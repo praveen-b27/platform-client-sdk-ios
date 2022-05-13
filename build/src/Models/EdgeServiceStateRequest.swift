@@ -17,11 +17,8 @@ public class EdgeServiceStateRequest: Codable {
     public var callDrainingWaitTimeSeconds: Int?
 
     public init(inService: Bool?, callDrainingWaitTimeSeconds: Int?) {
-        
         self.inService = inService
-        
         self.callDrainingWaitTimeSeconds = callDrainingWaitTimeSeconds
-        
     }
 
 

@@ -23,17 +23,11 @@ public class ActionProperties: Codable {
     public var webchatSurvey: ActionSurvey?
 
     public init(webchatPrompt: String?, webchatTitleText: String?, webchatAcceptText: String?, webchatDeclineText: String?, webchatSurvey: ActionSurvey?) {
-        
         self.webchatPrompt = webchatPrompt
-        
         self.webchatTitleText = webchatTitleText
-        
         self.webchatAcceptText = webchatAcceptText
-        
         self.webchatDeclineText = webchatDeclineText
-        
         self.webchatSurvey = webchatSurvey
-        
     }
 
 

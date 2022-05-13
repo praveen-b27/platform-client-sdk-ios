@@ -17,11 +17,8 @@ public class Knowledge: Codable {
     public var knowledgeBase: AddressableEntityRef?
 
     public init(enabled: Bool?, knowledgeBase: AddressableEntityRef?) {
-        
         self.enabled = enabled
-        
         self.knowledgeBase = knowledgeBase
-        
     }
 
 

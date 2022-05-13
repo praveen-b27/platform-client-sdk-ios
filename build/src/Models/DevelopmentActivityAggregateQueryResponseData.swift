@@ -17,11 +17,8 @@ public class DevelopmentActivityAggregateQueryResponseData: Codable {
     public var metrics: [DevelopmentActivityAggregateQueryResponseMetric]?
 
     public init(interval: String?, metrics: [DevelopmentActivityAggregateQueryResponseMetric]?) {
-        
         self.interval = interval
-        
         self.metrics = metrics
-        
     }
 
 

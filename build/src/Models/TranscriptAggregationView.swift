@@ -29,15 +29,10 @@ public class TranscriptAggregationView: Codable {
     public var range: AggregationRange?
 
     public init(target: Target?, name: String?, function: Function?, range: AggregationRange?) {
-        
         self.target = target
-        
         self.name = name
-        
         self.function = function
-        
         self.range = range
-        
     }
 
 

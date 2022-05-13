@@ -20,21 +20,15 @@ public class TwitterId: Codable {
     public var screenName: String?
     /** whether this data has been verified using the twitter API */
     public var verified: Bool?
-    /** url of user&#39;s twitter profile */
+    /** url of user's twitter profile */
     public var profileUrl: String?
 
     public init(_id: String?, name: String?, screenName: String?, verified: Bool?, profileUrl: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.screenName = screenName
-        
         self.verified = verified
-        
         self.profileUrl = profileUrl
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

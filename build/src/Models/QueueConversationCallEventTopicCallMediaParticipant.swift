@@ -105,103 +105,54 @@ public class QueueConversationCallEventTopicCallMediaParticipant: Codable {
     public var faxStatus: QueueConversationCallEventTopicFaxStatus?
 
     public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCallEventTopicUriReference?, queue: QueueConversationCallEventTopicUriReference?, team: QueueConversationCallEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCallEventTopicErrorBody?, script: QueueConversationCallEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationCallEventTopicUriReference?, externalOrganization: QueueConversationCallEventTopicUriReference?, wrapup: QueueConversationCallEventTopicWrapup?, conversationRoutingData: QueueConversationCallEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCallEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: QueueConversationCallEventTopicUriReference?, ani: String?, dnis: String?, documentId: String?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, bargedTime: Date?, consultParticipantId: String?, faxStatus: QueueConversationCallEventTopicFaxStatus?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.address = address
-        
         self.startTime = startTime
-        
         self.connectedTime = connectedTime
-        
         self.endTime = endTime
-        
         self.startHoldTime = startHoldTime
-        
         self.purpose = purpose
-        
         self.state = state
-        
         self.direction = direction
-        
         self.disconnectType = disconnectType
-        
         self.held = held
-        
         self.wrapupRequired = wrapupRequired
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.user = user
-        
         self.queue = queue
-        
         self.team = team
-        
         self.attributes = attributes
-        
         self.errorInfo = errorInfo
-        
         self.script = script
-        
         self.wrapupTimeoutMs = wrapupTimeoutMs
-        
         self.wrapupSkipped = wrapupSkipped
-        
         self.alertingTimeoutMs = alertingTimeoutMs
-        
         self.provider = provider
-        
         self.externalContact = externalContact
-        
         self.externalOrganization = externalOrganization
-        
         self.wrapup = wrapup
-        
         self.conversationRoutingData = conversationRoutingData
-        
         self.peer = peer
-        
         self.screenRecordingState = screenRecordingState
-        
         self.flaggedReason = flaggedReason
-        
         self.journeyContext = journeyContext
-        
         self.startAcwTime = startAcwTime
-        
         self.endAcwTime = endAcwTime
-        
         self.muted = muted
-        
         self.confined = confined
-        
         self.recording = recording
-        
         self.recordingState = recordingState
-        
         self.group = group
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.documentId = documentId
-        
         self.monitoredParticipantId = monitoredParticipantId
-        
         self.coachedParticipantId = coachedParticipantId
-        
         self.bargedParticipantId = bargedParticipantId
-        
         self.bargedTime = bargedTime
-        
         self.consultParticipantId = consultParticipantId
-        
         self.faxStatus = faxStatus
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

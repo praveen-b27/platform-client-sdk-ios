@@ -21,15 +21,10 @@ public class SingleWorkdayAveragePoints: Codable {
     public var performanceProfile: AddressableEntityRef?
 
     public init(dateWorkday: Date?, division: Division?, averagePoints: Double?, performanceProfile: AddressableEntityRef?) {
-        
         self.dateWorkday = dateWorkday
-        
         self.division = division
-        
         self.averagePoints = averagePoints
-        
         self.performanceProfile = performanceProfile
-        
     }
 
 

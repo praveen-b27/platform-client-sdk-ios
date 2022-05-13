@@ -17,11 +17,8 @@ public class Ring: Codable {
     public var actions: Actions?
 
     public init(expansionCriteria: [ExpansionCriterium]?, actions: Actions?) {
-        
         self.expansionCriteria = expansionCriteria
-        
         self.actions = actions
-        
     }
 
 

@@ -17,11 +17,8 @@ public class DialerCallabletimesetConfigChangeCallableTime: Codable {
     public var timeZoneId: String?
 
     public init(timeSlots: [DialerCallabletimesetConfigChangeTimeSlot]?, timeZoneId: String?) {
-        
         self.timeSlots = timeSlots
-        
         self.timeZoneId = timeZoneId
-        
     }
 
 

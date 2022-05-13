@@ -21,15 +21,10 @@ public class ShiftTradeMatchReviewResponse: Codable {
     public var adminReviewViolations: [ShiftTradeMatchViolation]?
 
     public init(initiatingUser: ShiftTradeMatchReviewUserResponse?, receivingUser: ShiftTradeMatchReviewUserResponse?, violations: [ShiftTradeMatchViolation]?, adminReviewViolations: [ShiftTradeMatchViolation]?) {
-        
         self.initiatingUser = initiatingUser
-        
         self.receivingUser = receivingUser
-        
         self.violations = violations
-        
         self.adminReviewViolations = adminReviewViolations
-        
     }
 
 

@@ -45,33 +45,19 @@ public class DialerDnclistConfigChangeDncList: Codable {
     public var version: Int?
 
     public init(importStatus: DialerDnclistConfigChangeImportStatus?, size: Int?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, contactMethod: ContactMethod?, division: DialerDnclistConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.importStatus = importStatus
-        
         self.size = size
-        
         self.dncSourceType = dncSourceType
-        
         self.loginId = loginId
-        
         self.dncCodes = dncCodes
-        
         self.licenseId = licenseId
-        
         self.contactMethod = contactMethod
-        
         self.division = division
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

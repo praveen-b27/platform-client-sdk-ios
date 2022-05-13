@@ -35,8 +35,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 WebMessagingAPI.getWebmessagingMessages(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -54,8 +54,8 @@ WebMessagingAPI.getWebmessagingMessages(pageSize: pageSize, pageNumber: pageNumb
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 

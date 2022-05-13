@@ -34,17 +34,11 @@ public class ForecastSourceDayPointer: Codable {
     public var dataKey: String?
 
     public init(dayOfWeek: DayOfWeek?, weight: Int?, date: String?, fileName: String?, dataKey: String?) {
-        
         self.dayOfWeek = dayOfWeek
-        
         self.weight = weight
-        
         self.date = date
-        
         self.fileName = fileName
-        
         self.dataKey = dataKey
-        
     }
 
 

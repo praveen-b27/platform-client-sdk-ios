@@ -21,11 +21,8 @@ public class ConversationAggregateQueryClause: Codable {
     public var predicates: [ConversationAggregateQueryPredicate]?
 
     public init(type: ModelType?, predicates: [ConversationAggregateQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

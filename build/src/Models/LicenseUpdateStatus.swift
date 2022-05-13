@@ -16,13 +16,9 @@ public class LicenseUpdateStatus: Codable {
     public var result: String?
 
     public init(userId: String?, licenseId: String?, result: String?) {
-        
         self.userId = userId
-        
         self.licenseId = licenseId
-        
         self.result = result
-        
     }
 
 

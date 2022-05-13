@@ -33,39 +33,22 @@ public class CalibrationCreate: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, calibrator: User?, agent: User?, conversation: ConversationReference?, evaluationForm: EvaluationForm?, contextId: String?, averageScore: Int?, highScore: Int?, lowScore: Int?, createdDate: Date?, evaluations: [Evaluation]?, evaluators: [User]?, scoringIndex: Evaluation?, expertEvaluator: User?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.calibrator = calibrator
-        
         self.agent = agent
-        
         self.conversation = conversation
-        
         self.evaluationForm = evaluationForm
-        
         self.contextId = contextId
-        
         self.averageScore = averageScore
-        
         self.highScore = highScore
-        
         self.lowScore = lowScore
-        
         self.createdDate = createdDate
-        
         self.evaluations = evaluations
-        
         self.evaluators = evaluators
-        
         self.scoringIndex = scoringIndex
-        
         self.expertEvaluator = expertEvaluator
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

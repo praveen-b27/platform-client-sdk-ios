@@ -33,9 +33,7 @@ public class TextBotUserAgent: Codable {
     public var name: Name?
 
     public init(name: Name?) {
-        
         self.name = name
-        
     }
 
 

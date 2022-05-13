@@ -19,13 +19,9 @@ public class UpdateBusinessUnitRequest: Codable {
     public var settings: UpdateBusinessUnitSettings?
 
     public init(name: String?, divisionId: String?, settings: UpdateBusinessUnitSettings?) {
-        
         self.name = name
-        
         self.divisionId = divisionId
-        
         self.settings = settings
-        
     }
 
 

@@ -60,15 +60,10 @@ public class AuditQueryRequest: Codable {
     public var sort: [AuditQuerySort]?
 
     public init(interval: String?, serviceName: ServiceName?, filters: [AuditQueryFilter]?, sort: [AuditQuerySort]?) {
-        
         self.interval = interval
-        
         self.serviceName = serviceName
-        
         self.filters = filters
-        
         self.sort = sort
-        
     }
 
 

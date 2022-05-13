@@ -17,11 +17,8 @@ public class NluDetectionRequest: Codable {
     public var context: NluDetectionContext?
 
     public init(input: NluDetectionInput?, context: NluDetectionContext?) {
-        
         self.input = input
-        
         self.context = context
-        
     }
 
 

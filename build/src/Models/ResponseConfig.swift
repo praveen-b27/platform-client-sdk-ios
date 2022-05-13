@@ -12,9 +12,9 @@ import Foundation
 
 public class ResponseConfig: Codable {
 
-    /** Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response. */
+    /** Map 'attribute name' and 'JSON path' pairs used to extract data from REST response. */
     public var translationMap: [String:String]?
-    /** Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key. */
+    /** Map 'attribute name' and 'default value' pairs used as fallback values if JSON path extraction fails for specified key. */
     public var translationMapDefaults: [String:String]?
     /** Velocity template to build response to return from Action. */
     public var successTemplate: String?
@@ -22,15 +22,10 @@ public class ResponseConfig: Codable {
     public var successTemplateUri: String?
 
     public init(translationMap: [String:String]?, translationMapDefaults: [String:String]?, successTemplate: String?, successTemplateUri: String?) {
-        
         self.translationMap = translationMap
-        
         self.translationMapDefaults = translationMapDefaults
-        
         self.successTemplate = successTemplate
-        
         self.successTemplateUri = successTemplateUri
-        
     }
 
 

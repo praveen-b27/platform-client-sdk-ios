@@ -19,17 +19,11 @@ public class TrunkMetrics: Codable {
     public var qos: TrunkMetricsQoS?
 
     public init(eventTime: Date?, logicalInterface: DomainEntityRef?, trunk: DomainEntityRef?, calls: TrunkMetricsCalls?, qos: TrunkMetricsQoS?) {
-        
         self.eventTime = eventTime
-        
         self.logicalInterface = logicalInterface
-        
         self.trunk = trunk
-        
         self.calls = calls
-        
         self.qos = qos
-        
     }
 
 

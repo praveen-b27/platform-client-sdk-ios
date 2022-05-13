@@ -17,19 +17,15 @@ public class PresenceDetailQueryFilter: Codable {
     }
     /** Boolean operation to apply to the provided predicates and clauses */
     public var type: ModelType?
-    /** Boolean &#39;and/or&#39; logic with up to two-levels of nesting */
+    /** Boolean 'and/or' logic with up to two-levels of nesting */
     public var clauses: [PresenceDetailQueryClause]?
     /** Like a three-word sentence: (attribute-name) (operator) (target-value). */
     public var predicates: [PresenceDetailQueryPredicate]?
 
     public init(type: ModelType?, clauses: [PresenceDetailQueryClause]?, predicates: [PresenceDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.clauses = clauses
-        
         self.predicates = predicates
-        
     }
 
 

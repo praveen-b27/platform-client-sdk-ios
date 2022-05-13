@@ -11,10 +11,7 @@ import Foundation
 
 open class TokensAPI {
     
-    
-    
     /**
-     
      Delete all auth tokens for the specified user.
      
      - parameter userId: (path) User ID 
@@ -32,11 +29,8 @@ open class TokensAPI {
     }
 
     /**
-     
      Delete all auth tokens for the specified user.
-     
      - DELETE /api/v2/tokens/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class TokensAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTokenWithRequestBuilder(userId: String) -> RequestBuilder<Void> {
+    open class func deleteTokenWithRequestBuilder(userId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/tokens/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -65,9 +54,7 @@ open class TokensAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete auth token used to make the request.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -84,26 +71,18 @@ open class TokensAPI {
     }
 
     /**
-     
      Delete auth token used to make the request.
-     
      - DELETE /api/v2/tokens/me
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTokensMeWithRequestBuilder() -> RequestBuilder<Void> {
+    open class func deleteTokensMeWithRequestBuilder() -> RequestBuilder<Void> {        
         let path = "/api/v2/tokens/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -112,9 +91,7 @@ open class TokensAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Fetch information about the current token
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -138,61 +115,44 @@ open class TokensAPI {
     }
 
     /**
-     
      Fetch information about the current token
-     
      - GET /api/v2/tokens/me
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "OAuthClient" : {
-    "authorizedGrantType" : "aeiou",
-    "dateToDelete" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "scope" : [ "aeiou" ],
-    "organization" : "",
-    "name" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "authorizedGrantType" : "CODE",
+    "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "scope" : [ "scope", "scope" ],
+    "organization" : "{}",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "active",
     "roleDivisions" : [ {
-      "roleId" : "aeiou",
-      "divisionId" : "aeiou"
+      "roleId" : "roleId",
+      "divisionId" : "divisionId"
+    }, {
+      "roleId" : "roleId",
+      "divisionId" : "divisionId"
     } ]
   },
-  "organization" : {
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "homeOrganization" : "",
-  "authorizedScope" : [ "aeiou" ],
-  "clonedUser" : {
-    "organization" : {
-      "id" : "aeiou"
-    },
-    "id" : "aeiou"
-  }
-}}]
+  "organization" : "{}",
+  "homeOrganization" : "{}",
+  "authorizedScope" : [ "authorizedScope", "authorizedScope" ],
+  "clonedUser" : "{}"
+}, statusCode=200}]
 
      - returns: RequestBuilder<TokenInfo> 
      */
-    open class func getTokensMeWithRequestBuilder() -> RequestBuilder<TokenInfo> {
+    open class func getTokensMeWithRequestBuilder() -> RequestBuilder<TokenInfo> {        
         let path = "/api/v2/tokens/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -201,9 +161,7 @@ open class TokensAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Verify user token
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -220,26 +178,18 @@ open class TokensAPI {
     }
 
     /**
-     
      Verify user token
-     
      - HEAD /api/v2/tokens/me
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headTokensMeWithRequestBuilder() -> RequestBuilder<Void> {
+    open class func headTokensMeWithRequestBuilder() -> RequestBuilder<Void> {        
         let path = "/api/v2/tokens/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 

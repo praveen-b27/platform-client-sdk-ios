@@ -45,43 +45,24 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
     public var modifiedBy: String?
 
     public init(_id: String?, user: WfmTimeOffRequestUpdateTopicUserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [String]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, reviewedDate: String?, reviewedBy: String?, submittedDate: String?, submittedBy: String?, modifiedDate: String?, modifiedBy: String?) {
-        
         self._id = _id
-        
         self.user = user
-        
         self.isFullDayRequest = isFullDayRequest
-        
         self.markedAsRead = markedAsRead
-        
         self.activityCodeId = activityCodeId
-        
         self.paid = paid
-        
         self.status = status
-        
         self.substatus = substatus
-        
         self.partialDayStartDateTimes = partialDayStartDateTimes
-        
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
-        
         self.dailyDurationMinutes = dailyDurationMinutes
-        
         self.notes = notes
-        
         self.reviewedDate = reviewedDate
-        
         self.reviewedBy = reviewedBy
-        
         self.submittedDate = submittedDate
-        
         self.submittedBy = submittedBy
-        
         self.modifiedDate = modifiedDate
-        
         self.modifiedBy = modifiedBy
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

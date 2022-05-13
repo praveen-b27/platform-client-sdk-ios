@@ -21,15 +21,10 @@ public class AuditQueryExecutionResultsResponse: Codable {
     public var entities: [AuditLogMessage]?
 
     public init(_id: String?, pageSize: Int?, cursor: String?, entities: [AuditLogMessage]?) {
-        
         self._id = _id
-        
         self.pageSize = pageSize
-        
         self.cursor = cursor
-        
         self.entities = entities
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

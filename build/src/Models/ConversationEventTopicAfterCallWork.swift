@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** A communication&#39;s after-call work data. */
+/** A communication's after-call work data. */
 
 public class ConversationEventTopicAfterCallWork: Codable {
 
@@ -19,7 +19,7 @@ public class ConversationEventTopicAfterCallWork: Codable {
         case complete = "complete"
         case notapplicable = "notApplicable"
     }
-    /** The communication&#39;s after-call work state. */
+    /** The communication's after-call work state. */
     public var state: State?
     /** The timestamp when this communication started after-call work in the cloud clock. */
     public var startTime: Date?
@@ -27,13 +27,9 @@ public class ConversationEventTopicAfterCallWork: Codable {
     public var endTime: Date?
 
     public init(state: State?, startTime: Date?, endTime: Date?) {
-        
         self.state = state
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
     }
 
 

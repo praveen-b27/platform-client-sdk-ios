@@ -17,11 +17,8 @@ public class DisallowedEntityLearningAssignmentItem: Codable {
     public var entity: LearningAssignmentItem?
 
     public init(errorCode: String?, entity: LearningAssignmentItem?) {
-        
         self.errorCode = errorCode
-        
         self.entity = entity
-        
     }
 
 

@@ -17,11 +17,8 @@ public class TokenInfoClonedUser: Codable {
     public var organization: Entity?
 
     public init(_id: String?, organization: Entity?) {
-        
         self._id = _id
-        
         self.organization = organization
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

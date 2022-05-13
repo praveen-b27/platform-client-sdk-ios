@@ -29,17 +29,11 @@ public class EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate: Codable {
     public var executeStopTime: Date?
 
     public init(_id: String?, status: Status?, downloadStartTime: Date?, executeStartTime: Date?, executeStopTime: Date?) {
-        
         self._id = _id
-        
         self.status = status
-        
         self.downloadStartTime = downloadStartTime
-        
         self.executeStartTime = executeStartTime
-        
         self.executeStopTime = executeStopTime
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

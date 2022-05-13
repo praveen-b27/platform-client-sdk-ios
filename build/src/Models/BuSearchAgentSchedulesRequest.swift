@@ -19,13 +19,9 @@ public class BuSearchAgentSchedulesRequest: Codable {
     public var userIds: [String]?
 
     public init(startDate: Date?, endDate: Date?, userIds: [String]?) {
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.userIds = userIds
-        
     }
 
 

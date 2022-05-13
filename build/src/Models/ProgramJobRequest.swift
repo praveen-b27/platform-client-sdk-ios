@@ -15,9 +15,7 @@ public class ProgramJobRequest: Codable {
     public var programIds: [String]?
 
     public init(programIds: [String]?) {
-        
         self.programIds = programIds
-        
     }
 
 

@@ -16,13 +16,9 @@ public class QueueConversationCallbackEventTopicJourneyContext: Codable {
     public var triggeringAction: QueueConversationCallbackEventTopicJourneyAction?
 
     public init(customer: QueueConversationCallbackEventTopicJourneyCustomer?, customerSession: QueueConversationCallbackEventTopicJourneyCustomerSession?, triggeringAction: QueueConversationCallbackEventTopicJourneyAction?) {
-        
         self.customer = customer
-        
         self.customerSession = customerSession
-        
         self.triggeringAction = triggeringAction
-        
     }
 
 

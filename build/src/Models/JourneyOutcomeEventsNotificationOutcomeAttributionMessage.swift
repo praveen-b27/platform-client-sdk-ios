@@ -16,13 +16,9 @@ public class JourneyOutcomeEventsNotificationOutcomeAttributionMessage: Codable 
     public var segmentAssignments: [JourneyOutcomeEventsNotificationSegment]?
 
     public init(outcome: JourneyOutcomeEventsNotificationOutcome?, outcomeTouchpoints: [JourneyOutcomeEventsNotificationOutcomeTouchpoint]?, segmentAssignments: [JourneyOutcomeEventsNotificationSegment]?) {
-        
         self.outcome = outcome
-        
         self.outcomeTouchpoints = outcomeTouchpoints
-        
         self.segmentAssignments = segmentAssignments
-        
     }
 
 

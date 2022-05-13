@@ -16,9 +16,7 @@ public class TextBotWaitForInputAction: Codable {
     public var modeConstraints: TextBotModeConstraints?
 
     public init(modeConstraints: TextBotModeConstraints?) {
-        
         self.modeConstraints = modeConstraints
-        
     }
 
 

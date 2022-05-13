@@ -36,19 +36,12 @@ public class WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpd
     public var metadata: WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata?
 
     public init(_id: String?, state: State?, reviewedBy: WfmBulkShiftTradeStateUpdateNotificationTopicUserReference?, reviewedDate: Date?, failureReason: FailureReason?, metadata: WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.reviewedBy = reviewedBy
-        
         self.reviewedDate = reviewedDate
-        
         self.failureReason = failureReason
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

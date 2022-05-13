@@ -21,15 +21,10 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationNotific
     public var parameters: [V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTemplateParameter]?
 
     public init(type: ModelType?, text: String?, media: V2ConversationMessageTypingEventForWorkflowTopicConversationContentAttachment?, parameters: [V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTemplateParameter]?) {
-        
         self.type = type
-        
         self.text = text
-        
         self.media = media
-        
         self.parameters = parameters
-        
     }
 
 

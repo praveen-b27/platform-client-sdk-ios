@@ -24,21 +24,13 @@ public class EvaluationQuestionScore: Codable {
     public var comments: String?
 
     public init(questionId: String?, answerId: String?, score: Int?, markedNA: Bool?, assistedAnswerId: String?, failedKillQuestion: Bool?, comments: String?) {
-        
         self.questionId = questionId
-        
         self.answerId = answerId
-        
         self.score = score
-        
         self.markedNA = markedNA
-        
         self.assistedAnswerId = assistedAnswerId
-        
         self.failedKillQuestion = failedKillQuestion
-        
         self.comments = comments
-        
     }
 
 

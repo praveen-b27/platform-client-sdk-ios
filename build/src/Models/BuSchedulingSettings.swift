@@ -15,9 +15,7 @@ public class BuSchedulingSettings: Codable {
     public var messageSeverities: [SchedulerMessageTypeSeverity]?
 
     public init(messageSeverities: [SchedulerMessageTypeSeverity]?) {
-        
         self.messageSeverities = messageSeverities
-        
     }
 
 

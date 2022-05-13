@@ -15,9 +15,7 @@ public class OAuthLastTokenIssued: Codable {
     public var dateIssued: Date?
 
     public init(dateIssued: Date?) {
-        
         self.dateIssued = dateIssued
-        
     }
 
 

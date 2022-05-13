@@ -15,17 +15,14 @@ public class OpenMessageContent: Codable {
     public enum ContentType: String, Codable { 
         case attachment = "Attachment"
     }
-    /** Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
+    /** Type of this content element. If contentType = \"Attachment\" only one item is allowed. */
     public var contentType: ContentType?
     /** Attachment content. */
     public var attachment: ContentAttachment?
 
     public init(contentType: ContentType?, attachment: ContentAttachment?) {
-        
         self.contentType = contentType
-        
         self.attachment = attachment
-        
     }
 
 

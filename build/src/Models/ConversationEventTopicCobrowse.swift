@@ -69,49 +69,30 @@ public class ConversationEventTopicCobrowse: Codable {
     public var disconnectedTime: Date?
     /** Call wrap up or disposition data. */
     public var wrapup: ConversationEventTopicWrapup?
-    /** A communication&#39;s after-call work data. */
+    /** A communication's after-call work data. */
     public var afterCallWork: ConversationEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
     public init(state: State?, disconnectType: DisconnectType?, _id: String?, _self: ConversationEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
-        
         self.state = state
-        
         self.disconnectType = disconnectType
-        
         self._id = _id
-        
         self._self = _self
-        
         self.roomId = roomId
-        
         self.cobrowseSessionId = cobrowseSessionId
-        
         self.cobrowseRole = cobrowseRole
-        
         self.controlling = controlling
-        
         self.viewerUrl = viewerUrl
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.providerEventTime = providerEventTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

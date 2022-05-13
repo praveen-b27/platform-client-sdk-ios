@@ -23,19 +23,12 @@ public class FlowOutcome: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, currentOperation: Operation?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.currentOperation = currentOperation
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

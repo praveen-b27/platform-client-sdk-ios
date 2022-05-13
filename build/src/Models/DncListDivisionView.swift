@@ -37,23 +37,14 @@ public class DncListDivisionView: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, contactMethod: ContactMethod?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self.importStatus = importStatus
-        
         self.size = size
-        
         self.dncSourceType = dncSourceType
-        
         self.contactMethod = contactMethod
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

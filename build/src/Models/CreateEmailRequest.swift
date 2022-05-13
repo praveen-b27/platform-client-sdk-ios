@@ -19,9 +19,9 @@ public class CreateEmailRequest: Codable {
     public var queueId: String?
     /** The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId */
     public var flowId: String?
-    /** The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails. */
+    /** The name of the provider that is sourcing the emails. The Provider \"PureCloud Email\" is reserved for native emails. */
     public var provider: String?
-    /** The list of skill ID&#39;s to use for routing. */
+    /** The list of skill ID's to use for routing. */
     public var skillIds: [String]?
     /** The ID of the language to use for routing. */
     public var languageId: String?
@@ -49,39 +49,22 @@ public class CreateEmailRequest: Codable {
     public var externalContactId: String?
 
     public init(queueId: String?, flowId: String?, provider: String?, skillIds: [String]?, languageId: String?, priority: Int64?, attributes: [String:String]?, toAddress: String?, toName: String?, fromAddress: String?, fromName: String?, subject: String?, direction: Direction?, htmlBody: String?, textBody: String?, externalContactId: String?) {
-        
         self.queueId = queueId
-        
         self.flowId = flowId
-        
         self.provider = provider
-        
         self.skillIds = skillIds
-        
         self.languageId = languageId
-        
         self.priority = priority
-        
         self.attributes = attributes
-        
         self.toAddress = toAddress
-        
         self.toName = toName
-        
         self.fromAddress = fromAddress
-        
         self.fromName = fromName
-        
         self.subject = subject
-        
         self.direction = direction
-        
         self.htmlBody = htmlBody
-        
         self.textBody = textBody
-        
         self.externalContactId = externalContactId
-        
     }
 
 

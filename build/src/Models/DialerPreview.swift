@@ -22,17 +22,11 @@ public class DialerPreview: Codable {
     public var phoneNumberColumns: [PhoneNumberColumn]?
 
     public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [PhoneNumberColumn]?) {
-        
         self._id = _id
-        
         self.contactId = contactId
-        
         self.contactListId = contactListId
-        
         self.campaignId = campaignId
-        
         self.phoneNumberColumns = phoneNumberColumns
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

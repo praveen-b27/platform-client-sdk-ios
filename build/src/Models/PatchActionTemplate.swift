@@ -26,7 +26,7 @@ public class PatchActionTemplate: Codable {
     }
     /** Name of the action template. */
     public var name: String?
-    /** Description of the action template&#39;s functionality. */
+    /** Description of the action template's functionality. */
     public var _description: String?
     /** Media type of action described by the action template. */
     public var mediaType: MediaType?
@@ -36,17 +36,11 @@ public class PatchActionTemplate: Codable {
     public var contentOffer: PatchContentOffer?
 
     public init(name: String?, _description: String?, mediaType: MediaType?, state: State?, contentOffer: PatchContentOffer?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.mediaType = mediaType
-        
         self.state = state
-        
         self.contentOffer = contentOffer
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -21,11 +21,8 @@ public class SegmentDetailQueryClause: Codable {
     public var predicates: [SegmentDetailQueryPredicate]?
 
     public init(type: ModelType?, predicates: [SegmentDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

@@ -23,15 +23,10 @@ public class WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForec
     public var progress: Int?
 
     public init(status: Status?, result: WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast?, operationId: String?, progress: Int?) {
-        
         self.status = status
-        
         self.result = result
-        
         self.operationId = operationId
-        
         self.progress = progress
-        
     }
 
 

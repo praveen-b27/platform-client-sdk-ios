@@ -28,23 +28,14 @@ public class DialerCampaignScheduleConfigChangeCampaignSchedule: Codable {
     public var version: Int?
 
     public init(intervals: [DialerCampaignScheduleConfigChangeScheduleInterval]?, timeZone: String?, campaign: DialerCampaignScheduleConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.intervals = intervals
-        
         self.timeZone = timeZone
-        
         self.campaign = campaign
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

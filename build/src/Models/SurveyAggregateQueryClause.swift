@@ -21,11 +21,8 @@ public class SurveyAggregateQueryClause: Codable {
     public var predicates: [SurveyAggregateQueryPredicate]?
 
     public init(type: ModelType?, predicates: [SurveyAggregateQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

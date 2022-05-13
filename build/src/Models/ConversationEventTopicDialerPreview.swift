@@ -23,17 +23,11 @@ public class ConversationEventTopicDialerPreview: Codable {
     public var phoneNumberColumns: [ConversationEventTopicPhoneNumberColumn]?
 
     public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [ConversationEventTopicPhoneNumberColumn]?) {
-        
         self._id = _id
-        
         self.contactId = contactId
-        
         self.contactListId = contactListId
-        
         self.campaignId = campaignId
-        
         self.phoneNumberColumns = phoneNumberColumns
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

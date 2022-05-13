@@ -17,11 +17,8 @@ public class TrunkMetricsNetworkTypeIp: Codable {
     public var errorInfo: TrunkErrorInfo?
 
     public init(address: String?, errorInfo: TrunkErrorInfo?) {
-        
         self.address = address
-        
         self.errorInfo = errorInfo
-        
     }
 
 

@@ -20,15 +20,10 @@ public class OutboundMessagingMessagingCampaignConfigChangeSmsConfig: Codable {
     public var contentTemplate: OutboundMessagingMessagingCampaignConfigChangeResponseRef?
 
     public init(messageColumn: String?, phoneColumn: String?, senderSmsPhoneNumber: OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef?, contentTemplate: OutboundMessagingMessagingCampaignConfigChangeResponseRef?) {
-        
         self.messageColumn = messageColumn
-        
         self.phoneColumn = phoneColumn
-        
         self.senderSmsPhoneNumber = senderSmsPhoneNumber
-        
         self.contentTemplate = contentTemplate
-        
     }
 
 

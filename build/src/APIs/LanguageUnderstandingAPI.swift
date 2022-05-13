@@ -11,10 +11,7 @@ import Foundation
 
 open class LanguageUnderstandingAPI {
     
-    
-    
     /**
-     
      Delete an NLU Domain.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -32,11 +29,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Delete an NLU Domain.
-     
      - DELETE /api/v2/languageunderstanding/domains/{domainId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteLanguageunderstandingDomainWithRequestBuilder(domainId: String) -> RequestBuilder<Void> {
+    open class func deleteLanguageunderstandingDomainWithRequestBuilder(domainId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,11 +56,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete the feedback on the NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -90,11 +75,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Delete the feedback on the NLU Domain Version.
-     
      - DELETE /api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -104,7 +86,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteLanguageunderstandingDomainFeedbackFeedbackIdWithRequestBuilder(domainId: String, feedbackId: String) -> RequestBuilder<Void> {
+    open class func deleteLanguageunderstandingDomainFeedbackFeedbackIdWithRequestBuilder(domainId: String, feedbackId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -113,12 +95,7 @@ open class LanguageUnderstandingAPI {
         let feedbackIdPostEscape = feedbackIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{feedbackId}", with: feedbackIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -129,11 +106,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete an NLU Domain Version
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -152,11 +125,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Delete an NLU Domain Version
-     
      - DELETE /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -166,7 +136,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<Void> {
+    open class func deleteLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -175,12 +145,7 @@ open class LanguageUnderstandingAPI {
         let domainVersionIdPostEscape = domainVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainVersionId}", with: domainVersionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -190,10 +155,7 @@ open class LanguageUnderstandingAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a miner.
      
      - parameter minerId: (path) Miner ID 
@@ -211,11 +173,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Delete a miner.
-     
      - DELETE /api/v2/languageunderstanding/miners/{minerId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -224,18 +183,13 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteLanguageunderstandingMinerWithRequestBuilder(minerId: String) -> RequestBuilder<Void> {
+    open class func deleteLanguageunderstandingMinerWithRequestBuilder(minerId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -246,11 +200,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete a draft
      
      - parameter minerId: (path) Miner ID 
@@ -269,11 +219,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Delete a draft
-     
      - DELETE /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -283,7 +230,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String) -> RequestBuilder<Void> {
+    open class func deleteLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -292,12 +239,7 @@ open class LanguageUnderstandingAPI {
         let draftIdPostEscape = draftIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{draftId}", with: draftIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -307,10 +249,7 @@ open class LanguageUnderstandingAPI {
     }
 
     
-    
-    
     /**
-     
      Find an NLU Domain.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -335,87 +274,34 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Find an NLU Domain.
-     
      - GET /api/v2/languageunderstanding/domains/{domainId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "engineVersion" : "aeiou",
-  "lastPublishedVersion" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "draftVersion" : {
-    "intents" : [ {
-      "utterances" : [ {
-        "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
-        } ]
-      } ],
-      "name" : "aeiou",
-      "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
-      } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : "",
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
-        } ]
-      }
-    } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
-  }
-}}]
+  "engineVersion" : "engineVersion",
+  "lastPublishedVersion" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "language",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "draftVersion" : "{}"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
 
      - returns: RequestBuilder<NluDomain> 
      */
-    open class func getLanguageunderstandingDomainWithRequestBuilder(domainId: String) -> RequestBuilder<NluDomain> {
+    open class func getLanguageunderstandingDomainWithRequestBuilder(domainId: String) -> RequestBuilder<NluDomain> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -424,9 +310,6 @@ open class LanguageUnderstandingAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -446,25 +329,7 @@ open class LanguageUnderstandingAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    public enum Fields_getLanguageunderstandingDomainFeedback: String { 
-        case version = "version"
-        case datecreated = "dateCreated"
-        case text = "text"
-        case intents = "intents"
-    }
-
-    
-    
     /**
-     
      Get all feedback in the given NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -473,10 +338,10 @@ open class LanguageUnderstandingAPI {
      - parameter dateStart: (query) Begin of time window as ISO-8601 date. (optional)
      - parameter dateEnd: (query) End of time window as ISO-8601 date. (optional)
      - parameter includeDeleted: (query) Whether to include soft-deleted items in the result. (optional)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional, default to false)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination&#x3D;true (optional)
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -499,101 +364,97 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Get all feedback in the given NLU Domain Version.
-     
      - GET /api/v2/languageunderstanding/domains/{domainId}/feedback
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "intents" : [ {
-      "assessment" : "aeiou",
+      "assessment" : "Incorrect",
       "entities" : [ {
-        "entityType" : "aeiou",
-        "probability" : 1.3579000000000001069366817318950779736042022705078125,
-        "name" : "aeiou",
-        "value" : {
-          "raw" : "aeiou",
-          "resolved" : "aeiou"
-        }
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
+      }, {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
       } ],
-      "probability" : 1.3579000000000001069366817318950779736042022705078125,
-      "name" : "aeiou"
+      "probability" : 0.8008281904610115,
+      "name" : "name"
+    }, {
+      "assessment" : "Incorrect",
+      "entities" : [ {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
+      }, {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
+      } ],
+      "probability" : 0.8008281904610115,
+      "name" : "name"
     } ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "text" : "aeiou",
-    "version" : {
-      "intents" : [ {
-        "utterances" : [ {
-          "segments" : [ {
-            "text" : "aeiou",
-            "entity" : {
-              "name" : "aeiou"
-            }
-          } ]
-        } ],
-        "name" : "aeiou",
-        "entityTypeBindings" : [ {
-          "entityType" : "aeiou",
-          "entityName" : "aeiou"
-        } ],
-        "entityNameReferences" : [ "aeiou" ]
-      } ],
-      "dateTrained" : "2000-01-23T04:56:07.000+0000",
-      "trainingStatus" : "aeiou",
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "published" : true,
-      "datePublished" : "2000-01-23T04:56:07.000+0000",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "text" : "text",
+    "version" : "{}"
+  }, {
+    "intents" : [ {
+      "assessment" : "Incorrect",
       "entities" : [ {
-        "name" : "aeiou",
-        "type" : "aeiou"
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
+      }, {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
       } ],
-      "domain" : {
-        "engineVersion" : "aeiou",
-        "lastPublishedVersion" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "language" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "draftVersion" : ""
-      },
-      "entityTypes" : [ {
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "mechanism" : {
-          "restricted" : true,
-          "type" : "aeiou",
-          "items" : [ {
-            "synonyms" : [ "aeiou" ],
-            "value" : "aeiou"
-          } ]
-        }
+      "probability" : 0.8008281904610115,
+      "name" : "name"
+    }, {
+      "assessment" : "Incorrect",
+      "entities" : [ {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
+      }, {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
       } ],
-      "id" : "aeiou",
-      "evaluationStatus" : "aeiou"
-    }
+      "probability" : 0.8008281904610115,
+      "name" : "name"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "text" : "text",
+    "version" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter intentName: (query) The top intent name to retrieve feedback for. (optional)
@@ -601,50 +462,34 @@ open class LanguageUnderstandingAPI {
      - parameter dateStart: (query) Begin of time window as ISO-8601 date. (optional)
      - parameter dateEnd: (query) End of time window as ISO-8601 date. (optional)
      - parameter includeDeleted: (query) Whether to include soft-deleted items in the result. (optional)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional, default to false)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination&#x3D;true (optional)
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
 
      - returns: RequestBuilder<NluFeedbackListing> 
      */
-    open class func getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil) -> RequestBuilder<NluFeedbackListing> {
+    open class func getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil) -> RequestBuilder<NluFeedbackListing> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/feedback"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "intentName": intentName, 
-            
             "assessment": assessment?.rawValue, 
-            
             "dateStart": dateStart?.encodeToJSON(), 
-            
             "dateEnd": dateEnd?.encodeToJSON(), 
-            
             "includeDeleted": includeDeleted, 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "enableCursorPagination": enableCursorPagination, 
-            
             "after": after, 
-            
             "fields": fields
-            
         ])
 
         let requestBuilder: RequestBuilder<NluFeedbackListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -655,20 +500,7 @@ open class LanguageUnderstandingAPI {
     
     
     
-    
-    
-    
-    public enum Fields_getLanguageunderstandingDomainFeedbackFeedbackId: String { 
-        case version = "version"
-        case datecreated = "dateCreated"
-        case text = "text"
-        case intents = "intents"
-    }
-
-    
-    
     /**
-     
      Find a Feedback
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -695,90 +527,49 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Find a Feedback
-     
      - GET /api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "intents" : [ {
-    "assessment" : "aeiou",
+    "assessment" : "Incorrect",
     "entities" : [ {
-      "entityType" : "aeiou",
-      "probability" : 1.3579000000000001069366817318950779736042022705078125,
-      "name" : "aeiou",
-      "value" : {
-        "raw" : "aeiou",
-        "resolved" : "aeiou"
-      }
+      "entityType" : "entityType",
+      "probability" : 6.027456183070403,
+      "name" : "name",
+      "value" : "{}"
+    }, {
+      "entityType" : "entityType",
+      "probability" : 6.027456183070403,
+      "name" : "name",
+      "value" : "{}"
     } ],
-    "probability" : 1.3579000000000001069366817318950779736042022705078125,
-    "name" : "aeiou"
+    "probability" : 0.8008281904610115,
+    "name" : "name"
+  }, {
+    "assessment" : "Incorrect",
+    "entities" : [ {
+      "entityType" : "entityType",
+      "probability" : 6.027456183070403,
+      "name" : "name",
+      "value" : "{}"
+    }, {
+      "entityType" : "entityType",
+      "probability" : 6.027456183070403,
+      "name" : "name",
+      "value" : "{}"
+    } ],
+    "probability" : 0.8008281904610115,
+    "name" : "name"
   } ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "id" : "aeiou",
-  "text" : "aeiou",
-  "version" : {
-    "intents" : [ {
-      "utterances" : [ {
-        "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
-        } ]
-      } ],
-      "name" : "aeiou",
-      "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
-      } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : {
-      "engineVersion" : "aeiou",
-      "lastPublishedVersion" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "draftVersion" : ""
-    },
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
-        } ]
-      }
-    } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
-  }
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "text" : "text",
+  "version" : "{}"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter feedbackId: (path) ID of the Feedback 
@@ -786,7 +577,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<NluFeedbackResponse> 
      */
-    open class func getLanguageunderstandingDomainFeedbackFeedbackIdWithRequestBuilder(domainId: String, feedbackId: String, fields: [String]? = nil) -> RequestBuilder<NluFeedbackResponse> {
+    open class func getLanguageunderstandingDomainFeedbackFeedbackIdWithRequestBuilder(domainId: String, feedbackId: String, fields: [String]? = nil) -> RequestBuilder<NluFeedbackResponse> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -795,18 +586,11 @@ open class LanguageUnderstandingAPI {
         let feedbackIdPostEscape = feedbackIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{feedbackId}", with: feedbackIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "fields": fields
-            
         ])
 
         let requestBuilder: RequestBuilder<NluFeedbackResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -817,12 +601,7 @@ open class LanguageUnderstandingAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Find an NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -849,11 +628,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Find an NLU Domain Version.
-     
      - GET /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -861,58 +637,87 @@ open class LanguageUnderstandingAPI {
   "intents" : [ {
     "utterances" : [ {
       "segments" : [ {
-        "text" : "aeiou",
-        "entity" : {
-          "name" : "aeiou"
-        }
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
+      } ]
+    }, {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
       } ]
     } ],
-    "name" : "aeiou",
+    "name" : "name",
     "entityTypeBindings" : [ {
-      "entityType" : "aeiou",
-      "entityName" : "aeiou"
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    }, {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
     } ],
-    "entityNameReferences" : [ "aeiou" ]
-  } ],
-  "dateTrained" : "2000-01-23T04:56:07.000+0000",
-  "trainingStatus" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "published" : true,
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "entities" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou"
-  } ],
-  "domain" : {
-    "engineVersion" : "aeiou",
-    "lastPublishedVersion" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "draftVersion" : ""
-  },
-  "entityTypes" : [ {
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "mechanism" : {
-      "restricted" : true,
-      "type" : "aeiou",
-      "items" : [ {
-        "synonyms" : [ "aeiou" ],
-        "value" : "aeiou"
+    "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
+  }, {
+    "utterances" : [ {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
       } ]
-    }
+    }, {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
+      } ]
+    } ],
+    "name" : "name",
+    "entityTypeBindings" : [ {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    }, {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    } ],
+    "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   } ],
-  "id" : "aeiou",
-  "evaluationStatus" : "aeiou"
-}}]
+  "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+  "trainingStatus" : "Untrained",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "language" : "language",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "published" : true,
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "entities" : [ {
+    "name" : "name",
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "type" : "type"
+  } ],
+  "domain" : "{}",
+  "entityTypes" : [ {
+    "name" : "name",
+    "description" : "description",
+    "mechanism" : "{}"
+  }, {
+    "name" : "name",
+    "description" : "description",
+    "mechanism" : "{}"
+  } ],
+  "id" : "id",
+  "evaluationStatus" : "Unevaluated"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
@@ -920,7 +725,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<NluDomainVersion> 
      */
-    open class func getLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String, includeUtterances: Bool? = nil) -> RequestBuilder<NluDomainVersion> {
+    open class func getLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String, includeUtterances: Bool? = nil) -> RequestBuilder<NluDomainVersion> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -929,18 +734,11 @@ open class LanguageUnderstandingAPI {
         let domainVersionIdPostEscape = domainVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainVersionId}", with: domainVersionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "includeUtterances": includeUtterances
-            
         ])
 
         let requestBuilder: RequestBuilder<NluDomainVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -950,11 +748,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieved quality report for the specified NLU Domain Version
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -980,92 +774,41 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Retrieved quality report for the specified NLU Domain Version
-     
      - GET /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/report
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "summary" : {
-    "metrics" : [ {
-      "name" : "aeiou",
-      "value" : 1.3579000000000001069366817318950779736042022705078125
-    } ]
-  },
+  "summary" : "{}",
   "confusionMatrix" : [ {
     "columns" : [ {
-      "name" : "aeiou",
-      "value" : 1.3579000000000001069366817318950779736042022705078125
+      "name" : "name",
+      "value" : 0.8008282
+    }, {
+      "name" : "name",
+      "value" : 0.8008282
     } ],
-    "name" : "aeiou"
+    "name" : "name"
+  }, {
+    "columns" : [ {
+      "name" : "name",
+      "value" : 0.8008282
+    }, {
+      "name" : "name",
+      "value" : 0.8008282
+    } ],
+    "name" : "name"
   } ],
-  "version" : {
-    "intents" : [ {
-      "utterances" : [ {
-        "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
-        } ]
-      } ],
-      "name" : "aeiou",
-      "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
-      } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : {
-      "engineVersion" : "aeiou",
-      "lastPublishedVersion" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "draftVersion" : ""
-    },
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
-        } ]
-      }
-    } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
-  }
-}}]
+  "version" : "{}"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
 
      - returns: RequestBuilder<NluDomainVersionQualityReport> 
      */
-    open class func getLanguageunderstandingDomainVersionReportWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<NluDomainVersionQualityReport> {
+    open class func getLanguageunderstandingDomainVersionReportWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<NluDomainVersionQualityReport> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/report"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1074,12 +817,7 @@ open class LanguageUnderstandingAPI {
         let domainVersionIdPostEscape = domainVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainVersionId}", with: domainVersionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1092,19 +830,13 @@ open class LanguageUnderstandingAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Get all NLU Domain Versions for a given Domain.
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter includeUtterances: (query) Whether utterances for intent definition should be included when marshalling response. (optional)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getLanguageunderstandingDomainVersions(domainId: String, includeUtterances: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: NluDomainVersionListing?,_ error: Error?) -> Void)) {
@@ -1126,111 +858,212 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Get all NLU Domain Versions for a given Domain.
-     
      - GET /api/v2/languageunderstanding/domains/{domainId}/versions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
+        } ]
+      }, {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
         } ]
       } ],
-      "name" : "aeiou",
+      "name" : "name",
       "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      }, {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
       } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : {
-      "engineVersion" : "aeiou",
-      "lastPublishedVersion" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "draftVersion" : ""
-    },
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
+      "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
+    }, {
+      "utterances" : [ {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
         } ]
-      }
+      }, {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
+        } ]
+      } ],
+      "name" : "name",
+      "entityTypeBindings" : [ {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      }, {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      } ],
+      "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
+    "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+    "trainingStatus" : "Untrained",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "language" : "language",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "published" : true,
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "entities" : [ {
+      "name" : "name",
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "type" : "type"
+    } ],
+    "domain" : "{}",
+    "entityTypes" : [ {
+      "name" : "name",
+      "description" : "description",
+      "mechanism" : "{}"
+    }, {
+      "name" : "name",
+      "description" : "description",
+      "mechanism" : "{}"
+    } ],
+    "id" : "id",
+    "evaluationStatus" : "Unevaluated"
+  }, {
+    "intents" : [ {
+      "utterances" : [ {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
+        } ]
+      }, {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
+        } ]
+      } ],
+      "name" : "name",
+      "entityTypeBindings" : [ {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      }, {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      } ],
+      "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
+    }, {
+      "utterances" : [ {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
+        } ]
+      }, {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
+        } ]
+      } ],
+      "name" : "name",
+      "entityTypeBindings" : [ {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      }, {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      } ],
+      "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
+    } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+    "trainingStatus" : "Untrained",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "language" : "language",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "published" : true,
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "entities" : [ {
+      "name" : "name",
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "type" : "type"
+    } ],
+    "domain" : "{}",
+    "entityTypes" : [ {
+      "name" : "name",
+      "description" : "description",
+      "mechanism" : "{}"
+    }, {
+      "name" : "name",
+      "description" : "description",
+      "mechanism" : "{}"
+    } ],
+    "id" : "id",
+    "evaluationStatus" : "Unevaluated"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter includeUtterances: (query) Whether utterances for intent definition should be included when marshalling response. (optional)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<NluDomainVersionListing> 
      */
-    open class func getLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: String, includeUtterances: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<NluDomainVersionListing> {
+    open class func getLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: String, includeUtterances: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<NluDomainVersionListing> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "includeUtterances": includeUtterances, 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<NluDomainVersionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1240,15 +1073,11 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get all NLU Domains.
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getLanguageunderstandingDomains(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: NluDomainListing?,_ error: Error?) -> Void)) {
@@ -1270,104 +1099,58 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Get all NLU Domains.
-     
      - GET /api/v2/languageunderstanding/domains
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "engineVersion" : "aeiou",
-    "lastPublishedVersion" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "draftVersion" : {
-      "intents" : [ {
-        "utterances" : [ {
-          "segments" : [ {
-            "text" : "aeiou",
-            "entity" : {
-              "name" : "aeiou"
-            }
-          } ]
-        } ],
-        "name" : "aeiou",
-        "entityTypeBindings" : [ {
-          "entityType" : "aeiou",
-          "entityName" : "aeiou"
-        } ],
-        "entityNameReferences" : [ "aeiou" ]
-      } ],
-      "dateTrained" : "2000-01-23T04:56:07.000+0000",
-      "trainingStatus" : "aeiou",
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "published" : true,
-      "datePublished" : "2000-01-23T04:56:07.000+0000",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "entities" : [ {
-        "name" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "domain" : "",
-      "entityTypes" : [ {
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "mechanism" : {
-          "restricted" : true,
-          "type" : "aeiou",
-          "items" : [ {
-            "synonyms" : [ "aeiou" ],
-            "value" : "aeiou"
-          } ]
-        }
-      } ],
-      "id" : "aeiou",
-      "evaluationStatus" : "aeiou"
-    }
+    "engineVersion" : "engineVersion",
+    "lastPublishedVersion" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "draftVersion" : "{}"
+  }, {
+    "engineVersion" : "engineVersion",
+    "lastPublishedVersion" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "draftVersion" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<NluDomainListing> 
      */
-    open class func getLanguageunderstandingDomainsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<NluDomainListing> {
+    open class func getLanguageunderstandingDomainsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<NluDomainListing> {        
         let path = "/api/v2/languageunderstanding/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<NluDomainListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1376,10 +1159,7 @@ open class LanguageUnderstandingAPI {
     }
 
     
-    
-    
     /**
-     
      Get information about a miner.
      
      - parameter minerId: (path) Miner ID 
@@ -1404,62 +1184,41 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Get information about a miner.
-     
      - GET /api/v2/languageunderstanding/miners/{minerId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "conversationsDateRangeStart" : "2019-06-20",
-  "selfUri" : "aeiou",
-  "language" : "aeiou",
-  "mediaType" : "aeiou",
-  "dateModified" : "2020-04-30T23:56:07.268",
-  "message" : "aeiou",
+  "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
+  "selfUri" : "https://openapi-generator.tech",
+  "language" : "en-us",
+  "mediaType" : "Chat",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "message" : "message",
   "conversationDataUploaded" : true,
-  "conversationsDateRangeEnd" : "2019-12-20",
-  "queueIds" : [ "aeiou" ],
-  "dateCreated" : "2020-04-29T17:12:06.613",
-  "dateCompleted" : "2020-05-20T23:56:07.268",
-  "dateTriggered" : "2020-04-30T23:56:07.268",
-  "latestDraftVersion" : {
-    "intents" : [ {
-      "utterances" : [ "aeiou" ],
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "dateCreated" : "2020-05-20T23:56:07.268",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dateModified" : "2020-05-20T23:56:07.268",
-    "id" : "aeiou",
-    "miner" : ""
-  },
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
+  "queueIds" : [ "queueIds", "queueIds" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+  "latestDraftVersion" : "{}",
+  "name" : "name",
+  "id" : "id",
+  "status" : "NotStarted"
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
 
      - returns: RequestBuilder<Miner> 
      */
-    open class func getLanguageunderstandingMinerWithRequestBuilder(minerId: String) -> RequestBuilder<Miner> {
+    open class func getLanguageunderstandingMinerWithRequestBuilder(minerId: String) -> RequestBuilder<Miner> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1470,11 +1229,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get information about a draft.
      
      - parameter minerId: (path) Miner ID 
@@ -1500,52 +1255,37 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Get information about a draft.
-     
      - GET /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "intents" : [ {
-    "utterances" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "utterances" : [ "utterances", "utterances" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "utterances" : [ "utterances", "utterances" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "dateCreated" : "2020-05-20T23:56:07.268",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2020-05-20T23:56:07.268",
-  "id" : "aeiou",
-  "miner" : {
-    "conversationsDateRangeStart" : "2019-06-20",
-    "selfUri" : "aeiou",
-    "language" : "aeiou",
-    "mediaType" : "aeiou",
-    "dateModified" : "2020-04-30T23:56:07.268",
-    "message" : "aeiou",
-    "conversationDataUploaded" : true,
-    "conversationsDateRangeEnd" : "2019-12-20",
-    "queueIds" : [ "aeiou" ],
-    "dateCreated" : "2020-04-29T17:12:06.613",
-    "dateCompleted" : "2020-05-20T23:56:07.268",
-    "dateTriggered" : "2020-04-30T23:56:07.268",
-    "latestDraftVersion" : "",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
-  }
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "miner" : "{}"
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
      - parameter draftId: (path) Draft ID 
 
      - returns: RequestBuilder<Draft> 
      */
-    open class func getLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String) -> RequestBuilder<Draft> {
+    open class func getLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String) -> RequestBuilder<Draft> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1554,12 +1294,7 @@ open class LanguageUnderstandingAPI {
         let draftIdPostEscape = draftIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{draftId}", with: draftIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1569,10 +1304,7 @@ open class LanguageUnderstandingAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve the list of drafts created.
      
      - parameter minerId: (path) Miner ID 
@@ -1597,67 +1329,65 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Retrieve the list of drafts created.
-     
      - GET /api/v2/languageunderstanding/miners/{minerId}/drafts
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "intents" : [ {
-      "utterances" : [ "aeiou" ],
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "utterances" : [ "utterances", "utterances" ],
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "utterances" : [ "utterances", "utterances" ],
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     } ],
-    "dateCreated" : "2020-05-20T23:56:07.268",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dateModified" : "2020-05-20T23:56:07.268",
-    "id" : "aeiou",
-    "miner" : {
-      "conversationsDateRangeStart" : "2019-06-20",
-      "selfUri" : "aeiou",
-      "language" : "aeiou",
-      "mediaType" : "aeiou",
-      "dateModified" : "2020-04-30T23:56:07.268",
-      "message" : "aeiou",
-      "conversationDataUploaded" : true,
-      "conversationsDateRangeEnd" : "2019-12-20",
-      "queueIds" : [ "aeiou" ],
-      "dateCreated" : "2020-04-29T17:12:06.613",
-      "dateCompleted" : "2020-05-20T23:56:07.268",
-      "dateTriggered" : "2020-04-30T23:56:07.268",
-      "latestDraftVersion" : "",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "status" : "aeiou"
-    }
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "miner" : "{}"
+  }, {
+    "intents" : [ {
+      "utterances" : [ "utterances", "utterances" ],
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "utterances" : [ "utterances", "utterances" ],
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "miner" : "{}"
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
 
      - returns: RequestBuilder<DraftListing> 
      */
-    open class func getLanguageunderstandingMinerDraftsWithRequestBuilder(minerId: String) -> RequestBuilder<DraftListing> {
+    open class func getLanguageunderstandingMinerDraftsWithRequestBuilder(minerId: String) -> RequestBuilder<DraftListing> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1669,18 +1399,13 @@ open class LanguageUnderstandingAPI {
     
     
     
-    
-    
-    
     public enum Expand_getLanguageunderstandingMinerIntent: String { 
         case phrases = "phrases"
         case utterances = "utterances"
     }
 
     
-    
     /**
-     
      Get information about a mined intent
      
      - parameter minerId: (path) Miner ID 
@@ -1707,54 +1432,23 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Get information about a mined intent
-     
      - GET /api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "utterances" : [ {
     "utteranceText" : "I want to pay bill."
+  }, {
+    "utteranceText" : "I want to pay bill."
   } ],
-  "selfUri" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
   "name" : "pay bill.",
-  "id" : "aeiou",
-  "miner" : {
-    "conversationsDateRangeStart" : "2019-06-20",
-    "selfUri" : "aeiou",
-    "language" : "aeiou",
-    "mediaType" : "aeiou",
-    "dateModified" : "2020-04-30T23:56:07.268",
-    "message" : "aeiou",
-    "conversationDataUploaded" : true,
-    "conversationsDateRangeEnd" : "2019-12-20",
-    "queueIds" : [ "aeiou" ],
-    "dateCreated" : "2020-04-29T17:12:06.613",
-    "dateCompleted" : "2020-05-20T23:56:07.268",
-    "dateTriggered" : "2020-04-30T23:56:07.268",
-    "latestDraftVersion" : {
-      "intents" : [ {
-        "utterances" : [ "aeiou" ],
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ],
-      "dateCreated" : "2020-05-20T23:56:07.268",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "dateModified" : "2020-05-20T23:56:07.268",
-      "id" : "aeiou",
-      "miner" : ""
-    },
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
-  },
+  "id" : "id",
+  "miner" : "{}",
   "analyticVolumePercent" : 21.5
-}}]
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
      - parameter intentId: (path) The ID of the intent to be retrieved. 
@@ -1762,7 +1456,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<MinerIntent> 
      */
-    open class func getLanguageunderstandingMinerIntentWithRequestBuilder(minerId: String, intentId: String, expand: Expand_getLanguageunderstandingMinerIntent? = nil) -> RequestBuilder<MinerIntent> {
+    open class func getLanguageunderstandingMinerIntentWithRequestBuilder(minerId: String, intentId: String, expand: Expand_getLanguageunderstandingMinerIntent? = nil) -> RequestBuilder<MinerIntent> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1771,18 +1465,11 @@ open class LanguageUnderstandingAPI {
         let intentIdPostEscape = intentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{intentId}", with: intentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<MinerIntent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1792,17 +1479,13 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
     public enum Expand_getLanguageunderstandingMinerIntents: String { 
         case phrases = "phrases"
         case utterances = "utterances"
     }
 
     
-    
     /**
-     
      Retrieve a list of mined intents.
      
      - parameter minerId: (path) Miner ID 
@@ -1828,11 +1511,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Retrieve a list of mined intents.
-     
      - GET /api/v2/languageunderstanding/miners/{minerId}/intents
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1840,71 +1520,47 @@ open class LanguageUnderstandingAPI {
   "entities" : [ {
     "utterances" : [ {
       "utteranceText" : "I want to pay bill."
+    }, {
+      "utteranceText" : "I want to pay bill."
     } ],
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "name" : "pay bill.",
-    "id" : "aeiou",
-    "miner" : {
-      "conversationsDateRangeStart" : "2019-06-20",
-      "selfUri" : "aeiou",
-      "language" : "aeiou",
-      "mediaType" : "aeiou",
-      "dateModified" : "2020-04-30T23:56:07.268",
-      "message" : "aeiou",
-      "conversationDataUploaded" : true,
-      "conversationsDateRangeEnd" : "2019-12-20",
-      "queueIds" : [ "aeiou" ],
-      "dateCreated" : "2020-04-29T17:12:06.613",
-      "dateCompleted" : "2020-05-20T23:56:07.268",
-      "dateTriggered" : "2020-04-30T23:56:07.268",
-      "latestDraftVersion" : {
-        "intents" : [ {
-          "utterances" : [ "aeiou" ],
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        } ],
-        "dateCreated" : "2020-05-20T23:56:07.268",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "dateModified" : "2020-05-20T23:56:07.268",
-        "id" : "aeiou",
-        "miner" : ""
-      },
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "status" : "aeiou"
-    },
+    "id" : "id",
+    "miner" : "{}",
+    "analyticVolumePercent" : 21.5
+  }, {
+    "utterances" : [ {
+      "utteranceText" : "I want to pay bill."
+    }, {
+      "utteranceText" : "I want to pay bill."
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "pay bill.",
+    "id" : "id",
+    "miner" : "{}",
     "analyticVolumePercent" : 21.5
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
      - parameter expand: (query) Option to fetch utterances. (optional)
 
      - returns: RequestBuilder<MinedIntentsListing> 
      */
-    open class func getLanguageunderstandingMinerIntentsWithRequestBuilder(minerId: String, expand: Expand_getLanguageunderstandingMinerIntents? = nil) -> RequestBuilder<MinedIntentsListing> {
+    open class func getLanguageunderstandingMinerIntentsWithRequestBuilder(minerId: String, expand: Expand_getLanguageunderstandingMinerIntents? = nil) -> RequestBuilder<MinedIntentsListing> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/intents"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<MinedIntentsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1912,9 +1568,7 @@ open class LanguageUnderstandingAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Retrieve the list of miners created.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1938,62 +1592,58 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Retrieve the list of miners created.
-     
      - GET /api/v2/languageunderstanding/miners
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "conversationsDateRangeStart" : "2019-06-20",
-    "selfUri" : "aeiou",
-    "language" : "aeiou",
-    "mediaType" : "aeiou",
-    "dateModified" : "2020-04-30T23:56:07.268",
-    "message" : "aeiou",
+    "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
+    "selfUri" : "https://openapi-generator.tech",
+    "language" : "en-us",
+    "mediaType" : "Chat",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "message" : "message",
     "conversationDataUploaded" : true,
-    "conversationsDateRangeEnd" : "2019-12-20",
-    "queueIds" : [ "aeiou" ],
-    "dateCreated" : "2020-04-29T17:12:06.613",
-    "dateCompleted" : "2020-05-20T23:56:07.268",
-    "dateTriggered" : "2020-04-30T23:56:07.268",
-    "latestDraftVersion" : {
-      "intents" : [ {
-        "utterances" : [ "aeiou" ],
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ],
-      "dateCreated" : "2020-05-20T23:56:07.268",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "dateModified" : "2020-05-20T23:56:07.268",
-      "id" : "aeiou",
-      "miner" : ""
-    },
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
+    "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
+    "queueIds" : [ "queueIds", "queueIds" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+    "latestDraftVersion" : "{}",
+    "name" : "name",
+    "id" : "id",
+    "status" : "NotStarted"
+  }, {
+    "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
+    "selfUri" : "https://openapi-generator.tech",
+    "language" : "en-us",
+    "mediaType" : "Chat",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "message" : "message",
+    "conversationDataUploaded" : true,
+    "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
+    "queueIds" : [ "queueIds", "queueIds" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+    "latestDraftVersion" : "{}",
+    "name" : "name",
+    "id" : "id",
+    "status" : "NotStarted"
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
 
      - returns: RequestBuilder<MinerListing> 
      */
-    open class func getLanguageunderstandingMinersWithRequestBuilder() -> RequestBuilder<MinerListing> {
+    open class func getLanguageunderstandingMinersWithRequestBuilder() -> RequestBuilder<MinerListing> {        
         let path = "/api/v2/languageunderstanding/miners"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2004,11 +1654,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update an NLU Domain.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -2034,86 +1680,36 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Update an NLU Domain.
-     
      - PATCH /api/v2/languageunderstanding/domains/{domainId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "engineVersion" : "aeiou",
-  "lastPublishedVersion" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "draftVersion" : {
-    "intents" : [ {
-      "utterances" : [ {
-        "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
-        } ]
-      } ],
-      "name" : "aeiou",
-      "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
-      } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : "",
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
-        } ]
-      }
-    } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
-  }
-}}]
+  "engineVersion" : "engineVersion",
+  "lastPublishedVersion" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "language",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "draftVersion" : "{}"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter body: (body) The updated NLU Domain. 
 
      - returns: RequestBuilder<NluDomain> 
      */
-    open class func patchLanguageunderstandingDomainWithRequestBuilder(domainId: String, body: NluDomain) -> RequestBuilder<NluDomain> {
+    open class func patchLanguageunderstandingDomainWithRequestBuilder(domainId: String, body: NluDomain) -> RequestBuilder<NluDomain> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2124,12 +1720,7 @@ open class LanguageUnderstandingAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Save information for the draft. Either topic draft or intent draft should be sent.
      
      - parameter minerId: (path) Miner ID 
@@ -2156,45 +1747,30 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Save information for the draft. Either topic draft or intent draft should be sent.
-     
      - PATCH /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "intents" : [ {
-    "utterances" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "utterances" : [ "utterances", "utterances" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "utterances" : [ "utterances", "utterances" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "dateCreated" : "2020-05-20T23:56:07.268",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2020-05-20T23:56:07.268",
-  "id" : "aeiou",
-  "miner" : {
-    "conversationsDateRangeStart" : "2019-06-20",
-    "selfUri" : "aeiou",
-    "language" : "aeiou",
-    "mediaType" : "aeiou",
-    "dateModified" : "2020-04-30T23:56:07.268",
-    "message" : "aeiou",
-    "conversationDataUploaded" : true,
-    "conversationsDateRangeEnd" : "2019-12-20",
-    "queueIds" : [ "aeiou" ],
-    "dateCreated" : "2020-04-29T17:12:06.613",
-    "dateCompleted" : "2020-05-20T23:56:07.268",
-    "dateTriggered" : "2020-04-30T23:56:07.268",
-    "latestDraftVersion" : "",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
-  }
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "miner" : "{}"
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
      - parameter draftId: (path) Draft ID 
@@ -2202,7 +1778,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<Draft> 
      */
-    open class func patchLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String, body: DraftRequest? = nil) -> RequestBuilder<Draft> {
+    open class func patchLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String, body: DraftRequest? = nil) -> RequestBuilder<Draft> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2211,10 +1787,8 @@ open class LanguageUnderstandingAPI {
         let draftIdPostEscape = draftIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{draftId}", with: draftIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Draft>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2224,11 +1798,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create feedback for the NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -2254,106 +1824,63 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Create feedback for the NLU Domain Version.
-     
      - POST /api/v2/languageunderstanding/domains/{domainId}/feedback
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "intents" : [ {
-    "assessment" : "aeiou",
+    "assessment" : "Incorrect",
     "entities" : [ {
-      "entityType" : "aeiou",
-      "probability" : 1.3579000000000001069366817318950779736042022705078125,
-      "name" : "aeiou",
-      "value" : {
-        "raw" : "aeiou",
-        "resolved" : "aeiou"
-      }
+      "entityType" : "entityType",
+      "probability" : 6.027456183070403,
+      "name" : "name",
+      "value" : "{}"
+    }, {
+      "entityType" : "entityType",
+      "probability" : 6.027456183070403,
+      "name" : "name",
+      "value" : "{}"
     } ],
-    "probability" : 1.3579000000000001069366817318950779736042022705078125,
-    "name" : "aeiou"
+    "probability" : 0.8008281904610115,
+    "name" : "name"
+  }, {
+    "assessment" : "Incorrect",
+    "entities" : [ {
+      "entityType" : "entityType",
+      "probability" : 6.027456183070403,
+      "name" : "name",
+      "value" : "{}"
+    }, {
+      "entityType" : "entityType",
+      "probability" : 6.027456183070403,
+      "name" : "name",
+      "value" : "{}"
+    } ],
+    "probability" : 0.8008281904610115,
+    "name" : "name"
   } ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "id" : "aeiou",
-  "text" : "aeiou",
-  "version" : {
-    "intents" : [ {
-      "utterances" : [ {
-        "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
-        } ]
-      } ],
-      "name" : "aeiou",
-      "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
-      } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : {
-      "engineVersion" : "aeiou",
-      "lastPublishedVersion" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "draftVersion" : ""
-    },
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
-        } ]
-      }
-    } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
-  }
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "text" : "text",
+  "version" : "{}"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter body: (body) The Feedback to create. 
 
      - returns: RequestBuilder<NluFeedbackResponse> 
      */
-    open class func postLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, body: NluFeedbackRequest) -> RequestBuilder<NluFeedbackResponse> {
+    open class func postLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, body: NluFeedbackRequest) -> RequestBuilder<NluFeedbackResponse> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/feedback"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluFeedbackResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2364,12 +1891,7 @@ open class LanguageUnderstandingAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Detect intent, entities, etc. in the submitted text using the specified NLU domain version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -2396,94 +1918,55 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Detect intent, entities, etc. in the submitted text using the specified NLU domain version.
-     
      - POST /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "output" : {
     "dialogActs" : [ {
-      "probability" : 1.3579000000000001069366817318950779736042022705078125,
-      "name" : "aeiou"
+      "probability" : 6.027456183070403,
+      "name" : "name"
+    }, {
+      "probability" : 6.027456183070403,
+      "name" : "name"
     } ],
     "intents" : [ {
       "entities" : [ {
-        "entityType" : "aeiou",
-        "probability" : 1.3579000000000001069366817318950779736042022705078125,
-        "name" : "aeiou",
-        "value" : {
-          "raw" : "aeiou",
-          "resolved" : "aeiou"
-        }
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
+      }, {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
       } ],
-      "probability" : 1.3579000000000001069366817318950779736042022705078125,
-      "name" : "aeiou"
+      "probability" : 0.8008281904610115,
+      "name" : "name"
+    }, {
+      "entities" : [ {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
+      }, {
+        "entityType" : "entityType",
+        "probability" : 6.027456183070403,
+        "name" : "name",
+        "value" : "{}"
+      } ],
+      "probability" : 0.8008281904610115,
+      "name" : "name"
     } ]
   },
   "input" : {
-    "text" : "aeiou"
+    "text" : "text"
   },
-  "version" : {
-    "intents" : [ {
-      "utterances" : [ {
-        "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
-        } ]
-      } ],
-      "name" : "aeiou",
-      "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
-      } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : {
-      "engineVersion" : "aeiou",
-      "lastPublishedVersion" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "draftVersion" : ""
-    },
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
-        } ]
-      }
-    } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
-  }
-}}]
+  "version" : "{}"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
@@ -2491,7 +1974,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<NluDetectionResponse> 
      */
-    open class func postLanguageunderstandingDomainVersionDetectWithRequestBuilder(domainId: String, domainVersionId: String, body: NluDetectionRequest) -> RequestBuilder<NluDetectionResponse> {
+    open class func postLanguageunderstandingDomainVersionDetectWithRequestBuilder(domainId: String, domainVersionId: String, body: NluDetectionRequest) -> RequestBuilder<NluDetectionResponse> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2500,10 +1983,8 @@ open class LanguageUnderstandingAPI {
         let domainVersionIdPostEscape = domainVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainVersionId}", with: domainVersionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluDetectionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2513,11 +1994,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Publish the draft NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -2543,11 +2020,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Publish the draft NLU Domain Version.
-     
      - POST /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2555,65 +2029,94 @@ open class LanguageUnderstandingAPI {
   "intents" : [ {
     "utterances" : [ {
       "segments" : [ {
-        "text" : "aeiou",
-        "entity" : {
-          "name" : "aeiou"
-        }
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
+      } ]
+    }, {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
       } ]
     } ],
-    "name" : "aeiou",
+    "name" : "name",
     "entityTypeBindings" : [ {
-      "entityType" : "aeiou",
-      "entityName" : "aeiou"
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    }, {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
     } ],
-    "entityNameReferences" : [ "aeiou" ]
-  } ],
-  "dateTrained" : "2000-01-23T04:56:07.000+0000",
-  "trainingStatus" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "published" : true,
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "entities" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou"
-  } ],
-  "domain" : {
-    "engineVersion" : "aeiou",
-    "lastPublishedVersion" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "draftVersion" : ""
-  },
-  "entityTypes" : [ {
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "mechanism" : {
-      "restricted" : true,
-      "type" : "aeiou",
-      "items" : [ {
-        "synonyms" : [ "aeiou" ],
-        "value" : "aeiou"
+    "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
+  }, {
+    "utterances" : [ {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
       } ]
-    }
+    }, {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
+      } ]
+    } ],
+    "name" : "name",
+    "entityTypeBindings" : [ {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    }, {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    } ],
+    "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   } ],
-  "id" : "aeiou",
-  "evaluationStatus" : "aeiou"
-}}]
+  "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+  "trainingStatus" : "Untrained",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "language" : "language",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "published" : true,
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "entities" : [ {
+    "name" : "name",
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "type" : "type"
+  } ],
+  "domain" : "{}",
+  "entityTypes" : [ {
+    "name" : "name",
+    "description" : "description",
+    "mechanism" : "{}"
+  }, {
+    "name" : "name",
+    "description" : "description",
+    "mechanism" : "{}"
+  } ],
+  "id" : "id",
+  "evaluationStatus" : "Unevaluated"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
 
      - returns: RequestBuilder<NluDomainVersion> 
      */
-    open class func postLanguageunderstandingDomainVersionPublishWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<NluDomainVersion> {
+    open class func postLanguageunderstandingDomainVersionPublishWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<NluDomainVersion> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2622,12 +2125,7 @@ open class LanguageUnderstandingAPI {
         let domainVersionIdPostEscape = domainVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainVersionId}", with: domainVersionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2638,11 +2136,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Train the draft NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -2668,80 +2162,106 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Train the draft NLU Domain Version.
-     
      - POST /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "message" : "aeiou",
+  "message" : "message",
   "version" : {
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
+        } ]
+      }, {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
         } ]
       } ],
-      "name" : "aeiou",
+      "name" : "name",
       "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      }, {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
       } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : {
-      "engineVersion" : "aeiou",
-      "lastPublishedVersion" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "draftVersion" : ""
-    },
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
+      "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
+    }, {
+      "utterances" : [ {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
         } ]
-      }
+      }, {
+        "segments" : [ {
+          "text" : "text",
+          "entity" : "{}"
+        }, {
+          "text" : "text",
+          "entity" : "{}"
+        } ]
+      } ],
+      "name" : "name",
+      "entityTypeBindings" : [ {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      }, {
+        "entityType" : "entityType",
+        "entityName" : "entityName"
+      } ],
+      "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
+    "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+    "trainingStatus" : "Untrained",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "language" : "language",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "published" : true,
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "entities" : [ {
+      "name" : "name",
+      "type" : "type"
+    }, {
+      "name" : "name",
+      "type" : "type"
+    } ],
+    "domain" : "{}",
+    "entityTypes" : [ {
+      "name" : "name",
+      "description" : "description",
+      "mechanism" : "{}"
+    }, {
+      "name" : "name",
+      "description" : "description",
+      "mechanism" : "{}"
+    } ],
+    "id" : "id",
+    "evaluationStatus" : "Unevaluated"
   }
-}}]
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
 
      - returns: RequestBuilder<NluDomainVersionTrainingResponse> 
      */
-    open class func postLanguageunderstandingDomainVersionTrainWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<NluDomainVersionTrainingResponse> {
+    open class func postLanguageunderstandingDomainVersionTrainWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<NluDomainVersionTrainingResponse> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2750,12 +2270,7 @@ open class LanguageUnderstandingAPI {
         let domainVersionIdPostEscape = domainVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainVersionId}", with: domainVersionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2766,11 +2281,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create an NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -2796,11 +2307,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Create an NLU Domain Version.
-     
      - POST /api/v2/languageunderstanding/domains/{domainId}/versions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2808,74 +2316,101 @@ open class LanguageUnderstandingAPI {
   "intents" : [ {
     "utterances" : [ {
       "segments" : [ {
-        "text" : "aeiou",
-        "entity" : {
-          "name" : "aeiou"
-        }
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
+      } ]
+    }, {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
       } ]
     } ],
-    "name" : "aeiou",
+    "name" : "name",
     "entityTypeBindings" : [ {
-      "entityType" : "aeiou",
-      "entityName" : "aeiou"
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    }, {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
     } ],
-    "entityNameReferences" : [ "aeiou" ]
-  } ],
-  "dateTrained" : "2000-01-23T04:56:07.000+0000",
-  "trainingStatus" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "published" : true,
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "entities" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou"
-  } ],
-  "domain" : {
-    "engineVersion" : "aeiou",
-    "lastPublishedVersion" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "draftVersion" : ""
-  },
-  "entityTypes" : [ {
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "mechanism" : {
-      "restricted" : true,
-      "type" : "aeiou",
-      "items" : [ {
-        "synonyms" : [ "aeiou" ],
-        "value" : "aeiou"
+    "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
+  }, {
+    "utterances" : [ {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
       } ]
-    }
+    }, {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
+      } ]
+    } ],
+    "name" : "name",
+    "entityTypeBindings" : [ {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    }, {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    } ],
+    "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   } ],
-  "id" : "aeiou",
-  "evaluationStatus" : "aeiou"
-}}]
+  "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+  "trainingStatus" : "Untrained",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "language" : "language",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "published" : true,
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "entities" : [ {
+    "name" : "name",
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "type" : "type"
+  } ],
+  "domain" : "{}",
+  "entityTypes" : [ {
+    "name" : "name",
+    "description" : "description",
+    "mechanism" : "{}"
+  }, {
+    "name" : "name",
+    "description" : "description",
+    "mechanism" : "{}"
+  } ],
+  "id" : "id",
+  "evaluationStatus" : "Unevaluated"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter body: (body) The NLU Domain Version to create. 
 
      - returns: RequestBuilder<NluDomainVersion> 
      */
-    open class func postLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: String, body: NluDomainVersion) -> RequestBuilder<NluDomainVersion> {
+    open class func postLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: String, body: NluDomainVersion) -> RequestBuilder<NluDomainVersion> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluDomainVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2884,10 +2419,7 @@ open class LanguageUnderstandingAPI {
     }
 
     
-    
-    
     /**
-     
      Create an NLU Domain.
      
      - parameter body: (body) The NLU Domain to create. 
@@ -2912,82 +2444,32 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Create an NLU Domain.
-     
      - POST /api/v2/languageunderstanding/domains
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "engineVersion" : "aeiou",
-  "lastPublishedVersion" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "draftVersion" : {
-    "intents" : [ {
-      "utterances" : [ {
-        "segments" : [ {
-          "text" : "aeiou",
-          "entity" : {
-            "name" : "aeiou"
-          }
-        } ]
-      } ],
-      "name" : "aeiou",
-      "entityTypeBindings" : [ {
-        "entityType" : "aeiou",
-        "entityName" : "aeiou"
-      } ],
-      "entityNameReferences" : [ "aeiou" ]
-    } ],
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "published" : true,
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "entities" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "domain" : "",
-    "entityTypes" : [ {
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "mechanism" : {
-        "restricted" : true,
-        "type" : "aeiou",
-        "items" : [ {
-          "synonyms" : [ "aeiou" ],
-          "value" : "aeiou"
-        } ]
-      }
-    } ],
-    "id" : "aeiou",
-    "evaluationStatus" : "aeiou"
-  }
-}}]
+  "engineVersion" : "engineVersion",
+  "lastPublishedVersion" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "language",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "draftVersion" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) The NLU Domain to create. 
 
      - returns: RequestBuilder<NluDomain> 
      */
-    open class func postLanguageunderstandingDomainsWithRequestBuilder(body: NluDomain) -> RequestBuilder<NluDomain> {
+    open class func postLanguageunderstandingDomainsWithRequestBuilder(body: NluDomain) -> RequestBuilder<NluDomain> {        
         let path = "/api/v2/languageunderstanding/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2997,11 +2479,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create a new draft resource.
      
      - parameter minerId: (path) Miner ID 
@@ -3027,61 +2505,44 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Create a new draft resource.
-     
      - POST /api/v2/languageunderstanding/miners/{minerId}/drafts
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "intents" : [ {
-    "utterances" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "utterances" : [ "utterances", "utterances" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "utterances" : [ "utterances", "utterances" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "dateCreated" : "2020-05-20T23:56:07.268",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2020-05-20T23:56:07.268",
-  "id" : "aeiou",
-  "miner" : {
-    "conversationsDateRangeStart" : "2019-06-20",
-    "selfUri" : "aeiou",
-    "language" : "aeiou",
-    "mediaType" : "aeiou",
-    "dateModified" : "2020-04-30T23:56:07.268",
-    "message" : "aeiou",
-    "conversationDataUploaded" : true,
-    "conversationsDateRangeEnd" : "2019-12-20",
-    "queueIds" : [ "aeiou" ],
-    "dateCreated" : "2020-04-29T17:12:06.613",
-    "dateCompleted" : "2020-05-20T23:56:07.268",
-    "dateTriggered" : "2020-04-30T23:56:07.268",
-    "latestDraftVersion" : "",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
-  }
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "miner" : "{}"
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
      - parameter body: (body) Details for creating draft resource 
 
      - returns: RequestBuilder<Draft> 
      */
-    open class func postLanguageunderstandingMinerDraftsWithRequestBuilder(minerId: String, body: Draft) -> RequestBuilder<Draft> {
+    open class func postLanguageunderstandingMinerDraftsWithRequestBuilder(minerId: String, body: Draft) -> RequestBuilder<Draft> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Draft>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3091,11 +2552,7 @@ open class LanguageUnderstandingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
      
      - parameter minerId: (path) Miner ID 
@@ -3121,61 +2578,43 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
-     
      - POST /api/v2/languageunderstanding/miners/{minerId}/execute
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "conversationsDateRangeStart" : "2019-06-20",
-  "selfUri" : "aeiou",
-  "language" : "aeiou",
-  "mediaType" : "aeiou",
-  "dateModified" : "2020-04-30T23:56:07.268",
-  "message" : "aeiou",
+  "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
+  "selfUri" : "https://openapi-generator.tech",
+  "language" : "en-us",
+  "mediaType" : "Chat",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "message" : "message",
   "conversationDataUploaded" : true,
-  "conversationsDateRangeEnd" : "2019-12-20",
-  "queueIds" : [ "aeiou" ],
-  "dateCreated" : "2020-04-29T17:12:06.613",
-  "dateCompleted" : "2020-05-20T23:56:07.268",
-  "dateTriggered" : "2020-04-30T23:56:07.268",
-  "latestDraftVersion" : {
-    "intents" : [ {
-      "utterances" : [ "aeiou" ],
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "dateCreated" : "2020-05-20T23:56:07.268",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dateModified" : "2020-05-20T23:56:07.268",
-    "id" : "aeiou",
-    "miner" : ""
-  },
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
+  "queueIds" : [ "queueIds", "queueIds" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+  "latestDraftVersion" : "{}",
+  "name" : "name",
+  "id" : "id",
+  "status" : "NotStarted"
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<Miner> 
      */
-    open class func postLanguageunderstandingMinerExecuteWithRequestBuilder(minerId: String, body: MinerExecuteRequest? = nil) -> RequestBuilder<Miner> {
+    open class func postLanguageunderstandingMinerExecuteWithRequestBuilder(minerId: String, body: MinerExecuteRequest? = nil) -> RequestBuilder<Miner> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/execute"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Miner>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3184,10 +2623,7 @@ open class LanguageUnderstandingAPI {
     }
 
     
-    
-    
     /**
-     
      Create a unique miner.
      
      - parameter body: (body) Details for creating a new miner resource. 
@@ -3212,57 +2648,39 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Create a unique miner.
-     
      - POST /api/v2/languageunderstanding/miners
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "conversationsDateRangeStart" : "2019-06-20",
-  "selfUri" : "aeiou",
-  "language" : "aeiou",
-  "mediaType" : "aeiou",
-  "dateModified" : "2020-04-30T23:56:07.268",
-  "message" : "aeiou",
+  "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
+  "selfUri" : "https://openapi-generator.tech",
+  "language" : "en-us",
+  "mediaType" : "Chat",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "message" : "message",
   "conversationDataUploaded" : true,
-  "conversationsDateRangeEnd" : "2019-12-20",
-  "queueIds" : [ "aeiou" ],
-  "dateCreated" : "2020-04-29T17:12:06.613",
-  "dateCompleted" : "2020-05-20T23:56:07.268",
-  "dateTriggered" : "2020-04-30T23:56:07.268",
-  "latestDraftVersion" : {
-    "intents" : [ {
-      "utterances" : [ "aeiou" ],
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "dateCreated" : "2020-05-20T23:56:07.268",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dateModified" : "2020-05-20T23:56:07.268",
-    "id" : "aeiou",
-    "miner" : ""
-  },
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
+  "queueIds" : [ "queueIds", "queueIds" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+  "latestDraftVersion" : "{}",
+  "name" : "name",
+  "id" : "id",
+  "status" : "NotStarted"
+}, statusCode=200}]
      
      - parameter body: (body) Details for creating a new miner resource. 
 
      - returns: RequestBuilder<Miner> 
      */
-    open class func postLanguageunderstandingMinersWithRequestBuilder(body: Miner) -> RequestBuilder<Miner> {
+    open class func postLanguageunderstandingMinersWithRequestBuilder(body: Miner) -> RequestBuilder<Miner> {        
         let path = "/api/v2/languageunderstanding/miners"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Miner>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3273,12 +2691,7 @@ open class LanguageUnderstandingAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update an NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -3305,11 +2718,8 @@ open class LanguageUnderstandingAPI {
     }
 
     /**
-     
      Update an NLU Domain Version.
-     
      - PUT /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3317,58 +2727,87 @@ open class LanguageUnderstandingAPI {
   "intents" : [ {
     "utterances" : [ {
       "segments" : [ {
-        "text" : "aeiou",
-        "entity" : {
-          "name" : "aeiou"
-        }
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
+      } ]
+    }, {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
       } ]
     } ],
-    "name" : "aeiou",
+    "name" : "name",
     "entityTypeBindings" : [ {
-      "entityType" : "aeiou",
-      "entityName" : "aeiou"
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    }, {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
     } ],
-    "entityNameReferences" : [ "aeiou" ]
-  } ],
-  "dateTrained" : "2000-01-23T04:56:07.000+0000",
-  "trainingStatus" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "published" : true,
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "entities" : [ {
-    "name" : "aeiou",
-    "type" : "aeiou"
-  } ],
-  "domain" : {
-    "engineVersion" : "aeiou",
-    "lastPublishedVersion" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "draftVersion" : ""
-  },
-  "entityTypes" : [ {
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "mechanism" : {
-      "restricted" : true,
-      "type" : "aeiou",
-      "items" : [ {
-        "synonyms" : [ "aeiou" ],
-        "value" : "aeiou"
+    "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
+  }, {
+    "utterances" : [ {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
       } ]
-    }
+    }, {
+      "segments" : [ {
+        "text" : "text",
+        "entity" : "{}"
+      }, {
+        "text" : "text",
+        "entity" : "{}"
+      } ]
+    } ],
+    "name" : "name",
+    "entityTypeBindings" : [ {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    }, {
+      "entityType" : "entityType",
+      "entityName" : "entityName"
+    } ],
+    "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   } ],
-  "id" : "aeiou",
-  "evaluationStatus" : "aeiou"
-}}]
+  "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+  "trainingStatus" : "Untrained",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "language" : "language",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "published" : true,
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "entities" : [ {
+    "name" : "name",
+    "type" : "type"
+  }, {
+    "name" : "name",
+    "type" : "type"
+  } ],
+  "domain" : "{}",
+  "entityTypes" : [ {
+    "name" : "name",
+    "description" : "description",
+    "mechanism" : "{}"
+  }, {
+    "name" : "name",
+    "description" : "description",
+    "mechanism" : "{}"
+  } ],
+  "id" : "id",
+  "evaluationStatus" : "Unevaluated"
+}, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
@@ -3376,7 +2815,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<NluDomainVersion> 
      */
-    open class func putLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String, body: NluDomainVersion) -> RequestBuilder<NluDomainVersion> {
+    open class func putLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String, body: NluDomainVersion) -> RequestBuilder<NluDomainVersion> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3385,10 +2824,8 @@ open class LanguageUnderstandingAPI {
         let domainVersionIdPostEscape = domainVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainVersionId}", with: domainVersionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluDomainVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -15,9 +15,7 @@ public class Journey: Codable {
     public var patterns: [JourneyPattern]?
 
     public init(patterns: [JourneyPattern]?) {
-        
         self.patterns = patterns
-        
     }
 
 

@@ -15,9 +15,7 @@ public class ConversationContentCarousel: Codable {
     public var cards: [ConversationContentCard]?
 
     public init(cards: [ConversationContentCard]?) {
-        
         self.cards = cards
-        
     }
 
 

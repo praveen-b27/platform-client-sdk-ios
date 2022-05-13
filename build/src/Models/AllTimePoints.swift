@@ -19,13 +19,9 @@ public class AllTimePoints: Codable {
     public var allTimePoints: Int64?
 
     public init(user: UserReference?, dateEndWorkday: Date?, allTimePoints: Int64?) {
-        
         self.user = user
-        
         self.dateEndWorkday = dateEndWorkday
-        
         self.allTimePoints = allTimePoints
-        
     }
 
 

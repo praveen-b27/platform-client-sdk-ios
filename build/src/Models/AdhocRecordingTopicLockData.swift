@@ -16,13 +16,9 @@ public class AdhocRecordingTopicLockData: Codable {
     public var dateExpires: Date?
 
     public init(lockedBy: AdhocRecordingTopicUserData?, dateCreated: Date?, dateExpires: Date?) {
-        
         self.lockedBy = lockedBy
-        
         self.dateCreated = dateCreated
-        
         self.dateExpires = dateExpires
-        
     }
 
 

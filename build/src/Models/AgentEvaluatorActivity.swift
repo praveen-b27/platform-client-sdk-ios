@@ -23,23 +23,14 @@ public class AgentEvaluatorActivity: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, agent: User?, evaluator: User?, numEvaluations: Int?, averageEvaluationScore: Int?, numEvaluationsWithoutViewPermission: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.agent = agent
-        
         self.evaluator = evaluator
-        
         self.numEvaluations = numEvaluations
-        
         self.averageEvaluationScore = averageEvaluationScore
-        
         self.numEvaluationsWithoutViewPermission = numEvaluationsWithoutViewPermission
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

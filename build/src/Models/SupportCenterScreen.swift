@@ -23,11 +23,8 @@ public class SupportCenterScreen: Codable {
     public var moduleSettings: [SupportCenterModuleSetting]?
 
     public init(type: ModelType?, moduleSettings: [SupportCenterModuleSetting]?) {
-        
         self.type = type
-        
         self.moduleSettings = moduleSettings
-        
     }
 
 

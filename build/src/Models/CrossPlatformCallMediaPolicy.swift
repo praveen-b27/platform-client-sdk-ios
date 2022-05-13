@@ -17,11 +17,8 @@ public class CrossPlatformCallMediaPolicy: Codable {
     public var conditions: CallMediaPolicyConditions?
 
     public init(actions: CrossPlatformPolicyActions?, conditions: CallMediaPolicyConditions?) {
-        
         self.actions = actions
-        
         self.conditions = conditions
-        
     }
 
 

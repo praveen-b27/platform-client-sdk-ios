@@ -35,15 +35,10 @@ public class Criteria: Codable {
     public var _operator: Operator?
 
     public init(key: String?, values: [String]?, shouldIgnoreCase: Bool?, _operator: Operator?) {
-        
         self.key = key
-        
         self.values = values
-        
         self.shouldIgnoreCase = shouldIgnoreCase
-        
         self._operator = _operator
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

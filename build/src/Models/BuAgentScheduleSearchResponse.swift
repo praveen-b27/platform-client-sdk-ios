@@ -19,13 +19,9 @@ public class BuAgentScheduleSearchResponse: Codable {
     public var fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?
 
     public init(user: UserReference?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?) {
-        
         self.user = user
-        
         self.shifts = shifts
-        
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
-        
     }
 
 

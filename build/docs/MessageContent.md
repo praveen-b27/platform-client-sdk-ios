@@ -2,7 +2,7 @@
 title: MessageContent
 ---
 ## MessageContent
-Message content element. If contentType = \&quot;Attachment\&quot; only one item is allowed.
+Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed.
 
 ## Properties
 

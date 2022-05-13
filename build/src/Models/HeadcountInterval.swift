@@ -18,11 +18,8 @@ public class HeadcountInterval: Codable {
     public var value: Double?
 
     public init(interval: Date?, value: Double?) {
-        
         self.interval = interval
-        
         self.value = value
-        
     }
 
 

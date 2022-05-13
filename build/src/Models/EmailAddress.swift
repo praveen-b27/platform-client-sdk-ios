@@ -15,11 +15,8 @@ public class EmailAddress: Codable {
     public var name: String?
 
     public init(email: String?, name: String?) {
-        
         self.email = email
-        
         self.name = name
-        
     }
 
 

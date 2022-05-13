@@ -46,35 +46,20 @@ public class AvailableTopic: Codable {
     public var topicParameters: [String]?
 
     public init(_description: String?, _id: String?, permissionDetails: [PermissionDetails]?, requiresPermissions: [String]?, requiresDivisionPermissions: Bool?, requiresAnyValidator: Bool?, enforced: Bool?, visibility: Visibility?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?, publicApiTemplateUriPaths: [String]?, topicParameters: [String]?) {
-        
         self._description = _description
-        
         self._id = _id
-        
         self.permissionDetails = permissionDetails
-        
         self.requiresPermissions = requiresPermissions
-        
         self.requiresDivisionPermissions = requiresDivisionPermissions
-        
         self.requiresAnyValidator = requiresAnyValidator
-        
         self.enforced = enforced
-        
         self.visibility = visibility
-        
         self.schema = schema
-        
         self.requiresCurrentUser = requiresCurrentUser
-        
         self.requiresCurrentUserOrPermission = requiresCurrentUserOrPermission
-        
         self.transports = transports
-        
         self.publicApiTemplateUriPaths = publicApiTemplateUriPaths
-        
         self.topicParameters = topicParameters
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

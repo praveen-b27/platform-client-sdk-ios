@@ -21,15 +21,10 @@ public class BuAgentScheduleHistoryDroppedChange: Codable {
     public var deletes: BuAgentScheduleHistoryDeletedChange?
 
     public init(metadata: BuAgentScheduleHistoryChangeMetadata?, shiftIds: [String]?, fullDayTimeOffMarkerDates: [Date]?, deletes: BuAgentScheduleHistoryDeletedChange?) {
-        
         self.metadata = metadata
-        
         self.shiftIds = shiftIds
-        
         self.fullDayTimeOffMarkerDates = fullDayTimeOffMarkerDates
-        
         self.deletes = deletes
-        
     }
 
 

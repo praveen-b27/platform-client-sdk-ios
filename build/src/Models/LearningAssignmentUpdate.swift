@@ -24,11 +24,8 @@ public class LearningAssignmentUpdate: Codable {
     public var assessment: LearningAssessment?
 
     public init(state: State?, assessment: LearningAssessment?) {
-        
         self.state = state
-        
         self.assessment = assessment
-        
     }
 
 

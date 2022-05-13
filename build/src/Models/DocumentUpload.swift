@@ -19,15 +19,10 @@ public class DocumentUpload: Codable {
     public var tagIds: [String]?
 
     public init(name: String?, workspace: DomainEntityRef?, tags: [String]?, tagIds: [String]?) {
-        
         self.name = name
-        
         self.workspace = workspace
-        
         self.tags = tags
-        
         self.tagIds = tagIds
-        
     }
 
 

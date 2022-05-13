@@ -19,13 +19,9 @@ public class PatchPredictorRequest: Codable {
     public var workloadBalancingConfig: PredictorWorkloadBalancing?
 
     public init(routingTimeoutSeconds: Int?, schedule: PredictorSchedule?, workloadBalancingConfig: PredictorWorkloadBalancing?) {
-        
         self.routingTimeoutSeconds = routingTimeoutSeconds
-        
         self.schedule = schedule
-        
         self.workloadBalancingConfig = workloadBalancingConfig
-        
     }
 
 

@@ -11,49 +11,38 @@ import Foundation
 
 public class JourneyGeolocation: Codable {
 
-    /** Geolocation&#39;s ISO 3166-1 alpha-2 country code. */
+    /** Geolocation's ISO 3166-1 alpha-2 country code. */
     public var country: String?
-    /** Geolocation&#39;s country name. */
+    /** Geolocation's country name. */
     public var countryName: String?
-    /** Geolocation&#39;s latitude. */
+    /** Geolocation's latitude. */
     public var latitude: Double?
-    /** Geolocation&#39;s longitude. */
+    /** Geolocation's longitude. */
     public var longitude: Double?
-    /** Geolocation&#39;s locality or city. */
+    /** Geolocation's locality or city. */
     public var locality: String?
-    /** Geolocation&#39;s postal code or ZIP code. */
+    /** Geolocation's postal code or ZIP code. */
     public var postalCode: String?
-    /** Geolocation&#39;s ISO-3166-2 region code. */
+    /** Geolocation's ISO-3166-2 region code. */
     public var region: String?
-    /** Geolocation&#39;s region name. */
+    /** Geolocation's region name. */
     public var regionName: String?
     /** The source that was used to determine the geolocation information. */
     public var source: String?
-    /** Geolocation&#39;s timezone. */
+    /** Geolocation's timezone. */
     public var timezone: String?
 
     public init(country: String?, countryName: String?, latitude: Double?, longitude: Double?, locality: String?, postalCode: String?, region: String?, regionName: String?, source: String?, timezone: String?) {
-        
         self.country = country
-        
         self.countryName = countryName
-        
         self.latitude = latitude
-        
         self.longitude = longitude
-        
         self.locality = locality
-        
         self.postalCode = postalCode
-        
         self.region = region
-        
         self.regionName = regionName
-        
         self.source = source
-        
         self.timezone = timezone
-        
     }
 
 

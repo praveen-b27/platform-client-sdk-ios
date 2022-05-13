@@ -21,11 +21,8 @@ public class ConversationEventTyping: Codable {
     public var duration: Int64?
 
     public init(type: ModelType?, duration: Int64?) {
-        
         self.type = type
-        
         self.duration = duration
-        
     }
 
 

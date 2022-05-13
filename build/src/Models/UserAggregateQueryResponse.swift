@@ -16,11 +16,8 @@ public class UserAggregateQueryResponse: Codable {
     public var results: [UserAggregateDataContainer]?
 
     public init(systemToOrganizationMappings: [String:[String]]?, results: [UserAggregateDataContainer]?) {
-        
         self.systemToOrganizationMappings = systemToOrganizationMappings
-        
         self.results = results
-        
     }
 
 

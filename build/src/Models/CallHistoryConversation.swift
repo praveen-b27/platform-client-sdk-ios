@@ -22,7 +22,7 @@ public class CallHistoryConversation: Codable {
     public var participants: [CallHistoryParticipant]?
     /** The direction of the call relating to the current user */
     public var direction: Direction?
-    /** Did the call end in the current user&#39;s voicemail */
+    /** Did the call end in the current user's voicemail */
     public var wentToVoicemail: Bool?
     /** Did the user not answer this conversation */
     public var missedCall: Bool?
@@ -42,33 +42,19 @@ public class CallHistoryConversation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, participants: [CallHistoryParticipant]?, direction: Direction?, wentToVoicemail: Bool?, missedCall: Bool?, startTime: Date?, wasConference: Bool?, wasCallback: Bool?, hadScreenShare: Bool?, hadCobrowse: Bool?, wasOutboundCampaign: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.participants = participants
-        
         self.direction = direction
-        
         self.wentToVoicemail = wentToVoicemail
-        
         self.missedCall = missedCall
-        
         self.startTime = startTime
-        
         self.wasConference = wasConference
-        
         self.wasCallback = wasCallback
-        
         self.hadScreenShare = hadScreenShare
-        
         self.hadCobrowse = hadCobrowse
-        
         self.wasOutboundCampaign = wasOutboundCampaign
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

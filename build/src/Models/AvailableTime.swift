@@ -33,17 +33,11 @@ public class AvailableTime: Codable {
     public var wfmSchedule: WfmScheduleReference?
 
     public init(dateStart: Date?, lengthInMinutes: Int?, isPaid: Bool?, activityCategory: ActivityCategory?, wfmSchedule: WfmScheduleReference?) {
-        
         self.dateStart = dateStart
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.isPaid = isPaid
-        
         self.activityCategory = activityCategory
-        
         self.wfmSchedule = wfmSchedule
-        
     }
 
 

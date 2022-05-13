@@ -27,21 +27,13 @@ public class GuestMemberInfo: Codable {
     public var customFields: [String:String]?
 
     public init(displayName: String?, firstName: String?, lastName: String?, email: String?, phoneNumber: String?, avatarImageUrl: String?, customFields: [String:String]?) {
-        
         self.displayName = displayName
-        
         self.firstName = firstName
-        
         self.lastName = lastName
-        
         self.email = email
-        
         self.phoneNumber = phoneNumber
-        
         self.avatarImageUrl = avatarImageUrl
-        
         self.customFields = customFields
-        
     }
 
 

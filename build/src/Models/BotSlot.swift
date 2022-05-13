@@ -18,11 +18,8 @@ public class BotSlot: Codable {
     public var type: String?
 
     public init(name: String?, type: String?) {
-        
         self.name = name
-        
         self.type = type
-        
     }
 
 

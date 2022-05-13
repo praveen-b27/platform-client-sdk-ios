@@ -38,27 +38,16 @@ public class SearchRequest: Codable {
     public var aggregations: [SearchAggregation]?
 
     public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, returnFields: [String]?, expand: [String]?, types: [String]?, query: [SearchCriteria]?, aggregations: [SearchAggregation]?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sort = sort
-        
         self.returnFields = returnFields
-        
         self.expand = expand
-        
         self.types = types
-        
         self.query = query
-        
         self.aggregations = aggregations
-        
     }
 
 

@@ -20,13 +20,9 @@ public class DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone: Codable
     public var latestCallableTime: String?
 
     public init(timeZoneId: String?, earliestCallableTime: String?, latestCallableTime: String?) {
-        
         self.timeZoneId = timeZoneId
-        
         self.earliestCallableTime = earliestCallableTime
-        
         self.latestCallableTime = latestCallableTime
-        
     }
 
 

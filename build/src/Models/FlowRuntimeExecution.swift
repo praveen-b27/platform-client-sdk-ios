@@ -28,7 +28,7 @@ public class FlowRuntimeExecution: Codable {
     public var flowVersion: FlowVersion?
     /** The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateLaunched: Date?
-    /** The flow&#39;s running status, which indicates whether the flow is running normally or completed, etc. */
+    /** The flow's running status, which indicates whether the flow is running normally or completed, etc. */
     public var status: Status?
     /** The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCompleted: Date?
@@ -36,7 +36,7 @@ public class FlowRuntimeExecution: Codable {
     public var completionReason: String?
     /** Additional information if the flow is in error */
     public var flowErrorInfo: ErrorBody?
-    /** List of the flow&#39;s output variables, if any. Output variables are only supplied for Completed flows. */
+    /** List of the flow's output variables, if any. Output variables are only supplied for Completed flows. */
     public var outputData: [String:JSON]?
     /** The conversation to which this Flow execution is related */
     public var conversation: DomainEntityRef?
@@ -44,29 +44,17 @@ public class FlowRuntimeExecution: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, flowVersion: FlowVersion?, dateLaunched: Date?, status: Status?, dateCompleted: Date?, completionReason: String?, flowErrorInfo: ErrorBody?, outputData: [String:JSON]?, conversation: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.flowVersion = flowVersion
-        
         self.dateLaunched = dateLaunched
-        
         self.status = status
-        
         self.dateCompleted = dateCompleted
-        
         self.completionReason = completionReason
-        
         self.flowErrorInfo = flowErrorInfo
-        
         self.outputData = outputData
-        
         self.conversation = conversation
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

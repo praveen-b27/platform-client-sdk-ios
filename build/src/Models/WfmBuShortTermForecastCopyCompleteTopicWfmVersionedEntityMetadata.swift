@@ -16,13 +16,9 @@ public class WfmBuShortTermForecastCopyCompleteTopicWfmVersionedEntityMetadata: 
     public var dateModified: Date?
 
     public init(version: Int?, modifiedBy: WfmBuShortTermForecastCopyCompleteTopicUserReference?, dateModified: Date?) {
-        
         self.version = version
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
     }
 
 

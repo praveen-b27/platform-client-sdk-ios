@@ -19,11 +19,8 @@ public class WidgetClientConfigV1: Codable {
     public var authenticationUrl: String?
 
     public init(webChatSkin: WebChatSkin?, authenticationUrl: String?) {
-        
         self.webChatSkin = webChatSkin
-        
         self.authenticationUrl = authenticationUrl
-        
     }
 
 

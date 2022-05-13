@@ -15,9 +15,7 @@ public class ColumnStatus: Codable {
     public var contactable: Bool?
 
     public init(contactable: Bool?) {
-        
         self.contactable = contactable
-        
     }
 
 

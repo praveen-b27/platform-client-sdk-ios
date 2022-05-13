@@ -31,17 +31,11 @@ public class PatchAction: Codable {
     public var openActionFields: OpenActionFields?
 
     public init(mediaType: MediaType?, actionTemplate: ActionMapActionTemplate?, architectFlowFields: ArchitectFlowFields?, webMessagingOfferFields: WebMessagingOfferFields?, openActionFields: OpenActionFields?) {
-        
         self.mediaType = mediaType
-        
         self.actionTemplate = actionTemplate
-        
         self.architectFlowFields = architectFlowFields
-        
         self.webMessagingOfferFields = webMessagingOfferFields
-        
         self.openActionFields = openActionFields
-        
     }
 
 

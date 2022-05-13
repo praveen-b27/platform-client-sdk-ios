@@ -15,7 +15,7 @@ public class WritableDialerContact: Codable {
     public var _id: String?
     /** The identifier of the contact list containing this contact. */
     public var contactListId: String?
-    /** An ordered map of the contact&#39;s columns and corresponding values. */
+    /** An ordered map of the contact's columns and corresponding values. */
     public var data: [String:JSON]?
     /** A map of SMS records for the contact phone columns. */
     public var latestSmsEvaluations: [String:MessageEvaluation]?
@@ -25,19 +25,12 @@ public class WritableDialerContact: Codable {
     public var phoneNumberStatus: [String:PhoneNumberStatus]?
 
     public init(_id: String?, contactListId: String?, data: [String:JSON]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?) {
-        
         self._id = _id
-        
         self.contactListId = contactListId
-        
         self.data = data
-        
         self.latestSmsEvaluations = latestSmsEvaluations
-        
         self.callable = callable
-        
         self.phoneNumberStatus = phoneNumberStatus
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

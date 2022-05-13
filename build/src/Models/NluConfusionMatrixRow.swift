@@ -17,11 +17,8 @@ public class NluConfusionMatrixRow: Codable {
     public var columns: [NluConfusionMatrixColumn]?
 
     public init(name: String?, columns: [NluConfusionMatrixColumn]?) {
-        
         self.name = name
-        
         self.columns = columns
-        
     }
 
 

@@ -19,13 +19,9 @@ public class Transcripts: Codable {
     public var doesNotContain: [String]?
 
     public init(exactMatch: [String]?, contains: [String]?, doesNotContain: [String]?) {
-        
         self.exactMatch = exactMatch
-        
         self.contains = contains
-        
         self.doesNotContain = doesNotContain
-        
     }
 
 

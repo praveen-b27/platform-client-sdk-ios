@@ -18,11 +18,8 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationEventTy
     public var duration: Int?
 
     public init(type: ModelType?, duration: Int?) {
-        
         self.type = type
-        
         self.duration = duration
-        
     }
 
 

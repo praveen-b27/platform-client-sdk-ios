@@ -29,21 +29,13 @@ public class ProgramJob: Codable {
     public var selfUri: String?
 
     public init(_id: String?, state: State?, programs: [BaseProgramEntity]?, createdBy: AddressableEntityRef?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.programs = programs
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

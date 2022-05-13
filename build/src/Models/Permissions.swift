@@ -15,9 +15,7 @@ public class Permissions: Codable {
     public var ids: [String]?
 
     public init(ids: [String]?) {
-        
         self.ids = ids
-        
     }
 
 

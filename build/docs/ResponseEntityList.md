@@ -8,7 +8,7 @@ Query result list
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ModelResponse]**](ModelResponse.html) |  | [optional] |
+| **entities** | [**[ModelResponse]**](Response.html) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |

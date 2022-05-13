@@ -40,7 +40,7 @@ public class PhoneStatus: Codable {
     public var provision: ProvisionInfo?
     /** A list of LineStatus information for each of the lines of this phone */
     public var lineStatuses: [LineStatus]?
-    /** The phone status&#39;s edge assignment type. */
+    /** The phone status's edge assignment type. */
     public var phoneAssignmentToEdgeType: PhoneAssignmentToEdgeType?
     /** The URI of the edge that provided this status information. */
     public var edge: DomainEntityRef?
@@ -48,27 +48,16 @@ public class PhoneStatus: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, operationalStatus: OperationalStatus?, edgesStatus: EdgesStatus?, eventCreationTime: String?, provision: ProvisionInfo?, lineStatuses: [LineStatus]?, phoneAssignmentToEdgeType: PhoneAssignmentToEdgeType?, edge: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.operationalStatus = operationalStatus
-        
         self.edgesStatus = edgesStatus
-        
         self.eventCreationTime = eventCreationTime
-        
         self.provision = provision
-        
         self.lineStatuses = lineStatuses
-        
         self.phoneAssignmentToEdgeType = phoneAssignmentToEdgeType
-        
         self.edge = edge
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

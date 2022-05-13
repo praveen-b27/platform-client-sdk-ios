@@ -28,11 +28,8 @@ public class LearningAssignmentAggregateQueryResponseMetric: Codable {
     public var stats: LearningAssignmentAggregateQueryResponseStats?
 
     public init(metric: Metric?, stats: LearningAssignmentAggregateQueryResponseStats?) {
-        
         self.metric = metric
-        
         self.stats = stats
-        
     }
 
 

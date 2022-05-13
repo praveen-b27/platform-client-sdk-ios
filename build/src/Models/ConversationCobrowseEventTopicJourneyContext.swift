@@ -16,13 +16,9 @@ public class ConversationCobrowseEventTopicJourneyContext: Codable {
     public var triggeringAction: ConversationCobrowseEventTopicJourneyAction?
 
     public init(customer: ConversationCobrowseEventTopicJourneyCustomer?, customerSession: ConversationCobrowseEventTopicJourneyCustomerSession?, triggeringAction: ConversationCobrowseEventTopicJourneyAction?) {
-        
         self.customer = customer
-        
         self.customerSession = customerSession
-        
         self.triggeringAction = triggeringAction
-        
     }
 
 

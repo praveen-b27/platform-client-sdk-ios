@@ -23,7 +23,7 @@ public class ScheduleGroup: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -53,41 +53,23 @@ public class ScheduleGroup: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, timeZone: String?, openSchedules: [DomainEntityRef]?, closedSchedules: [DomainEntityRef]?, holidaySchedules: [DomainEntityRef]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.timeZone = timeZone
-        
         self.openSchedules = openSchedules
-        
         self.closedSchedules = closedSchedules
-        
         self.holidaySchedules = holidaySchedules
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -15,11 +15,8 @@ public class StatEventFlowOutcomeTopicStatsNotification: Codable {
     public var data: [StatEventFlowOutcomeTopicIntervalMetrics]?
 
     public init(group: [String:String]?, data: [StatEventFlowOutcomeTopicIntervalMetrics]?) {
-        
         self.group = group
-        
         self.data = data
-        
     }
 
 

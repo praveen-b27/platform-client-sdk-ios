@@ -50,27 +50,16 @@ public class OpenNormalizedMessage: Codable {
     public var metadata: [String:String]?
 
     public init(_id: String?, channel: OpenMessagingChannel?, type: ModelType?, text: String?, content: [OpenMessageContent]?, status: Status?, reasons: [Reason]?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
-        
         self._id = _id
-        
         self.channel = channel
-        
         self.type = type
-        
         self.text = text
-        
         self.content = content
-        
         self.status = status
-        
         self.reasons = reasons
-        
         self.isFinalReceipt = isFinalReceipt
-        
         self.direction = direction
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

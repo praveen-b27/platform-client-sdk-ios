@@ -24,29 +24,17 @@ public class DivsPermittedEntityListing: Codable {
     public var pageCount: Int?
 
     public init(entities: [AuthzDivision]?, pageSize: Int?, pageNumber: Int?, total: Int64?, allDivsPermitted: Bool?, lastUri: String?, firstUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
-        
         self.entities = entities
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.total = total
-        
         self.allDivsPermitted = allDivsPermitted
-        
         self.lastUri = lastUri
-        
         self.firstUri = firstUri
-        
         self.selfUri = selfUri
-        
         self.previousUri = previousUri
-        
         self.nextUri = nextUri
-        
         self.pageCount = pageCount
-        
     }
 
 

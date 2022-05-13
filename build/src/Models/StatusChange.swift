@@ -52,19 +52,12 @@ public class StatusChange: Codable {
     public var rejectReason: RejectReason?
 
     public init(dateStatusChanged: Date?, status: Status?, previousStatus: PreviousStatus?, message: String?, changedBy: String?, rejectReason: RejectReason?) {
-        
         self.dateStatusChanged = dateStatusChanged
-        
         self.status = status
-        
         self.previousStatus = previousStatus
-        
         self.message = message
-        
         self.changedBy = changedBy
-        
         self.rejectReason = rejectReason
-        
     }
 
 

@@ -32,21 +32,13 @@ public class UpdateTimeOffPlanRequest: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(name: String?, activityCodeIds: SetWrapperString?, timeOffLimitIds: SetWrapperString?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, active: Bool?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.name = name
-        
         self.activityCodeIds = activityCodeIds
-        
         self.timeOffLimitIds = timeOffLimitIds
-        
         self.autoApprovalRule = autoApprovalRule
-        
         self.daysBeforeStartToExpireFromWaitlist = daysBeforeStartToExpireFromWaitlist
-        
         self.active = active
-        
         self.metadata = metadata
-        
     }
 
 

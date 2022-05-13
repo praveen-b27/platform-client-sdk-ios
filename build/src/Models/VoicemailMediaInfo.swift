@@ -18,15 +18,10 @@ public class VoicemailMediaInfo: Codable {
     public var waveformData: [Float]?
 
     public init(_id: String?, mediaFileUri: String?, mediaImageUri: String?, waveformData: [Float]?) {
-        
         self._id = _id
-        
         self.mediaFileUri = mediaFileUri
-        
         self.mediaImageUri = mediaImageUri
-        
         self.waveformData = waveformData
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

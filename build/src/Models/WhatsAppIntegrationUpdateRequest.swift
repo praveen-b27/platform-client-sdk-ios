@@ -38,25 +38,15 @@ public class WhatsAppIntegrationUpdateRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, action: Action?, authenticationMethod: AuthenticationMethod?, confirmationCode: String?, phoneNumber: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.supportedContent = supportedContent
-        
         self.messagingSetting = messagingSetting
-        
         self.action = action
-        
         self.authenticationMethod = authenticationMethod
-        
         self.confirmationCode = confirmationCode
-        
         self.phoneNumber = phoneNumber
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

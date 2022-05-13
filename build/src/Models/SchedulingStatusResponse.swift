@@ -24,23 +24,17 @@ public class SchedulingStatusResponse: Codable {
     public var status: Status?
     /** If the request could not be properly processed, error details will be given here. */
     public var errorDetails: [SchedulingProcessingError]?
-    /** The uri of the scheduling result. It has a value if the status is &#39;Success&#39;. */
+    /** The uri of the scheduling result. It has a value if the status is 'Success'. */
     public var schedulingResultUri: String?
     /** The percentage of the job that is complete. */
     public var percentComplete: Int?
 
     public init(_id: String?, status: Status?, errorDetails: [SchedulingProcessingError]?, schedulingResultUri: String?, percentComplete: Int?) {
-        
         self._id = _id
-        
         self.status = status
-        
         self.errorDetails = errorDetails
-        
         self.schedulingResultUri = schedulingResultUri
-        
         self.percentComplete = percentComplete
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -33,25 +33,15 @@ public class DialerContactlistfilterConfigChangeContactListFilter: Codable {
     public var version: Int?
 
     public init(contactList: DialerContactlistfilterConfigChangeUriReference?, contactListColumns: [String]?, clauses: [DialerContactlistfilterConfigChangeFilterClause]?, filterType: FilterType?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.contactList = contactList
-        
         self.contactListColumns = contactListColumns
-        
         self.clauses = clauses
-        
         self.filterType = filterType
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

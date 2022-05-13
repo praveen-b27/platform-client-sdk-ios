@@ -17,11 +17,8 @@ public class WeekShiftTradeResponse: Codable {
     public var matchReview: ShiftTradeMatchReviewResponse?
 
     public init(trade: ShiftTradeResponse?, matchReview: ShiftTradeMatchReviewResponse?) {
-        
         self.trade = trade
-        
         self.matchReview = matchReview
-        
     }
 
 

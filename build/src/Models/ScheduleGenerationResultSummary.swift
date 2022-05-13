@@ -21,15 +21,10 @@ public class ScheduleGenerationResultSummary: Codable {
     public var messageSeverityCounts: [SchedulerMessageSeverityCount]?
 
     public init(failed: Bool?, runId: String?, messageCount: Int?, messageSeverityCounts: [SchedulerMessageSeverityCount]?) {
-        
         self.failed = failed
-        
         self.runId = runId
-        
         self.messageCount = messageCount
-        
         self.messageSeverityCounts = messageSeverityCounts
-        
     }
 
 

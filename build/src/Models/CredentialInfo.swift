@@ -24,19 +24,12 @@ public class CredentialInfo: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, createdDate: Date?, modifiedDate: Date?, type: CredentialType?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
         self.type = type
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

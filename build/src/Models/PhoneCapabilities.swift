@@ -29,25 +29,15 @@ public class PhoneCapabilities: Codable {
     public var cdm: Bool?
 
     public init(provisions: Bool?, registers: Bool?, dualRegisters: Bool?, hardwareIdType: String?, allowReboot: Bool?, noRebalance: Bool?, noCloudProvisioning: Bool?, mediaCodecs: [MediaCodecs]?, cdm: Bool?) {
-        
         self.provisions = provisions
-        
         self.registers = registers
-        
         self.dualRegisters = dualRegisters
-        
         self.hardwareIdType = hardwareIdType
-        
         self.allowReboot = allowReboot
-        
         self.noRebalance = noRebalance
-        
         self.noCloudProvisioning = noCloudProvisioning
-        
         self.mediaCodecs = mediaCodecs
-        
         self.cdm = cdm
-        
     }
 
 

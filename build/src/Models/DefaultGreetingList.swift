@@ -32,27 +32,16 @@ public class DefaultGreetingList: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, owner: GreetingOwner?, ownerType: OwnerType?, greetings: [String:Greeting]?, createdDate: Date?, createdBy: String?, modifiedDate: Date?, modifiedBy: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.owner = owner
-        
         self.ownerType = ownerType
-        
         self.greetings = greetings
-        
         self.createdDate = createdDate
-        
         self.createdBy = createdBy
-        
         self.modifiedDate = modifiedDate
-        
         self.modifiedBy = modifiedBy
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

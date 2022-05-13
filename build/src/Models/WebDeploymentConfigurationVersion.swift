@@ -61,47 +61,26 @@ public class WebDeploymentConfigurationVersion: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, version: String?, _description: String?, languages: [String]?, defaultLanguage: String?, messenger: MessengerSettings?, position: PositionSettings?, supportCenter: SupportCenterSettings?, cobrowse: CobrowseSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.version = version
-        
         self._description = _description
-        
         self.languages = languages
-        
         self.defaultLanguage = defaultLanguage
-        
         self.messenger = messenger
-        
         self.position = position
-        
         self.supportCenter = supportCenter
-        
         self.cobrowse = cobrowse
-        
         self.journeyEvents = journeyEvents
-        
         self.authenticationSettings = authenticationSettings
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.datePublished = datePublished
-        
         self.lastModifiedUser = lastModifiedUser
-        
         self.createdUser = createdUser
-        
         self.publishedUser = publishedUser
-        
         self.status = status
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

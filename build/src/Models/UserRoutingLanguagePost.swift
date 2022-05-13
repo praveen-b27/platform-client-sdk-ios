@@ -14,7 +14,7 @@ public class UserRoutingLanguagePost: Codable {
 
     /** The id of the existing routing language to add to the user */
     public var _id: String?
-    /** Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings. */
+    /** Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \"Best available language\" mode to allow acd interactions to target agents with higher proficiency ratings. */
     public var proficiency: Double?
     /** URI to the organization language used by this user language. */
     public var languageUri: String?
@@ -22,15 +22,10 @@ public class UserRoutingLanguagePost: Codable {
     public var selfUri: String?
 
     public init(_id: String?, proficiency: Double?, languageUri: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.proficiency = proficiency
-        
         self.languageUri = languageUri
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

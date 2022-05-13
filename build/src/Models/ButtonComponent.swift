@@ -18,11 +18,8 @@ public class ButtonComponent: Codable {
     public var actions: ContentActions?
 
     public init(title: String?, actions: ContentActions?) {
-        
         self.title = title
-        
         self.actions = actions
-        
     }
 
 

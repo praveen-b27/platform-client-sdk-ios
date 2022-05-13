@@ -22,13 +22,9 @@ public class AgentTimeOffRequestPatch: Codable {
     public var notes: String?
 
     public init(markedAsRead: Bool?, status: Status?, notes: String?) {
-        
         self.markedAsRead = markedAsRead
-        
         self.status = status
-        
         self.notes = notes
-        
     }
 
 

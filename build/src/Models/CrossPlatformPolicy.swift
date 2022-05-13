@@ -32,31 +32,18 @@ public class CrossPlatformPolicy: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, modifiedDate: Date?, createdDate: Date?, order: Int?, _description: String?, enabled: Bool?, mediaPolicies: CrossPlatformMediaPolicies?, conditions: PolicyConditions?, actions: CrossPlatformPolicyActions?, policyErrors: PolicyErrors?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.modifiedDate = modifiedDate
-        
         self.createdDate = createdDate
-        
         self.order = order
-        
         self._description = _description
-        
         self.enabled = enabled
-        
         self.mediaPolicies = mediaPolicies
-        
         self.conditions = conditions
-        
         self.actions = actions
-        
         self.policyErrors = policyErrors
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -35,29 +35,17 @@ public class PerformanceProfile: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, metricOrders: [String]?, dateCreated: Date?, reportingIntervals: [ReportingInterval]?, active: Bool?, memberCount: Int?, maxLeaderboardRankSize: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.metricOrders = metricOrders
-        
         self.dateCreated = dateCreated
-        
         self.reportingIntervals = reportingIntervals
-        
         self.active = active
-        
         self.memberCount = memberCount
-        
         self.maxLeaderboardRankSize = maxLeaderboardRankSize
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

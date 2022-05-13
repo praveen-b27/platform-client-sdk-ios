@@ -15,9 +15,7 @@ public class WfmProcessUploadRequest: Codable {
     public var uploadKey: String?
 
     public init(uploadKey: String?) {
-        
         self.uploadKey = uploadKey
-        
     }
 
 

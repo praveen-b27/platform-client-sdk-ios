@@ -18,9 +18,7 @@ public class ExecuteRecordingJobsQuery: Codable {
     public var state: State?
 
     public init(state: State?) {
-        
         self.state = state
-        
     }
 
 

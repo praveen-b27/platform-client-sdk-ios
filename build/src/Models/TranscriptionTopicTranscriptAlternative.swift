@@ -18,17 +18,11 @@ public class TranscriptionTopicTranscriptAlternative: Codable {
     public var words: [TranscriptionTopicTranscriptWord]?
 
     public init(confidence: Double?, offsetMs: Int?, durationMs: Int?, transcript: String?, words: [TranscriptionTopicTranscriptWord]?) {
-        
         self.confidence = confidence
-        
         self.offsetMs = offsetMs
-        
         self.durationMs = durationMs
-        
         self.transcript = transcript
-        
         self.words = words
-        
     }
 
 

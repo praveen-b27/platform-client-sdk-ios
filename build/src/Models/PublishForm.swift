@@ -17,11 +17,8 @@ public class PublishForm: Codable {
     public var _id: String?
 
     public init(published: Bool?, _id: String?) {
-        
         self.published = published
-        
         self._id = _id
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

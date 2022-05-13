@@ -15,11 +15,8 @@ public class ReverseWhitepagesLookupResult: Codable {
     public var externalOrganizations: [ExternalOrganization]?
 
     public init(contacts: [ExternalContact]?, externalOrganizations: [ExternalOrganization]?) {
-        
         self.contacts = contacts
-        
         self.externalOrganizations = externalOrganizations
-        
     }
 
 

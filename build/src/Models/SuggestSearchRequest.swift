@@ -19,13 +19,9 @@ public class SuggestSearchRequest: Codable {
     public var query: [SuggestSearchCriteria]?
 
     public init(expand: [String]?, types: [String]?, query: [SuggestSearchCriteria]?) {
-        
         self.expand = expand
-        
         self.types = types
-        
         self.query = query
-        
     }
 
 

@@ -40,6 +40,8 @@ Delete an existing appointment
 
 Permission not required if you are the creator of the appointment
 
+
+
 Wraps DELETE /api/v2/coaching/appointments/{appointmentId}  
 
 Requires ANY permissions: 
@@ -91,6 +93,8 @@ CoachingAPI.deleteCoachingAppointment(appointmentId: appointmentId) { (response,
 Delete an existing annotation
 
 You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+
+
 
 Wraps DELETE /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}  
 
@@ -146,6 +150,8 @@ Retrieve an appointment
 
 Permission not required if you are the attendee, creator or facilitator of the appointment
 
+
+
 Wraps GET /api/v2/coaching/appointments/{appointmentId}  
 
 Requires ANY permissions: 
@@ -197,6 +203,8 @@ CoachingAPI.getCoachingAppointment(appointmentId: appointmentId) { (response, er
 Retrieve an annotation.
 
 You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
+
+
 
 Wraps GET /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}  
 
@@ -253,6 +261,8 @@ Get a list of annotations.
 
 You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
 
+
+
 Wraps GET /api/v2/coaching/appointments/{appointmentId}/annotations  
 
 Requires ANY permissions: 
@@ -269,8 +279,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let appointmentId: String = "" // The ID of the coaching appointment.
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 CoachingAPI.getCoachingAppointmentAnnotations(appointmentId: appointmentId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -289,8 +299,8 @@ CoachingAPI.getCoachingAppointmentAnnotations(appointmentId: appointmentId, page
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **appointmentId** | **String**| The ID of the coaching appointment. | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -310,6 +320,8 @@ Get the list of status changes for a coaching appointment.
 
 Permission not required if you are an attendee, creator or facilitator of the appointment
 
+
+
 Wraps GET /api/v2/coaching/appointments/{appointmentId}/statuses  
 
 Requires ANY permissions: 
@@ -325,8 +337,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let appointmentId: String = "" // The ID of the coaching appointment.
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 CoachingAPI.getCoachingAppointmentStatuses(appointmentId: appointmentId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -345,8 +357,8 @@ CoachingAPI.getCoachingAppointmentStatuses(appointmentId: appointmentId, pageNum
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **appointmentId** | **String**| The ID of the coaching appointment. | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -382,12 +394,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userIds: [String] = [""] // The user IDs for which to retrieve appointments
 let interval: String = "" // Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let statuses: [String] = [CoachingAPI.Statuses_getCoachingAppointments.enummember.rawValue] // Appointment Statuses to filter by
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let statuses: [String] = [""] // Appointment Statuses to filter by
 let facilitatorIds: [String] = [""] // The facilitator IDs for which to retrieve appointments
 let sortOrder: CoachingAPI.SortOrder_getCoachingAppointments = CoachingAPI.SortOrder_getCoachingAppointments.enummember // Sort (by due date) either Asc or Desc
-let relationships: [String] = [CoachingAPI.Relationships_getCoachingAppointments.enummember.rawValue] // Relationships to filter by
+let relationships: [String] = [""] // Relationships to filter by
 let completionInterval: String = "" // Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let overdue: CoachingAPI.Overdue_getCoachingAppointments = CoachingAPI.Overdue_getCoachingAppointments.enummember // Overdue status to filter by
 let intervalCondition: CoachingAPI.IntervalCondition_getCoachingAppointments = CoachingAPI.IntervalCondition_getCoachingAppointments.enummember // Filter condition for interval
@@ -410,8 +422,8 @@ CoachingAPI.getCoachingAppointments(userIds: userIds, interval: interval, pageNu
 | ------------- | ------------- | ------------- | ------------- |
 | **userIds** | [**[String]**](String.html)| The user IDs for which to retrieve appointments | |
 | **interval** | **String**| Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **statuses** | [**[String]**](String.html)| Appointment Statuses to filter by | [optional]<br />**Values**: scheduled ("Scheduled"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **facilitatorIds** | [**[String]**](String.html)| The facilitator IDs for which to retrieve appointments | [optional] |
 | **sortOrder** | **String**| Sort (by due date) either Asc or Desc | [optional]<br />**Values**: desc ("Desc"), asc ("Asc") |
@@ -452,12 +464,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let interval: String = "" // Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let statuses: [String] = [CoachingAPI.Statuses_getCoachingAppointmentsMe.enummember.rawValue] // Appointment Statuses to filter by
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let statuses: [String] = [""] // Appointment Statuses to filter by
 let facilitatorIds: [String] = [""] // The facilitator IDs for which to retrieve appointments
 let sortOrder: CoachingAPI.SortOrder_getCoachingAppointmentsMe = CoachingAPI.SortOrder_getCoachingAppointmentsMe.enummember // Sort (by due date) either Asc or Desc
-let relationships: [String] = [CoachingAPI.Relationships_getCoachingAppointmentsMe.enummember.rawValue] // Relationships to filter by
+let relationships: [String] = [""] // Relationships to filter by
 let completionInterval: String = "" // Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let overdue: CoachingAPI.Overdue_getCoachingAppointmentsMe = CoachingAPI.Overdue_getCoachingAppointmentsMe.enummember // Overdue status to filter by
 let intervalCondition: CoachingAPI.IntervalCondition_getCoachingAppointmentsMe = CoachingAPI.IntervalCondition_getCoachingAppointmentsMe.enummember // Filter condition for interval
@@ -479,8 +491,8 @@ CoachingAPI.getCoachingAppointmentsMe(interval: interval, pageNumber: pageNumber
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **interval** | **String**| Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **statuses** | [**[String]**](String.html)| Appointment Statuses to filter by | [optional]<br />**Values**: scheduled ("Scheduled"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **facilitatorIds** | [**[String]**](String.html)| The facilitator IDs for which to retrieve appointments | [optional] |
 | **sortOrder** | **String**| Sort (by due date) either Asc or Desc | [optional]<br />**Values**: desc ("Desc"), asc ("Asc") |
@@ -507,6 +519,8 @@ Get an existing notification
 
 Permission not required if you are the owner of the notification.
 
+
+
 Wraps GET /api/v2/coaching/notifications/{notificationId}  
 
 Requires ANY permissions: 
@@ -522,7 +536,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let notificationId: String = "" // The ID of the notification.
-let expand: [String] = [CoachingAPI.Expand_getCoachingNotification.enummember.rawValue] // Indicates a field in the response which should be expanded.
+let expand: [String] = [""] // Indicates a field in the response which should be expanded.
 
 // Code example
 CoachingAPI.getCoachingNotification(notificationId: notificationId, expand: expand) { (response, error) in
@@ -574,9 +588,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let expand: [String] = [CoachingAPI.Expand_getCoachingNotifications.enummember.rawValue] // Indicates a field in the response which should be expanded.
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let expand: [String] = [""] // Indicates a field in the response which should be expanded.
 
 // Code example
 CoachingAPI.getCoachingNotifications(pageNumber: pageNumber, pageSize: pageSize, expand: expand) { (response, error) in
@@ -594,8 +608,8 @@ CoachingAPI.getCoachingNotifications(pageNumber: pageNumber, pageSize: pageSize,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **expand** | [**[String]**](String.html)| Indicates a field in the response which should be expanded. | [optional]<br />**Values**: appointment ("appointment") |
 {: class="table-striped"}
 
@@ -615,6 +629,8 @@ CoachingAPI.getCoachingNotifications(pageNumber: pageNumber, pageSize: pageSize,
 Update an existing appointment
 
 Permission not required if you are the creator or facilitator of the appointment
+
+
 
 Wraps PATCH /api/v2/coaching/appointments/{appointmentId}  
 
@@ -669,6 +685,8 @@ CoachingAPI.patchCoachingAppointment(appointmentId: appointmentId, body: body) {
 Update an existing annotation.
 
 You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
+
+
 
 Wraps PATCH /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}  
 
@@ -727,6 +745,8 @@ Update the status of a coaching appointment
 
 Permission not required if you are an attendee, creator or facilitator of the appointment
 
+
+
 Wraps PATCH /api/v2/coaching/appointments/{appointmentId}/status  
 
 Requires ANY permissions: 
@@ -781,6 +801,8 @@ Update an existing notification.
 
 Can only update your own notifications.
 
+
+
 Wraps PATCH /api/v2/coaching/notifications/{notificationId}  
 
 Requires NO permissions: 
@@ -833,6 +855,8 @@ CoachingAPI.patchCoachingNotification(notificationId: notificationId, body: body
 Create a new annotation.
 
 You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
+
+
 
 Wraps POST /api/v2/coaching/appointments/{appointmentId}/annotations  
 
@@ -888,6 +912,8 @@ CoachingAPI.postCoachingAppointmentAnnotations(appointmentId: appointmentId, bod
 Add a conversation to an appointment
 
 Permission not required if you are the creator or facilitator of the appointment
+
+
 
 Wraps POST /api/v2/coaching/appointments/{appointmentId}/conversations  
 

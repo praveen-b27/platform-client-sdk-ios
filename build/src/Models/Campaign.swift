@@ -50,7 +50,7 @@ public class Campaign: Codable {
     public var edgeGroup: DomainEntityRef?
     /** The identifier of the site to be used for dialing; can be set in place of an edge group. */
     public var site: DomainEntityRef?
-    /** The current status of the Campaign. A Campaign may be turned &#39;on&#39; or &#39;off&#39;. Required for updates. */
+    /** The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates. */
     public var campaignStatus: CampaignStatus?
     /** The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. */
     public var phoneColumns: [PhoneColumn]?
@@ -82,7 +82,7 @@ public class Campaign: Codable {
     public var contactSort: ContactSort?
     /** The order in which to sort contacts for dialing, based on up to four columns. */
     public var contactSorts: [ContactSort]?
-    /** How long to wait before dispositioning a call as &#39;no-answer&#39;. Default 30 seconds. Only applicable to non-preview campaigns. */
+    /** How long to wait before dispositioning a call as 'no-answer'. Default 30 seconds. Only applicable to non-preview campaigns. */
     public var noAnswerTimeout: Int?
     /** The language the edge will use to analyze the call. */
     public var callAnalysisLanguage: String?
@@ -96,73 +96,39 @@ public class Campaign: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, queue: DomainEntityRef?, dialingMode: DialingMode?, script: DomainEntityRef?, edgeGroup: DomainEntityRef?, site: DomainEntityRef?, campaignStatus: CampaignStatus?, phoneColumns: [PhoneColumn]?, abandonRate: Double?, dncLists: [DomainEntityRef]?, callableTimeSet: DomainEntityRef?, callAnalysisResponseSet: DomainEntityRef?, errors: [RestErrorDetail]?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, ruleSets: [DomainEntityRef]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int64?, alwaysRunning: Bool?, contactSort: ContactSort?, contactSorts: [ContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DomainEntityRef]?, division: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.contactList = contactList
-        
         self.queue = queue
-        
         self.dialingMode = dialingMode
-        
         self.script = script
-        
         self.edgeGroup = edgeGroup
-        
         self.site = site
-        
         self.campaignStatus = campaignStatus
-        
         self.phoneColumns = phoneColumns
-        
         self.abandonRate = abandonRate
-        
         self.dncLists = dncLists
-        
         self.callableTimeSet = callableTimeSet
-        
         self.callAnalysisResponseSet = callAnalysisResponseSet
-        
         self.errors = errors
-        
         self.callerName = callerName
-        
         self.callerAddress = callerAddress
-        
         self.outboundLineCount = outboundLineCount
-        
         self.ruleSets = ruleSets
-        
         self.skipPreviewDisabled = skipPreviewDisabled
-        
         self.previewTimeOutSeconds = previewTimeOutSeconds
-        
         self.alwaysRunning = alwaysRunning
-        
         self.contactSort = contactSort
-        
         self.contactSorts = contactSorts
-        
         self.noAnswerTimeout = noAnswerTimeout
-        
         self.callAnalysisLanguage = callAnalysisLanguage
-        
         self.priority = priority
-        
         self.contactListFilters = contactListFilters
-        
         self.division = division
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

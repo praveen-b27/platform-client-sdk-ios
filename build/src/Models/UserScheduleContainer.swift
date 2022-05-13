@@ -20,13 +20,9 @@ public class UserScheduleContainer: Codable {
     public var userSchedules: [String:UserSchedule]?
 
     public init(managementUnitTimeZone: String?, publishedSchedules: [WeekScheduleReference]?, userSchedules: [String:UserSchedule]?) {
-        
         self.managementUnitTimeZone = managementUnitTimeZone
-        
         self.publishedSchedules = publishedSchedules
-        
         self.userSchedules = userSchedules
-        
     }
 
 

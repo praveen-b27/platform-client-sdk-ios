@@ -20,11 +20,8 @@ public class JourneyWebEventsNotificationCustomEventAttribute: Codable {
     public var dataType: DataType?
 
     public init(value: String?, dataType: DataType?) {
-        
         self.value = value
-        
         self.dataType = dataType
-        
     }
 
 

@@ -30,21 +30,13 @@ public class DialerWrapupcodemappingConfigChangeWrapUpCodeMapping: Codable {
     public var mapping: [String:[String]]?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, defaultSet: [DefaultSet]?, mapping: [String:[String]]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.defaultSet = defaultSet
-        
         self.mapping = mapping
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

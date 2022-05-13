@@ -38,6 +38,8 @@ Delete an existing response library.
 
 This will remove any responses associated with the library.
 
+
+
 Wraps DELETE /api/v2/responsemanagement/libraries/{libraryId}  
 
 Requires NO permissions: 
@@ -87,6 +89,8 @@ ResponseManagementAPI.deleteResponsemanagementLibrary(libraryId: libraryId) { (e
 Delete an existing response.
 
 This will remove the response from any libraries associated with it.
+
+
 
 Wraps DELETE /api/v2/responsemanagement/responses/{responseId}  
 
@@ -202,8 +206,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let messagingTemplateFilter: ResponseManagementAPI.MessagingTemplateFilter_getResponsemanagementLibraries = ResponseManagementAPI.MessagingTemplateFilter_getResponsemanagementLibraries.enummember // Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel
 
 // Code example
@@ -222,8 +226,8 @@ ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **messagingTemplateFilter** | **String**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional]<br />**Values**: whatsapp ("whatsapp") |
 {: class="table-striped"}
 
@@ -289,7 +293,7 @@ ResponseManagementAPI.getResponsemanagementLibrary(libraryId: libraryId) { (resp
 
 
 
-> [ModelResponse](ModelResponse.html) getResponsemanagementResponse(responseId, expand)
+> [ModelResponse](Response.html) getResponsemanagementResponse(responseId, expand)
 
 Get details about an existing response.
 
@@ -334,7 +338,7 @@ ResponseManagementAPI.getResponsemanagementResponse(responseId: responseId, expa
 
 ### Return type
 
-[**ModelResponse**](ModelResponse.html)
+[**ModelResponse**](Response.html)
 
 <a name="getResponsemanagementResponseasset"></a>
 
@@ -466,8 +470,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let libraryId: String = "" // Library ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let expand: ResponseManagementAPI.Expand_getResponsemanagementResponses = ResponseManagementAPI.Expand_getResponsemanagementResponses.enummember // Expand instructions for the return value.
 
 // Code example
@@ -487,8 +491,8 @@ ResponseManagementAPI.getResponsemanagementResponses(libraryId: libraryId, pageN
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **libraryId** | **String**| Library ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: substitutionsschema ("substitutionsSchema") |
 {: class="table-striped"}
 
@@ -575,7 +579,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: ResponseAssetSearchRequest = new ResponseAssetSearchRequest(...) // request
-let expand: [String] = [ResponseManagementAPI.Expand_postResponsemanagementResponseassetsSearch.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 ResponseManagementAPI.postResponsemanagementResponseassetsSearch(body: body, expand: expand) { (response, error) in
@@ -660,7 +664,7 @@ ResponseManagementAPI.postResponsemanagementResponseassetsUploads(body: body) { 
 
 
 
-> [ModelResponse](ModelResponse.html) postResponsemanagementResponses(body, expand)
+> [ModelResponse](Response.html) postResponsemanagementResponses(body, expand)
 
 Create a response.
 
@@ -705,7 +709,7 @@ ResponseManagementAPI.postResponsemanagementResponses(body: body, expand: expand
 
 ### Return type
 
-[**ModelResponse**](ModelResponse.html)
+[**ModelResponse**](Response.html)
 
 <a name="postResponsemanagementResponsesQuery"></a>
 
@@ -770,6 +774,8 @@ Update an existing response library.
 
 Fields that can be updated: name. The most recent version is required for updates.
 
+
+
 Wraps PUT /api/v2/responsemanagement/libraries/{libraryId}  
 
 Requires NO permissions: 
@@ -817,11 +823,13 @@ ResponseManagementAPI.putResponsemanagementLibrary(libraryId: libraryId, body: b
 
 
 
-> [ModelResponse](ModelResponse.html) putResponsemanagementResponse(responseId, body, expand)
+> [ModelResponse](Response.html) putResponsemanagementResponse(responseId, body, expand)
 
 Update an existing response.
 
 Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
+
+
 
 Wraps PUT /api/v2/responsemanagement/responses/{responseId}  
 
@@ -864,7 +872,7 @@ ResponseManagementAPI.putResponsemanagementResponse(responseId: responseId, body
 
 ### Return type
 
-[**ModelResponse**](ModelResponse.html)
+[**ModelResponse**](Response.html)
 
 <a name="putResponsemanagementResponseasset"></a>
 

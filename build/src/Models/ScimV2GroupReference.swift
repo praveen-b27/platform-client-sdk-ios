@@ -21,19 +21,15 @@ public class ScimV2GroupReference: Codable {
     }
     /** The type of SCIM resource. */
     public var type: ModelType?
-    /** The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;. */
+    /** The ID of the group member. Can be \"userId\" or \"groupId\". */
     public var value: String?
     /** The reference URI of the SCIM resource. */
     public var ref: String?
 
     public init(type: ModelType?, value: String?, ref: String?) {
-        
         self.type = type
-        
         self.value = value
-        
         self.ref = ref
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

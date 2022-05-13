@@ -17,11 +17,8 @@ public class BuForecastGenerationPlanningGroupResult: Codable {
     public var metricResults: [BuForecastTimeSeriesResult]?
 
     public init(planningGroupId: String?, metricResults: [BuForecastTimeSeriesResult]?) {
-        
         self.planningGroupId = planningGroupId
-        
         self.metricResults = metricResults
-        
     }
 
 

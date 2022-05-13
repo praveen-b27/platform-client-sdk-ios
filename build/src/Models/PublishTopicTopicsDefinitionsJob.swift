@@ -19,11 +19,8 @@ public class PublishTopicTopicsDefinitionsJob: Codable {
     public var state: State?
 
     public init(_id: String?, state: State?) {
-        
         self._id = _id
-        
         self.state = state
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

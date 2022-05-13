@@ -29,15 +29,10 @@ public class WfmBuScheduleTopicBuScheduleNotification: Codable {
     public var result: WfmBuScheduleTopicBuScheduleMetadata?
 
     public init(status: Status?, operationId: String?, eventType: EventType?, result: WfmBuScheduleTopicBuScheduleMetadata?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.eventType = eventType
-        
         self.result = result
-        
     }
 
 

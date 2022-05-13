@@ -20,17 +20,11 @@ public class SystemPrompt: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, resources: [SystemPromptAsset]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.resources = resources
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

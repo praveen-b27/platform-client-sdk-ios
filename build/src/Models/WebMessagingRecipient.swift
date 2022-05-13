@@ -22,15 +22,10 @@ public class WebMessagingRecipient: Codable {
     public var additionalIds: [RecipientAdditionalIdentifier]?
 
     public init(firstName: String?, lastName: String?, nickname: String?, additionalIds: [RecipientAdditionalIdentifier]?) {
-        
         self.firstName = firstName
-        
         self.lastName = lastName
-        
         self.nickname = nickname
-        
         self.additionalIds = additionalIds
-        
     }
 
 

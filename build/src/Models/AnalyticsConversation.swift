@@ -69,39 +69,22 @@ public class AnalyticsConversation: Codable {
     public var participants: [AnalyticsParticipant]?
 
     public init(conversationEnd: Date?, conversationId: String?, conversationInitiator: ConversationInitiator?, conversationStart: Date?, customerParticipation: Bool?, divisionIds: [String]?, externalTag: String?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
-        
         self.conversationEnd = conversationEnd
-        
         self.conversationId = conversationId
-        
         self.conversationInitiator = conversationInitiator
-        
         self.conversationStart = conversationStart
-        
         self.customerParticipation = customerParticipation
-        
         self.divisionIds = divisionIds
-        
         self.externalTag = externalTag
-        
         self.knowledgeBaseIds = knowledgeBaseIds
-        
         self.mediaStatsMinConversationMos = mediaStatsMinConversationMos
-        
         self.mediaStatsMinConversationRFactor = mediaStatsMinConversationRFactor
-        
         self.originatingDirection = originatingDirection
-        
         self.selfServed = selfServed
-        
         self.evaluations = evaluations
-        
         self.surveys = surveys
-        
         self.resolutions = resolutions
-        
         self.participants = participants
-        
     }
 
 

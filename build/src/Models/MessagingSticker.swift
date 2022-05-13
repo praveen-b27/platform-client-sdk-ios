@@ -46,27 +46,16 @@ public class MessagingSticker: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, providerStickerId: Int?, providerPackageId: Int?, packageName: String?, messengerType: MessengerType?, stickerType: StickerType?, providerVersion: Int64?, uriLocation: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.providerStickerId = providerStickerId
-        
         self.providerPackageId = providerPackageId
-        
         self.packageName = packageName
-        
         self.messengerType = messengerType
-        
         self.stickerType = stickerType
-        
         self.providerVersion = providerVersion
-        
         self.uriLocation = uriLocation
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

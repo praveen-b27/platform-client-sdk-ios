@@ -10,9 +10,7 @@ import Foundation
 
 
 open class ChatAPI {
-    
     /**
-     
      Get Chat Settings.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -36,29 +34,21 @@ open class ChatAPI {
     }
 
     /**
-     
      Get Chat Settings.
-     
      - GET /api/v2/chat/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "messageRetentionPeriodDays" : 123
-}}]
+  "messageRetentionPeriodDays" : 0
+}, statusCode=200}]
 
      - returns: RequestBuilder<ChatSettings> 
      */
-    open class func getChatSettingsWithRequestBuilder() -> RequestBuilder<ChatSettings> {
+    open class func getChatSettingsWithRequestBuilder() -> RequestBuilder<ChatSettings> {        
         let path = "/api/v2/chat/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -68,10 +58,7 @@ open class ChatAPI {
     }
 
     
-    
-    
     /**
-     
      Patch Chat Settings.
      
      - parameter body: (body) Chat 
@@ -96,29 +83,24 @@ open class ChatAPI {
     }
 
     /**
-     
      Patch Chat Settings.
-     
      - PATCH /api/v2/chat/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "messageRetentionPeriodDays" : 123
-}}]
+  "messageRetentionPeriodDays" : 0
+}, statusCode=200}]
      
      - parameter body: (body) Chat 
 
      - returns: RequestBuilder<ChatSettings> 
      */
-    open class func patchChatSettingsWithRequestBuilder(body: ChatSettings) -> RequestBuilder<ChatSettings> {
+    open class func patchChatSettingsWithRequestBuilder(body: ChatSettings) -> RequestBuilder<ChatSettings> {        
         let path = "/api/v2/chat/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ChatSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -127,10 +109,7 @@ open class ChatAPI {
     }
 
     
-    
-    
     /**
-     
      Update Chat Settings.
      
      - parameter body: (body) Chat 
@@ -155,29 +134,24 @@ open class ChatAPI {
     }
 
     /**
-     
      Update Chat Settings.
-     
      - PUT /api/v2/chat/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "messageRetentionPeriodDays" : 123
-}}]
+  "messageRetentionPeriodDays" : 0
+}, statusCode=200}]
      
      - parameter body: (body) Chat 
 
      - returns: RequestBuilder<ChatSettings> 
      */
-    open class func putChatSettingsWithRequestBuilder(body: ChatSettings) -> RequestBuilder<ChatSettings> {
+    open class func putChatSettingsWithRequestBuilder(body: ChatSettings) -> RequestBuilder<ChatSettings> {        
         let path = "/api/v2/chat/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ChatSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

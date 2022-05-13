@@ -33,13 +33,9 @@ public class Phrase: Codable {
     public var sentiment: Sentiment?
 
     public init(text: String?, strictness: Strictness?, sentiment: Sentiment?) {
-        
         self.text = text
-        
         self.strictness = strictness
-        
         self.sentiment = sentiment
-        
     }
 
 

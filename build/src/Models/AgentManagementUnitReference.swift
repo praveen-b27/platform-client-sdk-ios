@@ -20,13 +20,9 @@ public class AgentManagementUnitReference: Codable {
     public var businessUnit: BusinessUnitReference?
 
     public init(user: UserReference?, managementUnit: ManagementUnitReference?, businessUnit: BusinessUnitReference?) {
-        
         self.user = user
-        
         self.managementUnit = managementUnit
-        
         self.businessUnit = businessUnit
-        
     }
 
 

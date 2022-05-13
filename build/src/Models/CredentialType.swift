@@ -22,17 +22,11 @@ public class CredentialType: Codable {
     public var _required: [String]?
 
     public init(_id: String?, name: String?, properties: JSON?, displayOrder: [String]?, _required: [String]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.properties = properties
-        
         self.displayOrder = displayOrder
-        
         self._required = _required
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

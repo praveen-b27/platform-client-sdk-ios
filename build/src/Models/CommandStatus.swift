@@ -43,23 +43,14 @@ public class CommandStatus: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, expiration: Date?, userId: String?, statusCode: StatusCode?, commandType: CommandType?, document: Document?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.expiration = expiration
-        
         self.userId = userId
-        
         self.statusCode = statusCode
-        
         self.commandType = commandType
-        
         self.document = document
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

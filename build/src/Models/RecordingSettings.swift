@@ -17,11 +17,8 @@ public class RecordingSettings: Codable {
     public var maxConfigurableScreenRecordingStreams: Int?
 
     public init(maxSimultaneousStreams: Int?, maxConfigurableScreenRecordingStreams: Int?) {
-        
         self.maxSimultaneousStreams = maxSimultaneousStreams
-        
         self.maxConfigurableScreenRecordingStreams = maxConfigurableScreenRecordingStreams
-        
     }
 
 

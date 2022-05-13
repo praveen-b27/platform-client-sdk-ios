@@ -20,15 +20,10 @@ public class Change: Codable {
     public var newValues: [String]?
 
     public init(entity: AuditEntity?, property: String?, oldValues: [String]?, newValues: [String]?) {
-        
         self.entity = entity
-        
         self.property = property
-        
         self.oldValues = oldValues
-        
         self.newValues = newValues
-        
     }
 
 

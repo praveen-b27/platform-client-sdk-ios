@@ -17,11 +17,8 @@ public class TrunkRecordingEnabledCount: Codable {
     public var disabledCount: Int?
 
     public init(enabledCount: Int?, disabledCount: Int?) {
-        
         self.enabledCount = enabledCount
-        
         self.disabledCount = disabledCount
-        
     }
 
 

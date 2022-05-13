@@ -26,21 +26,13 @@ public class FacebookIntegrationUpdateRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, pageAccessToken: String?, userAccessToken: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.supportedContent = supportedContent
-        
         self.messagingSetting = messagingSetting
-        
         self.pageAccessToken = pageAccessToken
-        
         self.userAccessToken = userAccessToken
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

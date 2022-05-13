@@ -80,7 +80,7 @@ GroupsAPI.deleteGroup(groupId: groupId) { (error) in
 
 
 
-> [Empty](Empty.html) deleteGroupMembers(groupId, ids)
+> [JSON](JSON.html) deleteGroupMembers(groupId, ids)
 
 Remove members
 
@@ -125,13 +125,13 @@ GroupsAPI.deleteGroupMembers(groupId: groupId, ids: ids) { (response, error) in
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="getFieldconfig"></a>
 
 # **getFieldconfig**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [FieldConfig](FieldConfig.html) getFieldconfig(type)
 
@@ -306,10 +306,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let groupId: String = "" // Group ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: GroupsAPI.SortOrder_getGroupMembers = GroupsAPI.SortOrder_getGroupMembers.enummember // Ascending or descending sort order
-let expand: [String] = [GroupsAPI.Expand_getGroupMembers.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 GroupsAPI.getGroupMembers(groupId: groupId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -328,9 +328,9 @@ GroupsAPI.getGroupMembers(groupId: groupId, pageSize: pageSize, pageNumber: page
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 {: class="table-striped"}
 
@@ -343,13 +343,15 @@ GroupsAPI.getGroupMembers(groupId: groupId, pageSize: pageSize, pageNumber: page
 
 # **getGroupProfile**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [GroupProfile](GroupProfile.html) getGroupProfile(groupId, fields)
 
 Get group profile
 
 This api is deprecated. Use /api/v2/groups instead
+
+
 
 Wraps GET /api/v2/groups/{groupId}/profile  
 
@@ -417,8 +419,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let _id: [String] = [""] // id
 let jabberId: [String] = [""] // A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter)
 let sortOrder: GroupsAPI.SortOrder_getGroups = GroupsAPI.SortOrder_getGroups.enummember // Ascending or descending sort order
@@ -439,11 +441,11 @@ GroupsAPI.getGroups(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabber
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
-| **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -508,13 +510,15 @@ GroupsAPI.getGroupsSearch(q64: q64, expand: expand) { (response, error) in
 
 # **getProfilesGroups**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [GroupProfileEntityListing](GroupProfileEntityListing.html) getProfilesGroups(pageSize, pageNumber, _id, sortOrder)
 
 Get group profile listing
 
 This api is deprecated. Use /api/v2/groups instead.
+
+
 
 Wraps GET /api/v2/profiles/groups  
 
@@ -529,8 +533,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let _id: [String] = [""] // id
 let sortOrder: GroupsAPI.SortOrder_getProfilesGroups = GroupsAPI.SortOrder_getProfilesGroups.enummember // Ascending or descending sort order
 
@@ -550,10 +554,10 @@ GroupsAPI.getProfilesGroups(pageSize: pageSize, pageNumber: pageNumber, _id: _id
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -567,7 +571,7 @@ GroupsAPI.getProfilesGroups(pageSize: pageSize, pageNumber: pageNumber, _id: _id
 
 
 
-> [Empty](Empty.html) postGroupMembers(groupId, body)
+> [JSON](JSON.html) postGroupMembers(groupId, body)
 
 Add members
 
@@ -612,7 +616,7 @@ GroupsAPI.postGroupMembers(groupId: groupId, body: body) { (response, error) in
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="postGroups"></a>
 

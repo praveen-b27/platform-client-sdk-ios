@@ -19,15 +19,10 @@ public class SecurityProfile: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, permissions: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.permissions = permissions
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

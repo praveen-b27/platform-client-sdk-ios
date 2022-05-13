@@ -15,9 +15,7 @@ public class DataAvailabilityResponse: Codable {
     public var dataAvailabilityDate: Date?
 
     public init(dataAvailabilityDate: Date?) {
-        
         self.dataAvailabilityDate = dataAvailabilityDate
-        
     }
 
 

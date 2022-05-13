@@ -64,13 +64,13 @@ public class CallMediaParticipant: Codable {
     public var connectedTime: Date?
     /** The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endTime: Date?
-    /** The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** The time when this participant's hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startHoldTime: Date?
-    /** The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr */
+    /** The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr */
     public var purpose: String?
-    /** The participant&#39;s state.  Values can be: &#39;alerting&#39;, &#39;connected&#39;, &#39;disconnected&#39;, &#39;dialing&#39;, &#39;contacting */
+    /** The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting */
     public var state: State?
-    /** The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39; */
+    /** The participant's direction.  Values can be: 'inbound' or 'outbound' */
     public var direction: Direction?
     /** The reason the participant was disconnected from the conversation. */
     public var disconnectType: DisconnectType?
@@ -140,7 +140,7 @@ public class CallMediaParticipant: Codable {
     public var monitoredParticipantId: String?
     /** The ID of the participant being coached when performing a call coach. */
     public var coachedParticipantId: String?
-    /** If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant. */
+    /** If this participant barged in a participant's call, then this will be the id of the targeted participant. */
     public var bargedParticipantId: String?
     /** The ID of the consult transfer target participant when performing a consult transfer. */
     public var consultParticipantId: String?
@@ -150,103 +150,54 @@ public class CallMediaParticipant: Codable {
     public var bargedTime: Date?
 
     public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, consultParticipantId: String?, uuiData: String?, bargedTime: Date?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.address = address
-        
         self.startTime = startTime
-        
         self.connectedTime = connectedTime
-        
         self.endTime = endTime
-        
         self.startHoldTime = startHoldTime
-        
         self.purpose = purpose
-        
         self.state = state
-        
         self.direction = direction
-        
         self.disconnectType = disconnectType
-        
         self.held = held
-        
         self.wrapupRequired = wrapupRequired
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.user = user
-        
         self.queue = queue
-        
         self.team = team
-        
         self.attributes = attributes
-        
         self.errorInfo = errorInfo
-        
         self.script = script
-        
         self.wrapupTimeoutMs = wrapupTimeoutMs
-        
         self.wrapupSkipped = wrapupSkipped
-        
         self.alertingTimeoutMs = alertingTimeoutMs
-        
         self.provider = provider
-        
         self.externalContact = externalContact
-        
         self.externalOrganization = externalOrganization
-        
         self.wrapup = wrapup
-        
         self.peer = peer
-        
         self.flaggedReason = flaggedReason
-        
         self.journeyContext = journeyContext
-        
         self.conversationRoutingData = conversationRoutingData
-        
         self.startAcwTime = startAcwTime
-        
         self.endAcwTime = endAcwTime
-        
         self.muted = muted
-        
         self.confined = confined
-        
         self.recording = recording
-        
         self.recordingState = recordingState
-        
         self.group = group
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.documentId = documentId
-        
         self.faxStatus = faxStatus
-        
         self.monitoredParticipantId = monitoredParticipantId
-        
         self.coachedParticipantId = coachedParticipantId
-        
         self.bargedParticipantId = bargedParticipantId
-        
         self.consultParticipantId = consultParticipantId
-        
         self.uuiData = uuiData
-        
         self.bargedTime = bargedTime
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -29,21 +29,13 @@ public class QueueConversationMessageEventTopicMessageDetails: Codable {
     public var errorInfo: QueueConversationMessageEventTopicErrorDetails?
 
     public init(message: QueueConversationMessageEventTopicUriReference?, messageTime: Date?, messageSegmentCount: Int?, messageStatus: MessageStatus?, media: [QueueConversationMessageEventTopicMessageMedia]?, stickers: [QueueConversationMessageEventTopicMessageSticker]?, errorInfo: QueueConversationMessageEventTopicErrorDetails?) {
-        
         self.message = message
-        
         self.messageTime = messageTime
-        
         self.messageSegmentCount = messageSegmentCount
-        
         self.messageStatus = messageStatus
-        
         self.media = media
-        
         self.stickers = stickers
-        
         self.errorInfo = errorInfo
-        
     }
 
 

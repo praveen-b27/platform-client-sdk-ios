@@ -43,27 +43,16 @@ public class AsyncConversationQuery: Codable {
     public var startOfDayIntervalMatching: Bool?
 
     public init(conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, resolutionFilters: [ResolutionDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, interval: String?, limit: Int?, startOfDayIntervalMatching: Bool?) {
-        
         self.conversationFilters = conversationFilters
-        
         self.segmentFilters = segmentFilters
-        
         self.evaluationFilters = evaluationFilters
-        
         self.surveyFilters = surveyFilters
-        
         self.resolutionFilters = resolutionFilters
-        
         self.order = order
-        
         self.orderBy = orderBy
-        
         self.interval = interval
-        
         self.limit = limit
-        
         self.startOfDayIntervalMatching = startOfDayIntervalMatching
-        
     }
 
 

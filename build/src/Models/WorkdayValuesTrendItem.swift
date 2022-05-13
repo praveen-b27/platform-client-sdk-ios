@@ -17,11 +17,8 @@ public class WorkdayValuesTrendItem: Codable {
     public var value: Double?
 
     public init(dateWorkday: Date?, value: Double?) {
-        
         self.dateWorkday = dateWorkday
-        
         self.value = value
-        
     }
 
 

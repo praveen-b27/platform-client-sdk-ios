@@ -57,43 +57,24 @@ public class Metrics: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, order: Int?, metricDefinitionName: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, unitType: UnitType?, enabled: Bool?, templateName: String?, maxPoints: Int?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, unitDefinition: String?, precision: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.order = order
-        
         self.metricDefinitionName = metricDefinitionName
-        
         self.metricDefinitionId = metricDefinitionId
-        
         self.externalMetricDefinitionId = externalMetricDefinitionId
-        
         self.unitType = unitType
-        
         self.enabled = enabled
-        
         self.templateName = templateName
-        
         self.maxPoints = maxPoints
-        
         self.performanceProfileId = performanceProfileId
-        
         self.linkedMetric = linkedMetric
-        
         self.dateCreated = dateCreated
-        
         self.dateUnlinked = dateUnlinked
-        
         self.sourcePerformanceProfile = sourcePerformanceProfile
-        
         self.unitDefinition = unitDefinition
-        
         self.precision = precision
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

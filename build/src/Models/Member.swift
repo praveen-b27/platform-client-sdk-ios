@@ -12,17 +12,14 @@ import Foundation
 
 public class Member: Codable {
 
-    /** The user&#39;s id */
+    /** The user's id */
     public var _id: String?
     /** The URI for this object */
     public var selfUri: String?
 
     public init(_id: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

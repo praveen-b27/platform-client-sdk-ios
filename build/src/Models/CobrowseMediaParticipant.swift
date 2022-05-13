@@ -59,13 +59,13 @@ public class CobrowseMediaParticipant: Codable {
     public var connectedTime: Date?
     /** The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endTime: Date?
-    /** The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** The time when this participant's hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startHoldTime: Date?
-    /** The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr */
+    /** The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr */
     public var purpose: String?
-    /** The participant&#39;s state.  Values can be: &#39;alerting&#39;, &#39;connected&#39;, &#39;disconnected&#39;, &#39;dialing&#39;, &#39;contacting */
+    /** The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting */
     public var state: State?
-    /** The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39; */
+    /** The participant's direction.  Values can be: 'inbound' or 'outbound' */
     public var direction: Direction?
     /** The reason the participant was disconnected from the conversation. */
     public var disconnectType: DisconnectType?
@@ -125,83 +125,44 @@ public class CobrowseMediaParticipant: Codable {
     public var providerEventTime: Date?
 
     public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, providerEventTime: Date?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.address = address
-        
         self.startTime = startTime
-        
         self.connectedTime = connectedTime
-        
         self.endTime = endTime
-        
         self.startHoldTime = startHoldTime
-        
         self.purpose = purpose
-        
         self.state = state
-        
         self.direction = direction
-        
         self.disconnectType = disconnectType
-        
         self.held = held
-        
         self.wrapupRequired = wrapupRequired
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.user = user
-        
         self.queue = queue
-        
         self.team = team
-        
         self.attributes = attributes
-        
         self.errorInfo = errorInfo
-        
         self.script = script
-        
         self.wrapupTimeoutMs = wrapupTimeoutMs
-        
         self.wrapupSkipped = wrapupSkipped
-        
         self.alertingTimeoutMs = alertingTimeoutMs
-        
         self.provider = provider
-        
         self.externalContact = externalContact
-        
         self.externalOrganization = externalOrganization
-        
         self.wrapup = wrapup
-        
         self.peer = peer
-        
         self.flaggedReason = flaggedReason
-        
         self.journeyContext = journeyContext
-        
         self.conversationRoutingData = conversationRoutingData
-        
         self.startAcwTime = startAcwTime
-        
         self.endAcwTime = endAcwTime
-        
         self.cobrowseSessionId = cobrowseSessionId
-        
         self.cobrowseRole = cobrowseRole
-        
         self.controlling = controlling
-        
         self.viewerUrl = viewerUrl
-        
         self.providerEventTime = providerEventTime
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

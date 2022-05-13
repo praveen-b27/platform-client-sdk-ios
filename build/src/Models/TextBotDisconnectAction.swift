@@ -29,15 +29,10 @@ public class TextBotDisconnectAction: Codable {
     public var flowOutcomes: [TextBotFlowOutcome]?
 
     public init(reason: Reason?, reasonExtendedInfo: String?, flowLocation: TextBotFlowLocation?, flowOutcomes: [TextBotFlowOutcome]?) {
-        
         self.reason = reason
-        
         self.reasonExtendedInfo = reasonExtendedInfo
-        
         self.flowLocation = flowLocation
-        
         self.flowOutcomes = flowOutcomes
-        
     }
 
 

@@ -17,11 +17,8 @@ public class CloseButtonStyleProperties: Codable {
     public var opacity: Float?
 
     public init(color: String?, opacity: Float?) {
-        
         self.color = color
-        
         self.opacity = opacity
-        
     }
 
 

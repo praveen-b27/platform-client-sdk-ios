@@ -23,17 +23,11 @@ public class QueueConversationCallEventTopicConversationRoutingData: Codable {
     public var scoredAgents: [QueueConversationCallEventTopicScoredAgent]?
 
     public init(queue: QueueConversationCallEventTopicUriReference?, language: QueueConversationCallEventTopicUriReference?, priority: Int?, skills: [QueueConversationCallEventTopicUriReference]?, scoredAgents: [QueueConversationCallEventTopicScoredAgent]?) {
-        
         self.queue = queue
-        
         self.language = language
-        
         self.priority = priority
-        
         self.skills = skills
-        
         self.scoredAgents = scoredAgents
-        
     }
 
 

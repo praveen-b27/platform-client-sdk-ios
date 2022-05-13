@@ -17,11 +17,8 @@ public class CrossPlatformEmailMediaPolicy: Codable {
     public var conditions: EmailMediaPolicyConditions?
 
     public init(actions: CrossPlatformPolicyActions?, conditions: EmailMediaPolicyConditions?) {
-        
         self.actions = actions
-        
         self.conditions = conditions
-        
     }
 
 

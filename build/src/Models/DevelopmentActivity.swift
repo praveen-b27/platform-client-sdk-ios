@@ -33,7 +33,7 @@ public class DevelopmentActivity: Codable {
     public var createdBy: UserReference?
     /** Date activity was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** The user&#39;s percentage score for this activity */
+    /** The user's percentage score for this activity */
     public var percentageScore: Float?
     /** True if the activity was passed */
     public var isPassed: Bool?
@@ -55,35 +55,20 @@ public class DevelopmentActivity: Codable {
     public var isOverdue: Bool?
 
     public init(_id: String?, dateCompleted: Date?, createdBy: UserReference?, dateCreated: Date?, percentageScore: Float?, isPassed: Bool?, selfUri: String?, name: String?, type: ModelType?, status: Status?, dateDue: Date?, facilitator: UserReference?, attendees: [UserReference]?, isOverdue: Bool?) {
-        
         self._id = _id
-        
         self.dateCompleted = dateCompleted
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.percentageScore = percentageScore
-        
         self.isPassed = isPassed
-        
         self.selfUri = selfUri
-        
         self.name = name
-        
         self.type = type
-        
         self.status = status
-        
         self.dateDue = dateDue
-        
         self.facilitator = facilitator
-        
         self.attendees = attendees
-        
         self.isOverdue = isOverdue
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

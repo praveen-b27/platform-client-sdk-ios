@@ -71,7 +71,7 @@ public class AnalyticsSession: Codable {
     public var agentBullseyeRing: Int?
     /** Flag indicating an agent-owned callback */
     public var agentOwned: Bool?
-    /** Automatic Number Identification (caller&#39;s number) */
+    /** Automatic Number Identification (caller's number) */
     public var ani: String?
     /** ID of the user that manually assigned a conversation */
     public var assignerId: String?
@@ -203,155 +203,80 @@ public class AnalyticsSession: Codable {
     public var segments: [AnalyticsConversationSegment]?
 
     public init(activeSkillIds: [String]?, acwSkipped: Bool?, addressFrom: String?, addressOther: String?, addressSelf: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, callbackNumbers: [String]?, callbackScheduledTime: Date?, callbackUserName: String?, coachedParticipantId: String?, cobrowseRole: String?, cobrowseRoomId: String?, deliveryStatus: DeliveryStatus?, deliveryStatusChangeDate: Date?, destinationAddresses: [String]?, direction: Direction?, dispositionAnalyzer: String?, dispositionName: String?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, extendedDeliveryStatus: String?, flowInType: String?, flowOutType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, mediaBridgeId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, monitoredParticipantId: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, peerId: String?, protocolCallId: String?, provider: String?, recording: Bool?, remote: String?, remoteNameDisplayable: String?, removedSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingRing: Int?, screenShareAddressSelf: String?, screenShareRoomId: String?, scriptId: String?, selectedAgentId: String?, selectedAgentRank: Int?, sessionDnis: String?, sessionId: String?, sharingScreen: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, usedRouting: UsedRouting?, videoAddressSelf: String?, videoRoomId: String?, waitingInteractionCounts: [Int]?, proposedAgents: [AnalyticsProposedAgent]?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, flow: AnalyticsFlow?, metrics: [AnalyticsSessionMetric]?, segments: [AnalyticsConversationSegment]?) {
-        
         self.activeSkillIds = activeSkillIds
-        
         self.acwSkipped = acwSkipped
-        
         self.addressFrom = addressFrom
-        
         self.addressOther = addressOther
-        
         self.addressSelf = addressSelf
-        
         self.addressTo = addressTo
-        
         self.agentAssistantId = agentAssistantId
-        
         self.agentBullseyeRing = agentBullseyeRing
-        
         self.agentOwned = agentOwned
-        
         self.ani = ani
-        
         self.assignerId = assignerId
-        
         self.authenticated = authenticated
-        
         self.callbackNumbers = callbackNumbers
-        
         self.callbackScheduledTime = callbackScheduledTime
-        
         self.callbackUserName = callbackUserName
-        
         self.coachedParticipantId = coachedParticipantId
-        
         self.cobrowseRole = cobrowseRole
-        
         self.cobrowseRoomId = cobrowseRoomId
-        
         self.deliveryStatus = deliveryStatus
-        
         self.deliveryStatusChangeDate = deliveryStatusChangeDate
-        
         self.destinationAddresses = destinationAddresses
-        
         self.direction = direction
-        
         self.dispositionAnalyzer = dispositionAnalyzer
-        
         self.dispositionName = dispositionName
-        
         self.dnis = dnis
-        
         self.edgeId = edgeId
-        
         self.eligibleAgentCounts = eligibleAgentCounts
-        
         self.extendedDeliveryStatus = extendedDeliveryStatus
-        
         self.flowInType = flowInType
-        
         self.flowOutType = flowOutType
-        
         self.journeyActionId = journeyActionId
-        
         self.journeyActionMapId = journeyActionMapId
-        
         self.journeyActionMapVersion = journeyActionMapVersion
-        
         self.journeyCustomerId = journeyCustomerId
-        
         self.journeyCustomerIdType = journeyCustomerIdType
-        
         self.journeyCustomerSessionId = journeyCustomerSessionId
-        
         self.journeyCustomerSessionIdType = journeyCustomerSessionIdType
-        
         self.mediaBridgeId = mediaBridgeId
-        
         self.mediaCount = mediaCount
-        
         self.mediaType = mediaType
-        
         self.messageType = messageType
-        
         self.monitoredParticipantId = monitoredParticipantId
-        
         self.outboundCampaignId = outboundCampaignId
-        
         self.outboundContactId = outboundContactId
-        
         self.outboundContactListId = outboundContactListId
-        
         self.peerId = peerId
-        
         self.protocolCallId = protocolCallId
-        
         self.provider = provider
-        
         self.recording = recording
-        
         self.remote = remote
-        
         self.remoteNameDisplayable = remoteNameDisplayable
-        
         self.removedSkillIds = removedSkillIds
-        
         self.requestedRoutings = requestedRoutings
-        
         self.roomId = roomId
-        
         self.routingRing = routingRing
-        
         self.screenShareAddressSelf = screenShareAddressSelf
-        
         self.screenShareRoomId = screenShareRoomId
-        
         self.scriptId = scriptId
-        
         self.selectedAgentId = selectedAgentId
-        
         self.selectedAgentRank = selectedAgentRank
-        
         self.sessionDnis = sessionDnis
-        
         self.sessionId = sessionId
-        
         self.sharingScreen = sharingScreen
-        
         self.skipEnabled = skipEnabled
-        
         self.timeoutSeconds = timeoutSeconds
-        
         self.usedRouting = usedRouting
-        
         self.videoAddressSelf = videoAddressSelf
-        
         self.videoRoomId = videoRoomId
-        
         self.waitingInteractionCounts = waitingInteractionCounts
-        
         self.proposedAgents = proposedAgents
-        
         self.mediaEndpointStats = mediaEndpointStats
-        
         self.flow = flow
-        
         self.metrics = metrics
-        
         self.segments = segments
-        
     }
 
 

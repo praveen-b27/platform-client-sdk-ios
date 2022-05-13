@@ -29,7 +29,7 @@ public class MessagingCampaign: Codable {
     public var version: Int?
     /** The division this entity belongs to. */
     public var division: DomainEntityRef?
-    /** The current status of the messaging campaign. A messaging campaign may be turned &#39;on&#39; or &#39;off&#39;. */
+    /** The current status of the messaging campaign. A messaging campaign may be turned 'on' or 'off'. */
     public var campaignStatus: CampaignStatus?
     /** The callable time set for this messaging campaign. */
     public var callableTimeSet: DomainEntityRef?
@@ -53,41 +53,23 @@ public class MessagingCampaign: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, contactListFilters: [DomainEntityRef]?, errors: [RestErrorDetail]?, smsConfig: SmsConfig?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.division = division
-        
         self.campaignStatus = campaignStatus
-        
         self.callableTimeSet = callableTimeSet
-        
         self.contactList = contactList
-        
         self.dncLists = dncLists
-        
         self.alwaysRunning = alwaysRunning
-        
         self.contactSorts = contactSorts
-        
         self.messagesPerMinute = messagesPerMinute
-        
         self.contactListFilters = contactListFilters
-        
         self.errors = errors
-        
         self.smsConfig = smsConfig
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

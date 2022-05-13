@@ -20,11 +20,8 @@ public class TranscriptionTopicTranscriptionRequestStatus: Codable {
     public var status: Status?
 
     public init(offsetMs: Int?, status: Status?) {
-        
         self.offsetMs = offsetMs
-        
         self.status = status
-        
     }
 
 

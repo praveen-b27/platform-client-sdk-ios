@@ -25,19 +25,12 @@ public class DomainCapabilities: Codable {
     public var pingEnabled: Bool?
 
     public init(enabled: Bool?, dhcp: Bool?, metric: Int?, autoMetric: Bool?, supportsMetric: Bool?, pingEnabled: Bool?) {
-        
         self.enabled = enabled
-        
         self.dhcp = dhcp
-        
         self.metric = metric
-        
         self.autoMetric = autoMetric
-        
         self.supportsMetric = supportsMetric
-        
         self.pingEnabled = pingEnabled
-        
     }
 
 

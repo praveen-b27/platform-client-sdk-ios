@@ -24,17 +24,11 @@ public class RequestConfig: Codable {
     public var headers: [String:String]?
 
     public init(requestUrlTemplate: String?, requestTemplate: String?, requestTemplateUri: String?, requestType: String?, headers: [String:String]?) {
-        
         self.requestUrlTemplate = requestUrlTemplate
-        
         self.requestTemplate = requestTemplate
-        
         self.requestTemplateUri = requestTemplateUri
-        
         self.requestType = requestType
-        
         self.headers = headers
-        
     }
 
 

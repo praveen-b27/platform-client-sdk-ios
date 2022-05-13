@@ -21,15 +21,10 @@ public class AuditEntity: Codable {
     public var selfUri: String?
 
     public init(type: String?, _id: String?, name: String?, selfUri: String?) {
-        
         self.type = type
-        
         self._id = _id
-        
         self.name = name
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

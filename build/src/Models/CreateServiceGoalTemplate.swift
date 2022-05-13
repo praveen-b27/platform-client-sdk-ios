@@ -21,15 +21,10 @@ public class CreateServiceGoalTemplate: Codable {
     public var abandonRate: BuAbandonRate?
 
     public init(name: String?, serviceLevel: BuServiceLevel?, averageSpeedOfAnswer: BuAverageSpeedOfAnswer?, abandonRate: BuAbandonRate?) {
-        
         self.name = name
-        
         self.serviceLevel = serviceLevel
-        
         self.averageSpeedOfAnswer = averageSpeedOfAnswer
-        
         self.abandonRate = abandonRate
-        
     }
 
 

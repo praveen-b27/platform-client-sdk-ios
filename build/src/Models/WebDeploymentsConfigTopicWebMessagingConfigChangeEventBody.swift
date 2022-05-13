@@ -23,13 +23,9 @@ public class WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody: Codable
     public var status: Status?
 
     public init(_id: String?, version: String?, status: Status?) {
-        
         self._id = _id
-        
         self.version = version
-        
         self.status = status
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

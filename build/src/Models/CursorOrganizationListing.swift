@@ -17,15 +17,10 @@ public class CursorOrganizationListing: Codable {
     public var previousUri: String?
 
     public init(entities: [ExternalOrganization]?, nextUri: String?, selfUri: String?, previousUri: String?) {
-        
         self.entities = entities
-        
         self.nextUri = nextUri
-        
         self.selfUri = selfUri
-        
         self.previousUri = previousUri
-        
     }
 
 

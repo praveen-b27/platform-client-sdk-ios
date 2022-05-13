@@ -17,11 +17,8 @@ public class AnalyticsReportingSettings: Codable {
     public var queueAgentAccessObfuscation: Bool?
 
     public init(piiMaskingEnabled: Bool?, queueAgentAccessObfuscation: Bool?) {
-        
         self.piiMaskingEnabled = piiMaskingEnabled
-        
         self.queueAgentAccessObfuscation = queueAgentAccessObfuscation
-        
     }
 
 

@@ -17,11 +17,8 @@ public class IntegrationExport: Codable {
     public var shouldExportScreenRecordings: Bool?
 
     public init(integration: DomainEntityRef?, shouldExportScreenRecordings: Bool?) {
-        
         self.integration = integration
-        
         self.shouldExportScreenRecordings = shouldExportScreenRecordings
-        
     }
 
 

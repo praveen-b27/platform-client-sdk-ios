@@ -23,13 +23,9 @@ public class PatchCallToAction: Codable {
     public var target: Target?
 
     public init(text: String?, url: String?, target: Target?) {
-        
         self.text = text
-        
         self.url = url
-        
         self.target = target
-        
     }
 
 

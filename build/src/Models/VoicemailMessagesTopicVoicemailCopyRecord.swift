@@ -15,11 +15,8 @@ public class VoicemailMessagesTopicVoicemailCopyRecord: Codable {
     public var group: VoicemailMessagesTopicOwner?
 
     public init(user: VoicemailMessagesTopicOwner?, group: VoicemailMessagesTopicOwner?) {
-        
         self.user = user
-        
         self.group = group
-        
     }
 
 

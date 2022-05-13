@@ -17,11 +17,8 @@ public class ValidationServiceRequest: Codable {
     public var uploadKey: String?
 
     public init(dateImportEnded: Date?, uploadKey: String?) {
-        
         self.dateImportEnded = dateImportEnded
-        
         self.uploadKey = uploadKey
-        
     }
 
 

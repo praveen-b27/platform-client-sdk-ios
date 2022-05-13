@@ -31,17 +31,11 @@ public class AsyncQueryStatus: Codable {
     public var completionDate: Date?
 
     public init(state: State?, errorMessage: String?, expirationDate: Date?, submissionDate: Date?, completionDate: Date?) {
-        
         self.state = state
-        
         self.errorMessage = errorMessage
-        
         self.expirationDate = expirationDate
-        
         self.submissionDate = submissionDate
-        
         self.completionDate = completionDate
-        
     }
 
 

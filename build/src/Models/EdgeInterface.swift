@@ -27,23 +27,14 @@ public class EdgeInterface: Codable {
     public var addressFamilyId: String?
 
     public init(type: String?, ipAddress: String?, name: String?, macAddress: String?, ifName: String?, endpoints: [DomainEntityRef]?, lineTypes: [LineTypes]?, addressFamilyId: String?) {
-        
         self.type = type
-        
         self.ipAddress = ipAddress
-        
         self.name = name
-        
         self.macAddress = macAddress
-        
         self.ifName = ifName
-        
         self.endpoints = endpoints
-        
         self.lineTypes = lineTypes
-        
         self.addressFamilyId = addressFamilyId
-        
     }
 
 

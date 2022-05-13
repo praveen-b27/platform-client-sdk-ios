@@ -21,15 +21,10 @@ public class UserStations: Codable {
     public var lastAssociatedStation: UserStation?
 
     public init(associatedStation: UserStation?, effectiveStation: UserStation?, defaultStation: UserStation?, lastAssociatedStation: UserStation?) {
-        
         self.associatedStation = associatedStation
-        
         self.effectiveStation = effectiveStation
-        
         self.defaultStation = defaultStation
-        
         self.lastAssociatedStation = lastAssociatedStation
-        
     }
 
 

@@ -81,39 +81,22 @@ public class QualityAuditLogMessage: Codable {
     public var context: [String:String]?
 
     public init(_id: String?, userHomeOrgId: String?, userTrusteeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIps: [String]?, serviceName: ServiceName?, level: Level?, status: Status?, eventDate: Date?, messageInfo: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
-        
         self._id = _id
-        
         self.userHomeOrgId = userHomeOrgId
-        
         self.userTrusteeOrgId = userTrusteeOrgId
-        
         self.user = user
-        
         self.client = client
-        
         self.remoteIps = remoteIps
-        
         self.serviceName = serviceName
-        
         self.level = level
-        
         self.status = status
-        
         self.eventDate = eventDate
-        
         self.messageInfo = messageInfo
-        
         self.action = action
-        
         self.entity = entity
-        
         self.entityType = entityType
-        
         self.propertyChanges = propertyChanges
-        
         self.context = context
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

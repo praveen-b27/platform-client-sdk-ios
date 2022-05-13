@@ -20,13 +20,9 @@ public class V2ConversationMessageTypingEventForUserTopicConversationMessageEven
     public var typing: V2ConversationMessageTypingEventForUserTopicConversationEventTyping?
 
     public init(eventType: EventType?, coBrowse: V2ConversationMessageTypingEventForUserTopicConversationEventCoBrowse?, typing: V2ConversationMessageTypingEventForUserTopicConversationEventTyping?) {
-        
         self.eventType = eventType
-        
         self.coBrowse = coBrowse
-        
         self.typing = typing
-        
     }
 
 

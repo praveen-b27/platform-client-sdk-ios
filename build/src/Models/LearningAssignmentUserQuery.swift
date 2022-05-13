@@ -18,11 +18,8 @@ public class LearningAssignmentUserQuery: Codable {
     public var searchTerm: String?
 
     public init(rule: LearningModuleRule?, searchTerm: String?) {
-        
         self.rule = rule
-        
         self.searchTerm = searchTerm
-        
     }
 
 

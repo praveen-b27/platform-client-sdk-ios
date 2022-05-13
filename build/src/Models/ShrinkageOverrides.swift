@@ -17,11 +17,8 @@ public class ShrinkageOverrides: Codable {
     public var values: [ShrinkageOverride]?
 
     public init(clear: Bool?, values: [ShrinkageOverride]?) {
-        
         self.clear = clear
-        
         self.values = values
-        
     }
 
 

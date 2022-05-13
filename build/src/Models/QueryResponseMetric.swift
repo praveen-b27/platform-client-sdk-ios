@@ -25,11 +25,8 @@ public class QueryResponseMetric: Codable {
     public var stats: QueryResponseStats?
 
     public init(metric: Metric?, stats: QueryResponseStats?) {
-        
         self.metric = metric
-        
         self.stats = stats
-        
     }
 
 

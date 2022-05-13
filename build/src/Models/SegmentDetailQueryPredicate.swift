@@ -121,23 +121,14 @@ public class SegmentDetailQueryPredicate: Codable {
     public var range: NumericRange?
 
     public init(type: ModelType?, dimension: Dimension?, propertyType: PropertyType?, property: String?, metric: Metric?, _operator: Operator?, value: String?, range: NumericRange?) {
-        
         self.type = type
-        
         self.dimension = dimension
-        
         self.propertyType = propertyType
-        
         self.property = property
-        
         self.metric = metric
-        
         self._operator = _operator
-        
         self.value = value
-        
         self.range = range
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

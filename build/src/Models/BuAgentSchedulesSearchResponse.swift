@@ -19,13 +19,9 @@ public class BuAgentSchedulesSearchResponse: Codable {
     public var publishedSchedules: [BuAgentSchedulePublishedScheduleReference]?
 
     public init(agentSchedules: [BuAgentScheduleSearchResponse]?, businessUnitTimeZone: String?, publishedSchedules: [BuAgentSchedulePublishedScheduleReference]?) {
-        
         self.agentSchedules = agentSchedules
-        
         self.businessUnitTimeZone = businessUnitTimeZone
-        
         self.publishedSchedules = publishedSchedules
-        
     }
 
 

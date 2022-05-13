@@ -40,51 +40,28 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
     public var calibration: EvaluationQualityV2TopicCalibration?
 
     public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?, calibration: EvaluationQualityV2TopicCalibration?) {
-        
         self._id = _id
-        
         self.conversationId = conversationId
-        
         self.agent = agent
-        
         self.evaluator = evaluator
-        
         self.eventTime = eventTime
-        
         self.evaluationFormId = evaluationFormId
-        
         self.formName = formName
-        
         self.scoringSet = scoringSet
-        
         self.contextId = contextId
-        
         self.status = status
-        
         self.agentHasRead = agentHasRead
-        
         self.releaseDate = releaseDate
-        
         self.assignedDate = assignedDate
-        
         self.changedDate = changedDate
-        
         self.eventType = eventType
-        
         self.resourceId = resourceId
-        
         self.resourceType = resourceType
-        
         self.divisionIds = divisionIds
-        
         self.rescore = rescore
-        
         self.conversationDate = conversationDate
-        
         self.mediaType = mediaType
-        
         self.calibration = calibration
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

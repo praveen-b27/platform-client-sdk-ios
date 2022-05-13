@@ -27,21 +27,13 @@ public class Wrapup: Codable {
     public var provisional: Bool?
 
     public init(code: String?, name: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?, provisional: Bool?) {
-        
         self.code = code
-        
         self.name = name
-        
         self.notes = notes
-        
         self.tags = tags
-        
         self.durationSeconds = durationSeconds
-        
         self.endTime = endTime
-        
         self.provisional = provisional
-        
     }
 
 

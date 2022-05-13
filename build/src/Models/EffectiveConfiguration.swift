@@ -24,17 +24,11 @@ public class EffectiveConfiguration: Codable {
     public var credentials: [String:CredentialInfo]?
 
     public init(properties: [String:JSON]?, advanced: [String:JSON]?, name: String?, notes: String?, credentials: [String:CredentialInfo]?) {
-        
         self.properties = properties
-        
         self.advanced = advanced
-        
         self.name = name
-        
         self.notes = notes
-        
         self.credentials = credentials
-        
     }
 
 

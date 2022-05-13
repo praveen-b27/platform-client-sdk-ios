@@ -26,19 +26,12 @@ public class ContentCard: Codable {
     public var actions: [ContentCardAction]?
 
     public init(title: String?, _description: String?, image: String?, video: String?, defaultAction: ContentCardAction?, actions: [ContentCardAction]?) {
-        
         self.title = title
-        
         self._description = _description
-        
         self.image = image
-        
         self.video = video
-        
         self.defaultAction = defaultAction
-        
         self.actions = actions
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

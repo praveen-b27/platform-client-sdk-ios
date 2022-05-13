@@ -24,11 +24,8 @@ public class UserRoutingStatusRoutingStatus: Codable {
     public var startTime: Date?
 
     public init(status: Status?, startTime: Date?) {
-        
         self.status = status
-        
         self.startTime = startTime
-        
     }
 
 

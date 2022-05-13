@@ -21,11 +21,8 @@ public class AssistanceCondition: Codable {
     public var topicIds: [String]?
 
     public init(_operator: Operator?, topicIds: [String]?) {
-        
         self._operator = _operator
-        
         self.topicIds = topicIds
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

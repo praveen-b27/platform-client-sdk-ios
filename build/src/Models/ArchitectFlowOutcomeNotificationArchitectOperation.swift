@@ -46,32 +46,22 @@ public class ArchitectFlowOutcomeNotificationArchitectOperation: Codable {
     public var errorMessage: String?
     /** The error code, if the action failed */
     public var errorCode: String?
-    public var errorMessageParams: ArchitectFlowOutcomeNotificationErrorMessageParams?
+    /** The error message params, if the action failed */
+    public var errorMessageParams: JSON?
     /** The error details, if the action failed */
     public var errorDetails: [ArchitectFlowOutcomeNotificationErrorDetail]?
 
-    public init(_id: String?, complete: Bool?, user: ArchitectFlowOutcomeNotificationUser?, client: ArchitectFlowOutcomeNotificationClient?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: ArchitectFlowOutcomeNotificationErrorMessageParams?, errorDetails: [ArchitectFlowOutcomeNotificationErrorDetail]?) {
-        
+    public init(_id: String?, complete: Bool?, user: ArchitectFlowOutcomeNotificationUser?, client: ArchitectFlowOutcomeNotificationClient?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: JSON?, errorDetails: [ArchitectFlowOutcomeNotificationErrorDetail]?) {
         self._id = _id
-        
         self.complete = complete
-        
         self.user = user
-        
         self.client = client
-        
         self.actionName = actionName
-        
         self.actionStatus = actionStatus
-        
         self.errorMessage = errorMessage
-        
         self.errorCode = errorCode
-        
         self.errorMessageParams = errorMessageParams
-        
         self.errorDetails = errorDetails
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

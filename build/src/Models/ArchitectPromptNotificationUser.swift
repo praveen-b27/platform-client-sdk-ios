@@ -19,13 +19,9 @@ public class ArchitectPromptNotificationUser: Codable {
     public var homeOrg: ArchitectPromptNotificationHomeOrganization?
 
     public init(_id: String?, name: String?, homeOrg: ArchitectPromptNotificationHomeOrganization?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.homeOrg = homeOrg
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

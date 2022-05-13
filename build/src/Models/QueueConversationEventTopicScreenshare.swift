@@ -55,7 +55,8 @@ public class QueueConversationEventTopicScreenshare: Codable {
     public var scriptId: String?
     /** The id of the peer communication corresponding to a matching leg for this communication. */
     public var peerId: String?
-    public var peerCount: QueueConversationEventTopicObject?
+    /** The number of peer participants from the perspective of the participant in the conference. */
+    public var peerCount: JSON?
     /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
     public var disconnectType: DisconnectType?
     /** The timestamp when this communication was connected in the cloud clock. */
@@ -64,43 +65,27 @@ public class QueueConversationEventTopicScreenshare: Codable {
     public var disconnectedTime: Date?
     /** Call wrap up or disposition data. */
     public var wrapup: QueueConversationEventTopicWrapup?
-    /** A communication&#39;s after-call work data. */
+    /** A communication's after-call work data. */
     public var afterCallWork: QueueConversationEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, _self: QueueConversationEventTopicAddress?, _id: String?, context: String?, sharing: Bool?, provider: String?, scriptId: String?, peerId: String?, peerCount: QueueConversationEventTopicObject?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
-        
+    public init(state: State?, _self: QueueConversationEventTopicAddress?, _id: String?, context: String?, sharing: Bool?, provider: String?, scriptId: String?, peerId: String?, peerCount: JSON?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
         self.state = state
-        
         self._self = _self
-        
         self._id = _id
-        
         self.context = context
-        
         self.sharing = sharing
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.peerCount = peerCount
-        
         self.disconnectType = disconnectType
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

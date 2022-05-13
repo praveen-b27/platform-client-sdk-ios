@@ -19,13 +19,9 @@ public class PatchContentOfferStyleProperties: Codable {
     public var backgroundColor: String?
 
     public init(padding: String?, color: String?, backgroundColor: String?) {
-        
         self.padding = padding
-        
         self.color = color
-        
         self.backgroundColor = backgroundColor
-        
     }
 
 

@@ -64,31 +64,18 @@ public class KnowledgeImport: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, uploadKey: String?, fileType: FileType?, ignoreHeaders: Bool?, status: Status?, report: ImportReport?, knowledgeBase: KnowledgeBase?, languageCode: LanguageCode?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.uploadKey = uploadKey
-        
         self.fileType = fileType
-        
         self.ignoreHeaders = ignoreHeaders
-        
         self.status = status
-        
         self.report = report
-        
         self.knowledgeBase = knowledgeBase
-        
         self.languageCode = languageCode
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -19,13 +19,9 @@ public class LanguageOverride: Codable {
     public var voice: String?
 
     public init(language: String?, engine: String?, voice: String?) {
-        
         self.language = language
-        
         self.engine = engine
-        
         self.voice = voice
-        
     }
 
 

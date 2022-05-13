@@ -19,13 +19,9 @@ public class ReportingTurnIntent: Codable {
     public var slots: [ReportingTurnIntentSlot]?
 
     public init(name: String?, confidence: Double?, slots: [ReportingTurnIntentSlot]?) {
-        
         self.name = name
-        
         self.confidence = confidence
-        
         self.slots = slots
-        
     }
 
 

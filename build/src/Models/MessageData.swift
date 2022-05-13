@@ -69,41 +69,23 @@ public class MessageData: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, providerMessageId: String?, timestamp: Date?, fromAddress: String?, toAddress: String?, direction: Direction?, messengerType: MessengerType?, textBody: String?, status: Status?, media: [MessageMedia]?, stickers: [MessageSticker]?, normalizedMessage: ConversationNormalizedMessage?, normalizedReceipts: [ConversationNormalizedMessage]?, createdBy: User?, conversationId: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.providerMessageId = providerMessageId
-        
         self.timestamp = timestamp
-        
         self.fromAddress = fromAddress
-        
         self.toAddress = toAddress
-        
         self.direction = direction
-        
         self.messengerType = messengerType
-        
         self.textBody = textBody
-        
         self.status = status
-        
         self.media = media
-        
         self.stickers = stickers
-        
         self.normalizedMessage = normalizedMessage
-        
         self.normalizedReceipts = normalizedReceipts
-        
         self.createdBy = createdBy
-        
         self.conversationId = conversationId
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

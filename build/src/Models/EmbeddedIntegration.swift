@@ -15,11 +15,8 @@ public class EmbeddedIntegration: Codable {
     public var domainWhitelist: [String]?
 
     public init(enableWhitelist: Bool?, domainWhitelist: [String]?) {
-        
         self.enableWhitelist = enableWhitelist
-        
         self.domainWhitelist = domainWhitelist
-        
     }
 
 

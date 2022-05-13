@@ -18,11 +18,8 @@ public class ScimUserRoutingLanguage: Codable {
     public var proficiency: Double?
 
     public init(name: String?, proficiency: Double?) {
-        
         self.name = name
-        
         self.proficiency = proficiency
-        
     }
 
 

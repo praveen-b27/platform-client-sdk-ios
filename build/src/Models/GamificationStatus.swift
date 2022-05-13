@@ -21,15 +21,10 @@ public class GamificationStatus: Codable {
     public var dateStartPersonalBest: Date?
 
     public init(isActive: Bool?, dateStart: Date?, automaticUserAssignment: Bool?, dateStartPersonalBest: Date?) {
-        
         self.isActive = isActive
-        
         self.dateStart = dateStart
-        
         self.automaticUserAssignment = automaticUserAssignment
-        
         self.dateStartPersonalBest = dateStartPersonalBest
-        
     }
 
 

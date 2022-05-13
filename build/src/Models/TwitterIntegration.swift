@@ -61,47 +61,26 @@ public class TwitterIntegration: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, accessTokenKey: String?, consumerKey: String?, username: String?, userId: String?, status: String?, tier: Tier?, envName: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.supportedContent = supportedContent
-        
         self.messagingSetting = messagingSetting
-        
         self.accessTokenKey = accessTokenKey
-        
         self.consumerKey = consumerKey
-        
         self.username = username
-        
         self.userId = userId
-        
         self.status = status
-        
         self.tier = tier
-        
         self.envName = envName
-        
         self.recipient = recipient
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.version = version
-        
         self.createStatus = createStatus
-        
         self.createError = createError
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

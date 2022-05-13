@@ -15,9 +15,7 @@ public class WorkPlanPatternRequest: Codable {
     public var workPlanIds: [String]?
 
     public init(workPlanIds: [String]?) {
-        
         self.workPlanIds = workPlanIds
-        
     }
 
 

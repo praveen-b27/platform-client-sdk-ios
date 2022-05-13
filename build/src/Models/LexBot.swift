@@ -20,15 +20,10 @@ public class LexBot: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

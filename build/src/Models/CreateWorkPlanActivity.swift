@@ -40,33 +40,19 @@ public class CreateWorkPlanActivity: Codable {
     public var minimumLengthFromShiftEndMinutes: Int?
 
     public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, minimumLengthFromShiftStartMinutes: Int?, minimumLengthFromShiftEndMinutes: Int?) {
-        
         self.activityCodeId = activityCodeId
-        
         self._description = _description
-        
         self.lengthMinutes = lengthMinutes
-        
         self.startTimeIsRelativeToShiftStart = startTimeIsRelativeToShiftStart
-        
         self.flexibleStartTime = flexibleStartTime
-        
         self.earliestStartTimeMinutes = earliestStartTimeMinutes
-        
         self.latestStartTimeMinutes = latestStartTimeMinutes
-        
         self.exactStartTimeMinutes = exactStartTimeMinutes
-        
         self.startTimeIncrementMinutes = startTimeIncrementMinutes
-        
         self.countsAsPaidTime = countsAsPaidTime
-        
         self.countsAsContiguousWorkTime = countsAsContiguousWorkTime
-        
         self.minimumLengthFromShiftStartMinutes = minimumLengthFromShiftStartMinutes
-        
         self.minimumLengthFromShiftEndMinutes = minimumLengthFromShiftEndMinutes
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

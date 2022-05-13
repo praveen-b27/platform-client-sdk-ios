@@ -29,23 +29,14 @@ public class FacetEntry: Codable {
     public var terms: [FacetTerm]?
 
     public init(attribute: TermAttribute?, statistics: FacetStatistics?, other: Int64?, total: Int64?, missing: Int64?, termCount: Int?, termType: TermType?, terms: [FacetTerm]?) {
-        
         self.attribute = attribute
-        
         self.statistics = statistics
-        
         self.other = other
-        
         self.total = total
-        
         self.missing = missing
-        
         self.termCount = termCount
-        
         self.termType = termType
-        
         self.terms = terms
-        
     }
 
 

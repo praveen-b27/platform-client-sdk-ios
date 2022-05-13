@@ -60,47 +60,26 @@ public class WrapupDetailEventTopicWrapupEvent: Codable {
     public var wrapupDurationMs: Int?
 
     public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, queueId: String?, wrapupCode: String?, wrapupNotes: String?, wrapupDurationMs: Int?) {
-        
         self.eventTime = eventTime
-        
         self.conversationId = conversationId
-        
         self.participantId = participantId
-        
         self.sessionId = sessionId
-        
         self.mediaType = mediaType
-        
         self.provider = provider
-        
         self.direction = direction
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.addressTo = addressTo
-        
         self.addressFrom = addressFrom
-        
         self.callbackUserName = callbackUserName
-        
         self.callbackNumbers = callbackNumbers
-        
         self.callbackScheduledTime = callbackScheduledTime
-        
         self.subject = subject
-        
         self.messageType = messageType
-        
         self.queueId = queueId
-        
         self.wrapupCode = wrapupCode
-        
         self.wrapupNotes = wrapupNotes
-        
         self.wrapupDurationMs = wrapupDurationMs
-        
     }
 
 

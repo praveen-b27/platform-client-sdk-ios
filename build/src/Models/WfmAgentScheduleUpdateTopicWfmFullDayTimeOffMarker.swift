@@ -20,21 +20,13 @@ public class WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker: Codable {
     public var paid: Bool?
 
     public init(timeOffRequestId: String?, managementUnitDate: String?, activityCodeId: String?, isPaid: Bool?, lengthInMinutes: Int?, _description: String?, paid: Bool?) {
-        
         self.timeOffRequestId = timeOffRequestId
-        
         self.managementUnitDate = managementUnitDate
-        
         self.activityCodeId = activityCodeId
-        
         self.isPaid = isPaid
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self._description = _description
-        
         self.paid = paid
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

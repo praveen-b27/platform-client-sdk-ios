@@ -17,19 +17,15 @@ public class ConversationDetailQueryFilter: Codable {
     }
     /** Boolean operation to apply to the provided predicates and clauses */
     public var type: ModelType?
-    /** Boolean &#39;and/or&#39; logic with up to two-levels of nesting */
+    /** Boolean 'and/or' logic with up to two-levels of nesting */
     public var clauses: [ConversationDetailQueryClause]?
     /** Like a three-word sentence: (attribute-name) (operator) (target-value). */
     public var predicates: [ConversationDetailQueryPredicate]?
 
     public init(type: ModelType?, clauses: [ConversationDetailQueryClause]?, predicates: [ConversationDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.clauses = clauses
-        
         self.predicates = predicates
-        
     }
 
 

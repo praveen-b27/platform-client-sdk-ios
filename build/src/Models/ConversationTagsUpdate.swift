@@ -15,9 +15,7 @@ public class ConversationTagsUpdate: Codable {
     public var externalTag: String?
 
     public init(externalTag: String?) {
-        
         self.externalTag = externalTag
-        
     }
 
 

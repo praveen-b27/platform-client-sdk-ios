@@ -33,7 +33,7 @@ public class IntegrationType: Codable {
     public var termsOfServiceUri: String?
     /** Name of the vendor of this integration type */
     public var vendorName: String?
-    /** URI of the vendor&#39;s website */
+    /** URI of the vendor's website */
     public var vendorWebsiteUri: String?
     /** URI of the marketplace listing for this integration type */
     public var marketplaceUri: String?
@@ -61,55 +61,30 @@ public class IntegrationType: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, provider: String?, category: String?, images: [UserImage]?, configPropertiesSchemaUri: String?, configAdvancedSchemaUri: String?, helpUri: String?, termsOfServiceUri: String?, vendorName: String?, vendorWebsiteUri: String?, marketplaceUri: String?, faqUri: String?, privacyPolicyUri: String?, supportContactUri: String?, salesContactUri: String?, helpLinks: [HelpLink]?, credentials: [String:CredentialSpecification]?, nonInstallable: Bool?, maxInstances: Int?, userPermissions: [String]?, vendorOAuthClientIds: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.provider = provider
-        
         self.category = category
-        
         self.images = images
-        
         self.configPropertiesSchemaUri = configPropertiesSchemaUri
-        
         self.configAdvancedSchemaUri = configAdvancedSchemaUri
-        
         self.helpUri = helpUri
-        
         self.termsOfServiceUri = termsOfServiceUri
-        
         self.vendorName = vendorName
-        
         self.vendorWebsiteUri = vendorWebsiteUri
-        
         self.marketplaceUri = marketplaceUri
-        
         self.faqUri = faqUri
-        
         self.privacyPolicyUri = privacyPolicyUri
-        
         self.supportContactUri = supportContactUri
-        
         self.salesContactUri = salesContactUri
-        
         self.helpLinks = helpLinks
-        
         self.credentials = credentials
-        
         self.nonInstallable = nonInstallable
-        
         self.maxInstances = maxInstances
-        
         self.userPermissions = userPermissions
-        
         self.vendorOAuthClientIds = vendorOAuthClientIds
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

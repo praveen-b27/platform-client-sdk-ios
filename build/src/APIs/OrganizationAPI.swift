@@ -11,7 +11,6 @@ import Foundation
 
 open class OrganizationAPI {
     
-    
     public enum ModelType_getFieldconfig: String { 
         case person = "person"
         case group = "group"
@@ -20,9 +19,7 @@ open class OrganizationAPI {
     }
 
     
-    
     /**
-     
      Fetch field config for an entity type
      
      - parameter type: (query) Field type 
@@ -47,62 +44,96 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Fetch field config for an entity type
-     
      - GET /api/v2/fieldconfig
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "schemaVersion" : "aeiou",
-  "entityType" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "version" : "aeiou",
+  "schemaVersion" : "schemaVersion",
+  "entityType" : "person",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "state" : "state",
+  "version" : "version",
   "sections" : [ {
-    "instructionText" : "aeiou",
-    "state" : "aeiou",
+    "instructionText" : "instructionText",
+    "state" : "state",
     "fieldList" : [ {
-      "instructionText" : "aeiou",
+      "instructionText" : "instructionText",
       "repeatable" : true,
       "customLabels" : true,
-      "labelKeys" : [ "aeiou" ],
-      "state" : "aeiou",
+      "labelKeys" : [ "labelKeys", "labelKeys" ],
+      "state" : "state",
       "params" : {
         "key" : "{}"
       },
-      "type" : "aeiou",
-      "key" : "aeiou",
+      "type" : "type",
+      "key" : "key",
+      "required" : true,
+      "gdpr" : true
+    }, {
+      "instructionText" : "instructionText",
+      "repeatable" : true,
+      "customLabels" : true,
+      "labelKeys" : [ "labelKeys", "labelKeys" ],
+      "state" : "state",
+      "params" : {
+        "key" : "{}"
+      },
+      "type" : "type",
+      "key" : "key",
       "required" : true,
       "gdpr" : true
     } ],
-    "key" : "aeiou"
+    "key" : "key"
+  }, {
+    "instructionText" : "instructionText",
+    "state" : "state",
+    "fieldList" : [ {
+      "instructionText" : "instructionText",
+      "repeatable" : true,
+      "customLabels" : true,
+      "labelKeys" : [ "labelKeys", "labelKeys" ],
+      "state" : "state",
+      "params" : {
+        "key" : "{}"
+      },
+      "type" : "type",
+      "key" : "key",
+      "required" : true,
+      "gdpr" : true
+    }, {
+      "instructionText" : "instructionText",
+      "repeatable" : true,
+      "customLabels" : true,
+      "labelKeys" : [ "labelKeys", "labelKeys" ],
+      "state" : "state",
+      "params" : {
+        "key" : "{}"
+      },
+      "type" : "type",
+      "key" : "key",
+      "required" : true,
+      "gdpr" : true
+    } ],
+    "key" : "key"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter type: (query) Field type 
 
      - returns: RequestBuilder<FieldConfig> 
      */
-    open class func getFieldconfigWithRequestBuilder(type: ModelType_getFieldconfig) -> RequestBuilder<FieldConfig> {
+    open class func getFieldconfigWithRequestBuilder(type: ModelType_getFieldconfig) -> RequestBuilder<FieldConfig> {        
         let path = "/api/v2/fieldconfig"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "type": type.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<FieldConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -110,9 +141,7 @@ open class OrganizationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get the list of domains that will be allowed to embed PureCloud applications
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -136,30 +165,22 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get the list of domains that will be allowed to embed PureCloud applications
-     
      - GET /api/v2/organizations/embeddedintegration
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "domainWhitelist" : [ "aeiou" ],
+  "domainWhitelist" : [ "domainWhitelist", "domainWhitelist" ],
   "enableWhitelist" : true
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<EmbeddedIntegration> 
      */
-    open class func getOrganizationsEmbeddedintegrationWithRequestBuilder() -> RequestBuilder<EmbeddedIntegration> {
+    open class func getOrganizationsEmbeddedintegrationWithRequestBuilder() -> RequestBuilder<EmbeddedIntegration> {        
         let path = "/api/v2/organizations/embeddedintegration"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -168,9 +189,7 @@ open class OrganizationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get organization IP address whitelist settings
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -194,29 +213,21 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get organization IP address whitelist settings
-     
      - GET /api/v2/organizations/ipaddressauthentication
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "networkWhitelist" : [ "aeiou" ]
-}}]
+  "networkWhitelist" : [ "networkWhitelist", "networkWhitelist" ]
+}, statusCode=200}]
 
      - returns: RequestBuilder<IpAddressAuthentication> 
      */
-    open class func getOrganizationsIpaddressauthenticationWithRequestBuilder() -> RequestBuilder<IpAddressAuthentication> {
+    open class func getOrganizationsIpaddressauthenticationWithRequestBuilder() -> RequestBuilder<IpAddressAuthentication> {        
         let path = "/api/v2/organizations/ipaddressauthentication"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -226,10 +237,7 @@ open class OrganizationAPI {
     }
 
     
-    
-    
     /**
-     
      Get a limit change request
      
      - parameter requestId: (path) Unique id for the limit change request 
@@ -254,55 +262,54 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get a limit change request
-     
      - GET /api/v2/organizations/limits/changerequests/{requestId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "requestedValue" : 1.3579000000000001069366817318950779736042022705078125,
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "requestedValue" : 0.8008281904610115,
   "statusHistory" : [ {
-    "dateStatusChanged" : "2000-01-23T04:56:07.000+0000",
-    "rejectReason" : "aeiou",
-    "changedBy" : "aeiou",
-    "message" : "aeiou",
-    "status" : "aeiou",
-    "previousStatus" : "aeiou"
+    "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+    "rejectReason" : "AlternativeExists",
+    "changedBy" : "changedBy",
+    "message" : "message",
+    "status" : "Open",
+    "previousStatus" : "Open"
+  }, {
+    "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+    "rejectReason" : "AlternativeExists",
+    "changedBy" : "changedBy",
+    "message" : "message",
+    "status" : "Open",
+    "previousStatus" : "Open"
   } ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "rejectReason" : "aeiou",
-  "createdBy" : "aeiou",
-  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "namespace" : "aeiou",
-  "id" : "aeiou",
-  "lastChangedBy" : "aeiou",
-  "key" : "aeiou",
-  "currentValue" : 1.3579000000000001069366817318950779736042022705078125,
-  "supportCaseUrl" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "rejectReason" : "AlternativeExists",
+  "createdBy" : "createdBy",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "namespace" : "namespace",
+  "id" : "id",
+  "lastChangedBy" : "lastChangedBy",
+  "key" : "key",
+  "currentValue" : 6.027456183070403,
+  "supportCaseUrl" : "supportCaseUrl",
+  "status" : "Open"
+}, statusCode=200}]
      
      - parameter requestId: (path) Unique id for the limit change request 
 
      - returns: RequestBuilder<LimitChangeRequestDetails> 
      */
-    open class func getOrganizationsLimitsChangerequestWithRequestBuilder(requestId: String) -> RequestBuilder<LimitChangeRequestDetails> {
+    open class func getOrganizationsLimitsChangerequestWithRequestBuilder(requestId: String) -> RequestBuilder<LimitChangeRequestDetails> {        
         var path = "/api/v2/organizations/limits/changerequests/{requestId}"
         let requestIdPreEscape = "\(requestId)"
         let requestIdPostEscape = requestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{requestId}", with: requestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -311,9 +318,6 @@ open class OrganizationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -331,22 +335,13 @@ open class OrganizationAPI {
     
     
     
-    
-    
-    public enum Expand_getOrganizationsLimitsChangerequests: String { 
-        case statushistory = "statusHistory"
-    }
-
-    
-    
     /**
-     
      Get the available limit change requests
      
      - parameter after: (query) Timestamp indicating the date to begin after when searching for requests. (optional)
      - parameter before: (query) Timestamp indicating the date to end before when searching for requests. (optional)
      - parameter status: (query) Status of the request to be filtered by (optional)
-     - parameter pageSize: (query) Page Size (optional, default to 25)
+     - parameter pageSize: (query) Page Size (optional)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -369,9 +364,7 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get the available limit change requests
-     
      - GET /api/v2/organizations/limits/changerequests
      - Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
      - OAuth:
@@ -379,65 +372,91 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "requestedValue" : 1.3579000000000001069366817318950779736042022705078125,
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "requestedValue" : 0.8008281904610115,
     "statusHistory" : [ {
-      "dateStatusChanged" : "2000-01-23T04:56:07.000+0000",
-      "rejectReason" : "aeiou",
-      "changedBy" : "aeiou",
-      "message" : "aeiou",
-      "status" : "aeiou",
-      "previousStatus" : "aeiou"
+      "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+      "rejectReason" : "AlternativeExists",
+      "changedBy" : "changedBy",
+      "message" : "message",
+      "status" : "Open",
+      "previousStatus" : "Open"
+    }, {
+      "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+      "rejectReason" : "AlternativeExists",
+      "changedBy" : "changedBy",
+      "message" : "message",
+      "status" : "Open",
+      "previousStatus" : "Open"
     } ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "rejectReason" : "aeiou",
-    "createdBy" : "aeiou",
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "namespace" : "aeiou",
-    "id" : "aeiou",
-    "lastChangedBy" : "aeiou",
-    "key" : "aeiou",
-    "currentValue" : 1.3579000000000001069366817318950779736042022705078125,
-    "supportCaseUrl" : "aeiou",
-    "status" : "aeiou"
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "rejectReason" : "AlternativeExists",
+    "createdBy" : "createdBy",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "namespace" : "namespace",
+    "id" : "id",
+    "lastChangedBy" : "lastChangedBy",
+    "key" : "key",
+    "currentValue" : 6.027456183070403,
+    "supportCaseUrl" : "supportCaseUrl",
+    "status" : "Open"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "requestedValue" : 0.8008281904610115,
+    "statusHistory" : [ {
+      "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+      "rejectReason" : "AlternativeExists",
+      "changedBy" : "changedBy",
+      "message" : "message",
+      "status" : "Open",
+      "previousStatus" : "Open"
+    }, {
+      "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+      "rejectReason" : "AlternativeExists",
+      "changedBy" : "changedBy",
+      "message" : "message",
+      "status" : "Open",
+      "previousStatus" : "Open"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "rejectReason" : "AlternativeExists",
+    "createdBy" : "createdBy",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "namespace" : "namespace",
+    "id" : "id",
+    "lastChangedBy" : "lastChangedBy",
+    "key" : "key",
+    "currentValue" : 6.027456183070403,
+    "supportCaseUrl" : "supportCaseUrl",
+    "status" : "Open"
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter after: (query) Timestamp indicating the date to begin after when searching for requests. (optional)
      - parameter before: (query) Timestamp indicating the date to end before when searching for requests. (optional)
      - parameter status: (query) Status of the request to be filtered by (optional)
-     - parameter pageSize: (query) Page Size (optional, default to 25)
+     - parameter pageSize: (query) Page Size (optional)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
 
      - returns: RequestBuilder<LimitChangeRequestsEntityListing> 
      */
-    open class func getOrganizationsLimitsChangerequestsWithRequestBuilder(after: Int64? = nil, before: Int64? = nil, status: Status_getOrganizationsLimitsChangerequests? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<LimitChangeRequestsEntityListing> {
+    open class func getOrganizationsLimitsChangerequestsWithRequestBuilder(after: Int64? = nil, before: Int64? = nil, status: Status_getOrganizationsLimitsChangerequests? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<LimitChangeRequestsEntityListing> {        
         let path = "/api/v2/organizations/limits/changerequests"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "after": after?.encodeToJSON(), 
-            
             "before": before?.encodeToJSON(), 
-            
             "status": status?.rawValue, 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<LimitChangeRequestsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -445,9 +464,7 @@ open class OrganizationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get a link to the limit documentation
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -471,29 +488,21 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get a link to the limit documentation
-     
      - GET /api/v2/organizations/limits/docs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "url" : "aeiou"
-}}]
+  "url" : "url"
+}, statusCode=200}]
 
      - returns: RequestBuilder<UrlResponse> 
      */
-    open class func getOrganizationsLimitsDocsWithRequestBuilder() -> RequestBuilder<UrlResponse> {
+    open class func getOrganizationsLimitsDocsWithRequestBuilder() -> RequestBuilder<UrlResponse> {        
         let path = "/api/v2/organizations/limits/docs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -503,10 +512,7 @@ open class OrganizationAPI {
     }
 
     
-    
-    
     /**
-     
      Get the effective limits in a namespace for an organization
      
      - parameter namespaceName: (path) The namespace to fetch limits for 
@@ -531,37 +537,32 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get the effective limits in a namespace for an organization
-     
      - GET /api/v2/organizations/limits/namespaces/{namespaceName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "value" : 1.3579000000000001069366817318950779736042022705078125,
-    "key" : "aeiou"
+    "value" : 0.8008281904610115,
+    "key" : "key"
+  }, {
+    "value" : 0.8008281904610115,
+    "key" : "key"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter namespaceName: (path) The namespace to fetch limits for 
 
      - returns: RequestBuilder<LimitsEntityListing> 
      */
-    open class func getOrganizationsLimitsNamespaceWithRequestBuilder(namespaceName: String) -> RequestBuilder<LimitsEntityListing> {
+    open class func getOrganizationsLimitsNamespaceWithRequestBuilder(namespaceName: String) -> RequestBuilder<LimitsEntityListing> {        
         var path = "/api/v2/organizations/limits/namespaces/{namespaceName}"
         let namespaceNamePreEscape = "\(namespaceName)"
         let namespaceNamePostEscape = namespaceNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{namespaceName}", with: namespaceNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -571,10 +572,7 @@ open class OrganizationAPI {
     }
 
     
-    
-    
     /**
-     
      Get the default limits in a namespace for an organization
      
      - parameter namespaceName: (path) The namespace to fetch defaults limits for 
@@ -599,37 +597,32 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get the default limits in a namespace for an organization
-     
      - GET /api/v2/organizations/limits/namespaces/{namespaceName}/defaults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "value" : 1.3579000000000001069366817318950779736042022705078125,
-    "key" : "aeiou"
+    "value" : 0.8008281904610115,
+    "key" : "key"
+  }, {
+    "value" : 0.8008281904610115,
+    "key" : "key"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter namespaceName: (path) The namespace to fetch defaults limits for 
 
      - returns: RequestBuilder<LimitsEntityListing> 
      */
-    open class func getOrganizationsLimitsNamespaceDefaultsWithRequestBuilder(namespaceName: String) -> RequestBuilder<LimitsEntityListing> {
+    open class func getOrganizationsLimitsNamespaceDefaultsWithRequestBuilder(namespaceName: String) -> RequestBuilder<LimitsEntityListing> {        
         var path = "/api/v2/organizations/limits/namespaces/{namespaceName}/defaults"
         let namespaceNamePreEscape = "\(namespaceName)"
         let namespaceNamePostEscape = namespaceNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{namespaceName}", with: namespaceNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -640,20 +633,16 @@ open class OrganizationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the available limit namespaces
      
-     - parameter pageSize: (query) Page size (optional, default to 100)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOrganizationsLimitsNamespaces(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: PagedNamespaceListing?,_ error: Error?) -> Void)) {
+    open class func getOrganizationsLimitsNamespaces(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = getOrganizationsLimitsNamespacesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
-        requestBuilder.execute { (response: Response<PagedNamespaceListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -670,48 +659,34 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get the available limit namespaces
-     
      - GET /api/v2/organizations/limits/namespaces
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
      
-     - parameter pageSize: (query) Page size (optional, default to 100)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
-     - returns: RequestBuilder<PagedNamespaceListing> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func getOrganizationsLimitsNamespacesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<PagedNamespaceListing> {
+    open class func getOrganizationsLimitsNamespacesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<JSON> {        
         let path = "/api/v2/organizations/limits/namespaces"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
-        let requestBuilder: RequestBuilder<PagedNamespaceListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get organization.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -735,45 +710,37 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Get organization.
-     
      - GET /api/v2/organizations/me
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultCountryCode" : "aeiou",
-  "selfUri" : "aeiou",
-  "thirdPartyURI" : "aeiou",
-  "version" : 123,
-  "thirdPartyOrgName" : "aeiou",
+  "defaultCountryCode" : "defaultCountryCode",
+  "selfUri" : "https://openapi-generator.tech",
+  "thirdPartyURI" : "https://openapi-generator.tech",
+  "version" : 0,
+  "thirdPartyOrgName" : "thirdPartyOrgName",
   "features" : {
     "key" : true
   },
-  "defaultLanguage" : "aeiou",
-  "defaultSiteId" : "aeiou",
-  "supportURI" : "aeiou",
-  "domain" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "defaultLanguage" : "defaultLanguage",
+  "defaultSiteId" : "defaultSiteId",
+  "supportURI" : "supportURI",
+  "domain" : "domain",
+  "name" : "name",
+  "id" : "id",
+  "state" : "active",
   "voicemailEnabled" : true,
-  "productPlatform" : "aeiou"
-}}]
+  "productPlatform" : "GenesysCloud"
+}, statusCode=200}]
 
      - returns: RequestBuilder<Organization> 
      */
-    open class func getOrganizationsMeWithRequestBuilder() -> RequestBuilder<Organization> {
+    open class func getOrganizationsMeWithRequestBuilder() -> RequestBuilder<Organization> {        
         let path = "/api/v2/organizations/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -782,9 +749,7 @@ open class OrganizationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Use PUT /api/v2/organizations/embeddedintegration instead
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -808,30 +773,22 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Use PUT /api/v2/organizations/embeddedintegration instead
-     
      - GET /api/v2/organizations/whitelist
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "domainWhitelist" : [ "aeiou" ],
+  "domainWhitelist" : [ "domainWhitelist", "domainWhitelist" ],
   "enableWhitelist" : true
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<OrgWhitelistSettings> 
      */
-    open class func getOrganizationsWhitelistWithRequestBuilder() -> RequestBuilder<OrgWhitelistSettings> {
+    open class func getOrganizationsWhitelistWithRequestBuilder() -> RequestBuilder<OrgWhitelistSettings> {        
         let path = "/api/v2/organizations/whitelist"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -840,7 +797,6 @@ open class OrganizationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum FeatureName_patchOrganizationsFeature: String { 
         case realtimecic = "realtimeCIC"
@@ -860,10 +816,7 @@ open class OrganizationAPI {
 
     
     
-    
-    
     /**
-     
      Update organization
      
      - parameter featureName: (path) Organization feature 
@@ -889,11 +842,8 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Update organization
-     
      - PATCH /api/v2/organizations/features/{featureName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -911,23 +861,21 @@ open class OrganizationAPI {
   "unifiedCommunications" : true,
   "realtimeCIC" : true,
   "contactCenter" : true
-}}]
+}, statusCode=200}]
      
      - parameter featureName: (path) Organization feature 
      - parameter enabled: (body) New state of feature 
 
      - returns: RequestBuilder<OrganizationFeatures> 
      */
-    open class func patchOrganizationsFeatureWithRequestBuilder(featureName: FeatureName_patchOrganizationsFeature, enabled: FeatureState) -> RequestBuilder<OrganizationFeatures> {
+    open class func patchOrganizationsFeatureWithRequestBuilder(featureName: FeatureName_patchOrganizationsFeature, enabled: FeatureState) -> RequestBuilder<OrganizationFeatures> {        
         var path = "/api/v2/organizations/features/{featureName}"
         let featureNamePreEscape = "\(featureName.rawValue)"
         let featureNamePostEscape = featureNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{featureName}", with: featureNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: enabled)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OrganizationFeatures>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -936,10 +884,7 @@ open class OrganizationAPI {
     }
 
     
-    
-    
     /**
-     
      Update the list of domains that will be allowed to embed PureCloud applications
      
      - parameter body: (body) Whitelist settings 
@@ -964,30 +909,25 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Update the list of domains that will be allowed to embed PureCloud applications
-     
      - PUT /api/v2/organizations/embeddedintegration
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "domainWhitelist" : [ "aeiou" ],
+  "domainWhitelist" : [ "domainWhitelist", "domainWhitelist" ],
   "enableWhitelist" : true
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Whitelist settings 
 
      - returns: RequestBuilder<EmbeddedIntegration> 
      */
-    open class func putOrganizationsEmbeddedintegrationWithRequestBuilder(body: EmbeddedIntegration) -> RequestBuilder<EmbeddedIntegration> {
+    open class func putOrganizationsEmbeddedintegrationWithRequestBuilder(body: EmbeddedIntegration) -> RequestBuilder<EmbeddedIntegration> {        
         let path = "/api/v2/organizations/embeddedintegration"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmbeddedIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -996,10 +936,7 @@ open class OrganizationAPI {
     }
 
     
-    
-    
     /**
-     
      Update organization IP address whitelist settings
      
      - parameter body: (body) IP address Whitelist settings 
@@ -1024,29 +961,24 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Update organization IP address whitelist settings
-     
      - PUT /api/v2/organizations/ipaddressauthentication
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "networkWhitelist" : [ "aeiou" ]
-}}]
+  "networkWhitelist" : [ "networkWhitelist", "networkWhitelist" ]
+}, statusCode=200}]
      
      - parameter body: (body) IP address Whitelist settings 
 
      - returns: RequestBuilder<IpAddressAuthentication> 
      */
-    open class func putOrganizationsIpaddressauthenticationWithRequestBuilder(body: IpAddressAuthentication) -> RequestBuilder<IpAddressAuthentication> {
+    open class func putOrganizationsIpaddressauthenticationWithRequestBuilder(body: IpAddressAuthentication) -> RequestBuilder<IpAddressAuthentication> {        
         let path = "/api/v2/organizations/ipaddressauthentication"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IpAddressAuthentication>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1055,10 +987,7 @@ open class OrganizationAPI {
     }
 
     
-    
-    
     /**
-     
      Update organization.
      
      - parameter body: (body) Organization (optional)
@@ -1083,45 +1012,40 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Update organization.
-     
      - PUT /api/v2/organizations/me
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultCountryCode" : "aeiou",
-  "selfUri" : "aeiou",
-  "thirdPartyURI" : "aeiou",
-  "version" : 123,
-  "thirdPartyOrgName" : "aeiou",
+  "defaultCountryCode" : "defaultCountryCode",
+  "selfUri" : "https://openapi-generator.tech",
+  "thirdPartyURI" : "https://openapi-generator.tech",
+  "version" : 0,
+  "thirdPartyOrgName" : "thirdPartyOrgName",
   "features" : {
     "key" : true
   },
-  "defaultLanguage" : "aeiou",
-  "defaultSiteId" : "aeiou",
-  "supportURI" : "aeiou",
-  "domain" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "defaultLanguage" : "defaultLanguage",
+  "defaultSiteId" : "defaultSiteId",
+  "supportURI" : "supportURI",
+  "domain" : "domain",
+  "name" : "name",
+  "id" : "id",
+  "state" : "active",
   "voicemailEnabled" : true,
-  "productPlatform" : "aeiou"
-}}]
+  "productPlatform" : "GenesysCloud"
+}, statusCode=200}]
      
      - parameter body: (body) Organization (optional)
 
      - returns: RequestBuilder<Organization> 
      */
-    open class func putOrganizationsMeWithRequestBuilder(body: Organization? = nil) -> RequestBuilder<Organization> {
+    open class func putOrganizationsMeWithRequestBuilder(body: Organization? = nil) -> RequestBuilder<Organization> {        
         let path = "/api/v2/organizations/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Organization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1130,10 +1054,7 @@ open class OrganizationAPI {
     }
 
     
-    
-    
     /**
-     
      Use PUT /api/v2/organizations/embeddedintegration instead
      
      - parameter body: (body) Whitelist settings 
@@ -1158,30 +1079,25 @@ open class OrganizationAPI {
     }
 
     /**
-     
      Use PUT /api/v2/organizations/embeddedintegration instead
-     
      - PUT /api/v2/organizations/whitelist
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "domainWhitelist" : [ "aeiou" ],
+  "domainWhitelist" : [ "domainWhitelist", "domainWhitelist" ],
   "enableWhitelist" : true
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Whitelist settings 
 
      - returns: RequestBuilder<OrgWhitelistSettings> 
      */
-    open class func putOrganizationsWhitelistWithRequestBuilder(body: OrgWhitelistSettings) -> RequestBuilder<OrgWhitelistSettings> {
+    open class func putOrganizationsWhitelistWithRequestBuilder(body: OrgWhitelistSettings) -> RequestBuilder<OrgWhitelistSettings> {        
         let path = "/api/v2/organizations/whitelist"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OrgWhitelistSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

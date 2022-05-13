@@ -19,19 +19,12 @@ public class CampaignInteractions: Codable {
     public var scheduledInteractions: [CampaignInteraction]?
 
     public init(campaign: DomainEntityRef?, pendingInteractions: [CampaignInteraction]?, proceedingInteractions: [CampaignInteraction]?, previewingInteractions: [CampaignInteraction]?, interactingInteractions: [CampaignInteraction]?, scheduledInteractions: [CampaignInteraction]?) {
-        
         self.campaign = campaign
-        
         self.pendingInteractions = pendingInteractions
-        
         self.proceedingInteractions = proceedingInteractions
-        
         self.previewingInteractions = previewingInteractions
-        
         self.interactingInteractions = interactingInteractions
-        
         self.scheduledInteractions = scheduledInteractions
-        
     }
 
 

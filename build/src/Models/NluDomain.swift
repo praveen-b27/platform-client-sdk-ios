@@ -31,25 +31,15 @@ public class NluDomain: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, language: String?, draftVersion: NluDomainVersion?, lastPublishedVersion: NluDomainVersion?, dateCreated: Date?, dateModified: Date?, engineVersion: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.language = language
-        
         self.draftVersion = draftVersion
-        
         self.lastPublishedVersion = lastPublishedVersion
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.engineVersion = engineVersion
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

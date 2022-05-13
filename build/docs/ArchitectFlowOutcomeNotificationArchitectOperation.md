@@ -16,7 +16,7 @@ Describes an operation being performed on an Architect object
 | **actionStatus** | **String** | The action status | [optional] |
 | **errorMessage** | **String** | The error message, if the action failed | [optional] |
 | **errorCode** | **String** | The error code, if the action failed | [optional] |
-| **errorMessageParams** | [**ArchitectFlowOutcomeNotificationErrorMessageParams**](ArchitectFlowOutcomeNotificationErrorMessageParams.html) |  | [optional] |
+| **errorMessageParams** | [**JSON**](.html) | The error message params, if the action failed | [optional] |
 | **errorDetails** | [**[ArchitectFlowOutcomeNotificationErrorDetail]**](ArchitectFlowOutcomeNotificationErrorDetail.html) | The error details, if the action failed | [optional] |
 {: class="table table-striped"}
 

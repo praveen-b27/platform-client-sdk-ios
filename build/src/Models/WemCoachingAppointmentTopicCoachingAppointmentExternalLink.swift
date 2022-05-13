@@ -20,11 +20,8 @@ public class WemCoachingAppointmentTopicCoachingAppointmentExternalLink: Codable
     public var action: Action?
 
     public init(externalLink: String?, action: Action?) {
-        
         self.externalLink = externalLink
-        
         self.action = action
-        
     }
 
 

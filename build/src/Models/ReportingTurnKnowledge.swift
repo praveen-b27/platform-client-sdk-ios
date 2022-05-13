@@ -19,13 +19,9 @@ public class ReportingTurnKnowledge: Codable {
     public var search: ReportingTurnKnowledgeSearch?
 
     public init(knowledgeBaseId: String?, feedback: ReportingTurnKnowledgeFeedback?, search: ReportingTurnKnowledgeSearch?) {
-        
         self.knowledgeBaseId = knowledgeBaseId
-        
         self.feedback = feedback
-        
         self.search = search
-        
     }
 
 

@@ -19,13 +19,9 @@ public class ArchitectFlowOutcomeNotificationUser: Codable {
     public var homeOrg: ArchitectFlowOutcomeNotificationHomeOrganization?
 
     public init(_id: String?, name: String?, homeOrg: ArchitectFlowOutcomeNotificationHomeOrganization?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.homeOrg = homeOrg
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

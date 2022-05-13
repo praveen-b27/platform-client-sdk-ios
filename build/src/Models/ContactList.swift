@@ -38,45 +38,28 @@ public class ContactList: Codable {
     public var attemptLimits: DomainEntityRef?
     /** Indicates if automatic time zone mapping is to be used for this ContactList. */
     public var automaticTimeZoneMapping: Bool?
-    /** The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true. */
+    /** The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true. */
     public var zipCodeColumnName: String?
     /** The URI for this object */
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.division = division
-        
         self.columnNames = columnNames
-        
         self.phoneColumns = phoneColumns
-        
         self.importStatus = importStatus
-        
         self.previewModeColumnName = previewModeColumnName
-        
         self.previewModeAcceptedValues = previewModeAcceptedValues
-        
         self.size = size
-        
         self.attemptLimits = attemptLimits
-        
         self.automaticTimeZoneMapping = automaticTimeZoneMapping
-        
         self.zipCodeColumnName = zipCodeColumnName
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

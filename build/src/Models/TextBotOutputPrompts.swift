@@ -18,11 +18,8 @@ public class TextBotOutputPrompts: Codable {
     public var textPrompts: TextBotModeOutputPrompts?
 
     public init(outputLanguage: String?, textPrompts: TextBotModeOutputPrompts?) {
-        
         self.outputLanguage = outputLanguage
-        
         self.textPrompts = textPrompts
-        
     }
 
 

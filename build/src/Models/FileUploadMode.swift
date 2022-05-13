@@ -22,11 +22,8 @@ public class FileUploadMode: Codable {
     public var maxFileSizeKB: Int64?
 
     public init(fileTypes: [FileTypes]?, maxFileSizeKB: Int64?) {
-        
         self.fileTypes = fileTypes
-        
         self.maxFileSizeKB = maxFileSizeKB
-        
     }
 
 

@@ -15,9 +15,7 @@ public class TopicDuration: Codable {
     public var totalMilliseconds: Int64?
 
     public init(totalMilliseconds: Int64?) {
-        
         self.totalMilliseconds = totalMilliseconds
-        
     }
 
 

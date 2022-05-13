@@ -42,23 +42,14 @@ public class PatchContentOffer: Codable {
     public var style: PatchContentOfferStylingConfiguration?
 
     public init(imageUrl: String?, displayMode: DisplayMode?, layoutMode: LayoutMode?, title: String?, headline: String?, body: String?, callToAction: PatchCallToAction?, style: PatchContentOfferStylingConfiguration?) {
-        
         self.imageUrl = imageUrl
-        
         self.displayMode = displayMode
-        
         self.layoutMode = layoutMode
-        
         self.title = title
-        
         self.headline = headline
-        
         self.body = body
-        
         self.callToAction = callToAction
-        
         self.style = style
-        
     }
 
 

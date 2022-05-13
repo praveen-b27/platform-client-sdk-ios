@@ -30,17 +30,11 @@ public class GroupContact: Codable {
     public var mediaType: MediaType?
 
     public init(address: String?, _extension: String?, display: String?, type: ModelType?, mediaType: MediaType?) {
-        
         self.address = address
-        
         self._extension = _extension
-        
         self.display = display
-        
         self.type = type
-        
         self.mediaType = mediaType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

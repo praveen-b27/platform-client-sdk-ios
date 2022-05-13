@@ -16,21 +16,16 @@ public class ScimV2EnterpriseUser: Codable {
     public var division: String?
     /** The department that the user belongs to. */
     public var department: String?
-    /** The user&#39;s manager. */
+    /** The user's manager. */
     public var manager: Manager?
-    /** The user&#39;s employee number. */
+    /** The user's employee number. */
     public var employeeNumber: String?
 
     public init(division: String?, department: String?, manager: Manager?, employeeNumber: String?) {
-        
         self.division = division
-        
         self.department = department
-        
         self.manager = manager
-        
         self.employeeNumber = employeeNumber
-        
     }
 
 

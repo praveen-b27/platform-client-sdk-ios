@@ -17,11 +17,8 @@ public class ReschedulingManagementUnitResponse: Codable {
     public var applied: Bool?
 
     public init(managementUnit: ManagementUnitReference?, applied: Bool?) {
-        
         self.managementUnit = managementUnit
-        
         self.applied = applied
-        
     }
 
 

@@ -15,9 +15,7 @@ public class SchedulingOptionsRequest: Codable {
     public var noForecastOptions: SchedulingNoForecastOptionsRequest?
 
     public init(noForecastOptions: SchedulingNoForecastOptionsRequest?) {
-        
         self.noForecastOptions = noForecastOptions
-        
     }
 
 

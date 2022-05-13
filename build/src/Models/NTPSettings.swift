@@ -15,9 +15,7 @@ public class NTPSettings: Codable {
     public var servers: [String]?
 
     public init(servers: [String]?) {
-        
         self.servers = servers
-        
     }
 
 

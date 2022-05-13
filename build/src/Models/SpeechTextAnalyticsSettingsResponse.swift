@@ -17,11 +17,8 @@ public class SpeechTextAnalyticsSettingsResponse: Codable {
     public var expectedDialects: [String]?
 
     public init(defaultProgram: AddressableEntityRef?, expectedDialects: [String]?) {
-        
         self.defaultProgram = defaultProgram
-        
         self.expectedDialects = expectedDialects
-        
     }
 
 

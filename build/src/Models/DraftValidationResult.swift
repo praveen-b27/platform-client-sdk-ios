@@ -18,11 +18,8 @@ public class DraftValidationResult: Codable {
     public var errors: [ErrorBody]?
 
     public init(valid: Bool?, errors: [ErrorBody]?) {
-        
         self.valid = valid
-        
         self.errors = errors
-        
     }
 
 

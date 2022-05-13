@@ -23,17 +23,11 @@ public class BuAgentScheduleRescheduleResponse: Codable {
     public var workPlansPerWeek: [WorkPlanReference]?
 
     public init(user: UserReference?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?, workPlan: WorkPlanReference?, workPlansPerWeek: [WorkPlanReference]?) {
-        
         self.user = user
-        
         self.shifts = shifts
-        
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
-        
         self.workPlan = workPlan
-        
         self.workPlansPerWeek = workPlansPerWeek
-        
     }
 
 

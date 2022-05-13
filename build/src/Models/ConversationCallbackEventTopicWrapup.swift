@@ -23,17 +23,11 @@ public class ConversationCallbackEventTopicWrapup: Codable {
     public var endTime: Date?
 
     public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {
-        
         self.code = code
-        
         self.notes = notes
-        
         self.tags = tags
-        
         self.durationSeconds = durationSeconds
-        
         self.endTime = endTime
-        
     }
 
 

@@ -16,13 +16,9 @@ public class WfmMoveAgentsCompleteTopicWfmMoveAgentsComplete: Codable {
     public var results: [WfmMoveAgentsCompleteTopicWfmMoveAgentData]?
 
     public init(requestingUser: WfmMoveAgentsCompleteTopicUserReference?, destinationManagementUnit: WfmMoveAgentsCompleteTopicManagementUnit?, results: [WfmMoveAgentsCompleteTopicWfmMoveAgentData]?) {
-        
         self.requestingUser = requestingUser
-        
         self.destinationManagementUnit = destinationManagementUnit
-        
         self.results = results
-        
     }
 
 

@@ -25,7 +25,7 @@ public class CreateActivityCodeRequest: Codable {
     }
     /** The name of the activity code */
     public var name: String?
-    /** The activity code&#39;s category */
+    /** The activity code's category */
     public var category: Category?
     /** The default length of the activity in minutes */
     public var lengthInMinutes: Int?
@@ -37,19 +37,12 @@ public class CreateActivityCodeRequest: Codable {
     public var agentTimeOffSelectable: Bool?
 
     public init(name: String?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?) {
-        
         self.name = name
-        
         self.category = category
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.countsAsPaidTime = countsAsPaidTime
-        
         self.countsAsWorkTime = countsAsWorkTime
-        
         self.agentTimeOffSelectable = agentTimeOffSelectable
-        
     }
 
 

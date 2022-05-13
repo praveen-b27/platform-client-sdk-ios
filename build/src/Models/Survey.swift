@@ -38,29 +38,17 @@ public class Survey: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, conversation: Conversation?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.conversation = conversation
-        
         self.surveyForm = surveyForm
-        
         self.agent = agent
-        
         self.status = status
-        
         self.queue = queue
-        
         self.answers = answers
-        
         self.completedDate = completedDate
-        
         self.surveyErrorDetails = surveyErrorDetails
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

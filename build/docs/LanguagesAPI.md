@@ -23,13 +23,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 # **deleteLanguage**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > Void deleteLanguage(languageId)
 
 Delete Language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+
+
 
 Wraps DELETE /api/v2/languages/{languageId}  
 
@@ -125,13 +127,15 @@ LanguagesAPI.deleteRoutingLanguage(languageId: languageId) { (error) in
 
 # **getLanguage**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [Language](Language.html) getLanguage(languageId)
 
 Get language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+
+
 
 Wraps GET /api/v2/languages/{languageId}  
 
@@ -177,13 +181,15 @@ LanguagesAPI.getLanguage(languageId: languageId) { (response, error) in
 
 # **getLanguages**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [LanguageEntityListing](LanguageEntityListing.html) getLanguages(pageSize, pageNumber, sortOrder, name)
 
 Get the list of supported languages. (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages
+
+
 
 Wraps GET /api/v2/languages  
 
@@ -199,8 +205,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: LanguagesAPI.SortOrder_getLanguages = LanguagesAPI.SortOrder_getLanguages.enummember // Ascending or descending sort order
 let name: String = "" // Name
 
@@ -220,9 +226,9 @@ LanguagesAPI.getLanguages(pageSize: pageSize, pageNumber: pageNumber, sortOrder:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **name** | **String**| Name | [optional] |
 {: class="table-striped"}
 
@@ -486,13 +492,15 @@ LanguagesAPI.getRoutingLanguage(languageId: languageId) { (response, error) in
 
 # **postLanguages**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [Language](Language.html) postLanguages(body)
 
 Create Language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages
+
+
 
 Wraps POST /api/v2/languages  
 

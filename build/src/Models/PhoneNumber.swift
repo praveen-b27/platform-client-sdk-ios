@@ -19,19 +19,12 @@ public class PhoneNumber: Codable {
     public var countryCode: String?
 
     public init(display: String?, _extension: Int64?, acceptsSMS: Bool?, userInput: String?, e164: String?, countryCode: String?) {
-        
         self.display = display
-        
         self._extension = _extension
-        
         self.acceptsSMS = acceptsSMS
-        
         self.userInput = userInput
-        
         self.e164 = e164
-        
         self.countryCode = countryCode
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

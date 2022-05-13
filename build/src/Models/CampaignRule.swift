@@ -34,29 +34,17 @@ public class CampaignRule: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaignRuleEntities: CampaignRuleEntities?, campaignRuleConditions: [CampaignRuleCondition]?, campaignRuleActions: [CampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.campaignRuleEntities = campaignRuleEntities
-        
         self.campaignRuleConditions = campaignRuleConditions
-        
         self.campaignRuleActions = campaignRuleActions
-        
         self.matchAnyConditions = matchAnyConditions
-        
         self.enabled = enabled
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

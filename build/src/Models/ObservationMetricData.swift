@@ -20,17 +20,11 @@ public class ObservationMetricData: Codable {
     public var observations: [ObservationValue]?
 
     public init(metric: String?, qualifier: String?, stats: StatisticalSummary?, truncated: Bool?, observations: [ObservationValue]?) {
-        
         self.metric = metric
-        
         self.qualifier = qualifier
-        
         self.stats = stats
-        
         self.truncated = truncated
-        
         self.observations = observations
-        
     }
 
 

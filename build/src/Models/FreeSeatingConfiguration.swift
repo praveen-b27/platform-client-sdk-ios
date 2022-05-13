@@ -22,11 +22,8 @@ public class FreeSeatingConfiguration: Codable {
     public var ttlMinutes: Int?
 
     public init(freeSeatingState: FreeSeatingState?, ttlMinutes: Int?) {
-        
         self.freeSeatingState = freeSeatingState
-        
         self.ttlMinutes = ttlMinutes
-        
     }
 
 

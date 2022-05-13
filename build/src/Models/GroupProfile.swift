@@ -29,19 +29,12 @@ public class GroupProfile: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, state: State?, dateModified: Date?, version: Int64?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.state = state
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

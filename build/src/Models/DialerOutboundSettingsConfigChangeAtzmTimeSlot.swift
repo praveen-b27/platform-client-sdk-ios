@@ -18,11 +18,8 @@ public class DialerOutboundSettingsConfigChangeAtzmTimeSlot: Codable {
     public var latestCallableTime: String?
 
     public init(earliestCallableTime: String?, latestCallableTime: String?) {
-        
         self.earliestCallableTime = earliestCallableTime
-        
         self.latestCallableTime = latestCallableTime
-        
     }
 
 

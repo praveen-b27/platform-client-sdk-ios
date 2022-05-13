@@ -15,9 +15,7 @@ public class CoachingAppointmentAggregateResponse: Codable {
     public var results: [QueryResponseGroupedData]?
 
     public init(results: [QueryResponseGroupedData]?) {
-        
         self.results = results
-        
     }
 
 

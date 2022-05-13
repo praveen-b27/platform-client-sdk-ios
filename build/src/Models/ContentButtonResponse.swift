@@ -26,15 +26,10 @@ public class ContentButtonResponse: Codable {
     public var payload: String?
 
     public init(_id: String?, type: ModelType?, text: String?, payload: String?) {
-        
         self._id = _id
-        
         self.type = type
-        
         self.text = text
-        
         self.payload = payload
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -20,13 +20,9 @@ public class CredentialSpecification: Codable {
     public var credentialTypes: [String]?
 
     public init(_required: Bool?, title: String?, credentialTypes: [String]?) {
-        
         self._required = _required
-        
         self.title = title
-        
         self.credentialTypes = credentialTypes
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

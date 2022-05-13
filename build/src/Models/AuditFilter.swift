@@ -21,15 +21,10 @@ public class AuditFilter: Codable {
     public var values: [String]?
 
     public init(name: String?, type: String?, _operator: String?, values: [String]?) {
-        
         self.name = name
-        
         self.type = type
-        
         self._operator = _operator
-        
         self.values = values
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -46,29 +46,17 @@ public class KnowledgeBase: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, coreLanguage: CoreLanguage?, dateCreated: Date?, dateModified: Date?, faqCount: Int?, dateDocumentLastModified: Date?, articleCount: Int?, published: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.coreLanguage = coreLanguage
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.faqCount = faqCount
-        
         self.dateDocumentLastModified = dateDocumentLastModified
-        
         self.articleCount = articleCount
-        
         self.published = published
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -54,7 +54,7 @@ public class QueueConversationVideoEventTopicVideo: Codable {
     /** Indicates whether this participant is sharing their screen to the session. */
     public var sharingScreen: Bool?
     /** The number of peer participants from the perspective of the participant in the conference. */
-    public var peerCount: QueueConversationVideoEventTopicObject?
+    public var peerCount: JSON?
     /** The media provider controlling the video. */
     public var provider: String?
     /** The UUID of the script to use. */
@@ -71,49 +71,30 @@ public class QueueConversationVideoEventTopicVideo: Codable {
     public var msids: [String]?
     /** Call wrap up or disposition data. */
     public var wrapup: QueueConversationVideoEventTopicWrapup?
-    /** A communication&#39;s after-call work data. */
+    /** A communication's after-call work data. */
     public var afterCallWork: QueueConversationVideoEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, _self: QueueConversationVideoEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: QueueConversationVideoEventTopicObject?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
-        
+    public init(state: State?, _self: QueueConversationVideoEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: JSON?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
         self.state = state
-        
         self._self = _self
-        
         self._id = _id
-        
         self.context = context
-        
         self.audioMuted = audioMuted
-        
         self.videoMuted = videoMuted
-        
         self.sharingScreen = sharingScreen
-        
         self.peerCount = peerCount
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.disconnectType = disconnectType
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.msids = msids
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

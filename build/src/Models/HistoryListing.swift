@@ -57,47 +57,26 @@ public class HistoryListing: Codable {
     public var pageCount: Int?
 
     public init(_id: String?, complete: Bool?, user: User?, client: DomainEntityRef?, errorMessage: String?, errorCode: String?, errorDetails: [Detail]?, errorMessageParams: [String:String]?, actionName: ActionName?, actionStatus: ActionStatus?, name: String?, _description: String?, system: Bool?, started: Date?, completed: Date?, pageSize: Int?, pageNumber: Int?, total: Int64?, entities: [HistoryEntry]?, pageCount: Int?) {
-        
         self._id = _id
-        
         self.complete = complete
-        
         self.user = user
-        
         self.client = client
-        
         self.errorMessage = errorMessage
-        
         self.errorCode = errorCode
-        
         self.errorDetails = errorDetails
-        
         self.errorMessageParams = errorMessageParams
-        
         self.actionName = actionName
-        
         self.actionStatus = actionStatus
-        
         self.name = name
-        
         self._description = _description
-        
         self.system = system
-        
         self.started = started
-        
         self.completed = completed
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.total = total
-        
         self.entities = entities
-        
         self.pageCount = pageCount
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

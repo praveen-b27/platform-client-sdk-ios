@@ -31,27 +31,16 @@ public class WfmBuScheduleRunTopicBuScheduleRun: Codable {
     public var messageSeverityCounts: [WfmBuScheduleRunTopicSchedulerMessageSeverityCount]?
 
     public init(_id: String?, percentComplete: Double?, intradayRescheduling: Bool?, state: State?, weekCount: Int?, schedule: WfmBuScheduleRunTopicBuScheduleReference?, schedulingCanceledBy: WfmBuScheduleRunTopicUserReference?, schedulingCompletedTime: String?, messageCount: Int?, messageSeverityCounts: [WfmBuScheduleRunTopicSchedulerMessageSeverityCount]?) {
-        
         self._id = _id
-        
         self.percentComplete = percentComplete
-        
         self.intradayRescheduling = intradayRescheduling
-        
         self.state = state
-        
         self.weekCount = weekCount
-        
         self.schedule = schedule
-        
         self.schedulingCanceledBy = schedulingCanceledBy
-        
         self.schedulingCompletedTime = schedulingCompletedTime
-        
         self.messageCount = messageCount
-        
         self.messageSeverityCounts = messageSeverityCounts
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

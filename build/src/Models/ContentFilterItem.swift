@@ -35,15 +35,10 @@ public class ContentFilterItem: Codable {
     public var values: [String]?
 
     public init(name: String?, type: ModelType?, _operator: Operator?, values: [String]?) {
-        
         self.name = name
-        
         self.type = type
-        
         self._operator = _operator
-        
         self.values = values
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

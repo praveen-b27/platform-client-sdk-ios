@@ -16,9 +16,7 @@ public class Certificate: Codable {
     public var certificate: String?
 
     public init(certificate: String?) {
-        
         self.certificate = certificate
-        
     }
 
 

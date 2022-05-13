@@ -29,35 +29,20 @@ public class AgentActivity: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, agent: User?, numEvaluations: Int?, averageEvaluationScore: Int?, numCriticalEvaluations: Int?, averageCriticalScore: Float?, highestEvaluationScore: Float?, lowestEvaluationScore: Float?, highestCriticalScore: Float?, lowestCriticalScore: Float?, agentEvaluatorActivityList: [AgentEvaluatorActivity]?, numEvaluationsWithoutViewPermission: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.agent = agent
-        
         self.numEvaluations = numEvaluations
-        
         self.averageEvaluationScore = averageEvaluationScore
-        
         self.numCriticalEvaluations = numCriticalEvaluations
-        
         self.averageCriticalScore = averageCriticalScore
-        
         self.highestEvaluationScore = highestEvaluationScore
-        
         self.lowestEvaluationScore = lowestEvaluationScore
-        
         self.highestCriticalScore = highestCriticalScore
-        
         self.lowestCriticalScore = lowestCriticalScore
-        
         self.agentEvaluatorActivityList = agentEvaluatorActivityList
-        
         self.numEvaluationsWithoutViewPermission = numEvaluationsWithoutViewPermission
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

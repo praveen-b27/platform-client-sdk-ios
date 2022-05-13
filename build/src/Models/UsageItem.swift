@@ -22,13 +22,9 @@ public class UsageItem: Codable {
     public var totalDocumentCount: Int64?
 
     public init(type: ModelType?, totalDocumentByteCount: Int64?, totalDocumentCount: Int64?) {
-        
         self.type = type
-        
         self.totalDocumentByteCount = totalDocumentByteCount
-        
         self.totalDocumentCount = totalDocumentCount
-        
     }
 
 

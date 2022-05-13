@@ -17,15 +17,10 @@ public class JourneyWebEventsNotificationOutcome: Codable {
     public var version: String?
 
     public init(_id: String?, selfUri: String?, displayName: String?, version: String?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.displayName = displayName
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

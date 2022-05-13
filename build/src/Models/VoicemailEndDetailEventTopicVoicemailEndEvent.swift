@@ -62,35 +62,20 @@ public class VoicemailEndDetailEventTopicVoicemailEndEvent: Codable {
     public var voicemailDurationMs: Int?
 
     public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, userId: String?, queueId: String?, divisionId: String?, voicemailDurationMs: Int?) {
-        
         self.eventTime = eventTime
-        
         self.conversationId = conversationId
-        
         self.participantId = participantId
-        
         self.sessionId = sessionId
-        
         self.disconnectType = disconnectType
-        
         self.mediaType = mediaType
-        
         self.provider = provider
-        
         self.direction = direction
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.userId = userId
-        
         self.queueId = queueId
-        
         self.divisionId = divisionId
-        
         self.voicemailDurationMs = voicemailDurationMs
-        
     }
 
 

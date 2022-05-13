@@ -19,13 +19,9 @@ public class DocumentFaq: Codable {
     public var alternatives: [String]?
 
     public init(question: String?, answer: String?, alternatives: [String]?) {
-        
         self.question = question
-        
         self.answer = answer
-        
         self.alternatives = alternatives
-        
     }
 
 

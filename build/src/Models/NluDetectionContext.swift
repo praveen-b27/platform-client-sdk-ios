@@ -17,11 +17,8 @@ public class NluDetectionContext: Codable {
     public var entity: ContextEntity?
 
     public init(intent: ContextIntent?, entity: ContextEntity?) {
-        
         self.intent = intent
-        
         self.entity = entity
-        
     }
 
 

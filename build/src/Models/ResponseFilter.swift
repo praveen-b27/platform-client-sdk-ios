@@ -17,7 +17,7 @@ public class ResponseFilter: Codable {
         case equals = "EQUALS"
         case notequals = "NOTEQUALS"
     }
-    /** Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId. */
+    /** Field to filter on. Allowed values are 'name' and 'libraryId. */
     public var name: String?
     /** Filter operation: IN, EQUALS, NOTEQUALS. */
     public var _operator: Operator?
@@ -25,13 +25,9 @@ public class ResponseFilter: Codable {
     public var values: [String]?
 
     public init(name: String?, _operator: Operator?, values: [String]?) {
-        
         self.name = name
-        
         self._operator = _operator
-        
         self.values = values
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

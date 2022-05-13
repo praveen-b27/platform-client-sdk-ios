@@ -33,7 +33,7 @@ public class PatchActionMap: Codable {
     public var weight: Int?
     /** The action that will be executed if this action map is triggered. */
     public var action: PatchAction?
-    /** The action map&#39;s associated schedule groups. */
+    /** The action map's associated schedule groups. */
     public var actionMapScheduleGroups: PatchActionMapScheduleGroups?
     /** Override organization-level frequency cap and always offer web engagements from this action map. */
     public var ignoreFrequencyCap: Bool?
@@ -49,43 +49,24 @@ public class PatchActionMap: Codable {
     public var endDate: Date?
 
     public init(_id: String?, version: Int?, isActive: Bool?, displayName: String?, triggerWithSegments: [String]?, triggerWithEventConditions: [EventCondition]?, triggerWithOutcomeProbabilityConditions: [OutcomeProbabilityCondition]?, pageUrlConditions: [UrlCondition]?, activation: Activation?, weight: Int?, action: PatchAction?, actionMapScheduleGroups: PatchActionMapScheduleGroups?, ignoreFrequencyCap: Bool?, selfUri: String?, createdDate: Date?, modifiedDate: Date?, startDate: Date?, endDate: Date?) {
-        
         self._id = _id
-        
         self.version = version
-        
         self.isActive = isActive
-        
         self.displayName = displayName
-        
         self.triggerWithSegments = triggerWithSegments
-        
         self.triggerWithEventConditions = triggerWithEventConditions
-        
         self.triggerWithOutcomeProbabilityConditions = triggerWithOutcomeProbabilityConditions
-        
         self.pageUrlConditions = pageUrlConditions
-        
         self.activation = activation
-        
         self.weight = weight
-        
         self.action = action
-        
         self.actionMapScheduleGroups = actionMapScheduleGroups
-        
         self.ignoreFrequencyCap = ignoreFrequencyCap
-        
         self.selfUri = selfUri
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

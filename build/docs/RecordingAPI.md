@@ -187,6 +187,8 @@ Delete media retention policies
 
 Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
 
+
+
 Wraps DELETE /api/v2/recording/crossplatform/mediaretentionpolicies  
 
 Requires ANY permissions: 
@@ -340,6 +342,8 @@ Delete media retention policies
 
 Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
 
+
+
 Wraps DELETE /api/v2/recording/mediaretentionpolicies  
 
 Requires ANY permissions: 
@@ -463,7 +467,7 @@ let formatId: RecordingAPI.FormatId_getConversationRecording = RecordingAPI.Form
 let emailFormatId: RecordingAPI.EmailFormatId_getConversationRecording = RecordingAPI.EmailFormatId_getConversationRecording.enummember // The desired media format when downloading an email recording. Valid values:EML,NONE
 let chatFormatId: RecordingAPI.ChatFormatId_getConversationRecording = RecordingAPI.ChatFormatId_getConversationRecording.enummember // The desired media format when downloading a chat recording. Valid values:ZIP,NONE 
 let messageFormatId: RecordingAPI.MessageFormatId_getConversationRecording = RecordingAPI.MessageFormatId_getConversationRecording.enummember // The desired media format when downloading a message recording. Valid values:ZIP,NONE
-let download: Bool = false // requesting a download format of the recording. Valid values:true,false
+let download: RecordingAPI.Download_getConversationRecording = RecordingAPI.Download_getConversationRecording.enummember // requesting a download format of the recording. Valid values:true,false
 let fileName: String = "" // the name of the downloaded fileName
 let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
 let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3
@@ -486,11 +490,11 @@ RecordingAPI.getConversationRecording(conversationId: conversationId, recordingI
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| Conversation ID | |
 | **recordingId** | **String**| Recording ID | |
-| **formatId** | **String**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
-| **emailFormatId** | **String**| The desired media format when downloading an email recording. Valid values:EML,NONE | [optional] [default to EML]<br />**Values**: eml ("EML"), _none ("NONE") |
-| **chatFormatId** | **String**| The desired media format when downloading a chat recording. Valid values:ZIP,NONE  | [optional] [default to ZIP]<br />**Values**: zip ("ZIP"), _none ("NONE") |
-| **messageFormatId** | **String**| The desired media format when downloading a message recording. Valid values:ZIP,NONE | [optional] [default to ZIP]<br />**Values**: zip ("ZIP"), _none ("NONE") |
-| **download** | **Bool**| requesting a download format of the recording. Valid values:true,false | [optional] [default to false] |
+| **formatId** | **String**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **emailFormatId** | **String**| The desired media format when downloading an email recording. Valid values:EML,NONE | [optional]<br />**Values**: eml ("EML"), _none ("NONE") |
+| **chatFormatId** | **String**| The desired media format when downloading a chat recording. Valid values:ZIP,NONE  | [optional]<br />**Values**: zip ("ZIP"), _none ("NONE") |
+| **messageFormatId** | **String**| The desired media format when downloading a message recording. Valid values:ZIP,NONE | [optional]<br />**Values**: zip ("ZIP"), _none ("NONE") |
+| **download** | **Bool**| requesting a download format of the recording. Valid values:true,false | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
 | **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |
 | **mediaFormats** | [**[String]**](String.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional] |
@@ -747,7 +751,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // Conversation ID
-let maxWaitMs: Int = 5000 // The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.
+let maxWaitMs: Int = 0 // The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.
 let formatId: RecordingAPI.FormatId_getConversationRecordings = RecordingAPI.FormatId_getConversationRecordings.enummember // The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE.
 let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3.
 
@@ -768,8 +772,8 @@ RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| Conversation ID | |
-| **maxWaitMs** | **Int**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
-| **formatId** | **String**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **maxWaitMs** | **Int**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] |
+| **formatId** | **String**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 | **mediaFormats** | [**[String]**](String.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional] |
 {: class="table-striped"}
 
@@ -842,6 +846,8 @@ Gets the media of a single orphan recording
 
 A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
 
+
+
 Wraps GET /api/v2/orphanrecordings/{orphanId}/media  
 
 Requires ANY permissions: 
@@ -861,7 +867,7 @@ let formatId: RecordingAPI.FormatId_getOrphanrecordingMedia = RecordingAPI.Forma
 let emailFormatId: RecordingAPI.EmailFormatId_getOrphanrecordingMedia = RecordingAPI.EmailFormatId_getOrphanrecordingMedia.enummember // The desired media format when downloading an email recording.
 let chatFormatId: RecordingAPI.ChatFormatId_getOrphanrecordingMedia = RecordingAPI.ChatFormatId_getOrphanrecordingMedia.enummember // The desired media format when downloading a chat recording.
 let messageFormatId: RecordingAPI.MessageFormatId_getOrphanrecordingMedia = RecordingAPI.MessageFormatId_getOrphanrecordingMedia.enummember // The desired media format when downloading a message recording.
-let download: Bool = false // requesting a download format of the recording
+let download: RecordingAPI.Download_getOrphanrecordingMedia = RecordingAPI.Download_getOrphanrecordingMedia.enummember // requesting a download format of the recording
 let fileName: String = "" // the name of the downloaded fileName
 let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
 let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3
@@ -883,11 +889,11 @@ RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, ema
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **orphanId** | **String**| Orphan ID | |
-| **formatId** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
-| **emailFormatId** | **String**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: eml ("EML"), _none ("NONE") |
-| **chatFormatId** | **String**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: zip ("ZIP"), _none ("NONE") |
-| **messageFormatId** | **String**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: zip ("ZIP"), _none ("NONE") |
-| **download** | **Bool**| requesting a download format of the recording | [optional] [default to false] |
+| **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **emailFormatId** | **String**| The desired media format when downloading an email recording. | [optional]<br />**Values**: eml ("EML"), _none ("NONE") |
+| **chatFormatId** | **String**| The desired media format when downloading a chat recording. | [optional]<br />**Values**: zip ("ZIP"), _none ("NONE") |
+| **messageFormatId** | **String**| The desired media format when downloading a message recording. | [optional]<br />**Values**: zip ("ZIP"), _none ("NONE") |
+| **download** | **Bool**| requesting a download format of the recording | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
 | **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |
 | **mediaFormats** | [**[String]**](String.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional] |
@@ -924,13 +930,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let hasConversation: Bool = false // Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
+let hasConversation: Bool = true // Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
 let media: RecordingAPI.Media_getOrphanrecordings = RecordingAPI.Media_getOrphanrecordings.enummember // Filter resulting orphans based on their media type
 
 // Code example
@@ -949,13 +955,13 @@ RecordingAPI.getOrphanrecordings(pageSize: pageSize, pageNumber: pageNumber, sor
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **hasConversation** | **Bool**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
+| **hasConversation** | **Bool**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] |
 | **media** | **String**| Filter resulting orphans based on their media type | [optional]<br />**Values**: call ("Call"), screen ("Screen") |
 {: class="table-striped"}
 
@@ -1025,7 +1031,9 @@ RecordingAPI.getRecordingBatchrequest(jobId: jobId) { (response, error) in
 
 Gets media retention policy list with query options to filter on name and enabled.
 
-for a less verbose response, add summary=true to this endpoint
+for a less verbose response, add summary&#x3D;true to this endpoint
+
+
 
 Wraps GET /api/v2/recording/crossplatform/mediaretentionpolicies  
 
@@ -1041,15 +1049,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let name: String = "" // the policy name - used for filtering results in searches.
 let enabled: Bool = true // checks to see if policy is enabled - use enabled = true or enabled = false
-let summary: Bool = false // provides a less verbose response of policy lists.
+let summary: Bool = true // provides a less verbose response of policy lists.
 let hasErrors: Bool = true // provides a way to fetch all policies with errors or policies that do not have errors
 let deleteDaysThreshold: Int = 0 // provides a way to fetch all policies with any actions having deleteDays exceeding the provided value
 
@@ -1069,15 +1077,15 @@ RecordingAPI.getRecordingCrossplatformMediaretentionpolicies(pageSize: pageSize,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **name** | **String**| the policy name - used for filtering results in searches. | [optional] |
 | **enabled** | **Bool**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional] |
-| **summary** | **Bool**| provides a less verbose response of policy lists. | [optional] [default to false] |
+| **summary** | **Bool**| provides a less verbose response of policy lists. | [optional] |
 | **hasErrors** | **Bool**| provides a way to fetch all policies with errors or policies that do not have errors | [optional] |
 | **deleteDaysThreshold** | **Int**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional] |
 {: class="table-striped"}
@@ -1218,8 +1226,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let jobId: String = "" // jobId
-let pageSize: Int = 25 // Page size. Maximum is 100.
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size. Maximum is 100.
+let pageNumber: Int = 0 // Page number
 let includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber.
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
 
@@ -1240,8 +1248,8 @@ RecordingAPI.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| jobId | |
-| **pageSize** | **Int**| Page size. Maximum is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size. Maximum is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **includeTotal** | **Bool**| If false, cursor will be used to locate the page instead of pageNumber. | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 {: class="table-striped"}
@@ -1277,8 +1285,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortBy: RecordingAPI.SortBy_getRecordingJobs = RecordingAPI.SortBy_getRecordingJobs.enummember // Sort by
 let state: RecordingAPI.State_getRecordingJobs = RecordingAPI.State_getRecordingJobs.enummember // Filter by state
 let showOnlyMyJobs: Bool = true // Show only my jobs
@@ -1302,9 +1310,9 @@ RecordingAPI.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to userId]<br />**Values**: userid ("userId"), datecreated ("dateCreated") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: userid ("userId"), datecreated ("dateCreated") |
 | **state** | **String**| Filter by state | [optional]<br />**Values**: fulfilled ("FULFILLED"), pending ("PENDING"), ready ("READY"), processing ("PROCESSING"), cancelled ("CANCELLED"), failed ("FAILED") |
 | **showOnlyMyJobs** | **Bool**| Show only my jobs | [optional] |
 | **jobType** | **String**| Job Type (Can be left empty for both) | [optional]<br />**Values**: delete ("DELETE"), export ("EXPORT") |
@@ -1527,7 +1535,9 @@ This endpoint does not require any parameters.
 
 Gets media retention policy list with query options to filter on name and enabled.
 
-for a less verbose response, add summary=true to this endpoint
+for a less verbose response, add summary&#x3D;true to this endpoint
+
+
 
 Wraps GET /api/v2/recording/mediaretentionpolicies  
 
@@ -1543,15 +1553,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let name: String = "" // the policy name - used for filtering results in searches.
 let enabled: Bool = true // checks to see if policy is enabled - use enabled = true or enabled = false
-let summary: Bool = false // provides a less verbose response of policy lists.
+let summary: Bool = true // provides a less verbose response of policy lists.
 let hasErrors: Bool = true // provides a way to fetch all policies with errors or policies that do not have errors
 let deleteDaysThreshold: Int = 0 // provides a way to fetch all policies with any actions having deleteDays exceeding the provided value
 
@@ -1571,15 +1581,15 @@ RecordingAPI.getRecordingMediaretentionpolicies(pageSize: pageSize, pageNumber: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **name** | **String**| the policy name - used for filtering results in searches. | [optional] |
 | **enabled** | **Bool**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional] |
-| **summary** | **Bool**| provides a less verbose response of policy lists. | [optional] [default to false] |
+| **summary** | **Bool**| provides a less verbose response of policy lists. | [optional] |
 | **hasErrors** | **Bool**| provides a way to fetch all policies with errors or policies that do not have errors | [optional] |
 | **deleteDaysThreshold** | **Int**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional] |
 {: class="table-striped"}
@@ -1667,8 +1677,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 RecordingAPI.getRecordingRecordingkeys(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -1686,8 +1696,8 @@ RecordingAPI.getRecordingRecordingkeys(pageSize: pageSize, pageNumber: pageNumbe
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1770,7 +1780,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let createDefault: Bool = false // If no settings are found, a new one is created with default values
+let createDefault: Bool = true // If no settings are found, a new one is created with default values
 
 // Code example
 RecordingAPI.getRecordingSettings(createDefault: createDefault) { (response, error) in
@@ -1788,7 +1798,7 @@ RecordingAPI.getRecordingSettings(createDefault: createDefault) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createDefault** | **Bool**| If no settings are found, a new one is created with default values | [optional] [default to false] |
+| **createDefault** | **Bool**| If no settings are found, a new one is created with default values | [optional] |
 {: class="table-striped"}
 
 
@@ -1822,8 +1832,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 RecordingAPI.getRecordingsScreensessions(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -1841,8 +1851,8 @@ RecordingAPI.getRecordingsScreensessions(pageSize: pageSize, pageNumber: pageNum
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -2130,6 +2140,8 @@ Create media retention policy
 
 Policy does not work retroactively
 
+
+
 Wraps POST /api/v2/recording/crossplatform/mediaretentionpolicies  
 
 Requires ANY permissions: 
@@ -2181,6 +2193,8 @@ RecordingAPI.postRecordingCrossplatformMediaretentionpolicies(body: body) { (res
 Create a recording bulk job.
 
 Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
+
+
 
 Wraps POST /api/v2/recording/jobs  
 
@@ -2442,6 +2456,8 @@ Create media retention policy
 
 Policy does not work retroactively
 
+
+
 Wraps POST /api/v2/recording/mediaretentionpolicies  
 
 Requires ANY permissions: 
@@ -2693,6 +2709,8 @@ Updates the retention records on a recording.
 
 Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
 
+
+
 Wraps PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}  
 
 Requires ANY permissions: 
@@ -2811,6 +2829,8 @@ Updates an orphan recording to a regular recording with retention values
 
 If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
 
+
+
 Wraps PUT /api/v2/orphanrecordings/{orphanId}  
 
 Requires ANY permissions: 
@@ -2865,6 +2885,8 @@ Update a media retention policy
 
 Policy does not work retroactively
 
+
+
 Wraps PUT /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}  
 
 Requires ANY permissions: 
@@ -2918,6 +2940,8 @@ RecordingAPI.putRecordingCrossplatformMediaretentionpolicy(policyId: policyId, b
 Execute the recording bulk job.
 
 A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording&#39;s retention.
+
+
 
 Wraps PUT /api/v2/recording/jobs/{jobId}  
 
@@ -3082,6 +3106,8 @@ RecordingAPI.putRecordingLocalkeysSetting(settingsId: settingsId, body: body) { 
 Update a media retention policy
 
 Policy does not work retroactively
+
+
 
 Wraps PUT /api/v2/recording/mediaretentionpolicies/{policyId}  
 
@@ -3274,7 +3300,7 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **protect** | **Bool**| Check for apply, uncheck for revoke (each action requires the respective permission) | [optional] [default to true] |
+| **protect** | **Bool**| Check for apply, uncheck for revoke (each action requires the respective permission) | [optional] |
 | **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)|  | [optional] |
 {: class="table-striped"}
 

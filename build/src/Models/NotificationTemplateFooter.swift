@@ -16,9 +16,7 @@ public class NotificationTemplateFooter: Codable {
     public var text: String?
 
     public init(text: String?) {
-        
         self.text = text
-        
     }
 
 

@@ -31,21 +31,13 @@ public class LocationSearchRequest: Codable {
     public var query: [LocationSearchCriteria]?
 
     public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, expand: [String]?, query: [LocationSearchCriteria]?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sort = sort
-        
         self.expand = expand
-        
         self.query = query
-        
     }
 
 

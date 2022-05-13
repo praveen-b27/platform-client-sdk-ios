@@ -39,25 +39,15 @@ public class LexBotAlias: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, bot: LexBot?, botVersion: String?, status: Status?, failureReason: String?, language: Language?, intents: [LexIntent]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.bot = bot
-        
         self.botVersion = botVersion
-        
         self.status = status
-        
         self.failureReason = failureReason
-        
         self.language = language
-        
         self.intents = intents
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

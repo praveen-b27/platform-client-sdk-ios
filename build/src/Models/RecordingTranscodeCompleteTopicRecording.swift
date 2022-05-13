@@ -19,19 +19,12 @@ public class RecordingTranscodeCompleteTopicRecording: Codable {
     public var actualTranscodeTimeMs: Int?
 
     public init(_id: String?, conversationId: String?, fileState: String?, mediaUris: [RecordingTranscodeCompleteTopicMediaResult]?, estimatedTranscodeTimeMs: Int?, actualTranscodeTimeMs: Int?) {
-        
         self._id = _id
-        
         self.conversationId = conversationId
-        
         self.fileState = fileState
-        
         self.mediaUris = mediaUris
-        
         self.estimatedTranscodeTimeMs = estimatedTranscodeTimeMs
-        
         self.actualTranscodeTimeMs = actualTranscodeTimeMs
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

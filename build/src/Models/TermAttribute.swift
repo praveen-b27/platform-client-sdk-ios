@@ -23,13 +23,9 @@ public class TermAttribute: Codable {
     public var type: ModelType?
 
     public init(_id: String?, name: String?, type: ModelType?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.type = type
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

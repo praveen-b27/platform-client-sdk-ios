@@ -43,31 +43,18 @@ public class ChatMessage: Codable {
     public var user: ChatMessageUser?
 
     public init(body: String?, _id: String?, to: String?, from: String?, utc: String?, chat: String?, message: String?, type: String?, bodyType: BodyType?, senderCommunicationId: String?, participantPurpose: String?, user: ChatMessageUser?) {
-        
         self.body = body
-        
         self._id = _id
-        
         self.to = to
-        
         self.from = from
-        
         self.utc = utc
-        
         self.chat = chat
-        
         self.message = message
-        
         self.type = type
-        
         self.bodyType = bodyType
-        
         self.senderCommunicationId = senderCommunicationId
-        
         self.participantPurpose = participantPurpose
-        
         self.user = user
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -15,9 +15,7 @@ public class ConfigurationOverrides: Codable {
     public var priority: Bool?
 
     public init(priority: Bool?) {
-        
         self.priority = priority
-        
     }
 
 

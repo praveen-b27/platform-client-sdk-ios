@@ -15,9 +15,7 @@ public class DraftRequest: Codable {
     public var intents: [DraftIntents]?
 
     public init(intents: [DraftIntents]?) {
-        
         self.intents = intents
-        
     }
 
 

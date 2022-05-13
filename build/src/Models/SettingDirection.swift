@@ -25,11 +25,8 @@ public class SettingDirection: Codable {
     public var outbound: Outbound?
 
     public init(inbound: Inbound?, outbound: Outbound?) {
-        
         self.inbound = inbound
-        
         self.outbound = outbound
-        
     }
 
 

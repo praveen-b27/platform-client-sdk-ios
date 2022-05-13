@@ -17,11 +17,8 @@ public class ValidateWorkPlanMessages: Codable {
     public var constraintConflictMessage: ConstraintConflictMessage?
 
     public init(violationMessages: [WorkPlanConfigurationViolationMessage]?, constraintConflictMessage: ConstraintConflictMessage?) {
-        
         self.violationMessages = violationMessages
-        
         self.constraintConflictMessage = constraintConflictMessage
-        
     }
 
 

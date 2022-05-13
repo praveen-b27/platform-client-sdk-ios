@@ -113,63 +113,34 @@ public class AcdEndDetailEventTopicAcdEndEvent: Codable {
     public var connectedDurationMs: Int?
 
     public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, queueId: String?, divisionId: String?, acdOutcome: AcdOutcome?, answeredUserId: String?, requestedRoutings: [RequestedRoutings]?, usedRouting: UsedRouting?, requestedRoutingSkillIds: [String]?, requestedLanguageId: String?, requestedRoutingUserIds: [String]?, routingPriority: Int?, connectedDurationMs: Int?) {
-        
         self.eventTime = eventTime
-        
         self.conversationId = conversationId
-        
         self.participantId = participantId
-        
         self.sessionId = sessionId
-        
         self.disconnectType = disconnectType
-        
         self.mediaType = mediaType
-        
         self.provider = provider
-        
         self.direction = direction
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.addressTo = addressTo
-        
         self.addressFrom = addressFrom
-        
         self.callbackUserName = callbackUserName
-        
         self.callbackNumbers = callbackNumbers
-        
         self.callbackScheduledTime = callbackScheduledTime
-        
         self.subject = subject
-        
         self.messageType = messageType
-        
         self.queueId = queueId
-        
         self.divisionId = divisionId
-        
         self.acdOutcome = acdOutcome
-        
         self.answeredUserId = answeredUserId
-        
         self.requestedRoutings = requestedRoutings
-        
         self.usedRouting = usedRouting
-        
         self.requestedRoutingSkillIds = requestedRoutingSkillIds
-        
         self.requestedLanguageId = requestedLanguageId
-        
         self.requestedRoutingUserIds = requestedRoutingUserIds
-        
         self.routingPriority = routingPriority
-        
         self.connectedDurationMs = connectedDurationMs
-        
     }
 
 

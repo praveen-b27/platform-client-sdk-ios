@@ -21,13 +21,9 @@ public class LocationEmergencyNumber: Codable {
     public var type: ModelType?
 
     public init(e164: String?, number: String?, type: ModelType?) {
-        
         self.e164 = e164
-        
         self.number = number
-        
         self.type = type
-        
     }
 
 

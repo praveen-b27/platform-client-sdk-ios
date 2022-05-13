@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Defines a SCIM PATCH request. See section 3.5.2 \&quot;Modifying with PATCH\&quot; in RFC 7644 for details. */
+/** Defines a SCIM PATCH request. See section 3.5.2 \"Modifying with PATCH\" in RFC 7644 for details. */
 
 public class ScimV2PatchRequest: Codable {
 
@@ -18,11 +18,8 @@ public class ScimV2PatchRequest: Codable {
     public var operations: [ScimV2PatchOperation]?
 
     public init(schemas: [String]?, operations: [ScimV2PatchOperation]?) {
-        
         self.schemas = schemas
-        
         self.operations = operations
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

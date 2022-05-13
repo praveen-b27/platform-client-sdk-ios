@@ -13,6 +13,8 @@ title: V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
 | **to** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient.html) |  | [optional] |
 | **from** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient.html) |  | [optional] |
 | **time** | [**Date**](Date.html) |  | [optional] |
+| **dateModified** | [**Date**](Date.html) |  | [optional] |
+| **dateDeleted** | [**Date**](Date.html) |  | [optional] |
 | **metadata** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingChannelMetadata**](V2ConversationMessageTypingEventForUserTopicConversationMessagingChannelMetadata.html) |  | [optional] |
 {: class="table table-striped"}
 

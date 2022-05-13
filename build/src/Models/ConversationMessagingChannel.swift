@@ -40,23 +40,14 @@ public class ConversationMessagingChannel: Codable {
     public var dateDeleted: Date?
 
     public init(_id: String?, platform: Platform?, messageId: String?, to: ConversationMessagingToRecipient?, from: ConversationMessagingFromRecipient?, time: Date?, dateModified: Date?, dateDeleted: Date?) {
-        
         self._id = _id
-        
         self.platform = platform
-        
         self.messageId = messageId
-        
         self.to = to
-        
         self.from = from
-        
         self.time = time
-        
         self.dateModified = dateModified
-        
         self.dateDeleted = dateDeleted
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

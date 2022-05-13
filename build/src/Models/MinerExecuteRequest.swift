@@ -28,17 +28,11 @@ public class MinerExecuteRequest: Codable {
     public var queueIds: [String]?
 
     public init(dateStart: Date?, dateEnd: Date?, uploadKey: String?, mediaType: MediaType?, queueIds: [String]?) {
-        
         self.dateStart = dateStart
-        
         self.dateEnd = dateEnd
-        
         self.uploadKey = uploadKey
-        
         self.mediaType = mediaType
-        
         self.queueIds = queueIds
-        
     }
 
 

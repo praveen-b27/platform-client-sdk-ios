@@ -19,13 +19,9 @@ public class FromEmailAddress: Codable {
     public var localPart: String?
 
     public init(domain: DomainEntityRef?, friendlyName: String?, localPart: String?) {
-        
         self.domain = domain
-        
         self.friendlyName = friendlyName
-        
         self.localPart = localPart
-        
     }
 
 

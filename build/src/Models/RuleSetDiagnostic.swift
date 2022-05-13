@@ -23,11 +23,8 @@ public class RuleSetDiagnostic: Codable {
     public var warnings: [Warnings]?
 
     public init(ruleSet: DomainEntityRef?, warnings: [Warnings]?) {
-        
         self.ruleSet = ruleSet
-        
         self.warnings = warnings
-        
     }
 
 

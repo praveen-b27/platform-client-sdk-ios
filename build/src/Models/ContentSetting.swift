@@ -15,9 +15,7 @@ public class ContentSetting: Codable {
     public var story: StorySetting?
 
     public init(story: StorySetting?) {
-        
         self.story = story
-        
     }
 
 

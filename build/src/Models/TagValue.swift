@@ -21,17 +21,11 @@ public class TagValue: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, inUse: Bool?, acl: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.inUse = inUse
-        
         self.acl = acl
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

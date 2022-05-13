@@ -19,13 +19,9 @@ public class ConnectRate: Codable {
     public var connectRatio: Double?
 
     public init(attempts: Int64?, connects: Int64?, connectRatio: Double?) {
-        
         self.attempts = attempts
-        
         self.connects = connects
-        
         self.connectRatio = connectRatio
-        
     }
 
 

@@ -17,11 +17,8 @@ public class PatchCallbackResponse: Codable {
     public var callbackIdentifiers: [CallbackIdentifier]?
 
     public init(conversation: DomainEntityRef?, callbackIdentifiers: [CallbackIdentifier]?) {
-        
         self.conversation = conversation
-        
         self.callbackIdentifiers = callbackIdentifiers
-        
     }
 
 

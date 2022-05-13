@@ -21,15 +21,10 @@ public class DialerAuditRequest: Codable {
     public var filters: [AuditFilter]?
 
     public init(queryPhrase: String?, queryFields: [String]?, facets: [AuditFacet]?, filters: [AuditFilter]?) {
-        
         self.queryPhrase = queryPhrase
-        
         self.queryFields = queryFields
-        
         self.facets = facets
-        
         self.filters = filters
-        
     }
 
 

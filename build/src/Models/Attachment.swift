@@ -25,19 +25,12 @@ public class Attachment: Codable {
     public var inlineImage: Bool?
 
     public init(attachmentId: String?, name: String?, contentUri: String?, contentType: String?, contentLength: Int?, inlineImage: Bool?) {
-        
         self.attachmentId = attachmentId
-        
         self.name = name
-        
         self.contentUri = contentUri
-        
         self.contentType = contentType
-        
         self.contentLength = contentLength
-        
         self.inlineImage = inlineImage
-        
     }
 
 

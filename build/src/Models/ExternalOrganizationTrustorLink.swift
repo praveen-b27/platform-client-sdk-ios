@@ -21,15 +21,10 @@ public class ExternalOrganizationTrustorLink: Codable {
     public var externalOrganizationUri: String?
 
     public init(externalOrganizationId: String?, trustorOrgId: String?, dateCreated: Date?, externalOrganizationUri: String?) {
-        
         self.externalOrganizationId = externalOrganizationId
-        
         self.trustorOrgId = trustorOrgId
-        
         self.dateCreated = dateCreated
-        
         self.externalOrganizationUri = externalOrganizationUri
-        
     }
 
 

@@ -20,15 +20,10 @@ public class ArchitectPromptNotificationPromptNotification: Codable {
     public var currentOperation: ArchitectPromptNotificationArchitectOperation?
 
     public init(_id: String?, name: String?, _description: String?, currentOperation: ArchitectPromptNotificationArchitectOperation?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.currentOperation = currentOperation
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

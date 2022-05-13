@@ -15,9 +15,7 @@ public class DevelopmentActivityAggregateResponse: Codable {
     public var results: [DevelopmentActivityAggregateQueryResponseGroupedData]?
 
     public init(results: [DevelopmentActivityAggregateQueryResponseGroupedData]?) {
-        
         self.results = results
-        
     }
 
 

@@ -35,29 +35,17 @@ public class AnalyticsMediaEndpointStat: Codable {
     public var underrunPackets: Int64?
 
     public init(codecs: [String]?, discardedPackets: Int64?, duplicatePackets: Int64?, eventTime: Date?, invalidPackets: Int64?, maxLatencyMs: Int64?, minMos: Double?, minRFactor: Double?, overrunPackets: Int64?, receivedPackets: Int64?, underrunPackets: Int64?) {
-        
         self.codecs = codecs
-        
         self.discardedPackets = discardedPackets
-        
         self.duplicatePackets = duplicatePackets
-        
         self.eventTime = eventTime
-        
         self.invalidPackets = invalidPackets
-        
         self.maxLatencyMs = maxLatencyMs
-        
         self.minMos = minMos
-        
         self.minRFactor = minRFactor
-        
         self.overrunPackets = overrunPackets
-        
         self.receivedPackets = receivedPackets
-        
         self.underrunPackets = underrunPackets
-        
     }
 
 

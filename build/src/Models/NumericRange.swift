@@ -21,15 +21,10 @@ public class NumericRange: Codable {
     public var lte: Double?
 
     public init(gt: Double?, gte: Double?, lt: Double?, lte: Double?) {
-        
         self.gt = gt
-        
         self.gte = gte
-        
         self.lt = lt
-        
         self.lte = lte
-        
     }
 
 

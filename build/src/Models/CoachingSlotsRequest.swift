@@ -23,17 +23,11 @@ public class CoachingSlotsRequest: Codable {
     public var interruptibleAppointmentIds: [String]?
 
     public init(interval: String?, lengthInMinutes: Int?, attendeeIds: [String]?, facilitatorIds: [String]?, interruptibleAppointmentIds: [String]?) {
-        
         self.interval = interval
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.attendeeIds = attendeeIds
-        
         self.facilitatorIds = facilitatorIds
-        
         self.interruptibleAppointmentIds = interruptibleAppointmentIds
-        
     }
 
 

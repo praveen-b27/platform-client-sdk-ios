@@ -17,11 +17,8 @@ public class Activation: Codable {
     public var delayInSeconds: Int?
 
     public init(type: String?, delayInSeconds: Int?) {
-        
         self.type = type
-        
         self.delayInSeconds = delayInSeconds
-        
     }
 
 

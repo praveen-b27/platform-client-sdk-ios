@@ -23,7 +23,7 @@ public class ConversationMessageContent: Codable {
         case card = "Card"
         case carousel = "Carousel"
     }
-    /** Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
+    /** Type of this content element. If contentType = \"Attachment\" only one item is allowed. */
     public var contentType: ContentType?
     /** Location content. */
     public var location: ConversationContentLocation?
@@ -45,27 +45,16 @@ public class ConversationMessageContent: Codable {
     public var carousel: ConversationContentCarousel?
 
     public init(contentType: ContentType?, location: ConversationContentLocation?, story: ConversationContentStory?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, template: ConversationContentNotificationTemplate?, buttonResponse: ConversationContentButtonResponse?, generic: ConversationContentGeneric?, card: ConversationContentCard?, carousel: ConversationContentCarousel?) {
-        
         self.contentType = contentType
-        
         self.location = location
-        
         self.story = story
-        
         self.attachment = attachment
-        
         self.quickReply = quickReply
-        
         self.template = template
-        
         self.buttonResponse = buttonResponse
-        
         self.generic = generic
-        
         self.card = card
-        
         self.carousel = carousel
-        
     }
 
 

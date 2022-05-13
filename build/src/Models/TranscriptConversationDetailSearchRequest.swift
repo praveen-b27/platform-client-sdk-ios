@@ -32,21 +32,13 @@ public class TranscriptConversationDetailSearchRequest: Codable {
     public var query: [TranscriptConversationDetailSearchCriteria]?
 
     public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, types: [String]?, query: [TranscriptConversationDetailSearchCriteria]?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sort = sort
-        
         self.types = types
-        
         self.query = query
-        
     }
 
 

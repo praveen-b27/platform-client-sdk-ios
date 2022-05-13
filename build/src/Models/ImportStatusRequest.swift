@@ -15,9 +15,7 @@ public class ImportStatusRequest: Codable {
     public var status: String?
 
     public init(status: String?) {
-        
         self.status = status
-        
     }
 
 

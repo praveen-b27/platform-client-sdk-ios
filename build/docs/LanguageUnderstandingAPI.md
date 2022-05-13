@@ -389,11 +389,11 @@ let assessment: LanguageUnderstandingAPI.Assessment_getLanguageunderstandingDoma
 let dateStart: Date = new Date(...) // Begin of time window as ISO-8601 date.
 let dateEnd: Date = new Date(...) // End of time window as ISO-8601 date.
 let includeDeleted: Bool = true // Whether to include soft-deleted items in the result.
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let enableCursorPagination: Bool = false // Enable Cursor Pagination
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let enableCursorPagination: Bool = true // Enable Cursor Pagination
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true
-let fields: [String] = [LanguageUnderstandingAPI.Fields_getLanguageunderstandingDomainFeedback.enummember.rawValue] // Fields and properties to get, comma-separated
+let fields: [String] = [""] // Fields and properties to get, comma-separated
 
 // Code example
 LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields) { (response, error) in
@@ -417,9 +417,9 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domain
 | **dateStart** | **Date**| Begin of time window as ISO-8601 date. | [optional] |
 | **dateEnd** | **Date**| End of time window as ISO-8601 date. | [optional] |
 | **includeDeleted** | **Bool**| Whether to include soft-deleted items in the result. | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **enableCursorPagination** | **Bool**| Enable Cursor Pagination | [optional] [default to false] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **enableCursorPagination** | **Bool**| Enable Cursor Pagination | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true | [optional] |
 | **fields** | [**[String]**](String.html)| Fields and properties to get, comma-separated | [optional]<br />**Values**: version ("version"), datecreated ("dateCreated"), text ("text"), intents ("intents") |
 {: class="table-striped"}
@@ -458,7 +458,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // ID of the NLU domain.
 let feedbackId: String = "" // ID of the Feedback
-let fields: [String] = [LanguageUnderstandingAPI.Fields_getLanguageunderstandingDomainFeedbackFeedbackId.enummember.rawValue] // Fields and properties to get, comma-separated
+let fields: [String] = [""] // Fields and properties to get, comma-separated
 
 // Code example
 LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedbackFeedbackId(domainId: domainId, feedbackId: feedbackId, fields: fields) { (response, error) in
@@ -627,8 +627,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // ID of the NLU domain.
 let includeUtterances: Bool = true // Whether utterances for intent definition should be included when marshalling response.
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 LanguageUnderstandingAPI.getLanguageunderstandingDomainVersions(domainId: domainId, includeUtterances: includeUtterances, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -648,8 +648,8 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomainVersions(domainId: domain
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| ID of the NLU domain. | |
 | **includeUtterances** | **Bool**| Whether utterances for intent definition should be included when marshalling response. | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -684,8 +684,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 LanguageUnderstandingAPI.getLanguageunderstandingDomains(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -703,8 +703,8 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomains(pageNumber: pageNumber,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 

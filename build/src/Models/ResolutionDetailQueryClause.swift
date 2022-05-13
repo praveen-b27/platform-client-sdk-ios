@@ -21,11 +21,8 @@ public class ResolutionDetailQueryClause: Codable {
     public var predicates: [ResolutionDetailQueryPredicate]?
 
     public init(type: ModelType?, predicates: [ResolutionDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

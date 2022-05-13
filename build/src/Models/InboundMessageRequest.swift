@@ -17,7 +17,7 @@ public class InboundMessageRequest: Codable {
     public var flowId: String?
     /** The name of the provider that is sourcing the email such as Oracle, Salesforce, etc. */
     public var provider: String?
-    /** The list of skill ID&#39;s to use for routing. */
+    /** The list of skill ID's to use for routing. */
     public var skillIds: [String]?
     /** The ID of the language to use for routing. */
     public var languageId: String?
@@ -37,31 +37,18 @@ public class InboundMessageRequest: Codable {
     public var subject: String?
 
     public init(queueId: String?, flowId: String?, provider: String?, skillIds: [String]?, languageId: String?, priority: Int?, attributes: [String:String]?, toAddress: String?, toName: String?, fromAddress: String?, fromName: String?, subject: String?) {
-        
         self.queueId = queueId
-        
         self.flowId = flowId
-        
         self.provider = provider
-        
         self.skillIds = skillIds
-        
         self.languageId = languageId
-        
         self.priority = priority
-        
         self.attributes = attributes
-        
         self.toAddress = toAddress
-        
         self.toName = toName
-        
         self.fromAddress = fromAddress
-        
         self.fromName = fromName
-        
         self.subject = subject
-        
     }
 
 

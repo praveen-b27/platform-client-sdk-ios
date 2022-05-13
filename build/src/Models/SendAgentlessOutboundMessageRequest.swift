@@ -26,23 +26,16 @@ public class SendAgentlessOutboundMessageRequest: Codable {
     public var textBody: String?
     /** The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type */
     public var messagingTemplate: MessagingTemplateRequest?
-    /** Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false */
+    /** Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false */
     public var useExistingActiveConversation: Bool?
 
     public init(fromAddress: String?, toAddress: String?, toAddressMessengerType: ToAddressMessengerType?, textBody: String?, messagingTemplate: MessagingTemplateRequest?, useExistingActiveConversation: Bool?) {
-        
         self.fromAddress = fromAddress
-        
         self.toAddress = toAddress
-        
         self.toAddressMessengerType = toAddressMessengerType
-        
         self.textBody = textBody
-        
         self.messagingTemplate = messagingTemplate
-        
         self.useExistingActiveConversation = useExistingActiveConversation
-        
     }
 
 

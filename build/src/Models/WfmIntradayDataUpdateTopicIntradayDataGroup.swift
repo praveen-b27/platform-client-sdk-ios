@@ -27,21 +27,13 @@ public class WfmIntradayDataUpdateTopicIntradayDataGroup: Codable {
     public var performancePredictionQueueDataPerInterval: [WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData]?
 
     public init(mediaType: MediaType?, forecastDataPerInterval: [WfmIntradayDataUpdateTopicIntradayForecastData]?, scheduleDataPerInterval: [WfmIntradayDataUpdateTopicIntradayScheduleData]?, historicalAgentDataPerInterval: [WfmIntradayDataUpdateTopicIntradayHistoricalAgentData]?, historicalQueueDataPerInterval: [WfmIntradayDataUpdateTopicIntradayHistoricalQueueData]?, performancePredictionAgentDataPerInterval: [WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData]?, performancePredictionQueueDataPerInterval: [WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData]?) {
-        
         self.mediaType = mediaType
-        
         self.forecastDataPerInterval = forecastDataPerInterval
-        
         self.scheduleDataPerInterval = scheduleDataPerInterval
-        
         self.historicalAgentDataPerInterval = historicalAgentDataPerInterval
-        
         self.historicalQueueDataPerInterval = historicalQueueDataPerInterval
-        
         self.performancePredictionAgentDataPerInterval = performancePredictionAgentDataPerInterval
-        
         self.performancePredictionQueueDataPerInterval = performancePredictionQueueDataPerInterval
-        
     }
 
 

@@ -17,11 +17,8 @@ public class CustomEventAttribute: Codable {
     public var value: String?
 
     public init(dataType: String?, value: String?) {
-        
         self.dataType = dataType
-        
         self.value = value
-        
     }
 
 

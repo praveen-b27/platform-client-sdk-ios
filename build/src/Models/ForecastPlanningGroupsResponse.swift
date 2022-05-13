@@ -14,9 +14,7 @@ public class ForecastPlanningGroupsResponse: Codable {
     public var entities: [ForecastPlanningGroupResponse]?
 
     public init(entities: [ForecastPlanningGroupResponse]?) {
-        
         self.entities = entities
-        
     }
 
 

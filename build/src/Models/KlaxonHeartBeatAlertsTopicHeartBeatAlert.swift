@@ -31,27 +31,16 @@ public class KlaxonHeartBeatAlertsTopicHeartBeatAlert: Codable {
     public var ruleType: RuleType?
 
     public init(_id: String?, name: String?, senderId: String?, heartBeatTimeoutInMinutes: Double?, ruleId: String?, startDate: Date?, endDate: Date?, notificationUsers: [KlaxonHeartBeatAlertsTopicNotificationUser]?, alertTypes: [AlertTypes]?, ruleType: RuleType?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.senderId = senderId
-        
         self.heartBeatTimeoutInMinutes = heartBeatTimeoutInMinutes
-        
         self.ruleId = ruleId
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.notificationUsers = notificationUsers
-        
         self.alertTypes = alertTypes
-        
         self.ruleType = ruleType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

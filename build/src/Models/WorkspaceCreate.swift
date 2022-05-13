@@ -17,13 +17,9 @@ public class WorkspaceCreate: Codable {
     public var _description: String?
 
     public init(name: String?, bucket: String?, _description: String?) {
-        
         self.name = name
-        
         self.bucket = bucket
-        
         self._description = _description
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

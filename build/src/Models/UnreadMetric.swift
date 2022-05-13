@@ -15,9 +15,7 @@ public class UnreadMetric: Codable {
     public var count: Int?
 
     public init(count: Int?) {
-        
         self.count = count
-        
     }
 
 

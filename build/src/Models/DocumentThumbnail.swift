@@ -17,15 +17,10 @@ public class DocumentThumbnail: Codable {
     public var width: Int?
 
     public init(resolution: String?, imageUri: String?, height: Int?, width: Int?) {
-        
         self.resolution = resolution
-        
         self.imageUri = imageUri
-        
         self.height = height
-        
         self.width = width
-        
     }
 
 

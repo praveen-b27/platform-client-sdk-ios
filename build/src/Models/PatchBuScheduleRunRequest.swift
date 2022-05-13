@@ -15,9 +15,7 @@ public class PatchBuScheduleRunRequest: Codable {
     public var reschedulingOptions: PatchBuReschedulingOptionsRequest?
 
     public init(reschedulingOptions: PatchBuReschedulingOptionsRequest?) {
-        
         self.reschedulingOptions = reschedulingOptions
-        
     }
 
 

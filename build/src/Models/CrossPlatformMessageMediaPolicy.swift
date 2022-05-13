@@ -17,11 +17,8 @@ public class CrossPlatformMessageMediaPolicy: Codable {
     public var conditions: MessageMediaPolicyConditions?
 
     public init(actions: CrossPlatformPolicyActions?, conditions: MessageMediaPolicyConditions?) {
-        
         self.actions = actions
-        
         self.conditions = conditions
-        
     }
 
 

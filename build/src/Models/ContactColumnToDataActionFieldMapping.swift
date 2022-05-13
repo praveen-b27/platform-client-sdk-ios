@@ -17,11 +17,8 @@ public class ContactColumnToDataActionFieldMapping: Codable {
     public var dataActionField: String?
 
     public init(contactColumnName: String?, dataActionField: String?) {
-        
         self.contactColumnName = contactColumnName
-        
         self.dataActionField = dataActionField
-        
     }
 
 

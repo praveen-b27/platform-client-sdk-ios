@@ -19,13 +19,9 @@ public class AnalyticsSessionMetric: Codable {
     public var value: Int64?
 
     public init(emitDate: Date?, name: String?, value: Int64?) {
-        
         self.emitDate = emitDate
-        
         self.name = name
-        
         self.value = value
-        
     }
 
 

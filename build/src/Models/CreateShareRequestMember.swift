@@ -20,11 +20,8 @@ public class CreateShareRequestMember: Codable {
     public var member: MemberEntity?
 
     public init(memberType: MemberType?, member: MemberEntity?) {
-        
         self.memberType = memberType
-        
         self.member = member
-        
     }
 
 

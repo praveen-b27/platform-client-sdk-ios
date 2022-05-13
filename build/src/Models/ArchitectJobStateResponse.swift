@@ -36,19 +36,12 @@ public class ArchitectJobStateResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, flow: AddressableEntityRef?, status: Status?, command: Command?, messages: [ArchitectJobMessage]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.flow = flow
-        
         self.status = status
-        
         self.command = command
-        
         self.messages = messages
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

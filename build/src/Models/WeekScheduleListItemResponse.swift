@@ -29,23 +29,14 @@ public class WeekScheduleListItemResponse: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(_id: String?, selfUri: String?, weekDate: String?, _description: String?, published: Bool?, generationResults: WeekScheduleGenerationResult?, shortTermForecast: ShortTermForecastReference?, metadata: WfmVersionedEntityMetadata?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.weekDate = weekDate
-        
         self._description = _description
-        
         self.published = published
-        
         self.generationResults = generationResults
-        
         self.shortTermForecast = shortTermForecast
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

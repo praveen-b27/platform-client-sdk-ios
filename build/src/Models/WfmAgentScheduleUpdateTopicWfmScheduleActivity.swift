@@ -19,19 +19,12 @@ public class WfmAgentScheduleUpdateTopicWfmScheduleActivity: Codable {
     public var _description: String?
 
     public init(activityCodeId: String?, startDate: Date?, countsAsPaidTime: Bool?, lengthInMinutes: Int?, timeOffRequestId: String?, _description: String?) {
-        
         self.activityCodeId = activityCodeId
-        
         self.startDate = startDate
-        
         self.countsAsPaidTime = countsAsPaidTime
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.timeOffRequestId = timeOffRequestId
-        
         self._description = _description
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

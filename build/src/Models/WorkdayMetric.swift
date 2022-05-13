@@ -23,17 +23,11 @@ public class WorkdayMetric: Codable {
     public var punctualityEvents: [PunctualityEvent]?
 
     public init(metric: Metric?, objective: Objective?, points: Int?, value: Double?, punctualityEvents: [PunctualityEvent]?) {
-        
         self.metric = metric
-        
         self.objective = objective
-        
         self.points = points
-        
         self.value = value
-        
         self.punctualityEvents = punctualityEvents
-        
     }
 
 

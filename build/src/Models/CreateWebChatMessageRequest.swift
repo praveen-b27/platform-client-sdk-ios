@@ -24,11 +24,8 @@ public class CreateWebChatMessageRequest: Codable {
     public var bodyType: BodyType?
 
     public init(body: String?, bodyType: BodyType?) {
-        
         self.body = body
-        
         self.bodyType = bodyType
-        
     }
 
 

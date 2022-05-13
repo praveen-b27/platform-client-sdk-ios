@@ -29,11 +29,8 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationReason:
     public var message: String?
 
     public init(code: Code?, message: String?) {
-        
         self.code = code
-        
         self.message = message
-        
     }
 
 

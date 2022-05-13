@@ -13,15 +13,12 @@ public class PhoneColumn: Codable {
 
     /** The name of the phone column. */
     public var columnName: String?
-    /** The type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. */
+    /** The type of the phone column. For example, 'cell' or 'home'. */
     public var type: String?
 
     public init(columnName: String?, type: String?) {
-        
         self.columnName = columnName
-        
         self.type = type
-        
     }
 
 

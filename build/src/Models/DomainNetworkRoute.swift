@@ -27,17 +27,11 @@ public class DomainNetworkRoute: Codable {
     public var family: Family?
 
     public init(_prefix: String?, nexthop: String?, persistent: Bool?, metric: Int?, family: Family?) {
-        
         self._prefix = _prefix
-        
         self.nexthop = nexthop
-        
         self.persistent = persistent
-        
         self.metric = metric
-        
         self.family = family
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

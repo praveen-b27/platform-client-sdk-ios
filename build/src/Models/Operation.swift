@@ -45,27 +45,16 @@ public class Operation: Codable {
     public var actionStatus: ActionStatus?
 
     public init(_id: String?, complete: Bool?, user: User?, client: DomainEntityRef?, errorMessage: String?, errorCode: String?, errorDetails: [Detail]?, errorMessageParams: [String:String]?, actionName: ActionName?, actionStatus: ActionStatus?) {
-        
         self._id = _id
-        
         self.complete = complete
-        
         self.user = user
-        
         self.client = client
-        
         self.errorMessage = errorMessage
-        
         self.errorCode = errorCode
-        
         self.errorDetails = errorDetails
-        
         self.errorMessageParams = errorMessageParams
-        
         self.actionName = actionName
-        
         self.actionStatus = actionStatus
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

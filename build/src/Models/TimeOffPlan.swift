@@ -36,25 +36,15 @@ public class TimeOffPlan: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, activityCodeIds: [String]?, timeOffLimits: [TimeOffLimitReference]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, active: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.activityCodeIds = activityCodeIds
-        
         self.timeOffLimits = timeOffLimits
-        
         self.autoApprovalRule = autoApprovalRule
-        
         self.daysBeforeStartToExpireFromWaitlist = daysBeforeStartToExpireFromWaitlist
-        
         self.active = active
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

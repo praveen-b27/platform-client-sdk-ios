@@ -15,11 +15,8 @@ public class QueryResults: Codable {
     public var facetInfo: QueryFacetInfo?
 
     public init(results: DomainEntityListingQueryResult?, facetInfo: QueryFacetInfo?) {
-        
         self.results = results
-        
         self.facetInfo = facetInfo
-        
     }
 
 

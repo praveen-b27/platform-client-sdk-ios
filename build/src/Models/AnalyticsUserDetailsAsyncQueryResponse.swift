@@ -18,13 +18,9 @@ public class AnalyticsUserDetailsAsyncQueryResponse: Codable {
     public var dataAvailabilityDate: Date?
 
     public init(userDetails: [AnalyticsUserDetail]?, cursor: String?, dataAvailabilityDate: Date?) {
-        
         self.userDetails = userDetails
-        
         self.cursor = cursor
-        
         self.dataAvailabilityDate = dataAvailabilityDate
-        
     }
 
 

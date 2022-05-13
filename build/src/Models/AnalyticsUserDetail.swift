@@ -19,13 +19,9 @@ public class AnalyticsUserDetail: Codable {
     public var routingStatus: [AnalyticsRoutingStatusRecord]?
 
     public init(userId: String?, primaryPresence: [AnalyticsUserPresenceRecord]?, routingStatus: [AnalyticsRoutingStatusRecord]?) {
-        
         self.userId = userId
-        
         self.primaryPresence = primaryPresence
-        
         self.routingStatus = routingStatus
-        
     }
 
 

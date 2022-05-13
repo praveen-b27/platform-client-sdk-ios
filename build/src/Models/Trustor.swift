@@ -27,21 +27,13 @@ public class Trustor: Codable {
     public var selfUri: String?
 
     public init(_id: String?, enabled: Bool?, dateCreated: Date?, createdBy: OrgUser?, organization: Organization?, authorization: TrusteeAuthorization?, selfUri: String?) {
-        
         self._id = _id
-        
         self.enabled = enabled
-        
         self.dateCreated = dateCreated
-        
         self.createdBy = createdBy
-        
         self.organization = organization
-        
         self.authorization = authorization
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

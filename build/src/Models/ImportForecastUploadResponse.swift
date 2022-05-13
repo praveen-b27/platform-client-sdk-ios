@@ -21,15 +21,10 @@ public class ImportForecastUploadResponse: Codable {
     public var uploadBodySchema: BuImportShortTermForecastSchema?
 
     public init(uploadKey: String?, url: String?, headers: [String:String]?, uploadBodySchema: BuImportShortTermForecastSchema?) {
-        
         self.uploadKey = uploadKey
-        
         self.url = url
-        
         self.headers = headers
-        
         self.uploadBodySchema = uploadBodySchema
-        
     }
 
 

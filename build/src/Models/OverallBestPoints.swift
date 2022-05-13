@@ -19,13 +19,9 @@ public class OverallBestPoints: Codable {
     public var performanceProfile: AddressableEntityRef?
 
     public init(division: Division?, bestPoints: [OverallBestPointsItem]?, performanceProfile: AddressableEntityRef?) {
-        
         self.division = division
-        
         self.bestPoints = bestPoints
-        
         self.performanceProfile = performanceProfile
-        
     }
 
 

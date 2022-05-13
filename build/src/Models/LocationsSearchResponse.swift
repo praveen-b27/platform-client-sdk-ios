@@ -31,25 +31,15 @@ public class LocationsSearchResponse: Codable {
     public var results: [LocationDefinition]?
 
     public init(total: Int64?, pageCount: Int?, pageSize: Int?, pageNumber: Int?, previousPage: String?, currentPage: String?, nextPage: String?, types: [String]?, results: [LocationDefinition]?) {
-        
         self.total = total
-        
         self.pageCount = pageCount
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.previousPage = previousPage
-        
         self.currentPage = currentPage
-        
         self.nextPage = nextPage
-        
         self.types = types
-        
         self.results = results
-        
     }
 
 

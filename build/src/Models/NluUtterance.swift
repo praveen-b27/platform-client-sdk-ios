@@ -15,9 +15,7 @@ public class NluUtterance: Codable {
     public var segments: [NluUtteranceSegment]?
 
     public init(segments: [NluUtteranceSegment]?) {
-        
         self.segments = segments
-        
     }
 
 

@@ -37,25 +37,15 @@ public class FaxSendRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, addresses: [String]?, documentId: String?, contentType: ContentType?, workspace: Workspace?, coverSheet: CoverSheet?, timeZoneOffsetMinutes: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.addresses = addresses
-        
         self.documentId = documentId
-        
         self.contentType = contentType
-        
         self.workspace = workspace
-        
         self.coverSheet = coverSheet
-        
         self.timeZoneOffsetMinutes = timeZoneOffsetMinutes
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

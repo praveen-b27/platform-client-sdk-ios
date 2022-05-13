@@ -25,19 +25,12 @@ public class ArchitectPromptResourceNotificationPromptResourceNotification: Coda
     public var durationSeconds: Double?
 
     public init(promptId: String?, _id: String?, language: String?, mediaUri: String?, uploadStatus: String?, durationSeconds: Double?) {
-        
         self.promptId = promptId
-        
         self._id = _id
-        
         self.language = language
-        
         self.mediaUri = mediaUri
-        
         self.uploadStatus = uploadStatus
-        
         self.durationSeconds = durationSeconds
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

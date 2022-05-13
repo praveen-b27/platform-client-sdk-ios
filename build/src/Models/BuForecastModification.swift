@@ -41,9 +41,9 @@ public class BuForecastModification: Codable {
     public var metric: Metric?
     /** The legacy metric to which this modification applies if applicable */
     public var legacyMetric: LegacyMetric?
-    /** The value of the modification.  Must be null if \&quot;values\&quot; is populated */
+    /** The value of the modification.  Must be null if \"values\" is populated */
     public var value: Double?
-    /** The list of values to update.  Only applicable for grid-type modifications. Must be null if \&quot;value\&quot; is populated */
+    /** The list of values to update.  Only applicable for grid-type modifications. Must be null if \"value\" is populated */
     public var values: [WfmForecastModificationIntervalOffsetValue]?
     /** The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H */
     public var displayGranularity: String?
@@ -55,29 +55,17 @@ public class BuForecastModification: Codable {
     public var planningGroupIds: [String]?
 
     public init(type: ModelType?, startIntervalIndex: Int?, endIntervalIndex: Int?, metric: Metric?, legacyMetric: LegacyMetric?, value: Double?, values: [WfmForecastModificationIntervalOffsetValue]?, displayGranularity: String?, granularity: String?, enabled: Bool?, planningGroupIds: [String]?) {
-        
         self.type = type
-        
         self.startIntervalIndex = startIntervalIndex
-        
         self.endIntervalIndex = endIntervalIndex
-        
         self.metric = metric
-        
         self.legacyMetric = legacyMetric
-        
         self.value = value
-        
         self.values = values
-        
         self.displayGranularity = displayGranularity
-        
         self.granularity = granularity
-        
         self.enabled = enabled
-        
         self.planningGroupIds = planningGroupIds
-        
     }
 
 

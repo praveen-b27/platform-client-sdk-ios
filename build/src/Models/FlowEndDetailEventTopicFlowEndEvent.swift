@@ -91,45 +91,25 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
     public var connectedDurationMs: Int?
 
     public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, flowType: FlowType?, flowId: String?, divisionId: String?, flowVersion: String?, connectedDurationMs: Int?) {
-        
         self.eventTime = eventTime
-        
         self.conversationId = conversationId
-        
         self.participantId = participantId
-        
         self.sessionId = sessionId
-        
         self.disconnectType = disconnectType
-        
         self.mediaType = mediaType
-        
         self.provider = provider
-        
         self.direction = direction
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.addressTo = addressTo
-        
         self.addressFrom = addressFrom
-        
         self.subject = subject
-        
         self.messageType = messageType
-        
         self.flowType = flowType
-        
         self.flowId = flowId
-        
         self.divisionId = divisionId
-        
         self.flowVersion = flowVersion
-        
         self.connectedDurationMs = connectedDurationMs
-        
     }
 
 

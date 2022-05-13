@@ -17,11 +17,8 @@ public class OutcomeAchievement: Codable {
     public var achievedDate: Date?
 
     public init(outcome: AchievedOutcome?, achievedDate: Date?) {
-        
         self.outcome = outcome
-        
         self.achievedDate = achievedDate
-        
     }
 
 

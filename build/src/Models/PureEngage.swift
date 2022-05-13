@@ -27,31 +27,18 @@ public class PureEngage: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, sloURI: String?, sloBinding: String?, relyingPartyIdentifier: String?, certificate: String?, certificates: [String]?, autoProvisionUsers: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.disabled = disabled
-        
         self.issuerURI = issuerURI
-        
         self.ssoTargetURI = ssoTargetURI
-        
         self.sloURI = sloURI
-        
         self.sloBinding = sloBinding
-        
         self.relyingPartyIdentifier = relyingPartyIdentifier
-        
         self.certificate = certificate
-        
         self.certificates = certificates
-        
         self.autoProvisionUsers = autoProvisionUsers
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

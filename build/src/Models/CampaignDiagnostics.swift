@@ -13,9 +13,9 @@ public class CampaignDiagnostics: Codable {
 
     /** Campaign properties that can impact which contacts are callable */
     public var callableContacts: CallableContactsDiagnostic?
-    /** Information regarding the campaign&#39;s queue */
+    /** Information regarding the campaign's queue */
     public var queueUtilizationDiagnostic: QueueUtilizationDiagnostic?
-    /** Information regarding the campaign&#39;s rule sets */
+    /** Information regarding the campaign's rule sets */
     public var ruleSetDiagnostics: [RuleSetDiagnostic]?
     /** Current number of outstanding interactions on the campaign */
     public var outstandingInteractionsCount: Int?
@@ -23,17 +23,11 @@ public class CampaignDiagnostics: Codable {
     public var scheduledInteractionsCount: Int?
 
     public init(callableContacts: CallableContactsDiagnostic?, queueUtilizationDiagnostic: QueueUtilizationDiagnostic?, ruleSetDiagnostics: [RuleSetDiagnostic]?, outstandingInteractionsCount: Int?, scheduledInteractionsCount: Int?) {
-        
         self.callableContacts = callableContacts
-        
         self.queueUtilizationDiagnostic = queueUtilizationDiagnostic
-        
         self.ruleSetDiagnostics = ruleSetDiagnostics
-        
         self.outstandingInteractionsCount = outstandingInteractionsCount
-        
         self.scheduledInteractionsCount = scheduledInteractionsCount
-        
     }
 
 

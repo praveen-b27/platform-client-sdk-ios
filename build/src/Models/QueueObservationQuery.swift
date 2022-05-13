@@ -41,13 +41,9 @@ public class QueueObservationQuery: Codable {
     public var detailMetrics: [DetailMetrics]?
 
     public init(filter: QueueObservationQueryFilter?, metrics: [Metrics]?, detailMetrics: [DetailMetrics]?) {
-        
         self.filter = filter
-        
         self.metrics = metrics
-        
         self.detailMetrics = detailMetrics
-        
     }
 
 

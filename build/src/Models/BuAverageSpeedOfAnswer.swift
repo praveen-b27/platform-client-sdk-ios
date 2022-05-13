@@ -18,11 +18,8 @@ public class BuAverageSpeedOfAnswer: Codable {
     public var seconds: Int?
 
     public init(include: Bool?, seconds: Int?) {
-        
         self.include = include
-        
         self.seconds = seconds
-        
     }
 
 

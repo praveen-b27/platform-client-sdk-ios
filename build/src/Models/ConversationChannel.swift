@@ -46,13 +46,9 @@ public class ConversationChannel: Codable {
     public var platform: String?
 
     public init(type: ModelType?, messageType: MessageType?, platform: String?) {
-        
         self.type = type
-        
         self.messageType = messageType
-        
         self.platform = platform
-        
     }
 
 

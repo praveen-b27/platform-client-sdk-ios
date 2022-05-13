@@ -51,43 +51,24 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
     public var division: OutboundMessagingMessagingCampaignConfigChangeUriReference?
 
     public init(campaignStatus: CampaignStatus?, callableTimeSet: OutboundMessagingMessagingCampaignConfigChangeUriReference?, contactList: OutboundMessagingMessagingCampaignConfigChangeUriReference?, dncLists: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, contactListFilters: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, alwaysRunning: Bool?, contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?, messagesPerMinute: Int?, ruleSets: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?, emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?, errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: OutboundMessagingMessagingCampaignConfigChangeUriReference?) {
-        
         self.campaignStatus = campaignStatus
-        
         self.callableTimeSet = callableTimeSet
-        
         self.contactList = contactList
-        
         self.dncLists = dncLists
-        
         self.contactListFilters = contactListFilters
-        
         self.alwaysRunning = alwaysRunning
-        
         self.contactSorts = contactSorts
-        
         self.messagesPerMinute = messagesPerMinute
-        
         self.ruleSets = ruleSets
-        
         self.smsConfig = smsConfig
-        
         self.emailConfig = emailConfig
-        
         self.errors = errors
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.division = division
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -30,15 +30,10 @@ public class TextBotFlowTurnRequest: Codable {
     public var inputEventError: TextBotErrorInputEvent?
 
     public init(previousTurn: TextBotTurnReference?, inputEventType: InputEventType?, inputEventUserInput: TextBotUserInputEvent?, inputEventError: TextBotErrorInputEvent?) {
-        
         self.previousTurn = previousTurn
-        
         self.inputEventType = inputEventType
-        
         self.inputEventUserInput = inputEventUserInput
-        
         self.inputEventError = inputEventError
-        
     }
 
 

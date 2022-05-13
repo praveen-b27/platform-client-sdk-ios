@@ -16,13 +16,9 @@ public class PhoneChangeTopicProvisionInfo: Codable {
     public var errorInfo: String?
 
     public init(time: Date?, source: String?, errorInfo: String?) {
-        
         self.time = time
-        
         self.source = source
-        
         self.errorInfo = errorInfo
-        
     }
 
 

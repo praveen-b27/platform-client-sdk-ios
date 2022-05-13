@@ -19,13 +19,9 @@ public class ValidateWorkPlanResponse: Codable {
     public var messages: ValidateWorkPlanMessages?
 
     public init(workPlan: WorkPlanReference?, valid: Bool?, messages: ValidateWorkPlanMessages?) {
-        
         self.workPlan = workPlan
-        
         self.valid = valid
-        
         self.messages = messages
-        
     }
 
 

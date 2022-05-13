@@ -15,9 +15,7 @@ public class MessengerStyles: Codable {
     public var primaryColor: String?
 
     public init(primaryColor: String?) {
-        
         self.primaryColor = primaryColor
-        
     }
 
 

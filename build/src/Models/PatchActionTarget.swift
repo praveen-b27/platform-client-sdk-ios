@@ -22,17 +22,11 @@ public class PatchActionTarget: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, serviceLevel: ServiceLevel?, shortAbandonThreshold: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.serviceLevel = serviceLevel
-        
         self.shortAbandonThreshold = shortAbandonThreshold
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -88,57 +88,31 @@ public class SmsPhoneNumber: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, capabilities: [Capabilities]?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, provisioningStatus: SmsProvisioningStatus?, country: String?, supportsSms: Bool?, supportsMms: Bool?, supportsVoice: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.phoneNumber = phoneNumber
-        
         self.phoneNumberType = phoneNumberType
-        
         self.provisionedThroughPureCloud = provisionedThroughPureCloud
-        
         self.phoneNumberStatus = phoneNumberStatus
-        
         self.capabilities = capabilities
-        
         self.countryCode = countryCode
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.version = version
-        
         self.purchaseDate = purchaseDate
-        
         self.cancellationDate = cancellationDate
-        
         self.renewalDate = renewalDate
-        
         self.autoRenewable = autoRenewable
-        
         self.addressId = addressId
-        
         self.shortCodeBillingType = shortCodeBillingType
-        
         self.provisioningStatus = provisioningStatus
-        
         self.country = country
-        
         self.supportsSms = supportsSms
-        
         self.supportsMms = supportsMms
-        
         self.supportsVoice = supportsVoice
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

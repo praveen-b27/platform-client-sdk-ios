@@ -23,17 +23,11 @@ public class QueueConversationSocialExpressionEventTopicConversationRoutingData:
     public var scoredAgents: [QueueConversationSocialExpressionEventTopicScoredAgent]?
 
     public init(queue: QueueConversationSocialExpressionEventTopicUriReference?, language: QueueConversationSocialExpressionEventTopicUriReference?, priority: Int?, skills: [QueueConversationSocialExpressionEventTopicUriReference]?, scoredAgents: [QueueConversationSocialExpressionEventTopicScoredAgent]?) {
-        
         self.queue = queue
-        
         self.language = language
-        
         self.priority = priority
-        
         self.skills = skills
-        
         self.scoredAgents = scoredAgents
-        
     }
 
 

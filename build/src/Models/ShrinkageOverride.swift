@@ -17,11 +17,8 @@ public class ShrinkageOverride: Codable {
     public var shrinkagePercent: Double?
 
     public init(intervalIndex: Int?, shrinkagePercent: Double?) {
-        
         self.intervalIndex = intervalIndex
-        
         self.shrinkagePercent = shrinkagePercent
-        
     }
 
 

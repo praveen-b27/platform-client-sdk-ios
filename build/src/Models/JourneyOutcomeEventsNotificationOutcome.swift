@@ -16,13 +16,9 @@ public class JourneyOutcomeEventsNotificationOutcome: Codable {
     public var displayName: String?
 
     public init(_id: String?, selfUri: String?, displayName: String?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.displayName = displayName
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

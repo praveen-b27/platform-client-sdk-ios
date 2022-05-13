@@ -11,10 +11,7 @@ import Foundation
 
 open class FaxAPI {
     
-    
-    
     /**
-     
      Delete a fax document.
      
      - parameter documentId: (path) Document ID 
@@ -32,11 +29,8 @@ open class FaxAPI {
     }
 
     /**
-     
      Delete a fax document.
-     
      - DELETE /api/v2/fax/documents/{documentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class FaxAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteFaxDocumentWithRequestBuilder(documentId: String) -> RequestBuilder<Void> {
+    open class func deleteFaxDocumentWithRequestBuilder(documentId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/fax/documents/{documentId}"
         let documentIdPreEscape = "\(documentId)"
         let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +55,7 @@ open class FaxAPI {
     }
 
     
-    
-    
     /**
-     
      Get a document.
      
      - parameter documentId: (path) Document ID 
@@ -94,60 +80,61 @@ open class FaxAPI {
     }
 
     /**
-     
      Get a document.
-     
      - GET /api/v2/fax/documents/{documentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "callerAddress" : "aeiou",
+  "callerAddress" : "callerAddress",
   "workspace" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "pageCount" : 123456789,
+  "pageCount" : 6,
   "read" : true,
-  "downloadSharingUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "receiverAddress" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "filename" : "aeiou",
-  "createdBy" : "",
-  "contentUri" : "aeiou",
-  "name" : "aeiou",
-  "contentLength" : 123456789,
-  "id" : "aeiou",
+  "downloadSharingUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "receiverAddress" : "receiverAddress",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "filename" : "filename",
+  "createdBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "contentUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "contentLength" : 0,
+  "id" : "id",
   "thumbnails" : [ {
-    "imageUri" : "aeiou",
-    "width" : 123,
-    "resolution" : "aeiou",
-    "height" : 123
+    "imageUri" : "imageUri",
+    "width" : 6,
+    "resolution" : "resolution",
+    "height" : 0
+  }, {
+    "imageUri" : "imageUri",
+    "width" : 6,
+    "resolution" : "resolution",
+    "height" : 0
   } ],
-  "contentType" : "aeiou",
-  "sharingUri" : "aeiou"
-}}]
+  "contentType" : "contentType",
+  "sharingUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter documentId: (path) Document ID 
 
      - returns: RequestBuilder<FaxDocument> 
      */
-    open class func getFaxDocumentWithRequestBuilder(documentId: String) -> RequestBuilder<FaxDocument> {
+    open class func getFaxDocumentWithRequestBuilder(documentId: String) -> RequestBuilder<FaxDocument> {        
         var path = "/api/v2/fax/documents/{documentId}"
         let documentIdPreEscape = "\(documentId)"
         let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -157,10 +144,7 @@ open class FaxAPI {
     }
 
     
-    
-    
     /**
-     
      Download a fax document.
      
      - parameter documentId: (path) Document ID 
@@ -185,41 +169,38 @@ open class FaxAPI {
     }
 
     /**
-     
      Download a fax document.
-     
      - GET /api/v2/fax/documents/{documentId}/content
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contentLocationUri" : "aeiou",
-  "imageUri" : "aeiou",
+  "contentLocationUri" : "contentLocationUri",
+  "imageUri" : "imageUri",
   "thumbnails" : [ {
-    "imageUri" : "aeiou",
-    "width" : 123,
-    "resolution" : "aeiou",
-    "height" : 123
+    "imageUri" : "imageUri",
+    "width" : 6,
+    "resolution" : "resolution",
+    "height" : 0
+  }, {
+    "imageUri" : "imageUri",
+    "width" : 6,
+    "resolution" : "resolution",
+    "height" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter documentId: (path) Document ID 
 
      - returns: RequestBuilder<DownloadResponse> 
      */
-    open class func getFaxDocumentContentWithRequestBuilder(documentId: String) -> RequestBuilder<DownloadResponse> {
+    open class func getFaxDocumentContentWithRequestBuilder(documentId: String) -> RequestBuilder<DownloadResponse> {        
         var path = "/api/v2/fax/documents/{documentId}/content"
         let documentIdPreEscape = "\(documentId)"
         let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -230,15 +211,11 @@ open class FaxAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a list of fax documents.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getFaxDocuments(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: FaxDocumentEntityListing?,_ error: Error?) -> Void)) {
@@ -260,77 +237,112 @@ open class FaxAPI {
     }
 
     /**
-     
      Get a list of fax documents.
-     
      - GET /api/v2/fax/documents
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "callerAddress" : "aeiou",
+    "callerAddress" : "callerAddress",
     "workspace" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "pageCount" : 123456789,
+    "pageCount" : 6,
     "read" : true,
-    "downloadSharingUri" : "aeiou",
-    "selfUri" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "receiverAddress" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "filename" : "aeiou",
-    "createdBy" : "",
-    "contentUri" : "aeiou",
-    "name" : "aeiou",
-    "contentLength" : 123456789,
-    "id" : "aeiou",
+    "downloadSharingUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "receiverAddress" : "receiverAddress",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "filename" : "filename",
+    "createdBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "contentUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "contentLength" : 0,
+    "id" : "id",
     "thumbnails" : [ {
-      "imageUri" : "aeiou",
-      "width" : 123,
-      "resolution" : "aeiou",
-      "height" : 123
+      "imageUri" : "imageUri",
+      "width" : 6,
+      "resolution" : "resolution",
+      "height" : 0
+    }, {
+      "imageUri" : "imageUri",
+      "width" : 6,
+      "resolution" : "resolution",
+      "height" : 0
     } ],
-    "contentType" : "aeiou",
-    "sharingUri" : "aeiou"
+    "contentType" : "contentType",
+    "sharingUri" : "https://openapi-generator.tech"
+  }, {
+    "callerAddress" : "callerAddress",
+    "workspace" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "pageCount" : 6,
+    "read" : true,
+    "downloadSharingUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "receiverAddress" : "receiverAddress",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "filename" : "filename",
+    "createdBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "contentUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "contentLength" : 0,
+    "id" : "id",
+    "thumbnails" : [ {
+      "imageUri" : "imageUri",
+      "width" : 6,
+      "resolution" : "resolution",
+      "height" : 0
+    }, {
+      "imageUri" : "imageUri",
+      "width" : 6,
+      "resolution" : "resolution",
+      "height" : 0
+    } ],
+    "contentType" : "contentType",
+    "sharingUri" : "https://openapi-generator.tech"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<FaxDocumentEntityListing> 
      */
-    open class func getFaxDocumentsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<FaxDocumentEntityListing> {
+    open class func getFaxDocumentsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<FaxDocumentEntityListing> {        
         let path = "/api/v2/fax/documents"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<FaxDocumentEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -338,9 +350,7 @@ open class FaxAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get fax summary
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -364,31 +374,23 @@ open class FaxAPI {
     }
 
     /**
-     
      Get fax summary
-     
      - GET /api/v2/fax/summary
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "unreadCount" : 123,
-  "readCount" : 123,
-  "totalCount" : 123
-}}]
+  "unreadCount" : 6,
+  "readCount" : 0,
+  "totalCount" : 1
+}, statusCode=200}]
 
      - returns: RequestBuilder<FaxSummary> 
      */
-    open class func getFaxSummaryWithRequestBuilder() -> RequestBuilder<FaxSummary> {
+    open class func getFaxSummaryWithRequestBuilder() -> RequestBuilder<FaxSummary> {        
         let path = "/api/v2/fax/summary"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -399,11 +401,7 @@ open class FaxAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a fax document.
      
      - parameter documentId: (path) Document ID 
@@ -429,59 +427,63 @@ open class FaxAPI {
     }
 
     /**
-     
      Update a fax document.
-     
      - PUT /api/v2/fax/documents/{documentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "callerAddress" : "aeiou",
+  "callerAddress" : "callerAddress",
   "workspace" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "pageCount" : 123456789,
+  "pageCount" : 6,
   "read" : true,
-  "downloadSharingUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "receiverAddress" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "filename" : "aeiou",
-  "createdBy" : "",
-  "contentUri" : "aeiou",
-  "name" : "aeiou",
-  "contentLength" : 123456789,
-  "id" : "aeiou",
+  "downloadSharingUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "receiverAddress" : "receiverAddress",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "filename" : "filename",
+  "createdBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "contentUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "contentLength" : 0,
+  "id" : "id",
   "thumbnails" : [ {
-    "imageUri" : "aeiou",
-    "width" : 123,
-    "resolution" : "aeiou",
-    "height" : 123
+    "imageUri" : "imageUri",
+    "width" : 6,
+    "resolution" : "resolution",
+    "height" : 0
+  }, {
+    "imageUri" : "imageUri",
+    "width" : 6,
+    "resolution" : "resolution",
+    "height" : 0
   } ],
-  "contentType" : "aeiou",
-  "sharingUri" : "aeiou"
-}}]
+  "contentType" : "contentType",
+  "sharingUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter documentId: (path) Document ID 
      - parameter body: (body) Document 
 
      - returns: RequestBuilder<FaxDocument> 
      */
-    open class func putFaxDocumentWithRequestBuilder(documentId: String, body: FaxDocument) -> RequestBuilder<FaxDocument> {
+    open class func putFaxDocumentWithRequestBuilder(documentId: String, body: FaxDocument) -> RequestBuilder<FaxDocument> {        
         var path = "/api/v2/fax/documents/{documentId}"
         let documentIdPreEscape = "\(documentId)"
         let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FaxDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

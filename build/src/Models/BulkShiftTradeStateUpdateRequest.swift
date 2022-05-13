@@ -15,9 +15,7 @@ public class BulkShiftTradeStateUpdateRequest: Codable {
     public var entities: [BulkUpdateShiftTradeStateRequestItem]?
 
     public init(entities: [BulkUpdateShiftTradeStateRequestItem]?) {
-        
         self.entities = entities
-        
     }
 
 

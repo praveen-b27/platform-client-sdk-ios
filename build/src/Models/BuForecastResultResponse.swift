@@ -17,11 +17,8 @@ public class BuForecastResultResponse: Codable {
     public var downloadUrl: String?
 
     public init(result: BuForecastResult?, downloadUrl: String?) {
-        
         self.result = result
-        
         self.downloadUrl = downloadUrl
-        
     }
 
 

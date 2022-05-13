@@ -21,11 +21,8 @@ public class DevelopmentActivityAggregateQueryRequestClause: Codable {
     public var predicates: [DevelopmentActivityAggregateQueryRequestPredicate]?
 
     public init(type: ModelType?, predicates: [DevelopmentActivityAggregateQueryRequestPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

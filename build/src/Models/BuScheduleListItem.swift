@@ -31,25 +31,15 @@ public class BuScheduleListItem: Codable {
     public var selfUri: String?
 
     public init(_id: String?, weekDate: Date?, weekCount: Int?, _description: String?, published: Bool?, shortTermForecast: BuShortTermForecastReference?, generationResults: ScheduleGenerationResultSummary?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.weekDate = weekDate
-        
         self.weekCount = weekCount
-        
         self._description = _description
-        
         self.published = published
-        
         self.shortTermForecast = shortTermForecast
-        
         self.generationResults = generationResults
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

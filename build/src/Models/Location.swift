@@ -22,17 +22,11 @@ public class Location: Codable {
     public var locationDefinition: LocationDefinition?
 
     public init(_id: String?, floorplanId: String?, coordinates: [String:Double]?, notes: String?, locationDefinition: LocationDefinition?) {
-        
         self._id = _id
-        
         self.floorplanId = floorplanId
-        
         self.coordinates = coordinates
-        
         self.notes = notes
-        
         self.locationDefinition = locationDefinition
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -37,27 +37,16 @@ public class DialerSequenceConfigChangeCampaignSequence: Codable {
     public var version: Int?
 
     public init(campaigns: [DialerSequenceConfigChangeUriReference]?, currentCampaign: Int?, status: Status?, stopMessage: String?, _repeat: Bool?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.campaigns = campaigns
-        
         self.currentCampaign = currentCampaign
-        
         self.status = status
-        
         self.stopMessage = stopMessage
-        
         self._repeat = _repeat
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

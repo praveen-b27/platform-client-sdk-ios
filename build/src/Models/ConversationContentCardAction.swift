@@ -27,15 +27,10 @@ public class ConversationContentCardAction: Codable {
     public var url: String?
 
     public init(type: ModelType?, text: String?, payload: String?, url: String?) {
-        
         self.type = type
-        
         self.text = text
-        
         self.payload = payload
-        
         self.url = url
-        
     }
 
 

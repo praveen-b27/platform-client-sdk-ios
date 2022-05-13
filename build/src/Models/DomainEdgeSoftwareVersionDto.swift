@@ -24,23 +24,14 @@ public class DomainEdgeSoftwareVersionDto: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, edgeVersion: String?, publishDate: Date?, edgeUri: String?, current: Bool?, latestRelease: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.edgeVersion = edgeVersion
-        
         self.publishDate = publishDate
-        
         self.edgeUri = edgeUri
-        
         self.current = current
-        
         self.latestRelease = latestRelease
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -64,19 +64,12 @@ public class AuditRealtimeQueryRequest: Codable {
     public var pageSize: Int?
 
     public init(interval: String?, serviceName: ServiceName?, filters: [AuditQueryFilter]?, sort: [AuditQuerySort]?, pageNumber: Int?, pageSize: Int?) {
-        
         self.interval = interval
-        
         self.serviceName = serviceName
-        
         self.filters = filters
-        
         self.sort = sort
-        
         self.pageNumber = pageNumber
-        
         self.pageSize = pageSize
-        
     }
 
 

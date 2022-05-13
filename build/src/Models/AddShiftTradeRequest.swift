@@ -22,17 +22,11 @@ public class AddShiftTradeRequest: Codable {
     public var acceptableIntervals: [String]?
 
     public init(scheduleId: String?, initiatingShiftId: String?, receivingUserId: String?, expiration: Date?, acceptableIntervals: [String]?) {
-        
         self.scheduleId = scheduleId
-        
         self.initiatingShiftId = initiatingShiftId
-        
         self.receivingUserId = receivingUserId
-        
         self.expiration = expiration
-        
         self.acceptableIntervals = acceptableIntervals
-        
     }
 
 

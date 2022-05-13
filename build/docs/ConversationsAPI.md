@@ -544,6 +544,8 @@ Delete an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
+
+
 Wraps DELETE /api/v2/conversations/messaging/integrations/open/{integrationId}  
 
 Requires ALL permissions: 
@@ -1188,7 +1190,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversation ID
 let participantId: String = "" // participant ID
-let provisional: Bool = false // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
 
 // Code example
 ConversationsAPI.getConversationParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -1208,7 +1210,7 @@ ConversationsAPI.getConversationParticipantWrapup(conversationId: conversationId
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversation ID | |
 | **participantId** | **String**| participant ID | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
 {: class="table-striped"}
 
 
@@ -1398,7 +1400,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = false // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
 
 // Code example
 ConversationsAPI.getConversationsCallParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -1418,7 +1420,7 @@ ConversationsAPI.getConversationsCallParticipantWrapup(conversationId: conversat
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
 {: class="table-striped"}
 
 
@@ -1557,7 +1559,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = false // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
 
 // Code example
 ConversationsAPI.getConversationsCallbackParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -1577,7 +1579,7 @@ ConversationsAPI.getConversationsCallbackParticipantWrapup(conversationId: conve
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
 {: class="table-striped"}
 
 
@@ -1757,10 +1759,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size, maximum 50
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size, maximum 50
+let pageNumber: Int = 0 // Page number
 let interval: String = "" // Interval string; format is ISO-8601. Separate start and end times with forward slash '/'
-let expand: [String] = [ConversationsAPI.Expand_getConversationsCallsHistory.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ConversationsAPI.getConversationsCallsHistory(pageSize: pageSize, pageNumber: pageNumber, interval: interval, expand: expand) { (response, error) in
@@ -1778,9 +1780,9 @@ ConversationsAPI.getConversationsCallsHistory(pageSize: pageSize, pageNumber: pa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size, maximum 50 | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **interval** | **String**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional] |
+| **pageSize** | **Int**| Page size, maximum 50 | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **interval** | **String**| Interval string; format is ISO-8601. Separate start and end times with forward slash '/' | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: externalorganization ("externalorganization"), externalcontact ("externalcontact"), user ("user"), queue ("queue"), group ("group") |
 {: class="table-striped"}
 
@@ -1899,6 +1901,8 @@ Get a web chat conversation message
 
 The current user must be involved with the conversation to get its messages.
 
+
+
 Wraps GET /api/v2/conversations/chats/{conversationId}/messages/{messageId}  
 
 Requires NO permissions: 
@@ -1952,6 +1956,8 @@ Get the messages of a chat conversation.
 
 The current user must be involved with the conversation to get its messages.
 
+
+
 Wraps GET /api/v2/conversations/chats/{conversationId}/messages  
 
 Requires NO permissions: 
@@ -1969,7 +1975,7 @@ let conversationId: String = "" // conversationId
 let after: String = "" // If specified, get the messages chronologically after the id of this message
 let before: String = "" // If specified, get the messages chronologically before the id of this message
 let sortOrder: ConversationsAPI.SortOrder_getConversationsChatMessages = ConversationsAPI.SortOrder_getConversationsChatMessages.enummember // Sort order
-let maxResults: Int = 100 // Limit the returned number of messages, up to a maximum of 100
+let maxResults: Int = 0 // Limit the returned number of messages, up to a maximum of 100
 
 // Code example
 ConversationsAPI.getConversationsChatMessages(conversationId: conversationId, after: after, before: before, sortOrder: sortOrder, maxResults: maxResults) { (response, error) in
@@ -1990,8 +1996,8 @@ ConversationsAPI.getConversationsChatMessages(conversationId: conversationId, af
 | **conversationId** | **String**| conversationId | |
 | **after** | **String**| If specified, get the messages chronologically after the id of this message | [optional] |
 | **before** | **String**| If specified, get the messages chronologically before the id of this message | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |
-| **maxResults** | **Int**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **maxResults** | **Int**| Limit the returned number of messages, up to a maximum of 100 | [optional] |
 {: class="table-striped"}
 
 
@@ -2026,7 +2032,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = false // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
 
 // Code example
 ConversationsAPI.getConversationsChatParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -2046,7 +2052,7 @@ ConversationsAPI.getConversationsChatParticipantWrapup(conversationId: conversat
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
 {: class="table-striped"}
 
 
@@ -2232,7 +2238,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = false // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
 
 // Code example
 ConversationsAPI.getConversationsCobrowsesessionParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -2252,7 +2258,7 @@ ConversationsAPI.getConversationsCobrowsesessionParticipantWrapup(conversationId
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
 {: class="table-striped"}
 
 
@@ -2593,7 +2599,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = false // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
 
 // Code example
 ConversationsAPI.getConversationsEmailParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -2613,7 +2619,7 @@ ConversationsAPI.getConversationsEmailParticipantWrapup(conversationId: conversa
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
 {: class="table-striped"}
 
 
@@ -2835,6 +2841,8 @@ Get media
 
 See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
 
+
+
 Wraps GET /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId}  
 
 Requires ANY permissions: 
@@ -3015,7 +3023,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = false // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
 
 // Code example
 ConversationsAPI.getConversationsMessageParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -3035,7 +3043,7 @@ ConversationsAPI.getConversationsMessageParticipantWrapup(conversationId: conver
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
 {: class="table-striped"}
 
 
@@ -3217,8 +3225,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrations = ConversationsAPI.Expand_getConversationsMessagingIntegrations.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
@@ -3238,8 +3246,8 @@ ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageN
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
@@ -3275,8 +3283,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsFacebook = ConversationsAPI.Expand_getConversationsMessagingIntegrationsFacebook.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
@@ -3296,8 +3304,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSiz
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
@@ -3387,8 +3395,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsLine = ConversationsAPI.Expand_getConversationsMessagingIntegrationsLine.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
@@ -3408,8 +3416,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
@@ -3485,6 +3493,8 @@ Get a list of Open messaging integrations
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
+
+
 Wraps GET /api/v2/conversations/messaging/integrations/open  
 
 Requires ALL permissions: 
@@ -3499,8 +3509,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsOpen = ConversationsAPI.Expand_getConversationsMessagingIntegrationsOpen.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
@@ -3520,8 +3530,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpen(pageSize: pageSize, p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
@@ -3542,6 +3552,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpen(pageSize: pageSize, p
 Get an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+
 
 Wraps GET /api/v2/conversations/messaging/integrations/open/{integrationId}  
 
@@ -3611,8 +3623,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter = ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
@@ -3632,8 +3644,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
@@ -3723,8 +3735,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsWhatsapp = ConversationsAPI.Expand_getConversationsMessagingIntegrationsWhatsapp.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
@@ -3744,8 +3756,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSiz
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
@@ -3836,8 +3848,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let messengerType: ConversationsAPI.MessengerType_getConversationsMessagingSticker = ConversationsAPI.MessengerType_getConversationsMessagingSticker.enummember // Messenger Type
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 ConversationsAPI.getConversationsMessagingSticker(messengerType: messengerType, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -3856,8 +3868,8 @@ ConversationsAPI.getConversationsMessagingSticker(messengerType: messengerType, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messengerType** | **String**| Messenger Type |<br />**Values**: line ("line") |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -3891,8 +3903,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 ConversationsAPI.getConversationsMessagingSupportedcontent(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -3910,8 +3922,8 @@ ConversationsAPI.getConversationsMessagingSupportedcontent(pageSize: pageSize, p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -3930,6 +3942,8 @@ ConversationsAPI.getConversationsMessagingSupportedcontent(pageSize: pageSize, p
 Get the organization&#39;s default supported content profile that will be used as the default when creating an integration.
 
 When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+
+
 
 Wraps GET /api/v2/conversations/messaging/supportedcontent/default  
 
@@ -4031,6 +4045,8 @@ Get conversation threading window timeline for each messaging type
 
 Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
 
+
+
 Wraps GET /api/v2/conversations/messaging/threadingtimeline  
 
 Requires ALL permissions: 
@@ -4078,6 +4094,8 @@ This endpoint does not require any parameters.
 Update a participant.
 
 Update conversation participant.
+
+
 
 Wraps PATCH /api/v2/conversations/{conversationId}/participants/{participantId}  
 
@@ -4343,7 +4361,7 @@ ConversationsAPI.patchConversationsCallParticipantAttributes(conversationId: con
 
 
 
-> [Empty](Empty.html) patchConversationsCallParticipantCommunication(conversationId, participantId, communicationId, body)
+> [JSON](JSON.html) patchConversationsCallParticipantCommunication(conversationId, participantId, communicationId, body)
 
 Update conversation participant&#39;s communication by disconnecting it.
 
@@ -4392,7 +4410,7 @@ ConversationsAPI.patchConversationsCallParticipantCommunication(conversationId: 
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="patchConversationsCallParticipantConsult"></a>
 
@@ -4617,7 +4635,7 @@ ConversationsAPI.patchConversationsCallbackParticipantAttributes(conversationId:
 
 
 
-> [Empty](Empty.html) patchConversationsCallbackParticipantCommunication(conversationId, participantId, communicationId, body)
+> [JSON](JSON.html) patchConversationsCallbackParticipantCommunication(conversationId, participantId, communicationId, body)
 
 Update conversation participant&#39;s communication by disconnecting it.
 
@@ -4666,7 +4684,7 @@ ConversationsAPI.patchConversationsCallbackParticipantCommunication(conversation
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="patchConversationsCallbacks"></a>
 
@@ -4888,7 +4906,7 @@ ConversationsAPI.patchConversationsChatParticipantAttributes(conversationId: con
 
 
 
-> [Empty](Empty.html) patchConversationsChatParticipantCommunication(conversationId, participantId, communicationId, body)
+> [JSON](JSON.html) patchConversationsChatParticipantCommunication(conversationId, participantId, communicationId, body)
 
 Update conversation participant&#39;s communication by disconnecting it.
 
@@ -4937,7 +4955,7 @@ ConversationsAPI.patchConversationsChatParticipantCommunication(conversationId: 
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="patchConversationsCobrowsesession"></a>
 
@@ -5107,7 +5125,7 @@ ConversationsAPI.patchConversationsCobrowsesessionParticipantAttributes(conversa
 
 
 
-> [Empty](Empty.html) patchConversationsCobrowsesessionParticipantCommunication(conversationId, participantId, communicationId, body)
+> [JSON](JSON.html) patchConversationsCobrowsesessionParticipantCommunication(conversationId, participantId, communicationId, body)
 
 Update conversation participant&#39;s communication by disconnecting it.
 
@@ -5156,7 +5174,7 @@ ConversationsAPI.patchConversationsCobrowsesessionParticipantCommunication(conve
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="patchConversationsEmail"></a>
 
@@ -5326,7 +5344,7 @@ ConversationsAPI.patchConversationsEmailParticipantAttributes(conversationId: co
 
 
 
-> [Empty](Empty.html) patchConversationsEmailParticipantCommunication(conversationId, participantId, communicationId, body)
+> [JSON](JSON.html) patchConversationsEmailParticipantCommunication(conversationId, participantId, communicationId, body)
 
 Update conversation participant&#39;s communication by disconnecting it.
 
@@ -5375,7 +5393,7 @@ ConversationsAPI.patchConversationsEmailParticipantCommunication(conversationId:
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="patchConversationsMessage"></a>
 
@@ -5545,7 +5563,7 @@ ConversationsAPI.patchConversationsMessageParticipantAttributes(conversationId: 
 
 
 
-> [Empty](Empty.html) patchConversationsMessageParticipantCommunication(conversationId, participantId, communicationId, body)
+> [JSON](JSON.html) patchConversationsMessageParticipantCommunication(conversationId, participantId, communicationId, body)
 
 Update conversation participant&#39;s communication by disconnecting it.
 
@@ -5594,7 +5612,7 @@ ConversationsAPI.patchConversationsMessageParticipantCommunication(conversationI
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="patchConversationsMessagingIntegrationsFacebookIntegrationId"></a>
 
@@ -5661,6 +5679,8 @@ ConversationsAPI.patchConversationsMessagingIntegrationsFacebookIntegrationId(in
 Update an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+
 
 Wraps PATCH /api/v2/conversations/messaging/integrations/open/{integrationId}  
 
@@ -5769,6 +5789,8 @@ ConversationsAPI.patchConversationsMessagingIntegrationsTwitterIntegrationId(int
 Update or activate a WhatsApp messaging integration
 
 The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+
+
 
 Wraps PATCH /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}  
 
@@ -6564,7 +6586,7 @@ ConversationsAPI.postConversationsCallParticipantConsult(conversationId: convers
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to | |
+| **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address & initial speak to | |
 {: class="table-striped"}
 
 
@@ -7486,6 +7508,8 @@ Create an email conversation
 
 If the direction of the request is INBOUND, this will create an external conversation with a third party provider. If the direction of the the request is OUTBOUND, this will create a conversation to send outbound emails on behalf of a queue.
 
+
+
 Wraps POST /api/v2/conversations/emails  
 
 Requires ANY permissions: 
@@ -7589,6 +7613,8 @@ Send message
 
 Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
 
+
+
 Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages  
 
 Requires ANY permissions: 
@@ -7646,6 +7672,8 @@ Create media
 
 See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
 
+
+
 Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media  
 
 Requires ANY permissions: 
@@ -7701,6 +7729,8 @@ Get messages in batch
 
 The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
 
+
+
 Wraps POST /api/v2/conversations/messages/{conversationId}/messages/bulk  
 
 Requires ANY permissions: 
@@ -7717,7 +7747,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // 
-let body: [String] = [new [String](...)] // messageIds
+let body: [String] = [""] // messageIds
 
 // Code example
 ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversationId, body: body) { (response, error) in
@@ -7736,7 +7766,7 @@ ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversati
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**|  | |
-| **body** | **[String]**| messageIds | [optional] |
+| **body** | [**[String]**](String.html)| messageIds | [optional] |
 {: class="table-striped"}
 
 
@@ -7810,6 +7840,8 @@ Create an outbound messaging conversation.
 
 If there is an existing conversation between the remote address and the address associated with the queue specified in createOutboundRequest then the result of this request depends on the state of that conversation and the useExistingConversation field of createOutboundRequest. If the existing conversation is in alerting or connected state, then the request will fail. If the existing conversation is disconnected but still within the conversation window then the request will fail unless useExistingConversation is set to true.
 
+
+
 Wraps POST /api/v2/conversations/messages  
 
 Requires ALL permissions: 
@@ -7862,6 +7894,8 @@ Send an agentless outbound message
 
 Send an agentless (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
 
+
+
 Wraps POST /api/v2/conversations/messages/agentless  
 
 Requires ALL permissions: 
@@ -7913,6 +7947,8 @@ ConversationsAPI.postConversationsMessagesAgentless(body: body) { (response, err
 Send an inbound Open Message
 
 Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+
 
 Wraps POST /api/v2/conversations/messages/inbound/open  
 
@@ -8070,6 +8106,8 @@ Create an Open messaging integration
 
 See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
 
+
+
 Wraps POST /api/v2/conversations/messaging/integrations/open  
 
 Requires ALL permissions: 
@@ -8173,6 +8211,8 @@ ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body) { (re
 Create a WhatsApp Integration
 
 You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+
+
 
 Wraps POST /api/v2/conversations/messaging/integrations/whatsapp  
 
@@ -8378,7 +8418,7 @@ ConversationsAPI.putConversationTags(conversationId: conversationId, body: body)
 
 
 
-> [Empty](Empty.html) putConversationsCallParticipantCommunicationUuidata(conversationId, participantId, communicationId, body)
+> [JSON](JSON.html) putConversationsCallParticipantCommunicationUuidata(conversationId, participantId, communicationId, body)
 
 Set uuiData to be sent on future commands.
 
@@ -8427,7 +8467,7 @@ ConversationsAPI.putConversationsCallParticipantCommunicationUuidata(conversatio
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="putConversationsEmailMessagesDraft"></a>
 
@@ -8548,6 +8588,8 @@ Set the organization&#39;s default supported content profile that may be assigne
 
 When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
 
+
+
 Wraps PUT /api/v2/conversations/messaging/supportedcontent/default  
 
 Requires ALL permissions: 
@@ -8599,6 +8641,8 @@ ConversationsAPI.putConversationsMessagingSupportedcontentDefault(body: body) { 
 Update conversation threading window timeline for each messaging type
 
 PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+
+
 
 Wraps PUT /api/v2/conversations/messaging/threadingtimeline  
 

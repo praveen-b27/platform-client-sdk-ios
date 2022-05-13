@@ -22,17 +22,13 @@ public class AnalyticsRoutingStatusRecord: Codable {
     public var startTime: Date?
     /** The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endTime: Date?
-    /** The user&#39;s ACD routing status */
+    /** The user's ACD routing status */
     public var routingStatus: RoutingStatus?
 
     public init(startTime: Date?, endTime: Date?, routingStatus: RoutingStatus?) {
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.routingStatus = routingStatus
-        
     }
 
 

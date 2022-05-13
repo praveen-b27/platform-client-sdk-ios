@@ -19,13 +19,9 @@ public class OtherProfileAssignment: Codable {
     public var selfUri: String?
 
     public init(_id: String?, currentProfile: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.currentProfile = currentProfile
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

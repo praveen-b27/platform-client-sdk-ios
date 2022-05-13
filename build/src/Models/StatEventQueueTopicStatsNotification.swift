@@ -15,11 +15,8 @@ public class StatEventQueueTopicStatsNotification: Codable {
     public var data: [StatEventQueueTopicIntervalMetrics]?
 
     public init(group: [String:String]?, data: [StatEventQueueTopicIntervalMetrics]?) {
-        
         self.group = group
-        
         self.data = data
-        
     }
 
 

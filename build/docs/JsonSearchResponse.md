@@ -12,8 +12,8 @@ title: JsonSearchResponse
 | **pageSize** | **Int** | The current page size | |
 | **pageNumber** | **Int** | The current page number | |
 | **types** | **[String]** | Resource types the search was performed against | |
-| **results** | [**ArrayNode**](ArrayNode.html) | Search results | |
-| **aggregations** | [**ArrayNode**](ArrayNode.html) |  | [optional] |
+| **results** | [**JSON**](JSON.html) | Search results | |
+| **aggregations** | [**JSON**](.html) |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -15,9 +15,7 @@ public class QueryWaitlistPositionsRequest: Codable {
     public var timeOffRequests: [UserTimeOffRequestReference]?
 
     public init(timeOffRequests: [UserTimeOffRequestReference]?) {
-        
         self.timeOffRequests = timeOffRequests
-        
     }
 
 

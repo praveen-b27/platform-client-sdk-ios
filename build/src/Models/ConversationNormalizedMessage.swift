@@ -60,31 +60,18 @@ public class ConversationNormalizedMessage: Codable {
     public var metadata: [String:String]?
 
     public init(_id: String?, channel: ConversationMessagingChannel?, type: ModelType?, text: String?, content: [ConversationMessageContent]?, events: [ConversationMessageEvent]?, status: Status?, reasons: [ConversationReason]?, originatingEntity: OriginatingEntity?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
-        
         self._id = _id
-        
         self.channel = channel
-        
         self.type = type
-        
         self.text = text
-        
         self.content = content
-        
         self.events = events
-        
         self.status = status
-        
         self.reasons = reasons
-        
         self.originatingEntity = originatingEntity
-        
         self.isFinalReceipt = isFinalReceipt
-        
         self.direction = direction
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

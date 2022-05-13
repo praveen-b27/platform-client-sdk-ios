@@ -76,67 +76,36 @@ public class Queue: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.memberCount = memberCount
-        
         self.userMemberCount = userMemberCount
-        
         self.joinedMemberCount = joinedMemberCount
-        
         self.mediaSettings = mediaSettings
-        
         self.routingRules = routingRules
-        
         self.bullseye = bullseye
-        
         self.acwSettings = acwSettings
-        
         self.skillEvaluationMethod = skillEvaluationMethod
-        
         self.queueFlow = queueFlow
-        
         self.emailInQueueFlow = emailInQueueFlow
-        
         self.messageInQueueFlow = messageInQueueFlow
-        
         self.whisperPrompt = whisperPrompt
-        
         self.onHoldPrompt = onHoldPrompt
-        
         self.autoAnswerOnly = autoAnswerOnly
-        
         self.enableTranscription = enableTranscription
-        
         self.enableManualAssignment = enableManualAssignment
-        
         self.callingPartyName = callingPartyName
-        
         self.callingPartyNumber = callingPartyNumber
-        
         self.defaultScripts = defaultScripts
-        
         self.outboundMessagingAddresses = outboundMessagingAddresses
-        
         self.outboundEmailAddress = outboundEmailAddress
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

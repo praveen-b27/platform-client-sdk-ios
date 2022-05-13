@@ -17,11 +17,8 @@ public class BuAgentScheduleHistoryChangeMetadata: Codable {
     public var modifiedBy: UserReference?
 
     public init(dateModified: Date?, modifiedBy: UserReference?) {
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
     }
 
 

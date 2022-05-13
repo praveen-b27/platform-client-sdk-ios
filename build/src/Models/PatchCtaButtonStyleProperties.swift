@@ -20,7 +20,7 @@ public class PatchCtaButtonStyleProperties: Codable {
     public var color: String?
     /** Font of the text. (eg. Helvetica) */
     public var font: String?
-    /** Font size of the text. (eg. &#39;12&#39;) */
+    /** Font size of the text. (eg. '12') */
     public var fontSize: String?
     /** Text alignment. */
     public var textAlign: TextAlign?
@@ -28,17 +28,11 @@ public class PatchCtaButtonStyleProperties: Codable {
     public var backgroundColor: String?
 
     public init(color: String?, font: String?, fontSize: String?, textAlign: TextAlign?, backgroundColor: String?) {
-        
         self.color = color
-        
         self.font = font
-        
         self.fontSize = fontSize
-        
         self.textAlign = textAlign
-        
         self.backgroundColor = backgroundColor
-        
     }
 
 

@@ -1234,9 +1234,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundAttemptlimits = OutboundAPI.FilterType_getOutboundAttemptlimits.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
@@ -1258,13 +1258,13 @@ OutboundAPI.getOutboundAttemptlimits(pageSize: pageSize, pageNumber: pageNumber,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -1350,9 +1350,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundCallabletimesets = OutboundAPI.FilterType_getOutboundCallabletimesets.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
@@ -1374,13 +1374,13 @@ OutboundAPI.getOutboundCallabletimesets(pageSize: pageSize, pageNumber: pageNumb
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -1466,9 +1466,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundCallanalysisresponsesets = OutboundAPI.FilterType_getOutboundCallanalysisresponsesets.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
@@ -1490,13 +1490,13 @@ OutboundAPI.getOutboundCallanalysisresponsesets(pageSize: pageSize, pageNumber: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -1896,9 +1896,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundCampaignrules = OutboundAPI.FilterType_getOutboundCampaignrules.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
@@ -1920,13 +1920,13 @@ OutboundAPI.getOutboundCampaignrules(pageSize: pageSize, pageNumber: pageNumber,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -1960,8 +1960,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
 let filterType: OutboundAPI.FilterType_getOutboundCampaigns = OutboundAPI.FilterType_getOutboundCampaigns.enummember // Filter type
 let name: String = "" // Name
 let _id: [String] = [""] // id
@@ -1990,9 +1990,9 @@ OutboundAPI.getOutboundCampaigns(pageSize: pageSize, pageNumber: pageNumber, fil
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **contactListId** | **String**| Contact List ID | [optional] |
@@ -2002,7 +2002,7 @@ OutboundAPI.getOutboundCampaigns(pageSize: pageSize, pageNumber: pageNumber, fil
 | **callAnalysisResponseSetId** | **String**| Call analysis response set ID | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -2038,12 +2038,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let _id: [String] = [""] // Campaign ID(s)
 let name: String = "" // Campaign name(s)
 let divisionId: [String] = [""] // Division ID(s)
-let mediaType: [String] = [OutboundAPI.MediaType_getOutboundCampaignsAll.enummember.rawValue] // Media type(s)
+let mediaType: [String] = [""] // Media type(s)
 let sortOrder: OutboundAPI.SortOrder_getOutboundCampaignsAll = OutboundAPI.SortOrder_getOutboundCampaignsAll.enummember // Sort order
 
 // Code example
@@ -2062,13 +2062,13 @@ OutboundAPI.getOutboundCampaignsAll(pageSize: pageSize, pageNumber: pageNumber, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **_id** | [**[String]**](String.html)| Campaign ID(s) | [optional] |
 | **name** | **String**| Campaign name(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
 | **mediaType** | [**[String]**](String.html)| Media type(s) | [optional]<br />**Values**: email ("email"), sms ("sms"), voice ("voice") |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -2104,12 +2104,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let _id: [String] = [""] // Campaign ID(s)
 let name: String = "" // Campaign name(s)
 let divisionId: [String] = [""] // Division ID(s)
-let mediaType: [String] = [OutboundAPI.MediaType_getOutboundCampaignsAllDivisionviews.enummember.rawValue] // Media type(s)
+let mediaType: [String] = [""] // Media type(s)
 let sortOrder: OutboundAPI.SortOrder_getOutboundCampaignsAllDivisionviews = OutboundAPI.SortOrder_getOutboundCampaignsAllDivisionviews.enummember // Sort order
 
 // Code example
@@ -2128,13 +2128,13 @@ OutboundAPI.getOutboundCampaignsAllDivisionviews(pageSize: pageSize, pageNumber:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **_id** | [**[String]**](String.html)| Campaign ID(s) | [optional] |
 | **name** | **String**| Campaign name(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
 | **mediaType** | [**[String]**](String.html)| Media type(s) | [optional]<br />**Values**: email ("email"), sms ("sms"), voice ("voice") |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -2153,6 +2153,8 @@ OutboundAPI.getOutboundCampaignsAllDivisionviews(pageSize: pageSize, pageNumber:
 Get a basic Campaign information object
 
 This returns a simplified version of a Campaign, consisting of name and division.
+
+
 
 Wraps GET /api/v2/outbound/campaigns/divisionviews/{campaignId}  
 
@@ -2206,6 +2208,8 @@ Query a list of basic Campaign information objects
 
 This returns a simplified version of a Campaign, consisting of name and division.
 
+
+
 Wraps GET /api/v2/outbound/campaigns/divisionviews  
 
 Requires ALL permissions: 
@@ -2220,8 +2224,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
 let filterType: OutboundAPI.FilterType_getOutboundCampaignsDivisionviews = OutboundAPI.FilterType_getOutboundCampaignsDivisionviews.enummember // Filter type
 let name: String = "" // Name
 let _id: [String] = [""] // id
@@ -2244,13 +2248,13 @@ OutboundAPI.getOutboundCampaignsDivisionviews(pageSize: pageSize, pageNumber: pa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -2285,8 +2289,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactListId: String = "" // ContactList ID
-let includeImportStatus: Bool = false // Import status
-let includeSize: Bool = false // Include size
+let includeImportStatus: Bool = true // Import status
+let includeSize: Bool = true // Include size
 
 // Code example
 OutboundAPI.getOutboundContactlist(contactListId: contactListId, includeImportStatus: includeImportStatus, includeSize: includeSize) { (response, error) in
@@ -2305,8 +2309,8 @@ OutboundAPI.getOutboundContactlist(contactListId: contactListId, includeImportSt
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactListId** | **String**| ContactList ID | |
-| **includeImportStatus** | **Bool**| Import status | [optional] [default to false] |
-| **includeSize** | **Bool**| Include size | [optional] [default to false] |
+| **includeImportStatus** | **Bool**| Import status | [optional] |
+| **includeSize** | **Bool**| Include size | [optional] |
 {: class="table-striped"}
 
 
@@ -2396,7 +2400,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactListId: String = "" // ContactList ID
-let download: String = "false" // Redirect to download uri
+let download: String = "" // Redirect to download uri
 
 // Code example
 OutboundAPI.getOutboundContactlistExport(contactListId: contactListId, download: download) { (response, error) in
@@ -2415,7 +2419,7 @@ OutboundAPI.getOutboundContactlistExport(contactListId: contactListId, download:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactListId** | **String**| ContactList ID | |
-| **download** | **String**| Redirect to download uri | [optional] [default to false] |
+| **download** | **String**| Redirect to download uri | [optional] |
 {: class="table-striped"}
 
 
@@ -2605,9 +2609,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundContactlistfilters = OutboundAPI.FilterType_getOutboundContactlistfilters.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
@@ -2630,13 +2634,13 @@ OutboundAPI.getOutboundContactlistfilters(pageSize: pageSize, pageNumber: pageNu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **contactListId** | **String**| Contact List ID | [optional] |
 {: class="table-striped"}
 
@@ -2671,11 +2675,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let includeImportStatus: Bool = false // Include import status
-let includeSize: Bool = false // Include size
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let includeImportStatus: Bool = true // Include import status
+let includeSize: Bool = true // Include size
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundContactlists = OutboundAPI.FilterType_getOutboundContactlists.enummember // Filter type
 let name: String = "" // Name
 let _id: [String] = [""] // id
@@ -2699,17 +2703,17 @@ OutboundAPI.getOutboundContactlists(includeImportStatus: includeImportStatus, in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **includeImportStatus** | **Bool**| Include import status | [optional] [default to false] |
-| **includeSize** | **Bool**| Include size | [optional] [default to false] |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **includeImportStatus** | **Bool**| Include import status | [optional] |
+| **includeSize** | **Bool**| Include size | [optional] |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -2729,6 +2733,8 @@ Get a basic ContactList information object
 
 This returns a simplified version of a ContactList, consisting of the name, division, column names, phone columns, import status, and size.
 
+
+
 Wraps GET /api/v2/outbound/contactlists/divisionviews/{contactListId}  
 
 Requires ALL permissions: 
@@ -2744,8 +2750,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactListId: String = "" // Contactlist ID
-let includeImportStatus: Bool = false // Include import status
-let includeSize: Bool = false // Include size
+let includeImportStatus: Bool = true // Include import status
+let includeSize: Bool = true // Include size
 
 // Code example
 OutboundAPI.getOutboundContactlistsDivisionview(contactListId: contactListId, includeImportStatus: includeImportStatus, includeSize: includeSize) { (response, error) in
@@ -2764,8 +2770,8 @@ OutboundAPI.getOutboundContactlistsDivisionview(contactListId: contactListId, in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactListId** | **String**| Contactlist ID | |
-| **includeImportStatus** | **Bool**| Include import status | [optional] [default to false] |
-| **includeSize** | **Bool**| Include size | [optional] [default to false] |
+| **includeImportStatus** | **Bool**| Include import status | [optional] |
+| **includeSize** | **Bool**| Include size | [optional] |
 {: class="table-striped"}
 
 
@@ -2785,6 +2791,8 @@ Query a list of simplified contact list objects.
 
 This return a simplified version of contact lists, consisting of the name, division, column names, phone columns, import status, and size.
 
+
+
 Wraps GET /api/v2/outbound/contactlists/divisionviews  
 
 Requires ALL permissions: 
@@ -2799,10 +2807,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let includeImportStatus: Bool = false // Include import status
-let includeSize: Bool = false // Include size
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
+let includeImportStatus: Bool = true // Include import status
+let includeSize: Bool = true // Include size
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
 let filterType: OutboundAPI.FilterType_getOutboundContactlistsDivisionviews = OutboundAPI.FilterType_getOutboundContactlistsDivisionviews.enummember // Filter type
 let name: String = "" // Name
 let _id: [String] = [""] // id
@@ -2825,15 +2833,15 @@ OutboundAPI.getOutboundContactlistsDivisionviews(includeImportStatus: includeImp
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **includeImportStatus** | **Bool**| Include import status | [optional] [default to false] |
-| **includeSize** | **Bool**| Include size | [optional] [default to false] |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **includeImportStatus** | **Bool**| Include import status | [optional] |
+| **includeSize** | **Bool**| Include size | [optional] |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -2868,8 +2876,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let dncListId: String = "" // DncList ID
-let includeImportStatus: Bool = false // Import status
-let includeSize: Bool = false // Include size
+let includeImportStatus: Bool = true // Import status
+let includeSize: Bool = true // Include size
 
 // Code example
 OutboundAPI.getOutboundDnclist(dncListId: dncListId, includeImportStatus: includeImportStatus, includeSize: includeSize) { (response, error) in
@@ -2888,8 +2896,8 @@ OutboundAPI.getOutboundDnclist(dncListId: dncListId, includeImportStatus: includ
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **dncListId** | **String**| DncList ID | |
-| **includeImportStatus** | **Bool**| Import status | [optional] [default to false] |
-| **includeSize** | **Bool**| Include size | [optional] [default to false] |
+| **includeImportStatus** | **Bool**| Import status | [optional] |
+| **includeSize** | **Bool**| Include size | [optional] |
 {: class="table-striped"}
 
 
@@ -2925,7 +2933,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let dncListId: String = "" // DncList ID
-let download: String = "false" // Redirect to download uri
+let download: String = "" // Redirect to download uri
 
 // Code example
 OutboundAPI.getOutboundDnclistExport(dncListId: dncListId, download: download) { (response, error) in
@@ -2944,7 +2952,7 @@ OutboundAPI.getOutboundDnclistExport(dncListId: dncListId, download: download) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **dncListId** | **String**| DncList ID | |
-| **download** | **String**| Redirect to download uri | [optional] [default to false] |
+| **download** | **String**| Redirect to download uri | [optional] |
 {: class="table-striped"}
 
 
@@ -3030,11 +3038,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let includeImportStatus: Bool = false // Import status
-let includeSize: Bool = false // Include size
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let includeImportStatus: Bool = true // Import status
+let includeSize: Bool = true // Include size
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundDnclists = OutboundAPI.FilterType_getOutboundDnclists.enummember // Filter type
 let name: String = "" // Name
 let dncSourceType: OutboundAPI.DncSourceType_getOutboundDnclists = OutboundAPI.DncSourceType_getOutboundDnclists.enummember // DncSourceType
@@ -3058,12 +3066,12 @@ OutboundAPI.getOutboundDnclists(includeImportStatus: includeImportStatus, includ
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **includeImportStatus** | **Bool**| Import status | [optional] [default to false] |
-| **includeSize** | **Bool**| Include size | [optional] [default to false] |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **includeImportStatus** | **Bool**| Import status | [optional] |
+| **includeSize** | **Bool**| Include size | [optional] |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **dncSourceType** | **String**| DncSourceType | [optional]<br />**Values**: rds ("rds"), dncCom ("dnc.com"), gryphon ("gryphon") |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
@@ -3088,6 +3096,8 @@ Get a basic DncList information object
 
 This returns a simplified version of a DncList, consisting of the name, division, import status, and size.
 
+
+
 Wraps GET /api/v2/outbound/dnclists/divisionviews/{dncListId}  
 
 Requires ALL permissions: 
@@ -3103,8 +3113,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let dncListId: String = "" // Dnclist ID
-let includeImportStatus: Bool = false // Include import status
-let includeSize: Bool = false // Include size
+let includeImportStatus: Bool = true // Include import status
+let includeSize: Bool = true // Include size
 
 // Code example
 OutboundAPI.getOutboundDnclistsDivisionview(dncListId: dncListId, includeImportStatus: includeImportStatus, includeSize: includeSize) { (response, error) in
@@ -3123,8 +3133,8 @@ OutboundAPI.getOutboundDnclistsDivisionview(dncListId: dncListId, includeImportS
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **dncListId** | **String**| Dnclist ID | |
-| **includeImportStatus** | **Bool**| Include import status | [optional] [default to false] |
-| **includeSize** | **Bool**| Include size | [optional] [default to false] |
+| **includeImportStatus** | **Bool**| Include import status | [optional] |
+| **includeSize** | **Bool**| Include size | [optional] |
 {: class="table-striped"}
 
 
@@ -3144,6 +3154,8 @@ Query a list of simplified dnc list objects.
 
 This return a simplified version of dnc lists, consisting of the name, division, import status, and size.
 
+
+
 Wraps GET /api/v2/outbound/dnclists/divisionviews  
 
 Requires ALL permissions: 
@@ -3158,10 +3170,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let includeImportStatus: Bool = false // Include import status
-let includeSize: Bool = false // Include size
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
+let includeImportStatus: Bool = true // Include import status
+let includeSize: Bool = true // Include size
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
 let filterType: OutboundAPI.FilterType_getOutboundDnclistsDivisionviews = OutboundAPI.FilterType_getOutboundDnclistsDivisionviews.enummember // Filter type
 let name: String = "" // Name
 let dncSourceType: OutboundAPI.DncSourceType_getOutboundDnclistsDivisionviews = OutboundAPI.DncSourceType_getOutboundDnclistsDivisionviews.enummember // DncSourceType
@@ -3185,16 +3197,16 @@ OutboundAPI.getOutboundDnclistsDivisionviews(includeImportStatus: includeImportS
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **includeImportStatus** | **Bool**| Include import status | [optional] [default to false] |
-| **includeSize** | **Bool**| Include size | [optional] [default to false] |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **includeImportStatus** | **Bool**| Include import status | [optional] |
+| **includeSize** | **Bool**| Include size | [optional] |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **dncSourceType** | **String**| DncSourceType | [optional]<br />**Values**: rds ("rds"), dncCom ("dnc.com"), gryphon ("gryphon") |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -3280,8 +3292,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let filterType: OutboundAPI.FilterType_getOutboundEvents = OutboundAPI.FilterType_getOutboundEvents.enummember // Filter type
 let category: String = "" // Category
 let level: String = "" // Level
@@ -3304,13 +3316,13 @@ OutboundAPI.getOutboundEvents(pageSize: pageSize, pageNumber: pageNumber, filter
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **category** | **String**| Category | [optional] |
 | **level** | **String**| Level | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -3451,8 +3463,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
 let sortBy: OutboundAPI.SortBy_getOutboundMessagingcampaigns = OutboundAPI.SortBy_getOutboundMessagingcampaigns.enummember // The field to sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundMessagingcampaigns = OutboundAPI.SortOrder_getOutboundMessagingcampaigns.enummember // The direction to sort
 let name: String = "" // Name
@@ -3478,10 +3490,10 @@ OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| The field to sort by | [optional] [default to name]<br />**Values**: campaignstatus ("campaignStatus"), name ("name"), type ("type") |
-| **sortOrder** | **String**| The direction to sort | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| The field to sort by | [optional]<br />**Values**: campaignstatus ("campaignStatus"), name ("name"), type ("type") |
+| **sortOrder** | **String**| The direction to sort | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **name** | **String**| Name | [optional] |
 | **contactListId** | **String**| Contact List ID | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
@@ -3506,6 +3518,8 @@ OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNu
 Get a basic Messaging Campaign information object
 
 This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+
+
 
 Wraps GET /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}  
 
@@ -3560,6 +3574,8 @@ Query a list of basic Messaging Campaign information objects
 
 This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
 
+
+
 Wraps GET /api/v2/outbound/messagingcampaigns/divisionviews  
 
 Requires ANY permissions: 
@@ -3575,8 +3591,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
 let sortOrder: OutboundAPI.SortOrder_getOutboundMessagingcampaignsDivisionviews = OutboundAPI.SortOrder_getOutboundMessagingcampaignsDivisionviews.enummember // The direction to sort
 let name: String = "" // Name
 let type: OutboundAPI.ModelType_getOutboundMessagingcampaignsDivisionviews = OutboundAPI.ModelType_getOutboundMessagingcampaignsDivisionviews.enummember // Campaign Type
@@ -3599,9 +3615,9 @@ OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageN
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| The direction to sort | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| The direction to sort | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **name** | **String**| Name | [optional] |
 | **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS") |
 | **_id** | [**[String]**](String.html)| id | [optional] |
@@ -3691,9 +3707,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundRulesets = OutboundAPI.FilterType_getOutboundRulesets.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
@@ -3715,13 +3731,13 @@ OutboundAPI.getOutboundRulesets(pageSize: pageSize, pageNumber: pageNumber, allo
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -4207,9 +4223,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size. The max that will be returned is 100.
-let pageNumber: Int = 1 // Page number
-let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let pageSize: Int = 0 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 0 // Page number
+let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundSequences = OutboundAPI.FilterType_getOutboundSequences.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
@@ -4231,13 +4247,13 @@ OutboundAPI.getOutboundSequences(pageSize: pageSize, pageNumber: pageNumber, all
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
-| **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
+| **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -4471,11 +4487,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: DialerAuditRequest = new DialerAuditRequest(...) // AuditSearch
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "entity.name" // Sort by
-let sortOrder: String = "ascending" // Sort order
-let facetsOnly: Bool = false // Facets only
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+let facetsOnly: Bool = true // Facets only
 
 // Code example
 OutboundAPI.postOutboundAudits(body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, facetsOnly: facetsOnly) { (response, error) in
@@ -4494,11 +4510,11 @@ OutboundAPI.postOutboundAudits(body: body, pageSize: pageSize, pageNumber: pageN
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to entity.name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ascending] |
-| **facetsOnly** | **Bool**| Facets only | [optional] [default to false] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **facetsOnly** | **Bool**| Facets only | [optional] |
 {: class="table-striped"}
 
 
@@ -4616,7 +4632,7 @@ OutboundAPI.postOutboundCallanalysisresponsesets(body: body) { (response, error)
 
 
 
-> [Empty](Empty.html) postOutboundCampaignAgentownedmappingpreview(campaignId)
+> [JSON](JSON.html) postOutboundCampaignAgentownedmappingpreview(campaignId)
 
 Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
 
@@ -4662,19 +4678,21 @@ OutboundAPI.postOutboundCampaignAgentownedmappingpreview(campaignId: campaignId)
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="postOutboundCampaignCallbackSchedule"></a>
 
 # **postOutboundCampaignCallbackSchedule**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [ContactCallbackRequest](ContactCallbackRequest.html) postOutboundCampaignCallbackSchedule(campaignId, body)
 
 Schedule a Callback for a Dialer Campaign (Deprecated)
 
 This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
+
+
 
 Wraps POST /api/v2/outbound/campaigns/{campaignId}/callback/schedule  
 
@@ -4847,7 +4865,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: [String] = [new [String](...)] // Campaign IDs
+let body: [String] = [""] // Campaign IDs
 
 // Code example
 OutboundAPI.postOutboundCampaignsProgress(body: body) { (response, error) in
@@ -4865,7 +4883,7 @@ OutboundAPI.postOutboundCampaignsProgress(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | **[String]**| Campaign IDs | |
+| **body** | [**[String]**](String.html)| Campaign IDs | |
 {: class="table-striped"}
 
 
@@ -4975,8 +4993,8 @@ OutboundAPI.postOutboundContactlistContacts(contactListId: contactListId, body: 
 | **contactListId** | **String**| Contact List ID | |
 | **body** | [**[WritableDialerContact]**](WritableDialerContact.html)| Contact | |
 | **priority** | **Bool**| Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. | [optional] |
-| **clearSystemData** | **Bool**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. | [optional] |
-| **doNotQueue** | **Bool**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. | [optional] |
+| **clearSystemData** | **Bool**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won't. | [optional] |
+| **doNotQueue** | **Bool**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the 'priority' parameter. | [optional] |
 {: class="table-striped"}
 
 
@@ -5011,7 +5029,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactListId: String = "" // Contact List ID
-let body: [String] = [new [String](...)] // ContactIds to get.
+let body: [String] = [""] // ContactIds to get.
 
 // Code example
 OutboundAPI.postOutboundContactlistContactsBulk(contactListId: contactListId, body: body) { (response, error) in
@@ -5030,7 +5048,7 @@ OutboundAPI.postOutboundContactlistContactsBulk(contactListId: contactListId, bo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactListId** | **String**| Contact List ID | |
-| **body** | **[String]**| ContactIds to get. | |
+| **body** | [**[String]**](String.html)| ContactIds to get. | |
 {: class="table-striped"}
 
 
@@ -5049,6 +5067,8 @@ OutboundAPI.postOutboundContactlistContactsBulk(contactListId: contactListId, bo
 Initiate the export of a contact list.
 
 Returns 200 if received OK.
+
+
 
 Wraps POST /api/v2/outbound/contactlists/{contactListId}/export  
 
@@ -5310,6 +5330,8 @@ Initiate the export of a dnc list.
 
 Returns 200 if received OK.
 
+
+
 Wraps POST /api/v2/outbound/dnclists/{dncListId}/export  
 
 Requires ALL permissions: 
@@ -5363,6 +5385,8 @@ Add phone numbers to a DNC list.
 
 Only Internal DNC lists may be appended to
 
+
+
 Wraps POST /api/v2/outbound/dnclists/{dncListId}/phonenumbers  
 
 Requires ANY permissions: 
@@ -5378,7 +5402,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let dncListId: String = "" // DncList ID
-let body: [String] = [new [String](...)] // DNC Phone Numbers
+let body: [String] = [""] // DNC Phone Numbers
 let expirationDateTime: String = "" // Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format
 
 // Code example
@@ -5397,7 +5421,7 @@ OutboundAPI.postOutboundDnclistPhonenumbers(dncListId: dncListId, body: body, ex
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **dncListId** | **String**| DncList ID | |
-| **body** | **[String]**| DNC Phone Numbers | |
+| **body** | [**[String]**](String.html)| DNC Phone Numbers | |
 | **expirationDateTime** | **String**| Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format | [optional] |
 {: class="table-striped"}
 
@@ -5538,7 +5562,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: [String] = [new [String](...)] // Messaging Campaign IDs
+let body: [String] = [""] // Messaging Campaign IDs
 
 // Code example
 OutboundAPI.postOutboundMessagingcampaignsProgress(body: body) { (response, error) in
@@ -5556,7 +5580,7 @@ OutboundAPI.postOutboundMessagingcampaignsProgress(body: body) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | **[String]**| Messaging Campaign IDs | |
+| **body** | [**[String]**](String.html)| Messaging Campaign IDs | |
 {: class="table-striped"}
 
 
@@ -5896,6 +5920,8 @@ Send notification that an agent&#39;s state changed
 
 New agent state.
 
+
+
 Wraps PUT /api/v2/outbound/campaigns/{campaignId}/agents/{userId}  
 
 Requires NO permissions: 
@@ -5930,7 +5956,7 @@ OutboundAPI.putOutboundCampaignAgent(campaignId: campaignId, userId: userId, bod
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **campaignId** | **String**| Campaign ID | |
-| **userId** | **String**| Agent&#39;s user ID | |
+| **userId** | **String**| Agent's user ID | |
 | **body** | [**Agent**](Agent.html)| agent | |
 {: class="table-striped"}
 

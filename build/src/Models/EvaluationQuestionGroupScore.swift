@@ -40,37 +40,21 @@ public class EvaluationQuestionGroupScore: Codable {
     public var questionScores: [EvaluationQuestionScore]?
 
     public init(questionGroupId: String?, totalScore: Float?, maxTotalScore: Float?, markedNA: Bool?, totalCriticalScore: Float?, maxTotalCriticalScore: Float?, totalNonCriticalScore: Float?, maxTotalNonCriticalScore: Float?, totalScoreUnweighted: Float?, maxTotalScoreUnweighted: Float?, totalCriticalScoreUnweighted: Float?, maxTotalCriticalScoreUnweighted: Float?, totalNonCriticalScoreUnweighted: Float?, maxTotalNonCriticalScoreUnweighted: Float?, questionScores: [EvaluationQuestionScore]?) {
-        
         self.questionGroupId = questionGroupId
-        
         self.totalScore = totalScore
-        
         self.maxTotalScore = maxTotalScore
-        
         self.markedNA = markedNA
-        
         self.totalCriticalScore = totalCriticalScore
-        
         self.maxTotalCriticalScore = maxTotalCriticalScore
-        
         self.totalNonCriticalScore = totalNonCriticalScore
-        
         self.maxTotalNonCriticalScore = maxTotalNonCriticalScore
-        
         self.totalScoreUnweighted = totalScoreUnweighted
-        
         self.maxTotalScoreUnweighted = maxTotalScoreUnweighted
-        
         self.totalCriticalScoreUnweighted = totalCriticalScoreUnweighted
-        
         self.maxTotalCriticalScoreUnweighted = maxTotalCriticalScoreUnweighted
-        
         self.totalNonCriticalScoreUnweighted = totalNonCriticalScoreUnweighted
-        
         self.maxTotalNonCriticalScoreUnweighted = maxTotalNonCriticalScoreUnweighted
-        
         self.questionScores = questionScores
-        
     }
 
 

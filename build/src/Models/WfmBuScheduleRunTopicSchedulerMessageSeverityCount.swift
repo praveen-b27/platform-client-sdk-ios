@@ -21,11 +21,8 @@ public class WfmBuScheduleRunTopicSchedulerMessageSeverityCount: Codable {
     public var count: Int?
 
     public init(severity: Severity?, count: Int?) {
-        
         self.severity = severity
-        
         self.count = count
-        
     }
 
 

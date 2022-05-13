@@ -19,13 +19,9 @@ public class MediaUtilization: Codable {
     public var includeNonAcd: Bool?
 
     public init(maximumCapacity: Int?, interruptableMediaTypes: [String]?, includeNonAcd: Bool?) {
-        
         self.maximumCapacity = maximumCapacity
-        
         self.interruptableMediaTypes = interruptableMediaTypes
-        
         self.includeNonAcd = includeNonAcd
-        
     }
 
 

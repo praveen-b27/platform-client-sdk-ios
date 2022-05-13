@@ -13,12 +13,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Leaderboard of the requesting user's division or performance profile
      
      - parameter startWorkday: (query) Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -45,37 +40,28 @@ open class GamificationAPI {
     }
 
     /**
-     
      Leaderboard of the requesting user's division or performance profile
-     
      - GET /api/v2/gamification/leaderboard
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : "",
-  "metric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-  "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "metric" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "dateStartWorkday" : "2000-01-23",
   "leaders" : [ {
-    "rank" : 123,
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "points" : 123456789
+    "rank" : 0,
+    "user" : "{}",
+    "points" : 6
+  }, {
+    "rank" : 0,
+    "user" : "{}",
+    "points" : 6
   } ],
-  "userRank" : ""
-}}]
+  "userRank" : "{}"
+}, statusCode=200}]
      
      - parameter startWorkday: (query) Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -83,25 +69,16 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Leaderboard> 
      */
-    open class func getGamificationLeaderboardWithRequestBuilder(startWorkday: Date, endWorkday: Date, metricId: String? = nil) -> RequestBuilder<Leaderboard> {
+    open class func getGamificationLeaderboardWithRequestBuilder(startWorkday: Date, endWorkday: Date, metricId: String? = nil) -> RequestBuilder<Leaderboard> {        
         let path = "/api/v2/gamification/leaderboard"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON(), 
-            
             "metricId": metricId
-            
         ])
 
         let requestBuilder: RequestBuilder<Leaderboard>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -109,7 +86,6 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum FilterType_getGamificationLeaderboardAll: String { 
         case performanceProfile = "PerformanceProfile"
@@ -121,13 +97,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Leaderboard by filter type
      
      - parameter filterType: (query) Filter type for the query request. 
@@ -156,37 +126,28 @@ open class GamificationAPI {
     }
 
     /**
-     
      Leaderboard by filter type
-     
      - GET /api/v2/gamification/leaderboard/all
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : "",
-  "metric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-  "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "metric" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "dateStartWorkday" : "2000-01-23",
   "leaders" : [ {
-    "rank" : 123,
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "points" : 123456789
+    "rank" : 0,
+    "user" : "{}",
+    "points" : 6
+  }, {
+    "rank" : 0,
+    "user" : "{}",
+    "points" : 6
   } ],
-  "userRank" : ""
-}}]
+  "userRank" : "{}"
+}, statusCode=200}]
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. For example, division or performance profile Id 
@@ -196,29 +157,18 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Leaderboard> 
      */
-    open class func getGamificationLeaderboardAllWithRequestBuilder(filterType: FilterType_getGamificationLeaderboardAll, filterId: String, startWorkday: Date, endWorkday: Date, metricId: String? = nil) -> RequestBuilder<Leaderboard> {
+    open class func getGamificationLeaderboardAllWithRequestBuilder(filterType: FilterType_getGamificationLeaderboardAll, filterId: String, startWorkday: Date, endWorkday: Date, metricId: String? = nil) -> RequestBuilder<Leaderboard> {        
         let path = "/api/v2/gamification/leaderboard/all"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "filterType": filterType.rawValue, 
-            
             "filterId": filterId, 
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON(), 
-            
             "metricId": metricId
-            
         ])
 
         let requestBuilder: RequestBuilder<Leaderboard>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -227,7 +177,6 @@ open class GamificationAPI {
     }
 
     
-    
     public enum FilterType_getGamificationLeaderboardAllBestpoints: String { 
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
@@ -235,10 +184,7 @@ open class GamificationAPI {
 
     
     
-    
-    
     /**
-     
      Best Points by division or performance profile
      
      - parameter filterType: (query) Filter type for the query request. 
@@ -264,59 +210,57 @@ open class GamificationAPI {
     }
 
     /**
-     
      Best Points by division or performance profile
-     
      - GET /api/v2/gamification/leaderboard/all/bestpoints
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
+  "performanceProfile" : "{}",
   "bestPoints" : [ {
-    "granularityType" : "aeiou",
-    "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-    "count" : 123,
-    "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
+    "granularityType" : "Monthly",
+    "dateEndWorkday" : "2000-01-23",
+    "count" : 0,
+    "dateStartWorkday" : "2000-01-23",
     "users" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "points" : 123
+    "points" : 6
+  }, {
+    "granularityType" : "Monthly",
+    "dateEndWorkday" : "2000-01-23",
+    "count" : 0,
+    "dateStartWorkday" : "2000-01-23",
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "points" : 6
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. For example, division or performance profile Id 
 
      - returns: RequestBuilder<OverallBestPoints> 
      */
-    open class func getGamificationLeaderboardAllBestpointsWithRequestBuilder(filterType: FilterType_getGamificationLeaderboardAllBestpoints, filterId: String) -> RequestBuilder<OverallBestPoints> {
+    open class func getGamificationLeaderboardAllBestpointsWithRequestBuilder(filterType: FilterType_getGamificationLeaderboardAllBestpoints, filterId: String) -> RequestBuilder<OverallBestPoints> {        
         let path = "/api/v2/gamification/leaderboard/all/bestpoints"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "filterType": filterType.rawValue, 
-            
             "filterId": filterId
-            
         ])
 
         let requestBuilder: RequestBuilder<OverallBestPoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -324,9 +268,7 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Best Points of the requesting user's current performance profile or division
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -350,48 +292,49 @@ open class GamificationAPI {
     }
 
     /**
-     
      Best Points of the requesting user's current performance profile or division
-     
      - GET /api/v2/gamification/leaderboard/bestpoints
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
+  "performanceProfile" : "{}",
   "bestPoints" : [ {
-    "granularityType" : "aeiou",
-    "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-    "count" : 123,
-    "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
+    "granularityType" : "Monthly",
+    "dateEndWorkday" : "2000-01-23",
+    "count" : 0,
+    "dateStartWorkday" : "2000-01-23",
     "users" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "points" : 123
+    "points" : 6
+  }, {
+    "granularityType" : "Monthly",
+    "dateEndWorkday" : "2000-01-23",
+    "count" : 0,
+    "dateStartWorkday" : "2000-01-23",
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "points" : 6
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<OverallBestPoints> 
      */
-    open class func getGamificationLeaderboardBestpointsWithRequestBuilder() -> RequestBuilder<OverallBestPoints> {
+    open class func getGamificationLeaderboardBestpointsWithRequestBuilder() -> RequestBuilder<OverallBestPoints> {        
         let path = "/api/v2/gamification/leaderboard/bestpoints"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -403,12 +346,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Gamified metric by id
      
      - parameter metricId: (path) metric Id 
@@ -435,67 +373,24 @@ open class GamificationAPI {
     }
 
     /**
-     
      Gamified metric by id
-     
      - GET /api/v2/gamification/metrics/{metricId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metricDefinitionId" : "aeiou",
-  "linkedMetric" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "sourcePerformanceProfile" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "active" : true,
-    "id" : "aeiou",
-    "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
-    } ]
-  },
-  "id" : "aeiou",
-  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-  "externalMetricDefinitionId" : "aeiou",
-  "performanceProfileId" : "aeiou",
-  "objective" : {
-    "mediaTypes" : [ "aeiou" ],
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "topics" : [ "" ],
-    "id" : "aeiou",
-    "templateId" : "aeiou",
-    "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
-    } ],
-    "enabled" : true,
-    "topicIdsFilterType" : "aeiou"
-  }
-}}]
+  "metricDefinitionId" : "metricDefinitionId",
+  "linkedMetric" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "sourcePerformanceProfile" : "{}",
+  "id" : "id",
+  "dateUnlinked" : "2000-01-23",
+  "externalMetricDefinitionId" : "externalMetricDefinitionId",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}"
+}, statusCode=200}]
      
      - parameter metricId: (path) metric Id 
      - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
@@ -503,26 +398,18 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func getGamificationMetricWithRequestBuilder(metricId: String, workday: Date? = nil, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {
+    open class func getGamificationMetricWithRequestBuilder(metricId: String, workday: Date? = nil, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {        
         var path = "/api/v2/gamification/metrics/{metricId}"
         let metricIdPreEscape = "\(metricId)"
         let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday?.encodeToJSON(), 
-            
             "performanceProfileId": performanceProfileId
-            
         ])
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -531,10 +418,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Metric definition by id
      
      - parameter metricDefinitionId: (path) metric definition id 
@@ -559,62 +443,34 @@ open class GamificationAPI {
     }
 
     /**
-     
      Metric definition by id
-     
      - GET /api/v2/gamification/metricdefinitions/{metricDefinitionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "unitType" : "aeiou",
-  "defaultObjective" : {
-    "mediaTypes" : [ "aeiou" ],
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "topics" : [ "" ],
-    "id" : "aeiou",
-    "templateId" : "aeiou",
-    "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
-    } ],
-    "enabled" : true,
-    "topicIdsFilterType" : "aeiou"
-  },
-  "divisorMetrics" : [ "aeiou" ],
-  "lockTemplateId" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dividendMetrics" : [ "aeiou" ],
-  "id" : "aeiou",
-  "shortName" : "aeiou"
-}}]
+  "unitType" : "None",
+  "defaultObjective" : "{}",
+  "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
+  "lockTemplateId" : "lockTemplateId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dividendMetrics" : [ "dividendMetrics", "dividendMetrics" ],
+  "id" : "id",
+  "shortName" : "shortName"
+}, statusCode=200}]
      
      - parameter metricDefinitionId: (path) metric definition id 
 
      - returns: RequestBuilder<MetricDefinition> 
      */
-    open class func getGamificationMetricdefinitionWithRequestBuilder(metricDefinitionId: String) -> RequestBuilder<MetricDefinition> {
+    open class func getGamificationMetricdefinitionWithRequestBuilder(metricDefinitionId: String) -> RequestBuilder<MetricDefinition> {        
         var path = "/api/v2/gamification/metricdefinitions/{metricDefinitionId}"
         let metricDefinitionIdPreEscape = "\(metricDefinitionId)"
         let metricDefinitionIdPostEscape = metricDefinitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{metricDefinitionId}", with: metricDefinitionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -623,9 +479,7 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      All metric definitions
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -649,61 +503,44 @@ open class GamificationAPI {
     }
 
     /**
-     
      All metric definitions
-     
      - GET /api/v2/gamification/metricdefinitions
      - Retrieves the metric definitions and their corresponding default objectives used to create a gamified metric
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "unitType" : "aeiou",
-    "defaultObjective" : {
-      "mediaTypes" : [ "aeiou" ],
-      "queues" : [ {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      } ],
-      "topics" : [ "" ],
-      "id" : "aeiou",
-      "templateId" : "aeiou",
-      "zones" : [ {
-        "upperLimitValue" : 123,
-        "directionType" : "aeiou",
-        "lowerLimitPoints" : 123,
-        "zoneType" : "aeiou",
-        "upperLimitPoints" : 123,
-        "label" : "aeiou",
-        "lowerLimitValue" : 123
-      } ],
-      "enabled" : true,
-      "topicIdsFilterType" : "aeiou"
-    },
-    "divisorMetrics" : [ "aeiou" ],
-    "lockTemplateId" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dividendMetrics" : [ "aeiou" ],
-    "id" : "aeiou",
-    "shortName" : "aeiou"
+    "unitType" : "None",
+    "defaultObjective" : "{}",
+    "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
+    "lockTemplateId" : "lockTemplateId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dividendMetrics" : [ "dividendMetrics", "dividendMetrics" ],
+    "id" : "id",
+    "shortName" : "shortName"
+  }, {
+    "unitType" : "None",
+    "defaultObjective" : "{}",
+    "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
+    "lockTemplateId" : "lockTemplateId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dividendMetrics" : [ "dividendMetrics", "dividendMetrics" ],
+    "id" : "id",
+    "shortName" : "shortName"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<GetMetricDefinitionsResponse> 
      */
-    open class func getGamificationMetricdefinitionsWithRequestBuilder() -> RequestBuilder<GetMetricDefinitionsResponse> {
+    open class func getGamificationMetricdefinitionsWithRequestBuilder() -> RequestBuilder<GetMetricDefinitionsResponse> {        
         let path = "/api/v2/gamification/metricdefinitions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -714,11 +551,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      All gamified metrics for a given profile
      
      - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
@@ -744,83 +577,69 @@ open class GamificationAPI {
     }
 
     /**
-     
      All gamified metrics for a given profile
-     
      - GET /api/v2/gamification/metrics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "precision" : 123,
-    "selfUri" : "aeiou",
-    "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-    "performanceProfileId" : "aeiou",
+    "precision" : 5,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateUnlinked" : "2000-01-23",
+    "performanceProfileId" : "performanceProfileId",
     "enabled" : true,
-    "unitType" : "aeiou",
-    "metricDefinitionId" : "aeiou",
-    "linkedMetric" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "templateName" : "aeiou",
-    "maxPoints" : 123,
-    "unitDefinition" : "aeiou",
-    "name" : "aeiou",
-    "sourcePerformanceProfile" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "metricOrders" : [ "aeiou" ],
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "maxLeaderboardRankSize" : 123,
-      "memberCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "reportingIntervals" : [ {
-        "intervalType" : "aeiou",
-        "intervalValue" : 123
-      } ]
-    },
-    "id" : "aeiou",
-    "metricDefinitionName" : "aeiou",
-    "externalMetricDefinitionId" : "aeiou",
-    "order" : 123
+    "unitType" : "None",
+    "metricDefinitionId" : "metricDefinitionId",
+    "linkedMetric" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "templateName" : "templateName",
+    "maxPoints" : 1,
+    "unitDefinition" : "unitDefinition",
+    "name" : "name",
+    "sourcePerformanceProfile" : "{}",
+    "id" : "id",
+    "metricDefinitionName" : "metricDefinitionName",
+    "externalMetricDefinitionId" : "externalMetricDefinitionId",
+    "order" : 6
+  }, {
+    "precision" : 5,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateUnlinked" : "2000-01-23",
+    "performanceProfileId" : "performanceProfileId",
+    "enabled" : true,
+    "unitType" : "None",
+    "metricDefinitionId" : "metricDefinitionId",
+    "linkedMetric" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "templateName" : "templateName",
+    "maxPoints" : 1,
+    "unitDefinition" : "unitDefinition",
+    "name" : "name",
+    "sourcePerformanceProfile" : "{}",
+    "id" : "id",
+    "metricDefinitionName" : "metricDefinitionName",
+    "externalMetricDefinitionId" : "externalMetricDefinitionId",
+    "order" : 6
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
      - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
 
      - returns: RequestBuilder<GetMetricsResponse> 
      */
-    open class func getGamificationMetricsWithRequestBuilder(performanceProfileId: String? = nil, workday: Date? = nil) -> RequestBuilder<GetMetricsResponse> {
+    open class func getGamificationMetricsWithRequestBuilder(performanceProfileId: String? = nil, workday: Date? = nil) -> RequestBuilder<GetMetricsResponse> {        
         let path = "/api/v2/gamification/metrics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "performanceProfileId": performanceProfileId, 
-            
             "workday": workday?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<GetMetricsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -829,10 +648,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Performance profile by id
      
      - parameter profileId: (path) performanceProfileId 
@@ -857,51 +673,42 @@ open class GamificationAPI {
     }
 
     /**
-     
      Performance profile by id
-     
      - GET /api/v2/gamification/profiles/{profileId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "metricOrders" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "maxLeaderboardRankSize" : 123,
-  "memberCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "division" : "{}",
+  "metricOrders" : [ "metricOrders", "metricOrders" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "maxLeaderboardRankSize" : 1,
+  "memberCount" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "reportingIntervals" : [ {
-    "intervalType" : "aeiou",
-    "intervalValue" : 123
+    "intervalType" : "Day",
+    "intervalValue" : 0
+  }, {
+    "intervalType" : "Day",
+    "intervalValue" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter profileId: (path) performanceProfileId 
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func getGamificationProfileWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {
+    open class func getGamificationProfileWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {        
         var path = "/api/v2/gamification/profiles/{profileId}"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -911,10 +718,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Members of a given performance profile
      
      - parameter performanceProfileId: (path) Performance Profile Id 
@@ -939,37 +743,32 @@ open class GamificationAPI {
     }
 
     /**
-     
      Members of a given performance profile
-     
      - GET /api/v2/gamification/profiles/{performanceProfileId}/members
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter performanceProfileId: (path) Performance Profile Id 
 
      - returns: RequestBuilder<MemberListing> 
      */
-    open class func getGamificationProfileMembersWithRequestBuilder(performanceProfileId: String) -> RequestBuilder<MemberListing> {
+    open class func getGamificationProfileMembersWithRequestBuilder(performanceProfileId: String) -> RequestBuilder<MemberListing> {        
         var path = "/api/v2/gamification/profiles/{performanceProfileId}/members"
         let performanceProfileIdPreEscape = "\(performanceProfileId)"
         let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -981,12 +780,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Performance profile gamified metric by id
      
      - parameter profileId: (path) Performance Profile Id 
@@ -1013,67 +807,24 @@ open class GamificationAPI {
     }
 
     /**
-     
      Performance profile gamified metric by id
-     
      - GET /api/v2/gamification/profiles/{profileId}/metrics/{metricId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metricDefinitionId" : "aeiou",
-  "linkedMetric" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "sourcePerformanceProfile" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "active" : true,
-    "id" : "aeiou",
-    "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
-    } ]
-  },
-  "id" : "aeiou",
-  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-  "externalMetricDefinitionId" : "aeiou",
-  "performanceProfileId" : "aeiou",
-  "objective" : {
-    "mediaTypes" : [ "aeiou" ],
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "topics" : [ "" ],
-    "id" : "aeiou",
-    "templateId" : "aeiou",
-    "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
-    } ],
-    "enabled" : true,
-    "topicIdsFilterType" : "aeiou"
-  }
-}}]
+  "metricDefinitionId" : "metricDefinitionId",
+  "linkedMetric" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "sourcePerformanceProfile" : "{}",
+  "id" : "id",
+  "dateUnlinked" : "2000-01-23",
+  "externalMetricDefinitionId" : "externalMetricDefinitionId",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}"
+}, statusCode=200}]
      
      - parameter profileId: (path) Performance Profile Id 
      - parameter metricId: (path) Metric Id 
@@ -1081,7 +832,7 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func getGamificationProfileMetricWithRequestBuilder(profileId: String, metricId: String, workday: Date? = nil) -> RequestBuilder<Metric> {
+    open class func getGamificationProfileMetricWithRequestBuilder(profileId: String, metricId: String, workday: Date? = nil) -> RequestBuilder<Metric> {        
         var path = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1090,18 +841,11 @@ open class GamificationAPI {
         let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1112,17 +856,7 @@ open class GamificationAPI {
     
     
     
-    
-    public enum Expand_getGamificationProfileMetrics: String { 
-        case objective = "objective"
-    }
-
-    
-    
-    
-    
     /**
-     
      All gamified metrics for a given performance profile
      
      - parameter profileId: (path) Performance Profile Id 
@@ -1149,71 +883,40 @@ open class GamificationAPI {
     }
 
     /**
-     
      All gamified metrics for a given performance profile
-     
      - GET /api/v2/gamification/profiles/{profileId}/metrics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "metricDefinitionId" : "aeiou",
-    "linkedMetric" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "sourcePerformanceProfile" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "metricOrders" : [ "aeiou" ],
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "maxLeaderboardRankSize" : 123,
-      "memberCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "reportingIntervals" : [ {
-        "intervalType" : "aeiou",
-        "intervalValue" : 123
-      } ]
-    },
-    "id" : "aeiou",
-    "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-    "externalMetricDefinitionId" : "aeiou",
-    "performanceProfileId" : "aeiou",
-    "objective" : {
-      "mediaTypes" : [ "aeiou" ],
-      "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "queues" : [ {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      } ],
-      "topics" : [ "" ],
-      "id" : "aeiou",
-      "templateId" : "aeiou",
-      "zones" : [ {
-        "upperLimitValue" : 123,
-        "directionType" : "aeiou",
-        "lowerLimitPoints" : 123,
-        "zoneType" : "aeiou",
-        "upperLimitPoints" : 123,
-        "label" : "aeiou",
-        "lowerLimitValue" : 123
-      } ],
-      "enabled" : true,
-      "topicIdsFilterType" : "aeiou"
-    }
+    "metricDefinitionId" : "metricDefinitionId",
+    "linkedMetric" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "sourcePerformanceProfile" : "{}",
+    "id" : "id",
+    "dateUnlinked" : "2000-01-23",
+    "externalMetricDefinitionId" : "externalMetricDefinitionId",
+    "performanceProfileId" : "performanceProfileId",
+    "objective" : "{}"
+  }, {
+    "metricDefinitionId" : "metricDefinitionId",
+    "linkedMetric" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "sourcePerformanceProfile" : "{}",
+    "id" : "id",
+    "dateUnlinked" : "2000-01-23",
+    "externalMetricDefinitionId" : "externalMetricDefinitionId",
+    "performanceProfileId" : "performanceProfileId",
+    "objective" : "{}"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter profileId: (path) Performance Profile Id 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
@@ -1221,26 +924,18 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<GetMetricResponse> 
      */
-    open class func getGamificationProfileMetricsWithRequestBuilder(profileId: String, expand: [String]? = nil, workday: Date? = nil) -> RequestBuilder<GetMetricResponse> {
+    open class func getGamificationProfileMetricsWithRequestBuilder(profileId: String, expand: [String]? = nil, workday: Date? = nil) -> RequestBuilder<GetMetricResponse> {        
         var path = "/api/v2/gamification/profiles/{profileId}/metrics"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand, 
-            
             "workday": workday?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<GetMetricResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1250,11 +945,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      All metrics for a given performance profile with objective details such as order and maxPoints
      
      - parameter profileId: (path) Performance Profile Id 
@@ -1280,84 +971,71 @@ open class GamificationAPI {
     }
 
     /**
-     
      All metrics for a given performance profile with objective details such as order and maxPoints
-     
      - GET /api/v2/gamification/profiles/{profileId}/metrics/objectivedetails
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "precision" : 123,
-    "selfUri" : "aeiou",
-    "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-    "performanceProfileId" : "aeiou",
+    "precision" : 5,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateUnlinked" : "2000-01-23",
+    "performanceProfileId" : "performanceProfileId",
     "enabled" : true,
-    "unitType" : "aeiou",
-    "metricDefinitionId" : "aeiou",
-    "linkedMetric" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "templateName" : "aeiou",
-    "maxPoints" : 123,
-    "unitDefinition" : "aeiou",
-    "name" : "aeiou",
-    "sourcePerformanceProfile" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "metricOrders" : [ "aeiou" ],
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "maxLeaderboardRankSize" : 123,
-      "memberCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "reportingIntervals" : [ {
-        "intervalType" : "aeiou",
-        "intervalValue" : 123
-      } ]
-    },
-    "id" : "aeiou",
-    "metricDefinitionName" : "aeiou",
-    "externalMetricDefinitionId" : "aeiou",
-    "order" : 123
+    "unitType" : "None",
+    "metricDefinitionId" : "metricDefinitionId",
+    "linkedMetric" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "templateName" : "templateName",
+    "maxPoints" : 1,
+    "unitDefinition" : "unitDefinition",
+    "name" : "name",
+    "sourcePerformanceProfile" : "{}",
+    "id" : "id",
+    "metricDefinitionName" : "metricDefinitionName",
+    "externalMetricDefinitionId" : "externalMetricDefinitionId",
+    "order" : 6
+  }, {
+    "precision" : 5,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateUnlinked" : "2000-01-23",
+    "performanceProfileId" : "performanceProfileId",
+    "enabled" : true,
+    "unitType" : "None",
+    "metricDefinitionId" : "metricDefinitionId",
+    "linkedMetric" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "templateName" : "templateName",
+    "maxPoints" : 1,
+    "unitDefinition" : "unitDefinition",
+    "name" : "name",
+    "sourcePerformanceProfile" : "{}",
+    "id" : "id",
+    "metricDefinitionName" : "metricDefinitionName",
+    "externalMetricDefinitionId" : "externalMetricDefinitionId",
+    "order" : 6
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter profileId: (path) Performance Profile Id 
      - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
 
      - returns: RequestBuilder<GetMetricsResponse> 
      */
-    open class func getGamificationProfileMetricsObjectivedetailsWithRequestBuilder(profileId: String, workday: Date? = nil) -> RequestBuilder<GetMetricsResponse> {
+    open class func getGamificationProfileMetricsObjectivedetailsWithRequestBuilder(profileId: String, workday: Date? = nil) -> RequestBuilder<GetMetricsResponse> {        
         var path = "/api/v2/gamification/profiles/{profileId}/metrics/objectivedetails"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<GetMetricsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1365,9 +1043,7 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      All performance profiles
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1391,50 +1067,59 @@ open class GamificationAPI {
     }
 
     /**
-     
      All performance profiles
-     
      - GET /api/v2/gamification/profiles
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "division" : "{}",
+    "metricOrders" : [ "metricOrders", "metricOrders" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "maxLeaderboardRankSize" : 1,
+    "memberCount" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
     "active" : true,
-    "id" : "aeiou",
+    "id" : "id",
     "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
+      "intervalType" : "Day",
+      "intervalValue" : 0
+    }, {
+      "intervalType" : "Day",
+      "intervalValue" : 0
+    } ]
+  }, {
+    "division" : "{}",
+    "metricOrders" : [ "metricOrders", "metricOrders" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "maxLeaderboardRankSize" : 1,
+    "memberCount" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "active" : true,
+    "id" : "id",
+    "reportingIntervals" : [ {
+      "intervalType" : "Day",
+      "intervalValue" : 0
+    }, {
+      "intervalType" : "Day",
+      "intervalValue" : 0
     } ]
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<GetProfilesResponse> 
      */
-    open class func getGamificationProfilesWithRequestBuilder() -> RequestBuilder<GetProfilesResponse> {
+    open class func getGamificationProfilesWithRequestBuilder() -> RequestBuilder<GetProfilesResponse> {        
         let path = "/api/v2/gamification/profiles"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1445,11 +1130,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Performance profile of a user
      
      - parameter userId: (path)  
@@ -1475,58 +1156,47 @@ open class GamificationAPI {
     }
 
     /**
-     
      Performance profile of a user
-     
      - GET /api/v2/gamification/profiles/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "metricOrders" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "maxLeaderboardRankSize" : 123,
-  "memberCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "division" : "{}",
+  "metricOrders" : [ "metricOrders", "metricOrders" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "maxLeaderboardRankSize" : 1,
+  "memberCount" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "reportingIntervals" : [ {
-    "intervalType" : "aeiou",
-    "intervalValue" : 123
+    "intervalType" : "Day",
+    "intervalValue" : 0
+  }, {
+    "intervalType" : "Day",
+    "intervalValue" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter userId: (path)  
      - parameter workday: (query) Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func getGamificationProfilesUserWithRequestBuilder(userId: String, workday: Date? = nil) -> RequestBuilder<PerformanceProfile> {
+    open class func getGamificationProfilesUserWithRequestBuilder(userId: String, workday: Date? = nil) -> RequestBuilder<PerformanceProfile> {        
         var path = "/api/v2/gamification/profiles/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1535,10 +1205,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Performance profile of the requesting user
      
      - parameter workday: (query) Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
@@ -1563,54 +1230,43 @@ open class GamificationAPI {
     }
 
     /**
-     
      Performance profile of the requesting user
-     
      - GET /api/v2/gamification/profiles/users/me
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "metricOrders" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "maxLeaderboardRankSize" : 123,
-  "memberCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "division" : "{}",
+  "metricOrders" : [ "metricOrders", "metricOrders" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "maxLeaderboardRankSize" : 1,
+  "memberCount" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "reportingIntervals" : [ {
-    "intervalType" : "aeiou",
-    "intervalValue" : 123
+    "intervalType" : "Day",
+    "intervalValue" : 0
+  }, {
+    "intervalType" : "Day",
+    "intervalValue" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter workday: (query) Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func getGamificationProfilesUsersMeWithRequestBuilder(workday: Date? = nil) -> RequestBuilder<PerformanceProfile> {
+    open class func getGamificationProfilesUsersMeWithRequestBuilder(workday: Date? = nil) -> RequestBuilder<PerformanceProfile> {        
         let path = "/api/v2/gamification/profiles/users/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1620,16 +1276,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    public enum Expand_getGamificationScorecards: String { 
-        case objective = "objective"
-    }
-
-    
-    
     /**
-     
      Workday performance metrics of the requesting user
      
      - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -1655,109 +1302,85 @@ open class GamificationAPI {
     }
 
     /**
-     
      Workday performance metrics of the requesting user
-     
      - GET /api/v2/gamification/scorecards
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "punctualityEvents" : [ {
-      "activityCodeId" : "aeiou",
-      "activityCode" : "aeiou",
-      "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "lengthMinutes" : 123,
-      "delta" : 1.3579000000000001069366817318950779736042022705078125,
-      "description" : "aeiou",
-      "category" : "aeiou",
-      "dateScheduleStart" : "2000-01-23T04:56:07.000+0000",
+      "activityCodeId" : "activityCodeId",
+      "activityCode" : "activityCode",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "delta" : 5.637376656633329,
+      "description" : "description",
+      "category" : "category",
+      "dateScheduleStart" : "2000-01-23T04:56:07.000+00:00",
       "bullseye" : true,
-      "points" : 123
+      "points" : 5
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "activityCode" : "activityCode",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "delta" : 5.637376656633329,
+      "description" : "description",
+      "category" : "category",
+      "dateScheduleStart" : "2000-01-23T04:56:07.000+00:00",
+      "bullseye" : true,
+      "points" : 5
     } ],
-    "metric" : {
-      "metricDefinitionId" : "aeiou",
-      "linkedMetric" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "sourcePerformanceProfile" : {
-        "division" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "metricOrders" : [ "aeiou" ],
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "maxLeaderboardRankSize" : 123,
-        "memberCount" : 123,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "active" : true,
-        "id" : "aeiou",
-        "reportingIntervals" : [ {
-          "intervalType" : "aeiou",
-          "intervalValue" : 123
-        } ]
-      },
-      "id" : "aeiou",
-      "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-      "externalMetricDefinitionId" : "aeiou",
-      "performanceProfileId" : "aeiou",
-      "objective" : {
-        "mediaTypes" : [ "aeiou" ],
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "queues" : [ {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        } ],
-        "topics" : [ "" ],
-        "id" : "aeiou",
-        "templateId" : "aeiou",
-        "zones" : [ {
-          "upperLimitValue" : 123,
-          "directionType" : "aeiou",
-          "lowerLimitPoints" : 123,
-          "zoneType" : "aeiou",
-          "upperLimitPoints" : 123,
-          "label" : "aeiou",
-          "lowerLimitValue" : 123
-        } ],
-        "enabled" : true,
-        "topicIdsFilterType" : "aeiou"
-      }
-    },
-    "value" : 1.3579000000000001069366817318950779736042022705078125,
-    "objective" : "",
-    "points" : 123
+    "metric" : "{}",
+    "value" : 6.027456183070403,
+    "objective" : "{}",
+    "points" : 0
+  }, {
+    "punctualityEvents" : [ {
+      "activityCodeId" : "activityCodeId",
+      "activityCode" : "activityCode",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "delta" : 5.637376656633329,
+      "description" : "description",
+      "category" : "category",
+      "dateScheduleStart" : "2000-01-23T04:56:07.000+00:00",
+      "bullseye" : true,
+      "points" : 5
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "activityCode" : "activityCode",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "delta" : 5.637376656633329,
+      "description" : "description",
+      "category" : "category",
+      "dateScheduleStart" : "2000-01-23T04:56:07.000+00:00",
+      "bullseye" : true,
+      "points" : 5
+    } ],
+    "metric" : "{}",
+    "value" : 6.027456183070403,
+    "objective" : "{}",
+    "points" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
 
      - returns: RequestBuilder<WorkdayMetricListing> 
      */
-    open class func getGamificationScorecardsWithRequestBuilder(workday: Date, expand: [String]? = nil) -> RequestBuilder<WorkdayMetricListing> {
+    open class func getGamificationScorecardsWithRequestBuilder(workday: Date, expand: [String]? = nil) -> RequestBuilder<WorkdayMetricListing> {        
         let path = "/api/v2/gamification/scorecards"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday.encodeToJSON(), 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkdayMetricListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1767,11 +1390,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Attendance status metrics of the requesting user
      
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -1797,43 +1416,35 @@ open class GamificationAPI {
     }
 
     /**
-     
      Attendance status metrics of the requesting user
-     
      - GET /api/v2/gamification/scorecards/attendance
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "attendanceStatusType" : "aeiou",
-    "dateWorkday" : "2000-01-23T04:56:07.000+0000"
+    "attendanceStatusType" : "HasData",
+    "dateWorkday" : "2000-01-23"
+  }, {
+    "attendanceStatusType" : "HasData",
+    "dateWorkday" : "2000-01-23"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<AttendanceStatusListing> 
      */
-    open class func getGamificationScorecardsAttendanceWithRequestBuilder(startWorkday: Date, endWorkday: Date) -> RequestBuilder<AttendanceStatusListing> {
+    open class func getGamificationScorecardsAttendanceWithRequestBuilder(startWorkday: Date, endWorkday: Date) -> RequestBuilder<AttendanceStatusListing> {        
         let path = "/api/v2/gamification/scorecards/attendance"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<AttendanceStatusListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1841,9 +1452,7 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Best points of the requesting user
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1867,39 +1476,34 @@ open class GamificationAPI {
     }
 
     /**
-     
      Best points of the requesting user
-     
      - GET /api/v2/gamification/scorecards/bestpoints
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "user" : "{}",
   "bestPoints" : [ {
-    "granularityType" : "aeiou",
-    "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-    "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
-    "rank" : 123,
-    "points" : 123
+    "granularityType" : "Monthly",
+    "dateEndWorkday" : "2000-01-23",
+    "dateStartWorkday" : "2000-01-23",
+    "rank" : 6,
+    "points" : 0
+  }, {
+    "granularityType" : "Monthly",
+    "dateEndWorkday" : "2000-01-23",
+    "dateStartWorkday" : "2000-01-23",
+    "rank" : 6,
+    "points" : 0
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<UserBestPoints> 
      */
-    open class func getGamificationScorecardsBestpointsWithRequestBuilder() -> RequestBuilder<UserBestPoints> {
+    open class func getGamificationScorecardsBestpointsWithRequestBuilder() -> RequestBuilder<UserBestPoints> {        
         let path = "/api/v2/gamification/scorecards/bestpoints"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1909,10 +1513,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      All-time points of the requesting user
      
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -1937,42 +1538,29 @@ open class GamificationAPI {
     }
 
     /**
-     
      All-time points of the requesting user
-     
      - GET /api/v2/gamification/scorecards/points/alltime
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-  "allTimePoints" : 123456789,
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "dateEndWorkday" : "2000-01-23",
+  "allTimePoints" : 0,
+  "user" : "{}"
+}, statusCode=200}]
      
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<AllTimePoints> 
      */
-    open class func getGamificationScorecardsPointsAlltimeWithRequestBuilder(endWorkday: Date) -> RequestBuilder<AllTimePoints> {
+    open class func getGamificationScorecardsPointsAlltimeWithRequestBuilder(endWorkday: Date) -> RequestBuilder<AllTimePoints> {        
         let path = "/api/v2/gamification/scorecards/points/alltime"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "endWorkday": endWorkday.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<AllTimePoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1981,10 +1569,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Average points of the requesting user's division or performance profile
      
      - parameter workday: (query) The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2009,47 +1594,30 @@ open class GamificationAPI {
     }
 
     /**
-     
      Average points of the requesting user's division or performance profile
-     
      - GET /api/v2/gamification/scorecards/points/average
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "averagePoints" : 1.3579000000000001069366817318950779736042022705078125,
-  "dateWorkday" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "averagePoints" : 0.8008281904610115,
+  "dateWorkday" : "2000-01-23"
+}, statusCode=200}]
      
      - parameter workday: (query) The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<SingleWorkdayAveragePoints> 
      */
-    open class func getGamificationScorecardsPointsAverageWithRequestBuilder(workday: Date) -> RequestBuilder<SingleWorkdayAveragePoints> {
+    open class func getGamificationScorecardsPointsAverageWithRequestBuilder(workday: Date) -> RequestBuilder<SingleWorkdayAveragePoints> {        
         let path = "/api/v2/gamification/scorecards/points/average"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<SingleWorkdayAveragePoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2057,9 +1625,6 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -2074,9 +1639,7 @@ open class GamificationAPI {
     }
 
     
-    
     /**
-     
      Points trends of the requesting user
      
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2103,28 +1666,25 @@ open class GamificationAPI {
     }
 
     /**
-     
      Points trends of the requesting user
-     
      - GET /api/v2/gamification/scorecards/points/trends
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dayOfWeek" : "aeiou",
-  "averagePoints" : 1.3579000000000001069366817318950779736042022705078125,
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
+  "dayOfWeek" : "Sunday",
+  "averagePoints" : 0.8008281904610115,
+  "dateEndWorkday" : "2000-01-23",
   "trend" : [ {
-    "dateWorkday" : "2000-01-23T04:56:07.000+0000",
-    "points" : 1.3579000000000001069366817318950779736042022705078125
+    "dateWorkday" : "2000-01-23",
+    "points" : 6.027456183070403
+  }, {
+    "dateWorkday" : "2000-01-23",
+    "points" : 6.027456183070403
   } ],
-  "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "dateStartWorkday" : "2000-01-23",
+  "user" : "{}"
+}, statusCode=200}]
      
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2132,25 +1692,16 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<WorkdayPointsTrend> 
      */
-    open class func getGamificationScorecardsPointsTrendsWithRequestBuilder(startWorkday: Date, endWorkday: Date, dayOfWeek: DayOfWeek_getGamificationScorecardsPointsTrends? = nil) -> RequestBuilder<WorkdayPointsTrend> {
+    open class func getGamificationScorecardsPointsTrendsWithRequestBuilder(startWorkday: Date, endWorkday: Date, dayOfWeek: DayOfWeek_getGamificationScorecardsPointsTrends? = nil) -> RequestBuilder<WorkdayPointsTrend> {        
         let path = "/api/v2/gamification/scorecards/points/trends"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON(), 
-            
             "dayOfWeek": dayOfWeek?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkdayPointsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2161,17 +1712,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    public enum Expand_getGamificationScorecardsUser: String { 
-        case objective = "objective"
-    }
-
-    
-    
     /**
-     
      Workday performance metrics for a user
      
      - parameter userId: (path)  
@@ -2198,86 +1739,70 @@ open class GamificationAPI {
     }
 
     /**
-     
      Workday performance metrics for a user
-     
      - GET /api/v2/gamification/scorecards/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "punctualityEvents" : [ {
-      "activityCodeId" : "aeiou",
-      "activityCode" : "aeiou",
-      "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "lengthMinutes" : 123,
-      "delta" : 1.3579000000000001069366817318950779736042022705078125,
-      "description" : "aeiou",
-      "category" : "aeiou",
-      "dateScheduleStart" : "2000-01-23T04:56:07.000+0000",
+      "activityCodeId" : "activityCodeId",
+      "activityCode" : "activityCode",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "delta" : 5.637376656633329,
+      "description" : "description",
+      "category" : "category",
+      "dateScheduleStart" : "2000-01-23T04:56:07.000+00:00",
       "bullseye" : true,
-      "points" : 123
+      "points" : 5
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "activityCode" : "activityCode",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "delta" : 5.637376656633329,
+      "description" : "description",
+      "category" : "category",
+      "dateScheduleStart" : "2000-01-23T04:56:07.000+00:00",
+      "bullseye" : true,
+      "points" : 5
     } ],
-    "metric" : {
-      "metricDefinitionId" : "aeiou",
-      "linkedMetric" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "sourcePerformanceProfile" : {
-        "division" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "metricOrders" : [ "aeiou" ],
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "maxLeaderboardRankSize" : 123,
-        "memberCount" : 123,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "active" : true,
-        "id" : "aeiou",
-        "reportingIntervals" : [ {
-          "intervalType" : "aeiou",
-          "intervalValue" : 123
-        } ]
-      },
-      "id" : "aeiou",
-      "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-      "externalMetricDefinitionId" : "aeiou",
-      "performanceProfileId" : "aeiou",
-      "objective" : {
-        "mediaTypes" : [ "aeiou" ],
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "queues" : [ {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        } ],
-        "topics" : [ "" ],
-        "id" : "aeiou",
-        "templateId" : "aeiou",
-        "zones" : [ {
-          "upperLimitValue" : 123,
-          "directionType" : "aeiou",
-          "lowerLimitPoints" : 123,
-          "zoneType" : "aeiou",
-          "upperLimitPoints" : 123,
-          "label" : "aeiou",
-          "lowerLimitValue" : 123
-        } ],
-        "enabled" : true,
-        "topicIdsFilterType" : "aeiou"
-      }
-    },
-    "value" : 1.3579000000000001069366817318950779736042022705078125,
-    "objective" : "",
-    "points" : 123
+    "metric" : "{}",
+    "value" : 6.027456183070403,
+    "objective" : "{}",
+    "points" : 0
+  }, {
+    "punctualityEvents" : [ {
+      "activityCodeId" : "activityCodeId",
+      "activityCode" : "activityCode",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "delta" : 5.637376656633329,
+      "description" : "description",
+      "category" : "category",
+      "dateScheduleStart" : "2000-01-23T04:56:07.000+00:00",
+      "bullseye" : true,
+      "points" : 5
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "activityCode" : "activityCode",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "delta" : 5.637376656633329,
+      "description" : "description",
+      "category" : "category",
+      "dateScheduleStart" : "2000-01-23T04:56:07.000+00:00",
+      "bullseye" : true,
+      "points" : 5
+    } ],
+    "metric" : "{}",
+    "value" : 6.027456183070403,
+    "objective" : "{}",
+    "points" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter userId: (path)  
      - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2285,26 +1810,18 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<WorkdayMetricListing> 
      */
-    open class func getGamificationScorecardsUserWithRequestBuilder(userId: String, workday: Date, expand: [String]? = nil) -> RequestBuilder<WorkdayMetricListing> {
+    open class func getGamificationScorecardsUserWithRequestBuilder(userId: String, workday: Date, expand: [String]? = nil) -> RequestBuilder<WorkdayMetricListing> {        
         var path = "/api/v2/gamification/scorecards/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday.encodeToJSON(), 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkdayMetricListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2315,12 +1832,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Attendance status metrics for a user
      
      - parameter userId: (path)  
@@ -2347,20 +1859,20 @@ open class GamificationAPI {
     }
 
     /**
-     
      Attendance status metrics for a user
-     
      - GET /api/v2/gamification/scorecards/users/{userId}/attendance
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "attendanceStatusType" : "aeiou",
-    "dateWorkday" : "2000-01-23T04:56:07.000+0000"
+    "attendanceStatusType" : "HasData",
+    "dateWorkday" : "2000-01-23"
+  }, {
+    "attendanceStatusType" : "HasData",
+    "dateWorkday" : "2000-01-23"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter userId: (path)  
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2368,26 +1880,18 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<AttendanceStatusListing> 
      */
-    open class func getGamificationScorecardsUserAttendanceWithRequestBuilder(userId: String, startWorkday: Date, endWorkday: Date) -> RequestBuilder<AttendanceStatusListing> {
+    open class func getGamificationScorecardsUserAttendanceWithRequestBuilder(userId: String, startWorkday: Date, endWorkday: Date) -> RequestBuilder<AttendanceStatusListing> {        
         var path = "/api/v2/gamification/scorecards/users/{userId}/attendance"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<AttendanceStatusListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2396,10 +1900,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Best points of a user
      
      - parameter userId: (path)  
@@ -2424,44 +1925,39 @@ open class GamificationAPI {
     }
 
     /**
-     
      Best points of a user
-     
      - GET /api/v2/gamification/scorecards/users/{userId}/bestpoints
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "user" : "{}",
   "bestPoints" : [ {
-    "granularityType" : "aeiou",
-    "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-    "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
-    "rank" : 123,
-    "points" : 123
+    "granularityType" : "Monthly",
+    "dateEndWorkday" : "2000-01-23",
+    "dateStartWorkday" : "2000-01-23",
+    "rank" : 6,
+    "points" : 0
+  }, {
+    "granularityType" : "Monthly",
+    "dateEndWorkday" : "2000-01-23",
+    "dateStartWorkday" : "2000-01-23",
+    "rank" : 6,
+    "points" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter userId: (path)  
 
      - returns: RequestBuilder<UserBestPoints> 
      */
-    open class func getGamificationScorecardsUserBestpointsWithRequestBuilder(userId: String) -> RequestBuilder<UserBestPoints> {
+    open class func getGamificationScorecardsUserBestpointsWithRequestBuilder(userId: String) -> RequestBuilder<UserBestPoints> {        
         var path = "/api/v2/gamification/scorecards/users/{userId}/bestpoints"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2472,11 +1968,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      All-time points for a user
      
      - parameter userId: (path)  
@@ -2502,46 +1994,33 @@ open class GamificationAPI {
     }
 
     /**
-     
      All-time points for a user
-     
      - GET /api/v2/gamification/scorecards/users/{userId}/points/alltime
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-  "allTimePoints" : 123456789,
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "dateEndWorkday" : "2000-01-23",
+  "allTimePoints" : 0,
+  "user" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (path)  
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<AllTimePoints> 
      */
-    open class func getGamificationScorecardsUserPointsAlltimeWithRequestBuilder(userId: String, endWorkday: Date) -> RequestBuilder<AllTimePoints> {
+    open class func getGamificationScorecardsUserPointsAlltimeWithRequestBuilder(userId: String, endWorkday: Date) -> RequestBuilder<AllTimePoints> {        
         var path = "/api/v2/gamification/scorecards/users/{userId}/points/alltime"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "endWorkday": endWorkday.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<AllTimePoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2549,10 +2028,6 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
-    
     
     
     
@@ -2568,9 +2043,7 @@ open class GamificationAPI {
     }
 
     
-    
     /**
-     
      Points trend for a user
      
      - parameter userId: (path)  
@@ -2598,28 +2071,25 @@ open class GamificationAPI {
     }
 
     /**
-     
      Points trend for a user
-     
      - GET /api/v2/gamification/scorecards/users/{userId}/points/trends
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dayOfWeek" : "aeiou",
-  "averagePoints" : 1.3579000000000001069366817318950779736042022705078125,
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
+  "dayOfWeek" : "Sunday",
+  "averagePoints" : 0.8008281904610115,
+  "dateEndWorkday" : "2000-01-23",
   "trend" : [ {
-    "dateWorkday" : "2000-01-23T04:56:07.000+0000",
-    "points" : 1.3579000000000001069366817318950779736042022705078125
+    "dateWorkday" : "2000-01-23",
+    "points" : 6.027456183070403
+  }, {
+    "dateWorkday" : "2000-01-23",
+    "points" : 6.027456183070403
   } ],
-  "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "dateStartWorkday" : "2000-01-23",
+  "user" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (path)  
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2628,28 +2098,19 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<WorkdayPointsTrend> 
      */
-    open class func getGamificationScorecardsUserPointsTrendsWithRequestBuilder(userId: String, startWorkday: Date, endWorkday: Date, dayOfWeek: DayOfWeek_getGamificationScorecardsUserPointsTrends? = nil) -> RequestBuilder<WorkdayPointsTrend> {
+    open class func getGamificationScorecardsUserPointsTrendsWithRequestBuilder(userId: String, startWorkday: Date, endWorkday: Date, dayOfWeek: DayOfWeek_getGamificationScorecardsUserPointsTrends? = nil) -> RequestBuilder<WorkdayPointsTrend> {        
         var path = "/api/v2/gamification/scorecards/users/{userId}/points/trends"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON(), 
-            
             "dayOfWeek": dayOfWeek?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkdayPointsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2661,19 +2122,13 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Values trends of a user
      
      - parameter userId: (path)  
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsUserValuesTrends(userId: String, startWorkday: Date, endWorkday: Date, timeZone: String? = nil, completion: @escaping ((_ data: WorkdayValuesTrend?,_ error: Error?) -> Void)) {
@@ -2695,78 +2150,67 @@ open class GamificationAPI {
     }
 
     /**
-     
      Values trends of a user
-     
      - GET /api/v2/gamification/scorecards/users/{userId}/values/trends
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : "",
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-  "metric" : "",
-  "timezone" : "aeiou",
-  "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
-  "dateReferenceWorkday" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "metric" : "{}",
+  "timezone" : "timezone",
+  "dateStartWorkday" : "2000-01-23",
+  "dateReferenceWorkday" : "2000-01-23",
+  "user" : "{}",
   "results" : [ {
-    "unitType" : "aeiou",
-    "average" : 1.3579000000000001069366817318950779736042022705078125,
-    "metric" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
     "trend" : [ {
-      "value" : 1.3579000000000001069366817318950779736042022705078125,
-      "dateWorkday" : "2000-01-23T04:56:07.000+0000"
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
     } ],
-    "metricDefinition" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    }
+    "metricDefinition" : "{}"
+  }, {
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
+    "trend" : [ {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    } ],
+    "metricDefinition" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter userId: (path)  
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
 
      - returns: RequestBuilder<WorkdayValuesTrend> 
      */
-    open class func getGamificationScorecardsUserValuesTrendsWithRequestBuilder(userId: String, startWorkday: Date, endWorkday: Date, timeZone: String? = nil) -> RequestBuilder<WorkdayValuesTrend> {
+    open class func getGamificationScorecardsUserValuesTrendsWithRequestBuilder(userId: String, startWorkday: Date, endWorkday: Date, timeZone: String? = nil) -> RequestBuilder<WorkdayValuesTrend> {        
         var path = "/api/v2/gamification/scorecards/users/{userId}/values/trends"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON(), 
-            
             "timeZone": timeZone
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkdayValuesTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2774,7 +2218,6 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum FilterType_getGamificationScorecardsUsersPointsAverage: String { 
         case performanceProfile = "PerformanceProfile"
@@ -2784,11 +2227,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
     /**
-     
      Workday average points by target group
      
      - parameter filterType: (query) Filter type for the query request. 
@@ -2815,27 +2254,17 @@ open class GamificationAPI {
     }
 
     /**
-     
      Workday average points by target group
-     
      - GET /api/v2/gamification/scorecards/users/points/average
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "averagePoints" : 1.3579000000000001069366817318950779736042022705078125,
-  "dateWorkday" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "averagePoints" : 0.8008281904610115,
+  "dateWorkday" : "2000-01-23"
+}, statusCode=200}]
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. 
@@ -2843,25 +2272,16 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<SingleWorkdayAveragePoints> 
      */
-    open class func getGamificationScorecardsUsersPointsAverageWithRequestBuilder(filterType: FilterType_getGamificationScorecardsUsersPointsAverage, filterId: String, workday: Date) -> RequestBuilder<SingleWorkdayAveragePoints> {
+    open class func getGamificationScorecardsUsersPointsAverageWithRequestBuilder(filterType: FilterType_getGamificationScorecardsUsersPointsAverage, filterId: String, workday: Date) -> RequestBuilder<SingleWorkdayAveragePoints> {        
         let path = "/api/v2/gamification/scorecards/users/points/average"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "filterType": filterType.rawValue, 
-            
             "filterId": filterId, 
-            
             "workday": workday.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<SingleWorkdayAveragePoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2869,7 +2289,6 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum FilterType_getGamificationScorecardsUsersValuesAverage: String { 
         case performanceProfile = "PerformanceProfile"
@@ -2880,18 +2299,13 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Workday average values by target group
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. For example, division Id 
      - parameter workday: (query) The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsUsersValuesAverage(filterType: FilterType_getGamificationScorecardsUsersValuesAverage, filterId: String, workday: Date, timeZone: String? = nil, completion: @escaping ((_ data: SingleWorkdayAverageValues?,_ error: Error?) -> Void)) {
@@ -2913,74 +2327,62 @@ open class GamificationAPI {
     }
 
     /**
-     
      Workday average values by target group
-     
      - GET /api/v2/gamification/scorecards/users/values/average
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : "",
-  "timezone" : "aeiou",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "timezone" : "timezone",
+  "user" : "{}",
   "results" : [ {
-    "unitType" : "aeiou",
-    "average" : 1.3579000000000001069366817318950779736042022705078125,
-    "metric" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
     "trend" : [ {
-      "value" : 1.3579000000000001069366817318950779736042022705078125,
-      "dateWorkday" : "2000-01-23T04:56:07.000+0000"
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
     } ],
-    "metricDefinition" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    }
+    "metricDefinition" : "{}"
+  }, {
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
+    "trend" : [ {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    } ],
+    "metricDefinition" : "{}"
   } ],
-  "dateWorkday" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "dateWorkday" : "2000-01-23"
+}, statusCode=200}]
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. For example, division Id 
      - parameter workday: (query) The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
 
      - returns: RequestBuilder<SingleWorkdayAverageValues> 
      */
-    open class func getGamificationScorecardsUsersValuesAverageWithRequestBuilder(filterType: FilterType_getGamificationScorecardsUsersValuesAverage, filterId: String, workday: Date, timeZone: String? = nil) -> RequestBuilder<SingleWorkdayAverageValues> {
+    open class func getGamificationScorecardsUsersValuesAverageWithRequestBuilder(filterType: FilterType_getGamificationScorecardsUsersValuesAverage, filterId: String, workday: Date, timeZone: String? = nil) -> RequestBuilder<SingleWorkdayAverageValues> {        
         let path = "/api/v2/gamification/scorecards/users/values/average"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "filterType": filterType.rawValue, 
-            
             "filterId": filterId, 
-            
             "workday": workday.encodeToJSON(), 
-            
             "timeZone": timeZone
-            
         ])
 
         let requestBuilder: RequestBuilder<SingleWorkdayAverageValues>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2988,7 +2390,6 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum FilterType_getGamificationScorecardsUsersValuesTrends: String { 
         case performanceProfile = "PerformanceProfile"
@@ -3000,20 +2401,14 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Values trend by target group
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. 
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsUsersValuesTrends(filterType: FilterType_getGamificationScorecardsUsersValuesTrends, filterId: String, startWorkday: Date, endWorkday: Date, timeZone: String? = nil, completion: @escaping ((_ data: WorkdayValuesTrend?,_ error: Error?) -> Void)) {
@@ -3035,80 +2430,67 @@ open class GamificationAPI {
     }
 
     /**
-     
      Values trend by target group
-     
      - GET /api/v2/gamification/scorecards/users/values/trends
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : "",
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-  "metric" : "",
-  "timezone" : "aeiou",
-  "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
-  "dateReferenceWorkday" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "metric" : "{}",
+  "timezone" : "timezone",
+  "dateStartWorkday" : "2000-01-23",
+  "dateReferenceWorkday" : "2000-01-23",
+  "user" : "{}",
   "results" : [ {
-    "unitType" : "aeiou",
-    "average" : 1.3579000000000001069366817318950779736042022705078125,
-    "metric" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
     "trend" : [ {
-      "value" : 1.3579000000000001069366817318950779736042022705078125,
-      "dateWorkday" : "2000-01-23T04:56:07.000+0000"
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
     } ],
-    "metricDefinition" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    }
+    "metricDefinition" : "{}"
+  }, {
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
+    "trend" : [ {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    } ],
+    "metricDefinition" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. 
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
 
      - returns: RequestBuilder<WorkdayValuesTrend> 
      */
-    open class func getGamificationScorecardsUsersValuesTrendsWithRequestBuilder(filterType: FilterType_getGamificationScorecardsUsersValuesTrends, filterId: String, startWorkday: Date, endWorkday: Date, timeZone: String? = nil) -> RequestBuilder<WorkdayValuesTrend> {
+    open class func getGamificationScorecardsUsersValuesTrendsWithRequestBuilder(filterType: FilterType_getGamificationScorecardsUsersValuesTrends, filterId: String, startWorkday: Date, endWorkday: Date, timeZone: String? = nil) -> RequestBuilder<WorkdayValuesTrend> {        
         let path = "/api/v2/gamification/scorecards/users/values/trends"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "filterType": filterType.rawValue, 
-            
             "filterId": filterId, 
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON(), 
-            
             "timeZone": timeZone
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkdayValuesTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3118,15 +2500,11 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Average values of the requesting user's division or performance profile
      
      - parameter workday: (query) The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsValuesAverage(workday: Date, timeZone: String? = nil, completion: @escaping ((_ data: SingleWorkdayAverageValues?,_ error: Error?) -> Void)) {
@@ -3148,68 +2526,58 @@ open class GamificationAPI {
     }
 
     /**
-     
      Average values of the requesting user's division or performance profile
-     
      - GET /api/v2/gamification/scorecards/values/average
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : "",
-  "timezone" : "aeiou",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "timezone" : "timezone",
+  "user" : "{}",
   "results" : [ {
-    "unitType" : "aeiou",
-    "average" : 1.3579000000000001069366817318950779736042022705078125,
-    "metric" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
     "trend" : [ {
-      "value" : 1.3579000000000001069366817318950779736042022705078125,
-      "dateWorkday" : "2000-01-23T04:56:07.000+0000"
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
     } ],
-    "metricDefinition" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    }
+    "metricDefinition" : "{}"
+  }, {
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
+    "trend" : [ {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    } ],
+    "metricDefinition" : "{}"
   } ],
-  "dateWorkday" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "dateWorkday" : "2000-01-23"
+}, statusCode=200}]
      
      - parameter workday: (query) The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
 
      - returns: RequestBuilder<SingleWorkdayAverageValues> 
      */
-    open class func getGamificationScorecardsValuesAverageWithRequestBuilder(workday: Date, timeZone: String? = nil) -> RequestBuilder<SingleWorkdayAverageValues> {
+    open class func getGamificationScorecardsValuesAverageWithRequestBuilder(workday: Date, timeZone: String? = nil) -> RequestBuilder<SingleWorkdayAverageValues> {        
         let path = "/api/v2/gamification/scorecards/values/average"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "workday": workday.encodeToJSON(), 
-            
             "timeZone": timeZone
-            
         ])
 
         let requestBuilder: RequestBuilder<SingleWorkdayAverageValues>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3217,9 +2585,6 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -3231,18 +2596,14 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
     /**
-     
      Values trends of the requesting user or group
      
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter filterType: (query) Filter type for the query request. If not set, then the request is for the requesting user. (optional)
      - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsValuesTrends(startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsValuesTrends? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil, completion: @escaping ((_ data: WorkdayValuesTrend?,_ error: Error?) -> Void)) {
@@ -3264,80 +2625,67 @@ open class GamificationAPI {
     }
 
     /**
-     
      Values trends of the requesting user or group
-     
      - GET /api/v2/gamification/scorecards/values/trends
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "performanceProfile" : "",
-  "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
-  "metric" : "",
-  "timezone" : "aeiou",
-  "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
-  "dateReferenceWorkday" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "metric" : "{}",
+  "timezone" : "timezone",
+  "dateStartWorkday" : "2000-01-23",
+  "dateReferenceWorkday" : "2000-01-23",
+  "user" : "{}",
   "results" : [ {
-    "unitType" : "aeiou",
-    "average" : 1.3579000000000001069366817318950779736042022705078125,
-    "metric" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
     "trend" : [ {
-      "value" : 1.3579000000000001069366817318950779736042022705078125,
-      "dateWorkday" : "2000-01-23T04:56:07.000+0000"
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
     } ],
-    "metricDefinition" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    }
+    "metricDefinition" : "{}"
+  }, {
+    "unitType" : "None",
+    "average" : 0.8008281904610115,
+    "metric" : "{}",
+    "trend" : [ {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    }, {
+      "value" : 6.027456183070403,
+      "dateWorkday" : "2000-01-23"
+    } ],
+    "metricDefinition" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter filterType: (query) Filter type for the query request. If not set, then the request is for the requesting user. (optional)
      - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
-     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
 
      - returns: RequestBuilder<WorkdayValuesTrend> 
      */
-    open class func getGamificationScorecardsValuesTrendsWithRequestBuilder(startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsValuesTrends? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil) -> RequestBuilder<WorkdayValuesTrend> {
+    open class func getGamificationScorecardsValuesTrendsWithRequestBuilder(startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsValuesTrends? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil) -> RequestBuilder<WorkdayValuesTrend> {        
         let path = "/api/v2/gamification/scorecards/values/trends"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "filterType": filterType?.rawValue, 
-            
             "referenceWorkday": referenceWorkday?.encodeToJSON(), 
-            
             "startWorkday": startWorkday.encodeToJSON(), 
-            
             "endWorkday": endWorkday.encodeToJSON(), 
-            
             "timeZone": timeZone
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkdayValuesTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3345,9 +2693,7 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Gamification activation status
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -3371,32 +2717,24 @@ open class GamificationAPI {
     }
 
     /**
-     
      Gamification activation status
-     
      - GET /api/v2/gamification/status
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateStart" : "2000-01-23T04:56:07.000+0000",
-  "dateStartPersonalBest" : "2000-01-23T04:56:07.000+0000",
+  "dateStart" : "2000-01-23",
+  "dateStartPersonalBest" : "2000-01-23",
   "automaticUserAssignment" : true,
   "isActive" : true
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<GamificationStatus> 
      */
-    open class func getGamificationStatusWithRequestBuilder() -> RequestBuilder<GamificationStatus> {
+    open class func getGamificationStatusWithRequestBuilder() -> RequestBuilder<GamificationStatus> {        
         let path = "/api/v2/gamification/status"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3406,10 +2744,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Objective template by id
      
      - parameter templateId: (path) template id 
@@ -3434,45 +2769,45 @@ open class GamificationAPI {
     }
 
     /**
-     
      Objective template by id
-     
      - GET /api/v2/gamification/templates/{templateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "zones" : [ {
-    "upperLimitValue" : 123,
-    "directionType" : "aeiou",
-    "lowerLimitPoints" : 123,
-    "zoneType" : "aeiou",
-    "upperLimitPoints" : 123,
-    "label" : "aeiou",
-    "lowerLimitValue" : 123
+    "upperLimitValue" : 1,
+    "directionType" : "Up",
+    "lowerLimitPoints" : 6,
+    "zoneType" : "Good",
+    "upperLimitPoints" : 0,
+    "label" : "label",
+    "lowerLimitValue" : 5
+  }, {
+    "upperLimitValue" : 1,
+    "directionType" : "Up",
+    "lowerLimitPoints" : 6,
+    "zoneType" : "Good",
+    "upperLimitPoints" : 0,
+    "label" : "label",
+    "lowerLimitValue" : 5
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter templateId: (path) template id 
 
      - returns: RequestBuilder<ObjectiveTemplate> 
      */
-    open class func getGamificationTemplateWithRequestBuilder(templateId: String) -> RequestBuilder<ObjectiveTemplate> {
+    open class func getGamificationTemplateWithRequestBuilder(templateId: String) -> RequestBuilder<ObjectiveTemplate> {        
         var path = "/api/v2/gamification/templates/{templateId}"
         let templateIdPreEscape = "\(templateId)"
         let templateIdPostEscape = templateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{templateId}", with: templateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3481,9 +2816,7 @@ open class GamificationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      All objective templates
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -3507,44 +2840,65 @@ open class GamificationAPI {
     }
 
     /**
-     
      All objective templates
-     
      - GET /api/v2/gamification/templates
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
     "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
+      "upperLimitValue" : 1,
+      "directionType" : "Up",
+      "lowerLimitPoints" : 6,
+      "zoneType" : "Good",
+      "upperLimitPoints" : 0,
+      "label" : "label",
+      "lowerLimitValue" : 5
+    }, {
+      "upperLimitValue" : 1,
+      "directionType" : "Up",
+      "lowerLimitPoints" : 6,
+      "zoneType" : "Good",
+      "upperLimitPoints" : 0,
+      "label" : "label",
+      "lowerLimitValue" : 5
+    } ]
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "zones" : [ {
+      "upperLimitValue" : 1,
+      "directionType" : "Up",
+      "lowerLimitPoints" : 6,
+      "zoneType" : "Good",
+      "upperLimitPoints" : 0,
+      "label" : "label",
+      "lowerLimitValue" : 5
+    }, {
+      "upperLimitValue" : 1,
+      "directionType" : "Up",
+      "lowerLimitPoints" : 6,
+      "zoneType" : "Good",
+      "upperLimitPoints" : 0,
+      "label" : "label",
+      "lowerLimitValue" : 5
     } ]
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<GetTemplatesResponse> 
      */
-    open class func getGamificationTemplatesWithRequestBuilder() -> RequestBuilder<GetTemplatesResponse> {
+    open class func getGamificationTemplatesWithRequestBuilder() -> RequestBuilder<GetTemplatesResponse> {        
         let path = "/api/v2/gamification/templates"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3554,10 +2908,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Creates a gamified metric with a given metric definition and metric objective
      
      - parameter body: (body) Metric 
@@ -3582,79 +2933,34 @@ open class GamificationAPI {
     }
 
     /**
-     
      Creates a gamified metric with a given metric definition and metric objective
-     
      - POST /api/v2/gamification/metrics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metricDefinitionId" : "aeiou",
-  "linkedMetric" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "sourcePerformanceProfile" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "active" : true,
-    "id" : "aeiou",
-    "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
-    } ]
-  },
-  "id" : "aeiou",
-  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-  "externalMetricDefinitionId" : "aeiou",
-  "performanceProfileId" : "aeiou",
-  "objective" : {
-    "mediaTypes" : [ "aeiou" ],
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "topics" : [ "" ],
-    "id" : "aeiou",
-    "templateId" : "aeiou",
-    "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
-    } ],
-    "enabled" : true,
-    "topicIdsFilterType" : "aeiou"
-  }
-}}]
+  "metricDefinitionId" : "metricDefinitionId",
+  "linkedMetric" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "sourcePerformanceProfile" : "{}",
+  "id" : "id",
+  "dateUnlinked" : "2000-01-23",
+  "externalMetricDefinitionId" : "externalMetricDefinitionId",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}"
+}, statusCode=201}]
      
      - parameter body: (body) Metric 
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func postGamificationMetricsWithRequestBuilder(body: CreateMetric) -> RequestBuilder<Metric> {
+    open class func postGamificationMetricsWithRequestBuilder(body: CreateMetric) -> RequestBuilder<Metric> {        
         let path = "/api/v2/gamification/metrics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3663,10 +2969,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Activate a performance profile
      
      - parameter profileId: (path) performanceProfileId 
@@ -3691,51 +2994,42 @@ open class GamificationAPI {
     }
 
     /**
-     
      Activate a performance profile
-     
      - POST /api/v2/gamification/profiles/{profileId}/activate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "metricOrders" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "maxLeaderboardRankSize" : 123,
-  "memberCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "division" : "{}",
+  "metricOrders" : [ "metricOrders", "metricOrders" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "maxLeaderboardRankSize" : 1,
+  "memberCount" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "reportingIntervals" : [ {
-    "intervalType" : "aeiou",
-    "intervalValue" : 123
+    "intervalType" : "Day",
+    "intervalValue" : 0
+  }, {
+    "intervalType" : "Day",
+    "intervalValue" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter profileId: (path) performanceProfileId 
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func postGamificationProfileActivateWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {
+    open class func postGamificationProfileActivateWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {        
         var path = "/api/v2/gamification/profiles/{profileId}/activate"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3745,10 +3039,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Deactivate a performance profile
      
      - parameter profileId: (path) performanceProfileId 
@@ -3773,51 +3064,42 @@ open class GamificationAPI {
     }
 
     /**
-     
      Deactivate a performance profile
-     
      - POST /api/v2/gamification/profiles/{profileId}/deactivate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "metricOrders" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "maxLeaderboardRankSize" : 123,
-  "memberCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "division" : "{}",
+  "metricOrders" : [ "metricOrders", "metricOrders" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "maxLeaderboardRankSize" : 1,
+  "memberCount" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "reportingIntervals" : [ {
-    "intervalType" : "aeiou",
-    "intervalValue" : 123
+    "intervalType" : "Day",
+    "intervalValue" : 0
+  }, {
+    "intervalType" : "Day",
+    "intervalValue" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter profileId: (path) performanceProfileId 
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func postGamificationProfileDeactivateWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {
+    open class func postGamificationProfileDeactivateWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {        
         var path = "/api/v2/gamification/profiles/{profileId}/deactivate"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3828,11 +3110,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Assign members to a given performance profile
      
      - parameter performanceProfileId: (path) Performance Profile Id 
@@ -3858,41 +3136,48 @@ open class GamificationAPI {
     }
 
     /**
-     
      Assign members to a given performance profile
-     
      - POST /api/v2/gamification/profiles/{performanceProfileId}/members
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "removedMembers" : [ "" ],
+  "removedMembers" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "assignedMembers" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
   "assignmentErrors" : [ {
-    "message" : "aeiou",
-    "user" : ""
+    "message" : "message",
+    "user" : "{}"
+  }, {
+    "message" : "message",
+    "user" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter performanceProfileId: (path) Performance Profile Id 
      - parameter body: (body) assignUsers 
 
      - returns: RequestBuilder<Assignment> 
      */
-    open class func postGamificationProfileMembersWithRequestBuilder(performanceProfileId: String, body: AssignUsers) -> RequestBuilder<Assignment> {
+    open class func postGamificationProfileMembersWithRequestBuilder(performanceProfileId: String, body: AssignUsers) -> RequestBuilder<Assignment> {        
         var path = "/api/v2/gamification/profiles/{performanceProfileId}/members"
         let performanceProfileIdPreEscape = "\(performanceProfileId)"
         let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Assignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3902,11 +3187,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Validate member assignment
      
      - parameter performanceProfileId: (path) Performance Profile Id 
@@ -3932,50 +3213,57 @@ open class GamificationAPI {
     }
 
     /**
-     
      Validate member assignment
-     
      - POST /api/v2/gamification/profiles/{performanceProfileId}/members/validate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "invalidMemberAssignments" : [ {
-    "message" : "aeiou",
-    "user" : ""
+    "message" : "message",
+    "user" : "{}"
+  }, {
+    "message" : "message",
+    "user" : "{}"
   } ],
   "membersNotAssigned" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "membersAlreadyAssigned" : [ "" ],
+  "membersAlreadyAssigned" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "membersAlreadyAssignedToOther" : [ {
-    "selfUri" : "aeiou",
-    "currentProfile" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "currentProfile" : "{}",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "currentProfile" : "{}",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter performanceProfileId: (path) Performance Profile Id 
      - parameter body: (body) memberAssignments 
 
      - returns: RequestBuilder<AssignmentValidation> 
      */
-    open class func postGamificationProfileMembersValidateWithRequestBuilder(performanceProfileId: String, body: ValidateAssignUsers) -> RequestBuilder<AssignmentValidation> {
+    open class func postGamificationProfileMembersValidateWithRequestBuilder(performanceProfileId: String, body: ValidateAssignUsers) -> RequestBuilder<AssignmentValidation> {        
         var path = "/api/v2/gamification/profiles/{performanceProfileId}/members/validate"
         let performanceProfileIdPreEscape = "\(performanceProfileId)"
         let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AssignmentValidation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3986,12 +3274,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Creates a linked metric
      
      - parameter sourceProfileId: (path) Source Performance Profile Id 
@@ -4018,67 +3301,24 @@ open class GamificationAPI {
     }
 
     /**
-     
      Creates a linked metric
-     
      - POST /api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metricDefinitionId" : "aeiou",
-  "linkedMetric" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "sourcePerformanceProfile" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "active" : true,
-    "id" : "aeiou",
-    "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
-    } ]
-  },
-  "id" : "aeiou",
-  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-  "externalMetricDefinitionId" : "aeiou",
-  "performanceProfileId" : "aeiou",
-  "objective" : {
-    "mediaTypes" : [ "aeiou" ],
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "topics" : [ "" ],
-    "id" : "aeiou",
-    "templateId" : "aeiou",
-    "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
-    } ],
-    "enabled" : true,
-    "topicIdsFilterType" : "aeiou"
-  }
-}}]
+  "metricDefinitionId" : "metricDefinitionId",
+  "linkedMetric" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "sourcePerformanceProfile" : "{}",
+  "id" : "id",
+  "dateUnlinked" : "2000-01-23",
+  "externalMetricDefinitionId" : "externalMetricDefinitionId",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}"
+}, statusCode=201}]
      
      - parameter sourceProfileId: (path) Source Performance Profile Id 
      - parameter sourceMetricId: (path) Source Metric Id 
@@ -4086,7 +3326,7 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func postGamificationProfileMetricLinkWithRequestBuilder(sourceProfileId: String, sourceMetricId: String, body: TargetPerformanceProfile) -> RequestBuilder<Metric> {
+    open class func postGamificationProfileMetricLinkWithRequestBuilder(sourceProfileId: String, sourceMetricId: String, body: TargetPerformanceProfile) -> RequestBuilder<Metric> {        
         var path = "/api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link"
         let sourceProfileIdPreEscape = "\(sourceProfileId)"
         let sourceProfileIdPostEscape = sourceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4095,10 +3335,8 @@ open class GamificationAPI {
         let sourceMetricIdPostEscape = sourceMetricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{sourceMetricId}", with: sourceMetricIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4108,11 +3346,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Creates a gamified metric with a given metric definition and metric objective under in a performance profile
      
      - parameter profileId: (path) Performance Profile Id 
@@ -4138,83 +3372,38 @@ open class GamificationAPI {
     }
 
     /**
-     
      Creates a gamified metric with a given metric definition and metric objective under in a performance profile
-     
      - POST /api/v2/gamification/profiles/{profileId}/metrics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metricDefinitionId" : "aeiou",
-  "linkedMetric" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "sourcePerformanceProfile" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "active" : true,
-    "id" : "aeiou",
-    "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
-    } ]
-  },
-  "id" : "aeiou",
-  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-  "externalMetricDefinitionId" : "aeiou",
-  "performanceProfileId" : "aeiou",
-  "objective" : {
-    "mediaTypes" : [ "aeiou" ],
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "topics" : [ "" ],
-    "id" : "aeiou",
-    "templateId" : "aeiou",
-    "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
-    } ],
-    "enabled" : true,
-    "topicIdsFilterType" : "aeiou"
-  }
-}}]
+  "metricDefinitionId" : "metricDefinitionId",
+  "linkedMetric" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "sourcePerformanceProfile" : "{}",
+  "id" : "id",
+  "dateUnlinked" : "2000-01-23",
+  "externalMetricDefinitionId" : "externalMetricDefinitionId",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}"
+}, statusCode=201}]
      
      - parameter profileId: (path) Performance Profile Id 
      - parameter body: (body) Metric 
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func postGamificationProfileMetricsWithRequestBuilder(profileId: String, body: CreateMetric) -> RequestBuilder<Metric> {
+    open class func postGamificationProfileMetricsWithRequestBuilder(profileId: String, body: CreateMetric) -> RequestBuilder<Metric> {        
         var path = "/api/v2/gamification/profiles/{profileId}/metrics"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4224,15 +3413,11 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create a new custom performance profile
      
      - parameter body: (body) performanceProfile 
-     - parameter copyMetrics: (query) Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)
+     - parameter copyMetrics: (query) Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postGamificationProfiles(body: CreatePerformanceProfile, copyMetrics: Bool? = nil, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
@@ -4254,52 +3439,44 @@ open class GamificationAPI {
     }
 
     /**
-     
      Create a new custom performance profile
-     
      - POST /api/v2/gamification/profiles
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "metricOrders" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "maxLeaderboardRankSize" : 123,
-  "memberCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "division" : "{}",
+  "metricOrders" : [ "metricOrders", "metricOrders" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "maxLeaderboardRankSize" : 1,
+  "memberCount" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "reportingIntervals" : [ {
-    "intervalType" : "aeiou",
-    "intervalValue" : 123
+    "intervalType" : "Day",
+    "intervalValue" : 0
+  }, {
+    "intervalType" : "Day",
+    "intervalValue" : 0
   } ]
-}}]
+}, statusCode=201}]
      
      - parameter body: (body) performanceProfile 
-     - parameter copyMetrics: (query) Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)
+     - parameter copyMetrics: (query) Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional)
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func postGamificationProfilesWithRequestBuilder(body: CreatePerformanceProfile, copyMetrics: Bool? = nil) -> RequestBuilder<PerformanceProfile> {
+    open class func postGamificationProfilesWithRequestBuilder(body: CreatePerformanceProfile, copyMetrics: Bool? = nil) -> RequestBuilder<PerformanceProfile> {        
         let path = "/api/v2/gamification/profiles"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "copyMetrics": copyMetrics
-            
         ])
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4310,12 +3487,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Updates a metric
      
      - parameter metricId: (path) metric Id 
@@ -4342,67 +3514,24 @@ open class GamificationAPI {
     }
 
     /**
-     
      Updates a metric
-     
      - PUT /api/v2/gamification/metrics/{metricId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metricDefinitionId" : "aeiou",
-  "linkedMetric" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "sourcePerformanceProfile" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "active" : true,
-    "id" : "aeiou",
-    "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
-    } ]
-  },
-  "id" : "aeiou",
-  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-  "externalMetricDefinitionId" : "aeiou",
-  "performanceProfileId" : "aeiou",
-  "objective" : {
-    "mediaTypes" : [ "aeiou" ],
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "topics" : [ "" ],
-    "id" : "aeiou",
-    "templateId" : "aeiou",
-    "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
-    } ],
-    "enabled" : true,
-    "topicIdsFilterType" : "aeiou"
-  }
-}}]
+  "metricDefinitionId" : "metricDefinitionId",
+  "linkedMetric" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "sourcePerformanceProfile" : "{}",
+  "id" : "id",
+  "dateUnlinked" : "2000-01-23",
+  "externalMetricDefinitionId" : "externalMetricDefinitionId",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}"
+}, statusCode=200}]
      
      - parameter metricId: (path) metric Id 
      - parameter body: (body) Metric 
@@ -4410,21 +3539,17 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func putGamificationMetricWithRequestBuilder(metricId: String, body: CreateMetric, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {
+    open class func putGamificationMetricWithRequestBuilder(metricId: String, body: CreateMetric, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {        
         var path = "/api/v2/gamification/metrics/{metricId}"
         let metricIdPreEscape = "\(metricId)"
         let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "performanceProfileId": performanceProfileId
-            
         ])
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4434,11 +3559,7 @@ open class GamificationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Updates a performance profile
      
      - parameter profileId: (path) performanceProfileId 
@@ -4464,50 +3585,44 @@ open class GamificationAPI {
     }
 
     /**
-     
      Updates a performance profile
-     
      - PUT /api/v2/gamification/profiles/{profileId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "metricOrders" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "maxLeaderboardRankSize" : 123,
-  "memberCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "division" : "{}",
+  "metricOrders" : [ "metricOrders", "metricOrders" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "maxLeaderboardRankSize" : 1,
+  "memberCount" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "reportingIntervals" : [ {
-    "intervalType" : "aeiou",
-    "intervalValue" : 123
+    "intervalType" : "Day",
+    "intervalValue" : 0
+  }, {
+    "intervalType" : "Day",
+    "intervalValue" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter profileId: (path) performanceProfileId 
      - parameter body: (body) performanceProfile (optional)
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func putGamificationProfileWithRequestBuilder(profileId: String, body: PerformanceProfile? = nil) -> RequestBuilder<PerformanceProfile> {
+    open class func putGamificationProfileWithRequestBuilder(profileId: String, body: PerformanceProfile? = nil) -> RequestBuilder<PerformanceProfile> {        
         var path = "/api/v2/gamification/profiles/{profileId}"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4518,12 +3633,7 @@ open class GamificationAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Updates a metric in performance profile
      
      - parameter profileId: (path) Performance Profile Id 
@@ -4550,67 +3660,24 @@ open class GamificationAPI {
     }
 
     /**
-     
      Updates a metric in performance profile
-     
      - PUT /api/v2/gamification/profiles/{profileId}/metrics/{metricId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metricDefinitionId" : "aeiou",
-  "linkedMetric" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "sourcePerformanceProfile" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "active" : true,
-    "id" : "aeiou",
-    "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
-    } ]
-  },
-  "id" : "aeiou",
-  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
-  "externalMetricDefinitionId" : "aeiou",
-  "performanceProfileId" : "aeiou",
-  "objective" : {
-    "mediaTypes" : [ "aeiou" ],
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "topics" : [ "" ],
-    "id" : "aeiou",
-    "templateId" : "aeiou",
-    "zones" : [ {
-      "upperLimitValue" : 123,
-      "directionType" : "aeiou",
-      "lowerLimitPoints" : 123,
-      "zoneType" : "aeiou",
-      "upperLimitPoints" : 123,
-      "label" : "aeiou",
-      "lowerLimitValue" : 123
-    } ],
-    "enabled" : true,
-    "topicIdsFilterType" : "aeiou"
-  }
-}}]
+  "metricDefinitionId" : "metricDefinitionId",
+  "linkedMetric" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "sourcePerformanceProfile" : "{}",
+  "id" : "id",
+  "dateUnlinked" : "2000-01-23",
+  "externalMetricDefinitionId" : "externalMetricDefinitionId",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}"
+}, statusCode=200}]
      
      - parameter profileId: (path) Performance Profile Id 
      - parameter metricId: (path) Metric Id 
@@ -4618,7 +3685,7 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func putGamificationProfileMetricWithRequestBuilder(profileId: String, metricId: String, body: CreateMetric) -> RequestBuilder<Metric> {
+    open class func putGamificationProfileMetricWithRequestBuilder(profileId: String, metricId: String, body: CreateMetric) -> RequestBuilder<Metric> {        
         var path = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4627,10 +3694,8 @@ open class GamificationAPI {
         let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4639,10 +3704,7 @@ open class GamificationAPI {
     }
 
     
-    
-    
     /**
-     
      Update gamification activation status
      
      - parameter status: (body) Gamification status 
@@ -4667,32 +3729,27 @@ open class GamificationAPI {
     }
 
     /**
-     
      Update gamification activation status
-     
      - PUT /api/v2/gamification/status
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateStart" : "2000-01-23T04:56:07.000+0000",
-  "dateStartPersonalBest" : "2000-01-23T04:56:07.000+0000",
+  "dateStart" : "2000-01-23",
+  "dateStartPersonalBest" : "2000-01-23",
   "automaticUserAssignment" : true,
   "isActive" : true
-}}]
+}, statusCode=200}]
      
      - parameter status: (body) Gamification status 
 
      - returns: RequestBuilder<GamificationStatus> 
      */
-    open class func putGamificationStatusWithRequestBuilder(status: GamificationStatus) -> RequestBuilder<GamificationStatus> {
+    open class func putGamificationStatusWithRequestBuilder(status: GamificationStatus) -> RequestBuilder<GamificationStatus> {        
         let path = "/api/v2/gamification/status"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: status)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GamificationStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

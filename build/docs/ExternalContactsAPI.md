@@ -78,7 +78,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-> [Empty](Empty.html) deleteExternalcontactsContact(contactId)
+> [JSON](JSON.html) deleteExternalcontactsContact(contactId)
 
 Delete an external contact
 
@@ -122,7 +122,7 @@ ExternalContactsAPI.deleteExternalcontactsContact(contactId: contactId) { (respo
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteExternalcontactsContactNote"></a>
 
@@ -130,7 +130,7 @@ ExternalContactsAPI.deleteExternalcontactsContact(contactId: contactId) { (respo
 
 
 
-> [Empty](Empty.html) deleteExternalcontactsContactNote(contactId, noteId)
+> [JSON](JSON.html) deleteExternalcontactsContactNote(contactId, noteId)
 
 Delete a note for an external contact
 
@@ -176,7 +176,7 @@ ExternalContactsAPI.deleteExternalcontactsContactNote(contactId: contactId, note
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteExternalcontactsContactsSchema"></a>
 
@@ -235,7 +235,7 @@ ExternalContactsAPI.deleteExternalcontactsContactsSchema(schemaId: schemaId) { (
 
 
 
-> [Empty](Empty.html) deleteExternalcontactsOrganization(externalOrganizationId)
+> [JSON](JSON.html) deleteExternalcontactsOrganization(externalOrganizationId)
 
 Delete an external organization
 
@@ -280,7 +280,7 @@ ExternalContactsAPI.deleteExternalcontactsOrganization(externalOrganizationId: e
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteExternalcontactsOrganizationNote"></a>
 
@@ -288,7 +288,7 @@ ExternalContactsAPI.deleteExternalcontactsOrganization(externalOrganizationId: e
 
 
 
-> [Empty](Empty.html) deleteExternalcontactsOrganizationNote(externalOrganizationId, noteId)
+> [JSON](JSON.html) deleteExternalcontactsOrganizationNote(externalOrganizationId, noteId)
 
 Delete a note for an external organization
 
@@ -334,7 +334,7 @@ ExternalContactsAPI.deleteExternalcontactsOrganizationNote(externalOrganizationI
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteExternalcontactsOrganizationTrustor"></a>
 
@@ -393,7 +393,7 @@ ExternalContactsAPI.deleteExternalcontactsOrganizationTrustor(externalOrganizati
 
 
 
-> [Empty](Empty.html) deleteExternalcontactsRelationship(relationshipId)
+> [JSON](JSON.html) deleteExternalcontactsRelationship(relationshipId)
 
 Delete a relationship
 
@@ -437,7 +437,7 @@ ExternalContactsAPI.deleteExternalcontactsRelationship(relationshipId: relations
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="getExternalcontactsContact"></a>
 
@@ -466,7 +466,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactId: String = "" // ExternalContact ID
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsContact.enummember.rawValue] // which fields, if any, to expand (externalOrganization,externalDataSources)
+let expand: [String] = [""] // which fields, if any, to expand (externalOrganization,externalDataSources)
 
 // Code example
 ExternalContactsAPI.getExternalcontactsContact(contactId: contactId, expand: expand) { (response, error) in
@@ -521,7 +521,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactId: String = "" // ExternalContact Id
 let noteId: String = "" // Note Id
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsContactNote.enummember.rawValue] // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsContactNote(contactId: contactId, noteId: noteId, expand: expand) { (response, error) in
@@ -576,10 +576,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactId: String = "" // ExternalContact Id
-let pageSize: Int = 20 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let pageNumber: Int = 1 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let sortOrder: String = "" // Sort order
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsContactNotes.enummember.rawValue] // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsContactNotes(contactId: contactId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -598,8 +598,8 @@ ExternalContactsAPI.getExternalcontactsContactNotes(contactId: contactId, pageSi
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactId** | **String**| ExternalContact Id | |
-| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
+| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources") |
 {: class="table-striped"}
@@ -635,11 +635,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 20 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let pageNumber: Int = 1 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let q: String = "" // User supplied search keywords (no special syntax is currently supported)
 let sortOrder: String = "" // Sort order
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsContacts.enummember.rawValue] // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: pageNumber, q: q, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -657,8 +657,8 @@ ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
+| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources") |
@@ -959,11 +959,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let externalOrganizationId: String = "" // External Organization ID
-let pageSize: Int = 20 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let pageNumber: Int = 1 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let q: String = "" // User supplied search keywords (no special syntax is currently supported)
 let sortOrder: String = "" // Sort order
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsOrganizationContacts.enummember.rawValue] // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsOrganizationContacts(externalOrganizationId: externalOrganizationId, pageSize: pageSize, pageNumber: pageNumber, q: q, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -982,8 +982,8 @@ ExternalContactsAPI.getExternalcontactsOrganizationContacts(externalOrganization
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **externalOrganizationId** | **String**| External Organization ID | |
-| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
+| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources") |
@@ -1022,7 +1022,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let externalOrganizationId: String = "" // External Organization Id
 let noteId: String = "" // Note Id
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsOrganizationNote.enummember.rawValue] // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsOrganizationNote(externalOrganizationId: externalOrganizationId, noteId: noteId, expand: expand) { (response, error) in
@@ -1078,10 +1078,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let externalOrganizationId: String = "" // External Organization Id
-let pageSize: Int = 20 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let pageNumber: Int = 1 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let sortOrder: String = "" // Sort order
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsOrganizationNotes.enummember.rawValue] // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsOrganizationNotes(externalOrganizationId: externalOrganizationId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -1100,8 +1100,8 @@ ExternalContactsAPI.getExternalcontactsOrganizationNotes(externalOrganizationId:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **externalOrganizationId** | **String**| External Organization Id | |
-| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
+| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources") |
 {: class="table-striped"}
@@ -1139,8 +1139,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let externalOrganizationId: String = "" // External Organization ID
-let pageSize: Int = 20 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let pageNumber: Int = 1 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let expand: ExternalContactsAPI.Expand_getExternalcontactsOrganizationRelationships = ExternalContactsAPI.Expand_getExternalcontactsOrganizationRelationships.enummember // which fields, if any, to expand
 let sortOrder: String = "" // Sort order
 
@@ -1161,8 +1161,8 @@ ExternalContactsAPI.getExternalcontactsOrganizationRelationships(externalOrganiz
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **externalOrganizationId** | **String**| External Organization ID | |
-| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
+| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **expand** | **String**| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
 | **sortOrder** | **String**| Sort order | [optional] |
 {: class="table-striped"}
@@ -1199,12 +1199,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 20 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let pageNumber: Int = 1 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let q: String = "" // Search query
 let trustorId: [String] = [""] // Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested
 let sortOrder: String = "" // Sort order
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsOrganizations.enummember.rawValue] // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 let includeTrustors: Bool = true // (true or false) whether or not to include trustor information embedded in the externalOrganization
 
 // Code example
@@ -1223,10 +1223,10 @@ ExternalContactsAPI.getExternalcontactsOrganizations(pageSize: pageSize, pageNum
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
-| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
+| **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **q** | **String**| Search query | [optional] |
-| **trustorId** | [**[String]**](String.html)| Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested | [optional] |
+| **trustorId** | [**[String]**](String.html)| Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
 | **includeTrustors** | **Bool**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional] |
@@ -1524,7 +1524,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let lookupVal: String = "" // User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)
-let expand: [String] = [ExternalContactsAPI.Expand_getExternalcontactsReversewhitepageslookup.enummember.rawValue] // which field, if any, to expand
+let expand: [String] = [""] // which field, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookupVal, expand: expand) { (response, error) in
@@ -3147,11 +3147,13 @@ ExternalContactsAPI.putExternalcontactsContactsSchema(schemaId: schemaId, body: 
 
 
 
-> Void putExternalcontactsConversation(body, conversationId)
+> Void putExternalcontactsConversation(conversationId, body)
 
 Associate/disassociate an external contact with a conversation
 
 To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
+
+
 
 Wraps PUT /api/v2/externalcontacts/conversations/{conversationId}  
 
@@ -3167,11 +3169,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ConversationAssociation = new ConversationAssociation(...) // ConversationAssociation
 let conversationId: String = "" // Conversation ID
+let body: ConversationAssociation = new ConversationAssociation(...) // ConversationAssociation
 
 // Code example
-ExternalContactsAPI.putExternalcontactsConversation(body: body, conversationId: conversationId) { (error) in
+ExternalContactsAPI.putExternalcontactsConversation(conversationId: conversationId, body: body) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -3185,8 +3187,8 @@ ExternalContactsAPI.putExternalcontactsConversation(body: body, conversationId: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation | |
 | **conversationId** | **String**| Conversation ID | |
+| **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation | |
 {: class="table-striped"}
 
 

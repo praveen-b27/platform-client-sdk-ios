@@ -32,17 +32,11 @@ public class WorkdayValuesMetricItem: Codable {
     public var trend: [WorkdayValuesTrendItem]?
 
     public init(metric: AddressableEntityRef?, metricDefinition: DomainEntityRef?, average: Double?, unitType: UnitType?, trend: [WorkdayValuesTrendItem]?) {
-        
         self.metric = metric
-        
         self.metricDefinition = metricDefinition
-        
         self.average = average
-        
         self.unitType = unitType
-        
         self.trend = trend
-        
     }
 
 

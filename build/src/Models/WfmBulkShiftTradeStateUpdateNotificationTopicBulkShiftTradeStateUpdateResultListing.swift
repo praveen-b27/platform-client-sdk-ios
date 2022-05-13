@@ -14,9 +14,7 @@ public class WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpd
     public var entities: [WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult]?
 
     public init(entities: [WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult]?) {
-        
         self.entities = entities
-        
     }
 
 

@@ -25,19 +25,12 @@ public class WfmUserNotificationTopicTimeOffRequestNotification: Codable {
     public var fullDayManagementUnitDates: [String]?
 
     public init(timeOffRequestId: String?, user: WfmUserNotificationTopicUserReference?, isFullDayRequest: Bool?, status: Status?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?) {
-        
         self.timeOffRequestId = timeOffRequestId
-        
         self.user = user
-        
         self.isFullDayRequest = isFullDayRequest
-        
         self.status = status
-        
         self.partialDayStartDateTimes = partialDayStartDateTimes
-        
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
-        
     }
 
 

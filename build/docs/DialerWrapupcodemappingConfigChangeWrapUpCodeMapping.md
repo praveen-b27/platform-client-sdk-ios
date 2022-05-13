@@ -13,7 +13,7 @@ title: DialerWrapupcodemappingConfigChangeWrapUpCodeMapping
 | **dateModified** | [**Date**](Date.html) | Last modified time of the entity | [optional] |
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
 | **defaultSet** | **[String]** |  | [optional] |
-| **mapping** | [**[String:[String]]**](Array.html) |  | [optional] |
+| **mapping** | [**[String:[String]]**](StringJSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

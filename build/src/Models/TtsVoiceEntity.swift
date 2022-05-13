@@ -26,21 +26,13 @@ public class TtsVoiceEntity: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, gender: String?, language: String?, engine: TtsEngineEntity?, isDefault: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.gender = gender
-        
         self.language = language
-        
         self.engine = engine
-        
         self.isDefault = isDefault
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

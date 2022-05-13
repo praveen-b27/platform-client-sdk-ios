@@ -11,10 +11,7 @@ import Foundation
 
 open class OAuthAPI {
     
-    
-    
     /**
-     
      Delete OAuth Client
      
      - parameter clientId: (path) Client ID 
@@ -32,11 +29,8 @@ open class OAuthAPI {
     }
 
     /**
-     
      Delete OAuth Client
-     
      - DELETE /api/v2/oauth/clients/{clientId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class OAuthAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteOauthClientWithRequestBuilder(clientId: String) -> RequestBuilder<Void> {
+    open class func deleteOauthClientWithRequestBuilder(clientId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/oauth/clients/{clientId}"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,15 +56,11 @@ open class OAuthAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a client that is authorized by the resource owner
      
      - parameter clientId: (path) The ID of client 
-     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional, default to en-us)
+     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getOauthAuthorization(clientId: String, acceptLanguage: String? = nil, completion: @escaping ((_ data: OAuthAuthorization?,_ error: Error?) -> Void)) {
@@ -97,70 +82,73 @@ open class OAuthAPI {
     }
 
     /**
-     
      Get a client that is authorized by the resource owner
-     
      - GET /api/v2/oauth/authorizations/{clientId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "",
-  "resourceOwner" : "",
-  "scope" : [ "aeiou" ],
-  "roles" : [ "aeiou" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "resourceOwner" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "scope" : [ "scope", "scope" ],
+  "roles" : [ "roles", "roles" ],
   "pending" : true,
-  "selfUri" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
   "client" : {
-    "dateToDelete" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "registeredRedirectUri" : [ "aeiou" ],
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "secret" : "aeiou",
-    "authorizedGrantType" : "aeiou",
-    "roleIds" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "accessTokenValiditySeconds" : 123456789,
-    "scope" : [ "aeiou" ],
-    "name" : "aeiou",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "secret" : "secret",
+    "authorizedGrantType" : "CODE",
+    "roleIds" : [ "roleIds", "roleIds" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "accessTokenValiditySeconds" : 0,
+    "scope" : [ "scope", "scope" ],
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "active",
     "roleDivisions" : [ {
-      "roleId" : "aeiou",
-      "divisionId" : "aeiou"
+      "roleId" : "roleId",
+      "divisionId" : "divisionId"
+    }, {
+      "roleId" : "roleId",
+      "divisionId" : "divisionId"
     } ]
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "state" : "aeiou"
-}}]
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "state" : "Unauthorized"
+}, statusCode=200}]
      
      - parameter clientId: (path) The ID of client 
-     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional, default to en-us)
+     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional)
 
      - returns: RequestBuilder<OAuthAuthorization> 
      */
-    open class func getOauthAuthorizationWithRequestBuilder(clientId: String, acceptLanguage: String? = nil) -> RequestBuilder<OAuthAuthorization> {
+    open class func getOauthAuthorizationWithRequestBuilder(clientId: String, acceptLanguage: String? = nil) -> RequestBuilder<OAuthAuthorization> {        
         var path = "/api/v2/oauth/authorizations/{clientId}"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
@@ -174,13 +162,10 @@ open class OAuthAPI {
     }
 
     
-    
-    
     /**
-     
      List clients that have been authorized, requested, or revoked by the resource owner
      
-     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional, default to en-us)
+     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getOauthAuthorizations(acceptLanguage: String? = nil, completion: @escaping ((_ data: OAuthAuthorizationListing?,_ error: Error?) -> Void)) {
@@ -202,70 +187,121 @@ open class OAuthAPI {
     }
 
     /**
-     
      List clients that have been authorized, requested, or revoked by the resource owner
-     
      - GET /api/v2/oauth/authorizations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "resourceOwner" : "",
-    "scope" : [ "aeiou" ],
-    "roles" : [ "aeiou" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "resourceOwner" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "scope" : [ "scope", "scope" ],
+    "roles" : [ "roles", "roles" ],
     "pending" : true,
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "client" : {
-      "dateToDelete" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "registeredRedirectUri" : [ "aeiou" ],
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "secret" : "aeiou",
-      "authorizedGrantType" : "aeiou",
-      "roleIds" : [ "aeiou" ],
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "accessTokenValiditySeconds" : 123456789,
-      "scope" : [ "aeiou" ],
-      "name" : "aeiou",
-      "modifiedBy" : "",
-      "id" : "aeiou",
-      "state" : "aeiou",
+      "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "secret" : "secret",
+      "authorizedGrantType" : "CODE",
+      "roleIds" : [ "roleIds", "roleIds" ],
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "{}",
+      "accessTokenValiditySeconds" : 0,
+      "scope" : [ "scope", "scope" ],
+      "name" : "name",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "active",
       "roleDivisions" : [ {
-        "roleId" : "aeiou",
-        "divisionId" : "aeiou"
+        "roleId" : "roleId",
+        "divisionId" : "divisionId"
+      }, {
+        "roleId" : "roleId",
+        "divisionId" : "divisionId"
       } ]
     },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "state" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "state" : "Unauthorized"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "resourceOwner" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "scope" : [ "scope", "scope" ],
+    "roles" : [ "roles", "roles" ],
+    "pending" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "client" : {
+      "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "secret" : "secret",
+      "authorizedGrantType" : "CODE",
+      "roleIds" : [ "roleIds", "roleIds" ],
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "{}",
+      "accessTokenValiditySeconds" : 0,
+      "scope" : [ "scope", "scope" ],
+      "name" : "name",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "roleDivisions" : [ {
+        "roleId" : "roleId",
+        "divisionId" : "divisionId"
+      }, {
+        "roleId" : "roleId",
+        "divisionId" : "divisionId"
+      } ]
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "state" : "Unauthorized"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional, default to en-us)
+     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional)
 
      - returns: RequestBuilder<OAuthAuthorizationListing> 
      */
-    open class func getOauthAuthorizationsWithRequestBuilder(acceptLanguage: String? = nil) -> RequestBuilder<OAuthAuthorizationListing> {
+    open class func getOauthAuthorizationsWithRequestBuilder(acceptLanguage: String? = nil) -> RequestBuilder<OAuthAuthorizationListing> {        
         let path = "/api/v2/oauth/authorizations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
@@ -279,10 +315,7 @@ open class OAuthAPI {
     }
 
     
-    
-    
     /**
-     
      Get OAuth Client
      
      - parameter clientId: (path) Client ID 
@@ -307,57 +340,48 @@ open class OAuthAPI {
     }
 
     /**
-     
      Get OAuth Client
-     
      - GET /api/v2/oauth/clients/{clientId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateToDelete" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "registeredRedirectUri" : [ "aeiou" ],
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "secret" : "aeiou",
-  "authorizedGrantType" : "aeiou",
-  "roleIds" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "accessTokenValiditySeconds" : 123456789,
-  "scope" : [ "aeiou" ],
-  "name" : "aeiou",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "secret" : "secret",
+  "authorizedGrantType" : "CODE",
+  "roleIds" : [ "roleIds", "roleIds" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "accessTokenValiditySeconds" : 0,
+  "scope" : [ "scope", "scope" ],
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "active",
   "roleDivisions" : [ {
-    "roleId" : "aeiou",
-    "divisionId" : "aeiou"
+    "roleId" : "roleId",
+    "divisionId" : "divisionId"
+  }, {
+    "roleId" : "roleId",
+    "divisionId" : "divisionId"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter clientId: (path) Client ID 
 
      - returns: RequestBuilder<OAuthClient> 
      */
-    open class func getOauthClientWithRequestBuilder(clientId: String) -> RequestBuilder<OAuthClient> {
+    open class func getOauthClientWithRequestBuilder(clientId: String) -> RequestBuilder<OAuthClient> {        
         var path = "/api/v2/oauth/clients/{clientId}"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -368,11 +392,7 @@ open class OAuthAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the results of a usage query
      
      - parameter executionId: (path) ID of the query execution 
@@ -398,39 +418,50 @@ open class OAuthAPI {
     }
 
     /**
-     
      Get the results of a usage query
-     
      - GET /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "queryStatus" : "aeiou",
+  "queryStatus" : "Complete",
   "results" : [ {
-    "date" : "2000-01-23T04:56:07.000+0000",
-    "clientId" : "aeiou",
-    "clientName" : "aeiou",
-    "templateUri" : "aeiou",
-    "requests" : 123456789,
-    "httpMethod" : "aeiou",
-    "userId" : "aeiou",
-    "organizationId" : "aeiou",
-    "status429" : 123456789,
-    "status400" : 123456789,
-    "status500" : 123456789,
-    "status200" : 123456789,
-    "status300" : 123456789
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "clientId" : "clientId",
+    "clientName" : "clientName",
+    "templateUri" : "templateUri",
+    "requests" : 2,
+    "httpMethod" : "httpMethod",
+    "userId" : "userId",
+    "organizationId" : "organizationId",
+    "status429" : 5,
+    "status400" : 1,
+    "status500" : 5,
+    "status200" : 0,
+    "status300" : 6
+  }, {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "clientId" : "clientId",
+    "clientName" : "clientName",
+    "templateUri" : "templateUri",
+    "requests" : 2,
+    "httpMethod" : "httpMethod",
+    "userId" : "userId",
+    "organizationId" : "organizationId",
+    "status429" : 5,
+    "status400" : 1,
+    "status500" : 5,
+    "status200" : 0,
+    "status300" : 6
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter executionId: (path) ID of the query execution 
      - parameter clientId: (path) Client ID 
 
      - returns: RequestBuilder<ApiUsageQueryResult> 
      */
-    open class func getOauthClientUsageQueryResultWithRequestBuilder(executionId: String, clientId: String) -> RequestBuilder<ApiUsageQueryResult> {
+    open class func getOauthClientUsageQueryResultWithRequestBuilder(executionId: String, clientId: String) -> RequestBuilder<ApiUsageQueryResult> {        
         var path = "/api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}"
         let executionIdPreEscape = "\(executionId)"
         let executionIdPostEscape = executionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -439,12 +470,7 @@ open class OAuthAPI {
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -455,15 +481,11 @@ open class OAuthAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a summary of OAuth client API usage
      
      - parameter clientId: (path) Client ID 
-     - parameter days: (query) Previous number of days to query (optional, default to 7)
+     - parameter days: (query) Previous number of days to query (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getOauthClientUsageSummary(clientId: String, days: String? = nil, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
@@ -485,42 +507,33 @@ open class OAuthAPI {
     }
 
     /**
-     
      Get a summary of OAuth client API usage
-     
      - GET /api/v2/oauth/clients/{clientId}/usage/summary
      - After calling this method, you will then need to poll for the query results based on the returned execution Id
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "executionId" : "aeiou",
-  "resultsUri" : "aeiou"
-}}]
+  "executionId" : "executionId",
+  "resultsUri" : "resultsUri"
+}, statusCode=200}]
      
      - parameter clientId: (path) Client ID 
-     - parameter days: (query) Previous number of days to query (optional, default to 7)
+     - parameter days: (query) Previous number of days to query (optional)
 
      - returns: RequestBuilder<UsageExecutionResult> 
      */
-    open class func getOauthClientUsageSummaryWithRequestBuilder(clientId: String, days: String? = nil) -> RequestBuilder<UsageExecutionResult> {
+    open class func getOauthClientUsageSummaryWithRequestBuilder(clientId: String, days: String? = nil) -> RequestBuilder<UsageExecutionResult> {        
         var path = "/api/v2/oauth/clients/{clientId}/usage/summary"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "days": days
-            
         ])
 
         let requestBuilder: RequestBuilder<UsageExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -528,9 +541,7 @@ open class OAuthAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      The list of OAuth clients
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -554,62 +565,76 @@ open class OAuthAPI {
     }
 
     /**
-     
      The list of OAuth clients
-     
      - GET /api/v2/oauth/clients
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "dateToDelete" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "registeredRedirectUri" : [ "aeiou" ],
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "secret" : "aeiou",
-    "roleIds" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "accessTokenValiditySeconds" : 123456789,
-    "scope" : [ "aeiou" ],
-    "name" : "aeiou",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "secret" : "secret",
+    "roleIds" : [ "roleIds", "roleIds" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "accessTokenValiditySeconds" : 0,
+    "scope" : [ "scope", "scope" ],
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "active",
     "roleDivisions" : [ {
-      "roleId" : "aeiou",
-      "divisionId" : "aeiou"
+      "roleId" : "roleId",
+      "divisionId" : "divisionId"
+    }, {
+      "roleId" : "roleId",
+      "divisionId" : "divisionId"
+    } ]
+  }, {
+    "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "secret" : "secret",
+    "roleIds" : [ "roleIds", "roleIds" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "accessTokenValiditySeconds" : 0,
+    "scope" : [ "scope", "scope" ],
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "roleDivisions" : [ {
+      "roleId" : "roleId",
+      "divisionId" : "divisionId"
+    }, {
+      "roleId" : "roleId",
+      "divisionId" : "divisionId"
     } ]
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<OAuthClientEntityListing> 
      */
-    open class func getOauthClientsWithRequestBuilder() -> RequestBuilder<OAuthClientEntityListing> {
+    open class func getOauthClientsWithRequestBuilder() -> RequestBuilder<OAuthClientEntityListing> {        
         let path = "/api/v2/oauth/clients"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -620,15 +645,11 @@ open class OAuthAPI {
 
     
     
-    
-    
-    
     /**
-     
      An OAuth scope
      
      - parameter scopeId: (path) Scope ID 
-     - parameter acceptLanguage: (header) The language with which to display the scope description. (optional, default to en-us)
+     - parameter acceptLanguage: (header) The language with which to display the scope description. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getOauthScope(scopeId: String, acceptLanguage: String? = nil, completion: @escaping ((_ data: OAuthScope?,_ error: Error?) -> Void)) {
@@ -650,37 +671,29 @@ open class OAuthAPI {
     }
 
     /**
-     
      An OAuth scope
-     
      - GET /api/v2/oauth/scopes/{scopeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter scopeId: (path) Scope ID 
-     - parameter acceptLanguage: (header) The language with which to display the scope description. (optional, default to en-us)
+     - parameter acceptLanguage: (header) The language with which to display the scope description. (optional)
 
      - returns: RequestBuilder<OAuthScope> 
      */
-    open class func getOauthScopeWithRequestBuilder(scopeId: String, acceptLanguage: String? = nil) -> RequestBuilder<OAuthScope> {
+    open class func getOauthScopeWithRequestBuilder(scopeId: String, acceptLanguage: String? = nil) -> RequestBuilder<OAuthScope> {        
         var path = "/api/v2/oauth/scopes/{scopeId}"
         let scopeIdPreEscape = "\(scopeId)"
         let scopeIdPostEscape = scopeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scopeId}", with: scopeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
@@ -694,13 +707,10 @@ open class OAuthAPI {
     }
 
     
-    
-    
     /**
-     
      The list of OAuth scopes
      
-     - parameter acceptLanguage: (header) The language with which to display the scope descriptions. (optional, default to en-us)
+     - parameter acceptLanguage: (header) The language with which to display the scope descriptions. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getOauthScopes(acceptLanguage: String? = nil, completion: @escaping ((_ data: OAuthScopeListing?,_ error: Error?) -> Void)) {
@@ -722,37 +732,33 @@ open class OAuthAPI {
     }
 
     /**
-     
      The list of OAuth scopes
-     
      - GET /api/v2/oauth/scopes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "id" : "id"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter acceptLanguage: (header) The language with which to display the scope descriptions. (optional, default to en-us)
+     - parameter acceptLanguage: (header) The language with which to display the scope descriptions. (optional)
 
      - returns: RequestBuilder<OAuthScopeListing> 
      */
-    open class func getOauthScopesWithRequestBuilder(acceptLanguage: String? = nil) -> RequestBuilder<OAuthScopeListing> {
+    open class func getOauthScopesWithRequestBuilder(acceptLanguage: String? = nil) -> RequestBuilder<OAuthScopeListing> {        
         let path = "/api/v2/oauth/scopes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
@@ -766,10 +772,7 @@ open class OAuthAPI {
     }
 
     
-    
-    
     /**
-     
      Regenerate Client Secret
      
      - parameter clientId: (path) Client ID 
@@ -794,57 +797,49 @@ open class OAuthAPI {
     }
 
     /**
-     
      Regenerate Client Secret
-     
      - POST /api/v2/oauth/clients/{clientId}/secret
      - This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateToDelete" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "registeredRedirectUri" : [ "aeiou" ],
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "secret" : "aeiou",
-  "authorizedGrantType" : "aeiou",
-  "roleIds" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "accessTokenValiditySeconds" : 123456789,
-  "scope" : [ "aeiou" ],
-  "name" : "aeiou",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "secret" : "secret",
+  "authorizedGrantType" : "CODE",
+  "roleIds" : [ "roleIds", "roleIds" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "accessTokenValiditySeconds" : 0,
+  "scope" : [ "scope", "scope" ],
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "active",
   "roleDivisions" : [ {
-    "roleId" : "aeiou",
-    "divisionId" : "aeiou"
+    "roleId" : "roleId",
+    "divisionId" : "divisionId"
+  }, {
+    "roleId" : "roleId",
+    "divisionId" : "divisionId"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter clientId: (path) Client ID 
 
      - returns: RequestBuilder<OAuthClient> 
      */
-    open class func postOauthClientSecretWithRequestBuilder(clientId: String) -> RequestBuilder<OAuthClient> {
+    open class func postOauthClientSecretWithRequestBuilder(clientId: String) -> RequestBuilder<OAuthClient> {        
         var path = "/api/v2/oauth/clients/{clientId}/secret"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -855,11 +850,7 @@ open class OAuthAPI {
 
     
     
-    
-    
-    
     /**
-     
      Query for OAuth client API usage
      
      - parameter clientId: (path) Client ID 
@@ -885,34 +876,30 @@ open class OAuthAPI {
     }
 
     /**
-     
      Query for OAuth client API usage
-     
      - POST /api/v2/oauth/clients/{clientId}/usage/query
      - After calling this method, you will then need to poll for the query results based on the returned execution Id
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "executionId" : "aeiou",
-  "resultsUri" : "aeiou"
-}}]
+  "executionId" : "executionId",
+  "resultsUri" : "resultsUri"
+}, statusCode=200}]
      
      - parameter clientId: (path) Client ID 
      - parameter body: (body) Query 
 
      - returns: RequestBuilder<UsageExecutionResult> 
      */
-    open class func postOauthClientUsageQueryWithRequestBuilder(clientId: String, body: ApiUsageQuery) -> RequestBuilder<UsageExecutionResult> {
+    open class func postOauthClientUsageQueryWithRequestBuilder(clientId: String, body: ApiUsageQuery) -> RequestBuilder<UsageExecutionResult> {        
         var path = "/api/v2/oauth/clients/{clientId}/usage/query"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UsageExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -921,10 +908,7 @@ open class OAuthAPI {
     }
 
     
-    
-    
     /**
-     
      Create OAuth client
      
      - parameter body: (body) Client 
@@ -949,52 +933,47 @@ open class OAuthAPI {
     }
 
     /**
-     
      Create OAuth client
-     
      - POST /api/v2/oauth/clients
      - The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateToDelete" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "registeredRedirectUri" : [ "aeiou" ],
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "secret" : "aeiou",
-  "authorizedGrantType" : "aeiou",
-  "roleIds" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "accessTokenValiditySeconds" : 123456789,
-  "scope" : [ "aeiou" ],
-  "name" : "aeiou",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "secret" : "secret",
+  "authorizedGrantType" : "CODE",
+  "roleIds" : [ "roleIds", "roleIds" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "accessTokenValiditySeconds" : 0,
+  "scope" : [ "scope", "scope" ],
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "active",
   "roleDivisions" : [ {
-    "roleId" : "aeiou",
-    "divisionId" : "aeiou"
+    "roleId" : "roleId",
+    "divisionId" : "divisionId"
+  }, {
+    "roleId" : "roleId",
+    "divisionId" : "divisionId"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Client 
 
      - returns: RequestBuilder<OAuthClient> 
      */
-    open class func postOauthClientsWithRequestBuilder(body: OAuthClientRequest) -> RequestBuilder<OAuthClient> {
+    open class func postOauthClientsWithRequestBuilder(body: OAuthClientRequest) -> RequestBuilder<OAuthClient> {        
         let path = "/api/v2/oauth/clients"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthClient>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1004,11 +983,7 @@ open class OAuthAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update OAuth Client
      
      - parameter clientId: (path) Client ID 
@@ -1034,56 +1009,50 @@ open class OAuthAPI {
     }
 
     /**
-     
      Update OAuth Client
-     
      - PUT /api/v2/oauth/clients/{clientId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateToDelete" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "registeredRedirectUri" : [ "aeiou" ],
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "secret" : "aeiou",
-  "authorizedGrantType" : "aeiou",
-  "roleIds" : [ "aeiou" ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "accessTokenValiditySeconds" : 123456789,
-  "scope" : [ "aeiou" ],
-  "name" : "aeiou",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "dateToDelete" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "registeredRedirectUri" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "secret" : "secret",
+  "authorizedGrantType" : "CODE",
+  "roleIds" : [ "roleIds", "roleIds" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "accessTokenValiditySeconds" : 0,
+  "scope" : [ "scope", "scope" ],
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "active",
   "roleDivisions" : [ {
-    "roleId" : "aeiou",
-    "divisionId" : "aeiou"
+    "roleId" : "roleId",
+    "divisionId" : "divisionId"
+  }, {
+    "roleId" : "roleId",
+    "divisionId" : "divisionId"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter clientId: (path) Client ID 
      - parameter body: (body) Client 
 
      - returns: RequestBuilder<OAuthClient> 
      */
-    open class func putOauthClientWithRequestBuilder(clientId: String, body: OAuthClientRequest) -> RequestBuilder<OAuthClient> {
+    open class func putOauthClientWithRequestBuilder(clientId: String, body: OAuthClientRequest) -> RequestBuilder<OAuthClient> {        
         var path = "/api/v2/oauth/clients/{clientId}"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthClient>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -105,83 +105,44 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
     public var recipientType: String?
 
     public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationMessageEventTopicUriReference?, queue: QueueConversationMessageEventTopicUriReference?, team: QueueConversationMessageEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationMessageEventTopicErrorBody?, script: QueueConversationMessageEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationMessageEventTopicUriReference?, externalOrganization: QueueConversationMessageEventTopicUriReference?, wrapup: QueueConversationMessageEventTopicWrapup?, conversationRoutingData: QueueConversationMessageEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationMessageEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, messages: [QueueConversationMessageEventTopicMessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.address = address
-        
         self.startTime = startTime
-        
         self.connectedTime = connectedTime
-        
         self.endTime = endTime
-        
         self.startHoldTime = startHoldTime
-        
         self.purpose = purpose
-        
         self.state = state
-        
         self.direction = direction
-        
         self.disconnectType = disconnectType
-        
         self.held = held
-        
         self.wrapupRequired = wrapupRequired
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.user = user
-        
         self.queue = queue
-        
         self.team = team
-        
         self.attributes = attributes
-        
         self.errorInfo = errorInfo
-        
         self.script = script
-        
         self.wrapupTimeoutMs = wrapupTimeoutMs
-        
         self.wrapupSkipped = wrapupSkipped
-        
         self.alertingTimeoutMs = alertingTimeoutMs
-        
         self.provider = provider
-        
         self.externalContact = externalContact
-        
         self.externalOrganization = externalOrganization
-        
         self.wrapup = wrapup
-        
         self.conversationRoutingData = conversationRoutingData
-        
         self.peer = peer
-        
         self.screenRecordingState = screenRecordingState
-        
         self.flaggedReason = flaggedReason
-        
         self.journeyContext = journeyContext
-        
         self.startAcwTime = startAcwTime
-        
         self.endAcwTime = endAcwTime
-        
         self.messages = messages
-        
         self.type = type
-        
         self.recipientCountry = recipientCountry
-        
         self.recipientType = recipientType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

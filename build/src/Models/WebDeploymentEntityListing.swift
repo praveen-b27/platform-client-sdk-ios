@@ -16,13 +16,9 @@ public class WebDeploymentEntityListing: Codable {
     public var selfUri: String?
 
     public init(total: Int64?, entities: [WebDeployment]?, selfUri: String?) {
-        
         self.total = total
-        
         self.entities = entities
-        
         self.selfUri = selfUri
-        
     }
 
 

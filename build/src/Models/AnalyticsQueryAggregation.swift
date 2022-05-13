@@ -27,17 +27,11 @@ public class AnalyticsQueryAggregation: Codable {
     public var ranges: [AggregationRange]?
 
     public init(type: ModelType?, dimension: String?, metric: String?, size: Int?, ranges: [AggregationRange]?) {
-        
         self.type = type
-        
         self.dimension = dimension
-        
         self.metric = metric
-        
         self.size = size
-        
         self.ranges = ranges
-        
     }
 
 

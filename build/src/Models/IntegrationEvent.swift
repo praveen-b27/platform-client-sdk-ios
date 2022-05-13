@@ -42,29 +42,17 @@ public class IntegrationEvent: Codable {
     public var user: User?
 
     public init(_id: String?, selfUri: String?, correlationId: String?, timestamp: Date?, level: Level?, eventCode: String?, message: MessageInfo?, entities: [EventEntity]?, contextAttributes: [String:String]?, detailMessage: MessageInfo?, user: User?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.correlationId = correlationId
-        
         self.timestamp = timestamp
-        
         self.level = level
-        
         self.eventCode = eventCode
-        
         self.message = message
-        
         self.entities = entities
-        
         self.contextAttributes = contextAttributes
-        
         self.detailMessage = detailMessage
-        
         self.user = user
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

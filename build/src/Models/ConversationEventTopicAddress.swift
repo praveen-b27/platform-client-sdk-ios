@@ -24,17 +24,11 @@ public class ConversationEventTopicAddress: Codable {
     public var addressDisplayable: String?
 
     public init(name: String?, nameRaw: String?, addressNormalized: String?, addressRaw: String?, addressDisplayable: String?) {
-        
         self.name = name
-        
         self.nameRaw = nameRaw
-        
         self.addressNormalized = addressNormalized
-        
         self.addressRaw = addressRaw
-        
         self.addressDisplayable = addressDisplayable
-        
     }
 
 

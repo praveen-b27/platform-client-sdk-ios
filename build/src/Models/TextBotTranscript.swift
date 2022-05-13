@@ -18,11 +18,8 @@ public class TextBotTranscript: Codable {
     public var confidence: Float?
 
     public init(text: String?, confidence: Float?) {
-        
         self.text = text
-        
         self.confidence = confidence
-        
     }
 
 

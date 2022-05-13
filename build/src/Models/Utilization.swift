@@ -15,9 +15,7 @@ public class Utilization: Codable {
     public var utilization: [String:MediaUtilization]?
 
     public init(utilization: [String:MediaUtilization]?) {
-        
         self.utilization = utilization
-        
     }
 
 

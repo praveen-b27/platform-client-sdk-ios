@@ -15,9 +15,7 @@ public class RoutingSettings: Codable {
     public var resetAgentScoreOnPresenceChange: Bool?
 
     public init(resetAgentScoreOnPresenceChange: Bool?) {
-        
         self.resetAgentScoreOnPresenceChange = resetAgentScoreOnPresenceChange
-        
     }
 
 

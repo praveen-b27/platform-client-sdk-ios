@@ -42,33 +42,19 @@ public class PromptAssetCreate: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, promptId: String?, language: String?, mediaUri: String?, ttsString: String?, text: String?, uploadStatus: UploadStatus?, uploadUri: String?, languageDefault: Bool?, tags: [String:[String]]?, durationSeconds: Double?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.promptId = promptId
-        
         self.language = language
-        
         self.mediaUri = mediaUri
-        
         self.ttsString = ttsString
-        
         self.text = text
-        
         self.uploadStatus = uploadStatus
-        
         self.uploadUri = uploadUri
-        
         self.languageDefault = languageDefault
-        
         self.tags = tags
-        
         self.durationSeconds = durationSeconds
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

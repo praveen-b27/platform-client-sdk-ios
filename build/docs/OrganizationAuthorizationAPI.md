@@ -525,6 +525,8 @@ The list of cloned users from the trustee organization (i.e. users with a native
 
 There can be no more than 5 cloned users per organization, so results are represented as simple list and not paged
 
+
+
 Wraps GET /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers  
 
 Requires ANY permissions: 
@@ -700,8 +702,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let trusteeOrgId: String = "" // Trustee Organization Id
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 OrganizationAuthorizationAPI.getOrgauthorizationTrusteeUsers(trusteeOrgId: trusteeOrgId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -720,8 +722,8 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteeUsers(trusteeOrgId: trust
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -755,8 +757,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 OrganizationAuthorizationAPI.getOrgauthorizationTrustees(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -774,8 +776,8 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustees(pageSize: pageSize, pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1071,8 +1073,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let trustorOrgId: String = "" // Trustee Organization Id
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 OrganizationAuthorizationAPI.getOrgauthorizationTrustorUsers(trustorOrgId: trustorOrgId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -1091,8 +1093,8 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustorUsers(trustorOrgId: trust
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustee Organization Id | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1126,8 +1128,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 OrganizationAuthorizationAPI.getOrgauthorizationTrustors(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -1145,8 +1147,8 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustors(pageSize: pageSize, pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1319,7 +1321,7 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrustees(body: body) { (respons
 
 
 
-> [AuditQueryResponse](AuditQueryResponse.html) postOrgauthorizationTrusteesAudits(body, pageSize, pageNumber, sortBy, sortOrder)
+> [JSON](JSON.html) postOrgauthorizationTrusteesAudits(body, pageSize, pageNumber, sortBy, sortOrder)
 
 Get Org Trustee Audits
 
@@ -1340,10 +1342,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: TrusteeAuditQueryRequest = new TrusteeAuditQueryRequest(...) // Values to scope the request.
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "timestamp" // Sort by
-let sortOrder: String = "descending" // Sort order
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 
 // Code example
 OrganizationAuthorizationAPI.postOrgauthorizationTrusteesAudits(body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
@@ -1362,16 +1364,16 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrusteesAudits(body: body, page
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**TrusteeAuditQueryRequest**](TrusteeAuditQueryRequest.html)| Values to scope the request. | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to timestamp] |
-| **sortOrder** | **String**| Sort order | [optional] [default to descending] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AuditQueryResponse**](AuditQueryResponse.html)
+[**JSON**](JSON.html)
 
 <a name="postOrgauthorizationTrusteesDefault"></a>
 
@@ -1434,7 +1436,7 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrusteesDefault(assignDefaultRo
 
 
 
-> [AuditQueryResponse](AuditQueryResponse.html) postOrgauthorizationTrustorAudits(body, pageSize, pageNumber, sortBy, sortOrder)
+> [JSON](JSON.html) postOrgauthorizationTrustorAudits(body, pageSize, pageNumber, sortBy, sortOrder)
 
 Get Org Trustor Audits
 
@@ -1455,10 +1457,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: TrustorAuditQueryRequest = new TrustorAuditQueryRequest(...) // Values to scope the request.
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "timestamp" // Sort by
-let sortOrder: String = "descending" // Sort order
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 
 // Code example
 OrganizationAuthorizationAPI.postOrgauthorizationTrustorAudits(body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
@@ -1477,16 +1479,16 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrustorAudits(body: body, pageS
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**TrustorAuditQueryRequest**](TrustorAuditQueryRequest.html)| Values to scope the request. | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to timestamp] |
-| **sortOrder** | **String**| Sort order | [optional] [default to descending] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AuditQueryResponse**](AuditQueryResponse.html)
+[**JSON**](JSON.html)
 
 <a name="putOrgauthorizationTrustee"></a>
 
@@ -1626,7 +1628,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let trusteeOrgId: String = "" // Trustee Organization Id
 let trusteeUserId: String = "" // Trustee User Id
-let body: [String] = [new [String](...)] // List of roles
+let body: [String] = [""] // List of roles
 
 // Code example
 OrganizationAuthorizationAPI.putOrgauthorizationTrusteeUserRoles(trusteeOrgId: trusteeOrgId, trusteeUserId: trusteeUserId, body: body) { (response, error) in
@@ -1646,7 +1648,7 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrusteeUserRoles(trusteeOrgId: t
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-| **body** | **[String]**| List of roles | |
+| **body** | [**[String]**](String.html)| List of roles | |
 {: class="table-striped"}
 
 

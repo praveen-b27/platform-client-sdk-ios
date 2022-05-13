@@ -50,11 +50,8 @@ public class ShiftTradeMatchViolation: Codable {
     public var params: [String:String]?
 
     public init(type: ModelType?, params: [String:String]?) {
-        
         self.type = type
-        
         self.params = params
-        
     }
 
 

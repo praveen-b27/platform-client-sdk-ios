@@ -17,11 +17,8 @@ public class CallableTime: Codable {
     public var timeZoneId: String?
 
     public init(timeSlots: [CampaignTimeSlot]?, timeZoneId: String?) {
-        
         self.timeSlots = timeSlots
-        
         self.timeZoneId = timeZoneId
-        
     }
 
 

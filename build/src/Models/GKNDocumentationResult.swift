@@ -21,15 +21,10 @@ public class GKNDocumentationResult: Codable {
     public var type: String?
 
     public init(content: String?, link: String?, title: String?, type: String?) {
-        
         self.content = content
-        
         self.link = link
-        
         self.title = title
-        
         self.type = type
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -23,27 +23,16 @@ public class JourneyWebEventsNotificationGeoLocation: Codable {
     public var source: String?
 
     public init(country: String?, countryName: String?, latitude: Double?, longitude: Double?, locality: String?, postalCode: String?, region: String?, regionName: String?, timezone: String?, source: String?) {
-        
         self.country = country
-        
         self.countryName = countryName
-        
         self.latitude = latitude
-        
         self.longitude = longitude
-        
         self.locality = locality
-        
         self.postalCode = postalCode
-        
         self.region = region
-        
         self.regionName = regionName
-        
         self.timezone = timezone
-        
         self.source = source
-        
     }
 
 

@@ -16,13 +16,9 @@ public class WfmBuScheduleQueryResultTopicBuScheduleSearchResultNotification: Co
     public var downloadUrl: String?
 
     public init(operationId: String?, businessUnitId: String?, downloadUrl: String?) {
-        
         self.operationId = operationId
-        
         self.businessUnitId = businessUnitId
-        
         self.downloadUrl = downloadUrl
-        
     }
 
 

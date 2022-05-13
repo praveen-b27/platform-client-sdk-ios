@@ -30,21 +30,13 @@ public class CallConversation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, participants: [CallMediaParticipant]?, otherMediaUris: [String]?, recordingState: RecordingState?, maxParticipants: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.participants = participants
-        
         self.otherMediaUris = otherMediaUris
-        
         self.recordingState = recordingState
-        
         self.maxParticipants = maxParticipants
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

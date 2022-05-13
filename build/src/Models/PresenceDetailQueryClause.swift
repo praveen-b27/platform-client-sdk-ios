@@ -21,11 +21,8 @@ public class PresenceDetailQueryClause: Codable {
     public var predicates: [PresenceDetailQueryPredicate]?
 
     public init(type: ModelType?, predicates: [PresenceDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

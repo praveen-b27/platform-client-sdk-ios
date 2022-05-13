@@ -29,19 +29,12 @@ public class GroupSearchRequest: Codable {
     public var query: [GroupSearchCriteria]?
 
     public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, query: [GroupSearchCriteria]?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sort = sort
-        
         self.query = query
-        
     }
 
 

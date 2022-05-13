@@ -15,9 +15,7 @@ public class ContactCenterSettings: Codable {
     public var removeSkillsFromBlindTransfer: Bool?
 
     public init(removeSkillsFromBlindTransfer: Bool?) {
-        
         self.removeSkillsFromBlindTransfer = removeSkillsFromBlindTransfer
-        
     }
 
 

@@ -24,25 +24,15 @@ public class ReportMetaData: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, title: String?, _description: String?, keywords: [String]?, availableLocales: [String]?, parameters: [Parameter]?, exampleUrl: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.title = title
-        
         self._description = _description
-        
         self.keywords = keywords
-        
         self.availableLocales = availableLocales
-        
         self.parameters = parameters
-        
         self.exampleUrl = exampleUrl
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

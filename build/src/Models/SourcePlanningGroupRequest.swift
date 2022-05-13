@@ -17,11 +17,8 @@ public class SourcePlanningGroupRequest: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(_id: String?, metadata: WfmVersionedEntityMetadata?) {
-        
         self._id = _id
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

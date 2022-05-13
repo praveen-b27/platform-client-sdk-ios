@@ -62,45 +62,25 @@ public class FlowVersion: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, debug: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, generationId: String?, publishResultUri: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, compatibleFlowTypes: [CompatibleFlowTypes]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.commitVersion = commitVersion
-        
         self.configurationVersion = configurationVersion
-        
         self.type = type
-        
         self.secure = secure
-        
         self.debug = debug
-        
         self.createdBy = createdBy
-        
         self.createdByClient = createdByClient
-        
         self.configurationUri = configurationUri
-        
         self.dateCreated = dateCreated
-        
         self.generationId = generationId
-        
         self.publishResultUri = publishResultUri
-        
         self.inputSchema = inputSchema
-        
         self.outputSchema = outputSchema
-        
         self.nluInfo = nluInfo
-        
         self.supportedLanguages = supportedLanguages
-        
         self.compatibleFlowTypes = compatibleFlowTypes
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

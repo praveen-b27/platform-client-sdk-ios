@@ -38,29 +38,17 @@ public class AttemptLimits: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, maxAttemptsPerContact: Int?, maxAttemptsPerNumber: Int?, timeZoneId: String?, resetPeriod: ResetPeriod?, recallEntries: [String:RecallEntry]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.maxAttemptsPerContact = maxAttemptsPerContact
-        
         self.maxAttemptsPerNumber = maxAttemptsPerNumber
-        
         self.timeZoneId = timeZoneId
-        
         self.resetPeriod = resetPeriod
-        
         self.recallEntries = recallEntries
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

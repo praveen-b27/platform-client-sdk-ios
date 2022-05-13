@@ -17,11 +17,8 @@ public class LearningAssignmentItem: Codable {
     public var userId: String?
 
     public init(moduleId: String?, userId: String?) {
-        
         self.moduleId = moduleId
-        
         self.userId = userId
-        
     }
 
 

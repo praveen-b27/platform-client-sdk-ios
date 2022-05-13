@@ -94,7 +94,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let locationId: String = "" // Location ID
-let expand: [String] = [LocationsAPI.Expand_getLocation.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 LocationsAPI.getLocation(locationId: locationId, expand: expand) { (response, error) in
@@ -197,8 +197,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let _id: [String] = [""] // id
 let sortOrder: LocationsAPI.SortOrder_getLocations = LocationsAPI.SortOrder_getLocations.enummember // Sort order
 
@@ -218,8 +218,8 @@ LocationsAPI.getLocations(pageSize: pageSize, pageNumber: pageNumber, _id: _id, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 {: class="table-striped"}
@@ -255,7 +255,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let q64: String = "" // q64
-let expand: [String] = [LocationsAPI.Expand_getLocationsSearch.enummember.rawValue] // Provides more details about a specified resource
+let expand: [String] = [""] // Provides more details about a specified resource
 
 // Code example
 LocationsAPI.getLocationsSearch(q64: q64, expand: expand) { (response, error) in

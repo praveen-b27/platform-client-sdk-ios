@@ -21,15 +21,10 @@ public class CrossPlatformMediaPolicies: Codable {
     public var messagePolicy: CrossPlatformMessageMediaPolicy?
 
     public init(callPolicy: CrossPlatformCallMediaPolicy?, chatPolicy: CrossPlatformChatMediaPolicy?, emailPolicy: CrossPlatformEmailMediaPolicy?, messagePolicy: CrossPlatformMessageMediaPolicy?) {
-        
         self.callPolicy = callPolicy
-        
         self.chatPolicy = chatPolicy
-        
         self.emailPolicy = emailPolicy
-        
         self.messagePolicy = messagePolicy
-        
     }
 
 

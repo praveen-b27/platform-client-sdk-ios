@@ -18,17 +18,11 @@ public class EdgeMetricsTopicEdgeMetricNetworks: Codable {
     public var utilizationPct: Double?
 
     public init(ifname: String?, sentBytesPerSec: Int?, receivedBytesPerSec: Int?, bandwidthBitsPerSec: Int?, utilizationPct: Double?) {
-        
         self.ifname = ifname
-        
         self.sentBytesPerSec = sentBytesPerSec
-        
         self.receivedBytesPerSec = receivedBytesPerSec
-        
         self.bandwidthBitsPerSec = bandwidthBitsPerSec
-        
         self.utilizationPct = utilizationPct
-        
     }
 
 

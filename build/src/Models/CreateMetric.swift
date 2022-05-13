@@ -23,17 +23,11 @@ public class CreateMetric: Codable {
     public var name: String?
 
     public init(metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: CreateObjective?, performanceProfileId: String?, name: String?) {
-        
         self.metricDefinitionId = metricDefinitionId
-        
         self.externalMetricDefinitionId = externalMetricDefinitionId
-        
         self.objective = objective
-        
         self.performanceProfileId = performanceProfileId
-        
         self.name = name
-        
     }
 
 

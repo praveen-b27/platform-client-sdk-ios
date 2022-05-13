@@ -27,35 +27,20 @@ public class ContentManagementWorkspaceDocumentsTopicDocumentDataV2: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, workspace: ContentManagementWorkspaceDocumentsTopicWorkspaceData?, createdBy: ContentManagementWorkspaceDocumentsTopicUserData?, contentType: String?, contentLength: Int?, filename: String?, changeNumber: Int?, dateUploaded: Date?, uploadedBy: ContentManagementWorkspaceDocumentsTopicUserData?, lockInfo: ContentManagementWorkspaceDocumentsTopicLockData?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.workspace = workspace
-        
         self.createdBy = createdBy
-        
         self.contentType = contentType
-        
         self.contentLength = contentLength
-        
         self.filename = filename
-        
         self.changeNumber = changeNumber
-        
         self.dateUploaded = dateUploaded
-        
         self.uploadedBy = uploadedBy
-        
         self.lockInfo = lockInfo
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

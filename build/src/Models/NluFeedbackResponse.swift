@@ -25,19 +25,12 @@ public class NluFeedbackResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, text: String?, intents: [IntentFeedback]?, version: NluDomainVersion?, dateCreated: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.text = text
-        
         self.intents = intents
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -23,17 +23,11 @@ public class TrustCreate: Codable {
     public var dateExpired: Date?
 
     public init(pairingId: String?, enabled: Bool?, users: [TrustMemberCreate]?, groups: [TrustMemberCreate]?, dateExpired: Date?) {
-        
         self.pairingId = pairingId
-        
         self.enabled = enabled
-        
         self.users = users
-        
         self.groups = groups
-        
         self.dateExpired = dateExpired
-        
     }
 
 

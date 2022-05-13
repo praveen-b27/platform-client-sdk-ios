@@ -19,13 +19,9 @@ public class AtzmTimeSlotWithTimeZone: Codable {
     public var timeZoneId: String?
 
     public init(earliestCallableTime: String?, latestCallableTime: String?, timeZoneId: String?) {
-        
         self.earliestCallableTime = earliestCallableTime
-        
         self.latestCallableTime = latestCallableTime
-        
         self.timeZoneId = timeZoneId
-        
     }
 
 

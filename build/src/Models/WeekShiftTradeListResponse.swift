@@ -14,9 +14,7 @@ public class WeekShiftTradeListResponse: Codable {
     public var entities: [WeekShiftTradeResponse]?
 
     public init(entities: [WeekShiftTradeResponse]?) {
-        
         self.entities = entities
-        
     }
 
 

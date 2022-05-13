@@ -30,25 +30,15 @@ public class Action: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, integrationId: String?, category: String?, contract: ActionContract?, version: Int?, secure: Bool?, config: ActionConfig?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.integrationId = integrationId
-        
         self.category = category
-        
         self.contract = contract
-        
         self.version = version
-        
         self.secure = secure
-        
         self.config = config
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -24,13 +24,9 @@ public class PostTextMessage: Codable {
     public var content: [MessageContent]?
 
     public init(type: ModelType?, text: String?, content: [MessageContent]?) {
-        
         self.type = type
-        
         self.text = text
-        
         self.content = content
-        
     }
 
 

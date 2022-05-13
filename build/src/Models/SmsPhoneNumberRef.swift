@@ -16,11 +16,8 @@ public class SmsPhoneNumberRef: Codable {
     public var selfUri: String?
 
     public init(phoneNumber: String?, selfUri: String?) {
-        
         self.phoneNumber = phoneNumber
-        
         self.selfUri = selfUri
-        
     }
 
 

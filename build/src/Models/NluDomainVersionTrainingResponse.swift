@@ -16,11 +16,8 @@ public class NluDomainVersionTrainingResponse: Codable {
     public var version: NluDomainVersion?
 
     public init(message: String?, version: NluDomainVersion?) {
-        
         self.message = message
-        
         self.version = version
-        
     }
 
 

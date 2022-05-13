@@ -17,11 +17,8 @@ public class CrossPlatformChatMediaPolicy: Codable {
     public var conditions: ChatMediaPolicyConditions?
 
     public init(actions: CrossPlatformPolicyActions?, conditions: ChatMediaPolicyConditions?) {
-        
         self.actions = actions
-        
         self.conditions = conditions
-        
     }
 
 

@@ -26,13 +26,9 @@ public class KeyPerformanceIndicatorAssessment: Codable {
     public var checks: [Check]?
 
     public init(kpi: String?, assessmentResult: AssessmentResult?, checks: [Check]?) {
-        
         self.kpi = kpi
-        
         self.assessmentResult = assessmentResult
-        
         self.checks = checks
-        
     }
 
 

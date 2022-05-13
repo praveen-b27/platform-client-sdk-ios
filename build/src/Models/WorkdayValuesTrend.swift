@@ -31,25 +31,15 @@ public class WorkdayValuesTrend: Codable {
     public var metric: AddressableEntityRef?
 
     public init(dateStartWorkday: Date?, dateEndWorkday: Date?, dateReferenceWorkday: Date?, division: Division?, user: UserReference?, timezone: String?, results: [WorkdayValuesMetricItem]?, performanceProfile: AddressableEntityRef?, metric: AddressableEntityRef?) {
-        
         self.dateStartWorkday = dateStartWorkday
-        
         self.dateEndWorkday = dateEndWorkday
-        
         self.dateReferenceWorkday = dateReferenceWorkday
-        
         self.division = division
-        
         self.user = user
-        
         self.timezone = timezone
-        
         self.results = results
-        
         self.performanceProfile = performanceProfile
-        
         self.metric = metric
-        
     }
 
 

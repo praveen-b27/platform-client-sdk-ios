@@ -17,11 +17,8 @@ public class AssignmentError: Codable {
     public var message: String?
 
     public init(user: UserReference?, message: String?) {
-        
         self.user = user
-        
         self.message = message
-        
     }
 
 

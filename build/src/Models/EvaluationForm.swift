@@ -26,23 +26,14 @@ public class EvaluationForm: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, publishedVersions: DomainEntityListingEvaluationForm?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.modifiedDate = modifiedDate
-        
         self.published = published
-        
         self.contextId = contextId
-        
         self.questionGroups = questionGroups
-        
         self.publishedVersions = publishedVersions
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -22,11 +22,8 @@ public class ConsultTransfer: Codable {
     public var destination: Destination?
 
     public init(speakTo: SpeakTo?, destination: Destination?) {
-        
         self.speakTo = speakTo
-        
         self.destination = destination
-        
     }
 
 

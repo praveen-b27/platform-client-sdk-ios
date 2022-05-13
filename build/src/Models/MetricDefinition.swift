@@ -39,25 +39,15 @@ public class MetricDefinition: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, unitType: UnitType?, shortName: String?, dividendMetrics: [String]?, divisorMetrics: [String]?, defaultObjective: DefaultObjective?, lockTemplateId: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.unitType = unitType
-        
         self.shortName = shortName
-        
         self.dividendMetrics = dividendMetrics
-        
         self.divisorMetrics = divisorMetrics
-        
         self.defaultObjective = defaultObjective
-        
         self.lockTemplateId = lockTemplateId
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

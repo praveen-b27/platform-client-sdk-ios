@@ -44,19 +44,12 @@ public class EventCondition: Codable {
     public var eventName: String?
 
     public init(key: String?, values: [String]?, _operator: Operator?, streamType: StreamType?, sessionType: String?, eventName: String?) {
-        
         self.key = key
-        
         self.values = values
-        
         self._operator = _operator
-        
         self.streamType = streamType
-        
         self.sessionType = sessionType
-        
         self.eventName = eventName
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

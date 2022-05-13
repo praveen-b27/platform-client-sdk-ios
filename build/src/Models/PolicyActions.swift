@@ -29,31 +29,18 @@ public class PolicyActions: Codable {
     public var integrationExport: IntegrationExport?
 
     public init(retainRecording: Bool?, deleteRecording: Bool?, alwaysDelete: Bool?, assignEvaluations: [EvaluationAssignment]?, assignMeteredEvaluations: [MeteredEvaluationAssignment]?, assignMeteredAssignmentByAgent: [MeteredAssignmentByAgent]?, assignCalibrations: [CalibrationAssignment]?, assignSurveys: [SurveyAssignment]?, retentionDuration: RetentionDuration?, initiateScreenRecording: InitiateScreenRecording?, mediaTranscriptions: [MediaTranscription]?, integrationExport: IntegrationExport?) {
-        
         self.retainRecording = retainRecording
-        
         self.deleteRecording = deleteRecording
-        
         self.alwaysDelete = alwaysDelete
-        
         self.assignEvaluations = assignEvaluations
-        
         self.assignMeteredEvaluations = assignMeteredEvaluations
-        
         self.assignMeteredAssignmentByAgent = assignMeteredAssignmentByAgent
-        
         self.assignCalibrations = assignCalibrations
-        
         self.assignSurveys = assignSurveys
-        
         self.retentionDuration = retentionDuration
-        
         self.initiateScreenRecording = initiateScreenRecording
-        
         self.mediaTranscriptions = mediaTranscriptions
-        
         self.integrationExport = integrationExport
-        
     }
 
 

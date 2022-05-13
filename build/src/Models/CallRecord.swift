@@ -17,11 +17,8 @@ public class CallRecord: Codable {
     public var lastResult: String?
 
     public init(lastAttempt: Date?, lastResult: String?) {
-        
         self.lastAttempt = lastAttempt
-        
         self.lastResult = lastResult
-        
     }
 
 

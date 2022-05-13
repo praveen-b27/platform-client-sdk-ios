@@ -48,7 +48,7 @@ public class CallbackBasic: Codable {
     public var state: State?
     /** A globally unique identifier for this communication. */
     public var _id: String?
-    /** The time line of the participant&#39;s callback, divided into activity segments. */
+    /** The time line of the participant's callback, divided into activity segments. */
     public var segments: [Segment]?
     /** The direction of the call */
     public var direction: Direction?
@@ -100,61 +100,33 @@ public class CallbackBasic: Codable {
     public var callerIdName: String?
 
     public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.segments = segments
-        
         self.direction = direction
-        
         self.held = held
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.dialerPreview = dialerPreview
-        
         self.voicemail = voicemail
-        
         self.callbackNumbers = callbackNumbers
-        
         self.callbackUserName = callbackUserName
-        
         self.scriptId = scriptId
-        
         self.externalCampaign = externalCampaign
-        
         self.skipEnabled = skipEnabled
-        
         self.timeoutSeconds = timeoutSeconds
-        
         self.startAlertingTime = startAlertingTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.callbackScheduledTime = callbackScheduledTime
-        
         self.automatedCallbackConfigId = automatedCallbackConfigId
-        
         self.provider = provider
-        
         self.peerId = peerId
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
         self.callerId = callerId
-        
         self.callerIdName = callerIdName
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -56,37 +56,21 @@ public class NluDomainVersion: Codable {
     public var selfUri: String?
 
     public init(_id: String?, domain: NluDomain?, _description: String?, language: String?, published: Bool?, dateCreated: Date?, dateModified: Date?, dateTrained: Date?, datePublished: Date?, trainingStatus: TrainingStatus?, evaluationStatus: EvaluationStatus?, intents: [IntentDefinition]?, entityTypes: [NamedEntityTypeDefinition]?, entities: [NamedEntityDefinition]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.domain = domain
-        
         self._description = _description
-        
         self.language = language
-        
         self.published = published
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.dateTrained = dateTrained
-        
         self.datePublished = datePublished
-        
         self.trainingStatus = trainingStatus
-        
         self.evaluationStatus = evaluationStatus
-        
         self.intents = intents
-        
         self.entityTypes = entityTypes
-        
         self.entities = entities
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

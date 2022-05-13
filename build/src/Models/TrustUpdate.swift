@@ -17,11 +17,8 @@ public class TrustUpdate: Codable {
     public var dateExpired: Date?
 
     public init(enabled: Bool?, dateExpired: Date?) {
-        
         self.enabled = enabled
-        
         self.dateExpired = dateExpired
-        
     }
 
 

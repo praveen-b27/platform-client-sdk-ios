@@ -24,11 +24,8 @@ public class AuditQuerySort: Codable {
     public var sortOrder: SortOrder?
 
     public init(name: Name?, sortOrder: SortOrder?) {
-        
         self.name = name
-        
         self.sortOrder = sortOrder
-        
     }
 
 

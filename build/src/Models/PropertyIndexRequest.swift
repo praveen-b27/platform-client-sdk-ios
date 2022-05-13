@@ -19,13 +19,9 @@ public class PropertyIndexRequest: Codable {
     public var properties: [AnalyticsProperty]?
 
     public init(sessionId: String?, targetDate: Date?, properties: [AnalyticsProperty]?) {
-        
         self.sessionId = sessionId
-        
         self.targetDate = targetDate
-        
         self.properties = properties
-        
     }
 
 

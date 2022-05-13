@@ -17,11 +17,8 @@ public class OpenActionFields: Codable {
     public var configurationFields: [String:JSON]?
 
     public init(openAction: DomainEntityRef?, configurationFields: [String:JSON]?) {
-        
         self.openAction = openAction
-        
         self.configurationFields = configurationFields
-        
     }
 
 

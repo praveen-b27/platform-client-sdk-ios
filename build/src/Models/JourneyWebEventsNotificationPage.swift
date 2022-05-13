@@ -23,27 +23,16 @@ public class JourneyWebEventsNotificationPage: Codable {
     public var breadcrumb: [String]?
 
     public init(url: String?, title: String?, domain: String?, fragment: String?, hostname: String?, keywords: String?, lang: String?, pathname: String?, queryString: String?, breadcrumb: [String]?) {
-        
         self.url = url
-        
         self.title = title
-        
         self.domain = domain
-        
         self.fragment = fragment
-        
         self.hostname = hostname
-        
         self.keywords = keywords
-        
         self.lang = lang
-        
         self.pathname = pathname
-        
         self.queryString = queryString
-        
         self.breadcrumb = breadcrumb
-        
     }
 
 

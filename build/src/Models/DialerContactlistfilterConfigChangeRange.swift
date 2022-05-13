@@ -24,17 +24,11 @@ public class DialerContactlistfilterConfigChangeRange: Codable {
     public var inSet: [String]?
 
     public init(min: String?, max: String?, minInclusive: Bool?, maxInclusive: Bool?, inSet: [String]?) {
-        
         self.min = min
-        
         self.max = max
-        
         self.minInclusive = minInclusive
-        
         self.maxInclusive = maxInclusive
-        
         self.inSet = inSet
-        
     }
 
 

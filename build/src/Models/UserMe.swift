@@ -76,15 +76,15 @@ public class UserMe: Codable {
     public var dateLastLogin: Date?
     /** The PureCloud system date time. */
     public var date: ServerDate?
-    /** Geolocation settings for user&#39;s organization. */
+    /** Geolocation settings for user's organization. */
     public var geolocationSettings: GeolocationSettings?
     /** Organization details for this user. */
     public var organization: Organization?
-    /** The first 100 presence definitions for user&#39;s organization. */
+    /** The first 100 presence definitions for user's organization. */
     public var presenceDefinitions: [OrganizationPresence]?
-    /** The first 100 site locations for user&#39;s organization */
+    /** The first 100 site locations for user's organization */
     public var locationDefinitions: [LocationDefinition]?
-    /** The first 100 organization roles, with applicable permission policies, for user&#39;s organization. */
+    /** The first 100 organization roles, with applicable permission policies, for user's organization. */
     public var orgAuthorization: [DomainOrganizationRole]?
     /** The first 50 favorited users. */
     public var favorites: [User]?
@@ -94,9 +94,9 @@ public class UserMe: Codable {
     public var directReports: [User]?
     /** The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands. */
     public var adjacents: Adjacents?
-    /** The first 50 routing skills for user&#39;s organizations */
+    /** The first 50 routing skills for user's organizations */
     public var routingSkills: [RoutingSkill]?
-    /** The field config for all entities types of user&#39;s organization */
+    /** The field config for all entities types of user's organization */
     public var fieldConfigs: FieldConfigs?
     /** Information about the current token */
     public var token: TokenInfo?
@@ -108,109 +108,57 @@ public class UserMe: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, date: ServerDate?, geolocationSettings: GeolocationSettings?, organization: Organization?, presenceDefinitions: [OrganizationPresence]?, locationDefinitions: [LocationDefinition]?, orgAuthorization: [DomainOrganizationRole]?, favorites: [User]?, superiors: [User]?, directReports: [User]?, adjacents: Adjacents?, routingSkills: [RoutingSkill]?, fieldConfigs: FieldConfigs?, token: TokenInfo?, trustors: [Trustor]?, orgProducts: [DomainOrganizationProduct]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self.chat = chat
-        
         self.department = department
-        
         self.email = email
-        
         self.primaryContactInfo = primaryContactInfo
-        
         self.addresses = addresses
-        
         self.state = state
-        
         self.title = title
-        
         self.username = username
-        
         self.manager = manager
-        
         self.images = images
-        
         self.version = version
-        
         self.certifications = certifications
-        
         self.biography = biography
-        
         self.employerInfo = employerInfo
-        
         self.routingStatus = routingStatus
-        
         self.presence = presence
-        
         self.integrationPresence = integrationPresence
-        
         self.conversationSummary = conversationSummary
-        
         self.outOfOffice = outOfOffice
-        
         self.geolocation = geolocation
-        
         self.station = station
-        
         self.authorization = authorization
-        
         self.profileSkills = profileSkills
-        
         self.locations = locations
-        
         self.groups = groups
-        
         self.team = team
-        
         self.skills = skills
-        
         self.languages = languages
-        
         self.acdAutoAnswer = acdAutoAnswer
-        
         self.languagePreference = languagePreference
-        
         self.lastTokenIssued = lastTokenIssued
-        
         self.dateLastLogin = dateLastLogin
-        
         self.date = date
-        
         self.geolocationSettings = geolocationSettings
-        
         self.organization = organization
-        
         self.presenceDefinitions = presenceDefinitions
-        
         self.locationDefinitions = locationDefinitions
-        
         self.orgAuthorization = orgAuthorization
-        
         self.favorites = favorites
-        
         self.superiors = superiors
-        
         self.directReports = directReports
-        
         self.adjacents = adjacents
-        
         self.routingSkills = routingSkills
-        
         self.fieldConfigs = fieldConfigs
-        
         self.token = token
-        
         self.trustors = trustors
-        
         self.orgProducts = orgProducts
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

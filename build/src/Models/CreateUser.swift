@@ -16,15 +16,15 @@ public class CreateUser: Codable {
         case inactive = "inactive"
         case deleted = "deleted"
     }
-    /** User&#39;s full name */
+    /** User's full name */
     public var name: String?
     public var department: String?
-    /** User&#39;s email and username */
+    /** User's email and username */
     public var email: String?
     /** Email addresses and phone numbers for this user */
     public var addresses: [Contact]?
     public var title: String?
-    /** User&#39;s password */
+    /** User's password */
     public var password: String?
     /** The division to which this user will belong */
     public var divisionId: String?
@@ -32,23 +32,14 @@ public class CreateUser: Codable {
     public var state: State?
 
     public init(name: String?, department: String?, email: String?, addresses: [Contact]?, title: String?, password: String?, divisionId: String?, state: State?) {
-        
         self.name = name
-        
         self.department = department
-        
         self.email = email
-        
         self.addresses = addresses
-        
         self.title = title
-        
         self.password = password
-        
         self.divisionId = divisionId
-        
         self.state = state
-        
     }
 
 

@@ -21,11 +21,8 @@ public class CoachingAnnotationCreateRequest: Codable {
     public var accessType: AccessType?
 
     public init(text: String?, accessType: AccessType?) {
-        
         self.text = text
-        
         self.accessType = accessType
-        
     }
 
 

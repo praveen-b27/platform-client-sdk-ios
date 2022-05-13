@@ -15,9 +15,7 @@ public class TopicJobRequest: Codable {
     public var topicIds: [String]?
 
     public init(topicIds: [String]?) {
-        
         self.topicIds = topicIds
-        
     }
 
 

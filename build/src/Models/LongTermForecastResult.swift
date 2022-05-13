@@ -19,13 +19,9 @@ public class LongTermForecastResult: Codable {
     public var weekCount: Int?
 
     public init(planningGroups: [LongTermForecastPlanningGroupData]?, referenceStartDate: Date?, weekCount: Int?) {
-        
         self.planningGroups = planningGroups
-        
         self.referenceStartDate = referenceStartDate
-        
         self.weekCount = weekCount
-        
     }
 
 

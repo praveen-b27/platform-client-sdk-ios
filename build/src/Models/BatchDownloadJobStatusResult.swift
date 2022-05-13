@@ -27,21 +27,13 @@ public class BatchDownloadJobStatusResult: Codable {
     public var selfUri: String?
 
     public init(_id: String?, jobId: String?, expectedResultCount: Int?, resultCount: Int?, errorCount: Int?, results: [BatchDownloadJobResult]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.jobId = jobId
-        
         self.expectedResultCount = expectedResultCount
-        
         self.resultCount = resultCount
-        
         self.errorCount = errorCount
-        
         self.results = results
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

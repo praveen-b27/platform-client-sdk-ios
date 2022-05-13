@@ -17,15 +17,10 @@ public class JourneyOutcomeEventsNotificationOutcomeTouchpoint: Codable {
     public var actionMap: JourneyOutcomeEventsNotificationActionMap?
 
     public init(_id: String?, channels: [JourneyOutcomeEventsNotificationOutcomeTouchpointChannel]?, createdDate: Date?, actionMap: JourneyOutcomeEventsNotificationActionMap?) {
-        
         self._id = _id
-        
         self.channels = channels
-        
         self.createdDate = createdDate
-        
         self.actionMap = actionMap
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

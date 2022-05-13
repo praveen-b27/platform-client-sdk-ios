@@ -29,15 +29,10 @@ public class IntegrationStatusInfo: Codable {
     public var lastUpdated: Date?
 
     public init(code: Code?, effective: String?, detail: MessageInfo?, lastUpdated: Date?) {
-        
         self.code = code
-        
         self.effective = effective
-        
         self.detail = detail
-        
         self.lastUpdated = lastUpdated
-        
     }
 
 

@@ -29,23 +29,14 @@ public class PolicyConditions: Codable {
     public var timeAllowed: TimeAllowed?
 
     public init(forUsers: [User]?, directions: [Directions]?, dateRanges: [String]?, mediaTypes: [MediaTypes]?, forQueues: [Queue]?, duration: DurationCondition?, wrapupCodes: [WrapupCode]?, timeAllowed: TimeAllowed?) {
-        
         self.forUsers = forUsers
-        
         self.directions = directions
-        
         self.dateRanges = dateRanges
-        
         self.mediaTypes = mediaTypes
-        
         self.forQueues = forQueues
-        
         self.duration = duration
-        
         self.wrapupCodes = wrapupCodes
-        
         self.timeAllowed = timeAllowed
-        
     }
 
 

@@ -89,81 +89,43 @@ public class QueueConversationScreenShareEventTopicScreenShareMediaParticipant: 
     public var sharing: Bool?
 
     public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationScreenShareEventTopicUriReference?, queue: QueueConversationScreenShareEventTopicUriReference?, team: QueueConversationScreenShareEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationScreenShareEventTopicErrorBody?, script: QueueConversationScreenShareEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationScreenShareEventTopicUriReference?, externalOrganization: QueueConversationScreenShareEventTopicUriReference?, wrapup: QueueConversationScreenShareEventTopicWrapup?, conversationRoutingData: QueueConversationScreenShareEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationScreenShareEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, context: String?, peerCount: Int?, sharing: Bool?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.address = address
-        
         self.startTime = startTime
-        
         self.connectedTime = connectedTime
-        
         self.endTime = endTime
-        
         self.startHoldTime = startHoldTime
-        
         self.purpose = purpose
-        
         self.state = state
-        
         self.direction = direction
-        
         self.disconnectType = disconnectType
-        
         self.held = held
-        
         self.wrapupRequired = wrapupRequired
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.user = user
-        
         self.queue = queue
-        
         self.team = team
-        
         self.attributes = attributes
-        
         self.errorInfo = errorInfo
-        
         self.script = script
-        
         self.wrapupTimeoutMs = wrapupTimeoutMs
-        
         self.wrapupSkipped = wrapupSkipped
-        
         self.alertingTimeoutMs = alertingTimeoutMs
-        
         self.provider = provider
-        
         self.externalContact = externalContact
-        
         self.externalOrganization = externalOrganization
-        
         self.wrapup = wrapup
-        
         self.conversationRoutingData = conversationRoutingData
-        
         self.peer = peer
-        
         self.screenRecordingState = screenRecordingState
-        
         self.flaggedReason = flaggedReason
-        
         self.journeyContext = journeyContext
-        
         self.startAcwTime = startAcwTime
-        
         self.endAcwTime = endAcwTime
-        
         self.context = context
-        
         self.peerCount = peerCount
-        
         self.sharing = sharing
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

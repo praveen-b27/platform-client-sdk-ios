@@ -32,21 +32,13 @@ public class SupportCenterSettings: Codable {
     public var styleSetting: SupportCenterStyleSetting?
 
     public init(enabled: Bool?, knowledgeBase: AddressableEntityRef?, customMessages: [SupportCenterCustomMessage]?, routerType: RouterType?, screens: [SupportCenterScreen]?, enabledCategories: [AddressableEntityRef]?, styleSetting: SupportCenterStyleSetting?) {
-        
         self.enabled = enabled
-        
         self.knowledgeBase = knowledgeBase
-        
         self.customMessages = customMessages
-        
         self.routerType = routerType
-        
         self.screens = screens
-        
         self.enabledCategories = enabledCategories
-        
         self.styleSetting = styleSetting
-        
     }
 
 

@@ -17,11 +17,8 @@ public class SubjectDivisions: Codable {
     public var divisionIds: [String]?
 
     public init(subjectIds: [String]?, divisionIds: [String]?) {
-        
         self.subjectIds = subjectIds
-        
         self.divisionIds = divisionIds
-        
     }
 
 

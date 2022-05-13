@@ -21,15 +21,10 @@ public class CreateWebChatConversationResponse: Codable {
     public var member: WebChatMemberInfo?
 
     public init(_id: String?, jwt: String?, eventStreamUri: String?, member: WebChatMemberInfo?) {
-        
         self._id = _id
-        
         self.jwt = jwt
-        
         self.eventStreamUri = eventStreamUri
-        
         self.member = member
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

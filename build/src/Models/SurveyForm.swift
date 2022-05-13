@@ -37,31 +37,18 @@ public class SurveyForm: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, disabled: Bool?, contextId: String?, language: String?, header: String?, footer: String?, questionGroups: [SurveyQuestionGroup]?, publishedVersions: DomainEntityListingSurveyForm?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.modifiedDate = modifiedDate
-        
         self.published = published
-        
         self.disabled = disabled
-        
         self.contextId = contextId
-        
         self.language = language
-        
         self.header = header
-        
         self.footer = footer
-        
         self.questionGroups = questionGroups
-        
         self.publishedVersions = publishedVersions
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -66,45 +66,28 @@ public class QueueConversationSocialExpressionEventTopicChat: Codable {
     public var journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?
     /** Call wrap up or disposition data. */
     public var wrapup: QueueConversationSocialExpressionEventTopicWrapup?
-    /** A communication&#39;s after-call work data. */
+    /** A communication's after-call work data. */
     public var afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
     public init(state: State?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.roomId = roomId
-        
         self.avatarImageUrl = avatarImageUrl
-        
         self.held = held
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.journeyContext = journeyContext
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

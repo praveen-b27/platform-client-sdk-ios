@@ -15,9 +15,7 @@ public class LearningAssignmentAggregateResponse: Codable {
     public var results: [LearningAssignmentAggregateQueryResponseGroupedData]?
 
     public init(results: [LearningAssignmentAggregateQueryResponseGroupedData]?) {
-        
         self.results = results
-        
     }
 
 

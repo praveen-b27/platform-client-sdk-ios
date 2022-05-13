@@ -51,39 +51,22 @@ public class BuShortTermForecast: Codable {
     public var selfUri: String?
 
     public init(_id: String?, weekDate: Date?, weekCount: Int?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, metadata: WfmVersionedEntityMetadata?, canUseForScheduling: Bool?, referenceStartDate: Date?, sourceDays: [ForecastSourceDayPointer]?, modifications: [BuForecastModification]?, generationResults: BuForecastGenerationResult?, timeZone: String?, planningGroupsVersion: Int?, planningGroups: ForecastPlanningGroupsResponse?, selfUri: String?) {
-        
         self._id = _id
-        
         self.weekDate = weekDate
-        
         self.weekCount = weekCount
-        
         self.creationMethod = creationMethod
-        
         self._description = _description
-        
         self.legacy = legacy
-        
         self.metadata = metadata
-        
         self.canUseForScheduling = canUseForScheduling
-        
         self.referenceStartDate = referenceStartDate
-        
         self.sourceDays = sourceDays
-        
         self.modifications = modifications
-        
         self.generationResults = generationResults
-        
         self.timeZone = timeZone
-        
         self.planningGroupsVersion = planningGroupsVersion
-        
         self.planningGroups = planningGroups
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -35,29 +35,17 @@ public class AssessmentFormQuestion: Codable {
     public var isCritical: Bool?
 
     public init(_id: String?, type: ModelType?, text: String?, helpText: String?, naEnabled: Bool?, commentsRequired: Bool?, visibilityCondition: VisibilityCondition?, answerOptions: [AnswerOption]?, maxResponseCharacters: Int?, isKill: Bool?, isCritical: Bool?) {
-        
         self._id = _id
-        
         self.type = type
-        
         self.text = text
-        
         self.helpText = helpText
-        
         self.naEnabled = naEnabled
-        
         self.commentsRequired = commentsRequired
-        
         self.visibilityCondition = visibilityCondition
-        
         self.answerOptions = answerOptions
-        
         self.maxResponseCharacters = maxResponseCharacters
-        
         self.isKill = isKill
-        
         self.isCritical = isCritical
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

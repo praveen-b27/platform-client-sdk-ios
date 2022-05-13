@@ -28,23 +28,14 @@ public class DialerSequenceScheduleConfigChangeSequenceSchedule: Codable {
     public var version: Int?
 
     public init(intervals: [DialerSequenceScheduleConfigChangeScheduleInterval]?, timeZone: String?, sequence: DialerSequenceScheduleConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.intervals = intervals
-        
         self.timeZone = timeZone
-        
         self.sequence = sequence
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

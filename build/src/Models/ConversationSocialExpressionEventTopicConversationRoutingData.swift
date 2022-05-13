@@ -23,17 +23,11 @@ public class ConversationSocialExpressionEventTopicConversationRoutingData: Coda
     public var scoredAgents: [ConversationSocialExpressionEventTopicScoredAgent]?
 
     public init(queue: ConversationSocialExpressionEventTopicUriReference?, language: ConversationSocialExpressionEventTopicUriReference?, priority: Int?, skills: [ConversationSocialExpressionEventTopicUriReference]?, scoredAgents: [ConversationSocialExpressionEventTopicScoredAgent]?) {
-        
         self.queue = queue
-        
         self.language = language
-        
         self.priority = priority
-        
         self.skills = skills
-        
         self.scoredAgents = scoredAgents
-        
     }
 
 

@@ -29,23 +29,14 @@ public class StreetAddress: Codable {
     public var PC: String?
 
     public init(country: String?, a1: String?, a3: String?, RD: String?, HNO: String?, LOC: String?, NAM: String?, PC: String?) {
-        
         self.country = country
-        
         self.a1 = a1
-        
         self.a3 = a3
-        
         self.RD = RD
-        
         self.HNO = HNO
-        
         self.LOC = LOC
-        
         self.NAM = NAM
-        
         self.PC = PC
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

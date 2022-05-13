@@ -332,35 +332,20 @@ public class AuditLogMessage: Codable {
     public var context: [String:String]?
 
     public init(_id: String?, userHomeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, status: Status?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
-        
         self._id = _id
-        
         self.userHomeOrgId = userHomeOrgId
-        
         self.user = user
-        
         self.client = client
-        
         self.remoteIp = remoteIp
-        
         self.serviceName = serviceName
-        
         self.eventDate = eventDate
-        
         self.message = message
-        
         self.action = action
-        
         self.entity = entity
-        
         self.entityType = entityType
-        
         self.status = status
-        
         self.propertyChanges = propertyChanges
-        
         self.context = context
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

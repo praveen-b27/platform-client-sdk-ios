@@ -23,17 +23,11 @@ public class BuImportAgentScheduleUploadSchema: Codable {
     public var fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?
 
     public init(userId: String?, workPlanId: ValueWrapperString?, workPlanIdsPerWeek: ListWrapperString?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?) {
-        
         self.userId = userId
-        
         self.workPlanId = workPlanId
-        
         self.workPlanIdsPerWeek = workPlanIdsPerWeek
-        
         self.shifts = shifts
-        
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
-        
     }
 
 

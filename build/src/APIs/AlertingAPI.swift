@@ -11,10 +11,7 @@ import Foundation
 
 open class AlertingAPI {
     
-    
-    
     /**
-     
      Delete an interaction stats alert
      
      - parameter alertId: (path) Alert ID 
@@ -32,11 +29,8 @@ open class AlertingAPI {
     }
 
     /**
-     
      Delete an interaction stats alert
-     
      - DELETE /api/v2/alerting/interactionstats/alerts/{alertId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class AlertingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteAlertingInteractionstatsAlertWithRequestBuilder(alertId: String) -> RequestBuilder<Void> {
+    open class func deleteAlertingInteractionstatsAlertWithRequestBuilder(alertId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/alerting/interactionstats/alerts/{alertId}"
         let alertIdPreEscape = "\(alertId)"
         let alertIdPostEscape = alertIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{alertId}", with: alertIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +55,7 @@ open class AlertingAPI {
     }
 
     
-    
-    
     /**
-     
      Delete an interaction stats rule.
      
      - parameter ruleId: (path) Rule ID 
@@ -87,11 +73,8 @@ open class AlertingAPI {
     }
 
     /**
-     
      Delete an interaction stats rule.
-     
      - DELETE /api/v2/alerting/interactionstats/rules/{ruleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -100,18 +83,13 @@ open class AlertingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteAlertingInteractionstatsRuleWithRequestBuilder(ruleId: String) -> RequestBuilder<Void> {
+    open class func deleteAlertingInteractionstatsRuleWithRequestBuilder(ruleId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/alerting/interactionstats/rules/{ruleId}"
         let ruleIdPreEscape = "\(ruleId)"
         let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -120,9 +98,7 @@ open class AlertingAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Gets active alert count for a user.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -146,29 +122,21 @@ open class AlertingAPI {
     }
 
     /**
-     
      Gets active alert count for a user.
-     
      - GET /api/v2/alerting/alerts/active
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "count" : 123
-}}]
+  "count" : 0
+}, statusCode=200}]
 
      - returns: RequestBuilder<ActiveAlertCount> 
      */
-    open class func getAlertingAlertsActiveWithRequestBuilder() -> RequestBuilder<ActiveAlertCount> {
+    open class func getAlertingAlertsActiveWithRequestBuilder() -> RequestBuilder<ActiveAlertCount> {        
         let path = "/api/v2/alerting/alerts/active"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -179,16 +147,7 @@ open class AlertingAPI {
 
     
     
-    
-    
-    public enum Expand_getAlertingInteractionstatsAlert: String { 
-        case notificationusers = "notificationUsers"
-    }
-
-    
-    
     /**
-     
      Get an interaction stats alert
      
      - parameter alertId: (path) Alert ID 
@@ -214,324 +173,617 @@ open class AlertingAPI {
     }
 
     /**
-     
      Get an interaction stats alert
-     
      - GET /api/v2/alerting/interactionstats/alerts/{alertId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "statistic" : "aeiou",
-  "numericRange" : "aeiou",
+  "statistic" : "count",
+  "numericRange" : "gt",
   "unread" : true,
-  "endDate" : "2000-01-23T04:56:07.000+0000",
-  "alertTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "mediaType" : "aeiou",
-  "dimensionValue" : "aeiou",
-  "metric" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "ruleId" : "aeiou",
-  "dimension" : "aeiou",
-  "value" : 1.3579000000000001069366817318950779736042022705078125,
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "alertTypes" : [ "SMS", "SMS" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "mediaType" : "voice",
+  "dimensionValue" : "dimensionValue",
+  "metric" : "tAbandon",
+  "name" : "name",
+  "id" : "id",
+  "ruleId" : "ruleId",
+  "dimension" : "queueId",
+  "value" : 0.8008281904610115,
   "notificationUsers" : [ {
-    "addresses" : [ "" ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
     "acdAutoAnswer" : true,
-    "routingStatus" : {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "status" : "aeiou"
-    },
-    "title" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "authorization" : {
-      "unusedRoles" : [ "" ],
-      "permissions" : [ "aeiou" ],
-      "permissionPolicies" : [ {
-        "policyDescription" : "aeiou",
-        "resourceConditionNode" : {
-          "operands" : [ {
-            "type" : "aeiou",
-            "value" : "aeiou"
-          } ],
-          "variableName" : "aeiou",
-          "conjunction" : "aeiou",
-          "terms" : [ "" ],
-          "operator" : "aeiou"
-        },
-        "actionSetKey" : "aeiou",
-        "namedResources" : [ "aeiou" ],
-        "policyName" : "aeiou",
-        "entityName" : "aeiou",
-        "domain" : "aeiou",
-        "allowConditions" : true,
-        "id" : "aeiou",
-        "resourceCondition" : "aeiou",
-        "actionSet" : [ "aeiou" ]
-      } ],
-      "roles" : [ {
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ]
-    },
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "skillUri" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
     } ],
-    "station" : {
-      "defaultStation" : "",
-      "lastAssociatedStation" : "",
-      "associatedStation" : {
-        "associatedDate" : "2000-01-23T04:56:07.000+0000",
-        "webRtcCallAppearances" : 123,
-        "name" : "aeiou",
-        "defaultUser" : "",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "associatedUser" : "",
-        "providerInfo" : {
-          "key" : "aeiou"
-        }
-      },
-      "effectiveStation" : ""
-    },
-    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "department" : "aeiou",
-    "presence" : {
-      "presenceDefinition" : {
-        "systemPresence" : "aeiou",
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "source" : "aeiou",
-      "message" : "aeiou",
-      "primary" : true
-    },
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
     "lastTokenIssued" : {
-      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
     },
-    "email" : "aeiou",
+    "email" : "email",
     "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "manager" : "",
     "employerInfo" : {
-      "employeeType" : "aeiou",
-      "dateHire" : "aeiou",
-      "employeeId" : "aeiou",
-      "officialName" : "aeiou"
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
     },
     "languages" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "languageUri" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
     } ],
-    "selfUri" : "aeiou",
-    "conversationSummary" : {
-      "call" : {
-        "enterprise" : "",
-        "contactCenter" : {
-          "acw" : 123,
-          "active" : 123
-        }
-      },
-      "socialExpression" : "",
-      "chat" : "",
-      "callback" : "",
-      "video" : "",
-      "message" : "",
-      "userId" : "aeiou",
-      "email" : ""
-    },
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
     "groups" : [ {
-      "images" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "display" : "aeiou",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "visibility" : "aeiou",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "owners" : [ "" ],
-      "type" : "aeiou",
-      "version" : 123,
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
       "rulesVisible" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou"
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
     } ],
     "primaryContactInfo" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
       "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
     } ],
     "biography" : {
       "education" : [ {
-        "notes" : "aeiou",
-        "school" : "aeiou",
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "dateEnd" : "2000-01-23T04:56:07.000+0000",
-        "fieldOfStudy" : "aeiou"
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
       } ],
-      "hobbies" : [ "aeiou" ],
-      "biography" : "aeiou",
-      "interests" : [ "aeiou" ],
-      "spouse" : "aeiou"
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
     },
-    "team" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou"
-    },
-    "certifications" : [ "aeiou" ],
-    "version" : 123,
-    "outOfOffice" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "user" : "",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "indefinite" : true
-    },
-    "languagePreference" : "aeiou",
-    "profileSkills" : [ "aeiou" ],
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
     "chat" : {
-      "jabberId" : "aeiou"
+      "jabberId" : "jabberId"
     },
-    "name" : "aeiou",
-    "integrationPresence" : "",
+    "name" : "name",
+    "integrationPresence" : "{}",
     "locations" : [ {
-      "notes" : "aeiou",
+      "notes" : "notes",
       "coordinates" : {
-        "key" : 1.3579000000000001069366817318950779736042022705078125
+        "key" : 1.4658129805029452
       },
-      "locationDefinition" : "",
-      "id" : "aeiou",
-      "floorplanId" : "aeiou"
-    } ],
-    "username" : "aeiou",
-    "geolocation" : {
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "locations" : [ {
-        "images" : "aeiou",
+      "locationDefinition" : {
+        "images" : "images",
         "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
         },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
         "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
         "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
+  }, {
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    } ],
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+    },
+    "email" : "email",
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "employerInfo" : {
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
+    },
+    "languages" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
+    "groups" : [ {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "region" : "aeiou",
-      "primary" : true,
-      "longitude" : 1.3579000000000001069366817318950779736042022705078125
-    }
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    } ],
+    "primaryContactInfo" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "biography" : {
+      "education" : [ {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      } ],
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
+    },
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
+    "chat" : {
+      "jabberId" : "jabberId"
+    },
+    "name" : "name",
+    "integrationPresence" : "{}",
+    "locations" : [ {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
   } ],
-  "startDate" : "2000-01-23T04:56:07.000+0000",
-  "ruleUri" : "aeiou"
-}}]
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "ruleUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter alertId: (path) Alert ID 
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<InteractionStatsAlert> 
      */
-    open class func getAlertingInteractionstatsAlertWithRequestBuilder(alertId: String, expand: [String]? = nil) -> RequestBuilder<InteractionStatsAlert> {
+    open class func getAlertingInteractionstatsAlertWithRequestBuilder(alertId: String, expand: [String]? = nil) -> RequestBuilder<InteractionStatsAlert> {        
         var path = "/api/v2/alerting/interactionstats/alerts/{alertId}"
         let alertIdPreEscape = "\(alertId)"
         let alertIdPostEscape = alertIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{alertId}", with: alertIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsAlert>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -540,15 +792,7 @@ open class AlertingAPI {
     }
 
     
-    
-    public enum Expand_getAlertingInteractionstatsAlerts: String { 
-        case notificationusers = "notificationUsers"
-    }
-
-    
-    
     /**
-     
      Get interaction stats alert list.
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
@@ -573,331 +817,1212 @@ open class AlertingAPI {
     }
 
     /**
-     
      Get interaction stats alert list.
-     
      - GET /api/v2/alerting/interactionstats/alerts
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "statistic" : "aeiou",
-    "numericRange" : "aeiou",
+    "statistic" : "count",
+    "numericRange" : "gt",
     "unread" : true,
-    "endDate" : "2000-01-23T04:56:07.000+0000",
-    "alertTypes" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "mediaType" : "aeiou",
-    "dimensionValue" : "aeiou",
-    "metric" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "ruleId" : "aeiou",
-    "dimension" : "aeiou",
-    "value" : 1.3579000000000001069366817318950779736042022705078125,
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "alertTypes" : [ "SMS", "SMS" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "mediaType" : "voice",
+    "dimensionValue" : "dimensionValue",
+    "metric" : "tAbandon",
+    "name" : "name",
+    "id" : "id",
+    "ruleId" : "ruleId",
+    "dimension" : "queueId",
+    "value" : 0.8008281904610115,
     "notificationUsers" : [ {
-      "addresses" : [ "" ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
       "acdAutoAnswer" : true,
-      "routingStatus" : {
-        "startTime" : "2000-01-23T04:56:07.000+0000",
-        "userId" : "aeiou",
-        "status" : "aeiou"
-      },
-      "title" : "aeiou",
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "authorization" : {
-        "unusedRoles" : [ "" ],
-        "permissions" : [ "aeiou" ],
-        "permissionPolicies" : [ {
-          "policyDescription" : "aeiou",
-          "resourceConditionNode" : {
-            "operands" : [ {
-              "type" : "aeiou",
-              "value" : "aeiou"
-            } ],
-            "variableName" : "aeiou",
-            "conjunction" : "aeiou",
-            "terms" : [ "" ],
-            "operator" : "aeiou"
-          },
-          "actionSetKey" : "aeiou",
-          "namedResources" : [ "aeiou" ],
-          "policyName" : "aeiou",
-          "entityName" : "aeiou",
-          "domain" : "aeiou",
-          "allowConditions" : true,
-          "id" : "aeiou",
-          "resourceCondition" : "aeiou",
-          "actionSet" : [ "aeiou" ]
-        } ],
-        "roles" : [ {
-          "name" : "aeiou",
-          "id" : "aeiou"
-        } ]
-      },
+      "routingStatus" : "{}",
+      "title" : "title",
+      "division" : "{}",
+      "authorization" : "{}",
       "skills" : [ {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "skillUri" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
       } ],
-      "station" : {
-        "defaultStation" : "",
-        "lastAssociatedStation" : "",
-        "associatedStation" : {
-          "associatedDate" : "2000-01-23T04:56:07.000+0000",
-          "webRtcCallAppearances" : 123,
-          "name" : "aeiou",
-          "defaultUser" : "",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "associatedUser" : "",
-          "providerInfo" : {
-            "key" : "aeiou"
-          }
-        },
-        "effectiveStation" : ""
-      },
-      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "department" : "aeiou",
-      "presence" : {
-        "presenceDefinition" : {
-          "systemPresence" : "aeiou",
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "source" : "aeiou",
-        "message" : "aeiou",
-        "primary" : true
-      },
+      "station" : "{}",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "active",
+      "department" : "department",
+      "presence" : "{}",
       "lastTokenIssued" : {
-        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+        "dateIssued" : "2000-01-23T04:56:07.000+00:00"
       },
-      "email" : "aeiou",
+      "email" : "email",
       "images" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "manager" : "",
       "employerInfo" : {
-        "employeeType" : "aeiou",
-        "dateHire" : "aeiou",
-        "employeeId" : "aeiou",
-        "officialName" : "aeiou"
+        "employeeType" : "employeeType",
+        "dateHire" : "dateHire",
+        "employeeId" : "employeeId",
+        "officialName" : "officialName"
       },
       "languages" : [ {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "languageUri" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
       } ],
-      "selfUri" : "aeiou",
-      "conversationSummary" : {
-        "call" : {
-          "enterprise" : "",
-          "contactCenter" : {
-            "acw" : 123,
-            "active" : 123
-          }
-        },
-        "socialExpression" : "",
-        "chat" : "",
-        "callback" : "",
-        "video" : "",
-        "message" : "",
-        "userId" : "aeiou",
-        "email" : ""
-      },
+      "selfUri" : "https://openapi-generator.tech",
+      "conversationSummary" : "{}",
       "groups" : [ {
-        "images" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "display" : "aeiou",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "visibility" : "aeiou",
-        "memberCount" : 123456789,
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "owners" : [ "" ],
-        "type" : "aeiou",
-        "version" : 123,
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
         "rulesVisible" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou"
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      }, {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
       } ],
       "primaryContactInfo" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
         "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
       } ],
       "biography" : {
         "education" : [ {
-          "notes" : "aeiou",
-          "school" : "aeiou",
-          "dateStart" : "2000-01-23T04:56:07.000+0000",
-          "dateEnd" : "2000-01-23T04:56:07.000+0000",
-          "fieldOfStudy" : "aeiou"
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        }, {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
         } ],
-        "hobbies" : [ "aeiou" ],
-        "biography" : "aeiou",
-        "interests" : [ "aeiou" ],
-        "spouse" : "aeiou"
+        "hobbies" : [ "hobbies", "hobbies" ],
+        "biography" : "biography",
+        "interests" : [ "interests", "interests" ],
+        "spouse" : "spouse"
       },
-      "team" : {
-        "division" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "memberCount" : 123456789,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou"
-      },
-      "certifications" : [ "aeiou" ],
-      "version" : 123,
-      "outOfOffice" : {
-        "endDate" : "2000-01-23T04:56:07.000+0000",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "active" : true,
-        "id" : "aeiou",
-        "user" : "",
-        "startDate" : "2000-01-23T04:56:07.000+0000",
-        "indefinite" : true
-      },
-      "languagePreference" : "aeiou",
-      "profileSkills" : [ "aeiou" ],
+      "team" : "{}",
+      "certifications" : [ "certifications", "certifications" ],
+      "version" : 6,
+      "outOfOffice" : "{}",
+      "languagePreference" : "languagePreference",
+      "profileSkills" : [ "profileSkills", "profileSkills" ],
       "chat" : {
-        "jabberId" : "aeiou"
+        "jabberId" : "jabberId"
       },
-      "name" : "aeiou",
-      "integrationPresence" : "",
+      "name" : "name",
+      "integrationPresence" : "{}",
       "locations" : [ {
-        "notes" : "aeiou",
+        "notes" : "notes",
         "coordinates" : {
-          "key" : 1.3579000000000001069366817318950779736042022705078125
+          "key" : 1.4658129805029452
         },
-        "locationDefinition" : "",
-        "id" : "aeiou",
-        "floorplanId" : "aeiou"
-      } ],
-      "username" : "aeiou",
-      "geolocation" : {
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "locations" : [ {
-          "images" : "aeiou",
+        "locationDefinition" : {
+          "images" : "images",
           "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
           },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
           } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
           "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
           "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      }, {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      } ],
+      "username" : "username",
+      "geolocation" : "{}"
+    }, {
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : "{}",
+      "title" : "title",
+      "division" : "{}",
+      "authorization" : "{}",
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      } ],
+      "station" : "{}",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "active",
+      "department" : "department",
+      "presence" : "{}",
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+      },
+      "email" : "email",
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "employerInfo" : {
+        "employeeType" : "employeeType",
+        "dateHire" : "dateHire",
+        "employeeId" : "employeeId",
+        "officialName" : "officialName"
+      },
+      "languages" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      } ],
+      "selfUri" : "https://openapi-generator.tech",
+      "conversationSummary" : "{}",
+      "groups" : [ {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "region" : "aeiou",
-        "primary" : true,
-        "longitude" : 1.3579000000000001069366817318950779736042022705078125
-      }
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      }, {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        }, {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        } ],
+        "hobbies" : [ "hobbies", "hobbies" ],
+        "biography" : "biography",
+        "interests" : [ "interests", "interests" ],
+        "spouse" : "spouse"
+      },
+      "team" : "{}",
+      "certifications" : [ "certifications", "certifications" ],
+      "version" : 6,
+      "outOfOffice" : "{}",
+      "languagePreference" : "languagePreference",
+      "profileSkills" : [ "profileSkills", "profileSkills" ],
+      "chat" : {
+        "jabberId" : "jabberId"
+      },
+      "name" : "name",
+      "integrationPresence" : "{}",
+      "locations" : [ {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      }, {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      } ],
+      "username" : "username",
+      "geolocation" : "{}"
     } ],
-    "startDate" : "2000-01-23T04:56:07.000+0000",
-    "ruleUri" : "aeiou"
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "ruleUri" : "https://openapi-generator.tech"
+  }, {
+    "statistic" : "count",
+    "numericRange" : "gt",
+    "unread" : true,
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "alertTypes" : [ "SMS", "SMS" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "mediaType" : "voice",
+    "dimensionValue" : "dimensionValue",
+    "metric" : "tAbandon",
+    "name" : "name",
+    "id" : "id",
+    "ruleId" : "ruleId",
+    "dimension" : "queueId",
+    "value" : 0.8008281904610115,
+    "notificationUsers" : [ {
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : "{}",
+      "title" : "title",
+      "division" : "{}",
+      "authorization" : "{}",
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      } ],
+      "station" : "{}",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "active",
+      "department" : "department",
+      "presence" : "{}",
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+      },
+      "email" : "email",
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "employerInfo" : {
+        "employeeType" : "employeeType",
+        "dateHire" : "dateHire",
+        "employeeId" : "employeeId",
+        "officialName" : "officialName"
+      },
+      "languages" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      } ],
+      "selfUri" : "https://openapi-generator.tech",
+      "conversationSummary" : "{}",
+      "groups" : [ {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      }, {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        }, {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        } ],
+        "hobbies" : [ "hobbies", "hobbies" ],
+        "biography" : "biography",
+        "interests" : [ "interests", "interests" ],
+        "spouse" : "spouse"
+      },
+      "team" : "{}",
+      "certifications" : [ "certifications", "certifications" ],
+      "version" : 6,
+      "outOfOffice" : "{}",
+      "languagePreference" : "languagePreference",
+      "profileSkills" : [ "profileSkills", "profileSkills" ],
+      "chat" : {
+        "jabberId" : "jabberId"
+      },
+      "name" : "name",
+      "integrationPresence" : "{}",
+      "locations" : [ {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      }, {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      } ],
+      "username" : "username",
+      "geolocation" : "{}"
+    }, {
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : "{}",
+      "title" : "title",
+      "division" : "{}",
+      "authorization" : "{}",
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      } ],
+      "station" : "{}",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "active",
+      "department" : "department",
+      "presence" : "{}",
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+      },
+      "email" : "email",
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "employerInfo" : {
+        "employeeType" : "employeeType",
+        "dateHire" : "dateHire",
+        "employeeId" : "employeeId",
+        "officialName" : "officialName"
+      },
+      "languages" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      } ],
+      "selfUri" : "https://openapi-generator.tech",
+      "conversationSummary" : "{}",
+      "groups" : [ {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      }, {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        }, {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        } ],
+        "hobbies" : [ "hobbies", "hobbies" ],
+        "biography" : "biography",
+        "interests" : [ "interests", "interests" ],
+        "spouse" : "spouse"
+      },
+      "team" : "{}",
+      "certifications" : [ "certifications", "certifications" ],
+      "version" : 6,
+      "outOfOffice" : "{}",
+      "languagePreference" : "languagePreference",
+      "profileSkills" : [ "profileSkills", "profileSkills" ],
+      "chat" : {
+        "jabberId" : "jabberId"
+      },
+      "name" : "name",
+      "integrationPresence" : "{}",
+      "locations" : [ {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      }, {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      } ],
+      "username" : "username",
+      "geolocation" : "{}"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "ruleUri" : "https://openapi-generator.tech"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<InteractionStatsAlertContainer> 
      */
-    open class func getAlertingInteractionstatsAlertsWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<InteractionStatsAlertContainer> {
+    open class func getAlertingInteractionstatsAlertsWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<InteractionStatsAlertContainer> {        
         let path = "/api/v2/alerting/interactionstats/alerts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsAlertContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -905,9 +2030,7 @@ open class AlertingAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Gets user unread count of interaction stats alerts.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -931,29 +2054,21 @@ open class AlertingAPI {
     }
 
     /**
-     
      Gets user unread count of interaction stats alerts.
-     
      - GET /api/v2/alerting/interactionstats/alerts/unread
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "count" : 123
-}}]
+  "count" : 0
+}, statusCode=200}]
 
      - returns: RequestBuilder<UnreadMetric> 
      */
-    open class func getAlertingInteractionstatsAlertsUnreadWithRequestBuilder() -> RequestBuilder<UnreadMetric> {
+    open class func getAlertingInteractionstatsAlertsUnreadWithRequestBuilder() -> RequestBuilder<UnreadMetric> {        
         let path = "/api/v2/alerting/interactionstats/alerts/unread"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -964,16 +2079,7 @@ open class AlertingAPI {
 
     
     
-    
-    
-    public enum Expand_getAlertingInteractionstatsRule: String { 
-        case notificationusers = "notificationUsers"
-    }
-
-    
-    
     /**
-     
      Get an interaction stats rule.
      
      - parameter ruleId: (path) Rule ID 
@@ -999,321 +2105,614 @@ open class AlertingAPI {
     }
 
     /**
-     
      Get an interaction stats rule.
-     
      - GET /api/v2/alerting/interactionstats/rules/{ruleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "statistic" : "aeiou",
-  "numericRange" : "aeiou",
+  "statistic" : "count",
+  "numericRange" : "gt",
   "inAlarm" : true,
-  "alertTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "mediaType" : "aeiou",
+  "alertTypes" : [ "SMS", "SMS" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "mediaType" : "voice",
   "enabled" : true,
-  "dimensionValue" : "aeiou",
-  "metric" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "dimension" : "aeiou",
-  "value" : 1.3579000000000001069366817318950779736042022705078125,
+  "dimensionValue" : "dimensionValue",
+  "metric" : "tAbandon",
+  "name" : "name",
+  "id" : "id",
+  "dimension" : "queueId",
+  "value" : 0.8008281904610115,
   "notificationUsers" : [ {
-    "addresses" : [ "" ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
     "acdAutoAnswer" : true,
-    "routingStatus" : {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "status" : "aeiou"
-    },
-    "title" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "authorization" : {
-      "unusedRoles" : [ "" ],
-      "permissions" : [ "aeiou" ],
-      "permissionPolicies" : [ {
-        "policyDescription" : "aeiou",
-        "resourceConditionNode" : {
-          "operands" : [ {
-            "type" : "aeiou",
-            "value" : "aeiou"
-          } ],
-          "variableName" : "aeiou",
-          "conjunction" : "aeiou",
-          "terms" : [ "" ],
-          "operator" : "aeiou"
-        },
-        "actionSetKey" : "aeiou",
-        "namedResources" : [ "aeiou" ],
-        "policyName" : "aeiou",
-        "entityName" : "aeiou",
-        "domain" : "aeiou",
-        "allowConditions" : true,
-        "id" : "aeiou",
-        "resourceCondition" : "aeiou",
-        "actionSet" : [ "aeiou" ]
-      } ],
-      "roles" : [ {
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ]
-    },
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "skillUri" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
     } ],
-    "station" : {
-      "defaultStation" : "",
-      "lastAssociatedStation" : "",
-      "associatedStation" : {
-        "associatedDate" : "2000-01-23T04:56:07.000+0000",
-        "webRtcCallAppearances" : 123,
-        "name" : "aeiou",
-        "defaultUser" : "",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "associatedUser" : "",
-        "providerInfo" : {
-          "key" : "aeiou"
-        }
-      },
-      "effectiveStation" : ""
-    },
-    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "department" : "aeiou",
-    "presence" : {
-      "presenceDefinition" : {
-        "systemPresence" : "aeiou",
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "source" : "aeiou",
-      "message" : "aeiou",
-      "primary" : true
-    },
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
     "lastTokenIssued" : {
-      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
     },
-    "email" : "aeiou",
+    "email" : "email",
     "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "manager" : "",
     "employerInfo" : {
-      "employeeType" : "aeiou",
-      "dateHire" : "aeiou",
-      "employeeId" : "aeiou",
-      "officialName" : "aeiou"
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
     },
     "languages" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "languageUri" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
     } ],
-    "selfUri" : "aeiou",
-    "conversationSummary" : {
-      "call" : {
-        "enterprise" : "",
-        "contactCenter" : {
-          "acw" : 123,
-          "active" : 123
-        }
-      },
-      "socialExpression" : "",
-      "chat" : "",
-      "callback" : "",
-      "video" : "",
-      "message" : "",
-      "userId" : "aeiou",
-      "email" : ""
-    },
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
     "groups" : [ {
-      "images" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "display" : "aeiou",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "visibility" : "aeiou",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "owners" : [ "" ],
-      "type" : "aeiou",
-      "version" : 123,
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
       "rulesVisible" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou"
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
     } ],
     "primaryContactInfo" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
       "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
     } ],
     "biography" : {
       "education" : [ {
-        "notes" : "aeiou",
-        "school" : "aeiou",
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "dateEnd" : "2000-01-23T04:56:07.000+0000",
-        "fieldOfStudy" : "aeiou"
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
       } ],
-      "hobbies" : [ "aeiou" ],
-      "biography" : "aeiou",
-      "interests" : [ "aeiou" ],
-      "spouse" : "aeiou"
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
     },
-    "team" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou"
-    },
-    "certifications" : [ "aeiou" ],
-    "version" : 123,
-    "outOfOffice" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "user" : "",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "indefinite" : true
-    },
-    "languagePreference" : "aeiou",
-    "profileSkills" : [ "aeiou" ],
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
     "chat" : {
-      "jabberId" : "aeiou"
+      "jabberId" : "jabberId"
     },
-    "name" : "aeiou",
-    "integrationPresence" : "",
+    "name" : "name",
+    "integrationPresence" : "{}",
     "locations" : [ {
-      "notes" : "aeiou",
+      "notes" : "notes",
       "coordinates" : {
-        "key" : 1.3579000000000001069366817318950779736042022705078125
+        "key" : 1.4658129805029452
       },
-      "locationDefinition" : "",
-      "id" : "aeiou",
-      "floorplanId" : "aeiou"
-    } ],
-    "username" : "aeiou",
-    "geolocation" : {
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "locations" : [ {
-        "images" : "aeiou",
+      "locationDefinition" : {
+        "images" : "images",
         "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
         },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
         "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
         "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
+  }, {
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    } ],
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+    },
+    "email" : "email",
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "employerInfo" : {
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
+    },
+    "languages" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
+    "groups" : [ {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "region" : "aeiou",
-      "primary" : true,
-      "longitude" : 1.3579000000000001069366817318950779736042022705078125
-    }
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    } ],
+    "primaryContactInfo" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "biography" : {
+      "education" : [ {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      } ],
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
+    },
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
+    "chat" : {
+      "jabberId" : "jabberId"
+    },
+    "name" : "name",
+    "integrationPresence" : "{}",
+    "locations" : [ {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter ruleId: (path) Rule ID 
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<InteractionStatsRule> 
      */
-    open class func getAlertingInteractionstatsRuleWithRequestBuilder(ruleId: String, expand: [String]? = nil) -> RequestBuilder<InteractionStatsRule> {
+    open class func getAlertingInteractionstatsRuleWithRequestBuilder(ruleId: String, expand: [String]? = nil) -> RequestBuilder<InteractionStatsRule> {        
         var path = "/api/v2/alerting/interactionstats/rules/{ruleId}"
         let ruleIdPreEscape = "\(ruleId)"
         let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1322,15 +2721,7 @@ open class AlertingAPI {
     }
 
     
-    
-    public enum Expand_getAlertingInteractionstatsRules: String { 
-        case notificationusers = "notificationUsers"
-    }
-
-    
-    
     /**
-     
      Get an interaction stats rule list.
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
@@ -1355,328 +2746,1206 @@ open class AlertingAPI {
     }
 
     /**
-     
      Get an interaction stats rule list.
-     
      - GET /api/v2/alerting/interactionstats/rules
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "statistic" : "aeiou",
-    "numericRange" : "aeiou",
+    "statistic" : "count",
+    "numericRange" : "gt",
     "inAlarm" : true,
-    "alertTypes" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "mediaType" : "aeiou",
+    "alertTypes" : [ "SMS", "SMS" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "mediaType" : "voice",
     "enabled" : true,
-    "dimensionValue" : "aeiou",
-    "metric" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "dimension" : "aeiou",
-    "value" : 1.3579000000000001069366817318950779736042022705078125,
+    "dimensionValue" : "dimensionValue",
+    "metric" : "tAbandon",
+    "name" : "name",
+    "id" : "id",
+    "dimension" : "queueId",
+    "value" : 0.8008281904610115,
     "notificationUsers" : [ {
-      "addresses" : [ "" ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
       "acdAutoAnswer" : true,
-      "routingStatus" : {
-        "startTime" : "2000-01-23T04:56:07.000+0000",
-        "userId" : "aeiou",
-        "status" : "aeiou"
-      },
-      "title" : "aeiou",
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "authorization" : {
-        "unusedRoles" : [ "" ],
-        "permissions" : [ "aeiou" ],
-        "permissionPolicies" : [ {
-          "policyDescription" : "aeiou",
-          "resourceConditionNode" : {
-            "operands" : [ {
-              "type" : "aeiou",
-              "value" : "aeiou"
-            } ],
-            "variableName" : "aeiou",
-            "conjunction" : "aeiou",
-            "terms" : [ "" ],
-            "operator" : "aeiou"
-          },
-          "actionSetKey" : "aeiou",
-          "namedResources" : [ "aeiou" ],
-          "policyName" : "aeiou",
-          "entityName" : "aeiou",
-          "domain" : "aeiou",
-          "allowConditions" : true,
-          "id" : "aeiou",
-          "resourceCondition" : "aeiou",
-          "actionSet" : [ "aeiou" ]
-        } ],
-        "roles" : [ {
-          "name" : "aeiou",
-          "id" : "aeiou"
-        } ]
-      },
+      "routingStatus" : "{}",
+      "title" : "title",
+      "division" : "{}",
+      "authorization" : "{}",
       "skills" : [ {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "skillUri" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
       } ],
-      "station" : {
-        "defaultStation" : "",
-        "lastAssociatedStation" : "",
-        "associatedStation" : {
-          "associatedDate" : "2000-01-23T04:56:07.000+0000",
-          "webRtcCallAppearances" : 123,
-          "name" : "aeiou",
-          "defaultUser" : "",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "associatedUser" : "",
-          "providerInfo" : {
-            "key" : "aeiou"
-          }
-        },
-        "effectiveStation" : ""
-      },
-      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "department" : "aeiou",
-      "presence" : {
-        "presenceDefinition" : {
-          "systemPresence" : "aeiou",
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "source" : "aeiou",
-        "message" : "aeiou",
-        "primary" : true
-      },
+      "station" : "{}",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "active",
+      "department" : "department",
+      "presence" : "{}",
       "lastTokenIssued" : {
-        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+        "dateIssued" : "2000-01-23T04:56:07.000+00:00"
       },
-      "email" : "aeiou",
+      "email" : "email",
       "images" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "manager" : "",
       "employerInfo" : {
-        "employeeType" : "aeiou",
-        "dateHire" : "aeiou",
-        "employeeId" : "aeiou",
-        "officialName" : "aeiou"
+        "employeeType" : "employeeType",
+        "dateHire" : "dateHire",
+        "employeeId" : "employeeId",
+        "officialName" : "officialName"
       },
       "languages" : [ {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "languageUri" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
       } ],
-      "selfUri" : "aeiou",
-      "conversationSummary" : {
-        "call" : {
-          "enterprise" : "",
-          "contactCenter" : {
-            "acw" : 123,
-            "active" : 123
-          }
-        },
-        "socialExpression" : "",
-        "chat" : "",
-        "callback" : "",
-        "video" : "",
-        "message" : "",
-        "userId" : "aeiou",
-        "email" : ""
-      },
+      "selfUri" : "https://openapi-generator.tech",
+      "conversationSummary" : "{}",
       "groups" : [ {
-        "images" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "display" : "aeiou",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "visibility" : "aeiou",
-        "memberCount" : 123456789,
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "owners" : [ "" ],
-        "type" : "aeiou",
-        "version" : 123,
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
         "rulesVisible" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou"
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      }, {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
       } ],
       "primaryContactInfo" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
         "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
       } ],
       "biography" : {
         "education" : [ {
-          "notes" : "aeiou",
-          "school" : "aeiou",
-          "dateStart" : "2000-01-23T04:56:07.000+0000",
-          "dateEnd" : "2000-01-23T04:56:07.000+0000",
-          "fieldOfStudy" : "aeiou"
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        }, {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
         } ],
-        "hobbies" : [ "aeiou" ],
-        "biography" : "aeiou",
-        "interests" : [ "aeiou" ],
-        "spouse" : "aeiou"
+        "hobbies" : [ "hobbies", "hobbies" ],
+        "biography" : "biography",
+        "interests" : [ "interests", "interests" ],
+        "spouse" : "spouse"
       },
-      "team" : {
-        "division" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "memberCount" : 123456789,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou"
-      },
-      "certifications" : [ "aeiou" ],
-      "version" : 123,
-      "outOfOffice" : {
-        "endDate" : "2000-01-23T04:56:07.000+0000",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "active" : true,
-        "id" : "aeiou",
-        "user" : "",
-        "startDate" : "2000-01-23T04:56:07.000+0000",
-        "indefinite" : true
-      },
-      "languagePreference" : "aeiou",
-      "profileSkills" : [ "aeiou" ],
+      "team" : "{}",
+      "certifications" : [ "certifications", "certifications" ],
+      "version" : 6,
+      "outOfOffice" : "{}",
+      "languagePreference" : "languagePreference",
+      "profileSkills" : [ "profileSkills", "profileSkills" ],
       "chat" : {
-        "jabberId" : "aeiou"
+        "jabberId" : "jabberId"
       },
-      "name" : "aeiou",
-      "integrationPresence" : "",
+      "name" : "name",
+      "integrationPresence" : "{}",
       "locations" : [ {
-        "notes" : "aeiou",
+        "notes" : "notes",
         "coordinates" : {
-          "key" : 1.3579000000000001069366817318950779736042022705078125
+          "key" : 1.4658129805029452
         },
-        "locationDefinition" : "",
-        "id" : "aeiou",
-        "floorplanId" : "aeiou"
-      } ],
-      "username" : "aeiou",
-      "geolocation" : {
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "locations" : [ {
-          "images" : "aeiou",
+        "locationDefinition" : {
+          "images" : "images",
           "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
           },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
           } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
           "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
           "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      }, {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      } ],
+      "username" : "username",
+      "geolocation" : "{}"
+    }, {
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : "{}",
+      "title" : "title",
+      "division" : "{}",
+      "authorization" : "{}",
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      } ],
+      "station" : "{}",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "active",
+      "department" : "department",
+      "presence" : "{}",
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+      },
+      "email" : "email",
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "employerInfo" : {
+        "employeeType" : "employeeType",
+        "dateHire" : "dateHire",
+        "employeeId" : "employeeId",
+        "officialName" : "officialName"
+      },
+      "languages" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      } ],
+      "selfUri" : "https://openapi-generator.tech",
+      "conversationSummary" : "{}",
+      "groups" : [ {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "region" : "aeiou",
-        "primary" : true,
-        "longitude" : 1.3579000000000001069366817318950779736042022705078125
-      }
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      }, {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        }, {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        } ],
+        "hobbies" : [ "hobbies", "hobbies" ],
+        "biography" : "biography",
+        "interests" : [ "interests", "interests" ],
+        "spouse" : "spouse"
+      },
+      "team" : "{}",
+      "certifications" : [ "certifications", "certifications" ],
+      "version" : 6,
+      "outOfOffice" : "{}",
+      "languagePreference" : "languagePreference",
+      "profileSkills" : [ "profileSkills", "profileSkills" ],
+      "chat" : {
+        "jabberId" : "jabberId"
+      },
+      "name" : "name",
+      "integrationPresence" : "{}",
+      "locations" : [ {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      }, {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      } ],
+      "username" : "username",
+      "geolocation" : "{}"
+    } ]
+  }, {
+    "statistic" : "count",
+    "numericRange" : "gt",
+    "inAlarm" : true,
+    "alertTypes" : [ "SMS", "SMS" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "mediaType" : "voice",
+    "enabled" : true,
+    "dimensionValue" : "dimensionValue",
+    "metric" : "tAbandon",
+    "name" : "name",
+    "id" : "id",
+    "dimension" : "queueId",
+    "value" : 0.8008281904610115,
+    "notificationUsers" : [ {
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : "{}",
+      "title" : "title",
+      "division" : "{}",
+      "authorization" : "{}",
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      } ],
+      "station" : "{}",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "active",
+      "department" : "department",
+      "presence" : "{}",
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+      },
+      "email" : "email",
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "employerInfo" : {
+        "employeeType" : "employeeType",
+        "dateHire" : "dateHire",
+        "employeeId" : "employeeId",
+        "officialName" : "officialName"
+      },
+      "languages" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      } ],
+      "selfUri" : "https://openapi-generator.tech",
+      "conversationSummary" : "{}",
+      "groups" : [ {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      }, {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        }, {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        } ],
+        "hobbies" : [ "hobbies", "hobbies" ],
+        "biography" : "biography",
+        "interests" : [ "interests", "interests" ],
+        "spouse" : "spouse"
+      },
+      "team" : "{}",
+      "certifications" : [ "certifications", "certifications" ],
+      "version" : 6,
+      "outOfOffice" : "{}",
+      "languagePreference" : "languagePreference",
+      "profileSkills" : [ "profileSkills", "profileSkills" ],
+      "chat" : {
+        "jabberId" : "jabberId"
+      },
+      "name" : "name",
+      "integrationPresence" : "{}",
+      "locations" : [ {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      }, {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      } ],
+      "username" : "username",
+      "geolocation" : "{}"
+    }, {
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : "{}",
+      "title" : "title",
+      "division" : "{}",
+      "authorization" : "{}",
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "skillUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "state" : "active",
+        "proficiency" : 7.061401241503109
+      } ],
+      "station" : "{}",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "active",
+      "department" : "department",
+      "presence" : "{}",
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+      },
+      "email" : "email",
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "employerInfo" : {
+        "employeeType" : "employeeType",
+        "dateHire" : "dateHire",
+        "employeeId" : "employeeId",
+        "officialName" : "officialName"
+      },
+      "languages" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "state" : "active",
+        "languageUri" : "https://openapi-generator.tech",
+        "proficiency" : 9.301444243932576
+      } ],
+      "selfUri" : "https://openapi-generator.tech",
+      "conversationSummary" : "{}",
+      "groups" : [ {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      }, {
+        "images" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addresses" : [ {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        }, {
+          "extension" : "extension",
+          "address" : "address",
+          "display" : "display",
+          "mediaType" : "PHONE",
+          "type" : "GROUPRING"
+        } ],
+        "visibility" : "public",
+        "memberCount" : 5,
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "owners" : [ null, null ],
+        "type" : "official",
+        "version" : 2,
+        "rulesVisible" : true,
+        "name" : "name",
+        "id" : "id",
+        "state" : "active"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "integration" : "microsoftteams",
+        "mediaType" : "PHONE",
+        "type" : "PRIMARY"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        }, {
+          "notes" : "notes",
+          "school" : "school",
+          "dateStart" : "2000-01-23",
+          "dateEnd" : "2000-01-23",
+          "fieldOfStudy" : "fieldOfStudy"
+        } ],
+        "hobbies" : [ "hobbies", "hobbies" ],
+        "biography" : "biography",
+        "interests" : [ "interests", "interests" ],
+        "spouse" : "spouse"
+      },
+      "team" : "{}",
+      "certifications" : [ "certifications", "certifications" ],
+      "version" : 6,
+      "outOfOffice" : "{}",
+      "languagePreference" : "languagePreference",
+      "profileSkills" : [ "profileSkills", "profileSkills" ],
+      "chat" : {
+        "jabberId" : "jabberId"
+      },
+      "name" : "name",
+      "integrationPresence" : "{}",
+      "locations" : [ {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      }, {
+        "notes" : "notes",
+        "coordinates" : {
+          "key" : 1.4658129805029452
+        },
+        "locationDefinition" : {
+          "images" : "images",
+          "address" : {
+            "zipcode" : "zipcode",
+            "country" : "country",
+            "city" : "city",
+            "street1" : "street1",
+            "countryName" : "countryName",
+            "state" : "state",
+            "street2" : "street2"
+          },
+          "notes" : "notes",
+          "floorplanImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "addressVerificationDetails" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "profileImage" : [ {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          }, {
+            "imageUri" : "imageUri",
+            "resolution" : "resolution"
+          } ],
+          "emergencyNumber" : "{}",
+          "version" : 5,
+          "path" : [ "path", "path" ],
+          "addressStored" : true,
+          "name" : "name",
+          "id" : "id",
+          "contactUser" : "{}",
+          "state" : "active",
+          "addressVerified" : true
+        },
+        "id" : "id",
+        "floorplanId" : "floorplanId"
+      } ],
+      "username" : "username",
+      "geolocation" : "{}"
     } ]
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<InteractionStatsRuleContainer> 
      */
-    open class func getAlertingInteractionstatsRulesWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<InteractionStatsRuleContainer> {
+    open class func getAlertingInteractionstatsRulesWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<InteractionStatsRuleContainer> {        
         let path = "/api/v2/alerting/interactionstats/rules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRuleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1686,16 +3955,7 @@ open class AlertingAPI {
 
     
     
-    
-    
-    public enum Expand_postAlertingInteractionstatsRules: String { 
-        case notificationusers = "notificationUsers"
-    }
-
-    
-    
     /**
-     
      Create an interaction stats rule.
      
      - parameter body: (body) AlertingRule 
@@ -1721,315 +3981,611 @@ open class AlertingAPI {
     }
 
     /**
-     
      Create an interaction stats rule.
-     
      - POST /api/v2/alerting/interactionstats/rules
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "statistic" : "aeiou",
-  "numericRange" : "aeiou",
+  "statistic" : "count",
+  "numericRange" : "gt",
   "inAlarm" : true,
-  "alertTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "mediaType" : "aeiou",
+  "alertTypes" : [ "SMS", "SMS" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "mediaType" : "voice",
   "enabled" : true,
-  "dimensionValue" : "aeiou",
-  "metric" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "dimension" : "aeiou",
-  "value" : 1.3579000000000001069366817318950779736042022705078125,
+  "dimensionValue" : "dimensionValue",
+  "metric" : "tAbandon",
+  "name" : "name",
+  "id" : "id",
+  "dimension" : "queueId",
+  "value" : 0.8008281904610115,
   "notificationUsers" : [ {
-    "addresses" : [ "" ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
     "acdAutoAnswer" : true,
-    "routingStatus" : {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "status" : "aeiou"
-    },
-    "title" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "authorization" : {
-      "unusedRoles" : [ "" ],
-      "permissions" : [ "aeiou" ],
-      "permissionPolicies" : [ {
-        "policyDescription" : "aeiou",
-        "resourceConditionNode" : {
-          "operands" : [ {
-            "type" : "aeiou",
-            "value" : "aeiou"
-          } ],
-          "variableName" : "aeiou",
-          "conjunction" : "aeiou",
-          "terms" : [ "" ],
-          "operator" : "aeiou"
-        },
-        "actionSetKey" : "aeiou",
-        "namedResources" : [ "aeiou" ],
-        "policyName" : "aeiou",
-        "entityName" : "aeiou",
-        "domain" : "aeiou",
-        "allowConditions" : true,
-        "id" : "aeiou",
-        "resourceCondition" : "aeiou",
-        "actionSet" : [ "aeiou" ]
-      } ],
-      "roles" : [ {
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ]
-    },
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "skillUri" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
     } ],
-    "station" : {
-      "defaultStation" : "",
-      "lastAssociatedStation" : "",
-      "associatedStation" : {
-        "associatedDate" : "2000-01-23T04:56:07.000+0000",
-        "webRtcCallAppearances" : 123,
-        "name" : "aeiou",
-        "defaultUser" : "",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "associatedUser" : "",
-        "providerInfo" : {
-          "key" : "aeiou"
-        }
-      },
-      "effectiveStation" : ""
-    },
-    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "department" : "aeiou",
-    "presence" : {
-      "presenceDefinition" : {
-        "systemPresence" : "aeiou",
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "source" : "aeiou",
-      "message" : "aeiou",
-      "primary" : true
-    },
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
     "lastTokenIssued" : {
-      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
     },
-    "email" : "aeiou",
+    "email" : "email",
     "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "manager" : "",
     "employerInfo" : {
-      "employeeType" : "aeiou",
-      "dateHire" : "aeiou",
-      "employeeId" : "aeiou",
-      "officialName" : "aeiou"
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
     },
     "languages" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "languageUri" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
     } ],
-    "selfUri" : "aeiou",
-    "conversationSummary" : {
-      "call" : {
-        "enterprise" : "",
-        "contactCenter" : {
-          "acw" : 123,
-          "active" : 123
-        }
-      },
-      "socialExpression" : "",
-      "chat" : "",
-      "callback" : "",
-      "video" : "",
-      "message" : "",
-      "userId" : "aeiou",
-      "email" : ""
-    },
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
     "groups" : [ {
-      "images" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "display" : "aeiou",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "visibility" : "aeiou",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "owners" : [ "" ],
-      "type" : "aeiou",
-      "version" : 123,
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
       "rulesVisible" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou"
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
     } ],
     "primaryContactInfo" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
       "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
     } ],
     "biography" : {
       "education" : [ {
-        "notes" : "aeiou",
-        "school" : "aeiou",
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "dateEnd" : "2000-01-23T04:56:07.000+0000",
-        "fieldOfStudy" : "aeiou"
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
       } ],
-      "hobbies" : [ "aeiou" ],
-      "biography" : "aeiou",
-      "interests" : [ "aeiou" ],
-      "spouse" : "aeiou"
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
     },
-    "team" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou"
-    },
-    "certifications" : [ "aeiou" ],
-    "version" : 123,
-    "outOfOffice" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "user" : "",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "indefinite" : true
-    },
-    "languagePreference" : "aeiou",
-    "profileSkills" : [ "aeiou" ],
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
     "chat" : {
-      "jabberId" : "aeiou"
+      "jabberId" : "jabberId"
     },
-    "name" : "aeiou",
-    "integrationPresence" : "",
+    "name" : "name",
+    "integrationPresence" : "{}",
     "locations" : [ {
-      "notes" : "aeiou",
+      "notes" : "notes",
       "coordinates" : {
-        "key" : 1.3579000000000001069366817318950779736042022705078125
+        "key" : 1.4658129805029452
       },
-      "locationDefinition" : "",
-      "id" : "aeiou",
-      "floorplanId" : "aeiou"
-    } ],
-    "username" : "aeiou",
-    "geolocation" : {
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "locations" : [ {
-        "images" : "aeiou",
+      "locationDefinition" : {
+        "images" : "images",
         "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
         },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
         "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
         "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
+  }, {
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    } ],
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+    },
+    "email" : "email",
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "employerInfo" : {
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
+    },
+    "languages" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
+    "groups" : [ {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "region" : "aeiou",
-      "primary" : true,
-      "longitude" : 1.3579000000000001069366817318950779736042022705078125
-    }
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    } ],
+    "primaryContactInfo" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "biography" : {
+      "education" : [ {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      } ],
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
+    },
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
+    "chat" : {
+      "jabberId" : "jabberId"
+    },
+    "name" : "name",
+    "integrationPresence" : "{}",
+    "locations" : [ {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) AlertingRule 
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<InteractionStatsRule> 
      */
-    open class func postAlertingInteractionstatsRulesWithRequestBuilder(body: InteractionStatsRule, expand: [String]? = nil) -> RequestBuilder<InteractionStatsRule> {
+    open class func postAlertingInteractionstatsRulesWithRequestBuilder(body: InteractionStatsRule, expand: [String]? = nil) -> RequestBuilder<InteractionStatsRule> {        
         let path = "/api/v2/alerting/interactionstats/rules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2040,17 +4596,7 @@ open class AlertingAPI {
     
     
     
-    
-    
-    
-    public enum Expand_putAlertingInteractionstatsAlert: String { 
-        case notificationusers = "notificationUsers"
-    }
-
-    
-    
     /**
-     
      Update an interaction stats alert read status
      
      - parameter alertId: (path) Alert ID 
@@ -2077,17 +4623,14 @@ open class AlertingAPI {
     }
 
     /**
-     
      Update an interaction stats alert read status
-     
      - PUT /api/v2/alerting/interactionstats/alerts/{alertId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "unread" : true
-}}]
+}, statusCode=200}]
      
      - parameter alertId: (path) Alert ID 
      - parameter body: (body) InteractionStatsAlert 
@@ -2095,21 +4638,17 @@ open class AlertingAPI {
 
      - returns: RequestBuilder<UnreadStatus> 
      */
-    open class func putAlertingInteractionstatsAlertWithRequestBuilder(alertId: String, body: UnreadStatus, expand: [String]? = nil) -> RequestBuilder<UnreadStatus> {
+    open class func putAlertingInteractionstatsAlertWithRequestBuilder(alertId: String, body: UnreadStatus, expand: [String]? = nil) -> RequestBuilder<UnreadStatus> {        
         var path = "/api/v2/alerting/interactionstats/alerts/{alertId}"
         let alertIdPreEscape = "\(alertId)"
         let alertIdPostEscape = alertIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{alertId}", with: alertIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<UnreadStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2120,17 +4659,7 @@ open class AlertingAPI {
     
     
     
-    
-    
-    
-    public enum Expand_putAlertingInteractionstatsRule: String { 
-        case notificationusers = "notificationUsers"
-    }
-
-    
-    
     /**
-     
      Update an interaction stats rule
      
      - parameter ruleId: (path) Rule ID 
@@ -2157,297 +4686,597 @@ open class AlertingAPI {
     }
 
     /**
-     
      Update an interaction stats rule
-     
      - PUT /api/v2/alerting/interactionstats/rules/{ruleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "statistic" : "aeiou",
-  "numericRange" : "aeiou",
+  "statistic" : "count",
+  "numericRange" : "gt",
   "inAlarm" : true,
-  "alertTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "mediaType" : "aeiou",
+  "alertTypes" : [ "SMS", "SMS" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "mediaType" : "voice",
   "enabled" : true,
-  "dimensionValue" : "aeiou",
-  "metric" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "dimension" : "aeiou",
-  "value" : 1.3579000000000001069366817318950779736042022705078125,
+  "dimensionValue" : "dimensionValue",
+  "metric" : "tAbandon",
+  "name" : "name",
+  "id" : "id",
+  "dimension" : "queueId",
+  "value" : 0.8008281904610115,
   "notificationUsers" : [ {
-    "addresses" : [ "" ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
     "acdAutoAnswer" : true,
-    "routingStatus" : {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "status" : "aeiou"
-    },
-    "title" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "authorization" : {
-      "unusedRoles" : [ "" ],
-      "permissions" : [ "aeiou" ],
-      "permissionPolicies" : [ {
-        "policyDescription" : "aeiou",
-        "resourceConditionNode" : {
-          "operands" : [ {
-            "type" : "aeiou",
-            "value" : "aeiou"
-          } ],
-          "variableName" : "aeiou",
-          "conjunction" : "aeiou",
-          "terms" : [ "" ],
-          "operator" : "aeiou"
-        },
-        "actionSetKey" : "aeiou",
-        "namedResources" : [ "aeiou" ],
-        "policyName" : "aeiou",
-        "entityName" : "aeiou",
-        "domain" : "aeiou",
-        "allowConditions" : true,
-        "id" : "aeiou",
-        "resourceCondition" : "aeiou",
-        "actionSet" : [ "aeiou" ]
-      } ],
-      "roles" : [ {
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ]
-    },
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "skillUri" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
     } ],
-    "station" : {
-      "defaultStation" : "",
-      "lastAssociatedStation" : "",
-      "associatedStation" : {
-        "associatedDate" : "2000-01-23T04:56:07.000+0000",
-        "webRtcCallAppearances" : 123,
-        "name" : "aeiou",
-        "defaultUser" : "",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "associatedUser" : "",
-        "providerInfo" : {
-          "key" : "aeiou"
-        }
-      },
-      "effectiveStation" : ""
-    },
-    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "department" : "aeiou",
-    "presence" : {
-      "presenceDefinition" : {
-        "systemPresence" : "aeiou",
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "source" : "aeiou",
-      "message" : "aeiou",
-      "primary" : true
-    },
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
     "lastTokenIssued" : {
-      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
     },
-    "email" : "aeiou",
+    "email" : "email",
     "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "manager" : "",
     "employerInfo" : {
-      "employeeType" : "aeiou",
-      "dateHire" : "aeiou",
-      "employeeId" : "aeiou",
-      "officialName" : "aeiou"
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
     },
     "languages" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "languageUri" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
     } ],
-    "selfUri" : "aeiou",
-    "conversationSummary" : {
-      "call" : {
-        "enterprise" : "",
-        "contactCenter" : {
-          "acw" : 123,
-          "active" : 123
-        }
-      },
-      "socialExpression" : "",
-      "chat" : "",
-      "callback" : "",
-      "video" : "",
-      "message" : "",
-      "userId" : "aeiou",
-      "email" : ""
-    },
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
     "groups" : [ {
-      "images" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "display" : "aeiou",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "visibility" : "aeiou",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "owners" : [ "" ],
-      "type" : "aeiou",
-      "version" : 123,
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
       "rulesVisible" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou"
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
     } ],
     "primaryContactInfo" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
       "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
     } ],
     "biography" : {
       "education" : [ {
-        "notes" : "aeiou",
-        "school" : "aeiou",
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "dateEnd" : "2000-01-23T04:56:07.000+0000",
-        "fieldOfStudy" : "aeiou"
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
       } ],
-      "hobbies" : [ "aeiou" ],
-      "biography" : "aeiou",
-      "interests" : [ "aeiou" ],
-      "spouse" : "aeiou"
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
     },
-    "team" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou"
-    },
-    "certifications" : [ "aeiou" ],
-    "version" : 123,
-    "outOfOffice" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "user" : "",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "indefinite" : true
-    },
-    "languagePreference" : "aeiou",
-    "profileSkills" : [ "aeiou" ],
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
     "chat" : {
-      "jabberId" : "aeiou"
+      "jabberId" : "jabberId"
     },
-    "name" : "aeiou",
-    "integrationPresence" : "",
+    "name" : "name",
+    "integrationPresence" : "{}",
     "locations" : [ {
-      "notes" : "aeiou",
+      "notes" : "notes",
       "coordinates" : {
-        "key" : 1.3579000000000001069366817318950779736042022705078125
+        "key" : 1.4658129805029452
       },
-      "locationDefinition" : "",
-      "id" : "aeiou",
-      "floorplanId" : "aeiou"
-    } ],
-    "username" : "aeiou",
-    "geolocation" : {
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "locations" : [ {
-        "images" : "aeiou",
+      "locationDefinition" : {
+        "images" : "images",
         "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
         },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
         "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
         "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
+  }, {
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    } ],
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+    },
+    "email" : "email",
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "employerInfo" : {
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
+    },
+    "languages" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
+    "groups" : [ {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "region" : "aeiou",
-      "primary" : true,
-      "longitude" : 1.3579000000000001069366817318950779736042022705078125
-    }
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    } ],
+    "primaryContactInfo" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "biography" : {
+      "education" : [ {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      } ],
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
+    },
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
+    "chat" : {
+      "jabberId" : "jabberId"
+    },
+    "name" : "name",
+    "integrationPresence" : "{}",
+    "locations" : [ {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter ruleId: (path) Rule ID 
      - parameter body: (body) AlertingRule 
@@ -2455,21 +5284,17 @@ open class AlertingAPI {
 
      - returns: RequestBuilder<InteractionStatsRule> 
      */
-    open class func putAlertingInteractionstatsRuleWithRequestBuilder(ruleId: String, body: InteractionStatsRule, expand: [String]? = nil) -> RequestBuilder<InteractionStatsRule> {
+    open class func putAlertingInteractionstatsRuleWithRequestBuilder(ruleId: String, body: InteractionStatsRule, expand: [String]? = nil) -> RequestBuilder<InteractionStatsRule> {        
         var path = "/api/v2/alerting/interactionstats/rules/{ruleId}"
         let ruleIdPreEscape = "\(ruleId)"
         let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

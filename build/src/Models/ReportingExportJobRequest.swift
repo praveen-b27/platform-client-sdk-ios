@@ -128,7 +128,7 @@ public class ReportingExportJobRequest: Codable {
     public var hasSplitByMedia: Bool?
     /** Indicates if summary row needs to be present in exports */
     public var hasSummaryRow: Bool?
-    /** The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request */
+    /** The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request */
     public var csvDelimiter: CsvDelimiter?
     /** The list of ordered selected columns from the export view by the user */
     public var selectedColumns: [SelectedColumns]?
@@ -138,43 +138,24 @@ public class ReportingExportJobRequest: Codable {
     public var recipientEmails: [String]?
 
     public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?) {
-        
         self.name = name
-        
         self.timeZone = timeZone
-        
         self.exportFormat = exportFormat
-        
         self.interval = interval
-        
         self.period = period
-        
         self.viewType = viewType
-        
         self.filter = filter
-        
         self.read = read
-        
         self.locale = locale
-        
         self.hasFormatDurations = hasFormatDurations
-        
         self.hasSplitFilters = hasSplitFilters
-        
         self.excludeEmptyRows = excludeEmptyRows
-        
         self.hasSplitByMedia = hasSplitByMedia
-        
         self.hasSummaryRow = hasSummaryRow
-        
         self.csvDelimiter = csvDelimiter
-        
         self.selectedColumns = selectedColumns
-        
         self.hasCustomParticipantAttributes = hasCustomParticipantAttributes
-        
         self.recipientEmails = recipientEmails
-        
     }
 
 

@@ -11,7 +11,6 @@ import Foundation
 
 open class DataExtensionsAPI {
     
-    
     public enum CoretypeName_getDataextensionsCoretype: String { 
         case text = "text"
         case longtext = "longtext"
@@ -27,9 +26,7 @@ open class DataExtensionsAPI {
     }
 
     
-    
     /**
-     
      Get a specific named core type.
      
      - parameter coretypeName: (path) The core type&#39;s name 
@@ -54,69 +51,36 @@ open class DataExtensionsAPI {
     }
 
     /**
-     
      Get a specific named core type.
-     
      - GET /api/v2/dataextensions/coretypes/{coretypeName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "schema" : {
-    "pattern" : "aeiou",
-    "description" : "aeiou",
-    "title" : "aeiou",
-    "type" : "[\"string\"] for a text-based core type, [\"integer\"] for a numeric core type, or [\"boolean\", \"null\"] for the checkbox core type",
-    "items" : {
-      "pattern" : "aeiou",
-      "type" : "aeiou"
-    }
-  },
+  "schema" : "{}",
   "current" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "version" : 123,
-  "itemValidationFields" : [ "aeiou" ],
-  "itemValidationLimits" : {
-    "minLength" : "",
-    "maxLength" : ""
-  },
-  "validationFields" : [ "aeiou" ],
-  "validationLimits" : {
-    "minItems" : "",
-    "maxItems" : "",
-    "minLength" : {
-      "min" : 123456789,
-      "max" : 123456789
-    },
-    "maximum" : "",
-    "minimum" : "",
-    "maxLength" : {
-      "min" : 123456789,
-      "max" : 123456789
-    }
-  }
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
      
      - parameter coretypeName: (path) The core type&#39;s name 
 
      - returns: RequestBuilder<Coretype> 
      */
-    open class func getDataextensionsCoretypeWithRequestBuilder(coretypeName: CoretypeName_getDataextensionsCoretype) -> RequestBuilder<Coretype> {
+    open class func getDataextensionsCoretypeWithRequestBuilder(coretypeName: CoretypeName_getDataextensionsCoretype) -> RequestBuilder<Coretype> {        
         var path = "/api/v2/dataextensions/coretypes/{coretypeName}"
         let coretypeNamePreEscape = "\(coretypeName.rawValue)"
         let coretypeNamePostEscape = coretypeNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{coretypeName}", with: coretypeNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -125,9 +89,7 @@ open class DataExtensionsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get the core types from which all schemas are built.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -151,68 +113,47 @@ open class DataExtensionsAPI {
     }
 
     /**
-     
      Get the core types from which all schemas are built.
-     
      - GET /api/v2/dataextensions/coretypes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "schema" : {
-      "pattern" : "aeiou",
-      "description" : "aeiou",
-      "title" : "aeiou",
-      "type" : "[\"string\"] for a text-based core type, [\"integer\"] for a numeric core type, or [\"boolean\", \"null\"] for the checkbox core type",
-      "items" : {
-        "pattern" : "aeiou",
-        "type" : "aeiou"
-      }
-    },
+    "schema" : "{}",
     "current" : true,
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "version" : 123,
-    "itemValidationFields" : [ "aeiou" ],
-    "itemValidationLimits" : {
-      "minLength" : "",
-      "maxLength" : ""
-    },
-    "validationFields" : [ "aeiou" ],
-    "validationLimits" : {
-      "minItems" : "",
-      "maxItems" : "",
-      "minLength" : {
-        "min" : 123456789,
-        "max" : 123456789
-      },
-      "maximum" : "",
-      "minimum" : "",
-      "maxLength" : {
-        "min" : 123456789,
-        "max" : 123456789
-      }
-    }
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  }, {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<CoretypeListing> 
      */
-    open class func getDataextensionsCoretypesWithRequestBuilder() -> RequestBuilder<CoretypeListing> {
+    open class func getDataextensionsCoretypesWithRequestBuilder() -> RequestBuilder<CoretypeListing> {        
         let path = "/api/v2/dataextensions/coretypes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -221,9 +162,7 @@ open class DataExtensionsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get quantitative limits on schemas
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -247,42 +186,34 @@ open class DataExtensionsAPI {
     }
 
     /**
-     
      Get quantitative limits on schemas
-     
      - GET /api/v2/dataextensions/limits
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "minSchemaDescriptionCharacters" : "\"minSchemaDescriptionCharacters\":0",
-  "maxFieldDescriptionCharacters" : "\"maxFieldDescriptionCharacters\":200",
-  "selfUri" : "aeiou",
-  "minFieldDescriptionCharacters" : "\"minFieldDescriptionCharacters\":0",
-  "maxNumberOfFieldsPerSchema" : "\"maxNumberOfFieldsPerSchema\":25",
-  "minSchemaNameCharacters" : "\"minSchemaNameCharacters\":1",
-  "minFieldNameCharacters" : "\"minFieldNameCharacters\":1",
-  "maxNumberOfSchemasPerOrg" : "\"maxNumberOfSchemasPerOrg\":20",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "maxFieldNameCharacters" : "\"minFieldNameCharacters\":100",
-  "maxSchemaDescriptionCharacters" : "\"maxSchemaDescriptionCharacters\":200",
-  "maxSchemaNameCharacters" : "\"maxSchemaNameCharacters\":50",
-  "maxNumberOfFieldsPerOrg" : "\"maxNumberOfFieldsPerOrg\":500"
-}}]
+  "minSchemaDescriptionCharacters" : 7,
+  "maxFieldDescriptionCharacters" : 5,
+  "selfUri" : "https://openapi-generator.tech",
+  "minFieldDescriptionCharacters" : 1,
+  "maxNumberOfFieldsPerSchema" : 2,
+  "minSchemaNameCharacters" : 5,
+  "minFieldNameCharacters" : 0,
+  "maxNumberOfSchemasPerOrg" : 3,
+  "name" : "name",
+  "id" : "id",
+  "maxFieldNameCharacters" : 6,
+  "maxSchemaDescriptionCharacters" : 9,
+  "maxSchemaNameCharacters" : 2,
+  "maxNumberOfFieldsPerOrg" : 4
+}, statusCode=200}]
 
      - returns: RequestBuilder<SchemaQuantityLimits> 
      */
-    open class func getDataextensionsLimitsWithRequestBuilder() -> RequestBuilder<SchemaQuantityLimits> {
+    open class func getDataextensionsLimitsWithRequestBuilder() -> RequestBuilder<SchemaQuantityLimits> {        
         let path = "/api/v2/dataextensions/limits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 

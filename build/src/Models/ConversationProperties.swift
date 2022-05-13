@@ -35,29 +35,17 @@ public class ConversationProperties: Codable {
     public var matchAll: Bool?
 
     public init(isWaiting: Bool?, isActive: Bool?, isAcd: Bool?, isPreferred: Bool?, isScreenshare: Bool?, isCobrowse: Bool?, isVoicemail: Bool?, isFlagged: Bool?, isMonitored: Bool?, filterWrapUpNotes: Bool?, matchAll: Bool?) {
-        
         self.isWaiting = isWaiting
-        
         self.isActive = isActive
-        
         self.isAcd = isAcd
-        
         self.isPreferred = isPreferred
-        
         self.isScreenshare = isScreenshare
-        
         self.isCobrowse = isCobrowse
-        
         self.isVoicemail = isVoicemail
-        
         self.isFlagged = isFlagged
-        
         self.isMonitored = isMonitored
-        
         self.filterWrapUpNotes = filterWrapUpNotes
-        
         self.matchAll = matchAll
-        
     }
 
 

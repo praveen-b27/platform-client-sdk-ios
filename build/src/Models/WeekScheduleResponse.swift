@@ -18,11 +18,8 @@ public class WeekScheduleResponse: Codable {
     public var downloadUrl: String?
 
     public init(result: WeekSchedule?, downloadUrl: String?) {
-        
         self.result = result
-        
         self.downloadUrl = downloadUrl
-        
     }
 
 

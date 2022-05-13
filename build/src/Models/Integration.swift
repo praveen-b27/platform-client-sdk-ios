@@ -37,25 +37,15 @@ public class Integration: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, integrationType: IntegrationType?, notes: String?, intendedState: IntendedState?, config: IntegrationConfigurationInfo?, reportedState: IntegrationStatusInfo?, attributes: [String:String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.integrationType = integrationType
-        
         self.notes = notes
-        
         self.intendedState = intendedState
-        
         self.config = config
-        
         self.reportedState = reportedState
-        
         self.attributes = attributes
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

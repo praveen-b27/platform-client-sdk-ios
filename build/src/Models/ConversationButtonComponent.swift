@@ -18,11 +18,8 @@ public class ConversationButtonComponent: Codable {
     public var actions: ConversationContentActions?
 
     public init(title: String?, actions: ConversationContentActions?) {
-        
         self.title = title
-        
         self.actions = actions
-        
     }
 
 

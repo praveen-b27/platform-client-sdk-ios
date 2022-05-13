@@ -11,10 +11,7 @@ import Foundation
 
 open class TelephonyProvidersEdgeAPI {
     
-    
-    
     /**
-     
      Delete a edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -32,11 +29,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete a edge.
-     
      - DELETE /api/v2/telephony/providers/edges/{edgeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgeWithRequestBuilder(edgeId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgeWithRequestBuilder(edgeId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,11 +56,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete an edge logical interface
      
      - parameter edgeId: (path) Edge ID 
@@ -90,11 +75,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete an edge logical interface
-     
      - DELETE /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -104,7 +86,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgeLogicalinterfaceWithRequestBuilder(edgeId: String, interfaceId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgeLogicalinterfaceWithRequestBuilder(edgeId: String, interfaceId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -113,12 +95,7 @@ open class TelephonyProvidersEdgeAPI {
         let interfaceIdPostEscape = interfaceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{interfaceId}", with: interfaceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -128,10 +105,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Cancels any in-progress update for this edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -149,11 +123,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Cancels any in-progress update for this edge.
-     
      - DELETE /api/v2/telephony/providers/edges/{edgeId}/softwareupdate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -162,18 +133,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgeSoftwareupdateWithRequestBuilder(edgeId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgeSoftwareupdateWithRequestBuilder(edgeId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -183,10 +149,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a certificate authority.
      
      - parameter certificateId: (path) Certificate ID 
@@ -204,11 +167,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete a certificate authority.
-     
      - DELETE /api/v2/telephony/providers/edges/certificateauthorities/{certificateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -217,18 +177,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesCertificateauthorityWithRequestBuilder(certificateId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesCertificateauthorityWithRequestBuilder(certificateId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}"
         let certificateIdPreEscape = "\(certificateId)"
         let certificateIdPostEscape = certificateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{certificateId}", with: certificateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -238,10 +193,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a DID Pool by ID.
      
      - parameter didPoolId: (path) DID pool ID 
@@ -259,11 +211,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete a DID Pool by ID.
-     
      - DELETE /api/v2/telephony/providers/edges/didpools/{didPoolId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -272,18 +221,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesDidpoolWithRequestBuilder(didPoolId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesDidpoolWithRequestBuilder(didPoolId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/didpools/{didPoolId}"
         let didPoolIdPreEscape = "\(didPoolId)"
         let didPoolIdPostEscape = didPoolIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{didPoolId}", with: didPoolIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -293,10 +237,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete an edge group.
      
      - parameter edgeGroupId: (path) Edge group ID 
@@ -314,11 +255,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete an edge group.
-     
      - DELETE /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -327,18 +265,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesEdgegroupWithRequestBuilder(edgeGroupId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesEdgegroupWithRequestBuilder(edgeGroupId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}"
         let edgeGroupIdPreEscape = "\(edgeGroupId)"
         let edgeGroupIdPostEscape = edgeGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeGroupId}", with: edgeGroupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -348,10 +281,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete an extension pool by ID
      
      - parameter extensionPoolId: (path) Extension pool ID 
@@ -369,11 +299,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete an extension pool by ID
-     
      - DELETE /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -382,18 +309,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesExtensionpoolWithRequestBuilder(extensionPoolId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesExtensionpoolWithRequestBuilder(extensionPoolId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}"
         let extensionPoolIdPreEscape = "\(extensionPoolId)"
         let extensionPoolIdPostEscape = extensionPoolIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{extensionPoolId}", with: extensionPoolIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -403,10 +325,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete Outbound Route
      
      - parameter outboundRouteId: (path) Outbound route ID 
@@ -424,9 +343,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete Outbound Route
-     
      - DELETE /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}
      - This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
      - OAuth:
@@ -437,18 +354,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesOutboundrouteWithRequestBuilder(outboundRouteId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesOutboundrouteWithRequestBuilder(outboundRouteId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}"
         let outboundRouteIdPreEscape = "\(outboundRouteId)"
         let outboundRouteIdPostEscape = outboundRouteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outboundRouteId}", with: outboundRouteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -458,10 +370,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a Phone by ID
      
      - parameter phoneId: (path) Phone ID 
@@ -479,11 +388,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete a Phone by ID
-     
      - DELETE /api/v2/telephony/providers/edges/phones/{phoneId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -492,18 +398,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesPhoneWithRequestBuilder(phoneId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesPhoneWithRequestBuilder(phoneId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/phones/{phoneId}"
         let phoneIdPreEscape = "\(phoneId)"
         let phoneIdPostEscape = phoneIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{phoneId}", with: phoneIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -513,10 +414,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a Phone Base Settings by ID
      
      - parameter phoneBaseId: (path) Phone base ID 
@@ -534,11 +432,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete a Phone Base Settings by ID
-     
      - DELETE /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -547,18 +442,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesPhonebasesettingWithRequestBuilder(phoneBaseId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesPhonebasesettingWithRequestBuilder(phoneBaseId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}"
         let phoneBaseIdPreEscape = "\(phoneBaseId)"
         let phoneBaseIdPostEscape = phoneBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{phoneBaseId}", with: phoneBaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -568,10 +458,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a Site by ID
      
      - parameter siteId: (path) Site ID 
@@ -589,11 +476,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete a Site by ID
-     
      - DELETE /api/v2/telephony/providers/edges/sites/{siteId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -602,18 +486,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesSiteWithRequestBuilder(siteId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesSiteWithRequestBuilder(siteId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -624,11 +503,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete Outbound Route
      
      - parameter siteId: (path) Site ID 
@@ -647,11 +522,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete Outbound Route
-     
      - DELETE /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -661,7 +533,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesSiteOutboundrouteWithRequestBuilder(siteId: String, outboundRouteId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesSiteOutboundrouteWithRequestBuilder(siteId: String, outboundRouteId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -670,12 +542,7 @@ open class TelephonyProvidersEdgeAPI {
         let outboundRouteIdPostEscape = outboundRouteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outboundRouteId}", with: outboundRouteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -685,10 +552,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a Trunk Base Settings object by ID
      
      - parameter trunkBaseSettingsId: (path) Trunk Base ID 
@@ -706,11 +570,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Delete a Trunk Base Settings object by ID
-     
      - DELETE /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -719,18 +580,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteTelephonyProvidersEdgesTrunkbasesettingWithRequestBuilder(trunkBaseSettingsId: String) -> RequestBuilder<Void> {
+    open class func deleteTelephonyProvidersEdgesTrunkbasesettingWithRequestBuilder(trunkBaseSettingsId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}"
         let trunkBaseSettingsIdPreEscape = "\(trunkBaseSettingsId)"
         let trunkBaseSettingsIdPostEscape = trunkBaseSettingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trunkBaseSettingsId}", with: trunkBaseSettingsIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -741,15 +597,11 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Lists available schema categories (Deprecated)
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getConfigurationSchemasEdgesVnext(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: SchemaCategoryEntityListing?,_ error: Error?) -> Void)) {
@@ -771,67 +623,66 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Lists available schema categories (Deprecated)
-     
      - GET /api/v2/configuration/schemas/edges/vnext
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<SchemaCategoryEntityListing> 
      */
-    open class func getConfigurationSchemasEdgesVnextWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SchemaCategoryEntityListing> {
+    open class func getConfigurationSchemasEdgesVnextWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SchemaCategoryEntityListing> {        
         let path = "/api/v2/configuration/schemas/edges/vnext"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<SchemaCategoryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -842,17 +693,12 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      List schemas of a specific category (Deprecated)
      
      - parameter schemaCategory: (path) Schema category 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getConfigurationSchemasEdgesVnextSchemaCategory(schemaCategory: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: SchemaReferenceEntityListing?,_ error: Error?) -> Void)) {
@@ -874,71 +720,70 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      List schemas of a specific category (Deprecated)
-     
      - GET /api/v2/configuration/schemas/edges/vnext/{schemaCategory}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter schemaCategory: (path) Schema category 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<SchemaReferenceEntityListing> 
      */
-    open class func getConfigurationSchemasEdgesVnextSchemaCategoryWithRequestBuilder(schemaCategory: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SchemaReferenceEntityListing> {
+    open class func getConfigurationSchemasEdgesVnextSchemaCategoryWithRequestBuilder(schemaCategory: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SchemaReferenceEntityListing> {        
         var path = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}"
         let schemaCategoryPreEscape = "\(schemaCategory)"
         let schemaCategoryPostEscape = schemaCategoryPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{schemaCategory}", with: schemaCategoryPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<SchemaReferenceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -950,19 +795,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      List schemas of a specific category (Deprecated)
      
      - parameter schemaCategory: (path) Schema category 
      - parameter schemaType: (path) Schema type 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getConfigurationSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory: String, schemaType: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: SchemaReferenceEntityListing?,_ error: Error?) -> Void)) {
@@ -984,53 +823,60 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      List schemas of a specific category (Deprecated)
-     
      - GET /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter schemaCategory: (path) Schema category 
      - parameter schemaType: (path) Schema type 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<SchemaReferenceEntityListing> 
      */
-    open class func getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeWithRequestBuilder(schemaCategory: String, schemaType: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SchemaReferenceEntityListing> {
+    open class func getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeWithRequestBuilder(schemaCategory: String, schemaType: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SchemaReferenceEntityListing> {        
         var path = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}"
         let schemaCategoryPreEscape = "\(schemaCategory)"
         let schemaCategoryPostEscape = schemaCategoryPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1039,20 +885,12 @@ open class TelephonyProvidersEdgeAPI {
         let schemaTypePostEscape = schemaTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{schemaType}", with: schemaTypePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<SchemaReferenceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1063,12 +901,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a json schema (Deprecated)
      
      - parameter schemaCategory: (path) Schema category 
@@ -1095,33 +928,30 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a json schema (Deprecated)
-     
      - GET /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultCountryCode" : "aeiou",
-  "selfUri" : "aeiou",
-  "thirdPartyURI" : "aeiou",
-  "version" : 123,
-  "thirdPartyOrgName" : "aeiou",
+  "defaultCountryCode" : "defaultCountryCode",
+  "selfUri" : "https://openapi-generator.tech",
+  "thirdPartyURI" : "https://openapi-generator.tech",
+  "version" : 0,
+  "thirdPartyOrgName" : "thirdPartyOrgName",
   "features" : {
     "key" : true
   },
-  "defaultLanguage" : "aeiou",
-  "defaultSiteId" : "aeiou",
-  "supportURI" : "aeiou",
-  "domain" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "defaultLanguage" : "defaultLanguage",
+  "defaultSiteId" : "defaultSiteId",
+  "supportURI" : "supportURI",
+  "domain" : "domain",
+  "name" : "name",
+  "id" : "id",
+  "state" : "active",
   "voicemailEnabled" : true,
-  "productPlatform" : "aeiou"
-}}]
+  "productPlatform" : "GenesysCloud"
+}, statusCode=200}]
      
      - parameter schemaCategory: (path) Schema category 
      - parameter schemaType: (path) Schema type 
@@ -1129,7 +959,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Organization> 
      */
-    open class func getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdWithRequestBuilder(schemaCategory: String, schemaType: String, schemaId: String) -> RequestBuilder<Organization> {
+    open class func getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdWithRequestBuilder(schemaCategory: String, schemaType: String, schemaId: String) -> RequestBuilder<Organization> {        
         var path = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}"
         let schemaCategoryPreEscape = "\(schemaCategory)"
         let schemaCategoryPostEscape = schemaCategoryPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1141,12 +971,7 @@ open class TelephonyProvidersEdgeAPI {
         let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1161,15 +986,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get metadata for a schema (Deprecated)
      
      - parameter schemaCategory: (path) Schema category 
@@ -1199,33 +1016,30 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get metadata for a schema (Deprecated)
-     
      - GET /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultCountryCode" : "aeiou",
-  "selfUri" : "aeiou",
-  "thirdPartyURI" : "aeiou",
-  "version" : 123,
-  "thirdPartyOrgName" : "aeiou",
+  "defaultCountryCode" : "defaultCountryCode",
+  "selfUri" : "https://openapi-generator.tech",
+  "thirdPartyURI" : "https://openapi-generator.tech",
+  "version" : 0,
+  "thirdPartyOrgName" : "thirdPartyOrgName",
   "features" : {
     "key" : true
   },
-  "defaultLanguage" : "aeiou",
-  "defaultSiteId" : "aeiou",
-  "supportURI" : "aeiou",
-  "domain" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "defaultLanguage" : "defaultLanguage",
+  "defaultSiteId" : "defaultSiteId",
+  "supportURI" : "supportURI",
+  "domain" : "domain",
+  "name" : "name",
+  "id" : "id",
+  "state" : "active",
   "voicemailEnabled" : true,
-  "productPlatform" : "aeiou"
-}}]
+  "productPlatform" : "GenesysCloud"
+}, statusCode=200}]
      
      - parameter schemaCategory: (path) Schema category 
      - parameter schemaType: (path) Schema type 
@@ -1236,7 +1050,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Organization> 
      */
-    open class func getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataIdWithRequestBuilder(schemaCategory: String, schemaType: String, schemaId: String, extensionType: String, metadataId: String, type: String? = nil) -> RequestBuilder<Organization> {
+    open class func getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataIdWithRequestBuilder(schemaCategory: String, schemaType: String, schemaId: String, extensionType: String, metadataId: String, type: String? = nil) -> RequestBuilder<Organization> {        
         var path = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId}"
         let schemaCategoryPreEscape = "\(schemaCategory)"
         let schemaCategoryPostEscape = schemaCategoryPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1254,18 +1068,11 @@ open class TelephonyProvidersEdgeAPI {
         let metadataIdPostEscape = metadataIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{metadataId}", with: metadataIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "type": type
-            
         ])
 
         let requestBuilder: RequestBuilder<Organization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1275,16 +1082,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    public enum Expand_getTelephonyProvidersEdge: String { 
-        case site = "site"
-    }
-
-    
-    
     /**
-     
      Get edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -1310,270 +1108,164 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get edge.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "softwareStatus" : {
-    "callDrainingWaitTimeSeconds" : 123456789,
-    "current" : true,
-    "executeOnIdle" : true,
-    "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-    "maxDownloadRate" : 123,
-    "edgeUri" : "aeiou",
-    "version" : {
-      "latestRelease" : true,
-      "current" : true,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "publishDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "edgeUri" : "aeiou",
-      "edgeVersion" : "aeiou"
-    },
-    "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-    "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-    "status" : "aeiou"
-  },
-  "fullSoftwareVersion" : "aeiou",
-  "onlineStatus" : "aeiou",
-  "description" : "aeiou",
-  "callDrainingState" : "aeiou",
-  "createdByApp" : "aeiou",
+  "softwareStatus" : "{}",
+  "fullSoftwareVersion" : "fullSoftwareVersion",
+  "onlineStatus" : "ONLINE",
+  "description" : "description",
+  "callDrainingState" : "NONE",
+  "createdByApp" : "createdByApp",
   "edgeGroup" : {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "hybrid" : true,
-    "createdBy" : "aeiou",
+    "createdBy" : "createdBy",
     "managed" : true,
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "edgeTrunkBaseAssignment" : {
-      "family" : 123,
-      "trunkBase" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "trunkType" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "trunkMetabase" : "",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "properties" : {
-          "key" : "{}"
-        }
-      }
-    },
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "phoneTrunkBases" : [ "" ]
-  },
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "patch" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "apiVersion" : "aeiou",
-  "managed" : true,
-  "conversationCount" : 123,
-  "fingerprint" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "model" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "make" : "aeiou",
-  "stagedVersion" : "aeiou",
-  "interfaces" : [ {
-    "macAddress" : "aeiou",
-    "endpoints" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "ifName" : "aeiou",
-    "ipAddress" : "aeiou",
-    "name" : "aeiou",
-    "type" : "aeiou",
-    "lineTypes" : [ "aeiou" ],
-    "addressFamilyId" : "aeiou"
-  } ],
-  "edgeDeploymentType" : "aeiou",
-  "serialNumber" : "aeiou",
-  "softwareVersionConfiguration" : "aeiou",
-  "physicalEdge" : true,
-  "selfUri" : "aeiou",
-  "offlineConfigCalled" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "osName" : "aeiou",
-  "version" : 123,
-  "currentVersion" : "aeiou",
-  "proxy" : "aeiou",
-  "site" : {
-    "primarySites" : [ "" ],
-    "addresses" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
-      "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "secondaryEdges" : [ "" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "primaryEdges" : [ "" ],
-    "managed" : true,
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "coreSite" : true,
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
-    "ntpSettings" : {
-      "servers" : [ "aeiou" ]
-    },
-    "createdBy" : "aeiou",
-    "secondarySites" : [ "" ],
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "location" : {
-      "images" : "aeiou",
-      "address" : {
-        "zipcode" : "aeiou",
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "street1" : "aeiou",
-        "countryName" : "aeiou",
-        "state" : "aeiou",
-        "street2" : "aeiou"
-      },
-      "notes" : "aeiou",
-      "floorplanImage" : [ "" ],
-      "addressVerificationDetails" : {
-        "dateStarted" : "2000-01-23T04:56:07.000+0000",
-        "dateFinished" : "2000-01-23T04:56:07.000+0000",
-        "service" : "smartystreets-us",
-        "status" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "profileImage" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "emergencyNumber" : {
-        "number" : "aeiou",
-        "e164" : "aeiou",
-        "type" : "aeiou"
-      },
-      "version" : 123,
-      "path" : [ "aeiou" ],
-      "addressStored" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "contactUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "state" : "aeiou",
-      "addressVerified" : true
-    },
-    "mediaModel" : "aeiou",
-    "siteConnections" : [ {
-      "coreSite" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "edgeTrunkBaseAssignment" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "phoneTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "selfUri" : "aeiou",
-      "edgeList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou",
-        "edgeConnectionList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "site" : "",
-          "connectionErrors" : [ "aeiou" ],
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou"
-        } ]
-      } ],
-      "name" : "aeiou",
-      "secondaryCoreSites" : [ "" ],
-      "mediaModel" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "enabled" : true,
-      "primaryCoreSites" : [ "" ]
-    } ],
-    "edgeAutoUpdateConfig" : {
-      "rrule" : "aeiou",
-      "start" : "aeiou",
-      "timeZone" : "aeiou",
-      "end" : "aeiou"
-    }
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    } ]
   },
-  "softwareVersionPlatform" : "aeiou",
-  "fingerprintHint" : "aeiou",
-  "createdBy" : "aeiou",
-  "softwareVersionTimestamp" : "aeiou",
-  "pairingId" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "softwareVersion" : "aeiou",
-  "statusCode" : "aeiou"
-}}]
+  "division" : "{}",
+  "patch" : "patch",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "apiVersion" : "apiVersion",
+  "managed" : true,
+  "conversationCount" : 5,
+  "fingerprint" : "fingerprint",
+  "modifiedBy" : "modifiedBy",
+  "model" : "model",
+  "id" : "id",
+  "state" : "active",
+  "make" : "make",
+  "stagedVersion" : "stagedVersion",
+  "interfaces" : [ {
+    "macAddress" : "macAddress",
+    "endpoints" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "ifName" : "ifName",
+    "ipAddress" : "ipAddress",
+    "name" : "name",
+    "type" : "type",
+    "lineTypes" : [ "TIE", "TIE" ],
+    "addressFamilyId" : "addressFamilyId"
+  }, {
+    "macAddress" : "macAddress",
+    "endpoints" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "ifName" : "ifName",
+    "ipAddress" : "ipAddress",
+    "name" : "name",
+    "type" : "type",
+    "lineTypes" : [ "TIE", "TIE" ],
+    "addressFamilyId" : "addressFamilyId"
+  } ],
+  "edgeDeploymentType" : "HARDWARE",
+  "serialNumber" : "serialNumber",
+  "softwareVersionConfiguration" : "softwareVersionConfiguration",
+  "physicalEdge" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "offlineConfigCalled" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "osName" : "osName",
+  "version" : 0,
+  "currentVersion" : "currentVersion",
+  "proxy" : "proxy",
+  "site" : "{}",
+  "softwareVersionPlatform" : "softwareVersionPlatform",
+  "fingerprintHint" : "fingerprintHint",
+  "createdBy" : "createdBy",
+  "softwareVersionTimestamp" : "softwareVersionTimestamp",
+  "pairingId" : "pairingId",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "softwareVersion" : "softwareVersion",
+  "statusCode" : "NEW"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
 
      - returns: RequestBuilder<Edge> 
      */
-    open class func getTelephonyProvidersEdgeWithRequestBuilder(edgeId: String, expand: [String]? = nil) -> RequestBuilder<Edge> {
+    open class func getTelephonyProvidersEdgeWithRequestBuilder(edgeId: String, expand: [String]? = nil) -> RequestBuilder<Edge> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<Edge>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1582,10 +1274,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get networking-related information from an Edge for a target IP or host.
      
      - parameter edgeId: (path) Edge Id 
@@ -1610,35 +1299,27 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get networking-related information from an Edge for a target IP or host.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "diagnostics" : "aeiou",
-  "commandCorrelationId" : "aeiou"
-}}]
+  "diagnostics" : "diagnostics",
+  "commandCorrelationId" : "commandCorrelationId"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge Id 
 
      - returns: RequestBuilder<EdgeNetworkDiagnosticResponse> 
      */
-    open class func getTelephonyProvidersEdgeDiagnosticNslookupWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {
+    open class func getTelephonyProvidersEdgeDiagnosticNslookupWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1648,10 +1329,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get networking-related information from an Edge for a target IP or host.
      
      - parameter edgeId: (path) Edge Id 
@@ -1676,35 +1354,27 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get networking-related information from an Edge for a target IP or host.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "diagnostics" : "aeiou",
-  "commandCorrelationId" : "aeiou"
-}}]
+  "diagnostics" : "diagnostics",
+  "commandCorrelationId" : "commandCorrelationId"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge Id 
 
      - returns: RequestBuilder<EdgeNetworkDiagnosticResponse> 
      */
-    open class func getTelephonyProvidersEdgeDiagnosticPingWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {
+    open class func getTelephonyProvidersEdgeDiagnosticPingWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1714,10 +1384,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get networking-related information from an Edge for a target IP or host.
      
      - parameter edgeId: (path) Edge Id 
@@ -1742,35 +1409,27 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get networking-related information from an Edge for a target IP or host.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "diagnostics" : "aeiou",
-  "commandCorrelationId" : "aeiou"
-}}]
+  "diagnostics" : "diagnostics",
+  "commandCorrelationId" : "commandCorrelationId"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge Id 
 
      - returns: RequestBuilder<EdgeNetworkDiagnosticResponse> 
      */
-    open class func getTelephonyProvidersEdgeDiagnosticRouteWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {
+    open class func getTelephonyProvidersEdgeDiagnosticRouteWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1780,10 +1439,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get networking-related information from an Edge for a target IP or host.
      
      - parameter edgeId: (path) Edge Id 
@@ -1808,35 +1464,27 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get networking-related information from an Edge for a target IP or host.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "diagnostics" : "aeiou",
-  "commandCorrelationId" : "aeiou"
-}}]
+  "diagnostics" : "diagnostics",
+  "commandCorrelationId" : "commandCorrelationId"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge Id 
 
      - returns: RequestBuilder<EdgeNetworkDiagnosticResponse> 
      */
-    open class func getTelephonyProvidersEdgeDiagnosticTracepathWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {
+    open class func getTelephonyProvidersEdgeDiagnosticTracepathWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1847,11 +1495,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get line
      
      - parameter edgeId: (path) Edge ID 
@@ -1877,299 +1521,266 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get line
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "schema" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "selfUri" : "aeiou",
-  "ipAddress" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "edgeGroup" : "",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "edge" : {
-    "softwareStatus" : {
-      "callDrainingWaitTimeSeconds" : 123456789,
-      "current" : true,
-      "executeOnIdle" : true,
-      "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-      "maxDownloadRate" : 123,
-      "edgeUri" : "aeiou",
-      "version" : {
-        "latestRelease" : true,
-        "current" : true,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "publishDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "edgeUri" : "aeiou",
-        "edgeVersion" : "aeiou"
-      },
-      "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-      "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
-    "fullSoftwareVersion" : "aeiou",
-    "onlineStatus" : "aeiou",
-    "description" : "aeiou",
-    "callDrainingState" : "aeiou",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "hybrid" : true,
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "edgeTrunkBaseAssignment" : {
-        "family" : 123,
-        "trunkBase" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "trunkType" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "trunkMetabase" : "",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "properties" : {
-            "key" : "{}"
-          }
-        }
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "phoneTrunkBases" : [ "" ]
-    },
-    "division" : "",
-    "patch" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "apiVersion" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "ipAddress" : "ipAddress",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "edgeGroup" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "hybrid" : true,
+    "createdBy" : "createdBy",
     "managed" : true,
-    "conversationCount" : 123,
-    "fingerprint" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "model" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "make" : "aeiou",
-    "stagedVersion" : "aeiou",
-    "interfaces" : [ {
-      "macAddress" : "aeiou",
-      "endpoints" : [ "" ],
-      "ifName" : "aeiou",
-      "ipAddress" : "aeiou",
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "lineTypes" : [ "aeiou" ],
-      "addressFamilyId" : "aeiou"
-    } ],
-    "edgeDeploymentType" : "aeiou",
-    "serialNumber" : "aeiou",
-    "softwareVersionConfiguration" : "aeiou",
-    "physicalEdge" : true,
-    "selfUri" : "aeiou",
-    "offlineConfigCalled" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "osName" : "aeiou",
-    "version" : 123,
-    "currentVersion" : "aeiou",
-    "proxy" : "aeiou",
-    "site" : {
-      "primarySites" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
-        "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "secondaryEdges" : [ "" ],
-      "description" : "aeiou",
-      "createdByApp" : "aeiou",
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "primaryEdges" : [ "" ],
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "edgeTrunkBaseAssignment" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "phoneTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "coreSite" : true,
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
-      "ntpSettings" : {
-        "servers" : [ "aeiou" ]
-      },
-      "createdBy" : "aeiou",
-      "secondarySites" : [ "" ],
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "location" : {
-        "images" : "aeiou",
-        "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
-        },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
-        } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
-        "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
-        "addressVerified" : true
-      },
-      "mediaModel" : "aeiou",
-      "siteConnections" : [ {
-        "coreSite" : true,
-        "managed" : true,
-        "selfUri" : "aeiou",
-        "edgeList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou",
-          "edgeConnectionList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "site" : "",
-            "connectionErrors" : [ "aeiou" ],
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou"
-          } ]
-        } ],
-        "name" : "aeiou",
-        "secondaryCoreSites" : [ "" ],
-        "mediaModel" : "aeiou",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "enabled" : true,
-        "primaryCoreSites" : [ "" ]
-      } ],
-      "edgeAutoUpdateConfig" : {
-        "rrule" : "aeiou",
-        "start" : "aeiou",
-        "timeZone" : "aeiou",
-        "end" : "aeiou"
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
       }
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    } ]
+  },
+  "version" : 0,
+  "division" : "{}",
+  "edge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "softwareVersionPlatform" : "aeiou",
-    "fingerprintHint" : "aeiou",
-    "createdBy" : "aeiou",
-    "softwareVersionTimestamp" : "aeiou",
-    "pairingId" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "softwareVersion" : "aeiou",
-    "statusCode" : "aeiou"
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   },
   "endpoint" : {
-    "schema" : "",
-    "selfUri" : "aeiou",
-    "count" : 123,
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
+    "schema" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "count" : 1,
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
     "enabled" : true,
-    "division" : "",
-    "site" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "dids" : [ "aeiou" ],
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "dids" : [ "dids", "dids" ],
     "properties" : {
       "key" : "{}"
     }
   },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "lineType" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "logicalInterfaceId" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "lineType" : "TIE",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "logicalInterfaceId" : "logicalInterfaceId",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter lineId: (path) Line ID 
 
      - returns: RequestBuilder<EdgeLine> 
      */
-    open class func getTelephonyProvidersEdgeLineWithRequestBuilder(edgeId: String, lineId: String) -> RequestBuilder<EdgeLine> {
+    open class func getTelephonyProvidersEdgeLineWithRequestBuilder(edgeId: String, lineId: String) -> RequestBuilder<EdgeLine> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2178,12 +1789,7 @@ open class TelephonyProvidersEdgeAPI {
         let lineIdPostEscape = lineIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{lineId}", with: lineIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2195,17 +1801,12 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get the list of lines.
      
      - parameter edgeId: (path) Edge ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTelephonyProvidersEdgeLines(edgeId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: EdgeLineEntityListing?,_ error: Error?) -> Void)) {
@@ -2227,330 +1828,536 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of lines.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/lines
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "schema" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "selfUri" : "aeiou",
-    "ipAddress" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : "",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "edge" : {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "ipAddress" : "ipAddress",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
       "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : {
-        "primarySites" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "countryCode" : "aeiou",
-          "display" : "aeiou",
-          "integration" : "microsoftteams",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
-        } ],
-        "secondaryEdges" : [ "" ],
-        "description" : "aeiou",
-        "createdByApp" : "aeiou",
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "primaryEdges" : [ "" ],
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
         "managed" : true,
-        "modifiedBy" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "coreSite" : true,
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
-        "ntpSettings" : {
-          "servers" : [ "aeiou" ]
-        },
-        "createdBy" : "aeiou",
-        "secondarySites" : [ "" ],
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "location" : {
-          "images" : "aeiou",
-          "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
-          },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
-          } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
-          "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
-          "addressVerified" : true
-        },
-        "mediaModel" : "aeiou",
-        "siteConnections" : [ {
-          "coreSite" : true,
-          "managed" : true,
-          "selfUri" : "aeiou",
-          "edgeList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou",
-            "edgeConnectionList" : [ {
-              "interfaceIpAddress" : "aeiou",
-              "site" : "",
-              "connectionErrors" : [ "aeiou" ],
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "interfaceName" : "aeiou"
-            } ]
-          } ],
-          "name" : "aeiou",
-          "secondaryCoreSites" : [ "" ],
-          "mediaModel" : "aeiou",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "enabled" : true,
-          "primaryCoreSites" : [ "" ]
-        } ],
-        "edgeAutoUpdateConfig" : {
-          "rrule" : "aeiou",
-          "start" : "aeiou",
-          "timeZone" : "aeiou",
-          "end" : "aeiou"
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
         }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "version" : 0,
+    "division" : "{}",
+    "edge" : {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
       },
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
     },
     "endpoint" : {
-      "schema" : "",
-      "selfUri" : "aeiou",
-      "count" : 123,
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
+      "schema" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "count" : 1,
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
       "enabled" : true,
-      "division" : "",
-      "site" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "dids" : [ "aeiou" ],
+      "division" : "{}",
+      "site" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "dids" : [ "dids", "dids" ],
       "properties" : {
         "key" : "{}"
       }
     },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "lineType" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "logicalInterfaceId" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "lineType" : "TIE",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "logicalInterfaceId" : "logicalInterfaceId",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "schema" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "ipAddress" : "ipAddress",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "version" : 0,
+    "division" : "{}",
+    "edge" : {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    },
+    "endpoint" : {
+      "schema" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "count" : 1,
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "enabled" : true,
+      "division" : "{}",
+      "site" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "dids" : [ "dids", "dids" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "lineType" : "TIE",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "logicalInterfaceId" : "logicalInterfaceId",
     "properties" : {
       "key" : "{}"
     }
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<EdgeLineEntityListing> 
      */
-    open class func getTelephonyProvidersEdgeLinesWithRequestBuilder(edgeId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<EdgeLineEntityListing> {
+    open class func getTelephonyProvidersEdgeLinesWithRequestBuilder(edgeId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<EdgeLineEntityListing> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/lines"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<EdgeLineEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2561,18 +2368,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    public enum Expand_getTelephonyProvidersEdgeLogicalinterface: String { 
-        case externaltrunkbaseassignments = "externalTrunkBaseAssignments"
-        case phonetrunkbaseassignments = "phoneTrunkBaseAssignments"
-    }
-
-    
-    
     /**
-     
      Get an edge logical interface
      
      - parameter edgeId: (path) Edge ID 
@@ -2599,123 +2395,119 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get an edge logical interface
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "hardwareAddress" : "aeiou",
+  "hardwareAddress" : "hardwareAddress",
   "addresses" : [ {
-    "address" : "aeiou",
-    "type" : "aeiou",
+    "address" : "address",
+    "type" : "ip",
     "persistent" : true,
-    "family" : 123
+    "family" : 5
+  }, {
+    "address" : "address",
+    "type" : "ip",
+    "persistent" : true,
+    "family" : 5
   } ],
-  "phoneTrunkBaseAssignments" : [ "" ],
-  "endDate" : "2000-01-23T04:56:07.000+0000",
+  "phoneTrunkBaseAssignments" : [ {
+    "family" : 7,
+    "trunkBase" : "{}"
+  }, {
+    "family" : 7,
+    "trunkBase" : "{}"
+  } ],
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
   "externalTrunkBaseAssignments" : [ {
-    "family" : 123,
-    "trunkBase" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "trunkType" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "trunkMetabase" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "properties" : {
-        "key" : "{}"
-      }
-    }
+    "family" : 7,
+    "trunkBase" : "{}"
+  }, {
+    "family" : 7,
+    "trunkBase" : "{}"
   } ],
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
+  "description" : "description",
+  "createdByApp" : "createdByApp",
   "useForInternalEdgeCommunication" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
   "useForWanInterface" : true,
-  "interfaceType" : "aeiou",
+  "interfaceType" : "DIAGNOSTIC",
   "routes" : [ {
-    "metric" : 123,
-    "prefix" : "aeiou",
+    "metric" : 1,
+    "prefix" : "prefix",
     "persistent" : true,
-    "family" : 123,
-    "nexthop" : "aeiou"
+    "family" : 5,
+    "nexthop" : "nexthop"
+  }, {
+    "metric" : 1,
+    "prefix" : "prefix",
+    "persistent" : true,
+    "family" : 5,
+    "nexthop" : "nexthop"
   } ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "lastModifiedUserId" : "aeiou",
-  "lastModifiedCorrelationId" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "friendlyName" : "aeiou",
-  "publicNatAddressIpV4" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastModifiedUserId" : "lastModifiedUserId",
+  "lastModifiedCorrelationId" : "lastModifiedCorrelationId",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "friendlyName" : "friendlyName",
+  "publicNatAddressIpV4" : "publicNatAddressIpV4",
   "commandResponses" : [ {
-    "commandName" : "aeiou",
+    "commandName" : "commandName",
     "acknowledged" : true,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : "aeiou",
+      "messageWithParams" : "messageWithParams",
+      "code" : "code",
+      "contextId" : "contextId",
+      "details" : "https://openapi-generator.tech",
       "messageParams" : {
-        "key" : "aeiou"
+        "key" : "messageParams"
       },
-      "message" : "aeiou",
-      "nested" : "",
-      "status" : 123
+      "message" : "message",
+      "status" : 2
     },
-    "correlationId" : "aeiou"
+    "correlationId" : "correlationId"
+  }, {
+    "commandName" : "commandName",
+    "acknowledged" : true,
+    "errorInfo" : {
+      "messageWithParams" : "messageWithParams",
+      "code" : "code",
+      "contextId" : "contextId",
+      "details" : "https://openapi-generator.tech",
+      "messageParams" : {
+        "key" : "messageParams"
+      },
+      "message" : "message",
+      "status" : 2
+    },
+    "correlationId" : "correlationId"
   } ],
-  "publicNatAddressIpV6" : "aeiou",
-  "ifStatus" : "aeiou",
-  "selfUri" : "aeiou",
+  "publicNatAddressIpV6" : "publicNatAddressIpV6",
+  "ifStatus" : "ifStatus",
+  "selfUri" : "https://openapi-generator.tech",
   "useForCloudProxyEdgeCommunication" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "ipv6Capabilities" : "",
-  "version" : 123,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "ipv6Capabilities" : "{}",
+  "version" : 0,
   "useForIndirectEdgeCommunication" : true,
-  "ipv4Capabilities" : {
-    "metric" : 123,
-    "pingEnabled" : true,
-    "enabled" : true,
-    "dhcp" : true,
-    "autoMetric" : true,
-    "supportsMetric" : true
-  },
+  "ipv4Capabilities" : "{}",
   "inheritPhoneTrunkBasesIPv6" : true,
-  "physicalAdapterId" : "aeiou",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "edgeAssignedId" : "aeiou",
-  "vlanTagId" : 123,
-  "edgeUri" : "aeiou",
-  "currentState" : "aeiou",
+  "physicalAdapterId" : "physicalAdapterId",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "edgeAssignedId" : "edgeAssignedId",
+  "vlanTagId" : 6,
+  "edgeUri" : "https://openapi-generator.tech",
+  "currentState" : "INIT",
   "traceEnabled" : true,
   "inheritPhoneTrunkBasesIPv4" : true,
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter interfaceId: (path) Interface ID 
@@ -2723,7 +2515,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<DomainLogicalInterface> 
      */
-    open class func getTelephonyProvidersEdgeLogicalinterfaceWithRequestBuilder(edgeId: String, interfaceId: String, expand: [String]? = nil) -> RequestBuilder<DomainLogicalInterface> {
+    open class func getTelephonyProvidersEdgeLogicalinterfaceWithRequestBuilder(edgeId: String, interfaceId: String, expand: [String]? = nil) -> RequestBuilder<DomainLogicalInterface> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2732,18 +2524,11 @@ open class TelephonyProvidersEdgeAPI {
         let interfaceIdPostEscape = interfaceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{interfaceId}", with: interfaceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<DomainLogicalInterface>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2753,17 +2538,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    public enum Expand_getTelephonyProvidersEdgeLogicalinterfaces: String { 
-        case externaltrunkbaseassignments = "externalTrunkBaseAssignments"
-        case phonetrunkbaseassignments = "phoneTrunkBaseAssignments"
-    }
-
-    
-    
     /**
-     
      Get edge logical interfaces.
      
      - parameter edgeId: (path) Edge ID 
@@ -2789,158 +2564,255 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get edge logical interfaces.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces
      - Retrieve a list of all configured logical interfaces from a specific edge.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 2,
+  "pageCount" : 4,
+  "pageNumber" : 3,
   "entities" : [ {
-    "hardwareAddress" : "aeiou",
+    "hardwareAddress" : "hardwareAddress",
     "addresses" : [ {
-      "address" : "aeiou",
-      "type" : "aeiou",
+      "address" : "address",
+      "type" : "ip",
       "persistent" : true,
-      "family" : 123
+      "family" : 5
+    }, {
+      "address" : "address",
+      "type" : "ip",
+      "persistent" : true,
+      "family" : 5
     } ],
-    "phoneTrunkBaseAssignments" : [ "" ],
-    "endDate" : "2000-01-23T04:56:07.000+0000",
+    "phoneTrunkBaseAssignments" : [ {
+      "family" : 7,
+      "trunkBase" : "{}"
+    }, {
+      "family" : 7,
+      "trunkBase" : "{}"
+    } ],
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
     "externalTrunkBaseAssignments" : [ {
-      "family" : 123,
-      "trunkBase" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "trunkType" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "trunkMetabase" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "properties" : {
-          "key" : "{}"
-        }
-      }
+      "family" : 7,
+      "trunkBase" : "{}"
+    }, {
+      "family" : 7,
+      "trunkBase" : "{}"
     } ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
+    "description" : "description",
+    "createdByApp" : "createdByApp",
     "useForInternalEdgeCommunication" : true,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
+    "division" : "{}",
     "useForWanInterface" : true,
-    "interfaceType" : "aeiou",
+    "interfaceType" : "DIAGNOSTIC",
     "routes" : [ {
-      "metric" : 123,
-      "prefix" : "aeiou",
+      "metric" : 1,
+      "prefix" : "prefix",
       "persistent" : true,
-      "family" : 123,
-      "nexthop" : "aeiou"
+      "family" : 5,
+      "nexthop" : "nexthop"
+    }, {
+      "metric" : 1,
+      "prefix" : "prefix",
+      "persistent" : true,
+      "family" : 5,
+      "nexthop" : "nexthop"
     } ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "lastModifiedUserId" : "aeiou",
-    "lastModifiedCorrelationId" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "friendlyName" : "aeiou",
-    "publicNatAddressIpV4" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastModifiedUserId" : "lastModifiedUserId",
+    "lastModifiedCorrelationId" : "lastModifiedCorrelationId",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "friendlyName" : "friendlyName",
+    "publicNatAddressIpV4" : "publicNatAddressIpV4",
     "commandResponses" : [ {
-      "commandName" : "aeiou",
+      "commandName" : "commandName",
       "acknowledged" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
-        "code" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : "aeiou",
+        "messageWithParams" : "messageWithParams",
+        "code" : "code",
+        "contextId" : "contextId",
+        "details" : "https://openapi-generator.tech",
         "messageParams" : {
-          "key" : "aeiou"
+          "key" : "messageParams"
         },
-        "message" : "aeiou",
-        "nested" : "",
-        "status" : 123
+        "message" : "message",
+        "status" : 2
       },
-      "correlationId" : "aeiou"
+      "correlationId" : "correlationId"
+    }, {
+      "commandName" : "commandName",
+      "acknowledged" : true,
+      "errorInfo" : {
+        "messageWithParams" : "messageWithParams",
+        "code" : "code",
+        "contextId" : "contextId",
+        "details" : "https://openapi-generator.tech",
+        "messageParams" : {
+          "key" : "messageParams"
+        },
+        "message" : "message",
+        "status" : 2
+      },
+      "correlationId" : "correlationId"
     } ],
-    "publicNatAddressIpV6" : "aeiou",
-    "ifStatus" : "aeiou",
-    "selfUri" : "aeiou",
+    "publicNatAddressIpV6" : "publicNatAddressIpV6",
+    "ifStatus" : "ifStatus",
+    "selfUri" : "https://openapi-generator.tech",
     "useForCloudProxyEdgeCommunication" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "ipv6Capabilities" : "",
-    "version" : 123,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "ipv6Capabilities" : "{}",
+    "version" : 0,
     "useForIndirectEdgeCommunication" : true,
-    "ipv4Capabilities" : {
-      "metric" : 123,
-      "pingEnabled" : true,
-      "enabled" : true,
-      "dhcp" : true,
-      "autoMetric" : true,
-      "supportsMetric" : true
-    },
+    "ipv4Capabilities" : "{}",
     "inheritPhoneTrunkBasesIPv6" : true,
-    "physicalAdapterId" : "aeiou",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "edgeAssignedId" : "aeiou",
-    "vlanTagId" : 123,
-    "edgeUri" : "aeiou",
-    "currentState" : "aeiou",
+    "physicalAdapterId" : "physicalAdapterId",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "edgeAssignedId" : "edgeAssignedId",
+    "vlanTagId" : 6,
+    "edgeUri" : "https://openapi-generator.tech",
+    "currentState" : "INIT",
     "traceEnabled" : true,
     "inheritPhoneTrunkBasesIPv4" : true,
-    "startDate" : "2000-01-23T04:56:07.000+0000"
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "hardwareAddress" : "hardwareAddress",
+    "addresses" : [ {
+      "address" : "address",
+      "type" : "ip",
+      "persistent" : true,
+      "family" : 5
+    }, {
+      "address" : "address",
+      "type" : "ip",
+      "persistent" : true,
+      "family" : 5
+    } ],
+    "phoneTrunkBaseAssignments" : [ {
+      "family" : 7,
+      "trunkBase" : "{}"
+    }, {
+      "family" : 7,
+      "trunkBase" : "{}"
+    } ],
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "externalTrunkBaseAssignments" : [ {
+      "family" : 7,
+      "trunkBase" : "{}"
+    }, {
+      "family" : 7,
+      "trunkBase" : "{}"
+    } ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "useForInternalEdgeCommunication" : true,
+    "division" : "{}",
+    "useForWanInterface" : true,
+    "interfaceType" : "DIAGNOSTIC",
+    "routes" : [ {
+      "metric" : 1,
+      "prefix" : "prefix",
+      "persistent" : true,
+      "family" : 5,
+      "nexthop" : "nexthop"
+    }, {
+      "metric" : 1,
+      "prefix" : "prefix",
+      "persistent" : true,
+      "family" : 5,
+      "nexthop" : "nexthop"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastModifiedUserId" : "lastModifiedUserId",
+    "lastModifiedCorrelationId" : "lastModifiedCorrelationId",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "friendlyName" : "friendlyName",
+    "publicNatAddressIpV4" : "publicNatAddressIpV4",
+    "commandResponses" : [ {
+      "commandName" : "commandName",
+      "acknowledged" : true,
+      "errorInfo" : {
+        "messageWithParams" : "messageWithParams",
+        "code" : "code",
+        "contextId" : "contextId",
+        "details" : "https://openapi-generator.tech",
+        "messageParams" : {
+          "key" : "messageParams"
+        },
+        "message" : "message",
+        "status" : 2
+      },
+      "correlationId" : "correlationId"
+    }, {
+      "commandName" : "commandName",
+      "acknowledged" : true,
+      "errorInfo" : {
+        "messageWithParams" : "messageWithParams",
+        "code" : "code",
+        "contextId" : "contextId",
+        "details" : "https://openapi-generator.tech",
+        "messageParams" : {
+          "key" : "messageParams"
+        },
+        "message" : "message",
+        "status" : 2
+      },
+      "correlationId" : "correlationId"
+    } ],
+    "publicNatAddressIpV6" : "publicNatAddressIpV6",
+    "ifStatus" : "ifStatus",
+    "selfUri" : "https://openapi-generator.tech",
+    "useForCloudProxyEdgeCommunication" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "ipv6Capabilities" : "{}",
+    "version" : 0,
+    "useForIndirectEdgeCommunication" : true,
+    "ipv4Capabilities" : "{}",
+    "inheritPhoneTrunkBasesIPv6" : true,
+    "physicalAdapterId" : "physicalAdapterId",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "edgeAssignedId" : "edgeAssignedId",
+    "vlanTagId" : 6,
+    "edgeUri" : "https://openapi-generator.tech",
+    "currentState" : "INIT",
+    "traceEnabled" : true,
+    "inheritPhoneTrunkBasesIPv4" : true,
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 9,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter expand: (query) Field to expand in the response (optional)
 
      - returns: RequestBuilder<LogicalInterfaceEntityListing> 
      */
-    open class func getTelephonyProvidersEdgeLogicalinterfacesWithRequestBuilder(edgeId: String, expand: [String]? = nil) -> RequestBuilder<LogicalInterfaceEntityListing> {
+    open class func getTelephonyProvidersEdgeLogicalinterfacesWithRequestBuilder(edgeId: String, expand: [String]? = nil) -> RequestBuilder<LogicalInterfaceEntityListing> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<LogicalInterfaceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2950,11 +2822,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get an Edge logs job.
      
      - parameter edgeId: (path) Edge ID 
@@ -2980,61 +2848,74 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get an Edge logs job.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
   "files" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "uploadStatus" : "aeiou",
-    "downloadId" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "timeModified" : "2000-01-23T04:56:07.000+0000",
-    "sizeBytes" : 1.3579000000000001069366817318950779736042022705078125,
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "timeCreated" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "edgePath" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "uploadStatus" : "UPLOADING",
+    "downloadId" : "downloadId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "timeModified" : "2000-01-23T04:56:07.000+00:00",
+    "sizeBytes" : 1.4658129805029452,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "timeCreated" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "edgePath" : "https://openapi-generator.tech"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "uploadStatus" : "UPLOADING",
+    "downloadId" : "downloadId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "timeModified" : "2000-01-23T04:56:07.000+00:00",
+    "sizeBytes" : 1.4658129805029452,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "timeCreated" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "edgePath" : "https://openapi-generator.tech"
   } ],
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter jobId: (path) Job ID 
 
      - returns: RequestBuilder<EdgeLogsJob> 
      */
-    open class func getTelephonyProvidersEdgeLogsJobWithRequestBuilder(edgeId: String, jobId: String) -> RequestBuilder<EdgeLogsJob> {
+    open class func getTelephonyProvidersEdgeLogsJobWithRequestBuilder(edgeId: String, jobId: String) -> RequestBuilder<EdgeLogsJob> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3043,12 +2924,7 @@ open class TelephonyProvidersEdgeAPI {
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3058,10 +2934,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get the edge metrics.
      
      - parameter edgeId: (path) Edge Id 
@@ -3086,69 +2959,85 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the edge metrics.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/metrics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "edge" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
   "memory" : [ {
-    "totalBytes" : 1.3579000000000001069366817318950779736042022705078125,
-    "type" : "aeiou",
-    "availableBytes" : 1.3579000000000001069366817318950779736042022705078125
+    "totalBytes" : 7.061401241503109,
+    "type" : "type",
+    "availableBytes" : 2.3021358869347655
+  }, {
+    "totalBytes" : 7.061401241503109,
+    "type" : "type",
+    "availableBytes" : 2.3021358869347655
   } ],
   "disks" : [ {
-    "partitionName" : "aeiou",
-    "totalBytes" : 1.3579000000000001069366817318950779736042022705078125,
-    "availableBytes" : 1.3579000000000001069366817318950779736042022705078125
+    "partitionName" : "partitionName",
+    "totalBytes" : 3.616076749251911,
+    "availableBytes" : 9.301444243932576
+  }, {
+    "partitionName" : "partitionName",
+    "totalBytes" : 3.616076749251911,
+    "availableBytes" : 9.301444243932576
   } ],
-  "eventTime" : "2000-01-23T04:56:07.000+0000",
-  "upTimeMsec" : 123456789,
+  "eventTime" : "2000-01-23T04:56:07.000+00:00",
+  "upTimeMsec" : 0,
   "processors" : [ {
-    "privilegedTimePct" : 1.3579000000000001069366817318950779736042022705078125,
-    "cpuId" : "aeiou",
-    "userTimePct" : 1.3579000000000001069366817318950779736042022705078125,
-    "idleTimePct" : 1.3579000000000001069366817318950779736042022705078125,
-    "activeTimePct" : 1.3579000000000001069366817318950779736042022705078125
+    "privilegedTimePct" : 5.962133916683182,
+    "cpuId" : "cpuId",
+    "userTimePct" : 5.637376656633329,
+    "idleTimePct" : 1.4658129805029452,
+    "activeTimePct" : 6.027456183070403
+  }, {
+    "privilegedTimePct" : 5.962133916683182,
+    "cpuId" : "cpuId",
+    "userTimePct" : 5.637376656633329,
+    "idleTimePct" : 1.4658129805029452,
+    "activeTimePct" : 6.027456183070403
   } ],
   "networks" : [ {
-    "sentBytesPerSec" : 123,
-    "ifname" : "aeiou",
-    "bandwidthBitsPerSec" : 1.3579000000000001069366817318950779736042022705078125,
-    "receivedBytesPerSec" : 123,
-    "utilizationPct" : 1.3579000000000001069366817318950779736042022705078125
+    "sentBytesPerSec" : 4,
+    "ifname" : "ifname",
+    "bandwidthBitsPerSec" : 1.2315135367772556,
+    "receivedBytesPerSec" : 7,
+    "utilizationPct" : 1.0246457001441578
+  }, {
+    "sentBytesPerSec" : 4,
+    "ifname" : "ifname",
+    "bandwidthBitsPerSec" : 1.2315135367772556,
+    "receivedBytesPerSec" : 7,
+    "utilizationPct" : 1.0246457001441578
   } ],
   "subsystems" : [ {
-    "delayMs" : 123,
-    "processName" : "aeiou",
-    "mediaSubsystem" : ""
+    "delayMs" : 2,
+    "processName" : "processName",
+    "mediaSubsystem" : "{}"
+  }, {
+    "delayMs" : 2,
+    "processName" : "processName",
+    "mediaSubsystem" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge Id 
 
      - returns: RequestBuilder<EdgeMetrics> 
      */
-    open class func getTelephonyProvidersEdgeMetricsWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeMetrics> {
+    open class func getTelephonyProvidersEdgeMetricsWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeMetrics> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/metrics"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3159,11 +3048,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get edge physical interface.
      
      - parameter edgeId: (path) Edge ID 
@@ -3189,48 +3074,42 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get edge physical interface.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId}
      - Retrieve a physical interface from a specific edge.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "hardwareAddress" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "hardwareAddress" : "hardwareAddress",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "physicalCapabilities" : {
     "vlan" : true,
     "team" : true
   },
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "edgeUri" : "aeiou",
-  "portLabel" : "aeiou",
-  "friendlyName" : "aeiou"
-}}]
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "edgeUri" : "https://openapi-generator.tech",
+  "portLabel" : "portLabel",
+  "friendlyName" : "friendlyName"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter interfaceId: (path) Interface ID 
 
      - returns: RequestBuilder<DomainPhysicalInterface> 
      */
-    open class func getTelephonyProvidersEdgePhysicalinterfaceWithRequestBuilder(edgeId: String, interfaceId: String) -> RequestBuilder<DomainPhysicalInterface> {
+    open class func getTelephonyProvidersEdgePhysicalinterfaceWithRequestBuilder(edgeId: String, interfaceId: String) -> RequestBuilder<DomainPhysicalInterface> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3239,12 +3118,7 @@ open class TelephonyProvidersEdgeAPI {
         let interfaceIdPostEscape = interfaceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{interfaceId}", with: interfaceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3254,10 +3128,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve a list of all configured physical interfaces from a specific edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -3282,69 +3153,79 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Retrieve a list of all configured physical interfaces from a specific edge.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "hardwareAddress" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "hardwareAddress" : "hardwareAddress",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "physicalCapabilities" : {
       "vlan" : true,
       "team" : true
     },
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "edgeUri" : "https://openapi-generator.tech",
+    "portLabel" : "portLabel",
+    "friendlyName" : "friendlyName"
+  }, {
+    "hardwareAddress" : "hardwareAddress",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "physicalCapabilities" : {
+      "vlan" : true,
+      "team" : true
     },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "edgeUri" : "aeiou",
-    "portLabel" : "aeiou",
-    "friendlyName" : "aeiou"
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "edgeUri" : "https://openapi-generator.tech",
+    "portLabel" : "portLabel",
+    "friendlyName" : "friendlyName"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
 
      - returns: RequestBuilder<PhysicalInterfaceEntityListing> 
      */
-    open class func getTelephonyProvidersEdgePhysicalinterfacesWithRequestBuilder(edgeId: String) -> RequestBuilder<PhysicalInterfaceEntityListing> {
+    open class func getTelephonyProvidersEdgePhysicalinterfacesWithRequestBuilder(edgeId: String) -> RequestBuilder<PhysicalInterfaceEntityListing> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3354,10 +3235,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -3382,41 +3260,29 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/setuppackage
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "meta-data" : {
-    "pairing-url" : "aeiou",
-    "pairing-trust" : [ "aeiou" ],
-    "pairing-token" : "aeiou"
-  },
-  "org-id" : "aeiou",
-  "edge-id" : "aeiou",
-  "auth-token" : "aeiou"
-}}]
+  "meta-data" : "{}",
+  "org-id" : "org-id",
+  "edge-id" : "edge-id",
+  "auth-token" : "auth-token"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
 
      - returns: RequestBuilder<VmPairingInfo> 
      */
-    open class func getTelephonyProvidersEdgeSetuppackageWithRequestBuilder(edgeId: String) -> RequestBuilder<VmPairingInfo> {
+    open class func getTelephonyProvidersEdgeSetuppackageWithRequestBuilder(edgeId: String) -> RequestBuilder<VmPairingInfo> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/setuppackage"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3426,10 +3292,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Gets software update status information about any edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -3454,52 +3317,35 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Gets software update status information about any edge.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/softwareupdate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "callDrainingWaitTimeSeconds" : 123456789,
+  "callDrainingWaitTimeSeconds" : 6,
   "current" : true,
   "executeOnIdle" : true,
-  "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-  "maxDownloadRate" : 123,
-  "edgeUri" : "aeiou",
-  "version" : {
-    "latestRelease" : true,
-    "current" : true,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "publishDate" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "edgeUri" : "aeiou",
-    "edgeVersion" : "aeiou"
-  },
-  "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-  "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-  "status" : "aeiou"
-}}]
+  "downloadStartTime" : "2000-01-23T04:56:07.000+00:00",
+  "maxDownloadRate" : 0,
+  "edgeUri" : "https://openapi-generator.tech",
+  "version" : "{}",
+  "executeStopTime" : "2000-01-23T04:56:07.000+00:00",
+  "executeStartTime" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "NONE"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
 
      - returns: RequestBuilder<DomainEdgeSoftwareUpdateDto> 
      */
-    open class func getTelephonyProvidersEdgeSoftwareupdateWithRequestBuilder(edgeId: String) -> RequestBuilder<DomainEdgeSoftwareUpdateDto> {
+    open class func getTelephonyProvidersEdgeSoftwareupdateWithRequestBuilder(edgeId: String) -> RequestBuilder<DomainEdgeSoftwareUpdateDto> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3509,10 +3355,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Gets all the available software versions for this edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -3537,52 +3380,53 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Gets all the available software versions for this edge.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/softwareversions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "latestRelease" : true,
     "current" : true,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "publishDate" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "edgeUri" : "aeiou",
-    "edgeVersion" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "publishDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "edgeUri" : "https://openapi-generator.tech",
+    "edgeVersion" : "edgeVersion"
+  }, {
+    "latestRelease" : true,
+    "current" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "publishDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "edgeUri" : "https://openapi-generator.tech",
+    "edgeVersion" : "edgeVersion"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
 
      - returns: RequestBuilder<DomainEdgeSoftwareVersionDtoEntityListing> 
      */
-    open class func getTelephonyProvidersEdgeSoftwareversionsWithRequestBuilder(edgeId: String) -> RequestBuilder<DomainEdgeSoftwareVersionDtoEntityListing> {
+    open class func getTelephonyProvidersEdgeSoftwareversionsWithRequestBuilder(edgeId: String) -> RequestBuilder<DomainEdgeSoftwareVersionDtoEntityListing> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/softwareversions"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3598,13 +3442,6 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     public enum TrunkType_getTelephonyProvidersEdgeTrunks: String { 
         case external = "EXTERNAL"
         case phone = "PHONE"
@@ -3612,16 +3449,14 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
     /**
-     
      Get the list of available trunks for the given Edge.
      
      - parameter edgeId: (path) Edge ID 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter trunkBaseId: (query) Filter by Trunk Base Ids (optional)
      - parameter trunkType: (query) Filter by a Trunk type (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -3645,127 +3480,215 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of available trunks for the given Edge.
-     
      - GET /api/v2/telephony/providers/edges/{edgeId}/trunks
      - Trunks are created by assigning trunk base settings to an Edge or Edge Group.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
-    "proxyAddressList" : [ "aeiou" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "trunkType" : "aeiou",
-    "edgeGroup" : "",
+    "proxyAddressList" : [ "proxyAddressList", "proxyAddressList" ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "edgeGroup" : "{}",
     "enabled" : true,
-    "registersEnabledStatus" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "edge" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "logicalInterface" : "",
-    "connectedStatus" : {
-      "connected" : true,
-      "connectedStateTime" : "2000-01-23T04:56:07.000+0000"
-    },
-    "modifiedBy" : "aeiou",
-    "trunkMetabase" : "",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "trunkBase" : "",
+    "registersEnabledStatus" : "ENABLED",
+    "division" : "{}",
+    "edge" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "logicalInterface" : "{}",
+    "connectedStatus" : "{}",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "trunkBase" : "{}",
     "inService" : true,
     "optionsStatus" : [ {
-      "optionStateTime" : "2000-01-23T04:56:07.000+0000",
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
       "optionState" : true,
       "errorInfo" : {
-        "code" : "aeiou",
+        "code" : "code",
         "details" : {
-          "hostname" : "aeiou",
-          "code" : "aeiou",
-          "message" : "aeiou"
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
         },
-        "text" : "aeiou"
+        "text" : "text"
       },
-      "proxyAddress" : "aeiou"
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
     } ],
-    "selfUri" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
     "registersStatus" : [ {
       "registerState" : true,
-      "registerStateTime" : "2000-01-23T04:56:07.000+0000",
-      "errorInfo" : "",
-      "proxyAddress" : "aeiou"
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
     } ],
-    "ipStatus" : {
-      "address" : "aeiou",
-      "errorInfo" : ""
-    },
-    "optionsEnabledStatus" : "aeiou",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "family" : 123
+    "ipStatus" : "{}",
+    "optionsEnabledStatus" : "ENABLED",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "family" : 6
+  }, {
+    "proxyAddressList" : [ "proxyAddressList", "proxyAddressList" ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "edgeGroup" : "{}",
+    "enabled" : true,
+    "registersEnabledStatus" : "ENABLED",
+    "division" : "{}",
+    "edge" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "logicalInterface" : "{}",
+    "connectedStatus" : "{}",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "trunkBase" : "{}",
+    "inService" : true,
+    "optionsStatus" : [ {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "registersStatus" : [ {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    } ],
+    "ipStatus" : "{}",
+    "optionsEnabledStatus" : "ENABLED",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "family" : 6
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 1,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter trunkBaseId: (query) Filter by Trunk Base Ids (optional)
      - parameter trunkType: (query) Filter by a Trunk type (optional)
 
      - returns: RequestBuilder<TrunkEntityListing> 
      */
-    open class func getTelephonyProvidersEdgeTrunksWithRequestBuilder(edgeId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, trunkBaseId: String? = nil, trunkType: TrunkType_getTelephonyProvidersEdgeTrunks? = nil) -> RequestBuilder<TrunkEntityListing> {
+    open class func getTelephonyProvidersEdgeTrunksWithRequestBuilder(edgeId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, trunkBaseId: String? = nil, trunkType: TrunkType_getTelephonyProvidersEdgeTrunks? = nil) -> RequestBuilder<TrunkEntityListing> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/trunks"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "trunkBase.id": trunkBaseId, 
-            
             "trunkType": trunkType?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<TrunkEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3780,24 +3703,15 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get the list of edges.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
      - parameter siteId: (query) Filter by site.id (optional)
      - parameter edgeGroupId: (query) Filter by edgeGroup.id (optional)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter managed: (query) Filter by managed (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -3820,295 +3734,318 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of edges.
-     
      - GET /api/v2/telephony/providers/edges
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "softwareStatus" : {
-      "callDrainingWaitTimeSeconds" : 123456789,
-      "current" : true,
-      "executeOnIdle" : true,
-      "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-      "maxDownloadRate" : 123,
-      "edgeUri" : "aeiou",
-      "version" : {
-        "latestRelease" : true,
-        "current" : true,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "publishDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "edgeUri" : "aeiou",
-        "edgeVersion" : "aeiou"
-      },
-      "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-      "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
-    "fullSoftwareVersion" : "aeiou",
-    "onlineStatus" : "aeiou",
-    "description" : "aeiou",
-    "callDrainingState" : "aeiou",
-    "createdByApp" : "aeiou",
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
     "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "hybrid" : true,
-      "createdBy" : "aeiou",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "edgeTrunkBaseAssignment" : {
-        "family" : 123,
-        "trunkBase" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "trunkType" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "trunkMetabase" : "",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "properties" : {
-            "key" : "{}"
-          }
-        }
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "phoneTrunkBases" : [ "" ]
-    },
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "patch" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "apiVersion" : "aeiou",
-    "managed" : true,
-    "conversationCount" : 123,
-    "fingerprint" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "model" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "make" : "aeiou",
-    "stagedVersion" : "aeiou",
-    "interfaces" : [ {
-      "macAddress" : "aeiou",
-      "endpoints" : [ {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ],
-      "ifName" : "aeiou",
-      "ipAddress" : "aeiou",
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "lineTypes" : [ "aeiou" ],
-      "addressFamilyId" : "aeiou"
-    } ],
-    "edgeDeploymentType" : "aeiou",
-    "serialNumber" : "aeiou",
-    "softwareVersionConfiguration" : "aeiou",
-    "physicalEdge" : true,
-    "selfUri" : "aeiou",
-    "offlineConfigCalled" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "osName" : "aeiou",
-    "version" : 123,
-    "currentVersion" : "aeiou",
-    "proxy" : "aeiou",
-    "site" : {
-      "primarySites" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
-        "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "secondaryEdges" : [ "" ],
-      "description" : "aeiou",
-      "createdByApp" : "aeiou",
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "primaryEdges" : [ "" ],
-      "managed" : true,
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "coreSite" : true,
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
-      "ntpSettings" : {
-        "servers" : [ "aeiou" ]
-      },
-      "createdBy" : "aeiou",
-      "secondarySites" : [ "" ],
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "location" : {
-        "images" : "aeiou",
-        "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
-        },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
-        } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
-        "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
-        "addressVerified" : true
-      },
-      "mediaModel" : "aeiou",
-      "siteConnections" : [ {
-        "coreSite" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
         "managed" : true,
-        "selfUri" : "aeiou",
-        "edgeList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou",
-          "edgeConnectionList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "site" : "",
-            "connectionErrors" : [ "aeiou" ],
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou"
-          } ]
-        } ],
-        "name" : "aeiou",
-        "secondaryCoreSites" : [ "" ],
-        "mediaModel" : "aeiou",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "enabled" : true,
-        "primaryCoreSites" : [ "" ]
-      } ],
-      "edgeAutoUpdateConfig" : {
-        "rrule" : "aeiou",
-        "start" : "aeiou",
-        "timeZone" : "aeiou",
-        "end" : "aeiou"
-      }
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "softwareVersionPlatform" : "aeiou",
-    "fingerprintHint" : "aeiou",
-    "createdBy" : "aeiou",
-    "softwareVersionTimestamp" : "aeiou",
-    "pairingId" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "softwareVersion" : "aeiou",
-    "statusCode" : "aeiou"
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
      - parameter siteId: (query) Filter by site.id (optional)
      - parameter edgeGroupId: (query) Filter by edgeGroup.id (optional)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter managed: (query) Filter by managed (optional)
 
      - returns: RequestBuilder<EdgeEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, edgeGroupId: String? = nil, sortBy: String? = nil, managed: Bool? = nil) -> RequestBuilder<EdgeEntityListing> {
+    open class func getTelephonyProvidersEdgesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, edgeGroupId: String? = nil, sortBy: String? = nil, managed: Bool? = nil) -> RequestBuilder<EdgeEntityListing> {        
         let path = "/api/v2/telephony/providers/edges"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "name": name, 
-            
             "site.id": siteId, 
-            
             "edgeGroup.id": edgeGroupId, 
-            
             "sortBy": sortBy, 
-            
             "managed": managed
-            
         ])
 
         let requestBuilder: RequestBuilder<EdgeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4116,9 +4053,7 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get the list of available languages.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -4142,29 +4077,21 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of available languages.
-     
      - GET /api/v2/telephony/providers/edges/availablelanguages
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "languages" : [ "aeiou" ]
-}}]
+  "languages" : [ "languages", "languages" ]
+}, statusCode=200}]
 
      - returns: RequestBuilder<AvailableLanguageList> 
      */
-    open class func getTelephonyProvidersEdgesAvailablelanguagesWithRequestBuilder() -> RequestBuilder<AvailableLanguageList> {
+    open class func getTelephonyProvidersEdgesAvailablelanguagesWithRequestBuilder() -> RequestBuilder<AvailableLanguageList> {        
         let path = "/api/v2/telephony/providers/edges/availablelanguages"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4173,9 +4100,7 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get the list of certificate authorities.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -4199,68 +4124,98 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of certificate authorities.
-     
      - GET /api/v2/telephony/providers/edges/certificateauthorities
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
     "certificateDetails" : [ {
       "valid" : true,
       "signatureValid" : true,
       "expired" : true,
-      "subject" : "aeiou",
-      "issueDate" : "2000-01-23T04:56:07.000+0000",
-      "issuer" : "aeiou",
-      "expirationDate" : "2000-01-23T04:56:07.000+0000"
+      "subject" : "subject",
+      "issueDate" : "2000-01-23T04:56:07.000+00:00",
+      "issuer" : "issuer",
+      "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "valid" : true,
+      "signatureValid" : true,
+      "expired" : true,
+      "subject" : "subject",
+      "issueDate" : "2000-01-23T04:56:07.000+00:00",
+      "issuer" : "issuer",
+      "expirationDate" : "2000-01-23T04:56:07.000+00:00"
     } ],
-    "selfUri" : "aeiou",
-    "certificate" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "services" : [ "aeiou" ],
-    "createdByApp" : "aeiou",
-    "type" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "certificate" : "certificate",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "services" : [ "SIP", "SIP" ],
+    "createdByApp" : "createdByApp",
+    "type" : "MANAGED",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "certificateDetails" : [ {
+      "valid" : true,
+      "signatureValid" : true,
+      "expired" : true,
+      "subject" : "subject",
+      "issueDate" : "2000-01-23T04:56:07.000+00:00",
+      "issuer" : "issuer",
+      "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "valid" : true,
+      "signatureValid" : true,
+      "expired" : true,
+      "subject" : "subject",
+      "issueDate" : "2000-01-23T04:56:07.000+00:00",
+      "issuer" : "issuer",
+      "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "certificate" : "certificate",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "services" : [ "SIP", "SIP" ],
+    "createdByApp" : "createdByApp",
+    "type" : "MANAGED",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<CertificateAuthorityEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesCertificateauthoritiesWithRequestBuilder() -> RequestBuilder<CertificateAuthorityEntityListing> {
+    open class func getTelephonyProvidersEdgesCertificateauthoritiesWithRequestBuilder() -> RequestBuilder<CertificateAuthorityEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/certificateauthorities"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4270,10 +4225,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a certificate authority.
      
      - parameter certificateId: (path) Certificate ID 
@@ -4298,11 +4250,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a certificate authority.
-     
      - GET /api/v2/telephony/providers/edges/certificateauthorities/{certificateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -4311,49 +4260,48 @@ open class TelephonyProvidersEdgeAPI {
     "valid" : true,
     "signatureValid" : true,
     "expired" : true,
-    "subject" : "aeiou",
-    "issueDate" : "2000-01-23T04:56:07.000+0000",
-    "issuer" : "aeiou",
-    "expirationDate" : "2000-01-23T04:56:07.000+0000"
+    "subject" : "subject",
+    "issueDate" : "2000-01-23T04:56:07.000+00:00",
+    "issuer" : "issuer",
+    "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "valid" : true,
+    "signatureValid" : true,
+    "expired" : true,
+    "subject" : "subject",
+    "issueDate" : "2000-01-23T04:56:07.000+00:00",
+    "issuer" : "issuer",
+    "expirationDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "selfUri" : "aeiou",
-  "certificate" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "services" : [ "aeiou" ],
-  "createdByApp" : "aeiou",
-  "type" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "services" : [ "SIP", "SIP" ],
+  "createdByApp" : "createdByApp",
+  "type" : "MANAGED",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter certificateId: (path) Certificate ID 
 
      - returns: RequestBuilder<DomainCertificateAuthority> 
      */
-    open class func getTelephonyProvidersEdgesCertificateauthorityWithRequestBuilder(certificateId: String) -> RequestBuilder<DomainCertificateAuthority> {
+    open class func getTelephonyProvidersEdgesCertificateauthorityWithRequestBuilder(certificateId: String) -> RequestBuilder<DomainCertificateAuthority> {        
         var path = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}"
         let certificateIdPreEscape = "\(certificateId)"
         let certificateIdPostEscape = certificateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{certificateId}", with: certificateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4363,10 +4311,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a DID by ID.
      
      - parameter didId: (path) DID ID 
@@ -4391,58 +4336,46 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a DID by ID.
-     
      - GET /api/v2/telephony/providers/edges/dids/{didId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "owner" : "",
-  "ownerType" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "phoneNumber" : "aeiou",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
+  "owner" : "{}",
+  "ownerType" : "USER",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "phoneNumber" : "phoneNumber",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
   "didPool" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter didId: (path) DID ID 
 
      - returns: RequestBuilder<DID> 
      */
-    open class func getTelephonyProvidersEdgesDidWithRequestBuilder(didId: String) -> RequestBuilder<DID> {
+    open class func getTelephonyProvidersEdgesDidWithRequestBuilder(didId: String) -> RequestBuilder<DID> {        
         var path = "/api/v2/telephony/providers/edges/dids/{didId}"
         let didIdPreEscape = "\(didId)"
         let didIdPostEscape = didIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{didId}", with: didIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4452,10 +4385,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a DID Pool by ID.
      
      - parameter didPoolId: (path) DID pool ID 
@@ -4480,54 +4410,42 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a DID Pool by ID.
-     
      - GET /api/v2/telephony/providers/edges/didpools/{didPoolId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "comments" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "provider" : "aeiou",
-  "startPhoneNumber" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "endPhoneNumber" : "aeiou"
-}}]
+  "comments" : "comments",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "provider" : "PURE_CLOUD",
+  "startPhoneNumber" : "startPhoneNumber",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "endPhoneNumber" : "endPhoneNumber"
+}, statusCode=200}]
      
      - parameter didPoolId: (path) DID pool ID 
 
      - returns: RequestBuilder<DIDPool> 
      */
-    open class func getTelephonyProvidersEdgesDidpoolWithRequestBuilder(didPoolId: String) -> RequestBuilder<DIDPool> {
+    open class func getTelephonyProvidersEdgesDidpoolWithRequestBuilder(didPoolId: String) -> RequestBuilder<DIDPool> {        
         var path = "/api/v2/telephony/providers/edges/didpools/{didPoolId}"
         let didPoolIdPreEscape = "\(didPoolId)"
         let didPoolIdPostEscape = didPoolIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{didPoolId}", with: didPoolIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4540,18 +4458,12 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Get a listing of DID Pools
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to number)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter _id: (query) Filter by a specific list of ID&#39;s (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -4574,77 +4486,78 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a listing of DID Pools
-     
      - GET /api/v2/telephony/providers/edges/didpools
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "comments" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "provider" : "aeiou",
-    "startPhoneNumber" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "endPhoneNumber" : "aeiou"
+    "comments" : "comments",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "provider" : "PURE_CLOUD",
+    "startPhoneNumber" : "startPhoneNumber",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "endPhoneNumber" : "endPhoneNumber"
+  }, {
+    "comments" : "comments",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "provider" : "PURE_CLOUD",
+    "startPhoneNumber" : "startPhoneNumber",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "endPhoneNumber" : "endPhoneNumber"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to number)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter _id: (query) Filter by a specific list of ID&#39;s (optional)
 
      - returns: RequestBuilder<DIDPoolEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesDidpoolsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, _id: [String]? = nil) -> RequestBuilder<DIDPoolEntityListing> {
+    open class func getTelephonyProvidersEdgesDidpoolsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, _id: [String]? = nil) -> RequestBuilder<DIDPoolEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/didpools"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "id": _id
-            
         ])
 
         let requestBuilder: RequestBuilder<DIDPoolEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4652,7 +4565,6 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum ModelType_getTelephonyProvidersEdgesDidpoolsDids: String { 
         case assignedAndUnassigned = "ASSIGNED_AND_UNASSIGNED"
@@ -4665,22 +4577,15 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
      
      - parameter type: (query) The type of numbers to return. 
      - parameter _id: (query) Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)
      - parameter numberMatch: (query) A number to filter the results by. (optional)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTelephonyProvidersEdgesDidpoolsDids(type: ModelType_getTelephonyProvidersEdgesDidpoolsDids, _id: [String]? = nil, numberMatch: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: DIDNumberEntityListing?,_ error: Error?) -> Void)) {
@@ -4702,77 +4607,64 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
-     
      - GET /api/v2/telephony/providers/edges/didpools/dids
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "owner" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "ownerType" : "aeiou",
-    "number" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "didPool" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "owner" : "{}",
+    "ownerType" : "USER",
+    "number" : "number",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "didPool" : "{}",
     "assigned" : true,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "owner" : "{}",
+    "ownerType" : "USER",
+    "number" : "number",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "didPool" : "{}",
+    "assigned" : true,
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter type: (query) The type of numbers to return. 
      - parameter _id: (query) Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)
      - parameter numberMatch: (query) A number to filter the results by. (optional)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Sort order (optional)
 
      - returns: RequestBuilder<DIDNumberEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesDidpoolsDidsWithRequestBuilder(type: ModelType_getTelephonyProvidersEdgesDidpoolsDids, _id: [String]? = nil, numberMatch: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<DIDNumberEntityListing> {
+    open class func getTelephonyProvidersEdgesDidpoolsDidsWithRequestBuilder(type: ModelType_getTelephonyProvidersEdgesDidpoolsDids, _id: [String]? = nil, numberMatch: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<DIDNumberEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/didpools/dids"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "type": type.rawValue, 
-            
             "id": _id, 
-            
             "numberMatch": numberMatch, 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortOrder": sortOrder
-            
         ])
 
         let requestBuilder: RequestBuilder<DIDNumberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4788,23 +4680,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get a listing of DIDs
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to number)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter phoneNumber: (query) Filter by phoneNumber (optional)
      - parameter ownerId: (query) Filter by the owner of a phone number (optional)
      - parameter didPoolId: (query) Filter by the DID Pool assignment (optional)
@@ -4830,57 +4712,72 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a listing of DIDs
-     
      - GET /api/v2/telephony/providers/edges/dids
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "owner" : "",
-    "ownerType" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "phoneNumber" : "aeiou",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
+    "owner" : "{}",
+    "ownerType" : "USER",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "phoneNumber" : "phoneNumber",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
     "didPool" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "owner" : "{}",
+    "ownerType" : "USER",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "phoneNumber" : "phoneNumber",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "didPool" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to number)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter phoneNumber: (query) Filter by phoneNumber (optional)
      - parameter ownerId: (query) Filter by the owner of a phone number (optional)
      - parameter didPoolId: (query) Filter by the DID Pool assignment (optional)
@@ -4888,35 +4785,21 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<DIDEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesDidsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, phoneNumber: String? = nil, ownerId: String? = nil, didPoolId: String? = nil, _id: [String]? = nil) -> RequestBuilder<DIDEntityListing> {
+    open class func getTelephonyProvidersEdgesDidsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, phoneNumber: String? = nil, ownerId: String? = nil, didPoolId: String? = nil, _id: [String]? = nil) -> RequestBuilder<DIDEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/dids"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "phoneNumber": phoneNumber, 
-            
             "owner.id": ownerId, 
-            
             "didPool.id": didPoolId, 
-            
             "id": _id
-            
         ])
 
         let requestBuilder: RequestBuilder<DIDEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4926,17 +4809,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    public enum Expand_getTelephonyProvidersEdgesEdgegroup: String { 
-        case phonetrunkbases = "phoneTrunkBases"
-        case edgetrunkbaseassignment = "edgeTrunkBaseAssignment"
-    }
-
-    
-    
     /**
-     
      Get edge group.
      
      - parameter edgeGroupId: (path) Edge group ID 
@@ -4962,88 +4835,87 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get edge group.
-     
      - GET /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 6,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "hybrid" : true,
-  "createdBy" : "aeiou",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "edgeTrunkBaseAssignment" : {
-    "family" : 123,
-    "trunkBase" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "trunkType" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "trunkMetabase" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "properties" : {
-        "key" : "{}"
-      }
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "edgeTrunkBaseAssignment" : "{}",
+  "id" : "id",
+  "state" : "active",
+  "phoneTrunkBases" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
     }
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "phoneTrunkBases" : [ "" ]
-}}]
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  } ]
+}, statusCode=200}]
      
      - parameter edgeGroupId: (path) Edge group ID 
      - parameter expand: (query) Fields to expand in the response (optional)
 
      - returns: RequestBuilder<EdgeGroup> 
      */
-    open class func getTelephonyProvidersEdgesEdgegroupWithRequestBuilder(edgeGroupId: String, expand: [String]? = nil) -> RequestBuilder<EdgeGroup> {
+    open class func getTelephonyProvidersEdgesEdgegroupWithRequestBuilder(edgeGroupId: String, expand: [String]? = nil) -> RequestBuilder<EdgeGroup> {        
         var path = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}"
         let edgeGroupIdPreEscape = "\(edgeGroupId)"
         let edgeGroupIdPostEscape = edgeGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeGroupId}", with: edgeGroupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<EdgeGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5053,11 +4925,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Gets the edge trunk base associated with the edge group
      
      - parameter edgegroupId: (path) Edge Group ID 
@@ -5083,49 +4951,38 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Gets the edge trunk base associated with the edge group
-     
      - GET /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "trunkType" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "trunkMetabase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "trunkType" : "EXTERNAL",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "trunkMetabase" : "{}",
+  "id" : "id",
+  "state" : "active",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter edgegroupId: (path) Edge Group ID 
      - parameter edgetrunkbaseId: (path) Edge Trunk Base ID 
 
      - returns: RequestBuilder<EdgeTrunkBase> 
      */
-    open class func getTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithRequestBuilder(edgegroupId: String, edgetrunkbaseId: String) -> RequestBuilder<EdgeTrunkBase> {
+    open class func getTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithRequestBuilder(edgegroupId: String, edgetrunkbaseId: String) -> RequestBuilder<EdgeTrunkBase> {        
         var path = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}"
         let edgegroupIdPreEscape = "\(edgegroupId)"
         let edgegroupIdPostEscape = edgegroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5134,12 +4991,7 @@ open class TelephonyProvidersEdgeAPI {
         let edgetrunkbaseIdPostEscape = edgetrunkbaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgetrunkbaseId}", with: edgetrunkbaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5153,20 +5005,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Get the list of edge groups.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter managed: (query) Filter by managed (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -5189,107 +5034,160 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of edge groups.
-     
      - GET /api/v2/telephony/providers/edges/edgegroups
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "hybrid" : true,
-    "createdBy" : "aeiou",
+    "createdBy" : "createdBy",
     "managed" : true,
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "edgeTrunkBaseAssignment" : {
-      "family" : 123,
-      "trunkBase" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "trunkType" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "trunkMetabase" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "properties" : {
-          "key" : "{}"
-        }
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "edgeTrunkBaseAssignment" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "phoneTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
       }
-    },
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "phoneTrunkBases" : [ "" ]
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    } ]
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "hybrid" : true,
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "edgeTrunkBaseAssignment" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "phoneTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    } ]
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter managed: (query) Filter by managed (optional)
 
      - returns: RequestBuilder<EdgeGroupEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesEdgegroupsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, sortBy: String? = nil, managed: Bool? = nil) -> RequestBuilder<EdgeGroupEntityListing> {
+    open class func getTelephonyProvidersEdgesEdgegroupsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, sortBy: String? = nil, managed: Bool? = nil) -> RequestBuilder<EdgeGroupEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/edgegroups"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "name": name, 
-            
             "sortBy": sortBy, 
-            
             "managed": managed
-            
         ])
 
         let requestBuilder: RequestBuilder<EdgeGroupEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5297,9 +5195,7 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get the edge version report.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -5323,9 +5219,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the edge version report.
-     
      - GET /api/v2/telephony/providers/edges/edgeversionreport
      - The report will not have consistent data about the edge version(s) until all edges have been reset.
      - OAuth:
@@ -5333,22 +5227,19 @@ open class TelephonyProvidersEdgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "oldestVersion" : {
-    "softwareVersion" : "aeiou"
+    "softwareVersion" : "softwareVersion"
   },
-  "newestVersion" : ""
-}}]
+  "newestVersion" : {
+    "softwareVersion" : "softwareVersion"
+  }
+}, statusCode=200}]
 
      - returns: RequestBuilder<EdgeVersionReport> 
      */
-    open class func getTelephonyProvidersEdgesEdgeversionreportWithRequestBuilder() -> RequestBuilder<EdgeVersionReport> {
+    open class func getTelephonyProvidersEdgesEdgeversionreportWithRequestBuilder() -> RequestBuilder<EdgeVersionReport> {        
         let path = "/api/v2/telephony/providers/edges/edgeversionreport"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5357,9 +5248,7 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      List of edges more than 4 edge versions behind the latest software.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -5383,33 +5272,29 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      List of edges more than 4 edge versions behind the latest software.
-     
      - GET /api/v2/telephony/providers/edges/expired
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<ExpiredEdgeListing> 
      */
-    open class func getTelephonyProvidersEdgesExpiredWithRequestBuilder() -> RequestBuilder<ExpiredEdgeListing> {
+    open class func getTelephonyProvidersEdgesExpiredWithRequestBuilder() -> RequestBuilder<ExpiredEdgeListing> {        
         let path = "/api/v2/telephony/providers/edges/expired"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5419,10 +5304,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get an extension by ID.
      
      - parameter extensionId: (path) Extension ID 
@@ -5447,58 +5329,46 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get an extension by ID.
-     
      - GET /api/v2/telephony/providers/edges/extensions/{extensionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "owner" : "{}",
+  "ownerType" : "USER",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "number" : "number",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "extensionPool" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "ownerType" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "number" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "extensionPool" : "",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter extensionId: (path) Extension ID 
 
      - returns: RequestBuilder<Extension> 
      */
-    open class func getTelephonyProvidersEdgesExtensionWithRequestBuilder(extensionId: String) -> RequestBuilder<Extension> {
+    open class func getTelephonyProvidersEdgesExtensionWithRequestBuilder(extensionId: String) -> RequestBuilder<Extension> {        
         var path = "/api/v2/telephony/providers/edges/extensions/{extensionId}"
         let extensionIdPreEscape = "\(extensionId)"
         let extensionIdPostEscape = extensionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{extensionId}", with: extensionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5508,10 +5378,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get an extension pool by ID
      
      - parameter extensionPoolId: (path) Extension pool ID 
@@ -5536,52 +5403,40 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get an extension pool by ID
-     
      - GET /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "startNumber" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "endNumber" : "aeiou",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "startNumber" : "startNumber",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "endNumber" : "endNumber",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter extensionPoolId: (path) Extension pool ID 
 
      - returns: RequestBuilder<ExtensionPool> 
      */
-    open class func getTelephonyProvidersEdgesExtensionpoolWithRequestBuilder(extensionPoolId: String) -> RequestBuilder<ExtensionPool> {
+    open class func getTelephonyProvidersEdgesExtensionpoolWithRequestBuilder(extensionPoolId: String) -> RequestBuilder<ExtensionPool> {        
         var path = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}"
         let extensionPoolIdPreEscape = "\(extensionPoolId)"
         let extensionPoolIdPostEscape = extensionPoolIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{extensionPoolId}", with: extensionPoolIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5594,17 +5449,11 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Get a listing of extension pools
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter number: (query) Deprecated, filtering by number not supported (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -5628,75 +5477,74 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a listing of extension pools
-     
      - GET /api/v2/telephony/providers/edges/extensionpools
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "startNumber" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "endNumber" : "aeiou",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "startNumber" : "startNumber",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "endNumber" : "endNumber",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "startNumber" : "startNumber",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "endNumber" : "endNumber",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter number: (query) Deprecated, filtering by number not supported (optional)
 
      - returns: RequestBuilder<ExtensionPoolEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesExtensionpoolsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, number: String? = nil) -> RequestBuilder<ExtensionPoolEntityListing> {
+    open class func getTelephonyProvidersEdgesExtensionpoolsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, number: String? = nil) -> RequestBuilder<ExtensionPoolEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/extensionpools"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "number": number
-            
         ])
 
         let requestBuilder: RequestBuilder<ExtensionPoolEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5709,20 +5557,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Get a listing of extensions
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to number)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter number: (query) Filter by number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -5745,84 +5586,88 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a listing of extensions
-     
      - GET /api/v2/telephony/providers/edges/extensions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "owner" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+    "owner" : "{}",
+    "ownerType" : "USER",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "number" : "number",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "extensionPool" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "ownerType" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "owner" : "{}",
+    "ownerType" : "USER",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "number" : "number",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "extensionPool" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "number" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "extensionPool" : "",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to number)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter number: (query) Filter by number (optional)
 
      - returns: RequestBuilder<ExtensionEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesExtensionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, number: String? = nil) -> RequestBuilder<ExtensionEntityListing> {
+    open class func getTelephonyProvidersEdgesExtensionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, number: String? = nil) -> RequestBuilder<ExtensionEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/extensions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "number": number
-            
         ])
 
         let requestBuilder: RequestBuilder<ExtensionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5831,10 +5676,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Line by ID
      
      - parameter lineId: (path) Line ID 
@@ -5859,288 +5701,73 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Line by ID
-     
      - GET /api/v2/telephony/providers/edges/lines/{lineId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "template" : "",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
+  "template" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
   "edgeGroup" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "loggedInUser" : "",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "loggedInUser" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "site" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "secondaryEdge" : "",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "defaultForUser" : "",
-  "primaryEdge" : {
-    "softwareStatus" : {
-      "callDrainingWaitTimeSeconds" : 123456789,
-      "current" : true,
-      "executeOnIdle" : true,
-      "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-      "maxDownloadRate" : 123,
-      "edgeUri" : "aeiou",
-      "version" : {
-        "latestRelease" : true,
-        "current" : true,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "publishDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "edgeUri" : "aeiou",
-        "edgeVersion" : "aeiou"
-      },
-      "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-      "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
-    "fullSoftwareVersion" : "aeiou",
-    "onlineStatus" : "aeiou",
-    "description" : "aeiou",
-    "callDrainingState" : "aeiou",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "hybrid" : true,
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "edgeTrunkBaseAssignment" : {
-        "family" : 123,
-        "trunkBase" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "trunkType" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "trunkMetabase" : "",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "properties" : {
-            "key" : "{}"
-          }
-        }
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "phoneTrunkBases" : [ "" ]
-    },
-    "division" : "",
-    "patch" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "apiVersion" : "aeiou",
-    "managed" : true,
-    "conversationCount" : 123,
-    "fingerprint" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "model" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "make" : "aeiou",
-    "stagedVersion" : "aeiou",
-    "interfaces" : [ {
-      "macAddress" : "aeiou",
-      "endpoints" : [ "" ],
-      "ifName" : "aeiou",
-      "ipAddress" : "aeiou",
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "lineTypes" : [ "aeiou" ],
-      "addressFamilyId" : "aeiou"
-    } ],
-    "edgeDeploymentType" : "aeiou",
-    "serialNumber" : "aeiou",
-    "softwareVersionConfiguration" : "aeiou",
-    "physicalEdge" : true,
-    "selfUri" : "aeiou",
-    "offlineConfigCalled" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "osName" : "aeiou",
-    "version" : 123,
-    "currentVersion" : "aeiou",
-    "proxy" : "aeiou",
-    "site" : {
-      "primarySites" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
-        "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "secondaryEdges" : [ "" ],
-      "description" : "aeiou",
-      "createdByApp" : "aeiou",
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "primaryEdges" : [ "" ],
-      "managed" : true,
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "coreSite" : true,
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
-      "ntpSettings" : {
-        "servers" : [ "aeiou" ]
-      },
-      "createdBy" : "aeiou",
-      "secondarySites" : [ "" ],
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "location" : {
-        "images" : "aeiou",
-        "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
-        },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
-        } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
-        "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
-        "addressVerified" : true
-      },
-      "mediaModel" : "aeiou",
-      "siteConnections" : [ {
-        "coreSite" : true,
-        "managed" : true,
-        "selfUri" : "aeiou",
-        "edgeList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou",
-          "edgeConnectionList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "site" : "",
-            "connectionErrors" : [ "aeiou" ],
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou"
-          } ]
-        } ],
-        "name" : "aeiou",
-        "secondaryCoreSites" : [ "" ],
-        "mediaModel" : "aeiou",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "enabled" : true,
-        "primaryCoreSites" : [ "" ]
-      } ],
-      "edgeAutoUpdateConfig" : {
-        "rrule" : "aeiou",
-        "start" : "aeiou",
-        "timeZone" : "aeiou",
-        "end" : "aeiou"
-      }
-    },
-    "softwareVersionPlatform" : "aeiou",
-    "fingerprintHint" : "aeiou",
-    "createdBy" : "aeiou",
-    "softwareVersionTimestamp" : "aeiou",
-    "pairingId" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "softwareVersion" : "aeiou",
-    "statusCode" : "aeiou"
+  "version" : 0,
+  "division" : "{}",
+  "site" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "lineBaseSettings" : "",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "secondaryEdge" : "{}",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "defaultForUser" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "primaryEdge" : "{}",
+  "lineBaseSettings" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter lineId: (path) Line ID 
 
      - returns: RequestBuilder<Line> 
      */
-    open class func getTelephonyProvidersEdgesLineWithRequestBuilder(lineId: String) -> RequestBuilder<Line> {
+    open class func getTelephonyProvidersEdgesLineWithRequestBuilder(lineId: String) -> RequestBuilder<Line> {        
         var path = "/api/v2/telephony/providers/edges/lines/{lineId}"
         let lineIdPreEscape = "\(lineId)"
         let lineIdPostEscape = lineIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{lineId}", with: lineIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -6150,10 +5777,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a line base settings object by ID
      
      - parameter lineBaseId: (path) Line base ID 
@@ -6178,58 +5802,46 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a line base settings object by ID
-     
      - GET /api/v2/telephony/providers/edges/linebasesettings/{lineBaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
   "lineMetaBase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter lineBaseId: (path) Line base ID 
 
      - returns: RequestBuilder<LineBase> 
      */
-    open class func getTelephonyProvidersEdgesLinebasesettingWithRequestBuilder(lineBaseId: String) -> RequestBuilder<LineBase> {
+    open class func getTelephonyProvidersEdgesLinebasesettingWithRequestBuilder(lineBaseId: String) -> RequestBuilder<LineBase> {        
         var path = "/api/v2/telephony/providers/edges/linebasesettings/{lineBaseId}"
         let lineBaseIdPreEscape = "\(lineBaseId)"
         let lineBaseIdPostEscape = lineBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{lineBaseId}", with: lineBaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -6243,25 +5855,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    public enum Expand_getTelephonyProvidersEdgesLinebasesettings: String { 
-        case properties = "properties"
-    }
-
-    
-    
     /**
-     
      Get a listing of line base settings objects
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -6284,84 +5884,88 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a listing of line base settings objects
-     
      - GET /api/v2/telephony/providers/edges/linebasesettings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
     "lineMetaBase" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
     "properties" : {
       "key" : "{}"
     }
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
 
      - returns: RequestBuilder<LineBaseEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesLinebasesettingsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, expand: [String]? = nil) -> RequestBuilder<LineBaseEntityListing> {
+    open class func getTelephonyProvidersEdgesLinebasesettingsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, expand: [String]? = nil) -> RequestBuilder<LineBaseEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/linebasesettings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<LineBaseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6374,31 +5978,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    public enum Expand_getTelephonyProvidersEdgesLines: String { 
-        case properties = "properties"
-        case site = "site"
-        case edgegroup = "edgeGroup"
-        case primaryedge = "primaryEdge"
-        case secondaryedge = "secondaryEdge"
-        case edges = "edges"
-        case assigneduser = "assignedUser"
-    }
-
-    
-    
     /**
-     
      Get a list of Lines
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
+     - parameter sortBy: (query) Value by which to sort (optional)
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -6421,314 +6007,142 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a list of Lines
-     
      - GET /api/v2/telephony/providers/edges/lines
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "template" : "",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
     "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "loggedInUser" : "",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "site" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "secondaryEdge" : "",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "defaultForUser" : "",
-    "primaryEdge" : {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
-      "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : {
-        "primarySites" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "countryCode" : "aeiou",
-          "display" : "aeiou",
-          "integration" : "microsoftteams",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
-        } ],
-        "secondaryEdges" : [ "" ],
-        "description" : "aeiou",
-        "createdByApp" : "aeiou",
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "primaryEdges" : [ "" ],
-        "managed" : true,
-        "modifiedBy" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "coreSite" : true,
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
-        "ntpSettings" : {
-          "servers" : [ "aeiou" ]
-        },
-        "createdBy" : "aeiou",
-        "secondarySites" : [ "" ],
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "location" : {
-          "images" : "aeiou",
-          "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
-          },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
-          } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
-          "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
-          "addressVerified" : true
-        },
-        "mediaModel" : "aeiou",
-        "siteConnections" : [ {
-          "coreSite" : true,
-          "managed" : true,
-          "selfUri" : "aeiou",
-          "edgeList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou",
-            "edgeConnectionList" : [ {
-              "interfaceIpAddress" : "aeiou",
-              "site" : "",
-              "connectionErrors" : [ "aeiou" ],
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "interfaceName" : "aeiou"
-            } ]
-          } ],
-          "name" : "aeiou",
-          "secondaryCoreSites" : [ "" ],
-          "mediaModel" : "aeiou",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "enabled" : true,
-          "primaryCoreSites" : [ "" ]
-        } ],
-        "edgeAutoUpdateConfig" : {
-          "rrule" : "aeiou",
-          "start" : "aeiou",
-          "timeZone" : "aeiou",
-          "end" : "aeiou"
-        }
-      },
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "lineBaseSettings" : "",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
     "properties" : {
       "key" : "{}"
     }
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
+     - parameter sortBy: (query) Value by which to sort (optional)
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
 
      - returns: RequestBuilder<LineEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesLinesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, sortBy: String? = nil, expand: [String]? = nil) -> RequestBuilder<LineEntityListing> {
+    open class func getTelephonyProvidersEdgesLinesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, sortBy: String? = nil, expand: [String]? = nil) -> RequestBuilder<LineEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/lines"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "name": name, 
-            
             "sortBy": sortBy, 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<LineEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6737,10 +6151,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
      
      - parameter lineBaseSettingsId: (query) The id of a Line Base Settings object upon which to base this Line 
@@ -6765,291 +6176,74 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
-     
      - GET /api/v2/telephony/providers/edges/lines/template
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "template" : "",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
+  "template" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
   "edgeGroup" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "loggedInUser" : "",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "loggedInUser" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "site" : "",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "secondaryEdge" : "",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "defaultForUser" : "",
-  "primaryEdge" : {
-    "softwareStatus" : {
-      "callDrainingWaitTimeSeconds" : 123456789,
-      "current" : true,
-      "executeOnIdle" : true,
-      "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-      "maxDownloadRate" : 123,
-      "edgeUri" : "aeiou",
-      "version" : {
-        "latestRelease" : true,
-        "current" : true,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "publishDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "edgeUri" : "aeiou",
-        "edgeVersion" : "aeiou"
-      },
-      "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-      "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
-    "fullSoftwareVersion" : "aeiou",
-    "onlineStatus" : "aeiou",
-    "description" : "aeiou",
-    "callDrainingState" : "aeiou",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "hybrid" : true,
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "edgeTrunkBaseAssignment" : {
-        "family" : 123,
-        "trunkBase" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "trunkType" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "trunkMetabase" : "",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "properties" : {
-            "key" : "{}"
-          }
-        }
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "phoneTrunkBases" : [ "" ]
-    },
-    "division" : "",
-    "patch" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "apiVersion" : "aeiou",
-    "managed" : true,
-    "conversationCount" : 123,
-    "fingerprint" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "model" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "make" : "aeiou",
-    "stagedVersion" : "aeiou",
-    "interfaces" : [ {
-      "macAddress" : "aeiou",
-      "endpoints" : [ "" ],
-      "ifName" : "aeiou",
-      "ipAddress" : "aeiou",
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "lineTypes" : [ "aeiou" ],
-      "addressFamilyId" : "aeiou"
-    } ],
-    "edgeDeploymentType" : "aeiou",
-    "serialNumber" : "aeiou",
-    "softwareVersionConfiguration" : "aeiou",
-    "physicalEdge" : true,
-    "selfUri" : "aeiou",
-    "offlineConfigCalled" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "osName" : "aeiou",
-    "version" : 123,
-    "currentVersion" : "aeiou",
-    "proxy" : "aeiou",
-    "site" : {
-      "primarySites" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
-        "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "secondaryEdges" : [ "" ],
-      "description" : "aeiou",
-      "createdByApp" : "aeiou",
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "primaryEdges" : [ "" ],
-      "managed" : true,
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "coreSite" : true,
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
-      "ntpSettings" : {
-        "servers" : [ "aeiou" ]
-      },
-      "createdBy" : "aeiou",
-      "secondarySites" : [ "" ],
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "location" : {
-        "images" : "aeiou",
-        "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
-        },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
-        } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
-        "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
-        "addressVerified" : true
-      },
-      "mediaModel" : "aeiou",
-      "siteConnections" : [ {
-        "coreSite" : true,
-        "managed" : true,
-        "selfUri" : "aeiou",
-        "edgeList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou",
-          "edgeConnectionList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "site" : "",
-            "connectionErrors" : [ "aeiou" ],
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou"
-          } ]
-        } ],
-        "name" : "aeiou",
-        "secondaryCoreSites" : [ "" ],
-        "mediaModel" : "aeiou",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "enabled" : true,
-        "primaryCoreSites" : [ "" ]
-      } ],
-      "edgeAutoUpdateConfig" : {
-        "rrule" : "aeiou",
-        "start" : "aeiou",
-        "timeZone" : "aeiou",
-        "end" : "aeiou"
-      }
-    },
-    "softwareVersionPlatform" : "aeiou",
-    "fingerprintHint" : "aeiou",
-    "createdBy" : "aeiou",
-    "softwareVersionTimestamp" : "aeiou",
-    "pairingId" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "softwareVersion" : "aeiou",
-    "statusCode" : "aeiou"
+  "version" : 0,
+  "division" : "{}",
+  "site" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "lineBaseSettings" : "",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "secondaryEdge" : "{}",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "defaultForUser" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "primaryEdge" : "{}",
+  "lineBaseSettings" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter lineBaseSettingsId: (query) The id of a Line Base Settings object upon which to base this Line 
 
      - returns: RequestBuilder<Line> 
      */
-    open class func getTelephonyProvidersEdgesLinesTemplateWithRequestBuilder(lineBaseSettingsId: String) -> RequestBuilder<Line> {
+    open class func getTelephonyProvidersEdgesLinesTemplateWithRequestBuilder(lineBaseSettingsId: String) -> RequestBuilder<Line> {        
         let path = "/api/v2/telephony/providers/edges/lines/template"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "lineBaseSettingsId": lineBaseSettingsId
-            
         ])
 
         let requestBuilder: RequestBuilder<Line>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7059,17 +6253,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    public enum Expand_getTelephonyProvidersEdgesLogicalinterfaces: String { 
-        case externaltrunkbaseassignments = "externalTrunkBaseAssignments"
-        case phonetrunkbaseassignments = "phoneTrunkBaseAssignments"
-    }
-
-    
-    
     /**
-     
      Get edge logical interfaces.
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -7095,157 +6279,253 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get edge logical interfaces.
-     
      - GET /api/v2/telephony/providers/edges/logicalinterfaces
      - Retrieve the configured logical interfaces for a list edges. Only 100 edges can be requested at a time.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 2,
+  "pageCount" : 4,
+  "pageNumber" : 3,
   "entities" : [ {
-    "hardwareAddress" : "aeiou",
+    "hardwareAddress" : "hardwareAddress",
     "addresses" : [ {
-      "address" : "aeiou",
-      "type" : "aeiou",
+      "address" : "address",
+      "type" : "ip",
       "persistent" : true,
-      "family" : 123
+      "family" : 5
+    }, {
+      "address" : "address",
+      "type" : "ip",
+      "persistent" : true,
+      "family" : 5
     } ],
-    "phoneTrunkBaseAssignments" : [ "" ],
-    "endDate" : "2000-01-23T04:56:07.000+0000",
+    "phoneTrunkBaseAssignments" : [ {
+      "family" : 7,
+      "trunkBase" : "{}"
+    }, {
+      "family" : 7,
+      "trunkBase" : "{}"
+    } ],
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
     "externalTrunkBaseAssignments" : [ {
-      "family" : 123,
-      "trunkBase" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "trunkType" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "trunkMetabase" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "properties" : {
-          "key" : "{}"
-        }
-      }
+      "family" : 7,
+      "trunkBase" : "{}"
+    }, {
+      "family" : 7,
+      "trunkBase" : "{}"
     } ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
+    "description" : "description",
+    "createdByApp" : "createdByApp",
     "useForInternalEdgeCommunication" : true,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
+    "division" : "{}",
     "useForWanInterface" : true,
-    "interfaceType" : "aeiou",
+    "interfaceType" : "DIAGNOSTIC",
     "routes" : [ {
-      "metric" : 123,
-      "prefix" : "aeiou",
+      "metric" : 1,
+      "prefix" : "prefix",
       "persistent" : true,
-      "family" : 123,
-      "nexthop" : "aeiou"
+      "family" : 5,
+      "nexthop" : "nexthop"
+    }, {
+      "metric" : 1,
+      "prefix" : "prefix",
+      "persistent" : true,
+      "family" : 5,
+      "nexthop" : "nexthop"
     } ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "lastModifiedUserId" : "aeiou",
-    "lastModifiedCorrelationId" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "friendlyName" : "aeiou",
-    "publicNatAddressIpV4" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastModifiedUserId" : "lastModifiedUserId",
+    "lastModifiedCorrelationId" : "lastModifiedCorrelationId",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "friendlyName" : "friendlyName",
+    "publicNatAddressIpV4" : "publicNatAddressIpV4",
     "commandResponses" : [ {
-      "commandName" : "aeiou",
+      "commandName" : "commandName",
       "acknowledged" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
-        "code" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : "aeiou",
+        "messageWithParams" : "messageWithParams",
+        "code" : "code",
+        "contextId" : "contextId",
+        "details" : "https://openapi-generator.tech",
         "messageParams" : {
-          "key" : "aeiou"
+          "key" : "messageParams"
         },
-        "message" : "aeiou",
-        "nested" : "",
-        "status" : 123
+        "message" : "message",
+        "status" : 2
       },
-      "correlationId" : "aeiou"
+      "correlationId" : "correlationId"
+    }, {
+      "commandName" : "commandName",
+      "acknowledged" : true,
+      "errorInfo" : {
+        "messageWithParams" : "messageWithParams",
+        "code" : "code",
+        "contextId" : "contextId",
+        "details" : "https://openapi-generator.tech",
+        "messageParams" : {
+          "key" : "messageParams"
+        },
+        "message" : "message",
+        "status" : 2
+      },
+      "correlationId" : "correlationId"
     } ],
-    "publicNatAddressIpV6" : "aeiou",
-    "ifStatus" : "aeiou",
-    "selfUri" : "aeiou",
+    "publicNatAddressIpV6" : "publicNatAddressIpV6",
+    "ifStatus" : "ifStatus",
+    "selfUri" : "https://openapi-generator.tech",
     "useForCloudProxyEdgeCommunication" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "ipv6Capabilities" : "",
-    "version" : 123,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "ipv6Capabilities" : "{}",
+    "version" : 0,
     "useForIndirectEdgeCommunication" : true,
-    "ipv4Capabilities" : {
-      "metric" : 123,
-      "pingEnabled" : true,
-      "enabled" : true,
-      "dhcp" : true,
-      "autoMetric" : true,
-      "supportsMetric" : true
-    },
+    "ipv4Capabilities" : "{}",
     "inheritPhoneTrunkBasesIPv6" : true,
-    "physicalAdapterId" : "aeiou",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "edgeAssignedId" : "aeiou",
-    "vlanTagId" : 123,
-    "edgeUri" : "aeiou",
-    "currentState" : "aeiou",
+    "physicalAdapterId" : "physicalAdapterId",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "edgeAssignedId" : "edgeAssignedId",
+    "vlanTagId" : 6,
+    "edgeUri" : "https://openapi-generator.tech",
+    "currentState" : "INIT",
     "traceEnabled" : true,
     "inheritPhoneTrunkBasesIPv4" : true,
-    "startDate" : "2000-01-23T04:56:07.000+0000"
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "hardwareAddress" : "hardwareAddress",
+    "addresses" : [ {
+      "address" : "address",
+      "type" : "ip",
+      "persistent" : true,
+      "family" : 5
+    }, {
+      "address" : "address",
+      "type" : "ip",
+      "persistent" : true,
+      "family" : 5
+    } ],
+    "phoneTrunkBaseAssignments" : [ {
+      "family" : 7,
+      "trunkBase" : "{}"
+    }, {
+      "family" : 7,
+      "trunkBase" : "{}"
+    } ],
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "externalTrunkBaseAssignments" : [ {
+      "family" : 7,
+      "trunkBase" : "{}"
+    }, {
+      "family" : 7,
+      "trunkBase" : "{}"
+    } ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "useForInternalEdgeCommunication" : true,
+    "division" : "{}",
+    "useForWanInterface" : true,
+    "interfaceType" : "DIAGNOSTIC",
+    "routes" : [ {
+      "metric" : 1,
+      "prefix" : "prefix",
+      "persistent" : true,
+      "family" : 5,
+      "nexthop" : "nexthop"
+    }, {
+      "metric" : 1,
+      "prefix" : "prefix",
+      "persistent" : true,
+      "family" : 5,
+      "nexthop" : "nexthop"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastModifiedUserId" : "lastModifiedUserId",
+    "lastModifiedCorrelationId" : "lastModifiedCorrelationId",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "friendlyName" : "friendlyName",
+    "publicNatAddressIpV4" : "publicNatAddressIpV4",
+    "commandResponses" : [ {
+      "commandName" : "commandName",
+      "acknowledged" : true,
+      "errorInfo" : {
+        "messageWithParams" : "messageWithParams",
+        "code" : "code",
+        "contextId" : "contextId",
+        "details" : "https://openapi-generator.tech",
+        "messageParams" : {
+          "key" : "messageParams"
+        },
+        "message" : "message",
+        "status" : 2
+      },
+      "correlationId" : "correlationId"
+    }, {
+      "commandName" : "commandName",
+      "acknowledged" : true,
+      "errorInfo" : {
+        "messageWithParams" : "messageWithParams",
+        "code" : "code",
+        "contextId" : "contextId",
+        "details" : "https://openapi-generator.tech",
+        "messageParams" : {
+          "key" : "messageParams"
+        },
+        "message" : "message",
+        "status" : 2
+      },
+      "correlationId" : "correlationId"
+    } ],
+    "publicNatAddressIpV6" : "publicNatAddressIpV6",
+    "ifStatus" : "ifStatus",
+    "selfUri" : "https://openapi-generator.tech",
+    "useForCloudProxyEdgeCommunication" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "ipv6Capabilities" : "{}",
+    "version" : 0,
+    "useForIndirectEdgeCommunication" : true,
+    "ipv4Capabilities" : "{}",
+    "inheritPhoneTrunkBasesIPv6" : true,
+    "physicalAdapterId" : "physicalAdapterId",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "edgeAssignedId" : "edgeAssignedId",
+    "vlanTagId" : 6,
+    "edgeUri" : "https://openapi-generator.tech",
+    "currentState" : "INIT",
+    "traceEnabled" : true,
+    "inheritPhoneTrunkBasesIPv4" : true,
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 9,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
      - parameter expand: (query) Field to expand in the response (optional)
 
      - returns: RequestBuilder<LogicalInterfaceEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesLogicalinterfacesWithRequestBuilder(edgeIds: String, expand: [String]? = nil) -> RequestBuilder<LogicalInterfaceEntityListing> {
+    open class func getTelephonyProvidersEdgesLogicalinterfacesWithRequestBuilder(edgeIds: String, expand: [String]? = nil) -> RequestBuilder<LogicalInterfaceEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/logicalinterfaces"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "edgeIds": edgeIds, 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<LogicalInterfaceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7254,10 +6534,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get the metrics for a list of edges.
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -7282,72 +6559,86 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the metrics for a list of edges.
-     
      - GET /api/v2/telephony/providers/edges/metrics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
+     - examples: [{contentType=application/json, example={
   "edge" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
   "memory" : [ {
-    "totalBytes" : 1.3579000000000001069366817318950779736042022705078125,
-    "type" : "aeiou",
-    "availableBytes" : 1.3579000000000001069366817318950779736042022705078125
+    "totalBytes" : 7.061401241503109,
+    "type" : "type",
+    "availableBytes" : 2.3021358869347655
+  }, {
+    "totalBytes" : 7.061401241503109,
+    "type" : "type",
+    "availableBytes" : 2.3021358869347655
   } ],
   "disks" : [ {
-    "partitionName" : "aeiou",
-    "totalBytes" : 1.3579000000000001069366817318950779736042022705078125,
-    "availableBytes" : 1.3579000000000001069366817318950779736042022705078125
+    "partitionName" : "partitionName",
+    "totalBytes" : 3.616076749251911,
+    "availableBytes" : 9.301444243932576
+  }, {
+    "partitionName" : "partitionName",
+    "totalBytes" : 3.616076749251911,
+    "availableBytes" : 9.301444243932576
   } ],
-  "eventTime" : "2000-01-23T04:56:07.000+0000",
-  "upTimeMsec" : 123456789,
+  "eventTime" : "2000-01-23T04:56:07.000+00:00",
+  "upTimeMsec" : 0,
   "processors" : [ {
-    "privilegedTimePct" : 1.3579000000000001069366817318950779736042022705078125,
-    "cpuId" : "aeiou",
-    "userTimePct" : 1.3579000000000001069366817318950779736042022705078125,
-    "idleTimePct" : 1.3579000000000001069366817318950779736042022705078125,
-    "activeTimePct" : 1.3579000000000001069366817318950779736042022705078125
+    "privilegedTimePct" : 5.962133916683182,
+    "cpuId" : "cpuId",
+    "userTimePct" : 5.637376656633329,
+    "idleTimePct" : 1.4658129805029452,
+    "activeTimePct" : 6.027456183070403
+  }, {
+    "privilegedTimePct" : 5.962133916683182,
+    "cpuId" : "cpuId",
+    "userTimePct" : 5.637376656633329,
+    "idleTimePct" : 1.4658129805029452,
+    "activeTimePct" : 6.027456183070403
   } ],
   "networks" : [ {
-    "sentBytesPerSec" : 123,
-    "ifname" : "aeiou",
-    "bandwidthBitsPerSec" : 1.3579000000000001069366817318950779736042022705078125,
-    "receivedBytesPerSec" : 123,
-    "utilizationPct" : 1.3579000000000001069366817318950779736042022705078125
+    "sentBytesPerSec" : 4,
+    "ifname" : "ifname",
+    "bandwidthBitsPerSec" : 1.2315135367772556,
+    "receivedBytesPerSec" : 7,
+    "utilizationPct" : 1.0246457001441578
+  }, {
+    "sentBytesPerSec" : 4,
+    "ifname" : "ifname",
+    "bandwidthBitsPerSec" : 1.2315135367772556,
+    "receivedBytesPerSec" : 7,
+    "utilizationPct" : 1.0246457001441578
   } ],
   "subsystems" : [ {
-    "delayMs" : 123,
-    "processName" : "aeiou",
-    "mediaSubsystem" : ""
+    "delayMs" : 2,
+    "processName" : "processName",
+    "mediaSubsystem" : "{}"
+  }, {
+    "delayMs" : 2,
+    "processName" : "processName",
+    "mediaSubsystem" : "{}"
   } ]
-} ]}]
+}, statusCode=200}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
 
      - returns: RequestBuilder<[EdgeMetrics]> 
      */
-    open class func getTelephonyProvidersEdgesMetricsWithRequestBuilder(edgeIds: String) -> RequestBuilder<[EdgeMetrics]> {
+    open class func getTelephonyProvidersEdgesMetricsWithRequestBuilder(edgeIds: String) -> RequestBuilder<[EdgeMetrics]> {        
         let path = "/api/v2/telephony/providers/edges/metrics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "edgeIds": edgeIds
-            
         ])
 
         let requestBuilder: RequestBuilder<[EdgeMetrics]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7356,10 +6647,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get outbound route
      
      - parameter outboundRouteId: (path) Outbound route ID 
@@ -7384,283 +6672,53 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get outbound route
-     
      - GET /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}
      - This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "classificationTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "distribution" : "aeiou",
-  "version" : 123,
+  "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "distribution" : "SEQUENTIAL",
+  "version" : 0,
   "enabled" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "site" : {
-    "primarySites" : [ "" ],
-    "addresses" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
-      "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "secondaryEdges" : [ "" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "primaryEdges" : [ {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
-      "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : "",
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
-    } ],
-    "managed" : true,
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "coreSite" : true,
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
-    "ntpSettings" : {
-      "servers" : [ "aeiou" ]
-    },
-    "createdBy" : "aeiou",
-    "secondarySites" : [ "" ],
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "location" : {
-      "images" : "aeiou",
-      "address" : {
-        "zipcode" : "aeiou",
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "street1" : "aeiou",
-        "countryName" : "aeiou",
-        "state" : "aeiou",
-        "street2" : "aeiou"
-      },
-      "notes" : "aeiou",
-      "floorplanImage" : [ "" ],
-      "addressVerificationDetails" : {
-        "dateStarted" : "2000-01-23T04:56:07.000+0000",
-        "dateFinished" : "2000-01-23T04:56:07.000+0000",
-        "service" : "smartystreets-us",
-        "status" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "profileImage" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "emergencyNumber" : {
-        "number" : "aeiou",
-        "e164" : "aeiou",
-        "type" : "aeiou"
-      },
-      "version" : 123,
-      "path" : [ "aeiou" ],
-      "addressStored" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "contactUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "state" : "aeiou",
-      "addressVerified" : true
-    },
-    "mediaModel" : "aeiou",
-    "siteConnections" : [ {
-      "coreSite" : true,
-      "managed" : true,
-      "selfUri" : "aeiou",
-      "edgeList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou",
-        "edgeConnectionList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "site" : "",
-          "connectionErrors" : [ "aeiou" ],
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou"
-        } ]
-      } ],
-      "name" : "aeiou",
-      "secondaryCoreSites" : [ "" ],
-      "mediaModel" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "enabled" : true,
-      "primaryCoreSites" : [ "" ]
-    } ],
-    "edgeAutoUpdateConfig" : {
-      "rrule" : "aeiou",
-      "start" : "aeiou",
-      "timeZone" : "aeiou",
-      "end" : "aeiou"
-    }
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
+  "division" : "{}",
+  "site" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
   "externalTrunkBases" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter outboundRouteId: (path) Outbound route ID 
 
      - returns: RequestBuilder<OutboundRoute> 
      */
-    open class func getTelephonyProvidersEdgesOutboundrouteWithRequestBuilder(outboundRouteId: String) -> RequestBuilder<OutboundRoute> {
+    open class func getTelephonyProvidersEdgesOutboundrouteWithRequestBuilder(outboundRouteId: String) -> RequestBuilder<OutboundRoute> {        
         var path = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}"
         let outboundRouteIdPreEscape = "\(outboundRouteId)"
         let outboundRouteIdPostEscape = outboundRouteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outboundRouteId}", with: outboundRouteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -7675,23 +6733,15 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get outbound routes
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
      - parameter siteId: (query) Filter by site.id (optional)
      - parameter externalTrunkBasesIds: (query) Filter by externalTrunkBases.ids (optional)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTelephonyProvidersEdgesOutboundroutes(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, externalTrunkBasesIds: String? = nil, sortBy: String? = nil, completion: @escaping ((_ data: OutboundRouteEntityListing?,_ error: Error?) -> Void)) {
@@ -7713,312 +6763,102 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get outbound routes
-     
      - GET /api/v2/telephony/providers/edges/outboundroutes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "classificationTypes" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "distribution" : "aeiou",
-    "version" : 123,
+    "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "distribution" : "SEQUENTIAL",
+    "version" : 0,
     "enabled" : true,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "site" : {
-      "primarySites" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
-        "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "secondaryEdges" : [ "" ],
-      "description" : "aeiou",
-      "createdByApp" : "aeiou",
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "primaryEdges" : [ {
-        "softwareStatus" : {
-          "callDrainingWaitTimeSeconds" : 123456789,
-          "current" : true,
-          "executeOnIdle" : true,
-          "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-          "maxDownloadRate" : 123,
-          "edgeUri" : "aeiou",
-          "version" : {
-            "latestRelease" : true,
-            "current" : true,
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "publishDate" : "2000-01-23T04:56:07.000+0000",
-            "id" : "aeiou",
-            "edgeUri" : "aeiou",
-            "edgeVersion" : "aeiou"
-          },
-          "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-          "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-          "status" : "aeiou"
-        },
-        "fullSoftwareVersion" : "aeiou",
-        "onlineStatus" : "aeiou",
-        "description" : "aeiou",
-        "callDrainingState" : "aeiou",
-        "createdByApp" : "aeiou",
-        "edgeGroup" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "hybrid" : true,
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "edgeTrunkBaseAssignment" : {
-            "family" : 123,
-            "trunkBase" : {
-              "selfUri" : "aeiou",
-              "description" : "aeiou",
-              "dateModified" : "2000-01-23T04:56:07.000+0000",
-              "createdByApp" : "aeiou",
-              "trunkType" : "aeiou",
-              "version" : 123,
-              "division" : "",
-              "dateCreated" : "2000-01-23T04:56:07.000+0000",
-              "createdBy" : "aeiou",
-              "managed" : true,
-              "name" : "aeiou",
-              "modifiedByApp" : "aeiou",
-              "modifiedBy" : "aeiou",
-              "trunkMetabase" : "",
-              "id" : "aeiou",
-              "state" : "aeiou",
-              "properties" : {
-                "key" : "{}"
-              }
-            }
-          },
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "phoneTrunkBases" : [ "" ]
-        },
-        "division" : "",
-        "patch" : "aeiou",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "apiVersion" : "aeiou",
-        "managed" : true,
-        "conversationCount" : 123,
-        "fingerprint" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "model" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "make" : "aeiou",
-        "stagedVersion" : "aeiou",
-        "interfaces" : [ {
-          "macAddress" : "aeiou",
-          "endpoints" : [ "" ],
-          "ifName" : "aeiou",
-          "ipAddress" : "aeiou",
-          "name" : "aeiou",
-          "type" : "aeiou",
-          "lineTypes" : [ "aeiou" ],
-          "addressFamilyId" : "aeiou"
-        } ],
-        "edgeDeploymentType" : "aeiou",
-        "serialNumber" : "aeiou",
-        "softwareVersionConfiguration" : "aeiou",
-        "physicalEdge" : true,
-        "selfUri" : "aeiou",
-        "offlineConfigCalled" : true,
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "osName" : "aeiou",
-        "version" : 123,
-        "currentVersion" : "aeiou",
-        "proxy" : "aeiou",
-        "site" : "",
-        "softwareVersionPlatform" : "aeiou",
-        "fingerprintHint" : "aeiou",
-        "createdBy" : "aeiou",
-        "softwareVersionTimestamp" : "aeiou",
-        "pairingId" : "aeiou",
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "softwareVersion" : "aeiou",
-        "statusCode" : "aeiou"
-      } ],
-      "managed" : true,
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "coreSite" : true,
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
-      "ntpSettings" : {
-        "servers" : [ "aeiou" ]
-      },
-      "createdBy" : "aeiou",
-      "secondarySites" : [ "" ],
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "location" : {
-        "images" : "aeiou",
-        "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
-        },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
-        } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
-        "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
-        "addressVerified" : true
-      },
-      "mediaModel" : "aeiou",
-      "siteConnections" : [ {
-        "coreSite" : true,
-        "managed" : true,
-        "selfUri" : "aeiou",
-        "edgeList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou",
-          "edgeConnectionList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "site" : "",
-            "connectionErrors" : [ "aeiou" ],
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou"
-          } ]
-        } ],
-        "name" : "aeiou",
-        "secondaryCoreSites" : [ "" ],
-        "mediaModel" : "aeiou",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "enabled" : true,
-        "primaryCoreSites" : [ "" ]
-      } ],
-      "edgeAutoUpdateConfig" : {
-        "rrule" : "aeiou",
-        "start" : "aeiou",
-        "timeZone" : "aeiou",
-        "end" : "aeiou"
-      }
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
+    "division" : "{}",
+    "site" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
     "managed" : true,
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
     "externalTrunkBases" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     } ],
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "distribution" : "SEQUENTIAL",
+    "version" : 0,
+    "enabled" : true,
+    "division" : "{}",
+    "site" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "externalTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
      - parameter siteId: (query) Filter by site.id (optional)
      - parameter externalTrunkBasesIds: (query) Filter by externalTrunkBases.ids (optional)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortBy: (query) Sort by (optional)
 
      - returns: RequestBuilder<OutboundRouteEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesOutboundroutesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, externalTrunkBasesIds: String? = nil, sortBy: String? = nil) -> RequestBuilder<OutboundRouteEntityListing> {
+    open class func getTelephonyProvidersEdgesOutboundroutesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, externalTrunkBasesIds: String? = nil, sortBy: String? = nil) -> RequestBuilder<OutboundRouteEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/outboundroutes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "name": name, 
-            
             "site.id": siteId, 
-            
             "externalTrunkBases.ids": externalTrunkBasesIds, 
-            
             "sortBy": sortBy
-            
         ])
 
         let requestBuilder: RequestBuilder<OutboundRouteEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8027,10 +6867,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Phone by ID
      
      - parameter phoneId: (path) Phone ID 
@@ -8055,352 +6892,439 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Phone by ID
-     
      - GET /api/v2/telephony/providers/edges/phones/{phoneId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "description" : "description",
+  "createdByApp" : "createdByApp",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "lines" : [ {
-    "template" : "",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : "",
-    "loggedInUser" : "",
-    "version" : 123,
-    "division" : "",
-    "site" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "secondaryEdge" : "",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "defaultForUser" : "",
-    "primaryEdge" : {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
-      "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : {
-        "primarySites" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "countryCode" : "aeiou",
-          "display" : "aeiou",
-          "integration" : "microsoftteams",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
-        } ],
-        "secondaryEdges" : [ "" ],
-        "description" : "aeiou",
-        "createdByApp" : "aeiou",
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "primaryEdges" : [ "" ],
-        "managed" : true,
-        "modifiedBy" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "coreSite" : true,
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
-        "ntpSettings" : {
-          "servers" : [ "aeiou" ]
-        },
-        "createdBy" : "aeiou",
-        "secondarySites" : [ "" ],
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "location" : {
-          "images" : "aeiou",
-          "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
-          },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
-          } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
-          "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
-          "addressVerified" : true
-        },
-        "mediaModel" : "aeiou",
-        "siteConnections" : [ {
-          "coreSite" : true,
-          "managed" : true,
-          "selfUri" : "aeiou",
-          "edgeList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou",
-            "edgeConnectionList" : [ {
-              "interfaceIpAddress" : "aeiou",
-              "site" : "",
-              "connectionErrors" : [ "aeiou" ],
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "interfaceName" : "aeiou"
-            } ]
-          } ],
-          "name" : "aeiou",
-          "secondaryCoreSites" : [ "" ],
-          "mediaModel" : "aeiou",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "enabled" : true,
-          "primaryCoreSites" : [ "" ]
-        } ],
-        "edgeAutoUpdateConfig" : {
-          "rrule" : "aeiou",
-          "start" : "aeiou",
-          "timeZone" : "aeiou",
-          "end" : "aeiou"
-        }
-      },
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "lineBaseSettings" : "",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
     "properties" : {
       "key" : "{}"
     }
   } ],
-  "primaryEdge" : "",
-  "phoneBaseSettings" : "",
+  "primaryEdge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  },
+  "phoneBaseSettings" : "{}",
   "capabilities" : {
     "provisions" : true,
-    "hardwareIdType" : "aeiou",
+    "hardwareIdType" : "hardwareIdType",
     "noCloudProvisioning" : true,
     "registers" : true,
     "dualRegisters" : true,
     "allowReboot" : true,
-    "mediaCodecs" : [ "aeiou" ],
+    "mediaCodecs" : [ "audio/opus", "audio/opus" ],
     "cdm" : true,
     "noRebalance" : true
   },
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "phoneMetaBase" : "",
-  "version" : 123,
-  "userAgentInfo" : {
-    "model" : "aeiou",
-    "firmwareVersion" : "aeiou",
-    "manufacturer" : "aeiou"
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "phoneMetaBase" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "site" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "version" : 0,
+  "userAgentInfo" : "{}",
+  "site" : "{}",
+  "createdBy" : "createdBy",
+  "secondaryEdge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   },
-  "createdBy" : "aeiou",
-  "secondaryEdge" : "",
-  "secondaryStatus" : "",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "webRtcUser" : "",
-  "lineBaseSettings" : "",
+  "secondaryStatus" : "{}",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "webRtcUser" : "{}",
+  "lineBaseSettings" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
   "properties" : {
     "key" : "{}"
   },
-  "status" : {
-    "operationalStatus" : "aeiou",
-    "edgesStatus" : "aeiou",
-    "edge" : "",
-    "lineStatuses" : [ {
-      "contactAddresses" : [ "aeiou" ],
-      "addressOfRecord" : "aeiou",
-      "id" : "aeiou",
-      "reachable" : true,
-      "reachableStateTime" : "2000-01-23T04:56:07.000+0000"
-    } ],
-    "phoneAssignmentToEdgeType" : "aeiou",
-    "provision" : {
-      "errorInfo" : "aeiou",
-      "time" : "2000-01-23T04:56:07.000+0000",
-      "source" : "aeiou"
-    },
-    "eventCreationTime" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "status" : "{}"
+}, statusCode=200}]
      
      - parameter phoneId: (path) Phone ID 
 
      - returns: RequestBuilder<Phone> 
      */
-    open class func getTelephonyProvidersEdgesPhoneWithRequestBuilder(phoneId: String) -> RequestBuilder<Phone> {
+    open class func getTelephonyProvidersEdgesPhoneWithRequestBuilder(phoneId: String) -> RequestBuilder<Phone> {        
         var path = "/api/v2/telephony/providers/edges/phones/{phoneId}"
         let phoneIdPreEscape = "\(phoneId)"
         let phoneIdPostEscape = phoneIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{phoneId}", with: phoneIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -8410,10 +7334,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Phone Base Settings object by ID
      
      - parameter phoneBaseId: (path) Phone base ID 
@@ -8438,63 +7359,78 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Phone Base Settings object by ID
-     
      - GET /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "capabilities" : {
     "provisions" : true,
-    "hardwareIdType" : "aeiou",
+    "hardwareIdType" : "hardwareIdType",
     "noCloudProvisioning" : true,
     "registers" : true,
     "dualRegisters" : true,
     "allowReboot" : true,
-    "mediaCodecs" : [ "aeiou" ],
+    "mediaCodecs" : [ "audio/opus", "audio/opus" ],
     "cdm" : true,
     "noRebalance" : true
   },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "phoneMetaBase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "phoneMetaBase" : "{}",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "lines" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "lineMetaBase" : "",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
     "properties" : {
       "key" : "{}"
     }
@@ -8502,24 +7438,19 @@ open class TelephonyProvidersEdgeAPI {
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter phoneBaseId: (path) Phone base ID 
 
      - returns: RequestBuilder<PhoneBase> 
      */
-    open class func getTelephonyProvidersEdgesPhonebasesettingWithRequestBuilder(phoneBaseId: String) -> RequestBuilder<PhoneBase> {
+    open class func getTelephonyProvidersEdgesPhonebasesettingWithRequestBuilder(phoneBaseId: String) -> RequestBuilder<PhoneBase> {        
         var path = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}"
         let phoneBaseIdPreEscape = "\(phoneBaseId)"
         let phoneBaseIdPostEscape = phoneBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{phoneBaseId}", with: phoneBaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -8534,27 +7465,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    public enum Expand_getTelephonyProvidersEdgesPhonebasesettings: String { 
-        case properties = "properties"
-        case lines = "lines"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get a list of Phone Base Settings objects
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
      - parameter name: (query) Name (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -8578,67 +7495,156 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a list of Phone Base Settings objects
-     
      - GET /api/v2/telephony/providers/edges/phonebasesettings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "capabilities" : {
       "provisions" : true,
-      "hardwareIdType" : "aeiou",
+      "hardwareIdType" : "hardwareIdType",
       "noCloudProvisioning" : true,
       "registers" : true,
       "dualRegisters" : true,
       "allowReboot" : true,
-      "mediaCodecs" : [ "aeiou" ],
+      "mediaCodecs" : [ "audio/opus", "audio/opus" ],
       "cdm" : true,
       "noRebalance" : true
     },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "phoneMetaBase" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "phoneMetaBase" : "{}",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
     "lines" : [ {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "lineMetaBase" : "",
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 0,
+      "lineMetaBase" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 0,
+      "lineMetaBase" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    } ],
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "capabilities" : {
+      "provisions" : true,
+      "hardwareIdType" : "hardwareIdType",
+      "noCloudProvisioning" : true,
+      "registers" : true,
+      "dualRegisters" : true,
+      "allowReboot" : true,
+      "mediaCodecs" : [ "audio/opus", "audio/opus" ],
+      "cdm" : true,
+      "noRebalance" : true
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "phoneMetaBase" : "{}",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "lines" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 0,
+      "lineMetaBase" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 0,
+      "lineMetaBase" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
       "properties" : {
         "key" : "{}"
       }
@@ -8647,48 +7653,36 @@ open class TelephonyProvidersEdgeAPI {
       "key" : "{}"
     }
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
      - parameter name: (query) Name (optional)
 
      - returns: RequestBuilder<PhoneBaseEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesPhonebasesettingsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, expand: [String]? = nil, name: String? = nil) -> RequestBuilder<PhoneBaseEntityListing> {
+    open class func getTelephonyProvidersEdgesPhonebasesettingsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, expand: [String]? = nil, name: String? = nil) -> RequestBuilder<PhoneBaseEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/phonebasesettings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "expand": expand, 
-            
             "name": name
-            
         ])
 
         let requestBuilder: RequestBuilder<PhoneBaseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8698,15 +7692,11 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a list of available makes and models to create a new Phone Base Settings
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTelephonyProvidersEdgesPhonebasesettingsAvailablemetabases(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: PhoneMetaBaseEntityListing?,_ error: Error?) -> Void)) {
@@ -8728,68 +7718,68 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a list of available makes and models to create a new Phone Base Settings
-     
      - GET /api/v2/telephony/providers/edges/phonebasesettings/availablemetabases
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "type" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "type" : "EXTERNAL",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "type" : "EXTERNAL",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<PhoneMetaBaseEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<PhoneMetaBaseEntityListing> {
+    open class func getTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<PhoneMetaBaseEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/phonebasesettings/availablemetabases"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<PhoneMetaBaseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8798,10 +7788,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
      
      - parameter phoneMetabaseId: (query) The id of a metabase object upon which to base this Phone Base Settings 
@@ -8826,63 +7813,78 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
-     
      - GET /api/v2/telephony/providers/edges/phonebasesettings/template
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "capabilities" : {
     "provisions" : true,
-    "hardwareIdType" : "aeiou",
+    "hardwareIdType" : "hardwareIdType",
     "noCloudProvisioning" : true,
     "registers" : true,
     "dualRegisters" : true,
     "allowReboot" : true,
-    "mediaCodecs" : [ "aeiou" ],
+    "mediaCodecs" : [ "audio/opus", "audio/opus" ],
     "cdm" : true,
     "noRebalance" : true
   },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "phoneMetaBase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "phoneMetaBase" : "{}",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "lines" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "lineMetaBase" : "",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
     "properties" : {
       "key" : "{}"
     }
@@ -8890,27 +7892,20 @@ open class TelephonyProvidersEdgeAPI {
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter phoneMetabaseId: (query) The id of a metabase object upon which to base this Phone Base Settings 
 
      - returns: RequestBuilder<PhoneBase> 
      */
-    open class func getTelephonyProvidersEdgesPhonebasesettingsTemplateWithRequestBuilder(phoneMetabaseId: String) -> RequestBuilder<PhoneBase> {
+    open class func getTelephonyProvidersEdgesPhonebasesettingsTemplateWithRequestBuilder(phoneMetabaseId: String) -> RequestBuilder<PhoneBase> {        
         let path = "/api/v2/telephony/providers/edges/phonebasesettings/template"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "phoneMetabaseId": phoneMetabaseId
-            
         ])
 
         let requestBuilder: RequestBuilder<PhoneBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8918,9 +7913,6 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -8945,48 +7937,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    public enum Expand_getTelephonyProvidersEdgesPhones: String { 
-        case properties = "properties"
-        case site = "site"
-        case status = "status"
-        case statusPrimaryedgesstatus = "status.primaryEdgesStatus"
-        case statusSecondaryedgesstatus = "status.secondaryEdgesStatus"
-        case phonebasesettings = "phoneBaseSettings"
-        case lines = "lines"
-    }
-
-    
-    
-    
-    public enum Fields_getTelephonyProvidersEdgesPhones: String { 
-        case webrtcuser = "webRtcUser"
-        case properties_ = "properties.*"
-        case linesLoggedinuser = "lines.loggedInUser"
-        case linesDefaultforuser = "lines.defaultForUser"
-    }
-
-    
-    
     /**
-     
      Get a list of Phone Instances
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) The field to sort by (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) The field to sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter siteId: (query) Filter by site.id (optional)
      - parameter webRtcUserId: (query) Filter by webRtcUser.id (optional)
      - parameter phoneBaseSettingsId: (query) Filter by phoneBaseSettings.id (optional)
@@ -9021,351 +7978,858 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a list of Phone Instances
-     
      - GET /api/v2/telephony/providers/edges/phones
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
     "lines" : [ {
-      "template" : "",
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : "",
-      "loggedInUser" : "",
-      "version" : 123,
-      "division" : "",
-      "site" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "secondaryEdge" : "",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "defaultForUser" : "",
-      "primaryEdge" : {
-        "softwareStatus" : {
-          "callDrainingWaitTimeSeconds" : 123456789,
-          "current" : true,
-          "executeOnIdle" : true,
-          "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-          "maxDownloadRate" : 123,
-          "edgeUri" : "aeiou",
-          "version" : {
-            "latestRelease" : true,
-            "current" : true,
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "publishDate" : "2000-01-23T04:56:07.000+0000",
-            "id" : "aeiou",
-            "edgeUri" : "aeiou",
-            "edgeVersion" : "aeiou"
-          },
-          "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-          "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-          "status" : "aeiou"
-        },
-        "fullSoftwareVersion" : "aeiou",
-        "onlineStatus" : "aeiou",
-        "description" : "aeiou",
-        "callDrainingState" : "aeiou",
-        "createdByApp" : "aeiou",
-        "edgeGroup" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "hybrid" : true,
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "edgeTrunkBaseAssignment" : {
-            "family" : 123,
-            "trunkBase" : {
-              "selfUri" : "aeiou",
-              "description" : "aeiou",
-              "dateModified" : "2000-01-23T04:56:07.000+0000",
-              "createdByApp" : "aeiou",
-              "trunkType" : "aeiou",
-              "version" : 123,
-              "division" : "",
-              "dateCreated" : "2000-01-23T04:56:07.000+0000",
-              "createdBy" : "aeiou",
-              "managed" : true,
-              "name" : "aeiou",
-              "modifiedByApp" : "aeiou",
-              "modifiedBy" : "aeiou",
-              "trunkMetabase" : "",
-              "id" : "aeiou",
-              "state" : "aeiou",
-              "properties" : {
-                "key" : "{}"
-              }
-            }
-          },
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "phoneTrunkBases" : [ "" ]
-        },
-        "division" : "",
-        "patch" : "aeiou",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "apiVersion" : "aeiou",
-        "managed" : true,
-        "conversationCount" : 123,
-        "fingerprint" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "model" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "make" : "aeiou",
-        "stagedVersion" : "aeiou",
-        "interfaces" : [ {
-          "macAddress" : "aeiou",
-          "endpoints" : [ "" ],
-          "ifName" : "aeiou",
-          "ipAddress" : "aeiou",
-          "name" : "aeiou",
-          "type" : "aeiou",
-          "lineTypes" : [ "aeiou" ],
-          "addressFamilyId" : "aeiou"
-        } ],
-        "edgeDeploymentType" : "aeiou",
-        "serialNumber" : "aeiou",
-        "softwareVersionConfiguration" : "aeiou",
-        "physicalEdge" : true,
-        "selfUri" : "aeiou",
-        "offlineConfigCalled" : true,
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "osName" : "aeiou",
-        "version" : 123,
-        "currentVersion" : "aeiou",
-        "proxy" : "aeiou",
-        "site" : {
-          "primarySites" : [ "" ],
-          "addresses" : [ {
-            "extension" : "aeiou",
-            "address" : "aeiou",
-            "countryCode" : "aeiou",
-            "display" : "aeiou",
-            "integration" : "microsoftteams",
-            "mediaType" : "aeiou",
-            "type" : "aeiou"
-          } ],
-          "secondaryEdges" : [ "" ],
-          "description" : "aeiou",
-          "createdByApp" : "aeiou",
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "primaryEdges" : [ "" ],
-          "managed" : true,
-          "modifiedBy" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "coreSite" : true,
-          "selfUri" : "aeiou",
-          "edges" : [ "" ],
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "version" : 123,
-          "mediaRegionsUseLatencyBased" : true,
-          "ntpSettings" : {
-            "servers" : [ "aeiou" ]
-          },
-          "createdBy" : "aeiou",
-          "secondarySites" : [ "" ],
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "location" : {
-            "images" : "aeiou",
-            "address" : {
-              "zipcode" : "aeiou",
-              "country" : "aeiou",
-              "city" : "aeiou",
-              "street1" : "aeiou",
-              "countryName" : "aeiou",
-              "state" : "aeiou",
-              "street2" : "aeiou"
-            },
-            "notes" : "aeiou",
-            "floorplanImage" : [ "" ],
-            "addressVerificationDetails" : {
-              "dateStarted" : "2000-01-23T04:56:07.000+0000",
-              "dateFinished" : "2000-01-23T04:56:07.000+0000",
-              "service" : "smartystreets-us",
-              "status" : "aeiou"
-            },
-            "selfUri" : "aeiou",
-            "profileImage" : [ {
-              "imageUri" : "aeiou",
-              "resolution" : "aeiou"
-            } ],
-            "emergencyNumber" : {
-              "number" : "aeiou",
-              "e164" : "aeiou",
-              "type" : "aeiou"
-            },
-            "version" : 123,
-            "path" : [ "aeiou" ],
-            "addressStored" : true,
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "contactUser" : {
-              "selfUri" : "aeiou",
-              "id" : "aeiou"
-            },
-            "state" : "aeiou",
-            "addressVerified" : true
-          },
-          "mediaModel" : "aeiou",
-          "siteConnections" : [ {
-            "coreSite" : true,
-            "managed" : true,
-            "selfUri" : "aeiou",
-            "edgeList" : [ {
-              "interfaceIpAddress" : "aeiou",
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "interfaceName" : "aeiou",
-              "edgeConnectionList" : [ {
-                "interfaceIpAddress" : "aeiou",
-                "site" : "",
-                "connectionErrors" : [ "aeiou" ],
-                "selfUri" : "aeiou",
-                "name" : "aeiou",
-                "id" : "aeiou",
-                "interfaceName" : "aeiou"
-              } ]
-            } ],
-            "name" : "aeiou",
-            "secondaryCoreSites" : [ "" ],
-            "mediaModel" : "aeiou",
-            "id" : "aeiou",
-            "type" : "aeiou",
-            "enabled" : true,
-            "primaryCoreSites" : [ "" ]
-          } ],
-          "edgeAutoUpdateConfig" : {
-            "rrule" : "aeiou",
-            "start" : "aeiou",
-            "timeZone" : "aeiou",
-            "end" : "aeiou"
-          }
-        },
-        "softwareVersionPlatform" : "aeiou",
-        "fingerprintHint" : "aeiou",
-        "createdBy" : "aeiou",
-        "softwareVersionTimestamp" : "aeiou",
-        "pairingId" : "aeiou",
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "softwareVersion" : "aeiou",
-        "statusCode" : "aeiou"
+      "template" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
       },
-      "lineBaseSettings" : "",
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "loggedInUser" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "version" : 0,
+      "division" : "{}",
+      "site" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "secondaryEdge" : "{}",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "defaultForUser" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "primaryEdge" : "{}",
+      "lineBaseSettings" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "template" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "loggedInUser" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "version" : 0,
+      "division" : "{}",
+      "site" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "secondaryEdge" : "{}",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "defaultForUser" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "primaryEdge" : "{}",
+      "lineBaseSettings" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
       "properties" : {
         "key" : "{}"
       }
     } ],
-    "primaryEdge" : "",
-    "phoneBaseSettings" : "",
+    "primaryEdge" : {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    },
+    "phoneBaseSettings" : "{}",
     "capabilities" : {
       "provisions" : true,
-      "hardwareIdType" : "aeiou",
+      "hardwareIdType" : "hardwareIdType",
       "noCloudProvisioning" : true,
       "registers" : true,
       "dualRegisters" : true,
       "allowReboot" : true,
-      "mediaCodecs" : [ "aeiou" ],
+      "mediaCodecs" : [ "audio/opus", "audio/opus" ],
       "cdm" : true,
       "noRebalance" : true
     },
-    "selfUri" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "phoneMetaBase" : "",
-    "version" : 123,
-    "userAgentInfo" : {
-      "model" : "aeiou",
-      "firmwareVersion" : "aeiou",
-      "manufacturer" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "phoneMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "site" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+    "version" : 0,
+    "userAgentInfo" : "{}",
+    "site" : "{}",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
     },
-    "createdBy" : "aeiou",
-    "secondaryEdge" : "",
-    "secondaryStatus" : "",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "webRtcUser" : "",
-    "lineBaseSettings" : "",
+    "secondaryStatus" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "webRtcUser" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
     "properties" : {
       "key" : "{}"
     },
-    "status" : {
-      "operationalStatus" : "aeiou",
-      "edgesStatus" : "aeiou",
-      "edge" : "",
-      "lineStatuses" : [ {
-        "contactAddresses" : [ "aeiou" ],
-        "addressOfRecord" : "aeiou",
-        "id" : "aeiou",
-        "reachable" : true,
-        "reachableStateTime" : "2000-01-23T04:56:07.000+0000"
-      } ],
-      "phoneAssignmentToEdgeType" : "aeiou",
-      "provision" : {
-        "errorInfo" : "aeiou",
-        "time" : "2000-01-23T04:56:07.000+0000",
-        "source" : "aeiou"
+    "status" : "{}"
+  }, {
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "lines" : [ {
+      "template" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
       },
-      "eventCreationTime" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    }
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "loggedInUser" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "version" : 0,
+      "division" : "{}",
+      "site" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "secondaryEdge" : "{}",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "defaultForUser" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "primaryEdge" : "{}",
+      "lineBaseSettings" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "template" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "loggedInUser" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "version" : 0,
+      "division" : "{}",
+      "site" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "secondaryEdge" : "{}",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "id" : "id",
+      "state" : "active",
+      "defaultForUser" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "primaryEdge" : "{}",
+      "lineBaseSettings" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    } ],
+    "primaryEdge" : {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    },
+    "phoneBaseSettings" : "{}",
+    "capabilities" : {
+      "provisions" : true,
+      "hardwareIdType" : "hardwareIdType",
+      "noCloudProvisioning" : true,
+      "registers" : true,
+      "dualRegisters" : true,
+      "allowReboot" : true,
+      "mediaCodecs" : [ "audio/opus", "audio/opus" ],
+      "cdm" : true,
+      "noRebalance" : true
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "phoneMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "userAgentInfo" : "{}",
+    "site" : "{}",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    },
+    "secondaryStatus" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "webRtcUser" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "properties" : {
+      "key" : "{}"
+    },
+    "status" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) The field to sort by (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) The field to sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter siteId: (query) Filter by site.id (optional)
      - parameter webRtcUserId: (query) Filter by webRtcUser.id (optional)
      - parameter phoneBaseSettingsId: (query) Filter by phoneBaseSettings.id (optional)
@@ -9382,53 +8846,30 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<PhoneEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesPhonesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getTelephonyProvidersEdgesPhones? = nil, sortOrder: String? = nil, siteId: String? = nil, webRtcUserId: String? = nil, phoneBaseSettingsId: String? = nil, linesLoggedInUserId: String? = nil, linesDefaultForUserId: String? = nil, phoneHardwareId: String? = nil, linesId: String? = nil, linesName: String? = nil, name: String? = nil, statusOperationalStatus: String? = nil, secondaryStatusOperationalStatus: String? = nil, expand: [String]? = nil, fields: [String]? = nil) -> RequestBuilder<PhoneEntityListing> {
+    open class func getTelephonyProvidersEdgesPhonesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getTelephonyProvidersEdgesPhones? = nil, sortOrder: String? = nil, siteId: String? = nil, webRtcUserId: String? = nil, phoneBaseSettingsId: String? = nil, linesLoggedInUserId: String? = nil, linesDefaultForUserId: String? = nil, phoneHardwareId: String? = nil, linesId: String? = nil, linesName: String? = nil, name: String? = nil, statusOperationalStatus: String? = nil, secondaryStatusOperationalStatus: String? = nil, expand: [String]? = nil, fields: [String]? = nil) -> RequestBuilder<PhoneEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/phones"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "sortBy": sortBy?.rawValue, 
-            
             "sortOrder": sortOrder, 
-            
             "site.id": siteId, 
-            
             "webRtcUser.id": webRtcUserId, 
-            
             "phoneBaseSettings.id": phoneBaseSettingsId, 
-            
             "lines.loggedInUser.id": linesLoggedInUserId, 
-            
             "lines.defaultForUser.id": linesDefaultForUserId, 
-            
             "phone_hardwareId": phoneHardwareId, 
-            
             "lines.id": linesId, 
-            
             "lines.name": linesName, 
-            
             "name": name, 
-            
             "status.operationalStatus": statusOperationalStatus, 
-            
             "secondaryStatus.operationalStatus": secondaryStatusOperationalStatus, 
-            
             "expand": expand, 
-            
             "fields": fields
-            
         ])
 
         let requestBuilder: RequestBuilder<PhoneEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9437,10 +8878,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
      
      - parameter phoneBaseSettingsId: (query) The id of a Phone Base Settings object upon which to base this Phone 
@@ -9465,355 +8903,440 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
-     
      - GET /api/v2/telephony/providers/edges/phones/template
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "description" : "description",
+  "createdByApp" : "createdByApp",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "lines" : [ {
-    "template" : "",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : "",
-    "loggedInUser" : "",
-    "version" : 123,
-    "division" : "",
-    "site" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "secondaryEdge" : "",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "defaultForUser" : "",
-    "primaryEdge" : {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
-      "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : {
-        "primarySites" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "countryCode" : "aeiou",
-          "display" : "aeiou",
-          "integration" : "microsoftteams",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
-        } ],
-        "secondaryEdges" : [ "" ],
-        "description" : "aeiou",
-        "createdByApp" : "aeiou",
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "primaryEdges" : [ "" ],
-        "managed" : true,
-        "modifiedBy" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "coreSite" : true,
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
-        "ntpSettings" : {
-          "servers" : [ "aeiou" ]
-        },
-        "createdBy" : "aeiou",
-        "secondarySites" : [ "" ],
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "location" : {
-          "images" : "aeiou",
-          "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
-          },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
-          } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
-          "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
-          "addressVerified" : true
-        },
-        "mediaModel" : "aeiou",
-        "siteConnections" : [ {
-          "coreSite" : true,
-          "managed" : true,
-          "selfUri" : "aeiou",
-          "edgeList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou",
-            "edgeConnectionList" : [ {
-              "interfaceIpAddress" : "aeiou",
-              "site" : "",
-              "connectionErrors" : [ "aeiou" ],
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "interfaceName" : "aeiou"
-            } ]
-          } ],
-          "name" : "aeiou",
-          "secondaryCoreSites" : [ "" ],
-          "mediaModel" : "aeiou",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "enabled" : true,
-          "primaryCoreSites" : [ "" ]
-        } ],
-        "edgeAutoUpdateConfig" : {
-          "rrule" : "aeiou",
-          "start" : "aeiou",
-          "timeZone" : "aeiou",
-          "end" : "aeiou"
-        }
-      },
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "lineBaseSettings" : "",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
     "properties" : {
       "key" : "{}"
     }
   } ],
-  "primaryEdge" : "",
-  "phoneBaseSettings" : "",
+  "primaryEdge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  },
+  "phoneBaseSettings" : "{}",
   "capabilities" : {
     "provisions" : true,
-    "hardwareIdType" : "aeiou",
+    "hardwareIdType" : "hardwareIdType",
     "noCloudProvisioning" : true,
     "registers" : true,
     "dualRegisters" : true,
     "allowReboot" : true,
-    "mediaCodecs" : [ "aeiou" ],
+    "mediaCodecs" : [ "audio/opus", "audio/opus" ],
     "cdm" : true,
     "noRebalance" : true
   },
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "phoneMetaBase" : "",
-  "version" : 123,
-  "userAgentInfo" : {
-    "model" : "aeiou",
-    "firmwareVersion" : "aeiou",
-    "manufacturer" : "aeiou"
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "phoneMetaBase" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "site" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "version" : 0,
+  "userAgentInfo" : "{}",
+  "site" : "{}",
+  "createdBy" : "createdBy",
+  "secondaryEdge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   },
-  "createdBy" : "aeiou",
-  "secondaryEdge" : "",
-  "secondaryStatus" : "",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "webRtcUser" : "",
-  "lineBaseSettings" : "",
+  "secondaryStatus" : "{}",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "webRtcUser" : "{}",
+  "lineBaseSettings" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
   "properties" : {
     "key" : "{}"
   },
-  "status" : {
-    "operationalStatus" : "aeiou",
-    "edgesStatus" : "aeiou",
-    "edge" : "",
-    "lineStatuses" : [ {
-      "contactAddresses" : [ "aeiou" ],
-      "addressOfRecord" : "aeiou",
-      "id" : "aeiou",
-      "reachable" : true,
-      "reachableStateTime" : "2000-01-23T04:56:07.000+0000"
-    } ],
-    "phoneAssignmentToEdgeType" : "aeiou",
-    "provision" : {
-      "errorInfo" : "aeiou",
-      "time" : "2000-01-23T04:56:07.000+0000",
-      "source" : "aeiou"
-    },
-    "eventCreationTime" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "status" : "{}"
+}, statusCode=200}]
      
      - parameter phoneBaseSettingsId: (query) The id of a Phone Base Settings object upon which to base this Phone 
 
      - returns: RequestBuilder<Phone> 
      */
-    open class func getTelephonyProvidersEdgesPhonesTemplateWithRequestBuilder(phoneBaseSettingsId: String) -> RequestBuilder<Phone> {
+    open class func getTelephonyProvidersEdgesPhonesTemplateWithRequestBuilder(phoneBaseSettingsId: String) -> RequestBuilder<Phone> {        
         let path = "/api/v2/telephony/providers/edges/phones/template"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "phoneBaseSettingsId": phoneBaseSettingsId
-            
         ])
 
         let requestBuilder: RequestBuilder<Phone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9822,10 +9345,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get physical interfaces for edges.
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -9850,72 +9370,81 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get physical interfaces for edges.
-     
      - GET /api/v2/telephony/providers/edges/physicalinterfaces
      - Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "hardwareAddress" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "hardwareAddress" : "hardwareAddress",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "physicalCapabilities" : {
       "vlan" : true,
       "team" : true
     },
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "edgeUri" : "https://openapi-generator.tech",
+    "portLabel" : "portLabel",
+    "friendlyName" : "friendlyName"
+  }, {
+    "hardwareAddress" : "hardwareAddress",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "physicalCapabilities" : {
+      "vlan" : true,
+      "team" : true
     },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "edgeUri" : "aeiou",
-    "portLabel" : "aeiou",
-    "friendlyName" : "aeiou"
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "edgeUri" : "https://openapi-generator.tech",
+    "portLabel" : "portLabel",
+    "friendlyName" : "friendlyName"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
 
      - returns: RequestBuilder<PhysicalInterfaceEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesPhysicalinterfacesWithRequestBuilder(edgeIds: String) -> RequestBuilder<PhysicalInterfaceEntityListing> {
+    open class func getTelephonyProvidersEdgesPhysicalinterfacesWithRequestBuilder(edgeIds: String) -> RequestBuilder<PhysicalInterfaceEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/physicalinterfaces"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "edgeIds": edgeIds
-            
         ])
 
         let requestBuilder: RequestBuilder<PhysicalInterfaceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9924,10 +9453,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Site by ID.
      
      - parameter siteId: (path) Site ID 
@@ -9952,263 +9478,1066 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Site by ID.
-     
      - GET /api/v2/telephony/providers/edges/sites/{siteId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "primarySites" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
   "addresses" : [ {
-    "extension" : "aeiou",
-    "address" : "aeiou",
-    "countryCode" : "aeiou",
-    "display" : "aeiou",
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
     "integration" : "microsoftteams",
-    "mediaType" : "aeiou",
-    "type" : "aeiou"
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
+  }, {
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "integration" : "microsoftteams",
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
   } ],
-  "secondaryEdges" : [ "" ],
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "primaryEdges" : [ {
-    "softwareStatus" : {
-      "callDrainingWaitTimeSeconds" : 123456789,
-      "current" : true,
-      "executeOnIdle" : true,
-      "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-      "maxDownloadRate" : 123,
-      "edgeUri" : "aeiou",
-      "version" : {
-        "latestRelease" : true,
-        "current" : true,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "publishDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "edgeUri" : "aeiou",
-        "edgeVersion" : "aeiou"
-      },
-      "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-      "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
-    "fullSoftwareVersion" : "aeiou",
-    "onlineStatus" : "aeiou",
-    "description" : "aeiou",
-    "callDrainingState" : "aeiou",
-    "createdByApp" : "aeiou",
+  "secondaryEdges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
     "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "hybrid" : true,
-      "createdBy" : "aeiou",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "edgeTrunkBaseAssignment" : {
-        "family" : 123,
-        "trunkBase" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "trunkType" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "trunkMetabase" : "",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "properties" : {
-            "key" : "{}"
-          }
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
         }
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "phoneTrunkBases" : [ "" ]
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "division" : "",
-    "patch" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "apiVersion" : "aeiou",
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
     "managed" : true,
-    "conversationCount" : 123,
-    "fingerprint" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "model" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "make" : "aeiou",
-    "stagedVersion" : "aeiou",
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
     "interfaces" : [ {
-      "macAddress" : "aeiou",
-      "endpoints" : [ "" ],
-      "ifName" : "aeiou",
-      "ipAddress" : "aeiou",
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "lineTypes" : [ "aeiou" ],
-      "addressFamilyId" : "aeiou"
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
     } ],
-    "edgeDeploymentType" : "aeiou",
-    "serialNumber" : "aeiou",
-    "softwareVersionConfiguration" : "aeiou",
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
     "physicalEdge" : true,
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "offlineConfigCalled" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "osName" : "aeiou",
-    "version" : 123,
-    "currentVersion" : "aeiou",
-    "proxy" : "aeiou",
-    "site" : "",
-    "softwareVersionPlatform" : "aeiou",
-    "fingerprintHint" : "aeiou",
-    "createdBy" : "aeiou",
-    "softwareVersionTimestamp" : "aeiou",
-    "pairingId" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "softwareVersion" : "aeiou",
-    "statusCode" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  } ],
+  "description" : "description",
+  "createdByApp" : "createdByApp",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "primaryEdges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   } ],
   "managed" : true,
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "coreSite" : true,
-  "selfUri" : "aeiou",
-  "edges" : [ "" ],
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "version" : 123,
-  "mediaRegionsUseLatencyBased" : true,
-  "ntpSettings" : {
-    "servers" : [ "aeiou" ]
-  },
-  "createdBy" : "aeiou",
-  "secondarySites" : [ "" ],
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "location" : {
-    "images" : "aeiou",
-    "address" : {
-      "zipcode" : "aeiou",
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "street1" : "aeiou",
-      "countryName" : "aeiou",
-      "state" : "aeiou",
-      "street2" : "aeiou"
+  "selfUri" : "https://openapi-generator.tech",
+  "edges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "notes" : "aeiou",
-    "floorplanImage" : [ "" ],
-    "addressVerificationDetails" : {
-      "dateStarted" : "2000-01-23T04:56:07.000+0000",
-      "dateFinished" : "2000-01-23T04:56:07.000+0000",
-      "service" : "smartystreets-us",
-      "status" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "profileImage" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
     } ],
-    "emergencyNumber" : {
-      "number" : "aeiou",
-      "e164" : "aeiou",
-      "type" : "aeiou"
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "version" : 123,
-    "path" : [ "aeiou" ],
-    "addressStored" : true,
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "contactUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "state" : "aeiou",
-    "addressVerified" : true
-  },
-  "mediaModel" : "aeiou",
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  } ],
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 0,
+  "mediaRegionsUseLatencyBased" : true,
+  "ntpSettings" : "{}",
+  "createdBy" : "createdBy",
+  "secondarySites" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "location" : "{}",
+  "mediaModel" : "Premises",
   "siteConnections" : [ {
     "coreSite" : true,
     "managed" : true,
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "edgeList" : [ {
-      "interfaceIpAddress" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "interfaceName" : "aeiou",
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
       "edgeConnectionList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "site" : "",
-        "connectionErrors" : [ "aeiou" ],
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou"
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
       } ]
     } ],
-    "name" : "aeiou",
-    "secondaryCoreSites" : [ "" ],
-    "mediaModel" : "aeiou",
-    "id" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
     "enabled" : true,
-    "primaryCoreSites" : [ "" ]
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  }, {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
   } ],
-  "edgeAutoUpdateConfig" : {
-    "rrule" : "aeiou",
-    "start" : "aeiou",
-    "timeZone" : "aeiou",
-    "end" : "aeiou"
-  }
-}}]
+  "edgeAutoUpdateConfig" : "{}"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
 
      - returns: RequestBuilder<Site> 
      */
-    open class func getTelephonyProvidersEdgesSiteWithRequestBuilder(siteId: String) -> RequestBuilder<Site> {
+    open class func getTelephonyProvidersEdgesSiteWithRequestBuilder(siteId: String) -> RequestBuilder<Site> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -10219,11 +10548,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a Number Plan by ID.
      
      - parameter siteId: (path) Site ID 
@@ -10249,53 +10574,49 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Number Plan by ID.
-     
      - GET /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "matchType" : "aeiou",
-  "selfUri" : "aeiou",
-  "match" : "aeiou",
+  "matchType" : "matchType",
+  "selfUri" : "https://openapi-generator.tech",
+  "match" : "match",
   "numbers" : [ {
-    "start" : "aeiou",
-    "end" : "aeiou"
+    "start" : "start",
+    "end" : "end"
+  }, {
+    "start" : "start",
+    "end" : "end"
   } ],
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "priority" : 123,
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "priority" : 6,
   "digitLength" : {
-    "start" : "aeiou",
-    "end" : "aeiou"
+    "start" : "start",
+    "end" : "end"
   },
-  "classification" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "normalizedFormat" : "aeiou"
-}}]
+  "classification" : "classification",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "normalizedFormat" : "normalizedFormat"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
      - parameter numberPlanId: (path) Number Plan ID 
 
      - returns: RequestBuilder<NumberPlan> 
      */
-    open class func getTelephonyProvidersEdgesSiteNumberplanWithRequestBuilder(siteId: String, numberPlanId: String) -> RequestBuilder<NumberPlan> {
+    open class func getTelephonyProvidersEdgesSiteNumberplanWithRequestBuilder(siteId: String, numberPlanId: String) -> RequestBuilder<NumberPlan> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId}"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10304,12 +10625,7 @@ open class TelephonyProvidersEdgeAPI {
         let numberPlanIdPostEscape = numberPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{numberPlanId}", with: numberPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -10319,10 +10635,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get the list of Number Plans for this Site. Only fetches the first 200 records.
      
      - parameter siteId: (path) Site ID 
@@ -10347,63 +10660,54 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of Number Plans for this Site. Only fetches the first 200 records.
-     
      - GET /api/v2/telephony/providers/edges/sites/{siteId}/numberplans
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
-  "matchType" : "aeiou",
-  "selfUri" : "aeiou",
-  "match" : "aeiou",
+     - examples: [{contentType=application/json, example={
+  "matchType" : "matchType",
+  "selfUri" : "https://openapi-generator.tech",
+  "match" : "match",
   "numbers" : [ {
-    "start" : "aeiou",
-    "end" : "aeiou"
+    "start" : "start",
+    "end" : "end"
+  }, {
+    "start" : "start",
+    "end" : "end"
   } ],
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "priority" : 123,
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "priority" : 6,
   "digitLength" : {
-    "start" : "aeiou",
-    "end" : "aeiou"
+    "start" : "start",
+    "end" : "end"
   },
-  "classification" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "normalizedFormat" : "aeiou"
-} ]}]
+  "classification" : "classification",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "normalizedFormat" : "normalizedFormat"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
 
      - returns: RequestBuilder<[NumberPlan]> 
      */
-    open class func getTelephonyProvidersEdgesSiteNumberplansWithRequestBuilder(siteId: String) -> RequestBuilder<[NumberPlan]> {
+    open class func getTelephonyProvidersEdgesSiteNumberplansWithRequestBuilder(siteId: String) -> RequestBuilder<[NumberPlan]> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -10414,11 +10718,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a list of Classifications for this Site
      
      - parameter siteId: (path) Site ID 
@@ -10444,39 +10744,29 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a list of Classifications for this Site
-     
      - GET /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example="", statusCode=200}]
      
      - parameter siteId: (path) Site ID 
      - parameter classification: (query) Classification (optional)
 
      - returns: RequestBuilder<[String]> 
      */
-    open class func getTelephonyProvidersEdgesSiteNumberplansClassificationsWithRequestBuilder(siteId: String, classification: String? = nil) -> RequestBuilder<[String]> {
+    open class func getTelephonyProvidersEdgesSiteNumberplansClassificationsWithRequestBuilder(siteId: String, classification: String? = nil) -> RequestBuilder<[String]> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "classification": classification
-            
         ])
 
         let requestBuilder: RequestBuilder<[String]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10486,11 +10776,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get an outbound route
      
      - parameter siteId: (path) Site ID 
@@ -10516,48 +10802,45 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get an outbound route
-     
      - GET /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "classificationTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "distribution" : "aeiou",
-  "version" : 123,
+  "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "distribution" : "SEQUENTIAL",
+  "version" : 0,
   "enabled" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
   "externalTrunkBases" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
      - parameter outboundRouteId: (path) Outbound route ID 
 
      - returns: RequestBuilder<OutboundRouteBase> 
      */
-    open class func getTelephonyProvidersEdgesSiteOutboundrouteWithRequestBuilder(siteId: String, outboundRouteId: String) -> RequestBuilder<OutboundRouteBase> {
+    open class func getTelephonyProvidersEdgesSiteOutboundrouteWithRequestBuilder(siteId: String, outboundRouteId: String) -> RequestBuilder<OutboundRouteBase> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10566,12 +10849,7 @@ open class TelephonyProvidersEdgeAPI {
         let outboundRouteIdPostEscape = outboundRouteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outboundRouteId}", with: outboundRouteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -10586,23 +10864,15 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get outbound routes
      
      - parameter siteId: (path) Site ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
      - parameter externalTrunkBasesIds: (query) externalTrunkBases.ids (optional)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTelephonyProvidersEdgesSiteOutboundroutes(siteId: String, pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, externalTrunkBasesIds: String? = nil, sortBy: String? = nil, completion: @escaping ((_ data: OutboundRouteBaseEntityListing?,_ error: Error?) -> Void)) {
@@ -10624,88 +10894,100 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get outbound routes
-     
      - GET /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "classificationTypes" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "distribution" : "aeiou",
-    "version" : 123,
+    "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "distribution" : "SEQUENTIAL",
+    "version" : 0,
     "enabled" : true,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
     "externalTrunkBases" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     } ],
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "distribution" : "SEQUENTIAL",
+    "version" : 0,
+    "enabled" : true,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "externalTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter name: (query) Name (optional)
      - parameter externalTrunkBasesIds: (query) externalTrunkBases.ids (optional)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortBy: (query) Sort by (optional)
 
      - returns: RequestBuilder<OutboundRouteBaseEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesSiteOutboundroutesWithRequestBuilder(siteId: String, pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, externalTrunkBasesIds: String? = nil, sortBy: String? = nil) -> RequestBuilder<OutboundRouteBaseEntityListing> {
+    open class func getTelephonyProvidersEdgesSiteOutboundroutesWithRequestBuilder(siteId: String, pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, externalTrunkBasesIds: String? = nil, sortBy: String? = nil) -> RequestBuilder<OutboundRouteBaseEntityListing> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "name": name, 
-            
             "externalTrunkBases.ids": externalTrunkBasesIds, 
-            
             "sortBy": sortBy
-            
         ])
 
         let requestBuilder: RequestBuilder<OutboundRouteBaseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10720,22 +11002,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get the list of Sites.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Name (optional)
      - parameter locationId: (query) Location Id (optional)
      - parameter managed: (query) Filter by managed (optional)
@@ -10760,295 +11033,2132 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of Sites.
-     
      - GET /api/v2/telephony/providers/edges/sites
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "primarySites" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     } ],
     "addresses" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
       "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
     } ],
-    "secondaryEdges" : [ "" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "primaryEdges" : [ {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
+    "secondaryEdges" : [ {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
       "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
         "hybrid" : true,
-        "createdBy" : "aeiou",
+        "createdBy" : "createdBy",
         "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
           }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
       },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
       "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
       "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
       } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
       "physicalEdge" : true,
-      "selfUri" : "aeiou",
+      "selfUri" : "https://openapi-generator.tech",
       "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : "",
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "primaryEdges" : [ {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
     } ],
     "managed" : true,
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
     "coreSite" : true,
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
-    "ntpSettings" : {
-      "servers" : [ "aeiou" ]
-    },
-    "createdBy" : "aeiou",
-    "secondarySites" : [ "" ],
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "location" : {
-      "images" : "aeiou",
-      "address" : {
-        "zipcode" : "aeiou",
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "street1" : "aeiou",
-        "countryName" : "aeiou",
-        "state" : "aeiou",
-        "street2" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "edges" : [ {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
       },
-      "notes" : "aeiou",
-      "floorplanImage" : [ "" ],
-      "addressVerificationDetails" : {
-        "dateStarted" : "2000-01-23T04:56:07.000+0000",
-        "dateFinished" : "2000-01-23T04:56:07.000+0000",
-        "service" : "smartystreets-us",
-        "status" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "profileImage" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
       } ],
-      "emergencyNumber" : {
-        "number" : "aeiou",
-        "e164" : "aeiou",
-        "type" : "aeiou"
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
       },
-      "version" : 123,
-      "path" : [ "aeiou" ],
-      "addressStored" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "contactUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "state" : "aeiou",
-      "addressVerified" : true
-    },
-    "mediaModel" : "aeiou",
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "mediaRegionsUseLatencyBased" : true,
+    "ntpSettings" : "{}",
+    "createdBy" : "createdBy",
+    "secondarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "location" : "{}",
+    "mediaModel" : "Premises",
     "siteConnections" : [ {
       "coreSite" : true,
       "managed" : true,
-      "selfUri" : "aeiou",
+      "selfUri" : "https://openapi-generator.tech",
       "edgeList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou",
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
         "edgeConnectionList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "site" : "",
-          "connectionErrors" : [ "aeiou" ],
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou"
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
         } ]
       } ],
-      "name" : "aeiou",
-      "secondaryCoreSites" : [ "" ],
-      "mediaModel" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou",
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
       "enabled" : true,
-      "primaryCoreSites" : [ "" ]
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    }, {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
     } ],
-    "edgeAutoUpdateConfig" : {
-      "rrule" : "aeiou",
-      "start" : "aeiou",
-      "timeZone" : "aeiou",
-      "end" : "aeiou"
-    }
+    "edgeAutoUpdateConfig" : "{}"
+  }, {
+    "primarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "secondaryEdges" : [ {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "primaryEdges" : [ {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "managed" : true,
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "coreSite" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edges" : [ {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "mediaRegionsUseLatencyBased" : true,
+    "ntpSettings" : "{}",
+    "createdBy" : "createdBy",
+    "secondarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "location" : "{}",
+    "mediaModel" : "Premises",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    }, {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    } ],
+    "edgeAutoUpdateConfig" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Name (optional)
      - parameter locationId: (query) Location Id (optional)
      - parameter managed: (query) Filter by managed (optional)
 
      - returns: RequestBuilder<SiteEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesSitesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, locationId: String? = nil, managed: Bool? = nil) -> RequestBuilder<SiteEntityListing> {
+    open class func getTelephonyProvidersEdgesSitesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, locationId: String? = nil, managed: Bool? = nil) -> RequestBuilder<SiteEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/sites"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "name": name, 
-            
             "location.id": locationId, 
-            
             "managed": managed
-            
         ])
 
         let requestBuilder: RequestBuilder<SiteEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11058,15 +13168,11 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a list of Edge-compatible time zones
      
-     - parameter pageSize: (query) Page size (optional, default to 1000)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTelephonyProvidersEdgesTimezones(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: TimeZoneEntityListing?,_ error: Error?) -> Void)) {
@@ -11088,54 +13194,48 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a list of Edge-compatible time zones
-     
      - GET /api/v2/telephony/providers/edges/timezones
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "offset" : 123456789,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "offset" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "offset" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 1000)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<TimeZoneEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesTimezonesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TimeZoneEntityListing> {
+    open class func getTelephonyProvidersEdgesTimezonesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TimeZoneEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/timezones"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<TimeZoneEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11144,10 +13244,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Trunk by ID
      
      - parameter trunkId: (path) Trunk ID 
@@ -11172,94 +13269,106 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Trunk by ID
-     
      - GET /api/v2/telephony/providers/edges/trunks/{trunkId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "proxyAddressList" : [ "aeiou" ],
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
-  "trunkType" : "aeiou",
-  "edgeGroup" : "",
+  "proxyAddressList" : [ "proxyAddressList", "proxyAddressList" ],
+  "description" : "description",
+  "createdByApp" : "createdByApp",
+  "trunkType" : "EXTERNAL",
+  "edgeGroup" : "{}",
   "enabled" : true,
-  "registersEnabledStatus" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "edge" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "logicalInterface" : "",
-  "connectedStatus" : {
-    "connected" : true,
-    "connectedStateTime" : "2000-01-23T04:56:07.000+0000"
-  },
-  "modifiedBy" : "aeiou",
-  "trunkMetabase" : "",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "trunkBase" : "",
+  "registersEnabledStatus" : "ENABLED",
+  "division" : "{}",
+  "edge" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "logicalInterface" : "{}",
+  "connectedStatus" : "{}",
+  "modifiedBy" : "modifiedBy",
+  "trunkMetabase" : "{}",
+  "id" : "id",
+  "state" : "active",
+  "trunkBase" : "{}",
   "inService" : true,
   "optionsStatus" : [ {
-    "optionStateTime" : "2000-01-23T04:56:07.000+0000",
+    "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
     "optionState" : true,
     "errorInfo" : {
-      "code" : "aeiou",
+      "code" : "code",
       "details" : {
-        "hostname" : "aeiou",
-        "code" : "aeiou",
-        "message" : "aeiou"
+        "hostname" : "hostname",
+        "code" : "code",
+        "message" : "message"
       },
-      "text" : "aeiou"
+      "text" : "text"
     },
-    "proxyAddress" : "aeiou"
+    "proxyAddress" : "proxyAddress"
+  }, {
+    "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+    "optionState" : true,
+    "errorInfo" : {
+      "code" : "code",
+      "details" : {
+        "hostname" : "hostname",
+        "code" : "code",
+        "message" : "message"
+      },
+      "text" : "text"
+    },
+    "proxyAddress" : "proxyAddress"
   } ],
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "version" : 123,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 0,
   "registersStatus" : [ {
     "registerState" : true,
-    "registerStateTime" : "2000-01-23T04:56:07.000+0000",
-    "errorInfo" : "",
-    "proxyAddress" : "aeiou"
+    "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+    "errorInfo" : {
+      "code" : "code",
+      "details" : {
+        "hostname" : "hostname",
+        "code" : "code",
+        "message" : "message"
+      },
+      "text" : "text"
+    },
+    "proxyAddress" : "proxyAddress"
+  }, {
+    "registerState" : true,
+    "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+    "errorInfo" : {
+      "code" : "code",
+      "details" : {
+        "hostname" : "hostname",
+        "code" : "code",
+        "message" : "message"
+      },
+      "text" : "text"
+    },
+    "proxyAddress" : "proxyAddress"
   } ],
-  "ipStatus" : {
-    "address" : "aeiou",
-    "errorInfo" : ""
-  },
-  "optionsEnabledStatus" : "aeiou",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "family" : 123
-}}]
+  "ipStatus" : "{}",
+  "optionsEnabledStatus" : "ENABLED",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "family" : 6
+}, statusCode=200}]
      
      - parameter trunkId: (path) Trunk ID 
 
      - returns: RequestBuilder<Trunk> 
      */
-    open class func getTelephonyProvidersEdgesTrunkWithRequestBuilder(trunkId: String) -> RequestBuilder<Trunk> {
+    open class func getTelephonyProvidersEdgesTrunkWithRequestBuilder(trunkId: String) -> RequestBuilder<Trunk> {        
         var path = "/api/v2/telephony/providers/edges/trunks/{trunkId}"
         let trunkIdPreEscape = "\(trunkId)"
         let trunkIdPostEscape = trunkIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trunkId}", with: trunkIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -11269,10 +13378,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get the trunk metrics.
      
      - parameter trunkId: (path) Trunk Id 
@@ -11297,47 +13403,43 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the trunk metrics.
-     
      - GET /api/v2/telephony/providers/edges/trunks/{trunkId}/metrics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "logicalInterface" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
   "qos" : {
-    "mismatchCount" : 123
+    "mismatchCount" : 1
   },
   "calls" : {
-    "outboundCallCount" : 123,
-    "inboundCallCount" : 123
+    "outboundCallCount" : 6,
+    "inboundCallCount" : 0
   },
-  "eventTime" : "2000-01-23T04:56:07.000+0000",
-  "trunk" : ""
-}}]
+  "eventTime" : "2000-01-23T04:56:07.000+00:00",
+  "trunk" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }
+}, statusCode=200}]
      
      - parameter trunkId: (path) Trunk Id 
 
      - returns: RequestBuilder<TrunkMetrics> 
      */
-    open class func getTelephonyProvidersEdgesTrunkMetricsWithRequestBuilder(trunkId: String) -> RequestBuilder<TrunkMetrics> {
+    open class func getTelephonyProvidersEdgesTrunkMetricsWithRequestBuilder(trunkId: String) -> RequestBuilder<TrunkMetrics> {        
         var path = "/api/v2/telephony/providers/edges/trunks/{trunkId}/metrics"
         let trunkIdPreEscape = "\(trunkId)"
         let trunkIdPostEscape = trunkIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trunkId}", with: trunkIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -11348,11 +13450,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a Trunk Base Settings object by ID
      
      - parameter trunkBaseSettingsId: (path) Trunk Base ID 
@@ -11378,67 +13476,50 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Trunk Base Settings object by ID
-     
      - GET /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}
      - Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "trunkType" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "trunkType" : "EXTERNAL",
+  "version" : 1,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "trunkMetabase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "trunkMetabase" : "{}",
+  "id" : "id",
+  "state" : "active",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter trunkBaseSettingsId: (path) Trunk Base ID 
      - parameter ignoreHidden: (query) Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)
 
      - returns: RequestBuilder<TrunkBase> 
      */
-    open class func getTelephonyProvidersEdgesTrunkbasesettingWithRequestBuilder(trunkBaseSettingsId: String, ignoreHidden: Bool? = nil) -> RequestBuilder<TrunkBase> {
+    open class func getTelephonyProvidersEdgesTrunkbasesettingWithRequestBuilder(trunkBaseSettingsId: String, ignoreHidden: Bool? = nil) -> RequestBuilder<TrunkBase> {        
         var path = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}"
         let trunkBaseSettingsIdPreEscape = "\(trunkBaseSettingsId)"
         let trunkBaseSettingsIdPostEscape = trunkBaseSettingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trunkBaseSettingsId}", with: trunkBaseSettingsIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "ignoreHidden": ignoreHidden
-            
         ])
 
         let requestBuilder: RequestBuilder<TrunkBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11455,29 +13536,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    public enum Expand_getTelephonyProvidersEdgesTrunkbasesettings: String { 
-        case properties = "properties"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get Trunk Base Settings listing
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter recordingEnabled: (query) Filter trunks by recording enabled (optional)
      - parameter ignoreHidden: (query) Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)
      - parameter managed: (query) Filter by managed (optional)
@@ -11504,59 +13569,69 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get Trunk Base Settings listing
-     
      - GET /api/v2/telephony/providers/edges/trunkbasesettings
      - Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "trunkType" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
     "managed" : true,
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "trunkMetabase" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
     "properties" : {
       "key" : "{}"
     }
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter recordingEnabled: (query) Filter trunks by recording enabled (optional)
      - parameter ignoreHidden: (query) Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)
      - parameter managed: (query) Filter by managed (optional)
@@ -11565,37 +13640,22 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<TrunkBaseEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesTrunkbasesettingsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, recordingEnabled: Bool? = nil, ignoreHidden: Bool? = nil, managed: Bool? = nil, expand: [String]? = nil, name: String? = nil) -> RequestBuilder<TrunkBaseEntityListing> {
+    open class func getTelephonyProvidersEdgesTrunkbasesettingsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, recordingEnabled: Bool? = nil, ignoreHidden: Bool? = nil, managed: Bool? = nil, expand: [String]? = nil, name: String? = nil) -> RequestBuilder<TrunkBaseEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/trunkbasesettings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "recordingEnabled": recordingEnabled, 
-            
             "ignoreHidden": ignoreHidden, 
-            
             "managed": managed, 
-            
             "expand": expand, 
-            
             "name": name
-            
         ])
 
         let requestBuilder: RequestBuilder<TrunkBaseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11603,7 +13663,6 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum ModelType_getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases: String { 
         case external = "EXTERNAL"
@@ -11614,16 +13673,12 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
     /**
-     
      Get a list of available makes and models to create a new Trunk Base Settings
      
      - parameter type: (query)  (optional)
-     - parameter pageSize: (query)  (optional, default to 25)
-     - parameter pageNumber: (query)  (optional, default to 1)
+     - parameter pageSize: (query)  (optional)
+     - parameter pageNumber: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases(type: ModelType_getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: TrunkMetabaseEntityListing?,_ error: Error?) -> Void)) {
@@ -11645,71 +13700,70 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a list of available makes and models to create a new Trunk Base Settings
-     
      - GET /api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "type" : "aeiou",
-    "version" : 123,
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "type" : "EXTERNAL",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "type" : "EXTERNAL",
+    "version" : 0,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter type: (query)  (optional)
-     - parameter pageSize: (query)  (optional, default to 25)
-     - parameter pageNumber: (query)  (optional, default to 1)
+     - parameter pageSize: (query)  (optional)
+     - parameter pageNumber: (query)  (optional)
 
      - returns: RequestBuilder<TrunkMetabaseEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesWithRequestBuilder(type: ModelType_getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases? = nil, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TrunkMetabaseEntityListing> {
+    open class func getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesWithRequestBuilder(type: ModelType_getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases? = nil, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TrunkMetabaseEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "type": type?.rawValue, 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<TrunkMetabaseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11718,10 +13772,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
      
      - parameter trunkMetabaseId: (query) The id of a metabase object upon which to base this Trunk Base Settings 
@@ -11746,63 +13797,45 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
-     
      - GET /api/v2/telephony/providers/edges/trunkbasesettings/template
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "trunkType" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "trunkType" : "EXTERNAL",
+  "version" : 1,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "trunkMetabase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "trunkMetabase" : "{}",
+  "id" : "id",
+  "state" : "active",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter trunkMetabaseId: (query) The id of a metabase object upon which to base this Trunk Base Settings 
 
      - returns: RequestBuilder<TrunkBase> 
      */
-    open class func getTelephonyProvidersEdgesTrunkbasesettingsTemplateWithRequestBuilder(trunkMetabaseId: String) -> RequestBuilder<TrunkBase> {
+    open class func getTelephonyProvidersEdgesTrunkbasesettingsTemplateWithRequestBuilder(trunkMetabaseId: String) -> RequestBuilder<TrunkBase> {        
         let path = "/api/v2/telephony/providers/edges/trunkbasesettings/template"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "trunkMetabaseId": trunkMetabaseId
-            
         ])
 
         let requestBuilder: RequestBuilder<TrunkBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11817,13 +13850,6 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     public enum TrunkType_getTelephonyProvidersEdgesTrunks: String { 
         case external = "EXTERNAL"
         case phone = "PHONE"
@@ -11831,15 +13857,13 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
     /**
-     
      Get the list of available trunks.
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter edgeId: (query) Filter by Edge Ids (optional)
      - parameter trunkBaseId: (query) Filter by Trunk Base Ids (optional)
      - parameter trunkType: (query) Filter by a Trunk type (optional)
@@ -11864,126 +13888,213 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the list of available trunks.
-     
      - GET /api/v2/telephony/providers/edges/trunks
      - Trunks are created by assigning trunk base settings to an Edge or Edge Group.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
-    "proxyAddressList" : [ "aeiou" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "trunkType" : "aeiou",
-    "edgeGroup" : "",
+    "proxyAddressList" : [ "proxyAddressList", "proxyAddressList" ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "edgeGroup" : "{}",
     "enabled" : true,
-    "registersEnabledStatus" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "edge" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "logicalInterface" : "",
-    "connectedStatus" : {
-      "connected" : true,
-      "connectedStateTime" : "2000-01-23T04:56:07.000+0000"
-    },
-    "modifiedBy" : "aeiou",
-    "trunkMetabase" : "",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "trunkBase" : "",
+    "registersEnabledStatus" : "ENABLED",
+    "division" : "{}",
+    "edge" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "logicalInterface" : "{}",
+    "connectedStatus" : "{}",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "trunkBase" : "{}",
     "inService" : true,
     "optionsStatus" : [ {
-      "optionStateTime" : "2000-01-23T04:56:07.000+0000",
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
       "optionState" : true,
       "errorInfo" : {
-        "code" : "aeiou",
+        "code" : "code",
         "details" : {
-          "hostname" : "aeiou",
-          "code" : "aeiou",
-          "message" : "aeiou"
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
         },
-        "text" : "aeiou"
+        "text" : "text"
       },
-      "proxyAddress" : "aeiou"
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
     } ],
-    "selfUri" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
     "registersStatus" : [ {
       "registerState" : true,
-      "registerStateTime" : "2000-01-23T04:56:07.000+0000",
-      "errorInfo" : "",
-      "proxyAddress" : "aeiou"
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
     } ],
-    "ipStatus" : {
-      "address" : "aeiou",
-      "errorInfo" : ""
-    },
-    "optionsEnabledStatus" : "aeiou",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "family" : 123
+    "ipStatus" : "{}",
+    "optionsEnabledStatus" : "ENABLED",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "family" : 6
+  }, {
+    "proxyAddressList" : [ "proxyAddressList", "proxyAddressList" ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "edgeGroup" : "{}",
+    "enabled" : true,
+    "registersEnabledStatus" : "ENABLED",
+    "division" : "{}",
+    "edge" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "logicalInterface" : "{}",
+    "connectedStatus" : "{}",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "trunkBase" : "{}",
+    "inService" : true,
+    "optionsStatus" : [ {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "registersStatus" : [ {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    } ],
+    "ipStatus" : "{}",
+    "optionsEnabledStatus" : "ENABLED",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "family" : 6
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 1,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter edgeId: (query) Filter by Edge Ids (optional)
      - parameter trunkBaseId: (query) Filter by Trunk Base Ids (optional)
      - parameter trunkType: (query) Filter by a Trunk type (optional)
 
      - returns: RequestBuilder<TrunkEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesTrunksWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, edgeId: String? = nil, trunkBaseId: String? = nil, trunkType: TrunkType_getTelephonyProvidersEdgesTrunks? = nil) -> RequestBuilder<TrunkEntityListing> {
+    open class func getTelephonyProvidersEdgesTrunksWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, edgeId: String? = nil, trunkBaseId: String? = nil, trunkType: TrunkType_getTelephonyProvidersEdgesTrunks? = nil) -> RequestBuilder<TrunkEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/trunks"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "edge.id": edgeId, 
-            
             "trunkBase.id": trunkBaseId, 
-            
             "trunkType": trunkType?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<TrunkEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11992,10 +14103,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get the metrics for a list of trunks.
      
      - parameter trunkIds: (query) Comma separated list of Trunk Id&#39;s 
@@ -12020,50 +14128,44 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get the metrics for a list of trunks.
-     
      - GET /api/v2/telephony/providers/edges/trunks/metrics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
+     - examples: [{contentType=application/json, example={
   "logicalInterface" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
   "qos" : {
-    "mismatchCount" : 123
+    "mismatchCount" : 1
   },
   "calls" : {
-    "outboundCallCount" : 123,
-    "inboundCallCount" : 123
+    "outboundCallCount" : 6,
+    "inboundCallCount" : 0
   },
-  "eventTime" : "2000-01-23T04:56:07.000+0000",
-  "trunk" : ""
-} ]}]
+  "eventTime" : "2000-01-23T04:56:07.000+00:00",
+  "trunk" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }
+}, statusCode=200}]
      
      - parameter trunkIds: (query) Comma separated list of Trunk Id&#39;s 
 
      - returns: RequestBuilder<[TrunkMetrics]> 
      */
-    open class func getTelephonyProvidersEdgesTrunksMetricsWithRequestBuilder(trunkIds: String) -> RequestBuilder<[TrunkMetrics]> {
+    open class func getTelephonyProvidersEdgesTrunksMetricsWithRequestBuilder(trunkIds: String) -> RequestBuilder<[TrunkMetrics]> {        
         let path = "/api/v2/telephony/providers/edges/trunks/metrics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "trunkIds": trunkIds
-            
         ])
 
         let requestBuilder: RequestBuilder<[TrunkMetrics]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12072,7 +14174,6 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
     public enum TrunkType_getTelephonyProvidersEdgesTrunkswithrecording: String { 
         case external = "EXTERNAL"
         case phone = "PHONE"
@@ -12080,9 +14181,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
     /**
-     
      Get Counts of trunks that have recording disabled or enabled
      
      - parameter trunkType: (query) The type of this trunk base. (optional)
@@ -12107,38 +14206,28 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Get Counts of trunks that have recording disabled or enabled
-     
      - GET /api/v2/telephony/providers/edges/trunkswithrecording
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "enabledCount" : 123,
-  "disabledCount" : 123
-}}]
+  "enabledCount" : 0,
+  "disabledCount" : 6
+}, statusCode=200}]
      
      - parameter trunkType: (query) The type of this trunk base. (optional)
 
      - returns: RequestBuilder<TrunkRecordingEnabledCount> 
      */
-    open class func getTelephonyProvidersEdgesTrunkswithrecordingWithRequestBuilder(trunkType: TrunkType_getTelephonyProvidersEdgesTrunkswithrecording? = nil) -> RequestBuilder<TrunkRecordingEnabledCount> {
+    open class func getTelephonyProvidersEdgesTrunkswithrecordingWithRequestBuilder(trunkType: TrunkType_getTelephonyProvidersEdgesTrunkswithrecording? = nil) -> RequestBuilder<TrunkRecordingEnabledCount> {        
         let path = "/api/v2/telephony/providers/edges/trunkswithrecording"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "trunkType": trunkType?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<TrunkRecordingEnabledCount>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12148,11 +14237,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Nslookup request command to collect networking-related information from an Edge for a target IP or host.
      
      - parameter edgeId: (path) Edge Id 
@@ -12178,34 +14263,29 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Nslookup request command to collect networking-related information from an Edge for a target IP or host.
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter edgeId: (path) Edge Id 
      - parameter body: (body) request payload to get network diagnostic 
 
      - returns: RequestBuilder<EdgeNetworkDiagnostic> 
      */
-    open class func postTelephonyProvidersEdgeDiagnosticNslookupWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {
+    open class func postTelephonyProvidersEdgeDiagnosticNslookupWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeNetworkDiagnostic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12215,11 +14295,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Ping Request command to collect networking-related information from an Edge for a target IP or host.
      
      - parameter edgeId: (path) Edge Id 
@@ -12245,34 +14321,29 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Ping Request command to collect networking-related information from an Edge for a target IP or host.
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter edgeId: (path) Edge Id 
      - parameter body: (body) request payload to get network diagnostic 
 
      - returns: RequestBuilder<EdgeNetworkDiagnostic> 
      */
-    open class func postTelephonyProvidersEdgeDiagnosticPingWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {
+    open class func postTelephonyProvidersEdgeDiagnosticPingWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeNetworkDiagnostic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12282,11 +14353,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Route request command to collect networking-related information from an Edge for a target IP or host.
      
      - parameter edgeId: (path) Edge Id 
@@ -12312,34 +14379,29 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Route request command to collect networking-related information from an Edge for a target IP or host.
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter edgeId: (path) Edge Id 
      - parameter body: (body) request payload to get network diagnostic 
 
      - returns: RequestBuilder<EdgeNetworkDiagnostic> 
      */
-    open class func postTelephonyProvidersEdgeDiagnosticRouteWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {
+    open class func postTelephonyProvidersEdgeDiagnosticRouteWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeNetworkDiagnostic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12349,11 +14411,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Tracepath request command to collect networking-related information from an Edge for a target IP or host.
      
      - parameter edgeId: (path) Edge Id 
@@ -12379,34 +14437,29 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Tracepath request command to collect networking-related information from an Edge for a target IP or host.
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter edgeId: (path) Edge Id 
      - parameter body: (body) request payload to get network diagnostic 
 
      - returns: RequestBuilder<EdgeNetworkDiagnostic> 
      */
-    open class func postTelephonyProvidersEdgeDiagnosticTracepathWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {
+    open class func postTelephonyProvidersEdgeDiagnosticTracepathWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeNetworkDiagnostic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12416,11 +14469,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create an edge logical interface.
      
      - parameter edgeId: (path) Edge ID 
@@ -12446,139 +14495,134 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create an edge logical interface.
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces
      - Create
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "hardwareAddress" : "aeiou",
+  "hardwareAddress" : "hardwareAddress",
   "addresses" : [ {
-    "address" : "aeiou",
-    "type" : "aeiou",
+    "address" : "address",
+    "type" : "ip",
     "persistent" : true,
-    "family" : 123
+    "family" : 5
+  }, {
+    "address" : "address",
+    "type" : "ip",
+    "persistent" : true,
+    "family" : 5
   } ],
-  "phoneTrunkBaseAssignments" : [ "" ],
-  "endDate" : "2000-01-23T04:56:07.000+0000",
+  "phoneTrunkBaseAssignments" : [ {
+    "family" : 7,
+    "trunkBase" : "{}"
+  }, {
+    "family" : 7,
+    "trunkBase" : "{}"
+  } ],
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
   "externalTrunkBaseAssignments" : [ {
-    "family" : 123,
-    "trunkBase" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "trunkType" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "trunkMetabase" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "properties" : {
-        "key" : "{}"
-      }
-    }
+    "family" : 7,
+    "trunkBase" : "{}"
+  }, {
+    "family" : 7,
+    "trunkBase" : "{}"
   } ],
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
+  "description" : "description",
+  "createdByApp" : "createdByApp",
   "useForInternalEdgeCommunication" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
   "useForWanInterface" : true,
-  "interfaceType" : "aeiou",
+  "interfaceType" : "DIAGNOSTIC",
   "routes" : [ {
-    "metric" : 123,
-    "prefix" : "aeiou",
+    "metric" : 1,
+    "prefix" : "prefix",
     "persistent" : true,
-    "family" : 123,
-    "nexthop" : "aeiou"
+    "family" : 5,
+    "nexthop" : "nexthop"
+  }, {
+    "metric" : 1,
+    "prefix" : "prefix",
+    "persistent" : true,
+    "family" : 5,
+    "nexthop" : "nexthop"
   } ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "lastModifiedUserId" : "aeiou",
-  "lastModifiedCorrelationId" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "friendlyName" : "aeiou",
-  "publicNatAddressIpV4" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastModifiedUserId" : "lastModifiedUserId",
+  "lastModifiedCorrelationId" : "lastModifiedCorrelationId",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "friendlyName" : "friendlyName",
+  "publicNatAddressIpV4" : "publicNatAddressIpV4",
   "commandResponses" : [ {
-    "commandName" : "aeiou",
+    "commandName" : "commandName",
     "acknowledged" : true,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : "aeiou",
+      "messageWithParams" : "messageWithParams",
+      "code" : "code",
+      "contextId" : "contextId",
+      "details" : "https://openapi-generator.tech",
       "messageParams" : {
-        "key" : "aeiou"
+        "key" : "messageParams"
       },
-      "message" : "aeiou",
-      "nested" : "",
-      "status" : 123
+      "message" : "message",
+      "status" : 2
     },
-    "correlationId" : "aeiou"
+    "correlationId" : "correlationId"
+  }, {
+    "commandName" : "commandName",
+    "acknowledged" : true,
+    "errorInfo" : {
+      "messageWithParams" : "messageWithParams",
+      "code" : "code",
+      "contextId" : "contextId",
+      "details" : "https://openapi-generator.tech",
+      "messageParams" : {
+        "key" : "messageParams"
+      },
+      "message" : "message",
+      "status" : 2
+    },
+    "correlationId" : "correlationId"
   } ],
-  "publicNatAddressIpV6" : "aeiou",
-  "ifStatus" : "aeiou",
-  "selfUri" : "aeiou",
+  "publicNatAddressIpV6" : "publicNatAddressIpV6",
+  "ifStatus" : "ifStatus",
+  "selfUri" : "https://openapi-generator.tech",
   "useForCloudProxyEdgeCommunication" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "ipv6Capabilities" : "",
-  "version" : 123,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "ipv6Capabilities" : "{}",
+  "version" : 0,
   "useForIndirectEdgeCommunication" : true,
-  "ipv4Capabilities" : {
-    "metric" : 123,
-    "pingEnabled" : true,
-    "enabled" : true,
-    "dhcp" : true,
-    "autoMetric" : true,
-    "supportsMetric" : true
-  },
+  "ipv4Capabilities" : "{}",
   "inheritPhoneTrunkBasesIPv6" : true,
-  "physicalAdapterId" : "aeiou",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "edgeAssignedId" : "aeiou",
-  "vlanTagId" : 123,
-  "edgeUri" : "aeiou",
-  "currentState" : "aeiou",
+  "physicalAdapterId" : "physicalAdapterId",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "edgeAssignedId" : "edgeAssignedId",
+  "vlanTagId" : 6,
+  "edgeUri" : "https://openapi-generator.tech",
+  "currentState" : "INIT",
   "traceEnabled" : true,
   "inheritPhoneTrunkBasesIPv4" : true,
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter body: (body) Logical interface 
 
      - returns: RequestBuilder<DomainLogicalInterface> 
      */
-    open class func postTelephonyProvidersEdgeLogicalinterfacesWithRequestBuilder(edgeId: String, body: DomainLogicalInterface) -> RequestBuilder<DomainLogicalInterface> {
+    open class func postTelephonyProvidersEdgeLogicalinterfacesWithRequestBuilder(edgeId: String, body: DomainLogicalInterface) -> RequestBuilder<DomainLogicalInterface> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DomainLogicalInterface>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12589,12 +14633,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Request that the specified fileIds be uploaded from the Edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -12614,11 +14653,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Request that the specified fileIds be uploaded from the Edge.
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -12629,7 +14665,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postTelephonyProvidersEdgeLogsJobUploadWithRequestBuilder(edgeId: String, jobId: String, body: EdgeLogsJobUploadRequest) -> RequestBuilder<Void> {
+    open class func postTelephonyProvidersEdgeLogsJobUploadWithRequestBuilder(edgeId: String, jobId: String, body: EdgeLogsJobUploadRequest) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12638,10 +14674,8 @@ open class TelephonyProvidersEdgeAPI {
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12651,11 +14685,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create a job to upload a list of Edge logs.
      
      - parameter edgeId: (path) Edge ID 
@@ -12681,49 +14711,40 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create a job to upload a list of Edge logs.
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/logs/jobs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=202}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter body: (body) EdgeLogsJobRequest 
 
      - returns: RequestBuilder<EdgeLogsJobResponse> 
      */
-    open class func postTelephonyProvidersEdgeLogsJobsWithRequestBuilder(edgeId: String, body: EdgeLogsJobRequest) -> RequestBuilder<EdgeLogsJobResponse> {
+    open class func postTelephonyProvidersEdgeLogsJobsWithRequestBuilder(edgeId: String, body: EdgeLogsJobRequest) -> RequestBuilder<EdgeLogsJobResponse> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeLogsJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12733,11 +14754,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Reboot an Edge
      
      - parameter edgeId: (path) Edge ID 
@@ -12763,31 +14780,25 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Reboot an Edge
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/reboot
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="aeiou"}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter body: (body) Parameters for the edge reboot (optional)
 
      - returns: RequestBuilder<String> 
      */
-    open class func postTelephonyProvidersEdgeRebootWithRequestBuilder(edgeId: String, body: EdgeRebootParameters? = nil) -> RequestBuilder<String> {
+    open class func postTelephonyProvidersEdgeRebootWithRequestBuilder(edgeId: String, body: EdgeRebootParameters? = nil) -> RequestBuilder<String> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/reboot"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12797,11 +14808,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Starts a software update for this edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -12827,51 +14834,37 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Starts a software update for this edge.
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/softwareupdate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "callDrainingWaitTimeSeconds" : 123456789,
+  "callDrainingWaitTimeSeconds" : 6,
   "current" : true,
   "executeOnIdle" : true,
-  "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-  "maxDownloadRate" : 123,
-  "edgeUri" : "aeiou",
-  "version" : {
-    "latestRelease" : true,
-    "current" : true,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "publishDate" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "edgeUri" : "aeiou",
-    "edgeVersion" : "aeiou"
-  },
-  "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-  "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-  "status" : "aeiou"
-}}]
+  "downloadStartTime" : "2000-01-23T04:56:07.000+00:00",
+  "maxDownloadRate" : 0,
+  "edgeUri" : "https://openapi-generator.tech",
+  "version" : "{}",
+  "executeStopTime" : "2000-01-23T04:56:07.000+00:00",
+  "executeStartTime" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "NONE"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter body: (body) Software update request 
 
      - returns: RequestBuilder<DomainEdgeSoftwareUpdateDto> 
      */
-    open class func postTelephonyProvidersEdgeSoftwareupdateWithRequestBuilder(edgeId: String, body: DomainEdgeSoftwareUpdateDto) -> RequestBuilder<DomainEdgeSoftwareUpdateDto> {
+    open class func postTelephonyProvidersEdgeSoftwareupdateWithRequestBuilder(edgeId: String, body: DomainEdgeSoftwareUpdateDto) -> RequestBuilder<DomainEdgeSoftwareUpdateDto> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DomainEdgeSoftwareUpdateDto>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12881,11 +14874,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Take an Edge in or out of service
      
      - parameter edgeId: (path) Edge ID 
@@ -12911,31 +14900,25 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Take an Edge in or out of service
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/statuscode
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="aeiou"}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter body: (body) Edge Service State (optional)
 
      - returns: RequestBuilder<String> 
      */
-    open class func postTelephonyProvidersEdgeStatuscodeWithRequestBuilder(edgeId: String, body: EdgeServiceStateRequest? = nil) -> RequestBuilder<String> {
+    open class func postTelephonyProvidersEdgeStatuscodeWithRequestBuilder(edgeId: String, body: EdgeServiceStateRequest? = nil) -> RequestBuilder<String> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/statuscode"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12944,10 +14927,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Unpair an Edge
      
      - parameter edgeId: (path) Edge Id 
@@ -12972,32 +14952,23 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Unpair an Edge
-     
      - POST /api/v2/telephony/providers/edges/{edgeId}/unpair
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="aeiou"}]
      
      - parameter edgeId: (path) Edge Id 
 
      - returns: RequestBuilder<String> 
      */
-    open class func postTelephonyProvidersEdgeUnpairWithRequestBuilder(edgeId: String) -> RequestBuilder<String> {
+    open class func postTelephonyProvidersEdgeUnpairWithRequestBuilder(edgeId: String) -> RequestBuilder<String> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/unpair"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -13007,10 +14978,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create an edge.
      
      - parameter body: (body) Edge 
@@ -13035,258 +15003,157 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create an edge.
-     
      - POST /api/v2/telephony/providers/edges
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "softwareStatus" : {
-    "callDrainingWaitTimeSeconds" : 123456789,
-    "current" : true,
-    "executeOnIdle" : true,
-    "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-    "maxDownloadRate" : 123,
-    "edgeUri" : "aeiou",
-    "version" : {
-      "latestRelease" : true,
-      "current" : true,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "publishDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "edgeUri" : "aeiou",
-      "edgeVersion" : "aeiou"
-    },
-    "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-    "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-    "status" : "aeiou"
-  },
-  "fullSoftwareVersion" : "aeiou",
-  "onlineStatus" : "aeiou",
-  "description" : "aeiou",
-  "callDrainingState" : "aeiou",
-  "createdByApp" : "aeiou",
+  "softwareStatus" : "{}",
+  "fullSoftwareVersion" : "fullSoftwareVersion",
+  "onlineStatus" : "ONLINE",
+  "description" : "description",
+  "callDrainingState" : "NONE",
+  "createdByApp" : "createdByApp",
   "edgeGroup" : {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "hybrid" : true,
-    "createdBy" : "aeiou",
+    "createdBy" : "createdBy",
     "managed" : true,
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "edgeTrunkBaseAssignment" : {
-      "family" : 123,
-      "trunkBase" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "trunkType" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "trunkMetabase" : "",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "properties" : {
-          "key" : "{}"
-        }
-      }
-    },
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "phoneTrunkBases" : [ "" ]
-  },
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "patch" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "apiVersion" : "aeiou",
-  "managed" : true,
-  "conversationCount" : 123,
-  "fingerprint" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "model" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "make" : "aeiou",
-  "stagedVersion" : "aeiou",
-  "interfaces" : [ {
-    "macAddress" : "aeiou",
-    "endpoints" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "ifName" : "aeiou",
-    "ipAddress" : "aeiou",
-    "name" : "aeiou",
-    "type" : "aeiou",
-    "lineTypes" : [ "aeiou" ],
-    "addressFamilyId" : "aeiou"
-  } ],
-  "edgeDeploymentType" : "aeiou",
-  "serialNumber" : "aeiou",
-  "softwareVersionConfiguration" : "aeiou",
-  "physicalEdge" : true,
-  "selfUri" : "aeiou",
-  "offlineConfigCalled" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "osName" : "aeiou",
-  "version" : 123,
-  "currentVersion" : "aeiou",
-  "proxy" : "aeiou",
-  "site" : {
-    "primarySites" : [ "" ],
-    "addresses" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
-      "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "secondaryEdges" : [ "" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "primaryEdges" : [ "" ],
-    "managed" : true,
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "coreSite" : true,
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
-    "ntpSettings" : {
-      "servers" : [ "aeiou" ]
-    },
-    "createdBy" : "aeiou",
-    "secondarySites" : [ "" ],
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "location" : {
-      "images" : "aeiou",
-      "address" : {
-        "zipcode" : "aeiou",
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "street1" : "aeiou",
-        "countryName" : "aeiou",
-        "state" : "aeiou",
-        "street2" : "aeiou"
-      },
-      "notes" : "aeiou",
-      "floorplanImage" : [ "" ],
-      "addressVerificationDetails" : {
-        "dateStarted" : "2000-01-23T04:56:07.000+0000",
-        "dateFinished" : "2000-01-23T04:56:07.000+0000",
-        "service" : "smartystreets-us",
-        "status" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "profileImage" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "emergencyNumber" : {
-        "number" : "aeiou",
-        "e164" : "aeiou",
-        "type" : "aeiou"
-      },
-      "version" : 123,
-      "path" : [ "aeiou" ],
-      "addressStored" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "contactUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "state" : "aeiou",
-      "addressVerified" : true
-    },
-    "mediaModel" : "aeiou",
-    "siteConnections" : [ {
-      "coreSite" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "edgeTrunkBaseAssignment" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "phoneTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "selfUri" : "aeiou",
-      "edgeList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou",
-        "edgeConnectionList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "site" : "",
-          "connectionErrors" : [ "aeiou" ],
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou"
-        } ]
-      } ],
-      "name" : "aeiou",
-      "secondaryCoreSites" : [ "" ],
-      "mediaModel" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "enabled" : true,
-      "primaryCoreSites" : [ "" ]
-    } ],
-    "edgeAutoUpdateConfig" : {
-      "rrule" : "aeiou",
-      "start" : "aeiou",
-      "timeZone" : "aeiou",
-      "end" : "aeiou"
-    }
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    } ]
   },
-  "softwareVersionPlatform" : "aeiou",
-  "fingerprintHint" : "aeiou",
-  "createdBy" : "aeiou",
-  "softwareVersionTimestamp" : "aeiou",
-  "pairingId" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "softwareVersion" : "aeiou",
-  "statusCode" : "aeiou"
-}}]
+  "division" : "{}",
+  "patch" : "patch",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "apiVersion" : "apiVersion",
+  "managed" : true,
+  "conversationCount" : 5,
+  "fingerprint" : "fingerprint",
+  "modifiedBy" : "modifiedBy",
+  "model" : "model",
+  "id" : "id",
+  "state" : "active",
+  "make" : "make",
+  "stagedVersion" : "stagedVersion",
+  "interfaces" : [ {
+    "macAddress" : "macAddress",
+    "endpoints" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "ifName" : "ifName",
+    "ipAddress" : "ipAddress",
+    "name" : "name",
+    "type" : "type",
+    "lineTypes" : [ "TIE", "TIE" ],
+    "addressFamilyId" : "addressFamilyId"
+  }, {
+    "macAddress" : "macAddress",
+    "endpoints" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "ifName" : "ifName",
+    "ipAddress" : "ipAddress",
+    "name" : "name",
+    "type" : "type",
+    "lineTypes" : [ "TIE", "TIE" ],
+    "addressFamilyId" : "addressFamilyId"
+  } ],
+  "edgeDeploymentType" : "HARDWARE",
+  "serialNumber" : "serialNumber",
+  "softwareVersionConfiguration" : "softwareVersionConfiguration",
+  "physicalEdge" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "offlineConfigCalled" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "osName" : "osName",
+  "version" : 0,
+  "currentVersion" : "currentVersion",
+  "proxy" : "proxy",
+  "site" : "{}",
+  "softwareVersionPlatform" : "softwareVersionPlatform",
+  "fingerprintHint" : "fingerprintHint",
+  "createdBy" : "createdBy",
+  "softwareVersionTimestamp" : "softwareVersionTimestamp",
+  "pairingId" : "pairingId",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "softwareVersion" : "softwareVersion",
+  "statusCode" : "NEW"
+}, statusCode=200}]
      
      - parameter body: (body) Edge 
 
      - returns: RequestBuilder<Edge> 
      */
-    open class func postTelephonyProvidersEdgesWithRequestBuilder(body: Edge) -> RequestBuilder<Edge> {
+    open class func postTelephonyProvidersEdgesWithRequestBuilder(body: Edge) -> RequestBuilder<Edge> {        
         let path = "/api/v2/telephony/providers/edges"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Edge>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13295,10 +15162,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Validates a street address
      
      - parameter body: (body) Address 
@@ -13323,33 +15187,25 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Validates a street address
-     
      - POST /api/v2/telephony/providers/edges/addressvalidation
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "valid" : true,
-  "response" : {
-    "messageReturned" : [ "aeiou" ],
-    "status" : "aeiou"
-  }
-}}]
+  "response" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Address 
 
      - returns: RequestBuilder<ValidateAddressResponse> 
      */
-    open class func postTelephonyProvidersEdgesAddressvalidationWithRequestBuilder(body: ValidateAddressRequest) -> RequestBuilder<ValidateAddressResponse> {
+    open class func postTelephonyProvidersEdgesAddressvalidationWithRequestBuilder(body: ValidateAddressRequest) -> RequestBuilder<ValidateAddressResponse> {        
         let path = "/api/v2/telephony/providers/edges/addressvalidation"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ValidateAddressResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13358,10 +15214,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create a certificate authority.
      
      - parameter body: (body) CertificateAuthority 
@@ -13386,11 +15239,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create a certificate authority.
-     
      - POST /api/v2/telephony/providers/edges/certificateauthorities
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -13399,44 +15249,46 @@ open class TelephonyProvidersEdgeAPI {
     "valid" : true,
     "signatureValid" : true,
     "expired" : true,
-    "subject" : "aeiou",
-    "issueDate" : "2000-01-23T04:56:07.000+0000",
-    "issuer" : "aeiou",
-    "expirationDate" : "2000-01-23T04:56:07.000+0000"
+    "subject" : "subject",
+    "issueDate" : "2000-01-23T04:56:07.000+00:00",
+    "issuer" : "issuer",
+    "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "valid" : true,
+    "signatureValid" : true,
+    "expired" : true,
+    "subject" : "subject",
+    "issueDate" : "2000-01-23T04:56:07.000+00:00",
+    "issuer" : "issuer",
+    "expirationDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "selfUri" : "aeiou",
-  "certificate" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "services" : [ "aeiou" ],
-  "createdByApp" : "aeiou",
-  "type" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "services" : [ "SIP", "SIP" ],
+  "createdByApp" : "createdByApp",
+  "type" : "MANAGED",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter body: (body) CertificateAuthority 
 
      - returns: RequestBuilder<DomainCertificateAuthority> 
      */
-    open class func postTelephonyProvidersEdgesCertificateauthoritiesWithRequestBuilder(body: DomainCertificateAuthority) -> RequestBuilder<DomainCertificateAuthority> {
+    open class func postTelephonyProvidersEdgesCertificateauthoritiesWithRequestBuilder(body: DomainCertificateAuthority) -> RequestBuilder<DomainCertificateAuthority> {        
         let path = "/api/v2/telephony/providers/edges/certificateauthorities"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DomainCertificateAuthority>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13445,10 +15297,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create a new DID pool
      
      - parameter body: (body) DID pool 
@@ -13473,49 +15322,40 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create a new DID pool
-     
      - POST /api/v2/telephony/providers/edges/didpools
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "comments" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "provider" : "aeiou",
-  "startPhoneNumber" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "endPhoneNumber" : "aeiou"
-}}]
+  "comments" : "comments",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "provider" : "PURE_CLOUD",
+  "startPhoneNumber" : "startPhoneNumber",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "endPhoneNumber" : "endPhoneNumber"
+}, statusCode=200}]
      
      - parameter body: (body) DID pool 
 
      - returns: RequestBuilder<DIDPool> 
      */
-    open class func postTelephonyProvidersEdgesDidpoolsWithRequestBuilder(body: DIDPool) -> RequestBuilder<DIDPool> {
+    open class func postTelephonyProvidersEdgesDidpoolsWithRequestBuilder(body: DIDPool) -> RequestBuilder<DIDPool> {        
         let path = "/api/v2/telephony/providers/edges/didpools"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DIDPool>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13524,10 +15364,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create an edge group.
      
      - parameter body: (body) EdgeGroup 
@@ -13552,76 +15389,80 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create an edge group.
-     
      - POST /api/v2/telephony/providers/edges/edgegroups
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 6,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "hybrid" : true,
-  "createdBy" : "aeiou",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "edgeTrunkBaseAssignment" : {
-    "family" : 123,
-    "trunkBase" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "trunkType" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "trunkMetabase" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "properties" : {
-        "key" : "{}"
-      }
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "edgeTrunkBaseAssignment" : "{}",
+  "id" : "id",
+  "state" : "active",
+  "phoneTrunkBases" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
     }
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "phoneTrunkBases" : [ "" ]
-}}]
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  } ]
+}, statusCode=200}]
      
      - parameter body: (body) EdgeGroup 
 
      - returns: RequestBuilder<EdgeGroup> 
      */
-    open class func postTelephonyProvidersEdgesEdgegroupsWithRequestBuilder(body: EdgeGroup) -> RequestBuilder<EdgeGroup> {
+    open class func postTelephonyProvidersEdgesEdgegroupsWithRequestBuilder(body: EdgeGroup) -> RequestBuilder<EdgeGroup> {        
         let path = "/api/v2/telephony/providers/edges/edgegroups"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13630,10 +15471,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create a new extension pool
      
      - parameter body: (body) ExtensionPool 
@@ -13658,47 +15496,38 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create a new extension pool
-     
      - POST /api/v2/telephony/providers/edges/extensionpools
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "startNumber" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "endNumber" : "aeiou",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "startNumber" : "startNumber",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "endNumber" : "endNumber",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter body: (body) ExtensionPool 
 
      - returns: RequestBuilder<ExtensionPool> 
      */
-    open class func postTelephonyProvidersEdgesExtensionpoolsWithRequestBuilder(body: ExtensionPool) -> RequestBuilder<ExtensionPool> {
+    open class func postTelephonyProvidersEdgesExtensionpoolsWithRequestBuilder(body: ExtensionPool) -> RequestBuilder<ExtensionPool> {        
         let path = "/api/v2/telephony/providers/edges/extensionpools"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExtensionPool>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13707,10 +15536,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create outbound rule
      
      - parameter body: (body) OutboundRoute 
@@ -13735,278 +15561,51 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create outbound rule
-     
      - POST /api/v2/telephony/providers/edges/outboundroutes
      - This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "classificationTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "distribution" : "aeiou",
-  "version" : 123,
+  "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "distribution" : "SEQUENTIAL",
+  "version" : 0,
   "enabled" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "site" : {
-    "primarySites" : [ "" ],
-    "addresses" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
-      "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "secondaryEdges" : [ "" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "primaryEdges" : [ {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
-      "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : "",
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
-    } ],
-    "managed" : true,
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "coreSite" : true,
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
-    "ntpSettings" : {
-      "servers" : [ "aeiou" ]
-    },
-    "createdBy" : "aeiou",
-    "secondarySites" : [ "" ],
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "location" : {
-      "images" : "aeiou",
-      "address" : {
-        "zipcode" : "aeiou",
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "street1" : "aeiou",
-        "countryName" : "aeiou",
-        "state" : "aeiou",
-        "street2" : "aeiou"
-      },
-      "notes" : "aeiou",
-      "floorplanImage" : [ "" ],
-      "addressVerificationDetails" : {
-        "dateStarted" : "2000-01-23T04:56:07.000+0000",
-        "dateFinished" : "2000-01-23T04:56:07.000+0000",
-        "service" : "smartystreets-us",
-        "status" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "profileImage" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "emergencyNumber" : {
-        "number" : "aeiou",
-        "e164" : "aeiou",
-        "type" : "aeiou"
-      },
-      "version" : 123,
-      "path" : [ "aeiou" ],
-      "addressStored" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "contactUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "state" : "aeiou",
-      "addressVerified" : true
-    },
-    "mediaModel" : "aeiou",
-    "siteConnections" : [ {
-      "coreSite" : true,
-      "managed" : true,
-      "selfUri" : "aeiou",
-      "edgeList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou",
-        "edgeConnectionList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "site" : "",
-          "connectionErrors" : [ "aeiou" ],
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou"
-        } ]
-      } ],
-      "name" : "aeiou",
-      "secondaryCoreSites" : [ "" ],
-      "mediaModel" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "enabled" : true,
-      "primaryCoreSites" : [ "" ]
-    } ],
-    "edgeAutoUpdateConfig" : {
-      "rrule" : "aeiou",
-      "start" : "aeiou",
-      "timeZone" : "aeiou",
-      "end" : "aeiou"
-    }
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
+  "division" : "{}",
+  "site" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
   "externalTrunkBases" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter body: (body) OutboundRoute 
 
      - returns: RequestBuilder<OutboundRoute> 
      */
-    open class func postTelephonyProvidersEdgesOutboundroutesWithRequestBuilder(body: OutboundRoute) -> RequestBuilder<OutboundRoute> {
+    open class func postTelephonyProvidersEdgesOutboundroutesWithRequestBuilder(body: OutboundRoute) -> RequestBuilder<OutboundRoute> {        
         let path = "/api/v2/telephony/providers/edges/outboundroutes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OutboundRoute>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14015,10 +15614,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Reboot a Phone
      
      - parameter phoneId: (path) Phone Id 
@@ -14036,11 +15632,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Reboot a Phone
-     
      - POST /api/v2/telephony/providers/edges/phones/{phoneId}/reboot
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -14049,18 +15642,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postTelephonyProvidersEdgesPhoneRebootWithRequestBuilder(phoneId: String) -> RequestBuilder<Void> {
+    open class func postTelephonyProvidersEdgesPhoneRebootWithRequestBuilder(phoneId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/phones/{phoneId}/reboot"
         let phoneIdPreEscape = "\(phoneId)"
         let phoneIdPostEscape = phoneIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{phoneId}", with: phoneIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -14070,10 +15658,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create a new Phone Base Settings object
      
      - parameter body: (body) Phone base settings 
@@ -14098,63 +15683,78 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create a new Phone Base Settings object
-     
      - POST /api/v2/telephony/providers/edges/phonebasesettings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "capabilities" : {
     "provisions" : true,
-    "hardwareIdType" : "aeiou",
+    "hardwareIdType" : "hardwareIdType",
     "noCloudProvisioning" : true,
     "registers" : true,
     "dualRegisters" : true,
     "allowReboot" : true,
-    "mediaCodecs" : [ "aeiou" ],
+    "mediaCodecs" : [ "audio/opus", "audio/opus" ],
     "cdm" : true,
     "noRebalance" : true
   },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "phoneMetaBase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "phoneMetaBase" : "{}",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "lines" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "lineMetaBase" : "",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
     "properties" : {
       "key" : "{}"
     }
@@ -14162,19 +15762,17 @@ open class TelephonyProvidersEdgeAPI {
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Phone base settings 
 
      - returns: RequestBuilder<PhoneBase> 
      */
-    open class func postTelephonyProvidersEdgesPhonebasesettingsWithRequestBuilder(body: PhoneBase) -> RequestBuilder<PhoneBase> {
+    open class func postTelephonyProvidersEdgesPhonebasesettingsWithRequestBuilder(body: PhoneBase) -> RequestBuilder<PhoneBase> {        
         let path = "/api/v2/telephony/providers/edges/phonebasesettings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PhoneBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14183,10 +15781,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create a new Phone
      
      - parameter body: (body) Phone 
@@ -14211,347 +15806,437 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create a new Phone
-     
      - POST /api/v2/telephony/providers/edges/phones
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "description" : "description",
+  "createdByApp" : "createdByApp",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "lines" : [ {
-    "template" : "",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : "",
-    "loggedInUser" : "",
-    "version" : 123,
-    "division" : "",
-    "site" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "secondaryEdge" : "",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "defaultForUser" : "",
-    "primaryEdge" : {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
-      "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : {
-        "primarySites" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "countryCode" : "aeiou",
-          "display" : "aeiou",
-          "integration" : "microsoftteams",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
-        } ],
-        "secondaryEdges" : [ "" ],
-        "description" : "aeiou",
-        "createdByApp" : "aeiou",
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "primaryEdges" : [ "" ],
-        "managed" : true,
-        "modifiedBy" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "coreSite" : true,
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
-        "ntpSettings" : {
-          "servers" : [ "aeiou" ]
-        },
-        "createdBy" : "aeiou",
-        "secondarySites" : [ "" ],
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "location" : {
-          "images" : "aeiou",
-          "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
-          },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
-          } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
-          "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
-          "addressVerified" : true
-        },
-        "mediaModel" : "aeiou",
-        "siteConnections" : [ {
-          "coreSite" : true,
-          "managed" : true,
-          "selfUri" : "aeiou",
-          "edgeList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou",
-            "edgeConnectionList" : [ {
-              "interfaceIpAddress" : "aeiou",
-              "site" : "",
-              "connectionErrors" : [ "aeiou" ],
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "interfaceName" : "aeiou"
-            } ]
-          } ],
-          "name" : "aeiou",
-          "secondaryCoreSites" : [ "" ],
-          "mediaModel" : "aeiou",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "enabled" : true,
-          "primaryCoreSites" : [ "" ]
-        } ],
-        "edgeAutoUpdateConfig" : {
-          "rrule" : "aeiou",
-          "start" : "aeiou",
-          "timeZone" : "aeiou",
-          "end" : "aeiou"
-        }
-      },
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "lineBaseSettings" : "",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
     "properties" : {
       "key" : "{}"
     }
   } ],
-  "primaryEdge" : "",
-  "phoneBaseSettings" : "",
+  "primaryEdge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  },
+  "phoneBaseSettings" : "{}",
   "capabilities" : {
     "provisions" : true,
-    "hardwareIdType" : "aeiou",
+    "hardwareIdType" : "hardwareIdType",
     "noCloudProvisioning" : true,
     "registers" : true,
     "dualRegisters" : true,
     "allowReboot" : true,
-    "mediaCodecs" : [ "aeiou" ],
+    "mediaCodecs" : [ "audio/opus", "audio/opus" ],
     "cdm" : true,
     "noRebalance" : true
   },
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "phoneMetaBase" : "",
-  "version" : 123,
-  "userAgentInfo" : {
-    "model" : "aeiou",
-    "firmwareVersion" : "aeiou",
-    "manufacturer" : "aeiou"
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "phoneMetaBase" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "site" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "version" : 0,
+  "userAgentInfo" : "{}",
+  "site" : "{}",
+  "createdBy" : "createdBy",
+  "secondaryEdge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   },
-  "createdBy" : "aeiou",
-  "secondaryEdge" : "",
-  "secondaryStatus" : "",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "webRtcUser" : "",
-  "lineBaseSettings" : "",
+  "secondaryStatus" : "{}",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "webRtcUser" : "{}",
+  "lineBaseSettings" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
   "properties" : {
     "key" : "{}"
   },
-  "status" : {
-    "operationalStatus" : "aeiou",
-    "edgesStatus" : "aeiou",
-    "edge" : "",
-    "lineStatuses" : [ {
-      "contactAddresses" : [ "aeiou" ],
-      "addressOfRecord" : "aeiou",
-      "id" : "aeiou",
-      "reachable" : true,
-      "reachableStateTime" : "2000-01-23T04:56:07.000+0000"
-    } ],
-    "phoneAssignmentToEdgeType" : "aeiou",
-    "provision" : {
-      "errorInfo" : "aeiou",
-      "time" : "2000-01-23T04:56:07.000+0000",
-      "source" : "aeiou"
-    },
-    "eventCreationTime" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "status" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Phone 
 
      - returns: RequestBuilder<Phone> 
      */
-    open class func postTelephonyProvidersEdgesPhonesWithRequestBuilder(body: Phone) -> RequestBuilder<Phone> {
+    open class func postTelephonyProvidersEdgesPhonesWithRequestBuilder(body: Phone) -> RequestBuilder<Phone> {        
         let path = "/api/v2/telephony/providers/edges/phones"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Phone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14560,10 +16245,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Reboot Multiple Phones
      
      - parameter body: (body) Phones 
@@ -14581,11 +16263,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Reboot Multiple Phones
-     
      - POST /api/v2/telephony/providers/edges/phones/reboot
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -14594,13 +16273,11 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postTelephonyProvidersEdgesPhonesRebootWithRequestBuilder(body: PhonesReboot) -> RequestBuilder<Void> {
+    open class func postTelephonyProvidersEdgesPhonesRebootWithRequestBuilder(body: PhonesReboot) -> RequestBuilder<Void> {        
         let path = "/api/v2/telephony/providers/edges/phones/reboot"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14610,11 +16287,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create outbound route
      
      - parameter siteId: (path) Site ID 
@@ -14640,57 +16313,52 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create outbound route
-     
      - POST /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "classificationTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "distribution" : "aeiou",
-  "version" : 123,
+  "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "distribution" : "SEQUENTIAL",
+  "version" : 0,
   "enabled" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
   "externalTrunkBases" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
      - parameter body: (body) OutboundRoute 
 
      - returns: RequestBuilder<OutboundRouteBase> 
      */
-    open class func postTelephonyProvidersEdgesSiteOutboundroutesWithRequestBuilder(siteId: String, body: OutboundRouteBase) -> RequestBuilder<OutboundRouteBase> {
+    open class func postTelephonyProvidersEdgesSiteOutboundroutesWithRequestBuilder(siteId: String, body: OutboundRouteBase) -> RequestBuilder<OutboundRouteBase> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OutboundRouteBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14699,10 +16367,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Triggers the rebalance operation.
      
      - parameter siteId: (path) Site ID 
@@ -14720,11 +16385,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Triggers the rebalance operation.
-     
      - POST /api/v2/telephony/providers/edges/sites/{siteId}/rebalance
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -14733,18 +16395,13 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postTelephonyProvidersEdgesSiteRebalanceWithRequestBuilder(siteId: String) -> RequestBuilder<Void> {
+    open class func postTelephonyProvidersEdgesSiteRebalanceWithRequestBuilder(siteId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/rebalance"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -14754,10 +16411,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create a Site.
      
      - parameter body: (body) Site 
@@ -14782,258 +16436,1064 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create a Site.
-     
      - POST /api/v2/telephony/providers/edges/sites
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "primarySites" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
   "addresses" : [ {
-    "extension" : "aeiou",
-    "address" : "aeiou",
-    "countryCode" : "aeiou",
-    "display" : "aeiou",
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
     "integration" : "microsoftteams",
-    "mediaType" : "aeiou",
-    "type" : "aeiou"
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
+  }, {
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "integration" : "microsoftteams",
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
   } ],
-  "secondaryEdges" : [ "" ],
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "primaryEdges" : [ {
-    "softwareStatus" : {
-      "callDrainingWaitTimeSeconds" : 123456789,
-      "current" : true,
-      "executeOnIdle" : true,
-      "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-      "maxDownloadRate" : 123,
-      "edgeUri" : "aeiou",
-      "version" : {
-        "latestRelease" : true,
-        "current" : true,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "publishDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "edgeUri" : "aeiou",
-        "edgeVersion" : "aeiou"
-      },
-      "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-      "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
-    "fullSoftwareVersion" : "aeiou",
-    "onlineStatus" : "aeiou",
-    "description" : "aeiou",
-    "callDrainingState" : "aeiou",
-    "createdByApp" : "aeiou",
+  "secondaryEdges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
     "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "hybrid" : true,
-      "createdBy" : "aeiou",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "edgeTrunkBaseAssignment" : {
-        "family" : 123,
-        "trunkBase" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "trunkType" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "trunkMetabase" : "",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "properties" : {
-            "key" : "{}"
-          }
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
         }
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "phoneTrunkBases" : [ "" ]
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "division" : "",
-    "patch" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "apiVersion" : "aeiou",
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
     "managed" : true,
-    "conversationCount" : 123,
-    "fingerprint" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "model" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "make" : "aeiou",
-    "stagedVersion" : "aeiou",
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
     "interfaces" : [ {
-      "macAddress" : "aeiou",
-      "endpoints" : [ "" ],
-      "ifName" : "aeiou",
-      "ipAddress" : "aeiou",
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "lineTypes" : [ "aeiou" ],
-      "addressFamilyId" : "aeiou"
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
     } ],
-    "edgeDeploymentType" : "aeiou",
-    "serialNumber" : "aeiou",
-    "softwareVersionConfiguration" : "aeiou",
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
     "physicalEdge" : true,
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "offlineConfigCalled" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "osName" : "aeiou",
-    "version" : 123,
-    "currentVersion" : "aeiou",
-    "proxy" : "aeiou",
-    "site" : "",
-    "softwareVersionPlatform" : "aeiou",
-    "fingerprintHint" : "aeiou",
-    "createdBy" : "aeiou",
-    "softwareVersionTimestamp" : "aeiou",
-    "pairingId" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "softwareVersion" : "aeiou",
-    "statusCode" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  } ],
+  "description" : "description",
+  "createdByApp" : "createdByApp",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "primaryEdges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   } ],
   "managed" : true,
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "coreSite" : true,
-  "selfUri" : "aeiou",
-  "edges" : [ "" ],
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "version" : 123,
-  "mediaRegionsUseLatencyBased" : true,
-  "ntpSettings" : {
-    "servers" : [ "aeiou" ]
-  },
-  "createdBy" : "aeiou",
-  "secondarySites" : [ "" ],
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "location" : {
-    "images" : "aeiou",
-    "address" : {
-      "zipcode" : "aeiou",
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "street1" : "aeiou",
-      "countryName" : "aeiou",
-      "state" : "aeiou",
-      "street2" : "aeiou"
+  "selfUri" : "https://openapi-generator.tech",
+  "edges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "notes" : "aeiou",
-    "floorplanImage" : [ "" ],
-    "addressVerificationDetails" : {
-      "dateStarted" : "2000-01-23T04:56:07.000+0000",
-      "dateFinished" : "2000-01-23T04:56:07.000+0000",
-      "service" : "smartystreets-us",
-      "status" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "profileImage" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
     } ],
-    "emergencyNumber" : {
-      "number" : "aeiou",
-      "e164" : "aeiou",
-      "type" : "aeiou"
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "version" : 123,
-    "path" : [ "aeiou" ],
-    "addressStored" : true,
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "contactUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "state" : "aeiou",
-    "addressVerified" : true
-  },
-  "mediaModel" : "aeiou",
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  } ],
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 0,
+  "mediaRegionsUseLatencyBased" : true,
+  "ntpSettings" : "{}",
+  "createdBy" : "createdBy",
+  "secondarySites" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "location" : "{}",
+  "mediaModel" : "Premises",
   "siteConnections" : [ {
     "coreSite" : true,
     "managed" : true,
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "edgeList" : [ {
-      "interfaceIpAddress" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "interfaceName" : "aeiou",
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
       "edgeConnectionList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "site" : "",
-        "connectionErrors" : [ "aeiou" ],
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou"
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
       } ]
     } ],
-    "name" : "aeiou",
-    "secondaryCoreSites" : [ "" ],
-    "mediaModel" : "aeiou",
-    "id" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
     "enabled" : true,
-    "primaryCoreSites" : [ "" ]
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  }, {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
   } ],
-  "edgeAutoUpdateConfig" : {
-    "rrule" : "aeiou",
-    "start" : "aeiou",
-    "timeZone" : "aeiou",
-    "end" : "aeiou"
-  }
-}}]
+  "edgeAutoUpdateConfig" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Site 
 
      - returns: RequestBuilder<Site> 
      */
-    open class func postTelephonyProvidersEdgesSitesWithRequestBuilder(body: Site) -> RequestBuilder<Site> {
+    open class func postTelephonyProvidersEdgesSitesWithRequestBuilder(body: Site) -> RequestBuilder<Site> {        
         let path = "/api/v2/telephony/providers/edges/sites"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Site>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -15042,10 +17502,7 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create a Trunk Base Settings object
      
      - parameter body: (body) Trunk base settings 
@@ -15070,55 +17527,42 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Create a Trunk Base Settings object
-     
      - POST /api/v2/telephony/providers/edges/trunkbasesettings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "trunkType" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "trunkType" : "EXTERNAL",
+  "version" : 1,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "trunkMetabase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "trunkMetabase" : "{}",
+  "id" : "id",
+  "state" : "active",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Trunk base settings 
 
      - returns: RequestBuilder<TrunkBase> 
      */
-    open class func postTelephonyProvidersEdgesTrunkbasesettingsWithRequestBuilder(body: TrunkBase) -> RequestBuilder<TrunkBase> {
+    open class func postTelephonyProvidersEdgesTrunkbasesettingsWithRequestBuilder(body: TrunkBase) -> RequestBuilder<TrunkBase> {        
         let path = "/api/v2/telephony/providers/edges/trunkbasesettings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TrunkBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -15128,11 +17572,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a edge.
      
      - parameter edgeId: (path) Edge ID 
@@ -15158,262 +17598,161 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a edge.
-     
      - PUT /api/v2/telephony/providers/edges/{edgeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "softwareStatus" : {
-    "callDrainingWaitTimeSeconds" : 123456789,
-    "current" : true,
-    "executeOnIdle" : true,
-    "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-    "maxDownloadRate" : 123,
-    "edgeUri" : "aeiou",
-    "version" : {
-      "latestRelease" : true,
-      "current" : true,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "publishDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "edgeUri" : "aeiou",
-      "edgeVersion" : "aeiou"
-    },
-    "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-    "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-    "status" : "aeiou"
-  },
-  "fullSoftwareVersion" : "aeiou",
-  "onlineStatus" : "aeiou",
-  "description" : "aeiou",
-  "callDrainingState" : "aeiou",
-  "createdByApp" : "aeiou",
+  "softwareStatus" : "{}",
+  "fullSoftwareVersion" : "fullSoftwareVersion",
+  "onlineStatus" : "ONLINE",
+  "description" : "description",
+  "callDrainingState" : "NONE",
+  "createdByApp" : "createdByApp",
   "edgeGroup" : {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "hybrid" : true,
-    "createdBy" : "aeiou",
+    "createdBy" : "createdBy",
     "managed" : true,
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "edgeTrunkBaseAssignment" : {
-      "family" : 123,
-      "trunkBase" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "trunkType" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "trunkMetabase" : "",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "properties" : {
-          "key" : "{}"
-        }
-      }
-    },
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "phoneTrunkBases" : [ "" ]
-  },
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "patch" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "apiVersion" : "aeiou",
-  "managed" : true,
-  "conversationCount" : 123,
-  "fingerprint" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "model" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "make" : "aeiou",
-  "stagedVersion" : "aeiou",
-  "interfaces" : [ {
-    "macAddress" : "aeiou",
-    "endpoints" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "ifName" : "aeiou",
-    "ipAddress" : "aeiou",
-    "name" : "aeiou",
-    "type" : "aeiou",
-    "lineTypes" : [ "aeiou" ],
-    "addressFamilyId" : "aeiou"
-  } ],
-  "edgeDeploymentType" : "aeiou",
-  "serialNumber" : "aeiou",
-  "softwareVersionConfiguration" : "aeiou",
-  "physicalEdge" : true,
-  "selfUri" : "aeiou",
-  "offlineConfigCalled" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "osName" : "aeiou",
-  "version" : 123,
-  "currentVersion" : "aeiou",
-  "proxy" : "aeiou",
-  "site" : {
-    "primarySites" : [ "" ],
-    "addresses" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
-      "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "secondaryEdges" : [ "" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "primaryEdges" : [ "" ],
-    "managed" : true,
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "coreSite" : true,
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
-    "ntpSettings" : {
-      "servers" : [ "aeiou" ]
-    },
-    "createdBy" : "aeiou",
-    "secondarySites" : [ "" ],
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "location" : {
-      "images" : "aeiou",
-      "address" : {
-        "zipcode" : "aeiou",
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "street1" : "aeiou",
-        "countryName" : "aeiou",
-        "state" : "aeiou",
-        "street2" : "aeiou"
-      },
-      "notes" : "aeiou",
-      "floorplanImage" : [ "" ],
-      "addressVerificationDetails" : {
-        "dateStarted" : "2000-01-23T04:56:07.000+0000",
-        "dateFinished" : "2000-01-23T04:56:07.000+0000",
-        "service" : "smartystreets-us",
-        "status" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "profileImage" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "emergencyNumber" : {
-        "number" : "aeiou",
-        "e164" : "aeiou",
-        "type" : "aeiou"
-      },
-      "version" : 123,
-      "path" : [ "aeiou" ],
-      "addressStored" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "contactUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "state" : "aeiou",
-      "addressVerified" : true
-    },
-    "mediaModel" : "aeiou",
-    "siteConnections" : [ {
-      "coreSite" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "edgeTrunkBaseAssignment" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "phoneTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "selfUri" : "aeiou",
-      "edgeList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou",
-        "edgeConnectionList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "site" : "",
-          "connectionErrors" : [ "aeiou" ],
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou"
-        } ]
-      } ],
-      "name" : "aeiou",
-      "secondaryCoreSites" : [ "" ],
-      "mediaModel" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "enabled" : true,
-      "primaryCoreSites" : [ "" ]
-    } ],
-    "edgeAutoUpdateConfig" : {
-      "rrule" : "aeiou",
-      "start" : "aeiou",
-      "timeZone" : "aeiou",
-      "end" : "aeiou"
-    }
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    } ]
   },
-  "softwareVersionPlatform" : "aeiou",
-  "fingerprintHint" : "aeiou",
-  "createdBy" : "aeiou",
-  "softwareVersionTimestamp" : "aeiou",
-  "pairingId" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "softwareVersion" : "aeiou",
-  "statusCode" : "aeiou"
-}}]
+  "division" : "{}",
+  "patch" : "patch",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "apiVersion" : "apiVersion",
+  "managed" : true,
+  "conversationCount" : 5,
+  "fingerprint" : "fingerprint",
+  "modifiedBy" : "modifiedBy",
+  "model" : "model",
+  "id" : "id",
+  "state" : "active",
+  "make" : "make",
+  "stagedVersion" : "stagedVersion",
+  "interfaces" : [ {
+    "macAddress" : "macAddress",
+    "endpoints" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "ifName" : "ifName",
+    "ipAddress" : "ipAddress",
+    "name" : "name",
+    "type" : "type",
+    "lineTypes" : [ "TIE", "TIE" ],
+    "addressFamilyId" : "addressFamilyId"
+  }, {
+    "macAddress" : "macAddress",
+    "endpoints" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "ifName" : "ifName",
+    "ipAddress" : "ipAddress",
+    "name" : "name",
+    "type" : "type",
+    "lineTypes" : [ "TIE", "TIE" ],
+    "addressFamilyId" : "addressFamilyId"
+  } ],
+  "edgeDeploymentType" : "HARDWARE",
+  "serialNumber" : "serialNumber",
+  "softwareVersionConfiguration" : "softwareVersionConfiguration",
+  "physicalEdge" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "offlineConfigCalled" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "osName" : "osName",
+  "version" : 0,
+  "currentVersion" : "currentVersion",
+  "proxy" : "proxy",
+  "site" : "{}",
+  "softwareVersionPlatform" : "softwareVersionPlatform",
+  "fingerprintHint" : "fingerprintHint",
+  "createdBy" : "createdBy",
+  "softwareVersionTimestamp" : "softwareVersionTimestamp",
+  "pairingId" : "pairingId",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "softwareVersion" : "softwareVersion",
+  "statusCode" : "NEW"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter body: (body) Edge 
 
      - returns: RequestBuilder<Edge> 
      */
-    open class func putTelephonyProvidersEdgeWithRequestBuilder(edgeId: String, body: Edge) -> RequestBuilder<Edge> {
+    open class func putTelephonyProvidersEdgeWithRequestBuilder(edgeId: String, body: Edge) -> RequestBuilder<Edge> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Edge>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -15424,12 +17763,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update a line.
      
      - parameter edgeId: (path) Edge ID 
@@ -15456,292 +17790,259 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a line.
-     
      - PUT /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "schema" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "selfUri" : "aeiou",
-  "ipAddress" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "edgeGroup" : "",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "edge" : {
-    "softwareStatus" : {
-      "callDrainingWaitTimeSeconds" : 123456789,
-      "current" : true,
-      "executeOnIdle" : true,
-      "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-      "maxDownloadRate" : 123,
-      "edgeUri" : "aeiou",
-      "version" : {
-        "latestRelease" : true,
-        "current" : true,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "publishDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "edgeUri" : "aeiou",
-        "edgeVersion" : "aeiou"
-      },
-      "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-      "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
-    "fullSoftwareVersion" : "aeiou",
-    "onlineStatus" : "aeiou",
-    "description" : "aeiou",
-    "callDrainingState" : "aeiou",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "hybrid" : true,
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "edgeTrunkBaseAssignment" : {
-        "family" : 123,
-        "trunkBase" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "trunkType" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "trunkMetabase" : "",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "properties" : {
-            "key" : "{}"
-          }
-        }
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "phoneTrunkBases" : [ "" ]
-    },
-    "division" : "",
-    "patch" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "apiVersion" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "ipAddress" : "ipAddress",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "edgeGroup" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "hybrid" : true,
+    "createdBy" : "createdBy",
     "managed" : true,
-    "conversationCount" : 123,
-    "fingerprint" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "model" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "make" : "aeiou",
-    "stagedVersion" : "aeiou",
-    "interfaces" : [ {
-      "macAddress" : "aeiou",
-      "endpoints" : [ "" ],
-      "ifName" : "aeiou",
-      "ipAddress" : "aeiou",
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "lineTypes" : [ "aeiou" ],
-      "addressFamilyId" : "aeiou"
-    } ],
-    "edgeDeploymentType" : "aeiou",
-    "serialNumber" : "aeiou",
-    "softwareVersionConfiguration" : "aeiou",
-    "physicalEdge" : true,
-    "selfUri" : "aeiou",
-    "offlineConfigCalled" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "osName" : "aeiou",
-    "version" : 123,
-    "currentVersion" : "aeiou",
-    "proxy" : "aeiou",
-    "site" : {
-      "primarySites" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
-        "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "secondaryEdges" : [ "" ],
-      "description" : "aeiou",
-      "createdByApp" : "aeiou",
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "primaryEdges" : [ "" ],
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "edgeTrunkBaseAssignment" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "phoneTrunkBases" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "coreSite" : true,
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
-      "ntpSettings" : {
-        "servers" : [ "aeiou" ]
-      },
-      "createdBy" : "aeiou",
-      "secondarySites" : [ "" ],
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "location" : {
-        "images" : "aeiou",
-        "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
-        },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
-        } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
-        "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
-        "addressVerified" : true
-      },
-      "mediaModel" : "aeiou",
-      "siteConnections" : [ {
-        "coreSite" : true,
-        "managed" : true,
-        "selfUri" : "aeiou",
-        "edgeList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou",
-          "edgeConnectionList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "site" : "",
-            "connectionErrors" : [ "aeiou" ],
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou"
-          } ]
-        } ],
-        "name" : "aeiou",
-        "secondaryCoreSites" : [ "" ],
-        "mediaModel" : "aeiou",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "enabled" : true,
-        "primaryCoreSites" : [ "" ]
-      } ],
-      "edgeAutoUpdateConfig" : {
-        "rrule" : "aeiou",
-        "start" : "aeiou",
-        "timeZone" : "aeiou",
-        "end" : "aeiou"
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
       }
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "trunkType" : "EXTERNAL",
+      "version" : 1,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "trunkMetabase" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "properties" : {
+        "key" : "{}"
+      }
+    } ]
+  },
+  "version" : 0,
+  "division" : "{}",
+  "edge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "softwareVersionPlatform" : "aeiou",
-    "fingerprintHint" : "aeiou",
-    "createdBy" : "aeiou",
-    "softwareVersionTimestamp" : "aeiou",
-    "pairingId" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "softwareVersion" : "aeiou",
-    "statusCode" : "aeiou"
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   },
   "endpoint" : {
-    "schema" : "",
-    "selfUri" : "aeiou",
-    "count" : 123,
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
+    "schema" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "count" : 1,
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 6,
     "enabled" : true,
-    "division" : "",
-    "site" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "dids" : [ "aeiou" ],
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "dids" : [ "dids", "dids" ],
     "properties" : {
       "key" : "{}"
     }
   },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "lineType" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "logicalInterfaceId" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "lineType" : "TIE",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "logicalInterfaceId" : "logicalInterfaceId",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter lineId: (path) Line ID 
@@ -15749,7 +18050,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<EdgeLine> 
      */
-    open class func putTelephonyProvidersEdgeLineWithRequestBuilder(edgeId: String, lineId: String, body: EdgeLine) -> RequestBuilder<EdgeLine> {
+    open class func putTelephonyProvidersEdgeLineWithRequestBuilder(edgeId: String, lineId: String, body: EdgeLine) -> RequestBuilder<EdgeLine> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15758,10 +18059,8 @@ open class TelephonyProvidersEdgeAPI {
         let lineIdPostEscape = lineIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{lineId}", with: lineIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeLine>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -15772,12 +18071,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update an edge logical interface.
      
      - parameter edgeId: (path) Edge ID 
@@ -15804,123 +18098,119 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update an edge logical interface.
-     
      - PUT /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "hardwareAddress" : "aeiou",
+  "hardwareAddress" : "hardwareAddress",
   "addresses" : [ {
-    "address" : "aeiou",
-    "type" : "aeiou",
+    "address" : "address",
+    "type" : "ip",
     "persistent" : true,
-    "family" : 123
+    "family" : 5
+  }, {
+    "address" : "address",
+    "type" : "ip",
+    "persistent" : true,
+    "family" : 5
   } ],
-  "phoneTrunkBaseAssignments" : [ "" ],
-  "endDate" : "2000-01-23T04:56:07.000+0000",
+  "phoneTrunkBaseAssignments" : [ {
+    "family" : 7,
+    "trunkBase" : "{}"
+  }, {
+    "family" : 7,
+    "trunkBase" : "{}"
+  } ],
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
   "externalTrunkBaseAssignments" : [ {
-    "family" : 123,
-    "trunkBase" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "trunkType" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "trunkMetabase" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "properties" : {
-        "key" : "{}"
-      }
-    }
+    "family" : 7,
+    "trunkBase" : "{}"
+  }, {
+    "family" : 7,
+    "trunkBase" : "{}"
   } ],
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
+  "description" : "description",
+  "createdByApp" : "createdByApp",
   "useForInternalEdgeCommunication" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "division" : "{}",
   "useForWanInterface" : true,
-  "interfaceType" : "aeiou",
+  "interfaceType" : "DIAGNOSTIC",
   "routes" : [ {
-    "metric" : 123,
-    "prefix" : "aeiou",
+    "metric" : 1,
+    "prefix" : "prefix",
     "persistent" : true,
-    "family" : 123,
-    "nexthop" : "aeiou"
+    "family" : 5,
+    "nexthop" : "nexthop"
+  }, {
+    "metric" : 1,
+    "prefix" : "prefix",
+    "persistent" : true,
+    "family" : 5,
+    "nexthop" : "nexthop"
   } ],
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "lastModifiedUserId" : "aeiou",
-  "lastModifiedCorrelationId" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "friendlyName" : "aeiou",
-  "publicNatAddressIpV4" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastModifiedUserId" : "lastModifiedUserId",
+  "lastModifiedCorrelationId" : "lastModifiedCorrelationId",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "friendlyName" : "friendlyName",
+  "publicNatAddressIpV4" : "publicNatAddressIpV4",
   "commandResponses" : [ {
-    "commandName" : "aeiou",
+    "commandName" : "commandName",
     "acknowledged" : true,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : "aeiou",
+      "messageWithParams" : "messageWithParams",
+      "code" : "code",
+      "contextId" : "contextId",
+      "details" : "https://openapi-generator.tech",
       "messageParams" : {
-        "key" : "aeiou"
+        "key" : "messageParams"
       },
-      "message" : "aeiou",
-      "nested" : "",
-      "status" : 123
+      "message" : "message",
+      "status" : 2
     },
-    "correlationId" : "aeiou"
+    "correlationId" : "correlationId"
+  }, {
+    "commandName" : "commandName",
+    "acknowledged" : true,
+    "errorInfo" : {
+      "messageWithParams" : "messageWithParams",
+      "code" : "code",
+      "contextId" : "contextId",
+      "details" : "https://openapi-generator.tech",
+      "messageParams" : {
+        "key" : "messageParams"
+      },
+      "message" : "message",
+      "status" : 2
+    },
+    "correlationId" : "correlationId"
   } ],
-  "publicNatAddressIpV6" : "aeiou",
-  "ifStatus" : "aeiou",
-  "selfUri" : "aeiou",
+  "publicNatAddressIpV6" : "publicNatAddressIpV6",
+  "ifStatus" : "ifStatus",
+  "selfUri" : "https://openapi-generator.tech",
   "useForCloudProxyEdgeCommunication" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "ipv6Capabilities" : "",
-  "version" : 123,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "ipv6Capabilities" : "{}",
+  "version" : 0,
   "useForIndirectEdgeCommunication" : true,
-  "ipv4Capabilities" : {
-    "metric" : 123,
-    "pingEnabled" : true,
-    "enabled" : true,
-    "dhcp" : true,
-    "autoMetric" : true,
-    "supportsMetric" : true
-  },
+  "ipv4Capabilities" : "{}",
   "inheritPhoneTrunkBasesIPv6" : true,
-  "physicalAdapterId" : "aeiou",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "edgeAssignedId" : "aeiou",
-  "vlanTagId" : 123,
-  "edgeUri" : "aeiou",
-  "currentState" : "aeiou",
+  "physicalAdapterId" : "physicalAdapterId",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "edgeAssignedId" : "edgeAssignedId",
+  "vlanTagId" : 6,
+  "edgeUri" : "https://openapi-generator.tech",
+  "currentState" : "INIT",
   "traceEnabled" : true,
   "inheritPhoneTrunkBasesIPv4" : true,
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
      - parameter interfaceId: (path) Interface ID 
@@ -15928,7 +18218,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<DomainLogicalInterface> 
      */
-    open class func putTelephonyProvidersEdgeLogicalinterfaceWithRequestBuilder(edgeId: String, interfaceId: String, body: DomainLogicalInterface) -> RequestBuilder<DomainLogicalInterface> {
+    open class func putTelephonyProvidersEdgeLogicalinterfaceWithRequestBuilder(edgeId: String, interfaceId: String, body: DomainLogicalInterface) -> RequestBuilder<DomainLogicalInterface> {        
         var path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}"
         let edgeIdPreEscape = "\(edgeId)"
         let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15937,10 +18227,8 @@ open class TelephonyProvidersEdgeAPI {
         let interfaceIdPostEscape = interfaceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{interfaceId}", with: interfaceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DomainLogicalInterface>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -15950,11 +18238,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a certificate authority.
      
      - parameter certificateId: (path) Certificate ID 
@@ -15980,11 +18264,8 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a certificate authority.
-     
      - PUT /api/v2/telephony/providers/edges/certificateauthorities/{certificateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -15993,48 +18274,50 @@ open class TelephonyProvidersEdgeAPI {
     "valid" : true,
     "signatureValid" : true,
     "expired" : true,
-    "subject" : "aeiou",
-    "issueDate" : "2000-01-23T04:56:07.000+0000",
-    "issuer" : "aeiou",
-    "expirationDate" : "2000-01-23T04:56:07.000+0000"
+    "subject" : "subject",
+    "issueDate" : "2000-01-23T04:56:07.000+00:00",
+    "issuer" : "issuer",
+    "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "valid" : true,
+    "signatureValid" : true,
+    "expired" : true,
+    "subject" : "subject",
+    "issueDate" : "2000-01-23T04:56:07.000+00:00",
+    "issuer" : "issuer",
+    "expirationDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "selfUri" : "aeiou",
-  "certificate" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "services" : [ "aeiou" ],
-  "createdByApp" : "aeiou",
-  "type" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "services" : [ "SIP", "SIP" ],
+  "createdByApp" : "createdByApp",
+  "type" : "MANAGED",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter certificateId: (path) Certificate ID 
      - parameter body: (body) Certificate authority 
 
      - returns: RequestBuilder<DomainCertificateAuthority> 
      */
-    open class func putTelephonyProvidersEdgesCertificateauthorityWithRequestBuilder(certificateId: String, body: DomainCertificateAuthority) -> RequestBuilder<DomainCertificateAuthority> {
+    open class func putTelephonyProvidersEdgesCertificateauthorityWithRequestBuilder(certificateId: String, body: DomainCertificateAuthority) -> RequestBuilder<DomainCertificateAuthority> {        
         var path = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}"
         let certificateIdPreEscape = "\(certificateId)"
         let certificateIdPostEscape = certificateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{certificateId}", with: certificateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DomainCertificateAuthority>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -16044,11 +18327,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a DID by ID.
      
      - parameter didId: (path) DID ID 
@@ -16074,57 +18353,48 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a DID by ID.
-     
      - PUT /api/v2/telephony/providers/edges/dids/{didId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "owner" : "",
-  "ownerType" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "phoneNumber" : "aeiou",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
+  "owner" : "{}",
+  "ownerType" : "USER",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "phoneNumber" : "phoneNumber",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
   "didPool" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter didId: (path) DID ID 
      - parameter body: (body) DID 
 
      - returns: RequestBuilder<DID> 
      */
-    open class func putTelephonyProvidersEdgesDidWithRequestBuilder(didId: String, body: DID) -> RequestBuilder<DID> {
+    open class func putTelephonyProvidersEdgesDidWithRequestBuilder(didId: String, body: DID) -> RequestBuilder<DID> {        
         var path = "/api/v2/telephony/providers/edges/dids/{didId}"
         let didIdPreEscape = "\(didId)"
         let didIdPostEscape = didIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{didId}", with: didIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DID>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -16134,11 +18404,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a DID Pool by ID.
      
      - parameter didPoolId: (path) DID pool ID 
@@ -16164,53 +18430,44 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a DID Pool by ID.
-     
      - PUT /api/v2/telephony/providers/edges/didpools/{didPoolId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "comments" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "provider" : "aeiou",
-  "startPhoneNumber" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "endPhoneNumber" : "aeiou"
-}}]
+  "comments" : "comments",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "provider" : "PURE_CLOUD",
+  "startPhoneNumber" : "startPhoneNumber",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "endPhoneNumber" : "endPhoneNumber"
+}, statusCode=200}]
      
      - parameter didPoolId: (path) DID pool ID 
      - parameter body: (body) DID pool 
 
      - returns: RequestBuilder<DIDPool> 
      */
-    open class func putTelephonyProvidersEdgesDidpoolWithRequestBuilder(didPoolId: String, body: DIDPool) -> RequestBuilder<DIDPool> {
+    open class func putTelephonyProvidersEdgesDidpoolWithRequestBuilder(didPoolId: String, body: DIDPool) -> RequestBuilder<DIDPool> {        
         var path = "/api/v2/telephony/providers/edges/didpools/{didPoolId}"
         let didPoolIdPreEscape = "\(didPoolId)"
         let didPoolIdPostEscape = didPoolIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{didPoolId}", with: didPoolIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DIDPool>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -16220,11 +18477,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update an edge group.
      
      - parameter edgeGroupId: (path) Edge group ID 
@@ -16250,80 +18503,84 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update an edge group.
-     
      - PUT /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 6,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "hybrid" : true,
-  "createdBy" : "aeiou",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "edgeTrunkBaseAssignment" : {
-    "family" : 123,
-    "trunkBase" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "trunkType" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "trunkMetabase" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "properties" : {
-        "key" : "{}"
-      }
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "edgeTrunkBaseAssignment" : "{}",
+  "id" : "id",
+  "state" : "active",
+  "phoneTrunkBases" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
     }
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "phoneTrunkBases" : [ "" ]
-}}]
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  } ]
+}, statusCode=200}]
      
      - parameter edgeGroupId: (path) Edge group ID 
      - parameter body: (body) EdgeGroup 
 
      - returns: RequestBuilder<EdgeGroup> 
      */
-    open class func putTelephonyProvidersEdgesEdgegroupWithRequestBuilder(edgeGroupId: String, body: EdgeGroup) -> RequestBuilder<EdgeGroup> {
+    open class func putTelephonyProvidersEdgesEdgegroupWithRequestBuilder(edgeGroupId: String, body: EdgeGroup) -> RequestBuilder<EdgeGroup> {        
         var path = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}"
         let edgeGroupIdPreEscape = "\(edgeGroupId)"
         let edgeGroupIdPostEscape = edgeGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgeGroupId}", with: edgeGroupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -16334,12 +18591,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update the edge trunk base associated with the edge group
      
      - parameter edgegroupId: (path) Edge Group ID 
@@ -16366,42 +18618,31 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update the edge trunk base associated with the edge group
-     
      - PUT /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "trunkType" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "trunkMetabase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "trunkType" : "EXTERNAL",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "trunkMetabase" : "{}",
+  "id" : "id",
+  "state" : "active",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter edgegroupId: (path) Edge Group ID 
      - parameter edgetrunkbaseId: (path) Edge Trunk Base ID 
@@ -16409,7 +18650,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<EdgeTrunkBase> 
      */
-    open class func putTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithRequestBuilder(edgegroupId: String, edgetrunkbaseId: String, body: EdgeTrunkBase) -> RequestBuilder<EdgeTrunkBase> {
+    open class func putTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithRequestBuilder(edgegroupId: String, edgetrunkbaseId: String, body: EdgeTrunkBase) -> RequestBuilder<EdgeTrunkBase> {        
         var path = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}"
         let edgegroupIdPreEscape = "\(edgegroupId)"
         let edgegroupIdPostEscape = edgegroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -16418,10 +18659,8 @@ open class TelephonyProvidersEdgeAPI {
         let edgetrunkbaseIdPostEscape = edgetrunkbaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{edgetrunkbaseId}", with: edgetrunkbaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeTrunkBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -16431,11 +18670,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update an extension by ID.
      
      - parameter extensionId: (path) Extension ID 
@@ -16461,57 +18696,48 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update an extension by ID.
-     
      - PUT /api/v2/telephony/providers/edges/extensions/{extensionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "owner" : "{}",
+  "ownerType" : "USER",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "number" : "number",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "extensionPool" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "ownerType" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "number" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "extensionPool" : "",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter extensionId: (path) Extension ID 
      - parameter body: (body) Extension 
 
      - returns: RequestBuilder<Extension> 
      */
-    open class func putTelephonyProvidersEdgesExtensionWithRequestBuilder(extensionId: String, body: Extension) -> RequestBuilder<Extension> {
+    open class func putTelephonyProvidersEdgesExtensionWithRequestBuilder(extensionId: String, body: Extension) -> RequestBuilder<Extension> {        
         var path = "/api/v2/telephony/providers/edges/extensions/{extensionId}"
         let extensionIdPreEscape = "\(extensionId)"
         let extensionIdPostEscape = extensionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{extensionId}", with: extensionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Extension>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -16521,11 +18747,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update an extension pool by ID
      
      - parameter extensionPoolId: (path) Extension pool ID 
@@ -16551,51 +18773,42 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update an extension pool by ID
-     
      - PUT /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "startNumber" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "endNumber" : "aeiou",
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "startNumber" : "startNumber",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "endNumber" : "endNumber",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter extensionPoolId: (path) Extension pool ID 
      - parameter body: (body) ExtensionPool 
 
      - returns: RequestBuilder<ExtensionPool> 
      */
-    open class func putTelephonyProvidersEdgesExtensionpoolWithRequestBuilder(extensionPoolId: String, body: ExtensionPool) -> RequestBuilder<ExtensionPool> {
+    open class func putTelephonyProvidersEdgesExtensionpoolWithRequestBuilder(extensionPoolId: String, body: ExtensionPool) -> RequestBuilder<ExtensionPool> {        
         var path = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}"
         let extensionPoolIdPreEscape = "\(extensionPoolId)"
         let extensionPoolIdPostEscape = extensionPoolIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{extensionPoolId}", with: extensionPoolIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExtensionPool>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -16605,11 +18818,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update outbound route
      
      - parameter outboundRouteId: (path) Outbound route ID 
@@ -16635,282 +18844,55 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update outbound route
-     
      - PUT /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}
      - This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "classificationTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "distribution" : "aeiou",
-  "version" : 123,
+  "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "distribution" : "SEQUENTIAL",
+  "version" : 0,
   "enabled" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "site" : {
-    "primarySites" : [ "" ],
-    "addresses" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
-      "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "secondaryEdges" : [ "" ],
-    "description" : "aeiou",
-    "createdByApp" : "aeiou",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "primaryEdges" : [ {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
-      "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : "",
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
-    } ],
-    "managed" : true,
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "coreSite" : true,
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
-    "ntpSettings" : {
-      "servers" : [ "aeiou" ]
-    },
-    "createdBy" : "aeiou",
-    "secondarySites" : [ "" ],
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "location" : {
-      "images" : "aeiou",
-      "address" : {
-        "zipcode" : "aeiou",
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "street1" : "aeiou",
-        "countryName" : "aeiou",
-        "state" : "aeiou",
-        "street2" : "aeiou"
-      },
-      "notes" : "aeiou",
-      "floorplanImage" : [ "" ],
-      "addressVerificationDetails" : {
-        "dateStarted" : "2000-01-23T04:56:07.000+0000",
-        "dateFinished" : "2000-01-23T04:56:07.000+0000",
-        "service" : "smartystreets-us",
-        "status" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "profileImage" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "emergencyNumber" : {
-        "number" : "aeiou",
-        "e164" : "aeiou",
-        "type" : "aeiou"
-      },
-      "version" : 123,
-      "path" : [ "aeiou" ],
-      "addressStored" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "contactUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "state" : "aeiou",
-      "addressVerified" : true
-    },
-    "mediaModel" : "aeiou",
-    "siteConnections" : [ {
-      "coreSite" : true,
-      "managed" : true,
-      "selfUri" : "aeiou",
-      "edgeList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou",
-        "edgeConnectionList" : [ {
-          "interfaceIpAddress" : "aeiou",
-          "site" : "",
-          "connectionErrors" : [ "aeiou" ],
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "interfaceName" : "aeiou"
-        } ]
-      } ],
-      "name" : "aeiou",
-      "secondaryCoreSites" : [ "" ],
-      "mediaModel" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "enabled" : true,
-      "primaryCoreSites" : [ "" ]
-    } ],
-    "edgeAutoUpdateConfig" : {
-      "rrule" : "aeiou",
-      "start" : "aeiou",
-      "timeZone" : "aeiou",
-      "end" : "aeiou"
-    }
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
+  "division" : "{}",
+  "site" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
   "externalTrunkBases" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter outboundRouteId: (path) Outbound route ID 
      - parameter body: (body) OutboundRoute 
 
      - returns: RequestBuilder<OutboundRoute> 
      */
-    open class func putTelephonyProvidersEdgesOutboundrouteWithRequestBuilder(outboundRouteId: String, body: OutboundRoute) -> RequestBuilder<OutboundRoute> {
+    open class func putTelephonyProvidersEdgesOutboundrouteWithRequestBuilder(outboundRouteId: String, body: OutboundRoute) -> RequestBuilder<OutboundRoute> {        
         var path = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}"
         let outboundRouteIdPreEscape = "\(outboundRouteId)"
         let outboundRouteIdPostEscape = outboundRouteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outboundRouteId}", with: outboundRouteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OutboundRoute>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -16920,11 +18902,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a Phone by ID
      
      - parameter phoneId: (path) Phone ID 
@@ -16950,351 +18928,441 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a Phone by ID
-     
      - PUT /api/v2/telephony/providers/edges/phones/{phoneId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "description" : "description",
+  "createdByApp" : "createdByApp",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "lines" : [ {
-    "template" : "",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "edgeGroup" : "",
-    "loggedInUser" : "",
-    "version" : 123,
-    "division" : "",
-    "site" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "secondaryEdge" : "",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "defaultForUser" : "",
-    "primaryEdge" : {
-      "softwareStatus" : {
-        "callDrainingWaitTimeSeconds" : 123456789,
-        "current" : true,
-        "executeOnIdle" : true,
-        "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-        "maxDownloadRate" : 123,
-        "edgeUri" : "aeiou",
-        "version" : {
-          "latestRelease" : true,
-          "current" : true,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "publishDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "edgeUri" : "aeiou",
-          "edgeVersion" : "aeiou"
-        },
-        "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-        "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-        "status" : "aeiou"
-      },
-      "fullSoftwareVersion" : "aeiou",
-      "onlineStatus" : "aeiou",
-      "description" : "aeiou",
-      "callDrainingState" : "aeiou",
-      "createdByApp" : "aeiou",
-      "edgeGroup" : {
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "createdByApp" : "aeiou",
-        "version" : 123,
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "hybrid" : true,
-        "createdBy" : "aeiou",
-        "managed" : true,
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
-        "edgeTrunkBaseAssignment" : {
-          "family" : 123,
-          "trunkBase" : {
-            "selfUri" : "aeiou",
-            "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
-            "createdByApp" : "aeiou",
-            "trunkType" : "aeiou",
-            "version" : 123,
-            "division" : "",
-            "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "createdBy" : "aeiou",
-            "managed" : true,
-            "name" : "aeiou",
-            "modifiedByApp" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "trunkMetabase" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "properties" : {
-              "key" : "{}"
-            }
-          }
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "phoneTrunkBases" : [ "" ]
-      },
-      "division" : "",
-      "patch" : "aeiou",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "apiVersion" : "aeiou",
-      "managed" : true,
-      "conversationCount" : 123,
-      "fingerprint" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "model" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "make" : "aeiou",
-      "stagedVersion" : "aeiou",
-      "interfaces" : [ {
-        "macAddress" : "aeiou",
-        "endpoints" : [ "" ],
-        "ifName" : "aeiou",
-        "ipAddress" : "aeiou",
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "lineTypes" : [ "aeiou" ],
-        "addressFamilyId" : "aeiou"
-      } ],
-      "edgeDeploymentType" : "aeiou",
-      "serialNumber" : "aeiou",
-      "softwareVersionConfiguration" : "aeiou",
-      "physicalEdge" : true,
-      "selfUri" : "aeiou",
-      "offlineConfigCalled" : true,
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "osName" : "aeiou",
-      "version" : 123,
-      "currentVersion" : "aeiou",
-      "proxy" : "aeiou",
-      "site" : {
-        "primarySites" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "countryCode" : "aeiou",
-          "display" : "aeiou",
-          "integration" : "microsoftteams",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
-        } ],
-        "secondaryEdges" : [ "" ],
-        "description" : "aeiou",
-        "createdByApp" : "aeiou",
-        "division" : "",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "primaryEdges" : [ "" ],
-        "managed" : true,
-        "modifiedBy" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "coreSite" : true,
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
-        "ntpSettings" : {
-          "servers" : [ "aeiou" ]
-        },
-        "createdBy" : "aeiou",
-        "secondarySites" : [ "" ],
-        "name" : "aeiou",
-        "modifiedByApp" : "aeiou",
-        "location" : {
-          "images" : "aeiou",
-          "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
-          },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
-          } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
-          "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
-          "addressVerified" : true
-        },
-        "mediaModel" : "aeiou",
-        "siteConnections" : [ {
-          "coreSite" : true,
-          "managed" : true,
-          "selfUri" : "aeiou",
-          "edgeList" : [ {
-            "interfaceIpAddress" : "aeiou",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "interfaceName" : "aeiou",
-            "edgeConnectionList" : [ {
-              "interfaceIpAddress" : "aeiou",
-              "site" : "",
-              "connectionErrors" : [ "aeiou" ],
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "interfaceName" : "aeiou"
-            } ]
-          } ],
-          "name" : "aeiou",
-          "secondaryCoreSites" : [ "" ],
-          "mediaModel" : "aeiou",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "enabled" : true,
-          "primaryCoreSites" : [ "" ]
-        } ],
-        "edgeAutoUpdateConfig" : {
-          "rrule" : "aeiou",
-          "start" : "aeiou",
-          "timeZone" : "aeiou",
-          "end" : "aeiou"
-        }
-      },
-      "softwareVersionPlatform" : "aeiou",
-      "fingerprintHint" : "aeiou",
-      "createdBy" : "aeiou",
-      "softwareVersionTimestamp" : "aeiou",
-      "pairingId" : "aeiou",
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "softwareVersion" : "aeiou",
-      "statusCode" : "aeiou"
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "lineBaseSettings" : "",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "template" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "loggedInUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "version" : 0,
+    "division" : "{}",
+    "site" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "secondaryEdge" : "{}",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "defaultForUser" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "primaryEdge" : "{}",
+    "lineBaseSettings" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
     "properties" : {
       "key" : "{}"
     }
   } ],
-  "primaryEdge" : "",
-  "phoneBaseSettings" : "",
+  "primaryEdge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  },
+  "phoneBaseSettings" : "{}",
   "capabilities" : {
     "provisions" : true,
-    "hardwareIdType" : "aeiou",
+    "hardwareIdType" : "hardwareIdType",
     "noCloudProvisioning" : true,
     "registers" : true,
     "dualRegisters" : true,
     "allowReboot" : true,
-    "mediaCodecs" : [ "aeiou" ],
+    "mediaCodecs" : [ "audio/opus", "audio/opus" ],
     "cdm" : true,
     "noRebalance" : true
   },
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "phoneMetaBase" : "",
-  "version" : 123,
-  "userAgentInfo" : {
-    "model" : "aeiou",
-    "firmwareVersion" : "aeiou",
-    "manufacturer" : "aeiou"
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "phoneMetaBase" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "site" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "version" : 0,
+  "userAgentInfo" : "{}",
+  "site" : "{}",
+  "createdBy" : "createdBy",
+  "secondaryEdge" : {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   },
-  "createdBy" : "aeiou",
-  "secondaryEdge" : "",
-  "secondaryStatus" : "",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "webRtcUser" : "",
-  "lineBaseSettings" : "",
+  "secondaryStatus" : "{}",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "webRtcUser" : "{}",
+  "lineBaseSettings" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
   "properties" : {
     "key" : "{}"
   },
-  "status" : {
-    "operationalStatus" : "aeiou",
-    "edgesStatus" : "aeiou",
-    "edge" : "",
-    "lineStatuses" : [ {
-      "contactAddresses" : [ "aeiou" ],
-      "addressOfRecord" : "aeiou",
-      "id" : "aeiou",
-      "reachable" : true,
-      "reachableStateTime" : "2000-01-23T04:56:07.000+0000"
-    } ],
-    "phoneAssignmentToEdgeType" : "aeiou",
-    "provision" : {
-      "errorInfo" : "aeiou",
-      "time" : "2000-01-23T04:56:07.000+0000",
-      "source" : "aeiou"
-    },
-    "eventCreationTime" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "status" : "{}"
+}, statusCode=200}]
      
      - parameter phoneId: (path) Phone ID 
      - parameter body: (body) Phone 
 
      - returns: RequestBuilder<Phone> 
      */
-    open class func putTelephonyProvidersEdgesPhoneWithRequestBuilder(phoneId: String, body: Phone) -> RequestBuilder<Phone> {
+    open class func putTelephonyProvidersEdgesPhoneWithRequestBuilder(phoneId: String, body: Phone) -> RequestBuilder<Phone> {        
         var path = "/api/v2/telephony/providers/edges/phones/{phoneId}"
         let phoneIdPreEscape = "\(phoneId)"
         let phoneIdPostEscape = phoneIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{phoneId}", with: phoneIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Phone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -17304,11 +19372,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a Phone Base Settings by ID
      
      - parameter phoneBaseId: (path) Phone base ID 
@@ -17334,63 +19398,78 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a Phone Base Settings by ID
-     
      - PUT /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "capabilities" : {
     "provisions" : true,
-    "hardwareIdType" : "aeiou",
+    "hardwareIdType" : "hardwareIdType",
     "noCloudProvisioning" : true,
     "registers" : true,
     "dualRegisters" : true,
     "allowReboot" : true,
-    "mediaCodecs" : [ "aeiou" ],
+    "mediaCodecs" : [ "audio/opus", "audio/opus" ],
     "cdm" : true,
     "noRebalance" : true
   },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "phoneMetaBase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "createdByApp" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "phoneMetaBase" : "{}",
+  "createdByApp" : "createdByApp",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "lines" : [ {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "createdByApp" : "aeiou",
-    "version" : 123,
-    "lineMetaBase" : "",
-    "division" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "version" : 0,
+    "lineMetaBase" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "id" : "id",
+    "state" : "active",
     "properties" : {
       "key" : "{}"
     }
@@ -17398,23 +19477,21 @@ open class TelephonyProvidersEdgeAPI {
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter phoneBaseId: (path) Phone base ID 
      - parameter body: (body) Phone base settings 
 
      - returns: RequestBuilder<PhoneBase> 
      */
-    open class func putTelephonyProvidersEdgesPhonebasesettingWithRequestBuilder(phoneBaseId: String, body: PhoneBase) -> RequestBuilder<PhoneBase> {
+    open class func putTelephonyProvidersEdgesPhonebasesettingWithRequestBuilder(phoneBaseId: String, body: PhoneBase) -> RequestBuilder<PhoneBase> {        
         var path = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}"
         let phoneBaseIdPreEscape = "\(phoneBaseId)"
         let phoneBaseIdPostEscape = phoneBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{phoneBaseId}", with: phoneBaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PhoneBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -17424,11 +19501,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a Site by ID.
      
      - parameter siteId: (path) Site ID 
@@ -17454,262 +19527,1068 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a Site by ID.
-     
      - PUT /api/v2/telephony/providers/edges/sites/{siteId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "primarySites" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
   "addresses" : [ {
-    "extension" : "aeiou",
-    "address" : "aeiou",
-    "countryCode" : "aeiou",
-    "display" : "aeiou",
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
     "integration" : "microsoftteams",
-    "mediaType" : "aeiou",
-    "type" : "aeiou"
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
+  }, {
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "integration" : "microsoftteams",
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
   } ],
-  "secondaryEdges" : [ "" ],
-  "description" : "aeiou",
-  "createdByApp" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "primaryEdges" : [ {
-    "softwareStatus" : {
-      "callDrainingWaitTimeSeconds" : 123456789,
-      "current" : true,
-      "executeOnIdle" : true,
-      "downloadStartTime" : "2000-01-23T04:56:07.000+0000",
-      "maxDownloadRate" : 123,
-      "edgeUri" : "aeiou",
-      "version" : {
-        "latestRelease" : true,
-        "current" : true,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "publishDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "edgeUri" : "aeiou",
-        "edgeVersion" : "aeiou"
-      },
-      "executeStopTime" : "2000-01-23T04:56:07.000+0000",
-      "executeStartTime" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
-    "fullSoftwareVersion" : "aeiou",
-    "onlineStatus" : "aeiou",
-    "description" : "aeiou",
-    "callDrainingState" : "aeiou",
-    "createdByApp" : "aeiou",
+  "secondaryEdges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
     "edgeGroup" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "createdByApp" : "aeiou",
-      "version" : 123,
-      "division" : "",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "hybrid" : true,
-      "createdBy" : "aeiou",
+      "createdBy" : "createdBy",
       "managed" : true,
-      "name" : "aeiou",
-      "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
-      "edgeTrunkBaseAssignment" : {
-        "family" : 123,
-        "trunkBase" : {
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "createdByApp" : "aeiou",
-          "trunkType" : "aeiou",
-          "version" : 123,
-          "division" : "",
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "aeiou",
-          "managed" : true,
-          "name" : "aeiou",
-          "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "trunkMetabase" : "",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "properties" : {
-            "key" : "{}"
-          }
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
         }
-      },
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "phoneTrunkBases" : [ "" ]
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "division" : "",
-    "patch" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "apiVersion" : "aeiou",
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
     "managed" : true,
-    "conversationCount" : 123,
-    "fingerprint" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "model" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "make" : "aeiou",
-    "stagedVersion" : "aeiou",
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
     "interfaces" : [ {
-      "macAddress" : "aeiou",
-      "endpoints" : [ "" ],
-      "ifName" : "aeiou",
-      "ipAddress" : "aeiou",
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "lineTypes" : [ "aeiou" ],
-      "addressFamilyId" : "aeiou"
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
     } ],
-    "edgeDeploymentType" : "aeiou",
-    "serialNumber" : "aeiou",
-    "softwareVersionConfiguration" : "aeiou",
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
     "physicalEdge" : true,
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "offlineConfigCalled" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "osName" : "aeiou",
-    "version" : 123,
-    "currentVersion" : "aeiou",
-    "proxy" : "aeiou",
-    "site" : "",
-    "softwareVersionPlatform" : "aeiou",
-    "fingerprintHint" : "aeiou",
-    "createdBy" : "aeiou",
-    "softwareVersionTimestamp" : "aeiou",
-    "pairingId" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
-    "softwareVersion" : "aeiou",
-    "statusCode" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  } ],
+  "description" : "description",
+  "createdByApp" : "createdByApp",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "primaryEdges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
+    },
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
   } ],
   "managed" : true,
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
   "coreSite" : true,
-  "selfUri" : "aeiou",
-  "edges" : [ "" ],
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "version" : 123,
-  "mediaRegionsUseLatencyBased" : true,
-  "ntpSettings" : {
-    "servers" : [ "aeiou" ]
-  },
-  "createdBy" : "aeiou",
-  "secondarySites" : [ "" ],
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "location" : {
-    "images" : "aeiou",
-    "address" : {
-      "zipcode" : "aeiou",
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "street1" : "aeiou",
-      "countryName" : "aeiou",
-      "state" : "aeiou",
-      "street2" : "aeiou"
+  "selfUri" : "https://openapi-generator.tech",
+  "edges" : [ {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "notes" : "aeiou",
-    "floorplanImage" : [ "" ],
-    "addressVerificationDetails" : {
-      "dateStarted" : "2000-01-23T04:56:07.000+0000",
-      "dateFinished" : "2000-01-23T04:56:07.000+0000",
-      "service" : "smartystreets-us",
-      "status" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "profileImage" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
     } ],
-    "emergencyNumber" : {
-      "number" : "aeiou",
-      "e164" : "aeiou",
-      "type" : "aeiou"
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  }, {
+    "softwareStatus" : "{}",
+    "fullSoftwareVersion" : "fullSoftwareVersion",
+    "onlineStatus" : "ONLINE",
+    "description" : "description",
+    "callDrainingState" : "NONE",
+    "createdByApp" : "createdByApp",
+    "edgeGroup" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "createdByApp" : "createdByApp",
+      "version" : 6,
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "hybrid" : true,
+      "createdBy" : "createdBy",
+      "managed" : true,
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "modifiedBy" : "modifiedBy",
+      "edgeTrunkBaseAssignment" : "{}",
+      "id" : "id",
+      "state" : "active",
+      "phoneTrunkBases" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "trunkType" : "EXTERNAL",
+        "version" : 1,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "trunkMetabase" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "properties" : {
+          "key" : "{}"
+        }
+      } ]
     },
-    "version" : 123,
-    "path" : [ "aeiou" ],
-    "addressStored" : true,
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "contactUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "state" : "aeiou",
-    "addressVerified" : true
-  },
-  "mediaModel" : "aeiou",
+    "division" : "{}",
+    "patch" : "patch",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "apiVersion" : "apiVersion",
+    "managed" : true,
+    "conversationCount" : 5,
+    "fingerprint" : "fingerprint",
+    "modifiedBy" : "modifiedBy",
+    "model" : "model",
+    "id" : "id",
+    "state" : "active",
+    "make" : "make",
+    "stagedVersion" : "stagedVersion",
+    "interfaces" : [ {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    }, {
+      "macAddress" : "macAddress",
+      "endpoints" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "ifName" : "ifName",
+      "ipAddress" : "ipAddress",
+      "name" : "name",
+      "type" : "type",
+      "lineTypes" : [ "TIE", "TIE" ],
+      "addressFamilyId" : "addressFamilyId"
+    } ],
+    "edgeDeploymentType" : "HARDWARE",
+    "serialNumber" : "serialNumber",
+    "softwareVersionConfiguration" : "softwareVersionConfiguration",
+    "physicalEdge" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "offlineConfigCalled" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "osName" : "osName",
+    "version" : 0,
+    "currentVersion" : "currentVersion",
+    "proxy" : "proxy",
+    "site" : "{}",
+    "softwareVersionPlatform" : "softwareVersionPlatform",
+    "fingerprintHint" : "fingerprintHint",
+    "createdBy" : "createdBy",
+    "softwareVersionTimestamp" : "softwareVersionTimestamp",
+    "pairingId" : "pairingId",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "softwareVersion" : "softwareVersion",
+    "statusCode" : "NEW"
+  } ],
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 0,
+  "mediaRegionsUseLatencyBased" : true,
+  "ntpSettings" : "{}",
+  "createdBy" : "createdBy",
+  "secondarySites" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "location" : "{}",
+  "mediaModel" : "Premises",
   "siteConnections" : [ {
     "coreSite" : true,
     "managed" : true,
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "edgeList" : [ {
-      "interfaceIpAddress" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "interfaceName" : "aeiou",
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
       "edgeConnectionList" : [ {
-        "interfaceIpAddress" : "aeiou",
-        "site" : "",
-        "connectionErrors" : [ "aeiou" ],
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "interfaceName" : "aeiou"
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
       } ]
     } ],
-    "name" : "aeiou",
-    "secondaryCoreSites" : [ "" ],
-    "mediaModel" : "aeiou",
-    "id" : "aeiou",
-    "type" : "aeiou",
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
     "enabled" : true,
-    "primaryCoreSites" : [ "" ]
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  }, {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    }, {
+      "interfaceIpAddress" : "interfaceIpAddress",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "interfaceName" : "interfaceName",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "site" : {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        },
+        "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName"
+      } ]
+    } ],
+    "name" : "name",
+    "secondaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "mediaModel" : "Premises",
+    "id" : "id",
+    "type" : "Direct",
+    "enabled" : true,
+    "primaryCoreSites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
   } ],
-  "edgeAutoUpdateConfig" : {
-    "rrule" : "aeiou",
-    "start" : "aeiou",
-    "timeZone" : "aeiou",
-    "end" : "aeiou"
-  }
-}}]
+  "edgeAutoUpdateConfig" : "{}"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
      - parameter body: (body) Site 
 
      - returns: RequestBuilder<Site> 
      */
-    open class func putTelephonyProvidersEdgesSiteWithRequestBuilder(siteId: String, body: Site) -> RequestBuilder<Site> {
+    open class func putTelephonyProvidersEdgesSiteWithRequestBuilder(siteId: String, body: Site) -> RequestBuilder<Site> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Site>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -17719,11 +20598,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update the list of Number Plans. A user can update maximum 200 number plans at a time.
      
      - parameter siteId: (path) Site ID 
@@ -17749,62 +20624,56 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update the list of Number Plans. A user can update maximum 200 number plans at a time.
-     
      - PUT /api/v2/telephony/providers/edges/sites/{siteId}/numberplans
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
-  "matchType" : "aeiou",
-  "selfUri" : "aeiou",
-  "match" : "aeiou",
+     - examples: [{contentType=application/json, example={
+  "matchType" : "matchType",
+  "selfUri" : "https://openapi-generator.tech",
+  "match" : "match",
   "numbers" : [ {
-    "start" : "aeiou",
-    "end" : "aeiou"
+    "start" : "start",
+    "end" : "end"
+  }, {
+    "start" : "start",
+    "end" : "end"
   } ],
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "priority" : 123,
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "priority" : 6,
   "digitLength" : {
-    "start" : "aeiou",
-    "end" : "aeiou"
+    "start" : "start",
+    "end" : "end"
   },
-  "classification" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "normalizedFormat" : "aeiou"
-} ]}]
+  "classification" : "classification",
+  "version" : 0,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "id" : "id",
+  "state" : "active",
+  "normalizedFormat" : "normalizedFormat"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
      - parameter body: (body) List of number plans 
 
      - returns: RequestBuilder<[NumberPlan]> 
      */
-    open class func putTelephonyProvidersEdgesSiteNumberplansWithRequestBuilder(siteId: String, body: [NumberPlan]) -> RequestBuilder<[NumberPlan]> {
+    open class func putTelephonyProvidersEdgesSiteNumberplansWithRequestBuilder(siteId: String, body: [NumberPlan]) -> RequestBuilder<[NumberPlan]> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[NumberPlan]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -17815,12 +20684,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update outbound route
      
      - parameter siteId: (path) Site ID 
@@ -17847,41 +20711,38 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update outbound route
-     
      - PUT /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "classificationTypes" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "distribution" : "aeiou",
-  "version" : 123,
+  "classificationTypes" : [ "classificationTypes", "classificationTypes" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "distribution" : "SEQUENTIAL",
+  "version" : 0,
   "enabled" : true,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
   "externalTrunkBases" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
      
      - parameter siteId: (path) Site ID 
      - parameter outboundRouteId: (path) Outbound route ID 
@@ -17889,7 +20750,7 @@ open class TelephonyProvidersEdgeAPI {
 
      - returns: RequestBuilder<OutboundRouteBase> 
      */
-    open class func putTelephonyProvidersEdgesSiteOutboundrouteWithRequestBuilder(siteId: String, outboundRouteId: String, body: OutboundRouteBase) -> RequestBuilder<OutboundRouteBase> {
+    open class func putTelephonyProvidersEdgesSiteOutboundrouteWithRequestBuilder(siteId: String, outboundRouteId: String, body: OutboundRouteBase) -> RequestBuilder<OutboundRouteBase> {        
         var path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}"
         let siteIdPreEscape = "\(siteId)"
         let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17898,10 +20759,8 @@ open class TelephonyProvidersEdgeAPI {
         let outboundRouteIdPostEscape = outboundRouteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outboundRouteId}", with: outboundRouteIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OutboundRouteBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -17911,11 +20770,7 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a Trunk Base Settings object by ID
      
      - parameter trunkBaseSettingsId: (path) Trunk Base ID 
@@ -17941,59 +20796,46 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     /**
-     
      Update a Trunk Base Settings object by ID
-     
      - PUT /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "createdByApp" : "aeiou",
-  "trunkType" : "aeiou",
-  "version" : 123,
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "createdByApp" : "createdByApp",
+  "trunkType" : "EXTERNAL",
+  "version" : 1,
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "createdBy",
   "managed" : true,
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "trunkMetabase" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "name" : "name",
+  "modifiedByApp" : "modifiedByApp",
+  "modifiedBy" : "modifiedBy",
+  "trunkMetabase" : "{}",
+  "id" : "id",
+  "state" : "active",
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter trunkBaseSettingsId: (path) Trunk Base ID 
      - parameter body: (body) Trunk base settings 
 
      - returns: RequestBuilder<TrunkBase> 
      */
-    open class func putTelephonyProvidersEdgesTrunkbasesettingWithRequestBuilder(trunkBaseSettingsId: String, body: TrunkBase) -> RequestBuilder<TrunkBase> {
+    open class func putTelephonyProvidersEdgesTrunkbasesettingWithRequestBuilder(trunkBaseSettingsId: String, body: TrunkBase) -> RequestBuilder<TrunkBase> {        
         var path = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}"
         let trunkBaseSettingsIdPreEscape = "\(trunkBaseSettingsId)"
         let trunkBaseSettingsIdPostEscape = trunkBaseSettingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trunkBaseSettingsId}", with: trunkBaseSettingsIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TrunkBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

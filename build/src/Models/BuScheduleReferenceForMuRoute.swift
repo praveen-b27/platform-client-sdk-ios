@@ -21,15 +21,10 @@ public class BuScheduleReferenceForMuRoute: Codable {
     public var selfUri: String?
 
     public init(_id: String?, weekDate: Date?, businessUnit: BusinessUnitReference?, selfUri: String?) {
-        
         self._id = _id
-        
         self.weekDate = weekDate
-        
         self.businessUnit = businessUnit
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

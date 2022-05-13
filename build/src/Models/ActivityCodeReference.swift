@@ -20,15 +20,10 @@ public class ActivityCodeReference: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, secondaryPresences: [SecondaryPresence]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.secondaryPresences = secondaryPresences
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

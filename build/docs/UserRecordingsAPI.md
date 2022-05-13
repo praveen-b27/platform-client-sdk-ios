@@ -91,7 +91,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let recordingId: String = "" // User Recording ID
-let expand: [String] = [UserRecordingsAPI.Expand_getUserrecording.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 UserRecordingsAPI.getUserrecording(recordingId: recordingId, expand: expand) { (response, error) in
@@ -163,7 +163,7 @@ UserRecordingsAPI.getUserrecordingMedia(recordingId: recordingId, formatId: form
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **recordingId** | **String**| User Recording ID | |
-| **formatId** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 {: class="table-striped"}
 
 
@@ -196,9 +196,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let expand: [String] = [UserRecordingsAPI.Expand_getUserrecordings.enummember.rawValue] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 UserRecordingsAPI.getUserrecordings(pageSize: pageSize, pageNumber: pageNumber, expand: expand) { (response, error) in
@@ -216,8 +216,8 @@ UserRecordingsAPI.getUserrecordings(pageSize: pageSize, pageNumber: pageNumber, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: conversation ("conversation") |
 {: class="table-striped"}
 
@@ -300,7 +300,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let recordingId: String = "" // User Recording ID
 let body: UserRecording = new UserRecording(...) // UserRecording
-let expand: [String] = [UserRecordingsAPI.Expand_putUserrecording.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 UserRecordingsAPI.putUserrecording(recordingId: recordingId, body: body, expand: expand) { (response, error) in

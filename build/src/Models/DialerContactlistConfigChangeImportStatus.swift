@@ -27,17 +27,11 @@ public class DialerContactlistConfigChangeImportStatus: Codable {
     public var failureReason: String?
 
     public init(importState: ImportState?, totalRecords: Int?, completedRecords: Int?, percentageComplete: Int?, failureReason: String?) {
-        
         self.importState = importState
-        
         self.totalRecords = totalRecords
-        
         self.completedRecords = completedRecords
-        
         self.percentageComplete = percentageComplete
-        
         self.failureReason = failureReason
-        
     }
 
 

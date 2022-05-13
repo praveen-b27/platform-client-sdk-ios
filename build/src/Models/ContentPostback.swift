@@ -20,13 +20,9 @@ public class ContentPostback: Codable {
     public var payload: String?
 
     public init(_id: String?, text: String?, payload: String?) {
-        
         self._id = _id
-        
         self.text = text
-        
         self.payload = payload
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

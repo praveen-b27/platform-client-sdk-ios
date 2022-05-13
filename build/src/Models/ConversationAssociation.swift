@@ -32,15 +32,10 @@ public class ConversationAssociation: Codable {
     public var mediaType: MediaType?
 
     public init(externalContactId: String?, conversationId: String?, communicationId: String?, mediaType: MediaType?) {
-        
         self.externalContactId = externalContactId
-        
         self.conversationId = conversationId
-        
         self.communicationId = communicationId
-        
         self.mediaType = mediaType
-        
     }
 
 

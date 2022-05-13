@@ -29,19 +29,12 @@ public class DocumentationSearchRequest: Codable {
     public var query: [DocumentationSearchCriteria]?
 
     public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, query: [DocumentationSearchCriteria]?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sort = sort
-        
         self.query = query
-        
     }
 
 

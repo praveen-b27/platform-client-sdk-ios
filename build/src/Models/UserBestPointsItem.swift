@@ -28,17 +28,11 @@ public class UserBestPointsItem: Codable {
     public var rank: Int?
 
     public init(granularityType: GranularityType?, points: Int?, dateStartWorkday: Date?, dateEndWorkday: Date?, rank: Int?) {
-        
         self.granularityType = granularityType
-        
         self.points = points
-        
         self.dateStartWorkday = dateStartWorkday
-        
         self.dateEndWorkday = dateEndWorkday
-        
         self.rank = rank
-        
     }
 
 

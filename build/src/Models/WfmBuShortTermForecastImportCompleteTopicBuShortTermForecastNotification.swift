@@ -22,13 +22,9 @@ public class WfmBuShortTermForecastImportCompleteTopicBuShortTermForecastNotific
     public var operationId: String?
 
     public init(status: Status?, result: WfmBuShortTermForecastImportCompleteTopicBuShortTermForecast?, operationId: String?) {
-        
         self.status = status
-        
         self.result = result
-        
         self.operationId = operationId
-        
     }
 
 

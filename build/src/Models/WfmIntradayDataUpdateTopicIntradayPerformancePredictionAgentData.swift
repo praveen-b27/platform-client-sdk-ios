@@ -14,9 +14,7 @@ public class WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData: C
     public var interactingTimeSeconds: Double?
 
     public init(interactingTimeSeconds: Double?) {
-        
         self.interactingTimeSeconds = interactingTimeSeconds
-        
     }
 
 

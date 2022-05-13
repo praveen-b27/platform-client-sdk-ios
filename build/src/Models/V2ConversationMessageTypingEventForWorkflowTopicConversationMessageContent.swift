@@ -30,23 +30,14 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationMessage
     public var generic: V2ConversationMessageTypingEventForWorkflowTopicConversationContentGeneric?
 
     public init(contentType: ContentType?, location: V2ConversationMessageTypingEventForWorkflowTopicConversationContentLocation?, story: V2ConversationMessageTypingEventForWorkflowTopicConversationContentStory?, attachment: V2ConversationMessageTypingEventForWorkflowTopicConversationContentAttachment?, quickReply: V2ConversationMessageTypingEventForWorkflowTopicConversationContentQuickReply?, template: V2ConversationMessageTypingEventForWorkflowTopicConversationContentNotificationTemplate?, buttonResponse: V2ConversationMessageTypingEventForWorkflowTopicConversationContentButtonResponse?, generic: V2ConversationMessageTypingEventForWorkflowTopicConversationContentGeneric?) {
-        
         self.contentType = contentType
-        
         self.location = location
-        
         self.story = story
-        
         self.attachment = attachment
-        
         self.quickReply = quickReply
-        
         self.template = template
-        
         self.buttonResponse = buttonResponse
-        
         self.generic = generic
-        
     }
 
 

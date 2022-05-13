@@ -58,35 +58,20 @@ public class Metabase: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, type: ModelType?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.type = type
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

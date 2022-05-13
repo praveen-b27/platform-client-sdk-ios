@@ -19,13 +19,9 @@ public class LongTermForecastPlanningGroupData: Codable {
     public var averageHandleTimeSecondsPerDay: [Double]?
 
     public init(planningGroupId: String?, offeredPerDay: [Double]?, averageHandleTimeSecondsPerDay: [Double]?) {
-        
         self.planningGroupId = planningGroupId
-        
         self.offeredPerDay = offeredPerDay
-        
         self.averageHandleTimeSecondsPerDay = averageHandleTimeSecondsPerDay
-        
     }
 
 

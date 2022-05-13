@@ -16,9 +16,7 @@ public class TextBotUserInputAlternative: Codable {
     public var transcript: TextBotTranscript?
 
     public init(transcript: TextBotTranscript?) {
-        
         self.transcript = transcript
-        
     }
 
 

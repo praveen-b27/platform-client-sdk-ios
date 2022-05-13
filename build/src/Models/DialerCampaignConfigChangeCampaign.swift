@@ -67,7 +67,7 @@ public class DialerCampaignConfigChangeCampaign: Codable {
     public var contactSort: DialerCampaignConfigChangeContactSort?
     /** List of contact sort objects. */
     public var contactSorts: [DialerCampaignConfigChangeContactSort]?
-    /** for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds */
+    /** for non-preview campaigns, how long to wait before dispositioning as 'no-answer', default 30 seconds */
     public var noAnswerTimeout: Int?
     /** The language the edge will use to analyze the call */
     public var callAnalysisLanguage: String?
@@ -91,73 +91,39 @@ public class DialerCampaignConfigChangeCampaign: Codable {
     public var version: Int?
 
     public init(contactList: DialerCampaignConfigChangeUriReference?, queue: DialerCampaignConfigChangeUriReference?, dialingMode: DialingMode?, script: DialerCampaignConfigChangeUriReference?, edgeGroup: DialerCampaignConfigChangeUriReference?, site: DialerCampaignConfigChangeUriReference?, campaignStatus: CampaignStatus?, phoneColumns: [DialerCampaignConfigChangePhoneColumn]?, abandonRate: Double?, dncLists: [DialerCampaignConfigChangeUriReference]?, callableTimeSet: DialerCampaignConfigChangeUriReference?, callAnalysisResponseSet: DialerCampaignConfigChangeUriReference?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, errors: [DialerCampaignConfigChangeRestErrorDetail]?, ruleSets: [DialerCampaignConfigChangeUriReference]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int?, singleNumberPreview: Bool?, contactSort: DialerCampaignConfigChangeContactSort?, contactSorts: [DialerCampaignConfigChangeContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DialerCampaignConfigChangeUriReference]?, division: DialerCampaignConfigChangeUriReference?, agentOwnedColumn: String?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.contactList = contactList
-        
         self.queue = queue
-        
         self.dialingMode = dialingMode
-        
         self.script = script
-        
         self.edgeGroup = edgeGroup
-        
         self.site = site
-        
         self.campaignStatus = campaignStatus
-        
         self.phoneColumns = phoneColumns
-        
         self.abandonRate = abandonRate
-        
         self.dncLists = dncLists
-        
         self.callableTimeSet = callableTimeSet
-        
         self.callAnalysisResponseSet = callAnalysisResponseSet
-        
         self.callerName = callerName
-        
         self.callerAddress = callerAddress
-        
         self.outboundLineCount = outboundLineCount
-        
         self.errors = errors
-        
         self.ruleSets = ruleSets
-        
         self.skipPreviewDisabled = skipPreviewDisabled
-        
         self.previewTimeOutSeconds = previewTimeOutSeconds
-        
         self.singleNumberPreview = singleNumberPreview
-        
         self.contactSort = contactSort
-        
         self.contactSorts = contactSorts
-        
         self.noAnswerTimeout = noAnswerTimeout
-        
         self.callAnalysisLanguage = callAnalysisLanguage
-        
         self.priority = priority
-        
         self.contactListFilters = contactListFilters
-        
         self.division = division
-        
         self.agentOwnedColumn = agentOwnedColumn
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

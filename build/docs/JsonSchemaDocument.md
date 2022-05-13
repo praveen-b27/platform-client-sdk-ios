@@ -15,7 +15,7 @@ A JSON Schema document.
 | **type** | **String** |  | [optional] |
 | **_required** | **[String]** |  | [optional] |
 | **properties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-| **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
+| **additionalProperties** | [**JSON**](.html) |  | [optional] |
 {: class="table table-striped"}
 
 

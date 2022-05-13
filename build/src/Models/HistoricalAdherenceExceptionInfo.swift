@@ -78,25 +78,15 @@ public class HistoricalAdherenceExceptionInfo: Codable {
     public var secondaryPresenceLookupId: String?
 
     public init(startOffsetSeconds: Int?, endOffsetSeconds: Int?, scheduledActivityCodeId: String?, scheduledActivityCategory: ScheduledActivityCategory?, actualActivityCategory: ActualActivityCategory?, systemPresence: SystemPresence?, routingStatus: RoutingStatus?, impact: Impact?, secondaryPresenceLookupId: String?) {
-        
         self.startOffsetSeconds = startOffsetSeconds
-        
         self.endOffsetSeconds = endOffsetSeconds
-        
         self.scheduledActivityCodeId = scheduledActivityCodeId
-        
         self.scheduledActivityCategory = scheduledActivityCategory
-        
         self.actualActivityCategory = actualActivityCategory
-        
         self.systemPresence = systemPresence
-        
         self.routingStatus = routingStatus
-        
         self.impact = impact
-        
         self.secondaryPresenceLookupId = secondaryPresenceLookupId
-        
     }
 
 

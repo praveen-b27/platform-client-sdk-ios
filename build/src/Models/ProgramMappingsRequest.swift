@@ -17,11 +17,8 @@ public class ProgramMappingsRequest: Codable {
     public var flowIds: [String]?
 
     public init(queueIds: [String]?, flowIds: [String]?) {
-        
         self.queueIds = queueIds
-        
         self.flowIds = flowIds
-        
     }
 
 

@@ -15,9 +15,7 @@ public class ConditionalGroupRouting: Codable {
     public var rules: [ConditionalGroupRoutingRule]?
 
     public init(rules: [ConditionalGroupRoutingRule]?) {
-        
         self.rules = rules
-        
     }
 
 

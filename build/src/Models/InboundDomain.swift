@@ -31,21 +31,13 @@ public class InboundDomain: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, mxRecordStatus: MxRecordStatus?, subDomain: Bool?, mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.mxRecordStatus = mxRecordStatus
-        
         self.subDomain = subDomain
-        
         self.mailFromSettings = mailFromSettings
-        
         self.customSMTPServer = customSMTPServer
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

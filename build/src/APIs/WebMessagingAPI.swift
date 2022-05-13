@@ -12,15 +12,11 @@ import Foundation
 open class WebMessagingAPI {
     
     
-    
-    
-    
     /**
-     
      Get the messages for a web messaging session.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWebmessagingMessages(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: WebMessagingMessageEntityList?,_ error: Error?) -> Void)) {
@@ -42,127 +38,96 @@ open class WebMessagingAPI {
     }
 
     /**
-     
      Get the messages for a web messaging session.
-     
      - GET /api/v2/webmessaging/messages
-     - 
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "originatingEntity" : "aeiou",
-    "channel" : {
-      "messageId" : "aeiou",
-      "from" : {
-        "firstName" : "aeiou",
-        "lastName" : "aeiou",
-        "nickname" : "aeiou",
-        "additionalIds" : [ {
-          "type" : "aeiou",
-          "value" : "aeiou"
-        } ]
-      },
-      "to" : "",
-      "time" : "2000-01-23T04:56:07.000+0000"
-    },
-    "id" : "aeiou",
-    "text" : "aeiou",
-    "type" : "aeiou",
+    "originatingEntity" : "Human",
+    "channel" : "{}",
+    "id" : "id",
+    "text" : "text",
+    "type" : "Text",
     "content" : [ {
-      "quickReply" : {
-        "image" : "aeiou",
-        "payload" : "aeiou",
-        "action" : "aeiou",
-        "text" : "aeiou"
-      },
-      "attachment" : {
-        "filename" : "aeiou",
-        "sha256" : "aeiou",
-        "fileSize" : 123,
-        "mime" : "aeiou",
-        "mediaType" : "aeiou",
-        "id" : "aeiou",
-        "text" : "aeiou",
-        "url" : "aeiou"
-      },
-      "buttonResponse" : {
-        "payload" : "aeiou",
-        "id" : "aeiou",
-        "text" : "aeiou",
-        "type" : "aeiou"
-      },
-      "carousel" : {
-        "cards" : [ "" ]
-      },
-      "contentType" : "aeiou",
-      "generic" : {
-        "image" : "aeiou",
-        "components" : [ {
-          "title" : "aeiou",
-          "actions" : ""
-        } ],
-        "description" : "aeiou",
-        "title" : "aeiou",
-        "actions" : {
-          "urlTarget" : "aeiou",
-          "textback" : "aeiou",
-          "url" : "aeiou"
-        }
-      },
-      "card" : {
-        "image" : "aeiou",
-        "defaultAction" : {
-          "payload" : "aeiou",
-          "text" : "aeiou",
-          "type" : "aeiou",
-          "url" : "aeiou"
-        },
-        "description" : "aeiou",
-        "video" : "aeiou",
-        "title" : "aeiou",
-        "actions" : [ "" ]
-      }
+      "quickReply" : "{}",
+      "attachment" : "{}",
+      "buttonResponse" : "{}",
+      "carousel" : "{}",
+      "contentType" : "Attachment",
+      "generic" : "{}",
+      "card" : "{}"
+    }, {
+      "quickReply" : "{}",
+      "attachment" : "{}",
+      "buttonResponse" : "{}",
+      "carousel" : "{}",
+      "contentType" : "Attachment",
+      "generic" : "{}",
+      "card" : "{}"
     } ],
     "events" : [ {
-      "coBrowse" : {
-        "sessionJoinToken" : "aeiou",
-        "sessionId" : "aeiou",
-        "type" : "aeiou"
-      },
-      "eventType" : "aeiou",
-      "presence" : {
-        "type" : "aeiou"
-      }
+      "coBrowse" : "{}",
+      "eventType" : "CoBrowse",
+      "presence" : "{}"
+    }, {
+      "coBrowse" : "{}",
+      "eventType" : "CoBrowse",
+      "presence" : "{}"
     } ],
-    "direction" : "aeiou"
+    "direction" : "Inbound"
+  }, {
+    "originatingEntity" : "Human",
+    "channel" : "{}",
+    "id" : "id",
+    "text" : "text",
+    "type" : "Text",
+    "content" : [ {
+      "quickReply" : "{}",
+      "attachment" : "{}",
+      "buttonResponse" : "{}",
+      "carousel" : "{}",
+      "contentType" : "Attachment",
+      "generic" : "{}",
+      "card" : "{}"
+    }, {
+      "quickReply" : "{}",
+      "attachment" : "{}",
+      "buttonResponse" : "{}",
+      "carousel" : "{}",
+      "contentType" : "Attachment",
+      "generic" : "{}",
+      "card" : "{}"
+    } ],
+    "events" : [ {
+      "coBrowse" : "{}",
+      "eventType" : "CoBrowse",
+      "presence" : "{}"
+    }, {
+      "coBrowse" : "{}",
+      "eventType" : "CoBrowse",
+      "presence" : "{}"
+    } ],
+    "direction" : "Inbound"
   } ],
-  "pageSize" : 123
-}}]
+  "pageSize" : 0
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<WebMessagingMessageEntityList> 
      */
-    open class func getWebmessagingMessagesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<WebMessagingMessageEntityList> {
+    open class func getWebmessagingMessagesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<WebMessagingMessageEntityList> {        
         let path = "/api/v2/webmessaging/messages"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<WebMessagingMessageEntityList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -25,11 +25,8 @@ public class AuditQueryFilter: Codable {
     public var value: String?
 
     public init(property: Property?, value: String?) {
-        
         self.property = property
-        
         self.value = value
-        
     }
 
 

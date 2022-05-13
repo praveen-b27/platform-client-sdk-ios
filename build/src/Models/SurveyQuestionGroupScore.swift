@@ -20,17 +20,11 @@ public class SurveyQuestionGroupScore: Codable {
     public var questionScores: [SurveyQuestionScore]?
 
     public init(questionGroupId: String?, totalScore: Float?, maxTotalScore: Float?, markedNA: Bool?, questionScores: [SurveyQuestionScore]?) {
-        
         self.questionGroupId = questionGroupId
-        
         self.totalScore = totalScore
-        
         self.maxTotalScore = maxTotalScore
-        
         self.markedNA = markedNA
-        
         self.questionScores = questionScores
-        
     }
 
 

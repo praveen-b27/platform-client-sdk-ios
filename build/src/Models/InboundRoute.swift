@@ -40,35 +40,20 @@ public class InboundRoute: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.pattern = pattern
-        
         self.queue = queue
-        
         self.priority = priority
-        
         self.skills = skills
-        
         self.language = language
-        
         self.fromName = fromName
-        
         self.fromEmail = fromEmail
-        
         self.flow = flow
-        
         self.replyEmailAddress = replyEmailAddress
-        
         self.autoBcc = autoBcc
-        
         self.spamFlow = spamFlow
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

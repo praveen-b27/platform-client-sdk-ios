@@ -18,11 +18,8 @@ public class ActionConfig: Codable {
     public var response: ResponseConfig?
 
     public init(request: RequestConfig?, response: ResponseConfig?) {
-        
         self.request = request
-        
         self.response = response
-        
     }
 
 

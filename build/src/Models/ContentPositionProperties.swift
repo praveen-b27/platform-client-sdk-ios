@@ -21,15 +21,10 @@ public class ContentPositionProperties: Codable {
     public var _right: String?
 
     public init(top: String?, bottom: String?, _left: String?, _right: String?) {
-        
         self.top = top
-        
         self.bottom = bottom
-        
         self._left = _left
-        
         self._right = _right
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

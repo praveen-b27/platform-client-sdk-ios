@@ -33,29 +33,17 @@ public class OAuthAuthorization: Codable {
     public var selfUri: String?
 
     public init(client: OAuthClient?, scope: [String]?, roles: [String]?, resourceOwner: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, pending: Bool?, state: State?, selfUri: String?) {
-        
         self.client = client
-        
         self.scope = scope
-        
         self.roles = roles
-        
         self.resourceOwner = resourceOwner
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.pending = pending
-        
         self.state = state
-        
         self.selfUri = selfUri
-        
     }
 
 

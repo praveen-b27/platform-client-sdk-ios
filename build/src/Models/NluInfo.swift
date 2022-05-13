@@ -17,15 +17,10 @@ public class NluInfo: Codable {
     public var engineVersion: String?
 
     public init(domain: AddressableEntityRef?, version: NluDomainVersion?, intents: [Intent]?, engineVersion: String?) {
-        
         self.domain = domain
-        
         self.version = version
-        
         self.intents = intents
-        
         self.engineVersion = engineVersion
-        
     }
 
 

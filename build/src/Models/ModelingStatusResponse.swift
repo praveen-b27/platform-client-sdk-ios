@@ -24,19 +24,14 @@ public class ModelingStatusResponse: Codable {
     public var status: Status?
     /** If the request could not be properly processed, error details will be given here. */
     public var errorDetails: [ModelingProcessingError]?
-    /** The uri of the modeling result. It has a value if the status is either &#39;Success&#39;, &#39;PartialFailure&#39;, or &#39;Failed&#39;. */
+    /** The uri of the modeling result. It has a value if the status is either 'Success', 'PartialFailure', or 'Failed'. */
     public var modelingResultUri: String?
 
     public init(_id: String?, status: Status?, errorDetails: [ModelingProcessingError]?, modelingResultUri: String?) {
-        
         self._id = _id
-        
         self.status = status
-        
         self.errorDetails = errorDetails
-        
         self.modelingResultUri = modelingResultUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

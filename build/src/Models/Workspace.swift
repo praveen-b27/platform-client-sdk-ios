@@ -34,31 +34,18 @@ public class Workspace: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, type: ModelType?, isCurrentUserWorkspace: Bool?, user: DomainEntityRef?, bucket: String?, dateCreated: Date?, dateModified: Date?, summary: WorkspaceSummary?, acl: [String]?, _description: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.type = type
-        
         self.isCurrentUserWorkspace = isCurrentUserWorkspace
-        
         self.user = user
-        
         self.bucket = bucket
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.summary = summary
-        
         self.acl = acl
-        
         self._description = _description
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

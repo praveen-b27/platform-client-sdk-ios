@@ -28,7 +28,7 @@ public class CreateObjective: Codable {
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** The id of this objective&#39;s base template */
+    /** The id of this objective's base template */
     public var templateId: String?
     /** Objective zone specifies min,max points and values for the associated metric */
     public var zones: [ObjectiveZone]?
@@ -40,31 +40,21 @@ public class CreateObjective: Codable {
     public var mediaTypes: [MediaTypes]?
     /** A list of queue ids for the metric */
     public var queueIds: [String]?
-    /** A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;. */
+    /** A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\". */
     public var topicIdsFilterType: TopicIdsFilterType?
     /** start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateStart: Date?
 
     public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, topicIds: [String]?, mediaTypes: [MediaTypes]?, queueIds: [String]?, topicIdsFilterType: TopicIdsFilterType?, dateStart: Date?) {
-        
         self._id = _id
-        
         self.templateId = templateId
-        
         self.zones = zones
-        
         self.enabled = enabled
-        
         self.topicIds = topicIds
-        
         self.mediaTypes = mediaTypes
-        
         self.queueIds = queueIds
-        
         self.topicIdsFilterType = topicIdsFilterType
-        
         self.dateStart = dateStart
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -25,19 +25,12 @@ public class SingleWorkdayAverageValues: Codable {
     public var performanceProfile: AddressableEntityRef?
 
     public init(dateWorkday: Date?, division: Division?, user: UserReference?, timezone: String?, results: [WorkdayValuesMetricItem]?, performanceProfile: AddressableEntityRef?) {
-        
         self.dateWorkday = dateWorkday
-        
         self.division = division
-        
         self.user = user
-        
         self.timezone = timezone
-        
         self.results = results
-        
         self.performanceProfile = performanceProfile
-        
     }
 
 

@@ -41,27 +41,16 @@ public class AdherenceExplanationNotification: Codable {
     public var selfUri: String?
 
     public init(_id: String?, agent: UserReference?, managementUnit: ManagementUnitReference?, businessUnit: BusinessUnitReference?, startDate: Date?, lengthMinutes: Int?, status: Status?, type: ModelType?, notes: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.agent = agent
-        
         self.managementUnit = managementUnit
-        
         self.businessUnit = businessUnit
-        
         self.startDate = startDate
-        
         self.lengthMinutes = lengthMinutes
-        
         self.status = status
-        
         self.type = type
-        
         self.notes = notes
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

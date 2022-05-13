@@ -17,11 +17,8 @@ public class SearchShiftTradesRequest: Codable {
     public var receivingShiftIds: [String]?
 
     public init(receivingScheduleId: String?, receivingShiftIds: [String]?) {
-        
         self.receivingScheduleId = receivingScheduleId
-        
         self.receivingShiftIds = receivingShiftIds
-        
     }
 
 

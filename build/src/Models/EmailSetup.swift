@@ -15,9 +15,7 @@ public class EmailSetup: Codable {
     public var rootDomain: String?
 
     public init(rootDomain: String?) {
-        
         self.rootDomain = rootDomain
-        
     }
 
 

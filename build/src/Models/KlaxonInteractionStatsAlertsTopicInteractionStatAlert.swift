@@ -71,39 +71,22 @@ public class KlaxonInteractionStatsAlertsTopicInteractionStatAlert: Codable {
     public var alertTypes: [AlertTypes]?
 
     public init(_id: String?, name: String?, ruleId: String?, dimension: Dimension?, dimensionValue: String?, dimensionValueName: String?, metric: Metric?, mediaType: MediaType?, numericRange: NumericRange?, statistic: Statistic?, value: Double?, unread: Bool?, startDate: Date?, endDate: Date?, notificationUsers: [KlaxonInteractionStatsAlertsTopicNotificationUser]?, alertTypes: [AlertTypes]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.ruleId = ruleId
-        
         self.dimension = dimension
-        
         self.dimensionValue = dimensionValue
-        
         self.dimensionValueName = dimensionValueName
-        
         self.metric = metric
-        
         self.mediaType = mediaType
-        
         self.numericRange = numericRange
-        
         self.statistic = statistic
-        
         self.value = value
-        
         self.unread = unread
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.notificationUsers = notificationUsers
-        
         self.alertTypes = alertTypes
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

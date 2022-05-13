@@ -21,23 +21,14 @@ public class UserConversationSummary: Codable {
     public var video: MediaSummary?
 
     public init(userId: String?, call: MediaSummary?, callback: MediaSummary?, email: MediaSummary?, message: MediaSummary?, chat: MediaSummary?, socialExpression: MediaSummary?, video: MediaSummary?) {
-        
         self.userId = userId
-        
         self.call = call
-        
         self.callback = callback
-        
         self.email = email
-        
         self.message = message
-        
         self.chat = chat
-        
         self.socialExpression = socialExpression
-        
         self.video = video
-        
     }
 
 

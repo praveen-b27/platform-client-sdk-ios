@@ -15,11 +15,8 @@ public class EdgeLogicalInterfacesChangeTopicDomainLogicalInterfaceChange: Codab
     public var errorInfo: EdgeLogicalInterfacesChangeTopicErrorInfo?
 
     public init(_id: String?, errorInfo: EdgeLogicalInterfacesChangeTopicErrorInfo?) {
-        
         self._id = _id
-        
         self.errorInfo = errorInfo
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

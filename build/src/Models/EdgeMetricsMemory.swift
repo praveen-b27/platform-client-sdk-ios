@@ -19,13 +19,9 @@ public class EdgeMetricsMemory: Codable {
     public var totalBytes: Double?
 
     public init(availableBytes: Double?, type: String?, totalBytes: Double?) {
-        
         self.availableBytes = availableBytes
-        
         self.type = type
-        
         self.totalBytes = totalBytes
-        
     }
 
 

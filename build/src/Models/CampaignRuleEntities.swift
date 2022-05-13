@@ -17,11 +17,8 @@ public class CampaignRuleEntities: Codable {
     public var sequences: [DomainEntityRef]?
 
     public init(campaigns: [DomainEntityRef]?, sequences: [DomainEntityRef]?) {
-        
         self.campaigns = campaigns
-        
         self.sequences = sequences
-        
     }
 
 

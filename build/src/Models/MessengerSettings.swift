@@ -26,19 +26,12 @@ public class MessengerSettings: Codable {
     public var homeScreen: MessengerHomeScreen?
 
     public init(enabled: Bool?, styles: MessengerStyles?, launcherButton: LauncherButtonSettings?, fileUpload: FileUploadSettings?, apps: MessengerApps?, homeScreen: MessengerHomeScreen?) {
-        
         self.enabled = enabled
-        
         self.styles = styles
-        
         self.launcherButton = launcherButton
-        
         self.fileUpload = fileUpload
-        
         self.apps = apps
-        
         self.homeScreen = homeScreen
-        
     }
 
 

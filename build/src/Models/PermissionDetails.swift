@@ -28,15 +28,10 @@ public class PermissionDetails: Codable {
     public var enforced: Bool?
 
     public init(type: ModelType?, permissions: [String]?, allowsCurrentUser: Bool?, enforced: Bool?) {
-        
         self.type = type
-        
         self.permissions = permissions
-        
         self.allowsCurrentUser = allowsCurrentUser
-        
         self.enforced = enforced
-        
     }
 
 

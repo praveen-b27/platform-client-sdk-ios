@@ -114,109 +114,57 @@ public class HomerRecord: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, date: Date?, milliTs: String?, microTs: String?, method: String?, replyReason: String?, ruri: String?, ruriUser: String?, ruriDomain: String?, fromUser: String?, fromDomain: String?, fromTag: String?, toUser: String?, toDomain: String?, toTag: String?, pidUser: String?, contactUser: String?, authUser: String?, callid: String?, callidAleg: String?, via1: String?, via1Branch: String?, cseq: String?, diversion: String?, reason: String?, contentType: String?, auth: String?, userAgent: String?, sourceIp: String?, sourcePort: String?, destinationIp: String?, destinationPort: String?, contactIp: String?, contactPort: String?, originatorIp: String?, originatorPort: String?, correlationId: String?, proto: String?, family: String?, rtpStat: String?, type: String?, node: String?, trans: String?, dbnode: String?, msg: String?, sourceAlias: String?, destinationAlias: String?, conversationId: String?, participantId: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.date = date
-        
         self.milliTs = milliTs
-        
         self.microTs = microTs
-        
         self.method = method
-        
         self.replyReason = replyReason
-        
         self.ruri = ruri
-        
         self.ruriUser = ruriUser
-        
         self.ruriDomain = ruriDomain
-        
         self.fromUser = fromUser
-        
         self.fromDomain = fromDomain
-        
         self.fromTag = fromTag
-        
         self.toUser = toUser
-        
         self.toDomain = toDomain
-        
         self.toTag = toTag
-        
         self.pidUser = pidUser
-        
         self.contactUser = contactUser
-        
         self.authUser = authUser
-        
         self.callid = callid
-        
         self.callidAleg = callidAleg
-        
         self.via1 = via1
-        
         self.via1Branch = via1Branch
-        
         self.cseq = cseq
-        
         self.diversion = diversion
-        
         self.reason = reason
-        
         self.contentType = contentType
-        
         self.auth = auth
-        
         self.userAgent = userAgent
-        
         self.sourceIp = sourceIp
-        
         self.sourcePort = sourcePort
-        
         self.destinationIp = destinationIp
-        
         self.destinationPort = destinationPort
-        
         self.contactIp = contactIp
-        
         self.contactPort = contactPort
-        
         self.originatorIp = originatorIp
-        
         self.originatorPort = originatorPort
-        
         self.correlationId = correlationId
-        
         self.proto = proto
-        
         self.family = family
-        
         self.rtpStat = rtpStat
-        
         self.type = type
-        
         self.node = node
-        
         self.trans = trans
-        
         self.dbnode = dbnode
-        
         self.msg = msg
-        
         self.sourceAlias = sourceAlias
-        
         self.destinationAlias = destinationAlias
-        
         self.conversationId = conversationId
-        
         self.participantId = participantId
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -30,17 +30,11 @@ public class RoutePathRequest: Codable {
     public var sourcePlanningGroup: SourcePlanningGroupRequest?
 
     public init(queueId: String?, mediaType: MediaType?, languageId: String?, skillIds: [String]?, sourcePlanningGroup: SourcePlanningGroupRequest?) {
-        
         self.queueId = queueId
-        
         self.mediaType = mediaType
-        
         self.languageId = languageId
-        
         self.skillIds = skillIds
-        
         self.sourcePlanningGroup = sourcePlanningGroup
-        
     }
 
 

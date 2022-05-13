@@ -16,13 +16,9 @@ public class StatEventFlowOutcomeTopicMetricStats: Codable {
     public var stats: [String:Double]?
 
     public init(metric: String?, qualifier: String?, stats: [String:Double]?) {
-        
         self.metric = metric
-        
         self.qualifier = qualifier
-        
         self.stats = stats
-        
     }
 
 

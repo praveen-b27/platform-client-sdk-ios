@@ -12,7 +12,7 @@ import Foundation
 
 public class ScimV2SchemaDefinition: Codable {
 
-    /** The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;returned\&quot; is set to \&quot;always\&quot;. */
+    /** The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readOnly\". \"returned\" is set to \"always\". */
     public var _id: String?
     /** The name of the schema. */
     public var name: String?
@@ -20,21 +20,15 @@ public class ScimV2SchemaDefinition: Codable {
     public var _description: String?
     /** The list of service provider attributes. */
     public var attributes: [ScimV2SchemaAttribute]?
-    /** The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;Schema\&quot; resources. */
+    /** The metadata of the SCIM resource. Only \"location\" and \"resourceType\" are set for \"Schema\" resources. */
     public var meta: ScimMetadata?
 
     public init(_id: String?, name: String?, _description: String?, attributes: [ScimV2SchemaAttribute]?, meta: ScimMetadata?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.attributes = attributes
-        
         self.meta = meta
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

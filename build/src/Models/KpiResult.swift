@@ -28,17 +28,11 @@ public class KpiResult: Codable {
     public var mediaType: MediaType?
 
     public init(kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, mediaType: MediaType?) {
-        
         self.kpiTotalOn = kpiTotalOn
-        
         self.kpiTotalOff = kpiTotalOff
-        
         self.interactionCountOn = interactionCountOn
-        
         self.interactionCountOff = interactionCountOff
-        
         self.mediaType = mediaType
-        
     }
 
 

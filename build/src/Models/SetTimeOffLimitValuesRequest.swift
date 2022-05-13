@@ -17,11 +17,8 @@ public class SetTimeOffLimitValuesRequest: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(values: [TimeOffLimitRange]?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.values = values
-        
         self.metadata = metadata
-        
     }
 
 

@@ -23,17 +23,11 @@ public class GenericTemplate: Codable {
     public var actions: RecordingContentActions?
 
     public init(title: String?, _description: String?, url: String?, components: [RecordingButtonComponent]?, actions: RecordingContentActions?) {
-        
         self.title = title
-        
         self._description = _description
-        
         self.url = url
-        
         self.components = components
-        
         self.actions = actions
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

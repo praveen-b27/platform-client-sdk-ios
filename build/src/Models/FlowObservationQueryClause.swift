@@ -21,11 +21,8 @@ public class FlowObservationQueryClause: Codable {
     public var predicates: [FlowObservationQueryPredicate]?
 
     public init(type: ModelType?, predicates: [FlowObservationQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

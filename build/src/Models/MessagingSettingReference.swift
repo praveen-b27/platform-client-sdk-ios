@@ -34,27 +34,16 @@ public class MessagingSettingReference: Codable {
     public var event: EventSetting?
 
     public init(_id: String?, name: String?, selfUri: String?, dateCreated: Date?, dateModified: Date?, version: String?, createdBy: DomainEntityRef?, updatedBy: DomainEntityRef?, content: ContentSetting?, event: EventSetting?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.selfUri = selfUri
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.createdBy = createdBy
-        
         self.updatedBy = updatedBy
-        
         self.content = content
-        
         self.event = event
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

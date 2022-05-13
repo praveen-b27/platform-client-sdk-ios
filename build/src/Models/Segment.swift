@@ -23,17 +23,11 @@ public class Segment: Codable {
     public var disconnectType: String?
 
     public init(startTime: Date?, endTime: Date?, type: String?, howEnded: String?, disconnectType: String?) {
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.type = type
-        
         self.howEnded = howEnded
-        
         self.disconnectType = disconnectType
-        
     }
 
 

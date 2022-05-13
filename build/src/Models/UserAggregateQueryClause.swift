@@ -21,11 +21,8 @@ public class UserAggregateQueryClause: Codable {
     public var predicates: [UserAggregateQueryPredicate]?
 
     public init(type: ModelType?, predicates: [UserAggregateQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

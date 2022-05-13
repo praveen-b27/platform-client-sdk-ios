@@ -15,9 +15,7 @@ public class EdgeRebootParameters: Codable {
     public var callDrainingWaitTimeSeconds: Int?
 
     public init(callDrainingWaitTimeSeconds: Int?) {
-        
         self.callDrainingWaitTimeSeconds = callDrainingWaitTimeSeconds
-        
     }
 
 

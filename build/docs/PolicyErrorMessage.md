@@ -8,7 +8,7 @@ title: PolicyErrorMessage
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **statusCode** | **Int** |  | [optional] |
-| **userMessage** | [**JSON**](JSON.html) |  | [optional] |
+| **userMessage** | [**JSON**](.html) |  | [optional] |
 | **userParamsMessage** | **String** |  | [optional] |
 | **errorCode** | **String** |  | [optional] |
 | **correlationId** | **String** |  | [optional] |

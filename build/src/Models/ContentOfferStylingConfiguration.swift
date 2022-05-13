@@ -27,21 +27,13 @@ public class ContentOfferStylingConfiguration: Codable {
     public var body: TextStyleProperties?
 
     public init(position: ContentPositionProperties?, offer: ContentOfferStyleProperties?, closeButton: CloseButtonStyleProperties?, ctaButton: CtaButtonStyleProperties?, title: TextStyleProperties?, headline: TextStyleProperties?, body: TextStyleProperties?) {
-        
         self.position = position
-        
         self.offer = offer
-        
         self.closeButton = closeButton
-        
         self.ctaButton = ctaButton
-        
         self.title = title
-        
         self.headline = headline
-        
         self.body = body
-        
     }
 
 

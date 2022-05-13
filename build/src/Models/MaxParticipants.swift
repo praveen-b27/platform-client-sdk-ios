@@ -15,9 +15,7 @@ public class MaxParticipants: Codable {
     public var maxParticipants: Int?
 
     public init(maxParticipants: Int?) {
-        
         self.maxParticipants = maxParticipants
-        
     }
 
 

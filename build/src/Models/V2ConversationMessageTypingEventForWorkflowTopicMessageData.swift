@@ -15,11 +15,8 @@ public class V2ConversationMessageTypingEventForWorkflowTopicMessageData: Codabl
     public var normalizedMessage: V2ConversationMessageTypingEventForWorkflowTopicConversationNormalizedMessage?
 
     public init(conversationId: String?, normalizedMessage: V2ConversationMessageTypingEventForWorkflowTopicConversationNormalizedMessage?) {
-        
         self.conversationId = conversationId
-        
         self.normalizedMessage = normalizedMessage
-        
     }
 
 

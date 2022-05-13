@@ -15,9 +15,7 @@ public class EdgeNetworkDiagnosticRequest: Codable {
     public var host: String?
 
     public init(host: String?) {
-        
         self.host = host
-        
     }
 
 

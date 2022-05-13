@@ -19,13 +19,9 @@ public class ProcessScheduleUpdateUploadRequest: Codable {
     public var managementUnitIdsForAddedTeamUsers: [String]?
 
     public init(uploadKey: String?, teamIds: [String]?, managementUnitIdsForAddedTeamUsers: [String]?) {
-        
         self.uploadKey = uploadKey
-        
         self.teamIds = teamIds
-        
         self.managementUnitIdsForAddedTeamUsers = managementUnitIdsForAddedTeamUsers
-        
     }
 
 

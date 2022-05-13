@@ -13,15 +13,12 @@ public class QueueConversationScreenShareEventTopicScoredAgent: Codable {
 
     /** A UriReference for a resource */
     public var agent: QueueConversationScreenShareEventTopicUriReference?
-    /** Agent&#39;s score for the current conversation, from 0 - 100, higher being better */
+    /** Agent's score for the current conversation, from 0 - 100, higher being better */
     public var score: Int?
 
     public init(agent: QueueConversationScreenShareEventTopicUriReference?, score: Int?) {
-        
         self.agent = agent
-        
         self.score = score
-        
     }
 
 

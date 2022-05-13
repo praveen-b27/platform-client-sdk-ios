@@ -19,25 +19,18 @@ public class CreateWebChatConversationRequest: Codable {
     public var routingTarget: WebChatRoutingTarget?
     /** The guest member info to use for the new chat conversation. */
     public var memberInfo: GuestMemberInfo?
-    /** If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \&quot;POST /api/v2/signeddata\&quot; resource. */
+    /** If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \"POST /api/v2/signeddata\" resource. */
     public var memberAuthToken: String?
-    /** A subset of the Journey System&#39;s data relevant to this conversation/session request (for external linkage and internal usage/context). */
+    /** A subset of the Journey System's data relevant to this conversation/session request (for external linkage and internal usage/context). */
     public var journeyContext: JourneyContext?
 
     public init(organizationId: String?, deploymentId: String?, routingTarget: WebChatRoutingTarget?, memberInfo: GuestMemberInfo?, memberAuthToken: String?, journeyContext: JourneyContext?) {
-        
         self.organizationId = organizationId
-        
         self.deploymentId = deploymentId
-        
         self.routingTarget = routingTarget
-        
         self.memberInfo = memberInfo
-        
         self.memberAuthToken = memberAuthToken
-        
         self.journeyContext = journeyContext
-        
     }
 
 

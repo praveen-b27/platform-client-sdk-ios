@@ -15,9 +15,7 @@ public class TypingSetting: Codable {
     public var on: SettingDirection?
 
     public init(on: SettingDirection?) {
-        
         self.on = on
-        
     }
 
 

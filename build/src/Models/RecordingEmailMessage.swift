@@ -24,27 +24,16 @@ public class RecordingEmailMessage: Codable {
     public var time: Date?
 
     public init(htmlBody: String?, textBody: String?, _id: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, subject: String?, attachments: [EmailAttachment]?, time: Date?) {
-        
         self.htmlBody = htmlBody
-        
         self.textBody = textBody
-        
         self._id = _id
-        
         self.to = to
-        
         self.cc = cc
-        
         self.bcc = bcc
-        
         self.from = from
-        
         self.subject = subject
-        
         self.attachments = attachments
-        
         self.time = time
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

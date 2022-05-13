@@ -21,15 +21,10 @@ public class RegisterArchitectJobResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, presignedUrl: String?, headers: [String:String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.presignedUrl = presignedUrl
-        
         self.headers = headers
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

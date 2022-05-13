@@ -17,11 +17,8 @@ public class FacetInfo: Codable {
     public var entries: [Entry]?
 
     public init(name: String?, entries: [Entry]?) {
-        
         self.name = name
-        
         self.entries = entries
-        
     }
 
 

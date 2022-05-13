@@ -16,13 +16,9 @@ public class AnalyticsConversationQueryResponse: Codable {
     public var totalHits: Int?
 
     public init(aggregations: [AggregationResult]?, conversations: [AnalyticsConversationWithoutAttributes]?, totalHits: Int?) {
-        
         self.aggregations = aggregations
-        
         self.conversations = conversations
-        
         self.totalHits = totalHits
-        
     }
 
 

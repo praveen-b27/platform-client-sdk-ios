@@ -36,25 +36,15 @@ public class EncryptionKey: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, createDate: Date?, keydataSummary: String?, user: User?, localEncryptionConfiguration: LocalEncryptionConfiguration?, keyConfigurationType: KeyConfigurationType?, kmsKeyArn: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.createDate = createDate
-        
         self.keydataSummary = keydataSummary
-        
         self.user = user
-        
         self.localEncryptionConfiguration = localEncryptionConfiguration
-        
         self.keyConfigurationType = keyConfigurationType
-        
         self.kmsKeyArn = kmsKeyArn
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

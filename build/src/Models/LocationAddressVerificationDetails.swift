@@ -28,15 +28,10 @@ public class LocationAddressVerificationDetails: Codable {
     public var service: String?
 
     public init(status: Status?, dateFinished: Date?, dateStarted: Date?, service: String?) {
-        
         self.status = status
-        
         self.dateFinished = dateFinished
-        
         self.dateStarted = dateStarted
-        
         self.service = service
-        
     }
 
 

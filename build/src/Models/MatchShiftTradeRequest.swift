@@ -19,13 +19,9 @@ public class MatchShiftTradeRequest: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(receivingScheduleId: String?, receivingShiftId: String?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.receivingScheduleId = receivingScheduleId
-        
         self.receivingShiftId = receivingShiftId
-        
         self.metadata = metadata
-        
     }
 
 

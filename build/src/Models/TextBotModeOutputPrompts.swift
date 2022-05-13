@@ -16,9 +16,7 @@ public class TextBotModeOutputPrompts: Codable {
     public var segments: [TextBotPromptSegment]?
 
     public init(segments: [TextBotPromptSegment]?) {
-        
         self.segments = segments
-        
     }
 
 

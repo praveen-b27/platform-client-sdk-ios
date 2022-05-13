@@ -387,6 +387,8 @@ Batch-delete a list of prompts
 
 Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
+
+
 Wraps DELETE /api/v2/architect/prompts  
 
 Requires ALL permissions: 
@@ -645,6 +647,8 @@ Batch-delete a list of flows
 
 Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
 
+
+
 Wraps DELETE /api/v2/flows  
 
 Requires ANY permissions: 
@@ -697,6 +701,8 @@ deletes a specific datatable by id
 
 Deletes an entire datatable (including the schema and data) with a given datatableId
 
+
+
 Wraps DELETE /api/v2/flows/datatables/{datatableId}  
 
 Requires ANY permissions: 
@@ -712,7 +718,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let datatableId: String = "" // id of datatable
-let force: Bool = false // force delete, even if in use
+let force: Bool = true // force delete, even if in use
 
 // Code example
 ArchitectAPI.deleteFlowsDatatable(datatableId: datatableId, force: force) { (error) in
@@ -730,7 +736,7 @@ ArchitectAPI.deleteFlowsDatatable(datatableId: datatableId, force: force) { (err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
-| **force** | **Bool**| force delete, even if in use | [optional] [default to false] |
+| **force** | **Bool**| force delete, even if in use | [optional] |
 {: class="table-striped"}
 
 
@@ -749,6 +755,8 @@ ArchitectAPI.deleteFlowsDatatable(datatableId: datatableId, force: force) { (err
 Delete a row entry
 
 Deletes a row with a given rowId (the value of the key field).
+
+
 
 Wraps DELETE /api/v2/flows/datatables/{datatableId}/rows/{rowId}  
 
@@ -798,7 +806,7 @@ ArchitectAPI.deleteFlowsDatatableRow(datatableId: datatableId, rowId: rowId) { (
 
 
 
-> [Empty](Empty.html) deleteFlowsMilestone(milestoneId)
+> [JSON](JSON.html) deleteFlowsMilestone(milestoneId)
 
 Delete a flow milestone.
 
@@ -842,7 +850,7 @@ ArchitectAPI.deleteFlowsMilestone(milestoneId: milestoneId) { (response, error) 
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="getArchitectDependencytracking"></a>
 
@@ -871,13 +879,13 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let name: String = "" // Object name to search for
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let objectType: [String] = [ArchitectAPI.ObjectType_getArchitectDependencytracking.enummember.rawValue] // Object type(s) to search for
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let objectType: [String] = [""] // Object type(s) to search for
 let consumedResources: Bool = true // Include resources each result item consumes
 let consumingResources: Bool = true // Include resources that consume each result item
-let consumedResourceType: [String] = [ArchitectAPI.ConsumedResourceType_getArchitectDependencytracking.enummember.rawValue] // Types of consumed resources to return, if consumed resources are requested
-let consumingResourceType: [String] = [ArchitectAPI.ConsumingResourceType_getArchitectDependencytracking.enummember.rawValue] // Types of consuming resources to return, if consuming resources are requested
+let consumedResourceType: [String] = [""] // Types of consumed resources to return, if consumed resources are requested
+let consumingResourceType: [String] = [""] // Types of consuming resources to return, if consuming resources are requested
 
 // Code example
 ArchitectAPI.getArchitectDependencytracking(name: name, pageNumber: pageNumber, pageSize: pageSize, objectType: objectType, consumedResources: consumedResources, consumingResources: consumingResources, consumedResourceType: consumedResourceType, consumingResourceType: consumingResourceType) { (response, error) in
@@ -896,8 +904,8 @@ ArchitectAPI.getArchitectDependencytracking(name: name, pageNumber: pageNumber, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **String**| Object name to search for | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
 | **consumedResources** | **Bool**| Include resources each result item consumes | [optional] |
 | **consumingResources** | **Bool**| Include resources that consume each result item | [optional] |
@@ -987,9 +995,9 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let _id: String = "" // Consuming object ID
 let version: String = "" // Consuming object version
 let objectType: ArchitectAPI.ObjectType_getArchitectDependencytrackingConsumedresources = ArchitectAPI.ObjectType_getArchitectDependencytrackingConsumedresources.enummember // Consuming object type.  Only versioned types are allowed here.
-let resourceType: [String] = [ArchitectAPI.ResourceType_getArchitectDependencytrackingConsumedresources.enummember.rawValue] // Types of consumed resources to show
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let resourceType: [String] = [""] // Types of consumed resources to show
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 ArchitectAPI.getArchitectDependencytrackingConsumedresources(_id: _id, version: version, objectType: objectType, resourceType: resourceType, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1011,8 +1019,8 @@ ArchitectAPI.getArchitectDependencytrackingConsumedresources(_id: _id, version: 
 | **version** | **String**| Consuming object version | |
 | **objectType** | **String**| Consuming object type.  Only versioned types are allowed here. |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
 | **resourceType** | [**[String]**](String.html)| Types of consumed resources to show | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1048,10 +1056,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let _id: String = "" // Consumed object ID
 let objectType: ArchitectAPI.ObjectType_getArchitectDependencytrackingConsumingresources = ArchitectAPI.ObjectType_getArchitectDependencytrackingConsumingresources.enummember // Consumed object type
-let resourceType: [String] = [ArchitectAPI.ResourceType_getArchitectDependencytrackingConsumingresources.enummember.rawValue] // Types of consuming resources to show.  Only versioned types are allowed here.
+let resourceType: [String] = [""] // Types of consuming resources to show.  Only versioned types are allowed here.
 let version: String = "" // Object version
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let flowFilter: ArchitectAPI.FlowFilter_getArchitectDependencytrackingConsumingresources = ArchitectAPI.FlowFilter_getArchitectDependencytrackingConsumingresources.enummember // Show only checkedIn or published flows
 
 // Code example
@@ -1074,8 +1082,8 @@ ArchitectAPI.getArchitectDependencytrackingConsumingresources(_id: _id, objectTy
 | **objectType** | **String**| Consumed object type |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
 | **resourceType** | [**[String]**](String.html)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
 | **version** | **String**| Object version | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **flowFilter** | **String**| Show only checkedIn or published flows | [optional]<br />**Values**: checkedin ("checkedIn"), published ("published") |
 {: class="table-striped"}
 
@@ -1111,12 +1119,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let name: String = "" // Name to search for
-let objectType: [String] = [ArchitectAPI.ObjectType_getArchitectDependencytrackingDeletedresourceconsumers.enummember.rawValue] // Object type(s) to search for
+let objectType: [String] = [""] // Object type(s) to search for
 let flowFilter: ArchitectAPI.FlowFilter_getArchitectDependencytrackingDeletedresourceconsumers = ArchitectAPI.FlowFilter_getArchitectDependencytrackingDeletedresourceconsumers.enummember // Show only checkedIn or published flows
-let consumedResources: Bool = false // Return consumed resources?
-let consumedResourceType: [String] = [ArchitectAPI.ConsumedResourceType_getArchitectDependencytrackingDeletedresourceconsumers.enummember.rawValue] // Resource type(s) to return
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let consumedResources: Bool = true // Return consumed resources?
+let consumedResourceType: [String] = [""] // Resource type(s) to return
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 ArchitectAPI.getArchitectDependencytrackingDeletedresourceconsumers(name: name, objectType: objectType, flowFilter: flowFilter, consumedResources: consumedResources, consumedResourceType: consumedResourceType, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1137,10 +1145,10 @@ ArchitectAPI.getArchitectDependencytrackingDeletedresourceconsumers(name: name, 
 | **name** | **String**| Name to search for | [optional] |
 | **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
 | **flowFilter** | **String**| Show only checkedIn or published flows | [optional]<br />**Values**: checkedin ("checkedIn"), published ("published") |
-| **consumedResources** | **Bool**| Return consumed resources? | [optional] [default to false] |
+| **consumedResources** | **Bool**| Return consumed resources? | [optional] |
 | **consumedResourceType** | [**[String]**](String.html)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1179,8 +1187,8 @@ let version: String = "" // Object version
 let objectType: ArchitectAPI.ObjectType_getArchitectDependencytrackingObject = ArchitectAPI.ObjectType_getArchitectDependencytrackingObject.enummember // Object type
 let consumedResources: Bool = true // Include resources this item consumes
 let consumingResources: Bool = true // Include resources that consume this item
-let consumedResourceType: [String] = [ArchitectAPI.ConsumedResourceType_getArchitectDependencytrackingObject.enummember.rawValue] // Types of consumed resources to return, if consumed resources are requested
-let consumingResourceType: [String] = [ArchitectAPI.ConsumingResourceType_getArchitectDependencytrackingObject.enummember.rawValue] // Types of consuming resources to return, if consuming resources are requested
+let consumedResourceType: [String] = [""] // Types of consumed resources to return, if consumed resources are requested
+let consumingResourceType: [String] = [""] // Types of consuming resources to return, if consuming resources are requested
 let consumedResourceRequest: Bool = true // Indicate that this is going to look up a consumed resource object
 
 // Code example
@@ -1292,8 +1300,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 ArchitectAPI.getArchitectDependencytrackingTypes(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1311,8 +1319,8 @@ ArchitectAPI.getArchitectDependencytrackingTypes(pageNumber: pageNumber, pageSiz
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1347,11 +1355,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let name: String = "" // Name to search for
-let objectType: [String] = [ArchitectAPI.ObjectType_getArchitectDependencytrackingUpdatedresourceconsumers.enummember.rawValue] // Object type(s) to search for
-let consumedResources: Bool = false // Return consumed resources?
-let consumedResourceType: [String] = [ArchitectAPI.ConsumedResourceType_getArchitectDependencytrackingUpdatedresourceconsumers.enummember.rawValue] // Resource type(s) to return
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let objectType: [String] = [""] // Object type(s) to search for
+let consumedResources: Bool = true // Return consumed resources?
+let consumedResourceType: [String] = [""] // Resource type(s) to return
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 ArchitectAPI.getArchitectDependencytrackingUpdatedresourceconsumers(name: name, objectType: objectType, consumedResources: consumedResources, consumedResourceType: consumedResourceType, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1371,10 +1379,10 @@ ArchitectAPI.getArchitectDependencytrackingUpdatedresourceconsumers(name: name, 
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **String**| Name to search for | [optional] |
 | **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
-| **consumedResources** | **Bool**| Return consumed resources? | [optional] [default to false] |
+| **consumedResources** | **Bool**| Return consumed resources? | [optional] |
 | **consumedResourceType** | [**[String]**](String.html)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW") |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1460,10 +1468,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Sort by
-let sortOrder: String = "ASC" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let name: String = "" // Name of the Emergency Group to filter by.
 
 // Code example
@@ -1482,10 +1490,10 @@ ArchitectAPI.getArchitectEmergencygroups(pageNumber: pageNumber, pageSize: pageS
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name of the Emergency Group to filter by. | [optional] |
 {: class="table-striped"}
 
@@ -1572,10 +1580,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Sort by
-let sortOrder: String = "ASC" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let name: String = "" // Name of the IVR to filter by.
 
 // Code example
@@ -1594,10 +1602,10 @@ ArchitectAPI.getArchitectIvrs(pageNumber: pageNumber, pageSize: pageSize, sortBy
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name of the IVR to filter by. | [optional] |
 {: class="table-striped"}
 
@@ -1686,11 +1694,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let promptId: String = "" // Prompt ID
 let historyId: String = "" // History request ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortOrder: String = "desc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortOrder: String = "" // Sort order
 let sortBy: ArchitectAPI.SortBy_getArchitectPromptHistoryHistoryId = ArchitectAPI.SortBy_getArchitectPromptHistoryHistoryId.enummember // Sort by
-let action: [String] = [ArchitectAPI.Action_getArchitectPromptHistoryHistoryId.enummember.rawValue] // Flow actions to include (omit to include all)
+let action: [String] = [""] // Flow actions to include (omit to include all)
 
 // Code example
 ArchitectAPI.getArchitectPromptHistoryHistoryId(promptId: promptId, historyId: historyId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, sortBy: sortBy, action: action) { (response, error) in
@@ -1710,10 +1718,10 @@ ArchitectAPI.getArchitectPromptHistoryHistoryId(promptId: promptId, historyId: h
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **historyId** | **String**| History request ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortOrder** | **String**| Sort order | [optional] [default to desc] |
-| **sortBy** | **String**| Sort by | [optional] [default to timestamp]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
 | **action** | [**[String]**](String.html)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
 {: class="table-striped"}
 
@@ -1788,6 +1796,8 @@ Get a pageable list of user prompt resources
 
 The returned list is pageable, and query parameters can be used for filtering.
 
+
+
 Wraps GET /api/v2/architect/prompts/{promptId}/resources  
 
 Requires ALL permissions: 
@@ -1803,8 +1813,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let promptId: String = "" // Prompt ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 ArchitectAPI.getArchitectPromptResources(promptId: promptId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1823,8 +1833,8 @@ ArchitectAPI.getArchitectPromptResources(promptId: promptId, pageNumber: pageNum
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1844,6 +1854,8 @@ Get a pageable list of user prompts
 
 The returned list is pageable, and query parameters can be used for filtering.  Multiple names can be specified, in which case all matching prompts will be returned, and no other filters will be evaluated.
 
+
+
 Wraps GET /api/v2/architect/prompts  
 
 Requires ALL permissions: 
@@ -1858,13 +1870,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let name: [String] = [""] // Name
 let _description: String = "" // Description
 let nameOrDescription: String = "" // Name or description
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 
 // Code example
 ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
@@ -1882,13 +1894,13 @@ ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, nam
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **name** | [**[String]**](String.html)| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 {: class="table-striped"}
 
 
@@ -2026,10 +2038,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Sort by
-let sortOrder: String = "ASC" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let name: String = "" // Name of the Schedule Group to filter by.
 let scheduleIds: String = "" // A comma-delimited list of Schedule IDs to filter by.
 let divisionId: [String] = [""] // List of divisionIds on which to filter.
@@ -2050,10 +2062,10 @@ ArchitectAPI.getArchitectSchedulegroups(pageNumber: pageNumber, pageSize: pageSi
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name of the Schedule Group to filter by. | [optional] |
 | **scheduleIds** | **String**| A comma-delimited list of Schedule IDs to filter by. | [optional] |
 | **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
@@ -2090,10 +2102,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Sort by
-let sortOrder: String = "ASC" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let name: String = "" // Name of the Schedule to filter by.
 let divisionId: [String] = [""] // List of divisionIds on which to filter.
 
@@ -2113,10 +2125,10 @@ ArchitectAPI.getArchitectSchedules(pageNumber: pageNumber, pageSize: pageSize, s
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name of the Schedule to filter by. | [optional] |
 | **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
 {: class="table-striped"}
@@ -2206,11 +2218,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let promptId: String = "" // promptId
 let historyId: String = "" // History request ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortOrder: String = "desc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortOrder: String = "" // Sort order
 let sortBy: ArchitectAPI.SortBy_getArchitectSystempromptHistoryHistoryId = ArchitectAPI.SortBy_getArchitectSystempromptHistoryHistoryId.enummember // Sort by
-let action: [String] = [ArchitectAPI.Action_getArchitectSystempromptHistoryHistoryId.enummember.rawValue] // Flow actions to include (omit to include all)
+let action: [String] = [""] // Flow actions to include (omit to include all)
 
 // Code example
 ArchitectAPI.getArchitectSystempromptHistoryHistoryId(promptId: promptId, historyId: historyId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, sortBy: sortBy, action: action) { (response, error) in
@@ -2230,10 +2242,10 @@ ArchitectAPI.getArchitectSystempromptHistoryHistoryId(promptId: promptId, histor
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| promptId | |
 | **historyId** | **String**| History request ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortOrder** | **String**| Sort order | [optional] [default to desc] |
-| **sortBy** | **String**| Sort by | [optional] [default to timestamp]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
 | **action** | [**[String]**](String.html)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
 {: class="table-striped"}
 
@@ -2323,10 +2335,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let promptId: String = "" // Prompt ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 
 // Code example
 ArchitectAPI.getArchitectSystempromptResources(promptId: promptId, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
@@ -2345,10 +2357,10 @@ ArchitectAPI.getArchitectSystempromptResources(promptId: promptId, pageNumber: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 {: class="table-striped"}
 
 
@@ -2382,10 +2394,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let name: String = "" // Name
 let _description: String = "" // Description
 let nameOrDescription: String = "" // Name or description
@@ -2406,10 +2418,10 @@ ArchitectAPI.getArchitectSystemprompts(pageNumber: pageNumber, pageSize: pageSiz
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
@@ -2447,7 +2459,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
-let deleted: Bool = false // Deleted flows
+let deleted: Bool = true // Deleted flows
 
 // Code example
 ArchitectAPI.getFlow(flowId: flowId, deleted: deleted) { (response, error) in
@@ -2466,7 +2478,7 @@ ArchitectAPI.getFlow(flowId: flowId, deleted: deleted) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-| **deleted** | **Bool**| Deleted flows | [optional] [default to false] |
+| **deleted** | **Bool**| Deleted flows | [optional] |
 {: class="table-striped"}
 
 
@@ -2502,11 +2514,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
 let historyId: String = "" // History request ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortOrder: String = "desc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortOrder: String = "" // Sort order
 let sortBy: ArchitectAPI.SortBy_getFlowHistoryHistoryId = ArchitectAPI.SortBy_getFlowHistoryHistoryId.enummember // Sort by
-let action: [String] = [ArchitectAPI.Action_getFlowHistoryHistoryId.enummember.rawValue] // Flow actions to include (omit to include all)
+let action: [String] = [""] // Flow actions to include (omit to include all)
 
 // Code example
 ArchitectAPI.getFlowHistoryHistoryId(flowId: flowId, historyId: historyId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, sortBy: sortBy, action: action) { (response, error) in
@@ -2526,10 +2538,10 @@ ArchitectAPI.getFlowHistoryHistoryId(flowId: flowId, historyId: historyId, pageN
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
 | **historyId** | **String**| History request ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortOrder** | **String**| Sort order | [optional] [default to desc] |
-| **sortBy** | **String**| Sort by | [optional] [default to timestamp]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
 | **action** | [**[String]**](String.html)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
 {: class="table-striped"}
 
@@ -2565,7 +2577,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
-let deleted: Bool = false // Deleted flows
+let deleted: Bool = true // Deleted flows
 
 // Code example
 ArchitectAPI.getFlowLatestconfiguration(flowId: flowId, deleted: deleted) { (response, error) in
@@ -2584,7 +2596,7 @@ ArchitectAPI.getFlowLatestconfiguration(flowId: flowId, deleted: deleted) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-| **deleted** | **Bool**| Deleted flows | [optional] [default to false] |
+| **deleted** | **Bool**| Deleted flows | [optional] |
 {: class="table-striped"}
 
 
@@ -2731,8 +2743,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let deleted: Bool = true // Include Deleted flows
 
 // Code example
@@ -2752,8 +2764,8 @@ ArchitectAPI.getFlowVersions(flowId: flowId, pageNumber: pageNumber, pageSize: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **deleted** | **Bool**| Include Deleted flows | [optional] |
 {: class="table-striped"}
 
@@ -2774,6 +2786,8 @@ Get a pageable list of flows, filtered by query parameters
 
 If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
 
+
+
 Wraps GET /api/v2/flows  
 
 Requires ANY permissions: 
@@ -2788,11 +2802,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let type: [String] = [ArchitectAPI.ModelType_getFlows.enummember.rawValue] // Type
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let type: [String] = [""] // Type
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let _id: [String] = [""] // ID
 let name: String = "" // Name
 let _description: String = "" // Description
@@ -2802,10 +2816,10 @@ let editableBy: String = "" // Editable by
 let lockedBy: String = "" // Locked by
 let lockedByClientId: String = "" // Locked by client ID
 let secure: ArchitectAPI.Secure_getFlows = ArchitectAPI.Secure_getFlows.enummember // Secure
-let deleted: Bool = false // Include deleted
-let includeSchemas: Bool = false // Include variable schemas
-let publishedAfter: String = "" // Published after
-let publishedBefore: String = "" // Published before
+let deleted: Bool = true // Include deleted
+let includeSchemas: Bool = true // Include variable schemas
+let publishedAfter: String = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01 // Published after
+let publishedBefore: String = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01 // Published before
 let divisionId: [String] = [""] // division ID(s)
 
 // Code example
@@ -2825,10 +2839,10 @@ ArchitectAPI.getFlows(type: type, pageNumber: pageNumber, pageSize: pageSize, so
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | [**[String]**](String.html)| Type | [optional]<br />**Values**: bot ("bot"), commonmodule ("commonmodule"), digitalbot ("digitalbot"), inboundcall ("inboundcall"), inboundchat ("inboundchat"), inboundemail ("inboundemail"), inboundshortmessage ("inboundshortmessage"), outboundcall ("outboundcall"), inqueuecall ("inqueuecall"), inqueueemail ("inqueueemail"), inqueueshortmessage ("inqueueshortmessage"), speech ("speech"), securecall ("securecall"), surveyinvite ("surveyinvite"), voice ("voice"), voicemail ("voicemail"), workflow ("workflow"), workitem ("workitem") |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **_id** | [**[String]**](String.html)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
@@ -2838,8 +2852,8 @@ ArchitectAPI.getFlows(type: type, pageNumber: pageNumber, pageSize: pageSize, so
 | **lockedBy** | **String**| Locked by | [optional] |
 | **lockedByClientId** | **String**| Locked by client ID | [optional] |
 | **secure** | **String**| Secure | [optional]<br />**Values**: any ("any"), checkedin ("checkedin"), published ("published") |
-| **deleted** | **Bool**| Include deleted | [optional] [default to false] |
-| **includeSchemas** | **Bool**| Include variable schemas | [optional] [default to false] |
+| **deleted** | **Bool**| Include deleted | [optional] |
+| **includeSchemas** | **Bool**| Include variable schemas | [optional] |
 | **publishedAfter** | **String**| Published after | [optional] |
 | **publishedBefore** | **String**| Published before | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
@@ -2861,6 +2875,8 @@ ArchitectAPI.getFlows(type: type, pageNumber: pageNumber, pageSize: pageSize, so
 Returns a specific datatable by id
 
 Given a datatableId returns the datatable object and schema associated with it.
+
+
 
 Wraps GET /api/v2/flows/datatables/{datatableId}  
 
@@ -2915,6 +2931,8 @@ ArchitectAPI.getFlowsDatatable(datatableId: datatableId, expand: expand) { (resp
 Returns the state information about an export job
 
 Returns the state information about an export job.
+
+
 
 Wraps GET /api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}  
 
@@ -2971,6 +2989,8 @@ Returns the state information about an import job
 
 Returns the state information about an import job.
 
+
+
 Wraps GET /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}  
 
 Requires ANY permissions: 
@@ -3026,6 +3046,8 @@ Get all recent import jobs
 
 Get all recent import jobs
 
+
+
 Wraps GET /api/v2/flows/datatables/{datatableId}/import/jobs  
 
 Requires ANY permissions: 
@@ -3042,8 +3064,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let datatableId: String = "" // id of datatable
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 ArchitectAPI.getFlowsDatatableImportJobs(datatableId: datatableId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -3062,8 +3084,8 @@ ArchitectAPI.getFlowsDatatableImportJobs(datatableId: datatableId, pageNumber: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -3082,6 +3104,8 @@ ArchitectAPI.getFlowsDatatableImportJobs(datatableId: datatableId, pageNumber: p
 Returns a specific row for the datatable
 
 Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
+
+
 
 Wraps GET /api/v2/flows/datatables/{datatableId}/rows/{rowId}  
 
@@ -3120,7 +3144,7 @@ ArchitectAPI.getFlowsDatatableRow(datatableId: datatableId, rowId: rowId, showbr
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **rowId** | **String**| The key for the row | |
-| **showbrief** | **Bool**| if true returns just the key field for the row | [optional] [default to true] |
+| **showbrief** | **Bool**| if true returns just the key field for the row | [optional] |
 {: class="table-striped"}
 
 
@@ -3140,6 +3164,8 @@ Returns the rows for the datatable with the given id
 
 Returns all of the rows for the datatable with the given datatableId.  By default this will just be a truncated list returning the key for each row. Set showBrief to false to return all of the row contents.
 
+
+
 Wraps GET /api/v2/flows/datatables/{datatableId}/rows  
 
 Requires ANY permissions: 
@@ -3156,8 +3182,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let datatableId: String = "" // id of datatable
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let showbrief: Bool = true // If true returns just the key value of the row
 
 // Code example
@@ -3177,9 +3203,9 @@ ArchitectAPI.getFlowsDatatableRows(datatableId: datatableId, pageNumber: pageNum
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **showbrief** | **Bool**| If true returns just the key value of the row | [optional] [default to true] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **showbrief** | **Bool**| If true returns just the key value of the row | [optional] |
 {: class="table-striped"}
 
 
@@ -3199,6 +3225,8 @@ Retrieve a list of datatables for the org
 
 Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
 
+
+
 Wraps GET /api/v2/flows/datatables  
 
 Requires ANY permissions: 
@@ -3214,10 +3242,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let expand: ArchitectAPI.Expand_getFlowsDatatables = ArchitectAPI.Expand_getFlowsDatatables.enummember // Expand instructions for the result
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let sortBy: ArchitectAPI.SortBy_getFlowsDatatables = ArchitectAPI.SortBy_getFlowsDatatables.enummember // Sort by
-let sortOrder: String = "ascending" // Sort order
+let sortOrder: String = "" // Sort order
 let divisionId: [String] = [""] // division ID(s)
 let name: String = "" // Name to filter by
 
@@ -3238,10 +3266,10 @@ ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **expand** | **String**| Expand instructions for the result | [optional]<br />**Values**: schema ("schema") |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id]<br />**Values**: _id ("id"), name ("name") |
-| **sortOrder** | **String**| Sort order | [optional] [default to ascending] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: _id ("id"), name ("name") |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
 | **name** | **String**| Name to filter by | [optional] |
 {: class="table-striped"}
@@ -3262,6 +3290,8 @@ ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize
 Returns a specific datatable by id
 
 Given a datatableId returns the datatable object and schema associated with it.
+
+
 
 Wraps GET /api/v2/flows/datatables/divisionviews/{datatableId}  
 
@@ -3317,6 +3347,8 @@ Retrieve a list of datatables for the org
 
 Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
 
+
+
 Wraps GET /api/v2/flows/datatables/divisionviews  
 
 Requires ALL permissions: 
@@ -3332,10 +3364,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let expand: ArchitectAPI.Expand_getFlowsDatatablesDivisionviews = ArchitectAPI.Expand_getFlowsDatatablesDivisionviews.enummember // Expand instructions for the result
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let sortBy: ArchitectAPI.SortBy_getFlowsDatatablesDivisionviews = ArchitectAPI.SortBy_getFlowsDatatablesDivisionviews.enummember // Sort by
-let sortOrder: String = "ascending" // Sort order
+let sortOrder: String = "" // Sort order
 let divisionId: [String] = [""] // division ID(s)
 let name: String = "" // Name to filter by
 
@@ -3356,10 +3388,10 @@ ArchitectAPI.getFlowsDatatablesDivisionviews(expand: expand, pageNumber: pageNum
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **expand** | **String**| Expand instructions for the result | [optional]<br />**Values**: schema ("schema") |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id]<br />**Values**: _id ("id"), name ("name") |
-| **sortOrder** | **String**| Sort order | [optional] [default to ascending] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: _id ("id"), name ("name") |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
 | **name** | **String**| Name to filter by | [optional] |
 {: class="table-striped"}
@@ -3381,6 +3413,8 @@ Get a pageable list of basic flow information objects filterable by query parame
 
 This returns a simplified version of /flow consisting of name and type. If one or more IDs are specified, the search will fetch flows that match the given ID(s) and not use any additional supplied query parameters in the search.
 
+
+
 Wraps GET /api/v2/flows/divisionviews  
 
 Requires ALL permissions: 
@@ -3395,18 +3429,18 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let type: [String] = [ArchitectAPI.ModelType_getFlowsDivisionviews.enummember.rawValue] // Type
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let type: [String] = [""] // Type
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let _id: [String] = [""] // ID
 let name: String = "" // Name
 let publishVersionId: String = "" // Publish version ID
-let publishedAfter: String = "" // Published after
-let publishedBefore: String = "" // Published before
+let publishedAfter: String = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01 // Published after
+let publishedBefore: String = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01 // Published before
 let divisionId: [String] = [""] // division ID(s)
-let includeSchemas: Bool = false // Include variable schemas
+let includeSchemas: Bool = true // Include variable schemas
 
 // Code example
 ArchitectAPI.getFlowsDivisionviews(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, publishVersionId: publishVersionId, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId, includeSchemas: includeSchemas) { (response, error) in
@@ -3425,17 +3459,17 @@ ArchitectAPI.getFlowsDivisionviews(type: type, pageNumber: pageNumber, pageSize:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | [**[String]**](String.html)| Type | [optional]<br />**Values**: bot ("bot"), commonmodule ("commonmodule"), digitalbot ("digitalbot"), inboundcall ("inboundcall"), inboundchat ("inboundchat"), inboundemail ("inboundemail"), inboundshortmessage ("inboundshortmessage"), outboundcall ("outboundcall"), inqueuecall ("inqueuecall"), inqueueemail ("inqueueemail"), inqueueshortmessage ("inqueueshortmessage"), speech ("speech"), securecall ("securecall"), surveyinvite ("surveyinvite"), voice ("voice"), voicemail ("voicemail"), workflow ("workflow"), workitem ("workitem") |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **_id** | [**[String]**](String.html)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **publishVersionId** | **String**| Publish version ID | [optional] |
 | **publishedAfter** | **String**| Published after | [optional] |
 | **publishedBefore** | **String**| Published before | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
-| **includeSchemas** | **Bool**| Include variable schemas | [optional] [default to false] |
+| **includeSchemas** | **Bool**| Include variable schemas | [optional] |
 {: class="table-striped"}
 
 
@@ -3522,7 +3556,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let jobId: String = "" // Job ID
-let expand: [String] = [ArchitectAPI.Expand_getFlowsJob.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ArchitectAPI.getFlowsJob(jobId: jobId, expand: expand) { (response, error) in
@@ -3560,6 +3594,8 @@ ArchitectAPI.getFlowsJob(jobId: jobId, expand: expand) { (response, error) in
 Get a flow milestone
 
 Returns a specified flow milestone
+
+
 
 Wraps GET /api/v2/flows/milestones/{milestoneId}  
 
@@ -3613,6 +3649,8 @@ Get a pageable list of flow milestones, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
 
+
+
 Wraps GET /api/v2/flows/milestones  
 
 Requires ALL permissions: 
@@ -3627,10 +3665,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let _id: [String] = [""] // ID
 let name: String = "" // Name
 let _description: String = "" // Description
@@ -3653,10 +3691,10 @@ ArchitectAPI.getFlowsMilestones(pageNumber: pageNumber, pageSize: pageSize, sort
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **_id** | [**[String]**](String.html)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
@@ -3681,6 +3719,8 @@ Get a pageable list of basic flow milestone information objects filterable by qu
 
 This returns flow milestones consisting of name and division. If one or more IDs are specified, the search will fetch flow milestones that match the given ID(s) and not use any additional supplied query parameters in the search.
 
+
+
 Wraps GET /api/v2/flows/milestones/divisionviews  
 
 Requires ALL permissions: 
@@ -3695,10 +3735,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let _id: [String] = [""] // ID
 let name: String = "" // Name
 let divisionId: [String] = [""] // division ID(s)
@@ -3719,10 +3759,10 @@ ArchitectAPI.getFlowsMilestonesDivisionviews(pageNumber: pageNumber, pageSize: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **_id** | [**[String]**](String.html)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
@@ -3744,6 +3784,8 @@ ArchitectAPI.getFlowsMilestonesDivisionviews(pageNumber: pageNumber, pageSize: p
 Get a flow outcome
 
 Returns a specified flow outcome
+
+
 
 Wraps GET /api/v2/flows/outcomes/{flowOutcomeId}  
 
@@ -3797,6 +3839,8 @@ Get a pageable list of flow outcomes, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flow outcomes will be returned, and no other parameters will be evaluated.
 
+
+
 Wraps GET /api/v2/flows/outcomes  
 
 Requires ALL permissions: 
@@ -3811,10 +3855,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let _id: [String] = [""] // ID
 let name: String = "" // Name
 let _description: String = "" // Description
@@ -3837,10 +3881,10 @@ ArchitectAPI.getFlowsOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **_id** | [**[String]**](String.html)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
@@ -3865,6 +3909,8 @@ Get a pageable list of basic flow outcome information objects filterable by quer
 
 This returns flow outcomes consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
 
+
+
 Wraps GET /api/v2/flows/outcomes/divisionviews  
 
 Requires ALL permissions: 
@@ -3879,10 +3925,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "id" // Sort by
-let sortOrder: String = "asc" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let _id: [String] = [""] // ID
 let name: String = "" // Name
 let divisionId: [String] = [""] // division ID(s)
@@ -3903,10 +3949,10 @@ ArchitectAPI.getFlowsOutcomesDivisionviews(pageNumber: pageNumber, pageSize: pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Sort by | [optional] [default to id] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **_id** | [**[String]**](String.html)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
@@ -3928,6 +3974,8 @@ ArchitectAPI.getFlowsOutcomesDivisionviews(pageNumber: pageNumber, pageSize: pag
 Rebuild Dependency Tracking data for an organization
 
 Asynchronous.  Notification topic: v2.architect.dependencytracking.build
+
+
 
 Wraps POST /api/v2/architect/dependencytracking/build  
 
@@ -4079,6 +4127,8 @@ ArchitectAPI.postArchitectIvrs(body: body) { (response, error) in
 Generate prompt history
 
 Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+
+
 
 Wraps POST /api/v2/architect/prompts/{promptId}/history  
 
@@ -4342,6 +4392,8 @@ Generate system prompt history
 
 Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
 
+
+
 Wraps POST /api/v2/architect/systemprompts/{promptId}/history  
 
 Requires ALL permissions: 
@@ -4448,6 +4500,8 @@ Generate flow history
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
 
+
+
 Wraps POST /api/v2/flows/{flowId}/history  
 
 Requires ANY permissions: 
@@ -4515,7 +4569,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
-let body: JSON = new JSON(...) // 
+let body: [String:JSON] = new JSON(...) // 
 
 // Code example
 ArchitectAPI.postFlowVersions(flowId: flowId, body: body) { (response, error) in
@@ -4534,7 +4588,7 @@ ArchitectAPI.postFlowVersions(flowId: flowId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-| **body** | [**JSON**](JSON.html)|  | |
+| **body** | [**[String:JSON]**](JSON.html)|  | |
 {: class="table-striped"}
 
 
@@ -4607,6 +4661,8 @@ ArchitectAPI.postFlows(body: body, language: language) { (response, error) in
 Check-in flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
+
+
 
 Wraps POST /api/v2/flows/actions/checkin  
 
@@ -4765,6 +4821,8 @@ Publish flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
 
+
+
 Wraps POST /api/v2/flows/actions/publish  
 
 Requires ANY permissions: 
@@ -4872,6 +4930,8 @@ Unlock flow
 
 Allows for unlocking a flow in the case where there is no flow configuration available, and thus a check-in will not unlock the flow. The user must have Architect Admin permissions to perform this action.
 
+
+
 Wraps POST /api/v2/flows/actions/unlock  
 
 Requires ANY permissions: 
@@ -4923,6 +4983,8 @@ ArchitectAPI.postFlowsActionsUnlock(flow: flow) { (response, error) in
 Begin an export process for exporting all rows from a datatable
 
 Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+
+
 
 Wraps POST /api/v2/flows/datatables/{datatableId}/export/jobs  
 
@@ -4976,6 +5038,8 @@ ArchitectAPI.postFlowsDatatableExportJobs(datatableId: datatableId) { (response,
 Begin an import process for importing rows into a datatable
 
 Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+
+
 
 Wraps POST /api/v2/flows/datatables/{datatableId}/import/jobs  
 
@@ -5032,6 +5096,8 @@ Create a new row entry for the datatable.
 
 Will add the passed in row entry to the datatable with the given datatableId after verifying it against the schema.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {      \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,      \&quot;Field2\&quot;: false,      \&quot;KEY\&quot;: \&quot;27272\&quot;  }
 
+
+
 Wraps POST /api/v2/flows/datatables/{datatableId}/rows  
 
 Requires ANY permissions: 
@@ -5048,7 +5114,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let datatableId: String = "" // id of datatable
-let dataTableRow: JSON = new JSON(...) // 
+let dataTableRow: [String:JSON] = new JSON(...) // 
 
 // Code example
 ArchitectAPI.postFlowsDatatableRows(datatableId: datatableId, dataTableRow: dataTableRow) { (response, error) in
@@ -5067,7 +5133,7 @@ ArchitectAPI.postFlowsDatatableRows(datatableId: datatableId, dataTableRow: data
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
-| **dataTableRow** | [**JSON**](JSON.html)|  | |
+| **dataTableRow** | [**[String:JSON]**](JSON.html)|  | |
 {: class="table-striped"}
 
 
@@ -5086,6 +5152,8 @@ ArchitectAPI.postFlowsDatatableRows(datatableId: datatableId, dataTableRow: data
 Create a new datatable with the specified json-schema definition
 
 This will create a new datatable with fields that match the property definitions in the JSON schema.  The schema&#39;s title field will be overridden by the name field in the DataTable object.  See also http://json-schema.org/
+
+
 
 Wraps POST /api/v2/flows/datatables  
 
@@ -5138,6 +5206,8 @@ ArchitectAPI.postFlowsDatatables(body: body) { (response, error) in
 Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
 
 The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+
+
 
 Wraps POST /api/v2/flows/executions  
 
@@ -5290,6 +5360,8 @@ ArchitectAPI.postFlowsMilestones(body: body) { (response, error) in
 Create a flow outcome
 
 Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
+
+
 
 Wraps POST /api/v2/flows/outcomes  
 
@@ -5779,6 +5851,8 @@ Updates a specific datatable by id
 
 Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
 
+
+
 Wraps PUT /api/v2/flows/datatables/{datatableId}  
 
 Requires ANY permissions: 
@@ -5835,6 +5909,8 @@ Update a row entry
 
 Updates a row with the given rowId (the value of the key field) to the new values.  The DataTableRow should be a json-ized&#39; stream of key -&gt; value pairs {     \&quot;Field1\&quot;: \&quot;XYZZY\&quot;,     \&quot;Field2\&quot;: false,     \&quot;KEY\&quot;: \&quot;27272\&quot; }
 
+
+
 Wraps PUT /api/v2/flows/datatables/{datatableId}/rows/{rowId}  
 
 Requires ANY permissions: 
@@ -5852,7 +5928,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let datatableId: String = "" // id of datatable
 let rowId: String = "" // the key for the row
-let body: JSON = new JSON(...) // datatable row
+let body: [String:JSON] = new JSON(...) // datatable row
 
 // Code example
 ArchitectAPI.putFlowsDatatableRow(datatableId: datatableId, rowId: rowId, body: body) { (response, error) in
@@ -5872,7 +5948,7 @@ ArchitectAPI.putFlowsDatatableRow(datatableId: datatableId, rowId: rowId, body: 
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **rowId** | **String**| the key for the row | |
-| **body** | [**JSON**](JSON.html)| datatable row | [optional] |
+| **body** | [**[String:JSON]**](JSON.html)| datatable row | [optional] |
 {: class="table-striped"}
 
 
@@ -5945,6 +6021,8 @@ ArchitectAPI.putFlowsMilestone(milestoneId: milestoneId, body: body) { (response
 Updates a flow outcome
 
 Updates a flow outcome.  Asynchronous.  Notification topic: v2.flowoutcomes.{flowoutcomeId}
+
+
 
 Wraps PUT /api/v2/flows/outcomes/{flowOutcomeId}  
 

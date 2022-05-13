@@ -17,11 +17,8 @@ public class GroupMembersUpdate: Codable {
     public var version: Int?
 
     public init(memberIds: [String]?, version: Int?) {
-        
         self.memberIds = memberIds
-        
         self.version = version
-        
     }
 
 

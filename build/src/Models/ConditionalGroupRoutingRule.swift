@@ -34,19 +34,12 @@ public class ConditionalGroupRoutingRule: Codable {
     public var waitSeconds: Int?
 
     public init(queue: DomainEntityRef?, metric: Metric?, _operator: Operator?, conditionValue: Double?, groups: [MemberGroup]?, waitSeconds: Int?) {
-        
         self.queue = queue
-        
         self.metric = metric
-        
         self._operator = _operator
-        
         self.conditionValue = conditionValue
-        
         self.groups = groups
-        
         self.waitSeconds = waitSeconds
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

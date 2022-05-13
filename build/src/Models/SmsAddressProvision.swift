@@ -31,25 +31,15 @@ public class SmsAddressProvision: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, street: String?, city: String?, region: String?, postalCode: String?, countryCode: String?, autoCorrectAddress: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.street = street
-        
         self.city = city
-        
         self.region = region
-        
         self.postalCode = postalCode
-        
         self.countryCode = countryCode
-        
         self.autoCorrectAddress = autoCorrectAddress
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

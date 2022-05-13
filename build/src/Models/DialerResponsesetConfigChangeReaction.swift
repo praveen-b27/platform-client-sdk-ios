@@ -22,13 +22,9 @@ public class DialerResponsesetConfigChangeReaction: Codable {
     public var reactionType: ReactionType?
 
     public init(data: String?, name: String?, reactionType: ReactionType?) {
-        
         self.data = data
-        
         self.name = name
-        
         self.reactionType = reactionType
-        
     }
 
 

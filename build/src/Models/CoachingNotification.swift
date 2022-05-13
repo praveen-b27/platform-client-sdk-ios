@@ -36,7 +36,7 @@ public class CoachingNotification: Codable {
     public var markedAsRead: Bool?
     /** Action causing the notification. */
     public var actionType: ActionType?
-    /** The relationship of this user to this notification&#39;s appointment */
+    /** The relationship of this user to this notification's appointment */
     public var relationship: Relationship?
     /** The start time of the appointment relating to this notification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateStart: Date?
@@ -52,29 +52,17 @@ public class CoachingNotification: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, markedAsRead: Bool?, actionType: ActionType?, relationship: Relationship?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, user: UserReference?, appointment: CoachingAppointmentResponse?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.markedAsRead = markedAsRead
-        
         self.actionType = actionType
-        
         self.relationship = relationship
-        
         self.dateStart = dateStart
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.status = status
-        
         self.user = user
-        
         self.appointment = appointment
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

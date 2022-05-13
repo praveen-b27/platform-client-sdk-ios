@@ -16,9 +16,7 @@ public class ParsedCertificate: Codable {
     public var certificateDetails: [CertificateDetails]?
 
     public init(certificateDetails: [CertificateDetails]?) {
-        
         self.certificateDetails = certificateDetails
-        
     }
 
 

@@ -24,19 +24,12 @@ public class QueueConversationCallEventTopicCallConversation: Codable {
     public var maxParticipants: Int?
 
     public init(_id: String?, name: String?, participants: [QueueConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, recordingState: RecordingState?, maxParticipants: Int?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.participants = participants
-        
         self.otherMediaUris = otherMediaUris
-        
         self.recordingState = recordingState
-        
         self.maxParticipants = maxParticipants
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

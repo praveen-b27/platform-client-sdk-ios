@@ -20,15 +20,10 @@ public class OutboundMessagingMessagingCampaignConfigChangeEmailConfig: Codable 
     public var replyToAddress: OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress?
 
     public init(emailColumns: [String]?, contentTemplate: OutboundMessagingMessagingCampaignConfigChangeResponseRef?, fromAddress: OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress?, replyToAddress: OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress?) {
-        
         self.emailColumns = emailColumns
-        
         self.contentTemplate = contentTemplate
-        
         self.fromAddress = fromAddress
-        
         self.replyToAddress = replyToAddress
-        
     }
 
 

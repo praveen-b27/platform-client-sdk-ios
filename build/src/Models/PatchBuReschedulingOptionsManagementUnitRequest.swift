@@ -17,11 +17,8 @@ public class PatchBuReschedulingOptionsManagementUnitRequest: Codable {
     public var applied: Bool?
 
     public init(managementUnitId: String?, applied: Bool?) {
-        
         self.managementUnitId = managementUnitId
-        
         self.applied = applied
-        
     }
 
 

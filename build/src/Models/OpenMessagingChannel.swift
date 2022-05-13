@@ -33,26 +33,17 @@ public class OpenMessagingChannel: Codable {
     /** Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var time: Date?
     /** Information about the channel. */
-    public var metadata: ChannelMetadata?
+    public var metadata: JSON?
 
-    public init(_id: String?, platform: Platform?, type: ModelType?, messageId: String?, to: OpenMessagingToRecipient?, from: OpenMessagingFromRecipient?, time: Date?, metadata: ChannelMetadata?) {
-        
+    public init(_id: String?, platform: Platform?, type: ModelType?, messageId: String?, to: OpenMessagingToRecipient?, from: OpenMessagingFromRecipient?, time: Date?, metadata: JSON?) {
         self._id = _id
-        
         self.platform = platform
-        
         self.type = type
-        
         self.messageId = messageId
-        
         self.to = to
-        
         self.from = from
-        
         self.time = time
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

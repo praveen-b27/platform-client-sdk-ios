@@ -19,13 +19,9 @@ public class EdgeMetricsDisk: Codable {
     public var totalBytes: Double?
 
     public init(availableBytes: Double?, partitionName: String?, totalBytes: Double?) {
-        
         self.availableBytes = availableBytes
-        
         self.partitionName = partitionName
-        
         self.totalBytes = totalBytes
-        
     }
 
 

@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Single shift in a user&#39;s schedule */
+/** Single shift in a user's schedule */
 
 public class UserScheduleShift: Codable {
 
@@ -28,21 +28,13 @@ public class UserScheduleShift: Codable {
     public var manuallyEdited: Bool?
 
     public init(weekSchedule: WeekScheduleReference?, _id: String?, startDate: Date?, lengthInMinutes: Int?, activities: [UserScheduleActivity]?, delete: Bool?, manuallyEdited: Bool?) {
-        
         self.weekSchedule = weekSchedule
-        
         self._id = _id
-        
         self.startDate = startDate
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.activities = activities
-        
         self.delete = delete
-        
         self.manuallyEdited = manuallyEdited
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

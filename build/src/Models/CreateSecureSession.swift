@@ -21,15 +21,10 @@ public class CreateSecureSession: Codable {
     public var disconnect: Bool?
 
     public init(sourceParticipantId: String?, flowId: String?, userData: String?, disconnect: Bool?) {
-        
         self.sourceParticipantId = sourceParticipantId
-        
         self.flowId = flowId
-        
         self.userData = userData
-        
         self.disconnect = disconnect
-        
     }
 
 

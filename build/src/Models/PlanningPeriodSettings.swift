@@ -17,11 +17,8 @@ public class PlanningPeriodSettings: Codable {
     public var startDate: Date?
 
     public init(weekCount: Int?, startDate: Date?) {
-        
         self.weekCount = weekCount
-        
         self.startDate = startDate
-        
     }
 
 

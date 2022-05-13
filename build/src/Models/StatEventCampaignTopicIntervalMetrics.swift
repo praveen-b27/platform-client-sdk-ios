@@ -15,11 +15,8 @@ public class StatEventCampaignTopicIntervalMetrics: Codable {
     public var metrics: [StatEventCampaignTopicMetricStats]?
 
     public init(interval: String?, metrics: [StatEventCampaignTopicMetricStats]?) {
-        
         self.interval = interval
-        
         self.metrics = metrics
-        
     }
 
 

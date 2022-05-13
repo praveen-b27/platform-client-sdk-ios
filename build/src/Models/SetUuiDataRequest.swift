@@ -15,9 +15,7 @@ public class SetUuiDataRequest: Codable {
     public var uuiData: String?
 
     public init(uuiData: String?) {
-        
         self.uuiData = uuiData
-        
     }
 
 

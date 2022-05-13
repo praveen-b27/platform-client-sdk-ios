@@ -32,21 +32,13 @@ public class Library: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, version: Int?, createdBy: User?, dateCreated: Date?, responseType: ResponseType?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.version = version
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.responseType = responseType
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

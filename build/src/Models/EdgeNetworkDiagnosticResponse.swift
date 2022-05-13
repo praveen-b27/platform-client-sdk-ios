@@ -17,11 +17,8 @@ public class EdgeNetworkDiagnosticResponse: Codable {
     public var diagnostics: String?
 
     public init(commandCorrelationId: String?, diagnostics: String?) {
-        
         self.commandCorrelationId = commandCorrelationId
-        
         self.diagnostics = diagnostics
-        
     }
 
 

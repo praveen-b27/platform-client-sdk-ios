@@ -16,9 +16,7 @@ public class TextBotInputOutputData: Codable {
     public var variables: [String:JSON]?
 
     public init(variables: [String:JSON]?) {
-        
         self.variables = variables
-        
     }
 
 

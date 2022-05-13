@@ -23,27 +23,16 @@ public class ErrorBody: Codable {
     public var errors: [ErrorBody]?
 
     public init(message: String?, code: String?, status: Int?, entityId: String?, entityName: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, details: [Detail]?, errors: [ErrorBody]?) {
-        
         self.message = message
-        
         self.code = code
-        
         self.status = status
-        
         self.entityId = entityId
-        
         self.entityName = entityName
-        
         self.messageWithParams = messageWithParams
-        
         self.messageParams = messageParams
-        
         self.contextId = contextId
-        
         self.details = details
-        
         self.errors = errors
-        
     }
 
 

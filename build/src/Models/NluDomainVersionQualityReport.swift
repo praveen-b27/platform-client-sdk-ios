@@ -19,13 +19,9 @@ public class NluDomainVersionQualityReport: Codable {
     public var summary: NluQualityReportSummary?
 
     public init(version: NluDomainVersion?, confusionMatrix: [NluConfusionMatrixRow]?, summary: NluQualityReportSummary?) {
-        
         self.version = version
-        
         self.confusionMatrix = confusionMatrix
-        
         self.summary = summary
-        
     }
 
 

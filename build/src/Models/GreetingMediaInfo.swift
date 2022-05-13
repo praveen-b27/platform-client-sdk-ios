@@ -17,13 +17,9 @@ public class GreetingMediaInfo: Codable {
     public var mediaImageUri: String?
 
     public init(_id: String?, mediaFileUri: String?, mediaImageUri: String?) {
-        
         self._id = _id
-        
         self.mediaFileUri = mediaFileUri
-        
         self.mediaImageUri = mediaImageUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

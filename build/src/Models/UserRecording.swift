@@ -30,33 +30,19 @@ public class UserRecording: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, conversation: Conversation?, contentLength: Int64?, durationMilliseconds: Int64?, thumbnails: [DocumentThumbnail]?, read: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.contentUri = contentUri
-        
         self.workspace = workspace
-        
         self.createdBy = createdBy
-        
         self.conversation = conversation
-        
         self.contentLength = contentLength
-        
         self.durationMilliseconds = durationMilliseconds
-        
         self.thumbnails = thumbnails
-        
         self.read = read
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

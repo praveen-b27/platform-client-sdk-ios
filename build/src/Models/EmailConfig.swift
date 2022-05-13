@@ -21,15 +21,10 @@ public class EmailConfig: Codable {
     public var replyToAddress: ReplyToEmailAddress?
 
     public init(emailColumns: [String]?, contentTemplate: DomainEntityRef?, fromAddress: FromEmailAddress?, replyToAddress: ReplyToEmailAddress?) {
-        
         self.emailColumns = emailColumns
-        
         self.contentTemplate = contentTemplate
-        
         self.fromAddress = fromAddress
-        
         self.replyToAddress = replyToAddress
-        
     }
 
 

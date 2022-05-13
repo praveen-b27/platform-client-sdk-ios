@@ -20,17 +20,11 @@ public class DomainPermissionCollection: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, domain: String?, permissionMap: [String:[DomainPermission]]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.domain = domain
-        
         self.permissionMap = permissionMap
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

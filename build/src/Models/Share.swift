@@ -34,29 +34,17 @@ public class Share: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, sharedEntityType: SharedEntityType?, sharedEntity: DomainEntityRef?, memberType: MemberType?, member: DomainEntityRef?, sharedBy: DomainEntityRef?, workspace: DomainEntityRef?, user: User?, group: Group?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.sharedEntityType = sharedEntityType
-        
         self.sharedEntity = sharedEntity
-        
         self.memberType = memberType
-        
         self.member = member
-        
         self.sharedBy = sharedBy
-        
         self.workspace = workspace
-        
         self.user = user
-        
         self.group = group
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

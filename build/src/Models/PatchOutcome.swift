@@ -37,31 +37,18 @@ public class PatchOutcome: Codable {
     public var modifiedDate: Date?
 
     public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, isPositive: Bool?, context: Context?, journey: Journey?, associatedValueField: AssociatedValueField?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
-        
         self._id = _id
-        
         self.isActive = isActive
-        
         self.displayName = displayName
-        
         self.version = version
-        
         self._description = _description
-        
         self.isPositive = isPositive
-        
         self.context = context
-        
         self.journey = journey
-        
         self.associatedValueField = associatedValueField
-        
         self.selfUri = selfUri
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

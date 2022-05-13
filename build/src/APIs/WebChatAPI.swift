@@ -11,10 +11,7 @@ import Foundation
 
 open class WebChatAPI {
     
-    
-    
     /**
-     
      Delete a WebChat deployment
      
      - parameter deploymentId: (path) Deployment Id 
@@ -32,11 +29,8 @@ open class WebChatAPI {
     }
 
     /**
-     
      Delete a WebChat deployment
-     
      - DELETE /api/v2/webchat/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class WebChatAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWebchatDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<Void> {
+    open class func deleteWebchatDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/webchat/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,11 +56,7 @@ open class WebChatAPI {
 
     
     
-    
-    
-    
     /**
-     
      Remove a member from a chat conversation
      
      - parameter conversationId: (path) conversationId 
@@ -90,11 +75,8 @@ open class WebChatAPI {
     }
 
     /**
-     
      Remove a member from a chat conversation
-     
      - DELETE /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -104,7 +86,7 @@ open class WebChatAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWebchatGuestConversationMemberWithRequestBuilder(conversationId: String, memberId: String) -> RequestBuilder<Void> {
+    open class func deleteWebchatGuestConversationMemberWithRequestBuilder(conversationId: String, memberId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -113,12 +95,7 @@ open class WebChatAPI {
         let memberIdPostEscape = memberIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{memberId}", with: memberIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -127,9 +104,7 @@ open class WebChatAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Remove WebChat deployment settings
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -146,26 +121,18 @@ open class WebChatAPI {
     }
 
     /**
-     
      Remove WebChat deployment settings
-     
      - DELETE /api/v2/webchat/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWebchatSettingsWithRequestBuilder() -> RequestBuilder<Void> {
+    open class func deleteWebchatSettingsWithRequestBuilder() -> RequestBuilder<Void> {        
         let path = "/api/v2/webchat/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -175,10 +142,7 @@ open class WebChatAPI {
     }
 
     
-    
-    
     /**
-     
      Get a WebChat deployment
      
      - parameter deploymentId: (path) Deployment Id 
@@ -203,49 +167,37 @@ open class WebChatAPI {
     }
 
     /**
-     
      Get a WebChat deployment
-     
      - GET /api/v2/webchat/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationRequired" : true,
-  "allowedDomains" : [ "aeiou" ],
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
   "webChatConfig" : {
-    "webChatSkin" : "aeiou"
+    "webChatSkin" : "basic"
   },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "disabled" : true,
-  "id" : "aeiou",
-  "authenticationUrl" : "aeiou",
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "id" : "id",
+  "authenticationUrl" : "authenticationUrl",
+  "flow" : "{}"
+}, statusCode=200}]
      
      - parameter deploymentId: (path) Deployment Id 
 
      - returns: RequestBuilder<WebChatDeployment> 
      */
-    open class func getWebchatDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<WebChatDeployment> {
+    open class func getWebchatDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<WebChatDeployment> {        
         var path = "/api/v2/webchat/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -254,9 +206,7 @@ open class WebChatAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      List WebChat deployments
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -280,48 +230,49 @@ open class WebChatAPI {
     }
 
     /**
-     
      List WebChat deployments
-     
      - GET /api/v2/webchat/deployments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
     "authenticationRequired" : true,
-    "allowedDomains" : [ "aeiou" ],
+    "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
     "webChatConfig" : {
-      "webChatSkin" : "aeiou"
+      "webChatSkin" : "basic"
     },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
     "disabled" : true,
-    "id" : "aeiou",
-    "authenticationUrl" : "aeiou",
-    "flow" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    }
+    "id" : "id",
+    "authenticationUrl" : "authenticationUrl",
+    "flow" : "{}"
+  }, {
+    "authenticationRequired" : true,
+    "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+    "webChatConfig" : {
+      "webChatSkin" : "basic"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "disabled" : true,
+    "id" : "id",
+    "authenticationUrl" : "authenticationUrl",
+    "flow" : "{}"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<WebChatDeploymentEntityListing> 
      */
-    open class func getWebchatDeploymentsWithRequestBuilder() -> RequestBuilder<WebChatDeploymentEntityListing> {
+    open class func getWebchatDeploymentsWithRequestBuilder() -> RequestBuilder<WebChatDeploymentEntityListing> {        
         let path = "/api/v2/webchat/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -332,11 +283,7 @@ open class WebChatAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a media request in the conversation
      
      - parameter conversationId: (path) conversationId 
@@ -362,30 +309,27 @@ open class WebChatAPI {
     }
 
     /**
-     
      Get a media request in the conversation
-     
      - GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
-  "types" : [ "aeiou" ],
-  "communicationId" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "securityKey" : "aeiou"
-}}]
+  "types" : [ "COBROWSE", "COBROWSE" ],
+  "communicationId" : "communicationId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "state" : "PENDING",
+  "securityKey" : "securityKey"
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
      - parameter mediaRequestId: (path) mediaRequestId 
 
      - returns: RequestBuilder<WebChatGuestMediaRequest> 
      */
-    open class func getWebchatGuestConversationMediarequestWithRequestBuilder(conversationId: String, mediaRequestId: String) -> RequestBuilder<WebChatGuestMediaRequest> {
+    open class func getWebchatGuestConversationMediarequestWithRequestBuilder(conversationId: String, mediaRequestId: String) -> RequestBuilder<WebChatGuestMediaRequest> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -394,12 +338,7 @@ open class WebChatAPI {
         let mediaRequestIdPostEscape = mediaRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{mediaRequestId}", with: mediaRequestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -409,10 +348,7 @@ open class WebChatAPI {
     }
 
     
-    
-    
     /**
-     
      Get all media requests to the guest in the conversation
      
      - parameter conversationId: (path) conversationId 
@@ -437,42 +373,42 @@ open class WebChatAPI {
     }
 
     /**
-     
      Get all media requests to the guest in the conversation
-     
      - GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "types" : [ "aeiou" ],
-    "communicationId" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "securityKey" : "aeiou"
+    "types" : [ "COBROWSE", "COBROWSE" ],
+    "communicationId" : "communicationId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "PENDING",
+    "securityKey" : "securityKey"
+  }, {
+    "types" : [ "COBROWSE", "COBROWSE" ],
+    "communicationId" : "communicationId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "PENDING",
+    "securityKey" : "securityKey"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
 
      - returns: RequestBuilder<WebChatGuestMediaRequestEntityList> 
      */
-    open class func getWebchatGuestConversationMediarequestsWithRequestBuilder(conversationId: String) -> RequestBuilder<WebChatGuestMediaRequestEntityList> {
+    open class func getWebchatGuestConversationMediarequestsWithRequestBuilder(conversationId: String) -> RequestBuilder<WebChatGuestMediaRequestEntityList> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/mediarequests"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -483,11 +419,7 @@ open class WebChatAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a web chat conversation member
      
      - parameter conversationId: (path) conversationId 
@@ -513,38 +445,35 @@ open class WebChatAPI {
     }
 
     /**
-     
      Get a web chat conversation member
-     
      - GET /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
-  "lastName" : "aeiou",
-  "role" : "aeiou",
-  "displayName" : "aeiou",
+  "lastName" : "lastName",
+  "role" : "AGENT",
+  "displayName" : "displayName",
   "customFields" : {
-    "key" : "aeiou"
+    "key" : "customFields"
   },
-  "avatarImageUrl" : "aeiou",
-  "firstName" : "aeiou",
-  "phoneNumber" : "aeiou",
-  "joinDate" : "2000-01-23T04:56:07.000+0000",
-  "leaveDate" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "avatarImageUrl" : "https://openapi-generator.tech",
+  "firstName" : "firstName",
+  "phoneNumber" : "phoneNumber",
+  "joinDate" : "2000-01-23T04:56:07.000+00:00",
+  "leaveDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "CONNECTED",
   "authenticatedGuest" : true,
-  "email" : "aeiou"
-}}]
+  "email" : "email"
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
      - parameter memberId: (path) memberId 
 
      - returns: RequestBuilder<WebChatMemberInfo> 
      */
-    open class func getWebchatGuestConversationMemberWithRequestBuilder(conversationId: String, memberId: String) -> RequestBuilder<WebChatMemberInfo> {
+    open class func getWebchatGuestConversationMemberWithRequestBuilder(conversationId: String, memberId: String) -> RequestBuilder<WebChatMemberInfo> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -553,12 +482,7 @@ open class WebChatAPI {
         let memberIdPostEscape = memberIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{memberId}", with: memberIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -571,19 +495,13 @@ open class WebChatAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Get the members of a chat conversation.
      
      - parameter conversationId: (path) conversationId 
-     - parameter pageSize: (query) The number of entries to return per page, or omitted for the default. (optional, default to 25)
-     - parameter pageNumber: (query) The page number to return, or omitted for the first page. (optional, default to 1)
-     - parameter excludeDisconnectedMembers: (query) If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)
+     - parameter pageSize: (query) The number of entries to return per page, or omitted for the default. (optional)
+     - parameter pageNumber: (query) The page number to return, or omitted for the first page. (optional)
+     - parameter excludeDisconnectedMembers: (query) If true, the results will not contain members who have a DISCONNECTED state. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWebchatGuestConversationMembers(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, excludeDisconnectedMembers: Bool? = nil, completion: @escaping ((_ data: WebChatMemberInfoEntityList?,_ error: Error?) -> Void)) {
@@ -605,72 +523,76 @@ open class WebChatAPI {
     }
 
     /**
-     
      Get the members of a chat conversation.
-     
      - GET /api/v2/webchat/guest/conversations/{conversationId}/members
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "lastName" : "aeiou",
-    "role" : "aeiou",
-    "displayName" : "aeiou",
+    "lastName" : "lastName",
+    "role" : "AGENT",
+    "displayName" : "displayName",
     "customFields" : {
-      "key" : "aeiou"
+      "key" : "customFields"
     },
-    "avatarImageUrl" : "aeiou",
-    "firstName" : "aeiou",
-    "phoneNumber" : "aeiou",
-    "joinDate" : "2000-01-23T04:56:07.000+0000",
-    "leaveDate" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "avatarImageUrl" : "https://openapi-generator.tech",
+    "firstName" : "firstName",
+    "phoneNumber" : "phoneNumber",
+    "joinDate" : "2000-01-23T04:56:07.000+00:00",
+    "leaveDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "CONNECTED",
     "authenticatedGuest" : true,
-    "email" : "aeiou"
+    "email" : "email"
+  }, {
+    "lastName" : "lastName",
+    "role" : "AGENT",
+    "displayName" : "displayName",
+    "customFields" : {
+      "key" : "customFields"
+    },
+    "avatarImageUrl" : "https://openapi-generator.tech",
+    "firstName" : "firstName",
+    "phoneNumber" : "phoneNumber",
+    "joinDate" : "2000-01-23T04:56:07.000+00:00",
+    "leaveDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "CONNECTED",
+    "authenticatedGuest" : true,
+    "email" : "email"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
-     - parameter pageSize: (query) The number of entries to return per page, or omitted for the default. (optional, default to 25)
-     - parameter pageNumber: (query) The page number to return, or omitted for the first page. (optional, default to 1)
-     - parameter excludeDisconnectedMembers: (query) If true, the results will not contain members who have a DISCONNECTED state. (optional, default to false)
+     - parameter pageSize: (query) The number of entries to return per page, or omitted for the default. (optional)
+     - parameter pageNumber: (query) The page number to return, or omitted for the first page. (optional)
+     - parameter excludeDisconnectedMembers: (query) If true, the results will not contain members who have a DISCONNECTED state. (optional)
 
      - returns: RequestBuilder<WebChatMemberInfoEntityList> 
      */
-    open class func getWebchatGuestConversationMembersWithRequestBuilder(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, excludeDisconnectedMembers: Bool? = nil) -> RequestBuilder<WebChatMemberInfoEntityList> {
+    open class func getWebchatGuestConversationMembersWithRequestBuilder(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, excludeDisconnectedMembers: Bool? = nil) -> RequestBuilder<WebChatMemberInfoEntityList> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/members"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "excludeDisconnectedMembers": excludeDisconnectedMembers
-            
         ])
 
         let requestBuilder: RequestBuilder<WebChatMemberInfoEntityList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -680,11 +602,7 @@ open class WebChatAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a web chat conversation message
      
      - parameter conversationId: (path) conversationId 
@@ -710,52 +628,28 @@ open class WebChatAPI {
     }
 
     /**
-     
      Get a web chat conversation message
-     
      - GET /api/v2/webchat/guest/conversations/{conversationId}/messages/{messageId}
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
-  "bodyType" : "aeiou",
-  "sender" : "",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "body" : "aeiou",
-  "conversation" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "member" : {
-      "lastName" : "aeiou",
-      "role" : "aeiou",
-      "displayName" : "aeiou",
-      "customFields" : {
-        "key" : "aeiou"
-      },
-      "avatarImageUrl" : "aeiou",
-      "firstName" : "aeiou",
-      "phoneNumber" : "aeiou",
-      "joinDate" : "2000-01-23T04:56:07.000+0000",
-      "leaveDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "authenticatedGuest" : true,
-      "email" : "aeiou"
-    },
-    "id" : "aeiou"
-  },
-  "timestamp" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "bodyType" : "standard",
+  "sender" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "body" : "body",
+  "conversation" : "{}",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
      - parameter messageId: (path) messageId 
 
      - returns: RequestBuilder<WebChatMessage> 
      */
-    open class func getWebchatGuestConversationMessageWithRequestBuilder(conversationId: String, messageId: String) -> RequestBuilder<WebChatMessage> {
+    open class func getWebchatGuestConversationMessageWithRequestBuilder(conversationId: String, messageId: String) -> RequestBuilder<WebChatMessage> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/messages/{messageId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -764,12 +658,7 @@ open class WebChatAPI {
         let messageIdPostEscape = messageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{messageId}", with: messageIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -782,10 +671,6 @@ open class WebChatAPI {
     
     
     
-    
-    
-    
-    
     public enum SortOrder_getWebchatGuestConversationMessages: String { 
         case ascending = "ascending"
         case descending = "descending"
@@ -793,17 +678,14 @@ open class WebChatAPI {
 
     
     
-    
-    
     /**
-     
      Get the messages of a chat conversation.
      
      - parameter conversationId: (path) conversationId 
      - parameter after: (query) If available, get the messages chronologically after the id of this message (optional)
      - parameter before: (query) If available, get the messages chronologically before the id of this message (optional)
-     - parameter sortOrder: (query) Sort order (optional, default to ascending)
-     - parameter maxResults: (query) Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter maxResults: (query) Limit the returned number of messages, up to a maximum of 100 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWebchatGuestConversationMessages(conversationId: String, after: String? = nil, before: String? = nil, sortOrder: SortOrder_getWebchatGuestConversationMessages? = nil, maxResults: Int? = nil, completion: @escaping ((_ data: WebChatMessageEntityList?,_ error: Error?) -> Void)) {
@@ -825,84 +707,59 @@ open class WebChatAPI {
     }
 
     /**
-     
      Get the messages of a chat conversation.
-     
      - GET /api/v2/webchat/guest/conversations/{conversationId}/messages
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
-  "next" : "aeiou",
-  "previousPage" : "aeiou",
+  "next" : "next",
+  "previousPage" : "previousPage",
   "entities" : [ {
-    "bodyType" : "aeiou",
-    "sender" : "",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "body" : "aeiou",
-    "conversation" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "member" : {
-        "lastName" : "aeiou",
-        "role" : "aeiou",
-        "displayName" : "aeiou",
-        "customFields" : {
-          "key" : "aeiou"
-        },
-        "avatarImageUrl" : "aeiou",
-        "firstName" : "aeiou",
-        "phoneNumber" : "aeiou",
-        "joinDate" : "2000-01-23T04:56:07.000+0000",
-        "leaveDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "authenticatedGuest" : true,
-        "email" : "aeiou"
-      },
-      "id" : "aeiou"
-    },
-    "timestamp" : "2000-01-23T04:56:07.000+0000"
+    "bodyType" : "standard",
+    "sender" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "body" : "body",
+    "conversation" : "{}",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "bodyType" : "standard",
+    "sender" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "body" : "body",
+    "conversation" : "{}",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "selfUri" : "aeiou",
-  "pageSize" : 123
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
      - parameter after: (query) If available, get the messages chronologically after the id of this message (optional)
      - parameter before: (query) If available, get the messages chronologically before the id of this message (optional)
-     - parameter sortOrder: (query) Sort order (optional, default to ascending)
-     - parameter maxResults: (query) Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter maxResults: (query) Limit the returned number of messages, up to a maximum of 100 (optional)
 
      - returns: RequestBuilder<WebChatMessageEntityList> 
      */
-    open class func getWebchatGuestConversationMessagesWithRequestBuilder(conversationId: String, after: String? = nil, before: String? = nil, sortOrder: SortOrder_getWebchatGuestConversationMessages? = nil, maxResults: Int? = nil) -> RequestBuilder<WebChatMessageEntityList> {
+    open class func getWebchatGuestConversationMessagesWithRequestBuilder(conversationId: String, after: String? = nil, before: String? = nil, sortOrder: SortOrder_getWebchatGuestConversationMessages? = nil, maxResults: Int? = nil) -> RequestBuilder<WebChatMessageEntityList> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/messages"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "after": after, 
-            
             "before": before, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "maxResults": maxResults?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<WebChatMessageEntityList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -910,9 +767,7 @@ open class WebChatAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get WebChat deployment settings
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -936,29 +791,21 @@ open class WebChatAPI {
     }
 
     /**
-     
      Get WebChat deployment settings
-     
      - GET /api/v2/webchat/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "requireDeployment" : true
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<WebChatSettings> 
      */
-    open class func getWebchatSettingsWithRequestBuilder() -> RequestBuilder<WebChatSettings> {
+    open class func getWebchatSettingsWithRequestBuilder() -> RequestBuilder<WebChatSettings> {        
         let path = "/api/v2/webchat/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -970,12 +817,7 @@ open class WebChatAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
      
      - parameter conversationId: (path) conversationId 
@@ -1002,23 +844,20 @@ open class WebChatAPI {
     }
 
     /**
-     
      Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
-     
      - PATCH /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
-  "types" : [ "aeiou" ],
-  "communicationId" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "securityKey" : "aeiou"
-}}]
+  "types" : [ "COBROWSE", "COBROWSE" ],
+  "communicationId" : "communicationId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "state" : "PENDING",
+  "securityKey" : "securityKey"
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
      - parameter mediaRequestId: (path) mediaRequestId 
@@ -1026,7 +865,7 @@ open class WebChatAPI {
 
      - returns: RequestBuilder<WebChatGuestMediaRequest> 
      */
-    open class func patchWebchatGuestConversationMediarequestWithRequestBuilder(conversationId: String, mediaRequestId: String, body: WebChatGuestMediaRequest) -> RequestBuilder<WebChatGuestMediaRequest> {
+    open class func patchWebchatGuestConversationMediarequestWithRequestBuilder(conversationId: String, mediaRequestId: String, body: WebChatGuestMediaRequest) -> RequestBuilder<WebChatGuestMediaRequest> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1035,10 +874,8 @@ open class WebChatAPI {
         let mediaRequestIdPostEscape = mediaRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{mediaRequestId}", with: mediaRequestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebChatGuestMediaRequest>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1047,10 +884,7 @@ open class WebChatAPI {
     }
 
     
-    
-    
     /**
-     
      Create WebChat deployment
      
      - parameter body: (body) Deployment 
@@ -1075,44 +909,35 @@ open class WebChatAPI {
     }
 
     /**
-     
      Create WebChat deployment
-     
      - POST /api/v2/webchat/deployments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationRequired" : true,
-  "allowedDomains" : [ "aeiou" ],
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
   "webChatConfig" : {
-    "webChatSkin" : "aeiou"
+    "webChatSkin" : "basic"
   },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "disabled" : true,
-  "id" : "aeiou",
-  "authenticationUrl" : "aeiou",
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "id" : "id",
+  "authenticationUrl" : "authenticationUrl",
+  "flow" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Deployment 
 
      - returns: RequestBuilder<WebChatDeployment> 
      */
-    open class func postWebchatDeploymentsWithRequestBuilder(body: WebChatDeployment) -> RequestBuilder<WebChatDeployment> {
+    open class func postWebchatDeploymentsWithRequestBuilder(body: WebChatDeployment) -> RequestBuilder<WebChatDeployment> {        
         let path = "/api/v2/webchat/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebChatDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1123,12 +948,7 @@ open class WebChatAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Send a message in a chat conversation.
      
      - parameter conversationId: (path) conversationId 
@@ -1155,45 +975,21 @@ open class WebChatAPI {
     }
 
     /**
-     
      Send a message in a chat conversation.
-     
      - POST /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/messages
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
-  "bodyType" : "aeiou",
-  "sender" : "",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "body" : "aeiou",
-  "conversation" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "member" : {
-      "lastName" : "aeiou",
-      "role" : "aeiou",
-      "displayName" : "aeiou",
-      "customFields" : {
-        "key" : "aeiou"
-      },
-      "avatarImageUrl" : "aeiou",
-      "firstName" : "aeiou",
-      "phoneNumber" : "aeiou",
-      "joinDate" : "2000-01-23T04:56:07.000+0000",
-      "leaveDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "authenticatedGuest" : true,
-      "email" : "aeiou"
-    },
-    "id" : "aeiou"
-  },
-  "timestamp" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "bodyType" : "standard",
+  "sender" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "body" : "body",
+  "conversation" : "{}",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
      - parameter memberId: (path) memberId 
@@ -1201,7 +997,7 @@ open class WebChatAPI {
 
      - returns: RequestBuilder<WebChatMessage> 
      */
-    open class func postWebchatGuestConversationMemberMessagesWithRequestBuilder(conversationId: String, memberId: String, body: CreateWebChatMessageRequest) -> RequestBuilder<WebChatMessage> {
+    open class func postWebchatGuestConversationMemberMessagesWithRequestBuilder(conversationId: String, memberId: String, body: CreateWebChatMessageRequest) -> RequestBuilder<WebChatMessage> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/messages"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1210,10 +1006,8 @@ open class WebChatAPI {
         let memberIdPostEscape = memberIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{memberId}", with: memberIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebChatMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1223,11 +1017,7 @@ open class WebChatAPI {
 
     
     
-    
-    
-    
     /**
-     
      Send a typing-indicator in a chat conversation.
      
      - parameter conversationId: (path) conversationId 
@@ -1253,48 +1043,24 @@ open class WebChatAPI {
     }
 
     /**
-     
      Send a typing-indicator in a chat conversation.
-     
      - POST /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/typing
-     - 
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
-  "sender" : "",
-  "id" : "aeiou",
-  "conversation" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "member" : {
-      "lastName" : "aeiou",
-      "role" : "aeiou",
-      "displayName" : "aeiou",
-      "customFields" : {
-        "key" : "aeiou"
-      },
-      "avatarImageUrl" : "aeiou",
-      "firstName" : "aeiou",
-      "phoneNumber" : "aeiou",
-      "joinDate" : "2000-01-23T04:56:07.000+0000",
-      "leaveDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "authenticatedGuest" : true,
-      "email" : "aeiou"
-    },
-    "id" : "aeiou"
-  },
-  "timestamp" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "sender" : "{}",
+  "id" : "id",
+  "conversation" : "{}",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
      - parameter memberId: (path) memberId 
 
      - returns: RequestBuilder<WebChatTyping> 
      */
-    open class func postWebchatGuestConversationMemberTypingWithRequestBuilder(conversationId: String, memberId: String) -> RequestBuilder<WebChatTyping> {
+    open class func postWebchatGuestConversationMemberTypingWithRequestBuilder(conversationId: String, memberId: String) -> RequestBuilder<WebChatTyping> {        
         var path = "/api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/typing"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1303,12 +1069,7 @@ open class WebChatAPI {
         let memberIdPostEscape = memberIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{memberId}", with: memberIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1318,10 +1079,7 @@ open class WebChatAPI {
     }
 
     
-    
-    
     /**
-     
      Create an ACD chat conversation from an external customer.
      
      - parameter body: (body) CreateConversationRequest 
@@ -1346,45 +1104,25 @@ open class WebChatAPI {
     }
 
     /**
-     
      Create an ACD chat conversation from an external customer.
-     
      - POST /api/v2/webchat/guest/conversations
      - This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the 'memberAuthToken' field should include his JWT as generated by the 'POST /api/v2/signeddata' resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the 'eventStreamUri' field of the response; the conversation is not routed until the event stream is attached.
      - examples: [{contentType=application/json, example={
-  "jwt" : "aeiou",
-  "member" : {
-    "lastName" : "aeiou",
-    "role" : "aeiou",
-    "displayName" : "aeiou",
-    "customFields" : {
-      "key" : "aeiou"
-    },
-    "avatarImageUrl" : "aeiou",
-    "firstName" : "aeiou",
-    "phoneNumber" : "aeiou",
-    "joinDate" : "2000-01-23T04:56:07.000+0000",
-    "leaveDate" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "authenticatedGuest" : true,
-    "email" : "aeiou"
-  },
-  "id" : "aeiou",
-  "eventStreamUri" : "aeiou"
-}}]
+  "jwt" : "jwt",
+  "member" : "{}",
+  "id" : "id",
+  "eventStreamUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter body: (body) CreateConversationRequest 
 
      - returns: RequestBuilder<CreateWebChatConversationResponse> 
      */
-    open class func postWebchatGuestConversationsWithRequestBuilder(body: CreateWebChatConversationRequest) -> RequestBuilder<CreateWebChatConversationResponse> {
+    open class func postWebchatGuestConversationsWithRequestBuilder(body: CreateWebChatConversationRequest) -> RequestBuilder<CreateWebChatConversationResponse> {        
         let path = "/api/v2/webchat/guest/conversations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CreateWebChatConversationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1394,11 +1132,7 @@ open class WebChatAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a WebChat deployment
      
      - parameter deploymentId: (path) Deployment Id 
@@ -1424,48 +1158,39 @@ open class WebChatAPI {
     }
 
     /**
-     
      Update a WebChat deployment
-     
      - PUT /api/v2/webchat/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationRequired" : true,
-  "allowedDomains" : [ "aeiou" ],
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
   "webChatConfig" : {
-    "webChatSkin" : "aeiou"
+    "webChatSkin" : "basic"
   },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "disabled" : true,
-  "id" : "aeiou",
-  "authenticationUrl" : "aeiou",
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "id" : "id",
+  "authenticationUrl" : "authenticationUrl",
+  "flow" : "{}"
+}, statusCode=200}]
      
      - parameter deploymentId: (path) Deployment Id 
      - parameter body: (body) Deployment 
 
      - returns: RequestBuilder<WebChatDeployment> 
      */
-    open class func putWebchatDeploymentWithRequestBuilder(deploymentId: String, body: WebChatDeployment) -> RequestBuilder<WebChatDeployment> {
+    open class func putWebchatDeploymentWithRequestBuilder(deploymentId: String, body: WebChatDeployment) -> RequestBuilder<WebChatDeployment> {        
         var path = "/api/v2/webchat/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebChatDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1474,10 +1199,7 @@ open class WebChatAPI {
     }
 
     
-    
-    
     /**
-     
      Update WebChat deployment settings
      
      - parameter body: (body) webChatSettings 
@@ -1502,29 +1224,24 @@ open class WebChatAPI {
     }
 
     /**
-     
      Update WebChat deployment settings
-     
      - PUT /api/v2/webchat/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "requireDeployment" : true
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) webChatSettings 
 
      - returns: RequestBuilder<WebChatSettings> 
      */
-    open class func putWebchatSettingsWithRequestBuilder(body: WebChatSettings) -> RequestBuilder<WebChatSettings> {
+    open class func putWebchatSettingsWithRequestBuilder(body: WebChatSettings) -> RequestBuilder<WebChatSettings> {        
         let path = "/api/v2/webchat/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebChatSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

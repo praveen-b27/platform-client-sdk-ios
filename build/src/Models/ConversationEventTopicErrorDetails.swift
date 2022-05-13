@@ -18,30 +18,22 @@ public class ConversationEventTopicErrorDetails: Codable {
     public var code: String?
     /** Friendly description of this error. */
     public var message: String?
-    /** This is the same as message except it uses template fields for variable replacement. For instance: &#39;User {username} was not found&#39; */
+    /** This is the same as message except it uses template fields for variable replacement. For instance: 'User {username} was not found' */
     public var messageWithParams: String?
-    /** Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = &#39;username&#39;, UserParam.value = &#39;john.doe&#39; */
+    /** Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'john.doe' */
     public var messageParams: [String:String]?
-    /** The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header &#39;ININ-Correlation-Id&#39; instead. */
+    /** The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead. */
     public var contextId: String?
     public var uri: String?
 
     public init(status: Int?, code: String?, message: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, uri: String?) {
-        
         self.status = status
-        
         self.code = code
-        
         self.message = message
-        
         self.messageWithParams = messageWithParams
-        
         self.messageParams = messageParams
-        
         self.contextId = contextId
-        
         self.uri = uri
-        
     }
 
 

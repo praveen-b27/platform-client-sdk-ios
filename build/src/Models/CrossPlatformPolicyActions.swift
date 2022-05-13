@@ -27,27 +27,16 @@ public class CrossPlatformPolicyActions: Codable {
     public var integrationExport: IntegrationExport?
 
     public init(retainRecording: Bool?, deleteRecording: Bool?, alwaysDelete: Bool?, assignEvaluations: [EvaluationAssignment]?, assignMeteredEvaluations: [MeteredEvaluationAssignment]?, assignMeteredAssignmentByAgent: [MeteredAssignmentByAgent]?, assignCalibrations: [CalibrationAssignment]?, retentionDuration: RetentionDuration?, mediaTranscriptions: [MediaTranscription]?, integrationExport: IntegrationExport?) {
-        
         self.retainRecording = retainRecording
-        
         self.deleteRecording = deleteRecording
-        
         self.alwaysDelete = alwaysDelete
-        
         self.assignEvaluations = assignEvaluations
-        
         self.assignMeteredEvaluations = assignMeteredEvaluations
-        
         self.assignMeteredAssignmentByAgent = assignMeteredAssignmentByAgent
-        
         self.assignCalibrations = assignCalibrations
-        
         self.retentionDuration = retentionDuration
-        
         self.mediaTranscriptions = mediaTranscriptions
-        
         self.integrationExport = integrationExport
-        
     }
 
 

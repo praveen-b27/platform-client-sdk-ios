@@ -15,9 +15,7 @@ public class PlanningGroupList: Codable {
     public var entities: [PlanningGroup]?
 
     public init(entities: [PlanningGroup]?) {
-        
         self.entities = entities
-        
     }
 
 

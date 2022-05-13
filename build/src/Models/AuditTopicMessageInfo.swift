@@ -17,15 +17,10 @@ public class AuditTopicMessageInfo: Codable {
     public var messageParams: [String:String]?
 
     public init(localizableMessageCode: String?, message: String?, messageWithParams: String?, messageParams: [String:String]?) {
-        
         self.localizableMessageCode = localizableMessageCode
-        
         self.message = message
-        
         self.messageWithParams = messageWithParams
-        
         self.messageParams = messageParams
-        
     }
 
 

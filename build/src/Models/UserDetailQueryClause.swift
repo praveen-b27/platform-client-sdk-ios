@@ -21,11 +21,8 @@ public class UserDetailQueryClause: Codable {
     public var predicates: [UserDetailQueryPredicate]?
 
     public init(type: ModelType?, predicates: [UserDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

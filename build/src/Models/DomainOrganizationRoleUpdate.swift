@@ -30,31 +30,18 @@ public class DomainOrganizationRoleUpdate: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, defaultRoleId: String?, permissions: [String]?, unusedPermissions: [String]?, permissionPolicies: [DomainPermissionPolicy]?, userCount: Int?, roleNeedsUpdate: Bool?, base: Bool?, _default: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.defaultRoleId = defaultRoleId
-        
         self.permissions = permissions
-        
         self.unusedPermissions = unusedPermissions
-        
         self.permissionPolicies = permissionPolicies
-        
         self.userCount = userCount
-        
         self.roleNeedsUpdate = roleNeedsUpdate
-        
         self.base = base
-        
         self._default = _default
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

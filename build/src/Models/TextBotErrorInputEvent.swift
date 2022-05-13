@@ -18,11 +18,8 @@ public class TextBotErrorInputEvent: Codable {
     public var message: String?
 
     public init(code: String?, message: String?) {
-        
         self.code = code
-        
         self.message = message
-        
     }
 
 

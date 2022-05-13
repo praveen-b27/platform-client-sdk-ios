@@ -17,11 +17,8 @@ public class SurveyErrorDetails: Codable {
     public var surveyErrorReason: String?
 
     public init(flowDiagnosticInfo: FlowDiagnosticInfo?, surveyErrorReason: String?) {
-        
         self.flowDiagnosticInfo = flowDiagnosticInfo
-        
         self.surveyErrorReason = surveyErrorReason
-        
     }
 
 

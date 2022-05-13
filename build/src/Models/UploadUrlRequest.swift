@@ -14,7 +14,7 @@ public class UploadUrlRequest: Codable {
     public enum ServerSideEncryption: String, Codable { 
         case aes256 = "AES256"
     }
-    /** Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\&quot;&gt;[~&lt;#| */
+    /** Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\">[~<#| */
     public var fileName: String?
     /** Content MD5 of the file to upload */
     public var contentMd5: String?
@@ -23,15 +23,10 @@ public class UploadUrlRequest: Codable {
     public var serverSideEncryption: ServerSideEncryption?
 
     public init(fileName: String?, contentMd5: String?, signedUrlTimeoutSeconds: Int?, serverSideEncryption: ServerSideEncryption?) {
-        
         self.fileName = fileName
-        
         self.contentMd5 = contentMd5
-        
         self.signedUrlTimeoutSeconds = signedUrlTimeoutSeconds
-        
         self.serverSideEncryption = serverSideEncryption
-        
     }
 
 

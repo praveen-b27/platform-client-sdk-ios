@@ -30,7 +30,7 @@ public class WfmUserNotification: Codable {
     public var timeOffRequest: TimeOffRequestNotification?
     /** An adherence explanation notification.  Only set if type == AdherenceExplanation */
     public var adherenceExplanation: AdherenceExplanationNotification?
-    /** Whether this notification has been marked \&quot;read\&quot; */
+    /** Whether this notification has been marked \"read\" */
     public var markedAsRead: Bool?
     /** Whether this notification is for an agent */
     public var agentNotification: Bool?
@@ -38,27 +38,16 @@ public class WfmUserNotification: Codable {
     public var otherNotificationIdsInGroup: [String]?
 
     public init(_id: String?, mutableGroupId: String?, timestamp: Date?, type: ModelType?, shiftTrade: ShiftTradeNotification?, timeOffRequest: TimeOffRequestNotification?, adherenceExplanation: AdherenceExplanationNotification?, markedAsRead: Bool?, agentNotification: Bool?, otherNotificationIdsInGroup: [String]?) {
-        
         self._id = _id
-        
         self.mutableGroupId = mutableGroupId
-        
         self.timestamp = timestamp
-        
         self.type = type
-        
         self.shiftTrade = shiftTrade
-        
         self.timeOffRequest = timeOffRequest
-        
         self.adherenceExplanation = adherenceExplanation
-        
         self.markedAsRead = markedAsRead
-        
         self.agentNotification = agentNotification
-        
         self.otherNotificationIdsInGroup = otherNotificationIdsInGroup
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

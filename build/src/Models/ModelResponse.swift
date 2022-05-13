@@ -51,35 +51,20 @@ public class ModelResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, assets: [AddressableEntityRef]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.version = version
-        
         self.libraries = libraries
-        
         self.texts = texts
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.interactionType = interactionType
-        
         self.substitutions = substitutions
-        
         self.substitutionsSchema = substitutionsSchema
-        
         self.responseType = responseType
-        
         self.messagingTemplate = messagingTemplate
-        
         self.assets = assets
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

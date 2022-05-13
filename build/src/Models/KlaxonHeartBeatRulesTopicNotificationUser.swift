@@ -15,11 +15,8 @@ public class KlaxonHeartBeatRulesTopicNotificationUser: Codable {
     public var displayName: String?
 
     public init(_id: String?, displayName: String?) {
-        
         self._id = _id
-        
         self.displayName = displayName
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

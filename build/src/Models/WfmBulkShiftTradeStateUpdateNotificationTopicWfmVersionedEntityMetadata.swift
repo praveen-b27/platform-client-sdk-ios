@@ -16,13 +16,9 @@ public class WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMeta
     public var dateModified: Date?
 
     public init(version: Int?, modifiedBy: WfmBulkShiftTradeStateUpdateNotificationTopicUserReference?, dateModified: Date?) {
-        
         self.version = version
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
     }
 
 

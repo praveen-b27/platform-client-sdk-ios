@@ -20,13 +20,9 @@ public class OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress: Cod
     public var domain: OutboundMessagingMessagingCampaignConfigChangeUriReference?
 
     public init(friendlyName: String?, localPart: String?, domain: OutboundMessagingMessagingCampaignConfigChangeUriReference?) {
-        
         self.friendlyName = friendlyName
-        
         self.localPart = localPart
-        
         self.domain = domain
-        
     }
 
 

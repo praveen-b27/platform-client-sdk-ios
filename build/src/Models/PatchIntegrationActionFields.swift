@@ -17,11 +17,8 @@ public class PatchIntegrationActionFields: Codable {
     public var requestMappings: [RequestMapping]?
 
     public init(integrationAction: PatchIntegrationAction?, requestMappings: [RequestMapping]?) {
-        
         self.integrationAction = integrationAction
-        
         self.requestMappings = requestMappings
-        
     }
 
 

@@ -46,31 +46,18 @@ public class ManagementUnit: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, businessUnit: BusinessUnitReference?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettingsResponse?, metadata: WfmVersionedEntityMetadata?, division: DivisionReference?, version: Int?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.businessUnit = businessUnit
-        
         self.startDayOfWeek = startDayOfWeek
-        
         self.timeZone = timeZone
-        
         self.settings = settings
-        
         self.metadata = metadata
-        
         self.division = division
-        
         self.version = version
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

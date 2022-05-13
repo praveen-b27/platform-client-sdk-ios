@@ -31,15 +31,10 @@ public class Parameter: Codable {
     public var _required: Bool?
 
     public init(name: String?, parameterType: ParameterType?, domain: Domain?, _required: Bool?) {
-        
         self.name = name
-        
         self.parameterType = parameterType
-        
         self.domain = domain
-        
         self._required = _required
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -50,33 +50,19 @@ public class WebChatMemberInfo: Codable {
     public var state: State?
 
     public init(_id: String?, displayName: String?, firstName: String?, lastName: String?, email: String?, phoneNumber: String?, avatarImageUrl: String?, role: Role?, joinDate: Date?, leaveDate: Date?, authenticatedGuest: Bool?, customFields: [String:String]?, state: State?) {
-        
         self._id = _id
-        
         self.displayName = displayName
-        
         self.firstName = firstName
-        
         self.lastName = lastName
-        
         self.email = email
-        
         self.phoneNumber = phoneNumber
-        
         self.avatarImageUrl = avatarImageUrl
-        
         self.role = role
-        
         self.joinDate = joinDate
-        
         self.leaveDate = leaveDate
-        
         self.authenticatedGuest = authenticatedGuest
-        
         self.customFields = customFields
-        
         self.state = state
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

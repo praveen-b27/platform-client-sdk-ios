@@ -37,27 +37,16 @@ public class VoicemailGroupPolicy: Codable {
     public var interactiveResponsePromptId: String?
 
     public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?, interactiveResponsePromptId: String?) {
-        
         self.name = name
-        
         self.group = group
-        
         self.enabled = enabled
-        
         self.sendEmailNotifications = sendEmailNotifications
-        
         self.disableEmailPii = disableEmailPii
-        
         self.rotateCallsSecs = rotateCallsSecs
-        
         self.stopRingingAfterRotations = stopRingingAfterRotations
-        
         self.overflowGroupId = overflowGroupId
-        
         self.groupAlertType = groupAlertType
-        
         self.interactiveResponsePromptId = interactiveResponsePromptId
-        
     }
 
 

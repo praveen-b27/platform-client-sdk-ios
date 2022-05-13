@@ -30,23 +30,14 @@ public class V2ConversationMessageTypingEventForUserTopicConversationMessageCont
     public var generic: V2ConversationMessageTypingEventForUserTopicConversationContentGeneric?
 
     public init(contentType: ContentType?, location: V2ConversationMessageTypingEventForUserTopicConversationContentLocation?, story: V2ConversationMessageTypingEventForUserTopicConversationContentStory?, attachment: V2ConversationMessageTypingEventForUserTopicConversationContentAttachment?, quickReply: V2ConversationMessageTypingEventForUserTopicConversationContentQuickReply?, template: V2ConversationMessageTypingEventForUserTopicConversationContentNotificationTemplate?, buttonResponse: V2ConversationMessageTypingEventForUserTopicConversationContentButtonResponse?, generic: V2ConversationMessageTypingEventForUserTopicConversationContentGeneric?) {
-        
         self.contentType = contentType
-        
         self.location = location
-        
         self.story = story
-        
         self.attachment = attachment
-        
         self.quickReply = quickReply
-        
         self.template = template
-        
         self.buttonResponse = buttonResponse
-        
         self.generic = generic
-        
     }
 
 

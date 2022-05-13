@@ -23,27 +23,16 @@ public class JourneyOutcomeEventsNotificationOutcomeAchievedMessage: Codable {
     public var visitReferrer: JourneyOutcomeEventsNotificationReferrer?
 
     public init(outcome: JourneyOutcomeEventsNotificationOutcome?, browser: JourneyOutcomeEventsNotificationBrowser?, visitCreatedDate: Date?, ipAddress: String?, ipOrganization: String?, userAgentString: String?, device: JourneyOutcomeEventsNotificationDevice?, geolocation: JourneyOutcomeEventsNotificationGeoLocation?, mktCampaign: JourneyOutcomeEventsNotificationMktCampaign?, visitReferrer: JourneyOutcomeEventsNotificationReferrer?) {
-        
         self.outcome = outcome
-        
         self.browser = browser
-        
         self.visitCreatedDate = visitCreatedDate
-        
         self.ipAddress = ipAddress
-        
         self.ipOrganization = ipOrganization
-        
         self.userAgentString = userAgentString
-        
         self.device = device
-        
         self.geolocation = geolocation
-        
         self.mktCampaign = mktCampaign
-        
         self.visitReferrer = visitReferrer
-        
     }
 
 

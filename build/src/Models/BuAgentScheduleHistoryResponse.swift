@@ -21,15 +21,10 @@ public class BuAgentScheduleHistoryResponse: Codable {
     public var changes: [BuAgentScheduleHistoryChange]?
 
     public init(priorPublishedSchedules: [BuScheduleReference]?, basePublishedSchedule: BuAgentScheduleHistoryChange?, droppedChanges: [BuAgentScheduleHistoryDroppedChange]?, changes: [BuAgentScheduleHistoryChange]?) {
-        
         self.priorPublishedSchedules = priorPublishedSchedules
-        
         self.basePublishedSchedule = basePublishedSchedule
-        
         self.droppedChanges = droppedChanges
-        
         self.changes = changes
-        
     }
 
 

@@ -159,6 +159,8 @@ Delete business unit
 
 A business unit cannot be deleted if it contains one or more management units
 
+
+
 Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}  
 
 Requires ANY permissions: 
@@ -190,7 +192,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunit(businessUnitId: bus
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -242,7 +244,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitActivitycode(busines
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to delete | |
 {: class="table-striped"}
 
@@ -478,6 +480,8 @@ Delete a short term forecast
 
 Must not be tied to any schedules
 
+
+
 Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}  
 
 Requires ANY permissions: 
@@ -611,7 +615,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunit(managementUnitId:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -769,7 +773,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWorkplan(managemen
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to delete | |
 {: class="table-striped"}
 
@@ -822,7 +826,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWorkplanrotation(m
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to be deleted | |
 {: class="table-striped"}
 
@@ -1108,6 +1112,8 @@ Get business unit
 
 Expanding \&quot;settings\&quot; will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
 
+
+
 Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}  
 
 Requires ANY permissions: 
@@ -1186,7 +1192,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunit.enummember.rawValue] // 
+let expand: [String] = [""] // 
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, expand: expand) { (response, error) in
@@ -1204,7 +1210,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: busine
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling") |
 {: class="table-striped"}
 
@@ -1258,7 +1264,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycode(businessUn
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to fetch | |
 {: class="table-striped"}
 
@@ -1368,7 +1374,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(businessU
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -1475,7 +1481,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(busines
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), coachingDivisioned ("CoachingDivisioned"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**|  | [optional] |
 {: class="table-striped"}
@@ -1681,7 +1687,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let businessUnitId: String = "" // The ID of the business unit
 let runId: String = "" // The ID of the schedule run
 let managementUnitIds: [String] = [""] // The IDs of the management units for which to fetch the reschedule results
-let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitSchedulingRunResult.enummember.rawValue] // The fields to expand. Omitting will return an empty response
+let expand: [String] = [""] // The fields to expand. Omitting will return an empty response
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulingRunResult(businessUnitId: businessUnitId, runId: runId, managementUnitIds: managementUnitIds, expand: expand) { (response, error) in
@@ -2115,7 +2121,9 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgen
 
 Get the list of week schedules for the specified week
 
-Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+Use \&quot;recent\&quot; (without quotes) for the &#x60;weekId&#x60; path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+
+
 
 Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules  
 
@@ -2154,7 +2162,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedules(businessU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules | |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format, or 'recent' (without quotes) to get recent schedules | |
 | **includeOnlyPublished** | **Bool**| includeOnlyPublished | [optional] |
 | **expand** | **String**| expand | [optional]<br />**Values**: forecastDescription ("forecast.description") |
 {: class="table-striped"}
@@ -2193,7 +2201,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
-let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitWeekShorttermforecast.enummember.rawValue] // 
+let expand: [String] = [""] // 
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, expand: expand) { (response, error) in
@@ -2233,6 +2241,8 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecast(b
 Get the result of a short term forecast calculation
 
 Includes modifications unless you pass the doNotApplyModifications query parameter
+
+
 
 Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data  
 
@@ -2350,6 +2360,8 @@ Get the result of a long term forecast calculation
 
 Includes modifications unless you pass the doNotApplyModifications query parameter
 
+
+
 Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata  
 
 Requires ANY permissions: 
@@ -2464,7 +2476,9 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastPl
 
 Get short term forecasts
 
-Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+Use \&quot;recent\&quot; (without quotes) for the &#x60;weekDateId&#x60; path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+
+
 
 Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts  
 
@@ -2501,7 +2515,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecasts(
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts | |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format or 'recent' (without quotes) to fetch recent forecasts | |
 {: class="table-striped"}
 
 
@@ -2822,6 +2836,8 @@ Get management unit
 
 settings.shortTermForecasting is deprecated and now lives on the business unit
 
+
+
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}  
 
 Requires ANY permissions: 
@@ -2895,7 +2911,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementManagementunit.enummember.rawValue] // 
+let expand: [String] = [""] // 
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunit(managementUnitId: managementUnitId, expand: expand) { (response, error) in
@@ -2913,7 +2929,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunit(managementUnitId: ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: settings ("settings"), settingsAdherence ("settings.adherence"), settingsTimeoff ("settings.timeOff"), settingsScheduling ("settings.scheduling"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsShifttrading ("settings.shiftTrading") |
 {: class="table-striped"}
 
@@ -2926,7 +2942,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunit(managementUnitId: ma
 
 # **getWorkforcemanagementManagementunitActivitycodes**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [ActivityCodeContainer](ActivityCodeContainer.html) getWorkforcemanagementManagementunitActivitycodes(managementUnitId)
 
@@ -3005,7 +3021,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitActivitycodes(managem
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -3113,7 +3129,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **agentId** | **String**| The agent id | |
 | **excludeCapabilities** | **Bool**| Excludes all capabilities of the agent such as queues, languages, and skills | [optional] |
 {: class="table-striped"}
@@ -3169,7 +3185,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgentShifttrades(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **agentId** | **String**| The agent id | |
 {: class="table-striped"}
 
@@ -3223,7 +3239,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesMatched(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -3275,7 +3291,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -3294,6 +3310,8 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(mana
 Gets a time off limit object
 
 Returns properties of time off limit object, but not daily values.
+
+
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}  
 
@@ -3348,6 +3366,8 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeofflimit(manageme
 Gets a list of time off limit objects under management unit.
 
 Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+
+
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits  
 
@@ -3542,7 +3562,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequest(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
 | **timeOffRequestId** | **String**| Time Off Request Id | |
 {: class="table-striped"}
@@ -3637,7 +3657,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The userId to whom the Time Off Request applies.
-let recentlyReviewed: Bool = false // Limit results to requests that have been reviewed within the preceding 30 days
+let recentlyReviewed: Bool = true // Limit results to requests that have been reviewed within the preceding 30 days
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: managementUnitId, userId: userId, recentlyReviewed: recentlyReviewed) { (response, error) in
@@ -3655,9 +3675,9 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(m
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
-| **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
+| **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] |
 {: class="table-striped"}
 
 
@@ -3716,7 +3736,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(managementUnitI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -3728,7 +3748,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(managementUnitI
 
 # **getWorkforcemanagementManagementunitWeekSchedule**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [WeekScheduleResponse](WeekScheduleResponse.html) getWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, expand, forceDownloadService)
 
@@ -3773,7 +3793,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekSchedule(manageme
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
 | **scheduleId** | **String**| The ID of the schedule to fetch | |
 | **expand** | **String**| Which fields, if any, to expand | [optional]<br />**Values**: generationresults ("generationResults"), headcountforecast ("headcountForecast") |
@@ -3789,7 +3809,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekSchedule(manageme
 
 # **getWorkforcemanagementManagementunitWeekSchedules**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [WeekScheduleListResponse](WeekScheduleListResponse.html) getWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate)
 
@@ -3834,7 +3854,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekSchedules(managem
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
 | **includeOnlyPublished** | **Bool**| Return only published schedules | [optional] |
 | **earliestWeekDate** | **String**| The start date of the earliest week to query in yyyy-MM-dd format | [optional] |
@@ -3893,9 +3913,9 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(manag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **evaluateMatches** | **Bool**| Whether to evaluate the matches for violations | [optional] [default to true] |
+| **evaluateMatches** | **Bool**| Whether to evaluate the matches for violations | [optional] |
 {: class="table-striped"}
 
 
@@ -3933,7 +3953,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to fetch
-let includeOnly: [String] = [WorkforceManagementAPI.IncludeOnly_getWorkforcemanagementManagementunitWorkplan.enummember.rawValue] // limit response to the specified fields
+let includeOnly: [String] = [""] // limit response to the specified fields
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId, includeOnly: includeOnly) { (response, error) in
@@ -3951,7 +3971,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplan(managementUn
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to fetch | |
 | **includeOnly** | [**[String]**](String.html)| limit response to the specified fields | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances") |
 {: class="table-striped"}
@@ -4006,7 +4026,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplanrotation(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to fetch | |
 {: class="table-striped"}
 
@@ -4043,7 +4063,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementManagementunitWorkplanrotations.enummember.rawValue] // 
+let expand: [String] = [""] // 
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplanrotations(managementUnitId: managementUnitId, expand: expand) { (response, error) in
@@ -4061,7 +4081,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplanrotations(man
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: agents ("agents") |
 {: class="table-striped"}
 
@@ -4080,7 +4100,9 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplanrotations(man
 
 Get work plans
 
-\&quot;expand=details\&quot; is deprecated
+\&quot;expand&#x3D;details\&quot; is deprecated
+
+
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans  
 
@@ -4101,7 +4123,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementManagementunitWorkplans.enummember.rawValue] // 
+let expand: [String] = [""] // 
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, expand: expand) { (response, error) in
@@ -4119,7 +4141,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementU
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances"), details ("details") |
 {: class="table-striped"}
 
@@ -4250,6 +4272,8 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitsDivisionviews(divisi
 Get a list of notifications for the current user
 
 Notifications are only initially sent if you have the relevant Notify and Edit permissions
+
+
 
 Wraps GET /api/v2/workforcemanagement/notifications  
 
@@ -4520,7 +4544,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let recentlyReviewed: Bool = false // Limit results to requests that have been reviewed within the preceding 30 days
+let recentlyReviewed: Bool = true // Limit results to requests that have been reviewed within the preceding 30 days
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementTimeoffrequests(recentlyReviewed: recentlyReviewed) { (response, error) in
@@ -4538,7 +4562,7 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequests(recentlyReviewed: r
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
+| **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] |
 {: class="table-striped"}
 
 
@@ -4591,7 +4615,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunit(businessUnitId: busi
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -4646,7 +4670,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycode(business
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to update | |
 | **body** | [**UpdateActivityCodeRequest**](UpdateActivityCodeRequest.html)| body | [optional] |
 {: class="table-striped"}
@@ -4868,7 +4892,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunit(managementUnitId: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -4888,6 +4912,8 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunit(managementUnitId: 
 Updates a time off limit object.
 
 Updates time off limit object properties, but not daily values.
+
+
 
 Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}  
 
@@ -5036,7 +5062,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **userId** | **String**| The id of the user the requested time off request belongs to | |
 | **timeOffRequestId** | **String**| The id of the time off request to update | |
 | **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch.html)| body | [optional] |
@@ -5053,7 +5079,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(
 
 
 
-> [ShiftTradeResponse](ShiftTradeResponse.html) patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId, weekDateId, body, tradeId)
+> [ShiftTradeResponse](ShiftTradeResponse.html) patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId, weekDateId, tradeId, body)
 
 Updates a shift trade. This route can only be called by the initiating agent
 
@@ -5075,11 +5101,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let body: PatchShiftTradeRequest = new PatchShiftTradeRequest(...) // body
 let tradeId: String = "" // The ID of the shift trade to update
+let body: PatchShiftTradeRequest = new PatchShiftTradeRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, tradeId: tradeId) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId: managementUnitId, weekDateId: weekDateId, tradeId: tradeId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5094,10 +5120,10 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest.html)| body | |
 | **tradeId** | **String**| The ID of the shift trade to update | |
+| **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest.html)| body | |
 {: class="table-striped"}
 
 
@@ -5111,7 +5137,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(mana
 
 
 
-> [WorkPlan](WorkPlan.html) patchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body, validationMode)
+> [WorkPlan](WorkPlan.html) patchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, validationMode, body)
 
 Update a work plan
 
@@ -5133,11 +5159,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to update
-let body: WorkPlan = new WorkPlan(...) // body
 let validationMode: WorkforceManagementAPI.ValidationMode_patchWorkforcemanagementManagementunitWorkplan = WorkforceManagementAPI.ValidationMode_patchWorkforcemanagementManagementunitWorkplan.enummember // Allows to update work plan even if validation result is invalid
+let body: WorkPlan = new WorkPlan(...) // body
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, validationMode: validationMode) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId, validationMode: validationMode, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5152,10 +5178,10 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(management
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to update | |
-| **body** | [**WorkPlan**](WorkPlan.html)| body | [optional] |
 | **validationMode** | **String**| Allows to update work plan even if validation result is invalid | [optional]<br />**Values**: ignore ("Ignore") |
+| **body** | [**WorkPlan**](WorkPlan.html)| body | [optional] |
 {: class="table-striped"}
 
 
@@ -5209,7 +5235,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplanrotation(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to update | |
 | **body** | [**UpdateWorkPlanRotationRequest**](UpdateWorkPlanRotationRequest.html)| body | [optional] |
 {: class="table-striped"}
@@ -5422,7 +5448,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(business
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -5437,7 +5463,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(business
 
 
 
-> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, body, forceAsync, forceDownloadService)
+> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, forceAsync, forceDownloadService, body)
 
 Search published schedules
 
@@ -5459,12 +5485,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit
-let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: businessUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5480,9 +5506,9 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAgentschedulesSearch(b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
 {: class="table-striped"}
 
 
@@ -5845,6 +5871,8 @@ Starts processing a schedule update
 
 Call after uploading the schedule data to the url supplied by the /update/uploadurl route
 
+
+
 Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update  
 
 Requires ANY permissions: 
@@ -5902,6 +5930,8 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleUpdate(bus
 Creates a signed upload URL for updating a schedule
 
 Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+
+
 
 Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl  
 
@@ -6073,6 +6103,8 @@ Starts processing a schedule import
 
 Call after uploading the schedule data to the url supplied by the /import/uploadurl route
 
+
+
 Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import  
 
 Requires ANY permissions: 
@@ -6128,6 +6160,8 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesImport(bu
 Creates a signed upload URL for importing a schedule
 
 Once the upload is complete, call the /import route to start the schedule import process
+
+
 
 Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl  
 
@@ -6303,6 +6337,8 @@ Starts importing the uploaded short term forecast
 
 Call after uploading the forecast data to the url supplied by the /import/uploadurl route
 
+
+
 Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import  
 
 Requires ANY permissions: 
@@ -6359,6 +6395,8 @@ Creates a signed upload URL for importing a short term forecast
 
 Once the upload is complete, call the /import route to start the short term forecast import process
 
+
+
 Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl  
 
 Requires ANY permissions: 
@@ -6414,6 +6452,8 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 Add a new business unit
 
 It may take a minute or two for a new business unit to be available for api operations
+
+
 
 Wraps POST /api/v2/workforcemanagement/businessunits  
 
@@ -6482,7 +6522,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let language: String = "en-US" // A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar
+let language: String = en-US // A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar
 
 // Code example
 WorkforceManagementAPI.postWorkforcemanagementCalendarUrlIcs(language: language) { (response, error) in
@@ -6500,7 +6540,7 @@ WorkforceManagementAPI.postWorkforcemanagementCalendarUrlIcs(language: language)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **language** | **String**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar | [optional] [default to en-US] |
+| **language** | **String**| A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar | [optional] |
 {: class="table-striped"}
 
 
@@ -6613,7 +6653,7 @@ WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate(body: body)
 
 
 
-> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, body, forceAsync, forceDownloadService)
+> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, forceAsync, forceDownloadService, body)
 
 Query published schedules for given given time range for set of users
 
@@ -6635,12 +6675,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: managementUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: managementUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -6655,10 +6695,10 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
 {: class="table-striped"}
 
 
@@ -6676,7 +6716,9 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 
 Request a historical adherence report
 
-The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
+The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions &#x3D; true
+
+
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery  
 
@@ -6732,6 +6774,8 @@ Move the requested management unit to a new business unit
 
 Returns status 200 if the management unit is already in the requested business unit
 
+
+
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/move  
 
 Requires ALL permissions: 
@@ -6765,7 +6809,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitMove(managementUnitI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -6778,7 +6822,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitMove(managementUnitI
 
 # **postWorkforcemanagementManagementunitSchedulesSearch**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementManagementunitSchedulesSearch(managementUnitId, body)
 
@@ -6820,7 +6864,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -6840,6 +6884,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(mana
 Creates a new time off limit object under management unit.
 
 Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+
+
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits  
 
@@ -7036,7 +7082,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -7055,7 +7101,9 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(mana
 
 Fetches time off requests matching the conditions specified in the request body
 
-Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
+Request body requires one of the following: User ID is specified, statuses &#x3D;&#x3D; [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
+
+
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query  
 
@@ -7090,7 +7138,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -7159,7 +7207,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsWaitl
 
 
 
-> [MatchShiftTradeResponse](MatchShiftTradeResponse.html) postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId, weekDateId, body, tradeId)
+> [MatchShiftTradeResponse](MatchShiftTradeResponse.html) postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId, weekDateId, tradeId, body)
 
 Matches a shift trade. This route can only be called by the receiving agent
 
@@ -7181,11 +7229,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let body: MatchShiftTradeRequest = new MatchShiftTradeRequest(...) // body
 let tradeId: String = "" // The ID of the shift trade to update
+let body: MatchShiftTradeRequest = new MatchShiftTradeRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, tradeId: tradeId) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId: managementUnitId, weekDateId: weekDateId, tradeId: tradeId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7200,10 +7248,10 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradeMatch(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body | |
 | **tradeId** | **String**| The ID of the shift trade to update | |
+| **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body | |
 {: class="table-striped"}
 
 
@@ -7257,7 +7305,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttrades(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest.html)| body | |
 {: class="table-striped"}
@@ -7313,7 +7361,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesSearc
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest.html)| body | |
 {: class="table-striped"}
@@ -7334,6 +7382,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesSearc
 Updates the state of a batch of shift trades
 
 Admin functionality is not supported with \&quot;mine\&quot;.
+
+
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk  
 
@@ -7371,7 +7421,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesState
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**BulkShiftTradeStateUpdateRequest**](BulkShiftTradeStateUpdateRequest.html)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
@@ -7428,7 +7478,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanCopy(managem
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to create a copy | |
 | **body** | [**CopyWorkPlan**](CopyWorkPlan.html)| body | [optional] |
 {: class="table-striped"}
@@ -7444,7 +7494,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanCopy(managem
 
 
 
-> [ValidateWorkPlanResponse](ValidateWorkPlanResponse.html) postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, body, expand)
+> [ValidateWorkPlanResponse](ValidateWorkPlanResponse.html) postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, expand, body)
 
 Validate Work Plan
 
@@ -7467,11 +7517,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to validate. For new work plan, use the word 'new' for the ID.
+let expand: [String] = [""] // 
 let body: WorkPlanValidationRequest = new WorkPlanValidationRequest(...) // body
-let expand: [String] = [WorkforceManagementAPI.Expand_postWorkforcemanagementManagementunitWorkplanValidate.enummember.rawValue] // 
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, expand: expand) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: managementUnitId, workPlanId: workPlanId, expand: expand, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7486,10 +7536,10 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate(man
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **workPlanId** | **String**| The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. | |
-| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest.html)| body | [optional] |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
+| **workPlanId** | **String**| The ID of the work plan to validate. For new work plan, use the word 'new' for the ID. | |
 | **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: messages ("messages") |
+| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest.html)| body | [optional] |
 {: class="table-striped"}
 
 
@@ -7543,7 +7593,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotationCopy
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to create a copy | |
 | **body** | [**CopyWorkPlanRotationRequest**](CopyWorkPlanRotationRequest.html)| body | [optional] |
 {: class="table-striped"}
@@ -7598,7 +7648,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotations(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **body** | [**AddWorkPlanRotationRequest**](AddWorkPlanRotationRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -7613,7 +7663,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotations(ma
 
 
 
-> [WorkPlan](WorkPlan.html) postWorkforcemanagementManagementunitWorkplans(managementUnitId, body, validationMode)
+> [WorkPlan](WorkPlan.html) postWorkforcemanagementManagementunitWorkplans(managementUnitId, validationMode, body)
 
 Create a new work plan
 
@@ -7634,11 +7684,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let body: CreateWorkPlan = new CreateWorkPlan(...) // body
 let validationMode: WorkforceManagementAPI.ValidationMode_postWorkforcemanagementManagementunitWorkplans = WorkforceManagementAPI.ValidationMode_postWorkforcemanagementManagementunitWorkplans.enummember // Allows to create work plan even if the validation result is invalid
+let body: CreateWorkPlan = new CreateWorkPlan(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, body: body, validationMode: validationMode) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, validationMode: validationMode, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7653,9 +7703,9 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(management
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **body** | [**CreateWorkPlan**](CreateWorkPlan.html)| body | [optional] |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **validationMode** | **String**| Allows to create work plan even if the validation result is invalid | [optional]<br />**Values**: ignore ("Ignore") |
+| **body** | [**CreateWorkPlan**](CreateWorkPlan.html)| body | [optional] |
 {: class="table-striped"}
 
 
@@ -7674,6 +7724,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(management
 Add a management unit
 
 It may take a minute or two for a new management unit to be available for api operations
+
+
 
 Wraps POST /api/v2/workforcemanagement/managementunits  
 
@@ -7770,7 +7822,7 @@ WorkforceManagementAPI.postWorkforcemanagementNotificationsUpdate(body: body) { 
 
 # **postWorkforcemanagementSchedules**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementSchedules(body)
 
@@ -7933,6 +7985,8 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequests(body: body) { (res
 Sets daily values for a date range of time off limit object
 
 Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+
+
 
 Wraps PUT /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values  
 

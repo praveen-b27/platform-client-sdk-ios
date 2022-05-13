@@ -23,17 +23,11 @@ public class UpdateServiceGoalTemplate: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(name: String?, serviceLevel: BuServiceLevel?, averageSpeedOfAnswer: BuAverageSpeedOfAnswer?, abandonRate: BuAbandonRate?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.name = name
-        
         self.serviceLevel = serviceLevel
-        
         self.averageSpeedOfAnswer = averageSpeedOfAnswer
-        
         self.abandonRate = abandonRate
-        
         self.metadata = metadata
-        
     }
 
 

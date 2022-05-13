@@ -16,9 +16,7 @@ public class ValueWrapperDate: Codable {
     public var value: Date?
 
     public init(value: Date?) {
-        
         self.value = value
-        
     }
 
 

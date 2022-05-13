@@ -31,29 +31,17 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
     public var isOverdue: Bool?
 
     public init(_id: String?, user: LearningAssignmentTopicUserReference?, module: LearningAssignmentTopicLearningModuleReference?, version: Int?, state: State?, dateRecommendedForCompletion: Date?, createdBy: LearningAssignmentTopicUserReference?, dateCreated: Date?, modifiedBy: LearningAssignmentTopicUserReference?, dateModified: Date?, isOverdue: Bool?) {
-        
         self._id = _id
-        
         self.user = user
-        
         self.module = module
-        
         self.version = version
-        
         self.state = state
-        
         self.dateRecommendedForCompletion = dateRecommendedForCompletion
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.isOverdue = isOverdue
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

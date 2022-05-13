@@ -30,35 +30,24 @@ public class PostTextResponse: Codable {
     public var amazonLex: [String:JSON]?
     /** Raw data response from Google Dialogflow (if called) */
     public var googleDialogFlow: [String:JSON]?
-    /** Raw data response from Genesys&#39; Dialogengine (if called) */
+    /** Raw data response from Genesys' Dialogengine (if called) */
     public var genesysDialogEngine: [String:JSON]?
-    /** Raw data response from Genesys&#39; BotConnector (if called) */
+    /** Raw data response from Genesys' BotConnector (if called) */
     public var genesysBotConnector: [String:JSON]?
     /** Raw data response from Nuance Mix Dlg (if called) */
     public var nuanceMixDlg: [String:JSON]?
 
     public init(botState: BotState?, replyMessages: [PostTextMessage]?, intentName: String?, slots: [String:String]?, botCorrelationId: String?, amazonLex: [String:JSON]?, googleDialogFlow: [String:JSON]?, genesysDialogEngine: [String:JSON]?, genesysBotConnector: [String:JSON]?, nuanceMixDlg: [String:JSON]?) {
-        
         self.botState = botState
-        
         self.replyMessages = replyMessages
-        
         self.intentName = intentName
-        
         self.slots = slots
-        
         self.botCorrelationId = botCorrelationId
-        
         self.amazonLex = amazonLex
-        
         self.googleDialogFlow = googleDialogFlow
-        
         self.genesysDialogEngine = genesysDialogEngine
-        
         self.genesysBotConnector = genesysBotConnector
-        
         self.nuanceMixDlg = nuanceMixDlg
-        
     }
 
 

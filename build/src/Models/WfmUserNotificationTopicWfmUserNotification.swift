@@ -28,27 +28,16 @@ public class WfmUserNotificationTopicWfmUserNotification: Codable {
     public var markedAsRead: Bool?
 
     public init(_id: String?, mutableGroupId: String?, timestamp: Date?, type: ModelType?, shiftTrade: WfmUserNotificationTopicShiftTradeNotification?, timeOffRequest: WfmUserNotificationTopicTimeOffRequestNotification?, adherenceExplanation: WfmUserNotificationTopicAdherenceExplanationNotification?, agentNotification: Bool?, otherNotificationIdsInGroup: [String]?, markedAsRead: Bool?) {
-        
         self._id = _id
-        
         self.mutableGroupId = mutableGroupId
-        
         self.timestamp = timestamp
-        
         self.type = type
-        
         self.shiftTrade = shiftTrade
-        
         self.timeOffRequest = timeOffRequest
-        
         self.adherenceExplanation = adherenceExplanation
-        
         self.agentNotification = agentNotification
-        
         self.otherNotificationIdsInGroup = otherNotificationIdsInGroup
-        
         self.markedAsRead = markedAsRead
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

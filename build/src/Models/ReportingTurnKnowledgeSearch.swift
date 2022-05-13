@@ -19,13 +19,9 @@ public class ReportingTurnKnowledgeSearch: Codable {
     public var query: String?
 
     public init(searchId: String?, documents: [ReportingTurnKnowledgeDocument]?, query: String?) {
-        
         self.searchId = searchId
-        
         self.documents = documents
-        
         self.query = query
-        
     }
 
 

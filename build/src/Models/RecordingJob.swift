@@ -49,35 +49,20 @@ public class RecordingJob: Codable {
     public var user: AddressableEntityRef?
 
     public init(_id: String?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalSkippedRecordings: Int?, totalFailedRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, failedRecordings: String?, selfUri: String?, user: AddressableEntityRef?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.recordingJobsQuery = recordingJobsQuery
-        
         self.dateCreated = dateCreated
-        
         self.totalConversations = totalConversations
-        
         self.totalRecordings = totalRecordings
-        
         self.totalSkippedRecordings = totalSkippedRecordings
-        
         self.totalFailedRecordings = totalFailedRecordings
-        
         self.totalProcessedRecordings = totalProcessedRecordings
-        
         self.percentProgress = percentProgress
-        
         self.errorMessage = errorMessage
-        
         self.failedRecordings = failedRecordings
-        
         self.selfUri = selfUri
-        
         self.user = user
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

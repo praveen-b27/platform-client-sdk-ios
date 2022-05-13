@@ -18,11 +18,8 @@ public class HeadcountForecast: Codable {
     public var requiredWithoutShrinkage: [HeadcountInterval]?
 
     public init(_required: [HeadcountInterval]?, requiredWithoutShrinkage: [HeadcountInterval]?) {
-        
         self._required = _required
-        
         self.requiredWithoutShrinkage = requiredWithoutShrinkage
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

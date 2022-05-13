@@ -32,13 +32,9 @@ public class ScimPhoneNumber: Codable {
     public var primary: Bool?
 
     public init(value: String?, type: ModelType?, primary: Bool?) {
-        
         self.value = value
-        
         self.type = type
-        
         self.primary = primary
-        
     }
 
 

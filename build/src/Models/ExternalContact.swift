@@ -63,69 +63,37 @@ public class ExternalContact: Codable {
     public var selfUri: String?
 
     public init(_id: String?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: PhoneNumber?, cellPhone: PhoneNumber?, homePhone: PhoneNumber?, otherPhone: PhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ContactAddress?, twitterId: TwitterId?, lineId: LineId?, whatsAppId: WhatsAppId?, facebookId: FacebookId?, modifyDate: Date?, createDate: Date?, externalOrganization: ExternalOrganization?, surveyOptOut: Bool?, externalSystemUrl: String?, schema: DataSchema?, customFields: [String:JSON]?, externalDataSources: [ExternalDataSource]?, type: ModelType?, canonicalContact: ContactAddressableEntityRef?, mergeSet: [ContactAddressableEntityRef]?, mergeOperation: MergeOperation?, selfUri: String?) {
-        
         self._id = _id
-        
         self.firstName = firstName
-        
         self.middleName = middleName
-        
         self.lastName = lastName
-        
         self.salutation = salutation
-        
         self.title = title
-        
         self.workPhone = workPhone
-        
         self.cellPhone = cellPhone
-        
         self.homePhone = homePhone
-        
         self.otherPhone = otherPhone
-        
         self.workEmail = workEmail
-        
         self.personalEmail = personalEmail
-        
         self.otherEmail = otherEmail
-        
         self.address = address
-        
         self.twitterId = twitterId
-        
         self.lineId = lineId
-        
         self.whatsAppId = whatsAppId
-        
         self.facebookId = facebookId
-        
         self.modifyDate = modifyDate
-        
         self.createDate = createDate
-        
         self.externalOrganization = externalOrganization
-        
         self.surveyOptOut = surveyOptOut
-        
         self.externalSystemUrl = externalSystemUrl
-        
         self.schema = schema
-        
         self.customFields = customFields
-        
         self.externalDataSources = externalDataSources
-        
         self.type = type
-        
         self.canonicalContact = canonicalContact
-        
         self.mergeSet = mergeSet
-        
         self.mergeOperation = mergeOperation
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

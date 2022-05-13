@@ -27,23 +27,14 @@ public class ArchitectFlowNotificationFlowNotification: Codable {
     public var currentOperation: ArchitectFlowNotificationArchitectOperation?
 
     public init(_id: String?, name: String?, _description: String?, deleted: Bool?, checkedInVersion: ArchitectFlowNotificationFlowVersion?, savedVersion: ArchitectFlowNotificationFlowVersion?, publishedVersion: ArchitectFlowNotificationFlowVersion?, currentOperation: ArchitectFlowNotificationArchitectOperation?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.deleted = deleted
-        
         self.checkedInVersion = checkedInVersion
-        
         self.savedVersion = savedVersion
-        
         self.publishedVersion = publishedVersion
-        
         self.currentOperation = currentOperation
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

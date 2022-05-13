@@ -61,7 +61,7 @@ public class Call: Codable {
     public var recording: Bool?
     /** State of recording on this call. */
     public var recordingState: RecordingState?
-    /** True if this call is muted so that remote participants can&#39;t hear any audio from this end. */
+    /** True if this call is muted so that remote participants can't hear any audio from this end. */
     public var muted: Bool?
     /** True if this call is held and the person on this side hears hold music. */
     public var confined: Bool?
@@ -69,7 +69,7 @@ public class Call: Codable {
     public var held: Bool?
     /** A globally unique identifier for the recording associated with this call. */
     public var recordingId: String?
-    /** The time line of the participant&#39;s call, divided into activity segments. */
+    /** The time line of the participant's call, divided into activity segments. */
     public var segments: [Segment]?
     public var errorInfo: ErrorInfo?
     /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
@@ -110,65 +110,35 @@ public class Call: Codable {
     public var agentAssistantId: String?
 
     public init(state: State?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.direction = direction
-        
         self.recording = recording
-        
         self.recordingState = recordingState
-        
         self.muted = muted
-        
         self.confined = confined
-        
         self.held = held
-        
         self.recordingId = recordingId
-        
         self.segments = segments
-        
         self.errorInfo = errorInfo
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.documentId = documentId
-        
         self.startAlertingTime = startAlertingTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.disconnectReasons = disconnectReasons
-        
         self.faxStatus = faxStatus
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.uuiData = uuiData
-        
         self._self = _self
-        
         self.other = other
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
         self.agentAssistantId = agentAssistantId
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

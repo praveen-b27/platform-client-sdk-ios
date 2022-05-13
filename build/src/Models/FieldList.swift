@@ -23,27 +23,16 @@ public class FieldList: Codable {
     public var gdpr: Bool?
 
     public init(customLabels: Bool?, instructionText: String?, key: String?, labelKeys: [String]?, params: [String:JSON]?, repeatable: Bool?, state: String?, type: String?, _required: Bool?, gdpr: Bool?) {
-        
         self.customLabels = customLabels
-        
         self.instructionText = instructionText
-        
         self.key = key
-        
         self.labelKeys = labelKeys
-        
         self.params = params
-        
         self.repeatable = repeatable
-        
         self.state = state
-        
         self.type = type
-        
         self._required = _required
-        
         self.gdpr = gdpr
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

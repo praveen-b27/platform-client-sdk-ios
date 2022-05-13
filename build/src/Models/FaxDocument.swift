@@ -35,43 +35,24 @@ public class FaxDocument: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, sharingUri: String?, contentType: String?, contentLength: Int64?, filename: String?, read: Bool?, pageCount: Int64?, callerAddress: String?, receiverAddress: String?, thumbnails: [DocumentThumbnail]?, downloadSharingUri: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.contentUri = contentUri
-        
         self.workspace = workspace
-        
         self.createdBy = createdBy
-        
         self.sharingUri = sharingUri
-        
         self.contentType = contentType
-        
         self.contentLength = contentLength
-        
         self.filename = filename
-        
         self.read = read
-        
         self.pageCount = pageCount
-        
         self.callerAddress = callerAddress
-        
         self.receiverAddress = receiverAddress
-        
         self.thumbnails = thumbnails
-        
         self.downloadSharingUri = downloadSharingUri
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

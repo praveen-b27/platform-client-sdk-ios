@@ -26,31 +26,21 @@ public class SupportedContent: Codable {
     public var modifiedBy: DomainEntityRef?
     /** Version number */
     public var version: Int?
-    /** Defines the allowable media that may be accepted for an inbound message or to be sent in an outbound message. The following is an example of allowing all inbound media, and for outbound all images and only mpeg video: {   \&quot;mediaTypes\&quot;: {     \&quot;allow\&quot;: {       \&quot;inbound\&quot;: [{\&quot;type\&quot;: \&quot;*/*\&quot;}],       \&quot;outbound\&quot;: [{\&quot;type\&quot;: \&quot;image/*\&quot;}, {\&quot;type\&quot;: \&quot;video/mpeg\&quot;}]     }   } } */
+    /** Defines the allowable media that may be accepted for an inbound message or to be sent in an outbound message. The following is an example of allowing all inbound media, and for outbound all images and only mpeg video: {   \"mediaTypes\": {     \"allow\": {       \"inbound\": [{\"type\": \"*_/_*\"}],       \"outbound\": [{\"type\": \"image/_*\"}, {\"type\": \"video/mpeg\"}]     }   } } */
     public var mediaTypes: MediaTypes?
     /** The URI for this object */
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, mediaTypes: MediaTypes?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.version = version
-        
         self.mediaTypes = mediaTypes
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -15,9 +15,7 @@ public class Context: Codable {
     public var patterns: [ContextPattern]?
 
     public init(patterns: [ContextPattern]?) {
-        
         self.patterns = patterns
-        
     }
 
 

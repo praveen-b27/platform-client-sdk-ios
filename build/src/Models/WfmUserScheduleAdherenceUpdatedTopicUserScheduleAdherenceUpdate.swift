@@ -48,43 +48,24 @@ public class WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate: Co
     public var removedFromManagementUnit: Bool?
 
     public init(user: WfmUserScheduleAdherenceUpdatedTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceExplanation: WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
-        
         self.user = user
-        
         self.managementUnitId = managementUnitId
-        
         self.team = team
-        
         self.scheduledActivityCategory = scheduledActivityCategory
-        
         self.scheduledActivityCode = scheduledActivityCode
-        
         self.systemPresence = systemPresence
-        
         self.organizationSecondaryPresenceId = organizationSecondaryPresenceId
-        
         self.routingStatus = routingStatus
-        
         self.actualActivityCategory = actualActivityCategory
-        
         self.isOutOfOffice = isOutOfOffice
-        
         self.adherenceState = adherenceState
-        
         self.impact = impact
-        
         self.adherenceExplanation = adherenceExplanation
-        
         self.adherenceChangeTime = adherenceChangeTime
-        
         self.presenceUpdateTime = presenceUpdateTime
-        
         self.activeQueues = activeQueues
-        
         self.activeQueuesModifiedTime = activeQueuesModifiedTime
-        
         self.removedFromManagementUnit = removedFromManagementUnit
-        
     }
 
 

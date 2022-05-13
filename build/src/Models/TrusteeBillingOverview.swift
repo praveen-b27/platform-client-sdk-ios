@@ -55,41 +55,23 @@ public class TrusteeBillingOverview: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, organization: NamedEntity?, currency: String?, enabledProducts: [String]?, subscriptionType: SubscriptionType?, rampPeriodStartDate: Date?, rampPeriodEndDate: Date?, billingPeriodStartDate: Date?, billingPeriodEndDate: Date?, usages: [SubscriptionOverviewUsage]?, contractAmendmentDate: Date?, contractEffectiveDate: Date?, contractEndDate: Date?, minimumMonthlyAmount: String?, inRampPeriod: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.organization = organization
-        
         self.currency = currency
-        
         self.enabledProducts = enabledProducts
-        
         self.subscriptionType = subscriptionType
-        
         self.rampPeriodStartDate = rampPeriodStartDate
-        
         self.rampPeriodEndDate = rampPeriodEndDate
-        
         self.billingPeriodStartDate = billingPeriodStartDate
-        
         self.billingPeriodEndDate = billingPeriodEndDate
-        
         self.usages = usages
-        
         self.contractAmendmentDate = contractAmendmentDate
-        
         self.contractEffectiveDate = contractEffectiveDate
-        
         self.contractEndDate = contractEndDate
-        
         self.minimumMonthlyAmount = minimumMonthlyAmount
-        
         self.inRampPeriod = inRampPeriod
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

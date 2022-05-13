@@ -15,9 +15,7 @@ public class LicenseBatchAssignmentRequest: Codable {
     public var assignments: [LicenseAssignmentRequest]?
 
     public init(assignments: [LicenseAssignmentRequest]?) {
-        
         self.assignments = assignments
-        
     }
 
 

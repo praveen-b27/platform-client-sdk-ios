@@ -12,20 +12,16 @@ import Foundation
 open class SCIMAPI {
     
     
-    
-    
-    
     /**
-     
      Delete a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteScimUser(userId: String, ifMatch: String? = nil, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteScimUser(userId: String, ifMatch: String? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteScimUserWithRequestBuilder(userId: userId, ifMatch: ifMatch)
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -42,33 +38,24 @@ open class SCIMAPI {
     }
 
     /**
-     
      Delete a user
-     
      - DELETE /api/v2/scim/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteScimUserWithRequestBuilder(userId: String, ifMatch: String? = nil) -> RequestBuilder<Empty> {
+    open class func deleteScimUserWithRequestBuilder(userId: String, ifMatch: String? = nil) -> RequestBuilder<JSON> {        
         var path = "/api/v2/scim/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
@@ -76,27 +63,23 @@ open class SCIMAPI {
         ]
         let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body, headers: headerParameters)
     }
 
     
     
-    
-    
-    
     /**
-     
      Delete a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteScimV2User(userId: String, ifMatch: String? = nil, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteScimV2User(userId: String, ifMatch: String? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteScimV2UserWithRequestBuilder(userId: userId, ifMatch: ifMatch)
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -113,33 +96,24 @@ open class SCIMAPI {
     }
 
     /**
-     
      Delete a user
-     
      - DELETE /api/v2/scim/v2/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteScimV2UserWithRequestBuilder(userId: String, ifMatch: String? = nil) -> RequestBuilder<Empty> {
+    open class func deleteScimV2UserWithRequestBuilder(userId: String, ifMatch: String? = nil) -> RequestBuilder<JSON> {        
         var path = "/api/v2/scim/v2/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
@@ -147,7 +121,7 @@ open class SCIMAPI {
         ]
         let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body, headers: headerParameters)
     }
@@ -156,49 +130,7 @@ open class SCIMAPI {
     
     
     
-    public enum Attributes_getScimGroup: String { 
-        case _id = "id"
-        case displayname = "displayName"
-        case members = "members"
-        case externalid = "externalId"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
-        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
-        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
-        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
-        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
-        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
-    }
-
-    
-    
-    
-    public enum ExcludedAttributes_getScimGroup: String { 
-        case _id = "id"
-        case displayname = "displayName"
-        case members = "members"
-        case externalid = "externalId"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
-        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
-        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
-        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
-        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
-        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
@@ -226,31 +158,27 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a group
-     
      - GET /api/v2/scim/groups/{groupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
+  "displayName" : "displayName",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
   "members" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "externalId" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "externalId" : "externalId",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
@@ -259,26 +187,18 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2Group> 
      */
-    open class func getScimGroupWithRequestBuilder(groupId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2Group> {
+    open class func getScimGroupWithRequestBuilder(groupId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2Group> {        
         var path = "/api/v2/scim/groups/{groupId}"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "attributes": attributes, 
-            
             "excludedAttributes": excludedAttributes
-            
         ])
         let nillableHeaders: [String: Any?] = [
             "If-None-Match": ifNoneMatch
@@ -295,54 +215,11 @@ open class SCIMAPI {
     
     
     
-    
-    public enum Attributes_getScimGroups: String { 
-        case _id = "id"
-        case displayname = "displayName"
-        case members = "members"
-        case externalid = "externalId"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
-        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
-        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
-        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
-        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
-        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
-    }
-
-    
-    
-    
-    public enum ExcludedAttributes_getScimGroups: String { 
-        case _id = "id"
-        case displayname = "displayName"
-        case members = "members"
-        case externalid = "externalId"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
-        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
-        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
-        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
-        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
-        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get a list of groups
      
-     - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional, default to 25)
+     - parameter startIndex: (query) The 1-based index of the first query result. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional)
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)
@@ -367,69 +244,69 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a list of groups
-     
      - GET /api/v2/scim/groups
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalResults" : 123456789,
-  "startIndex" : 123456789,
-  "itemsPerPage" : 123456789,
-  "schemas" : [ "aeiou" ],
+  "totalResults" : 0,
+  "startIndex" : 6,
+  "itemsPerPage" : 1,
+  "schemas" : [ "schemas", "schemas" ],
   "Resources" : [ {
-    "displayName" : "aeiou",
-    "meta" : {
-      "location" : "aeiou",
-      "lastModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : "aeiou",
-      "resourceType" : "aeiou"
-    },
-    "schemas" : [ "aeiou" ],
+    "displayName" : "displayName",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
     "members" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou",
-      "$ref" : "aeiou"
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    }, {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
     } ],
-    "externalId" : "aeiou",
-    "id" : "aeiou"
+    "externalId" : "externalId",
+    "id" : "id"
+  }, {
+    "displayName" : "displayName",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "members" : [ {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    }, {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    } ],
+    "externalId" : "externalId",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
-     - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional, default to 25)
+     - parameter startIndex: (query) The 1-based index of the first query result. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional)
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)
 
      - returns: RequestBuilder<ScimGroupListResponse> 
      */
-    open class func getScimGroupsWithRequestBuilder(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil) -> RequestBuilder<ScimGroupListResponse> {
+    open class func getScimGroupsWithRequestBuilder(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil) -> RequestBuilder<ScimGroupListResponse> {        
         let path = "/api/v2/scim/groups"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startIndex": startIndex?.encodeToJSON(), 
-            
             "count": count?.encodeToJSON(), 
-            
             "attributes": attributes, 
-            
             "excludedAttributes": excludedAttributes, 
-            
             "filter": filter
-            
         ])
 
         let requestBuilder: RequestBuilder<ScimGroupListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -437,7 +314,6 @@ open class SCIMAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum ResourceType_getScimResourcetype: String { 
         case user = "User"
@@ -448,9 +324,7 @@ open class SCIMAPI {
     }
 
     
-    
     /**
-     
      Get a resource type
      
      - parameter resourceType: (path) The type of resource. Returned with GET /api/v2/scim/resourcetypes. 
@@ -475,49 +349,39 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a resource type
-     
      - GET /api/v2/scim/resourcetypes/{resourceType}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "schema" : "aeiou",
-  "endpoint" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "schema" : "schema",
+  "endpoint" : "endpoint",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "name" : "name",
+  "description" : "description",
   "schemaExtensions" : [ {
-    "schema" : "aeiou",
+    "schema" : "schema",
+    "required" : true
+  }, {
+    "schema" : "schema",
     "required" : true
   } ],
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter resourceType: (path) The type of resource. Returned with GET /api/v2/scim/resourcetypes. 
 
      - returns: RequestBuilder<ScimConfigResourceType> 
      */
-    open class func getScimResourcetypeWithRequestBuilder(resourceType: ResourceType_getScimResourcetype) -> RequestBuilder<ScimConfigResourceType> {
+    open class func getScimResourcetypeWithRequestBuilder(resourceType: ResourceType_getScimResourcetype) -> RequestBuilder<ScimConfigResourceType> {        
         var path = "/api/v2/scim/resourcetypes/{resourceType}"
         let resourceTypePreEscape = "\(resourceType.rawValue)"
         let resourceTypePostEscape = resourceTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{resourceType}", with: resourceTypePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -526,9 +390,7 @@ open class SCIMAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get a list of resource types
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -552,50 +414,55 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a list of resource types
-     
      - GET /api/v2/scim/resourcetypes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalResults" : 123456789,
-  "startIndex" : 123456789,
-  "itemsPerPage" : 123456789,
-  "schemas" : [ "aeiou" ],
+  "totalResults" : 0,
+  "startIndex" : 6,
+  "itemsPerPage" : 1,
+  "schemas" : [ "schemas", "schemas" ],
   "Resources" : [ {
-    "schema" : "aeiou",
-    "endpoint" : "aeiou",
-    "meta" : {
-      "location" : "aeiou",
-      "lastModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : "aeiou",
-      "resourceType" : "aeiou"
-    },
-    "schemas" : [ "aeiou" ],
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "schema" : "schema",
+    "endpoint" : "endpoint",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "name" : "name",
+    "description" : "description",
     "schemaExtensions" : [ {
-      "schema" : "aeiou",
+      "schema" : "schema",
+      "required" : true
+    }, {
+      "schema" : "schema",
       "required" : true
     } ],
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "schema" : "schema",
+    "endpoint" : "endpoint",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "name" : "name",
+    "description" : "description",
+    "schemaExtensions" : [ {
+      "schema" : "schema",
+      "required" : true
+    }, {
+      "schema" : "schema",
+      "required" : true
+    } ],
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<ScimConfigResourceTypesListResponse> 
      */
-    open class func getScimResourcetypesWithRequestBuilder() -> RequestBuilder<ScimConfigResourceTypesListResponse> {
+    open class func getScimResourcetypesWithRequestBuilder() -> RequestBuilder<ScimConfigResourceTypesListResponse> {        
         let path = "/api/v2/scim/resourcetypes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -604,7 +471,6 @@ open class SCIMAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum SchemaId_getScimSchema: String { 
         case urnIetfParamsScimSchemasCore20User = "urn:ietf:params:scim:schemas:core:2.0:User"
@@ -617,9 +483,7 @@ open class SCIMAPI {
     }
 
     
-    
     /**
-     
      Get a SCIM schema
      
      - parameter schemaId: (path) The ID of a schema. Returned with GET /api/v2/scim/schemas. 
@@ -644,56 +508,56 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a SCIM schema
-     
      - GET /api/v2/scim/schemas/{schemaId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "meta" : "{}",
+  "name" : "name",
+  "description" : "description",
   "attributes" : [ {
-    "uniqueness" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "canonicalValues" : [ "aeiou" ],
-    "referenceTypes" : [ "aeiou" ],
-    "mutability" : "aeiou",
-    "type" : "aeiou",
+    "uniqueness" : "none",
+    "name" : "name",
+    "description" : "description",
+    "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+    "referenceTypes" : [ "User", "User" ],
+    "mutability" : "readWrite",
+    "type" : "string",
     "multiValued" : true,
     "caseExact" : true,
-    "returned" : "aeiou",
+    "returned" : "always",
     "required" : true,
-    "subAttributes" : [ "" ]
+    "subAttributes" : [ null, null ]
+  }, {
+    "uniqueness" : "none",
+    "name" : "name",
+    "description" : "description",
+    "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+    "referenceTypes" : [ "User", "User" ],
+    "mutability" : "readWrite",
+    "type" : "string",
+    "multiValued" : true,
+    "caseExact" : true,
+    "returned" : "always",
+    "required" : true,
+    "subAttributes" : [ null, null ]
   } ],
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter schemaId: (path) The ID of a schema. Returned with GET /api/v2/scim/schemas. 
 
      - returns: RequestBuilder<ScimV2SchemaDefinition> 
      */
-    open class func getScimSchemaWithRequestBuilder(schemaId: SchemaId_getScimSchema) -> RequestBuilder<ScimV2SchemaDefinition> {
+    open class func getScimSchemaWithRequestBuilder(schemaId: SchemaId_getScimSchema) -> RequestBuilder<ScimV2SchemaDefinition> {        
         var path = "/api/v2/scim/schemas/{schemaId}"
         let schemaIdPreEscape = "\(schemaId.rawValue)"
         let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -703,10 +567,7 @@ open class SCIMAPI {
     }
 
     
-    
-    
     /**
-     
      Get a list of SCIM schemas
      
      - parameter filter: (query) Filtered results are invalid and return 403 Unauthorized. (optional)
@@ -731,65 +592,95 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a list of SCIM schemas
-     
      - GET /api/v2/scim/schemas
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalResults" : 123456789,
-  "startIndex" : 123456789,
-  "itemsPerPage" : 123456789,
-  "schemas" : [ "aeiou" ],
+  "totalResults" : 0,
+  "startIndex" : 6,
+  "itemsPerPage" : 1,
+  "schemas" : [ "schemas", "schemas" ],
   "Resources" : [ {
-    "meta" : {
-      "location" : "aeiou",
-      "lastModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : "aeiou",
-      "resourceType" : "aeiou"
-    },
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "meta" : "{}",
+    "name" : "name",
+    "description" : "description",
     "attributes" : [ {
-      "uniqueness" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "canonicalValues" : [ "aeiou" ],
-      "referenceTypes" : [ "aeiou" ],
-      "mutability" : "aeiou",
-      "type" : "aeiou",
+      "uniqueness" : "none",
+      "name" : "name",
+      "description" : "description",
+      "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+      "referenceTypes" : [ "User", "User" ],
+      "mutability" : "readWrite",
+      "type" : "string",
       "multiValued" : true,
       "caseExact" : true,
-      "returned" : "aeiou",
+      "returned" : "always",
       "required" : true,
-      "subAttributes" : [ "" ]
+      "subAttributes" : [ null, null ]
+    }, {
+      "uniqueness" : "none",
+      "name" : "name",
+      "description" : "description",
+      "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+      "referenceTypes" : [ "User", "User" ],
+      "mutability" : "readWrite",
+      "type" : "string",
+      "multiValued" : true,
+      "caseExact" : true,
+      "returned" : "always",
+      "required" : true,
+      "subAttributes" : [ null, null ]
     } ],
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "meta" : "{}",
+    "name" : "name",
+    "description" : "description",
+    "attributes" : [ {
+      "uniqueness" : "none",
+      "name" : "name",
+      "description" : "description",
+      "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+      "referenceTypes" : [ "User", "User" ],
+      "mutability" : "readWrite",
+      "type" : "string",
+      "multiValued" : true,
+      "caseExact" : true,
+      "returned" : "always",
+      "required" : true,
+      "subAttributes" : [ null, null ]
+    }, {
+      "uniqueness" : "none",
+      "name" : "name",
+      "description" : "description",
+      "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+      "referenceTypes" : [ "User", "User" ],
+      "mutability" : "readWrite",
+      "type" : "string",
+      "multiValued" : true,
+      "caseExact" : true,
+      "returned" : "always",
+      "required" : true,
+      "subAttributes" : [ null, null ]
+    } ],
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter filter: (query) Filtered results are invalid and return 403 Unauthorized. (optional)
 
      - returns: RequestBuilder<ScimV2SchemaListResponse> 
      */
-    open class func getScimSchemasWithRequestBuilder(filter: String? = nil) -> RequestBuilder<ScimV2SchemaListResponse> {
+    open class func getScimSchemasWithRequestBuilder(filter: String? = nil) -> RequestBuilder<ScimV2SchemaListResponse> {        
         let path = "/api/v2/scim/schemas"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "filter": filter
-            
         ])
 
         let requestBuilder: RequestBuilder<ScimV2SchemaListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -798,10 +689,7 @@ open class SCIMAPI {
     }
 
     
-    
-    
     /**
-     
      Get a service provider's configuration
      
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
@@ -826,61 +714,46 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a service provider's configuration
-     
      - GET /api/v2/scim/serviceproviderconfig
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "patch" : {
-    "supported" : true
-  },
-  "filter" : {
-    "maxResults" : 123,
-    "supported" : true
-  },
-  "documentationUri" : "aeiou",
+  "patch" : "{}",
+  "filter" : "{}",
+  "documentationUri" : "https://openapi-generator.tech",
   "authenticationSchemes" : [ {
-    "documentationUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "specUri" : "aeiou",
-    "type" : "aeiou",
+    "documentationUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "specUri" : "https://openapi-generator.tech",
+    "type" : "oauth",
+    "primary" : true
+  }, {
+    "documentationUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "specUri" : "https://openapi-generator.tech",
+    "type" : "oauth",
     "primary" : true
   } ],
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "etag" : "",
-  "sort" : "",
-  "bulk" : {
-    "maxPayloadSize" : 123,
-    "maxOperations" : 123,
-    "supported" : true
-  },
-  "changePassword" : ""
-}}]
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "etag" : "{}",
+  "sort" : "{}",
+  "bulk" : "{}",
+  "changePassword" : "{}"
+}, statusCode=200}]
      
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
 
      - returns: RequestBuilder<ScimServiceProviderConfig> 
      */
-    open class func getScimServiceproviderconfigWithRequestBuilder(ifNoneMatch: String? = nil) -> RequestBuilder<ScimServiceProviderConfig> {
+    open class func getScimServiceproviderconfigWithRequestBuilder(ifNoneMatch: String? = nil) -> RequestBuilder<ScimServiceProviderConfig> {        
         let path = "/api/v2/scim/serviceproviderconfig"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
@@ -897,93 +770,7 @@ open class SCIMAPI {
     
     
     
-    public enum Attributes_getScimUser: String { 
-        case _id = "id"
-        case username = "userName"
-        case displayname = "displayName"
-        case title = "title"
-        case active = "active"
-        case externalid = "externalId"
-        case phonenumbers = "phoneNumbers"
-        case emails = "emails"
-        case groups = "groups"
-        case roles = "roles"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
-        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
-        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
-        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
-        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
-        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
-        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
-        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
-        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
-        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
-        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
-        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
-        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
-        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
-    }
-
-    
-    
-    
-    public enum ExcludedAttributes_getScimUser: String { 
-        case _id = "id"
-        case username = "userName"
-        case displayname = "displayName"
-        case title = "title"
-        case active = "active"
-        case externalid = "externalId"
-        case phonenumbers = "phoneNumbers"
-        case emails = "emails"
-        case groups = "groups"
-        case roles = "roles"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
-        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
-        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
-        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
-        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
-        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
-        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
-        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
-        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
-        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
-        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
-        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
-        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
-        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
@@ -1011,71 +798,56 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a user
-     
      - GET /api/v2/scim/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
+  "displayName" : "displayName",
   "roles" : [ {
-    "value" : "aeiou"
+    "value" : "value"
+  }, {
+    "value" : "value"
   } ],
   "active" : true,
-  "externalId" : "aeiou",
+  "externalId" : "externalId",
   "groups" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "userName" : "aeiou",
-  "title" : "aeiou",
+  "userName" : "userName",
+  "title" : "title",
   "phoneNumbers" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-    "division" : "aeiou",
-    "manager" : {
-      "value" : "aeiou",
-      "$ref" : "aeiou"
-    },
-    "department" : "aeiou",
-    "employeeNumber" : "aeiou"
-  },
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
   "emails" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "password" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "id" : "aeiou",
-  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-    "routingSkills" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "routingLanguages" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "externalIds" : [ {
-      "authority" : "aeiou",
-      "value" : "aeiou"
-    } ]
-  }
-}}]
+  "password" : "password",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "id" : "id",
+  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
@@ -1084,26 +856,18 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func getScimUserWithRequestBuilder(userId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2User> {
+    open class func getScimUserWithRequestBuilder(userId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2User> {        
         var path = "/api/v2/scim/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "attributes": attributes, 
-            
             "excludedAttributes": excludedAttributes
-            
         ])
         let nillableHeaders: [String: Any?] = [
             "If-None-Match": ifNoneMatch
@@ -1120,98 +884,11 @@ open class SCIMAPI {
     
     
     
-    
-    public enum Attributes_getScimUsers: String { 
-        case _id = "id"
-        case username = "userName"
-        case displayname = "displayName"
-        case title = "title"
-        case active = "active"
-        case externalid = "externalId"
-        case phonenumbers = "phoneNumbers"
-        case emails = "emails"
-        case groups = "groups"
-        case roles = "roles"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
-        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
-        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
-        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
-        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
-        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
-        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
-        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
-        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
-        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
-        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
-        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
-        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
-        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
-    }
-
-    
-    
-    
-    public enum ExcludedAttributes_getScimUsers: String { 
-        case _id = "id"
-        case username = "userName"
-        case displayname = "displayName"
-        case title = "title"
-        case active = "active"
-        case externalid = "externalId"
-        case phonenumbers = "phoneNumbers"
-        case emails = "emails"
-        case groups = "groups"
-        case roles = "roles"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
-        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
-        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
-        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
-        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
-        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
-        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
-        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
-        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
-        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
-        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
-        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
-        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
-        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get a list of users
      
-     - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional, default to 25)
+     - parameter startIndex: (query) The 1-based index of the first query result. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional)
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;, \&quot;employeeNumber eq 9876543210\&quot;. (optional)
@@ -1236,109 +913,128 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a list of users
-     
      - GET /api/v2/scim/users
      - To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \"active eq false\". By default, returns SCIM attributes \"externalId\", \"enterprise-user:manager\", and \"roles\". To exclude these attributes, set the attributes parameter to \"id,active\" or the excludeAttributes parameter to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalResults" : 123456789,
-  "startIndex" : 123456789,
-  "itemsPerPage" : 123456789,
-  "schemas" : [ "aeiou" ],
+  "totalResults" : 0,
+  "startIndex" : 6,
+  "itemsPerPage" : 1,
+  "schemas" : [ "schemas", "schemas" ],
   "Resources" : [ {
-    "displayName" : "aeiou",
+    "displayName" : "displayName",
     "roles" : [ {
-      "value" : "aeiou"
+      "value" : "value"
+    }, {
+      "value" : "value"
     } ],
     "active" : true,
-    "externalId" : "aeiou",
+    "externalId" : "externalId",
     "groups" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou",
-      "$ref" : "aeiou"
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    }, {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
     } ],
-    "userName" : "aeiou",
-    "title" : "aeiou",
+    "userName" : "userName",
+    "title" : "title",
     "phoneNumbers" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou",
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    }, {
+      "type" : "work",
+      "value" : "value",
       "primary" : true
     } ],
-    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-      "division" : "aeiou",
-      "manager" : {
-        "value" : "aeiou",
-        "$ref" : "aeiou"
-      },
-      "department" : "aeiou",
-      "employeeNumber" : "aeiou"
-    },
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
     "emails" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou",
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    }, {
+      "type" : "work",
+      "value" : "value",
       "primary" : true
     } ],
-    "password" : "aeiou",
-    "meta" : {
-      "location" : "aeiou",
-      "lastModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : "aeiou",
-      "resourceType" : "aeiou"
-    },
-    "schemas" : [ "aeiou" ],
-    "id" : "aeiou",
-    "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-      "routingSkills" : [ {
-        "name" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "routingLanguages" : [ {
-        "name" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "externalIds" : [ {
-        "authority" : "aeiou",
-        "value" : "aeiou"
-      } ]
-    }
+    "password" : "password",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "id" : "id",
+    "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+  }, {
+    "displayName" : "displayName",
+    "roles" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
+    "active" : true,
+    "externalId" : "externalId",
+    "groups" : [ {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    }, {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    } ],
+    "userName" : "userName",
+    "title" : "title",
+    "phoneNumbers" : [ {
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    }, {
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    } ],
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
+    "emails" : [ {
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    }, {
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    } ],
+    "password" : "password",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "id" : "id",
+    "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
-     - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional, default to 25)
+     - parameter startIndex: (query) The 1-based index of the first query result. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional)
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;, \&quot;employeeNumber eq 9876543210\&quot;. (optional)
 
      - returns: RequestBuilder<ScimUserListResponse> 
      */
-    open class func getScimUsersWithRequestBuilder(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil) -> RequestBuilder<ScimUserListResponse> {
+    open class func getScimUsersWithRequestBuilder(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil) -> RequestBuilder<ScimUserListResponse> {        
         let path = "/api/v2/scim/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startIndex": startIndex?.encodeToJSON(), 
-            
             "count": count?.encodeToJSON(), 
-            
             "attributes": attributes, 
-            
             "excludedAttributes": excludedAttributes, 
-            
             "filter": filter
-            
         ])
 
         let requestBuilder: RequestBuilder<ScimUserListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1350,49 +1046,7 @@ open class SCIMAPI {
     
     
     
-    public enum Attributes_getScimV2Group: String { 
-        case _id = "id"
-        case displayname = "displayName"
-        case members = "members"
-        case externalid = "externalId"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
-        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
-        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
-        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
-        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
-        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
-    }
-
-    
-    
-    
-    public enum ExcludedAttributes_getScimV2Group: String { 
-        case _id = "id"
-        case displayname = "displayName"
-        case members = "members"
-        case externalid = "externalId"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
-        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
-        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
-        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
-        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
-        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
@@ -1420,31 +1074,27 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a group
-     
      - GET /api/v2/scim/v2/groups/{groupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
+  "displayName" : "displayName",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
   "members" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "externalId" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "externalId" : "externalId",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
@@ -1453,26 +1103,18 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2Group> 
      */
-    open class func getScimV2GroupWithRequestBuilder(groupId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2Group> {
+    open class func getScimV2GroupWithRequestBuilder(groupId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2Group> {        
         var path = "/api/v2/scim/v2/groups/{groupId}"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "attributes": attributes, 
-            
             "excludedAttributes": excludedAttributes
-            
         ])
         let nillableHeaders: [String: Any?] = [
             "If-None-Match": ifNoneMatch
@@ -1489,55 +1131,12 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    public enum Attributes_getScimV2Groups: String { 
-        case _id = "id"
-        case displayname = "displayName"
-        case members = "members"
-        case externalid = "externalId"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
-        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
-        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
-        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
-        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
-        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
-    }
-
-    
-    
-    
-    public enum ExcludedAttributes_getScimV2Groups: String { 
-        case _id = "id"
-        case displayname = "displayName"
-        case members = "members"
-        case externalid = "externalId"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
-        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
-        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
-        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
-        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
-        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
-        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
-    }
-
-    
-    
     /**
-     
      Get a list of groups
      
      - parameter filter: (query) Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. 
-     - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional, default to 25)
+     - parameter startIndex: (query) The 1-based index of the first query result. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional)
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1561,69 +1160,69 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a list of groups
-     
      - GET /api/v2/scim/v2/groups
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalResults" : 123456789,
-  "startIndex" : 123456789,
-  "itemsPerPage" : 123456789,
-  "schemas" : [ "aeiou" ],
+  "totalResults" : 0,
+  "startIndex" : 6,
+  "itemsPerPage" : 1,
+  "schemas" : [ "schemas", "schemas" ],
   "Resources" : [ {
-    "displayName" : "aeiou",
-    "meta" : {
-      "location" : "aeiou",
-      "lastModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : "aeiou",
-      "resourceType" : "aeiou"
-    },
-    "schemas" : [ "aeiou" ],
+    "displayName" : "displayName",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
     "members" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou",
-      "$ref" : "aeiou"
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    }, {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
     } ],
-    "externalId" : "aeiou",
-    "id" : "aeiou"
+    "externalId" : "externalId",
+    "id" : "id"
+  }, {
+    "displayName" : "displayName",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "members" : [ {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    }, {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    } ],
+    "externalId" : "externalId",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter filter: (query) Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. 
-     - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional, default to 25)
+     - parameter startIndex: (query) The 1-based index of the first query result. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional)
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
 
      - returns: RequestBuilder<ScimGroupListResponse> 
      */
-    open class func getScimV2GroupsWithRequestBuilder(filter: String, startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil) -> RequestBuilder<ScimGroupListResponse> {
+    open class func getScimV2GroupsWithRequestBuilder(filter: String, startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil) -> RequestBuilder<ScimGroupListResponse> {        
         let path = "/api/v2/scim/v2/groups"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startIndex": startIndex?.encodeToJSON(), 
-            
             "count": count?.encodeToJSON(), 
-            
             "attributes": attributes, 
-            
             "excludedAttributes": excludedAttributes, 
-            
             "filter": filter
-            
         ])
 
         let requestBuilder: RequestBuilder<ScimGroupListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1631,7 +1230,6 @@ open class SCIMAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum ResourceType_getScimV2Resourcetype: String { 
         case user = "User"
@@ -1642,9 +1240,7 @@ open class SCIMAPI {
     }
 
     
-    
     /**
-     
      Get a resource type
      
      - parameter resourceType: (path) The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. 
@@ -1669,49 +1265,39 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a resource type
-     
      - GET /api/v2/scim/v2/resourcetypes/{resourceType}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "schema" : "aeiou",
-  "endpoint" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "schema" : "schema",
+  "endpoint" : "endpoint",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "name" : "name",
+  "description" : "description",
   "schemaExtensions" : [ {
-    "schema" : "aeiou",
+    "schema" : "schema",
+    "required" : true
+  }, {
+    "schema" : "schema",
     "required" : true
   } ],
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter resourceType: (path) The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. 
 
      - returns: RequestBuilder<ScimConfigResourceType> 
      */
-    open class func getScimV2ResourcetypeWithRequestBuilder(resourceType: ResourceType_getScimV2Resourcetype) -> RequestBuilder<ScimConfigResourceType> {
+    open class func getScimV2ResourcetypeWithRequestBuilder(resourceType: ResourceType_getScimV2Resourcetype) -> RequestBuilder<ScimConfigResourceType> {        
         var path = "/api/v2/scim/v2/resourcetypes/{resourceType}"
         let resourceTypePreEscape = "\(resourceType.rawValue)"
         let resourceTypePostEscape = resourceTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{resourceType}", with: resourceTypePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1720,9 +1306,7 @@ open class SCIMAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get a list of resource types
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1746,50 +1330,55 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a list of resource types
-     
      - GET /api/v2/scim/v2/resourcetypes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalResults" : 123456789,
-  "startIndex" : 123456789,
-  "itemsPerPage" : 123456789,
-  "schemas" : [ "aeiou" ],
+  "totalResults" : 0,
+  "startIndex" : 6,
+  "itemsPerPage" : 1,
+  "schemas" : [ "schemas", "schemas" ],
   "Resources" : [ {
-    "schema" : "aeiou",
-    "endpoint" : "aeiou",
-    "meta" : {
-      "location" : "aeiou",
-      "lastModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : "aeiou",
-      "resourceType" : "aeiou"
-    },
-    "schemas" : [ "aeiou" ],
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "schema" : "schema",
+    "endpoint" : "endpoint",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "name" : "name",
+    "description" : "description",
     "schemaExtensions" : [ {
-      "schema" : "aeiou",
+      "schema" : "schema",
+      "required" : true
+    }, {
+      "schema" : "schema",
       "required" : true
     } ],
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "schema" : "schema",
+    "endpoint" : "endpoint",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "name" : "name",
+    "description" : "description",
+    "schemaExtensions" : [ {
+      "schema" : "schema",
+      "required" : true
+    }, {
+      "schema" : "schema",
+      "required" : true
+    } ],
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<ScimConfigResourceTypesListResponse> 
      */
-    open class func getScimV2ResourcetypesWithRequestBuilder() -> RequestBuilder<ScimConfigResourceTypesListResponse> {
+    open class func getScimV2ResourcetypesWithRequestBuilder() -> RequestBuilder<ScimConfigResourceTypesListResponse> {        
         let path = "/api/v2/scim/v2/resourcetypes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1798,7 +1387,6 @@ open class SCIMAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum SchemaId_getScimV2Schema: String { 
         case urnIetfParamsScimSchemasCore20User = "urn:ietf:params:scim:schemas:core:2.0:User"
@@ -1811,9 +1399,7 @@ open class SCIMAPI {
     }
 
     
-    
     /**
-     
      Get a SCIM schema
      
      - parameter schemaId: (path) The ID of a schema. Returned with GET /api/v2/scim/v2/schemas. 
@@ -1838,56 +1424,56 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a SCIM schema
-     
      - GET /api/v2/scim/v2/schemas/{schemaId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "meta" : "{}",
+  "name" : "name",
+  "description" : "description",
   "attributes" : [ {
-    "uniqueness" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "canonicalValues" : [ "aeiou" ],
-    "referenceTypes" : [ "aeiou" ],
-    "mutability" : "aeiou",
-    "type" : "aeiou",
+    "uniqueness" : "none",
+    "name" : "name",
+    "description" : "description",
+    "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+    "referenceTypes" : [ "User", "User" ],
+    "mutability" : "readWrite",
+    "type" : "string",
     "multiValued" : true,
     "caseExact" : true,
-    "returned" : "aeiou",
+    "returned" : "always",
     "required" : true,
-    "subAttributes" : [ "" ]
+    "subAttributes" : [ null, null ]
+  }, {
+    "uniqueness" : "none",
+    "name" : "name",
+    "description" : "description",
+    "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+    "referenceTypes" : [ "User", "User" ],
+    "mutability" : "readWrite",
+    "type" : "string",
+    "multiValued" : true,
+    "caseExact" : true,
+    "returned" : "always",
+    "required" : true,
+    "subAttributes" : [ null, null ]
   } ],
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter schemaId: (path) The ID of a schema. Returned with GET /api/v2/scim/v2/schemas. 
 
      - returns: RequestBuilder<ScimV2SchemaDefinition> 
      */
-    open class func getScimV2SchemaWithRequestBuilder(schemaId: SchemaId_getScimV2Schema) -> RequestBuilder<ScimV2SchemaDefinition> {
+    open class func getScimV2SchemaWithRequestBuilder(schemaId: SchemaId_getScimV2Schema) -> RequestBuilder<ScimV2SchemaDefinition> {        
         var path = "/api/v2/scim/v2/schemas/{schemaId}"
         let schemaIdPreEscape = "\(schemaId.rawValue)"
         let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1897,10 +1483,7 @@ open class SCIMAPI {
     }
 
     
-    
-    
     /**
-     
      Get a list of SCIM schemas
      
      - parameter filter: (query) Filtered results are invalid and return 403 Unauthorized. (optional)
@@ -1925,65 +1508,95 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a list of SCIM schemas
-     
      - GET /api/v2/scim/v2/schemas
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalResults" : 123456789,
-  "startIndex" : 123456789,
-  "itemsPerPage" : 123456789,
-  "schemas" : [ "aeiou" ],
+  "totalResults" : 0,
+  "startIndex" : 6,
+  "itemsPerPage" : 1,
+  "schemas" : [ "schemas", "schemas" ],
   "Resources" : [ {
-    "meta" : {
-      "location" : "aeiou",
-      "lastModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : "aeiou",
-      "resourceType" : "aeiou"
-    },
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "meta" : "{}",
+    "name" : "name",
+    "description" : "description",
     "attributes" : [ {
-      "uniqueness" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "canonicalValues" : [ "aeiou" ],
-      "referenceTypes" : [ "aeiou" ],
-      "mutability" : "aeiou",
-      "type" : "aeiou",
+      "uniqueness" : "none",
+      "name" : "name",
+      "description" : "description",
+      "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+      "referenceTypes" : [ "User", "User" ],
+      "mutability" : "readWrite",
+      "type" : "string",
       "multiValued" : true,
       "caseExact" : true,
-      "returned" : "aeiou",
+      "returned" : "always",
       "required" : true,
-      "subAttributes" : [ "" ]
+      "subAttributes" : [ null, null ]
+    }, {
+      "uniqueness" : "none",
+      "name" : "name",
+      "description" : "description",
+      "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+      "referenceTypes" : [ "User", "User" ],
+      "mutability" : "readWrite",
+      "type" : "string",
+      "multiValued" : true,
+      "caseExact" : true,
+      "returned" : "always",
+      "required" : true,
+      "subAttributes" : [ null, null ]
     } ],
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "meta" : "{}",
+    "name" : "name",
+    "description" : "description",
+    "attributes" : [ {
+      "uniqueness" : "none",
+      "name" : "name",
+      "description" : "description",
+      "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+      "referenceTypes" : [ "User", "User" ],
+      "mutability" : "readWrite",
+      "type" : "string",
+      "multiValued" : true,
+      "caseExact" : true,
+      "returned" : "always",
+      "required" : true,
+      "subAttributes" : [ null, null ]
+    }, {
+      "uniqueness" : "none",
+      "name" : "name",
+      "description" : "description",
+      "canonicalValues" : [ "canonicalValues", "canonicalValues" ],
+      "referenceTypes" : [ "User", "User" ],
+      "mutability" : "readWrite",
+      "type" : "string",
+      "multiValued" : true,
+      "caseExact" : true,
+      "returned" : "always",
+      "required" : true,
+      "subAttributes" : [ null, null ]
+    } ],
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter filter: (query) Filtered results are invalid and return 403 Unauthorized. (optional)
 
      - returns: RequestBuilder<ScimV2SchemaListResponse> 
      */
-    open class func getScimV2SchemasWithRequestBuilder(filter: String? = nil) -> RequestBuilder<ScimV2SchemaListResponse> {
+    open class func getScimV2SchemasWithRequestBuilder(filter: String? = nil) -> RequestBuilder<ScimV2SchemaListResponse> {        
         let path = "/api/v2/scim/v2/schemas"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "filter": filter
-            
         ])
 
         let requestBuilder: RequestBuilder<ScimV2SchemaListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1992,10 +1605,7 @@ open class SCIMAPI {
     }
 
     
-    
-    
     /**
-     
      Get a service provider's configuration
      
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
@@ -2020,61 +1630,46 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a service provider's configuration
-     
      - GET /api/v2/scim/v2/serviceproviderconfig
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "patch" : {
-    "supported" : true
-  },
-  "filter" : {
-    "maxResults" : 123,
-    "supported" : true
-  },
-  "documentationUri" : "aeiou",
+  "patch" : "{}",
+  "filter" : "{}",
+  "documentationUri" : "https://openapi-generator.tech",
   "authenticationSchemes" : [ {
-    "documentationUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "specUri" : "aeiou",
-    "type" : "aeiou",
+    "documentationUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "specUri" : "https://openapi-generator.tech",
+    "type" : "oauth",
+    "primary" : true
+  }, {
+    "documentationUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "specUri" : "https://openapi-generator.tech",
+    "type" : "oauth",
     "primary" : true
   } ],
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "etag" : "",
-  "sort" : "",
-  "bulk" : {
-    "maxPayloadSize" : 123,
-    "maxOperations" : 123,
-    "supported" : true
-  },
-  "changePassword" : ""
-}}]
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "etag" : "{}",
+  "sort" : "{}",
+  "bulk" : "{}",
+  "changePassword" : "{}"
+}, statusCode=200}]
      
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
 
      - returns: RequestBuilder<ScimServiceProviderConfig> 
      */
-    open class func getScimV2ServiceproviderconfigWithRequestBuilder(ifNoneMatch: String? = nil) -> RequestBuilder<ScimServiceProviderConfig> {
+    open class func getScimV2ServiceproviderconfigWithRequestBuilder(ifNoneMatch: String? = nil) -> RequestBuilder<ScimServiceProviderConfig> {        
         let path = "/api/v2/scim/v2/serviceproviderconfig"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
@@ -2091,93 +1686,7 @@ open class SCIMAPI {
     
     
     
-    public enum Attributes_getScimV2User: String { 
-        case _id = "id"
-        case username = "userName"
-        case displayname = "displayName"
-        case title = "title"
-        case active = "active"
-        case externalid = "externalId"
-        case phonenumbers = "phoneNumbers"
-        case emails = "emails"
-        case groups = "groups"
-        case roles = "roles"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
-        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
-        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
-        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
-        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
-        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
-        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
-        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
-        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
-        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
-        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
-        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
-        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
-        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
-    }
-
-    
-    
-    
-    public enum ExcludedAttributes_getScimV2User: String { 
-        case _id = "id"
-        case username = "userName"
-        case displayname = "displayName"
-        case title = "title"
-        case active = "active"
-        case externalid = "externalId"
-        case phonenumbers = "phoneNumbers"
-        case emails = "emails"
-        case groups = "groups"
-        case roles = "roles"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
-        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
-        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
-        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
-        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
-        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
-        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
-        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
-        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
-        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
-        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
-        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
-        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
-        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
@@ -2205,71 +1714,56 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a user
-     
      - GET /api/v2/scim/v2/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
+  "displayName" : "displayName",
   "roles" : [ {
-    "value" : "aeiou"
+    "value" : "value"
+  }, {
+    "value" : "value"
   } ],
   "active" : true,
-  "externalId" : "aeiou",
+  "externalId" : "externalId",
   "groups" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "userName" : "aeiou",
-  "title" : "aeiou",
+  "userName" : "userName",
+  "title" : "title",
   "phoneNumbers" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-    "division" : "aeiou",
-    "manager" : {
-      "value" : "aeiou",
-      "$ref" : "aeiou"
-    },
-    "department" : "aeiou",
-    "employeeNumber" : "aeiou"
-  },
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
   "emails" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "password" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "id" : "aeiou",
-  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-    "routingSkills" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "routingLanguages" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "externalIds" : [ {
-      "authority" : "aeiou",
-      "value" : "aeiou"
-    } ]
-  }
-}}]
+  "password" : "password",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "id" : "id",
+  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
@@ -2278,26 +1772,18 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func getScimV2UserWithRequestBuilder(userId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2User> {
+    open class func getScimV2UserWithRequestBuilder(userId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2User> {        
         var path = "/api/v2/scim/v2/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "attributes": attributes, 
-            
             "excludedAttributes": excludedAttributes
-            
         ])
         let nillableHeaders: [String: Any?] = [
             "If-None-Match": ifNoneMatch
@@ -2314,98 +1800,11 @@ open class SCIMAPI {
     
     
     
-    
-    public enum Attributes_getScimV2Users: String { 
-        case _id = "id"
-        case username = "userName"
-        case displayname = "displayName"
-        case title = "title"
-        case active = "active"
-        case externalid = "externalId"
-        case phonenumbers = "phoneNumbers"
-        case emails = "emails"
-        case groups = "groups"
-        case roles = "roles"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
-        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
-        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
-        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
-        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
-        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
-        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
-        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
-        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
-        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
-        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
-        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
-        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
-        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
-    }
-
-    
-    
-    
-    public enum ExcludedAttributes_getScimV2Users: String { 
-        case _id = "id"
-        case username = "userName"
-        case displayname = "displayName"
-        case title = "title"
-        case active = "active"
-        case externalid = "externalId"
-        case phonenumbers = "phoneNumbers"
-        case emails = "emails"
-        case groups = "groups"
-        case roles = "roles"
-        case meta = "meta"
-        case metaVersion = "meta.version"
-        case metaLastmodified = "meta.lastModified"
-        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
-        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
-        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
-        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
-        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
-        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
-        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
-        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
-        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
-        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
-        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
-        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
-        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
-        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
-        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
-        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
-    }
-
-    
-    
-    
-    
     /**
-     
      Get a list of users
      
-     - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional, default to 25)
+     - parameter startIndex: (query) The 1-based index of the first query result. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional)
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;, \&quot;employeeNumber eq 9876543210\&quot;. (optional)
@@ -2430,109 +1829,128 @@ open class SCIMAPI {
     }
 
     /**
-     
      Get a list of users
-     
      - GET /api/v2/scim/v2/users
      - To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \"active eq false\". By default, returns SCIM attributes \"externalId\", \"enterprise-user:manager\", and \"roles\". To exclude these attributes, set the attributes parameter to \"id,active\" or the excludeAttributes parameter to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalResults" : 123456789,
-  "startIndex" : 123456789,
-  "itemsPerPage" : 123456789,
-  "schemas" : [ "aeiou" ],
+  "totalResults" : 0,
+  "startIndex" : 6,
+  "itemsPerPage" : 1,
+  "schemas" : [ "schemas", "schemas" ],
   "Resources" : [ {
-    "displayName" : "aeiou",
+    "displayName" : "displayName",
     "roles" : [ {
-      "value" : "aeiou"
+      "value" : "value"
+    }, {
+      "value" : "value"
     } ],
     "active" : true,
-    "externalId" : "aeiou",
+    "externalId" : "externalId",
     "groups" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou",
-      "$ref" : "aeiou"
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    }, {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
     } ],
-    "userName" : "aeiou",
-    "title" : "aeiou",
+    "userName" : "userName",
+    "title" : "title",
     "phoneNumbers" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou",
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    }, {
+      "type" : "work",
+      "value" : "value",
       "primary" : true
     } ],
-    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-      "division" : "aeiou",
-      "manager" : {
-        "value" : "aeiou",
-        "$ref" : "aeiou"
-      },
-      "department" : "aeiou",
-      "employeeNumber" : "aeiou"
-    },
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
     "emails" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou",
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    }, {
+      "type" : "work",
+      "value" : "value",
       "primary" : true
     } ],
-    "password" : "aeiou",
-    "meta" : {
-      "location" : "aeiou",
-      "lastModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : "aeiou",
-      "resourceType" : "aeiou"
-    },
-    "schemas" : [ "aeiou" ],
-    "id" : "aeiou",
-    "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-      "routingSkills" : [ {
-        "name" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "routingLanguages" : [ {
-        "name" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "externalIds" : [ {
-        "authority" : "aeiou",
-        "value" : "aeiou"
-      } ]
-    }
+    "password" : "password",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "id" : "id",
+    "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+  }, {
+    "displayName" : "displayName",
+    "roles" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
+    "active" : true,
+    "externalId" : "externalId",
+    "groups" : [ {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    }, {
+      "type" : "User",
+      "value" : "value",
+      "$ref" : "https://openapi-generator.tech"
+    } ],
+    "userName" : "userName",
+    "title" : "title",
+    "phoneNumbers" : [ {
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    }, {
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    } ],
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
+    "emails" : [ {
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    }, {
+      "type" : "work",
+      "value" : "value",
+      "primary" : true
+    } ],
+    "password" : "password",
+    "meta" : "{}",
+    "schemas" : [ "schemas", "schemas" ],
+    "id" : "id",
+    "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
-     - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional, default to 25)
+     - parameter startIndex: (query) The 1-based index of the first query result. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. (optional)
      - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;, \&quot;employeeNumber eq 9876543210\&quot;. (optional)
 
      - returns: RequestBuilder<ScimUserListResponse> 
      */
-    open class func getScimV2UsersWithRequestBuilder(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil) -> RequestBuilder<ScimUserListResponse> {
+    open class func getScimV2UsersWithRequestBuilder(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil) -> RequestBuilder<ScimUserListResponse> {        
         let path = "/api/v2/scim/v2/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startIndex": startIndex?.encodeToJSON(), 
-            
             "count": count?.encodeToJSON(), 
-            
             "attributes": attributes, 
-            
             "excludedAttributes": excludedAttributes, 
-            
             "filter": filter
-            
         ])
 
         let requestBuilder: RequestBuilder<ScimUserListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2543,12 +1961,7 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Modify a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
@@ -2575,31 +1988,27 @@ open class SCIMAPI {
     }
 
     /**
-     
      Modify a group
-     
      - PATCH /api/v2/scim/groups/{groupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
+  "displayName" : "displayName",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
   "members" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "externalId" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "externalId" : "externalId",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter body: (body) The information used to modify a group. 
@@ -2607,16 +2016,14 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2Group> 
      */
-    open class func patchScimGroupWithRequestBuilder(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {
+    open class func patchScimGroupWithRequestBuilder(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {        
         var path = "/api/v2/scim/groups/{groupId}"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
@@ -2631,12 +2038,7 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Modify a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
@@ -2663,71 +2065,56 @@ open class SCIMAPI {
     }
 
     /**
-     
      Modify a user
-     
      - PATCH /api/v2/scim/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
+  "displayName" : "displayName",
   "roles" : [ {
-    "value" : "aeiou"
+    "value" : "value"
+  }, {
+    "value" : "value"
   } ],
   "active" : true,
-  "externalId" : "aeiou",
+  "externalId" : "externalId",
   "groups" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "userName" : "aeiou",
-  "title" : "aeiou",
+  "userName" : "userName",
+  "title" : "title",
   "phoneNumbers" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-    "division" : "aeiou",
-    "manager" : {
-      "value" : "aeiou",
-      "$ref" : "aeiou"
-    },
-    "department" : "aeiou",
-    "employeeNumber" : "aeiou"
-  },
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
   "emails" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "password" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "id" : "aeiou",
-  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-    "routingSkills" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "routingLanguages" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "externalIds" : [ {
-      "authority" : "aeiou",
-      "value" : "aeiou"
-    } ]
-  }
-}}]
+  "password" : "password",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "id" : "id",
+  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter body: (body) The information used to modify a user. 
@@ -2735,16 +2122,14 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func patchScimUserWithRequestBuilder(userId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2User> {
+    open class func patchScimUserWithRequestBuilder(userId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2User> {        
         var path = "/api/v2/scim/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
@@ -2759,12 +2144,7 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Modify a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
@@ -2791,31 +2171,27 @@ open class SCIMAPI {
     }
 
     /**
-     
      Modify a group
-     
      - PATCH /api/v2/scim/v2/groups/{groupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
+  "displayName" : "displayName",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
   "members" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "externalId" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "externalId" : "externalId",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter body: (body) The information used to modify a group. 
@@ -2823,16 +2199,14 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2Group> 
      */
-    open class func patchScimV2GroupWithRequestBuilder(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {
+    open class func patchScimV2GroupWithRequestBuilder(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {        
         var path = "/api/v2/scim/v2/groups/{groupId}"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
@@ -2847,12 +2221,7 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Modify a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
@@ -2879,71 +2248,56 @@ open class SCIMAPI {
     }
 
     /**
-     
      Modify a user
-     
      - PATCH /api/v2/scim/v2/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
+  "displayName" : "displayName",
   "roles" : [ {
-    "value" : "aeiou"
+    "value" : "value"
+  }, {
+    "value" : "value"
   } ],
   "active" : true,
-  "externalId" : "aeiou",
+  "externalId" : "externalId",
   "groups" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "userName" : "aeiou",
-  "title" : "aeiou",
+  "userName" : "userName",
+  "title" : "title",
   "phoneNumbers" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-    "division" : "aeiou",
-    "manager" : {
-      "value" : "aeiou",
-      "$ref" : "aeiou"
-    },
-    "department" : "aeiou",
-    "employeeNumber" : "aeiou"
-  },
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
   "emails" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "password" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "id" : "aeiou",
-  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-    "routingSkills" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "routingLanguages" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "externalIds" : [ {
-      "authority" : "aeiou",
-      "value" : "aeiou"
-    } ]
-  }
-}}]
+  "password" : "password",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "id" : "id",
+  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter body: (body) The information used to modify a user. 
@@ -2951,16 +2305,14 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func patchScimV2UserWithRequestBuilder(userId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2User> {
+    open class func patchScimV2UserWithRequestBuilder(userId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2User> {        
         var path = "/api/v2/scim/v2/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
@@ -2973,10 +2325,7 @@ open class SCIMAPI {
     }
 
     
-    
-    
     /**
-     
      Create a user
      
      - parameter body: (body) The information used to create a user. 
@@ -3001,83 +2350,66 @@ open class SCIMAPI {
     }
 
     /**
-     
      Create a user
-     
      - POST /api/v2/scim/users
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
+  "displayName" : "displayName",
   "roles" : [ {
-    "value" : "aeiou"
+    "value" : "value"
+  }, {
+    "value" : "value"
   } ],
   "active" : true,
-  "externalId" : "aeiou",
+  "externalId" : "externalId",
   "groups" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "userName" : "aeiou",
-  "title" : "aeiou",
+  "userName" : "userName",
+  "title" : "title",
   "phoneNumbers" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-    "division" : "aeiou",
-    "manager" : {
-      "value" : "aeiou",
-      "$ref" : "aeiou"
-    },
-    "department" : "aeiou",
-    "employeeNumber" : "aeiou"
-  },
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
   "emails" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "password" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "id" : "aeiou",
-  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-    "routingSkills" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "routingLanguages" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "externalIds" : [ {
-      "authority" : "aeiou",
-      "value" : "aeiou"
-    } ]
-  }
-}}]
+  "password" : "password",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "id" : "id",
+  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) The information used to create a user. 
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func postScimUsersWithRequestBuilder(body: ScimV2CreateUser) -> RequestBuilder<ScimV2User> {
+    open class func postScimUsersWithRequestBuilder(body: ScimV2CreateUser) -> RequestBuilder<ScimV2User> {        
         let path = "/api/v2/scim/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3086,10 +2418,7 @@ open class SCIMAPI {
     }
 
     
-    
-    
     /**
-     
      Create a user
      
      - parameter body: (body) The information used to create a user. 
@@ -3114,83 +2443,66 @@ open class SCIMAPI {
     }
 
     /**
-     
      Create a user
-     
      - POST /api/v2/scim/v2/users
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
+  "displayName" : "displayName",
   "roles" : [ {
-    "value" : "aeiou"
+    "value" : "value"
+  }, {
+    "value" : "value"
   } ],
   "active" : true,
-  "externalId" : "aeiou",
+  "externalId" : "externalId",
   "groups" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "userName" : "aeiou",
-  "title" : "aeiou",
+  "userName" : "userName",
+  "title" : "title",
   "phoneNumbers" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-    "division" : "aeiou",
-    "manager" : {
-      "value" : "aeiou",
-      "$ref" : "aeiou"
-    },
-    "department" : "aeiou",
-    "employeeNumber" : "aeiou"
-  },
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
   "emails" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "password" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "id" : "aeiou",
-  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-    "routingSkills" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "routingLanguages" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "externalIds" : [ {
-      "authority" : "aeiou",
-      "value" : "aeiou"
-    } ]
-  }
-}}]
+  "password" : "password",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "id" : "id",
+  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) The information used to create a user. 
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func postScimV2UsersWithRequestBuilder(body: ScimV2CreateUser) -> RequestBuilder<ScimV2User> {
+    open class func postScimV2UsersWithRequestBuilder(body: ScimV2CreateUser) -> RequestBuilder<ScimV2User> {        
         let path = "/api/v2/scim/v2/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3201,12 +2513,7 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Replace a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
@@ -3233,31 +2540,27 @@ open class SCIMAPI {
     }
 
     /**
-     
      Replace a group
-     
      - PUT /api/v2/scim/groups/{groupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
+  "displayName" : "displayName",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
   "members" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "externalId" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "externalId" : "externalId",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter body: (body) The information used to replace a group. 
@@ -3265,16 +2568,14 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2Group> 
      */
-    open class func putScimGroupWithRequestBuilder(groupId: String, body: ScimV2Group, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {
+    open class func putScimGroupWithRequestBuilder(groupId: String, body: ScimV2Group, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {        
         var path = "/api/v2/scim/groups/{groupId}"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
@@ -3289,12 +2590,7 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Replace a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
@@ -3321,71 +2617,56 @@ open class SCIMAPI {
     }
 
     /**
-     
      Replace a user
-     
      - PUT /api/v2/scim/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
+  "displayName" : "displayName",
   "roles" : [ {
-    "value" : "aeiou"
+    "value" : "value"
+  }, {
+    "value" : "value"
   } ],
   "active" : true,
-  "externalId" : "aeiou",
+  "externalId" : "externalId",
   "groups" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "userName" : "aeiou",
-  "title" : "aeiou",
+  "userName" : "userName",
+  "title" : "title",
   "phoneNumbers" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-    "division" : "aeiou",
-    "manager" : {
-      "value" : "aeiou",
-      "$ref" : "aeiou"
-    },
-    "department" : "aeiou",
-    "employeeNumber" : "aeiou"
-  },
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
   "emails" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "password" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "id" : "aeiou",
-  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-    "routingSkills" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "routingLanguages" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "externalIds" : [ {
-      "authority" : "aeiou",
-      "value" : "aeiou"
-    } ]
-  }
-}}]
+  "password" : "password",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "id" : "id",
+  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter body: (body) The information used to replace a user. 
@@ -3393,16 +2674,14 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func putScimUserWithRequestBuilder(userId: String, body: ScimV2User, ifMatch: String? = nil) -> RequestBuilder<ScimV2User> {
+    open class func putScimUserWithRequestBuilder(userId: String, body: ScimV2User, ifMatch: String? = nil) -> RequestBuilder<ScimV2User> {        
         var path = "/api/v2/scim/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
@@ -3417,12 +2696,7 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Replace a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
@@ -3449,31 +2723,27 @@ open class SCIMAPI {
     }
 
     /**
-     
      Replace a group
-     
      - PUT /api/v2/scim/v2/groups/{groupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
+  "displayName" : "displayName",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
   "members" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "externalId" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "externalId" : "externalId",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter body: (body) The information used to replace a group. 
@@ -3481,16 +2751,14 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2Group> 
      */
-    open class func putScimV2GroupWithRequestBuilder(groupId: String, body: ScimV2Group, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {
+    open class func putScimV2GroupWithRequestBuilder(groupId: String, body: ScimV2Group, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {        
         var path = "/api/v2/scim/v2/groups/{groupId}"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
@@ -3505,12 +2773,7 @@ open class SCIMAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Replace a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
@@ -3537,71 +2800,56 @@ open class SCIMAPI {
     }
 
     /**
-     
      Replace a user
-     
      - PUT /api/v2/scim/v2/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "displayName" : "aeiou",
+  "displayName" : "displayName",
   "roles" : [ {
-    "value" : "aeiou"
+    "value" : "value"
+  }, {
+    "value" : "value"
   } ],
   "active" : true,
-  "externalId" : "aeiou",
+  "externalId" : "externalId",
   "groups" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
-    "$ref" : "aeiou"
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
+  }, {
+    "type" : "User",
+    "value" : "value",
+    "$ref" : "https://openapi-generator.tech"
   } ],
-  "userName" : "aeiou",
-  "title" : "aeiou",
+  "userName" : "userName",
+  "title" : "title",
   "phoneNumbers" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : {
-    "division" : "aeiou",
-    "manager" : {
-      "value" : "aeiou",
-      "$ref" : "aeiou"
-    },
-    "department" : "aeiou",
-    "employeeNumber" : "aeiou"
-  },
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User" : "{}",
   "emails" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou",
+    "type" : "work",
+    "value" : "value",
+    "primary" : true
+  }, {
+    "type" : "work",
+    "value" : "value",
     "primary" : true
   } ],
-  "password" : "aeiou",
-  "meta" : {
-    "location" : "aeiou",
-    "lastModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : "aeiou",
-    "resourceType" : "aeiou"
-  },
-  "schemas" : [ "aeiou" ],
-  "id" : "aeiou",
-  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
-    "routingSkills" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "routingLanguages" : [ {
-      "name" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "externalIds" : [ {
-      "authority" : "aeiou",
-      "value" : "aeiou"
-    } ]
-  }
-}}]
+  "password" : "password",
+  "meta" : "{}",
+  "schemas" : [ "schemas", "schemas" ],
+  "id" : "id",
+  "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter body: (body) The information used to replace a user. 
@@ -3609,16 +2857,14 @@ open class SCIMAPI {
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func putScimV2UserWithRequestBuilder(userId: String, body: ScimV2User, ifMatch: String? = nil) -> RequestBuilder<ScimV2User> {
+    open class func putScimV2UserWithRequestBuilder(userId: String, body: ScimV2User, ifMatch: String? = nil) -> RequestBuilder<ScimV2User> {        
         var path = "/api/v2/scim/v2/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch

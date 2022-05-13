@@ -17,11 +17,8 @@ public class PhonesReboot: Codable {
     public var siteId: String?
 
     public init(phoneIds: [String]?, siteId: String?) {
-        
         self.phoneIds = phoneIds
-        
         self.siteId = siteId
-        
     }
 
 

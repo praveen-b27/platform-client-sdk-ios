@@ -19,13 +19,9 @@ public class OutcomeProbabilityCondition: Codable {
     public var probability: Float?
 
     public init(outcomeId: String?, maximumProbability: Float?, probability: Float?) {
-        
         self.outcomeId = outcomeId
-        
         self.maximumProbability = maximumProbability
-        
         self.probability = probability
-        
     }
 
 

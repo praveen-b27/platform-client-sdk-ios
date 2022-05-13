@@ -22,17 +22,11 @@ public class DialogflowAgentSummary: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, project: DialogflowProject?, _description: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.project = project
-        
         self._description = _description
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

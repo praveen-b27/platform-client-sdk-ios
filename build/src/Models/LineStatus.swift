@@ -15,7 +15,7 @@ public class LineStatus: Codable {
     public var _id: String?
     /** Indicates whether the edge can reach the line. */
     public var reachable: Bool?
-    /** The line&#39;s address of record. */
+    /** The line's address of record. */
     public var addressOfRecord: String?
     /** The addresses used to contact the line. */
     public var contactAddresses: [String]?
@@ -23,17 +23,11 @@ public class LineStatus: Codable {
     public var reachableStateTime: Date?
 
     public init(_id: String?, reachable: Bool?, addressOfRecord: String?, contactAddresses: [String]?, reachableStateTime: Date?) {
-        
         self._id = _id
-        
         self.reachable = reachable
-        
         self.addressOfRecord = addressOfRecord
-        
         self.contactAddresses = contactAddresses
-        
         self.reachableStateTime = reachableStateTime
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

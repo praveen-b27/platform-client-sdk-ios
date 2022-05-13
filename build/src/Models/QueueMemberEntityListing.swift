@@ -20,21 +20,13 @@ public class QueueMemberEntityListing: Codable {
     public var nextUri: String?
 
     public init(entities: [QueueMember]?, pageNumber: Int?, pageSize: Int?, firstUri: String?, selfUri: String?, previousUri: String?, nextUri: String?) {
-        
         self.entities = entities
-        
         self.pageNumber = pageNumber
-        
         self.pageSize = pageSize
-        
         self.firstUri = firstUri
-        
         self.selfUri = selfUri
-        
         self.previousUri = previousUri
-        
         self.nextUri = nextUri
-        
     }
 
 

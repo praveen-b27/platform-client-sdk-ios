@@ -18,23 +18,17 @@ public class TextBotFlowLaunchRequest: Codable {
     public var externalSessionId: String?
     /** A conversation ID to associate with the bot flow, if available. */
     public var conversationId: String?
-    /** Input values to the flow. Valid values are defined by the flow&#39;s input JSON schema. */
+    /** Input values to the flow. Valid values are defined by the flow's input JSON schema. */
     public var inputData: TextBotInputOutputData?
     /** Channel information relevant to the bot flow. */
     public var channel: TextBotChannel?
 
     public init(flow: TextBotFlow?, externalSessionId: String?, conversationId: String?, inputData: TextBotInputOutputData?, channel: TextBotChannel?) {
-        
         self.flow = flow
-        
         self.externalSessionId = externalSessionId
-        
         self.conversationId = conversationId
-        
         self.inputData = inputData
-        
         self.channel = channel
-        
     }
 
 

@@ -210,8 +210,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: String = "" // Expand
 let name: String = "" // Name filter
 let feature: String = "" // Feature filter
@@ -237,8 +237,8 @@ ScriptsAPI.getScripts(pageSize: pageSize, pageNumber: pageNumber, expand: expand
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand | [optional] |
 | **name** | **String**| Name filter | [optional] |
 | **feature** | **String**| Feature filter | [optional] |
@@ -280,8 +280,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: String = "" // Expand
 let name: String = "" // Name filter
 let feature: String = "" // Feature filter
@@ -307,8 +307,8 @@ ScriptsAPI.getScriptsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, e
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand | [optional] |
 | **name** | **String**| Name filter | [optional] |
 | **feature** | **String**| Feature filter | [optional] |
@@ -350,8 +350,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: String = "" // Expand
 let name: String = "" // Name filter
 let feature: String = "" // Feature filter
@@ -375,8 +375,8 @@ ScriptsAPI.getScriptsPublished(pageSize: pageSize, pageNumber: pageNumber, expan
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand | [optional] |
 | **name** | **String**| Name filter | [optional] |
 | **feature** | **String**| Feature filter | [optional] |
@@ -416,8 +416,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let expand: String = "" // Expand
 let name: String = "" // Name filter
 let feature: String = "" // Feature filter
@@ -441,8 +441,8 @@ ScriptsAPI.getScriptsPublishedDivisionviews(pageSize: pageSize, pageNumber: page
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | **String**| Expand | [optional] |
 | **name** | **String**| Name filter | [optional] |
 | **feature** | **String**| Feature filter | [optional] |
@@ -707,7 +707,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let uploadId: String = "" // Upload ID
-let longPoll: Bool = false // Enable longPolling endpoint
+let longPoll: Bool = true // Enable longPolling endpoint
 
 // Code example
 ScriptsAPI.getScriptsUploadStatus(uploadId: uploadId, longPoll: longPoll) { (response, error) in
@@ -726,7 +726,7 @@ ScriptsAPI.getScriptsUploadStatus(uploadId: uploadId, longPoll: longPoll) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **uploadId** | **String**| Upload ID | |
-| **longPoll** | **Bool**| Enable longPolling endpoint | [optional] [default to false] |
+| **longPoll** | **Bool**| Enable longPolling endpoint | [optional] |
 {: class="table-striped"}
 
 

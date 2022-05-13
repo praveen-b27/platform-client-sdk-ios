@@ -33,7 +33,7 @@ public class LearningAssignment: Codable {
     public var dateModified: Date?
     /** True if the assignment is overdue */
     public var isOverdue: Bool?
-    /** The user&#39;s percentage score for this assignment */
+    /** The user's percentage score for this assignment */
     public var percentageScore: Float?
     /** True if this assignment was created by a Rule */
     public var isRule: Bool?
@@ -57,43 +57,24 @@ public class LearningAssignment: Codable {
     public var assessmentForm: AssessmentForm?
 
     public init(_id: String?, assessment: LearningAssessment?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, isOverdue: Bool?, percentageScore: Float?, isRule: Bool?, isManual: Bool?, isPassed: Bool?, selfUri: String?, state: State?, dateRecommendedForCompletion: Date?, version: Int?, module: LearningModule?, user: UserReference?, assessmentForm: AssessmentForm?) {
-        
         self._id = _id
-        
         self.assessment = assessment
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.isOverdue = isOverdue
-        
         self.percentageScore = percentageScore
-        
         self.isRule = isRule
-        
         self.isManual = isManual
-        
         self.isPassed = isPassed
-        
         self.selfUri = selfUri
-        
         self.state = state
-        
         self.dateRecommendedForCompletion = dateRecommendedForCompletion
-        
         self.version = version
-        
         self.module = module
-        
         self.user = user
-        
         self.assessmentForm = assessmentForm
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

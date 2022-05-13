@@ -39,35 +39,20 @@ public class AnalyticsEvaluation: Codable {
     public var oTotalScore: Int64?
 
     public init(calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, released: Bool?, rescored: Bool?, userId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
-        
         self.calibrationId = calibrationId
-        
         self.contextId = contextId
-        
         self.deleted = deleted
-        
         self.evaluationId = evaluationId
-        
         self.evaluatorId = evaluatorId
-        
         self.eventTime = eventTime
-        
         self.formId = formId
-        
         self.formName = formName
-        
         self.queueId = queueId
-        
         self.released = released
-        
         self.rescored = rescored
-        
         self.userId = userId
-        
         self.oTotalCriticalScore = oTotalCriticalScore
-        
         self.oTotalScore = oTotalScore
-        
     }
 
 

@@ -10,16 +10,14 @@ import Foundation
 
 
 open class IdentityProviderAPI {
-    
     /**
-     
      Delete ADFS Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersAdfs(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersAdfs(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersAdfsWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -36,45 +34,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete ADFS Identity Provider
-     
      - DELETE /api/v2/identityproviders/adfs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersAdfsWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersAdfsWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/adfs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete Customer Interaction Center (CIC) Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersCic(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersCic(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersCicWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -91,45 +78,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete Customer Interaction Center (CIC) Identity Provider
-     
      - DELETE /api/v2/identityproviders/cic
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersCicWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersCicWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/cic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete Generic SAML Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersGeneric(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersGeneric(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersGenericWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -146,45 +122,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete Generic SAML Identity Provider
-     
      - DELETE /api/v2/identityproviders/generic
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersGenericWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersGenericWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/generic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete G Suite Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersGsuite(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersGsuite(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersGsuiteWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -201,45 +166,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete G Suite Identity Provider
-     
      - DELETE /api/v2/identityproviders/gsuite
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersGsuiteWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersGsuiteWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/gsuite"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete IdentityNow Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersIdentitynow(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersIdentitynow(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersIdentitynowWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -256,45 +210,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete IdentityNow Provider
-     
      - DELETE /api/v2/identityproviders/identitynow
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersIdentitynowWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersIdentitynowWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/identitynow"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete Okta Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersOkta(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersOkta(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersOktaWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -311,45 +254,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete Okta Identity Provider
-     
      - DELETE /api/v2/identityproviders/okta
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersOktaWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersOktaWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/okta"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete OneLogin Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersOnelogin(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersOnelogin(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersOneloginWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -366,45 +298,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete OneLogin Identity Provider
-     
      - DELETE /api/v2/identityproviders/onelogin
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersOneloginWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersOneloginWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/onelogin"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete Ping Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersPing(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersPing(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersPingWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -421,45 +342,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete Ping Identity Provider
-     
      - DELETE /api/v2/identityproviders/ping
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersPingWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersPingWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/ping"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete PureCloud Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersPurecloud(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersPurecloud(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersPurecloudWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -476,45 +386,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete PureCloud Identity Provider
-     
      - DELETE /api/v2/identityproviders/purecloud
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersPurecloudWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersPurecloudWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/purecloud"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete PureEngage Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersPureengage(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersPureengage(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersPureengageWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -531,45 +430,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete PureEngage Identity Provider
-     
      - DELETE /api/v2/identityproviders/pureengage
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersPureengageWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersPureengageWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/pureengage"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete Salesforce Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteIdentityprovidersSalesforce(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+    open class func deleteIdentityprovidersSalesforce(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteIdentityprovidersSalesforceWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -586,38 +474,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Delete Salesforce Identity Provider
-     
      - DELETE /api/v2/identityproviders/salesforce
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={ }}]
 
-     - returns: RequestBuilder<Empty> 
+     - returns: RequestBuilder<JSON> 
      */
-    open class func deleteIdentityprovidersSalesforceWithRequestBuilder() -> RequestBuilder<Empty> {
+    open class func deleteIdentityprovidersSalesforceWithRequestBuilder() -> RequestBuilder<JSON> {        
         let path = "/api/v2/identityproviders/salesforce"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      The list of identity providers
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -641,43 +518,40 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      The list of identity providers
-     
      - GET /api/v2/identityproviders
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "disabled" : true,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "disabled" : true,
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<OAuthProviderEntityListing> 
      */
-    open class func getIdentityprovidersWithRequestBuilder() -> RequestBuilder<OAuthProviderEntityListing> {
+    open class func getIdentityprovidersWithRequestBuilder() -> RequestBuilder<OAuthProviderEntityListing> {        
         let path = "/api/v2/identityproviders"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -686,9 +560,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get ADFS Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -712,39 +584,31 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get ADFS Identity Provider
-     
      - GET /api/v2/identityproviders/adfs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<ADFS> 
      */
-    open class func getIdentityprovidersAdfsWithRequestBuilder() -> RequestBuilder<ADFS> {
+    open class func getIdentityprovidersAdfsWithRequestBuilder() -> RequestBuilder<ADFS> {        
         let path = "/api/v2/identityproviders/adfs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -753,9 +617,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get Customer Interaction Center (CIC) Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -779,39 +641,31 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get Customer Interaction Center (CIC) Identity Provider
-     
      - GET /api/v2/identityproviders/cic
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<CustomerInteractionCenter> 
      */
-    open class func getIdentityprovidersCicWithRequestBuilder() -> RequestBuilder<CustomerInteractionCenter> {
+    open class func getIdentityprovidersCicWithRequestBuilder() -> RequestBuilder<CustomerInteractionCenter> {        
         let path = "/api/v2/identityproviders/cic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -820,9 +674,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get Generic SAML Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -846,42 +698,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get Generic SAML Identity Provider
-     
      - GET /api/v2/identityproviders/generic
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "issuerURI" : "aeiou",
-  "logoImageData" : "aeiou",
-  "selfUri" : "aeiou",
-  "certificate" : "aeiou",
-  "sloBinding" : "aeiou",
+  "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
   "endpointCompression" : true,
-  "relyingPartyIdentifier" : "aeiou",
-  "nameIdentifierFormat" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "name" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "name" : "name",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id"
+}, statusCode=200}]
 
      - returns: RequestBuilder<GenericSAML> 
      */
-    open class func getIdentityprovidersGenericWithRequestBuilder() -> RequestBuilder<GenericSAML> {
+    open class func getIdentityprovidersGenericWithRequestBuilder() -> RequestBuilder<GenericSAML> {        
         let path = "/api/v2/identityproviders/generic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -890,9 +734,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get G Suite Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -916,39 +758,31 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get G Suite Identity Provider
-     
      - GET /api/v2/identityproviders/gsuite
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<GSuite> 
      */
-    open class func getIdentityprovidersGsuiteWithRequestBuilder() -> RequestBuilder<GSuite> {
+    open class func getIdentityprovidersGsuiteWithRequestBuilder() -> RequestBuilder<GSuite> {        
         let path = "/api/v2/identityproviders/gsuite"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -957,9 +791,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get IdentityNow Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -983,39 +815,31 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get IdentityNow Provider
-     
      - GET /api/v2/identityproviders/identitynow
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<IdentityNow> 
      */
-    open class func getIdentityprovidersIdentitynowWithRequestBuilder() -> RequestBuilder<IdentityNow> {
+    open class func getIdentityprovidersIdentitynowWithRequestBuilder() -> RequestBuilder<IdentityNow> {        
         let path = "/api/v2/identityproviders/identitynow"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1024,9 +848,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get Okta Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1050,39 +872,31 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get Okta Identity Provider
-     
      - GET /api/v2/identityproviders/okta
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<Okta> 
      */
-    open class func getIdentityprovidersOktaWithRequestBuilder() -> RequestBuilder<Okta> {
+    open class func getIdentityprovidersOktaWithRequestBuilder() -> RequestBuilder<Okta> {        
         let path = "/api/v2/identityproviders/okta"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1091,9 +905,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get OneLogin Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1117,39 +929,31 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get OneLogin Identity Provider
-     
      - GET /api/v2/identityproviders/onelogin
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<OneLogin> 
      */
-    open class func getIdentityprovidersOneloginWithRequestBuilder() -> RequestBuilder<OneLogin> {
+    open class func getIdentityprovidersOneloginWithRequestBuilder() -> RequestBuilder<OneLogin> {        
         let path = "/api/v2/identityproviders/onelogin"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1158,9 +962,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get Ping Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1184,39 +986,31 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get Ping Identity Provider
-     
      - GET /api/v2/identityproviders/ping
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<PingIdentity> 
      */
-    open class func getIdentityprovidersPingWithRequestBuilder() -> RequestBuilder<PingIdentity> {
+    open class func getIdentityprovidersPingWithRequestBuilder() -> RequestBuilder<PingIdentity> {        
         let path = "/api/v2/identityproviders/ping"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1225,9 +1019,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get PureCloud Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1251,32 +1043,24 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get PureCloud Identity Provider
-     
      - GET /api/v2/identityproviders/purecloud
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
 
      - returns: RequestBuilder<PureCloud> 
      */
-    open class func getIdentityprovidersPurecloudWithRequestBuilder() -> RequestBuilder<PureCloud> {
+    open class func getIdentityprovidersPurecloudWithRequestBuilder() -> RequestBuilder<PureCloud> {        
         let path = "/api/v2/identityproviders/purecloud"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1285,9 +1069,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get PureEngage Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1311,40 +1093,32 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get PureEngage Identity Provider
-     
      - GET /api/v2/identityproviders/pureengage
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "autoProvisionUsers" : true,
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<PureEngage> 
      */
-    open class func getIdentityprovidersPureengageWithRequestBuilder() -> RequestBuilder<PureEngage> {
+    open class func getIdentityprovidersPureengageWithRequestBuilder() -> RequestBuilder<PureEngage> {        
         let path = "/api/v2/identityproviders/pureengage"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1353,9 +1127,7 @@ open class IdentityProviderAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get Salesforce Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1379,39 +1151,31 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Get Salesforce Identity Provider
-     
      - GET /api/v2/identityproviders/salesforce
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
 
      - returns: RequestBuilder<Salesforce> 
      */
-    open class func getIdentityprovidersSalesforceWithRequestBuilder() -> RequestBuilder<Salesforce> {
+    open class func getIdentityprovidersSalesforceWithRequestBuilder() -> RequestBuilder<Salesforce> {        
         let path = "/api/v2/identityproviders/salesforce"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1421,10 +1185,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create ADFS Identity Provider
      
      - parameter body: (body) Provider 
@@ -1449,32 +1210,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create ADFS Identity Provider
-     
      - PUT /api/v2/identityproviders/adfs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersAdfsWithRequestBuilder(body: ADFS) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersAdfsWithRequestBuilder(body: ADFS) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/adfs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1483,10 +1239,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create Customer Interaction Center (CIC) Identity Provider
      
      - parameter body: (body) Provider 
@@ -1511,32 +1264,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create Customer Interaction Center (CIC) Identity Provider
-     
      - PUT /api/v2/identityproviders/cic
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersCicWithRequestBuilder(body: CustomerInteractionCenter) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersCicWithRequestBuilder(body: CustomerInteractionCenter) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/cic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1545,10 +1293,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create Generic SAML Identity Provider
      
      - parameter body: (body) Provider 
@@ -1573,32 +1318,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create Generic SAML Identity Provider
-     
      - PUT /api/v2/identityproviders/generic
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersGenericWithRequestBuilder(body: GenericSAML) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersGenericWithRequestBuilder(body: GenericSAML) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/generic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1607,10 +1347,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create G Suite Identity Provider
      
      - parameter body: (body) Provider 
@@ -1635,32 +1372,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create G Suite Identity Provider
-     
      - PUT /api/v2/identityproviders/gsuite
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersGsuiteWithRequestBuilder(body: GSuite) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersGsuiteWithRequestBuilder(body: GSuite) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/gsuite"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1669,10 +1401,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create IdentityNow Provider
      
      - parameter body: (body) Provider 
@@ -1697,39 +1426,34 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create IdentityNow Provider
-     
      - PUT /api/v2/identityproviders/identitynow
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
-  "issuerURI" : "aeiou",
-  "sloURI" : "aeiou",
-  "certificates" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "certificate" : "aeiou",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "issuerURI" : "issuerURI",
+  "sloURI" : "sloURI",
+  "certificates" : [ "certificates", "certificates" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "certificate" : "certificate",
   "disabled" : true,
-  "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "sloBinding" : "aeiou"
-}}]
+  "ssoTargetURI" : "ssoTargetURI",
+  "id" : "id",
+  "sloBinding" : "sloBinding"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<IdentityNow> 
      */
-    open class func putIdentityprovidersIdentitynowWithRequestBuilder(body: IdentityNow) -> RequestBuilder<IdentityNow> {
+    open class func putIdentityprovidersIdentitynowWithRequestBuilder(body: IdentityNow) -> RequestBuilder<IdentityNow> {        
         let path = "/api/v2/identityproviders/identitynow"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IdentityNow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1738,10 +1462,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create Okta Identity Provider
      
      - parameter body: (body) Provider 
@@ -1766,32 +1487,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create Okta Identity Provider
-     
      - PUT /api/v2/identityproviders/okta
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersOktaWithRequestBuilder(body: Okta) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersOktaWithRequestBuilder(body: Okta) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/okta"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1800,10 +1516,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create OneLogin Identity Provider
      
      - parameter body: (body) Provider 
@@ -1828,32 +1541,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create OneLogin Identity Provider
-     
      - PUT /api/v2/identityproviders/onelogin
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersOneloginWithRequestBuilder(body: OneLogin) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersOneloginWithRequestBuilder(body: OneLogin) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/onelogin"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1862,10 +1570,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create Ping Identity Provider
      
      - parameter body: (body) Provider 
@@ -1890,32 +1595,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create Ping Identity Provider
-     
      - PUT /api/v2/identityproviders/ping
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersPingWithRequestBuilder(body: PingIdentity) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersPingWithRequestBuilder(body: PingIdentity) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/ping"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1924,10 +1624,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create PureCloud Identity Provider
      
      - parameter body: (body) Provider 
@@ -1952,32 +1649,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create PureCloud Identity Provider
-     
      - PUT /api/v2/identityproviders/purecloud
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersPurecloudWithRequestBuilder(body: PureCloud) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersPurecloudWithRequestBuilder(body: PureCloud) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/purecloud"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1986,10 +1678,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create PureEngage Identity Provider
      
      - parameter body: (body) Provider 
@@ -2014,32 +1703,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create PureEngage Identity Provider
-     
      - PUT /api/v2/identityproviders/pureengage
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersPureengageWithRequestBuilder(body: PureEngage) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersPureengageWithRequestBuilder(body: PureEngage) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/pureengage"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2048,10 +1732,7 @@ open class IdentityProviderAPI {
     }
 
     
-    
-    
     /**
-     
      Update/Create Salesforce Identity Provider
      
      - parameter body: (body) Provider 
@@ -2076,32 +1757,27 @@ open class IdentityProviderAPI {
     }
 
     /**
-     
      Update/Create Salesforce Identity Provider
-     
      - PUT /api/v2/identityproviders/salesforce
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "disabled" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) Provider 
 
      - returns: RequestBuilder<OAuthProvider> 
      */
-    open class func putIdentityprovidersSalesforceWithRequestBuilder(body: Salesforce) -> RequestBuilder<OAuthProvider> {
+    open class func putIdentityprovidersSalesforceWithRequestBuilder(body: Salesforce) -> RequestBuilder<OAuthProvider> {        
         let path = "/api/v2/identityproviders/salesforce"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

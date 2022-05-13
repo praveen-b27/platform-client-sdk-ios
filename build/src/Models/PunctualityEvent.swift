@@ -32,27 +32,16 @@ public class PunctualityEvent: Codable {
     public var bullseye: Bool?
 
     public init(dateScheduleStart: Date?, dateStart: Date?, lengthMinutes: Int?, _description: String?, activityCodeId: String?, activityCode: String?, category: String?, points: Int?, delta: Double?, bullseye: Bool?) {
-        
         self.dateScheduleStart = dateScheduleStart
-        
         self.dateStart = dateStart
-        
         self.lengthMinutes = lengthMinutes
-        
         self._description = _description
-        
         self.activityCodeId = activityCodeId
-        
         self.activityCode = activityCode
-        
         self.category = category
-        
         self.points = points
-        
         self.delta = delta
-        
         self.bullseye = bullseye
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

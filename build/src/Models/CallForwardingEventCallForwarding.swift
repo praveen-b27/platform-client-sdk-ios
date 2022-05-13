@@ -18,17 +18,11 @@ public class CallForwardingEventCallForwarding: Codable {
     public var modifiedDate: Date?
 
     public init(user: CallForwardingEventUser?, enabled: Bool?, calls: [CallForwardingEventCall]?, voicemail: String?, modifiedDate: Date?) {
-        
         self.user = user
-        
         self.enabled = enabled
-        
         self.calls = calls
-        
         self.voicemail = voicemail
-        
         self.modifiedDate = modifiedDate
-        
     }
 
 

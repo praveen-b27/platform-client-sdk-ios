@@ -20,9 +20,7 @@ public class ConsultTransferUpdate: Codable {
     public var speakTo: SpeakTo?
 
     public init(speakTo: SpeakTo?) {
-        
         self.speakTo = speakTo
-        
     }
 
 

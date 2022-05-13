@@ -49,49 +49,27 @@ public class UpdateUser: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, title: String?, username: String?, manager: String?, images: [UserImage]?, version: Int?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, state: State?, acdAutoAnswer: Bool?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.chat = chat
-        
         self.department = department
-        
         self.email = email
-        
         self.primaryContactInfo = primaryContactInfo
-        
         self.addresses = addresses
-        
         self.title = title
-        
         self.username = username
-        
         self.manager = manager
-        
         self.images = images
-        
         self.version = version
-        
         self.profileSkills = profileSkills
-        
         self.locations = locations
-        
         self.groups = groups
-        
         self.state = state
-        
         self.acdAutoAnswer = acdAutoAnswer
-        
         self.certifications = certifications
-        
         self.biography = biography
-        
         self.employerInfo = employerInfo
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

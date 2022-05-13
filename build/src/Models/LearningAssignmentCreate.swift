@@ -19,13 +19,9 @@ public class LearningAssignmentCreate: Codable {
     public var recommendedCompletionDate: Date?
 
     public init(moduleId: String?, userId: String?, recommendedCompletionDate: Date?) {
-        
         self.moduleId = moduleId
-        
         self.userId = userId
-        
         self.recommendedCompletionDate = recommendedCompletionDate
-        
     }
 
 

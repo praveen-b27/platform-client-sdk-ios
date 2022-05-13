@@ -26,15 +26,10 @@ public class ResponseAssetStatus: Codable {
     public var errorMessage: String?
 
     public init(_id: String?, status: Status?, errorCode: String?, errorMessage: String?) {
-        
         self._id = _id
-        
         self.status = status
-        
         self.errorCode = errorCode
-        
         self.errorMessage = errorMessage
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

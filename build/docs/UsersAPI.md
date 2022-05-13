@@ -251,7 +251,7 @@ UsersAPI.deleteRoutingUserUtilization(userId: userId) { (error) in
 
 
 
-> [Empty](Empty.html) deleteUser(userId)
+> [JSON](JSON.html) deleteUser(userId)
 
 Delete user
 
@@ -295,7 +295,7 @@ UsersAPI.deleteUser(userId: userId) { (response, error) in
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteUserRoutinglanguage"></a>
 
@@ -666,13 +666,15 @@ This endpoint does not require any parameters.
 
 # **getAuthorizationDivisionspermittedMe**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [[AuthzDivision]](AuthzDivision.html) getAuthorizationDivisionspermittedMe(permission, name)
 
 Returns which divisions the current user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
+
+
 
 Wraps GET /api/v2/authorization/divisionspermitted/me  
 
@@ -741,8 +743,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let permission: String = "" // The permission string, including the object to access, e.g. routing:queue:view
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 UsersAPI.getAuthorizationDivisionspermittedPagedMe(permission: permission, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -761,8 +763,8 @@ UsersAPI.getAuthorizationDivisionspermittedPagedMe(permission: permission, pageN
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -774,13 +776,15 @@ UsersAPI.getAuthorizationDivisionspermittedPagedMe(permission: permission, pageN
 
 # **getAuthorizationDivisionspermittedPagedSubjectId**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [DivsPermittedEntityListing](DivsPermittedEntityListing.html) getAuthorizationDivisionspermittedPagedSubjectId(subjectId, permission, pageNumber, pageSize)
 
 Returns which divisions the specified user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
+
+
 
 Wraps GET /api/v2/authorization/divisionspermitted/paged/{subjectId}  
 
@@ -797,8 +801,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
 let permission: String = "" // The permission string, including the object to access, e.g. routing:queue:view
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 UsersAPI.getAuthorizationDivisionspermittedPagedSubjectId(subjectId: subjectId, permission: permission, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -818,8 +822,8 @@ UsersAPI.getAuthorizationDivisionspermittedPagedSubjectId(subjectId: subjectId, 
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -930,7 +934,7 @@ This endpoint does not require any parameters.
 
 # **getFieldconfig**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [FieldConfig](FieldConfig.html) getFieldconfig(type)
 
@@ -981,13 +985,15 @@ UsersAPI.getFieldconfig(type: type) { (response, error) in
 
 # **getProfilesUsers**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [UserProfileEntityListing](UserProfileEntityListing.html) getProfilesUsers(pageSize, pageNumber, _id, jid, sortOrder, expand, integrationPresenceSource)
 
 Get a user profile listing
 
 This api is deprecated. User /api/v2/users
+
+
 
 Wraps GET /api/v2/profiles/users  
 
@@ -1002,12 +1008,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let _id: [String] = [""] // id
 let jid: [String] = [""] // jid
 let sortOrder: UsersAPI.SortOrder_getProfilesUsers = UsersAPI.SortOrder_getProfilesUsers.enummember // Ascending or descending sort order
-let expand: [String] = [UsersAPI.Expand_getProfilesUsers.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getProfilesUsers = UsersAPI.IntegrationPresenceSource_getProfilesUsers.enummember // Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\".
 
 // Code example
@@ -1026,13 +1032,13 @@ UsersAPI.getProfilesUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **jid** | [**[String]**](String.html)| jid | [optional] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization") |
-| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
+| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
 {: class="table-striped"}
 
 
@@ -1119,7 +1125,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let expand: [String] = [UsersAPI.Expand_getUser.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUser = UsersAPI.IntegrationPresenceSource_getUser.enummember // Gets an integration presence for a user instead of their default.
 let state: UsersAPI.State_getUser = UsersAPI.State_getUser.enummember // Search for a user with this state
 
@@ -1142,7 +1148,7 @@ UsersAPI.getUser(userId: userId, expand: expand, integrationPresenceSource: inte
 | **userId** | **String**| User ID | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 | **integrationPresenceSource** | **String**| Gets an integration presence for a user instead of their default. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
-| **state** | **String**| Search for a user with this state | [optional] [default to active]<br />**Values**: active ("active"), deleted ("deleted") |
+| **state** | **String**| Search for a user with this state | [optional]<br />**Values**: active ("active"), deleted ("deleted") |
 {: class="table-striped"}
 
 
@@ -1176,7 +1182,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let expand: [String] = [UsersAPI.Expand_getUserAdjacents.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 UsersAPI.getUserAdjacents(userId: userId, expand: expand) { (response, error) in
@@ -1280,7 +1286,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let expand: [String] = [UsersAPI.Expand_getUserDirectreports.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 UsersAPI.getUserDirectreports(userId: userId, expand: expand) { (response, error) in
@@ -1311,7 +1317,7 @@ UsersAPI.getUserDirectreports(userId: userId, expand: expand) { (response, error
 
 # **getUserFavorites**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [UserEntityListing](UserEntityListing.html) getUserFavorites(userId, pageSize, pageNumber, sortOrder, expand)
 
@@ -1333,10 +1339,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortOrder: String = "ASC" // Sort order
-let expand: [String] = [UsersAPI.Expand_getUserFavorites.enummember.rawValue] // Which fields, if any, to expand
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortOrder: String = "" // Sort order
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 UsersAPI.getUserFavorites(userId: userId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -1355,9 +1361,9 @@ UsersAPI.getUserFavorites(userId: userId, pageSize: pageSize, pageNumber: pageNu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 {: class="table-striped"}
 
@@ -1474,13 +1480,15 @@ UsersAPI.getUserOutofoffice(userId: userId) { (response, error) in
 
 # **getUserProfile**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [UserProfile](UserProfile.html) getUserProfile(userId, expand, integrationPresenceSource)
 
 Get user profile
 
 This api has been deprecated. Use api/v2/users instead
+
+
 
 Wraps GET /api/v2/users/{userId}/profile  
 
@@ -1496,7 +1504,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // userId
-let expand: [String] = [UsersAPI.Expand_getUserProfile.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUserProfile = UsersAPI.IntegrationPresenceSource_getUserProfile.enummember // Gets an integration presence for a user instead of their default.
 
 // Code example
@@ -1606,8 +1614,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let joined: Bool = true // Is joined to the queue
 let divisionId: [String] = [""] // Division ID(s)
 
@@ -1628,9 +1636,9 @@ UsersAPI.getUserQueues(userId: userId, pageSize: pageSize, pageNumber: pageNumbe
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **joined** | **Bool**| Is joined to the queue | [optional] [default to true] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **joined** | **Bool**| Is joined to the queue | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
 {: class="table-striped"}
 
@@ -1717,8 +1725,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: UsersAPI.SortOrder_getUserRoutinglanguages = UsersAPI.SortOrder_getUserRoutinglanguages.enummember // Ascending or descending sort order
 
 // Code example
@@ -1738,9 +1746,9 @@ UsersAPI.getUserRoutinglanguages(userId: userId, pageSize: pageSize, pageNumber:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -1774,8 +1782,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: UsersAPI.SortOrder_getUserRoutingskills = UsersAPI.SortOrder_getUserRoutingskills.enummember // Ascending or descending sort order
 
 // Code example
@@ -1795,9 +1803,9 @@ UsersAPI.getUserRoutingskills(userId: userId, pageSize: pageSize, pageNumber: pa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -1985,7 +1993,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let expand: [String] = [UsersAPI.Expand_getUserSuperiors.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 UsersAPI.getUserSuperiors(userId: userId, expand: expand) { (response, error) in
@@ -2039,8 +2047,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 UsersAPI.getUserTrustors(userId: userId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -2059,8 +2067,8 @@ UsersAPI.getUserTrustors(userId: userId, pageSize: pageSize, pageNumber: pageNum
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -2093,12 +2101,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let _id: [String] = [""] // A list of user IDs to fetch by bulk
 let jabberId: [String] = [""] // A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter)
 let sortOrder: UsersAPI.SortOrder_getUsers = UsersAPI.SortOrder_getUsers.enummember // Ascending or descending sort order
-let expand: [String] = [UsersAPI.Expand_getUsers.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsers = UsersAPI.IntegrationPresenceSource_getUsers.enummember // Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100.
 let state: UsersAPI.State_getUsers = UsersAPI.State_getUsers.enummember // Only list users of this state
 
@@ -2118,14 +2126,14 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **_id** | [**[String]**](String.html)| A list of user IDs to fetch by bulk | [optional] |
-| **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
-| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
-| **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active ("active"), inactive ("inactive"), deleted ("deleted"), any ("any") |
+| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
+| **state** | **String**| Only list users of this state | [optional]<br />**Values**: active ("active"), inactive ("inactive"), deleted ("deleted"), any ("any") |
 {: class="table-striped"}
 
 
@@ -2144,6 +2152,8 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 Get list of Development Activities
 
 Either moduleId or userId is required. Results are filtered based on the applicable permissions.
+
+
 
 Wraps GET /api/v2/users/development/activities  
 
@@ -2165,12 +2175,12 @@ let moduleId: String = "" // Specifies the ID of the learning module.
 let interval: String = "" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let completionInterval: String = "" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let overdue: UsersAPI.Overdue_getUsersDevelopmentActivities = UsersAPI.Overdue_getUsersDevelopmentActivities.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: UsersAPI.SortOrder_getUsersDevelopmentActivities = UsersAPI.SortOrder_getUsersDevelopmentActivities.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)
-let types: [String] = [UsersAPI.Types_getUsersDevelopmentActivities.enummember.rawValue] // Specifies the activity types.
-let statuses: [String] = [UsersAPI.Statuses_getUsersDevelopmentActivities.enummember.rawValue] // Specifies the activity statuses to filter by
-let relationship: [String] = [UsersAPI.Relationship_getUsersDevelopmentActivities.enummember.rawValue] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.
+let types: [String] = [""] // Specifies the activity types.
+let statuses: [String] = [""] // Specifies the activity statuses to filter by
+let relationship: [String] = [""] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.
 
 // Code example
 UsersAPI.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in
@@ -2192,10 +2202,10 @@ UsersAPI.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, inter
 | **moduleId** | **String**| Specifies the ID of the learning module. | [optional] |
 | **interval** | **String**| Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 | **completionInterval** | **String**| Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-| **overdue** | **String**| Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
+| **overdue** | **String**| Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
@@ -2218,6 +2228,8 @@ Get list of Development Activities for current user
 
 Results are filtered based on the applicable permissions.
 
+
+
 Wraps GET /api/v2/users/development/activities/me  
 
 Requires NO permissions: 
@@ -2235,12 +2247,12 @@ let moduleId: String = "" // Specifies the ID of the learning module.
 let interval: String = "" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let completionInterval: String = "" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let overdue: UsersAPI.Overdue_getUsersDevelopmentActivitiesMe = UsersAPI.Overdue_getUsersDevelopmentActivitiesMe.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: UsersAPI.SortOrder_getUsersDevelopmentActivitiesMe = UsersAPI.SortOrder_getUsersDevelopmentActivitiesMe.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)
-let types: [String] = [UsersAPI.Types_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies the activity types.
-let statuses: [String] = [UsersAPI.Statuses_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies the activity statuses to filter by
-let relationship: [String] = [UsersAPI.Relationship_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.
+let types: [String] = [""] // Specifies the activity types.
+let statuses: [String] = [""] // Specifies the activity statuses to filter by
+let relationship: [String] = [""] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.
 
 // Code example
 UsersAPI.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in
@@ -2261,10 +2273,10 @@ UsersAPI.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval,
 | **moduleId** | **String**| Specifies the ID of the learning module. | [optional] |
 | **interval** | **String**| Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 | **completionInterval** | **String**| Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-| **overdue** | **String**| Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
+| **overdue** | **String**| Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
@@ -2286,6 +2298,8 @@ UsersAPI.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval,
 Get a Development Activity
 
 Permission not required if you are the attendee, creator or facilitator of the coaching appointment or you are the assigned user of the learning assignment.
+
+
 
 Wraps GET /api/v2/users/development/activities/{activityId}  
 
@@ -2342,6 +2356,8 @@ Get current user details.
 
 This request is not valid when using the Client Credentials OAuth grant.
 
+
+
 Wraps GET /api/v2/users/me  
 
 Requires NO permissions: 
@@ -2355,7 +2371,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let expand: [String] = [UsersAPI.Expand_getUsersMe.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsersMe = UsersAPI.IntegrationPresenceSource_getUsersMe.enummember // Get your presence for a given integration. This parameter will only be used when presence is provided as an \"expand\".
 
 // Code example
@@ -2375,7 +2391,7 @@ UsersAPI.getUsersMe(expand: expand, integrationPresenceSource: integrationPresen
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), date ("date"), geolocationsettings ("geolocationsettings"), organization ("organization"), presencedefinitions ("presencedefinitions"), locationdefinitions ("locationdefinitions"), orgauthorization ("orgauthorization"), orgproducts ("orgproducts"), favorites ("favorites"), superiors ("superiors"), directreports ("directreports"), adjacents ("adjacents"), routingskills ("routingskills"), routinglanguages ("routinglanguages"), fieldconfigs ("fieldconfigs"), token ("token"), trustors ("trustors"), logcapture ("logCapture") |
-| **integrationPresenceSource** | **String**| Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
+| **integrationPresenceSource** | **String**| Get your presence for a given integration. This parameter will only be used when presence is provided as an \"expand\". | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
 {: class="table-striped"}
 
 
@@ -2558,6 +2574,8 @@ UsersAPI.patchUserCallforwarding(userId: userId, body: body) { (response, error)
 Patch a user&#39;s Geolocation
 
 The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+
+
 
 Wraps PATCH /api/v2/users/{userId}/geolocations/{clientId}  
 
@@ -3171,7 +3189,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
 let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
-let subjectType: String = "PC_USER" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+let subjectType: String = "" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
 
 // Code example
 UsersAPI.postAuthorizationSubjectBulkadd(subjectId: subjectId, body: body, subjectType: subjectType) { (error) in
@@ -3190,7 +3208,7 @@ UsersAPI.postAuthorizationSubjectBulkadd(subjectId: subjectId, body: body, subje
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
-| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] |
 {: class="table-striped"}
 
 
@@ -3263,6 +3281,8 @@ Replace subject&#39;s roles and divisions with the exact list supplied in the re
 
 This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
 
+
+
 Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkreplace  
 
 Requires ALL permissions: 
@@ -3280,7 +3300,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
 let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
-let subjectType: String = "PC_USER" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+let subjectType: String = "" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
 
 // Code example
 UsersAPI.postAuthorizationSubjectBulkreplace(subjectId: subjectId, body: body, subjectType: subjectType) { (error) in
@@ -3299,7 +3319,7 @@ UsersAPI.postAuthorizationSubjectBulkreplace(subjectId: subjectId, body: body, s
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
-| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] |
 {: class="table-striped"}
 
 
@@ -3336,7 +3356,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let subjectId: String = "" // Subject ID (user or group)
 let divisionId: String = "" // the id of the division to which to make the grant
 let roleId: String = "" // the id of the role to grant
-let subjectType: String = "PC_USER" // what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
+let subjectType: String = "" // what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
 
 // Code example
 UsersAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: divisionId, roleId: roleId, subjectType: subjectType) { (error) in
@@ -3356,7 +3376,7 @@ UsersAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: 
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **divisionId** | **String**| the id of the division to which to make the grant | |
 | **roleId** | **String**| the id of the role to grant | |
-| **subjectType** | **String**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] |
 {: class="table-striped"}
 
 
@@ -3391,7 +3411,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let force: Bool = false // Resend the invitation even if one is already outstanding
+let force: Bool = true // Resend the invitation even if one is already outstanding
 
 // Code example
 UsersAPI.postUserInvite(userId: userId, force: force) { (error) in
@@ -3409,7 +3429,7 @@ UsersAPI.postUserInvite(userId: userId, force: force) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **force** | **Bool**| Resend the invitation even if one is already outstanding | [optional] [default to false] |
+| **force** | **Bool**| Resend the invitation even if one is already outstanding | [optional] |
 {: class="table-striped"}
 
 
@@ -3642,6 +3662,8 @@ UsersAPI.postUsers(body: body) { (response, error) in
 Retrieve aggregated development activity data
 
 Results are filtered based on the applicable permissions.
+
+
 
 Wraps POST /api/v2/users/development/activities/aggregates/query  
 
@@ -3974,7 +3996,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let body: [String] = [new [String](...)] // Skills
+let body: [String] = [""] // Skills
 
 // Code example
 UsersAPI.putUserProfileskills(userId: userId, body: body) { (response, error) in
@@ -3993,7 +4015,7 @@ UsersAPI.putUserProfileskills(userId: userId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **body** | **[String]**| Skills | |
+| **body** | [**[String]**](String.html)| Skills | |
 {: class="table-striped"}
 
 
@@ -4028,7 +4050,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let body: [String] = [new [String](...)] // List of roles
+let body: [String] = [""] // List of roles
 
 // Code example
 UsersAPI.putUserRoles(userId: userId, body: body) { (response, error) in
@@ -4047,7 +4069,7 @@ UsersAPI.putUserRoles(userId: userId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **body** | **[String]**| List of roles | |
+| **body** | [**[String]**](String.html)| List of roles | |
 {: class="table-striped"}
 
 

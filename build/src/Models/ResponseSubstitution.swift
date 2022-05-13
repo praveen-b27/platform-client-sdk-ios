@@ -20,13 +20,9 @@ public class ResponseSubstitution: Codable {
     public var defaultValue: String?
 
     public init(_id: String?, _description: String?, defaultValue: String?) {
-        
         self._id = _id
-        
         self._description = _description
-        
         self.defaultValue = defaultValue
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

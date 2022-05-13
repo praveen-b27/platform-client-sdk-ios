@@ -19,13 +19,9 @@ public class Record: Codable {
     public var value: String?
 
     public init(name: String?, type: String?, value: String?) {
-        
         self.name = name
-        
         self.type = type
-        
         self.value = value
-        
     }
 
 

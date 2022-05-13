@@ -36,35 +36,20 @@ public class SystemPromptAsset: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, promptId: String?, language: String?, durationSeconds: Double?, mediaUri: String?, ttsString: String?, text: String?, uploadUri: String?, uploadStatus: UploadStatus?, hasDefault: Bool?, languageDefault: Bool?, tags: [String:[String]]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.promptId = promptId
-        
         self.language = language
-        
         self.durationSeconds = durationSeconds
-        
         self.mediaUri = mediaUri
-        
         self.ttsString = ttsString
-        
         self.text = text
-        
         self.uploadUri = uploadUri
-        
         self.uploadStatus = uploadStatus
-        
         self.hasDefault = hasDefault
-        
         self.languageDefault = languageDefault
-        
         self.tags = tags
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

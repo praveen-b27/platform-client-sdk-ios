@@ -29,11 +29,8 @@ public class ContentReaction: Codable {
     public var count: Int?
 
     public init(reactionType: ReactionType?, count: Int?) {
-        
         self.reactionType = reactionType
-        
         self.count = count
-        
     }
 
 

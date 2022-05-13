@@ -17,11 +17,8 @@ public class UpdateNotificationResponse: Codable {
     public var _id: String?
 
     public init(mutableGroupId: String?, _id: String?) {
-        
         self.mutableGroupId = mutableGroupId
-        
         self._id = _id
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

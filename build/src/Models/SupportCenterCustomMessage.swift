@@ -21,11 +21,8 @@ public class SupportCenterCustomMessage: Codable {
     public var type: ModelType?
 
     public init(defaultValue: String?, type: ModelType?) {
-        
         self.defaultValue = defaultValue
-        
         self.type = type
-        
     }
 
 

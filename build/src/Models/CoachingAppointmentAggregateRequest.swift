@@ -32,15 +32,10 @@ public class CoachingAppointmentAggregateRequest: Codable {
     public var filter: QueryRequestFilter?
 
     public init(interval: String?, metrics: [Metrics]?, groupBy: [GroupBy]?, filter: QueryRequestFilter?) {
-        
         self.interval = interval
-        
         self.metrics = metrics
-        
         self.groupBy = groupBy
-        
         self.filter = filter
-        
     }
 
 

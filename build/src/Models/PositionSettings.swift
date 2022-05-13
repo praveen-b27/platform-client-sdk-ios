@@ -25,13 +25,9 @@ public class PositionSettings: Codable {
     public var bottomSpace: Int?
 
     public init(alignment: Alignment?, sideSpace: Int?, bottomSpace: Int?) {
-        
         self.alignment = alignment
-        
         self.sideSpace = sideSpace
-        
         self.bottomSpace = bottomSpace
-        
     }
 
 

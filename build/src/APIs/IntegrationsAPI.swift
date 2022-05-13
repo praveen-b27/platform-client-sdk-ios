@@ -11,10 +11,7 @@ import Foundation
 
 open class IntegrationsAPI {
     
-    
-    
     /**
-     
      Delete integration.
      
      - parameter integrationId: (path) Integration Id 
@@ -39,120 +36,36 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Delete integration.
-     
      - DELETE /api/v2/integrations/{integrationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "integrationType" : {
-    "configPropertiesSchemaUri" : "aeiou",
-    "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
-    } ],
-    "vendorWebsiteUri" : "aeiou",
-    "salesContactUri" : "aeiou",
-    "credentials" : {
-      "key" : {
-        "credentialTypes" : [ "aeiou" ],
-        "title" : "aeiou",
-        "required" : true
-      }
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "privacyPolicyUri" : "aeiou",
-    "userPermissions" : [ "aeiou" ],
-    "helpUri" : "aeiou",
-    "vendorName" : "aeiou",
-    "nonInstallable" : true,
-    "marketplaceUri" : "aeiou",
-    "termsOfServiceUri" : "aeiou",
-    "faqUri" : "aeiou",
-    "supportContactUri" : "aeiou",
-    "provider" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "helpLinks" : [ {
-      "description" : "aeiou",
-      "title" : "aeiou",
-      "uri" : "aeiou"
-    } ],
-    "category" : "aeiou",
-    "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou",
-    "vendorOAuthClientIds" : [ "aeiou" ]
-  },
-  "notes" : "aeiou",
-  "reportedState" : {
-    "effective" : "aeiou",
-    "lastUpdated" : "2000-01-23T04:56:07.000+0000",
-    "code" : "aeiou",
-    "detail" : {
-      "messageWithParams" : "aeiou",
-      "localizableMessageCode" : "aeiou",
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "intendedState" : "aeiou",
+  "integrationType" : "{}",
+  "notes" : "notes",
+  "reportedState" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "intendedState" : "ENABLED",
   "attributes" : {
-    "key" : "aeiou"
+    "key" : "attributes"
   },
-  "id" : "aeiou",
-  "config" : {
-    "current" : {
-      "notes" : "aeiou",
-      "advanced" : "{}",
-      "credentials" : {
-        "key" : {
-          "createdDate" : "2000-01-23T04:56:07.000+0000",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "type" : {
-            "name" : "aeiou",
-            "displayOrder" : [ "aeiou" ],
-            "id" : "aeiou",
-            "properties" : "{}",
-            "required" : [ "aeiou" ]
-          }
-        }
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "version" : 123,
-      "properties" : "{}"
-    }
-  }
-}}]
+  "id" : "id",
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter integrationId: (path) Integration Id 
 
      - returns: RequestBuilder<Integration> 
      */
-    open class func deleteIntegrationWithRequestBuilder(integrationId: String) -> RequestBuilder<Integration> {
+    open class func deleteIntegrationWithRequestBuilder(integrationId: String) -> RequestBuilder<Integration> {        
         var path = "/api/v2/integrations/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -162,10 +75,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Delete an Action
      
      - parameter actionId: (path) actionId 
@@ -183,11 +93,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Delete an Action
-     
      - DELETE /api/v2/integrations/actions/{actionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -196,18 +103,13 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteIntegrationsActionWithRequestBuilder(actionId: String) -> RequestBuilder<Void> {
+    open class func deleteIntegrationsActionWithRequestBuilder(actionId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/integrations/actions/{actionId}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -217,10 +119,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a Draft
      
      - parameter actionId: (path) actionId 
@@ -238,11 +137,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Delete a Draft
-     
      - DELETE /api/v2/integrations/actions/{actionId}/draft
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -251,18 +147,13 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteIntegrationsActionDraftWithRequestBuilder(actionId: String) -> RequestBuilder<Void> {
+    open class func deleteIntegrationsActionDraftWithRequestBuilder(actionId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -272,10 +163,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a set of credentials
      
      - parameter credentialId: (path) Credential ID 
@@ -293,11 +181,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Delete a set of credentials
-     
      - DELETE /api/v2/integrations/credentials/{credentialId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -306,18 +191,13 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteIntegrationsCredentialWithRequestBuilder(credentialId: String) -> RequestBuilder<Void> {
+    open class func deleteIntegrationsCredentialWithRequestBuilder(credentialId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/integrations/credentials/{credentialId}"
         let credentialIdPreEscape = "\(credentialId)"
         let credentialIdPostEscape = credentialIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{credentialId}", with: credentialIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -333,21 +213,12 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get integration.
      
      - parameter integrationId: (path) Integration Id 
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -373,107 +244,28 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get integration.
-     
      - GET /api/v2/integrations/{integrationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "integrationType" : {
-    "configPropertiesSchemaUri" : "aeiou",
-    "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
-    } ],
-    "vendorWebsiteUri" : "aeiou",
-    "salesContactUri" : "aeiou",
-    "credentials" : {
-      "key" : {
-        "credentialTypes" : [ "aeiou" ],
-        "title" : "aeiou",
-        "required" : true
-      }
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "privacyPolicyUri" : "aeiou",
-    "userPermissions" : [ "aeiou" ],
-    "helpUri" : "aeiou",
-    "vendorName" : "aeiou",
-    "nonInstallable" : true,
-    "marketplaceUri" : "aeiou",
-    "termsOfServiceUri" : "aeiou",
-    "faqUri" : "aeiou",
-    "supportContactUri" : "aeiou",
-    "provider" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "helpLinks" : [ {
-      "description" : "aeiou",
-      "title" : "aeiou",
-      "uri" : "aeiou"
-    } ],
-    "category" : "aeiou",
-    "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou",
-    "vendorOAuthClientIds" : [ "aeiou" ]
-  },
-  "notes" : "aeiou",
-  "reportedState" : {
-    "effective" : "aeiou",
-    "lastUpdated" : "2000-01-23T04:56:07.000+0000",
-    "code" : "aeiou",
-    "detail" : {
-      "messageWithParams" : "aeiou",
-      "localizableMessageCode" : "aeiou",
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "intendedState" : "aeiou",
+  "integrationType" : "{}",
+  "notes" : "notes",
+  "reportedState" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "intendedState" : "ENABLED",
   "attributes" : {
-    "key" : "aeiou"
+    "key" : "attributes"
   },
-  "id" : "aeiou",
-  "config" : {
-    "current" : {
-      "notes" : "aeiou",
-      "advanced" : "{}",
-      "credentials" : {
-        "key" : {
-          "createdDate" : "2000-01-23T04:56:07.000+0000",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "type" : {
-            "name" : "aeiou",
-            "displayOrder" : [ "aeiou" ],
-            "id" : "aeiou",
-            "properties" : "{}",
-            "required" : [ "aeiou" ]
-          }
-        }
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "version" : 123,
-      "properties" : "{}"
-    }
-  }
-}}]
+  "id" : "id",
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter integrationId: (path) Integration Id 
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -481,34 +273,22 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<Integration> 
      */
-    open class func getIntegrationWithRequestBuilder(integrationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<Integration> {
+    open class func getIntegrationWithRequestBuilder(integrationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<Integration> {        
         var path = "/api/v2/integrations/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "expand": expand, 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage
-            
         ])
 
         let requestBuilder: RequestBuilder<Integration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -517,10 +297,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get integration configuration.
      
      - parameter integrationId: (path) Integration Id 
@@ -545,56 +322,42 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get integration configuration.
-     
      - GET /api/v2/integrations/{integrationId}/config/current
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "notes" : "aeiou",
+  "notes" : "notes",
   "advanced" : "{}",
   "credentials" : {
     "key" : {
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "type" : {
-        "name" : "aeiou",
-        "displayOrder" : [ "aeiou" ],
-        "id" : "aeiou",
-        "properties" : "{}",
-        "required" : [ "aeiou" ]
-      }
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "type" : "{}"
     }
   },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "version" : 123,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
   "properties" : "{}"
-}}]
+}, statusCode=200}]
      
      - parameter integrationId: (path) Integration Id 
 
      - returns: RequestBuilder<IntegrationConfiguration> 
      */
-    open class func getIntegrationConfigCurrentWithRequestBuilder(integrationId: String) -> RequestBuilder<IntegrationConfiguration> {
+    open class func getIntegrationConfigCurrentWithRequestBuilder(integrationId: String) -> RequestBuilder<IntegrationConfiguration> {        
         var path = "/api/v2/integrations/{integrationId}/config/current"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -609,19 +372,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      List integrations
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -647,117 +402,50 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      List integrations
-     
      - GET /api/v2/integrations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "integrationType" : {
-      "configPropertiesSchemaUri" : "aeiou",
-      "images" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "vendorWebsiteUri" : "aeiou",
-      "salesContactUri" : "aeiou",
-      "credentials" : {
-        "key" : {
-          "credentialTypes" : [ "aeiou" ],
-          "title" : "aeiou",
-          "required" : true
-        }
-      },
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "privacyPolicyUri" : "aeiou",
-      "userPermissions" : [ "aeiou" ],
-      "helpUri" : "aeiou",
-      "vendorName" : "aeiou",
-      "nonInstallable" : true,
-      "marketplaceUri" : "aeiou",
-      "termsOfServiceUri" : "aeiou",
-      "faqUri" : "aeiou",
-      "supportContactUri" : "aeiou",
-      "provider" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "helpLinks" : [ {
-        "description" : "aeiou",
-        "title" : "aeiou",
-        "uri" : "aeiou"
-      } ],
-      "category" : "aeiou",
-      "maxInstances" : 123,
-      "configAdvancedSchemaUri" : "aeiou",
-      "vendorOAuthClientIds" : [ "aeiou" ]
-    },
-    "notes" : "aeiou",
-    "reportedState" : {
-      "effective" : "aeiou",
-      "lastUpdated" : "2000-01-23T04:56:07.000+0000",
-      "code" : "aeiou",
-      "detail" : {
-        "messageWithParams" : "aeiou",
-        "localizableMessageCode" : "aeiou",
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou"
-      }
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "intendedState" : "aeiou",
+    "integrationType" : "{}",
+    "notes" : "notes",
+    "reportedState" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "intendedState" : "ENABLED",
     "attributes" : {
-      "key" : "aeiou"
+      "key" : "attributes"
     },
-    "id" : "aeiou",
-    "config" : {
-      "current" : {
-        "notes" : "aeiou",
-        "advanced" : "{}",
-        "credentials" : {
-          "key" : {
-            "createdDate" : "2000-01-23T04:56:07.000+0000",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-            "id" : "aeiou",
-            "type" : {
-              "name" : "aeiou",
-              "displayOrder" : [ "aeiou" ],
-              "id" : "aeiou",
-              "properties" : "{}",
-              "required" : [ "aeiou" ]
-            }
-          }
-        },
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "version" : 123,
-        "properties" : "{}"
-      }
-    }
+    "id" : "id",
+    "config" : "{}"
+  }, {
+    "integrationType" : "{}",
+    "notes" : "notes",
+    "reportedState" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "intendedState" : "ENABLED",
+    "attributes" : {
+      "key" : "attributes"
+    },
+    "id" : "id",
+    "config" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -765,31 +453,19 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<IntegrationEntityListing> 
      */
-    open class func getIntegrationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<IntegrationEntityListing> {
+    open class func getIntegrationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<IntegrationEntityListing> {        
         let path = "/api/v2/integrations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "expand": expand, 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage
-            
         ])
 
         let requestBuilder: RequestBuilder<IntegrationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -799,23 +475,18 @@ open class IntegrationsAPI {
 
     
     
-    
-    
     public enum Expand_getIntegrationsAction: String { 
         case contract = "contract"
     }
 
     
     
-    
-    
     /**
-     
      Retrieves a single Action matching id.
      
      - parameter actionId: (path) actionId 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
-     - parameter includeConfig: (query) Return config in response. (optional, default to false)
+     - parameter includeConfig: (query) Return config in response. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsAction(actionId: String, expand: Expand_getIntegrationsAction? = nil, includeConfig: Bool? = nil, completion: @escaping ((_ data: Action?,_ error: Error?) -> Void)) {
@@ -837,97 +508,41 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieves a single Action matching id.
-     
      - GET /api/v2/integrations/actions/{actionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contract" : {
-    "output" : {
-      "successSchemaFlattened" : "",
-      "errorSchemaUri" : "aeiou",
-      "errorSchemaFlattened" : "{}",
-      "successSchema" : {
-        "$schema" : "aeiou",
-        "description" : "aeiou",
-        "id" : "aeiou",
-        "additionalProperties" : "{}",
-        "title" : "aeiou",
-        "type" : "aeiou",
-        "required" : [ "aeiou" ],
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "successSchemaUri" : "aeiou",
-      "errorSchema" : ""
-    },
-    "input" : {
-      "inputSchemaFlattened" : "",
-      "inputSchema" : "",
-      "inputSchemaUri" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "integrationId" : "aeiou",
-  "id" : "aeiou",
-  "category" : "aeiou",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integrationId" : "integrationId",
+  "id" : "id",
+  "category" : "category",
   "secure" : true,
-  "version" : 123,
-  "config" : {
-    "request" : {
-      "headers" : {
-        "key" : "aeiou"
-      },
-      "requestUrlTemplate" : "aeiou",
-      "requestType" : "aeiou",
-      "requestTemplate" : "aeiou",
-      "requestTemplateUri" : "aeiou"
-    },
-    "response" : {
-      "translationMapDefaults" : {
-        "key" : "aeiou"
-      },
-      "translationMap" : {
-        "key" : "aeiou"
-      },
-      "successTemplateUri" : "aeiou",
-      "successTemplate" : "aeiou"
-    }
-  }
-}}]
+  "version" : 0,
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
-     - parameter includeConfig: (query) Return config in response. (optional, default to false)
+     - parameter includeConfig: (query) Return config in response. (optional)
 
      - returns: RequestBuilder<Action> 
      */
-    open class func getIntegrationsActionWithRequestBuilder(actionId: String, expand: Expand_getIntegrationsAction? = nil, includeConfig: Bool? = nil) -> RequestBuilder<Action> {
+    open class func getIntegrationsActionWithRequestBuilder(actionId: String, expand: Expand_getIntegrationsAction? = nil, includeConfig: Bool? = nil) -> RequestBuilder<Action> {        
         var path = "/api/v2/integrations/actions/{actionId}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand?.rawValue, 
-            
             "includeConfig": includeConfig
-            
         ])
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -937,23 +552,18 @@ open class IntegrationsAPI {
 
     
     
-    
-    
     public enum Expand_getIntegrationsActionDraft: String { 
         case contract = "contract"
     }
 
     
     
-    
-    
     /**
-     
      Retrieve a Draft
      
      - parameter actionId: (path) actionId 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
-     - parameter includeConfig: (query) Return config in response. (optional, default to false)
+     - parameter includeConfig: (query) Return config in response. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsActionDraft(actionId: String, expand: Expand_getIntegrationsActionDraft? = nil, includeConfig: Bool? = nil, completion: @escaping ((_ data: Action?,_ error: Error?) -> Void)) {
@@ -975,97 +585,41 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieve a Draft
-     
      - GET /api/v2/integrations/actions/{actionId}/draft
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contract" : {
-    "output" : {
-      "successSchemaFlattened" : "",
-      "errorSchemaUri" : "aeiou",
-      "errorSchemaFlattened" : "{}",
-      "successSchema" : {
-        "$schema" : "aeiou",
-        "description" : "aeiou",
-        "id" : "aeiou",
-        "additionalProperties" : "{}",
-        "title" : "aeiou",
-        "type" : "aeiou",
-        "required" : [ "aeiou" ],
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "successSchemaUri" : "aeiou",
-      "errorSchema" : ""
-    },
-    "input" : {
-      "inputSchemaFlattened" : "",
-      "inputSchema" : "",
-      "inputSchemaUri" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "integrationId" : "aeiou",
-  "id" : "aeiou",
-  "category" : "aeiou",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integrationId" : "integrationId",
+  "id" : "id",
+  "category" : "category",
   "secure" : true,
-  "version" : 123,
-  "config" : {
-    "request" : {
-      "headers" : {
-        "key" : "aeiou"
-      },
-      "requestUrlTemplate" : "aeiou",
-      "requestType" : "aeiou",
-      "requestTemplate" : "aeiou",
-      "requestTemplateUri" : "aeiou"
-    },
-    "response" : {
-      "translationMapDefaults" : {
-        "key" : "aeiou"
-      },
-      "translationMap" : {
-        "key" : "aeiou"
-      },
-      "successTemplateUri" : "aeiou",
-      "successTemplate" : "aeiou"
-    }
-  }
-}}]
+  "version" : 0,
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
-     - parameter includeConfig: (query) Return config in response. (optional, default to false)
+     - parameter includeConfig: (query) Return config in response. (optional)
 
      - returns: RequestBuilder<Action> 
      */
-    open class func getIntegrationsActionDraftWithRequestBuilder(actionId: String, expand: Expand_getIntegrationsActionDraft? = nil, includeConfig: Bool? = nil) -> RequestBuilder<Action> {
+    open class func getIntegrationsActionDraftWithRequestBuilder(actionId: String, expand: Expand_getIntegrationsActionDraft? = nil, includeConfig: Bool? = nil) -> RequestBuilder<Action> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand?.rawValue, 
-            
             "includeConfig": includeConfig
-            
         ])
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1075,11 +629,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieve schema for a Draft based on filename.
      
      - parameter actionId: (path) actionId 
@@ -1105,33 +655,30 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieve schema for a Draft based on filename.
-     
      - GET /api/v2/integrations/actions/{actionId}/draft/schemas/{fileName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "$schema" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
+  "$schema" : "$schema",
+  "description" : "description",
+  "id" : "id",
   "additionalProperties" : "{}",
-  "title" : "aeiou",
-  "type" : "aeiou",
-  "required" : [ "aeiou" ],
+  "title" : "title",
+  "type" : "type",
+  "required" : [ "required", "required" ],
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter fileName: (path) Name of schema file to be retrieved for this draft. 
 
      - returns: RequestBuilder<JsonSchemaDocument> 
      */
-    open class func getIntegrationsActionDraftSchemaWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<JsonSchemaDocument> {
+    open class func getIntegrationsActionDraftSchemaWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<JsonSchemaDocument> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft/schemas/{fileName}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1140,12 +687,7 @@ open class IntegrationsAPI {
         let fileNamePostEscape = fileNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{fileName}", with: fileNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1156,11 +698,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieve templates for a Draft based on filename.
      
      - parameter actionId: (path) actionId 
@@ -1186,22 +724,18 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieve templates for a Draft based on filename.
-     
      - GET /api/v2/integrations/actions/{actionId}/draft/templates/{fileName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{output=none}]
      
      - parameter actionId: (path) actionId 
      - parameter fileName: (path) Name of template file to be retrieved for this action draft. 
 
      - returns: RequestBuilder<String> 
      */
-    open class func getIntegrationsActionDraftTemplateWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<String> {
+    open class func getIntegrationsActionDraftTemplateWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<String> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft/templates/{fileName}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1210,12 +744,7 @@ open class IntegrationsAPI {
         let fileNamePostEscape = fileNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{fileName}", with: fileNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1225,10 +754,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Validate current Draft configuration.
      
      - parameter actionId: (path) actionId 
@@ -1253,53 +779,73 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Validate current Draft configuration.
-     
      - GET /api/v2/integrations/actions/{actionId}/draft/validation
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "valid" : true,
   "errors" : [ {
-    "messageWithParams" : "aeiou",
-    "code" : "aeiou",
-    "entityName" : "aeiou",
-    "entityId" : "aeiou",
-    "contextId" : "aeiou",
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "entityId" : "entityId",
+    "contextId" : "contextId",
     "details" : [ {
-      "fieldName" : "aeiou",
-      "entityName" : "aeiou",
-      "errorCode" : "aeiou",
-      "entityId" : "aeiou"
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
     } ],
     "messageParams" : {
-      "key" : "aeiou"
+      "key" : "messageParams"
     },
-    "message" : "aeiou",
-    "errors" : [ "" ],
-    "status" : 123
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  }, {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
 
      - returns: RequestBuilder<DraftValidationResult> 
      */
-    open class func getIntegrationsActionDraftValidationWithRequestBuilder(actionId: String) -> RequestBuilder<DraftValidationResult> {
+    open class func getIntegrationsActionDraftValidationWithRequestBuilder(actionId: String) -> RequestBuilder<DraftValidationResult> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft/validation"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1310,11 +856,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieve schema for an action based on filename.
      
      - parameter actionId: (path) actionId 
@@ -1340,33 +882,30 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieve schema for an action based on filename.
-     
      - GET /api/v2/integrations/actions/{actionId}/schemas/{fileName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "$schema" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
+  "$schema" : "$schema",
+  "description" : "description",
+  "id" : "id",
   "additionalProperties" : "{}",
-  "title" : "aeiou",
-  "type" : "aeiou",
-  "required" : [ "aeiou" ],
+  "title" : "title",
+  "type" : "type",
+  "required" : [ "required", "required" ],
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter fileName: (path) Name of schema file to be retrieved for this action. 
 
      - returns: RequestBuilder<JsonSchemaDocument> 
      */
-    open class func getIntegrationsActionSchemaWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<JsonSchemaDocument> {
+    open class func getIntegrationsActionSchemaWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<JsonSchemaDocument> {        
         var path = "/api/v2/integrations/actions/{actionId}/schemas/{fileName}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1375,12 +914,7 @@ open class IntegrationsAPI {
         let fileNamePostEscape = fileNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{fileName}", with: fileNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1391,11 +925,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieve text of templates for an action based on filename.
      
      - parameter actionId: (path) actionId 
@@ -1421,22 +951,18 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieve text of templates for an action based on filename.
-     
      - GET /api/v2/integrations/actions/{actionId}/templates/{fileName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{output=none}]
      
      - parameter actionId: (path) actionId 
      - parameter fileName: (path) Name of template file to be retrieved for this action. 
 
      - returns: RequestBuilder<String> 
      */
-    open class func getIntegrationsActionTemplateWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<String> {
+    open class func getIntegrationsActionTemplateWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<String> {        
         var path = "/api/v2/integrations/actions/{actionId}/templates/{fileName}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1445,12 +971,7 @@ open class IntegrationsAPI {
         let fileNamePostEscape = fileNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{fileName}", with: fileNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1459,12 +980,6 @@ open class IntegrationsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
-    
-    
-    
     
     
     
@@ -1481,16 +996,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
     public enum Secure_getIntegrationsActions: String { 
         case _true = "true"
         case _false = "false"
     }
 
-    
     
     
     public enum IncludeAuthActions_getIntegrationsActions: String { 
@@ -1499,22 +1009,20 @@ open class IntegrationsAPI {
     }
 
     
-    
     /**
-     
      Retrieves all actions associated with filters passed in via query param.
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on. (optional)
-     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
+     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional)
      - parameter category: (query) Filter by category name. (optional)
      - parameter name: (query) Filter by partial or complete action name. (optional)
      - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
      - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
-     - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)
+     - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsActions(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
@@ -1536,131 +1044,76 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieves all actions associated with filters passed in via query param.
-     
      - GET /api/v2/integrations/actions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "contract" : {
-      "output" : {
-        "successSchemaFlattened" : "",
-        "errorSchemaUri" : "aeiou",
-        "errorSchemaFlattened" : "{}",
-        "successSchema" : {
-          "$schema" : "aeiou",
-          "description" : "aeiou",
-          "id" : "aeiou",
-          "additionalProperties" : "{}",
-          "title" : "aeiou",
-          "type" : "aeiou",
-          "required" : [ "aeiou" ],
-          "properties" : {
-            "key" : "{}"
-          }
-        },
-        "successSchemaUri" : "aeiou",
-        "errorSchema" : ""
-      },
-      "input" : {
-        "inputSchemaFlattened" : "",
-        "inputSchema" : "",
-        "inputSchemaUri" : "aeiou"
-      }
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "integrationId" : "aeiou",
-    "id" : "aeiou",
-    "category" : "aeiou",
+    "contract" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "integrationId" : "integrationId",
+    "id" : "id",
+    "category" : "category",
     "secure" : true,
-    "version" : 123,
-    "config" : {
-      "request" : {
-        "headers" : {
-          "key" : "aeiou"
-        },
-        "requestUrlTemplate" : "aeiou",
-        "requestType" : "aeiou",
-        "requestTemplate" : "aeiou",
-        "requestTemplateUri" : "aeiou"
-      },
-      "response" : {
-        "translationMapDefaults" : {
-          "key" : "aeiou"
-        },
-        "translationMap" : {
-          "key" : "aeiou"
-        },
-        "successTemplateUri" : "aeiou",
-        "successTemplate" : "aeiou"
-      }
-    }
+    "version" : 0,
+    "config" : "{}"
+  }, {
+    "contract" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "integrationId" : "integrationId",
+    "id" : "id",
+    "category" : "category",
+    "secure" : true,
+    "version" : 0,
+    "config" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on. (optional)
-     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
+     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional)
      - parameter category: (query) Filter by category name. (optional)
      - parameter name: (query) Filter by partial or complete action name. (optional)
      - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
      - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
-     - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)
+     - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)
 
      - returns: RequestBuilder<ActionEntityListing> 
      */
-    open class func getIntegrationsActionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil) -> RequestBuilder<ActionEntityListing> {
+    open class func getIntegrationsActionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil) -> RequestBuilder<ActionEntityListing> {        
         let path = "/api/v2/integrations/actions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage, 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "category": category, 
-            
             "name": name, 
-            
             "ids": ids, 
-            
             "secure": secure?.rawValue, 
-            
             "includeAuthActions": includeAuthActions?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<ActionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1674,18 +1127,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     public enum SortOrder_getIntegrationsActionsCategories: String { 
         case asc = "ASC"
         case desc = "DESC"
     }
 
-    
     
     
     public enum Secure_getIntegrationsActionsCategories: String { 
@@ -1694,17 +1140,15 @@ open class IntegrationsAPI {
     }
 
     
-    
     /**
-     
      Retrieves all categories of available Actions
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)
-     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
+     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional)
      - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1727,61 +1171,47 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieves all categories of available Actions
-     
      - GET /api/v2/integrations/actions/categories
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "name" : "aeiou"
+    "name" : "name"
+  }, {
+    "name" : "name"
   } ],
-  "pageSize" : 123
-}}]
+  "pageSize" : 0
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)
-     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
+     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional)
      - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
 
      - returns: RequestBuilder<CategoryEntityListing> 
      */
-    open class func getIntegrationsActionsCategoriesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsCategories? = nil, secure: Secure_getIntegrationsActionsCategories? = nil) -> RequestBuilder<CategoryEntityListing> {
+    open class func getIntegrationsActionsCategoriesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsCategories? = nil, secure: Secure_getIntegrationsActionsCategories? = nil) -> RequestBuilder<CategoryEntityListing> {        
         let path = "/api/v2/integrations/actions/categories"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage, 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "secure": secure?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<CategoryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1789,12 +1219,6 @@ open class IntegrationsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
-    
-    
-    
     
     
     
@@ -1811,16 +1235,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
     public enum Secure_getIntegrationsActionsDrafts: String { 
         case _true = "true"
         case _false = "false"
     }
 
-    
     
     
     public enum IncludeAuthActions_getIntegrationsActionsDrafts: String { 
@@ -1829,22 +1248,20 @@ open class IntegrationsAPI {
     }
 
     
-    
     /**
-     
      Retrieves all action drafts associated with the filters passed in via query param.
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on. (optional)
-     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
+     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional)
      - parameter category: (query) Filter by category name. (optional)
      - parameter name: (query) Filter by partial or complete action name. (optional)
      - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
      - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
-     - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)
+     - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsActionsDrafts(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
@@ -1866,131 +1283,76 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Retrieves all action drafts associated with the filters passed in via query param.
-     
      - GET /api/v2/integrations/actions/drafts
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "contract" : {
-      "output" : {
-        "successSchemaFlattened" : "",
-        "errorSchemaUri" : "aeiou",
-        "errorSchemaFlattened" : "{}",
-        "successSchema" : {
-          "$schema" : "aeiou",
-          "description" : "aeiou",
-          "id" : "aeiou",
-          "additionalProperties" : "{}",
-          "title" : "aeiou",
-          "type" : "aeiou",
-          "required" : [ "aeiou" ],
-          "properties" : {
-            "key" : "{}"
-          }
-        },
-        "successSchemaUri" : "aeiou",
-        "errorSchema" : ""
-      },
-      "input" : {
-        "inputSchemaFlattened" : "",
-        "inputSchema" : "",
-        "inputSchemaUri" : "aeiou"
-      }
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "integrationId" : "aeiou",
-    "id" : "aeiou",
-    "category" : "aeiou",
+    "contract" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "integrationId" : "integrationId",
+    "id" : "id",
+    "category" : "category",
     "secure" : true,
-    "version" : 123,
-    "config" : {
-      "request" : {
-        "headers" : {
-          "key" : "aeiou"
-        },
-        "requestUrlTemplate" : "aeiou",
-        "requestType" : "aeiou",
-        "requestTemplate" : "aeiou",
-        "requestTemplateUri" : "aeiou"
-      },
-      "response" : {
-        "translationMapDefaults" : {
-          "key" : "aeiou"
-        },
-        "translationMap" : {
-          "key" : "aeiou"
-        },
-        "successTemplateUri" : "aeiou",
-        "successTemplate" : "aeiou"
-      }
-    }
+    "version" : 0,
+    "config" : "{}"
+  }, {
+    "contract" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "integrationId" : "integrationId",
+    "id" : "id",
+    "category" : "category",
+    "secure" : true,
+    "version" : 0,
+    "config" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on. (optional)
-     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
+     - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional)
      - parameter category: (query) Filter by category name. (optional)
      - parameter name: (query) Filter by partial or complete action name. (optional)
      - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
      - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
-     - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)
+     - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)
 
      - returns: RequestBuilder<ActionEntityListing> 
      */
-    open class func getIntegrationsActionsDraftsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil) -> RequestBuilder<ActionEntityListing> {
+    open class func getIntegrationsActionsDraftsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil) -> RequestBuilder<ActionEntityListing> {        
         let path = "/api/v2/integrations/actions/drafts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage, 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "category": category, 
-            
             "name": name, 
-            
             "ids": ids, 
-            
             "secure": secure?.rawValue, 
-            
             "includeAuthActions": includeAuthActions?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<ActionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2001,12 +1363,7 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a specific botConnector bot, plus versions, for this integration
      
      - parameter integrationId: (path) The integration ID for this group of bots 
@@ -2033,11 +1390,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a specific botConnector bot, plus versions, for this integration
-     
      - GET /api/v2/integrations/botconnector/{integrationId}/bots/{botId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2046,21 +1400,49 @@ open class IntegrationsAPI {
     "intents" : [ {
       "slots" : {
         "key" : {
-          "name" : "aeiou",
-          "type" : "aeiou"
+          "name" : "name",
+          "type" : "type"
         }
       },
-      "name" : "aeiou"
+      "name" : "name"
+    }, {
+      "slots" : {
+        "key" : {
+          "name" : "name",
+          "type" : "type"
+        }
+      },
+      "name" : "name"
     } ],
-    "supportedLanguages" : [ "aeiou" ],
-    "version" : "aeiou"
+    "supportedLanguages" : [ "supportedLanguages", "supportedLanguages" ],
+    "version" : "version"
+  }, {
+    "intents" : [ {
+      "slots" : {
+        "key" : {
+          "name" : "name",
+          "type" : "type"
+        }
+      },
+      "name" : "name"
+    }, {
+      "slots" : {
+        "key" : {
+          "name" : "name",
+          "type" : "type"
+        }
+      },
+      "name" : "name"
+    } ],
+    "supportedLanguages" : [ "supportedLanguages", "supportedLanguages" ],
+    "version" : "version"
   } ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "botCompositeTag" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "botCompositeTag" : "botCompositeTag",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter integrationId: (path) The integration ID for this group of bots 
      - parameter botId: (path) The botID for this bot 
@@ -2068,7 +1450,7 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<BotConnectorBot> 
      */
-    open class func getIntegrationsBotconnectorIntegrationIdBotWithRequestBuilder(integrationId: String, botId: String, version: String? = nil) -> RequestBuilder<BotConnectorBot> {
+    open class func getIntegrationsBotconnectorIntegrationIdBotWithRequestBuilder(integrationId: String, botId: String, version: String? = nil) -> RequestBuilder<BotConnectorBot> {        
         var path = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2077,18 +1459,11 @@ open class IntegrationsAPI {
         let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "version": version
-            
         ])
 
         let requestBuilder: RequestBuilder<BotConnectorBot>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2100,19 +1475,13 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Get a list of bot versions for a bot
      
      - parameter integrationId: (path) The integration ID for this bot group 
      - parameter botId: (path) The botID for this bot 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsBotconnectorIntegrationIdBotVersions(integrationId: String, botId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: BotConnectorBotVersionSummaryEntityListing?,_ error: Error?) -> Void)) {
@@ -2134,41 +1503,44 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a list of bot versions for a bot
-     
      - GET /api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "botCompositeTag" : "aeiou",
-    "id" : "aeiou",
-    "version" : "aeiou"
+    "name" : "name",
+    "description" : "description",
+    "botCompositeTag" : "botCompositeTag",
+    "id" : "id",
+    "version" : "version"
+  }, {
+    "name" : "name",
+    "description" : "description",
+    "botCompositeTag" : "botCompositeTag",
+    "id" : "id",
+    "version" : "version"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter integrationId: (path) The integration ID for this bot group 
      - parameter botId: (path) The botID for this bot 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<BotConnectorBotVersionSummaryEntityListing> 
      */
-    open class func getIntegrationsBotconnectorIntegrationIdBotVersionsWithRequestBuilder(integrationId: String, botId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<BotConnectorBotVersionSummaryEntityListing> {
+    open class func getIntegrationsBotconnectorIntegrationIdBotVersionsWithRequestBuilder(integrationId: String, botId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<BotConnectorBotVersionSummaryEntityListing> {        
         var path = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2177,20 +1549,12 @@ open class IntegrationsAPI {
         let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<BotConnectorBotVersionSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2199,10 +1563,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a list of botConnector bots for this integration
      
      - parameter integrationId: (path) The integration ID for this group of bots 
@@ -2227,11 +1588,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a list of botConnector bots for this integration
-     
      - GET /api/v2/integrations/botconnector/{integrationId}/bots
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2241,39 +1599,109 @@ open class IntegrationsAPI {
       "intents" : [ {
         "slots" : {
           "key" : {
-            "name" : "aeiou",
-            "type" : "aeiou"
+            "name" : "name",
+            "type" : "type"
           }
         },
-        "name" : "aeiou"
+        "name" : "name"
+      }, {
+        "slots" : {
+          "key" : {
+            "name" : "name",
+            "type" : "type"
+          }
+        },
+        "name" : "name"
       } ],
-      "supportedLanguages" : [ "aeiou" ],
-      "version" : "aeiou"
+      "supportedLanguages" : [ "supportedLanguages", "supportedLanguages" ],
+      "version" : "version"
+    }, {
+      "intents" : [ {
+        "slots" : {
+          "key" : {
+            "name" : "name",
+            "type" : "type"
+          }
+        },
+        "name" : "name"
+      }, {
+        "slots" : {
+          "key" : {
+            "name" : "name",
+            "type" : "type"
+          }
+        },
+        "name" : "name"
+      } ],
+      "supportedLanguages" : [ "supportedLanguages", "supportedLanguages" ],
+      "version" : "version"
     } ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "botCompositeTag" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "botCompositeTag" : "botCompositeTag",
+    "id" : "id"
+  }, {
+    "versions" : [ {
+      "intents" : [ {
+        "slots" : {
+          "key" : {
+            "name" : "name",
+            "type" : "type"
+          }
+        },
+        "name" : "name"
+      }, {
+        "slots" : {
+          "key" : {
+            "name" : "name",
+            "type" : "type"
+          }
+        },
+        "name" : "name"
+      } ],
+      "supportedLanguages" : [ "supportedLanguages", "supportedLanguages" ],
+      "version" : "version"
+    }, {
+      "intents" : [ {
+        "slots" : {
+          "key" : {
+            "name" : "name",
+            "type" : "type"
+          }
+        },
+        "name" : "name"
+      }, {
+        "slots" : {
+          "key" : {
+            "name" : "name",
+            "type" : "type"
+          }
+        },
+        "name" : "name"
+      } ],
+      "supportedLanguages" : [ "supportedLanguages", "supportedLanguages" ],
+      "version" : "version"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "botCompositeTag" : "botCompositeTag",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter integrationId: (path) The integration ID for this group of bots 
 
      - returns: RequestBuilder<BotList> 
      */
-    open class func getIntegrationsBotconnectorIntegrationIdBotsWithRequestBuilder(integrationId: String) -> RequestBuilder<BotList> {
+    open class func getIntegrationsBotconnectorIntegrationIdBotsWithRequestBuilder(integrationId: String) -> RequestBuilder<BotList> {        
         var path = "/api/v2/integrations/botconnector/{integrationId}/bots"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2285,17 +1713,12 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a summary list of botConnector bots for this integration
      
      - parameter integrationId: (path) The integration ID for this group of bots 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsBotconnectorIntegrationIdBotsSummaries(integrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: BotConnectorBotSummaryEntityListing?,_ error: Error?) -> Void)) {
@@ -2317,58 +1740,52 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a summary list of botConnector bots for this integration
-     
      - GET /api/v2/integrations/botconnector/{integrationId}/bots/summaries
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "botCompositeTag" : "aeiou",
-    "id" : "aeiou"
+    "name" : "name",
+    "description" : "description",
+    "botCompositeTag" : "botCompositeTag",
+    "id" : "id"
+  }, {
+    "name" : "name",
+    "description" : "description",
+    "botCompositeTag" : "botCompositeTag",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter integrationId: (path) The integration ID for this group of bots 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<BotConnectorBotSummaryEntityListing> 
      */
-    open class func getIntegrationsBotconnectorIntegrationIdBotsSummariesWithRequestBuilder(integrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<BotConnectorBotSummaryEntityListing> {
+    open class func getIntegrationsBotconnectorIntegrationIdBotsSummariesWithRequestBuilder(integrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<BotConnectorBotSummaryEntityListing> {        
         var path = "/api/v2/integrations/botconnector/{integrationId}/bots/summaries"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<BotConnectorBotSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2382,19 +1799,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      List permitted client app integrations for the logged in user
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -2420,130 +1829,50 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      List permitted client app integrations for the logged in user
-     
      - GET /api/v2/integrations/clientapps
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "integrationType" : {
-      "configPropertiesSchemaUri" : "aeiou",
-      "images" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "vendorWebsiteUri" : "aeiou",
-      "salesContactUri" : "aeiou",
-      "credentials" : {
-        "key" : {
-          "credentialTypes" : [ "aeiou" ],
-          "title" : "aeiou",
-          "required" : true
-        }
-      },
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "privacyPolicyUri" : "aeiou",
-      "userPermissions" : [ "aeiou" ],
-      "helpUri" : "aeiou",
-      "vendorName" : "aeiou",
-      "nonInstallable" : true,
-      "marketplaceUri" : "aeiou",
-      "termsOfServiceUri" : "aeiou",
-      "faqUri" : "aeiou",
-      "supportContactUri" : "aeiou",
-      "provider" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "helpLinks" : [ {
-        "description" : "aeiou",
-        "title" : "aeiou",
-        "uri" : "aeiou"
-      } ],
-      "category" : "aeiou",
-      "maxInstances" : 123,
-      "configAdvancedSchemaUri" : "aeiou",
-      "vendorOAuthClientIds" : [ "aeiou" ]
-    },
-    "notes" : "aeiou",
-    "reportedState" : {
-      "effective" : "aeiou",
-      "lastUpdated" : "2000-01-23T04:56:07.000+0000",
-      "code" : "aeiou",
-      "detail" : {
-        "messageWithParams" : "aeiou",
-        "localizableMessageCode" : "aeiou",
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou"
-      }
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "intendedState" : "aeiou",
+    "integrationType" : "{}",
+    "notes" : "notes",
+    "reportedState" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "intendedState" : "ENABLED",
     "attributes" : {
-      "key" : "aeiou"
+      "key" : "attributes"
     },
-    "id" : "aeiou",
-    "config" : {
-      "effective" : {
-        "notes" : "aeiou",
-        "advanced" : {
-          "key" : "{}"
-        },
-        "credentials" : {
-          "key" : ""
-        },
-        "name" : "aeiou",
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "current" : {
-        "notes" : "aeiou",
-        "advanced" : "{}",
-        "credentials" : {
-          "key" : {
-            "createdDate" : "2000-01-23T04:56:07.000+0000",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-            "id" : "aeiou",
-            "type" : {
-              "name" : "aeiou",
-              "displayOrder" : [ "aeiou" ],
-              "id" : "aeiou",
-              "properties" : "{}",
-              "required" : [ "aeiou" ]
-            }
-          }
-        },
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "version" : 123,
-        "properties" : "{}"
-      }
-    }
+    "id" : "id",
+    "config" : "{}"
+  }, {
+    "integrationType" : "{}",
+    "notes" : "notes",
+    "reportedState" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "intendedState" : "ENABLED",
+    "attributes" : {
+      "key" : "attributes"
+    },
+    "id" : "id",
+    "config" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -2551,31 +1880,19 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<ClientAppEntityListing> 
      */
-    open class func getIntegrationsClientappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<ClientAppEntityListing> {
+    open class func getIntegrationsClientappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<ClientAppEntityListing> {        
         let path = "/api/v2/integrations/clientapps"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "expand": expand, 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage
-            
         ])
 
         let requestBuilder: RequestBuilder<ClientAppEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2589,19 +1906,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      UC integration client application configuration.
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -2627,44 +1936,53 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      UC integration client application configuration.
-     
      - GET /api/v2/integrations/clientapps/unifiedcommunications
      - This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "integrationPresenceSource" : "aeiou",
+    "integrationPresenceSource" : "MicrosoftTeams",
     "i10n" : {
       "key" : {
-        "name" : "aeiou"
+        "name" : "name"
       }
     },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "icon" : {
-      "vector" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "icon" : "{}",
+    "ucIntegrationKey" : "ucIntegrationKey",
+    "pbxPermission" : "pbxPermission",
+    "id" : "id"
+  }, {
+    "integrationPresenceSource" : "MicrosoftTeams",
+    "i10n" : {
+      "key" : {
+        "name" : "name"
+      }
     },
-    "ucIntegrationKey" : "aeiou",
-    "pbxPermission" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "icon" : "{}",
+    "ucIntegrationKey" : "ucIntegrationKey",
+    "pbxPermission" : "pbxPermission",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -2672,31 +1990,19 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<UCIntegrationListing> 
      */
-    open class func getIntegrationsClientappsUnifiedcommunicationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<UCIntegrationListing> {
+    open class func getIntegrationsClientappsUnifiedcommunicationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<UCIntegrationListing> {        
         let path = "/api/v2/integrations/clientapps/unifiedcommunications"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "expand": expand, 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage
-            
         ])
 
         let requestBuilder: RequestBuilder<UCIntegrationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2705,10 +2011,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a single credential with sensitive fields redacted
      
      - parameter credentialId: (path) Credential ID 
@@ -2733,46 +2036,32 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a single credential with sensitive fields redacted
-     
      - GET /api/v2/integrations/credentials/{credentialId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "type" : {
-    "name" : "aeiou",
-    "displayOrder" : [ "aeiou" ],
-    "id" : "aeiou",
-    "properties" : "{}",
-    "required" : [ "aeiou" ]
-  },
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "type" : "{}",
   "credentialFields" : {
-    "key" : "aeiou"
+    "key" : "credentialFields"
   }
-}}]
+}, statusCode=200}]
      
      - parameter credentialId: (path) Credential ID 
 
      - returns: RequestBuilder<Credential> 
      */
-    open class func getIntegrationsCredentialWithRequestBuilder(credentialId: String) -> RequestBuilder<Credential> {
+    open class func getIntegrationsCredentialWithRequestBuilder(credentialId: String) -> RequestBuilder<Credential> {        
         var path = "/api/v2/integrations/credentials/{credentialId}"
         let credentialIdPreEscape = "\(credentialId)"
         let credentialIdPostEscape = credentialIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{credentialId}", with: credentialIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2783,15 +2072,11 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      List multiple sets of credentials
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsCredentials(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: CredentialInfoListing?,_ error: Error?) -> Void)) {
@@ -2813,62 +2098,52 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      List multiple sets of credentials
-     
      - GET /api/v2/integrations/credentials
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "type" : {
-      "name" : "aeiou",
-      "displayOrder" : [ "aeiou" ],
-      "id" : "aeiou",
-      "properties" : "{}",
-      "required" : [ "aeiou" ]
-    }
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "type" : "{}"
+  }, {
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "type" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<CredentialInfoListing> 
      */
-    open class func getIntegrationsCredentialsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CredentialInfoListing> {
+    open class func getIntegrationsCredentialsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CredentialInfoListing> {        
         let path = "/api/v2/integrations/credentials"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<CredentialInfoListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2876,9 +2151,7 @@ open class IntegrationsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      List all credential types
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -2902,44 +2175,42 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      List all credential types
-     
      - GET /api/v2/integrations/credentials/types
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "name" : "aeiou",
-    "displayOrder" : [ "aeiou" ],
-    "id" : "aeiou",
+    "name" : "name",
+    "displayOrder" : [ "displayOrder", "displayOrder" ],
+    "id" : "id",
     "properties" : "{}",
-    "required" : [ "aeiou" ]
+    "required" : [ "required", "required" ]
+  }, {
+    "name" : "name",
+    "displayOrder" : [ "displayOrder", "displayOrder" ],
+    "id" : "id",
+    "properties" : "{}",
+    "required" : [ "required", "required" ]
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<CredentialTypeListing> 
      */
-    open class func getIntegrationsCredentialsTypesWithRequestBuilder() -> RequestBuilder<CredentialTypeListing> {
+    open class func getIntegrationsCredentialsTypesWithRequestBuilder() -> RequestBuilder<CredentialTypeListing> {        
         let path = "/api/v2/integrations/credentials/types"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2953,20 +2224,13 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      List all events
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to timestamp)
-     - parameter sortOrder: (query) Order by (optional, default to descending)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Order by (optional)
      - parameter entityId: (query) Include only events with this entity ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2989,349 +2253,84 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      List all events
-     
      - GET /api/v2/integrations/eventlog
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "eventCode" : "aeiou",
-    "level" : "aeiou",
+    "eventCode" : "eventCode",
+    "level" : "INFO",
     "entities" : [ {
-      "entityType" : "aeiou",
-      "id" : "aeiou"
+      "entityType" : "entityType",
+      "id" : "id"
+    }, {
+      "entityType" : "entityType",
+      "id" : "id"
     } ],
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "contextAttributes" : {
-      "key" : "aeiou"
+      "key" : "contextAttributes"
     },
-    "correlationId" : "aeiou",
-    "id" : "aeiou",
-    "detailMessage" : "",
-    "message" : {
-      "messageWithParams" : "aeiou",
-      "localizableMessageCode" : "aeiou",
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou"
+    "correlationId" : "correlationId",
+    "id" : "id",
+    "detailMessage" : "{}",
+    "message" : "{}",
+    "user" : "{}",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "eventCode" : "eventCode",
+    "level" : "INFO",
+    "entities" : [ {
+      "entityType" : "entityType",
+      "id" : "id"
+    }, {
+      "entityType" : "entityType",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "contextAttributes" : {
+      "key" : "contextAttributes"
     },
-    "user" : {
-      "addresses" : [ "" ],
-      "acdAutoAnswer" : true,
-      "routingStatus" : {
-        "startTime" : "2000-01-23T04:56:07.000+0000",
-        "userId" : "aeiou",
-        "status" : "aeiou"
-      },
-      "title" : "aeiou",
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "authorization" : {
-        "unusedRoles" : [ "" ],
-        "permissions" : [ "aeiou" ],
-        "permissionPolicies" : [ {
-          "policyDescription" : "aeiou",
-          "resourceConditionNode" : {
-            "operands" : [ {
-              "type" : "aeiou",
-              "value" : "aeiou"
-            } ],
-            "variableName" : "aeiou",
-            "conjunction" : "aeiou",
-            "terms" : [ "" ],
-            "operator" : "aeiou"
-          },
-          "actionSetKey" : "aeiou",
-          "namedResources" : [ "aeiou" ],
-          "policyName" : "aeiou",
-          "entityName" : "aeiou",
-          "domain" : "aeiou",
-          "allowConditions" : true,
-          "id" : "aeiou",
-          "resourceCondition" : "aeiou",
-          "actionSet" : [ "aeiou" ]
-        } ],
-        "roles" : [ {
-          "name" : "aeiou",
-          "id" : "aeiou"
-        } ]
-      },
-      "skills" : [ {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "skillUri" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "station" : {
-        "defaultStation" : "",
-        "lastAssociatedStation" : "",
-        "associatedStation" : {
-          "associatedDate" : "2000-01-23T04:56:07.000+0000",
-          "webRtcCallAppearances" : 123,
-          "name" : "aeiou",
-          "defaultUser" : "",
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "associatedUser" : "",
-          "providerInfo" : {
-            "key" : "aeiou"
-          }
-        },
-        "effectiveStation" : ""
-      },
-      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "department" : "aeiou",
-      "presence" : {
-        "presenceDefinition" : {
-          "systemPresence" : "aeiou",
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou",
-        "source" : "aeiou",
-        "message" : "aeiou",
-        "primary" : true
-      },
-      "lastTokenIssued" : {
-        "dateIssued" : "2000-01-23T04:56:07.000+0000"
-      },
-      "email" : "aeiou",
-      "images" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "manager" : "",
-      "employerInfo" : {
-        "employeeType" : "aeiou",
-        "dateHire" : "aeiou",
-        "employeeId" : "aeiou",
-        "officialName" : "aeiou"
-      },
-      "languages" : [ {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "languageUri" : "aeiou",
-        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "selfUri" : "aeiou",
-      "conversationSummary" : {
-        "call" : {
-          "enterprise" : "",
-          "contactCenter" : {
-            "acw" : 123,
-            "active" : 123
-          }
-        },
-        "socialExpression" : "",
-        "chat" : "",
-        "callback" : "",
-        "video" : "",
-        "message" : "",
-        "userId" : "aeiou",
-        "email" : ""
-      },
-      "groups" : [ {
-        "images" : [ "" ],
-        "addresses" : [ {
-          "extension" : "aeiou",
-          "address" : "aeiou",
-          "display" : "aeiou",
-          "mediaType" : "aeiou",
-          "type" : "aeiou"
-        } ],
-        "visibility" : "aeiou",
-        "memberCount" : 123456789,
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "owners" : [ "" ],
-        "type" : "aeiou",
-        "version" : 123,
-        "rulesVisible" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou"
-      } ],
-      "primaryContactInfo" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
-        "integration" : "microsoftteams",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "biography" : {
-        "education" : [ {
-          "notes" : "aeiou",
-          "school" : "aeiou",
-          "dateStart" : "2000-01-23T04:56:07.000+0000",
-          "dateEnd" : "2000-01-23T04:56:07.000+0000",
-          "fieldOfStudy" : "aeiou"
-        } ],
-        "hobbies" : [ "aeiou" ],
-        "biography" : "aeiou",
-        "interests" : [ "aeiou" ],
-        "spouse" : "aeiou"
-      },
-      "team" : {
-        "division" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "memberCount" : 123456789,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "id" : "aeiou"
-      },
-      "certifications" : [ "aeiou" ],
-      "version" : 123,
-      "outOfOffice" : {
-        "endDate" : "2000-01-23T04:56:07.000+0000",
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "active" : true,
-        "id" : "aeiou",
-        "user" : "",
-        "startDate" : "2000-01-23T04:56:07.000+0000",
-        "indefinite" : true
-      },
-      "languagePreference" : "aeiou",
-      "profileSkills" : [ "aeiou" ],
-      "chat" : {
-        "jabberId" : "aeiou"
-      },
-      "name" : "aeiou",
-      "integrationPresence" : "",
-      "locations" : [ {
-        "notes" : "aeiou",
-        "coordinates" : {
-          "key" : 1.3579000000000001069366817318950779736042022705078125
-        },
-        "locationDefinition" : "",
-        "id" : "aeiou",
-        "floorplanId" : "aeiou"
-      } ],
-      "username" : "aeiou",
-      "geolocation" : {
-        "country" : "aeiou",
-        "city" : "aeiou",
-        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "locations" : [ {
-          "images" : "aeiou",
-          "address" : {
-            "zipcode" : "aeiou",
-            "country" : "aeiou",
-            "city" : "aeiou",
-            "street1" : "aeiou",
-            "countryName" : "aeiou",
-            "state" : "aeiou",
-            "street2" : "aeiou"
-          },
-          "notes" : "aeiou",
-          "floorplanImage" : [ "" ],
-          "addressVerificationDetails" : {
-            "dateStarted" : "2000-01-23T04:56:07.000+0000",
-            "dateFinished" : "2000-01-23T04:56:07.000+0000",
-            "service" : "smartystreets-us",
-            "status" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "profileImage" : [ {
-            "imageUri" : "aeiou",
-            "resolution" : "aeiou"
-          } ],
-          "emergencyNumber" : {
-            "number" : "aeiou",
-            "e164" : "aeiou",
-            "type" : "aeiou"
-          },
-          "version" : 123,
-          "path" : [ "aeiou" ],
-          "addressStored" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "contactUser" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "state" : "aeiou",
-          "addressVerified" : true
-        } ],
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "region" : "aeiou",
-        "primary" : true,
-        "longitude" : 1.3579000000000001069366817318950779736042022705078125
-      }
-    },
-    "timestamp" : "2000-01-23T04:56:07.000+0000"
+    "correlationId" : "correlationId",
+    "id" : "id",
+    "detailMessage" : "{}",
+    "message" : "{}",
+    "user" : "{}",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to timestamp)
-     - parameter sortOrder: (query) Order by (optional, default to descending)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Order by (optional)
      - parameter entityId: (query) Include only events with this entity ID (optional)
 
      - returns: RequestBuilder<IntegrationEventEntityListing> 
      */
-    open class func getIntegrationsEventlogWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, entityId: String? = nil) -> RequestBuilder<IntegrationEventEntityListing> {
+    open class func getIntegrationsEventlogWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, entityId: String? = nil) -> RequestBuilder<IntegrationEventEntityListing> {        
         let path = "/api/v2/integrations/eventlog"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "sortOrder": sortOrder, 
-            
             "entityId": entityId
-            
         ])
 
         let requestBuilder: RequestBuilder<IntegrationEventEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3340,10 +2339,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a single event
      
      - parameter eventId: (path) Event Id 
@@ -3368,323 +2364,44 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a single event
-     
      - GET /api/v2/integrations/eventlog/{eventId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "eventCode" : "aeiou",
-  "level" : "aeiou",
+  "eventCode" : "eventCode",
+  "level" : "INFO",
   "entities" : [ {
-    "entityType" : "aeiou",
-    "id" : "aeiou"
+    "entityType" : "entityType",
+    "id" : "id"
+  }, {
+    "entityType" : "entityType",
+    "id" : "id"
   } ],
-  "selfUri" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
   "contextAttributes" : {
-    "key" : "aeiou"
+    "key" : "contextAttributes"
   },
-  "correlationId" : "aeiou",
-  "id" : "aeiou",
-  "detailMessage" : "",
-  "message" : {
-    "messageWithParams" : "aeiou",
-    "localizableMessageCode" : "aeiou",
-    "messageParams" : {
-      "key" : "aeiou"
-    },
-    "message" : "aeiou"
-  },
-  "user" : {
-    "addresses" : [ "" ],
-    "acdAutoAnswer" : true,
-    "routingStatus" : {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "status" : "aeiou"
-    },
-    "title" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "authorization" : {
-      "unusedRoles" : [ "" ],
-      "permissions" : [ "aeiou" ],
-      "permissionPolicies" : [ {
-        "policyDescription" : "aeiou",
-        "resourceConditionNode" : {
-          "operands" : [ {
-            "type" : "aeiou",
-            "value" : "aeiou"
-          } ],
-          "variableName" : "aeiou",
-          "conjunction" : "aeiou",
-          "terms" : [ "" ],
-          "operator" : "aeiou"
-        },
-        "actionSetKey" : "aeiou",
-        "namedResources" : [ "aeiou" ],
-        "policyName" : "aeiou",
-        "entityName" : "aeiou",
-        "domain" : "aeiou",
-        "allowConditions" : true,
-        "id" : "aeiou",
-        "resourceCondition" : "aeiou",
-        "actionSet" : [ "aeiou" ]
-      } ],
-      "roles" : [ {
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ]
-    },
-    "skills" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "skillUri" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "station" : {
-      "defaultStation" : "",
-      "lastAssociatedStation" : "",
-      "associatedStation" : {
-        "associatedDate" : "2000-01-23T04:56:07.000+0000",
-        "webRtcCallAppearances" : 123,
-        "name" : "aeiou",
-        "defaultUser" : "",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "associatedUser" : "",
-        "providerInfo" : {
-          "key" : "aeiou"
-        }
-      },
-      "effectiveStation" : ""
-    },
-    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "department" : "aeiou",
-    "presence" : {
-      "presenceDefinition" : {
-        "systemPresence" : "aeiou",
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "source" : "aeiou",
-      "message" : "aeiou",
-      "primary" : true
-    },
-    "lastTokenIssued" : {
-      "dateIssued" : "2000-01-23T04:56:07.000+0000"
-    },
-    "email" : "aeiou",
-    "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
-    } ],
-    "manager" : "",
-    "employerInfo" : {
-      "employeeType" : "aeiou",
-      "dateHire" : "aeiou",
-      "employeeId" : "aeiou",
-      "officialName" : "aeiou"
-    },
-    "languages" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "languageUri" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "selfUri" : "aeiou",
-    "conversationSummary" : {
-      "call" : {
-        "enterprise" : "",
-        "contactCenter" : {
-          "acw" : 123,
-          "active" : 123
-        }
-      },
-      "socialExpression" : "",
-      "chat" : "",
-      "callback" : "",
-      "video" : "",
-      "message" : "",
-      "userId" : "aeiou",
-      "email" : ""
-    },
-    "groups" : [ {
-      "images" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "display" : "aeiou",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "visibility" : "aeiou",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "owners" : [ "" ],
-      "type" : "aeiou",
-      "version" : 123,
-      "rulesVisible" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou"
-    } ],
-    "primaryContactInfo" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
-      "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "biography" : {
-      "education" : [ {
-        "notes" : "aeiou",
-        "school" : "aeiou",
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "dateEnd" : "2000-01-23T04:56:07.000+0000",
-        "fieldOfStudy" : "aeiou"
-      } ],
-      "hobbies" : [ "aeiou" ],
-      "biography" : "aeiou",
-      "interests" : [ "aeiou" ],
-      "spouse" : "aeiou"
-    },
-    "team" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou"
-    },
-    "certifications" : [ "aeiou" ],
-    "version" : 123,
-    "outOfOffice" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "user" : "",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "indefinite" : true
-    },
-    "languagePreference" : "aeiou",
-    "profileSkills" : [ "aeiou" ],
-    "chat" : {
-      "jabberId" : "aeiou"
-    },
-    "name" : "aeiou",
-    "integrationPresence" : "",
-    "locations" : [ {
-      "notes" : "aeiou",
-      "coordinates" : {
-        "key" : 1.3579000000000001069366817318950779736042022705078125
-      },
-      "locationDefinition" : "",
-      "id" : "aeiou",
-      "floorplanId" : "aeiou"
-    } ],
-    "username" : "aeiou",
-    "geolocation" : {
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "locations" : [ {
-        "images" : "aeiou",
-        "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
-        },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
-        } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
-        "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
-        "addressVerified" : true
-      } ],
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "region" : "aeiou",
-      "primary" : true,
-      "longitude" : 1.3579000000000001069366817318950779736042022705078125
-    }
-  },
-  "timestamp" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "correlationId" : "correlationId",
+  "id" : "id",
+  "detailMessage" : "{}",
+  "message" : "{}",
+  "user" : "{}",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter eventId: (path) Event Id 
 
      - returns: RequestBuilder<IntegrationEvent> 
      */
-    open class func getIntegrationsEventlogEventIdWithRequestBuilder(eventId: String) -> RequestBuilder<IntegrationEvent> {
+    open class func getIntegrationsEventlogEventIdWithRequestBuilder(eventId: String) -> RequestBuilder<IntegrationEvent> {        
         var path = "/api/v2/integrations/eventlog/{eventId}"
         let eventIdPreEscape = "\(eventId)"
         let eventIdPostEscape = eventIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{eventId}", with: eventIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3694,10 +2411,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get details about a Dialogflow agent
      
      - parameter agentId: (path) The agent ID 
@@ -3722,51 +2436,48 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get details about a Dialogflow agent
-     
      - GET /api/v2/integrations/speech/dialogflow/agents/{agentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "intents" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "parameters" : {
       "key" : {
-        "name" : "aeiou",
-        "type" : "aeiou"
+        "name" : "name",
+        "type" : "type"
+      }
+    }
+  }, {
+    "name" : "name",
+    "parameters" : {
+      "key" : {
+        "name" : "name",
+        "type" : "type"
       }
     }
   } ],
-  "languages" : [ "aeiou" ],
-  "environments" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "project" : {
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou"
-}}]
+  "languages" : [ "languages", "languages" ],
+  "environments" : [ "environments", "environments" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "project" : "{}",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter agentId: (path) The agent ID 
 
      - returns: RequestBuilder<DialogflowAgent> 
      */
-    open class func getIntegrationsSpeechDialogflowAgentWithRequestBuilder(agentId: String) -> RequestBuilder<DialogflowAgent> {
+    open class func getIntegrationsSpeechDialogflowAgentWithRequestBuilder(agentId: String) -> RequestBuilder<DialogflowAgent> {        
         var path = "/api/v2/integrations/speech/dialogflow/agents/{agentId}"
         let agentIdPreEscape = "\(agentId)"
         let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3778,16 +2489,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a list of Dialogflow agents in the customers' Google accounts
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter name: (query) Filter on agent name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -3810,61 +2516,52 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a list of Dialogflow agents in the customers' Google accounts
-     
      - GET /api/v2/integrations/speech/dialogflow/agents
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "project" : {
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "description" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "project" : "{}",
+    "description" : "description",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "project" : "{}",
+    "description" : "description",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter name: (query) Filter on agent name (optional)
 
      - returns: RequestBuilder<DialogflowAgentSummaryEntityListing> 
      */
-    open class func getIntegrationsSpeechDialogflowAgentsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil) -> RequestBuilder<DialogflowAgentSummaryEntityListing> {
+    open class func getIntegrationsSpeechDialogflowAgentsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil) -> RequestBuilder<DialogflowAgentSummaryEntityListing> {        
         let path = "/api/v2/integrations/speech/dialogflow/agents"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "name": name
-            
         ])
 
         let requestBuilder: RequestBuilder<DialogflowAgentSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3873,10 +2570,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get details about a Lex bot alias
      
      - parameter aliasId: (path) The alias ID 
@@ -3901,11 +2595,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get details about a Lex bot alias
-     
      - GET /api/v2/integrations/speech/lex/bot/alias/{aliasId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3913,47 +2604,49 @@ open class IntegrationsAPI {
   "intents" : [ {
     "slots" : {
       "key" : {
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "type" : "aeiou",
-        "priority" : 123
+        "name" : "name",
+        "description" : "description",
+        "type" : "type",
+        "priority" : 0
       }
     },
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "version" : "aeiou"
+    "name" : "name",
+    "description" : "description",
+    "version" : "version"
+  }, {
+    "slots" : {
+      "key" : {
+        "name" : "name",
+        "description" : "description",
+        "type" : "type",
+        "priority" : 0
+      }
+    },
+    "name" : "name",
+    "description" : "description",
+    "version" : "version"
   } ],
-  "bot" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou"
-  },
-  "failureReason" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "language" : "aeiou",
-  "id" : "aeiou",
-  "botVersion" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "bot" : "{}",
+  "failureReason" : "failureReason",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "en-US",
+  "id" : "id",
+  "botVersion" : "botVersion",
+  "status" : "BUILDING"
+}, statusCode=200}]
      
      - parameter aliasId: (path) The alias ID 
 
      - returns: RequestBuilder<LexBotAlias> 
      */
-    open class func getIntegrationsSpeechLexBotAliasWithRequestBuilder(aliasId: String) -> RequestBuilder<LexBotAlias> {
+    open class func getIntegrationsSpeechLexBotAliasWithRequestBuilder(aliasId: String) -> RequestBuilder<LexBotAlias> {        
         var path = "/api/v2/integrations/speech/lex/bot/alias/{aliasId}"
         let aliasIdPreEscape = "\(aliasId)"
         let aliasIdPostEscape = aliasIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{aliasId}", with: aliasIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3962,10 +2655,6 @@ open class IntegrationsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
-    
     
     
     
@@ -3979,15 +2668,12 @@ open class IntegrationsAPI {
 
     
     
-    
-    
     /**
-     
      Get a list of aliases for a bot in the customer's AWS accounts
      
      - parameter botId: (path) The bot ID 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter status: (query) Filter on alias status (optional)
      - parameter name: (query) Filter on alias name (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -4011,86 +2697,114 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a list of aliases for a bot in the customer's AWS accounts
-     
      - GET /api/v2/integrations/speech/lex/bot/{botId}/aliases
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "intents" : [ {
       "slots" : {
         "key" : {
-          "name" : "aeiou",
-          "description" : "aeiou",
-          "type" : "aeiou",
-          "priority" : 123
+          "name" : "name",
+          "description" : "description",
+          "type" : "type",
+          "priority" : 0
         }
       },
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "version" : "aeiou"
+      "name" : "name",
+      "description" : "description",
+      "version" : "version"
+    }, {
+      "slots" : {
+        "key" : {
+          "name" : "name",
+          "description" : "description",
+          "type" : "type",
+          "priority" : 0
+        }
+      },
+      "name" : "name",
+      "description" : "description",
+      "version" : "version"
     } ],
-    "bot" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou"
-    },
-    "failureReason" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "language" : "aeiou",
-    "id" : "aeiou",
-    "botVersion" : "aeiou",
-    "status" : "aeiou"
+    "bot" : "{}",
+    "failureReason" : "failureReason",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "en-US",
+    "id" : "id",
+    "botVersion" : "botVersion",
+    "status" : "BUILDING"
+  }, {
+    "intents" : [ {
+      "slots" : {
+        "key" : {
+          "name" : "name",
+          "description" : "description",
+          "type" : "type",
+          "priority" : 0
+        }
+      },
+      "name" : "name",
+      "description" : "description",
+      "version" : "version"
+    }, {
+      "slots" : {
+        "key" : {
+          "name" : "name",
+          "description" : "description",
+          "type" : "type",
+          "priority" : 0
+        }
+      },
+      "name" : "name",
+      "description" : "description",
+      "version" : "version"
+    } ],
+    "bot" : "{}",
+    "failureReason" : "failureReason",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "en-US",
+    "id" : "id",
+    "botVersion" : "botVersion",
+    "status" : "BUILDING"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter botId: (path) The bot ID 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter status: (query) Filter on alias status (optional)
      - parameter name: (query) Filter on alias name (optional)
 
      - returns: RequestBuilder<LexBotAliasEntityListing> 
      */
-    open class func getIntegrationsSpeechLexBotBotIdAliasesWithRequestBuilder(botId: String, pageNumber: Int? = nil, pageSize: Int? = nil, status: Status_getIntegrationsSpeechLexBotBotIdAliases? = nil, name: String? = nil) -> RequestBuilder<LexBotAliasEntityListing> {
+    open class func getIntegrationsSpeechLexBotBotIdAliasesWithRequestBuilder(botId: String, pageNumber: Int? = nil, pageSize: Int? = nil, status: Status_getIntegrationsSpeechLexBotBotIdAliases? = nil, name: String? = nil) -> RequestBuilder<LexBotAliasEntityListing> {        
         var path = "/api/v2/integrations/speech/lex/bot/{botId}/aliases"
         let botIdPreEscape = "\(botId)"
         let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "status": status?.rawValue, 
-            
             "name": name
-            
         ])
 
         let requestBuilder: RequestBuilder<LexBotAliasEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4101,16 +2815,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a list of Lex bots in the customers' AWS accounts
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter name: (query) Filter on bot name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -4133,57 +2842,50 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a list of Lex bots in the customers' AWS accounts
-     
      - GET /api/v2/integrations/speech/lex/bots
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter name: (query) Filter on bot name (optional)
 
      - returns: RequestBuilder<LexBotEntityListing> 
      */
-    open class func getIntegrationsSpeechLexBotsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil) -> RequestBuilder<LexBotEntityListing> {
+    open class func getIntegrationsSpeechLexBotsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil) -> RequestBuilder<LexBotEntityListing> {        
         let path = "/api/v2/integrations/speech/lex/bots"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "name": name
-            
         ])
 
         let requestBuilder: RequestBuilder<LexBotEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4193,15 +2895,11 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get details about a TTS engine
      
      - parameter engineId: (path) The engine ID 
-     - parameter includeVoices: (query) Include voices for the engine (optional, default to false)
+     - parameter includeVoices: (query) Include voices for the engine (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsSpeechTtsEngine(engineId: String, includeVoices: Bool? = nil, completion: @escaping ((_ data: TtsEngineEntity?,_ error: Error?) -> Void)) {
@@ -4223,56 +2921,54 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get details about a TTS engine
-     
      - GET /api/v2/integrations/speech/tts/engines/{engineId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "outputFormats" : [ "aeiou" ],
+  "outputFormats" : [ "outputFormats", "outputFormats" ],
   "isDefault" : true,
-  "languages" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "languages" : [ "languages", "languages" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "voices" : [ {
     "isDefault" : true,
-    "gender" : "aeiou",
-    "engine" : "",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "language" : "aeiou",
-    "id" : "aeiou"
+    "gender" : "gender",
+    "engine" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "id" : "id"
+  }, {
+    "isDefault" : true,
+    "gender" : "gender",
+    "engine" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "id" : "id"
   } ],
   "isSecure" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter engineId: (path) The engine ID 
-     - parameter includeVoices: (query) Include voices for the engine (optional, default to false)
+     - parameter includeVoices: (query) Include voices for the engine (optional)
 
      - returns: RequestBuilder<TtsEngineEntity> 
      */
-    open class func getIntegrationsSpeechTtsEngineWithRequestBuilder(engineId: String, includeVoices: Bool? = nil) -> RequestBuilder<TtsEngineEntity> {
+    open class func getIntegrationsSpeechTtsEngineWithRequestBuilder(engineId: String, includeVoices: Bool? = nil) -> RequestBuilder<TtsEngineEntity> {        
         var path = "/api/v2/integrations/speech/tts/engines/{engineId}"
         let engineIdPreEscape = "\(engineId)"
         let engineIdPostEscape = engineIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{engineId}", with: engineIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "includeVoices": includeVoices
-            
         ])
 
         let requestBuilder: RequestBuilder<TtsEngineEntity>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4282,11 +2978,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get details about a specific voice for a TTS engine
      
      - parameter engineId: (path) The engine ID 
@@ -4312,39 +3004,27 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get details about a specific voice for a TTS engine
-     
      - GET /api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "isDefault" : true,
-  "gender" : "aeiou",
-  "engine" : {
-    "outputFormats" : [ "aeiou" ],
-    "isDefault" : true,
-    "languages" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "voices" : [ "" ],
-    "isSecure" : true,
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "language" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "gender" : "gender",
+  "engine" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "language",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter engineId: (path) The engine ID 
      - parameter voiceId: (path) The voice ID 
 
      - returns: RequestBuilder<TtsVoiceEntity> 
      */
-    open class func getIntegrationsSpeechTtsEngineVoiceWithRequestBuilder(engineId: String, voiceId: String) -> RequestBuilder<TtsVoiceEntity> {
+    open class func getIntegrationsSpeechTtsEngineVoiceWithRequestBuilder(engineId: String, voiceId: String) -> RequestBuilder<TtsVoiceEntity> {        
         var path = "/api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId}"
         let engineIdPreEscape = "\(engineId)"
         let engineIdPostEscape = engineIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4353,12 +3033,7 @@ open class IntegrationsAPI {
         let voiceIdPostEscape = voiceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{voiceId}", with: voiceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4370,17 +3045,12 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a list of voices for a TTS engine
      
      - parameter engineId: (path) The engine ID 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsSpeechTtsEngineVoices(engineId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: TtsVoiceEntityListing?,_ error: Error?) -> Void)) {
@@ -4402,70 +3072,58 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a list of voices for a TTS engine
-     
      - GET /api/v2/integrations/speech/tts/engines/{engineId}/voices
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "isDefault" : true,
-    "gender" : "aeiou",
-    "engine" : {
-      "outputFormats" : [ "aeiou" ],
-      "isDefault" : true,
-      "languages" : [ "aeiou" ],
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "voices" : [ "" ],
-      "isSecure" : true,
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "language" : "aeiou",
-    "id" : "aeiou"
+    "gender" : "gender",
+    "engine" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "id" : "id"
+  }, {
+    "isDefault" : true,
+    "gender" : "gender",
+    "engine" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter engineId: (path) The engine ID 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<TtsVoiceEntityListing> 
      */
-    open class func getIntegrationsSpeechTtsEngineVoicesWithRequestBuilder(engineId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<TtsVoiceEntityListing> {
+    open class func getIntegrationsSpeechTtsEngineVoicesWithRequestBuilder(engineId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<TtsVoiceEntityListing> {        
         var path = "/api/v2/integrations/speech/tts/engines/{engineId}/voices"
         let engineIdPreEscape = "\(engineId)"
         let engineIdPostEscape = engineIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{engineId}", with: engineIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<TtsVoiceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4478,21 +3136,14 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Get a list of TTS engines enabled for org
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter includeVoices: (query) Include voices for the engine (optional, default to false)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter includeVoices: (query) Include voices for the engine (optional)
      - parameter name: (query) Filter on engine name (optional)
-     - parameter language: (query) Filter on supported language. If includeVoices=true then the voices are also filtered. (optional)
+     - parameter language: (query) Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getIntegrationsSpeechTtsEngines(pageNumber: Int? = nil, pageSize: Int? = nil, includeVoices: Bool? = nil, name: String? = nil, language: String? = nil, completion: @escaping ((_ data: TtsEngineEntityListing?,_ error: Error?) -> Void)) {
@@ -4514,75 +3165,94 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get a list of TTS engines enabled for org
-     
      - GET /api/v2/integrations/speech/tts/engines
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "outputFormats" : [ "aeiou" ],
+    "outputFormats" : [ "outputFormats", "outputFormats" ],
     "isDefault" : true,
-    "languages" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
+    "languages" : [ "languages", "languages" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "voices" : [ {
       "isDefault" : true,
-      "gender" : "aeiou",
-      "engine" : "",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "language" : "aeiou",
-      "id" : "aeiou"
+      "gender" : "gender",
+      "engine" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "language" : "language",
+      "id" : "id"
+    }, {
+      "isDefault" : true,
+      "gender" : "gender",
+      "engine" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "language" : "language",
+      "id" : "id"
     } ],
     "isSecure" : true,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "outputFormats" : [ "outputFormats", "outputFormats" ],
+    "isDefault" : true,
+    "languages" : [ "languages", "languages" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "voices" : [ {
+      "isDefault" : true,
+      "gender" : "gender",
+      "engine" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "language" : "language",
+      "id" : "id"
+    }, {
+      "isDefault" : true,
+      "gender" : "gender",
+      "engine" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "language" : "language",
+      "id" : "id"
+    } ],
+    "isSecure" : true,
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter includeVoices: (query) Include voices for the engine (optional, default to false)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter includeVoices: (query) Include voices for the engine (optional)
      - parameter name: (query) Filter on engine name (optional)
-     - parameter language: (query) Filter on supported language. If includeVoices=true then the voices are also filtered. (optional)
+     - parameter language: (query) Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. (optional)
 
      - returns: RequestBuilder<TtsEngineEntityListing> 
      */
-    open class func getIntegrationsSpeechTtsEnginesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, includeVoices: Bool? = nil, name: String? = nil, language: String? = nil) -> RequestBuilder<TtsEngineEntityListing> {
+    open class func getIntegrationsSpeechTtsEnginesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, includeVoices: Bool? = nil, name: String? = nil, language: String? = nil) -> RequestBuilder<TtsEngineEntityListing> {        
         let path = "/api/v2/integrations/speech/tts/engines"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "includeVoices": includeVoices, 
-            
             "name": name, 
-            
             "language": language
-            
         ])
 
         let requestBuilder: RequestBuilder<TtsEngineEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4590,9 +3260,7 @@ open class IntegrationsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get TTS settings for an org
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -4616,34 +3284,30 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get TTS settings for an org
-     
      - GET /api/v2/integrations/speech/tts/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultEngine" : "aeiou",
+  "defaultEngine" : "defaultEngine",
   "languageOverrides" : [ {
-    "voice" : "aeiou",
-    "engine" : "aeiou",
-    "language" : "aeiou"
+    "voice" : "voice",
+    "engine" : "engine",
+    "language" : "language"
+  }, {
+    "voice" : "voice",
+    "engine" : "engine",
+    "language" : "language"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<TtsSettings> 
      */
-    open class func getIntegrationsSpeechTtsSettingsWithRequestBuilder() -> RequestBuilder<TtsSettings> {
+    open class func getIntegrationsSpeechTtsSettingsWithRequestBuilder() -> RequestBuilder<TtsSettings> {        
         let path = "/api/v2/integrations/speech/tts/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4653,10 +3317,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get integration type.
      
      - parameter typeId: (path) Integration Type Id 
@@ -4681,70 +3342,69 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get integration type.
-     
      - GET /api/v2/integrations/types/{typeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "configPropertiesSchemaUri" : "aeiou",
+  "configPropertiesSchemaUri" : "configPropertiesSchemaUri",
   "images" : [ {
-    "imageUri" : "aeiou",
-    "resolution" : "aeiou"
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  }, {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
   } ],
-  "vendorWebsiteUri" : "aeiou",
-  "salesContactUri" : "aeiou",
+  "vendorWebsiteUri" : "vendorWebsiteUri",
+  "salesContactUri" : "salesContactUri",
   "credentials" : {
     "key" : {
-      "credentialTypes" : [ "aeiou" ],
-      "title" : "aeiou",
+      "credentialTypes" : [ "credentialTypes", "credentialTypes" ],
+      "title" : "title",
       "required" : true
     }
   },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "privacyPolicyUri" : "aeiou",
-  "userPermissions" : [ "aeiou" ],
-  "helpUri" : "aeiou",
-  "vendorName" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "privacyPolicyUri" : "privacyPolicyUri",
+  "userPermissions" : [ "userPermissions", "userPermissions" ],
+  "helpUri" : "helpUri",
+  "vendorName" : "vendorName",
   "nonInstallable" : true,
-  "marketplaceUri" : "aeiou",
-  "termsOfServiceUri" : "aeiou",
-  "faqUri" : "aeiou",
-  "supportContactUri" : "aeiou",
-  "provider" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "marketplaceUri" : "marketplaceUri",
+  "termsOfServiceUri" : "termsOfServiceUri",
+  "faqUri" : "faqUri",
+  "supportContactUri" : "supportContactUri",
+  "provider" : "provider",
+  "name" : "name",
+  "id" : "id",
   "helpLinks" : [ {
-    "description" : "aeiou",
-    "title" : "aeiou",
-    "uri" : "aeiou"
+    "description" : "description",
+    "title" : "title",
+    "uri" : "uri"
+  }, {
+    "description" : "description",
+    "title" : "title",
+    "uri" : "uri"
   } ],
-  "category" : "aeiou",
-  "maxInstances" : 123,
-  "configAdvancedSchemaUri" : "aeiou",
-  "vendorOAuthClientIds" : [ "aeiou" ]
-}}]
+  "category" : "category",
+  "maxInstances" : 0,
+  "configAdvancedSchemaUri" : "configAdvancedSchemaUri",
+  "vendorOAuthClientIds" : [ "vendorOAuthClientIds", "vendorOAuthClientIds" ]
+}, statusCode=200}]
      
      - parameter typeId: (path) Integration Type Id 
 
      - returns: RequestBuilder<IntegrationType> 
      */
-    open class func getIntegrationsTypeWithRequestBuilder(typeId: String) -> RequestBuilder<IntegrationType> {
+    open class func getIntegrationsTypeWithRequestBuilder(typeId: String) -> RequestBuilder<IntegrationType> {        
         var path = "/api/v2/integrations/types/{typeId}"
         let typeIdPreEscape = "\(typeId)"
         let typeIdPostEscape = typeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{typeId}", with: typeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4755,17 +3415,13 @@ open class IntegrationsAPI {
 
     
     
-    
-    
     public enum ConfigType_getIntegrationsTypeConfigschema: String { 
         case properties = "properties"
         case advanced = "advanced"
     }
 
     
-    
     /**
-     
      Get properties config schema for an integration type.
      
      - parameter typeId: (path) Integration Type Id 
@@ -4791,33 +3447,30 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Get properties config schema for an integration type.
-     
      - GET /api/v2/integrations/types/{typeId}/configschemas/{configType}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "$schema" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
+  "$schema" : "$schema",
+  "description" : "description",
+  "id" : "id",
   "additionalProperties" : "{}",
-  "title" : "aeiou",
-  "type" : "aeiou",
-  "required" : [ "aeiou" ],
+  "title" : "title",
+  "type" : "type",
+  "required" : [ "required", "required" ],
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter typeId: (path) Integration Type Id 
      - parameter configType: (path) Config schema type 
 
      - returns: RequestBuilder<JsonSchemaDocument> 
      */
-    open class func getIntegrationsTypeConfigschemaWithRequestBuilder(typeId: String, configType: ConfigType_getIntegrationsTypeConfigschema) -> RequestBuilder<JsonSchemaDocument> {
+    open class func getIntegrationsTypeConfigschemaWithRequestBuilder(typeId: String, configType: ConfigType_getIntegrationsTypeConfigschema) -> RequestBuilder<JsonSchemaDocument> {        
         var path = "/api/v2/integrations/types/{typeId}/configschemas/{configType}"
         let typeIdPreEscape = "\(typeId)"
         let typeIdPostEscape = typeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4826,12 +3479,7 @@ open class IntegrationsAPI {
         let configTypePostEscape = configTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{configType}", with: configTypePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4846,19 +3494,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      List integration types
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -4884,67 +3524,116 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      List integration types
-     
      - GET /api/v2/integrations/types
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "configPropertiesSchemaUri" : "aeiou",
+    "configPropertiesSchemaUri" : "configPropertiesSchemaUri",
     "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "vendorWebsiteUri" : "aeiou",
-    "salesContactUri" : "aeiou",
+    "vendorWebsiteUri" : "vendorWebsiteUri",
+    "salesContactUri" : "salesContactUri",
     "credentials" : {
       "key" : {
-        "credentialTypes" : [ "aeiou" ],
-        "title" : "aeiou",
+        "credentialTypes" : [ "credentialTypes", "credentialTypes" ],
+        "title" : "title",
         "required" : true
       }
     },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "privacyPolicyUri" : "aeiou",
-    "userPermissions" : [ "aeiou" ],
-    "helpUri" : "aeiou",
-    "vendorName" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "privacyPolicyUri" : "privacyPolicyUri",
+    "userPermissions" : [ "userPermissions", "userPermissions" ],
+    "helpUri" : "helpUri",
+    "vendorName" : "vendorName",
     "nonInstallable" : true,
-    "marketplaceUri" : "aeiou",
-    "termsOfServiceUri" : "aeiou",
-    "faqUri" : "aeiou",
-    "supportContactUri" : "aeiou",
-    "provider" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
+    "marketplaceUri" : "marketplaceUri",
+    "termsOfServiceUri" : "termsOfServiceUri",
+    "faqUri" : "faqUri",
+    "supportContactUri" : "supportContactUri",
+    "provider" : "provider",
+    "name" : "name",
+    "id" : "id",
     "helpLinks" : [ {
-      "description" : "aeiou",
-      "title" : "aeiou",
-      "uri" : "aeiou"
+      "description" : "description",
+      "title" : "title",
+      "uri" : "uri"
+    }, {
+      "description" : "description",
+      "title" : "title",
+      "uri" : "uri"
     } ],
-    "category" : "aeiou",
-    "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou",
-    "vendorOAuthClientIds" : [ "aeiou" ]
+    "category" : "category",
+    "maxInstances" : 0,
+    "configAdvancedSchemaUri" : "configAdvancedSchemaUri",
+    "vendorOAuthClientIds" : [ "vendorOAuthClientIds", "vendorOAuthClientIds" ]
+  }, {
+    "configPropertiesSchemaUri" : "configPropertiesSchemaUri",
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "vendorWebsiteUri" : "vendorWebsiteUri",
+    "salesContactUri" : "salesContactUri",
+    "credentials" : {
+      "key" : {
+        "credentialTypes" : [ "credentialTypes", "credentialTypes" ],
+        "title" : "title",
+        "required" : true
+      }
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "privacyPolicyUri" : "privacyPolicyUri",
+    "userPermissions" : [ "userPermissions", "userPermissions" ],
+    "helpUri" : "helpUri",
+    "vendorName" : "vendorName",
+    "nonInstallable" : true,
+    "marketplaceUri" : "marketplaceUri",
+    "termsOfServiceUri" : "termsOfServiceUri",
+    "faqUri" : "faqUri",
+    "supportContactUri" : "supportContactUri",
+    "provider" : "provider",
+    "name" : "name",
+    "id" : "id",
+    "helpLinks" : [ {
+      "description" : "description",
+      "title" : "title",
+      "uri" : "uri"
+    }, {
+      "description" : "description",
+      "title" : "title",
+      "uri" : "uri"
+    } ],
+    "category" : "category",
+    "maxInstances" : 0,
+    "configAdvancedSchemaUri" : "configAdvancedSchemaUri",
+    "vendorOAuthClientIds" : [ "vendorOAuthClientIds", "vendorOAuthClientIds" ]
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -4952,31 +3641,19 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<IntegrationTypeEntityListing> 
      */
-    open class func getIntegrationsTypesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<IntegrationTypeEntityListing> {
+    open class func getIntegrationsTypesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<IntegrationTypeEntityListing> {        
         let path = "/api/v2/integrations/types"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "expand": expand, 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage
-            
         ])
 
         let requestBuilder: RequestBuilder<IntegrationTypeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4991,20 +3668,11 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      List permitted user app integrations for the logged in user
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -5031,112 +3699,44 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      List permitted user app integrations for the logged in user
-     
      - GET /api/v2/integrations/userapps
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "integrationType" : {
-      "configPropertiesSchemaUri" : "aeiou",
-      "images" : [ {
-        "imageUri" : "aeiou",
-        "resolution" : "aeiou"
-      } ],
-      "vendorWebsiteUri" : "aeiou",
-      "salesContactUri" : "aeiou",
-      "credentials" : {
-        "key" : {
-          "credentialTypes" : [ "aeiou" ],
-          "title" : "aeiou",
-          "required" : true
-        }
-      },
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "privacyPolicyUri" : "aeiou",
-      "userPermissions" : [ "aeiou" ],
-      "helpUri" : "aeiou",
-      "vendorName" : "aeiou",
-      "nonInstallable" : true,
-      "marketplaceUri" : "aeiou",
-      "termsOfServiceUri" : "aeiou",
-      "faqUri" : "aeiou",
-      "supportContactUri" : "aeiou",
-      "provider" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "helpLinks" : [ {
-        "description" : "aeiou",
-        "title" : "aeiou",
-        "uri" : "aeiou"
-      } ],
-      "category" : "aeiou",
-      "maxInstances" : 123,
-      "configAdvancedSchemaUri" : "aeiou",
-      "vendorOAuthClientIds" : [ "aeiou" ]
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
+    "integrationType" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
     "config" : {
-      "effective" : {
-        "notes" : "aeiou",
-        "advanced" : {
-          "key" : "{}"
-        },
-        "credentials" : {
-          "key" : ""
-        },
-        "name" : "aeiou",
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "current" : {
-        "notes" : "aeiou",
-        "advanced" : "{}",
-        "credentials" : {
-          "key" : {
-            "createdDate" : "2000-01-23T04:56:07.000+0000",
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-            "id" : "aeiou",
-            "type" : {
-              "name" : "aeiou",
-              "displayOrder" : [ "aeiou" ],
-              "id" : "aeiou",
-              "properties" : "{}",
-              "required" : [ "aeiou" ]
-            }
-          }
-        },
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "version" : 123,
-        "properties" : "{}"
-      }
+      "effective" : "{}",
+      "current" : "{}"
+    }
+  }, {
+    "integrationType" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "config" : {
+      "effective" : "{}",
+      "current" : "{}"
     }
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
@@ -5145,33 +3745,20 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<UserAppEntityListing> 
      */
-    open class func getIntegrationsUserappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, appHost: String? = nil) -> RequestBuilder<UserAppEntityListing> {
+    open class func getIntegrationsUserappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, appHost: String? = nil) -> RequestBuilder<UserAppEntityListing> {        
         let path = "/api/v2/integrations/userapps"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "expand": expand, 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage, 
-            
             "appHost": appHost
-            
         ])
 
         let requestBuilder: RequestBuilder<UserAppEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5187,31 +3774,21 @@ open class IntegrationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Update an integration.
      
      - parameter integrationId: (path) Integration Id 
-     - parameter body: (body) Integration Update (optional)
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
+     - parameter body: (body) Integration Update (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchIntegration(integrationId: String, body: Integration? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: Integration?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchIntegrationWithRequestBuilder(integrationId: integrationId, body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
+    open class func patchIntegration(integrationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, body: Integration? = nil, completion: @escaping ((_ data: Integration?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchIntegrationWithRequestBuilder(integrationId: integrationId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, body: body)
         requestBuilder.execute { (response: Response<Integration>?, error) -> Void in
             do {
                 if let e = error {
@@ -5229,140 +3806,52 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Update an integration.
-     
      - PATCH /api/v2/integrations/{integrationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "integrationType" : {
-    "configPropertiesSchemaUri" : "aeiou",
-    "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
-    } ],
-    "vendorWebsiteUri" : "aeiou",
-    "salesContactUri" : "aeiou",
-    "credentials" : {
-      "key" : {
-        "credentialTypes" : [ "aeiou" ],
-        "title" : "aeiou",
-        "required" : true
-      }
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "privacyPolicyUri" : "aeiou",
-    "userPermissions" : [ "aeiou" ],
-    "helpUri" : "aeiou",
-    "vendorName" : "aeiou",
-    "nonInstallable" : true,
-    "marketplaceUri" : "aeiou",
-    "termsOfServiceUri" : "aeiou",
-    "faqUri" : "aeiou",
-    "supportContactUri" : "aeiou",
-    "provider" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "helpLinks" : [ {
-      "description" : "aeiou",
-      "title" : "aeiou",
-      "uri" : "aeiou"
-    } ],
-    "category" : "aeiou",
-    "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou",
-    "vendorOAuthClientIds" : [ "aeiou" ]
-  },
-  "notes" : "aeiou",
-  "reportedState" : {
-    "effective" : "aeiou",
-    "lastUpdated" : "2000-01-23T04:56:07.000+0000",
-    "code" : "aeiou",
-    "detail" : {
-      "messageWithParams" : "aeiou",
-      "localizableMessageCode" : "aeiou",
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "intendedState" : "aeiou",
+  "integrationType" : "{}",
+  "notes" : "notes",
+  "reportedState" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "intendedState" : "ENABLED",
   "attributes" : {
-    "key" : "aeiou"
+    "key" : "attributes"
   },
-  "id" : "aeiou",
-  "config" : {
-    "current" : {
-      "notes" : "aeiou",
-      "advanced" : "{}",
-      "credentials" : {
-        "key" : {
-          "createdDate" : "2000-01-23T04:56:07.000+0000",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "type" : {
-            "name" : "aeiou",
-            "displayOrder" : [ "aeiou" ],
-            "id" : "aeiou",
-            "properties" : "{}",
-            "required" : [ "aeiou" ]
-          }
-        }
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "version" : 123,
-      "properties" : "{}"
-    }
-  }
-}}]
+  "id" : "id",
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter integrationId: (path) Integration Id 
-     - parameter body: (body) Integration Update (optional)
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
+     - parameter body: (body) Integration Update (optional)
 
      - returns: RequestBuilder<Integration> 
      */
-    open class func patchIntegrationWithRequestBuilder(integrationId: String, body: Integration? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<Integration> {
+    open class func patchIntegrationWithRequestBuilder(integrationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, body: Integration? = nil) -> RequestBuilder<Integration> {        
         var path = "/api/v2/integrations/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "expand": expand, 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage
-            
         ])
 
         let requestBuilder: RequestBuilder<Integration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5372,11 +3861,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Patch an Action
      
      - parameter actionId: (path) actionId 
@@ -5402,86 +3887,36 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Patch an Action
-     
      - PATCH /api/v2/integrations/actions/{actionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contract" : {
-    "output" : {
-      "successSchemaFlattened" : "",
-      "errorSchemaUri" : "aeiou",
-      "errorSchemaFlattened" : "{}",
-      "successSchema" : {
-        "$schema" : "aeiou",
-        "description" : "aeiou",
-        "id" : "aeiou",
-        "additionalProperties" : "{}",
-        "title" : "aeiou",
-        "type" : "aeiou",
-        "required" : [ "aeiou" ],
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "successSchemaUri" : "aeiou",
-      "errorSchema" : ""
-    },
-    "input" : {
-      "inputSchemaFlattened" : "",
-      "inputSchema" : "",
-      "inputSchemaUri" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "integrationId" : "aeiou",
-  "id" : "aeiou",
-  "category" : "aeiou",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integrationId" : "integrationId",
+  "id" : "id",
+  "category" : "category",
   "secure" : true,
-  "version" : 123,
-  "config" : {
-    "request" : {
-      "headers" : {
-        "key" : "aeiou"
-      },
-      "requestUrlTemplate" : "aeiou",
-      "requestType" : "aeiou",
-      "requestTemplate" : "aeiou",
-      "requestTemplateUri" : "aeiou"
-    },
-    "response" : {
-      "translationMapDefaults" : {
-        "key" : "aeiou"
-      },
-      "translationMap" : {
-        "key" : "aeiou"
-      },
-      "successTemplateUri" : "aeiou",
-      "successTemplate" : "aeiou"
-    }
-  }
-}}]
+  "version" : 0,
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Input used to patch the Action. 
 
      - returns: RequestBuilder<Action> 
      */
-    open class func patchIntegrationsActionWithRequestBuilder(actionId: String, body: UpdateActionInput) -> RequestBuilder<Action> {
+    open class func patchIntegrationsActionWithRequestBuilder(actionId: String, body: UpdateActionInput) -> RequestBuilder<Action> {        
         var path = "/api/v2/integrations/actions/{actionId}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5491,11 +3926,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update an existing Draft
      
      - parameter actionId: (path) actionId 
@@ -5521,86 +3952,36 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Update an existing Draft
-     
      - PATCH /api/v2/integrations/actions/{actionId}/draft
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contract" : {
-    "output" : {
-      "successSchemaFlattened" : "",
-      "errorSchemaUri" : "aeiou",
-      "errorSchemaFlattened" : "{}",
-      "successSchema" : {
-        "$schema" : "aeiou",
-        "description" : "aeiou",
-        "id" : "aeiou",
-        "additionalProperties" : "{}",
-        "title" : "aeiou",
-        "type" : "aeiou",
-        "required" : [ "aeiou" ],
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "successSchemaUri" : "aeiou",
-      "errorSchema" : ""
-    },
-    "input" : {
-      "inputSchemaFlattened" : "",
-      "inputSchema" : "",
-      "inputSchemaUri" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "integrationId" : "aeiou",
-  "id" : "aeiou",
-  "category" : "aeiou",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integrationId" : "integrationId",
+  "id" : "id",
+  "category" : "category",
   "secure" : true,
-  "version" : 123,
-  "config" : {
-    "request" : {
-      "headers" : {
-        "key" : "aeiou"
-      },
-      "requestUrlTemplate" : "aeiou",
-      "requestType" : "aeiou",
-      "requestTemplate" : "aeiou",
-      "requestTemplateUri" : "aeiou"
-    },
-    "response" : {
-      "translationMapDefaults" : {
-        "key" : "aeiou"
-      },
-      "translationMap" : {
-        "key" : "aeiou"
-      },
-      "successTemplateUri" : "aeiou",
-      "successTemplate" : "aeiou"
-    }
-  }
-}}]
+  "version" : 0,
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Input used to patch the Action Draft. 
 
      - returns: RequestBuilder<Action> 
      */
-    open class func patchIntegrationsActionDraftWithRequestBuilder(actionId: String, body: UpdateDraftInput) -> RequestBuilder<Action> {
+    open class func patchIntegrationsActionDraftWithRequestBuilder(actionId: String, body: UpdateDraftInput) -> RequestBuilder<Action> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5609,10 +3990,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Create an integration.
      
      - parameter body: (body) Integration (optional)
@@ -5637,115 +4015,34 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Create an integration.
-     
      - POST /api/v2/integrations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "integrationType" : {
-    "configPropertiesSchemaUri" : "aeiou",
-    "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
-    } ],
-    "vendorWebsiteUri" : "aeiou",
-    "salesContactUri" : "aeiou",
-    "credentials" : {
-      "key" : {
-        "credentialTypes" : [ "aeiou" ],
-        "title" : "aeiou",
-        "required" : true
-      }
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "privacyPolicyUri" : "aeiou",
-    "userPermissions" : [ "aeiou" ],
-    "helpUri" : "aeiou",
-    "vendorName" : "aeiou",
-    "nonInstallable" : true,
-    "marketplaceUri" : "aeiou",
-    "termsOfServiceUri" : "aeiou",
-    "faqUri" : "aeiou",
-    "supportContactUri" : "aeiou",
-    "provider" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "helpLinks" : [ {
-      "description" : "aeiou",
-      "title" : "aeiou",
-      "uri" : "aeiou"
-    } ],
-    "category" : "aeiou",
-    "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou",
-    "vendorOAuthClientIds" : [ "aeiou" ]
-  },
-  "notes" : "aeiou",
-  "reportedState" : {
-    "effective" : "aeiou",
-    "lastUpdated" : "2000-01-23T04:56:07.000+0000",
-    "code" : "aeiou",
-    "detail" : {
-      "messageWithParams" : "aeiou",
-      "localizableMessageCode" : "aeiou",
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "intendedState" : "aeiou",
+  "integrationType" : "{}",
+  "notes" : "notes",
+  "reportedState" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "intendedState" : "ENABLED",
   "attributes" : {
-    "key" : "aeiou"
+    "key" : "attributes"
   },
-  "id" : "aeiou",
-  "config" : {
-    "current" : {
-      "notes" : "aeiou",
-      "advanced" : "{}",
-      "credentials" : {
-        "key" : {
-          "createdDate" : "2000-01-23T04:56:07.000+0000",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "type" : {
-            "name" : "aeiou",
-            "displayOrder" : [ "aeiou" ],
-            "id" : "aeiou",
-            "properties" : "{}",
-            "required" : [ "aeiou" ]
-          }
-        }
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "version" : 123,
-      "properties" : "{}"
-    }
-  }
-}}]
+  "id" : "id",
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Integration (optional)
 
      - returns: RequestBuilder<Integration> 
      */
-    open class func postIntegrationsWithRequestBuilder(body: CreateIntegrationRequest? = nil) -> RequestBuilder<Integration> {
+    open class func postIntegrationsWithRequestBuilder(body: CreateIntegrationRequest? = nil) -> RequestBuilder<Integration> {        
         let path = "/api/v2/integrations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Integration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5754,10 +4051,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a new Draft from existing Action
      
      - parameter actionId: (path) actionId 
@@ -5782,87 +4076,34 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Create a new Draft from existing Action
-     
      - POST /api/v2/integrations/actions/{actionId}/draft
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contract" : {
-    "output" : {
-      "successSchemaFlattened" : "",
-      "errorSchemaUri" : "aeiou",
-      "errorSchemaFlattened" : "{}",
-      "successSchema" : {
-        "$schema" : "aeiou",
-        "description" : "aeiou",
-        "id" : "aeiou",
-        "additionalProperties" : "{}",
-        "title" : "aeiou",
-        "type" : "aeiou",
-        "required" : [ "aeiou" ],
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "successSchemaUri" : "aeiou",
-      "errorSchema" : ""
-    },
-    "input" : {
-      "inputSchemaFlattened" : "",
-      "inputSchema" : "",
-      "inputSchemaUri" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "integrationId" : "aeiou",
-  "id" : "aeiou",
-  "category" : "aeiou",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integrationId" : "integrationId",
+  "id" : "id",
+  "category" : "category",
   "secure" : true,
-  "version" : 123,
-  "config" : {
-    "request" : {
-      "headers" : {
-        "key" : "aeiou"
-      },
-      "requestUrlTemplate" : "aeiou",
-      "requestType" : "aeiou",
-      "requestTemplate" : "aeiou",
-      "requestTemplateUri" : "aeiou"
-    },
-    "response" : {
-      "translationMapDefaults" : {
-        "key" : "aeiou"
-      },
-      "translationMap" : {
-        "key" : "aeiou"
-      },
-      "successTemplateUri" : "aeiou",
-      "successTemplate" : "aeiou"
-    }
-  }
-}}]
+  "version" : 0,
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
 
      - returns: RequestBuilder<Action> 
      */
-    open class func postIntegrationsActionDraftWithRequestBuilder(actionId: String) -> RequestBuilder<Action> {
+    open class func postIntegrationsActionDraftWithRequestBuilder(actionId: String) -> RequestBuilder<Action> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5873,11 +4114,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Publish a Draft and make it the active Action configuration
      
      - parameter actionId: (path) actionId 
@@ -5903,86 +4140,36 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Publish a Draft and make it the active Action configuration
-     
      - POST /api/v2/integrations/actions/{actionId}/draft/publish
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contract" : {
-    "output" : {
-      "successSchemaFlattened" : "",
-      "errorSchemaUri" : "aeiou",
-      "errorSchemaFlattened" : "{}",
-      "successSchema" : {
-        "$schema" : "aeiou",
-        "description" : "aeiou",
-        "id" : "aeiou",
-        "additionalProperties" : "{}",
-        "title" : "aeiou",
-        "type" : "aeiou",
-        "required" : [ "aeiou" ],
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "successSchemaUri" : "aeiou",
-      "errorSchema" : ""
-    },
-    "input" : {
-      "inputSchemaFlattened" : "",
-      "inputSchema" : "",
-      "inputSchemaUri" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "integrationId" : "aeiou",
-  "id" : "aeiou",
-  "category" : "aeiou",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integrationId" : "integrationId",
+  "id" : "id",
+  "category" : "category",
   "secure" : true,
-  "version" : 123,
-  "config" : {
-    "request" : {
-      "headers" : {
-        "key" : "aeiou"
-      },
-      "requestUrlTemplate" : "aeiou",
-      "requestType" : "aeiou",
-      "requestTemplate" : "aeiou",
-      "requestTemplateUri" : "aeiou"
-    },
-    "response" : {
-      "translationMapDefaults" : {
-        "key" : "aeiou"
-      },
-      "translationMap" : {
-        "key" : "aeiou"
-      },
-      "successTemplateUri" : "aeiou",
-      "successTemplate" : "aeiou"
-    }
-  }
-}}]
+  "version" : 0,
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Input used to patch the Action. 
 
      - returns: RequestBuilder<Action> 
      */
-    open class func postIntegrationsActionDraftPublishWithRequestBuilder(actionId: String, body: PublishDraftInput) -> RequestBuilder<Action> {
+    open class func postIntegrationsActionDraftPublishWithRequestBuilder(actionId: String, body: PublishDraftInput) -> RequestBuilder<Action> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft/publish"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5992,18 +4179,14 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postIntegrationsActionDraftTest(actionId: String, body: JSON, completion: @escaping ((_ data: TestExecutionResult?,_ error: Error?) -> Void)) {
+    open class func postIntegrationsActionDraftTest(actionId: String, body: [String:JSON], completion: @escaping ((_ data: TestExecutionResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postIntegrationsActionDraftTestWithRequestBuilder(actionId: actionId, body: body)
         requestBuilder.execute { (response: Response<TestExecutionResult>?, error) -> Void in
             do {
@@ -6022,11 +4205,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
-     
      - POST /api/v2/integrations/actions/{actionId}/draft/test
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -6034,48 +4214,34 @@ open class IntegrationsAPI {
   "operations" : [ {
     "result" : "{}",
     "success" : true,
-    "name" : "aeiou",
-    "step" : 123,
-    "error" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    }
+    "name" : "name",
+    "step" : 0,
+    "error" : "{}"
+  }, {
+    "result" : "{}",
+    "success" : true,
+    "name" : "name",
+    "step" : 0,
+    "error" : "{}"
   } ],
   "success" : true,
-  "error" : "",
+  "error" : "{}",
   "finalResult" : "{}"
-}}]
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
 
      - returns: RequestBuilder<TestExecutionResult> 
      */
-    open class func postIntegrationsActionDraftTestWithRequestBuilder(actionId: String, body: JSON) -> RequestBuilder<TestExecutionResult> {
+    open class func postIntegrationsActionDraftTestWithRequestBuilder(actionId: String, body: [String:JSON]) -> RequestBuilder<TestExecutionResult> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft/test"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TestExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6085,18 +4251,14 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postIntegrationsActionExecute(actionId: String, body: JSON, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+    open class func postIntegrationsActionExecute(actionId: String, body: [String:JSON], completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = postIntegrationsActionExecuteWithRequestBuilder(actionId: actionId, body: body)
         requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
@@ -6115,31 +4277,25 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
-     
      - POST /api/v2/integrations/actions/{actionId}/execute
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="{}"}]
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
 
      - returns: RequestBuilder<JSON> 
      */
-    open class func postIntegrationsActionExecuteWithRequestBuilder(actionId: String, body: JSON) -> RequestBuilder<JSON> {
+    open class func postIntegrationsActionExecuteWithRequestBuilder(actionId: String, body: [String:JSON]) -> RequestBuilder<JSON> {        
         var path = "/api/v2/integrations/actions/{actionId}/execute"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6149,18 +4305,14 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postIntegrationsActionTest(actionId: String, body: JSON, completion: @escaping ((_ data: TestExecutionResult?,_ error: Error?) -> Void)) {
+    open class func postIntegrationsActionTest(actionId: String, body: [String:JSON], completion: @escaping ((_ data: TestExecutionResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postIntegrationsActionTestWithRequestBuilder(actionId: actionId, body: body)
         requestBuilder.execute { (response: Response<TestExecutionResult>?, error) -> Void in
             do {
@@ -6179,11 +4331,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
-     
      - POST /api/v2/integrations/actions/{actionId}/test
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -6191,48 +4340,34 @@ open class IntegrationsAPI {
   "operations" : [ {
     "result" : "{}",
     "success" : true,
-    "name" : "aeiou",
-    "step" : 123,
-    "error" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    }
+    "name" : "name",
+    "step" : 0,
+    "error" : "{}"
+  }, {
+    "result" : "{}",
+    "success" : true,
+    "name" : "name",
+    "step" : 0,
+    "error" : "{}"
   } ],
   "success" : true,
-  "error" : "",
+  "error" : "{}",
   "finalResult" : "{}"
-}}]
+}, statusCode=200}]
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
 
      - returns: RequestBuilder<TestExecutionResult> 
      */
-    open class func postIntegrationsActionTestWithRequestBuilder(actionId: String, body: JSON) -> RequestBuilder<TestExecutionResult> {
+    open class func postIntegrationsActionTestWithRequestBuilder(actionId: String, body: [String:JSON]) -> RequestBuilder<TestExecutionResult> {        
         var path = "/api/v2/integrations/actions/{actionId}/test"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TestExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6241,10 +4376,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a new Action
      
      - parameter body: (body) Input used to create Action. 
@@ -6269,82 +4401,32 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Create a new Action
-     
      - POST /api/v2/integrations/actions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contract" : {
-    "output" : {
-      "successSchemaFlattened" : "",
-      "errorSchemaUri" : "aeiou",
-      "errorSchemaFlattened" : "{}",
-      "successSchema" : {
-        "$schema" : "aeiou",
-        "description" : "aeiou",
-        "id" : "aeiou",
-        "additionalProperties" : "{}",
-        "title" : "aeiou",
-        "type" : "aeiou",
-        "required" : [ "aeiou" ],
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "successSchemaUri" : "aeiou",
-      "errorSchema" : ""
-    },
-    "input" : {
-      "inputSchemaFlattened" : "",
-      "inputSchema" : "",
-      "inputSchemaUri" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "integrationId" : "aeiou",
-  "id" : "aeiou",
-  "category" : "aeiou",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integrationId" : "integrationId",
+  "id" : "id",
+  "category" : "category",
   "secure" : true,
-  "version" : 123,
-  "config" : {
-    "request" : {
-      "headers" : {
-        "key" : "aeiou"
-      },
-      "requestUrlTemplate" : "aeiou",
-      "requestType" : "aeiou",
-      "requestTemplate" : "aeiou",
-      "requestTemplateUri" : "aeiou"
-    },
-    "response" : {
-      "translationMapDefaults" : {
-        "key" : "aeiou"
-      },
-      "translationMap" : {
-        "key" : "aeiou"
-      },
-      "successTemplateUri" : "aeiou",
-      "successTemplate" : "aeiou"
-    }
-  }
-}}]
+  "version" : 0,
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Input used to create Action. 
 
      - returns: RequestBuilder<Action> 
      */
-    open class func postIntegrationsActionsWithRequestBuilder(body: PostActionInput) -> RequestBuilder<Action> {
+    open class func postIntegrationsActionsWithRequestBuilder(body: PostActionInput) -> RequestBuilder<Action> {        
         let path = "/api/v2/integrations/actions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6353,10 +4435,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a new Draft
      
      - parameter body: (body) Input used to create Action Draft. 
@@ -6381,82 +4460,32 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Create a new Draft
-     
      - POST /api/v2/integrations/actions/drafts
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "contract" : {
-    "output" : {
-      "successSchemaFlattened" : "",
-      "errorSchemaUri" : "aeiou",
-      "errorSchemaFlattened" : "{}",
-      "successSchema" : {
-        "$schema" : "aeiou",
-        "description" : "aeiou",
-        "id" : "aeiou",
-        "additionalProperties" : "{}",
-        "title" : "aeiou",
-        "type" : "aeiou",
-        "required" : [ "aeiou" ],
-        "properties" : {
-          "key" : "{}"
-        }
-      },
-      "successSchemaUri" : "aeiou",
-      "errorSchema" : ""
-    },
-    "input" : {
-      "inputSchemaFlattened" : "",
-      "inputSchema" : "",
-      "inputSchemaUri" : "aeiou"
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "integrationId" : "aeiou",
-  "id" : "aeiou",
-  "category" : "aeiou",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integrationId" : "integrationId",
+  "id" : "id",
+  "category" : "category",
   "secure" : true,
-  "version" : 123,
-  "config" : {
-    "request" : {
-      "headers" : {
-        "key" : "aeiou"
-      },
-      "requestUrlTemplate" : "aeiou",
-      "requestType" : "aeiou",
-      "requestTemplate" : "aeiou",
-      "requestTemplateUri" : "aeiou"
-    },
-    "response" : {
-      "translationMapDefaults" : {
-        "key" : "aeiou"
-      },
-      "translationMap" : {
-        "key" : "aeiou"
-      },
-      "successTemplateUri" : "aeiou",
-      "successTemplate" : "aeiou"
-    }
-  }
-}}]
+  "version" : 0,
+  "config" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Input used to create Action Draft. 
 
      - returns: RequestBuilder<Action> 
      */
-    open class func postIntegrationsActionsDraftsWithRequestBuilder(body: PostActionInput) -> RequestBuilder<Action> {
+    open class func postIntegrationsActionsDraftsWithRequestBuilder(body: PostActionInput) -> RequestBuilder<Action> {        
         let path = "/api/v2/integrations/actions/drafts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6465,10 +4494,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a set of credentials
      
      - parameter body: (body) Credential (optional)
@@ -6493,40 +4519,29 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Create a set of credentials
-     
      - POST /api/v2/integrations/credentials
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "type" : {
-    "name" : "aeiou",
-    "displayOrder" : [ "aeiou" ],
-    "id" : "aeiou",
-    "properties" : "{}",
-    "required" : [ "aeiou" ]
-  }
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Credential (optional)
 
      - returns: RequestBuilder<CredentialInfo> 
      */
-    open class func postIntegrationsCredentialsWithRequestBuilder(body: Credential? = nil) -> RequestBuilder<CredentialInfo> {
+    open class func postIntegrationsCredentialsWithRequestBuilder(body: Credential? = nil) -> RequestBuilder<CredentialInfo> {        
         let path = "/api/v2/integrations/credentials"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CredentialInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6535,10 +4550,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Add a vendor connection
      
      - parameter body: (body)  (optional)
@@ -6563,42 +4575,41 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Add a vendor connection
-     
      - POST /api/v2/integrations/workforcemanagement/vendorconnection
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<UserActionCategoryEntityListing> 
      */
-    open class func postIntegrationsWorkforcemanagementVendorconnectionWithRequestBuilder(body: VendorConnectionRequest? = nil) -> RequestBuilder<UserActionCategoryEntityListing> {
+    open class func postIntegrationsWorkforcemanagementVendorconnectionWithRequestBuilder(body: VendorConnectionRequest? = nil) -> RequestBuilder<UserActionCategoryEntityListing> {        
         let path = "/api/v2/integrations/workforcemanagement/vendorconnection"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserActionCategoryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6608,11 +4619,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update integration configuration.
      
      - parameter integrationId: (path) Integration Id 
@@ -6638,55 +4645,44 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Update integration configuration.
-     
      - PUT /api/v2/integrations/{integrationId}/config/current
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "notes" : "aeiou",
+  "notes" : "notes",
   "advanced" : "{}",
   "credentials" : {
     "key" : {
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "type" : {
-        "name" : "aeiou",
-        "displayOrder" : [ "aeiou" ],
-        "id" : "aeiou",
-        "properties" : "{}",
-        "required" : [ "aeiou" ]
-      }
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "type" : "{}"
     }
   },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "version" : 123,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
   "properties" : "{}"
-}}]
+}, statusCode=200}]
      
      - parameter integrationId: (path) Integration Id 
      - parameter body: (body) Integration Configuration (optional)
 
      - returns: RequestBuilder<IntegrationConfiguration> 
      */
-    open class func putIntegrationConfigCurrentWithRequestBuilder(integrationId: String, body: IntegrationConfiguration? = nil) -> RequestBuilder<IntegrationConfiguration> {
+    open class func putIntegrationConfigCurrentWithRequestBuilder(integrationId: String, body: IntegrationConfiguration? = nil) -> RequestBuilder<IntegrationConfiguration> {        
         var path = "/api/v2/integrations/{integrationId}/config/current"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IntegrationConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6696,11 +4692,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Set a list of botConnector bots plus versions for this integration
      
      - parameter integrationId: (path) The integration ID for this group of bots 
@@ -6719,11 +4711,8 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Set a list of botConnector bots plus versions for this integration
-     
      - PUT /api/v2/integrations/botconnector/{integrationId}/bots
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -6733,16 +4722,14 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func putIntegrationsBotconnectorIntegrationIdBotsWithRequestBuilder(integrationId: String, botList: BotList) -> RequestBuilder<Void> {
+    open class func putIntegrationsBotconnectorIntegrationIdBotsWithRequestBuilder(integrationId: String, botList: BotList) -> RequestBuilder<Void> {        
         var path = "/api/v2/integrations/botconnector/{integrationId}/bots"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: botList)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6752,11 +4739,7 @@ open class IntegrationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a set of credentials
      
      - parameter credentialId: (path) Credential ID 
@@ -6782,44 +4765,33 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Update a set of credentials
-     
      - PUT /api/v2/integrations/credentials/{credentialId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "type" : {
-    "name" : "aeiou",
-    "displayOrder" : [ "aeiou" ],
-    "id" : "aeiou",
-    "properties" : "{}",
-    "required" : [ "aeiou" ]
-  }
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "{}"
+}, statusCode=200}]
      
      - parameter credentialId: (path) Credential ID 
      - parameter body: (body) Credential (optional)
 
      - returns: RequestBuilder<CredentialInfo> 
      */
-    open class func putIntegrationsCredentialWithRequestBuilder(credentialId: String, body: Credential? = nil) -> RequestBuilder<CredentialInfo> {
+    open class func putIntegrationsCredentialWithRequestBuilder(credentialId: String, body: Credential? = nil) -> RequestBuilder<CredentialInfo> {        
         var path = "/api/v2/integrations/credentials/{credentialId}"
         let credentialIdPreEscape = "\(credentialId)"
         let credentialIdPostEscape = credentialIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{credentialId}", with: credentialIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CredentialInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6828,10 +4800,7 @@ open class IntegrationsAPI {
     }
 
     
-    
-    
     /**
-     
      Update TTS settings for an org
      
      - parameter body: (body) Updated TtsSettings 
@@ -6856,34 +4825,33 @@ open class IntegrationsAPI {
     }
 
     /**
-     
      Update TTS settings for an org
-     
      - PUT /api/v2/integrations/speech/tts/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultEngine" : "aeiou",
+  "defaultEngine" : "defaultEngine",
   "languageOverrides" : [ {
-    "voice" : "aeiou",
-    "engine" : "aeiou",
-    "language" : "aeiou"
+    "voice" : "voice",
+    "engine" : "engine",
+    "language" : "language"
+  }, {
+    "voice" : "voice",
+    "engine" : "engine",
+    "language" : "language"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Updated TtsSettings 
 
      - returns: RequestBuilder<TtsSettings> 
      */
-    open class func putIntegrationsSpeechTtsSettingsWithRequestBuilder(body: TtsSettings) -> RequestBuilder<TtsSettings> {
+    open class func putIntegrationsSpeechTtsSettingsWithRequestBuilder(body: TtsSettings) -> RequestBuilder<TtsSettings> {        
         let path = "/api/v2/integrations/speech/tts/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TtsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

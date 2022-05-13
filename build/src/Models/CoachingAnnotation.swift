@@ -35,25 +35,15 @@ public class CoachingAnnotation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, text: String?, isDeleted: Bool?, accessType: AccessType?, selfUri: String?) {
-        
         self._id = _id
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.text = text
-        
         self.isDeleted = isDeleted
-        
         self.accessType = accessType
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -131,7 +131,7 @@ JourneyAPI.deleteJourneyActiontemplate(actionTemplateId: actionTemplateId, hardD
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **actionTemplateId** | **String**| ID of the action template. | |
-| **hardDelete** | **Bool**| Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. | [optional] |
+| **hardDelete** | **Bool**| Determines whether Action Template should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. | [optional] |
 {: class="table-striped"}
 
 
@@ -319,8 +319,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let sortBy: String = "" // Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate).
 let filterField: String = "" // Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires 'filterField' to also be set.
 let filterValue: String = "" // Value to filter by. Requires 'filterValue' to also be set.
@@ -344,14 +344,14 @@ JourneyAPI.getJourneyActionmaps(pageNumber: pageNumber, pageSize: pageSize, sort
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). | [optional] |
-| **filterField** | **String**| Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. | [optional] |
-| **filterValue** | **String**| Value to filter by. Requires &#39;filterValue&#39; to also be set. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). | [optional] |
+| **filterField** | **String**| Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires 'filterField' to also be set. | [optional] |
+| **filterValue** | **String**| Value to filter by. Requires 'filterValue' to also be set. | [optional] |
 | **actionMapIds** | [**[String]**](String.html)| IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. | [optional] |
-| **queryFields** | [**[String]**](String.html)| Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional] |
-| **queryValue** | **String**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional] |
+| **queryFields** | [**[String]**](String.html)| Action Map field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
+| **queryValue** | **String**| Value to query on. Requires 'queryFields' to also be set. | [optional] |
 {: class="table-striped"}
 
 
@@ -437,8 +437,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 JourneyAPI.getJourneyActiontargets(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -456,8 +456,8 @@ JourneyAPI.getJourneyActiontargets(pageNumber: pageNumber, pageSize: pageSize) {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -543,8 +543,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let sortBy: String = "" // Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=name,-createdDate).
 let mediaType: JourneyAPI.MediaType_getJourneyActiontemplates = JourneyAPI.MediaType_getJourneyActiontemplates.enummember // Media type
 let state: JourneyAPI.State_getJourneyActiontemplates = JourneyAPI.State_getJourneyActiontemplates.enummember // Action template state.
@@ -567,13 +567,13 @@ JourneyAPI.getJourneyActiontemplates(pageNumber: pageNumber, pageSize: pageSize,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=name,-createdDate). | [optional] |
 | **mediaType** | **String**| Media type | [optional]<br />**Values**: webchat ("webchat"), webmessagingoffer ("webMessagingOffer"), contentoffer ("contentOffer"), integrationaction ("integrationAction"), architectflow ("architectFlow"), openaction ("openAction") |
 | **state** | **String**| Action template state. | [optional]<br />**Values**: active ("Active"), inactive ("Inactive"), deleted ("Deleted") |
-| **queryFields** | [**[String]**](String.html)| ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional] |
-| **queryValue** | **String**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional] |
+| **queryFields** | [**[String]**](String.html)| ActionTemplate field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
+| **queryValue** | **String**| Value to query on. Requires 'queryFields' to also be set. | [optional] |
 {: class="table-striped"}
 
 
@@ -659,8 +659,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let sortBy: String = "" // Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate).
 let outcomeIds: [String] = [""] // IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request.
 let queryFields: [String] = [""] // Outcome field(s) to query on. Requires 'queryValue' to also be set.
@@ -682,12 +682,12 @@ JourneyAPI.getJourneyOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). | [optional] |
 | **outcomeIds** | [**[String]**](String.html)| IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. | [optional] |
-| **queryFields** | [**[String]**](String.html)| Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional] |
-| **queryValue** | **String**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional] |
+| **queryFields** | [**[String]**](String.html)| Outcome field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
+| **queryValue** | **String**| Value to query on. Requires 'queryFields' to also be set. | [optional] |
 {: class="table-striped"}
 
 
@@ -774,8 +774,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let sortBy: String = "" // Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate).
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let isActive: Bool = true // Determines whether or not to show only active segments.
 let segmentIds: [String] = [""] // IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request.
 let queryFields: [String] = [""] // Segment field(s) to query on. Requires 'queryValue' to also be set.
@@ -797,13 +797,13 @@ JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sortBy** | **String**| Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). | [optional] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **sortBy** | **String**| Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **isActive** | **Bool**| Determines whether or not to show only active segments. | [optional] |
 | **segmentIds** | [**[String]**](String.html)| IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. | [optional] |
-| **queryFields** | [**[String]**](String.html)| Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional] |
-| **queryValue** | **String**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional] |
+| **queryFields** | [**[String]**](String.html)| Segment field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
+| **queryValue** | **String**| Value to query on. Requires 'queryFields' to also be set. | [optional] |
 {: class="table-striped"}
 
 

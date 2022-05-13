@@ -15,11 +15,8 @@ public class TrunkMetricsTopicTrunkMetricsCalls: Codable {
     public var outboundCallCount: Int?
 
     public init(inboundCallCount: Int?, outboundCallCount: Int?) {
-        
         self.inboundCallCount = inboundCallCount
-        
         self.outboundCallCount = outboundCallCount
-        
     }
 
 

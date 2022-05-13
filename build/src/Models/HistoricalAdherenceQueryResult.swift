@@ -37,25 +37,15 @@ public class HistoricalAdherenceQueryResult: Codable {
     public var actuals: [HistoricalAdherenceActuals]?
 
     public init(userId: String?, startDate: Date?, endDate: Date?, adherencePercentage: Double?, conformancePercentage: Double?, impact: Impact?, exceptionInfo: [HistoricalAdherenceExceptionInfo]?, dayMetrics: [HistoricalAdherenceDayMetrics]?, actuals: [HistoricalAdherenceActuals]?) {
-        
         self.userId = userId
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.adherencePercentage = adherencePercentage
-        
         self.conformancePercentage = conformancePercentage
-        
         self.impact = impact
-        
         self.exceptionInfo = exceptionInfo
-        
         self.dayMetrics = dayMetrics
-        
         self.actuals = actuals
-        
     }
 
 

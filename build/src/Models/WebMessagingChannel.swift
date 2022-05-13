@@ -22,15 +22,10 @@ public class WebMessagingChannel: Codable {
     public var messageId: String?
 
     public init(from: WebMessagingRecipient?, to: WebMessagingRecipient?, time: Date?, messageId: String?) {
-        
         self.from = from
-        
         self.to = to
-        
         self.time = time
-        
         self.messageId = messageId
-        
     }
 
 

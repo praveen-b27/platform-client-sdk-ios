@@ -15,9 +15,7 @@ public class ArticleContent: Codable {
     public var body: ArticleContentBody?
 
     public init(body: ArticleContentBody?) {
-        
         self.body = body
-        
     }
 
 

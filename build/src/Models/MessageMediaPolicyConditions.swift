@@ -24,21 +24,13 @@ public class MessageMediaPolicyConditions: Codable {
     public var customerParticipation: CustomerParticipation?
 
     public init(forUsers: [User]?, dateRanges: [String]?, forQueues: [Queue]?, wrapupCodes: [WrapupCode]?, languages: [Language]?, timeAllowed: TimeAllowed?, customerParticipation: CustomerParticipation?) {
-        
         self.forUsers = forUsers
-        
         self.dateRanges = dateRanges
-        
         self.forQueues = forQueues
-        
         self.wrapupCodes = wrapupCodes
-        
         self.languages = languages
-        
         self.timeAllowed = timeAllowed
-        
         self.customerParticipation = customerParticipation
-        
     }
 
 

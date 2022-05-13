@@ -60,37 +60,21 @@ public class LimitChangeRequestDetails: Codable {
     public var selfUri: String?
 
     public init(_id: String?, key: String?, namespace: String?, requestedValue: Double?, _description: String?, supportCaseUrl: String?, createdBy: String?, status: Status?, currentValue: Double?, dateCreated: Date?, statusHistory: [StatusChange]?, dateCompleted: Date?, lastChangedBy: String?, rejectReason: RejectReason?, selfUri: String?) {
-        
         self._id = _id
-        
         self.key = key
-        
         self.namespace = namespace
-        
         self.requestedValue = requestedValue
-        
         self._description = _description
-        
         self.supportCaseUrl = supportCaseUrl
-        
         self.createdBy = createdBy
-        
         self.status = status
-        
         self.currentValue = currentValue
-        
         self.dateCreated = dateCreated
-        
         self.statusHistory = statusHistory
-        
         self.dateCompleted = dateCompleted
-        
         self.lastChangedBy = lastChangedBy
-        
         self.rejectReason = rejectReason
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

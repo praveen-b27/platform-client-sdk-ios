@@ -64,11 +64,8 @@ public class ScheduleGenerationMessage: Codable {
     public var arguments: [SchedulerMessageArgument]?
 
     public init(type: ModelType?, arguments: [SchedulerMessageArgument]?) {
-        
         self.type = type
-        
         self.arguments = arguments
-        
     }
 
 

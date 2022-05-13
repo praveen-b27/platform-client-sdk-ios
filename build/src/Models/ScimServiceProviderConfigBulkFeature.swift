@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Defines a \&quot;bulk\&quot; request in the SCIM service provider&#39;s configuration. */
+/** Defines a \"bulk\" request in the SCIM service provider's configuration. */
 
 public class ScimServiceProviderConfigBulkFeature: Codable {
 
@@ -20,13 +20,9 @@ public class ScimServiceProviderConfigBulkFeature: Codable {
     public var maxPayloadSize: Int?
 
     public init(supported: Bool?, maxOperations: Int?, maxPayloadSize: Int?) {
-        
         self.supported = supported
-        
         self.maxOperations = maxOperations
-        
         self.maxPayloadSize = maxPayloadSize
-        
     }
 
 

@@ -18,17 +18,11 @@ public class WebMessagingMessageEntityList: Codable {
     public var pageCount: Int?
 
     public init(entities: [WebMessagingMessage]?, pageSize: Int?, pageNumber: Int?, total: Int64?, pageCount: Int?) {
-        
         self.entities = entities
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.total = total
-        
         self.pageCount = pageCount
-        
     }
 
 

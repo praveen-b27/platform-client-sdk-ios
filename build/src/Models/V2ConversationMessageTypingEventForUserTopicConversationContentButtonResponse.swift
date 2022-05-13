@@ -20,13 +20,9 @@ public class V2ConversationMessageTypingEventForUserTopicConversationContentButt
     public var payload: String?
 
     public init(type: ModelType?, text: String?, payload: String?) {
-        
         self.type = type
-        
         self.text = text
-        
         self.payload = payload
-        
     }
 
 

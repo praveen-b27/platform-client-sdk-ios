@@ -21,15 +21,10 @@ public class BuForecastResult: Codable {
     public var weekCount: Int?
 
     public init(referenceStartDate: Date?, planningGroups: [ForecastPlanningGroupData]?, weekNumber: Int?, weekCount: Int?) {
-        
         self.referenceStartDate = referenceStartDate
-        
         self.planningGroups = planningGroups
-        
         self.weekNumber = weekNumber
-        
         self.weekCount = weekCount
-        
     }
 
 

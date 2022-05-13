@@ -31,17 +31,11 @@ public class AuditEntityReference: Codable {
     public var action: String?
 
     public init(_id: String?, name: String?, selfUri: String?, type: ModelType?, action: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.selfUri = selfUri
-        
         self.type = type
-        
         self.action = action
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

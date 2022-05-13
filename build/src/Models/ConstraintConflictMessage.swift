@@ -17,11 +17,8 @@ public class ConstraintConflictMessage: Codable {
     public var conflictedConstraintMessages: [WorkPlanConstraintMessage]?
 
     public init(message: WorkPlanConstraintConflictMessage?, conflictedConstraintMessages: [WorkPlanConstraintMessage]?) {
-        
         self.message = message
-        
         self.conflictedConstraintMessages = conflictedConstraintMessages
-        
     }
 
 

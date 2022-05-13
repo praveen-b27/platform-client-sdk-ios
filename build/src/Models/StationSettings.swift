@@ -16,9 +16,7 @@ public class StationSettings: Codable {
     public var freeSeatingConfiguration: FreeSeatingConfiguration?
 
     public init(freeSeatingConfiguration: FreeSeatingConfiguration?) {
-        
         self.freeSeatingConfiguration = freeSeatingConfiguration
-        
     }
 
 

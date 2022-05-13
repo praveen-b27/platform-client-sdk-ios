@@ -19,13 +19,9 @@ public class UploadUrlResponse: Codable {
     public var headers: [String:String]?
 
     public init(url: String?, uploadKey: String?, headers: [String:String]?) {
-        
         self.url = url
-        
         self.uploadKey = uploadKey
-        
         self.headers = headers
-        
     }
 
 

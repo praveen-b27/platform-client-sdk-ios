@@ -43,27 +43,16 @@ public class ConversationQuery: Codable {
     public var paging: PagingSpec?
 
     public init(conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, resolutionFilters: [ResolutionDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, interval: String?, aggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?) {
-        
         self.conversationFilters = conversationFilters
-        
         self.segmentFilters = segmentFilters
-        
         self.evaluationFilters = evaluationFilters
-        
         self.surveyFilters = surveyFilters
-        
         self.resolutionFilters = resolutionFilters
-        
         self.order = order
-        
         self.orderBy = orderBy
-        
         self.interval = interval
-        
         self.aggregations = aggregations
-        
         self.paging = paging
-        
     }
 
 

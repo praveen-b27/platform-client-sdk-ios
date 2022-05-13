@@ -38,23 +38,14 @@ public class MessageDetails: Codable {
     public var errorInfo: ErrorBody?
 
     public init(messageId: String?, messageURI: String?, messageStatus: MessageStatus?, messageSegmentCount: Int?, messageTime: Date?, media: [MessageMedia]?, stickers: [MessageSticker]?, errorInfo: ErrorBody?) {
-        
         self.messageId = messageId
-        
         self.messageURI = messageURI
-        
         self.messageStatus = messageStatus
-        
         self.messageSegmentCount = messageSegmentCount
-        
         self.messageTime = messageTime
-        
         self.media = media
-        
         self.stickers = stickers
-        
         self.errorInfo = errorInfo
-        
     }
 
 

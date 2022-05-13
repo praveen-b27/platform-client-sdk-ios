@@ -40,21 +40,13 @@ public class Contact: Codable {
     public var integration: String?
 
     public init(address: String?, display: String?, mediaType: MediaType?, type: ModelType?, _extension: String?, countryCode: String?, integration: String?) {
-        
         self.address = address
-        
         self.display = display
-        
         self.mediaType = mediaType
-        
         self.type = type
-        
         self._extension = _extension
-        
         self.countryCode = countryCode
-        
         self.integration = integration
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -21,11 +21,8 @@ public class LearningAssignmentAggregateQueryRequestClause: Codable {
     public var predicates: [LearningAssignmentAggregateQueryRequestPredicate]?
 
     public init(type: ModelType?, predicates: [LearningAssignmentAggregateQueryRequestPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

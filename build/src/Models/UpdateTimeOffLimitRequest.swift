@@ -18,11 +18,8 @@ public class UpdateTimeOffLimitRequest: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(defaultLimitMinutes: Int?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.defaultLimitMinutes = defaultLimitMinutes
-        
         self.metadata = metadata
-        
     }
 
 

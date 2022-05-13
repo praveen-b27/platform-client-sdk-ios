@@ -21,11 +21,8 @@ public class TextBotUserInputEvent: Codable {
     public var alternatives: [TextBotUserInputAlternative]?
 
     public init(mode: Mode?, alternatives: [TextBotUserInputAlternative]?) {
-        
         self.mode = mode
-        
         self.alternatives = alternatives
-        
     }
 
 

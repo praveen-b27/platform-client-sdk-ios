@@ -21,11 +21,8 @@ public class SurveyDetailQueryClause: Codable {
     public var predicates: [SurveyDetailQueryPredicate]?
 
     public init(type: ModelType?, predicates: [SurveyDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

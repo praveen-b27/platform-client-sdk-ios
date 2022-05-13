@@ -26,23 +26,25 @@ public class WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadReques
         case json = "Json"
     }
     public var requestId: String?
+    public var dateImportStarted: Date?
+    public var dateImportEnded: Date?
+    public var dateCreated: Date?
+    public var dateModified: Date?
     public var status: Status?
     public var error: String?
     public var active: Bool?
     public var type: ModelType?
 
-    public init(requestId: String?, status: Status?, error: String?, active: Bool?, type: ModelType?) {
-        
+    public init(requestId: String?, dateImportStarted: Date?, dateImportEnded: Date?, dateCreated: Date?, dateModified: Date?, status: Status?, error: String?, active: Bool?, type: ModelType?) {
         self.requestId = requestId
-        
+        self.dateImportStarted = dateImportStarted
+        self.dateImportEnded = dateImportEnded
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
         self.status = status
-        
         self.error = error
-        
         self.active = active
-        
         self.type = type
-        
     }
 
 

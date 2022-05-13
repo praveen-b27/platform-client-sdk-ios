@@ -22,15 +22,10 @@ public class SupportedContentReference: Codable {
     public var mediaTypes: MediaTypes?
 
     public init(_id: String?, name: String?, selfUri: String?, mediaTypes: MediaTypes?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.selfUri = selfUri
-        
         self.mediaTypes = mediaTypes
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

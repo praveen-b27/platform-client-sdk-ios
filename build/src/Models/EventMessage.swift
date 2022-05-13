@@ -86,19 +86,12 @@ public class EventMessage: Codable {
     public var resourceURIs: [String]?
 
     public init(code: Code?, message: String?, messageWithParams: String?, messageParams: [String:JSON]?, documentationUri: String?, resourceURIs: [String]?) {
-        
         self.code = code
-        
         self.message = message
-        
         self.messageWithParams = messageWithParams
-        
         self.messageParams = messageParams
-        
         self.documentationUri = documentationUri
-        
         self.resourceURIs = resourceURIs
-        
     }
 
 

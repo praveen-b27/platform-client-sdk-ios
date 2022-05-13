@@ -17,11 +17,8 @@ public class CustomEventAttributeList: Codable {
     public var values: [String]?
 
     public init(dataType: String?, values: [String]?) {
-        
         self.dataType = dataType
-        
         self.values = values
-        
     }
 
 

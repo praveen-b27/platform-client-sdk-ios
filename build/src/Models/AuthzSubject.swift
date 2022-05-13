@@ -20,17 +20,11 @@ public class AuthzSubject: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, grants: [AuthzGrant]?, version: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.grants = grants
-        
         self.version = version
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

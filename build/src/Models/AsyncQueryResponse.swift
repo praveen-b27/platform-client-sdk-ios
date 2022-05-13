@@ -15,9 +15,7 @@ public class AsyncQueryResponse: Codable {
     public var jobId: String?
 
     public init(jobId: String?) {
-        
         self.jobId = jobId
-        
     }
 
 

@@ -17,11 +17,8 @@ public class CallCommand: Codable {
     public var phoneColumn: String?
 
     public init(callNumber: String?, phoneColumn: String?) {
-        
         self.callNumber = callNumber
-        
         self.phoneColumn = phoneColumn
-        
     }
 
 

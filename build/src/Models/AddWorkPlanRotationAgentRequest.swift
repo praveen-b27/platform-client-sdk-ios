@@ -19,13 +19,9 @@ public class AddWorkPlanRotationAgentRequest: Codable {
     public var position: Int?
 
     public init(userId: String?, dateRange: DateRangeWithOptionalEnd?, position: Int?) {
-        
         self.userId = userId
-        
         self.dateRange = dateRange
-        
         self.position = position
-        
     }
 
 

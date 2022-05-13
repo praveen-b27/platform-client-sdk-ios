@@ -18,11 +18,8 @@ public class EmergencyCallFlow: Codable {
     public var ivrs: [DomainEntityRef]?
 
     public init(emergencyFlow: DomainEntityRef?, ivrs: [DomainEntityRef]?) {
-        
         self.emergencyFlow = emergencyFlow
-        
         self.ivrs = ivrs
-        
     }
 
 

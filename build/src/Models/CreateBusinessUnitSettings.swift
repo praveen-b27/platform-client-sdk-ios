@@ -30,15 +30,10 @@ public class CreateBusinessUnitSettings: Codable {
     public var scheduling: BuSchedulingSettings?
 
     public init(startDayOfWeek: StartDayOfWeek?, timeZone: String?, shortTermForecasting: BuShortTermForecastingSettings?, scheduling: BuSchedulingSettings?) {
-        
         self.startDayOfWeek = startDayOfWeek
-        
         self.timeZone = timeZone
-        
         self.shortTermForecasting = shortTermForecasting
-        
         self.scheduling = scheduling
-        
     }
 
 

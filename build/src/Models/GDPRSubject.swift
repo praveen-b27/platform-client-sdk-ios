@@ -23,27 +23,16 @@ public class GDPRSubject: Codable {
     public var emailAddresses: [String]?
 
     public init(name: String?, userId: String?, externalContactId: String?, dialerContactId: DialerContactId?, journeyCustomer: GDPRJourneyCustomer?, socialHandle: SocialHandle?, externalId: String?, addresses: [String]?, phoneNumbers: [String]?, emailAddresses: [String]?) {
-        
         self.name = name
-        
         self.userId = userId
-        
         self.externalContactId = externalContactId
-        
         self.dialerContactId = dialerContactId
-        
         self.journeyCustomer = journeyCustomer
-        
         self.socialHandle = socialHandle
-        
         self.externalId = externalId
-        
         self.addresses = addresses
-        
         self.phoneNumbers = phoneNumbers
-        
         self.emailAddresses = emailAddresses
-        
     }
 
 

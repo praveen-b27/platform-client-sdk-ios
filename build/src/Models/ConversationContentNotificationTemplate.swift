@@ -12,7 +12,7 @@ import Foundation
 
 public class ConversationContentNotificationTemplate: Codable {
 
-    /** The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;. */
+    /** The messaging provider template ID. For WhatsApp, 'namespace@name'. */
     public var _id: String?
     /** Template language. */
     public var language: String?
@@ -24,17 +24,11 @@ public class ConversationContentNotificationTemplate: Codable {
     public var footer: ConversationNotificationTemplateFooter?
 
     public init(_id: String?, language: String?, header: ConversationNotificationTemplateHeader?, body: ConversationNotificationTemplateBody?, footer: ConversationNotificationTemplateFooter?) {
-        
         self._id = _id
-        
         self.language = language
-        
         self.header = header
-        
         self.body = body
-        
         self.footer = footer
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

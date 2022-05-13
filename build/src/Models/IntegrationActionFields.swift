@@ -17,11 +17,8 @@ public class IntegrationActionFields: Codable {
     public var requestMappings: [RequestMapping]?
 
     public init(integrationAction: IntegrationAction?, requestMappings: [RequestMapping]?) {
-        
         self.integrationAction = integrationAction
-        
         self.requestMappings = requestMappings
-        
     }
 
 

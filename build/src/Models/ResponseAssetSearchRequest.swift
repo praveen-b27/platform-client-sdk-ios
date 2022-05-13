@@ -27,17 +27,11 @@ public class ResponseAssetSearchRequest: Codable {
     public var query: [ResponseAssetFilter]?
 
     public init(pageSize: Int?, pageNumber: Int?, sortOrder: SortOrder?, sortBy: String?, query: [ResponseAssetFilter]?) {
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.query = query
-        
     }
 
 

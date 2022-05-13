@@ -11,10 +11,7 @@ import Foundation
 
 open class KnowledgeAPI {
     
-    
-    
     /**
-     
      Delete knowledge base
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -39,44 +36,36 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Delete knowledge base
-     
      - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "faqCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "faqCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "coreLanguage" : "en-US",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "articleCount" : 123,
-  "id" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "articleCount" : 6,
+  "id" : "id",
   "published" : true
-}}]
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
 
      - returns: RequestBuilder<KnowledgeBase> 
      */
-    open class func deleteKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: String) -> RequestBuilder<KnowledgeBase> {
+    open class func deleteKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: String) -> RequestBuilder<KnowledgeBase> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -85,9 +74,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -105,9 +91,7 @@ open class KnowledgeAPI {
     }
 
     
-    
     /**
-     
      Delete category
      
      - parameter categoryId: (path) Category ID 
@@ -134,36 +118,21 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Delete category
-     
      - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "languageCode" : "aeiou"
-}}]
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "languageCode" : "en-US"
+}, statusCode=200}]
      
      - parameter categoryId: (path) Category ID 
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -171,7 +140,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeCategory> 
      */
-    open class func deleteKnowledgeKnowledgebaseLanguageCategoryWithRequestBuilder(categoryId: String, knowledgeBaseId: String, languageCode: LanguageCode_deleteKnowledgeKnowledgebaseLanguageCategory) -> RequestBuilder<KnowledgeCategory> {
+    open class func deleteKnowledgeKnowledgebaseLanguageCategoryWithRequestBuilder(categoryId: String, knowledgeBaseId: String, languageCode: LanguageCode_deleteKnowledgeKnowledgebaseLanguageCategory) -> RequestBuilder<KnowledgeCategory> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}"
         let categoryIdPreEscape = "\(categoryId)"
         let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -183,12 +152,7 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -197,9 +161,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -217,9 +178,7 @@ open class KnowledgeAPI {
     }
 
     
-    
     /**
-     
      Delete document
      
      - parameter documentId: (path) Document ID 
@@ -246,61 +205,43 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Delete document
-     
      - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "externalUrl" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "knowledgeBase" : "",
-  "faq" : {
-    "question" : "aeiou",
-    "answer" : "aeiou",
-    "alternatives" : [ "aeiou" ]
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "externalUrl" : "externalUrl",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "faq" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "categories" : [ {
-    "knowledgeBase" : {
-      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "faqCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "coreLanguage" : "en-US",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "articleCount" : 123,
-      "id" : "aeiou",
-      "published" : true
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "languageCode" : "aeiou"
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
   } ],
-  "languageCode" : "aeiou",
-  "type" : "aeiou",
-  "article" : {
-    "alternatives" : [ "aeiou" ],
-    "title" : "aeiou",
-    "content" : {
-      "body" : {
-        "locationUrl" : "aeiou"
-      }
-    }
-  }
-}}]
+  "languageCode" : "en-US",
+  "type" : "Faq",
+  "article" : "{}"
+}, statusCode=200}]
      
      - parameter documentId: (path) Document ID 
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -308,7 +249,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeDocument> 
      */
-    open class func deleteKnowledgeKnowledgebaseLanguageDocumentWithRequestBuilder(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocument) -> RequestBuilder<KnowledgeDocument> {
+    open class func deleteKnowledgeKnowledgebaseLanguageDocumentWithRequestBuilder(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocument) -> RequestBuilder<KnowledgeDocument> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}"
         let documentIdPreEscape = "\(documentId)"
         let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -320,12 +261,7 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -334,8 +270,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
@@ -353,10 +287,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Delete import operation
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -376,11 +307,8 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Delete import operation
-     
      - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -391,7 +319,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String) -> RequestBuilder<Void> {
+    open class func deleteKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -403,12 +331,7 @@ open class KnowledgeAPI {
         let importIdPostEscape = importIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{importId}", with: importIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -418,10 +341,7 @@ open class KnowledgeAPI {
     }
 
     
-    
-    
     /**
-     
      Get knowledge base
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -446,44 +366,36 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get knowledge base
-     
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "faqCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "faqCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "coreLanguage" : "en-US",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "articleCount" : 123,
-  "id" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "articleCount" : 6,
+  "id" : "id",
   "published" : true
-}}]
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
 
      - returns: RequestBuilder<KnowledgeBase> 
      */
-    open class func getKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: String) -> RequestBuilder<KnowledgeBase> {
+    open class func getKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: String) -> RequestBuilder<KnowledgeBase> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -492,8 +404,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageCategories: String { 
@@ -515,14 +425,7 @@ open class KnowledgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Get categories
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -553,41 +456,35 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get categories
-     
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "knowledgeBase" : {
-      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "faqCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "coreLanguage" : "en-US",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "articleCount" : 123,
-      "id" : "aeiou",
-      "published" : true
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "languageCode" : "aeiou"
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -599,7 +496,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<CategoryListing> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageCategoriesWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageCategories, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil) -> RequestBuilder<CategoryListing> {
+    open class func getKnowledgeKnowledgebaseLanguageCategoriesWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageCategories, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil) -> RequestBuilder<CategoryListing> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -608,26 +505,15 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "before": before, 
-            
             "after": after, 
-            
             "limit": limit, 
-            
             "pageSize": pageSize, 
-            
             "name": name
-            
         ])
 
         let requestBuilder: RequestBuilder<CategoryListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -635,9 +521,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -655,9 +538,7 @@ open class KnowledgeAPI {
     }
 
     
-    
     /**
-     
      Get category
      
      - parameter categoryId: (path) Category ID 
@@ -684,47 +565,41 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get category
-     
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "parent" : {
-    "knowledgeBase" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "languageCode" : "aeiou"
-  },
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "children" : [ "" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "languageCode" : "aeiou"
-}}]
+  "parent" : "{}",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "children" : [ {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "languageCode" : "en-US"
+}, statusCode=200}]
      
      - parameter categoryId: (path) Category ID 
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -732,7 +607,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeExtendedCategory> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageCategoryWithRequestBuilder(categoryId: String, knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageCategory) -> RequestBuilder<KnowledgeExtendedCategory> {
+    open class func getKnowledgeKnowledgebaseLanguageCategoryWithRequestBuilder(categoryId: String, knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageCategory) -> RequestBuilder<KnowledgeExtendedCategory> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}"
         let categoryIdPreEscape = "\(categoryId)"
         let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -744,12 +619,7 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -758,9 +628,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -778,9 +645,7 @@ open class KnowledgeAPI {
     }
 
     
-    
     /**
-     
      Get document
      
      - parameter documentId: (path) Document ID 
@@ -807,61 +672,43 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get document
-     
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "externalUrl" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "knowledgeBase" : "",
-  "faq" : {
-    "question" : "aeiou",
-    "answer" : "aeiou",
-    "alternatives" : [ "aeiou" ]
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "externalUrl" : "externalUrl",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "faq" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "categories" : [ {
-    "knowledgeBase" : {
-      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "faqCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "coreLanguage" : "en-US",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "articleCount" : 123,
-      "id" : "aeiou",
-      "published" : true
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "languageCode" : "aeiou"
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
   } ],
-  "languageCode" : "aeiou",
-  "type" : "aeiou",
-  "article" : {
-    "alternatives" : [ "aeiou" ],
-    "title" : "aeiou",
-    "content" : {
-      "body" : {
-        "locationUrl" : "aeiou"
-      }
-    }
-  }
-}}]
+  "languageCode" : "en-US",
+  "type" : "Faq",
+  "article" : "{}"
+}, statusCode=200}]
      
      - parameter documentId: (path) Document ID 
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -869,7 +716,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeDocument> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageDocumentWithRequestBuilder(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocument) -> RequestBuilder<KnowledgeDocument> {
+    open class func getKnowledgeKnowledgebaseLanguageDocumentWithRequestBuilder(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocument) -> RequestBuilder<KnowledgeDocument> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}"
         let documentIdPreEscape = "\(documentId)"
         let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -881,12 +728,7 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -895,8 +737,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments: String { 
@@ -920,19 +760,11 @@ open class KnowledgeAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     public enum SortBy_getKnowledgeKnowledgebaseLanguageDocuments: String { 
         case title = "Title"
         case date = "Date"
     }
 
-    
     
     
     public enum SortOrder_getKnowledgeKnowledgebaseLanguageDocuments: String { 
@@ -944,10 +776,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Get documents
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -982,66 +811,79 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get documents
-     
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "externalUrl" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "knowledgeBase" : "",
-    "faq" : {
-      "question" : "aeiou",
-      "answer" : "aeiou",
-      "alternatives" : [ "aeiou" ]
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
+    "externalUrl" : "externalUrl",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeBase" : "{}",
+    "faq" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
     "categories" : [ {
-      "knowledgeBase" : {
-        "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "faqCount" : 123,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "coreLanguage" : "en-US",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "articleCount" : 123,
-        "id" : "aeiou",
-        "published" : true
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "languageCode" : "aeiou"
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    }, {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
     } ],
-    "languageCode" : "aeiou",
-    "type" : "aeiou",
-    "article" : {
-      "alternatives" : [ "aeiou" ],
-      "title" : "aeiou",
-      "content" : {
-        "body" : {
-          "locationUrl" : "aeiou"
-        }
-      }
-    }
+    "languageCode" : "en-US",
+    "type" : "Faq",
+    "article" : "{}"
+  }, {
+    "externalUrl" : "externalUrl",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeBase" : "{}",
+    "faq" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "categories" : [ {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    }, {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    } ],
+    "languageCode" : "en-US",
+    "type" : "Faq",
+    "article" : "{}"
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -1057,7 +899,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<DocumentListing> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, title: String? = nil, sortBy: SortBy_getKnowledgeKnowledgebaseLanguageDocuments? = nil, sortOrder: SortOrder_getKnowledgeKnowledgebaseLanguageDocuments? = nil, documentIds: [String]? = nil) -> RequestBuilder<DocumentListing> {
+    open class func getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, title: String? = nil, sortBy: SortBy_getKnowledgeKnowledgebaseLanguageDocuments? = nil, sortOrder: SortOrder_getKnowledgeKnowledgebaseLanguageDocuments? = nil, documentIds: [String]? = nil) -> RequestBuilder<DocumentListing> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1066,34 +908,19 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "before": before, 
-            
             "after": after, 
-            
             "limit": limit, 
-            
             "pageSize": pageSize, 
-            
             "categories": categories, 
-            
             "title": title, 
-            
             "sortBy": sortBy?.rawValue, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "documentIds": documentIds
-            
         ])
 
         let requestBuilder: RequestBuilder<DocumentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1101,8 +928,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
@@ -1120,10 +945,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Get import operation report
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -1150,51 +972,25 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get import operation report
-     
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "ignoreHeaders" : true,
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "uploadKey" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "report" : {
-    "validated" : {
-      "success" : 123,
-      "failure" : 123
-    },
-    "totalDocuments" : 123,
-    "imported" : "",
-    "errors" : [ {
-      "line" : 123,
-      "message" : "aeiou"
-    } ]
-  },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "languageCode" : "aeiou",
-  "fileType" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "report" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "languageCode" : "en-US",
+  "fileType" : "Csv",
+  "status" : "Created"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -1202,7 +998,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeImport> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String) -> RequestBuilder<KnowledgeImport> {
+    open class func getKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String) -> RequestBuilder<KnowledgeImport> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1214,12 +1010,7 @@ open class KnowledgeAPI {
         let importIdPostEscape = importIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{importId}", with: importIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1228,8 +1019,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageTraining: String { 
@@ -1247,10 +1036,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Get training detail
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -1277,38 +1063,23 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get training detail
-     
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateTriggered" : "2000-01-23T04:56:07.000+0000",
-  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "datePromoted" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "errorMessage" : "aeiou",
-  "id" : "aeiou",
-  "languageCode" : "aeiou",
-  "knowledgeDocumentsState" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "knowledgeBase" : "{}",
+  "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "datePromoted" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "errorMessage" : "errorMessage",
+  "id" : "id",
+  "languageCode" : "languageCode",
+  "knowledgeDocumentsState" : "Draft",
+  "status" : "Queued"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -1316,7 +1087,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeTraining> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageTrainingWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageTraining, trainingId: String) -> RequestBuilder<KnowledgeTraining> {
+    open class func getKnowledgeKnowledgebaseLanguageTrainingWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageTraining, trainingId: String) -> RequestBuilder<KnowledgeTraining> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1328,12 +1099,7 @@ open class KnowledgeAPI {
         let trainingIdPostEscape = trainingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trainingId}", with: trainingIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1342,8 +1108,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings: String { 
@@ -1365,11 +1129,6 @@ open class KnowledgeAPI {
     
     
     
-    
-    
-    
-    
-    
     public enum KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings: String { 
         case draft = "Draft"
         case active = "Active"
@@ -1378,9 +1137,7 @@ open class KnowledgeAPI {
     }
 
     
-    
     /**
-     
      Get all trainings information for a knowledgebase
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -1411,43 +1168,39 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get all trainings information for a knowledgebase
-     
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "knowledgeBase" : {
-      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "faqCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "coreLanguage" : "en-US",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "articleCount" : 123,
-      "id" : "aeiou",
-      "published" : true
-    },
-    "dateTriggered" : "2000-01-23T04:56:07.000+0000",
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "datePromoted" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "errorMessage" : "aeiou",
-    "id" : "aeiou",
-    "languageCode" : "aeiou",
-    "knowledgeDocumentsState" : "aeiou",
-    "status" : "aeiou"
+    "knowledgeBase" : "{}",
+    "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "datePromoted" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "errorMessage" : "errorMessage",
+    "id" : "id",
+    "languageCode" : "languageCode",
+    "knowledgeDocumentsState" : "Draft",
+    "status" : "Queued"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "datePromoted" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "errorMessage" : "errorMessage",
+    "id" : "id",
+    "languageCode" : "languageCode",
+    "knowledgeDocumentsState" : "Draft",
+    "status" : "Queued"
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -1459,7 +1212,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<TrainingListing> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageTrainingsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, knowledgeDocumentsState: KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings? = nil) -> RequestBuilder<TrainingListing> {
+    open class func getKnowledgeKnowledgebaseLanguageTrainingsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, knowledgeDocumentsState: KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings? = nil) -> RequestBuilder<TrainingListing> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1468,26 +1221,15 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "before": before, 
-            
             "after": after, 
-            
             "limit": limit, 
-            
             "pageSize": pageSize, 
-            
             "knowledgeDocumentsState": knowledgeDocumentsState?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<TrainingListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1495,12 +1237,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
-    
-    
-    
     
     
     
@@ -1523,14 +1259,11 @@ open class KnowledgeAPI {
     
     
     
-    
-    
     public enum SortBy_getKnowledgeKnowledgebases: String { 
         case name = "Name"
         case date = "Date"
     }
 
-    
     
     
     public enum SortOrder_getKnowledgeKnowledgebases: String { 
@@ -1541,9 +1274,7 @@ open class KnowledgeAPI {
     }
 
     
-    
     /**
-     
      Get knowledge bases
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
@@ -1576,32 +1307,41 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Get knowledge bases
-     
      - GET /api/v2/knowledge/knowledgebases
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "faqCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
     "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "articleCount" : 6,
+    "id" : "id",
+    "published" : true
+  }, {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "faqCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "coreLanguage" : "en-US",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "articleCount" : 6,
+    "id" : "id",
     "published" : true
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
@@ -1615,37 +1355,22 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeBaseListing> 
      */
-    open class func getKnowledgeKnowledgebasesWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, published: Bool? = nil, sortBy: SortBy_getKnowledgeKnowledgebases? = nil, sortOrder: SortOrder_getKnowledgeKnowledgebases? = nil) -> RequestBuilder<KnowledgeBaseListing> {
+    open class func getKnowledgeKnowledgebasesWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, published: Bool? = nil, sortBy: SortBy_getKnowledgeKnowledgebases? = nil, sortOrder: SortOrder_getKnowledgeKnowledgebases? = nil) -> RequestBuilder<KnowledgeBaseListing> {        
         let path = "/api/v2/knowledge/knowledgebases"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "before": before, 
-            
             "after": after, 
-            
             "limit": limit, 
-            
             "pageSize": pageSize, 
-            
             "name": name, 
-            
             "coreLanguage": coreLanguage?.rawValue, 
-            
             "published": published, 
-            
             "sortBy": sortBy?.rawValue, 
-            
             "sortOrder": sortOrder?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeBaseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1655,11 +1380,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update knowledge base
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -1685,43 +1406,38 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Update knowledge base
-     
      - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "faqCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "faqCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "coreLanguage" : "en-US",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "articleCount" : 123,
-  "id" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "articleCount" : 6,
+  "id" : "id",
   "published" : true
-}}]
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter body: (body)  
 
      - returns: RequestBuilder<KnowledgeBase> 
      */
-    open class func patchKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeBase) -> RequestBuilder<KnowledgeBase> {
+    open class func patchKnowledgeKnowledgebaseWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeBase) -> RequestBuilder<KnowledgeBase> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1729,9 +1445,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -1750,10 +1463,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Update category
      
      - parameter categoryId: (path) Category ID 
@@ -1781,47 +1491,41 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Update category
-     
      - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "parent" : {
-    "knowledgeBase" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "languageCode" : "aeiou"
-  },
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "children" : [ "" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "languageCode" : "aeiou"
-}}]
+  "parent" : "{}",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "children" : [ {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "languageCode" : "en-US"
+}, statusCode=200}]
      
      - parameter categoryId: (path) Category ID 
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -1830,7 +1534,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeExtendedCategory> 
      */
-    open class func patchKnowledgeKnowledgebaseLanguageCategoryWithRequestBuilder(categoryId: String, knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageCategory, body: KnowledgeCategoryRequest) -> RequestBuilder<KnowledgeExtendedCategory> {
+    open class func patchKnowledgeKnowledgebaseLanguageCategoryWithRequestBuilder(categoryId: String, knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageCategory, body: KnowledgeCategoryRequest) -> RequestBuilder<KnowledgeExtendedCategory> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}"
         let categoryIdPreEscape = "\(categoryId)"
         let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1842,10 +1546,8 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeExtendedCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1853,9 +1555,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -1874,10 +1573,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Update document
      
      - parameter documentId: (path) Document ID 
@@ -1905,61 +1601,43 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Update document
-     
      - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "externalUrl" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "knowledgeBase" : "",
-  "faq" : {
-    "question" : "aeiou",
-    "answer" : "aeiou",
-    "alternatives" : [ "aeiou" ]
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "externalUrl" : "externalUrl",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "faq" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "categories" : [ {
-    "knowledgeBase" : {
-      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "faqCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "coreLanguage" : "en-US",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "articleCount" : 123,
-      "id" : "aeiou",
-      "published" : true
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "languageCode" : "aeiou"
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
   } ],
-  "languageCode" : "aeiou",
-  "type" : "aeiou",
-  "article" : {
-    "alternatives" : [ "aeiou" ],
-    "title" : "aeiou",
-    "content" : {
-      "body" : {
-        "locationUrl" : "aeiou"
-      }
-    }
-  }
-}}]
+  "languageCode" : "en-US",
+  "type" : "Faq",
+  "article" : "{}"
+}, statusCode=200}]
      
      - parameter documentId: (path) Document ID 
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -1968,7 +1646,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeDocument> 
      */
-    open class func patchKnowledgeKnowledgebaseLanguageDocumentWithRequestBuilder(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageDocument, body: KnowledgeDocumentRequest) -> RequestBuilder<KnowledgeDocument> {
+    open class func patchKnowledgeKnowledgebaseLanguageDocumentWithRequestBuilder(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageDocument, body: KnowledgeDocumentRequest) -> RequestBuilder<KnowledgeDocument> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}"
         let documentIdPreEscape = "\(documentId)"
         let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1980,10 +1658,8 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1991,8 +1667,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocuments: String { 
@@ -2010,10 +1684,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Update documents collection
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -2040,66 +1711,79 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Update documents collection
-     
      - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "externalUrl" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "knowledgeBase" : "",
-    "faq" : {
-      "question" : "aeiou",
-      "answer" : "aeiou",
-      "alternatives" : [ "aeiou" ]
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
+    "externalUrl" : "externalUrl",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeBase" : "{}",
+    "faq" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
     "categories" : [ {
-      "knowledgeBase" : {
-        "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "faqCount" : 123,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "coreLanguage" : "en-US",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "articleCount" : 123,
-        "id" : "aeiou",
-        "published" : true
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "languageCode" : "aeiou"
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    }, {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
     } ],
-    "languageCode" : "aeiou",
-    "type" : "aeiou",
-    "article" : {
-      "alternatives" : [ "aeiou" ],
-      "title" : "aeiou",
-      "content" : {
-        "body" : {
-          "locationUrl" : "aeiou"
-        }
-      }
-    }
+    "languageCode" : "en-US",
+    "type" : "Faq",
+    "article" : "{}"
+  }, {
+    "externalUrl" : "externalUrl",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeBase" : "{}",
+    "faq" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "categories" : [ {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    }, {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    } ],
+    "languageCode" : "en-US",
+    "type" : "Faq",
+    "article" : "{}"
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -2107,7 +1791,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<DocumentListing> 
      */
-    open class func patchKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageDocuments, body: [KnowledgeDocumentBulkRequest]) -> RequestBuilder<DocumentListing> {
+    open class func patchKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageDocuments, body: [KnowledgeDocumentBulkRequest]) -> RequestBuilder<DocumentListing> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2116,10 +1800,8 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DocumentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2127,8 +1809,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
@@ -2147,11 +1827,7 @@ open class KnowledgeAPI {
     
     
     
-    
-    
-    
     /**
-     
      Start import operation
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -2179,51 +1855,25 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Start import operation
-     
      - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "ignoreHeaders" : true,
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "uploadKey" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "report" : {
-    "validated" : {
-      "success" : 123,
-      "failure" : 123
-    },
-    "totalDocuments" : 123,
-    "imported" : "",
-    "errors" : [ {
-      "line" : 123,
-      "message" : "aeiou"
-    } ]
-  },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "languageCode" : "aeiou",
-  "fileType" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "report" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "languageCode" : "en-US",
+  "fileType" : "Csv",
+  "status" : "Created"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -2232,7 +1882,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeImport> 
      */
-    open class func patchKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String, body: ImportStatusRequest) -> RequestBuilder<KnowledgeImport> {
+    open class func patchKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String, body: ImportStatusRequest) -> RequestBuilder<KnowledgeImport> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2244,10 +1894,8 @@ open class KnowledgeAPI {
         let importIdPostEscape = importIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{importId}", with: importIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2256,10 +1904,7 @@ open class KnowledgeAPI {
     }
 
     
-    
-    
     /**
-     
      Creates a presigned URL for uploading a knowledge import file with a set of documents
      
      - parameter body: (body) query 
@@ -2284,33 +1929,28 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Creates a presigned URL for uploading a knowledge import file with a set of documents
-     
      - POST /api/v2/knowledge/documentuploads
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<UploadUrlResponse> 
      */
-    open class func postKnowledgeDocumentuploadsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {
+    open class func postKnowledgeDocumentuploadsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {        
         let path = "/api/v2/knowledge/documentuploads"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2318,8 +1958,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageCategories: String { 
@@ -2337,10 +1975,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Create new category
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -2367,47 +2002,41 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Create new category
-     
      - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "parent" : {
-    "knowledgeBase" : "",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "languageCode" : "aeiou"
-  },
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "children" : [ "" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "languageCode" : "aeiou"
-}}]
+  "parent" : "{}",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "children" : [ {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "languageCode" : "en-US"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -2415,7 +2044,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeExtendedCategory> 
      */
-    open class func postKnowledgeKnowledgebaseLanguageCategoriesWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageCategories, body: KnowledgeCategoryRequest) -> RequestBuilder<KnowledgeExtendedCategory> {
+    open class func postKnowledgeKnowledgebaseLanguageCategoriesWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageCategories, body: KnowledgeCategoryRequest) -> RequestBuilder<KnowledgeExtendedCategory> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2424,10 +2053,8 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeExtendedCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2435,8 +2062,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocuments: String { 
@@ -2454,10 +2079,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Create document
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -2484,61 +2106,43 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Create document
-     
      - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "externalUrl" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "knowledgeBase" : "",
-  "faq" : {
-    "question" : "aeiou",
-    "answer" : "aeiou",
-    "alternatives" : [ "aeiou" ]
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "externalUrl" : "externalUrl",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "faq" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "categories" : [ {
-    "knowledgeBase" : {
-      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "faqCount" : 123,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "coreLanguage" : "en-US",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "articleCount" : 123,
-      "id" : "aeiou",
-      "published" : true
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "languageCode" : "aeiou"
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
+  }, {
+    "knowledgeBase" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "languageCode" : "en-US"
   } ],
-  "languageCode" : "aeiou",
-  "type" : "aeiou",
-  "article" : {
-    "alternatives" : [ "aeiou" ],
-    "title" : "aeiou",
-    "content" : {
-      "body" : {
-        "locationUrl" : "aeiou"
-      }
-    }
-  }
-}}]
+  "languageCode" : "en-US",
+  "type" : "Faq",
+  "article" : "{}"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -2546,7 +2150,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeDocument> 
      */
-    open class func postKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageDocuments, body: KnowledgeDocumentRequest) -> RequestBuilder<KnowledgeDocument> {
+    open class func postKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageDocuments, body: KnowledgeDocumentRequest) -> RequestBuilder<KnowledgeDocument> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2555,10 +2159,8 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2566,8 +2168,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports: String { 
@@ -2585,10 +2185,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Create import operation
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -2615,51 +2212,25 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Create import operation
-     
      - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "ignoreHeaders" : true,
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "uploadKey" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "report" : {
-    "validated" : {
-      "success" : 123,
-      "failure" : 123
-    },
-    "totalDocuments" : 123,
-    "imported" : "",
-    "errors" : [ {
-      "line" : 123,
-      "message" : "aeiou"
-    } ]
-  },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "languageCode" : "aeiou",
-  "fileType" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "report" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "languageCode" : "en-US",
+  "fileType" : "Csv",
+  "status" : "Created"
+}, statusCode=202}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -2667,7 +2238,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeImport> 
      */
-    open class func postKnowledgeKnowledgebaseLanguageDocumentsImportsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports, body: KnowledgeImport) -> RequestBuilder<KnowledgeImport> {
+    open class func postKnowledgeKnowledgebaseLanguageDocumentsImportsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports, body: KnowledgeImport) -> RequestBuilder<KnowledgeImport> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2676,10 +2247,8 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2687,8 +2256,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageTrainingPromote: String { 
@@ -2706,10 +2273,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
     /**
-     
      Promote trained documents from draft state to active.
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -2736,38 +2300,23 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Promote trained documents from draft state to active.
-     
      - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}/promote
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateTriggered" : "2000-01-23T04:56:07.000+0000",
-  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "datePromoted" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "errorMessage" : "aeiou",
-  "id" : "aeiou",
-  "languageCode" : "aeiou",
-  "knowledgeDocumentsState" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "knowledgeBase" : "{}",
+  "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "datePromoted" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "errorMessage" : "errorMessage",
+  "id" : "id",
+  "languageCode" : "languageCode",
+  "knowledgeDocumentsState" : "Draft",
+  "status" : "Queued"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -2775,7 +2324,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeTraining> 
      */
-    open class func postKnowledgeKnowledgebaseLanguageTrainingPromoteWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageTrainingPromote, trainingId: String) -> RequestBuilder<KnowledgeTraining> {
+    open class func postKnowledgeKnowledgebaseLanguageTrainingPromoteWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageTrainingPromote, trainingId: String) -> RequestBuilder<KnowledgeTraining> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}/promote"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2787,12 +2336,7 @@ open class KnowledgeAPI {
         let trainingIdPostEscape = trainingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trainingId}", with: trainingIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2801,8 +2345,6 @@ open class KnowledgeAPI {
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageTrainings: String { 
@@ -2819,9 +2361,7 @@ open class KnowledgeAPI {
     }
 
     
-    
     /**
-     
      Trigger training
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -2847,45 +2387,30 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Trigger training
-     
      - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "knowledgeBase" : {
-    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "faqCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "coreLanguage" : "en-US",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "articleCount" : 123,
-    "id" : "aeiou",
-    "published" : true
-  },
-  "dateTriggered" : "2000-01-23T04:56:07.000+0000",
-  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "datePromoted" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "errorMessage" : "aeiou",
-  "id" : "aeiou",
-  "languageCode" : "aeiou",
-  "knowledgeDocumentsState" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "knowledgeBase" : "{}",
+  "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "datePromoted" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "errorMessage" : "errorMessage",
+  "id" : "id",
+  "languageCode" : "languageCode",
+  "knowledgeDocumentsState" : "Draft",
+  "status" : "Queued"
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
 
      - returns: RequestBuilder<KnowledgeTraining> 
      */
-    open class func postKnowledgeKnowledgebaseLanguageTrainingsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageTrainings) -> RequestBuilder<KnowledgeTraining> {
+    open class func postKnowledgeKnowledgebaseLanguageTrainingsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageTrainings) -> RequestBuilder<KnowledgeTraining> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2894,12 +2419,7 @@ open class KnowledgeAPI {
         let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2910,11 +2430,7 @@ open class KnowledgeAPI {
 
     
     
-    
-    
-    
     /**
-     
      Search Documents
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -2940,85 +2456,97 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Search Documents
-     
      - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123,
-  "pageCount" : 123,
-  "pageNumber" : 123,
-  "searchId" : "aeiou",
-  "pageSize" : 123,
+  "total" : 0,
+  "pageCount" : 6,
+  "pageNumber" : 5,
+  "searchId" : "searchId",
+  "pageSize" : 1,
   "results" : [ {
-    "externalUrl" : "aeiou",
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "languageCode" : "aeiou",
-    "type" : "aeiou",
-    "article" : {
-      "alternatives" : [ "aeiou" ],
-      "title" : "aeiou",
-      "content" : {
-        "body" : {
-          "locationUrl" : "aeiou"
-        }
-      }
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "knowledgeBase" : "",
-    "faq" : {
-      "question" : "aeiou",
-      "answer" : "aeiou",
-      "alternatives" : [ "aeiou" ]
-    },
-    "name" : "aeiou",
-    "id" : "aeiou",
+    "externalUrl" : "externalUrl",
+    "confidence" : 5.637376656633329,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "languageCode" : "en-US",
+    "type" : "Faq",
+    "article" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeBase" : "{}",
+    "faq" : "{}",
+    "name" : "name",
+    "id" : "id",
     "categories" : [ {
-      "knowledgeBase" : {
-        "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "faqCount" : 123,
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "description" : "aeiou",
-        "coreLanguage" : "en-US",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "articleCount" : 123,
-        "id" : "aeiou",
-        "published" : true
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "languageCode" : "aeiou"
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    }, {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    } ]
+  }, {
+    "externalUrl" : "externalUrl",
+    "confidence" : 5.637376656633329,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "languageCode" : "en-US",
+    "type" : "Faq",
+    "article" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeBase" : "{}",
+    "faq" : "{}",
+    "name" : "name",
+    "id" : "id",
+    "categories" : [ {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
+    }, {
+      "knowledgeBase" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "languageCode" : "en-US"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<KnowledgeSearchResponse> 
      */
-    open class func postKnowledgeKnowledgebaseSearchWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeSearchRequest? = nil) -> RequestBuilder<KnowledgeSearchResponse> {
+    open class func postKnowledgeKnowledgebaseSearchWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeSearchRequest? = nil) -> RequestBuilder<KnowledgeSearchResponse> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3027,10 +2555,7 @@ open class KnowledgeAPI {
     }
 
     
-    
-    
     /**
-     
      Create new knowledge base
      
      - parameter body: (body)  
@@ -3055,39 +2580,34 @@ open class KnowledgeAPI {
     }
 
     /**
-     
      Create new knowledge base
-     
      - POST /api/v2/knowledge/knowledgebases
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "faqCount" : 123,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "faqCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "coreLanguage" : "en-US",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "articleCount" : 123,
-  "id" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "articleCount" : 6,
+  "id" : "id",
   "published" : true
-}}]
+}, statusCode=200}]
      
      - parameter body: (body)  
 
      - returns: RequestBuilder<KnowledgeBase> 
      */
-    open class func postKnowledgeKnowledgebasesWithRequestBuilder(body: KnowledgeBase) -> RequestBuilder<KnowledgeBase> {
+    open class func postKnowledgeKnowledgebasesWithRequestBuilder(body: KnowledgeBase) -> RequestBuilder<KnowledgeBase> {        
         let path = "/api/v2/knowledge/knowledgebases"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

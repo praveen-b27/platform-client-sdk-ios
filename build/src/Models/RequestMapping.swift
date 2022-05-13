@@ -31,15 +31,10 @@ public class RequestMapping: Codable {
     public var value: String?
 
     public init(name: String?, attributeType: AttributeType?, mappingType: MappingType?, value: String?) {
-        
         self.name = name
-        
         self.attributeType = attributeType
-        
         self.mappingType = mappingType
-        
         self.value = value
-        
     }
 
 

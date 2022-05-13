@@ -17,11 +17,8 @@ public class ValidateAddressResponse: Codable {
     public var response: SubscriberResponse?
 
     public init(valid: Bool?, response: SubscriberResponse?) {
-        
         self.valid = valid
-        
         self.response = response
-        
     }
 
 

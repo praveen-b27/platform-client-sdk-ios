@@ -17,11 +17,8 @@ public class InboundDomainPatchRequest: Codable {
     public var customSMTPServer: DomainEntityRef?
 
     public init(mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?) {
-        
         self.mailFromSettings = mailFromSettings
-        
         self.customSMTPServer = customSMTPServer
-        
     }
 
 

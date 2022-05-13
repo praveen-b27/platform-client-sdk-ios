@@ -18,13 +18,9 @@ public class PresenceDefinition: Codable {
     public var selfUri: String?
 
     public init(_id: String?, systemPresence: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.systemPresence = systemPresence
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

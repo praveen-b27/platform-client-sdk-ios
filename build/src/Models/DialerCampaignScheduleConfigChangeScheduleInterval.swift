@@ -17,11 +17,8 @@ public class DialerCampaignScheduleConfigChangeScheduleInterval: Codable {
     public var end: String?
 
     public init(start: String?, end: String?) {
-        
         self.start = start
-        
         self.end = end
-        
     }
 
 

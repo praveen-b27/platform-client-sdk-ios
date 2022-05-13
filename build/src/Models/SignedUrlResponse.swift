@@ -20,15 +20,10 @@ public class SignedUrlResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, url: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.url = url
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -30,7 +30,7 @@ public class SendAgentlessOutboundMessageResponse: Codable {
     public var textBody: String?
     /** The messaging template sent */
     public var messagingTemplate: MessagingTemplateRequest?
-    /** Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false */
+    /** Use an existing active conversation to send the agentless outbound message. Set this parameter to 'true' to use active conversation. Default value: false */
     public var useExistingActiveConversation: Bool?
     /** The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
@@ -40,29 +40,17 @@ public class SendAgentlessOutboundMessageResponse: Codable {
     public var user: AddressableEntityRef?
 
     public init(_id: String?, conversationId: String?, fromAddress: String?, toAddress: String?, messengerType: MessengerType?, textBody: String?, messagingTemplate: MessagingTemplateRequest?, useExistingActiveConversation: Bool?, timestamp: Date?, selfUri: String?, user: AddressableEntityRef?) {
-        
         self._id = _id
-        
         self.conversationId = conversationId
-        
         self.fromAddress = fromAddress
-        
         self.toAddress = toAddress
-        
         self.messengerType = messengerType
-        
         self.textBody = textBody
-        
         self.messagingTemplate = messagingTemplate
-        
         self.useExistingActiveConversation = useExistingActiveConversation
-        
         self.timestamp = timestamp
-        
         self.selfUri = selfUri
-        
         self.user = user
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

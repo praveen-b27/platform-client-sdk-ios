@@ -15,9 +15,7 @@ public class ValidateAssignUsers: Codable {
     public var membersToAssign: [String]?
 
     public init(membersToAssign: [String]?) {
-        
         self.membersToAssign = membersToAssign
-        
     }
 
 

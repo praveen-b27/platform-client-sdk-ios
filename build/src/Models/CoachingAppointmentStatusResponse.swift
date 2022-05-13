@@ -27,15 +27,10 @@ public class CoachingAppointmentStatusResponse: Codable {
     public var status: Status?
 
     public init(appointment: CoachingAppointmentReference?, createdBy: UserReference?, dateCreated: Date?, status: Status?) {
-        
         self.appointment = appointment
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.status = status
-        
     }
 
 

@@ -56,43 +56,24 @@ public class ShiftTradeResponse: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(_id: String?, weekDate: Date?, schedule: BuScheduleReferenceForMuRoute?, state: State?, initiatingUser: UserReference?, initiatingShiftId: String?, initiatingShiftStart: Date?, initiatingShiftEnd: Date?, receivingUser: UserReference?, receivingShiftId: String?, receivingShiftStart: Date?, receivingShiftEnd: Date?, expiration: Date?, oneSided: Bool?, acceptableIntervals: [String]?, reviewedBy: UserReference?, reviewedDate: Date?, metadata: WfmVersionedEntityMetadata?) {
-        
         self._id = _id
-        
         self.weekDate = weekDate
-        
         self.schedule = schedule
-        
         self.state = state
-        
         self.initiatingUser = initiatingUser
-        
         self.initiatingShiftId = initiatingShiftId
-        
         self.initiatingShiftStart = initiatingShiftStart
-        
         self.initiatingShiftEnd = initiatingShiftEnd
-        
         self.receivingUser = receivingUser
-        
         self.receivingShiftId = receivingShiftId
-        
         self.receivingShiftStart = receivingShiftStart
-        
         self.receivingShiftEnd = receivingShiftEnd
-        
         self.expiration = expiration
-        
         self.oneSided = oneSided
-        
         self.acceptableIntervals = acceptableIntervals
-        
         self.reviewedBy = reviewedBy
-        
         self.reviewedDate = reviewedDate
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

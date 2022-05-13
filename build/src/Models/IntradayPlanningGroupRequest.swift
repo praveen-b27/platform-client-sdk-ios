@@ -26,15 +26,10 @@ public class IntradayPlanningGroupRequest: Codable {
     public var intervalLengthMinutes: Int?
 
     public init(businessUnitDate: Date?, categories: [Categories]?, planningGroupIds: [String]?, intervalLengthMinutes: Int?) {
-        
         self.businessUnitDate = businessUnitDate
-        
         self.categories = categories
-        
         self.planningGroupIds = planningGroupIds
-        
         self.intervalLengthMinutes = intervalLengthMinutes
-        
     }
 
 

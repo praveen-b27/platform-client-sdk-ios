@@ -16,9 +16,7 @@ public class ResponseQueryResults: Codable {
     public var results: ResponseEntityList?
 
     public init(results: ResponseEntityList?) {
-        
         self.results = results
-        
     }
 
 

@@ -19,13 +19,9 @@ public class CampaignRuleActionEntities: Codable {
     public var useTriggeringEntity: Bool?
 
     public init(campaigns: [DomainEntityRef]?, sequences: [DomainEntityRef]?, useTriggeringEntity: Bool?) {
-        
         self.campaigns = campaigns
-        
         self.sequences = sequences
-        
         self.useTriggeringEntity = useTriggeringEntity
-        
     }
 
 

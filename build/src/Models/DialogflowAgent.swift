@@ -26,21 +26,13 @@ public class DialogflowAgent: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, project: DialogflowProject?, languages: [String]?, intents: [DialogflowIntent]?, environments: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.project = project
-        
         self.languages = languages
-        
         self.intents = intents
-        
         self.environments = environments
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

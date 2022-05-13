@@ -21,15 +21,10 @@ public class ForecastPlanningGroupResponse: Codable {
     public var serviceGoalTemplate: ForecastServiceGoalTemplateResponse?
 
     public init(_id: String?, name: String?, routePaths: [RoutePathResponse]?, serviceGoalTemplate: ForecastServiceGoalTemplateResponse?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.routePaths = routePaths
-        
         self.serviceGoalTemplate = serviceGoalTemplate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

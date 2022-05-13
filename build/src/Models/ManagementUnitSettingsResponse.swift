@@ -25,19 +25,12 @@ public class ManagementUnitSettingsResponse: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(adherence: AdherenceSettings?, shortTermForecasting: ShortTermForecastingSettings?, timeOff: TimeOffRequestSettings?, scheduling: SchedulingSettingsResponse?, shiftTrading: ShiftTradeSettings?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.adherence = adherence
-        
         self.shortTermForecasting = shortTermForecasting
-        
         self.timeOff = timeOff
-        
         self.scheduling = scheduling
-        
         self.shiftTrading = shiftTrading
-        
         self.metadata = metadata
-        
     }
 
 

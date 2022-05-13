@@ -31,25 +31,15 @@ public class BuRescheduleRequest: Codable {
     public var doNotChangeManuallyEditedShifts: Bool?
 
     public init(startDate: Date?, endDate: Date?, agentIds: [String]?, activityCodeIds: [String]?, managementUnitIds: [String]?, doNotChangeWeeklyPaidTime: Bool?, doNotChangeDailyPaidTime: Bool?, doNotChangeShiftStartTimes: Bool?, doNotChangeManuallyEditedShifts: Bool?) {
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.agentIds = agentIds
-        
         self.activityCodeIds = activityCodeIds
-        
         self.managementUnitIds = managementUnitIds
-        
         self.doNotChangeWeeklyPaidTime = doNotChangeWeeklyPaidTime
-        
         self.doNotChangeDailyPaidTime = doNotChangeDailyPaidTime
-        
         self.doNotChangeShiftStartTimes = doNotChangeShiftStartTimes
-        
         self.doNotChangeManuallyEditedShifts = doNotChangeManuallyEditedShifts
-        
     }
 
 

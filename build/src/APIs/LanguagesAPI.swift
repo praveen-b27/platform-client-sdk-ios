@@ -11,10 +11,7 @@ import Foundation
 
 open class LanguagesAPI {
     
-    
-    
     /**
-     
      Delete Language (Deprecated)
      
      - parameter languageId: (path) Language ID 
@@ -32,9 +29,7 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Delete Language (Deprecated)
-     
      - DELETE /api/v2/languages/{languageId}
      - This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
      - OAuth:
@@ -45,18 +40,13 @@ open class LanguagesAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Void> {
+    open class func deleteLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/languages/{languageId}"
         let languageIdPreEscape = "\(languageId)"
         let languageIdPostEscape = languageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageId}", with: languageIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +56,7 @@ open class LanguagesAPI {
     }
 
     
-    
-    
     /**
-     
      Delete Language
      
      - parameter languageId: (path) Language ID 
@@ -87,11 +74,8 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Delete Language
-     
      - DELETE /api/v2/routing/languages/{languageId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -100,18 +84,13 @@ open class LanguagesAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteRoutingLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Void> {
+    open class func deleteRoutingLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/routing/languages/{languageId}"
         let languageIdPreEscape = "\(languageId)"
         let languageIdPostEscape = languageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageId}", with: languageIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -121,10 +100,7 @@ open class LanguagesAPI {
     }
 
     
-    
-    
     /**
-     
      Get language (Deprecated)
      
      - parameter languageId: (path) Language ID 
@@ -149,39 +125,32 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Get language (Deprecated)
-     
      - GET /api/v2/languages/{languageId}
      - This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "version" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "active",
+  "version" : "version"
+}, statusCode=200}]
      
      - parameter languageId: (path) Language ID 
 
      - returns: RequestBuilder<Language> 
      */
-    open class func getLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Language> {
+    open class func getLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Language> {        
         var path = "/api/v2/languages/{languageId}"
         let languageIdPreEscape = "\(languageId)"
         let languageIdPostEscape = languageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageId}", with: languageIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -193,9 +162,6 @@ open class LanguagesAPI {
     
     
     
-    
-    
-    
     public enum SortOrder_getLanguages: String { 
         case ascending = "ascending"
         case descending = "descending"
@@ -203,15 +169,12 @@ open class LanguagesAPI {
 
     
     
-    
-    
     /**
-     
      Get the list of supported languages. (Deprecated)
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
      - parameter name: (query) Name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -234,62 +197,57 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Get the list of supported languages. (Deprecated)
-     
      - GET /api/v2/languages
      - This endpoint is deprecated. It has been moved to /routing/languages
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "version" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "version" : "version"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "version" : "version"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ASC)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
      - parameter name: (query) Name (optional)
 
      - returns: RequestBuilder<LanguageEntityListing> 
      */
-    open class func getLanguagesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLanguages? = nil, name: String? = nil) -> RequestBuilder<LanguageEntityListing> {
+    open class func getLanguagesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLanguages? = nil, name: String? = nil) -> RequestBuilder<LanguageEntityListing> {        
         let path = "/api/v2/languages"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "name": name
-            
         ])
 
         let requestBuilder: RequestBuilder<LanguageEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -297,9 +255,7 @@ open class LanguagesAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get all available languages for translation
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -323,30 +279,22 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Get all available languages for translation
-     
      - GET /api/v2/languages/translations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "builtin" : [ "aeiou" ],
-  "orgSpecific" : [ "aeiou" ]
-}}]
+  "builtin" : [ "builtin", "builtin" ],
+  "orgSpecific" : [ "orgSpecific", "orgSpecific" ]
+}, statusCode=200}]
 
      - returns: RequestBuilder<AvailableTranslations> 
      */
-    open class func getLanguagesTranslationsWithRequestBuilder() -> RequestBuilder<AvailableTranslations> {
+    open class func getLanguagesTranslationsWithRequestBuilder() -> RequestBuilder<AvailableTranslations> {        
         let path = "/api/v2/languages/translations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -356,10 +304,7 @@ open class LanguagesAPI {
     }
 
     
-    
-    
     /**
-     
      Get the builtin translation for a language
      
      - parameter language: (query) The language of the builtin translation to retrieve 
@@ -384,37 +329,24 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Get the builtin translation for a language
-     
      - GET /api/v2/languages/translations/builtin
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "key" : "{}"
-}}]
      
      - parameter language: (query) The language of the builtin translation to retrieve 
 
      - returns: RequestBuilder<[String:JSON]> 
      */
-    open class func getLanguagesTranslationsBuiltinWithRequestBuilder(language: String) -> RequestBuilder<[String:JSON]> {
+    open class func getLanguagesTranslationsBuiltinWithRequestBuilder(language: String) -> RequestBuilder<[String:JSON]> {        
         let path = "/api/v2/languages/translations/builtin"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "language": language
-            
         ])
 
         let requestBuilder: RequestBuilder<[String:JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -423,10 +355,7 @@ open class LanguagesAPI {
     }
 
     
-    
-    
     /**
-     
      Get effective translation for an organization by language
      
      - parameter language: (query) The language of the translation to retrieve for the organization 
@@ -451,37 +380,24 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Get effective translation for an organization by language
-     
      - GET /api/v2/languages/translations/organization
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "key" : "{}"
-}}]
      
      - parameter language: (query) The language of the translation to retrieve for the organization 
 
      - returns: RequestBuilder<[String:JSON]> 
      */
-    open class func getLanguagesTranslationsOrganizationWithRequestBuilder(language: String) -> RequestBuilder<[String:JSON]> {
+    open class func getLanguagesTranslationsOrganizationWithRequestBuilder(language: String) -> RequestBuilder<[String:JSON]> {        
         let path = "/api/v2/languages/translations/organization"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "language": language
-            
         ])
 
         let requestBuilder: RequestBuilder<[String:JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -490,10 +406,7 @@ open class LanguagesAPI {
     }
 
     
-    
-    
     /**
-     
      Get effective language translation for a user
      
      - parameter userId: (path) The user id 
@@ -518,34 +431,23 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Get effective language translation for a user
-     
      - GET /api/v2/languages/translations/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "key" : "{}"
-}}]
      
      - parameter userId: (path) The user id 
 
      - returns: RequestBuilder<[String:JSON]> 
      */
-    open class func getLanguagesTranslationsUserWithRequestBuilder(userId: String) -> RequestBuilder<[String:JSON]> {
+    open class func getLanguagesTranslationsUserWithRequestBuilder(userId: String) -> RequestBuilder<[String:JSON]> {        
         var path = "/api/v2/languages/translations/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -555,10 +457,7 @@ open class LanguagesAPI {
     }
 
     
-    
-    
     /**
-     
      Get language
      
      - parameter languageId: (path) Language ID 
@@ -583,39 +482,31 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Get language
-     
      - GET /api/v2/routing/languages/{languageId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "version" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "active",
+  "version" : "version"
+}, statusCode=200}]
      
      - parameter languageId: (path) Language ID 
 
      - returns: RequestBuilder<Language> 
      */
-    open class func getRoutingLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Language> {
+    open class func getRoutingLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Language> {        
         var path = "/api/v2/routing/languages/{languageId}"
         let languageIdPreEscape = "\(languageId)"
         let languageIdPostEscape = languageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{languageId}", with: languageIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -625,10 +516,7 @@ open class LanguagesAPI {
     }
 
     
-    
-    
     /**
-     
      Create Language (Deprecated)
      
      - parameter body: (body) Language 
@@ -653,34 +541,30 @@ open class LanguagesAPI {
     }
 
     /**
-     
      Create Language (Deprecated)
-     
      - POST /api/v2/languages
      - This endpoint is deprecated. It has been moved to /routing/languages
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "version" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "active",
+  "version" : "version"
+}, statusCode=200}]
      
      - parameter body: (body) Language 
 
      - returns: RequestBuilder<Language> 
      */
-    open class func postLanguagesWithRequestBuilder(body: Language) -> RequestBuilder<Language> {
+    open class func postLanguagesWithRequestBuilder(body: Language) -> RequestBuilder<Language> {        
         let path = "/api/v2/languages"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Language>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

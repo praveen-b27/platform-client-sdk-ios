@@ -50,35 +50,20 @@ public class DncList: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, contactMethod: ContactMethod?, loginId: String?, dncCodes: [String]?, licenseId: String?, division: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.importStatus = importStatus
-        
         self.size = size
-        
         self.dncSourceType = dncSourceType
-        
         self.contactMethod = contactMethod
-        
         self.loginId = loginId
-        
         self.dncCodes = dncCodes
-        
         self.licenseId = licenseId
-        
         self.division = division
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

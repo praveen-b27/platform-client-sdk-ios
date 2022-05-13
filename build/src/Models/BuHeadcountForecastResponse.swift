@@ -17,11 +17,8 @@ public class BuHeadcountForecastResponse: Codable {
     public var downloadUrl: String?
 
     public init(result: BuHeadcountForecast?, downloadUrl: String?) {
-        
         self.result = result
-        
         self.downloadUrl = downloadUrl
-        
     }
 
 

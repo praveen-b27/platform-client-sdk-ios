@@ -31,27 +31,16 @@ public class ManagementUnitListing: Codable {
     public var selfUri: String?
 
     public init(entities: [ManagementUnit]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?, selfUri: String?) {
-        
         self.entities = entities
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.total = total
-        
         self.lastUri = lastUri
-        
         self.firstUri = firstUri
-        
         self.previousUri = previousUri
-        
         self.nextUri = nextUri
-        
         self.pageCount = pageCount
-        
         self.selfUri = selfUri
-        
     }
 
 

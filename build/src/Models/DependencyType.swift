@@ -19,15 +19,10 @@ public class DependencyType: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, versioned: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.versioned = versioned
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

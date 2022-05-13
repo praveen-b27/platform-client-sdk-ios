@@ -20,9 +20,7 @@ public class WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete: Codable {
     public var status: Status?
 
     public init(status: Status?) {
-        
         self.status = status
-        
     }
 
 

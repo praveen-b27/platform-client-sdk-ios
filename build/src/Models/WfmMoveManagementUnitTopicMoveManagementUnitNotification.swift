@@ -21,11 +21,8 @@ public class WfmMoveManagementUnitTopicMoveManagementUnitNotification: Codable {
     public var status: Status?
 
     public init(businessUnit: WfmMoveManagementUnitTopicBusinessUnit?, status: Status?) {
-        
         self.businessUnit = businessUnit
-        
         self.status = status
-        
     }
 
 

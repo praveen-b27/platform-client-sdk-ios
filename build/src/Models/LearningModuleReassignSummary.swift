@@ -24,17 +24,11 @@ public class LearningModuleReassignSummary: Codable {
     public var notCompletedCount: Int?
 
     public init(totalReassigned: Int?, completedCount: Int?, inProgressCount: Int?, assignedCount: Int?, notCompletedCount: Int?) {
-        
         self.totalReassigned = totalReassigned
-        
         self.completedCount = completedCount
-        
         self.inProgressCount = inProgressCount
-        
         self.assignedCount = assignedCount
-        
         self.notCompletedCount = notCompletedCount
-        
     }
 
 

@@ -17,11 +17,8 @@ public class RoleDivisionPair: Codable {
     public var divisionId: String?
 
     public init(roleId: String?, divisionId: String?) {
-        
         self.roleId = roleId
-        
         self.divisionId = divisionId
-        
     }
 
 

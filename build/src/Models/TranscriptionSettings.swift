@@ -24,13 +24,9 @@ public class TranscriptionSettings: Codable {
     public var contentSearchEnabled: Bool?
 
     public init(transcription: Transcription?, transcriptionConfidenceThreshold: Int?, contentSearchEnabled: Bool?) {
-        
         self.transcription = transcription
-        
         self.transcriptionConfidenceThreshold = transcriptionConfidenceThreshold
-        
         self.contentSearchEnabled = contentSearchEnabled
-        
     }
 
 

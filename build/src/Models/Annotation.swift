@@ -35,31 +35,18 @@ public class Annotation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, type: String?, location: Int64?, durationMs: Int64?, absoluteLocation: Int64?, absoluteDurationMs: Int64?, recordingLocation: Int64?, recordingDurationMs: Int64?, user: User?, _description: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.type = type
-        
         self.location = location
-        
         self.durationMs = durationMs
-        
         self.absoluteLocation = absoluteLocation
-        
         self.absoluteDurationMs = absoluteDurationMs
-        
         self.recordingLocation = recordingLocation
-        
         self.recordingDurationMs = recordingDurationMs
-        
         self.user = user
-        
         self._description = _description
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

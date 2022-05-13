@@ -53,11 +53,8 @@ public class WorkPlanConstraintMessage: Codable {
     public var arguments: [WorkPlanValidationMessageArgument]?
 
     public init(type: ModelType?, arguments: [WorkPlanValidationMessageArgument]?) {
-        
         self.type = type
-        
         self.arguments = arguments
-        
     }
 
 

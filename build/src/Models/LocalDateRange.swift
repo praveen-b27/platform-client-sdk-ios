@@ -17,11 +17,8 @@ public class LocalDateRange: Codable {
     public var endDate: Date?
 
     public init(startDate: Date?, endDate: Date?) {
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
     }
 
 

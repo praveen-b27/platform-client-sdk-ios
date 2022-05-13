@@ -21,11 +21,8 @@ public class RoutingStatusDetailQueryClause: Codable {
     public var predicates: [RoutingStatusDetailQueryPredicate]?
 
     public init(type: ModelType?, predicates: [RoutingStatusDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

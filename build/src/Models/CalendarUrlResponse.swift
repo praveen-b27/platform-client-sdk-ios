@@ -17,11 +17,8 @@ public class CalendarUrlResponse: Codable {
     public var selfUri: String?
 
     public init(calendarUrl: String?, selfUri: String?) {
-        
         self.calendarUrl = calendarUrl
-        
         self.selfUri = selfUri
-        
     }
 
 

@@ -26,15 +26,10 @@ public class DurationCondition: Codable {
     public var durationMode: DurationMode?
 
     public init(durationTarget: DurationTarget?, durationOperator: String?, durationRange: String?, durationMode: DurationMode?) {
-        
         self.durationTarget = durationTarget
-        
         self.durationOperator = durationOperator
-        
         self.durationRange = durationRange
-        
         self.durationMode = durationMode
-        
     }
 
 

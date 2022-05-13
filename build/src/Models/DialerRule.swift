@@ -29,19 +29,12 @@ public class DialerRule: Codable {
     public var actions: [DialerAction]?
 
     public init(_id: String?, name: String?, order: Int?, category: Category?, conditions: [Condition]?, actions: [DialerAction]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.order = order
-        
         self.category = category
-        
         self.conditions = conditions
-        
         self.actions = actions
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -45,25 +45,15 @@ public class HistoricalImportStatus: Codable {
     public var type: ModelType?
 
     public init(requestId: String?, dateImportEnded: Date?, dateImportStarted: Date?, status: Status?, error: String?, dateCreated: Date?, dateModified: Date?, active: Bool?, type: ModelType?) {
-        
         self.requestId = requestId
-        
         self.dateImportEnded = dateImportEnded
-        
         self.dateImportStarted = dateImportStarted
-        
         self.status = status
-        
         self.error = error
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.active = active
-        
         self.type = type
-        
     }
 
 

@@ -17,11 +17,8 @@ public class UsageExecutionResult: Codable {
     public var resultsUri: String?
 
     public init(executionId: String?, resultsUri: String?) {
-        
         self.executionId = executionId
-        
         self.resultsUri = resultsUri
-        
     }
 
 

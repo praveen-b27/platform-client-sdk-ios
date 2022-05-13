@@ -27,27 +27,16 @@ public class JourneyOutcomeEventsNotificationOutcomeEventsNotification: Codable 
     public var outcomeAttributionEventMessage: JourneyOutcomeEventsNotificationOutcomeAttributionMessage?
 
     public init(_id: String?, correlationId: String?, externalContact: JourneyOutcomeEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, session: JourneyOutcomeEventsNotificationSession?, eventType: EventType?, outcomeAchievedEvent: JourneyOutcomeEventsNotificationOutcomeAchievedMessage?, outcomeAttributionEventMessage: JourneyOutcomeEventsNotificationOutcomeAttributionMessage?) {
-        
         self._id = _id
-        
         self.correlationId = correlationId
-        
         self.externalContact = externalContact
-        
         self.createdDate = createdDate
-        
         self.customerId = customerId
-        
         self.customerIdType = customerIdType
-        
         self.session = session
-        
         self.eventType = eventType
-        
         self.outcomeAchievedEvent = outcomeAchievedEvent
-        
         self.outcomeAttributionEventMessage = outcomeAttributionEventMessage
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

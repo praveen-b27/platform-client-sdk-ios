@@ -33,23 +33,14 @@ public class TranscriptSearchRequest: Codable {
     public var query: [TranscriptSearchCriteria]?
 
     public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, returnFields: [String]?, types: [String]?, query: [TranscriptSearchCriteria]?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sort = sort
-        
         self.returnFields = returnFields
-        
         self.types = types
-        
         self.query = query
-        
     }
 
 

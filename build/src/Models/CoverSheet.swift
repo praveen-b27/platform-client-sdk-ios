@@ -17,11 +17,8 @@ public class CoverSheet: Codable {
     public var locale: String?
 
     public init(notes: String?, locale: String?) {
-        
         self.notes = notes
-        
         self.locale = locale
-        
     }
 
 

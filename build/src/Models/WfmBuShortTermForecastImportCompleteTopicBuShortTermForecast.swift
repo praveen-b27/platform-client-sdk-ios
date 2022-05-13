@@ -32,33 +32,19 @@ public class WfmBuShortTermForecastImportCompleteTopicBuShortTermForecast: Codab
     public var canUseForScheduling: Bool?
 
     public init(_id: String?, weekDate: String?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, referenceStartDate: Date?, sourceDays: [WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer]?, modifications: [WfmBuShortTermForecastImportCompleteTopicBuForecastModification]?, timeZone: String?, planningGroupsVersion: Int?, weekCount: Int?, metadata: WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata?, canUseForScheduling: Bool?) {
-        
         self._id = _id
-        
         self.weekDate = weekDate
-        
         self.creationMethod = creationMethod
-        
         self._description = _description
-        
         self.legacy = legacy
-        
         self.referenceStartDate = referenceStartDate
-        
         self.sourceDays = sourceDays
-        
         self.modifications = modifications
-        
         self.timeZone = timeZone
-        
         self.planningGroupsVersion = planningGroupsVersion
-        
         self.weekCount = weekCount
-        
         self.metadata = metadata
-        
         self.canUseForScheduling = canUseForScheduling
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

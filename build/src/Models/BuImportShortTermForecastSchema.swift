@@ -23,17 +23,11 @@ public class BuImportShortTermForecastSchema: Codable {
     public var canUseForScheduling: Bool?
 
     public init(_description: String?, weekCount: Int?, planningGroups: [ForecastPlanningGroupData]?, longTermPlanningGroups: [LongTermForecastPlanningGroupData]?, canUseForScheduling: Bool?) {
-        
         self._description = _description
-        
         self.weekCount = weekCount
-        
         self.planningGroups = planningGroups
-        
         self.longTermPlanningGroups = longTermPlanningGroups
-        
         self.canUseForScheduling = canUseForScheduling
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

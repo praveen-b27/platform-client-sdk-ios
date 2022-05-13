@@ -16,9 +16,7 @@ public class AddConversationRequest: Codable {
     public var conversationId: String?
 
     public init(conversationId: String?) {
-        
         self.conversationId = conversationId
-        
     }
 
 

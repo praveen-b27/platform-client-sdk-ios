@@ -16,11 +16,8 @@ public class QueueObservationQueryResponse: Codable {
     public var results: [QueueObservationDataContainer]?
 
     public init(systemToOrganizationMappings: [String:[String]]?, results: [QueueObservationDataContainer]?) {
-        
         self.systemToOrganizationMappings = systemToOrganizationMappings
-        
         self.results = results
-        
     }
 
 

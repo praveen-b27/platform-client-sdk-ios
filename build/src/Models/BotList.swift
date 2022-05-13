@@ -16,9 +16,7 @@ public class BotList: Codable {
     public var chatBots: [BotConnectorBot]?
 
     public init(chatBots: [BotConnectorBot]?) {
-        
         self.chatBots = chatBots
-        
     }
 
 

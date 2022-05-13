@@ -54,47 +54,26 @@ public class CreateWorkPlanShift: Codable {
     public var activities: [CreateWorkPlanActivity]?
 
     public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, constrainEarliestStopTime: Bool?, earliestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, activities: [CreateWorkPlanActivity]?) {
-        
         self.name = name
-        
         self.days = days
-        
         self.flexibleStartTime = flexibleStartTime
-        
         self.exactStartTimeMinutesFromMidnight = exactStartTimeMinutesFromMidnight
-        
         self.earliestStartTimeMinutesFromMidnight = earliestStartTimeMinutesFromMidnight
-        
         self.latestStartTimeMinutesFromMidnight = latestStartTimeMinutesFromMidnight
-        
         self.constrainStopTime = constrainStopTime
-        
         self.constrainLatestStopTime = constrainLatestStopTime
-        
         self.latestStopTimeMinutesFromMidnight = latestStopTimeMinutesFromMidnight
-        
         self.constrainEarliestStopTime = constrainEarliestStopTime
-        
         self.earliestStopTimeMinutesFromMidnight = earliestStopTimeMinutesFromMidnight
-        
         self.startIncrementMinutes = startIncrementMinutes
-        
         self.flexiblePaidTime = flexiblePaidTime
-        
         self.exactPaidTimeMinutes = exactPaidTimeMinutes
-        
         self.minimumPaidTimeMinutes = minimumPaidTimeMinutes
-        
         self.maximumPaidTimeMinutes = maximumPaidTimeMinutes
-        
         self.constrainContiguousWorkTime = constrainContiguousWorkTime
-        
         self.minimumContiguousWorkTimeMinutes = minimumContiguousWorkTimeMinutes
-        
         self.maximumContiguousWorkTimeMinutes = maximumContiguousWorkTimeMinutes
-        
         self.activities = activities
-        
     }
 
 

@@ -9,7 +9,7 @@ title: NluDomain
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The name of the NLU domain. | |
-| **language** | **String** | The language culture of the NLU domain, e.g. `en-us`, `de-de`. | [optional] |
+| **language** | **String** | The language culture of the NLU domain, e.g. &#x60;en-us&#x60;, &#x60;de-de&#x60;. | [optional] |
 | **draftVersion** | [**NluDomainVersion**](NluDomainVersion.html) | The draft version of that NLU domain. | [optional] |
 | **lastPublishedVersion** | [**NluDomainVersion**](NluDomainVersion.html) | The last published version of that NLU domain. | [optional] |
 | **dateCreated** | [**Date**](Date.html) | The date when the NLU domain was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

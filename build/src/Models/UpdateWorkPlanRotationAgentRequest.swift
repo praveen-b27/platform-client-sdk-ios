@@ -21,15 +21,10 @@ public class UpdateWorkPlanRotationAgentRequest: Codable {
     public var delete: Bool?
 
     public init(userId: String?, dateRange: DateRangeWithOptionalEnd?, position: Int?, delete: Bool?) {
-        
         self.userId = userId
-        
         self.dateRange = dateRange
-        
         self.position = position
-        
         self.delete = delete
-        
     }
 
 

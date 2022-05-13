@@ -21,15 +21,10 @@ public class UpdateActionInput: Codable {
     public var version: Int?
 
     public init(category: String?, name: String?, config: ActionConfig?, version: Int?) {
-        
         self.category = category
-        
         self.name = name
-        
         self.config = config
-        
         self.version = version
-        
     }
 
 

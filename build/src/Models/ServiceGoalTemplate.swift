@@ -27,21 +27,13 @@ public class ServiceGoalTemplate: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, serviceLevel: BuServiceLevel?, averageSpeedOfAnswer: BuAverageSpeedOfAnswer?, abandonRate: BuAbandonRate?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.serviceLevel = serviceLevel
-        
         self.averageSpeedOfAnswer = averageSpeedOfAnswer
-        
         self.abandonRate = abandonRate
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

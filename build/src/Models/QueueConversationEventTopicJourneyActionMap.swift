@@ -18,11 +18,8 @@ public class QueueConversationEventTopicJourneyActionMap: Codable {
     public var version: Int?
 
     public init(_id: String?, version: Int?) {
-        
         self._id = _id
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -33,7 +33,7 @@ public class ActivityCode: Codable {
     public var isActive: Bool?
     /** Whether this is a default activity code */
     public var isDefault: Bool?
-    /** The activity code&#39;s category. */
+    /** The activity code's category. */
     public var category: Category?
     /** The default length of the activity in minutes */
     public var lengthInMinutes: Int?
@@ -41,35 +41,23 @@ public class ActivityCode: Codable {
     public var countsAsPaidTime: Bool?
     /** Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints */
     public var countsAsWorkTime: Bool?
-    /** Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off. */
+    /** Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off. */
     public var agentTimeOffSelectable: Bool?
-    /** Version metadata for the associated management unit&#39;s list of activity codes */
+    /** Version metadata for the associated management unit's list of activity codes */
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(_id: String?, selfUri: String?, name: String?, isActive: Bool?, isDefault: Bool?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, metadata: WfmVersionedEntityMetadata?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.name = name
-        
         self.isActive = isActive
-        
         self.isDefault = isDefault
-        
         self.category = category
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.countsAsPaidTime = countsAsPaidTime
-        
         self.countsAsWorkTime = countsAsWorkTime
-        
         self.agentTimeOffSelectable = agentTimeOffSelectable
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

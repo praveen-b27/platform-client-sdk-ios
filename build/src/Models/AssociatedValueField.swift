@@ -21,11 +21,8 @@ public class AssociatedValueField: Codable {
     public var name: String?
 
     public init(dataType: DataType?, name: String?) {
-        
         self.dataType = dataType
-        
         self.name = name
-        
     }
 
 

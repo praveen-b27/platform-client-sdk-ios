@@ -19,13 +19,9 @@ public class GenerateBuForecastRequest: Codable {
     public var canUseForScheduling: Bool?
 
     public init(_description: String?, weekCount: Int?, canUseForScheduling: Bool?) {
-        
         self._description = _description
-        
         self.weekCount = weekCount
-        
         self.canUseForScheduling = canUseForScheduling
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

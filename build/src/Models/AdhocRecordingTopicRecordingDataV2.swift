@@ -30,41 +30,23 @@ public class AdhocRecordingTopicRecordingDataV2: Codable {
     public var read: Bool?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, workspace: AdhocRecordingTopicWorkspaceData?, createdBy: AdhocRecordingTopicUserData?, contentType: String?, contentLength: Int?, filename: String?, changeNumber: Int?, dateUploaded: Date?, uploadedBy: AdhocRecordingTopicUserData?, lockInfo: AdhocRecordingTopicLockData?, selfUri: String?, durationMillieconds: Int?, conversation: AdhocRecordingTopicConversationData?, read: Bool?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.workspace = workspace
-        
         self.createdBy = createdBy
-        
         self.contentType = contentType
-        
         self.contentLength = contentLength
-        
         self.filename = filename
-        
         self.changeNumber = changeNumber
-        
         self.dateUploaded = dateUploaded
-        
         self.uploadedBy = uploadedBy
-        
         self.lockInfo = lockInfo
-        
         self.selfUri = selfUri
-        
         self.durationMillieconds = durationMillieconds
-        
         self.conversation = conversation
-        
         self.read = read
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

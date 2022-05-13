@@ -40,27 +40,16 @@ public class JourneyWebActionEventsNotificationBlockedWebActionOfferMessage: Cod
     public var blockingEmergencyScheduleGroup: JourneyWebActionEventsNotificationEmergencyGroup?
 
     public init(action: JourneyWebActionEventsNotificationEventAction?, actionMap: JourneyWebActionEventsNotificationActionMap?, actionTarget: JourneyWebActionEventsNotificationActionTarget?, blockingReason: BlockingReason?, blockingActionMap: JourneyWebActionEventsNotificationActionMap?, blockingAction: JourneyWebActionEventsNotificationEventAction?, blockingFrequencyCapBehaviour: BlockingFrequencyCapBehaviour?, blockingPageUrlConditions: [JourneyWebActionEventsNotificationActionMapPageUrlCondition]?, blockingScheduleGroup: JourneyWebActionEventsNotificationScheduleGroup?, blockingEmergencyScheduleGroup: JourneyWebActionEventsNotificationEmergencyGroup?) {
-        
         self.action = action
-        
         self.actionMap = actionMap
-        
         self.actionTarget = actionTarget
-        
         self.blockingReason = blockingReason
-        
         self.blockingActionMap = blockingActionMap
-        
         self.blockingAction = blockingAction
-        
         self.blockingFrequencyCapBehaviour = blockingFrequencyCapBehaviour
-        
         self.blockingPageUrlConditions = blockingPageUrlConditions
-        
         self.blockingScheduleGroup = blockingScheduleGroup
-        
         self.blockingEmergencyScheduleGroup = blockingEmergencyScheduleGroup
-        
     }
 
 

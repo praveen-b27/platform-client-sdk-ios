@@ -34,19 +34,12 @@ public class WorkdayPointsTrend: Codable {
     public var trend: [WorkdayPointsTrendItem]?
 
     public init(dateStartWorkday: Date?, dateEndWorkday: Date?, user: UserReference?, dayOfWeek: DayOfWeek?, averagePoints: Double?, trend: [WorkdayPointsTrendItem]?) {
-        
         self.dateStartWorkday = dateStartWorkday
-        
         self.dateEndWorkday = dateEndWorkday
-        
         self.user = user
-        
         self.dayOfWeek = dayOfWeek
-        
         self.averagePoints = averagePoints
-        
         self.trend = trend
-        
     }
 
 

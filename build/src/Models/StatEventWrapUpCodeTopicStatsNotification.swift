@@ -15,11 +15,8 @@ public class StatEventWrapUpCodeTopicStatsNotification: Codable {
     public var data: [StatEventWrapUpCodeTopicIntervalMetrics]?
 
     public init(group: [String:String]?, data: [StatEventWrapUpCodeTopicIntervalMetrics]?) {
-        
         self.group = group
-        
         self.data = data
-        
     }
 
 

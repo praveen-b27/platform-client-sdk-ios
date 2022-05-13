@@ -21,15 +21,10 @@ public class EdgeAutoUpdateConfig: Codable {
     public var end: String?
 
     public init(timeZone: String?, rrule: String?, start: String?, end: String?) {
-        
         self.timeZone = timeZone
-        
         self.rrule = rrule
-        
         self.start = start
-        
         self.end = end
-        
     }
 
 

@@ -19,13 +19,9 @@ public class AuditUser: Codable {
     public var display: String?
 
     public init(_id: String?, name: String?, display: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.display = display
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

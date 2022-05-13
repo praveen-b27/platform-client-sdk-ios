@@ -20,13 +20,9 @@ public class MediaTranscription: Codable {
     public var integrationId: String?
 
     public init(displayName: String?, transcriptionProvider: TranscriptionProvider?, integrationId: String?) {
-        
         self.displayName = displayName
-        
         self.transcriptionProvider = transcriptionProvider
-        
         self.integrationId = integrationId
-        
     }
 
 

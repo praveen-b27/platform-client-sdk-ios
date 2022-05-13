@@ -15,7 +15,7 @@ public class CreateWebChatRequest: Codable {
     public var queueId: String?
     /** The name of the provider that is sourcing the web chat. */
     public var provider: String?
-    /** The list of skill ID&#39;s to use for routing. */
+    /** The list of skill ID's to use for routing. */
     public var skillIds: [String]?
     /** The ID of the langauge to use for routing. */
     public var languageId: String?
@@ -27,21 +27,13 @@ public class CreateWebChatRequest: Codable {
     public var customerName: String?
 
     public init(queueId: String?, provider: String?, skillIds: [String]?, languageId: String?, priority: Int64?, attributes: [String:String]?, customerName: String?) {
-        
         self.queueId = queueId
-        
         self.provider = provider
-        
         self.skillIds = skillIds
-        
         self.languageId = languageId
-        
         self.priority = priority
-        
         self.attributes = attributes
-        
         self.customerName = customerName
-        
     }
 
 

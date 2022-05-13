@@ -21,15 +21,10 @@ public class ReportingTurnKnowledgeDocument: Codable {
     public var confidence: Double?
 
     public init(_id: String?, question: String?, answer: String?, confidence: Double?) {
-        
         self._id = _id
-        
         self.question = question
-        
         self.answer = answer
-        
         self.confidence = confidence
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

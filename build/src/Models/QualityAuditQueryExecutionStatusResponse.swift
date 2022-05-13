@@ -32,19 +32,12 @@ public class QualityAuditQueryExecutionStatusResponse: Codable {
     public var sort: [AuditQuerySort]?
 
     public init(_id: String?, state: State?, dateStart: Date?, interval: String?, filters: [QualityAuditQueryFilter]?, sort: [AuditQuerySort]?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.dateStart = dateStart
-        
         self.interval = interval
-        
         self.filters = filters
-        
         self.sort = sort
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

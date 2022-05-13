@@ -21,15 +21,10 @@ public class GoogleDialogflowCustomSettings: Codable {
     public var eventInputParameters: [String:String]?
 
     public init(environment: String?, eventName: String?, webhookQueryParameters: [String:String]?, eventInputParameters: [String:String]?) {
-        
         self.environment = environment
-        
         self.eventName = eventName
-        
         self.webhookQueryParameters = webhookQueryParameters
-        
         self.eventInputParameters = eventInputParameters
-        
     }
 
 

@@ -11,10 +11,7 @@ import Foundation
 
 open class GreetingsAPI {
     
-    
-    
     /**
-     
      Deletes a Greeting with the given GreetingId
      
      - parameter greetingId: (path) Greeting ID 
@@ -32,11 +29,8 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Deletes a Greeting with the given GreetingId
-     
      - DELETE /api/v2/greetings/{greetingId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class GreetingsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteGreetingWithRequestBuilder(greetingId: String) -> RequestBuilder<Void> {
+    open class func deleteGreetingWithRequestBuilder(greetingId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/greetings/{greetingId}"
         let greetingIdPreEscape = "\(greetingId)"
         let greetingIdPostEscape = greetingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{greetingId}", with: greetingIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +55,7 @@ open class GreetingsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Greeting with the given GreetingId
      
      - parameter greetingId: (path) Greeting ID 
@@ -94,53 +80,41 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Get a Greeting with the given GreetingId
-     
      - GET /api/v2/greetings/{greetingId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "ownerType" : "aeiou",
-  "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "ownerType" : "USER",
+  "owner" : "{}",
   "audioFile" : {
-    "durationMilliseconds" : 123456789,
-    "selfUri" : "aeiou",
-    "sizeBytes" : 123456789
+    "durationMilliseconds" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "sizeBytes" : 6
   },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "audioTTS" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "type" : "aeiou"
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "audioTTS" : "audioTTS",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
+  "type" : "STATION"
+}, statusCode=200}]
      
      - parameter greetingId: (path) Greeting ID 
 
      - returns: RequestBuilder<Greeting> 
      */
-    open class func getGreetingWithRequestBuilder(greetingId: String) -> RequestBuilder<Greeting> {
+    open class func getGreetingWithRequestBuilder(greetingId: String) -> RequestBuilder<Greeting> {        
         var path = "/api/v2/greetings/{greetingId}"
         let greetingIdPreEscape = "\(greetingId)"
         let greetingIdPostEscape = greetingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{greetingId}", with: greetingIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -149,8 +123,6 @@ open class GreetingsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum FormatId_getGreetingMedia: String { 
@@ -164,13 +136,11 @@ open class GreetingsAPI {
     }
 
     
-    
     /**
-     
      Get media playback URI for this greeting
      
      - parameter greetingId: (path) Greeting ID 
-     - parameter formatId: (query) The desired media format. (optional, default to WAV)
+     - parameter formatId: (query) The desired media format. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGreetingMedia(greetingId: String, formatId: FormatId_getGreetingMedia? = nil, completion: @escaping ((_ data: GreetingMediaInfo?,_ error: Error?) -> Void)) {
@@ -192,43 +162,33 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Get media playback URI for this greeting
-     
      - GET /api/v2/greetings/{greetingId}/media
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "mediaImageUri" : "aeiou",
-  "id" : "aeiou",
-  "mediaFileUri" : "aeiou"
-}}]
+  "mediaImageUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "mediaFileUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter greetingId: (path) Greeting ID 
-     - parameter formatId: (query) The desired media format. (optional, default to WAV)
+     - parameter formatId: (query) The desired media format. (optional)
 
      - returns: RequestBuilder<GreetingMediaInfo> 
      */
-    open class func getGreetingMediaWithRequestBuilder(greetingId: String, formatId: FormatId_getGreetingMedia? = nil) -> RequestBuilder<GreetingMediaInfo> {
+    open class func getGreetingMediaWithRequestBuilder(greetingId: String, formatId: FormatId_getGreetingMedia? = nil) -> RequestBuilder<GreetingMediaInfo> {        
         var path = "/api/v2/greetings/{greetingId}/media"
         let greetingIdPreEscape = "\(greetingId)"
         let greetingIdPostEscape = greetingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{greetingId}", with: greetingIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "formatId": formatId?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<GreetingMediaInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -238,15 +198,11 @@ open class GreetingsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Gets an Organization's Greetings
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGreetings(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: DomainEntityListing?,_ error: Error?) -> Void)) {
@@ -268,53 +224,46 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Gets an Organization's Greetings
-     
      - GET /api/v2/greetings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<DomainEntityListing> 
      */
-    open class func getGreetingsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<DomainEntityListing> {
+    open class func getGreetingsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<DomainEntityListing> {        
         let path = "/api/v2/greetings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<DomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -322,9 +271,7 @@ open class GreetingsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get an Organization's DefaultGreetingList
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -348,65 +295,53 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Get an Organization's DefaultGreetingList
-     
      - GET /api/v2/greetings/defaults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "ownerType" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
+  "ownerType" : "USER",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
   "greetings" : {
     "key" : {
-      "ownerType" : "aeiou",
-      "owner" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "ownerType" : "USER",
+      "owner" : "{}",
       "audioFile" : {
-        "durationMilliseconds" : 123456789,
-        "selfUri" : "aeiou",
-        "sizeBytes" : 123456789
+        "durationMilliseconds" : 0,
+        "selfUri" : "https://openapi-generator.tech",
+        "sizeBytes" : 6
       },
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "audioTTS" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou"
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "https://openapi-generator.tech",
+      "audioTTS" : "audioTTS",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "modifiedBy" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "STATION"
     }
   }
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<DefaultGreetingList> 
      */
-    open class func getGreetingsDefaultsWithRequestBuilder() -> RequestBuilder<DefaultGreetingList> {
+    open class func getGreetingsDefaultsWithRequestBuilder() -> RequestBuilder<DefaultGreetingList> {        
         let path = "/api/v2/greetings/defaults"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -418,17 +353,12 @@ open class GreetingsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a list of the Group's Greetings
      
      - parameter groupId: (path) Group ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGroupGreetings(groupId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: GreetingListing?,_ error: Error?) -> Void)) {
@@ -450,74 +380,76 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Get a list of the Group's Greetings
-     
      - GET /api/v2/groups/{groupId}/greetings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "ownerType" : "aeiou",
-    "owner" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
+    "ownerType" : "USER",
+    "owner" : "{}",
     "audioFile" : {
-      "durationMilliseconds" : 123456789,
-      "selfUri" : "aeiou",
-      "sizeBytes" : 123456789
+      "durationMilliseconds" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "sizeBytes" : 6
     },
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
-    "audioTTS" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou",
-    "type" : "aeiou"
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "https://openapi-generator.tech",
+    "audioTTS" : "audioTTS",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "STATION"
+  }, {
+    "ownerType" : "USER",
+    "owner" : "{}",
+    "audioFile" : {
+      "durationMilliseconds" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "sizeBytes" : 6
+    },
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "https://openapi-generator.tech",
+    "audioTTS" : "audioTTS",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "STATION"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter groupId: (path) Group ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<GreetingListing> 
      */
-    open class func getGroupGreetingsWithRequestBuilder(groupId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<GreetingListing> {
+    open class func getGroupGreetingsWithRequestBuilder(groupId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<GreetingListing> {        
         var path = "/api/v2/groups/{groupId}/greetings"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<GreetingListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -526,10 +458,7 @@ open class GreetingsAPI {
     }
 
     
-    
-    
     /**
-     
      Grabs the list of Default Greetings given a Group's ID
      
      - parameter groupId: (path) Group ID 
@@ -554,70 +483,58 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Grabs the list of Default Greetings given a Group's ID
-     
      - GET /api/v2/groups/{groupId}/greetings/defaults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "ownerType" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
+  "ownerType" : "USER",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
   "greetings" : {
     "key" : {
-      "ownerType" : "aeiou",
-      "owner" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "ownerType" : "USER",
+      "owner" : "{}",
       "audioFile" : {
-        "durationMilliseconds" : 123456789,
-        "selfUri" : "aeiou",
-        "sizeBytes" : 123456789
+        "durationMilliseconds" : 0,
+        "selfUri" : "https://openapi-generator.tech",
+        "sizeBytes" : 6
       },
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "audioTTS" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou"
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "https://openapi-generator.tech",
+      "audioTTS" : "audioTTS",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "modifiedBy" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "STATION"
     }
   }
-}}]
+}, statusCode=200}]
      
      - parameter groupId: (path) Group ID 
 
      - returns: RequestBuilder<DefaultGreetingList> 
      */
-    open class func getGroupGreetingsDefaultsWithRequestBuilder(groupId: String) -> RequestBuilder<DefaultGreetingList> {
+    open class func getGroupGreetingsDefaultsWithRequestBuilder(groupId: String) -> RequestBuilder<DefaultGreetingList> {        
         var path = "/api/v2/groups/{groupId}/greetings/defaults"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -629,17 +546,12 @@ open class GreetingsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a list of the User's Greetings
      
      - parameter userId: (path) User ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getUserGreetings(userId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: DomainEntityListing?,_ error: Error?) -> Void)) {
@@ -661,57 +573,50 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Get a list of the User's Greetings
-     
      - GET /api/v2/users/{userId}/greetings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter userId: (path) User ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<DomainEntityListing> 
      */
-    open class func getUserGreetingsWithRequestBuilder(userId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<DomainEntityListing> {
+    open class func getUserGreetingsWithRequestBuilder(userId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<DomainEntityListing> {        
         var path = "/api/v2/users/{userId}/greetings"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<DomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -720,10 +625,7 @@ open class GreetingsAPI {
     }
 
     
-    
-    
     /**
-     
      Grabs the list of Default Greetings given a User's ID
      
      - parameter userId: (path) User ID 
@@ -748,70 +650,58 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Grabs the list of Default Greetings given a User's ID
-     
      - GET /api/v2/users/{userId}/greetings/defaults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "ownerType" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
+  "ownerType" : "USER",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
   "greetings" : {
     "key" : {
-      "ownerType" : "aeiou",
-      "owner" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "ownerType" : "USER",
+      "owner" : "{}",
       "audioFile" : {
-        "durationMilliseconds" : 123456789,
-        "selfUri" : "aeiou",
-        "sizeBytes" : 123456789
+        "durationMilliseconds" : 0,
+        "selfUri" : "https://openapi-generator.tech",
+        "sizeBytes" : 6
       },
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "audioTTS" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou"
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "https://openapi-generator.tech",
+      "audioTTS" : "audioTTS",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "modifiedBy" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "STATION"
     }
   }
-}}]
+}, statusCode=200}]
      
      - parameter userId: (path) User ID 
 
      - returns: RequestBuilder<DefaultGreetingList> 
      */
-    open class func getUserGreetingsDefaultsWithRequestBuilder(userId: String) -> RequestBuilder<DefaultGreetingList> {
+    open class func getUserGreetingsDefaultsWithRequestBuilder(userId: String) -> RequestBuilder<DefaultGreetingList> {        
         var path = "/api/v2/users/{userId}/greetings/defaults"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -821,10 +711,7 @@ open class GreetingsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a Greeting for an Organization
      
      - parameter body: (body) The Greeting to create 
@@ -849,48 +736,39 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Create a Greeting for an Organization
-     
      - POST /api/v2/greetings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "ownerType" : "aeiou",
-  "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "ownerType" : "USER",
+  "owner" : "{}",
   "audioFile" : {
-    "durationMilliseconds" : 123456789,
-    "selfUri" : "aeiou",
-    "sizeBytes" : 123456789
+    "durationMilliseconds" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "sizeBytes" : 6
   },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "audioTTS" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "type" : "aeiou"
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "audioTTS" : "audioTTS",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
+  "type" : "STATION"
+}, statusCode=200}]
      
      - parameter body: (body) The Greeting to create 
 
      - returns: RequestBuilder<Greeting> 
      */
-    open class func postGreetingsWithRequestBuilder(body: Greeting) -> RequestBuilder<Greeting> {
+    open class func postGreetingsWithRequestBuilder(body: Greeting) -> RequestBuilder<Greeting> {        
         let path = "/api/v2/greetings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Greeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -900,11 +778,7 @@ open class GreetingsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Creates a Greeting for a Group
      
      - parameter groupId: (path) Group ID 
@@ -930,52 +804,43 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Creates a Greeting for a Group
-     
      - POST /api/v2/groups/{groupId}/greetings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "ownerType" : "aeiou",
-  "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "ownerType" : "USER",
+  "owner" : "{}",
   "audioFile" : {
-    "durationMilliseconds" : 123456789,
-    "selfUri" : "aeiou",
-    "sizeBytes" : 123456789
+    "durationMilliseconds" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "sizeBytes" : 6
   },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "audioTTS" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "type" : "aeiou"
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "audioTTS" : "audioTTS",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
+  "type" : "STATION"
+}, statusCode=200}]
      
      - parameter groupId: (path) Group ID 
      - parameter body: (body) The Greeting to create 
 
      - returns: RequestBuilder<Greeting> 
      */
-    open class func postGroupGreetingsWithRequestBuilder(groupId: String, body: Greeting) -> RequestBuilder<Greeting> {
+    open class func postGroupGreetingsWithRequestBuilder(groupId: String, body: Greeting) -> RequestBuilder<Greeting> {        
         var path = "/api/v2/groups/{groupId}/greetings"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Greeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -985,11 +850,7 @@ open class GreetingsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Creates a Greeting for a User
      
      - parameter userId: (path) User ID 
@@ -1015,52 +876,43 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Creates a Greeting for a User
-     
      - POST /api/v2/users/{userId}/greetings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "ownerType" : "aeiou",
-  "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "ownerType" : "USER",
+  "owner" : "{}",
   "audioFile" : {
-    "durationMilliseconds" : 123456789,
-    "selfUri" : "aeiou",
-    "sizeBytes" : 123456789
+    "durationMilliseconds" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "sizeBytes" : 6
   },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "audioTTS" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "type" : "aeiou"
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "audioTTS" : "audioTTS",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
+  "type" : "STATION"
+}, statusCode=200}]
      
      - parameter userId: (path) User ID 
      - parameter body: (body) The Greeting to create 
 
      - returns: RequestBuilder<Greeting> 
      */
-    open class func postUserGreetingsWithRequestBuilder(userId: String, body: Greeting) -> RequestBuilder<Greeting> {
+    open class func postUserGreetingsWithRequestBuilder(userId: String, body: Greeting) -> RequestBuilder<Greeting> {        
         var path = "/api/v2/users/{userId}/greetings"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Greeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1070,11 +922,7 @@ open class GreetingsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Updates the Greeting with the given GreetingId
      
      - parameter greetingId: (path) Greeting ID 
@@ -1100,52 +948,43 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Updates the Greeting with the given GreetingId
-     
      - PUT /api/v2/greetings/{greetingId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "ownerType" : "aeiou",
-  "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "ownerType" : "USER",
+  "owner" : "{}",
   "audioFile" : {
-    "durationMilliseconds" : 123456789,
-    "selfUri" : "aeiou",
-    "sizeBytes" : 123456789
+    "durationMilliseconds" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "sizeBytes" : 6
   },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "audioTTS" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
-  "type" : "aeiou"
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "audioTTS" : "audioTTS",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
+  "type" : "STATION"
+}, statusCode=200}]
      
      - parameter greetingId: (path) Greeting ID 
      - parameter body: (body) The updated Greeting 
 
      - returns: RequestBuilder<Greeting> 
      */
-    open class func putGreetingWithRequestBuilder(greetingId: String, body: Greeting) -> RequestBuilder<Greeting> {
+    open class func putGreetingWithRequestBuilder(greetingId: String, body: Greeting) -> RequestBuilder<Greeting> {        
         var path = "/api/v2/greetings/{greetingId}"
         let greetingIdPreEscape = "\(greetingId)"
         let greetingIdPostEscape = greetingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{greetingId}", with: greetingIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Greeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1154,10 +993,7 @@ open class GreetingsAPI {
     }
 
     
-    
-    
     /**
-     
      Update an Organization's DefaultGreetingList
      
      - parameter body: (body) The updated defaultGreetingList 
@@ -1182,65 +1018,56 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Update an Organization's DefaultGreetingList
-     
      - PUT /api/v2/greetings/defaults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "ownerType" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
+  "ownerType" : "USER",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
   "greetings" : {
     "key" : {
-      "ownerType" : "aeiou",
-      "owner" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "ownerType" : "USER",
+      "owner" : "{}",
       "audioFile" : {
-        "durationMilliseconds" : 123456789,
-        "selfUri" : "aeiou",
-        "sizeBytes" : 123456789
+        "durationMilliseconds" : 0,
+        "selfUri" : "https://openapi-generator.tech",
+        "sizeBytes" : 6
       },
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "audioTTS" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou"
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "https://openapi-generator.tech",
+      "audioTTS" : "audioTTS",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "modifiedBy" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "STATION"
     }
   }
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) The updated defaultGreetingList 
 
      - returns: RequestBuilder<DefaultGreetingList> 
      */
-    open class func putGreetingsDefaultsWithRequestBuilder(body: DefaultGreetingList) -> RequestBuilder<DefaultGreetingList> {
+    open class func putGreetingsDefaultsWithRequestBuilder(body: DefaultGreetingList) -> RequestBuilder<DefaultGreetingList> {        
         let path = "/api/v2/greetings/defaults"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DefaultGreetingList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1250,11 +1077,7 @@ open class GreetingsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Updates the DefaultGreetingList of the specified Group
      
      - parameter groupId: (path) Group ID 
@@ -1280,69 +1103,60 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Updates the DefaultGreetingList of the specified Group
-     
      - PUT /api/v2/groups/{groupId}/greetings/defaults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "ownerType" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
+  "ownerType" : "USER",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
   "greetings" : {
     "key" : {
-      "ownerType" : "aeiou",
-      "owner" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "ownerType" : "USER",
+      "owner" : "{}",
       "audioFile" : {
-        "durationMilliseconds" : 123456789,
-        "selfUri" : "aeiou",
-        "sizeBytes" : 123456789
+        "durationMilliseconds" : 0,
+        "selfUri" : "https://openapi-generator.tech",
+        "sizeBytes" : 6
       },
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "audioTTS" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou"
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "https://openapi-generator.tech",
+      "audioTTS" : "audioTTS",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "modifiedBy" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "STATION"
     }
   }
-}}]
+}, statusCode=200}]
      
      - parameter groupId: (path) Group ID 
      - parameter body: (body) The updated defaultGreetingList 
 
      - returns: RequestBuilder<DefaultGreetingList> 
      */
-    open class func putGroupGreetingsDefaultsWithRequestBuilder(groupId: String, body: DefaultGreetingList) -> RequestBuilder<DefaultGreetingList> {
+    open class func putGroupGreetingsDefaultsWithRequestBuilder(groupId: String, body: DefaultGreetingList) -> RequestBuilder<DefaultGreetingList> {        
         var path = "/api/v2/groups/{groupId}/greetings/defaults"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DefaultGreetingList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1352,11 +1166,7 @@ open class GreetingsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Updates the DefaultGreetingList of the specified User
      
      - parameter userId: (path) User ID 
@@ -1382,69 +1192,60 @@ open class GreetingsAPI {
     }
 
     /**
-     
      Updates the DefaultGreetingList of the specified User
-     
      - PUT /api/v2/users/{userId}/greetings/defaults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "owner" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "ownerType" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou",
+  "ownerType" : "USER",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "https://openapi-generator.tech",
+  "id" : "id",
   "greetings" : {
     "key" : {
-      "ownerType" : "aeiou",
-      "owner" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "ownerType" : "USER",
+      "owner" : "{}",
       "audioFile" : {
-        "durationMilliseconds" : 123456789,
-        "selfUri" : "aeiou",
-        "sizeBytes" : 123456789
+        "durationMilliseconds" : 0,
+        "selfUri" : "https://openapi-generator.tech",
+        "sizeBytes" : 6
       },
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "aeiou",
-      "audioTTS" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "modifiedBy" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou"
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "createdBy" : "https://openapi-generator.tech",
+      "audioTTS" : "audioTTS",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "modifiedBy" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "STATION"
     }
   }
-}}]
+}, statusCode=200}]
      
      - parameter userId: (path) User ID 
      - parameter body: (body) The updated defaultGreetingList 
 
      - returns: RequestBuilder<DefaultGreetingList> 
      */
-    open class func putUserGreetingsDefaultsWithRequestBuilder(userId: String, body: DefaultGreetingList) -> RequestBuilder<DefaultGreetingList> {
+    open class func putUserGreetingsDefaultsWithRequestBuilder(userId: String, body: DefaultGreetingList) -> RequestBuilder<DefaultGreetingList> {        
         var path = "/api/v2/users/{userId}/greetings/defaults"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DefaultGreetingList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

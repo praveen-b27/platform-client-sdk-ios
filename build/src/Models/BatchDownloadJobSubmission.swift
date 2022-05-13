@@ -15,9 +15,7 @@ public class BatchDownloadJobSubmission: Codable {
     public var batchDownloadRequestList: [BatchDownloadRequest]?
 
     public init(batchDownloadRequestList: [BatchDownloadRequest]?) {
-        
         self.batchDownloadRequestList = batchDownloadRequestList
-        
     }
 
 

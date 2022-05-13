@@ -20,21 +20,13 @@ public class JourneyWebActionEventsNotificationMktCampaign: Codable {
     public var network: String?
 
     public init(content: String?, medium: String?, name: String?, source: String?, term: String?, clickId: String?, network: String?) {
-        
         self.content = content
-        
         self.medium = medium
-        
         self.name = name
-        
         self.source = source
-        
         self.term = term
-        
         self.clickId = clickId
-        
         self.network = network
-        
     }
 
 

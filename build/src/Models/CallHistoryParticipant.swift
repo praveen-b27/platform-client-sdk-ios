@@ -44,9 +44,9 @@ public class CallHistoryParticipant: Codable {
     public var startTime: Date?
     /** The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endTime: Date?
-    /** The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr */
+    /** The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr */
     public var purpose: String?
-    /** The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39; */
+    /** The participant's direction.  Values can be: 'inbound' or 'outbound' */
     public var direction: Direction?
     /** The call ANI. */
     public var ani: String?
@@ -74,45 +74,25 @@ public class CallHistoryParticipant: Codable {
     public var outboundCampaign: Campaign?
 
     public init(_id: String?, name: String?, address: String?, startTime: Date?, endTime: Date?, purpose: String?, direction: Direction?, ani: String?, dnis: String?, user: User?, queue: Queue?, group: Group?, disconnectType: DisconnectType?, externalContact: ExternalContact?, externalOrganization: ExternalOrganization?, didInteract: Bool?, sipResponseCodes: [Int64]?, flaggedReason: FlaggedReason?, outboundCampaign: Campaign?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.address = address
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.purpose = purpose
-        
         self.direction = direction
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.user = user
-        
         self.queue = queue
-        
         self.group = group
-        
         self.disconnectType = disconnectType
-        
         self.externalContact = externalContact
-        
         self.externalOrganization = externalOrganization
-        
         self.didInteract = didInteract
-        
         self.sipResponseCodes = sipResponseCodes
-        
         self.flaggedReason = flaggedReason
-        
         self.outboundCampaign = outboundCampaign
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

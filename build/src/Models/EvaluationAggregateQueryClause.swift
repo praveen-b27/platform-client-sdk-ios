@@ -21,11 +21,8 @@ public class EvaluationAggregateQueryClause: Codable {
     public var predicates: [EvaluationAggregateQueryPredicate]?
 
     public init(type: ModelType?, predicates: [EvaluationAggregateQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

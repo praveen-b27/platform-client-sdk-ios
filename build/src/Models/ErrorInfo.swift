@@ -15,11 +15,8 @@ public class ErrorInfo: Codable {
     public var code: String?
 
     public init(message: String?, code: String?) {
-        
         self.message = message
-        
         self.code = code
-        
     }
 
 

@@ -19,13 +19,9 @@ public class MatchShiftTradeResponse: Codable {
     public var adminReviewViolations: [ShiftTradeMatchViolation]?
 
     public init(trade: ShiftTradeResponse?, violations: [ShiftTradeMatchViolation]?, adminReviewViolations: [ShiftTradeMatchViolation]?) {
-        
         self.trade = trade
-        
         self.violations = violations
-        
         self.adminReviewViolations = adminReviewViolations
-        
     }
 
 

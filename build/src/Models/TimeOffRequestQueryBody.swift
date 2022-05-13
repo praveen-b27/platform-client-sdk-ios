@@ -11,24 +11,17 @@ import Foundation
 
 public class TimeOffRequestQueryBody: Codable {
 
-    public enum Statuses: String, Codable { 
-        case pending = "PENDING"
-    }
     /** The set of user ids to filter time off requests */
     public var userIds: [String]?
     /** The set of statuses to filter time off requests */
-    public var statuses: [Statuses]?
+    public var statuses: [String]?
     /** The inclusive range of dates to filter time off requests */
     public var dateRange: DateRange?
 
     public init(userIds: [String]?, statuses: [Statuses]?, dateRange: DateRange?) {
-        
         self.userIds = userIds
-        
         self.statuses = statuses
-        
         self.dateRange = dateRange
-        
     }
 
 

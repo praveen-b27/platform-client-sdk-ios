@@ -91,71 +91,38 @@ public class Recording: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, conversationId: String?, path: String?, startTime: String?, endTime: String?, media: String?, annotations: [Annotation]?, transcript: [ChatMessage]?, emailTranscript: [RecordingEmailMessage]?, messagingTranscript: [RecordingMessagingMessage]?, fileState: FileState?, restoreExpirationTime: Date?, mediaUris: [String:MediaResult]?, estimatedTranscodeTimeMs: Int64?, actualTranscodeTimeMs: Int64?, archiveDate: Date?, archiveMedium: ArchiveMedium?, deleteDate: Date?, exportDate: Date?, exportedDate: Date?, outputDurationMs: Int?, outputSizeInBytes: Int?, maxAllowedRestorationsForOrg: Int?, remainingRestorationsAllowedForOrg: Int?, sessionId: String?, users: [User]?, recordingFileRole: RecordingFileRole?, recordingErrorStatus: RecordingErrorStatus?, originalRecordingStartTime: Date?, creationTime: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.conversationId = conversationId
-        
         self.path = path
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.media = media
-        
         self.annotations = annotations
-        
         self.transcript = transcript
-        
         self.emailTranscript = emailTranscript
-        
         self.messagingTranscript = messagingTranscript
-        
         self.fileState = fileState
-        
         self.restoreExpirationTime = restoreExpirationTime
-        
         self.mediaUris = mediaUris
-        
         self.estimatedTranscodeTimeMs = estimatedTranscodeTimeMs
-        
         self.actualTranscodeTimeMs = actualTranscodeTimeMs
-        
         self.archiveDate = archiveDate
-        
         self.archiveMedium = archiveMedium
-        
         self.deleteDate = deleteDate
-        
         self.exportDate = exportDate
-        
         self.exportedDate = exportedDate
-        
         self.outputDurationMs = outputDurationMs
-        
         self.outputSizeInBytes = outputSizeInBytes
-        
         self.maxAllowedRestorationsForOrg = maxAllowedRestorationsForOrg
-        
         self.remainingRestorationsAllowedForOrg = remainingRestorationsAllowedForOrg
-        
         self.sessionId = sessionId
-        
         self.users = users
-        
         self.recordingFileRole = recordingFileRole
-        
         self.recordingErrorStatus = recordingErrorStatus
-        
         self.originalRecordingStartTime = originalRecordingStartTime
-        
         self.creationTime = creationTime
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

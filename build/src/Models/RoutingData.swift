@@ -27,21 +27,13 @@ public class RoutingData: Codable {
     public var routingFlags: [String]?
 
     public init(queueId: String?, languageId: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?, routingFlags: [String]?) {
-        
         self.queueId = queueId
-        
         self.languageId = languageId
-        
         self.priority = priority
-        
         self.skillIds = skillIds
-        
         self.preferredAgentIds = preferredAgentIds
-        
         self.scoredAgents = scoredAgents
-        
         self.routingFlags = routingFlags
-        
     }
 
 

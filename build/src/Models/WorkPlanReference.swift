@@ -20,13 +20,9 @@ public class WorkPlanReference: Codable {
     public var selfUri: String?
 
     public init(_id: String?, managementUnit: ManagementUnitReference?, selfUri: String?) {
-        
         self._id = _id
-        
         self.managementUnit = managementUnit
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -33,27 +33,16 @@ public class ComparisonPeriod: Codable {
     public var selfUri: String?
 
     public init(_id: String?, kpi: String?, dateStarted: Date?, dateEnded: Date?, kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, kpiResults: [KpiResult]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.kpi = kpi
-        
         self.dateStarted = dateStarted
-        
         self.dateEnded = dateEnded
-        
         self.kpiTotalOn = kpiTotalOn
-        
         self.kpiTotalOff = kpiTotalOff
-        
         self.interactionCountOn = interactionCountOn
-        
         self.interactionCountOff = interactionCountOff
-        
         self.kpiResults = kpiResults
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -12,11 +12,7 @@ import Foundation
 open class BillingAPI {
     
     
-    
-    
-    
     /**
-     
      Get a report of the billable license usages
      
      - parameter startDate: (query) The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
@@ -42,53 +38,56 @@ open class BillingAPI {
     }
 
     /**
-     
      Get a report of the billable license usages
-     
      - GET /api/v2/billing/reports/billableusage
      - Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "endDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "usages" : [ {
-    "name" : "aeiou",
+    "name" : "name",
     "resources" : [ {
-      "date" : "2000-01-23T04:56:07.000+0000",
-      "name" : "aeiou"
+      "date" : "2000-01-23T04:56:07.000+00:00",
+      "name" : "name"
+    }, {
+      "date" : "2000-01-23T04:56:07.000+00:00",
+      "name" : "name"
     } ],
-    "totalUsage" : "aeiou"
+    "totalUsage" : "totalUsage"
+  }, {
+    "name" : "name",
+    "resources" : [ {
+      "date" : "2000-01-23T04:56:07.000+00:00",
+      "name" : "name"
+    }, {
+      "date" : "2000-01-23T04:56:07.000+00:00",
+      "name" : "name"
+    } ],
+    "totalUsage" : "totalUsage"
   } ],
-  "startDate" : "2000-01-23T04:56:07.000+0000",
-  "status" : "aeiou"
-}}]
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "InProgress"
+}, statusCode=200}]
      
      - parameter startDate: (query) The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
      - parameter endDate: (query) The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
 
      - returns: RequestBuilder<BillingUsageReport> 
      */
-    open class func getBillingReportsBillableusageWithRequestBuilder(startDate: Date, endDate: Date) -> RequestBuilder<BillingUsageReport> {
+    open class func getBillingReportsBillableusageWithRequestBuilder(startDate: Date, endDate: Date) -> RequestBuilder<BillingUsageReport> {        
         let path = "/api/v2/billing/reports/billableusage"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "startDate": startDate.encodeToJSON(), 
-            
             "endDate": endDate.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<BillingUsageReport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -98,15 +97,11 @@ open class BillingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the billing overview for an organization that is managed by a partner.
      
      - parameter trustorOrgId: (path) The organization ID of the trustor (customer) organization. 
-     - parameter billingPeriodIndex: (query) 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)
+     - parameter billingPeriodIndex: (query) 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getBillingTrusteebillingoverviewTrustorOrgId(trustorOrgId: String, billingPeriodIndex: Int? = nil, completion: @escaping ((_ data: TrusteeBillingOverview?,_ error: Error?) -> Void)) {
@@ -128,9 +123,7 @@ open class BillingAPI {
     }
 
     /**
-     
      Get the billing overview for an organization that is managed by a partner.
-     
      - GET /api/v2/billing/trusteebillingoverview/{trustorOrgId}
      - Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
      - OAuth:
@@ -138,63 +131,66 @@ open class BillingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "inRampPeriod" : true,
-  "billingPeriodEndDate" : "2000-01-23T04:56:07.000+0000",
-  "minimumMonthlyAmount" : "aeiou",
-  "selfUri" : "aeiou",
-  "contractEndDate" : "2000-01-23T04:56:07.000+0000",
-  "contractAmendmentDate" : "2000-01-23T04:56:07.000+0000",
-  "billingPeriodStartDate" : "2000-01-23T04:56:07.000+0000",
-  "rampPeriodStartDate" : "2000-01-23T04:56:07.000+0000",
-  "contractEffectiveDate" : "2000-01-23T04:56:07.000+0000",
-  "subscriptionType" : "aeiou",
-  "rampPeriodEndDate" : "2000-01-23T04:56:07.000+0000",
-  "organization" : {
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "name" : "aeiou",
-  "currency" : "aeiou",
-  "id" : "aeiou",
+  "billingPeriodEndDate" : "2000-01-23T04:56:07.000+00:00",
+  "minimumMonthlyAmount" : "minimumMonthlyAmount",
+  "selfUri" : "https://openapi-generator.tech",
+  "contractEndDate" : "2000-01-23T04:56:07.000+00:00",
+  "contractAmendmentDate" : "2000-01-23T04:56:07.000+00:00",
+  "billingPeriodStartDate" : "2000-01-23T04:56:07.000+00:00",
+  "rampPeriodStartDate" : "2000-01-23T04:56:07.000+00:00",
+  "contractEffectiveDate" : "2000-01-23T04:56:07.000+00:00",
+  "subscriptionType" : "ININ",
+  "rampPeriodEndDate" : "2000-01-23T04:56:07.000+00:00",
+  "organization" : "{}",
+  "name" : "name",
+  "currency" : "currency",
+  "id" : "id",
   "usages" : [ {
-    "overagePrice" : "aeiou",
+    "overagePrice" : "overagePrice",
     "isThirdParty" : true,
-    "prepayQuantity" : "aeiou",
+    "prepayQuantity" : "prepayQuantity",
     "isCancellable" : true,
-    "name" : "aeiou",
-    "partNumber" : "aeiou",
-    "usageQuantity" : "aeiou",
-    "unitOfMeasureType" : "aeiou",
-    "usageNotes" : "aeiou",
-    "grouping" : "aeiou",
-    "prepayPrice" : "aeiou",
-    "bundleQuantity" : "aeiou"
+    "name" : "name",
+    "partNumber" : "partNumber",
+    "usageQuantity" : "usageQuantity",
+    "unitOfMeasureType" : "unitOfMeasureType",
+    "usageNotes" : "usageNotes",
+    "grouping" : "grouping",
+    "prepayPrice" : "prepayPrice",
+    "bundleQuantity" : "bundleQuantity"
+  }, {
+    "overagePrice" : "overagePrice",
+    "isThirdParty" : true,
+    "prepayQuantity" : "prepayQuantity",
+    "isCancellable" : true,
+    "name" : "name",
+    "partNumber" : "partNumber",
+    "usageQuantity" : "usageQuantity",
+    "unitOfMeasureType" : "unitOfMeasureType",
+    "usageNotes" : "usageNotes",
+    "grouping" : "grouping",
+    "prepayPrice" : "prepayPrice",
+    "bundleQuantity" : "bundleQuantity"
   } ],
-  "enabledProducts" : [ "aeiou" ]
-}}]
+  "enabledProducts" : [ "enabledProducts", "enabledProducts" ]
+}, statusCode=200}]
      
      - parameter trustorOrgId: (path) The organization ID of the trustor (customer) organization. 
-     - parameter billingPeriodIndex: (query) 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional, default to 0)
+     - parameter billingPeriodIndex: (query) 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional)
 
      - returns: RequestBuilder<TrusteeBillingOverview> 
      */
-    open class func getBillingTrusteebillingoverviewTrustorOrgIdWithRequestBuilder(trustorOrgId: String, billingPeriodIndex: Int? = nil) -> RequestBuilder<TrusteeBillingOverview> {
+    open class func getBillingTrusteebillingoverviewTrustorOrgIdWithRequestBuilder(trustorOrgId: String, billingPeriodIndex: Int? = nil) -> RequestBuilder<TrusteeBillingOverview> {        
         var path = "/api/v2/billing/trusteebillingoverview/{trustorOrgId}"
         let trustorOrgIdPreEscape = "\(trustorOrgId)"
         let trustorOrgIdPostEscape = trustorOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trustorOrgId}", with: trustorOrgIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "billingPeriodIndex": billingPeriodIndex?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<TrusteeBillingOverview>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

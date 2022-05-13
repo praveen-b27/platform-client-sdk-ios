@@ -25,13 +25,9 @@ public class ImportForecastResponse: Codable {
     public var result: BuShortTermForecast?
 
     public init(status: Status?, operationId: String?, result: BuShortTermForecast?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.result = result
-        
     }
 
 

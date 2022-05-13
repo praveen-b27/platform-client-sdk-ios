@@ -31,7 +31,7 @@ public class TimeOffRequest: Codable {
     public var status: Status?
     /** A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false */
     public var partialDayStartDateTimes: [Date]?
-    /** A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true */
+    /** A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true */
     public var fullDayManagementUnitDates: [String]?
     /** The daily duration of this time off request in minutes */
     public var dailyDurationMinutes: Int?
@@ -51,39 +51,22 @@ public class TimeOffRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, user: UserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, status: Status?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, submittedBy: UserReference?, submittedDate: Date?, reviewedBy: UserReference?, reviewedDate: Date?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.user = user
-        
         self.isFullDayRequest = isFullDayRequest
-        
         self.markedAsRead = markedAsRead
-        
         self.activityCodeId = activityCodeId
-        
         self.status = status
-        
         self.partialDayStartDateTimes = partialDayStartDateTimes
-        
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
-        
         self.dailyDurationMinutes = dailyDurationMinutes
-        
         self.notes = notes
-        
         self.submittedBy = submittedBy
-        
         self.submittedDate = submittedDate
-        
         self.reviewedBy = reviewedBy
-        
         self.reviewedDate = reviewedDate
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

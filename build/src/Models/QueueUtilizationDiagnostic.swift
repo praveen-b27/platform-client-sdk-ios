@@ -31,25 +31,15 @@ public class QueueUtilizationDiagnostic: Codable {
     public var usersOnANonCampaignCall: Int?
 
     public init(queue: DomainEntityRef?, usersInQueue: Int?, activeUsersInQueue: Int?, usersOnQueue: Int?, usersNotUtilized: Int?, usersOnQueueWithStation: Int?, usersOnACampaignCall: Int?, usersOnDifferentEdgeGroup: Int?, usersOnANonCampaignCall: Int?) {
-        
         self.queue = queue
-        
         self.usersInQueue = usersInQueue
-        
         self.activeUsersInQueue = activeUsersInQueue
-        
         self.usersOnQueue = usersOnQueue
-        
         self.usersNotUtilized = usersNotUtilized
-        
         self.usersOnQueueWithStation = usersOnQueueWithStation
-        
         self.usersOnACampaignCall = usersOnACampaignCall
-        
         self.usersOnDifferentEdgeGroup = usersOnDifferentEdgeGroup
-        
         self.usersOnANonCampaignCall = usersOnANonCampaignCall
-        
     }
 
 

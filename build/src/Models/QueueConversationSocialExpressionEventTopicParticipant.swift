@@ -84,81 +84,43 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
     public var videos: [QueueConversationSocialExpressionEventTopicVideo]?
 
     public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: QueueConversationSocialExpressionEventTopicConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationSocialExpressionEventTopicCall]?, callbacks: [QueueConversationSocialExpressionEventTopicCallback]?, chats: [QueueConversationSocialExpressionEventTopicChat]?, cobrowsesessions: [QueueConversationSocialExpressionEventTopicCobrowse]?, emails: [QueueConversationSocialExpressionEventTopicEmail]?, messages: [QueueConversationSocialExpressionEventTopicMessage]?, screenshares: [QueueConversationSocialExpressionEventTopicScreenshare]?, socialExpressions: [QueueConversationSocialExpressionEventTopicSocialExpression]?, videos: [QueueConversationSocialExpressionEventTopicVideo]?) {
-        
         self._id = _id
-        
         self.connectedTime = connectedTime
-        
         self.endTime = endTime
-        
         self.userId = userId
-        
         self.externalContactId = externalContactId
-        
         self.externalOrganizationId = externalOrganizationId
-        
         self.name = name
-        
         self.queueId = queueId
-        
         self.groupId = groupId
-        
         self.teamId = teamId
-        
         self.purpose = purpose
-        
         self.consultParticipantId = consultParticipantId
-        
         self.address = address
-        
         self.wrapupRequired = wrapupRequired
-        
         self.wrapupExpected = wrapupExpected
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.wrapupTimeoutMs = wrapupTimeoutMs
-        
         self.wrapup = wrapup
-        
         self.startAcwTime = startAcwTime
-        
         self.endAcwTime = endAcwTime
-        
         self.conversationRoutingData = conversationRoutingData
-        
         self.alertingTimeoutMs = alertingTimeoutMs
-        
         self.monitoredParticipantId = monitoredParticipantId
-        
         self.coachedParticipantId = coachedParticipantId
-        
         self.bargedParticipantId = bargedParticipantId
-        
         self.screenRecordingState = screenRecordingState
-        
         self.flaggedReason = flaggedReason
-        
         self.attributes = attributes
-        
         self.calls = calls
-        
         self.callbacks = callbacks
-        
         self.chats = chats
-        
         self.cobrowsesessions = cobrowsesessions
-        
         self.emails = emails
-        
         self.messages = messages
-        
         self.screenshares = screenshares
-        
         self.socialExpressions = socialExpressions
-        
         self.videos = videos
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

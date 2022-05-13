@@ -19,13 +19,9 @@ public class DocumentArticle: Codable {
     public var alternatives: [String]?
 
     public init(title: String?, content: ArticleContent?, alternatives: [String]?) {
-        
         self.title = title
-        
         self.content = content
-        
         self.alternatives = alternatives
-        
     }
 
 

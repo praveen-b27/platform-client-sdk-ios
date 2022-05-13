@@ -14,9 +14,7 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationNotific
     public var text: String?
 
     public init(text: String?) {
-        
         self.text = text
-        
     }
 
 

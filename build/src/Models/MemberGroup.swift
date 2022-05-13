@@ -29,19 +29,12 @@ public class MemberGroup: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, memberCount: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self.type = type
-        
         self.memberCount = memberCount
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

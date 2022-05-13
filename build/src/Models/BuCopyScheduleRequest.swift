@@ -17,11 +17,8 @@ public class BuCopyScheduleRequest: Codable {
     public var weekDate: Date?
 
     public init(_description: String?, weekDate: Date?) {
-        
         self._description = _description
-        
         self.weekDate = weekDate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

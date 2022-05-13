@@ -54,33 +54,19 @@ public class KnowledgeSearchDocument: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, languageCode: LanguageCode?, type: ModelType?, faq: DocumentFaq?, dateCreated: Date?, dateModified: Date?, categories: [KnowledgeCategory]?, knowledgeBase: KnowledgeBase?, externalUrl: String?, article: DocumentArticle?, confidence: Double?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.languageCode = languageCode
-        
         self.type = type
-        
         self.faq = faq
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.categories = categories
-        
         self.knowledgeBase = knowledgeBase
-        
         self.externalUrl = externalUrl
-        
         self.article = article
-        
         self.confidence = confidence
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

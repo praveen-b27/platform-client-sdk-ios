@@ -19,8 +19,8 @@ title: Flow
 | **deleted** | **Bool** |  | [optional] |
 | **publishedVersion** | [**FlowVersion**](FlowVersion.html) |  | [optional] |
 | **savedVersion** | [**FlowVersion**](FlowVersion.html) |  | [optional] |
-| **inputSchema** | [**JSON**](JSON.html) | json schema describing the inputs for the flow | [optional] |
-| **outputSchema** | [**JSON**](JSON.html) | json schema describing the outputs for the flow | [optional] |
+| **inputSchema** | [**JSON**](.html) | json schema describing the inputs for the flow | [optional] |
+| **outputSchema** | [**JSON**](.html) | json schema describing the outputs for the flow | [optional] |
 | **checkedInVersion** | [**FlowVersion**](FlowVersion.html) |  | [optional] |
 | **debugVersion** | [**FlowVersion**](FlowVersion.html) |  | [optional] |
 | **publishedBy** | [**User**](User.html) |  | [optional] |

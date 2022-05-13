@@ -18,17 +18,11 @@ public class ChatMessageUser: Codable {
     public var images: [UserImage]?
 
     public init(_id: String?, name: String?, displayName: String?, username: String?, images: [UserImage]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.displayName = displayName
-        
         self.username = username
-        
         self.images = images
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

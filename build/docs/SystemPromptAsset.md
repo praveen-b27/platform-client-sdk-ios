@@ -19,7 +19,7 @@ title: SystemPromptAsset
 | **uploadStatus** | **String** |  | [optional] |
 | **hasDefault** | **Bool** |  | [optional] |
 | **languageDefault** | **Bool** |  | [optional] |
-| **tags** | [**[String:[String]]**](Array.html) |  | [optional] |
+| **tags** | [**[String:[String]]**](StringJSON.html) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

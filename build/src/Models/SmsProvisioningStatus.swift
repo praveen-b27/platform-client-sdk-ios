@@ -32,15 +32,10 @@ public class SmsProvisioningStatus: Codable {
     public var version: Int64?
 
     public init(action: Action?, state: State?, error: ErrorBody?, version: Int64?) {
-        
         self.action = action
-        
         self.state = state
-        
         self.error = error
-        
         self.version = version
-        
     }
 
 

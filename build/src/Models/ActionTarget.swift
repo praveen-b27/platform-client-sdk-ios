@@ -48,29 +48,17 @@ public class ActionTarget: Codable {
     public var modifiedDate: Date?
 
     public init(_id: String?, name: String?, userData: [KeyValue]?, supportedMediaTypes: [SupportedMediaTypes]?, state: State?, _description: String?, serviceLevel: ServiceLevel?, shortAbandonThreshold: Int?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.userData = userData
-        
         self.supportedMediaTypes = supportedMediaTypes
-        
         self.state = state
-        
         self._description = _description
-        
         self.serviceLevel = serviceLevel
-        
         self.shortAbandonThreshold = shortAbandonThreshold
-        
         self.selfUri = selfUri
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

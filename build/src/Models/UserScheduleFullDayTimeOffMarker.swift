@@ -26,19 +26,12 @@ public class UserScheduleFullDayTimeOffMarker: Codable {
     public var delete: Bool?
 
     public init(managementUnitDate: String?, activityCodeId: String?, isPaid: Bool?, lengthInMinutes: Int?, _description: String?, delete: Bool?) {
-        
         self.managementUnitDate = managementUnitDate
-        
         self.activityCodeId = activityCodeId
-        
         self.isPaid = isPaid
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self._description = _description
-        
         self.delete = delete
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

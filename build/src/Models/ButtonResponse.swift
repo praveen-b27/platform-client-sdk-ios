@@ -30,15 +30,10 @@ public class ButtonResponse: Codable {
     public var messageType: MessageType?
 
     public init(type: ModelType?, text: String?, payload: String?, messageType: MessageType?) {
-        
         self.type = type
-        
         self.text = text
-        
         self.payload = payload
-        
         self.messageType = messageType
-        
     }
 
 

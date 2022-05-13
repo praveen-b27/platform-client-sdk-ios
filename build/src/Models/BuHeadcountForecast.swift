@@ -16,11 +16,8 @@ public class BuHeadcountForecast: Codable {
     public var referenceStartDate: Date?
 
     public init(entities: [BuPlanningGroupHeadcountForecast]?, referenceStartDate: Date?) {
-        
         self.entities = entities
-        
         self.referenceStartDate = referenceStartDate
-        
     }
 
 

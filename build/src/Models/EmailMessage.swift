@@ -40,35 +40,20 @@ public class EmailMessage: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, replyTo: EmailAddress?, subject: String?, attachments: [Attachment]?, textBody: String?, htmlBody: String?, time: Date?, historyIncluded: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.to = to
-        
         self.cc = cc
-        
         self.bcc = bcc
-        
         self.from = from
-        
         self.replyTo = replyTo
-        
         self.subject = subject
-        
         self.attachments = attachments
-        
         self.textBody = textBody
-        
         self.htmlBody = htmlBody
-        
         self.time = time
-        
         self.historyIncluded = historyIncluded
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

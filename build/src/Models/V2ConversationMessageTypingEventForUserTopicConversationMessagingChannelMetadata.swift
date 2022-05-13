@@ -14,9 +14,7 @@ public class V2ConversationMessageTypingEventForUserTopicConversationMessagingCh
     public var customAttributes: [String:String]?
 
     public init(customAttributes: [String:String]?) {
-        
         self.customAttributes = customAttributes
-        
     }
 
 

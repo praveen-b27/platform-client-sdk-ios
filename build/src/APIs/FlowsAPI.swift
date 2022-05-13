@@ -11,10 +11,7 @@ import Foundation
 
 open class FlowsAPI {
     
-    
-    
     /**
-     
      Query for flow aggregates
      
      - parameter body: (body) query 
@@ -39,57 +36,298 @@ open class FlowsAPI {
     }
 
     /**
-     
      Query for flow aggregates
-     
      - POST /api/v2/analytics/flows/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<FlowAggregateQueryResponse> 
      */
-    open class func postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: FlowAggregationQuery) -> RequestBuilder<FlowAggregateQueryResponse> {
+    open class func postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: FlowAggregationQuery) -> RequestBuilder<FlowAggregateQueryResponse> {        
         let path = "/api/v2/analytics/flows/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -98,10 +336,7 @@ open class FlowsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for flow observations
      
      - parameter body: (body) query 
@@ -126,75 +361,314 @@ open class FlowsAPI {
     }
 
     /**
-     
      Query for flow observations
-     
      - POST /api/v2/analytics/flows/observations/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "metric" : "aeiou",
+      "metric" : "metric",
       "stats" : {
-        "current" : 1.3579000000000001069366817318950779736042022705078125,
-        "min" : 1.3579000000000001069366817318950779736042022705078125,
-        "max" : 1.3579000000000001069366817318950779736042022705078125,
-        "count" : 123456789,
-        "sum" : 1.3579000000000001069366817318950779736042022705078125,
-        "countPositive" : 123456789,
-        "countNegative" : 123456789,
-        "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-        "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-        "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-        "target" : 1.3579000000000001069366817318950779736042022705078125
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
       },
-      "qualifier" : "aeiou",
+      "qualifier" : "qualifier",
       "observations" : [ {
-        "usedRouting" : "aeiou",
-        "routingPriority" : 123456789,
-        "conversationId" : "aeiou",
-        "convertedTo" : "aeiou",
-        "requestedRoutingSkillIds" : [ "aeiou" ],
-        "sessionId" : "aeiou",
-        "userId" : "aeiou",
-        "addressTo" : "aeiou",
-        "observationDate" : "2000-01-23T04:56:07.000+0000",
-        "teamId" : "aeiou",
-        "requestedRoutings" : [ "aeiou" ],
-        "convertedFrom" : "aeiou",
-        "dnis" : "aeiou",
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
         "scoredAgents" : [ {
-          "scoredAgentId" : "aeiou",
-          "agentScore" : 123
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
         } ],
-        "requestedLanguageId" : "aeiou",
-        "participantName" : "aeiou",
-        "addressFrom" : "aeiou",
-        "ani" : "aeiou",
-        "direction" : "aeiou"
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    }, {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
       } ],
       "truncated" : true
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    }, {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<FlowObservationQueryResponse> 
      */
-    open class func postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: FlowObservationQuery) -> RequestBuilder<FlowObservationQueryResponse> {
+    open class func postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: FlowObservationQuery) -> RequestBuilder<FlowObservationQueryResponse> {        
         let path = "/api/v2/analytics/flows/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

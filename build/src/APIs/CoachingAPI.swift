@@ -11,10 +11,7 @@ import Foundation
 
 open class CoachingAPI {
     
-    
-    
     /**
-     
      Delete an existing appointment
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -39,35 +36,28 @@ open class CoachingAPI {
     }
 
     /**
-     
      Delete an existing appointment
-     
      - DELETE /api/v2/coaching/appointments/{appointmentId}
      - Permission not required if you are the creator of the appointment
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
 
      - returns: RequestBuilder<CoachingAppointmentReference> 
      */
-    open class func deleteCoachingAppointmentWithRequestBuilder(appointmentId: String) -> RequestBuilder<CoachingAppointmentReference> {
+    open class func deleteCoachingAppointmentWithRequestBuilder(appointmentId: String) -> RequestBuilder<CoachingAppointmentReference> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -78,11 +68,7 @@ open class CoachingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete an existing annotation
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -101,9 +87,7 @@ open class CoachingAPI {
     }
 
     /**
-     
      Delete an existing annotation
-     
      - DELETE /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}
      - You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
      - OAuth:
@@ -115,7 +99,7 @@ open class CoachingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteCoachingAppointmentAnnotationWithRequestBuilder(appointmentId: String, annotationId: String) -> RequestBuilder<Void> {
+    open class func deleteCoachingAppointmentAnnotationWithRequestBuilder(appointmentId: String, annotationId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -124,12 +108,7 @@ open class CoachingAPI {
         let annotationIdPostEscape = annotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{annotationId}", with: annotationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -139,10 +118,7 @@ open class CoachingAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve an appointment
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -167,69 +143,63 @@ open class CoachingAPI {
     }
 
     /**
-     
      Retrieve an appointment
-     
      - GET /api/v2/coaching/appointments/{appointmentId}
      - Permission not required if you are the attendee, creator or facilitator of the appointment
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "wfmSchedule" : {
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
-  },
+  "wfmSchedule" : "{}",
   "documents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "attendees" : [ "" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "attendees" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "conversations" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "facilitator" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "lengthInMinutes" : 123,
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "facilitator" : "{}",
+  "lengthInMinutes" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
-  "dateStart" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "",
-  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "modifiedBy" : "",
-  "externalLinks" : [ "aeiou" ],
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "externalLinks" : [ "externalLinks", "externalLinks" ],
+  "id" : "id",
+  "status" : "Scheduled"
+}, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
 
      - returns: RequestBuilder<CoachingAppointmentResponse> 
      */
-    open class func getCoachingAppointmentWithRequestBuilder(appointmentId: String) -> RequestBuilder<CoachingAppointmentResponse> {
+    open class func getCoachingAppointmentWithRequestBuilder(appointmentId: String) -> RequestBuilder<CoachingAppointmentResponse> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -240,11 +210,7 @@ open class CoachingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieve an annotation.
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -270,35 +236,30 @@ open class CoachingAPI {
     }
 
     /**
-     
      Retrieve an annotation.
-     
      - GET /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}
      - You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "accessType" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "accessType" : "Public",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isDeleted" : true,
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "modifiedBy" : "",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "text" : "aeiou"
-}}]
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "text" : "text"
+}, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
      - parameter annotationId: (path) The ID of the annotation. 
 
      - returns: RequestBuilder<CoachingAnnotation> 
      */
-    open class func getCoachingAppointmentAnnotationWithRequestBuilder(appointmentId: String, annotationId: String) -> RequestBuilder<CoachingAnnotation> {
+    open class func getCoachingAppointmentAnnotationWithRequestBuilder(appointmentId: String, annotationId: String) -> RequestBuilder<CoachingAnnotation> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -307,12 +268,7 @@ open class CoachingAPI {
         let annotationIdPostEscape = annotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{annotationId}", with: annotationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -324,17 +280,12 @@ open class CoachingAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a list of annotations.
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getCoachingAppointmentAnnotations(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: CoachingAnnotationList?,_ error: Error?) -> Void)) {
@@ -356,66 +307,63 @@ open class CoachingAPI {
     }
 
     /**
-     
      Get a list of annotations.
-     
      - GET /api/v2/coaching/appointments/{appointmentId}/annotations
      - You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can view private annotations).
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "accessType" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "accessType" : "Public",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isDeleted" : true,
-    "createdBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "text" : "aeiou"
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "text" : "text"
+  }, {
+    "accessType" : "Public",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isDeleted" : true,
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "text" : "text"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<CoachingAnnotationList> 
      */
-    open class func getCoachingAppointmentAnnotationsWithRequestBuilder(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CoachingAnnotationList> {
+    open class func getCoachingAppointmentAnnotationsWithRequestBuilder(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CoachingAnnotationList> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}/annotations"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<CoachingAnnotationList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -426,17 +374,12 @@ open class CoachingAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get the list of status changes for a coaching appointment.
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getCoachingAppointmentStatuses(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: CoachingAppointmentStatusResponseList?,_ error: Error?) -> Void)) {
@@ -458,59 +401,48 @@ open class CoachingAPI {
     }
 
     /**
-     
      Get the list of status changes for a coaching appointment.
-     
      - GET /api/v2/coaching/appointments/{appointmentId}/statuses
      - Permission not required if you are an attendee, creator or facilitator of the appointment
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "appointment" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "status" : "aeiou"
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "appointment" : "{}",
+    "status" : "Scheduled"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "appointment" : "{}",
+    "status" : "Scheduled"
   } ],
-  "pageSize" : 123
-}}]
+  "pageSize" : 0
+}, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<CoachingAppointmentStatusResponseList> 
      */
-    open class func getCoachingAppointmentStatusesWithRequestBuilder(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CoachingAppointmentStatusResponseList> {
+    open class func getCoachingAppointmentStatusesWithRequestBuilder(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CoachingAppointmentStatusResponseList> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}/statuses"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<CoachingAppointmentStatusResponseList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -525,36 +457,11 @@ open class CoachingAPI {
     
     
     
-    
-    
-    
-    public enum Statuses_getCoachingAppointments: String { 
-        case scheduled = "Scheduled"
-        case inProgress = "InProgress"
-        case completed = "Completed"
-        case invalidSchedule = "InvalidSchedule"
-    }
-
-    
-    
-    
-    
-    
     public enum SortOrder_getCoachingAppointments: String { 
         case desc = "Desc"
         case asc = "Asc"
     }
 
-    
-    
-    
-    public enum Relationships_getCoachingAppointments: String { 
-        case creator = "Creator"
-        case facilitator = "Facilitator"
-        case attendee = "Attendee"
-    }
-
-    
     
     
     
@@ -567,22 +474,19 @@ open class CoachingAPI {
 
     
     
-    
     public enum IntervalCondition_getCoachingAppointments: String { 
         case startsIn = "StartsIn"
         case overlaps = "Overlaps"
     }
 
     
-    
     /**
-     
      Get appointments for users and optional date range
      
      - parameter userIds: (query) The user IDs for which to retrieve appointments 
      - parameter interval: (query) Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
      - parameter facilitatorIds: (query) The facilitator IDs for which to retrieve appointments (optional)
      - parameter sortOrder: (query) Sort (by due date) either Asc or Desc (optional)
@@ -611,68 +515,104 @@ open class CoachingAPI {
     }
 
     /**
-     
      Get appointments for users and optional date range
-     
      - GET /api/v2/coaching/appointments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "wfmSchedule" : {
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
+    "wfmSchedule" : "{}",
     "documents" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "attendees" : [ "" ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "attendees" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "conversations" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "facilitator" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "lengthInMinutes" : 123,
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "facilitator" : "{}",
+    "lengthInMinutes" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "modifiedBy" : "",
-    "externalLinks" : [ "aeiou" ],
-    "id" : "aeiou",
-    "status" : "aeiou"
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "externalLinks" : [ "externalLinks", "externalLinks" ],
+    "id" : "id",
+    "status" : "Scheduled"
+  }, {
+    "wfmSchedule" : "{}",
+    "documents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "attendees" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "conversations" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "facilitator" : "{}",
+    "lengthInMinutes" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isOverdue" : true,
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "externalLinks" : [ "externalLinks", "externalLinks" ],
+    "id" : "id",
+    "status" : "Scheduled"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter userIds: (query) The user IDs for which to retrieve appointments 
      - parameter interval: (query) Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
      - parameter facilitatorIds: (query) The facilitator IDs for which to retrieve appointments (optional)
      - parameter sortOrder: (query) Sort (by due date) either Asc or Desc (optional)
@@ -683,41 +623,24 @@ open class CoachingAPI {
 
      - returns: RequestBuilder<CoachingAppointmentResponseList> 
      */
-    open class func getCoachingAppointmentsWithRequestBuilder(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointments? = nil, intervalCondition: IntervalCondition_getCoachingAppointments? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
+    open class func getCoachingAppointmentsWithRequestBuilder(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointments? = nil, intervalCondition: IntervalCondition_getCoachingAppointments? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {        
         let path = "/api/v2/coaching/appointments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "userIds": userIds, 
-            
             "interval": interval, 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "statuses": statuses, 
-            
             "facilitatorIds": facilitatorIds, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "relationships": relationships, 
-            
             "completionInterval": completionInterval, 
-            
             "overdue": overdue?.rawValue, 
-            
             "intervalCondition": intervalCondition?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<CoachingAppointmentResponseList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -731,35 +654,11 @@ open class CoachingAPI {
     
     
     
-    
-    
-    public enum Statuses_getCoachingAppointmentsMe: String { 
-        case scheduled = "Scheduled"
-        case inProgress = "InProgress"
-        case completed = "Completed"
-        case invalidSchedule = "InvalidSchedule"
-    }
-
-    
-    
-    
-    
-    
     public enum SortOrder_getCoachingAppointmentsMe: String { 
         case desc = "Desc"
         case asc = "Asc"
     }
 
-    
-    
-    
-    public enum Relationships_getCoachingAppointmentsMe: String { 
-        case creator = "Creator"
-        case facilitator = "Facilitator"
-        case attendee = "Attendee"
-    }
-
-    
     
     
     
@@ -772,21 +671,18 @@ open class CoachingAPI {
 
     
     
-    
     public enum IntervalCondition_getCoachingAppointmentsMe: String { 
         case startsIn = "StartsIn"
         case overlaps = "Overlaps"
     }
 
     
-    
     /**
-     
      Get my appointments for a given date range
      
      - parameter interval: (query) Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
      - parameter facilitatorIds: (query) The facilitator IDs for which to retrieve appointments (optional)
      - parameter sortOrder: (query) Sort (by due date) either Asc or Desc (optional)
@@ -815,67 +711,103 @@ open class CoachingAPI {
     }
 
     /**
-     
      Get my appointments for a given date range
-     
      - GET /api/v2/coaching/appointments/me
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "wfmSchedule" : {
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
+    "wfmSchedule" : "{}",
     "documents" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "attendees" : [ "" ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "attendees" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "conversations" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "facilitator" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "lengthInMinutes" : 123,
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "facilitator" : "{}",
+    "lengthInMinutes" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "modifiedBy" : "",
-    "externalLinks" : [ "aeiou" ],
-    "id" : "aeiou",
-    "status" : "aeiou"
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "externalLinks" : [ "externalLinks", "externalLinks" ],
+    "id" : "id",
+    "status" : "Scheduled"
+  }, {
+    "wfmSchedule" : "{}",
+    "documents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "attendees" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "conversations" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "facilitator" : "{}",
+    "lengthInMinutes" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isOverdue" : true,
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "externalLinks" : [ "externalLinks", "externalLinks" ],
+    "id" : "id",
+    "status" : "Scheduled"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter interval: (query) Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
      - parameter facilitatorIds: (query) The facilitator IDs for which to retrieve appointments (optional)
      - parameter sortOrder: (query) Sort (by due date) either Asc or Desc (optional)
@@ -886,39 +818,23 @@ open class CoachingAPI {
 
      - returns: RequestBuilder<CoachingAppointmentResponseList> 
      */
-    open class func getCoachingAppointmentsMeWithRequestBuilder(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointmentsMe? = nil, intervalCondition: IntervalCondition_getCoachingAppointmentsMe? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
+    open class func getCoachingAppointmentsMeWithRequestBuilder(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointmentsMe? = nil, intervalCondition: IntervalCondition_getCoachingAppointmentsMe? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {        
         let path = "/api/v2/coaching/appointments/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "interval": interval, 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "statuses": statuses, 
-            
             "facilitatorIds": facilitatorIds, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "relationships": relationships, 
-            
             "completionInterval": completionInterval, 
-            
             "overdue": overdue?.rawValue, 
-            
             "intervalCondition": intervalCondition?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<CoachingAppointmentResponseList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -928,16 +844,7 @@ open class CoachingAPI {
 
     
     
-    
-    
-    public enum Expand_getCoachingNotification: String { 
-        case appointment = "appointment"
-    }
-
-    
-    
     /**
-     
      Get an existing notification
      
      - parameter notificationId: (path) The ID of the notification. 
@@ -963,88 +870,42 @@ open class CoachingAPI {
     }
 
     /**
-     
      Get an existing notification
-     
      - GET /api/v2/coaching/notifications/{notificationId}
      - Permission not required if you are the owner of the notification.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "actionType" : "aeiou",
-  "lengthInMinutes" : 123,
+  "actionType" : "Create",
+  "lengthInMinutes" : 0,
   "markedAsRead" : true,
-  "dateStart" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "appointment" : {
-    "wfmSchedule" : {
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "documents" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "attendees" : [ "" ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "conversations" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "facilitator" : "",
-    "lengthInMinutes" : 123,
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "isOverdue" : true,
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "modifiedBy" : "",
-    "externalLinks" : [ "aeiou" ],
-    "id" : "aeiou",
-    "status" : "aeiou"
-  },
-  "id" : "aeiou",
-  "relationship" : "aeiou",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "appointment" : "{}",
+  "id" : "id",
+  "relationship" : "Attendee",
+  "user" : "{}",
+  "status" : "Scheduled"
+}, statusCode=200}]
      
      - parameter notificationId: (path) The ID of the notification. 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
 
      - returns: RequestBuilder<CoachingNotification> 
      */
-    open class func getCoachingNotificationWithRequestBuilder(notificationId: String, expand: [String]? = nil) -> RequestBuilder<CoachingNotification> {
+    open class func getCoachingNotificationWithRequestBuilder(notificationId: String, expand: [String]? = nil) -> RequestBuilder<CoachingNotification> {        
         var path = "/api/v2/coaching/notifications/{notificationId}"
         let notificationIdPreEscape = "\(notificationId)"
         let notificationIdPostEscape = notificationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{notificationId}", with: notificationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<CoachingNotification>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1055,21 +916,11 @@ open class CoachingAPI {
     
     
     
-    
-    
-    
-    public enum Expand_getCoachingNotifications: String { 
-        case appointment = "appointment"
-    }
-
-    
-    
     /**
-     
      Retrieve the list of your notifications.
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1092,101 +943,64 @@ open class CoachingAPI {
     }
 
     /**
-     
      Retrieve the list of your notifications.
-     
      - GET /api/v2/coaching/notifications
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "actionType" : "aeiou",
-    "lengthInMinutes" : 123,
+    "actionType" : "Create",
+    "lengthInMinutes" : 0,
     "markedAsRead" : true,
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "appointment" : {
-      "wfmSchedule" : {
-        "businessUnit" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "id" : "aeiou",
-        "weekDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "documents" : [ {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      } ],
-      "attendees" : [ "" ],
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "conversations" : [ {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      } ],
-      "facilitator" : "",
-      "lengthInMinutes" : 123,
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "isOverdue" : true,
-      "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-      "name" : "aeiou",
-      "modifiedBy" : "",
-      "externalLinks" : [ "aeiou" ],
-      "id" : "aeiou",
-      "status" : "aeiou"
-    },
-    "id" : "aeiou",
-    "relationship" : "aeiou",
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "status" : "aeiou"
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "appointment" : "{}",
+    "id" : "id",
+    "relationship" : "Attendee",
+    "user" : "{}",
+    "status" : "Scheduled"
+  }, {
+    "actionType" : "Create",
+    "lengthInMinutes" : 0,
+    "markedAsRead" : true,
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "appointment" : "{}",
+    "id" : "id",
+    "relationship" : "Attendee",
+    "user" : "{}",
+    "status" : "Scheduled"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
 
      - returns: RequestBuilder<CoachingNotificationList> 
      */
-    open class func getCoachingNotificationsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<CoachingNotificationList> {
+    open class func getCoachingNotificationsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<CoachingNotificationList> {        
         let path = "/api/v2/coaching/notifications"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<CoachingNotificationList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1196,11 +1010,7 @@ open class CoachingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update an existing appointment
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -1226,68 +1036,65 @@ open class CoachingAPI {
     }
 
     /**
-     
      Update an existing appointment
-     
      - PATCH /api/v2/coaching/appointments/{appointmentId}
      - Permission not required if you are the creator or facilitator of the appointment
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "wfmSchedule" : {
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
-  },
+  "wfmSchedule" : "{}",
   "documents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "attendees" : [ "" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "attendees" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "conversations" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "facilitator" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "lengthInMinutes" : 123,
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "facilitator" : "{}",
+  "lengthInMinutes" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
-  "dateStart" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "",
-  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "modifiedBy" : "",
-  "externalLinks" : [ "aeiou" ],
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "externalLinks" : [ "externalLinks", "externalLinks" ],
+  "id" : "id",
+  "status" : "Scheduled"
+}, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
      - parameter body: (body) The new version of the appointment 
 
      - returns: RequestBuilder<CoachingAppointmentResponse> 
      */
-    open class func patchCoachingAppointmentWithRequestBuilder(appointmentId: String, body: UpdateCoachingAppointmentRequest) -> RequestBuilder<CoachingAppointmentResponse> {
+    open class func patchCoachingAppointmentWithRequestBuilder(appointmentId: String, body: UpdateCoachingAppointmentRequest) -> RequestBuilder<CoachingAppointmentResponse> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAppointmentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1298,12 +1105,7 @@ open class CoachingAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update an existing annotation.
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -1330,28 +1132,23 @@ open class CoachingAPI {
     }
 
     /**
-     
      Update an existing annotation.
-     
      - PATCH /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}
      - You must have the appropriate permission for the type of annotation you are updating. Permission not required if you are the creator or facilitator of the appointment
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "accessType" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "accessType" : "Public",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isDeleted" : true,
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "modifiedBy" : "",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "text" : "aeiou"
-}}]
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "text" : "text"
+}, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
      - parameter annotationId: (path) The ID of the annotation. 
@@ -1359,7 +1156,7 @@ open class CoachingAPI {
 
      - returns: RequestBuilder<CoachingAnnotation> 
      */
-    open class func patchCoachingAppointmentAnnotationWithRequestBuilder(appointmentId: String, annotationId: String, body: CoachingAnnotation) -> RequestBuilder<CoachingAnnotation> {
+    open class func patchCoachingAppointmentAnnotationWithRequestBuilder(appointmentId: String, annotationId: String, body: CoachingAnnotation) -> RequestBuilder<CoachingAnnotation> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1368,10 +1165,8 @@ open class CoachingAPI {
         let annotationIdPostEscape = annotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{annotationId}", with: annotationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAnnotation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1381,11 +1176,7 @@ open class CoachingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update the status of a coaching appointment
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -1411,42 +1202,32 @@ open class CoachingAPI {
     }
 
     /**
-     
      Update the status of a coaching appointment
-     
      - PATCH /api/v2/coaching/appointments/{appointmentId}/status
      - Permission not required if you are an attendee, creator or facilitator of the appointment
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "appointment" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "appointment" : "{}",
+  "status" : "Scheduled"
+}, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
      - parameter body: (body) Updated status of the coaching appointment 
 
      - returns: RequestBuilder<CoachingAppointmentStatusResponse> 
      */
-    open class func patchCoachingAppointmentStatusWithRequestBuilder(appointmentId: String, body: CoachingAppointmentStatusRequest) -> RequestBuilder<CoachingAppointmentStatusResponse> {
+    open class func patchCoachingAppointmentStatusWithRequestBuilder(appointmentId: String, body: CoachingAppointmentStatusRequest) -> RequestBuilder<CoachingAppointmentStatusResponse> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}/status"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAppointmentStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1456,11 +1237,7 @@ open class CoachingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update an existing notification.
      
      - parameter notificationId: (path) The ID of the notification. 
@@ -1486,80 +1263,39 @@ open class CoachingAPI {
     }
 
     /**
-     
      Update an existing notification.
-     
      - PATCH /api/v2/coaching/notifications/{notificationId}
      - Can only update your own notifications.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "actionType" : "aeiou",
-  "lengthInMinutes" : 123,
+  "actionType" : "Create",
+  "lengthInMinutes" : 0,
   "markedAsRead" : true,
-  "dateStart" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "appointment" : {
-    "wfmSchedule" : {
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "documents" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "attendees" : [ "" ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "conversations" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "facilitator" : "",
-    "lengthInMinutes" : 123,
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "isOverdue" : true,
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "modifiedBy" : "",
-    "externalLinks" : [ "aeiou" ],
-    "id" : "aeiou",
-    "status" : "aeiou"
-  },
-  "id" : "aeiou",
-  "relationship" : "aeiou",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "appointment" : "{}",
+  "id" : "id",
+  "relationship" : "Attendee",
+  "user" : "{}",
+  "status" : "Scheduled"
+}, statusCode=200}]
      
      - parameter notificationId: (path) The ID of the notification. 
      - parameter body: (body) Change the read state of a notification 
 
      - returns: RequestBuilder<CoachingNotification> 
      */
-    open class func patchCoachingNotificationWithRequestBuilder(notificationId: String, body: CoachingNotification) -> RequestBuilder<CoachingNotification> {
+    open class func patchCoachingNotificationWithRequestBuilder(notificationId: String, body: CoachingNotification) -> RequestBuilder<CoachingNotification> {        
         var path = "/api/v2/coaching/notifications/{notificationId}"
         let notificationIdPreEscape = "\(notificationId)"
         let notificationIdPostEscape = notificationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{notificationId}", with: notificationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingNotification>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1569,11 +1305,7 @@ open class CoachingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create a new annotation.
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -1599,44 +1331,37 @@ open class CoachingAPI {
     }
 
     /**
-     
      Create a new annotation.
-     
      - POST /api/v2/coaching/appointments/{appointmentId}/annotations
      - You must have the appropriate permission for the type of annotation you are creating. Permission not required if you are related to the appointment (only the creator or facilitator can create private annotations).
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "accessType" : "aeiou",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "accessType" : "Public",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isDeleted" : true,
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "modifiedBy" : "",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "text" : "aeiou"
-}}]
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "text" : "text"
+}, statusCode=201}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
      - parameter body: (body) The annotation to add 
 
      - returns: RequestBuilder<CoachingAnnotation> 
      */
-    open class func postCoachingAppointmentAnnotationsWithRequestBuilder(appointmentId: String, body: CoachingAnnotationCreateRequest) -> RequestBuilder<CoachingAnnotation> {
+    open class func postCoachingAppointmentAnnotationsWithRequestBuilder(appointmentId: String, body: CoachingAnnotationCreateRequest) -> RequestBuilder<CoachingAnnotation> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}/annotations"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAnnotation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1646,11 +1371,7 @@ open class CoachingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Add a conversation to an appointment
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -1676,40 +1397,30 @@ open class CoachingAPI {
     }
 
     /**
-     
      Add a conversation to an appointment
-     
      - POST /api/v2/coaching/appointments/{appointmentId}/conversations
      - Permission not required if you are the creator or facilitator of the appointment
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "appointment" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "conversation" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "appointment" : "{}",
+  "conversation" : "{}"
+}, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
      - parameter body: (body) body 
 
      - returns: RequestBuilder<AddConversationResponse> 
      */
-    open class func postCoachingAppointmentConversationsWithRequestBuilder(appointmentId: String, body: AddConversationRequest) -> RequestBuilder<AddConversationResponse> {
+    open class func postCoachingAppointmentConversationsWithRequestBuilder(appointmentId: String, body: AddConversationRequest) -> RequestBuilder<AddConversationResponse> {        
         var path = "/api/v2/coaching/appointments/{appointmentId}/conversations"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AddConversationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1718,10 +1429,7 @@ open class CoachingAPI {
     }
 
     
-    
-    
     /**
-     
      Create a new appointment
      
      - parameter body: (body) The appointment to add 
@@ -1746,64 +1454,60 @@ open class CoachingAPI {
     }
 
     /**
-     
      Create a new appointment
-     
      - POST /api/v2/coaching/appointments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "wfmSchedule" : {
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
-  },
+  "wfmSchedule" : "{}",
   "documents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "attendees" : [ "" ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "attendees" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "conversations" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "facilitator" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "lengthInMinutes" : 123,
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "facilitator" : "{}",
+  "lengthInMinutes" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
-  "dateStart" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "",
-  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "modifiedBy" : "",
-  "externalLinks" : [ "aeiou" ],
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "externalLinks" : [ "externalLinks", "externalLinks" ],
+  "id" : "id",
+  "status" : "Scheduled"
+}, statusCode=201}]
      
      - parameter body: (body) The appointment to add 
 
      - returns: RequestBuilder<CoachingAppointmentResponse> 
      */
-    open class func postCoachingAppointmentsWithRequestBuilder(body: CreateCoachingAppointmentRequest) -> RequestBuilder<CoachingAppointmentResponse> {
+    open class func postCoachingAppointmentsWithRequestBuilder(body: CreateCoachingAppointmentRequest) -> RequestBuilder<CoachingAppointmentResponse> {        
         let path = "/api/v2/coaching/appointments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAppointmentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1812,10 +1516,7 @@ open class CoachingAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve aggregated appointment data
      
      - parameter body: (body) Aggregate Request 
@@ -1840,42 +1541,70 @@ open class CoachingAPI {
     }
 
     /**
-     
      Retrieve aggregated appointment data
-     
      - POST /api/v2/coaching/appointments/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
-        "stats" : {
-          "count" : 123
-        }
+        "metric" : "nActivities",
+        "stats" : "{}"
+      }, {
+        "metric" : "nActivities",
+        "stats" : "{}"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "nActivities",
+        "stats" : "{}"
+      }, {
+        "metric" : "nActivities",
+        "stats" : "{}"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "nActivities",
+        "stats" : "{}"
+      }, {
+        "metric" : "nActivities",
+        "stats" : "{}"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "nActivities",
+        "stats" : "{}"
+      }, {
+        "metric" : "nActivities",
+        "stats" : "{}"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Aggregate Request 
 
      - returns: RequestBuilder<CoachingAppointmentAggregateResponse> 
      */
-    open class func postCoachingAppointmentsAggregatesQueryWithRequestBuilder(body: CoachingAppointmentAggregateRequest) -> RequestBuilder<CoachingAppointmentAggregateResponse> {
+    open class func postCoachingAppointmentsAggregatesQueryWithRequestBuilder(body: CoachingAppointmentAggregateRequest) -> RequestBuilder<CoachingAppointmentAggregateResponse> {        
         let path = "/api/v2/coaching/appointments/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAppointmentAggregateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1884,10 +1613,7 @@ open class CoachingAPI {
     }
 
     
-    
-    
     /**
-     
      Get list of possible slots where a coaching appointment can be scheduled.
      
      - parameter body: (body) The slot search request 
@@ -1912,78 +1638,171 @@ open class CoachingAPI {
     }
 
     /**
-     
      Get list of possible slots where a coaching appointment can be scheduled.
-     
      - POST /api/v2/coaching/scheduleslots/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "attendeeSchedules" : [ {
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "user" : "{}",
     "availableTimes" : [ {
-      "lengthInMinutes" : 123,
+      "lengthInMinutes" : 1,
       "isPaid" : true,
-      "wfmSchedule" : "",
-      "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "activityCategory" : "aeiou"
+      "wfmSchedule" : "{}",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "activityCategory" : "OnQueueWork"
+    }, {
+      "lengthInMinutes" : 1,
+      "isPaid" : true,
+      "wfmSchedule" : "{}",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "activityCategory" : "OnQueueWork"
+    } ]
+  }, {
+    "user" : "{}",
+    "availableTimes" : [ {
+      "lengthInMinutes" : 1,
+      "isPaid" : true,
+      "wfmSchedule" : "{}",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "activityCategory" : "OnQueueWork"
+    }, {
+      "lengthInMinutes" : 1,
+      "isPaid" : true,
+      "wfmSchedule" : "{}",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "activityCategory" : "OnQueueWork"
     } ]
   } ],
-  "facilitatorSchedules" : [ "" ],
+  "facilitatorSchedules" : [ {
+    "user" : "{}",
+    "availableTimes" : [ {
+      "lengthInMinutes" : 1,
+      "isPaid" : true,
+      "wfmSchedule" : "{}",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "activityCategory" : "OnQueueWork"
+    }, {
+      "lengthInMinutes" : 1,
+      "isPaid" : true,
+      "wfmSchedule" : "{}",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "activityCategory" : "OnQueueWork"
+    } ]
+  }, {
+    "user" : "{}",
+    "availableTimes" : [ {
+      "lengthInMinutes" : 1,
+      "isPaid" : true,
+      "wfmSchedule" : "{}",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "activityCategory" : "OnQueueWork"
+    }, {
+      "lengthInMinutes" : 1,
+      "isPaid" : true,
+      "wfmSchedule" : "{}",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "activityCategory" : "OnQueueWork"
+    } ]
+  } ],
   "suggestedSlots" : [ {
-    "lengthInMinutes" : 123,
-    "staffingDifference" : 1.3579000000000001069366817318950779736042022705078125,
-    "wfmSchedule" : {
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "differenceRating" : "aeiou"
+    "lengthInMinutes" : 0,
+    "staffingDifference" : 6.027456183070403,
+    "wfmSchedule" : "{}",
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "differenceRating" : "Poor"
+  }, {
+    "lengthInMinutes" : 0,
+    "staffingDifference" : 6.027456183070403,
+    "wfmSchedule" : "{}",
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "differenceRating" : "Poor"
   } ],
   "wfmScheduleActivities" : [ {
     "fullDayTimeOffMarkers" : [ {
-      "activityCodeId" : "aeiou",
-      "timeOffRequestId" : "aeiou",
-      "lengthMinutes" : 123,
-      "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 5,
+      "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "aeiou"
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 5,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
     } ],
     "activities" : [ {
-      "activityCodeId" : "aeiou",
-      "externalActivityType" : "aeiou",
-      "timeOffRequestId" : "aeiou",
-      "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "lengthMinutes" : 123,
-      "externalActivityId" : "aeiou",
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "Coaching",
+      "timeOffRequestId" : "timeOffRequestId",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 5,
+      "externalActivityId" : "externalActivityId",
       "paid" : true,
-      "description" : "aeiou"
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "Coaching",
+      "timeOffRequestId" : "timeOffRequestId",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 5,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description"
     } ],
-    "userReference" : ""
+    "userReference" : "{}"
+  }, {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 5,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 5,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "Coaching",
+      "timeOffRequestId" : "timeOffRequestId",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 5,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "Coaching",
+      "timeOffRequestId" : "timeOffRequestId",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 5,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "userReference" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) The slot search request 
 
      - returns: RequestBuilder<CoachingSlotsResponse> 
      */
-    open class func postCoachingScheduleslotsQueryWithRequestBuilder(body: CoachingSlotsRequest) -> RequestBuilder<CoachingSlotsResponse> {
+    open class func postCoachingScheduleslotsQueryWithRequestBuilder(body: CoachingSlotsRequest) -> RequestBuilder<CoachingSlotsResponse> {        
         let path = "/api/v2/coaching/scheduleslots/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingSlotsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

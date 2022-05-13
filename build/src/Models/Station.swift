@@ -40,37 +40,21 @@ public class Station: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, status: Status?, userId: String?, webRtcUserId: String?, primaryEdge: DomainEntityRef?, secondaryEdge: DomainEntityRef?, type: String?, lineAppearanceId: String?, webRtcMediaDscp: Int?, webRtcPersistentEnabled: Bool?, webRtcForceTurn: Bool?, webRtcCallAppearances: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.status = status
-        
         self.userId = userId
-        
         self.webRtcUserId = webRtcUserId
-        
         self.primaryEdge = primaryEdge
-        
         self.secondaryEdge = secondaryEdge
-        
         self.type = type
-        
         self.lineAppearanceId = lineAppearanceId
-        
         self.webRtcMediaDscp = webRtcMediaDscp
-        
         self.webRtcPersistentEnabled = webRtcPersistentEnabled
-        
         self.webRtcForceTurn = webRtcForceTurn
-        
         self.webRtcCallAppearances = webRtcCallAppearances
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

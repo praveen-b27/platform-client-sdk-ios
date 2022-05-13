@@ -11,10 +11,7 @@ import Foundation
 
 open class UploadsAPI {
     
-    
-    
     /**
-     
      Creates a presigned URL for uploading a knowledge import file with a set of documents
      
      - parameter body: (body) query 
@@ -39,33 +36,28 @@ open class UploadsAPI {
     }
 
     /**
-     
      Creates a presigned URL for uploading a knowledge import file with a set of documents
-     
      - POST /api/v2/knowledge/documentuploads
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<UploadUrlResponse> 
      */
-    open class func postKnowledgeDocumentuploadsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {
+    open class func postKnowledgeDocumentuploadsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {        
         let path = "/api/v2/knowledge/documentuploads"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -75,18 +67,14 @@ open class UploadsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
      
      - parameter minerId: (path) Miner ID 
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLanguageunderstandingMinerUploads(minerId: String, body: Empty, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
+    open class func postLanguageunderstandingMinerUploads(minerId: String, body: JSON, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postLanguageunderstandingMinerUploadsWithRequestBuilder(minerId: minerId, body: body)
         requestBuilder.execute { (response: Response<UploadUrlResponse>?, error) -> Void in
             do {
@@ -105,37 +93,32 @@ open class UploadsAPI {
     }
 
     /**
-     
      Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
-     
      - POST /api/v2/languageunderstanding/miners/{minerId}/uploads
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter minerId: (path) Miner ID 
      - parameter body: (body) query 
 
      - returns: RequestBuilder<UploadUrlResponse> 
      */
-    open class func postLanguageunderstandingMinerUploadsWithRequestBuilder(minerId: String, body: Empty) -> RequestBuilder<UploadUrlResponse> {
+    open class func postLanguageunderstandingMinerUploadsWithRequestBuilder(minerId: String, body: JSON) -> RequestBuilder<UploadUrlResponse> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/uploads"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -144,10 +127,7 @@ open class UploadsAPI {
     }
 
     
-    
-    
     /**
-     
      Creates presigned url for uploading a public asset image
      
      - parameter body: (body) query 
@@ -172,33 +152,28 @@ open class UploadsAPI {
     }
 
     /**
-     
      Creates presigned url for uploading a public asset image
-     
      - POST /api/v2/uploads/publicassets/images
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<UploadUrlResponse> 
      */
-    open class func postUploadsPublicassetsImagesWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {
+    open class func postUploadsPublicassetsImagesWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {        
         let path = "/api/v2/uploads/publicassets/images"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -207,10 +182,7 @@ open class UploadsAPI {
     }
 
     
-    
-    
     /**
-     
      Creates presigned url for uploading a recording file
      
      - parameter body: (body) query 
@@ -235,33 +207,28 @@ open class UploadsAPI {
     }
 
     /**
-     
      Creates presigned url for uploading a recording file
-     
      - POST /api/v2/uploads/recordings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<UploadUrlResponse> 
      */
-    open class func postUploadsRecordingsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {
+    open class func postUploadsRecordingsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {        
         let path = "/api/v2/uploads/recordings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -270,10 +237,7 @@ open class UploadsAPI {
     }
 
     
-    
-    
     /**
-     
      Creates presigned url for uploading WFM historical data file. Requires data in csv format.
      
      - parameter body: (body) query 
@@ -298,33 +262,28 @@ open class UploadsAPI {
     }
 
     /**
-     
      Creates presigned url for uploading WFM historical data file. Requires data in csv format.
-     
      - POST /api/v2/uploads/workforcemanagement/historicaldata/csv
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<UploadUrlResponse> 
      */
-    open class func postUploadsWorkforcemanagementHistoricaldataCsvWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {
+    open class func postUploadsWorkforcemanagementHistoricaldataCsvWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {        
         let path = "/api/v2/uploads/workforcemanagement/historicaldata/csv"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

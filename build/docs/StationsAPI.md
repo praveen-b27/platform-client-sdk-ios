@@ -140,9 +140,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "name" // Sort by
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
 let name: String = "" // Name
 let userSelectable: String = "" // True for stations that the user can select otherwise false
 let webRtcUserId: String = "" // Filter for the webRtc station of the webRtcUserId
@@ -165,9 +165,9 @@ StationsAPI.getStations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sort
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
 | **name** | **String**| Name | [optional] |
 | **userSelectable** | **String**| True for stations that the user can select otherwise false | [optional] |
 | **webRtcUserId** | **String**| Filter for the webRtc station of the webRtcUserId | [optional] |

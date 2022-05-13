@@ -15,9 +15,7 @@ public class TrusteeAuthorization: Codable {
     public var permissions: [String]?
 
     public init(permissions: [String]?) {
-        
         self.permissions = permissions
-        
     }
 
 

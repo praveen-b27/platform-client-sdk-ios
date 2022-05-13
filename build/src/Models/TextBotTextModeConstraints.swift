@@ -16,9 +16,7 @@ public class TextBotTextModeConstraints: Codable {
     public var languagePreferences: [String]?
 
     public init(languagePreferences: [String]?) {
-        
         self.languagePreferences = languagePreferences
-        
     }
 
 

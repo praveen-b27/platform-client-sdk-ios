@@ -27,17 +27,11 @@ public class ContentQuickReply: Codable {
     public var action: Action?
 
     public init(_id: String?, text: String?, payload: String?, image: String?, action: Action?) {
-        
         self._id = _id
-        
         self.text = text
-        
         self.payload = payload
-        
         self.image = image
-        
         self.action = action
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

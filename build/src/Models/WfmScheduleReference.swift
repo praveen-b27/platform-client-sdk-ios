@@ -21,15 +21,10 @@ public class WfmScheduleReference: Codable {
     public var selfUri: String?
 
     public init(_id: String?, businessUnit: WfmBusinessUnitReference?, weekDate: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.businessUnit = businessUnit
-        
         self.weekDate = weekDate
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

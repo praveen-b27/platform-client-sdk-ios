@@ -38,7 +38,7 @@ public class BusinessUnitActivityCode: Codable {
     public var countsAsPaidTime: Bool?
     /** Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints */
     public var countsAsWorkTime: Bool?
-    /** Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off. */
+    /** Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off. */
     public var agentTimeOffSelectable: Bool?
     /** Version metadata of this activity code */
     public var metadata: WfmVersionedEntityMetadata?
@@ -46,29 +46,17 @@ public class BusinessUnitActivityCode: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, active: Bool?, defaultCode: Bool?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.active = active
-        
         self.defaultCode = defaultCode
-        
         self.category = category
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.countsAsPaidTime = countsAsPaidTime
-        
         self.countsAsWorkTime = countsAsWorkTime
-        
         self.agentTimeOffSelectable = agentTimeOffSelectable
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

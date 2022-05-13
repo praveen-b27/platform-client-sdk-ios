@@ -16,9 +16,7 @@ public class OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef: Co
     public var phoneNumber: String?
 
     public init(phoneNumber: String?) {
-        
         self.phoneNumber = phoneNumber
-        
     }
 
 

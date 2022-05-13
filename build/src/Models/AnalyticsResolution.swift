@@ -20,15 +20,10 @@ public class AnalyticsResolution: Codable {
     public var nNextContactAvoided: Int64?
 
     public init(eventTime: Date?, queueId: String?, userId: String?, nNextContactAvoided: Int64?) {
-        
         self.eventTime = eventTime
-        
         self.queueId = queueId
-        
         self.userId = userId
-        
         self.nNextContactAvoided = nNextContactAvoided
-        
     }
 
 

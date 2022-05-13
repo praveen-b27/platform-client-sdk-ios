@@ -65,17 +65,11 @@ public class JourneyAggregateQueryPredicate: Codable {
     public var range: NumericRange?
 
     public init(type: ModelType?, dimension: Dimension?, _operator: Operator?, value: String?, range: NumericRange?) {
-        
         self.type = type
-        
         self.dimension = dimension
-        
         self._operator = _operator
-        
         self.value = value
-        
         self.range = range
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

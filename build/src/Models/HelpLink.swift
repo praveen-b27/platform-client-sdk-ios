@@ -20,13 +20,9 @@ public class HelpLink: Codable {
     public var _description: String?
 
     public init(uri: String?, title: String?, _description: String?) {
-        
         self.uri = uri
-        
         self.title = title
-        
         self._description = _description
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

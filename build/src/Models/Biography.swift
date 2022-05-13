@@ -20,17 +20,11 @@ public class Biography: Codable {
     public var education: [Education]?
 
     public init(biography: String?, interests: [String]?, hobbies: [String]?, spouse: String?, education: [Education]?) {
-        
         self.biography = biography
-        
         self.interests = interests
-        
         self.hobbies = hobbies
-        
         self.spouse = spouse
-        
         self.education = education
-        
     }
 
 

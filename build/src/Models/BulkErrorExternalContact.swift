@@ -19,19 +19,12 @@ public class BulkErrorExternalContact: Codable {
     public var details: [BulkErrorDetail]?
 
     public init(code: String?, message: String?, status: Int?, retryable: Bool?, entity: ExternalContact?, details: [BulkErrorDetail]?) {
-        
         self.code = code
-        
         self.message = message
-        
         self.status = status
-        
         self.retryable = retryable
-        
         self.entity = entity
-        
         self.details = details
-        
     }
 
 

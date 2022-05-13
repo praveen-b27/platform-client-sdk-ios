@@ -20,13 +20,9 @@ public class LearningModuleCoverArtResponse: Codable {
     public var url: String?
 
     public init(_id: String?, selfUri: String?, url: String?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.url = url
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

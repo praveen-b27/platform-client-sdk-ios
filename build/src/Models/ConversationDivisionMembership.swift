@@ -17,11 +17,8 @@ public class ConversationDivisionMembership: Codable {
     public var entities: [DomainEntityRef]?
 
     public init(division: DomainEntityRef?, entities: [DomainEntityRef]?) {
-        
         self.division = division
-        
         self.entities = entities
-        
     }
 
 

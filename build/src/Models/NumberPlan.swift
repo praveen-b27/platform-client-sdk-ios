@@ -22,7 +22,7 @@ public class NumberPlan: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -51,47 +51,26 @@ public class NumberPlan: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, match: String?, normalizedFormat: String?, priority: Int?, numbers: [Number]?, digitLength: DigitLength?, classification: String?, matchType: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.match = match
-        
         self.normalizedFormat = normalizedFormat
-        
         self.priority = priority
-        
         self.numbers = numbers
-        
         self.digitLength = digitLength
-        
         self.classification = classification
-        
         self.matchType = matchType
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

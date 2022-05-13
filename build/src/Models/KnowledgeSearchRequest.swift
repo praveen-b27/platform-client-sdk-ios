@@ -29,19 +29,12 @@ public class KnowledgeSearchRequest: Codable {
     public var searchOnDraftDocuments: Bool?
 
     public init(query: String?, pageSize: Int?, pageNumber: Int?, documentType: DocumentType?, languageCode: String?, searchOnDraftDocuments: Bool?) {
-        
         self.query = query
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.documentType = documentType
-        
         self.languageCode = languageCode
-        
         self.searchOnDraftDocuments = searchOnDraftDocuments
-        
     }
 
 

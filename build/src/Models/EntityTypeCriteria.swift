@@ -40,17 +40,11 @@ public class EntityTypeCriteria: Codable {
     public var entityType: EntityType?
 
     public init(key: String?, values: [String]?, shouldIgnoreCase: Bool?, _operator: Operator?, entityType: EntityType?) {
-        
         self.key = key
-        
         self.values = values
-        
         self.shouldIgnoreCase = shouldIgnoreCase
-        
         self._operator = _operator
-        
         self.entityType = entityType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

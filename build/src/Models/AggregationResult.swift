@@ -24,17 +24,11 @@ public class AggregationResult: Codable {
     public var results: [AggregationResultEntry]?
 
     public init(type: ModelType?, dimension: String?, metric: String?, count: Int64?, results: [AggregationResultEntry]?) {
-        
         self.type = type
-        
         self.dimension = dimension
-        
         self.metric = metric
-        
         self.count = count
-        
         self.results = results
-        
     }
 
 

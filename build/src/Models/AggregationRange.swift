@@ -17,11 +17,8 @@ public class AggregationRange: Codable {
     public var lt: Double?
 
     public init(gte: Double?, lt: Double?) {
-        
         self.gte = gte
-        
         self.lt = lt
-        
     }
 
 

@@ -46,39 +46,22 @@ public class LocationDefinition: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, contactUser: AddressableEntityRef?, emergencyNumber: LocationEmergencyNumber?, address: LocationAddress?, state: State?, notes: String?, version: Int?, path: [String]?, profileImage: [LocationImage]?, floorplanImage: [LocationImage]?, addressVerificationDetails: LocationAddressVerificationDetails?, addressVerified: Bool?, addressStored: Bool?, images: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.contactUser = contactUser
-        
         self.emergencyNumber = emergencyNumber
-        
         self.address = address
-        
         self.state = state
-        
         self.notes = notes
-        
         self.version = version
-        
         self.path = path
-        
         self.profileImage = profileImage
-        
         self.floorplanImage = floorplanImage
-        
         self.addressVerificationDetails = addressVerificationDetails
-        
         self.addressVerified = addressVerified
-        
         self.addressStored = addressStored
-        
         self.images = images
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

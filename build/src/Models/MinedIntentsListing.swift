@@ -17,15 +17,10 @@ public class MinedIntentsListing: Codable {
     public var previousUri: String?
 
     public init(entities: [MinerIntent]?, nextUri: String?, selfUri: String?, previousUri: String?) {
-        
         self.entities = entities
-        
         self.nextUri = nextUri
-        
         self.selfUri = selfUri
-        
         self.previousUri = previousUri
-        
     }
 
 

@@ -22,15 +22,10 @@ public class FormsTrackTrigger: Codable {
     public var captureDataOnFormSubmit: Bool?
 
     public init(selector: String?, formName: String?, captureDataOnFormAbandon: Bool?, captureDataOnFormSubmit: Bool?) {
-        
         self.selector = selector
-        
         self.formName = formName
-        
         self.captureDataOnFormAbandon = captureDataOnFormAbandon
-        
         self.captureDataOnFormSubmit = captureDataOnFormSubmit
-        
     }
 
 

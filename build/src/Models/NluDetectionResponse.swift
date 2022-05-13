@@ -17,13 +17,9 @@ public class NluDetectionResponse: Codable {
     public var input: NluDetectionInput?
 
     public init(version: NluDomainVersion?, output: NluDetectionOutput?, input: NluDetectionInput?) {
-        
         self.version = version
-        
         self.output = output
-        
         self.input = input
-        
     }
 
 

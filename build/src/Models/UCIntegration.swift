@@ -34,23 +34,14 @@ public class UCIntegration: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, ucIntegrationKey: String?, integrationPresenceSource: IntegrationPresenceSource?, pbxPermission: String?, icon: UCIcon?, i10n: [String:UCI10n]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.ucIntegrationKey = ucIntegrationKey
-        
         self.integrationPresenceSource = integrationPresenceSource
-        
         self.pbxPermission = pbxPermission
-        
         self.icon = icon
-        
         self.i10n = i10n
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

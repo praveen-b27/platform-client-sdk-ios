@@ -16,13 +16,9 @@ public class ContentManagementWorkspaceDocumentsTopicLockData: Codable {
     public var dateExpires: Date?
 
     public init(lockedBy: ContentManagementWorkspaceDocumentsTopicUserData?, dateCreated: Date?, dateExpires: Date?) {
-        
         self.lockedBy = lockedBy
-        
         self.dateCreated = dateCreated
-        
         self.dateExpires = dateExpires
-        
     }
 
 

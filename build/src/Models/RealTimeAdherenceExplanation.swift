@@ -28,17 +28,11 @@ public class RealTimeAdherenceExplanation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, startDate: Date?, lengthMinutes: Int?, status: Status?, selfUri: String?) {
-        
         self._id = _id
-        
         self.startDate = startDate
-        
         self.lengthMinutes = lengthMinutes
-        
         self.status = status
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -25,13 +25,9 @@ public class MailFromResult: Codable {
     public var mailFromDomain: String?
 
     public init(status: Status?, records: [Record]?, mailFromDomain: String?) {
-        
         self.status = status
-        
         self.records = records
-        
         self.mailFromDomain = mailFromDomain
-        
     }
 
 

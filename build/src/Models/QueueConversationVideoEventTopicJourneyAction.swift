@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context) */
+/** A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context) */
 
 public class QueueConversationVideoEventTopicJourneyAction: Codable {
 
@@ -17,11 +17,8 @@ public class QueueConversationVideoEventTopicJourneyAction: Codable {
     public var actionMap: QueueConversationVideoEventTopicJourneyActionMap?
 
     public init(_id: String?, actionMap: QueueConversationVideoEventTopicJourneyActionMap?) {
-        
         self._id = _id
-        
         self.actionMap = actionMap
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

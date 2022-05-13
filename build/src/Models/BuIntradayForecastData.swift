@@ -17,11 +17,8 @@ public class BuIntradayForecastData: Codable {
     public var averageHandleTimeSeconds: Double?
 
     public init(offered: Double?, averageHandleTimeSeconds: Double?) {
-        
         self.offered = offered
-        
         self.averageHandleTimeSeconds = averageHandleTimeSeconds
-        
     }
 
 

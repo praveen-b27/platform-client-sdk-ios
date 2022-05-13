@@ -70,43 +70,24 @@ public class WhatsAppIntegration: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, phoneNumber: String?, availablePhoneNumbers: WhatsAppAvailablePhoneNumberDetailsListing?, status: Status?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, activationStatusCode: ActivationStatusCode?, activationErrorInfo: ErrorBody?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.supportedContent = supportedContent
-        
         self.messagingSetting = messagingSetting
-        
         self.phoneNumber = phoneNumber
-        
         self.availablePhoneNumbers = availablePhoneNumbers
-        
         self.status = status
-        
         self.recipient = recipient
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.version = version
-        
         self.activationStatusCode = activationStatusCode
-        
         self.activationErrorInfo = activationErrorInfo
-        
         self.createStatus = createStatus
-        
         self.createError = createError
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

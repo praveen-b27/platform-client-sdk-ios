@@ -34,21 +34,13 @@ public class BuIntradayDataGroup: Codable {
     public var performancePredictionDataPerInterval: [IntradayPerformancePredictionData]?
 
     public init(mediaType: MediaType?, forecastDataSummary: BuIntradayForecastData?, forecastDataPerInterval: [BuIntradayForecastData]?, scheduleDataSummary: BuIntradayScheduleData?, scheduleDataPerInterval: [BuIntradayScheduleData]?, performancePredictionDataSummary: IntradayPerformancePredictionData?, performancePredictionDataPerInterval: [IntradayPerformancePredictionData]?) {
-        
         self.mediaType = mediaType
-        
         self.forecastDataSummary = forecastDataSummary
-        
         self.forecastDataPerInterval = forecastDataPerInterval
-        
         self.scheduleDataSummary = scheduleDataSummary
-        
         self.scheduleDataPerInterval = scheduleDataPerInterval
-        
         self.performancePredictionDataSummary = performancePredictionDataSummary
-        
         self.performancePredictionDataPerInterval = performancePredictionDataPerInterval
-        
     }
 
 

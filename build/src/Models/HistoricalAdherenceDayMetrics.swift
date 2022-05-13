@@ -35,29 +35,17 @@ public class HistoricalAdherenceDayMetrics: Codable {
     public var conformancePercentage: Double?
 
     public init(dayStartOffsetSecs: Int?, adherenceScheduleSecs: Int?, conformanceScheduleSecs: Int?, conformanceActualSecs: Int?, exceptionCount: Int?, exceptionDurationSecs: Int?, impactSeconds: Int?, scheduleLengthSecs: Int?, actualLengthSecs: Int?, adherencePercentage: Double?, conformancePercentage: Double?) {
-        
         self.dayStartOffsetSecs = dayStartOffsetSecs
-        
         self.adherenceScheduleSecs = adherenceScheduleSecs
-        
         self.conformanceScheduleSecs = conformanceScheduleSecs
-        
         self.conformanceActualSecs = conformanceActualSecs
-        
         self.exceptionCount = exceptionCount
-        
         self.exceptionDurationSecs = exceptionDurationSecs
-        
         self.impactSeconds = impactSeconds
-        
         self.scheduleLengthSecs = scheduleLengthSecs
-        
         self.actualLengthSecs = actualLengthSecs
-        
         self.adherencePercentage = adherencePercentage
-        
         self.conformancePercentage = conformancePercentage
-        
     }
 
 

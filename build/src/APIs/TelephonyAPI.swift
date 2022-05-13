@@ -16,15 +16,7 @@ open class TelephonyAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Fetch SIP metadata
      
      - parameter dateStart: (query) Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
@@ -54,9 +46,7 @@ open class TelephonyAPI {
     }
 
     /**
-     
      Fetch SIP metadata
-     
      - GET /api/v2/telephony/siptraces
      - Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a parameter only sip records that have exactly that value will be returned. For example, some records contain conversationId but not all relevant records for that call may contain the conversationId so only a partial view of the call will be reflected
      - OAuth:
@@ -64,66 +54,118 @@ open class TelephonyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "data" : [ {
-    "date" : "2000-01-23T04:56:07.000+0000",
-    "callid" : "aeiou",
-    "msg" : "aeiou",
-    "reason" : "aeiou",
-    "sourcePort" : "aeiou",
-    "fromTag" : "aeiou",
-    "auth" : "aeiou",
-    "via1Branch" : "aeiou",
-    "toTag" : "aeiou",
-    "type" : "aeiou",
-    "ruri" : "aeiou",
-    "destinationIp" : "aeiou",
-    "ruriDomain" : "aeiou",
-    "contactIp" : "aeiou",
-    "id" : "aeiou",
-    "contentType" : "aeiou",
-    "method" : "aeiou",
-    "rtpStat" : "aeiou",
-    "toDomain" : "aeiou",
-    "contactPort" : "aeiou",
-    "originatorIp" : "aeiou",
-    "fromDomain" : "aeiou",
-    "node" : "aeiou",
-    "cseq" : "aeiou",
-    "sourceIp" : "aeiou",
-    "proto" : "aeiou",
-    "name" : "aeiou",
-    "diversion" : "aeiou",
-    "dbnode" : "aeiou",
-    "microTs" : "aeiou",
-    "trans" : "aeiou",
-    "sourceAlias" : "aeiou",
-    "destinationPort" : "aeiou",
-    "fromUser" : "aeiou",
-    "authUser" : "aeiou",
-    "destinationAlias" : "aeiou",
-    "toUser" : "aeiou",
-    "participantId" : "aeiou",
-    "ruriUser" : "aeiou",
-    "via1" : "aeiou",
-    "correlationId" : "aeiou",
-    "pidUser" : "aeiou",
-    "conversationId" : "aeiou",
-    "callidAleg" : "aeiou",
-    "selfUri" : "aeiou",
-    "userAgent" : "aeiou",
-    "replyReason" : "aeiou",
-    "milliTs" : "aeiou",
-    "contactUser" : "aeiou",
-    "originatorPort" : "aeiou",
-    "family" : "aeiou"
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "callid" : "callid",
+    "msg" : "msg",
+    "reason" : "reason",
+    "sourcePort" : "sourcePort",
+    "fromTag" : "fromTag",
+    "auth" : "auth",
+    "via1Branch" : "via1Branch",
+    "toTag" : "toTag",
+    "type" : "type",
+    "ruri" : "ruri",
+    "destinationIp" : "destinationIp",
+    "ruriDomain" : "ruriDomain",
+    "contactIp" : "contactIp",
+    "id" : "id",
+    "contentType" : "contentType",
+    "method" : "method",
+    "rtpStat" : "rtpStat",
+    "toDomain" : "toDomain",
+    "contactPort" : "contactPort",
+    "originatorIp" : "originatorIp",
+    "fromDomain" : "fromDomain",
+    "node" : "node",
+    "cseq" : "cseq",
+    "sourceIp" : "sourceIp",
+    "proto" : "proto",
+    "name" : "name",
+    "diversion" : "diversion",
+    "dbnode" : "dbnode",
+    "microTs" : "microTs",
+    "trans" : "trans",
+    "sourceAlias" : "sourceAlias",
+    "destinationPort" : "destinationPort",
+    "fromUser" : "fromUser",
+    "authUser" : "authUser",
+    "destinationAlias" : "destinationAlias",
+    "toUser" : "toUser",
+    "participantId" : "participantId",
+    "ruriUser" : "ruriUser",
+    "via1" : "via1",
+    "correlationId" : "correlationId",
+    "pidUser" : "pidUser",
+    "conversationId" : "conversationId",
+    "callidAleg" : "callidAleg",
+    "selfUri" : "https://openapi-generator.tech",
+    "userAgent" : "userAgent",
+    "replyReason" : "replyReason",
+    "milliTs" : "milliTs",
+    "contactUser" : "contactUser",
+    "originatorPort" : "originatorPort",
+    "family" : "family"
+  }, {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "callid" : "callid",
+    "msg" : "msg",
+    "reason" : "reason",
+    "sourcePort" : "sourcePort",
+    "fromTag" : "fromTag",
+    "auth" : "auth",
+    "via1Branch" : "via1Branch",
+    "toTag" : "toTag",
+    "type" : "type",
+    "ruri" : "ruri",
+    "destinationIp" : "destinationIp",
+    "ruriDomain" : "ruriDomain",
+    "contactIp" : "contactIp",
+    "id" : "id",
+    "contentType" : "contentType",
+    "method" : "method",
+    "rtpStat" : "rtpStat",
+    "toDomain" : "toDomain",
+    "contactPort" : "contactPort",
+    "originatorIp" : "originatorIp",
+    "fromDomain" : "fromDomain",
+    "node" : "node",
+    "cseq" : "cseq",
+    "sourceIp" : "sourceIp",
+    "proto" : "proto",
+    "name" : "name",
+    "diversion" : "diversion",
+    "dbnode" : "dbnode",
+    "microTs" : "microTs",
+    "trans" : "trans",
+    "sourceAlias" : "sourceAlias",
+    "destinationPort" : "destinationPort",
+    "fromUser" : "fromUser",
+    "authUser" : "authUser",
+    "destinationAlias" : "destinationAlias",
+    "toUser" : "toUser",
+    "participantId" : "participantId",
+    "ruriUser" : "ruriUser",
+    "via1" : "via1",
+    "correlationId" : "correlationId",
+    "pidUser" : "pidUser",
+    "conversationId" : "conversationId",
+    "callidAleg" : "callidAleg",
+    "selfUri" : "https://openapi-generator.tech",
+    "userAgent" : "userAgent",
+    "replyReason" : "replyReason",
+    "milliTs" : "milliTs",
+    "contactUser" : "contactUser",
+    "originatorPort" : "originatorPort",
+    "family" : "family"
   } ],
-  "auth" : "aeiou",
-  "selfUri" : "aeiou",
-  "count" : 123,
-  "id" : "aeiou",
-  "message" : "aeiou",
-  "status" : 123,
-  "sid" : "aeiou"
-}}]
+  "auth" : "auth",
+  "selfUri" : "https://openapi-generator.tech",
+  "count" : 6,
+  "id" : "id",
+  "message" : "message",
+  "status" : 0,
+  "sid" : "sid"
+}, statusCode=200}]
      
      - parameter dateStart: (query) Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
      - parameter dateEnd: (query) End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
@@ -134,31 +176,19 @@ open class TelephonyAPI {
 
      - returns: RequestBuilder<SipSearchResult> 
      */
-    open class func getTelephonySiptracesWithRequestBuilder(dateStart: Date, dateEnd: Date, callId: String? = nil, toUser: String? = nil, fromUser: String? = nil, conversationId: String? = nil) -> RequestBuilder<SipSearchResult> {
+    open class func getTelephonySiptracesWithRequestBuilder(dateStart: Date, dateEnd: Date, callId: String? = nil, toUser: String? = nil, fromUser: String? = nil, conversationId: String? = nil) -> RequestBuilder<SipSearchResult> {        
         let path = "/api/v2/telephony/siptraces"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "callId": callId, 
-            
             "toUser": toUser, 
-            
             "fromUser": fromUser, 
-            
             "conversationId": conversationId, 
-            
             "dateStart": dateStart.encodeToJSON(), 
-            
             "dateEnd": dateEnd.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<SipSearchResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -167,10 +197,7 @@ open class TelephonyAPI {
     }
 
     
-    
-    
     /**
-     
      Get signed S3 URL for a pcap download
      
      - parameter downloadId: (path) unique id for the downloaded file in S3 
@@ -195,37 +222,29 @@ open class TelephonyAPI {
     }
 
     /**
-     
      Get signed S3 URL for a pcap download
-     
      - GET /api/v2/telephony/siptraces/download/{downloadId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "url" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "url" : "http://example.com/aeiou"
+}, statusCode=200}]
      
      - parameter downloadId: (path) unique id for the downloaded file in S3 
 
      - returns: RequestBuilder<SignedUrlResponse> 
      */
-    open class func getTelephonySiptracesDownloadDownloadIdWithRequestBuilder(downloadId: String) -> RequestBuilder<SignedUrlResponse> {
+    open class func getTelephonySiptracesDownloadDownloadIdWithRequestBuilder(downloadId: String) -> RequestBuilder<SignedUrlResponse> {        
         var path = "/api/v2/telephony/siptraces/download/{downloadId}"
         let downloadIdPreEscape = "\(downloadId)"
         let downloadIdPostEscape = downloadIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{downloadId}", with: downloadIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -235,10 +254,7 @@ open class TelephonyAPI {
     }
 
     
-    
-    
     /**
-     
      Request a download of a pcap file to S3
      
      - parameter sIPSearchPublicRequest: (body)  
@@ -263,30 +279,25 @@ open class TelephonyAPI {
     }
 
     /**
-     
      Request a download of a pcap file to S3
-     
      - POST /api/v2/telephony/siptraces/download
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "downloadId" : "aeiou",
-  "documentId" : "aeiou"
-}}]
+  "downloadId" : "downloadId",
+  "documentId" : "documentId"
+}, statusCode=200}]
      
      - parameter sIPSearchPublicRequest: (body)  
 
      - returns: RequestBuilder<SipDownloadResponse> 
      */
-    open class func postTelephonySiptracesDownloadWithRequestBuilder(sIPSearchPublicRequest: SIPSearchPublicRequest) -> RequestBuilder<SipDownloadResponse> {
+    open class func postTelephonySiptracesDownloadWithRequestBuilder(sIPSearchPublicRequest: SIPSearchPublicRequest) -> RequestBuilder<SipDownloadResponse> {        
         let path = "/api/v2/telephony/siptraces/download"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: sIPSearchPublicRequest)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SipDownloadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

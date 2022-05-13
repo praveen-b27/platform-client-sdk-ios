@@ -15,9 +15,7 @@ public class BuShortTermForecastingSettings: Codable {
     public var defaultHistoryWeeks: Int?
 
     public init(defaultHistoryWeeks: Int?) {
-        
         self.defaultHistoryWeeks = defaultHistoryWeeks
-        
     }
 
 

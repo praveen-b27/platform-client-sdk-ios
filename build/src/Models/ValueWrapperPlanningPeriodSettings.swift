@@ -16,9 +16,7 @@ public class ValueWrapperPlanningPeriodSettings: Codable {
     public var value: PlanningPeriodSettings?
 
     public init(value: PlanningPeriodSettings?) {
-        
         self.value = value
-        
     }
 
 

@@ -19,13 +19,9 @@ public class CreatePlanningGroupRequest: Codable {
     public var serviceGoalTemplateId: String?
 
     public init(name: String?, routePaths: [RoutePathRequest]?, serviceGoalTemplateId: String?) {
-        
         self.name = name
-        
         self.routePaths = routePaths
-        
         self.serviceGoalTemplateId = serviceGoalTemplateId
-        
     }
 
 

@@ -16,13 +16,9 @@ public class PhoneChangeTopicUserAgentInfo: Codable {
     public var model: String?
 
     public init(firmwareVersion: String?, manufacturer: String?, model: String?) {
-        
         self.firmwareVersion = firmwareVersion
-        
         self.manufacturer = manufacturer
-        
         self.model = model
-        
     }
 
 

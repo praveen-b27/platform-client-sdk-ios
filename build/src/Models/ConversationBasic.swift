@@ -27,23 +27,14 @@ public class ConversationBasic: Codable {
     public var participants: [ParticipantBasic]?
 
     public init(_id: String?, name: String?, externalTag: String?, startTime: Date?, endTime: Date?, divisions: [ConversationDivisionMembership]?, selfUri: String?, participants: [ParticipantBasic]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.externalTag = externalTag
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.divisions = divisions
-        
         self.selfUri = selfUri
-        
         self.participants = participants
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

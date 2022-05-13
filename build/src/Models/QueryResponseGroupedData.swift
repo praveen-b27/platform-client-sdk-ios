@@ -17,11 +17,8 @@ public class QueryResponseGroupedData: Codable {
     public var data: [QueryResponseData]?
 
     public init(group: [String:String]?, data: [QueryResponseData]?) {
-        
         self.group = group
-        
         self.data = data
-        
     }
 
 

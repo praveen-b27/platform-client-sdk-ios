@@ -15,9 +15,7 @@ public class TrunkMetricsQoS: Codable {
     public var mismatchCount: Int?
 
     public init(mismatchCount: Int?) {
-        
         self.mismatchCount = mismatchCount
-        
     }
 
 

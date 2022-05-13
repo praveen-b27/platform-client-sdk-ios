@@ -24,17 +24,11 @@ public class WebMessagingGeneric: Codable {
     public var components: [ButtonComponent]?
 
     public init(title: String?, _description: String?, image: String?, actions: ContentActions?, components: [ButtonComponent]?) {
-        
         self.title = title
-        
         self._description = _description
-        
         self.image = image
-        
         self.actions = actions
-        
         self.components = components
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

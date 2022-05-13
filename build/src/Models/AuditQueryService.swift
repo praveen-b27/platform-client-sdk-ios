@@ -56,11 +56,8 @@ public class AuditQueryService: Codable {
     public var entities: [AuditQueryEntity]?
 
     public init(name: Name?, entities: [AuditQueryEntity]?) {
-        
         self.name = name
-        
         self.entities = entities
-        
     }
 
 

@@ -53,7 +53,7 @@ public class SocialExpression: Codable {
     public var previewText: String?
     /** A globally unique identifier for the recording associated with this chat. */
     public var recordingId: String?
-    /** The time line of the participant&#39;s chat, divided into activity segments. */
+    /** The time line of the participant's chat, divided into activity segments. */
     public var segments: [Segment]?
     /** True if this call is held and the person on this side hears silence. */
     public var held: Bool?
@@ -81,47 +81,26 @@ public class SocialExpression: Codable {
     public var afterCallWorkRequired: Bool?
 
     public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, segments: [Segment]?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.socialMediaId = socialMediaId
-        
         self.socialMediaHub = socialMediaHub
-        
         self.socialUserName = socialUserName
-        
         self.previewText = previewText
-        
         self.recordingId = recordingId
-        
         self.segments = segments
-        
         self.held = held
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.startAlertingTime = startAlertingTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

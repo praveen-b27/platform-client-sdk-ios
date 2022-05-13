@@ -35,7 +35,7 @@ public class ReportingTurn: Codable {
     public var botPrompts: [String]?
     /** The bot session ID that this reporting turn is grouped under. */
     public var sessionId: String?
-    /** The bot flow &#39;ask&#39; action associated with this reporting turn (e.g. AskForIntent). */
+    /** The bot flow 'ask' action associated with this reporting turn (e.g. AskForIntent). */
     public var askAction: ReportingTurnAction?
     /** The intent and associated slots detected during this reporting turn. */
     public var intent: ReportingTurnIntent?
@@ -43,31 +43,21 @@ public class ReportingTurn: Codable {
     public var knowledge: ReportingTurnKnowledge?
     /** Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** Result of the bot flow &#39;ask&#39; action. */
+    /** Result of the bot flow 'ask' action. */
     public var askActionResult: AskActionResult?
     /** The conversation details, across potentially multiple Bot Flow sessions. */
     public var conversation: AddressableEntityRef?
 
     public init(userInput: String?, botPrompts: [String]?, sessionId: String?, askAction: ReportingTurnAction?, intent: ReportingTurnIntent?, knowledge: ReportingTurnKnowledge?, dateCreated: Date?, askActionResult: AskActionResult?, conversation: AddressableEntityRef?) {
-        
         self.userInput = userInput
-        
         self.botPrompts = botPrompts
-        
         self.sessionId = sessionId
-        
         self.askAction = askAction
-        
         self.intent = intent
-        
         self.knowledge = knowledge
-        
         self.dateCreated = dateCreated
-        
         self.askActionResult = askActionResult
-        
         self.conversation = conversation
-        
     }
 
 

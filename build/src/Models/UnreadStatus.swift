@@ -15,9 +15,7 @@ public class UnreadStatus: Codable {
     public var unread: Bool?
 
     public init(unread: Bool?) {
-        
         self.unread = unread
-        
     }
 
 

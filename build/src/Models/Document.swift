@@ -64,69 +64,37 @@ public class Document: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, changeNumber: Int?, dateCreated: Date?, dateModified: Date?, dateUploaded: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, uploadedBy: DomainEntityRef?, sharingUri: String?, contentType: String?, contentLength: Int64?, systemType: SystemType?, filename: String?, pageCount: Int64?, read: Bool?, callerAddress: String?, receiverAddress: String?, tags: [String]?, tagValues: [TagValue]?, attributes: [DocumentAttribute]?, thumbnails: [DocumentThumbnail]?, uploadStatus: DomainEntityRef?, uploadDestinationUri: String?, uploadMethod: UploadMethod?, lockInfo: LockInfo?, acl: [String]?, sharingStatus: SharingStatus?, downloadSharingUri: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.changeNumber = changeNumber
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.dateUploaded = dateUploaded
-        
         self.contentUri = contentUri
-        
         self.workspace = workspace
-        
         self.createdBy = createdBy
-        
         self.uploadedBy = uploadedBy
-        
         self.sharingUri = sharingUri
-        
         self.contentType = contentType
-        
         self.contentLength = contentLength
-        
         self.systemType = systemType
-        
         self.filename = filename
-        
         self.pageCount = pageCount
-        
         self.read = read
-        
         self.callerAddress = callerAddress
-        
         self.receiverAddress = receiverAddress
-        
         self.tags = tags
-        
         self.tagValues = tagValues
-        
         self.attributes = attributes
-        
         self.thumbnails = thumbnails
-        
         self.uploadStatus = uploadStatus
-        
         self.uploadDestinationUri = uploadDestinationUri
-        
         self.uploadMethod = uploadMethod
-        
         self.lockInfo = lockInfo
-        
         self.acl = acl
-        
         self.sharingStatus = sharingStatus
-        
         self.downloadSharingUri = downloadSharingUri
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

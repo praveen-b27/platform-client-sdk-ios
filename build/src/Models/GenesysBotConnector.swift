@@ -15,9 +15,7 @@ public class GenesysBotConnector: Codable {
     public var queryParameters: [String:String]?
 
     public init(queryParameters: [String:String]?) {
-        
         self.queryParameters = queryParameters
-        
     }
 
 

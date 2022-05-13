@@ -24,17 +24,11 @@ public class CreateManagementUnitSettingsRequest: Codable {
     public var shiftTrading: ShiftTradeSettings?
 
     public init(adherence: AdherenceSettings?, shortTermForecasting: ShortTermForecastingSettings?, timeOff: TimeOffRequestSettings?, scheduling: SchedulingSettingsRequest?, shiftTrading: ShiftTradeSettings?) {
-        
         self.adherence = adherence
-        
         self.shortTermForecasting = shortTermForecasting
-        
         self.timeOff = timeOff
-        
         self.scheduling = scheduling
-        
         self.shiftTrading = shiftTrading
-        
     }
 
 

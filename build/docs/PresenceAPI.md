@@ -149,9 +149,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let deleted: String = "false" // Deleted query can be TRUE, FALSE or ALL
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let deleted: String = "" // Deleted query can be TRUE, FALSE or ALL
 let localeCode: String = "" // The locale code to fetch for each presence definition. Use ALL to fetch everything.
 
 // Code example
@@ -170,9 +170,9 @@ PresenceAPI.getPresencedefinitions(pageNumber: pageNumber, pageSize: pageSize, d
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **deleted** | **String**| Deleted query can be TRUE, FALSE or ALL | [optional] [default to false] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **deleted** | **String**| Deleted query can be TRUE, FALSE or ALL | [optional] |
 | **localeCode** | **String**| The locale code to fetch for each presence definition. Use ALL to fetch everything. | [optional] |
 {: class="table-striped"}
 
@@ -240,6 +240,8 @@ Get a user&#39;s Presence
 
 Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
 
+
+
 Wraps GET /api/v2/users/{userId}/presences/{sourceId}  
 
 Requires NO permissions: 
@@ -293,6 +295,8 @@ Get a user&#39;s Genesys Cloud presence.
 
 Get the default Genesys Cloud user presence source PURECLOUD
 
+
+
 Wraps GET /api/v2/users/{userId}/presences/purecloud  
 
 Requires NO permissions: 
@@ -343,6 +347,8 @@ PresenceAPI.getUserPresencesPurecloud(userId: userId) { (response, error) in
 Patch a user&#39;s Presence
 
 Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+
+
 
 Wraps PATCH /api/v2/users/{userId}/presences/{sourceId}  
 
@@ -398,6 +404,8 @@ PresenceAPI.patchUserPresence(userId: userId, sourceId: sourceId, body: body) { 
 Patch a Genesys Cloud user&#39;s presence
 
 The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+
+
 
 Wraps PATCH /api/v2/users/{userId}/presences/purecloud  
 

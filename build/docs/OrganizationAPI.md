@@ -29,7 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 # **getFieldconfig**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [FieldConfig](FieldConfig.html) getFieldconfig(type)
 
@@ -235,6 +235,8 @@ Get the available limit change requests
 
 Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
 
+
+
 Wraps GET /api/v2/organizations/limits/changerequests  
 
 Requires ANY permissions: 
@@ -252,8 +254,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let after: Int64 = 0 // Timestamp indicating the date to begin after when searching for requests.
 let before: Int64 = 0 // Timestamp indicating the date to end before when searching for requests.
 let status: OrganizationAPI.Status_getOrganizationsLimitsChangerequests = OrganizationAPI.Status_getOrganizationsLimitsChangerequests.enummember // Status of the request to be filtered by
-let pageSize: Int = 25 // Page Size
-let expand: [String] = [OrganizationAPI.Expand_getOrganizationsLimitsChangerequests.enummember.rawValue] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page Size
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 OrganizationAPI.getOrganizationsLimitsChangerequests(after: after, before: before, status: status, pageSize: pageSize, expand: expand) { (response, error) in
@@ -274,7 +276,7 @@ OrganizationAPI.getOrganizationsLimitsChangerequests(after: after, before: befor
 | **after** | **Int64**| Timestamp indicating the date to begin after when searching for requests. | [optional] |
 | **before** | **Int64**| Timestamp indicating the date to end before when searching for requests. | [optional] |
 | **status** | **String**| Status of the request to be filtered by | [optional]<br />**Values**: _open ("Open"), approved ("Approved"), implementingChange ("ImplementingChange"), changeImplemented ("ChangeImplemented"), rejected ("Rejected"), rollback ("Rollback"), implementingRollback ("ImplementingRollback"), rollbackImplemented ("RollbackImplemented") |
-| **pageSize** | **Int**| Page Size | [optional] [default to 25] |
+| **pageSize** | **Int**| Page Size | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: statushistory ("statusHistory") |
 {: class="table-striped"}
 
@@ -439,7 +441,7 @@ OrganizationAPI.getOrganizationsLimitsNamespaceDefaults(namespaceName: namespace
 
 
 
-> [PagedNamespaceListing](PagedNamespaceListing.html) getOrganizationsLimitsNamespaces(pageSize, pageNumber)
+> [JSON](JSON.html) getOrganizationsLimitsNamespaces(pageSize, pageNumber)
 
 Get the available limit namespaces
 
@@ -459,8 +461,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 100 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 OrganizationAPI.getOrganizationsLimitsNamespaces(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -478,14 +480,14 @@ OrganizationAPI.getOrganizationsLimitsNamespaces(pageSize: pageSize, pageNumber:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 100] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**PagedNamespaceListing**](PagedNamespaceListing.html)
+[**JSON**](JSON.html)
 
 <a name="getOrganizationsMe"></a>
 
@@ -538,7 +540,7 @@ This endpoint does not require any parameters.
 
 # **getOrganizationsWhitelist**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [OrgWhitelistSettings](OrgWhitelistSettings.html) getOrganizationsWhitelist()
 
@@ -795,7 +797,7 @@ OrganizationAPI.putOrganizationsMe(body: body) { (response, error) in
 
 # **putOrganizationsWhitelist**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [OrgWhitelistSettings](OrgWhitelistSettings.html) putOrganizationsWhitelist(body)
 

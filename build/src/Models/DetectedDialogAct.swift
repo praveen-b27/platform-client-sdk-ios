@@ -17,11 +17,8 @@ public class DetectedDialogAct: Codable {
     public var probability: Double?
 
     public init(name: String?, probability: Double?) {
-        
         self.name = name
-        
         self.probability = probability
-        
     }
 
 

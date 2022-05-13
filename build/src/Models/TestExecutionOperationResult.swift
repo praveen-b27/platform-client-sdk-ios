@@ -23,17 +23,11 @@ public class TestExecutionOperationResult: Codable {
     public var error: ErrorBody?
 
     public init(step: Int?, name: String?, success: Bool?, result: JSON?, error: ErrorBody?) {
-        
         self.step = step
-        
         self.name = name
-        
         self.success = success
-        
         self.result = result
-        
         self.error = error
-        
     }
 
 

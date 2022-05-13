@@ -21,11 +21,8 @@ public class JourneyAggregateQueryClause: Codable {
     public var predicates: [JourneyAggregateQueryPredicate]?
 
     public init(type: ModelType?, predicates: [JourneyAggregateQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

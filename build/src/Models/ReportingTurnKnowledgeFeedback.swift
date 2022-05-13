@@ -19,13 +19,9 @@ public class ReportingTurnKnowledgeFeedback: Codable {
     public var documents: [ReportingTurnKnowledgeDocument]?
 
     public init(searchId: String?, rating: Int?, documents: [ReportingTurnKnowledgeDocument]?) {
-        
         self.searchId = searchId
-        
         self.rating = rating
-        
         self.documents = documents
-        
     }
 
 

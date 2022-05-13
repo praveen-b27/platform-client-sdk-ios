@@ -17,13 +17,9 @@ public class Channel: Codable {
     public var expires: Date?
 
     public init(connectUri: String?, _id: String?, expires: Date?) {
-        
         self.connectUri = connectUri
-        
         self._id = _id
-        
         self.expires = expires
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

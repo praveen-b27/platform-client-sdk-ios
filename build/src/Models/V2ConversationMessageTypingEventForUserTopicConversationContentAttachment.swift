@@ -27,21 +27,13 @@ public class V2ConversationMessageTypingEventForUserTopicConversationContentAtta
     public var filename: String?
 
     public init(_id: String?, mediaType: MediaType?, url: String?, mime: String?, text: String?, sha256: String?, filename: String?) {
-        
         self._id = _id
-        
         self.mediaType = mediaType
-        
         self.url = url
-        
         self.mime = mime
-        
         self.text = text
-        
         self.sha256 = sha256
-        
         self.filename = filename
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

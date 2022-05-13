@@ -17,11 +17,8 @@ public class GDPRJourneyCustomer: Codable {
     public var _id: String?
 
     public init(type: String?, _id: String?) {
-        
         self.type = type
-        
         self._id = _id
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

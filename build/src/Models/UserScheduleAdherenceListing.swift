@@ -16,11 +16,8 @@ public class UserScheduleAdherenceListing: Codable {
     public var downloadUrl: String?
 
     public init(entities: [UserScheduleAdherence]?, downloadUrl: String?) {
-        
         self.entities = entities
-        
         self.downloadUrl = downloadUrl
-        
     }
 
 

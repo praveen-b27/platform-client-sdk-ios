@@ -21,15 +21,10 @@ public class AssignmentValidation: Codable {
     public var invalidMemberAssignments: [InvalidAssignment]?
 
     public init(membersNotAssigned: [UserReference]?, membersAlreadyAssigned: [UserReference]?, membersAlreadyAssignedToOther: [OtherProfileAssignment]?, invalidMemberAssignments: [InvalidAssignment]?) {
-        
         self.membersNotAssigned = membersNotAssigned
-        
         self.membersAlreadyAssigned = membersAlreadyAssigned
-        
         self.membersAlreadyAssignedToOther = membersAlreadyAssignedToOther
-        
         self.invalidMemberAssignments = invalidMemberAssignments
-        
     }
 
 

@@ -22,7 +22,7 @@ public class Phone: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -64,59 +64,32 @@ public class Phone: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, site: DomainEntityRef?, phoneBaseSettings: DomainEntityRef?, lineBaseSettings: DomainEntityRef?, phoneMetaBase: DomainEntityRef?, lines: [Line]?, status: PhoneStatus?, secondaryStatus: PhoneStatus?, userAgentInfo: UserAgentInfo?, properties: [String:JSON]?, capabilities: PhoneCapabilities?, webRtcUser: DomainEntityRef?, primaryEdge: Edge?, secondaryEdge: Edge?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.site = site
-        
         self.phoneBaseSettings = phoneBaseSettings
-        
         self.lineBaseSettings = lineBaseSettings
-        
         self.phoneMetaBase = phoneMetaBase
-        
         self.lines = lines
-        
         self.status = status
-        
         self.secondaryStatus = secondaryStatus
-        
         self.userAgentInfo = userAgentInfo
-        
         self.properties = properties
-        
         self.capabilities = capabilities
-        
         self.webRtcUser = webRtcUser
-        
         self.primaryEdge = primaryEdge
-        
         self.secondaryEdge = secondaryEdge
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

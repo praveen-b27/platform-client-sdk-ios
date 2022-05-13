@@ -35,23 +35,14 @@ public class WebChatMessage: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, conversation: WebChatConversation?, sender: WebChatMemberInfo?, body: String?, bodyType: BodyType?, timestamp: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.conversation = conversation
-        
         self.sender = sender
-        
         self.body = body
-        
         self.bodyType = bodyType
-        
         self.timestamp = timestamp
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

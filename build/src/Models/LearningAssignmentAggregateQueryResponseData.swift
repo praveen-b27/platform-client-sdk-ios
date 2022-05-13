@@ -17,11 +17,8 @@ public class LearningAssignmentAggregateQueryResponseData: Codable {
     public var metrics: [LearningAssignmentAggregateQueryResponseMetric]?
 
     public init(interval: String?, metrics: [LearningAssignmentAggregateQueryResponseMetric]?) {
-        
         self.interval = interval
-        
         self.metrics = metrics
-        
     }
 
 

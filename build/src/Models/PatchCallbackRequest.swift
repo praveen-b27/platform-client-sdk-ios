@@ -21,15 +21,10 @@ public class PatchCallbackRequest: Codable {
     public var callbackScheduledTime: Date?
 
     public init(conversationId: String?, queueId: String?, agentId: String?, callbackScheduledTime: Date?) {
-        
         self.conversationId = conversationId
-        
         self.queueId = queueId
-        
         self.agentId = agentId
-        
         self.callbackScheduledTime = callbackScheduledTime
-        
     }
 
 

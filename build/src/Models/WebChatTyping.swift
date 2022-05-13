@@ -21,15 +21,10 @@ public class WebChatTyping: Codable {
     public var timestamp: Date?
 
     public init(_id: String?, conversation: WebChatConversation?, sender: WebChatMemberInfo?, timestamp: Date?) {
-        
         self._id = _id
-        
         self.conversation = conversation
-        
         self.sender = sender
-        
         self.timestamp = timestamp
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

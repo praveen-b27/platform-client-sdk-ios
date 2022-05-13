@@ -28,28 +28,18 @@ public class SystemMessageSystemMessage: Codable {
     public var oauthClientId: String?
     public var reason: Reason?
     public var message: String?
-    public var data: [String:SystemMessageObject]?
+    public var data: [String:JSON]?
 
-    public init(channelId: String?, systemTopicType: SystemTopicType?, correlationId: String?, organizationId: String?, userId: String?, oauthClientId: String?, reason: Reason?, message: String?, data: [String:SystemMessageObject]?) {
-        
+    public init(channelId: String?, systemTopicType: SystemTopicType?, correlationId: String?, organizationId: String?, userId: String?, oauthClientId: String?, reason: Reason?, message: String?, data: [String:JSON]?) {
         self.channelId = channelId
-        
         self.systemTopicType = systemTopicType
-        
         self.correlationId = correlationId
-        
         self.organizationId = organizationId
-        
         self.userId = userId
-        
         self.oauthClientId = oauthClientId
-        
         self.reason = reason
-        
         self.message = message
-        
         self.data = data
-        
     }
 
 

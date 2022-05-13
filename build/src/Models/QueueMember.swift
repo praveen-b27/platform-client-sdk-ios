@@ -11,7 +11,7 @@ import Foundation
 
 public class QueueMember: Codable {
 
-    /** The queue member&#39;s id. */
+    /** The queue member's id. */
     public var _id: String?
     public var name: String?
     public var user: User?
@@ -23,23 +23,14 @@ public class QueueMember: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, user: User?, ringNumber: Int?, joined: Bool?, memberBy: String?, routingStatus: RoutingStatus?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.user = user
-        
         self.ringNumber = ringNumber
-        
         self.joined = joined
-        
         self.memberBy = memberBy
-        
         self.routingStatus = routingStatus
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

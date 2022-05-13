@@ -21,11 +21,8 @@ public class DialerContactlistfilterConfigChangeFilterClause: Codable {
     public var predicates: [DialerContactlistfilterConfigChangeFilterPredicate]?
 
     public init(filterType: FilterType?, predicates: [DialerContactlistfilterConfigChangeFilterPredicate]?) {
-        
         self.filterType = filterType
-        
         self.predicates = predicates
-        
     }
 
 

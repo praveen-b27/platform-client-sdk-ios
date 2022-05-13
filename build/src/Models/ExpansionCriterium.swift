@@ -18,11 +18,8 @@ public class ExpansionCriterium: Codable {
     public var threshold: Double?
 
     public init(type: ModelType?, threshold: Double?) {
-        
         self.type = type
-        
         self.threshold = threshold
-        
     }
 
 

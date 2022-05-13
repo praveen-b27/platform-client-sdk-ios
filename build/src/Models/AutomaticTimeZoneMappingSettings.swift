@@ -17,11 +17,8 @@ public class AutomaticTimeZoneMappingSettings: Codable {
     public var supportedCountries: [String]?
 
     public init(callableWindows: [CallableWindow]?, supportedCountries: [String]?) {
-        
         self.callableWindows = callableWindows
-        
         self.supportedCountries = supportedCountries
-        
     }
 
 

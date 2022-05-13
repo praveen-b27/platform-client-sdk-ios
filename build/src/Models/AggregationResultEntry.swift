@@ -20,15 +20,10 @@ public class AggregationResultEntry: Codable {
     public var lt: Double?
 
     public init(count: Int64?, value: String?, gte: Double?, lt: Double?) {
-        
         self.count = count
-        
         self.value = value
-        
         self.gte = gte
-        
         self.lt = lt
-        
     }
 
 

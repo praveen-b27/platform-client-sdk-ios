@@ -27,21 +27,13 @@ public class TrustorAuditQueryRequest: Codable {
     public var filters: [Filter]?
 
     public init(trustorOrganizationId: String?, trusteeUserIds: [String]?, startDate: Date?, endDate: Date?, queryPhrase: String?, facets: [Facet]?, filters: [Filter]?) {
-        
         self.trustorOrganizationId = trustorOrganizationId
-        
         self.trusteeUserIds = trusteeUserIds
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.queryPhrase = queryPhrase
-        
         self.facets = facets
-        
         self.filters = filters
-        
     }
 
 

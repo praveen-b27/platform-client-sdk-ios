@@ -17,11 +17,8 @@ public class SipDownloadResponse: Codable {
     public var documentId: String?
 
     public init(downloadId: String?, documentId: String?) {
-        
         self.downloadId = downloadId
-        
         self.documentId = documentId
-        
     }
 
 

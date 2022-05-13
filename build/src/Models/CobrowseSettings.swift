@@ -20,13 +20,9 @@ public class CobrowseSettings: Codable {
     public var maskSelectors: [String]?
 
     public init(enabled: Bool?, allowAgentControl: Bool?, maskSelectors: [String]?) {
-        
         self.enabled = enabled
-        
         self.allowAgentControl = allowAgentControl
-        
         self.maskSelectors = maskSelectors
-        
     }
 
 

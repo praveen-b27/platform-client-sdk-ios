@@ -27,27 +27,16 @@ public class JourneyWebActionEventsNotificationWebActionEventsNotification: Coda
     public var blockedWebActionOfferEvent: JourneyWebActionEventsNotificationBlockedWebActionOfferMessage?
 
     public init(_id: String?, correlationId: String?, externalContact: JourneyWebActionEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, session: JourneyWebActionEventsNotificationSession?, eventType: EventType?, webActionEvent: JourneyWebActionEventsNotificationWebActionMessage?, blockedWebActionOfferEvent: JourneyWebActionEventsNotificationBlockedWebActionOfferMessage?) {
-        
         self._id = _id
-        
         self.correlationId = correlationId
-        
         self.externalContact = externalContact
-        
         self.createdDate = createdDate
-        
         self.customerId = customerId
-        
         self.customerIdType = customerIdType
-        
         self.session = session
-        
         self.eventType = eventType
-        
         self.webActionEvent = webActionEvent
-        
         self.blockedWebActionOfferEvent = blockedWebActionOfferEvent
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

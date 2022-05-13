@@ -11,10 +11,7 @@ import Foundation
 
 open class GeneralDataProtectionRegulationAPI {
     
-    
-    
     /**
-     
      Get an existing GDPR request
      
      - parameter requestId: (path) Request id 
@@ -39,67 +36,35 @@ open class GeneralDataProtectionRegulationAPI {
     }
 
     /**
-     
      Get an existing GDPR request
-     
      - GET /api/v2/gdpr/requests/{requestId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "resultsUrl" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "requestType" : "aeiou",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "subject" : {
-    "addresses" : [ "aeiou" ],
-    "externalContactId" : "aeiou",
-    "emailAddresses" : [ "aeiou" ],
-    "name" : "aeiou",
-    "externalId" : "aeiou",
-    "dialerContactId" : {
-      "contactListId" : "aeiou",
-      "id" : "aeiou"
-    },
-    "journeyCustomer" : {
-      "id" : "aeiou",
-      "type" : "aeiou"
-    },
-    "socialHandle" : {
-      "type" : "aeiou",
-      "value" : "aeiou"
-    },
-    "userId" : "aeiou",
-    "phoneNumbers" : [ "aeiou" ]
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "resultsUrl" : "resultsUrl",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "requestType" : "GDPR_EXPORT",
+  "createdBy" : "{}",
+  "subject" : "{ \"emailAddresses\": [\"personal.email@domain.com\"], \"phoneNumbers\": [\"+13115552368\"] }",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "replacementTerms" : "[ { \"type\": \"EMAIL\": \"existingValue\": \"personal.email@domain.com\", \"updatedValue\": \"updated.personal.email@domain.com\" } ]",
-  "status" : "aeiou"
-}}]
+  "status" : "INITIATED"
+}, statusCode=200}]
      
      - parameter requestId: (path) Request id 
 
      - returns: RequestBuilder<GDPRRequest> 
      */
-    open class func getGdprRequestWithRequestBuilder(requestId: String) -> RequestBuilder<GDPRRequest> {
+    open class func getGdprRequestWithRequestBuilder(requestId: String) -> RequestBuilder<GDPRRequest> {        
         var path = "/api/v2/gdpr/requests/{requestId}"
         let requestIdPreEscape = "\(requestId)"
         let requestIdPostEscape = requestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{requestId}", with: requestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -110,15 +75,11 @@ open class GeneralDataProtectionRegulationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get all GDPR requests
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGdprRequests(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: GDPRRequestEntityListing?,_ error: Error?) -> Void)) {
@@ -140,84 +101,60 @@ open class GeneralDataProtectionRegulationAPI {
     }
 
     /**
-     
      Get all GDPR requests
-     
      - GET /api/v2/gdpr/requests
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "resultsUrl" : "aeiou",
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "requestType" : "aeiou",
-    "createdBy" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "subject" : {
-      "addresses" : [ "aeiou" ],
-      "externalContactId" : "aeiou",
-      "emailAddresses" : [ "aeiou" ],
-      "name" : "aeiou",
-      "externalId" : "aeiou",
-      "dialerContactId" : {
-        "contactListId" : "aeiou",
-        "id" : "aeiou"
-      },
-      "journeyCustomer" : {
-        "id" : "aeiou",
-        "type" : "aeiou"
-      },
-      "socialHandle" : {
-        "type" : "aeiou",
-        "value" : "aeiou"
-      },
-      "userId" : "aeiou",
-      "phoneNumbers" : [ "aeiou" ]
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
+    "resultsUrl" : "resultsUrl",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "requestType" : "GDPR_EXPORT",
+    "createdBy" : "{}",
+    "subject" : "{ \"emailAddresses\": [\"personal.email@domain.com\"], \"phoneNumbers\": [\"+13115552368\"] }",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
     "replacementTerms" : "[ { \"type\": \"EMAIL\": \"existingValue\": \"personal.email@domain.com\", \"updatedValue\": \"updated.personal.email@domain.com\" } ]",
-    "status" : "aeiou"
+    "status" : "INITIATED"
+  }, {
+    "resultsUrl" : "resultsUrl",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "requestType" : "GDPR_EXPORT",
+    "createdBy" : "{}",
+    "subject" : "{ \"emailAddresses\": [\"personal.email@domain.com\"], \"phoneNumbers\": [\"+13115552368\"] }",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "replacementTerms" : "[ { \"type\": \"EMAIL\": \"existingValue\": \"personal.email@domain.com\", \"updatedValue\": \"updated.personal.email@domain.com\" } ]",
+    "status" : "INITIATED"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<GDPRRequestEntityListing> 
      */
-    open class func getGdprRequestsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<GDPRRequestEntityListing> {
+    open class func getGdprRequestsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<GDPRRequestEntityListing> {        
         let path = "/api/v2/gdpr/requests"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<GDPRRequestEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -225,7 +162,6 @@ open class GeneralDataProtectionRegulationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum SearchType_getGdprSubjects: String { 
         case name = "NAME"
@@ -237,10 +173,7 @@ open class GeneralDataProtectionRegulationAPI {
 
     
     
-    
-    
     /**
-     
      Get GDPR subjects
      
      - parameter searchType: (query) Search Type 
@@ -266,69 +199,78 @@ open class GeneralDataProtectionRegulationAPI {
     }
 
     /**
-     
      Get GDPR subjects
-     
      - GET /api/v2/gdpr/subjects
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "addresses" : [ "aeiou" ],
-    "externalContactId" : "aeiou",
-    "emailAddresses" : [ "aeiou" ],
-    "name" : "aeiou",
-    "externalId" : "aeiou",
+    "addresses" : [ "addresses", "addresses" ],
+    "externalContactId" : "externalContactId",
+    "emailAddresses" : [ "emailAddresses", "emailAddresses" ],
+    "name" : "name",
+    "externalId" : "externalId",
     "dialerContactId" : {
-      "contactListId" : "aeiou",
-      "id" : "aeiou"
+      "contactListId" : "contactListId",
+      "id" : "id"
     },
     "journeyCustomer" : {
-      "id" : "aeiou",
-      "type" : "aeiou"
+      "id" : "id",
+      "type" : "type"
     },
     "socialHandle" : {
-      "type" : "aeiou",
-      "value" : "aeiou"
+      "type" : "TWITTER",
+      "value" : "value"
     },
-    "userId" : "aeiou",
-    "phoneNumbers" : [ "aeiou" ]
+    "userId" : "userId",
+    "phoneNumbers" : [ "phoneNumbers", "phoneNumbers" ]
+  }, {
+    "addresses" : [ "addresses", "addresses" ],
+    "externalContactId" : "externalContactId",
+    "emailAddresses" : [ "emailAddresses", "emailAddresses" ],
+    "name" : "name",
+    "externalId" : "externalId",
+    "dialerContactId" : {
+      "contactListId" : "contactListId",
+      "id" : "id"
+    },
+    "journeyCustomer" : {
+      "id" : "id",
+      "type" : "type"
+    },
+    "socialHandle" : {
+      "type" : "TWITTER",
+      "value" : "value"
+    },
+    "userId" : "userId",
+    "phoneNumbers" : [ "phoneNumbers", "phoneNumbers" ]
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter searchType: (query) Search Type 
      - parameter searchValue: (query) Search Value 
 
      - returns: RequestBuilder<GDPRSubjectEntityListing> 
      */
-    open class func getGdprSubjectsWithRequestBuilder(searchType: SearchType_getGdprSubjects, searchValue: String) -> RequestBuilder<GDPRSubjectEntityListing> {
+    open class func getGdprSubjectsWithRequestBuilder(searchType: SearchType_getGdprSubjects, searchValue: String) -> RequestBuilder<GDPRSubjectEntityListing> {        
         let path = "/api/v2/gdpr/subjects"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "searchType": searchType.rawValue, 
-            
             "searchValue": searchValue
-            
         ])
 
         let requestBuilder: RequestBuilder<GDPRSubjectEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -338,15 +280,11 @@ open class GeneralDataProtectionRegulationAPI {
 
     
     
-    
-    
-    
     /**
-     
      Submit a new GDPR request
      
      - parameter body: (body) GDPR request 
-     - parameter deleteConfirmed: (query) Confirm delete (optional, default to false)
+     - parameter deleteConfirmed: (query) Confirm delete (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postGdprRequests(body: GDPRRequest, deleteConfirmed: Bool? = nil, completion: @escaping ((_ data: GDPRRequest?,_ error: Error?) -> Void)) {
@@ -368,68 +306,37 @@ open class GeneralDataProtectionRegulationAPI {
     }
 
     /**
-     
      Submit a new GDPR request
-     
      - POST /api/v2/gdpr/requests
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "resultsUrl" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "requestType" : "aeiou",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "subject" : {
-    "addresses" : [ "aeiou" ],
-    "externalContactId" : "aeiou",
-    "emailAddresses" : [ "aeiou" ],
-    "name" : "aeiou",
-    "externalId" : "aeiou",
-    "dialerContactId" : {
-      "contactListId" : "aeiou",
-      "id" : "aeiou"
-    },
-    "journeyCustomer" : {
-      "id" : "aeiou",
-      "type" : "aeiou"
-    },
-    "socialHandle" : {
-      "type" : "aeiou",
-      "value" : "aeiou"
-    },
-    "userId" : "aeiou",
-    "phoneNumbers" : [ "aeiou" ]
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "resultsUrl" : "resultsUrl",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "requestType" : "GDPR_EXPORT",
+  "createdBy" : "{}",
+  "subject" : "{ \"emailAddresses\": [\"personal.email@domain.com\"], \"phoneNumbers\": [\"+13115552368\"] }",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "replacementTerms" : "[ { \"type\": \"EMAIL\": \"existingValue\": \"personal.email@domain.com\", \"updatedValue\": \"updated.personal.email@domain.com\" } ]",
-  "status" : "aeiou"
-}}]
+  "status" : "INITIATED"
+}, statusCode=200}]
      
      - parameter body: (body) GDPR request 
-     - parameter deleteConfirmed: (query) Confirm delete (optional, default to false)
+     - parameter deleteConfirmed: (query) Confirm delete (optional)
 
      - returns: RequestBuilder<GDPRRequest> 
      */
-    open class func postGdprRequestsWithRequestBuilder(body: GDPRRequest, deleteConfirmed: Bool? = nil) -> RequestBuilder<GDPRRequest> {
+    open class func postGdprRequestsWithRequestBuilder(body: GDPRRequest, deleteConfirmed: Bool? = nil) -> RequestBuilder<GDPRRequest> {        
         let path = "/api/v2/gdpr/requests"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "deleteConfirmed": deleteConfirmed
-            
         ])
 
         let requestBuilder: RequestBuilder<GDPRRequest>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

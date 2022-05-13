@@ -25,23 +25,14 @@ public class Page: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, versionId: String?, createdDate: Date?, modifiedDate: Date?, rootContainer: [String:JSON]?, properties: [String:JSON]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.versionId = versionId
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
         self.rootContainer = rootContainer
-        
         self.properties = properties
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

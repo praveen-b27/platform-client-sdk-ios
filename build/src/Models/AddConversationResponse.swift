@@ -17,11 +17,8 @@ public class AddConversationResponse: Codable {
     public var appointment: CoachingAppointmentReference?
 
     public init(conversation: ConversationReference?, appointment: CoachingAppointmentReference?) {
-        
         self.conversation = conversation
-        
         self.appointment = appointment
-        
     }
 
 

@@ -17,11 +17,8 @@ public class TtsSettings: Codable {
     public var languageOverrides: [LanguageOverride]?
 
     public init(defaultEngine: String?, languageOverrides: [LanguageOverride]?) {
-        
         self.defaultEngine = defaultEngine
-        
         self.languageOverrides = languageOverrides
-        
     }
 
 

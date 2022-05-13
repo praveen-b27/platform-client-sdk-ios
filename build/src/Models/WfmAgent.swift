@@ -36,29 +36,17 @@ public class WfmAgent: Codable {
     public var selfUri: String?
 
     public init(_id: String?, user: UserReference?, workPlan: WorkPlanReference?, workPlanRotation: WorkPlanRotationReference?, acceptDirectShiftTrades: Bool?, queues: [QueueReference]?, languages: [LanguageReference]?, skills: [RoutingSkillReference]?, schedulable: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.user = user
-        
         self.workPlan = workPlan
-        
         self.workPlanRotation = workPlanRotation
-        
         self.acceptDirectShiftTrades = acceptDirectShiftTrades
-        
         self.queues = queues
-        
         self.languages = languages
-        
         self.skills = skills
-        
         self.schedulable = schedulable
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

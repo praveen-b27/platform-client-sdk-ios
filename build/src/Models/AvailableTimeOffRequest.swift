@@ -17,11 +17,8 @@ public class AvailableTimeOffRequest: Codable {
     public var dateRanges: [LocalDateRange]?
 
     public init(activityCodeId: String?, dateRanges: [LocalDateRange]?) {
-        
         self.activityCodeId = activityCodeId
-        
         self.dateRanges = dateRanges
-        
     }
 
 

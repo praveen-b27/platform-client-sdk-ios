@@ -16,11 +16,8 @@ public class UserObservationDataContainer: Codable {
     public var data: [ObservationMetricData]?
 
     public init(group: [String:String]?, data: [ObservationMetricData]?) {
-        
         self.group = group
-        
         self.data = data
-        
     }
 
 

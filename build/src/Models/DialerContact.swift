@@ -16,7 +16,7 @@ public class DialerContact: Codable {
     public var name: String?
     /** The identifier of the contact list containing this contact. */
     public var contactListId: String?
-    /** An ordered map of the contact&#39;s columns and corresponding values. */
+    /** An ordered map of the contact's columns and corresponding values. */
     public var data: [String:JSON]?
     /** A map of call records for the contact phone columns. */
     public var callRecords: [String:CallRecord]?
@@ -34,29 +34,17 @@ public class DialerContact: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.contactListId = contactListId
-        
         self.data = data
-        
         self.callRecords = callRecords
-        
         self.latestSmsEvaluations = latestSmsEvaluations
-        
         self.callable = callable
-        
         self.phoneNumberStatus = phoneNumberStatus
-        
         self.contactColumnTimeZones = contactColumnTimeZones
-        
         self.configurationOverrides = configurationOverrides
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

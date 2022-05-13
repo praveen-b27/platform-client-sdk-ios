@@ -17,11 +17,8 @@ public class SupportedLanguage: Codable {
     public var isDefault: Bool?
 
     public init(language: String?, isDefault: Bool?) {
-        
         self.language = language
-        
         self.isDefault = isDefault
-        
     }
 
 

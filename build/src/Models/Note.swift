@@ -34,25 +34,15 @@ public class Note: Codable {
     public var selfUri: String?
 
     public init(_id: String?, entityId: String?, entityType: EntityType?, noteText: String?, modifyDate: Date?, createDate: Date?, createdBy: User?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.entityId = entityId
-        
         self.entityType = entityType
-        
         self.noteText = noteText
-        
         self.modifyDate = modifyDate
-        
         self.createDate = createDate
-        
         self.createdBy = createdBy
-        
         self.externalDataSources = externalDataSources
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

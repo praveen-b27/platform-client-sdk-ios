@@ -23,13 +23,9 @@ public class WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody:
     public var status: Status?
 
     public init(_id: String?, configuration: WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody?, status: Status?) {
-        
         self._id = _id
-        
         self.configuration = configuration
-        
         self.status = status
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

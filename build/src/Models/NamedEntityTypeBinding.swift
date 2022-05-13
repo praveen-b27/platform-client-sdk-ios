@@ -17,11 +17,8 @@ public class NamedEntityTypeBinding: Codable {
     public var entityName: String?
 
     public init(entityType: String?, entityName: String?) {
-        
         self.entityType = entityType
-        
         self.entityName = entityName
-        
     }
 
 

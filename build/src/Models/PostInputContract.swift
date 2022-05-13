@@ -16,9 +16,7 @@ public class PostInputContract: Codable {
     public var inputSchema: JsonSchemaDocument?
 
     public init(inputSchema: JsonSchemaDocument?) {
-        
         self.inputSchema = inputSchema
-        
     }
 
 

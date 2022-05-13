@@ -31,19 +31,12 @@ public class LearningModuleInformStepRequest: Codable {
     public var order: Int?
 
     public init(type: ModelType?, name: String?, value: String?, sharingUri: String?, contentType: String?, order: Int?) {
-        
         self.type = type
-        
         self.name = name
-        
         self.value = value
-        
         self.sharingUri = sharingUri
-        
         self.contentType = contentType
-        
         self.order = order
-        
     }
 
 

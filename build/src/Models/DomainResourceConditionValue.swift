@@ -23,15 +23,10 @@ public class DomainResourceConditionValue: Codable {
     public var type: ModelType?
 
     public init(user: User?, queue: Queue?, value: String?, type: ModelType?) {
-        
         self.user = user
-        
         self.queue = queue
-        
         self.value = value
-        
         self.type = type
-        
     }
 
 

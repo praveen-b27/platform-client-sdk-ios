@@ -15,11 +15,8 @@ public class PINConfiguration: Codable {
     public var maximumLength: Int?
 
     public init(minimumLength: Int?, maximumLength: Int?) {
-        
         self.minimumLength = minimumLength
-        
         self.maximumLength = maximumLength
-        
     }
 
 

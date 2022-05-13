@@ -19,9 +19,7 @@ public class WebChatConfig: Codable {
     public var webChatSkin: WebChatSkin?
 
     public init(webChatSkin: WebChatSkin?) {
-        
         self.webChatSkin = webChatSkin
-        
     }
 
 

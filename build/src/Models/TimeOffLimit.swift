@@ -27,17 +27,11 @@ public class TimeOffLimit: Codable {
     public var selfUri: String?
 
     public init(_id: String?, granularity: Granularity?, defaultLimitMinutes: Int?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.granularity = granularity
-        
         self.defaultLimitMinutes = defaultLimitMinutes
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

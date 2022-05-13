@@ -17,11 +17,8 @@ public class PatchUser: Codable {
     public var acdAutoAnswer: Bool?
 
     public init(_id: String?, acdAutoAnswer: Bool?) {
-        
         self._id = _id
-        
         self.acdAutoAnswer = acdAutoAnswer
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

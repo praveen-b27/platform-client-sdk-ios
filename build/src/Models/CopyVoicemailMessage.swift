@@ -20,13 +20,9 @@ public class CopyVoicemailMessage: Codable {
     public var groupId: String?
 
     public init(voicemailMessageId: String?, userId: String?, groupId: String?) {
-        
         self.voicemailMessageId = voicemailMessageId
-        
         self.userId = userId
-        
         self.groupId = groupId
-        
     }
 
 

@@ -17,13 +17,9 @@ public class UserRoutingStatusUserRoutingStatus: Codable {
     public var errorInfo: UserRoutingStatusErrorInfo?
 
     public init(_id: String?, routingStatus: UserRoutingStatusRoutingStatus?, errorInfo: UserRoutingStatusErrorInfo?) {
-        
         self._id = _id
-        
         self.routingStatus = routingStatus
-        
         self.errorInfo = errorInfo
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

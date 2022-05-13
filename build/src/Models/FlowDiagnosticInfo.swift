@@ -15,9 +15,7 @@ public class FlowDiagnosticInfo: Codable {
     public var lastActionId: Int?
 
     public init(lastActionId: Int?) {
-        
         self.lastActionId = lastActionId
-        
     }
 
 

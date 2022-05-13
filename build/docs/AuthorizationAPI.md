@@ -76,7 +76,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
-let force: Bool = false // Force delete this division as well as the grants and objects associated with it
+let force: Bool = true // Force delete this division as well as the grants and objects associated with it
 
 // Code example
 AuthorizationAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (error) in
@@ -94,7 +94,7 @@ AuthorizationAPI.deleteAuthorizationDivision(divisionId: divisionId, force: forc
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **force** | **Bool**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
+| **force** | **Bool**| Force delete this division as well as the grants and objects associated with it | [optional] |
 {: class="table-striped"}
 
 
@@ -234,7 +234,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
-let objectCount: Bool = false // Get count of objects in this division, grouped by type
+let objectCount: AuthorizationAPI.ObjectCount_getAuthorizationDivision = AuthorizationAPI.ObjectCount_getAuthorizationDivision.enummember // Get count of objects in this division, grouped by type
 
 // Code example
 AuthorizationAPI.getAuthorizationDivision(divisionId: divisionId, objectCount: objectCount) { (response, error) in
@@ -253,7 +253,7 @@ AuthorizationAPI.getAuthorizationDivision(divisionId: divisionId, objectCount: o
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **objectCount** | **Bool**| Get count of objects in this division, grouped by type | [optional] [default to false] |
+| **objectCount** | **Bool**| Get count of objects in this division, grouped by type | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -273,6 +273,8 @@ Gets all grants for a given division.
 
 Returns all grants assigned to a given division. Maximum page size is 500.
 
+
+
 Wraps GET /api/v2/authorization/divisions/{divisionId}/grants  
 
 Requires ANY permissions: 
@@ -288,8 +290,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 AuthorizationAPI.getAuthorizationDivisionGrants(divisionId: divisionId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -308,8 +310,8 @@ AuthorizationAPI.getAuthorizationDivisionGrants(divisionId: divisionId, pageNumb
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -327,7 +329,9 @@ AuthorizationAPI.getAuthorizationDivisionGrants(divisionId: divisionId, pageNumb
 
 Retrieve a list of all divisions defined for the organization
 
-Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id&#x3D;5f777167-63be-4c24-ad41-374155d9e28b&amp;id&#x3D;72e9fb25-c484-488d-9312-7acba82435b3
+
+
 
 Wraps GET /api/v2/authorization/divisions  
 
@@ -342,13 +346,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let objectCount: Bool = false // Include the count of objects contained in the division
+let objectCount: Bool = true // Include the count of objects contained in the division
 let _id: [String] = [""] // Optionally request specific divisions by their IDs
 let name: String = "" // Search term to filter by division name
 
@@ -368,13 +372,13 @@ AuthorizationAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageN
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **objectCount** | **Bool**| Include the count of objects contained in the division | [optional] [default to false] |
+| **objectCount** | **Bool**| Include the count of objects contained in the division | [optional] |
 | **_id** | [**[String]**](String.html)| Optionally request specific divisions by their IDs | [optional] |
 | **name** | **String**| Search term to filter by division name | [optional] |
 {: class="table-striped"}
@@ -395,6 +399,8 @@ AuthorizationAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageN
 Retrieve the home division for the organization.
 
 Will not include object counts.
+
+
 
 Wraps GET /api/v2/authorization/divisions/home  
 
@@ -482,13 +488,15 @@ This endpoint does not require any parameters.
 
 # **getAuthorizationDivisionspermittedMe**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [[AuthzDivision]](AuthzDivision.html) getAuthorizationDivisionspermittedMe(permission, name)
 
 Returns which divisions the current user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
+
+
 
 Wraps GET /api/v2/authorization/divisionspermitted/me  
 
@@ -557,8 +565,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let permission: String = "" // The permission string, including the object to access, e.g. routing:queue:view
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 AuthorizationAPI.getAuthorizationDivisionspermittedPagedMe(permission: permission, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -577,8 +585,8 @@ AuthorizationAPI.getAuthorizationDivisionspermittedPagedMe(permission: permissio
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -590,13 +598,15 @@ AuthorizationAPI.getAuthorizationDivisionspermittedPagedMe(permission: permissio
 
 # **getAuthorizationDivisionspermittedPagedSubjectId**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [DivsPermittedEntityListing](DivsPermittedEntityListing.html) getAuthorizationDivisionspermittedPagedSubjectId(subjectId, permission, pageNumber, pageSize)
 
 Returns which divisions the specified user has the given permission in.
 
 This route is deprecated, use authorization/divisionspermitted/paged/me instead.
+
+
 
 Wraps GET /api/v2/authorization/divisionspermitted/paged/{subjectId}  
 
@@ -613,8 +623,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
 let permission: String = "" // The permission string, including the object to access, e.g. routing:queue:view
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 AuthorizationAPI.getAuthorizationDivisionspermittedPagedSubjectId(subjectId: subjectId, permission: permission, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -634,8 +644,8 @@ AuthorizationAPI.getAuthorizationDivisionspermittedPagedSubjectId(subjectId: sub
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -655,6 +665,8 @@ Get all permissions.
 
 Retrieve a list of all permission defined in the system.
 
+
+
 Wraps GET /api/v2/authorization/permissions  
 
 Requires NO permissions: 
@@ -668,8 +680,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let queryType: AuthorizationAPI.QueryType_getAuthorizationPermissions = AuthorizationAPI.QueryType_getAuthorizationPermissions.enummember // Query filter type
 let query: String = "" // Comma-separated list of permissions or domains to query
 
@@ -689,8 +701,8 @@ AuthorizationAPI.getAuthorizationPermissions(pageSize: pageSize, pageNumber: pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **queryType** | **String**| Query filter type | [optional]<br />**Values**: domain ("domain"), permission ("permission") |
 | **query** | **String**| Comma-separated list of permissions or domains to query | [optional] |
 {: class="table-striped"}
@@ -711,6 +723,8 @@ AuthorizationAPI.getAuthorizationPermissions(pageSize: pageSize, pageNumber: pag
 Get the list of enabled products
 
 Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+
+
 
 Wraps GET /api/v2/authorization/products  
 
@@ -759,6 +773,8 @@ Get a single organization role.
 
 Get the organization role specified by its ID.
 
+
+
 Wraps GET /api/v2/authorization/roles/{roleId}  
 
 Requires ANY permissions: 
@@ -774,7 +790,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
-let expand: [String] = [AuthorizationAPI.Expand_getAuthorizationRole.enummember.rawValue] // Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role
+let expand: [String] = [""] // Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role
 
 // Code example
 AuthorizationAPI.getAuthorizationRole(roleId: roleId, expand: expand) { (response, error) in
@@ -793,7 +809,7 @@ AuthorizationAPI.getAuthorizationRole(roleId: roleId, expand: expand) { (respons
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role | [optional]<br />**Values**: unusedpermissions ("unusedPermissions") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role | [optional]<br />**Values**: unusedpermissions ("unusedPermissions") |
 {: class="table-striped"}
 
 
@@ -812,6 +828,8 @@ AuthorizationAPI.getAuthorizationRole(roleId: roleId, expand: expand) { (respons
 Get an org role to default role comparison
 
 Compares any organization role to a default role id and show differences
+
+
 
 Wraps GET /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}  
 
@@ -867,6 +885,8 @@ Get the subjects&#39; granted divisions in the specified role.
 
 Includes the divisions for which the subject has a grant.
 
+
+
 Wraps GET /api/v2/authorization/roles/{roleId}/subjectgrants  
 
 Requires ANY permissions: 
@@ -882,8 +902,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -906,8 +926,8 @@ AuthorizationAPI.getAuthorizationRoleSubjectgrants(roleId: roleId, pageSize: pag
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -931,6 +951,8 @@ Get a list of the users in a specified role.
 
 Get an array of the UUIDs of the users in the specified role.
 
+
+
 Wraps GET /api/v2/authorization/roles/{roleId}/users  
 
 Requires NO permissions: 
@@ -945,8 +967,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 AuthorizationAPI.getAuthorizationRoleUsers(roleId: roleId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -965,8 +987,8 @@ AuthorizationAPI.getAuthorizationRoleUsers(roleId: roleId, pageSize: pageSize, p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1000,8 +1022,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -1028,8 +1050,8 @@ AuthorizationAPI.getAuthorizationRoles(pageSize: pageSize, pageNumber: pageNumbe
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -1037,7 +1059,7 @@ AuthorizationAPI.getAuthorizationRoles(pageSize: pageSize, pageNumber: pageNumbe
 | **name** | **String**|  | [optional] |
 | **permission** | [**[String]**](String.html)|  | [optional] |
 | **defaultRoleId** | [**[String]**](String.html)|  | [optional] |
-| **userCount** | **Bool**|  | [optional] [default to true] |
+| **userCount** | **Bool**|  | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 {: class="table-striped"}
 
@@ -1261,6 +1283,8 @@ Patch Organization Role for needsUpdate Field
 
 Patch Organization Role for needsUpdate Field
 
+
+
 Wraps PATCH /api/v2/authorization/roles/{roleId}  
 
 Requires ANY permissions: 
@@ -1315,6 +1339,8 @@ Assign a list of objects to a division
 
 Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, DATATABLES or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
 
+
+
 Wraps POST /api/v2/authorization/divisions/{divisionId}/objects/{objectType}  
 
 Requires NO permissions: 
@@ -1330,7 +1356,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
 let objectType: AuthorizationAPI.ObjectType_postAuthorizationDivisionObject = AuthorizationAPI.ObjectType_postAuthorizationDivisionObject.enummember // The type of the objects. Must be one of the valid object types
-let body: [String] = [new [String](...)] // Object Id List
+let body: [String] = [""] // Object Id List
 
 // Code example
 AuthorizationAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectType: objectType, body: body) { (error) in
@@ -1349,7 +1375,7 @@ AuthorizationAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectT
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
 | **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), emailcampaign ("EMAILCAMPAIGN"), messagingcampaign ("MESSAGINGCAMPAIGN"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), user ("USER"), callroute ("CALLROUTE"), emergencygroups ("EMERGENCYGROUPS"), routingschedules ("ROUTINGSCHEDULES"), routingschedulegroups ("ROUTINGSCHEDULEGROUPS"), datatables ("DATATABLES"), team ("TEAM"), workbin ("WORKBIN"), worktype ("WORKTYPE"), extensionpool ("EXTENSIONPOOL"), skillgroup ("SKILLGROUP"), script ("SCRIPT") |
-| **body** | **[String]**| Object Id List | |
+| **body** | [**[String]**](String.html)| Object Id List | |
 {: class="table-striped"}
 
 
@@ -1492,7 +1518,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
 let body: SubjectDivisions = new SubjectDivisions(...) // Subjects and Divisions
-let subjectType: String = "PC_USER" // what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+let subjectType: String = "" // what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
 
 // Code example
 AuthorizationAPI.postAuthorizationRole(roleId: roleId, body: body, subjectType: subjectType) { (error) in
@@ -1511,7 +1537,7 @@ AuthorizationAPI.postAuthorizationRole(roleId: roleId, body: body, subjectType: 
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
 | **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions | |
-| **subjectType** | **String**| what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] |
 {: class="table-striped"}
 
 
@@ -1530,6 +1556,8 @@ AuthorizationAPI.postAuthorizationRole(roleId: roleId, body: body, subjectType: 
 Get an unsaved org role to default role comparison
 
 Allows users to compare their existing roles in an unsaved state to its default role
+
+
 
 Wraps POST /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}  
 
@@ -1637,7 +1665,9 @@ AuthorizationAPI.postAuthorizationRoles(body: body) { (response, error) in
 
 Restores all default roles
 
-This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
+This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force&#x3D;true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force&#x3D;true, you can restore all default roles. Note: This does not have an effect on custom roles.
+
+
 
 Wraps POST /api/v2/authorization/roles/default  
 
@@ -1653,7 +1683,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let force: Bool = false // Restore default roles
+let force: Bool = true // Restore default roles
 
 // Code example
 AuthorizationAPI.postAuthorizationRolesDefault(force: force) { (response, error) in
@@ -1671,7 +1701,7 @@ AuthorizationAPI.postAuthorizationRolesDefault(force: force) { (response, error)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **force** | **Bool**| Restore default roles | [optional] [default to false] |
+| **force** | **Bool**| Restore default roles | [optional] |
 {: class="table-striped"}
 
 
@@ -1707,7 +1737,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
 let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
-let subjectType: String = "PC_USER" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+let subjectType: String = "" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
 
 // Code example
 AuthorizationAPI.postAuthorizationSubjectBulkadd(subjectId: subjectId, body: body, subjectType: subjectType) { (error) in
@@ -1726,7 +1756,7 @@ AuthorizationAPI.postAuthorizationSubjectBulkadd(subjectId: subjectId, body: bod
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
-| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] |
 {: class="table-striped"}
 
 
@@ -1799,6 +1829,8 @@ Replace subject&#39;s roles and divisions with the exact list supplied in the re
 
 This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
 
+
+
 Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkreplace  
 
 Requires ALL permissions: 
@@ -1816,7 +1848,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
 let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
-let subjectType: String = "PC_USER" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+let subjectType: String = "" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
 
 // Code example
 AuthorizationAPI.postAuthorizationSubjectBulkreplace(subjectId: subjectId, body: body, subjectType: subjectType) { (error) in
@@ -1835,7 +1867,7 @@ AuthorizationAPI.postAuthorizationSubjectBulkreplace(subjectId: subjectId, body:
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
-| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] |
 {: class="table-striped"}
 
 
@@ -1872,7 +1904,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let subjectId: String = "" // Subject ID (user or group)
 let divisionId: String = "" // the id of the division to which to make the grant
 let roleId: String = "" // the id of the role to grant
-let subjectType: String = "PC_USER" // what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
+let subjectType: String = "" // what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
 
 // Code example
 AuthorizationAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: divisionId, roleId: roleId, subjectType: subjectType) { (error) in
@@ -1892,7 +1924,7 @@ AuthorizationAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divi
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **divisionId** | **String**| the id of the division to which to make the grant | |
 | **roleId** | **String**| the id of the role to grant | |
-| **subjectType** | **String**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] |
 {: class="table-striped"}
 
 
@@ -1966,6 +1998,8 @@ Update an organization role.
 
 Update
 
+
+
 Wraps PUT /api/v2/authorization/roles/{roleId}  
 
 Requires ANY permissions: 
@@ -2035,7 +2069,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
-let body: [String] = [new [String](...)] // List of user IDs
+let body: [String] = [""] // List of user IDs
 
 // Code example
 AuthorizationAPI.putAuthorizationRoleUsersAdd(roleId: roleId, body: body) { (response, error) in
@@ -2054,7 +2088,7 @@ AuthorizationAPI.putAuthorizationRoleUsersAdd(roleId: roleId, body: body) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
-| **body** | **[String]**| List of user IDs | |
+| **body** | [**[String]**](String.html)| List of user IDs | |
 {: class="table-striped"}
 
 
@@ -2089,7 +2123,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
-let body: [String] = [new [String](...)] // List of user IDs
+let body: [String] = [""] // List of user IDs
 
 // Code example
 AuthorizationAPI.putAuthorizationRoleUsersRemove(roleId: roleId, body: body) { (response, error) in
@@ -2108,7 +2142,7 @@ AuthorizationAPI.putAuthorizationRoleUsersRemove(roleId: roleId, body: body) { (
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
-| **body** | **[String]**| List of user IDs | |
+| **body** | [**[String]**](String.html)| List of user IDs | |
 {: class="table-striped"}
 
 
@@ -2195,7 +2229,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let body: [String] = [new [String](...)] // List of roles
+let body: [String] = [""] // List of roles
 
 // Code example
 AuthorizationAPI.putUserRoles(userId: userId, body: body) { (response, error) in
@@ -2214,7 +2248,7 @@ AuthorizationAPI.putUserRoles(userId: userId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **body** | **[String]**| List of roles | |
+| **body** | [**[String]**](String.html)| List of roles | |
 {: class="table-striped"}
 
 

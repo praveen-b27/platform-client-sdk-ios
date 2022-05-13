@@ -17,11 +17,8 @@ public class CallbackDisconnectIdentifier: Codable {
     public var callbackId: String?
 
     public init(conversationId: String?, callbackId: String?) {
-        
         self.conversationId = conversationId
-        
         self.callbackId = callbackId
-        
     }
 
 

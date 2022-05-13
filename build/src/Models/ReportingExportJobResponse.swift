@@ -138,7 +138,7 @@ public class ReportingExportJobResponse: Codable {
     public var exportFormat: ExportFormat?
     /** The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?
-    /** The url to download the request if it&#39;s status is completed */
+    /** The url to download the request if it's status is completed */
     public var downloadUrl: String?
     /** The type of view export job to be created */
     public var viewType: ViewType?
@@ -168,7 +168,7 @@ public class ReportingExportJobResponse: Codable {
     public var hasSplitByMedia: Bool?
     /** Indicates if summary row needs to be present in exports */
     public var hasSummaryRow: Bool?
-    /** The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request */
+    /** The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request */
     public var csvDelimiter: CsvDelimiter?
     /** The list of ordered selected columns from the export view by the user */
     public var selectedColumns: [SelectedColumns]?
@@ -185,67 +185,36 @@ public class ReportingExportJobResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, emailErrorDescription: String?, enabled: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.runId = runId
-        
         self.status = status
-        
         self.timeZone = timeZone
-        
         self.exportFormat = exportFormat
-        
         self.interval = interval
-        
         self.downloadUrl = downloadUrl
-        
         self.viewType = viewType
-        
         self.exportErrorMessagesType = exportErrorMessagesType
-        
         self.period = period
-        
         self.filter = filter
-        
         self.read = read
-        
         self.createdDateTime = createdDateTime
-        
         self.modifiedDateTime = modifiedDateTime
-        
         self.locale = locale
-        
         self.percentageComplete = percentageComplete
-        
         self.hasFormatDurations = hasFormatDurations
-        
         self.hasSplitFilters = hasSplitFilters
-        
         self.excludeEmptyRows = excludeEmptyRows
-        
         self.hasSplitByMedia = hasSplitByMedia
-        
         self.hasSummaryRow = hasSummaryRow
-        
         self.csvDelimiter = csvDelimiter
-        
         self.selectedColumns = selectedColumns
-        
         self.hasCustomParticipantAttributes = hasCustomParticipantAttributes
-        
         self.recipientEmails = recipientEmails
-        
         self.emailStatuses = emailStatuses
-        
         self.emailErrorDescription = emailErrorDescription
-        
         self.enabled = enabled
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

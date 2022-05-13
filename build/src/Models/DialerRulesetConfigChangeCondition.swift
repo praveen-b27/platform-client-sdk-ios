@@ -49,7 +49,7 @@ public class DialerRulesetConfigChangeCondition: Codable {
     public var valueType: ValueType?
     /** An operation type for condition evaluation */
     public var _operator: Operator?
-    /** List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;) */
+    /** List of wrap-up code identifiers (used only in conditions of type 'wrapupCondition') */
     public var codes: [String]?
     /** Determines the type of the property associated with the condition */
     public var propertyType: PropertyType?
@@ -69,39 +69,22 @@ public class DialerRulesetConfigChangeCondition: Codable {
     public var predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?
 
     public init(dataAction: DialerRulesetConfigChangeUriReference?, type: String?, inverted: Bool?, attributeName: String?, value: String?, valueType: ValueType?, _operator: Operator?, codes: [String]?, propertyType: PropertyType?, property: String?, dataNotFoundResolution: Bool?, contactIdField: String?, callAnalysisResultField: String?, agentWrapupField: String?, contactColumnToDataActionFieldMappings: [DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]?, predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?) {
-        
         self.dataAction = dataAction
-        
         self.type = type
-        
         self.inverted = inverted
-        
         self.attributeName = attributeName
-        
         self.value = value
-        
         self.valueType = valueType
-        
         self._operator = _operator
-        
         self.codes = codes
-        
         self.propertyType = propertyType
-        
         self.property = property
-        
         self.dataNotFoundResolution = dataNotFoundResolution
-        
         self.contactIdField = contactIdField
-        
         self.callAnalysisResultField = callAnalysisResultField
-        
         self.agentWrapupField = agentWrapupField
-        
         self.contactColumnToDataActionFieldMappings = contactColumnToDataActionFieldMappings
-        
         self.predicates = predicates
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

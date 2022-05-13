@@ -31,25 +31,15 @@ public class SurveyQuestion: Codable {
     public var explanationPrompt: String?
 
     public init(_id: String?, text: String?, helpText: String?, type: ModelType?, naEnabled: Bool?, visibilityCondition: VisibilityCondition?, answerOptions: [AnswerOption]?, maxResponseCharacters: Int?, explanationPrompt: String?) {
-        
         self._id = _id
-        
         self.text = text
-        
         self.helpText = helpText
-        
         self.type = type
-        
         self.naEnabled = naEnabled
-        
         self.visibilityCondition = visibilityCondition
-        
         self.answerOptions = answerOptions
-        
         self.maxResponseCharacters = maxResponseCharacters
-        
         self.explanationPrompt = explanationPrompt
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

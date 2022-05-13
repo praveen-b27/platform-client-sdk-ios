@@ -17,11 +17,8 @@ public class AnalyticsScoredAgent: Codable {
     public var scoredAgentId: String?
 
     public init(agentScore: Int?, scoredAgentId: String?) {
-        
         self.agentScore = agentScore
-        
         self.scoredAgentId = scoredAgentId
-        
     }
 
 

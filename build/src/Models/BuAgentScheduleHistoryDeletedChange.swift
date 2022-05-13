@@ -19,13 +19,9 @@ public class BuAgentScheduleHistoryDeletedChange: Codable {
     public var agentSchedule: Bool?
 
     public init(shiftIds: [String]?, fullDayTimeOffMarkerDates: [Date]?, agentSchedule: Bool?) {
-        
         self.shiftIds = shiftIds
-        
         self.fullDayTimeOffMarkerDates = fullDayTimeOffMarkerDates
-        
         self.agentSchedule = agentSchedule
-        
     }
 
 

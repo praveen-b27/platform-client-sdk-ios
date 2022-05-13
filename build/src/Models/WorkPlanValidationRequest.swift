@@ -81,71 +81,38 @@ public class WorkPlanValidationRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, enabled: Bool?, valid: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, minimumConsecutiveNonWorkingMinutesPerWeek: Int?, constrainMaximumConsecutiveWorkingWeekends: Bool?, maximumConsecutiveWorkingWeekends: Int?, minimumWorkingDaysPerWeek: Int?, constrainMaximumConsecutiveWorkingDays: Bool?, maximumConsecutiveWorkingDays: Int?, minimumShiftStartDistanceMinutes: Int?, minimumDaysOffPerPlanningPeriod: Int?, maximumDaysOffPerPlanningPeriod: Int?, minimumPaidMinutesPerPlanningPeriod: Int?, maximumPaidMinutesPerPlanningPeriod: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVarianceType: ShiftStartVarianceType?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [WorkPlanShift]?, agents: [DeletableUserReference]?, agentCount: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.enabled = enabled
-        
         self.valid = valid
-        
         self.constrainWeeklyPaidTime = constrainWeeklyPaidTime
-        
         self.flexibleWeeklyPaidTime = flexibleWeeklyPaidTime
-        
         self.weeklyExactPaidMinutes = weeklyExactPaidMinutes
-        
         self.weeklyMinimumPaidMinutes = weeklyMinimumPaidMinutes
-        
         self.weeklyMaximumPaidMinutes = weeklyMaximumPaidMinutes
-        
         self.constrainPaidTimeGranularity = constrainPaidTimeGranularity
-        
         self.paidTimeGranularityMinutes = paidTimeGranularityMinutes
-        
         self.constrainMinimumTimeBetweenShifts = constrainMinimumTimeBetweenShifts
-        
         self.minimumTimeBetweenShiftsMinutes = minimumTimeBetweenShiftsMinutes
-        
         self.maximumDays = maximumDays
-        
         self.minimumConsecutiveNonWorkingMinutesPerWeek = minimumConsecutiveNonWorkingMinutesPerWeek
-        
         self.constrainMaximumConsecutiveWorkingWeekends = constrainMaximumConsecutiveWorkingWeekends
-        
         self.maximumConsecutiveWorkingWeekends = maximumConsecutiveWorkingWeekends
-        
         self.minimumWorkingDaysPerWeek = minimumWorkingDaysPerWeek
-        
         self.constrainMaximumConsecutiveWorkingDays = constrainMaximumConsecutiveWorkingDays
-        
         self.maximumConsecutiveWorkingDays = maximumConsecutiveWorkingDays
-        
         self.minimumShiftStartDistanceMinutes = minimumShiftStartDistanceMinutes
-        
         self.minimumDaysOffPerPlanningPeriod = minimumDaysOffPerPlanningPeriod
-        
         self.maximumDaysOffPerPlanningPeriod = maximumDaysOffPerPlanningPeriod
-        
         self.minimumPaidMinutesPerPlanningPeriod = minimumPaidMinutesPerPlanningPeriod
-        
         self.maximumPaidMinutesPerPlanningPeriod = maximumPaidMinutesPerPlanningPeriod
-        
         self.optionalDays = optionalDays
-        
         self.shiftStartVarianceType = shiftStartVarianceType
-        
         self.shiftStartVariances = shiftStartVariances
-        
         self.shifts = shifts
-        
         self.agents = agents
-        
         self.agentCount = agentCount
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

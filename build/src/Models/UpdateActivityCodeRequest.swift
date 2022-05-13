@@ -25,7 +25,7 @@ public class UpdateActivityCodeRequest: Codable {
     }
     /** The name of the activity code */
     public var name: String?
-    /** The activity code&#39;s category. Attempting to change the category of a default activity code will return an error */
+    /** The activity code's category. Attempting to change the category of a default activity code will return an error */
     public var category: Category?
     /** The default length of the activity in minutes */
     public var lengthInMinutes: Int?
@@ -35,25 +35,17 @@ public class UpdateActivityCodeRequest: Codable {
     public var countsAsWorkTime: Bool?
     /** Whether an agent can select this activity code when creating or editing a time off request */
     public var agentTimeOffSelectable: Bool?
-    /** Version metadata for the associated business unit&#39;s list of activity codes */
+    /** Version metadata for the associated business unit's list of activity codes */
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(name: String?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.name = name
-        
         self.category = category
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.countsAsPaidTime = countsAsPaidTime
-        
         self.countsAsWorkTime = countsAsWorkTime
-        
         self.agentTimeOffSelectable = agentTimeOffSelectable
-        
         self.metadata = metadata
-        
     }
 
 

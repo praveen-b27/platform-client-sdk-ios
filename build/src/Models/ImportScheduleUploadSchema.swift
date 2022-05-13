@@ -25,19 +25,12 @@ public class ImportScheduleUploadSchema: Codable {
     public var agentSchedules: [BuImportAgentScheduleUploadSchema]?
 
     public init(_description: String?, weekCount: Int?, published: Bool?, shortTermForecast: BuShortTermForecastReference?, headcountForecast: BuHeadcountForecast?, agentSchedules: [BuImportAgentScheduleUploadSchema]?) {
-        
         self._description = _description
-        
         self.weekCount = weekCount
-        
         self.published = published
-        
         self.shortTermForecast = shortTermForecast
-        
         self.headcountForecast = headcountForecast
-        
         self.agentSchedules = agentSchedules
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

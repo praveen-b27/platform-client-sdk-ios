@@ -44,51 +44,28 @@ public class ExternalOrganization: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, companyType: String?, industry: String?, primaryContactId: String?, address: ContactAddress?, phoneNumber: PhoneNumber?, faxNumber: PhoneNumber?, employeeCount: Int64?, revenue: Int64?, tags: [String]?, websites: [String]?, tickers: [Ticker]?, twitterId: TwitterId?, externalSystemUrl: String?, modifyDate: Date?, createDate: Date?, trustor: Trustor?, schema: DataSchema?, customFields: [String:JSON]?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.companyType = companyType
-        
         self.industry = industry
-        
         self.primaryContactId = primaryContactId
-        
         self.address = address
-        
         self.phoneNumber = phoneNumber
-        
         self.faxNumber = faxNumber
-        
         self.employeeCount = employeeCount
-        
         self.revenue = revenue
-        
         self.tags = tags
-        
         self.websites = websites
-        
         self.tickers = tickers
-        
         self.twitterId = twitterId
-        
         self.externalSystemUrl = externalSystemUrl
-        
         self.modifyDate = modifyDate
-        
         self.createDate = createDate
-        
         self.trustor = trustor
-        
         self.schema = schema
-        
         self.customFields = customFields
-        
         self.externalDataSources = externalDataSources
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

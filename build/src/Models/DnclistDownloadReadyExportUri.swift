@@ -15,11 +15,8 @@ public class DnclistDownloadReadyExportUri: Codable {
     public var exportTimestamp: String?
 
     public init(uri: String?, exportTimestamp: String?) {
-        
         self.uri = uri
-        
         self.exportTimestamp = exportTimestamp
-        
     }
 
 

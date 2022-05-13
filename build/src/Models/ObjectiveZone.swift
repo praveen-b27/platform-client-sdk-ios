@@ -38,21 +38,13 @@ public class ObjectiveZone: Codable {
     public var lowerLimitValue: Int?
 
     public init(label: String?, directionType: DirectionType?, zoneType: ZoneType?, upperLimitPoints: Int?, lowerLimitPoints: Int?, upperLimitValue: Int?, lowerLimitValue: Int?) {
-        
         self.label = label
-        
         self.directionType = directionType
-        
         self.zoneType = zoneType
-        
         self.upperLimitPoints = upperLimitPoints
-        
         self.lowerLimitPoints = lowerLimitPoints
-        
         self.upperLimitValue = upperLimitValue
-        
         self.lowerLimitValue = lowerLimitValue
-        
     }
 
 

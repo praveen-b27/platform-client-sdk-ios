@@ -16,11 +16,8 @@ public class ExportUri: Codable {
     public var exportTimestamp: Date?
 
     public init(uri: String?, exportTimestamp: Date?) {
-        
         self.uri = uri
-        
         self.exportTimestamp = exportTimestamp
-        
     }
 
 

@@ -17,7 +17,7 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
     }
     public var maxAttemptsPerContact: Int?
     public var maxAttemptsPerNumber: Int?
-    /** The timezone is necessary to define when \&quot;today\&quot; starts and ends */
+    /** The timezone is necessary to define when \"today\" starts and ends */
     public var timeZoneId: String?
     /** After how long the number of attempts will be set back to 0 */
     public var resetPeriod: ResetPeriod?
@@ -37,29 +37,17 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
     public var version: Int?
 
     public init(maxAttemptsPerContact: Int?, maxAttemptsPerNumber: Int?, timeZoneId: String?, resetPeriod: ResetPeriod?, recallEntries: [String:DialerAttemptLimitsConfigChangeRecallEntry]?, breadthFirstRecalls: Bool?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.maxAttemptsPerContact = maxAttemptsPerContact
-        
         self.maxAttemptsPerNumber = maxAttemptsPerNumber
-        
         self.timeZoneId = timeZoneId
-        
         self.resetPeriod = resetPeriod
-        
         self.recallEntries = recallEntries
-        
         self.breadthFirstRecalls = breadthFirstRecalls
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

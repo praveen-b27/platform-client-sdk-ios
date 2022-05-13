@@ -17,15 +17,10 @@ public class BulkResponseResultExternalOrganizationEntity: Codable {
     public var error: BulkErrorEntity?
 
     public init(_id: String?, success: Bool?, entity: ExternalOrganization?, error: BulkErrorEntity?) {
-        
         self._id = _id
-        
         self.success = success
-        
         self.entity = entity
-        
         self.error = error
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -15,11 +15,8 @@ public class V2ConversationMessageTypingEventForUserTopicConversationButtonCompo
     public var actions: V2ConversationMessageTypingEventForUserTopicConversationContentActions?
 
     public init(title: String?, actions: V2ConversationMessageTypingEventForUserTopicConversationContentActions?) {
-        
         self.title = title
-        
         self.actions = actions
-        
     }
 
 

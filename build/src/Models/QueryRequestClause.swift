@@ -21,11 +21,8 @@ public class QueryRequestClause: Codable {
     public var predicates: [QueryRequestPredicate]?
 
     public init(type: ModelType?, predicates: [QueryRequestPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

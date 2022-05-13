@@ -30,19 +30,12 @@ public class UserRoutingLanguage: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, proficiency: Double?, state: State?, languageUri: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.proficiency = proficiency
-        
         self.state = state
-        
         self.languageUri = languageUri
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

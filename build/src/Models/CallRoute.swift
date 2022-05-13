@@ -15,9 +15,7 @@ public class CallRoute: Codable {
     public var targets: [CallTarget]?
 
     public init(targets: [CallTarget]?) {
-        
         self.targets = targets
-        
     }
 
 

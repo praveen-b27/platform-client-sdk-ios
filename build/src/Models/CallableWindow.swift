@@ -17,11 +17,8 @@ public class CallableWindow: Codable {
     public var unmapped: AtzmTimeSlotWithTimeZone?
 
     public init(mapped: AtzmTimeSlot?, unmapped: AtzmTimeSlotWithTimeZone?) {
-        
         self.mapped = mapped
-        
         self.unmapped = unmapped
-        
     }
 
 

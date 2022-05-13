@@ -22,17 +22,11 @@ public class DialerCampaignProgressEventCampaignProgress: Codable {
     public var percentage: Int?
 
     public init(campaign: DialerCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?) {
-        
         self.campaign = campaign
-        
         self.numberOfContactsCalled = numberOfContactsCalled
-        
         self.numberOfContactsMessaged = numberOfContactsMessaged
-        
         self.totalNumberOfContacts = totalNumberOfContacts
-        
         self.percentage = percentage
-        
     }
 
 

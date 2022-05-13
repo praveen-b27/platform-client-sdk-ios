@@ -21,15 +21,10 @@ public class ClonedUser: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, trustor: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.trustor = trustor
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

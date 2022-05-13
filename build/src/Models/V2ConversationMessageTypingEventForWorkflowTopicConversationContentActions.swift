@@ -16,13 +16,9 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationContent
     public var textback: String?
 
     public init(url: String?, urlTarget: String?, textback: String?) {
-        
         self.url = url
-        
         self.urlTarget = urlTarget
-        
         self.textback = textback
-        
     }
 
 

@@ -42,23 +42,14 @@ public class TopicRequest: Codable {
     public var phrases: [Phrase]?
 
     public init(name: String?, _description: String?, strictness: Strictness?, programIds: [String]?, tags: [String]?, dialect: String?, participants: Participants?, phrases: [Phrase]?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.strictness = strictness
-        
         self.programIds = programIds
-        
         self.tags = tags
-        
         self.dialect = dialect
-        
         self.participants = participants
-        
         self.phrases = phrases
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

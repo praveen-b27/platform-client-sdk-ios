@@ -21,11 +21,8 @@ public class ExternalDataSource: Codable {
     public var url: String?
 
     public init(platform: Platform?, url: String?) {
-        
         self.platform = platform
-        
         self.url = url
-        
     }
 
 

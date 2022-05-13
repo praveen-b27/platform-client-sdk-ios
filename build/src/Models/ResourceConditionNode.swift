@@ -30,17 +30,11 @@ public class ResourceConditionNode: Codable {
     public var terms: [ResourceConditionNode]?
 
     public init(variableName: String?, conjunction: Conjunction?, _operator: Operator?, operands: [ResourceConditionValue]?, terms: [ResourceConditionNode]?) {
-        
         self.variableName = variableName
-        
         self.conjunction = conjunction
-        
         self._operator = _operator
-        
         self.operands = operands
-        
         self.terms = terms
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

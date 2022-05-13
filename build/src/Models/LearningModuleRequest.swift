@@ -33,21 +33,13 @@ public class LearningModuleRequest: Codable {
     public var coverArt: LearningModuleCoverArtRequest?
 
     public init(name: String?, _description: String?, completionTimeInDays: Int?, informSteps: [LearningModuleInformStepRequest]?, type: ModelType?, assessmentForm: AssessmentForm?, coverArt: LearningModuleCoverArtRequest?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.completionTimeInDays = completionTimeInDays
-        
         self.informSteps = informSteps
-        
         self.type = type
-        
         self.assessmentForm = assessmentForm
-        
         self.coverArt = coverArt
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

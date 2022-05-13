@@ -17,11 +17,8 @@ public class RecordingJobFailedRecording: Codable {
     public var recording: AddressableEntityRef?
 
     public init(conversation: AddressableEntityRef?, recording: AddressableEntityRef?) {
-        
         self.conversation = conversation
-        
         self.recording = recording
-        
     }
 
 

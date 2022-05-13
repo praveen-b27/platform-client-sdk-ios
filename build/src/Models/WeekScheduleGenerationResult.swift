@@ -21,15 +21,10 @@ public class WeekScheduleGenerationResult: Codable {
     public var agentWarningCount: Int?
 
     public init(failed: Bool?, runId: String?, agentWarnings: [ScheduleGenerationWarning]?, agentWarningCount: Int?) {
-        
         self.failed = failed
-        
         self.runId = runId
-        
         self.agentWarnings = agentWarnings
-        
         self.agentWarningCount = agentWarningCount
-        
     }
 
 

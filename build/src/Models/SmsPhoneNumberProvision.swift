@@ -32,21 +32,13 @@ public class SmsPhoneNumberProvision: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, countryCode: String?, addressId: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.phoneNumber = phoneNumber
-        
         self.phoneNumberType = phoneNumberType
-        
         self.countryCode = countryCode
-        
         self.addressId = addressId
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

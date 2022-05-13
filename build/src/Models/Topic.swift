@@ -45,37 +45,21 @@ public class Topic: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, published: Bool?, strictness: Strictness?, programs: [BaseProgramEntity]?, tags: [String]?, dialect: String?, participants: Participants?, phrases: [Phrase]?, modifiedBy: AddressableEntityRef?, dateModified: Date?, publishedBy: AddressableEntityRef?, datePublished: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.published = published
-        
         self.strictness = strictness
-        
         self.programs = programs
-        
         self.tags = tags
-        
         self.dialect = dialect
-        
         self.participants = participants
-        
         self.phrases = phrases
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.publishedBy = publishedBy
-        
         self.datePublished = datePublished
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

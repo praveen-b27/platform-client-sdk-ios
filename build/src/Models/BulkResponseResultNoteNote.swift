@@ -17,15 +17,10 @@ public class BulkResponseResultNoteNote: Codable {
     public var error: BulkErrorNote?
 
     public init(_id: String?, success: Bool?, entity: Note?, error: BulkErrorNote?) {
-        
         self._id = _id
-        
         self.success = success
-        
         self.entity = entity
-        
         self.error = error
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

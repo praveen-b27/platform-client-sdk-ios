@@ -20,11 +20,8 @@ public class WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate: Codable {
     public var shiftStartDates: [Date]?
 
     public init(updateType: UpdateType?, shiftStartDates: [Date]?) {
-        
         self.updateType = updateType
-        
         self.shiftStartDates = shiftStartDates
-        
     }
 
 

@@ -30,21 +30,13 @@ public class BillingUsageReport: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, startDate: Date?, endDate: Date?, status: Status?, usages: [BillingUsage]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.status = status
-        
         self.usages = usages
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -21,15 +21,10 @@ public class AddWorkPlanRotationRequest: Codable {
     public var pattern: WorkPlanPatternRequest?
 
     public init(name: String?, dateRange: DateRangeWithOptionalEnd?, agents: [AddWorkPlanRotationAgentRequest]?, pattern: WorkPlanPatternRequest?) {
-        
         self.name = name
-        
         self.dateRange = dateRange
-        
         self.agents = agents
-        
         self.pattern = pattern
-        
     }
 
 

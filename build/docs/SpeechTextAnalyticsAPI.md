@@ -69,7 +69,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let programId: String = "" // The id of the program
-let forceDelete: Bool = false // Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program.
+let forceDelete: SpeechTextAnalyticsAPI.ForceDelete_deleteSpeechandtextanalyticsProgram = SpeechTextAnalyticsAPI.ForceDelete_deleteSpeechandtextanalyticsProgram.enummember // Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program.
 
 // Code example
 SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsProgram(programId: programId, forceDelete: forceDelete) { (error) in
@@ -87,7 +87,7 @@ SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsProgram(programId: programId,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **programId** | **String**| The id of the program | |
-| **forceDelete** | **Bool**| Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. | [optional] [default to false] |
+| **forceDelete** | **Bool**| Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -481,7 +481,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let nextPage: String = "" // The key for listing the next page
-let pageSize: Int = 20 // The page size for the listing
+let pageSize: Int = 0 // The page size for the listing
 
 // Code example
 SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize) { (response, error) in
@@ -500,7 +500,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pag
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
-| **pageSize** | **Int**| The page size for the listing | [optional] [default to 20] |
+| **pageSize** | **Int**| The page size for the listing | [optional] |
 {: class="table-striped"}
 
 
@@ -590,7 +590,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let nextPage: String = "" // The key for listing the next page
-let pageSize: Int = 20 // The page size for the listing
+let pageSize: Int = 0 // The page size for the listing
 
 // Code example
 SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsMappings(nextPage: nextPage, pageSize: pageSize) { (response, error) in
@@ -609,7 +609,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsMappings(nextPage: nextP
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
-| **pageSize** | **Int**| The page size for the listing | [optional] [default to 20] |
+| **pageSize** | **Int**| The page size for the listing | [optional] |
 {: class="table-striped"}
 
 
@@ -696,7 +696,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let nextPage: String = "" // The key for listing the next page
-let pageSize: Int = 20 // The page size for the listing
+let pageSize: Int = 0 // The page size for the listing
 
 // Code example
 SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsUnpublished(nextPage: nextPage, pageSize: pageSize) { (response, error) in
@@ -715,7 +715,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsUnpublished(nextPage: ne
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
-| **pageSize** | **Int**| The page size for the listing | [optional] [default to 20] |
+| **pageSize** | **Int**| The page size for the listing | [optional] |
 {: class="table-striped"}
 
 
@@ -796,7 +796,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let dialect: String = "" // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
+let dialect: String = en-US // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
 
 // Code example
 SpeechTextAnalyticsAPI.getSpeechandtextanalyticsSentimentfeedback(dialect: dialect) { (response, error) in
@@ -949,7 +949,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let nextPage: String = "" // The key for listing the next page
-let pageSize: Int = 20 // The page size for the listing
+let pageSize: Int = 0 // The page size for the listing
 let state: SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics = SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics.enummember // Topic state. Defaults to latest
 let name: String = "" // Case insensitive partial name to filter by
 let ids: [String] = [""] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.
@@ -973,7 +973,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageS
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
-| **pageSize** | **Int**| The page size for the listing | [optional] [default to 20] |
+| **pageSize** | **Int**| The page size for the listing | [optional] |
 | **state** | **String**| Topic state. Defaults to latest | [optional]<br />**Values**: latest ("latest"), published ("published") |
 | **name** | **String**| Case insensitive partial name to filter by | [optional] |
 | **ids** | [**[String]**](String.html)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional] |

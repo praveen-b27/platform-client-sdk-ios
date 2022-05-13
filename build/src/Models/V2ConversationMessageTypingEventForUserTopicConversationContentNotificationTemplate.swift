@@ -18,17 +18,11 @@ public class V2ConversationMessageTypingEventForUserTopicConversationContentNoti
     public var footer: V2ConversationMessageTypingEventForUserTopicConversationNotificationTemplateFooter?
 
     public init(_id: String?, language: String?, header: V2ConversationMessageTypingEventForUserTopicConversationNotificationTemplateHeader?, body: V2ConversationMessageTypingEventForUserTopicConversationNotificationTemplateBody?, footer: V2ConversationMessageTypingEventForUserTopicConversationNotificationTemplateFooter?) {
-        
         self._id = _id
-        
         self.language = language
-        
         self.header = header
-        
         self.body = body
-        
         self.footer = footer
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

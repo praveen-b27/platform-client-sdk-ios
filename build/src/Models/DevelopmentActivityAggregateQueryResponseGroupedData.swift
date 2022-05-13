@@ -17,11 +17,8 @@ public class DevelopmentActivityAggregateQueryResponseGroupedData: Codable {
     public var data: [DevelopmentActivityAggregateQueryResponseData]?
 
     public init(group: [String:String]?, data: [DevelopmentActivityAggregateQueryResponseData]?) {
-        
         self.group = group
-        
         self.data = data
-        
     }
 
 

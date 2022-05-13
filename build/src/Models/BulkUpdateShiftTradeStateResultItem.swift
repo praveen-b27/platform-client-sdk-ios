@@ -44,19 +44,12 @@ public class BulkUpdateShiftTradeStateResultItem: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(_id: String?, state: State?, reviewedBy: UserReference?, reviewedDate: Date?, failureReason: FailureReason?, metadata: WfmVersionedEntityMetadata?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.reviewedBy = reviewedBy
-        
         self.reviewedDate = reviewedDate
-        
         self.failureReason = failureReason
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

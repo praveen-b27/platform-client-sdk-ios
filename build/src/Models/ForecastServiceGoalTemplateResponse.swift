@@ -19,13 +19,9 @@ public class ForecastServiceGoalTemplateResponse: Codable {
     public var abandonRate: ForecastAbandonRateResponse?
 
     public init(serviceLevel: ForecastServiceLevelResponse?, averageSpeedOfAnswer: ForecastAverageSpeedOfAnswerResponse?, abandonRate: ForecastAbandonRateResponse?) {
-        
         self.serviceLevel = serviceLevel
-        
         self.averageSpeedOfAnswer = averageSpeedOfAnswer
-        
         self.abandonRate = abandonRate
-        
     }
 
 

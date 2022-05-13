@@ -36,27 +36,16 @@ public class DependencyStatus: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, user: User?, client: DomainEntityRef?, buildId: String?, dateStarted: Date?, dateCompleted: Date?, status: Status?, failedObjects: [FailedObject]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.user = user
-        
         self.client = client
-        
         self.buildId = buildId
-        
         self.dateStarted = dateStarted
-        
         self.dateCompleted = dateCompleted
-        
         self.status = status
-        
         self.failedObjects = failedObjects
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

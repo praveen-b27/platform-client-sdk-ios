@@ -21,11 +21,8 @@ public class PredictorSchedule: Codable {
     public var dateStarted: Date?
 
     public init(scheduleType: ScheduleType?, dateStarted: Date?) {
-        
         self.scheduleType = scheduleType
-        
         self.dateStarted = dateStarted
-        
     }
 
 

@@ -23,17 +23,11 @@ public class BuManagementUnitScheduleSummary: Codable {
     public var agents: [UserReference]?
 
     public init(managementUnit: ManagementUnitReference?, agentCount: Int?, startDate: Date?, endDate: Date?, agents: [UserReference]?) {
-        
         self.managementUnit = managementUnit
-        
         self.agentCount = agentCount
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.agents = agents
-        
     }
 
 

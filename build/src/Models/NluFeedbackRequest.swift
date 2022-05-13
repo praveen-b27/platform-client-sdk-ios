@@ -19,13 +19,9 @@ public class NluFeedbackRequest: Codable {
     public var versionId: String?
 
     public init(text: String?, intents: [IntentFeedback]?, versionId: String?) {
-        
         self.text = text
-        
         self.intents = intents
-        
         self.versionId = versionId
-        
     }
 
 

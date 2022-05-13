@@ -26,21 +26,13 @@ public class WhatsAppIntegrationRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, phoneNumber: String?, wabaCertificate: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.supportedContent = supportedContent
-        
         self.messagingSetting = messagingSetting
-        
         self.phoneNumber = phoneNumber
-        
         self.wabaCertificate = wabaCertificate
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

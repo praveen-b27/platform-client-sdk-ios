@@ -42,31 +42,18 @@ public class Greeting: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, type: ModelType?, ownerType: OwnerType?, owner: DomainEntity?, audioFile: GreetingAudioFile?, audioTTS: String?, createdDate: Date?, createdBy: String?, modifiedDate: Date?, modifiedBy: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.type = type
-        
         self.ownerType = ownerType
-        
         self.owner = owner
-        
         self.audioFile = audioFile
-        
         self.audioTTS = audioTTS
-        
         self.createdDate = createdDate
-        
         self.createdBy = createdBy
-        
         self.modifiedDate = modifiedDate
-        
         self.modifiedBy = modifiedBy
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

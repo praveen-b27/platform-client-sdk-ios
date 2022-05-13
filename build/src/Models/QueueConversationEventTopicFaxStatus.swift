@@ -12,7 +12,7 @@ import Foundation
 
 public class QueueConversationEventTopicFaxStatus: Codable {
 
-    /** The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;. */
+    /** The fax direction, either \"send\" or \"receive\". */
     public var direction: String?
     /** Total number of expected pages, if known. */
     public var expectedPages: Int?
@@ -30,23 +30,14 @@ public class QueueConversationEventTopicFaxStatus: Codable {
     public var lineErrors: Int?
 
     public init(direction: String?, expectedPages: Int?, activePage: Int?, linesTransmitted: Int?, bytesTransmitted: Int?, baudRate: Int?, pageErrors: Int?, lineErrors: Int?) {
-        
         self.direction = direction
-        
         self.expectedPages = expectedPages
-        
         self.activePage = activePage
-        
         self.linesTransmitted = linesTransmitted
-        
         self.bytesTransmitted = bytesTransmitted
-        
         self.baudRate = baudRate
-        
         self.pageErrors = pageErrors
-        
         self.lineErrors = lineErrors
-        
     }
 
 

@@ -18,11 +18,8 @@ public class WfmForecastModificationIntervalOffsetValue: Codable {
     public var value: Double?
 
     public init(intervalIndex: Int?, value: Double?) {
-        
         self.intervalIndex = intervalIndex
-        
         self.value = value
-        
     }
 
 

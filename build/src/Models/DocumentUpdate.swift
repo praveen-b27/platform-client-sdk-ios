@@ -23,25 +23,15 @@ public class DocumentUpdate: Codable {
     public var removeAttributes: [String]?
 
     public init(changeNumber: Int?, name: String?, read: Bool?, addTags: [String]?, removeTags: [String]?, addTagIds: [String]?, removeTagIds: [String]?, updateAttributes: [DocumentAttribute]?, removeAttributes: [String]?) {
-        
         self.changeNumber = changeNumber
-        
         self.name = name
-        
         self.read = read
-        
         self.addTags = addTags
-        
         self.removeTags = removeTags
-        
         self.addTagIds = addTagIds
-        
         self.removeTagIds = removeTagIds
-        
         self.updateAttributes = updateAttributes
-        
         self.removeAttributes = removeAttributes
-        
     }
 
 

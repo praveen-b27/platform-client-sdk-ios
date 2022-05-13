@@ -17,15 +17,10 @@ public class CalibrationAssignment: Codable {
     public var expertEvaluator: User?
 
     public init(calibrator: User?, evaluators: [User]?, evaluationForm: EvaluationForm?, expertEvaluator: User?) {
-        
         self.calibrator = calibrator
-        
         self.evaluators = evaluators
-        
         self.evaluationForm = evaluationForm
-        
         self.expertEvaluator = expertEvaluator
-        
     }
 
 

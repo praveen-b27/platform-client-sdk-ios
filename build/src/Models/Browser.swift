@@ -21,9 +21,9 @@ public class Browser: Codable {
     public var fingerprint: String?
     /** Flag that is true for mobile devices. */
     public var isMobile: Bool?
-    /** Browser&#39;s viewport height. */
+    /** Browser's viewport height. */
     public var viewHeight: Int?
-    /** Browser&#39;s viewport width. */
+    /** Browser's viewport width. */
     public var viewWidth: Int?
     /** Whether Flash is installed. */
     public var featuresFlash: Bool?
@@ -35,29 +35,17 @@ public class Browser: Codable {
     public var featuresWebrtc: Bool?
 
     public init(family: String?, version: String?, lang: String?, fingerprint: String?, isMobile: Bool?, viewHeight: Int?, viewWidth: Int?, featuresFlash: Bool?, featuresJava: Bool?, featuresPdf: Bool?, featuresWebrtc: Bool?) {
-        
         self.family = family
-        
         self.version = version
-        
         self.lang = lang
-        
         self.fingerprint = fingerprint
-        
         self.isMobile = isMobile
-        
         self.viewHeight = viewHeight
-        
         self.viewWidth = viewWidth
-        
         self.featuresFlash = featuresFlash
-        
         self.featuresJava = featuresJava
-        
         self.featuresPdf = featuresPdf
-        
         self.featuresWebrtc = featuresWebrtc
-        
     }
 
 

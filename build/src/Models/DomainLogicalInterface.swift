@@ -34,7 +34,7 @@ public class DomainLogicalInterface: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -86,15 +86,15 @@ public class DomainLogicalInterface: Codable {
     public var inheritPhoneTrunkBasesIPv6: Bool?
     /** This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. */
     public var useForInternalEdgeCommunication: Bool?
-    /** Site Interconnects using the \&quot;Indirect\&quot; method will communicate using the Public IP Address specified on the interface. Use this option when a NAT enabled firewall is between the Edge and the far end. */
+    /** Site Interconnects using the \"Indirect\" method will communicate using the Public IP Address specified on the interface. Use this option when a NAT enabled firewall is between the Edge and the far end. */
     public var useForIndirectEdgeCommunication: Bool?
-    /** Site Interconnects using the \&quot;Cloud Proxy\&quot; method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option. */
+    /** Site Interconnects using the \"Cloud Proxy\" method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option. */
     public var useForCloudProxyEdgeCommunication: Bool?
     /** This interface will be used for all communication with the internet. */
     public var useForWanInterface: Bool?
     /** External trunk base settings to use for external communication from this interface. */
     public var externalTrunkBaseAssignments: [TrunkBaseAssignment]?
-    /** Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true. */
+    /** Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \"inheritPhoneTrunkBases\" is true. */
     public var phoneTrunkBaseAssignments: [TrunkBaseAssignment]?
     public var traceEnabled: Bool?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -105,91 +105,48 @@ public class DomainLogicalInterface: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, edgeUri: String?, edgeAssignedId: String?, friendlyName: String?, vlanTagId: Int?, hardwareAddress: String?, physicalAdapterId: String?, ifStatus: String?, interfaceType: InterfaceType?, publicNatAddressIpV4: String?, publicNatAddressIpV6: String?, routes: [DomainNetworkRoute]?, addresses: [DomainNetworkAddress]?, ipv4Capabilities: DomainCapabilities?, ipv6Capabilities: DomainCapabilities?, currentState: CurrentState?, lastModifiedUserId: String?, lastModifiedCorrelationId: String?, commandResponses: [DomainNetworkCommandResponse]?, inheritPhoneTrunkBasesIPv4: Bool?, inheritPhoneTrunkBasesIPv6: Bool?, useForInternalEdgeCommunication: Bool?, useForIndirectEdgeCommunication: Bool?, useForCloudProxyEdgeCommunication: Bool?, useForWanInterface: Bool?, externalTrunkBaseAssignments: [TrunkBaseAssignment]?, phoneTrunkBaseAssignments: [TrunkBaseAssignment]?, traceEnabled: Bool?, startDate: Date?, endDate: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.edgeUri = edgeUri
-        
         self.edgeAssignedId = edgeAssignedId
-        
         self.friendlyName = friendlyName
-        
         self.vlanTagId = vlanTagId
-        
         self.hardwareAddress = hardwareAddress
-        
         self.physicalAdapterId = physicalAdapterId
-        
         self.ifStatus = ifStatus
-        
         self.interfaceType = interfaceType
-        
         self.publicNatAddressIpV4 = publicNatAddressIpV4
-        
         self.publicNatAddressIpV6 = publicNatAddressIpV6
-        
         self.routes = routes
-        
         self.addresses = addresses
-        
         self.ipv4Capabilities = ipv4Capabilities
-        
         self.ipv6Capabilities = ipv6Capabilities
-        
         self.currentState = currentState
-        
         self.lastModifiedUserId = lastModifiedUserId
-        
         self.lastModifiedCorrelationId = lastModifiedCorrelationId
-        
         self.commandResponses = commandResponses
-        
         self.inheritPhoneTrunkBasesIPv4 = inheritPhoneTrunkBasesIPv4
-        
         self.inheritPhoneTrunkBasesIPv6 = inheritPhoneTrunkBasesIPv6
-        
         self.useForInternalEdgeCommunication = useForInternalEdgeCommunication
-        
         self.useForIndirectEdgeCommunication = useForIndirectEdgeCommunication
-        
         self.useForCloudProxyEdgeCommunication = useForCloudProxyEdgeCommunication
-        
         self.useForWanInterface = useForWanInterface
-        
         self.externalTrunkBaseAssignments = externalTrunkBaseAssignments
-        
         self.phoneTrunkBaseAssignments = phoneTrunkBaseAssignments
-        
         self.traceEnabled = traceEnabled
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

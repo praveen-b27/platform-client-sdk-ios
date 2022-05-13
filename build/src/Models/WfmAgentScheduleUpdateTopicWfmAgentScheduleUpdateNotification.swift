@@ -19,19 +19,12 @@ public class WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification: Coda
     public var updates: [WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate]?
 
     public init(user: WfmAgentScheduleUpdateTopicUserReference?, startDate: Date?, endDate: Date?, shifts: [WfmAgentScheduleUpdateTopicWfmScheduleShift]?, fullDayTimeOffMarkers: [WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker]?, updates: [WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate]?) {
-        
         self.user = user
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.shifts = shifts
-        
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
-        
         self.updates = updates
-        
     }
 
 

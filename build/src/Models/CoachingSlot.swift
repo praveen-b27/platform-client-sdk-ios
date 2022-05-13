@@ -28,17 +28,11 @@ public class CoachingSlot: Codable {
     public var wfmSchedule: WfmScheduleReference?
 
     public init(dateStart: Date?, lengthInMinutes: Int?, staffingDifference: Double?, differenceRating: DifferenceRating?, wfmSchedule: WfmScheduleReference?) {
-        
         self.dateStart = dateStart
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.staffingDifference = staffingDifference
-        
         self.differenceRating = differenceRating
-        
         self.wfmSchedule = wfmSchedule
-        
     }
 
 

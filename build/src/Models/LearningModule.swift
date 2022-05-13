@@ -63,47 +63,26 @@ public class LearningModule: Codable {
     public var coverArt: LearningModuleCoverArtResponse?
 
     public init(_id: String?, name: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, coverArt: LearningModuleCoverArtResponse?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.externalId = externalId
-        
         self.source = source
-        
         self.rule = rule
-        
         self.selfUri = selfUri
-        
         self.isArchived = isArchived
-        
         self.isPublished = isPublished
-        
         self._description = _description
-        
         self.completionTimeInDays = completionTimeInDays
-        
         self.type = type
-        
         self.informSteps = informSteps
-        
         self.assessmentForm = assessmentForm
-        
         self.summaryData = summaryData
-        
         self.coverArt = coverArt
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

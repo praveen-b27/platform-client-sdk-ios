@@ -28,23 +28,14 @@ public class BatchDownloadJobResult: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, conversationId: String?, recordingId: String?, resultUrl: String?, contentType: String?, errorMsg: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.conversationId = conversationId
-        
         self.recordingId = recordingId
-        
         self.resultUrl = resultUrl
-        
         self.contentType = contentType
-        
         self.errorMsg = errorMsg
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

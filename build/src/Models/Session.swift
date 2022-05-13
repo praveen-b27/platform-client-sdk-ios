@@ -59,21 +59,21 @@ public class Session: Codable {
     public var outcomeAchievements: [OutcomeAchievement]?
     /** List of the segment assignments to the customer in this session. */
     public var segmentAssignments: [SessionSegmentAssignment]?
-    /** Attributes projected from the session&#39;s event stream. */
+    /** Attributes projected from the session's event stream. */
     public var attributes: [String:CustomEventAttribute]?
-    /** List-type attributes projected from the session&#39;s event stream. */
+    /** List-type attributes projected from the session's event stream. */
     public var attributeLists: [String:CustomEventAttributeList]?
-    /** Customer&#39;s browser. */
+    /** Customer's browser. */
     public var browser: Browser?
-    /** Customer&#39;s device. */
+    /** Customer's device. */
     public var device: Device?
-    /** Customer&#39;s geolocation. */
+    /** Customer's geolocation. */
     public var geolocation: JourneyGeolocation?
-    /** Customer&#39;s IP address. */
+    /** Customer's IP address. */
     public var ipAddress: String?
-    /** Customer&#39;s IP-based organization or ISP name. */
+    /** Customer's IP-based organization or ISP name. */
     public var ipOrganization: String?
-    /** The webpage where the customer&#39;s last web interaction occurred. */
+    /** The webpage where the customer's last web interaction occurred. */
     public var lastPage: JourneyPage?
     /** Marketing / traffic source information. */
     public var mktCampaign: JourneyCampaign?
@@ -127,91 +127,48 @@ public class Session: Codable {
     public var conversation: AddressableEntityRef?
 
     public init(_id: String?, customerId: String?, customerIdType: String?, type: String?, externalId: String?, externalUrl: String?, shortId: String?, outcomeAchievements: [OutcomeAchievement]?, segmentAssignments: [SessionSegmentAssignment]?, attributes: [String:CustomEventAttribute]?, attributeLists: [String:CustomEventAttributeList]?, browser: Browser?, device: Device?, geolocation: JourneyGeolocation?, ipAddress: String?, ipOrganization: String?, lastPage: JourneyPage?, mktCampaign: JourneyCampaign?, referrer: Referrer?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: SessionLastEvent?, lastConnectedQueue: ConnectedQueue?, lastConnectedUser: ConnectedUser?, lastUserDisposition: ConversationUserDisposition?, conversationChannels: [ConversationChannel]?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: AddressableEntityRef?, awayDate: Date?, idleDate: Date?, conversation: AddressableEntityRef?) {
-        
         self._id = _id
-        
         self.customerId = customerId
-        
         self.customerIdType = customerIdType
-        
         self.type = type
-        
         self.externalId = externalId
-        
         self.externalUrl = externalUrl
-        
         self.shortId = shortId
-        
         self.outcomeAchievements = outcomeAchievements
-        
         self.segmentAssignments = segmentAssignments
-        
         self.attributes = attributes
-        
         self.attributeLists = attributeLists
-        
         self.browser = browser
-        
         self.device = device
-        
         self.geolocation = geolocation
-        
         self.ipAddress = ipAddress
-        
         self.ipOrganization = ipOrganization
-        
         self.lastPage = lastPage
-        
         self.mktCampaign = mktCampaign
-        
         self.referrer = referrer
-        
         self.searchTerms = searchTerms
-        
         self.userAgentString = userAgentString
-        
         self.durationInSeconds = durationInSeconds
-        
         self.eventCount = eventCount
-        
         self.pageviewCount = pageviewCount
-        
         self.screenviewCount = screenviewCount
-        
         self.lastEvent = lastEvent
-        
         self.lastConnectedQueue = lastConnectedQueue
-        
         self.lastConnectedUser = lastConnectedUser
-        
         self.lastUserDisposition = lastUserDisposition
-        
         self.conversationChannels = conversationChannels
-        
         self.originatingDirection = originatingDirection
-        
         self.conversationSubject = conversationSubject
-        
         self.lastUserDisconnectType = lastUserDisconnectType
-        
         self.lastAcdOutcome = lastAcdOutcome
-        
         self.authenticated = authenticated
-        
         self.selfUri = selfUri
-        
         self.createdDate = createdDate
-        
         self.endedDate = endedDate
-        
         self.externalContact = externalContact
-        
         self.awayDate = awayDate
-        
         self.idleDate = idleDate
-        
         self.conversation = conversation
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

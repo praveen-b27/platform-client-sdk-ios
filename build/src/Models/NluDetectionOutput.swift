@@ -17,11 +17,8 @@ public class NluDetectionOutput: Codable {
     public var dialogActs: [DetectedDialogAct]?
 
     public init(intents: [DetectedIntent]?, dialogActs: [DetectedDialogAct]?) {
-        
         self.intents = intents
-        
         self.dialogActs = dialogActs
-        
     }
 
 

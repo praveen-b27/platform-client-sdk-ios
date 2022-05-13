@@ -19,13 +19,9 @@ public class ConversationThreadingWindow: Codable {
     public var defaultTimeoutMinutes: Int64?
 
     public init(_id: String?, settings: [ConversationThreadingWindowSetting]?, defaultTimeoutMinutes: Int64?) {
-        
         self._id = _id
-        
         self.settings = settings
-        
         self.defaultTimeoutMinutes = defaultTimeoutMinutes
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

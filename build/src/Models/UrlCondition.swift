@@ -31,11 +31,8 @@ public class UrlCondition: Codable {
     public var _operator: Operator?
 
     public init(values: [String]?, _operator: Operator?) {
-        
         self.values = values
-        
         self._operator = _operator
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -16,9 +16,7 @@ public class IntegrationConfigurationInfo: Codable {
     public var current: IntegrationConfiguration?
 
     public init(current: IntegrationConfiguration?) {
-        
         self.current = current
-        
     }
 
 

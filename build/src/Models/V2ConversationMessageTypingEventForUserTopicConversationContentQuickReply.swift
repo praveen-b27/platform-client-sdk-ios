@@ -20,15 +20,10 @@ public class V2ConversationMessageTypingEventForUserTopicConversationContentQuic
     public var action: Action?
 
     public init(text: String?, payload: String?, image: String?, action: Action?) {
-        
         self.text = text
-        
         self.payload = payload
-        
         self.image = image
-        
         self.action = action
-        
     }
 
 

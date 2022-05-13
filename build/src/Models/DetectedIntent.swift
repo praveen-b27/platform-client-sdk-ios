@@ -19,13 +19,9 @@ public class DetectedIntent: Codable {
     public var entities: [DetectedNamedEntity]?
 
     public init(name: String?, probability: Double?, entities: [DetectedNamedEntity]?) {
-        
         self.name = name
-        
         self.probability = probability
-        
         self.entities = entities
-        
     }
 
 

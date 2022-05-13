@@ -15,11 +15,8 @@ public class AgentActivityChangedTopicOutOfOffice: Codable {
     public var modifiedDate: Date?
 
     public init(active: Bool?, modifiedDate: Date?) {
-        
         self.active = active
-        
         self.modifiedDate = modifiedDate
-        
     }
 
 

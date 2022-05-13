@@ -27,25 +27,15 @@ public class Attribute: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, version: Int?, _description: String?, createdBy: DomainEntityRef?, dateCreated: Date?, modifiedBy: DomainEntityRef?, dateModified: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.version = version
-        
         self._description = _description
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

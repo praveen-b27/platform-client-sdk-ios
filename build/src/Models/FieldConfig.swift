@@ -29,23 +29,14 @@ public class FieldConfig: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, entityType: EntityType?, state: String?, sections: [Section]?, version: String?, schemaVersion: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.entityType = entityType
-        
         self.state = state
-        
         self.sections = sections
-        
         self.version = version
-        
         self.schemaVersion = schemaVersion
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -23,17 +23,11 @@ public class ShiftTradeMatchReviewUserResponse: Codable {
     public var postTradeNewShift: ShiftTradePreviewResponse?
 
     public init(weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, preTradeSchedulePaidMinutes: Int?, postTradeSchedulePaidMinutes: Int?, postTradeNewShift: ShiftTradePreviewResponse?) {
-        
         self.weeklyMinimumPaidMinutes = weeklyMinimumPaidMinutes
-        
         self.weeklyMaximumPaidMinutes = weeklyMaximumPaidMinutes
-        
         self.preTradeSchedulePaidMinutes = preTradeSchedulePaidMinutes
-        
         self.postTradeSchedulePaidMinutes = postTradeSchedulePaidMinutes
-        
         self.postTradeNewShift = postTradeNewShift
-        
     }
 
 

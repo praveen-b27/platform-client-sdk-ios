@@ -26,21 +26,13 @@ public class TranscriptTopic: Codable {
     public var duration: TopicDuration?
 
     public init(_id: String?, name: String?, topicPhrase: String?, transcriptPhrase: String?, confidence: Int?, startTimeMilliseconds: Int64?, duration: TopicDuration?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.topicPhrase = topicPhrase
-        
         self.transcriptPhrase = transcriptPhrase
-        
         self.confidence = confidence
-        
         self.startTimeMilliseconds = startTimeMilliseconds
-        
         self.duration = duration
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

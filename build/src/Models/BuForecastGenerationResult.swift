@@ -15,9 +15,7 @@ public class BuForecastGenerationResult: Codable {
     public var planningGroupResults: [BuForecastGenerationPlanningGroupResult]?
 
     public init(planningGroupResults: [BuForecastGenerationPlanningGroupResult]?) {
-        
         self.planningGroupResults = planningGroupResults
-        
     }
 
 

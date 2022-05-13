@@ -100,7 +100,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let clientId: String = "" // The ID of client
-let acceptLanguage: String = "en-us" // The language in which to display the client descriptions.
+let acceptLanguage: String = "" // The language in which to display the client descriptions.
 
 // Code example
 OAuthAPI.getOauthAuthorization(clientId: clientId, acceptLanguage: acceptLanguage) { (response, error) in
@@ -119,7 +119,7 @@ OAuthAPI.getOauthAuthorization(clientId: clientId, acceptLanguage: acceptLanguag
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| The ID of client | |
-| **acceptLanguage** | **String**| The language in which to display the client descriptions. | [optional] [default to en-us] |
+| **acceptLanguage** | **String**| The language in which to display the client descriptions. | [optional] |
 {: class="table-striped"}
 
 
@@ -153,7 +153,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let acceptLanguage: String = "en-us" // The language in which to display the client descriptions.
+let acceptLanguage: String = "" // The language in which to display the client descriptions.
 
 // Code example
 OAuthAPI.getOauthAuthorizations(acceptLanguage: acceptLanguage) { (response, error) in
@@ -171,7 +171,7 @@ OAuthAPI.getOauthAuthorizations(acceptLanguage: acceptLanguage) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **acceptLanguage** | **String**| The language in which to display the client descriptions. | [optional] [default to en-us] |
+| **acceptLanguage** | **String**| The language in which to display the client descriptions. | [optional] |
 {: class="table-striped"}
 
 
@@ -297,6 +297,8 @@ Get a summary of OAuth client API usage
 
 After calling this method, you will then need to poll for the query results based on the returned execution Id
 
+
+
 Wraps GET /api/v2/oauth/clients/{clientId}/usage/summary  
 
 Requires ANY permissions: 
@@ -312,7 +314,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let clientId: String = "" // Client ID
-let days: String = "7" // Previous number of days to query
+let days: String = "" // Previous number of days to query
 
 // Code example
 OAuthAPI.getOauthClientUsageSummary(clientId: clientId, days: days) { (response, error) in
@@ -331,7 +333,7 @@ OAuthAPI.getOauthClientUsageSummary(clientId: clientId, days: days) { (response,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-| **days** | **String**| Previous number of days to query | [optional] [default to 7] |
+| **days** | **String**| Previous number of days to query | [optional] |
 {: class="table-striped"}
 
 
@@ -413,7 +415,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let scopeId: String = "" // Scope ID
-let acceptLanguage: String = "en-us" // The language with which to display the scope description.
+let acceptLanguage: String = "" // The language with which to display the scope description.
 
 // Code example
 OAuthAPI.getOauthScope(scopeId: scopeId, acceptLanguage: acceptLanguage) { (response, error) in
@@ -432,7 +434,7 @@ OAuthAPI.getOauthScope(scopeId: scopeId, acceptLanguage: acceptLanguage) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scopeId** | **String**| Scope ID | |
-| **acceptLanguage** | **String**| The language with which to display the scope description. | [optional] [default to en-us] |
+| **acceptLanguage** | **String**| The language with which to display the scope description. | [optional] |
 {: class="table-striped"}
 
 
@@ -465,7 +467,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let acceptLanguage: String = "en-us" // The language with which to display the scope descriptions.
+let acceptLanguage: String = "" // The language with which to display the scope descriptions.
 
 // Code example
 OAuthAPI.getOauthScopes(acceptLanguage: acceptLanguage) { (response, error) in
@@ -483,7 +485,7 @@ OAuthAPI.getOauthScopes(acceptLanguage: acceptLanguage) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **acceptLanguage** | **String**| The language with which to display the scope descriptions. | [optional] [default to en-us] |
+| **acceptLanguage** | **String**| The language with which to display the scope descriptions. | [optional] |
 {: class="table-striped"}
 
 
@@ -502,6 +504,8 @@ OAuthAPI.getOauthScopes(acceptLanguage: acceptLanguage) { (response, error) in
 Regenerate Client Secret
 
 This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
+
+
 
 Wraps POST /api/v2/oauth/clients/{clientId}/secret  
 
@@ -554,6 +558,8 @@ OAuthAPI.postOauthClientSecret(clientId: clientId) { (response, error) in
 Query for OAuth client API usage
 
 After calling this method, you will then need to poll for the query results based on the returned execution Id
+
+
 
 Wraps POST /api/v2/oauth/clients/{clientId}/usage/query  
 
@@ -608,6 +614,8 @@ OAuthAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, 
 Create OAuth client
 
 The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
+
+
 
 Wraps POST /api/v2/oauth/clients  
 

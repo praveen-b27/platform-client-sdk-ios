@@ -17,11 +17,8 @@ public class JourneyCustomer: Codable {
     public var idType: String?
 
     public init(_id: String?, idType: String?) {
-        
         self._id = _id
-        
         self.idType = idType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

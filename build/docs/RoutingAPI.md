@@ -431,7 +431,7 @@ RoutingAPI.deleteRoutingQueueMember(queueId: queueId, memberId: memberId) { (err
 
 # **deleteRoutingQueueUser**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > Void deleteRoutingQueueUser(queueId, memberId)
 
@@ -710,7 +710,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let addressId: String = "" // Address ID
-let async: Bool = false // Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number. 
+let async: Bool = true // Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number. 
 
 // Code example
 RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId, async: async) { (error) in
@@ -728,7 +728,7 @@ RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId, async: async) { (er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
-| **async** | **Bool**| Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  | [optional] [default to false] |
+| **async** | **Bool**| Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  | [optional] |
 {: class="table-striped"}
 
 
@@ -1342,8 +1342,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainName: String = "" // email domain
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let pattern: String = "" // Filter routes by the route's pattern property
 
 // Code example
@@ -1363,9 +1363,9 @@ RoutingAPI.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSiz
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **domainName** | **String**| email domain | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pattern** | **String**| Filter routes by the route&#39;s pattern property | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pattern** | **String**| Filter routes by the route's pattern property | [optional] |
 {: class="table-striped"}
 
 
@@ -1399,7 +1399,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let excludeStatus: Bool = false // Exclude MX record data
+let excludeStatus: Bool = true // Exclude MX record data
 
 // Code example
 RoutingAPI.getRoutingEmailDomains(excludeStatus: excludeStatus) { (response, error) in
@@ -1417,7 +1417,7 @@ RoutingAPI.getRoutingEmailDomains(excludeStatus: excludeStatus) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **excludeStatus** | **Bool**| Exclude MX record data | [optional] [default to false] |
+| **excludeStatus** | **Bool**| Exclude MX record data | [optional] |
 {: class="table-striped"}
 
 
@@ -1498,8 +1498,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: RoutingAPI.SortOrder_getRoutingLanguages = RoutingAPI.SortOrder_getRoutingLanguages.enummember // Ascending or descending sort order
 let name: String = "" // Name
 let _id: [String] = [""] // id
@@ -1520,9 +1520,9 @@ RoutingAPI.getRoutingLanguages(pageSize: pageSize, pageNumber: pageNumber, sortO
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 {: class="table-striped"}
@@ -1611,8 +1611,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let messengerType: RoutingAPI.MessengerType_getRoutingMessageRecipients = RoutingAPI.MessengerType_getRoutingMessageRecipients.enummember // Messenger Type
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -1631,8 +1631,8 @@ RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, pageSize: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp"), _open ("open"), instagram ("instagram") |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -2099,10 +2099,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
-let pageNumber: Int = 1 // 
-let pageSize: Int = 25 // Max value is 100
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // Max value is 100
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueueMembers = RoutingAPI.SortOrder_getRoutingQueueMembers.enummember // Note: results are sorted by name.
-let expand: [String] = [RoutingAPI.Expand_getRoutingQueueMembers.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 let name: String = "" // Filter by queue member name
 let profileSkills: [String] = [""] // Filter by profile skill
 let skills: [String] = [""] // Filter by skill
@@ -2110,7 +2110,7 @@ let languages: [String] = [""] // Filter by language
 let routingStatus: [String] = [""] // Filter by routing status
 let presence: [String] = [""] // Filter by presence
 let memberBy: RoutingAPI.MemberBy_getRoutingQueueMembers = RoutingAPI.MemberBy_getRoutingQueueMembers.enummember // Filter by member type
-let joined: Bool = true // Filter by joined status
+let joined: RoutingAPI.Joined_getRoutingQueueMembers = RoutingAPI.Joined_getRoutingQueueMembers.enummember // Filter by joined status
 
 // Code example
 RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, expand: expand, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence, memberBy: memberBy, joined: joined) { (response, error) in
@@ -2129,9 +2129,9 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, page
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **pageNumber** | **Int**|  | [optional] [default to 1] |
-| **pageSize** | **Int**| Max value is 100 | [optional] [default to 25] |
-| **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**| Max value is 100 | [optional] |
+| **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 | **name** | **String**| Filter by queue member name | [optional] |
 | **profileSkills** | [**[String]**](String.html)| Filter by profile skill | [optional] |
@@ -2140,7 +2140,7 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, page
 | **routingStatus** | [**[String]**](String.html)| Filter by routing status | [optional] |
 | **presence** | [**[String]**](String.html)| Filter by presence | [optional] |
 | **memberBy** | **String**| Filter by member type | [optional]<br />**Values**: user ("user"), group ("group") |
-| **joined** | **Bool**| Filter by joined status | [optional] |
+| **joined** | **Bool**| Filter by joined status | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -2152,7 +2152,7 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, page
 
 # **getRoutingQueueUsers**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [QueueMemberEntityListingV1](QueueMemberEntityListingV1.html) getRoutingQueueUsers(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence)
 
@@ -2176,10 +2176,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
-let pageNumber: Int = 1 // 
-let pageSize: Int = 25 // Max value is 100
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // Max value is 100
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueueUsers = RoutingAPI.SortOrder_getRoutingQueueUsers.enummember // Note: results are sorted by name.
-let expand: [String] = [RoutingAPI.Expand_getRoutingQueueUsers.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 let joined: Bool = true // Filter by joined status
 let name: String = "" // Filter by queue member name
 let profileSkills: [String] = [""] // Filter by profile skill
@@ -2205,9 +2205,9 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageNumber: pageNumber, pageSi
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **pageNumber** | **Int**|  | [optional] [default to 1] |
-| **pageSize** | **Int**| Max value is 100 | [optional] [default to 25] |
-| **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**| Max value is 100 | [optional] |
+| **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 | **joined** | **Bool**| Filter by joined status | [optional] |
 | **name** | **String**| Filter by queue member name | [optional] |
@@ -2250,8 +2250,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -2270,8 +2270,8 @@ RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, page
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -2305,8 +2305,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueues = RoutingAPI.SortOrder_getRoutingQueues.enummember // Note: results are sorted by name.
 let name: String = "" // Filter by queue name
 let _id: [String] = [""] // Filter by queue ID(s)
@@ -2328,9 +2328,9 @@ RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrde
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **name** | **String**| Filter by queue name | [optional] |
 | **_id** | [**[String]**](String.html)| Filter by queue ID(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Filter by queue division ID(s) | [optional] |
@@ -2367,8 +2367,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size [max value is 100]
-let pageNumber: Int = 1 // Page number [max value is 5]
+let pageSize: Int = 0 // Page size [max value is 100]
+let pageNumber: Int = 0 // Page number [max value is 5]
 let sortBy: RoutingAPI.SortBy_getRoutingQueuesDivisionviews = RoutingAPI.SortBy_getRoutingQueuesDivisionviews.enummember // Sort by
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueuesDivisionviews = RoutingAPI.SortOrder_getRoutingQueuesDivisionviews.enummember // Sort order
 let name: String = "" // Name
@@ -2391,10 +2391,10 @@ RoutingAPI.getRoutingQueuesDivisionviews(pageSize: pageSize, pageNumber: pageNum
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size [max value is 100] | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number [max value is 5] | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name]<br />**Values**: name ("name"), _id ("id"), divisionid ("divisionId") |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
+| **pageSize** | **Int**| Page size [max value is 100] | [optional] |
+| **pageNumber** | **Int**| Page number [max value is 5] | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: name ("name"), _id ("id"), divisionid ("divisionId") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String.html)| Queue ID(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
@@ -2431,8 +2431,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size [max value is 500]
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size [max value is 500]
+let pageNumber: Int = 0 // Page number
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueuesDivisionviewsAll = RoutingAPI.SortOrder_getRoutingQueuesDivisionviewsAll.enummember // Sort order
 
 // Code example
@@ -2451,9 +2451,9 @@ RoutingAPI.getRoutingQueuesDivisionviewsAll(pageSize: pageSize, pageNumber: page
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size [max value is 500] | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
+| **pageSize** | **Int**| Page size [max value is 500] | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 {: class="table-striped"}
 
 
@@ -2486,9 +2486,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let joined: Bool = true // Filter by joined status.
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let joined: RoutingAPI.Joined_getRoutingQueuesMe = RoutingAPI.Joined_getRoutingQueuesMe.enummember // Filter by joined status.
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueuesMe = RoutingAPI.SortOrder_getRoutingQueuesMe.enummember // Note: results are sorted by name.
 
 // Code example
@@ -2507,10 +2507,10 @@ RoutingAPI.getRoutingQueuesMe(pageNumber: pageNumber, pageSize: pageSize, joined
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **joined** | **Bool**| Filter by joined status. | [optional] |
-| **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **joined** | **Bool**| Filter by joined status. | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 {: class="table-striped"}
 
 
@@ -2736,8 +2736,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Filter for results that start with this value
 let _id: [String] = [""] // id
 
@@ -2757,8 +2757,8 @@ RoutingAPI.getRoutingSkills(pageSize: pageSize, pageNumber: pageNumber, name: na
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Filter for results that start with this value | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 {: class="table-striped"}
@@ -2846,8 +2846,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 RoutingAPI.getRoutingSmsAddresses(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -2865,8 +2865,8 @@ RoutingAPI.getRoutingSmsAddresses(pageSize: pageSize, pageNumber: pageNumber) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -2885,6 +2885,8 @@ RoutingAPI.getRoutingSmsAddresses(pageSize: pageSize, pageNumber: pageNumber) { 
 Get a list of available phone numbers for SMS provisioning.
 
 This request will return up to 30 random phone numbers matching the criteria specified.  To get additional phone numbers repeat the request.
+
+
 
 Wraps GET /api/v2/routing/sms/availablephonenumbers  
 
@@ -2929,7 +2931,7 @@ RoutingAPI.getRoutingSmsAvailablephonenumbers(countryCode: countryCode, phoneNum
 | **region** | **String**| Region/province/state that can be used to restrict the numbers returned | [optional] |
 | **city** | **String**| City that can be used to restrict the numbers returned | [optional] |
 | **areaCode** | **String**| Area code that can be used to restrict the numbers returned | [optional] |
-| **pattern** | **String**| A pattern to match phone numbers. Valid characters are &#39;*&#39; and [0-9a-zA-Z]. The &#39;*&#39; character will match any single digit. | [optional] |
+| **pattern** | **String**| A pattern to match phone numbers. Valid characters are '*' and [0-9a-zA-Z]. The '*' character will match any single digit. | [optional] |
 | **addressRequirement** | **String**| This indicates whether the phone number requires to have an Address registered. | [optional]<br />**Values**: _none ("none"), any ("any"), local ("local"), foreign ("foreign") |
 {: class="table-striped"}
 
@@ -3017,14 +3019,14 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let phoneNumber: String = "" // Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used.
-let phoneNumberType: [String] = [RoutingAPI.PhoneNumberType_getRoutingSmsPhonenumbers.enummember.rawValue] // Filter on phone number type
-let phoneNumberStatus: [String] = [RoutingAPI.PhoneNumberStatus_getRoutingSmsPhonenumbers.enummember.rawValue] // Filter on phone number status
+let phoneNumberType: [String] = [""] // Filter on phone number type
+let phoneNumberStatus: [String] = [""] // Filter on phone number status
 let countryCode: [String] = [""] // Filter on country code
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortBy: RoutingAPI.SortBy_getRoutingSmsPhonenumbers = RoutingAPI.SortBy_getRoutingSmsPhonenumbers.enummember // Optional field to sort results
 let sortOrder: RoutingAPI.SortOrder_getRoutingSmsPhonenumbers = RoutingAPI.SortOrder_getRoutingSmsPhonenumbers.enummember // Sort order
-let language: String = "en-US" // A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations
+let language: String = en-US // A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations
 
 // Code example
 RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language) { (response, error) in
@@ -3042,15 +3044,15 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **phoneNumber** | **String**| Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. | [optional] |
+| **phoneNumber** | **String**| Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used. | [optional] |
 | **phoneNumberType** | [**[String]**](String.html)| Filter on phone number type | [optional]<br />**Values**: local ("local"), mobile ("mobile"), tollfree ("tollfree"), shortcode ("shortcode") |
 | **phoneNumberStatus** | [**[String]**](String.html)| Filter on phone number status | [optional]<br />**Values**: active ("active"), invalid ("invalid"), initiated ("initiated"), porting ("porting"), pending ("pending"), pendingCancellation ("pending-cancellation") |
 | **countryCode** | [**[String]**](String.html)| Filter on country code | [optional] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| Optional field to sort results | [optional]<br />**Values**: phonenumber ("phoneNumber"), countrycode ("countryCode"), country ("country"), phonenumberstatus ("phoneNumberStatus"), phonenumbertype ("phoneNumberType"), purchasedate ("purchaseDate"), supportsmms ("supportsMms"), supportssms ("supportsSms"), supportsvoice ("supportsVoice") |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
-| **language** | **String**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations | [optional] [default to en-US] |
+| **language** | **String**| A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations | [optional] |
 {: class="table-striped"}
 
 
@@ -3238,8 +3240,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortBy: RoutingAPI.SortBy_getRoutingWrapupcodes = RoutingAPI.SortBy_getRoutingWrapupcodes.enummember // Sort by
 let sortOrder: RoutingAPI.SortOrder_getRoutingWrapupcodes = RoutingAPI.SortOrder_getRoutingWrapupcodes.enummember // Sort order
 let name: String = "" // Wrapup code's name ('Sort by' param is ignored unless this field is provided)
@@ -3260,11 +3262,11 @@ RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sor
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name]<br />**Values**: name ("name"), _id ("id") |
-| **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |
-| **name** | **String**| Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: name ("name"), _id ("id") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **name** | **String**| Wrapup code's name ('Sort by' param is ignored unless this field is provided) | [optional] |
 {: class="table-striped"}
 
 
@@ -3301,8 +3303,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let joined: Bool = true // Is joined to the queue
 let divisionId: [String] = [""] // Division ID(s)
 
@@ -3323,9 +3325,9 @@ RoutingAPI.getUserQueues(userId: userId, pageSize: pageSize, pageNumber: pageNum
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **joined** | **Bool**| Is joined to the queue | [optional] [default to true] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **joined** | **Bool**| Is joined to the queue | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
 {: class="table-striped"}
 
@@ -3360,8 +3362,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: RoutingAPI.SortOrder_getUserRoutinglanguages = RoutingAPI.SortOrder_getUserRoutinglanguages.enummember // Ascending or descending sort order
 
 // Code example
@@ -3381,9 +3383,9 @@ RoutingAPI.getUserRoutinglanguages(userId: userId, pageSize: pageSize, pageNumbe
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -3417,8 +3419,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortOrder: RoutingAPI.SortOrder_getUserRoutingskills = RoutingAPI.SortOrder_getUserRoutingskills.enummember // Ascending or descending sort order
 
 // Code example
@@ -3438,9 +3440,9 @@ RoutingAPI.getUserRoutingskills(userId: userId, pageSize: pageSize, pageNumber: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -3459,6 +3461,8 @@ RoutingAPI.getUserRoutingskills(userId: userId, pageSize: pageSize, pageNumber: 
 Update attributes of an in-queue conversation
 
 Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+
+
 
 Wraps PATCH /api/v2/routing/conversations/{conversationId}  
 
@@ -3780,7 +3784,7 @@ RoutingAPI.patchRoutingQueueMembers(queueId: queueId, body: body) { (response, e
 
 # **patchRoutingQueueUser**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > Void patchRoutingQueueUser(queueId, memberId, body)
 
@@ -3836,7 +3840,7 @@ RoutingAPI.patchRoutingQueueUser(queueId: queueId, memberId: memberId, body: bod
 
 # **patchRoutingQueueUsers**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [QueueMemberEntityListingV1](QueueMemberEntityListingV1.html) patchRoutingQueueUsers(queueId, body)
 
@@ -4441,6 +4445,8 @@ Tests the custom SMTP server integration connection set on this domain
 
 The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
 
+
+
 Wraps POST /api/v2/routing/email/domains/{domainId}/testconnection  
 
 Requires ALL permissions: 
@@ -4669,7 +4675,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
 let body: [WritableEntity] = [new WritableEntity(...)] // Queue Members
-let delete: Bool = false // True to delete queue members
+let delete: Bool = true // True to delete queue members
 
 // Code example
 RoutingAPI.postRoutingQueueMembers(queueId: queueId, body: body, delete: delete) { (error) in
@@ -4688,7 +4694,7 @@ RoutingAPI.postRoutingQueueMembers(queueId: queueId, body: body, delete: delete)
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
 | **body** | [**[WritableEntity]**](WritableEntity.html)| Queue Members | |
-| **delete** | **Bool**| True to delete queue members | [optional] [default to false] |
+| **delete** | **Bool**| True to delete queue members | [optional] |
 {: class="table-striped"}
 
 
@@ -4700,7 +4706,7 @@ RoutingAPI.postRoutingQueueMembers(queueId: queueId, body: body, delete: delete)
 
 # **postRoutingQueueUsers**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > Void postRoutingQueueUsers(queueId, body, delete)
 
@@ -4725,7 +4731,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
 let body: [WritableEntity] = [new WritableEntity(...)] // Queue Members
-let delete: Bool = false // True to delete queue members
+let delete: Bool = true // True to delete queue members
 
 // Code example
 RoutingAPI.postRoutingQueueUsers(queueId: queueId, body: body, delete: delete) { (error) in
@@ -4744,7 +4750,7 @@ RoutingAPI.postRoutingQueueUsers(queueId: queueId, body: body, delete: delete) {
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
 | **body** | [**[WritableEntity]**](WritableEntity.html)| Queue Members | |
-| **delete** | **Bool**| True to delete queue members | [optional] [default to false] |
+| **delete** | **Bool**| True to delete queue members | [optional] |
 {: class="table-striped"}
 
 
@@ -4989,7 +4995,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: SmsPhoneNumberProvision = new SmsPhoneNumberProvision(...) // SmsPhoneNumber
-let async: Bool = false // Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber's provisioningStatus for completion of this request.
+let async: Bool = true // Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber's provisioningStatus for completion of this request.
 
 // Code example
 RoutingAPI.postRoutingSmsPhonenumbers(body: body, async: async) { (response, error) in
@@ -5008,7 +5014,7 @@ RoutingAPI.postRoutingSmsPhonenumbers(body: body, async: async) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**SmsPhoneNumberProvision**](SmsPhoneNumberProvision.html)| SmsPhoneNumber | |
-| **async** | **Bool**| Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. | [optional] [default to false] |
+| **async** | **Bool**| Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber's provisioningStatus for completion of this request. | [optional] |
 {: class="table-striped"}
 
 
@@ -5473,7 +5479,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let addressId: String = "" // Address ID
 let body: SmsPhoneNumber = new SmsPhoneNumber(...) // SmsPhoneNumber
-let async: Bool = false // Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber's provisioningStatus for the progress of this request.
+let async: Bool = true // Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber's provisioningStatus for the progress of this request.
 
 // Code example
 RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body, async: async) { (response, error) in
@@ -5493,7 +5499,7 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body, async: asy
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
 | **body** | [**SmsPhoneNumber**](SmsPhoneNumber.html)| SmsPhoneNumber | |
-| **async** | **Bool**| Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. | [optional] [default to false] |
+| **async** | **Bool**| Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber's provisioningStatus for the progress of this request. | [optional] |
 {: class="table-striped"}
 
 

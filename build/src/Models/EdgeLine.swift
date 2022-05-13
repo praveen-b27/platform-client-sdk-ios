@@ -28,7 +28,7 @@ public class EdgeLine: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -58,49 +58,27 @@ public class EdgeLine: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, schema: DomainEntityRef?, properties: [String:JSON]?, edge: Edge?, edgeGroup: EdgeGroup?, lineType: LineType?, endpoint: Endpoint?, ipAddress: String?, logicalInterfaceId: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.schema = schema
-        
         self.properties = properties
-        
         self.edge = edge
-        
         self.edgeGroup = edgeGroup
-        
         self.lineType = lineType
-        
         self.endpoint = endpoint
-        
         self.ipAddress = ipAddress
-        
         self.logicalInterfaceId = logicalInterfaceId
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

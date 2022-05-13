@@ -20,15 +20,10 @@ public class WebChatConversation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, member: WebChatMemberInfo?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.member = member
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

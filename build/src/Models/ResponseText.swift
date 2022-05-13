@@ -22,11 +22,8 @@ public class ResponseText: Codable {
     public var contentType: ContentType?
 
     public init(content: String?, contentType: ContentType?) {
-        
         self.content = content
-        
         self.contentType = contentType
-        
     }
 
 

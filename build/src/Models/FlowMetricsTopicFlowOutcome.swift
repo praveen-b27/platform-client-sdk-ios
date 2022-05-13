@@ -19,13 +19,9 @@ public class FlowMetricsTopicFlowOutcome: Codable {
     public var flowOutcomeValue: String?
 
     public init(flowOutcome: String?, flowOutcomeId: String?, flowOutcomeValue: String?) {
-        
         self.flowOutcome = flowOutcome
-        
         self.flowOutcomeId = flowOutcomeId
-        
         self.flowOutcomeValue = flowOutcomeValue
-        
     }
 
 

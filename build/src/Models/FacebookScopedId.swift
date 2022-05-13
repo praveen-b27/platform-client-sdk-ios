@@ -16,9 +16,7 @@ public class FacebookScopedId: Codable {
     public var scopedId: String?
 
     public init(scopedId: String?) {
-        
         self.scopedId = scopedId
-        
     }
 
 

@@ -73,21 +73,13 @@ public class AuditQueryExecutionStatusResponse: Codable {
     public var sort: [AuditQuerySort]?
 
     public init(_id: String?, state: State?, startDate: Date?, interval: String?, serviceName: ServiceName?, filters: [AuditQueryFilter]?, sort: [AuditQuerySort]?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.startDate = startDate
-        
         self.interval = interval
-        
         self.serviceName = serviceName
-        
         self.filters = filters
-        
         self.sort = sort
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -28,7 +28,7 @@ public class DefaultObjective: Codable {
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** The id of this objective&#39;s base template */
+    /** The id of this objective's base template */
     public var templateId: String?
     /** Objective zone specifies min,max points and values for the associated metric */
     public var zones: [ObjectiveZone]?
@@ -40,27 +40,18 @@ public class DefaultObjective: Codable {
     public var queues: [AddressableEntityRef]?
     /** A list of topic ids for detected topic metrics */
     public var topics: [AddressableEntityRef]?
-    /** A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;. */
+    /** A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\". */
     public var topicIdsFilterType: TopicIdsFilterType?
 
     public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, mediaTypes: [MediaTypes]?, queues: [AddressableEntityRef]?, topics: [AddressableEntityRef]?, topicIdsFilterType: TopicIdsFilterType?) {
-        
         self._id = _id
-        
         self.templateId = templateId
-        
         self.zones = zones
-        
         self.enabled = enabled
-        
         self.mediaTypes = mediaTypes
-        
         self.queues = queues
-        
         self.topics = topics
-        
         self.topicIdsFilterType = topicIdsFilterType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

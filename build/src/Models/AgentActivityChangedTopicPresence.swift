@@ -16,13 +16,9 @@ public class AgentActivityChangedTopicPresence: Codable {
     public var modifiedDate: Date?
 
     public init(presenceDefinition: AgentActivityChangedTopicOrganizationPresence?, presenceMessage: String?, modifiedDate: Date?) {
-        
         self.presenceDefinition = presenceDefinition
-        
         self.presenceMessage = presenceMessage
-        
         self.modifiedDate = modifiedDate
-        
     }
 
 

@@ -16,9 +16,7 @@ public class DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings:
     public var callableWindows: [DialerOutboundSettingsConfigChangeCallableWindow]?
 
     public init(callableWindows: [DialerOutboundSettingsConfigChangeCallableWindow]?) {
-        
         self.callableWindows = callableWindows
-        
     }
 
 

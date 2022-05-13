@@ -22,11 +22,8 @@ public class ReportingInterval: Codable {
     public var intervalValue: Int?
 
     public init(intervalType: IntervalType?, intervalValue: Int?) {
-        
         self.intervalType = intervalType
-        
         self.intervalValue = intervalValue
-        
     }
 
 

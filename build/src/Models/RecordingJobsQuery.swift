@@ -27,17 +27,11 @@ public class RecordingJobsQuery: Codable {
     public var conversationQuery: AsyncConversationQuery?
 
     public init(action: Action?, actionDate: Date?, integrationId: String?, includeScreenRecordings: Bool?, conversationQuery: AsyncConversationQuery?) {
-        
         self.action = action
-        
         self.actionDate = actionDate
-        
         self.integrationId = integrationId
-        
         self.includeScreenRecordings = includeScreenRecordings
-        
         self.conversationQuery = conversationQuery
-        
     }
 
 

@@ -20,21 +20,13 @@ public class UserGreetingEventGreeting: Codable {
     public var audioTTS: String?
 
     public init(_id: String?, name: String?, type: String?, ownerType: String?, owner: UserGreetingEventGreetingOwner?, greetingAudioFile: UserGreetingEventGreetingAudioFile?, audioTTS: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.type = type
-        
         self.ownerType = ownerType
-        
         self.owner = owner
-        
         self.greetingAudioFile = greetingAudioFile
-        
         self.audioTTS = audioTTS
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

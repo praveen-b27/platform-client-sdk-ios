@@ -28,17 +28,11 @@ public class TextBotFlowOutcome: Codable {
     public var milestones: [TextBotFlowMilestone]?
 
     public init(outcomeId: String?, outcomeValue: OutcomeValue?, dateStart: Date?, dateEnd: Date?, milestones: [TextBotFlowMilestone]?) {
-        
         self.outcomeId = outcomeId
-        
         self.outcomeValue = outcomeValue
-        
         self.dateStart = dateStart
-        
         self.dateEnd = dateEnd
-        
         self.milestones = milestones
-        
     }
 
 

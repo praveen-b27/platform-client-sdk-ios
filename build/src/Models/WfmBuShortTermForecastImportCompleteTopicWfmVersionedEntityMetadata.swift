@@ -16,13 +16,9 @@ public class WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata
     public var dateModified: Date?
 
     public init(version: Int?, modifiedBy: WfmBuShortTermForecastImportCompleteTopicUserReference?, dateModified: Date?) {
-        
         self.version = version
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
     }
 
 

@@ -26,7 +26,7 @@ public class MediaParticipantRequest: Codable {
     }
     /** Wrap-up to assign to this participant. */
     public var wrapup: Wrapup?
-    /** The state to update to set for this participant&#39;s communications.  Possible values are: &#39;connected&#39; and &#39;disconnected&#39;. */
+    /** The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'. */
     public var state: State?
     /** True to enable recording of this participant, otherwise false to disable recording. */
     public var recording: Bool?
@@ -40,21 +40,13 @@ public class MediaParticipantRequest: Codable {
     public var wrapupSkipped: Bool?
 
     public init(wrapup: Wrapup?, state: State?, recording: Bool?, muted: Bool?, confined: Bool?, held: Bool?, wrapupSkipped: Bool?) {
-        
         self.wrapup = wrapup
-        
         self.state = state
-        
         self.recording = recording
-        
         self.muted = muted
-        
         self.confined = confined
-        
         self.held = held
-        
         self.wrapupSkipped = wrapupSkipped
-        
     }
 
 

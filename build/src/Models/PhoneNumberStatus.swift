@@ -15,9 +15,7 @@ public class PhoneNumberStatus: Codable {
     public var callable: Bool?
 
     public init(callable: Bool?) {
-        
         self.callable = callable
-        
     }
 
 

@@ -11,10 +11,7 @@ import Foundation
 
 open class WidgetsAPI {
     
-    
-    
     /**
-     
      Delete a Widget deployment
      
      - parameter deploymentId: (path) Widget Config Id 
@@ -32,11 +29,8 @@ open class WidgetsAPI {
     }
 
     /**
-     
      Delete a Widget deployment
-     
      - DELETE /api/v2/widgets/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class WidgetsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWidgetsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<Void> {
+    open class func deleteWidgetsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/widgets/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +55,7 @@ open class WidgetsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Widget deployment
      
      - parameter deploymentId: (path) Widget Config Id 
@@ -94,58 +80,35 @@ open class WidgetsAPI {
     }
 
     /**
-     
      Get a Widget deployment
-     
      - GET /api/v2/widgets/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationRequired" : true,
-  "clientType" : "aeiou",
-  "allowedDomains" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "clientType" : "v1",
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "disabled" : true,
-  "id" : "aeiou",
-  "clientConfig" : {
-    "v1" : {
-      "webChatSkin" : "aeiou",
-      "authenticationUrl" : "aeiou"
-    },
-    "v2" : { },
-    "v1-http" : {
-      "webChatSkin" : "aeiou",
-      "authenticationUrl" : "aeiou"
-    },
-    "third-party" : { }
-  },
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "id" : "id",
+  "clientConfig" : "{}",
+  "flow" : "{}"
+}, statusCode=200}]
      
      - parameter deploymentId: (path) Widget Config Id 
 
      - returns: RequestBuilder<WidgetDeployment> 
      */
-    open class func getWidgetsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<WidgetDeployment> {
+    open class func getWidgetsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<WidgetDeployment> {        
         var path = "/api/v2/widgets/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -154,9 +117,7 @@ open class WidgetsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      List Widget deployments
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -180,57 +141,45 @@ open class WidgetsAPI {
     }
 
     /**
-     
      List Widget deployments
-     
      - GET /api/v2/widgets/deployments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
     "authenticationRequired" : true,
-    "clientType" : "aeiou",
-    "allowedDomains" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "clientType" : "v1",
+    "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
     "disabled" : true,
-    "id" : "aeiou",
-    "clientConfig" : {
-      "v1" : {
-        "webChatSkin" : "aeiou",
-        "authenticationUrl" : "aeiou"
-      },
-      "v2" : { },
-      "v1-http" : {
-        "webChatSkin" : "aeiou",
-        "authenticationUrl" : "aeiou"
-      },
-      "third-party" : { }
-    },
-    "flow" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    }
+    "id" : "id",
+    "clientConfig" : "{}",
+    "flow" : "{}"
+  }, {
+    "authenticationRequired" : true,
+    "clientType" : "v1",
+    "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "disabled" : true,
+    "id" : "id",
+    "clientConfig" : "{}",
+    "flow" : "{}"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<WidgetDeploymentEntityListing> 
      */
-    open class func getWidgetsDeploymentsWithRequestBuilder() -> RequestBuilder<WidgetDeploymentEntityListing> {
+    open class func getWidgetsDeploymentsWithRequestBuilder() -> RequestBuilder<WidgetDeploymentEntityListing> {        
         let path = "/api/v2/widgets/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -240,10 +189,7 @@ open class WidgetsAPI {
     }
 
     
-    
-    
     /**
-     
      Create Widget deployment
      
      - parameter body: (body) Deployment 
@@ -268,53 +214,33 @@ open class WidgetsAPI {
     }
 
     /**
-     
      Create Widget deployment
-     
      - POST /api/v2/widgets/deployments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationRequired" : true,
-  "clientType" : "aeiou",
-  "allowedDomains" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "clientType" : "v1",
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "disabled" : true,
-  "id" : "aeiou",
-  "clientConfig" : {
-    "v1" : {
-      "webChatSkin" : "aeiou",
-      "authenticationUrl" : "aeiou"
-    },
-    "v2" : { },
-    "v1-http" : {
-      "webChatSkin" : "aeiou",
-      "authenticationUrl" : "aeiou"
-    },
-    "third-party" : { }
-  },
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "id" : "id",
+  "clientConfig" : "{}",
+  "flow" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Deployment 
 
      - returns: RequestBuilder<WidgetDeployment> 
      */
-    open class func postWidgetsDeploymentsWithRequestBuilder(body: WidgetDeployment) -> RequestBuilder<WidgetDeployment> {
+    open class func postWidgetsDeploymentsWithRequestBuilder(body: WidgetDeployment) -> RequestBuilder<WidgetDeployment> {        
         let path = "/api/v2/widgets/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WidgetDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -324,11 +250,7 @@ open class WidgetsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a Widget deployment
      
      - parameter deploymentId: (path) Widget Config Id 
@@ -354,57 +276,37 @@ open class WidgetsAPI {
     }
 
     /**
-     
      Update a Widget deployment
-     
      - PUT /api/v2/widgets/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationRequired" : true,
-  "clientType" : "aeiou",
-  "allowedDomains" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "clientType" : "v1",
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "disabled" : true,
-  "id" : "aeiou",
-  "clientConfig" : {
-    "v1" : {
-      "webChatSkin" : "aeiou",
-      "authenticationUrl" : "aeiou"
-    },
-    "v2" : { },
-    "v1-http" : {
-      "webChatSkin" : "aeiou",
-      "authenticationUrl" : "aeiou"
-    },
-    "third-party" : { }
-  },
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "id" : "id",
+  "clientConfig" : "{}",
+  "flow" : "{}"
+}, statusCode=200}]
      
      - parameter deploymentId: (path) Widget Config Id 
      - parameter body: (body) Deployment 
 
      - returns: RequestBuilder<WidgetDeployment> 
      */
-    open class func putWidgetsDeploymentWithRequestBuilder(deploymentId: String, body: WidgetDeployment) -> RequestBuilder<WidgetDeployment> {
+    open class func putWidgetsDeploymentWithRequestBuilder(deploymentId: String, body: WidgetDeployment) -> RequestBuilder<WidgetDeployment> {        
         var path = "/api/v2/widgets/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WidgetDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

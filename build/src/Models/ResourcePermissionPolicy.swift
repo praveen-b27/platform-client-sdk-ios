@@ -24,29 +24,17 @@ public class ResourcePermissionPolicy: Codable {
     public var actionSet: [String]?
 
     public init(_id: String?, domain: String?, entityName: String?, policyName: String?, policyDescription: String?, actionSetKey: String?, allowConditions: Bool?, resourceConditionNode: ResourceConditionNode?, namedResources: [String]?, resourceCondition: String?, actionSet: [String]?) {
-        
         self._id = _id
-        
         self.domain = domain
-        
         self.entityName = entityName
-        
         self.policyName = policyName
-        
         self.policyDescription = policyDescription
-        
         self.actionSetKey = actionSetKey
-        
         self.allowConditions = allowConditions
-        
         self.resourceConditionNode = resourceConditionNode
-        
         self.namedResources = namedResources
-        
         self.resourceCondition = resourceCondition
-        
         self.actionSet = actionSet
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

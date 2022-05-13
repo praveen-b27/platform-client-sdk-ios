@@ -25,11 +25,8 @@ public class SupportCenterModuleSetting: Codable {
     public var enabled: Bool?
 
     public init(type: ModelType?, enabled: Bool?) {
-        
         self.type = type
-        
         self.enabled = enabled
-        
     }
 
 

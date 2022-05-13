@@ -58,41 +58,23 @@ public class OAuthClient: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, secret: String?, roleIds: [String]?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, dateToDelete: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.accessTokenValiditySeconds = accessTokenValiditySeconds
-        
         self._description = _description
-        
         self.registeredRedirectUri = registeredRedirectUri
-        
         self.secret = secret
-        
         self.roleIds = roleIds
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.authorizedGrantType = authorizedGrantType
-        
         self.scope = scope
-        
         self.roleDivisions = roleDivisions
-        
         self.state = state
-        
         self.dateToDelete = dateToDelete
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

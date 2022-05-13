@@ -23,23 +23,14 @@ public class SurveyQuestionScore: Codable {
     public var freeTextAnswer: String?
 
     public init(questionId: String?, answerId: String?, score: Int?, markedNA: Bool?, assistedAnswerId: String?, npsScore: Int?, npsTextAnswer: String?, freeTextAnswer: String?) {
-        
         self.questionId = questionId
-        
         self.answerId = answerId
-        
         self.score = score
-        
         self.markedNA = markedNA
-        
         self.assistedAnswerId = assistedAnswerId
-        
         self.npsScore = npsScore
-        
         self.npsTextAnswer = npsTextAnswer
-        
         self.freeTextAnswer = freeTextAnswer
-        
     }
 
 

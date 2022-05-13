@@ -21,13 +21,9 @@ public class OutboundMessagingMessagingCampaignConfigChangeContactSort: Codable 
     public var numeric: Bool?
 
     public init(fieldName: String?, direction: Direction?, numeric: Bool?) {
-        
         self.fieldName = fieldName
-        
         self.direction = direction
-        
         self.numeric = numeric
-        
     }
 
 

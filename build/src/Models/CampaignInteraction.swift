@@ -54,49 +54,27 @@ public class CampaignInteraction: Codable {
     public var skills: [DomainEntityRef]?
 
     public init(_id: String?, campaign: DomainEntityRef?, agent: DomainEntityRef?, contact: DomainEntityRef?, destinationAddress: String?, activePreviewCall: Bool?, lastActivePreviewWrapupTime: Date?, creationTime: Date?, callPlacedTime: Date?, callRoutedTime: Date?, previewConnectedTime: Date?, queue: DomainEntityRef?, script: DomainEntityRef?, disposition: Disposition?, callerName: String?, callerAddress: String?, previewPopDeliveredTime: Date?, conversation: ConversationBasic?, dialerSystemParticipantId: String?, dialingMode: String?, skills: [DomainEntityRef]?) {
-        
         self._id = _id
-        
         self.campaign = campaign
-        
         self.agent = agent
-        
         self.contact = contact
-        
         self.destinationAddress = destinationAddress
-        
         self.activePreviewCall = activePreviewCall
-        
         self.lastActivePreviewWrapupTime = lastActivePreviewWrapupTime
-        
         self.creationTime = creationTime
-        
         self.callPlacedTime = callPlacedTime
-        
         self.callRoutedTime = callRoutedTime
-        
         self.previewConnectedTime = previewConnectedTime
-        
         self.queue = queue
-        
         self.script = script
-        
         self.disposition = disposition
-        
         self.callerName = callerName
-        
         self.callerAddress = callerAddress
-        
         self.previewPopDeliveredTime = previewPopDeliveredTime
-        
         self.conversation = conversation
-        
         self.dialerSystemParticipantId = dialerSystemParticipantId
-        
         self.dialingMode = dialingMode
-        
         self.skills = skills
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -11,10 +11,7 @@ import Foundation
 
 open class ScriptsAPI {
     
-    
-    
     /**
-     
      Get a script
      
      - parameter scriptId: (path) Script ID 
@@ -39,34 +36,40 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get a script
-     
      - GET /api/v2/scripts/{scriptId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "variables" : "{}",
-  "selfUri" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
   "customActions" : "{}",
-  "versionDate" : "2000-01-23T04:56:07.000+0000",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "versionDate" : "2000-01-23T04:56:07.000+00:00",
+  "division" : "{}",
   "features" : "{}",
-  "versionId" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "versionId" : "versionId",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "pages" : [ {
-    "versionId" : "aeiou",
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "rootContainer" : {
+      "key" : "{}"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
     "rootContainer" : {
       "key" : "{}"
     },
@@ -74,30 +77,25 @@ open class ScriptsAPI {
       "key" : "{}"
     }
   } ],
-  "startPageName" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "startPageId" : "aeiou",
-  "id" : "aeiou",
-  "publishedDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "startPageName" : "startPageName",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "startPageId" : "startPageId",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter scriptId: (path) Script ID 
 
      - returns: RequestBuilder<Script> 
      */
-    open class func getScriptWithRequestBuilder(scriptId: String) -> RequestBuilder<Script> {
+    open class func getScriptWithRequestBuilder(scriptId: String) -> RequestBuilder<Script> {        
         var path = "/api/v2/scripts/{scriptId}"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scriptId}", with: scriptIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -109,12 +107,7 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a page
      
      - parameter scriptId: (path) Script ID 
@@ -141,28 +134,25 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get a page
-     
      - GET /api/v2/scripts/{scriptId}/pages/{pageId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "versionId" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "versionId" : "versionId",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "rootContainer" : {
     "key" : "{}"
   },
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter scriptId: (path) Script ID 
      - parameter pageId: (path) Page ID 
@@ -170,7 +160,7 @@ open class ScriptsAPI {
 
      - returns: RequestBuilder<Page> 
      */
-    open class func getScriptPageWithRequestBuilder(scriptId: String, pageId: String, scriptDataVersion: String? = nil) -> RequestBuilder<Page> {
+    open class func getScriptPageWithRequestBuilder(scriptId: String, pageId: String, scriptDataVersion: String? = nil) -> RequestBuilder<Page> {        
         var path = "/api/v2/scripts/{scriptId}/pages/{pageId}"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -179,18 +169,11 @@ open class ScriptsAPI {
         let pageIdPostEscape = pageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{pageId}", with: pageIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "scriptDataVersion": scriptDataVersion
-            
         ])
 
         let requestBuilder: RequestBuilder<Page>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -200,11 +183,7 @@ open class ScriptsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the list of pages
      
      - parameter scriptId: (path) Script ID 
@@ -230,52 +209,42 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the list of pages
-     
      - GET /api/v2/scripts/{scriptId}/pages
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
-  "versionId" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+     - examples: [{contentType=application/json, example={
+  "versionId" : "versionId",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "rootContainer" : {
     "key" : "{}"
   },
   "properties" : {
     "key" : "{}"
   }
-} ]}]
+}, statusCode=200}]
      
      - parameter scriptId: (path) Script ID 
      - parameter scriptDataVersion: (query) Advanced usage - controls the data version of the script (optional)
 
      - returns: RequestBuilder<[Page]> 
      */
-    open class func getScriptPagesWithRequestBuilder(scriptId: String, scriptDataVersion: String? = nil) -> RequestBuilder<[Page]> {
+    open class func getScriptPagesWithRequestBuilder(scriptId: String, scriptDataVersion: String? = nil) -> RequestBuilder<[Page]> {        
         var path = "/api/v2/scripts/{scriptId}/pages"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scriptId}", with: scriptIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "scriptDataVersion": scriptDataVersion
-            
         ])
 
         let requestBuilder: RequestBuilder<[Page]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -290,19 +259,11 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     public enum SortBy_getScripts: String { 
         case modifieddate = "modifiedDate"
         case createddate = "createdDate"
     }
 
-    
     
     
     public enum SortOrder_getScripts: String { 
@@ -313,15 +274,11 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
     /**
-     
      Get the list of scripts
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter expand: (query) Expand (optional)
      - parameter name: (query) Name filter (optional)
      - parameter feature: (query) Feature filter (optional)
@@ -351,38 +308,44 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the list of scripts
-     
      - GET /api/v2/scripts
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "variables" : "{}",
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "customActions" : "{}",
-    "versionDate" : "2000-01-23T04:56:07.000+0000",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
+    "versionDate" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
     "features" : "{}",
-    "versionId" : "aeiou",
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "pages" : [ {
-      "versionId" : "aeiou",
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
       "rootContainer" : {
         "key" : "{}"
       },
@@ -390,23 +353,65 @@ open class ScriptsAPI {
         "key" : "{}"
       }
     } ],
-    "startPageName" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "startPageId" : "aeiou",
-    "id" : "aeiou",
-    "publishedDate" : "2000-01-23T04:56:07.000+0000"
+    "startPageName" : "startPageName",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "startPageId" : "startPageId",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "variables" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "customActions" : "{}",
+    "versionDate" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
+    "features" : "{}",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "pages" : [ {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    } ],
+    "startPageName" : "startPageName",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "startPageId" : "startPageId",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter expand: (query) Expand (optional)
      - parameter name: (query) Name filter (optional)
      - parameter feature: (query) Feature filter (optional)
@@ -418,39 +423,23 @@ open class ScriptsAPI {
 
      - returns: RequestBuilder<ScriptEntityListing> 
      */
-    open class func getScriptsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: String? = nil, name: String? = nil, feature: String? = nil, flowId: String? = nil, sortBy: SortBy_getScripts? = nil, sortOrder: SortOrder_getScripts? = nil, scriptDataVersion: String? = nil, divisionIds: String? = nil) -> RequestBuilder<ScriptEntityListing> {
+    open class func getScriptsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: String? = nil, name: String? = nil, feature: String? = nil, flowId: String? = nil, sortBy: SortBy_getScripts? = nil, sortOrder: SortOrder_getScripts? = nil, scriptDataVersion: String? = nil, divisionIds: String? = nil) -> RequestBuilder<ScriptEntityListing> {        
         let path = "/api/v2/scripts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "expand": expand, 
-            
             "name": name, 
-            
             "feature": feature, 
-            
             "flowId": flowId, 
-            
             "sortBy": sortBy?.rawValue, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "scriptDataVersion": scriptDataVersion, 
-            
             "divisionIds": divisionIds
-            
         ])
 
         let requestBuilder: RequestBuilder<ScriptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -465,19 +454,11 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     public enum SortBy_getScriptsDivisionviews: String { 
         case modifieddate = "modifiedDate"
         case createddate = "createdDate"
     }
 
-    
     
     
     public enum SortOrder_getScriptsDivisionviews: String { 
@@ -488,15 +469,11 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
     /**
-     
      Get the metadata for a list of scripts
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter expand: (query) Expand (optional)
      - parameter name: (query) Name filter (optional)
      - parameter feature: (query) Feature filter (optional)
@@ -526,38 +503,44 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the metadata for a list of scripts
-     
      - GET /api/v2/scripts/divisionviews
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "variables" : "{}",
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "customActions" : "{}",
-    "versionDate" : "2000-01-23T04:56:07.000+0000",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
+    "versionDate" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
     "features" : "{}",
-    "versionId" : "aeiou",
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "pages" : [ {
-      "versionId" : "aeiou",
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
       "rootContainer" : {
         "key" : "{}"
       },
@@ -565,23 +548,65 @@ open class ScriptsAPI {
         "key" : "{}"
       }
     } ],
-    "startPageName" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "startPageId" : "aeiou",
-    "id" : "aeiou",
-    "publishedDate" : "2000-01-23T04:56:07.000+0000"
+    "startPageName" : "startPageName",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "startPageId" : "startPageId",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "variables" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "customActions" : "{}",
+    "versionDate" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
+    "features" : "{}",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "pages" : [ {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    } ],
+    "startPageName" : "startPageName",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "startPageId" : "startPageId",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter expand: (query) Expand (optional)
      - parameter name: (query) Name filter (optional)
      - parameter feature: (query) Feature filter (optional)
@@ -593,39 +618,23 @@ open class ScriptsAPI {
 
      - returns: RequestBuilder<ScriptEntityListing> 
      */
-    open class func getScriptsDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: String? = nil, name: String? = nil, feature: String? = nil, flowId: String? = nil, sortBy: SortBy_getScriptsDivisionviews? = nil, sortOrder: SortOrder_getScriptsDivisionviews? = nil, scriptDataVersion: String? = nil, divisionIds: String? = nil) -> RequestBuilder<ScriptEntityListing> {
+    open class func getScriptsDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: String? = nil, name: String? = nil, feature: String? = nil, flowId: String? = nil, sortBy: SortBy_getScriptsDivisionviews? = nil, sortOrder: SortOrder_getScriptsDivisionviews? = nil, scriptDataVersion: String? = nil, divisionIds: String? = nil) -> RequestBuilder<ScriptEntityListing> {        
         let path = "/api/v2/scripts/divisionviews"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "expand": expand, 
-            
             "name": name, 
-            
             "feature": feature, 
-            
             "flowId": flowId, 
-            
             "sortBy": sortBy?.rawValue, 
-            
             "sortOrder": sortOrder?.rawValue, 
-            
             "scriptDataVersion": scriptDataVersion, 
-            
             "divisionIds": divisionIds
-            
         ])
 
         let requestBuilder: RequestBuilder<ScriptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -641,21 +650,11 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get the published scripts.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter expand: (query) Expand (optional)
      - parameter name: (query) Name filter (optional)
      - parameter feature: (query) Feature filter (optional)
@@ -683,38 +682,44 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the published scripts.
-     
      - GET /api/v2/scripts/published
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "variables" : "{}",
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "customActions" : "{}",
-    "versionDate" : "2000-01-23T04:56:07.000+0000",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
+    "versionDate" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
     "features" : "{}",
-    "versionId" : "aeiou",
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "pages" : [ {
-      "versionId" : "aeiou",
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
       "rootContainer" : {
         "key" : "{}"
       },
@@ -722,23 +727,65 @@ open class ScriptsAPI {
         "key" : "{}"
       }
     } ],
-    "startPageName" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "startPageId" : "aeiou",
-    "id" : "aeiou",
-    "publishedDate" : "2000-01-23T04:56:07.000+0000"
+    "startPageName" : "startPageName",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "startPageId" : "startPageId",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "variables" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "customActions" : "{}",
+    "versionDate" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
+    "features" : "{}",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "pages" : [ {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    } ],
+    "startPageName" : "startPageName",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "startPageId" : "startPageId",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter expand: (query) Expand (optional)
      - parameter name: (query) Name filter (optional)
      - parameter feature: (query) Feature filter (optional)
@@ -748,35 +795,21 @@ open class ScriptsAPI {
 
      - returns: RequestBuilder<ScriptEntityListing> 
      */
-    open class func getScriptsPublishedWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: String? = nil, name: String? = nil, feature: String? = nil, flowId: String? = nil, scriptDataVersion: String? = nil, divisionIds: String? = nil) -> RequestBuilder<ScriptEntityListing> {
+    open class func getScriptsPublishedWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: String? = nil, name: String? = nil, feature: String? = nil, flowId: String? = nil, scriptDataVersion: String? = nil, divisionIds: String? = nil) -> RequestBuilder<ScriptEntityListing> {        
         let path = "/api/v2/scripts/published"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "expand": expand, 
-            
             "name": name, 
-            
             "feature": feature, 
-            
             "flowId": flowId, 
-            
             "scriptDataVersion": scriptDataVersion, 
-            
             "divisionIds": divisionIds
-            
         ])
 
         let requestBuilder: RequestBuilder<ScriptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -792,21 +825,11 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get the published scripts metadata.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter expand: (query) Expand (optional)
      - parameter name: (query) Name filter (optional)
      - parameter feature: (query) Feature filter (optional)
@@ -834,38 +857,44 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the published scripts metadata.
-     
      - GET /api/v2/scripts/published/divisionviews
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "variables" : "{}",
-    "selfUri" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
     "customActions" : "{}",
-    "versionDate" : "2000-01-23T04:56:07.000+0000",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
+    "versionDate" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
     "features" : "{}",
-    "versionId" : "aeiou",
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "pages" : [ {
-      "versionId" : "aeiou",
-      "createdDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
       "rootContainer" : {
         "key" : "{}"
       },
@@ -873,23 +902,65 @@ open class ScriptsAPI {
         "key" : "{}"
       }
     } ],
-    "startPageName" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "startPageId" : "aeiou",
-    "id" : "aeiou",
-    "publishedDate" : "2000-01-23T04:56:07.000+0000"
+    "startPageName" : "startPageName",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "startPageId" : "startPageId",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "variables" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "customActions" : "{}",
+    "versionDate" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
+    "features" : "{}",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "pages" : [ {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    }, {
+      "versionId" : "versionId",
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "rootContainer" : {
+        "key" : "{}"
+      },
+      "properties" : {
+        "key" : "{}"
+      }
+    } ],
+    "startPageName" : "startPageName",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "startPageId" : "startPageId",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter expand: (query) Expand (optional)
      - parameter name: (query) Name filter (optional)
      - parameter feature: (query) Feature filter (optional)
@@ -899,35 +970,21 @@ open class ScriptsAPI {
 
      - returns: RequestBuilder<ScriptEntityListing> 
      */
-    open class func getScriptsPublishedDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: String? = nil, name: String? = nil, feature: String? = nil, flowId: String? = nil, scriptDataVersion: String? = nil, divisionIds: String? = nil) -> RequestBuilder<ScriptEntityListing> {
+    open class func getScriptsPublishedDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: String? = nil, name: String? = nil, feature: String? = nil, flowId: String? = nil, scriptDataVersion: String? = nil, divisionIds: String? = nil) -> RequestBuilder<ScriptEntityListing> {        
         let path = "/api/v2/scripts/published/divisionviews"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "expand": expand, 
-            
             "name": name, 
-            
             "feature": feature, 
-            
             "flowId": flowId, 
-            
             "scriptDataVersion": scriptDataVersion, 
-            
             "divisionIds": divisionIds
-            
         ])
 
         let requestBuilder: RequestBuilder<ScriptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -937,11 +994,7 @@ open class ScriptsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the published script.
      
      - parameter scriptId: (path) Script ID 
@@ -967,34 +1020,40 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the published script.
-     
      - GET /api/v2/scripts/published/{scriptId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "variables" : "{}",
-  "selfUri" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
   "customActions" : "{}",
-  "versionDate" : "2000-01-23T04:56:07.000+0000",
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
+  "versionDate" : "2000-01-23T04:56:07.000+00:00",
+  "division" : "{}",
   "features" : "{}",
-  "versionId" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "versionId" : "versionId",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "pages" : [ {
-    "versionId" : "aeiou",
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "rootContainer" : {
+      "key" : "{}"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
     "rootContainer" : {
       "key" : "{}"
     },
@@ -1002,37 +1061,30 @@ open class ScriptsAPI {
       "key" : "{}"
     }
   } ],
-  "startPageName" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "startPageId" : "aeiou",
-  "id" : "aeiou",
-  "publishedDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "startPageName" : "startPageName",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "startPageId" : "startPageId",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter scriptId: (path) Script ID 
      - parameter scriptDataVersion: (query) Advanced usage - controls the data version of the script (optional)
 
      - returns: RequestBuilder<Script> 
      */
-    open class func getScriptsPublishedScriptIdWithRequestBuilder(scriptId: String, scriptDataVersion: String? = nil) -> RequestBuilder<Script> {
+    open class func getScriptsPublishedScriptIdWithRequestBuilder(scriptId: String, scriptDataVersion: String? = nil) -> RequestBuilder<Script> {        
         var path = "/api/v2/scripts/published/{scriptId}"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scriptId}", with: scriptIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "scriptDataVersion": scriptDataVersion
-            
         ])
 
         let requestBuilder: RequestBuilder<Script>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1043,12 +1095,7 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get the published page.
      
      - parameter scriptId: (path) Script ID 
@@ -1075,28 +1122,25 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the published page.
-     
      - GET /api/v2/scripts/published/{scriptId}/pages/{pageId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "versionId" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "versionId" : "versionId",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "rootContainer" : {
     "key" : "{}"
   },
   "properties" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter scriptId: (path) Script ID 
      - parameter pageId: (path) Page ID 
@@ -1104,7 +1148,7 @@ open class ScriptsAPI {
 
      - returns: RequestBuilder<Page> 
      */
-    open class func getScriptsPublishedScriptIdPageWithRequestBuilder(scriptId: String, pageId: String, scriptDataVersion: String? = nil) -> RequestBuilder<Page> {
+    open class func getScriptsPublishedScriptIdPageWithRequestBuilder(scriptId: String, pageId: String, scriptDataVersion: String? = nil) -> RequestBuilder<Page> {        
         var path = "/api/v2/scripts/published/{scriptId}/pages/{pageId}"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1113,18 +1157,11 @@ open class ScriptsAPI {
         let pageIdPostEscape = pageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{pageId}", with: pageIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "scriptDataVersion": scriptDataVersion
-            
         ])
 
         let requestBuilder: RequestBuilder<Page>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1134,11 +1171,7 @@ open class ScriptsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the list of published pages
      
      - parameter scriptId: (path) Script ID 
@@ -1164,52 +1197,42 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the list of published pages
-     
      - GET /api/v2/scripts/published/{scriptId}/pages
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
-  "versionId" : "aeiou",
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+     - examples: [{contentType=application/json, example={
+  "versionId" : "versionId",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "rootContainer" : {
     "key" : "{}"
   },
   "properties" : {
     "key" : "{}"
   }
-} ]}]
+}, statusCode=200}]
      
      - parameter scriptId: (path) Script ID 
      - parameter scriptDataVersion: (query) Advanced usage - controls the data version of the script (optional)
 
      - returns: RequestBuilder<[Page]> 
      */
-    open class func getScriptsPublishedScriptIdPagesWithRequestBuilder(scriptId: String, scriptDataVersion: String? = nil) -> RequestBuilder<[Page]> {
+    open class func getScriptsPublishedScriptIdPagesWithRequestBuilder(scriptId: String, scriptDataVersion: String? = nil) -> RequestBuilder<[Page]> {        
         var path = "/api/v2/scripts/published/{scriptId}/pages"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scriptId}", with: scriptIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "scriptDataVersion": scriptDataVersion
-            
         ])
 
         let requestBuilder: RequestBuilder<[Page]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1222,14 +1245,7 @@ open class ScriptsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Get the published variables
      
      - parameter scriptId: (path) Script ID 
@@ -1258,15 +1274,11 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the published variables
-     
      - GET /api/v2/scripts/published/{scriptId}/variables
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="{}"}]
      
      - parameter scriptId: (path) Script ID 
      - parameter input: (query) input (optional)
@@ -1276,30 +1288,20 @@ open class ScriptsAPI {
 
      - returns: RequestBuilder<JSON> 
      */
-    open class func getScriptsPublishedScriptIdVariablesWithRequestBuilder(scriptId: String, input: String? = nil, output: String? = nil, type: String? = nil, scriptDataVersion: String? = nil) -> RequestBuilder<JSON> {
+    open class func getScriptsPublishedScriptIdVariablesWithRequestBuilder(scriptId: String, input: String? = nil, output: String? = nil, type: String? = nil, scriptDataVersion: String? = nil) -> RequestBuilder<JSON> {        
         var path = "/api/v2/scripts/published/{scriptId}/variables"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scriptId}", with: scriptIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "input": input, 
-            
             "output": output, 
-            
             "type": type, 
-            
             "scriptDataVersion": scriptDataVersion
-            
         ])
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1309,15 +1311,11 @@ open class ScriptsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the upload status of an imported script
      
      - parameter uploadId: (path) Upload ID 
-     - parameter longPoll: (query) Enable longPolling endpoint (optional, default to false)
+     - parameter longPoll: (query) Enable longPolling endpoint (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScriptsUploadStatus(uploadId: String, longPoll: Bool? = nil, completion: @escaping ((_ data: ImportScriptStatusResponse?,_ error: Error?) -> Void)) {
@@ -1339,43 +1337,33 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Get the upload status of an imported script
-     
      - GET /api/v2/scripts/uploads/{uploadId}/status
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "message" : "aeiou",
-  "url" : "aeiou",
+  "message" : "message",
+  "url" : "https://openapi-generator.tech",
   "succeeded" : true
-}}]
+}, statusCode=200}]
      
      - parameter uploadId: (path) Upload ID 
-     - parameter longPoll: (query) Enable longPolling endpoint (optional, default to false)
+     - parameter longPoll: (query) Enable longPolling endpoint (optional)
 
      - returns: RequestBuilder<ImportScriptStatusResponse> 
      */
-    open class func getScriptsUploadStatusWithRequestBuilder(uploadId: String, longPoll: Bool? = nil) -> RequestBuilder<ImportScriptStatusResponse> {
+    open class func getScriptsUploadStatusWithRequestBuilder(uploadId: String, longPoll: Bool? = nil) -> RequestBuilder<ImportScriptStatusResponse> {        
         var path = "/api/v2/scripts/uploads/{uploadId}/status"
         let uploadIdPreEscape = "\(uploadId)"
         let uploadIdPostEscape = uploadIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{uploadId}", with: uploadIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "longPoll": longPoll
-            
         ])
 
         let requestBuilder: RequestBuilder<ImportScriptStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1385,11 +1373,7 @@ open class ScriptsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Export a script via download service.
      
      - parameter scriptId: (path) Script ID 
@@ -1415,33 +1399,28 @@ open class ScriptsAPI {
     }
 
     /**
-     
      Export a script via download service.
-     
      - POST /api/v2/scripts/{scriptId}/export
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "url" : "aeiou"
-}}]
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter scriptId: (path) Script ID 
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<ExportScriptResponse> 
      */
-    open class func postScriptExportWithRequestBuilder(scriptId: String, body: ExportScriptRequest? = nil) -> RequestBuilder<ExportScriptResponse> {
+    open class func postScriptExportWithRequestBuilder(scriptId: String, body: ExportScriptRequest? = nil) -> RequestBuilder<ExportScriptResponse> {        
         var path = "/api/v2/scripts/{scriptId}/export"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scriptId}", with: scriptIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExportScriptResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

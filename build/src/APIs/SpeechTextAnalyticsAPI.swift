@@ -12,15 +12,11 @@ import Foundation
 open class SpeechTextAnalyticsAPI {
     
     
-    
-    
-    
     /**
-     
      Delete a Speech & Text Analytics program by id
      
      - parameter programId: (path) The id of the program 
-     - parameter forceDelete: (query) Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)
+     - parameter forceDelete: (query) Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteSpeechandtextanalyticsProgram(programId: String, forceDelete: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -35,38 +31,28 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Delete a Speech & Text Analytics program by id
-     
      - DELETE /api/v2/speechandtextanalytics/programs/{programId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      
      - parameter programId: (path) The id of the program 
-     - parameter forceDelete: (query) Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)
+     - parameter forceDelete: (query) Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteSpeechandtextanalyticsProgramWithRequestBuilder(programId: String, forceDelete: Bool? = nil) -> RequestBuilder<Void> {
+    open class func deleteSpeechandtextanalyticsProgramWithRequestBuilder(programId: String, forceDelete: Bool? = nil) -> RequestBuilder<Void> {        
         var path = "/api/v2/speechandtextanalytics/programs/{programId}"
         let programIdPreEscape = "\(programId)"
         let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceDelete": forceDelete
-            
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -74,9 +60,7 @@ open class SpeechTextAnalyticsAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete All Speech & Text Analytics SentimentFeedback
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -93,26 +77,18 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Delete All Speech & Text Analytics SentimentFeedback
-     
      - DELETE /api/v2/speechandtextanalytics/sentimentfeedback
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder() -> RequestBuilder<Void> {
+    open class func deleteSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder() -> RequestBuilder<Void> {        
         let path = "/api/v2/speechandtextanalytics/sentimentfeedback"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -122,10 +98,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a Speech & Text Analytics SentimentFeedback by Id
      
      - parameter sentimentFeedbackId: (path) The Id of the SentimentFeedback 
@@ -143,11 +116,8 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Delete a Speech & Text Analytics SentimentFeedback by Id
-     
      - DELETE /api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -156,18 +126,13 @@ open class SpeechTextAnalyticsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdWithRequestBuilder(sentimentFeedbackId: String) -> RequestBuilder<Void> {
+    open class func deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdWithRequestBuilder(sentimentFeedbackId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}"
         let sentimentFeedbackIdPreEscape = "\(sentimentFeedbackId)"
         let sentimentFeedbackIdPostEscape = sentimentFeedbackIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{sentimentFeedbackId}", with: sentimentFeedbackIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -177,10 +142,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a Speech & Text Analytics topic by id
      
      - parameter topicId: (path) The id of the topic 
@@ -198,11 +160,8 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Delete a Speech & Text Analytics topic by id
-     
      - DELETE /api/v2/speechandtextanalytics/topics/{topicId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -211,18 +170,13 @@ open class SpeechTextAnalyticsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteSpeechandtextanalyticsTopicWithRequestBuilder(topicId: String) -> RequestBuilder<Void> {
+    open class func deleteSpeechandtextanalyticsTopicWithRequestBuilder(topicId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/speechandtextanalytics/topics/{topicId}"
         let topicIdPreEscape = "\(topicId)"
         let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -232,10 +186,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get Speech and Text Analytics for a specific conversation
      
      - parameter conversationId: (path) Conversation Id 
@@ -260,50 +211,30 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get Speech and Text Analytics for a specific conversation
-     
      - GET /api/v2/speechandtextanalytics/conversations/{conversationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "sentimentScore" : 1.3579000000000001069366817318950779736042022705078125,
-  "participantMetrics" : {
-    "agentDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
-    "overtalkDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
-    "ivrDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
-    "otherDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
-    "acdDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
-    "overtalkCount" : 123,
-    "customerDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
-    "silenceDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125
-  },
-  "sentimentTrend" : 1.3579000000000001069366817318950779736042022705078125,
-  "sentimentTrendClass" : "aeiou",
-  "conversation" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "sentimentScore" : 0.8008281904610115,
+  "participantMetrics" : "{}",
+  "sentimentTrend" : 6.027456183070403,
+  "sentimentTrendClass" : "NotCalculated",
+  "conversation" : "{}"
+}, statusCode=200}]
      
      - parameter conversationId: (path) Conversation Id 
 
      - returns: RequestBuilder<ConversationMetrics> 
      */
-    open class func getSpeechandtextanalyticsConversationWithRequestBuilder(conversationId: String) -> RequestBuilder<ConversationMetrics> {
+    open class func getSpeechandtextanalyticsConversationWithRequestBuilder(conversationId: String) -> RequestBuilder<ConversationMetrics> {        
         var path = "/api/v2/speechandtextanalytics/conversations/{conversationId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -314,11 +245,7 @@ open class SpeechTextAnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
      
      - parameter conversationId: (path) Conversation ID 
@@ -344,24 +271,21 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
-     
      - GET /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "url" : "aeiou"
-}}]
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
      - parameter communicationId: (path) Communication ID 
 
      - returns: RequestBuilder<TranscriptUrl> 
      */
-    open class func getSpeechandtextanalyticsConversationCommunicationTranscripturlWithRequestBuilder(conversationId: String, communicationId: String) -> RequestBuilder<TranscriptUrl> {
+    open class func getSpeechandtextanalyticsConversationCommunicationTranscripturlWithRequestBuilder(conversationId: String, communicationId: String) -> RequestBuilder<TranscriptUrl> {        
         var path = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -370,12 +294,7 @@ open class SpeechTextAnalyticsAPI {
         let communicationIdPostEscape = communicationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{communicationId}", with: communicationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -385,10 +304,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Speech & Text Analytics program by id
      
      - parameter programId: (path) The id of the program 
@@ -413,51 +329,50 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get a Speech & Text Analytics program by id
-     
      - GET /api/v2/speechandtextanalytics/programs/{programId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "publishedBy" : "",
-  "topics" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  } ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "modifiedBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "publishedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "topics" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "published" : true,
-  "tags" : [ "aeiou" ]
-}}]
+  "tags" : [ "tags", "tags" ]
+}, statusCode=200}]
      
      - parameter programId: (path) The id of the program 
 
      - returns: RequestBuilder<Program> 
      */
-    open class func getSpeechandtextanalyticsProgramWithRequestBuilder(programId: String) -> RequestBuilder<Program> {
+    open class func getSpeechandtextanalyticsProgramWithRequestBuilder(programId: String) -> RequestBuilder<Program> {        
         var path = "/api/v2/speechandtextanalytics/programs/{programId}"
         let programIdPreEscape = "\(programId)"
         let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -467,10 +382,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get Speech & Text Analytics program mappings to queues and flows by id
      
      - parameter programId: (path) The id of the program 
@@ -495,45 +407,49 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get Speech & Text Analytics program mappings to queues and flows by id
-     
      - GET /api/v2/speechandtextanalytics/programs/{programId}/mappings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "flows" : [ "" ],
-  "queues" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+  "flows" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "modifiedBy" : "",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "queues" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "program" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   }
-}}]
+}, statusCode=200}]
      
      - parameter programId: (path) The id of the program 
 
      - returns: RequestBuilder<ProgramMappings> 
      */
-    open class func getSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: String) -> RequestBuilder<ProgramMappings> {
+    open class func getSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: String) -> RequestBuilder<ProgramMappings> {        
         var path = "/api/v2/speechandtextanalytics/programs/{programId}/mappings"
         let programIdPreEscape = "\(programId)"
         let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -544,15 +460,11 @@ open class SpeechTextAnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the list of Speech & Text Analytics programs
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter pageSize: (query) The page size for the listing (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getSpeechandtextanalyticsPrograms(nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ProgramsEntityListing?,_ error: Error?) -> Void)) {
@@ -574,57 +486,59 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get the list of Speech & Text Analytics programs
-     
      - GET /api/v2/speechandtextanalytics/programs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "pageCount" : 123,
+  "pageCount" : 1,
   "entities" : [ {
-    "topicsCount" : 123,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "topicsCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
     "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
     "published" : true,
-    "tags" : [ "aeiou" ]
+    "tags" : [ "tags", "tags" ]
+  }, {
+    "topicsCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "modifiedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "published" : true,
+    "tags" : [ "tags", "tags" ]
   } ],
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "nextUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter pageSize: (query) The page size for the listing (optional)
 
      - returns: RequestBuilder<ProgramsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ProgramsEntityListing> {
+    open class func getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ProgramsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/programs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "nextPage": nextPage, 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<ProgramsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -633,10 +547,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Speech & Text Analytics general program job by id
      
      - parameter jobId: (path) The id of the publish programs job 
@@ -661,42 +572,34 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get a Speech & Text Analytics general program job by id
-     
      - GET /api/v2/speechandtextanalytics/programs/general/jobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
      
      - parameter jobId: (path) The id of the publish programs job 
 
      - returns: RequestBuilder<GeneralProgramJob> 
      */
-    open class func getSpeechandtextanalyticsProgramsGeneralJobWithRequestBuilder(jobId: String) -> RequestBuilder<GeneralProgramJob> {
+    open class func getSpeechandtextanalyticsProgramsGeneralJobWithRequestBuilder(jobId: String) -> RequestBuilder<GeneralProgramJob> {        
         var path = "/api/v2/speechandtextanalytics/programs/general/jobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -707,15 +610,11 @@ open class SpeechTextAnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the list of Speech & Text Analytics programs mappings to queues and flows
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter pageSize: (query) The page size for the listing (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getSpeechandtextanalyticsProgramsMappings(nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ProgramsMappingsEntityListing?,_ error: Error?) -> Void)) {
@@ -737,57 +636,83 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get the list of Speech & Text Analytics programs mappings to queues and flows
-     
      - GET /api/v2/speechandtextanalytics/programs/mappings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "pageCount" : 123,
+  "pageCount" : 6,
   "entities" : [ {
-    "flows" : [ "" ],
-    "queues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+    "flows" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "queues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "modifiedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "program" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }
+  }, {
+    "flows" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "queues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "modifiedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "program" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     }
   } ],
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "nextUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter pageSize: (query) The page size for the listing (optional)
 
      - returns: RequestBuilder<ProgramsMappingsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsProgramsMappingsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ProgramsMappingsEntityListing> {
+    open class func getSpeechandtextanalyticsProgramsMappingsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ProgramsMappingsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/programs/mappings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "nextPage": nextPage, 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<ProgramsMappingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -796,10 +721,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Speech & Text Analytics publish programs job by id
      
      - parameter jobId: (path) The id of the publish programs job 
@@ -824,47 +746,43 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get a Speech & Text Analytics publish programs job by id
-     
      - GET /api/v2/speechandtextanalytics/programs/publishjobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running",
   "programs" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter jobId: (path) The id of the publish programs job 
 
      - returns: RequestBuilder<ProgramJob> 
      */
-    open class func getSpeechandtextanalyticsProgramsPublishjobWithRequestBuilder(jobId: String) -> RequestBuilder<ProgramJob> {
+    open class func getSpeechandtextanalyticsProgramsPublishjobWithRequestBuilder(jobId: String) -> RequestBuilder<ProgramJob> {        
         var path = "/api/v2/speechandtextanalytics/programs/publishjobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -875,15 +793,11 @@ open class SpeechTextAnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get the list of Speech & Text Analytics unpublished programs
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter pageSize: (query) The page size for the listing (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getSpeechandtextanalyticsProgramsUnpublished(nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: UnpublishedProgramsEntityListing?,_ error: Error?) -> Void)) {
@@ -905,63 +819,85 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get the list of Speech & Text Analytics unpublished programs
-     
      - GET /api/v2/speechandtextanalytics/programs/unpublished
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "pageCount" : 123,
+  "pageCount" : 6,
   "entities" : [ {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
-    "publishedBy" : "",
-    "topics" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "publishedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
+    "topics" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "modifiedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
     "published" : true,
-    "tags" : [ "aeiou" ]
+    "tags" : [ "tags", "tags" ]
+  }, {
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "publishedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
+    "topics" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "modifiedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "published" : true,
+    "tags" : [ "tags", "tags" ]
   } ],
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "nextUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter pageSize: (query) The page size for the listing (optional)
 
      - returns: RequestBuilder<UnpublishedProgramsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsProgramsUnpublishedWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<UnpublishedProgramsEntityListing> {
+    open class func getSpeechandtextanalyticsProgramsUnpublishedWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<UnpublishedProgramsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/programs/unpublished"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "nextPage": nextPage, 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<UnpublishedProgramsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -969,9 +905,7 @@ open class SpeechTextAnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get the list of Speech & Text Analytics sentiment supported dialects
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -995,29 +929,21 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get the list of Speech & Text Analytics sentiment supported dialects
-     
      - GET /api/v2/speechandtextanalytics/sentiment/dialects
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "entities" : [ "{}" ]
-}}]
+  "entities" : [ "{}", "{}" ]
+}, statusCode=200}]
 
      - returns: RequestBuilder<EntityListing> 
      */
-    open class func getSpeechandtextanalyticsSentimentDialectsWithRequestBuilder() -> RequestBuilder<EntityListing> {
+    open class func getSpeechandtextanalyticsSentimentDialectsWithRequestBuilder() -> RequestBuilder<EntityListing> {        
         let path = "/api/v2/speechandtextanalytics/sentiment/dialects"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1027,10 +953,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get the list of Speech & Text Analytics SentimentFeedback
      
      - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
@@ -1055,47 +978,41 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get the list of Speech & Text Analytics SentimentFeedback
-     
      - GET /api/v2/speechandtextanalytics/sentimentfeedback
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "dialect" : "en-US",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "phrase" : "aeiou",
-    "createdBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "id" : "aeiou",
-    "feedbackValue" : "aeiou"
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "phrase" : "phrase",
+    "createdBy" : "{}",
+    "id" : "id",
+    "feedbackValue" : "Neutral"
+  }, {
+    "dialect" : "en-US",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "phrase" : "phrase",
+    "createdBy" : "{}",
+    "id" : "id",
+    "feedbackValue" : "Neutral"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
 
      - returns: RequestBuilder<SentimentFeedbackEntityListing> 
      */
-    open class func getSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder(dialect: String? = nil) -> RequestBuilder<SentimentFeedbackEntityListing> {
+    open class func getSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder(dialect: String? = nil) -> RequestBuilder<SentimentFeedbackEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/sentimentfeedback"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "dialect": dialect
-            
         ])
 
         let requestBuilder: RequestBuilder<SentimentFeedbackEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1103,9 +1020,7 @@ open class SpeechTextAnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get Speech And Text Analytics Settings
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1129,33 +1044,22 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get Speech And Text Analytics Settings
-     
      - GET /api/v2/speechandtextanalytics/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultProgram" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "expectedDialects" : [ "aeiou" ]
-}}]
+  "defaultProgram" : "{}",
+  "expectedDialects" : [ "expectedDialects", "expectedDialects" ]
+}, statusCode=200}]
 
      - returns: RequestBuilder<SpeechTextAnalyticsSettingsResponse> 
      */
-    open class func getSpeechandtextanalyticsSettingsWithRequestBuilder() -> RequestBuilder<SpeechTextAnalyticsSettingsResponse> {
+    open class func getSpeechandtextanalyticsSettingsWithRequestBuilder() -> RequestBuilder<SpeechTextAnalyticsSettingsResponse> {        
         let path = "/api/v2/speechandtextanalytics/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1165,10 +1069,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Speech & Text Analytics topic by id
      
      - parameter topicId: (path) The id of the topic 
@@ -1193,59 +1094,62 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get a Speech & Text Analytics topic by id
-     
      - GET /api/v2/speechandtextanalytics/topics/{topicId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedBy" : "",
-  "dialect" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "published" : true,
-  "tags" : [ "aeiou" ],
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "strictness" : "aeiou",
-  "modifiedBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+  "publishedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "id" : "aeiou",
+  "dialect" : "dialect",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "published" : true,
+  "tags" : [ "tags", "tags" ],
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "strictness" : "1",
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "id" : "id",
   "programs" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
   "phrases" : [ {
-    "sentiment" : "aeiou",
-    "strictness" : "aeiou",
-    "text" : "aeiou"
+    "sentiment" : "Unspecified",
+    "strictness" : "1",
+    "text" : "text"
+  }, {
+    "sentiment" : "Unspecified",
+    "strictness" : "1",
+    "text" : "text"
   } ],
-  "participants" : "aeiou"
-}}]
+  "participants" : "External"
+}, statusCode=200}]
      
      - parameter topicId: (path) The id of the topic 
 
      - returns: RequestBuilder<Topic> 
      */
-    open class func getSpeechandtextanalyticsTopicWithRequestBuilder(topicId: String) -> RequestBuilder<Topic> {
+    open class func getSpeechandtextanalyticsTopicWithRequestBuilder(topicId: String) -> RequestBuilder<Topic> {        
         var path = "/api/v2/speechandtextanalytics/topics/{topicId}"
         let topicIdPreEscape = "\(topicId)"
         let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1254,9 +1158,6 @@ open class SpeechTextAnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
     
     
     
@@ -1269,14 +1170,10 @@ open class SpeechTextAnalyticsAPI {
     
     
     
-    
-    
-    
     public enum SortBy_getSpeechandtextanalyticsTopics: String { 
         case name = "name"
     }
 
-    
     
     
     public enum SortOrder_getSpeechandtextanalyticsTopics: String { 
@@ -1285,13 +1182,11 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
     /**
-     
      Get the list of Speech & Text Analytics topics
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter pageSize: (query) The page size for the listing (optional)
      - parameter state: (query) Topic state. Defaults to latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
      - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
@@ -1318,42 +1213,56 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get the list of Speech & Text Analytics topics
-     
      - GET /api/v2/speechandtextanalytics/topics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123,
-  "pageCount" : 123,
+  "total" : 5,
+  "pageCount" : 5,
   "entities" : [ {
-    "dialect" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "dialect" : "dialect",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "published" : true,
-    "tags" : [ "aeiou" ],
-    "phrasesCount" : 123,
-    "name" : "aeiou",
-    "programsCount" : 123,
-    "strictness" : "aeiou",
+    "tags" : [ "tags", "tags" ],
+    "phrasesCount" : 6,
+    "name" : "name",
+    "programsCount" : 0,
+    "strictness" : "1",
     "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     },
-    "id" : "aeiou",
-    "participants" : "aeiou"
+    "id" : "id",
+    "participants" : "External"
+  }, {
+    "dialect" : "dialect",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "published" : true,
+    "tags" : [ "tags", "tags" ],
+    "phrasesCount" : 6,
+    "name" : "name",
+    "programsCount" : 0,
+    "strictness" : "1",
+    "modifiedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
+    "id" : "id",
+    "participants" : "External"
   } ],
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "nextUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 1,
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter pageSize: (query) The page size for the listing (optional)
      - parameter state: (query) Topic state. Defaults to latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
      - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
@@ -1362,33 +1271,20 @@ open class SpeechTextAnalyticsAPI {
 
      - returns: RequestBuilder<TopicsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsTopics? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsTopics? = nil) -> RequestBuilder<TopicsEntityListing> {
+    open class func getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsTopics? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsTopics? = nil) -> RequestBuilder<TopicsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/topics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "nextPage": nextPage, 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "state": state?.rawValue, 
-            
             "name": name, 
-            
             "ids": ids, 
-            
             "sortBy": sortBy?.rawValue, 
-            
             "sortOrder": sortOrder?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<TopicsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1396,9 +1292,7 @@ open class SpeechTextAnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get list of supported Speech & Text Analytics topics dialects
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1422,29 +1316,21 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get list of supported Speech & Text Analytics topics dialects
-     
      - GET /api/v2/speechandtextanalytics/topics/dialects
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "entities" : [ "{}" ]
-}}]
+  "entities" : [ "{}", "{}" ]
+}, statusCode=200}]
 
      - returns: RequestBuilder<EntityListing> 
      */
-    open class func getSpeechandtextanalyticsTopicsDialectsWithRequestBuilder() -> RequestBuilder<EntityListing> {
+    open class func getSpeechandtextanalyticsTopicsDialectsWithRequestBuilder() -> RequestBuilder<EntityListing> {        
         let path = "/api/v2/speechandtextanalytics/topics/dialects"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1453,7 +1339,6 @@ open class SpeechTextAnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum Dialect_getSpeechandtextanalyticsTopicsGeneral: String { 
         case enUs = "en-US"
@@ -1473,9 +1358,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
     /**
-     
      Get the Speech & Text Analytics general topics for a given dialect
      
      - parameter dialect: (query) The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
@@ -1500,39 +1383,31 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get the Speech & Text Analytics general topics for a given dialect
-     
      - GET /api/v2/speechandtextanalytics/topics/general
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "name" : "aeiou"
+    "name" : "name"
+  }, {
+    "name" : "name"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter dialect: (query) The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
 
      - returns: RequestBuilder<GeneralTopicsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsTopicsGeneralWithRequestBuilder(dialect: Dialect_getSpeechandtextanalyticsTopicsGeneral? = nil) -> RequestBuilder<GeneralTopicsEntityListing> {
+    open class func getSpeechandtextanalyticsTopicsGeneralWithRequestBuilder(dialect: Dialect_getSpeechandtextanalyticsTopicsGeneral? = nil) -> RequestBuilder<GeneralTopicsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/topics/general"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "dialect": dialect?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<GeneralTopicsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1541,10 +1416,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a Speech & Text Analytics publish topics job by id
      
      - parameter jobId: (path) The id of the publish topics job 
@@ -1569,47 +1441,43 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Get a Speech & Text Analytics publish topics job by id
-     
      - GET /api/v2/speechandtextanalytics/topics/publishjobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
   "topics" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
      
      - parameter jobId: (path) The id of the publish topics job 
 
      - returns: RequestBuilder<TopicJob> 
      */
-    open class func getSpeechandtextanalyticsTopicsPublishjobWithRequestBuilder(jobId: String) -> RequestBuilder<TopicJob> {
+    open class func getSpeechandtextanalyticsTopicsPublishjobWithRequestBuilder(jobId: String) -> RequestBuilder<TopicJob> {        
         var path = "/api/v2/speechandtextanalytics/topics/publishjobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1619,10 +1487,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Patch Speech And Text Analytics Settings
      
      - parameter body: (body) Speech And Text Analytics Settings 
@@ -1647,33 +1512,25 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Patch Speech And Text Analytics Settings
-     
      - PATCH /api/v2/speechandtextanalytics/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultProgram" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "expectedDialects" : [ "aeiou" ]
-}}]
+  "defaultProgram" : "{}",
+  "expectedDialects" : [ "expectedDialects", "expectedDialects" ]
+}, statusCode=200}]
      
      - parameter body: (body) Speech And Text Analytics Settings 
 
      - returns: RequestBuilder<SpeechTextAnalyticsSettingsResponse> 
      */
-    open class func patchSpeechandtextanalyticsSettingsWithRequestBuilder(body: SpeechTextAnalyticsSettingsRequest) -> RequestBuilder<SpeechTextAnalyticsSettingsResponse> {
+    open class func patchSpeechandtextanalyticsSettingsWithRequestBuilder(body: SpeechTextAnalyticsSettingsRequest) -> RequestBuilder<SpeechTextAnalyticsSettingsResponse> {        
         let path = "/api/v2/speechandtextanalytics/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SpeechTextAnalyticsSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1682,10 +1539,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Create new Speech & Text Analytics program
      
      - parameter body: (body) The program to create 
@@ -1710,46 +1564,48 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Create new Speech & Text Analytics program
-     
      - POST /api/v2/speechandtextanalytics/programs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "publishedBy" : "",
-  "topics" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  } ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "modifiedBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "publishedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "topics" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "published" : true,
-  "tags" : [ "aeiou" ]
-}}]
+  "tags" : [ "tags", "tags" ]
+}, statusCode=200}]
      
      - parameter body: (body) The program to create 
 
      - returns: RequestBuilder<Program> 
      */
-    open class func postSpeechandtextanalyticsProgramsWithRequestBuilder(body: ProgramRequest) -> RequestBuilder<Program> {
+    open class func postSpeechandtextanalyticsProgramsWithRequestBuilder(body: ProgramRequest) -> RequestBuilder<Program> {        
         let path = "/api/v2/speechandtextanalytics/programs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Program>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1758,10 +1614,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Create new Speech & Text Analytics general program job
      
      - parameter body: (body) The general programs job to create 
@@ -1786,37 +1639,32 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Create new Speech & Text Analytics general program job
-     
      - POST /api/v2/speechandtextanalytics/programs/general/jobs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
      
      - parameter body: (body) The general programs job to create 
 
      - returns: RequestBuilder<GeneralProgramJob> 
      */
-    open class func postSpeechandtextanalyticsProgramsGeneralJobsWithRequestBuilder(body: GeneralProgramJobRequest) -> RequestBuilder<GeneralProgramJob> {
+    open class func postSpeechandtextanalyticsProgramsGeneralJobsWithRequestBuilder(body: GeneralProgramJobRequest) -> RequestBuilder<GeneralProgramJob> {        
         let path = "/api/v2/speechandtextanalytics/programs/general/jobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GeneralProgramJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1825,10 +1673,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Create new Speech & Text Analytics publish programs job
      
      - parameter body: (body) The publish programs job to create 
@@ -1853,42 +1698,41 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Create new Speech & Text Analytics publish programs job
-     
      - POST /api/v2/speechandtextanalytics/programs/publishjobs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running",
   "programs" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) The publish programs job to create 
 
      - returns: RequestBuilder<ProgramJob> 
      */
-    open class func postSpeechandtextanalyticsProgramsPublishjobsWithRequestBuilder(body: ProgramJobRequest) -> RequestBuilder<ProgramJob> {
+    open class func postSpeechandtextanalyticsProgramsPublishjobsWithRequestBuilder(body: ProgramJobRequest) -> RequestBuilder<ProgramJob> {        
         let path = "/api/v2/speechandtextanalytics/programs/publishjobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ProgramJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1897,10 +1741,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a Speech & Text Analytics SentimentFeedback
      
      - parameter body: (body) The SentimentFeedback to create 
@@ -1925,37 +1766,29 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Create a Speech & Text Analytics SentimentFeedback
-     
      - POST /api/v2/speechandtextanalytics/sentimentfeedback
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dialect" : "en-US",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "phrase" : "aeiou",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "feedbackValue" : "aeiou"
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "phrase" : "phrase",
+  "createdBy" : "{}",
+  "id" : "id",
+  "feedbackValue" : "Neutral"
+}, statusCode=201}]
      
      - parameter body: (body) The SentimentFeedback to create 
 
      - returns: RequestBuilder<SentimentFeedback> 
      */
-    open class func postSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder(body: SentimentFeedback) -> RequestBuilder<SentimentFeedback> {
+    open class func postSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder(body: SentimentFeedback) -> RequestBuilder<SentimentFeedback> {        
         let path = "/api/v2/speechandtextanalytics/sentimentfeedback"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SentimentFeedback>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1964,10 +1797,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Create new Speech & Text Analytics topic
      
      - parameter body: (body) The topic to create 
@@ -1992,54 +1822,60 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Create new Speech & Text Analytics topic
-     
      - POST /api/v2/speechandtextanalytics/topics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedBy" : "",
-  "dialect" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "published" : true,
-  "tags" : [ "aeiou" ],
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "strictness" : "aeiou",
-  "modifiedBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+  "publishedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "id" : "aeiou",
+  "dialect" : "dialect",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "published" : true,
+  "tags" : [ "tags", "tags" ],
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "strictness" : "1",
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "id" : "id",
   "programs" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
   "phrases" : [ {
-    "sentiment" : "aeiou",
-    "strictness" : "aeiou",
-    "text" : "aeiou"
+    "sentiment" : "Unspecified",
+    "strictness" : "1",
+    "text" : "text"
+  }, {
+    "sentiment" : "Unspecified",
+    "strictness" : "1",
+    "text" : "text"
   } ],
-  "participants" : "aeiou"
-}}]
+  "participants" : "External"
+}, statusCode=200}]
      
      - parameter body: (body) The topic to create 
 
      - returns: RequestBuilder<Topic> 
      */
-    open class func postSpeechandtextanalyticsTopicsWithRequestBuilder(body: TopicRequest) -> RequestBuilder<Topic> {
+    open class func postSpeechandtextanalyticsTopicsWithRequestBuilder(body: TopicRequest) -> RequestBuilder<Topic> {        
         let path = "/api/v2/speechandtextanalytics/topics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Topic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2048,10 +1884,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Create new Speech & Text Analytics publish topics job
      
      - parameter body: (body) The publish topics job to create 
@@ -2076,42 +1909,41 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Create new Speech & Text Analytics publish topics job
-     
      - POST /api/v2/speechandtextanalytics/topics/publishjobs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
   "topics" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "selfUri" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
      
      - parameter body: (body) The publish topics job to create 
 
      - returns: RequestBuilder<TopicJob> 
      */
-    open class func postSpeechandtextanalyticsTopicsPublishjobsWithRequestBuilder(body: TopicJobRequest) -> RequestBuilder<TopicJob> {
+    open class func postSpeechandtextanalyticsTopicsPublishjobsWithRequestBuilder(body: TopicJobRequest) -> RequestBuilder<TopicJob> {        
         let path = "/api/v2/speechandtextanalytics/topics/publishjobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TopicJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2120,10 +1952,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Search resources.
      
      - parameter body: (body) Search request options 
@@ -2148,35 +1977,30 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Search resources.
-     
      - POST /api/v2/speechandtextanalytics/transcripts/search
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "types" : [ "aeiou" ],
-  "pageNumber" : 123,
-  "pageSize" : 123,
-  "results" : { },
-  "aggregations" : ""
-}}]
+  "total" : 0,
+  "pageCount" : 6,
+  "types" : [ "types", "types" ],
+  "pageNumber" : 5,
+  "pageSize" : 1,
+  "results" : "{}",
+  "aggregations" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Search request options 
 
      - returns: RequestBuilder<JsonSearchResponse> 
      */
-    open class func postSpeechandtextanalyticsTranscriptsSearchWithRequestBuilder(body: TranscriptSearchRequest) -> RequestBuilder<JsonSearchResponse> {
+    open class func postSpeechandtextanalyticsTranscriptsSearchWithRequestBuilder(body: TranscriptSearchRequest) -> RequestBuilder<JsonSearchResponse> {        
         let path = "/api/v2/speechandtextanalytics/transcripts/search"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JsonSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2186,11 +2010,7 @@ open class SpeechTextAnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update existing Speech & Text Analytics program
      
      - parameter programId: (path) The id of the program 
@@ -2216,50 +2036,52 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Update existing Speech & Text Analytics program
-     
      - PUT /api/v2/speechandtextanalytics/programs/{programId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "publishedBy" : "",
-  "topics" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  } ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "modifiedBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "publishedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "topics" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "published" : true,
-  "tags" : [ "aeiou" ]
-}}]
+  "tags" : [ "tags", "tags" ]
+}, statusCode=200}]
      
      - parameter programId: (path) The id of the program 
      - parameter body: (body) The program to update 
 
      - returns: RequestBuilder<Program> 
      */
-    open class func putSpeechandtextanalyticsProgramWithRequestBuilder(programId: String, body: ProgramRequest) -> RequestBuilder<Program> {
+    open class func putSpeechandtextanalyticsProgramWithRequestBuilder(programId: String, body: ProgramRequest) -> RequestBuilder<Program> {        
         var path = "/api/v2/speechandtextanalytics/programs/{programId}"
         let programIdPreEscape = "\(programId)"
         let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Program>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2269,11 +2091,7 @@ open class SpeechTextAnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Set Speech & Text Analytics program mappings to queues and flows
      
      - parameter programId: (path) The id of the program 
@@ -2299,44 +2117,51 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Set Speech & Text Analytics program mappings to queues and flows
-     
      - PUT /api/v2/speechandtextanalytics/programs/{programId}/mappings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "flows" : [ "" ],
-  "queues" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+  "flows" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "modifiedBy" : "",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "queues" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "program" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   }
-}}]
+}, statusCode=200}]
      
      - parameter programId: (path) The id of the program 
      - parameter body: (body) The program to set mappings for 
 
      - returns: RequestBuilder<ProgramMappings> 
      */
-    open class func putSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: String, body: ProgramMappingsRequest) -> RequestBuilder<ProgramMappings> {
+    open class func putSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: String, body: ProgramMappingsRequest) -> RequestBuilder<ProgramMappings> {        
         var path = "/api/v2/speechandtextanalytics/programs/{programId}/mappings"
         let programIdPreEscape = "\(programId)"
         let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ProgramMappings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2345,10 +2170,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Update Speech And Text Analytics Settings
      
      - parameter body: (body) Speech And Text Analytics Settings 
@@ -2373,33 +2195,25 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Update Speech And Text Analytics Settings
-     
      - PUT /api/v2/speechandtextanalytics/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "defaultProgram" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "expectedDialects" : [ "aeiou" ]
-}}]
+  "defaultProgram" : "{}",
+  "expectedDialects" : [ "expectedDialects", "expectedDialects" ]
+}, statusCode=200}]
      
      - parameter body: (body) Speech And Text Analytics Settings 
 
      - returns: RequestBuilder<SpeechTextAnalyticsSettingsResponse> 
      */
-    open class func putSpeechandtextanalyticsSettingsWithRequestBuilder(body: SpeechTextAnalyticsSettingsRequest) -> RequestBuilder<SpeechTextAnalyticsSettingsResponse> {
+    open class func putSpeechandtextanalyticsSettingsWithRequestBuilder(body: SpeechTextAnalyticsSettingsRequest) -> RequestBuilder<SpeechTextAnalyticsSettingsResponse> {        
         let path = "/api/v2/speechandtextanalytics/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SpeechTextAnalyticsSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2409,11 +2223,7 @@ open class SpeechTextAnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update existing Speech & Text Analytics topic
      
      - parameter topicId: (path) The id of the topic 
@@ -2439,58 +2249,64 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     
      Update existing Speech & Text Analytics topic
-     
      - PUT /api/v2/speechandtextanalytics/topics/{topicId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "publishedBy" : "",
-  "dialect" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "published" : true,
-  "tags" : [ "aeiou" ],
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "strictness" : "aeiou",
-  "modifiedBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+  "publishedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   },
-  "id" : "aeiou",
+  "dialect" : "dialect",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "published" : true,
+  "tags" : [ "tags", "tags" ],
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "strictness" : "1",
+  "modifiedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "id" : "id",
   "programs" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
   "phrases" : [ {
-    "sentiment" : "aeiou",
-    "strictness" : "aeiou",
-    "text" : "aeiou"
+    "sentiment" : "Unspecified",
+    "strictness" : "1",
+    "text" : "text"
+  }, {
+    "sentiment" : "Unspecified",
+    "strictness" : "1",
+    "text" : "text"
   } ],
-  "participants" : "aeiou"
-}}]
+  "participants" : "External"
+}, statusCode=200}]
      
      - parameter topicId: (path) The id of the topic 
      - parameter body: (body) The topic to update 
 
      - returns: RequestBuilder<Topic> 
      */
-    open class func putSpeechandtextanalyticsTopicWithRequestBuilder(topicId: String, body: TopicRequest) -> RequestBuilder<Topic> {
+    open class func putSpeechandtextanalyticsTopicWithRequestBuilder(topicId: String, body: TopicRequest) -> RequestBuilder<Topic> {        
         var path = "/api/v2/speechandtextanalytics/topics/{topicId}"
         let topicIdPreEscape = "\(topicId)"
         let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Topic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -23,27 +23,16 @@ public class EvaluationQuestionGroup: Codable {
     public var visibilityCondition: VisibilityCondition?
 
     public init(_id: String?, name: String?, type: String?, defaultAnswersToHighest: Bool?, defaultAnswersToNA: Bool?, naEnabled: Bool?, weight: Float?, manualWeight: Bool?, questions: [EvaluationQuestion]?, visibilityCondition: VisibilityCondition?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.type = type
-        
         self.defaultAnswersToHighest = defaultAnswersToHighest
-        
         self.defaultAnswersToNA = defaultAnswersToNA
-        
         self.naEnabled = naEnabled
-        
         self.weight = weight
-        
         self.manualWeight = manualWeight
-        
         self.questions = questions
-        
         self.visibilityCondition = visibilityCondition
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

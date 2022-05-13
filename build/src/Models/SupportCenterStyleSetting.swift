@@ -17,11 +17,8 @@ public class SupportCenterStyleSetting: Codable {
     public var globalStyle: SupportCenterGlobalStyle?
 
     public init(heroStyle: SupportCenterHeroStyle?, globalStyle: SupportCenterGlobalStyle?) {
-        
         self.heroStyle = heroStyle
-        
         self.globalStyle = globalStyle
-        
     }
 
 

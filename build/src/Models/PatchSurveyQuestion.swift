@@ -38,17 +38,11 @@ public class PatchSurveyQuestion: Codable {
     public var isMandatory: Bool?
 
     public init(type: ModelType?, label: String?, customerProperty: CustomerProperty?, choices: [String]?, isMandatory: Bool?) {
-        
         self.type = type
-        
         self.label = label
-        
         self.customerProperty = customerProperty
-        
         self.choices = choices
-        
         self.isMandatory = isMandatory
-        
     }
 
 

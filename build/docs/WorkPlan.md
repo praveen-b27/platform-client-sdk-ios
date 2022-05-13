@@ -14,20 +14,20 @@ Work plan information
 | **valid** | **Bool** | Whether the work plan is valid or not | [optional] |
 | **constrainWeeklyPaidTime** | **Bool** | Whether the weekly paid time constraint is enabled for this work plan | [optional] |
 | **flexibleWeeklyPaidTime** | **Bool** | Whether the weekly paid time constraint is flexible for this work plan | [optional] |
-| **weeklyExactPaidMinutes** | **Int** | Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false | [optional] |
-| **weeklyMinimumPaidMinutes** | **Int** | Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true | [optional] |
-| **weeklyMaximumPaidMinutes** | **Int** | Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true | [optional] |
+| **weeklyExactPaidMinutes** | **Int** | Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false | [optional] |
+| **weeklyMinimumPaidMinutes** | **Int** | Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true | [optional] |
+| **weeklyMaximumPaidMinutes** | **Int** | Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true | [optional] |
 | **constrainPaidTimeGranularity** | **Bool** | Whether paid time granularity is constrained for this work plan | [optional] |
-| **paidTimeGranularityMinutes** | **Int** | Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true | [optional] |
+| **paidTimeGranularityMinutes** | **Int** | Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity &#x3D;&#x3D; true | [optional] |
 | **constrainMinimumTimeBetweenShifts** | **Bool** | Whether the minimum time between shifts constraint is enabled for this work plan | [optional] |
-| **minimumTimeBetweenShiftsMinutes** | **Int** | Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true | [optional] |
+| **minimumTimeBetweenShiftsMinutes** | **Int** | Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts &#x3D;&#x3D; true | [optional] |
 | **maximumDays** | **Int** | Maximum number days in a week allowed to be scheduled for this work plan | [optional] |
 | **minimumConsecutiveNonWorkingMinutesPerWeek** | **Int** | Minimum amount of consecutive non working minutes per week that agents who are assigned this work plan are allowed to have off | [optional] |
 | **constrainMaximumConsecutiveWorkingWeekends** | **Bool** | Whether to constrain the maximum consecutive working weekends | [optional] |
 | **maximumConsecutiveWorkingWeekends** | **Int** | The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work | [optional] |
 | **minimumWorkingDaysPerWeek** | **Int** | The minimum number of days that agents assigned to a work plan must work per week | [optional] |
 | **constrainMaximumConsecutiveWorkingDays** | **Bool** | Whether to constrain the maximum consecutive working days | [optional] |
-| **maximumConsecutiveWorkingDays** | **Int** | The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays == true | [optional] |
+| **maximumConsecutiveWorkingDays** | **Int** | The maximum number of consecutive days that agents assigned to this work plan are allowed to work. Used if constrainMaximumConsecutiveWorkingDays &#x3D;&#x3D; true | [optional] |
 | **minimumShiftStartDistanceMinutes** | **Int** | The time period in minutes for the duration between the start times of two consecutive working days | [optional] |
 | **minimumDaysOffPerPlanningPeriod** | **Int** | Minimum days off in the planning period | [optional] |
 | **maximumDaysOffPerPlanningPeriod** | **Int** | Maximum days off in the planning period | [optional] |

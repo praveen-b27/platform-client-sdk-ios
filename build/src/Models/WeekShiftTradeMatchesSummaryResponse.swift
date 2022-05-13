@@ -17,11 +17,8 @@ public class WeekShiftTradeMatchesSummaryResponse: Codable {
     public var count: Int?
 
     public init(weekDate: Date?, count: Int?) {
-        
         self.weekDate = weekDate
-        
         self.count = count
-        
     }
 
 

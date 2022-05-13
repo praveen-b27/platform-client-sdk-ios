@@ -21,15 +21,10 @@ public class CoachingSlotsResponse: Codable {
     public var wfmScheduleActivities: [WfmScheduleActivity]?
 
     public init(suggestedSlots: [CoachingSlot]?, attendeeSchedules: [UserAvailableTimes]?, facilitatorSchedules: [UserAvailableTimes]?, wfmScheduleActivities: [WfmScheduleActivity]?) {
-        
         self.suggestedSlots = suggestedSlots
-        
         self.attendeeSchedules = attendeeSchedules
-        
         self.facilitatorSchedules = facilitatorSchedules
-        
         self.wfmScheduleActivities = wfmScheduleActivities
-        
     }
 
 

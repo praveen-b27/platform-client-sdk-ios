@@ -40,31 +40,18 @@ public class OutboundSettings: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, maxCallsPerAgent: Int?, maxConfigurableCallsPerAgent: Int?, maxLineUtilization: Double?, abandonSeconds: Double?, complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?, automaticTimeZoneMapping: AutomaticTimeZoneMappingSettings?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.maxCallsPerAgent = maxCallsPerAgent
-        
         self.maxConfigurableCallsPerAgent = maxConfigurableCallsPerAgent
-        
         self.maxLineUtilization = maxLineUtilization
-        
         self.abandonSeconds = abandonSeconds
-        
         self.complianceAbandonRateDenominator = complianceAbandonRateDenominator
-        
         self.automaticTimeZoneMapping = automaticTimeZoneMapping
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

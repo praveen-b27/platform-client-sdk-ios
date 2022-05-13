@@ -24,17 +24,11 @@ public class BotVersionSummary: Codable {
     public var version: String?
 
     public init(name: String?, _id: String?, _description: String?, botCompositeTag: String?, version: String?) {
-        
         self.name = name
-        
         self._id = _id
-        
         self._description = _description
-        
         self.botCompositeTag = botCompositeTag
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

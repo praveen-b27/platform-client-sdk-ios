@@ -38,23 +38,14 @@ public class BuIntradayResponse: Codable {
     public var intradayDataGroupings: [BuIntradayDataGroup]?
 
     public init(startDate: Date?, endDate: Date?, intervalLengthMinutes: Int?, noDataReason: NoDataReason?, categories: [Categories]?, shortTermForecast: BuShortTermForecastReference?, schedule: BuScheduleReference?, intradayDataGroupings: [BuIntradayDataGroup]?) {
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.intervalLengthMinutes = intervalLengthMinutes
-        
         self.noDataReason = noDataReason
-        
         self.categories = categories
-        
         self.shortTermForecast = shortTermForecast
-        
         self.schedule = schedule
-        
         self.intradayDataGroupings = intradayDataGroupings
-        
     }
 
 

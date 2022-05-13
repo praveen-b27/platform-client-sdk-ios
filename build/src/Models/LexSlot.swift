@@ -21,15 +21,10 @@ public class LexSlot: Codable {
     public var priority: Int?
 
     public init(name: String?, _description: String?, type: String?, priority: Int?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.type = type
-        
         self.priority = priority
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

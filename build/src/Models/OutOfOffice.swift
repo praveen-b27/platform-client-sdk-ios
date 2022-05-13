@@ -25,23 +25,14 @@ public class OutOfOffice: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, user: User?, startDate: Date?, endDate: Date?, active: Bool?, indefinite: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.user = user
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.active = active
-        
         self.indefinite = indefinite
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

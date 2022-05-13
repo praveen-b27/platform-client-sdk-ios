@@ -59,7 +59,7 @@ public class ConversationEventTopicCall: Codable {
     public var recording: Bool?
     /** State of recording on this call. */
     public var recordingState: RecordingState?
-    /** True if this call is muted so that remote participants can&#39;t hear any audio from this end. */
+    /** True if this call is muted so that remote participants can't hear any audio from this end. */
     public var muted: Bool?
     /** True if this call is held and the person on this side hears hold music. */
     public var confined: Bool?
@@ -103,61 +103,33 @@ public class ConversationEventTopicCall: Codable {
     public var agentAssistantId: String?
 
     public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.recording = recording
-        
         self.recordingState = recordingState
-        
         self.muted = muted
-        
         self.confined = confined
-        
         self.held = held
-        
         self.errorInfo = errorInfo
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.direction = direction
-        
         self.documentId = documentId
-        
         self._self = _self
-        
         self.other = other
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.disconnectReasons = disconnectReasons
-        
         self.faxStatus = faxStatus
-        
         self.uuiData = uuiData
-        
         self.bargedTime = bargedTime
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
         self.agentAssistantId = agentAssistantId
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

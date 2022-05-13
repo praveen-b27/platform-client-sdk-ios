@@ -11,7 +11,7 @@ import Foundation
 
 public class CampaignStats: Codable {
 
-    /** Information regarding the campaign&#39;s connect rate */
+    /** Information regarding the campaign's connect rate */
     public var contactRate: ConnectRate?
     /** Number of available agents not currently being utilized */
     public var idleAgents: Int?
@@ -25,19 +25,12 @@ public class CampaignStats: Codable {
     public var scheduledCalls: Int?
 
     public init(contactRate: ConnectRate?, idleAgents: Int?, effectiveIdleAgents: Double?, adjustedCallsPerAgent: Double?, outstandingCalls: Int?, scheduledCalls: Int?) {
-        
         self.contactRate = contactRate
-        
         self.idleAgents = idleAgents
-        
         self.effectiveIdleAgents = effectiveIdleAgents
-        
         self.adjustedCallsPerAgent = adjustedCallsPerAgent
-        
         self.outstandingCalls = outstandingCalls
-        
         self.scheduledCalls = scheduledCalls
-        
     }
 
 

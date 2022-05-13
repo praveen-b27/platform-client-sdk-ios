@@ -11,10 +11,7 @@ import Foundation
 
 open class LicenseAPI {
     
-    
-    
     /**
-     
      Get PureCloud license definition.
      
      - parameter licenseId: (path) ID 
@@ -39,44 +36,39 @@ open class LicenseAPI {
     }
 
     /**
-     
      Get PureCloud license definition.
-     
      - GET /api/v2/license/definitions/{licenseId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "prerequisites" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
   "permissions" : {
-    "ids" : [ "aeiou" ]
+    "ids" : [ "ids", "ids" ]
   },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
-  "comprises" : [ "" ]
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "id" : "id",
+  "comprises" : [ null, null ]
+}, statusCode=200}]
      
      - parameter licenseId: (path) ID 
 
      - returns: RequestBuilder<LicenseDefinition> 
      */
-    open class func getLicenseDefinitionWithRequestBuilder(licenseId: String) -> RequestBuilder<LicenseDefinition> {
+    open class func getLicenseDefinitionWithRequestBuilder(licenseId: String) -> RequestBuilder<LicenseDefinition> {        
         var path = "/api/v2/license/definitions/{licenseId}"
         let licenseIdPreEscape = "\(licenseId)"
         let licenseIdPostEscape = licenseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{licenseId}", with: licenseIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -85,9 +77,7 @@ open class LicenseAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get all PureCloud license definitions available for the organization.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -111,39 +101,34 @@ open class LicenseAPI {
     }
 
     /**
-     
      Get all PureCloud license definitions available for the organization.
-     
      - GET /api/v2/license/definitions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
+     - examples: [{contentType=application/json, example={
   "prerequisites" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
   "permissions" : {
-    "ids" : [ "aeiou" ]
+    "ids" : [ "ids", "ids" ]
   },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
-  "comprises" : [ "" ]
-} ]}]
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "id" : "id",
+  "comprises" : [ null, null ]
+}, statusCode=200}]
 
      - returns: RequestBuilder<[LicenseDefinition]> 
      */
-    open class func getLicenseDefinitionsWithRequestBuilder() -> RequestBuilder<[LicenseDefinition]> {
+    open class func getLicenseDefinitionsWithRequestBuilder() -> RequestBuilder<[LicenseDefinition]> {        
         let path = "/api/v2/license/definitions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -153,10 +138,7 @@ open class LicenseAPI {
     }
 
     
-    
-    
     /**
-     
      Get PureCloud license feature toggle value.
      
      - parameter featureName: (path) featureName 
@@ -181,35 +163,27 @@ open class LicenseAPI {
     }
 
     /**
-     
      Get PureCloud license feature toggle value.
-     
      - GET /api/v2/license/toggles/{featureName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "featureName" : "aeiou",
+  "featureName" : "featureName",
   "enabled" : true
-}}]
+}, statusCode=200}]
      
      - parameter featureName: (path) featureName 
 
      - returns: RequestBuilder<LicenseOrgToggle> 
      */
-    open class func getLicenseToggleWithRequestBuilder(featureName: String) -> RequestBuilder<LicenseOrgToggle> {
+    open class func getLicenseToggleWithRequestBuilder(featureName: String) -> RequestBuilder<LicenseOrgToggle> {        
         var path = "/api/v2/license/toggles/{featureName}"
         let featureNamePreEscape = "\(featureName)"
         let featureNamePostEscape = featureNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{featureName}", with: featureNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -219,10 +193,7 @@ open class LicenseAPI {
     }
 
     
-    
-    
     /**
-     
      Get licenses for specified user.
      
      - parameter userId: (path) ID 
@@ -247,48 +218,58 @@ open class LicenseAPI {
     }
 
     /**
-     
      Get licenses for specified user.
-     
      - GET /api/v2/license/users/{userId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "licenses" : [ {
     "prerequisites" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
     "permissions" : {
-      "ids" : [ "aeiou" ]
+      "ids" : [ "ids", "ids" ]
     },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou",
-    "comprises" : [ "" ]
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "id" : "id",
+    "comprises" : [ null, null ]
+  }, {
+    "prerequisites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "permissions" : {
+      "ids" : [ "ids", "ids" ]
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "id" : "id",
+    "comprises" : [ null, null ]
   } ],
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter userId: (path) ID 
 
      - returns: RequestBuilder<LicenseUser> 
      */
-    open class func getLicenseUserWithRequestBuilder(userId: String) -> RequestBuilder<LicenseUser> {
+    open class func getLicenseUserWithRequestBuilder(userId: String) -> RequestBuilder<LicenseUser> {        
         var path = "/api/v2/license/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -299,15 +280,11 @@ open class LicenseAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a page of users and their licenses
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getLicenseUsers(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: UserLicensesEntityListing?,_ error: Error?) -> Void)) {
@@ -329,48 +306,42 @@ open class LicenseAPI {
     }
 
     /**
-     
      Get a page of users and their licenses
-     
      - GET /api/v2/license/users
      - Retrieve a page of users in an organization along with the licenses they possess.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "licenses" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "licenses" : [ "licenses", "licenses" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "licenses" : [ "licenses", "licenses" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "pageSize" : 123
-}}]
+  "pageSize" : 0
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<UserLicensesEntityListing> 
      */
-    open class func getLicenseUsersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<UserLicensesEntityListing> {
+    open class func getLicenseUsersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<UserLicensesEntityListing> {        
         let path = "/api/v2/license/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<UserLicensesEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -379,10 +350,7 @@ open class LicenseAPI {
     }
 
     
-    
-    
     /**
-     
      Get a list of licenses inferred based on a list of roleIds
      
      - parameter body: (body) The roleIds to use while inferring licenses (optional)
@@ -407,27 +375,22 @@ open class LicenseAPI {
     }
 
     /**
-     
      Get a list of licenses inferred based on a list of roleIds
-     
      - POST /api/v2/license/infer
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example="", statusCode=200}]
      
      - parameter body: (body) The roleIds to use while inferring licenses (optional)
 
      - returns: RequestBuilder<[String]> 
      */
-    open class func postLicenseInferWithRequestBuilder(body: [String]? = nil) -> RequestBuilder<[String]> {
+    open class func postLicenseInferWithRequestBuilder(body: [String]? = nil) -> RequestBuilder<[String]> {        
         let path = "/api/v2/license/infer"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[String]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -436,10 +399,7 @@ open class LicenseAPI {
     }
 
     
-    
-    
     /**
-     
      Update the organization's license assignments in a batch.
      
      - parameter body: (body) The license assignments to update. (optional)
@@ -464,31 +424,26 @@ open class LicenseAPI {
     }
 
     /**
-     
      Update the organization's license assignments in a batch.
-     
      - POST /api/v2/license/organization
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
-  "result" : "aeiou",
-  "licenseId" : "aeiou",
-  "userId" : "aeiou"
-} ]}]
+     - examples: [{contentType=application/json, example={
+  "result" : "result",
+  "licenseId" : "licenseId",
+  "userId" : "userId"
+}, statusCode=200}]
      
      - parameter body: (body) The license assignments to update. (optional)
 
      - returns: RequestBuilder<[LicenseUpdateStatus]> 
      */
-    open class func postLicenseOrganizationWithRequestBuilder(body: LicenseBatchAssignmentRequest? = nil) -> RequestBuilder<[LicenseUpdateStatus]> {
+    open class func postLicenseOrganizationWithRequestBuilder(body: LicenseBatchAssignmentRequest? = nil) -> RequestBuilder<[LicenseUpdateStatus]> {        
         let path = "/api/v2/license/organization"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[LicenseUpdateStatus]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -497,10 +452,7 @@ open class LicenseAPI {
     }
 
     
-    
-    
     /**
-     
      Switch PureCloud license feature toggle value.
      
      - parameter featureName: (path) featureName 
@@ -525,35 +477,27 @@ open class LicenseAPI {
     }
 
     /**
-     
      Switch PureCloud license feature toggle value.
-     
      - POST /api/v2/license/toggles/{featureName}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "featureName" : "aeiou",
+  "featureName" : "featureName",
   "enabled" : true
-}}]
+}, statusCode=200}]
      
      - parameter featureName: (path) featureName 
 
      - returns: RequestBuilder<LicenseOrgToggle> 
      */
-    open class func postLicenseToggleWithRequestBuilder(featureName: String) -> RequestBuilder<LicenseOrgToggle> {
+    open class func postLicenseToggleWithRequestBuilder(featureName: String) -> RequestBuilder<LicenseOrgToggle> {        
         var path = "/api/v2/license/toggles/{featureName}"
         let featureNamePreEscape = "\(featureName)"
         let featureNamePostEscape = featureNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{featureName}", with: featureNamePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -563,10 +507,7 @@ open class LicenseAPI {
     }
 
     
-    
-    
     /**
-     
      Fetch user licenses in a batch.
      
      - parameter body: (body) The user IDs to fetch. (optional)
@@ -591,29 +532,21 @@ open class LicenseAPI {
     }
 
     /**
-     
      Fetch user licenses in a batch.
-     
      - POST /api/v2/license/users
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "key" : "{}"
-}}]
      
      - parameter body: (body) The user IDs to fetch. (optional)
 
      - returns: RequestBuilder<[String:JSON]> 
      */
-    open class func postLicenseUsersWithRequestBuilder(body: [String]? = nil) -> RequestBuilder<[String:JSON]> {
+    open class func postLicenseUsersWithRequestBuilder(body: [String]? = nil) -> RequestBuilder<[String:JSON]> {        
         let path = "/api/v2/license/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[String:JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

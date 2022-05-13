@@ -18,11 +18,8 @@ public class AuthenticationSettings: Codable {
     public var integrationId: String?
 
     public init(enabled: Bool?, integrationId: String?) {
-        
         self.enabled = enabled
-        
         self.integrationId = integrationId
-        
     }
 
 

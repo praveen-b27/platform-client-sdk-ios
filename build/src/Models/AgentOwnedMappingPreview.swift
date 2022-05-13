@@ -19,25 +19,18 @@ public class AgentOwnedMappingPreview: Codable {
     public var userId: String?
     /** Whether the user exists */
     public var exists: Bool?
-    /** Whether the user is a member of the campaign&#39;s queue */
+    /** Whether the user is a member of the campaign's queue */
     public var isQueueMember: Bool?
     /** The number of contact records whose agent-owned column matches the raw value */
     public var recordCount: Int?
 
     public init(agentOwnedColumn: String?, email: String?, userId: String?, exists: Bool?, isQueueMember: Bool?, recordCount: Int?) {
-        
         self.agentOwnedColumn = agentOwnedColumn
-        
         self.email = email
-        
         self.userId = userId
-        
         self.exists = exists
-        
         self.isQueueMember = isQueueMember
-        
         self.recordCount = recordCount
-        
     }
 
 

@@ -15,9 +15,7 @@ public class SearchShiftTradesResponse: Codable {
     public var trades: [SearchShiftTradeResponse]?
 
     public init(trades: [SearchShiftTradeResponse]?) {
-        
         self.trades = trades
-        
     }
 
 

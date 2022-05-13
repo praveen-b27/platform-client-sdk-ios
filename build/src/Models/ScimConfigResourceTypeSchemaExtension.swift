@@ -8,21 +8,18 @@
 import Foundation
 
 
-/** Defines a SCIM resource type&#39;s schema extension. */
+/** Defines a SCIM resource type's schema extension. */
 
 public class ScimConfigResourceTypeSchemaExtension: Codable {
 
-    /** The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema. */
+    /** The URI of an extended schema, for example, \"urn:edu:2.0:Staff\". Must be equal to the \"id\" attribute of a schema. */
     public var schema: String?
     /** Indicates whether a schema extension is required. */
     public var _required: Bool?
 
     public init(schema: String?, _required: Bool?) {
-        
         self.schema = schema
-        
         self._required = _required
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -21,11 +21,8 @@ public class ContactColumnTimeZone: Codable {
     public var columnType: ColumnType?
 
     public init(timeZone: String?, columnType: ColumnType?) {
-        
         self.timeZone = timeZone
-        
         self.columnType = columnType
-        
     }
 
 

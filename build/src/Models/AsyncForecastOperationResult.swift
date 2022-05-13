@@ -27,15 +27,10 @@ public class AsyncForecastOperationResult: Codable {
     public var progress: Int?
 
     public init(status: Status?, operationId: String?, result: BuShortTermForecast?, progress: Int?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.result = result
-        
         self.progress = progress
-        
     }
 
 

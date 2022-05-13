@@ -49,27 +49,16 @@ public class EventLog: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, errorEntity: DomainEntityRef?, relatedEntity: DomainEntityRef?, timestamp: Date?, level: Level?, category: Category?, correlationId: String?, eventMessage: EventMessage?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.errorEntity = errorEntity
-        
         self.relatedEntity = relatedEntity
-        
         self.timestamp = timestamp
-        
         self.level = level
-        
         self.category = category
-        
         self.correlationId = correlationId
-        
         self.eventMessage = eventMessage
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -29,23 +29,14 @@ public class SipSearchResult: Codable {
     public var selfUri: String?
 
     public init(_id: String?, status: Int?, sid: String?, auth: String?, message: String?, data: [HomerRecord]?, count: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.status = status
-        
         self.sid = sid
-        
         self.auth = auth
-        
         self.message = message
-        
         self.data = data
-        
         self.count = count
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

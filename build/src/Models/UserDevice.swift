@@ -35,27 +35,16 @@ public class UserDevice: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, deviceToken: String?, notificationId: String?, make: String?, model: String?, acceptNotifications: Bool?, type: ModelType?, sessionHash: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.deviceToken = deviceToken
-        
         self.notificationId = notificationId
-        
         self.make = make
-        
         self.model = model
-        
         self.acceptNotifications = acceptNotifications
-        
         self.type = type
-        
         self.sessionHash = sessionHash
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

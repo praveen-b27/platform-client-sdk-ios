@@ -23,17 +23,11 @@ public class UserApp: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, integrationType: IntegrationType?, config: UserAppConfigurationInfo?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.integrationType = integrationType
-        
         self.config = config
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

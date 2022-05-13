@@ -15,11 +15,8 @@ public class DialerOutboundSettingsConfigChangeCallableWindow: Codable {
     public var unmapped: DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone?
 
     public init(mapped: DialerOutboundSettingsConfigChangeAtzmTimeSlot?, unmapped: DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone?) {
-        
         self.mapped = mapped
-        
         self.unmapped = unmapped
-        
     }
 
 

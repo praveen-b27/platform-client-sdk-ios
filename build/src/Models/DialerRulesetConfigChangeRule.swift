@@ -29,19 +29,12 @@ public class DialerRulesetConfigChangeRule: Codable {
     public var actions: [DialerRulesetConfigChangeAction]?
 
     public init(conditions: [DialerRulesetConfigChangeCondition]?, _id: String?, name: String?, order: Int?, category: Category?, actions: [DialerRulesetConfigChangeAction]?) {
-        
         self.conditions = conditions
-        
         self._id = _id
-        
         self.name = name
-        
         self.order = order
-        
         self.category = category
-        
         self.actions = actions
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

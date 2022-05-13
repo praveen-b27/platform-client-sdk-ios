@@ -19,19 +19,12 @@ public class ContactAddress: Codable {
     public var countryCode: String?
 
     public init(address1: String?, address2: String?, city: String?, state: String?, postalCode: String?, countryCode: String?) {
-        
         self.address1 = address1
-        
         self.address2 = address2
-        
         self.city = city
-        
         self.state = state
-        
         self.postalCode = postalCode
-        
         self.countryCode = countryCode
-        
     }
 
 

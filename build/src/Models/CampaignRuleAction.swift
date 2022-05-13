@@ -29,15 +29,10 @@ public class CampaignRuleAction: Codable {
     public var campaignRuleActionEntities: CampaignRuleActionEntities?
 
     public init(_id: String?, parameters: CampaignRuleParameters?, actionType: ActionType?, campaignRuleActionEntities: CampaignRuleActionEntities?) {
-        
         self._id = _id
-        
         self.parameters = parameters
-        
         self.actionType = actionType
-        
         self.campaignRuleActionEntities = campaignRuleActionEntities
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

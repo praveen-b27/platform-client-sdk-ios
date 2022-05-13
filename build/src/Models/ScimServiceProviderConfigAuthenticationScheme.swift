@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Defines an authentication scheme in the SCIM service provider&#39;s configuration. */
+/** Defines an authentication scheme in the SCIM service provider's configuration. */
 
 public class ScimServiceProviderConfigAuthenticationScheme: Codable {
 
@@ -23,9 +23,9 @@ public class ScimServiceProviderConfigAuthenticationScheme: Codable {
     public var name: String?
     /** The description of the authentication scheme. */
     public var _description: String?
-    /** The HTTP-addressable URL that points to the authentication scheme&#39;s specification. */
+    /** The HTTP-addressable URL that points to the authentication scheme's specification. */
     public var specUri: String?
-    /** The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation. */
+    /** The HTTP-addressable URL that points to the authentication scheme's usage documentation. */
     public var documentationUri: String?
     /** The type of authentication scheme. */
     public var type: ModelType?
@@ -33,19 +33,12 @@ public class ScimServiceProviderConfigAuthenticationScheme: Codable {
     public var primary: Bool?
 
     public init(name: String?, _description: String?, specUri: String?, documentationUri: String?, type: ModelType?, primary: Bool?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.specUri = specUri
-        
         self.documentationUri = documentationUri
-        
         self.type = type
-        
         self.primary = primary
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

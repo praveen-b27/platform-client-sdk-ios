@@ -17,11 +17,8 @@ public class Ticker: Codable {
     public var exchange: String?
 
     public init(symbol: String?, exchange: String?) {
-        
         self.symbol = symbol
-        
         self.exchange = exchange
-        
     }
 
 

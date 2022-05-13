@@ -19,13 +19,9 @@ public class SearchShiftTradeResponse: Codable {
     public var preview: ShiftTradePreviewResponse?
 
     public init(trade: ShiftTradeResponse?, matchingReceivingShiftIds: [String]?, preview: ShiftTradePreviewResponse?) {
-        
         self.trade = trade
-        
         self.matchingReceivingShiftIds = matchingReceivingShiftIds
-        
         self.preview = preview
-        
     }
 
 

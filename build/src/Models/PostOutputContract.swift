@@ -16,9 +16,7 @@ public class PostOutputContract: Codable {
     public var successSchema: JsonSchemaDocument?
 
     public init(successSchema: JsonSchemaDocument?) {
-        
         self.successSchema = successSchema
-        
     }
 
 

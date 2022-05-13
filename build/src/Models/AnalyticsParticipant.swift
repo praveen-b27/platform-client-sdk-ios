@@ -44,7 +44,7 @@ public class AnalyticsParticipant: Codable {
     public var participantId: String?
     /** A human readable name identifying the participant */
     public var participantName: String?
-    /** The participant&#39;s purpose */
+    /** The participant's purpose */
     public var purpose: Purpose?
     /** The team ID the user is a member of */
     public var teamId: String?
@@ -56,27 +56,16 @@ public class AnalyticsParticipant: Codable {
     public var attributes: [String:String]?
 
     public init(externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, participantId: String?, participantName: String?, purpose: Purpose?, teamId: String?, userId: String?, sessions: [AnalyticsSession]?, attributes: [String:String]?) {
-        
         self.externalContactId = externalContactId
-        
         self.externalOrganizationId = externalOrganizationId
-        
         self.flaggedReason = flaggedReason
-        
         self.participantId = participantId
-        
         self.participantName = participantName
-        
         self.purpose = purpose
-        
         self.teamId = teamId
-        
         self.userId = userId
-        
         self.sessions = sessions
-        
         self.attributes = attributes
-        
     }
 
 

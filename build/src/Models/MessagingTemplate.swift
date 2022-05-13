@@ -16,9 +16,7 @@ public class MessagingTemplate: Codable {
     public var whatsApp: WhatsAppDefinition?
 
     public init(whatsApp: WhatsAppDefinition?) {
-        
         self.whatsApp = whatsApp
-        
     }
 
 

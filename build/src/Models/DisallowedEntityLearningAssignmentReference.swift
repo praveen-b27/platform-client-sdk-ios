@@ -17,11 +17,8 @@ public class DisallowedEntityLearningAssignmentReference: Codable {
     public var entity: LearningAssignmentReference?
 
     public init(errorCode: String?, entity: LearningAssignmentReference?) {
-        
         self.errorCode = errorCode
-        
         self.entity = entity
-        
     }
 
 

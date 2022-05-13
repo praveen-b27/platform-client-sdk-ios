@@ -18,11 +18,8 @@ public class SelectorEventTrigger: Codable {
     public var eventName: String?
 
     public init(selector: String?, eventName: String?) {
-        
         self.selector = selector
-        
         self.eventName = eventName
-        
     }
 
 

@@ -11,10 +11,7 @@ import Foundation
 
 open class WorkforceManagementAPI {
     
-    
-    
     /**
-     
      Delete business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -32,9 +29,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Delete business unit
-     
      - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}
      - A business unit cannot be deleted if it contains one or more management units
      - OAuth:
@@ -45,18 +40,13 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,11 +57,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Deletes an activity code
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -90,11 +76,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Deletes an activity code
-     
      - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -104,7 +87,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: String, activityCodeId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: String, activityCodeId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -113,12 +96,7 @@ open class WorkforceManagementAPI {
         let activityCodeIdPostEscape = activityCodeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{activityCodeId}", with: activityCodeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -129,11 +107,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Deletes the planning group
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -152,11 +126,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Deletes the planning group
-     
      - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -166,7 +137,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -175,12 +146,7 @@ open class WorkforceManagementAPI {
         let planningGroupIdPostEscape = planningGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{planningGroupId}", with: planningGroupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -191,11 +157,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Cancel a scheduling run
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -214,11 +176,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Cancel a scheduling run
-     
      - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -228,7 +187,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -237,12 +196,7 @@ open class WorkforceManagementAPI {
         let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -253,11 +207,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete a service goal template
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -276,11 +226,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Delete a service goal template
-     
      - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -290,7 +237,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -299,12 +246,7 @@ open class WorkforceManagementAPI {
         let serviceGoalTemplateIdPostEscape = serviceGoalTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{serviceGoalTemplateId}", with: serviceGoalTemplateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -316,12 +258,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Delete a schedule
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -348,61 +285,16 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Delete a schedule
-     
      - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "managementUnits" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "agentCount" : 123,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "agents" : [ "" ]
-    } ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "generationResults" : {
-      "messageSeverityCounts" : [ {
-        "severity" : "aeiou",
-        "count" : 123
-      } ],
-      "messageCount" : 123,
-      "failed" : true,
-      "runId" : "aeiou"
-    },
-    "id" : "aeiou",
-    "published" : true,
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "weekCount" : 123
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -410,7 +302,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuAsyncScheduleResponse> 
      */
-    open class func deleteWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String) -> RequestBuilder<BuAsyncScheduleResponse> {
+    open class func deleteWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String) -> RequestBuilder<BuAsyncScheduleResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -422,12 +314,7 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -439,12 +326,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Delete a short term forecast
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -464,9 +346,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Delete a short term forecast
-     
      - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}
      - Must not be tied to any schedules
      - OAuth:
@@ -479,7 +359,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementBusinessunitWeekShorttermforecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementBusinessunitWeekShorttermforecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -491,12 +371,7 @@ open class WorkforceManagementAPI {
         let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -505,9 +380,7 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
-    
     /**
-     
      Disable generated calendar link for the current user
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -524,26 +397,18 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Disable generated calendar link for the current user
-     
      - DELETE /api/v2/workforcemanagement/calendar/url/ics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementCalendarUrlIcsWithRequestBuilder() -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementCalendarUrlIcsWithRequestBuilder() -> RequestBuilder<Void> {        
         let path = "/api/v2/workforcemanagement/calendar/url/ics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -553,10 +418,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Delete management unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -574,11 +436,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Delete management unit
-     
      - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -587,18 +446,13 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -609,11 +463,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Deletes a time off limit object
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -632,11 +482,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Deletes a time off limit object
-     
      - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -646,7 +493,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: String, timeOffLimitId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: String, timeOffLimitId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -655,12 +502,7 @@ open class WorkforceManagementAPI {
         let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -671,11 +513,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Deletes a time off plan
      
      - parameter managementUnitId: (path) The ID of the management unit 
@@ -694,11 +532,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Deletes a time off plan
-     
      - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -708,7 +543,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: String, timeOffPlanId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: String, timeOffPlanId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -717,12 +552,7 @@ open class WorkforceManagementAPI {
         let timeOffPlanIdPostEscape = timeOffPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffPlanId}", with: timeOffPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -733,11 +563,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete a work plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -756,11 +582,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Delete a work plan
-     
      - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -770,7 +593,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -779,12 +602,7 @@ open class WorkforceManagementAPI {
         let workPlanIdPostEscape = workPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanId}", with: workPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -795,11 +613,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete a work plan rotation
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -818,11 +632,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Delete a work plan rotation
-     
      - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -832,7 +643,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String) -> RequestBuilder<Void> {
+    open class func deleteWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -841,12 +652,7 @@ open class WorkforceManagementAPI {
         let workPlanRotationIdPostEscape = workPlanRotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanRotationId}", with: workPlanRotationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -856,10 +662,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get a list of UserScheduleAdherence records for the requested users
      
      - parameter userId: (query) User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request 
@@ -884,174 +687,52 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a list of UserScheduleAdherence records for the requested users
-     
      - GET /api/v2/workforcemanagement/adherence
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
+     - examples: [{contentType=application/json, example={
   "removedFromManagementUnit" : true,
-  "organizationSecondaryPresenceId" : "aeiou",
-  "businessUnit" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "settings" : {
-      "startDayOfWeek" : "aeiou",
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : "",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "scheduling" : {
-        "messageSeverities" : [ {
-          "severity" : "aeiou",
-          "type" : "aeiou"
-        } ]
-      },
-      "timeZone" : "aeiou",
-      "shortTermForecasting" : {
-        "defaultHistoryWeeks" : 123
-      }
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "impact" : "aeiou",
-  "selfUri" : "aeiou",
-  "adherenceState" : "aeiou",
-  "team" : {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "memberCount" : 123456789,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou"
-  },
-  "routingStatus" : "aeiou",
-  "presenceUpdateTime" : "2000-01-23T04:56:07.000+0000",
+  "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
+  "businessUnit" : "{}",
+  "impact" : "Positive",
+  "selfUri" : "https://openapi-generator.tech",
+  "adherenceState" : "InAdherence",
+  "team" : "{}",
+  "routingStatus" : "OFF_QUEUE",
+  "presenceUpdateTime" : "2000-01-23T04:56:07.000+00:00",
   "isOutOfOffice" : true,
-  "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+0000",
-  "managementUnit" : {
-    "startDayOfWeek" : "aeiou",
-    "division" : "",
-    "settings" : {
-      "metadata" : "",
-      "shiftTrading" : {
-        "weeklyMaxPaidViolations" : "aeiou",
-        "unequalPaid" : "aeiou",
-        "requiresMatchingLanguages" : true,
-        "oneSided" : "aeiou",
-        "allowDirectTrades" : true,
-        "autoReview" : true,
-        "enabled" : true,
-        "weeklyMinPaidViolations" : "aeiou",
-        "requiresMatchingSkills" : true,
-        "requiresMatchingQueues" : true,
-        "minHoursInFuture" : 123,
-        "activityCategoryRules" : [ {
-          "activityCodeIdReplacement" : "aeiou",
-          "activityCategory" : "aeiou",
-          "action" : "aeiou"
-        } ],
-        "requiresMatchingPlanningGroups" : true
-      },
-      "adherence" : {
-        "ignoredActivityCategories" : {
-          "values" : [ "aeiou" ]
-        },
-        "nonOnQueueActivitiesEquivalent" : true,
-        "adherenceTargetPercent" : 123,
-        "adherenceExceptionThresholdSeconds" : 123,
-        "trackOnQueueActivity" : true,
-        "severeAlertThresholdMinutes" : 123
-      },
-      "scheduling" : {
-        "planningPeriod" : {
-          "weekCount" : 123,
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "maxOccupancyPercentForDeferredWork" : 123,
-        "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-        "shrinkageOverrides" : {
-          "values" : [ {
-            "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-            "intervalIndex" : 123
-          } ],
-          "clear" : true
-        },
-        "startDayOfWeekend" : "aeiou"
-      },
-      "timeOff" : {
-        "submissionEarliestDaysFromNow" : 123,
-        "submissionRangeEnforced" : true,
-        "submissionLatestDaysFromNow" : 123
-      },
-      "shortTermForecasting" : {
-        "defaultHistoryWeeks" : 123
-      }
-    },
-    "metadata" : "",
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "timeZone" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "version" : 123
-  },
-  "timeOfAdherenceChange" : "2000-01-23T04:56:07.000+0000",
-  "systemPresence" : "aeiou",
-  "name" : "aeiou",
-  "actualActivityCategory" : "aeiou",
-  "scheduledActivityCategory" : "aeiou",
+  "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+00:00",
+  "managementUnit" : "{}",
+  "timeOfAdherenceChange" : "2000-01-23T04:56:07.000+00:00",
+  "systemPresence" : "Available",
+  "name" : "name",
+  "actualActivityCategory" : "OnQueueWork",
+  "scheduledActivityCategory" : "OnQueueWork",
   "activeQueues" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "id" : "aeiou",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-} ]}]
+  "id" : "id",
+  "user" : "{}"
+}, statusCode=200}]
      
      - parameter userId: (query) User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request 
 
      - returns: RequestBuilder<[UserScheduleAdherence]> 
      */
-    open class func getWorkforcemanagementAdherenceWithRequestBuilder(userId: [String]) -> RequestBuilder<[UserScheduleAdherence]> {
+    open class func getWorkforcemanagementAdherenceWithRequestBuilder(userId: [String]) -> RequestBuilder<[UserScheduleAdherence]> {        
         let path = "/api/v2/workforcemanagement/adherence"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "userId": userId
-            
         ])
 
         let requestBuilder: RequestBuilder<[UserScheduleAdherence]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1060,10 +741,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get status of the modeling job
      
      - parameter jobId: (path) The id of the modeling job 
@@ -1088,40 +766,35 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get status of the modeling job
-     
      - GET /api/v2/workforcemanagement/adhocmodelingjobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "id" : "aeiou",
-  "modelingResultUri" : "aeiou",
-  "status" : "aeiou",
+  "id" : "id",
+  "modelingResultUri" : "modelingResultUri",
+  "status" : "Pending",
   "errorDetails" : [ {
-    "description" : "aeiou",
-    "internalErrorCode" : "aeiou"
+    "description" : "description",
+    "internalErrorCode" : "ModelInputMissing"
+  }, {
+    "description" : "description",
+    "internalErrorCode" : "ModelInputMissing"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter jobId: (path) The id of the modeling job 
 
      - returns: RequestBuilder<ModelingStatusResponse> 
      */
-    open class func getWorkforcemanagementAdhocmodelingjobWithRequestBuilder(jobId: String) -> RequestBuilder<ModelingStatusResponse> {
+    open class func getWorkforcemanagementAdhocmodelingjobWithRequestBuilder(jobId: String) -> RequestBuilder<ModelingStatusResponse> {        
         var path = "/api/v2/workforcemanagement/adhocmodelingjobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1131,10 +804,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get the management unit to which the agent belongs
      
      - parameter agentId: (path) The ID of the agent to look up 
@@ -1159,45 +829,28 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the management unit to which the agent belongs
-     
      - GET /api/v2/workforcemanagement/agents/{agentId}/managementunit
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "businessUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "managementUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "businessUnit" : "{}",
+  "managementUnit" : "{}",
+  "user" : "{}"
+}, statusCode=200}]
      
      - parameter agentId: (path) The ID of the agent to look up 
 
      - returns: RequestBuilder<AgentManagementUnitReference> 
      */
-    open class func getWorkforcemanagementAgentManagementunitWithRequestBuilder(agentId: String) -> RequestBuilder<AgentManagementUnitReference> {
+    open class func getWorkforcemanagementAgentManagementunitWithRequestBuilder(agentId: String) -> RequestBuilder<AgentManagementUnitReference> {        
         var path = "/api/v2/workforcemanagement/agents/{agentId}/managementunit"
         let agentIdPreEscape = "\(agentId)"
         let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1206,9 +859,7 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get the management unit to which the currently logged in agent belongs
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1232,40 +883,23 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the management unit to which the currently logged in agent belongs
-     
      - GET /api/v2/workforcemanagement/agents/me/managementunit
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "businessUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "managementUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "businessUnit" : "{}",
+  "managementUnit" : "{}",
+  "user" : "{}"
+}, statusCode=200}]
 
      - returns: RequestBuilder<AgentManagementUnitReference> 
      */
-    open class func getWorkforcemanagementAgentsMeManagementunitWithRequestBuilder() -> RequestBuilder<AgentManagementUnitReference> {
+    open class func getWorkforcemanagementAgentsMeManagementunitWithRequestBuilder() -> RequestBuilder<AgentManagementUnitReference> {        
         let path = "/api/v2/workforcemanagement/agents/me/managementunit"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1276,20 +910,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    public enum Expand_getWorkforcemanagementBusinessunit: String { 
-        case settings = "settings"
-        case settingsTimezone = "settings.timeZone"
-        case settingsStartdayofweek = "settings.startDayOfWeek"
-        case settingsShorttermforecasting = "settings.shortTermForecasting"
-        case settingsScheduling = "settings.scheduling"
-    }
-
-    
-    
     /**
-     
      Get business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -1315,70 +936,36 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get business unit
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}
      - Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "settings" : {
-    "startDayOfWeek" : "aeiou",
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "scheduling" : {
-      "messageSeverities" : [ {
-        "severity" : "aeiou",
-        "type" : "aeiou"
-      } ]
-    },
-    "timeZone" : "aeiou",
-    "shortTermForecasting" : {
-      "defaultHistoryWeeks" : 123
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "division" : "{}",
+  "settings" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter expand: (query)  (optional)
 
      - returns: RequestBuilder<BusinessUnit> 
      */
-    open class func getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, expand: [String]? = nil) -> RequestBuilder<BusinessUnit> {
+    open class func getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, expand: [String]? = nil) -> RequestBuilder<BusinessUnit> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1388,11 +975,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get an activity code
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -1418,43 +1001,31 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get an activity code
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "lengthInMinutes" : 123,
+  "lengthInMinutes" : 0,
   "defaultCode" : true,
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "metadata" : "{}",
   "countsAsWorkTime" : true,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "countsAsPaidTime" : true,
   "agentTimeOffSelectable" : true,
-  "category" : "aeiou"
-}}]
+  "category" : "OnQueueWork"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter activityCodeId: (path) The ID of the activity code to fetch 
 
      - returns: RequestBuilder<BusinessUnitActivityCode> 
      */
-    open class func getWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: String, activityCodeId: String) -> RequestBuilder<BusinessUnitActivityCode> {
+    open class func getWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: String, activityCodeId: String) -> RequestBuilder<BusinessUnitActivityCode> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1463,12 +1034,7 @@ open class WorkforceManagementAPI {
         let activityCodeIdPostEscape = activityCodeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{activityCodeId}", with: activityCodeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1478,10 +1044,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get activity codes
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -1506,55 +1069,50 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get activity codes
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "lengthInMinutes" : 123,
+    "lengthInMinutes" : 0,
     "defaultCode" : true,
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
+    "metadata" : "{}",
     "countsAsWorkTime" : true,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "active" : true,
-    "id" : "aeiou",
+    "id" : "id",
     "countsAsPaidTime" : true,
     "agentTimeOffSelectable" : true,
-    "category" : "aeiou"
+    "category" : "OnQueueWork"
+  }, {
+    "lengthInMinutes" : 0,
+    "defaultCode" : true,
+    "metadata" : "{}",
+    "countsAsWorkTime" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "active" : true,
+    "id" : "id",
+    "countsAsPaidTime" : true,
+    "agentTimeOffSelectable" : true,
+    "category" : "OnQueueWork"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
 
      - returns: RequestBuilder<BusinessUnitActivityCodeListing> 
      */
-    open class func getWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BusinessUnitActivityCodeListing> {
+    open class func getWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BusinessUnitActivityCodeListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1565,11 +1123,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get intraday planning groups for the given date
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -1595,72 +1149,86 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get intraday planning groups for the given date
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "noDataReason" : "aeiou",
+  "noDataReason" : "NoPublishedSchedule",
   "entities" : [ {
-    "serviceGoalTemplate" : {
-      "abandonRate" : {
-        "percent" : 123
-      },
-      "averageSpeedOfAnswer" : {
-        "seconds" : 123
-      },
-      "serviceLevel" : {
-        "seconds" : 123,
-        "percent" : 123
-      }
-    },
-    "name" : "aeiou",
-    "id" : "aeiou",
+    "serviceGoalTemplate" : "{}",
+    "name" : "name",
+    "id" : "id",
     "routePaths" : [ {
       "skills" : [ {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
       } ],
-      "mediaType" : "aeiou",
-      "language" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "queue" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    }, {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    } ]
+  }, {
+    "serviceGoalTemplate" : "{}",
+    "name" : "name",
+    "id" : "id",
+    "routePaths" : [ {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    }, {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter date: (query) yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<WfmIntradayPlanningGroupListing> 
      */
-    open class func getWorkforcemanagementBusinessunitIntradayPlanninggroupsWithRequestBuilder(businessUnitId: String, date: Date) -> RequestBuilder<WfmIntradayPlanningGroupListing> {
+    open class func getWorkforcemanagementBusinessunitIntradayPlanninggroupsWithRequestBuilder(businessUnitId: String, date: Date) -> RequestBuilder<WfmIntradayPlanningGroupListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "date": date.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<WfmIntradayPlanningGroupListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1668,8 +1236,6 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum Feature_getWorkforcemanagementBusinessunitManagementunits: String { 
@@ -1703,10 +1269,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
     /**
-     
      Get all authorized management units in the business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -1733,109 +1296,49 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get all authorized management units in the business unit
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "startDayOfWeek" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "settings" : {
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "shiftTrading" : {
-        "weeklyMaxPaidViolations" : "aeiou",
-        "unequalPaid" : "aeiou",
-        "requiresMatchingLanguages" : true,
-        "oneSided" : "aeiou",
-        "allowDirectTrades" : true,
-        "autoReview" : true,
-        "enabled" : true,
-        "weeklyMinPaidViolations" : "aeiou",
-        "requiresMatchingSkills" : true,
-        "requiresMatchingQueues" : true,
-        "minHoursInFuture" : 123,
-        "activityCategoryRules" : [ {
-          "activityCodeIdReplacement" : "aeiou",
-          "activityCategory" : "aeiou",
-          "action" : "aeiou"
-        } ],
-        "requiresMatchingPlanningGroups" : true
-      },
-      "adherence" : {
-        "ignoredActivityCategories" : {
-          "values" : [ "aeiou" ]
-        },
-        "nonOnQueueActivitiesEquivalent" : true,
-        "adherenceTargetPercent" : 123,
-        "adherenceExceptionThresholdSeconds" : 123,
-        "trackOnQueueActivity" : true,
-        "severeAlertThresholdMinutes" : 123
-      },
-      "scheduling" : {
-        "planningPeriod" : {
-          "weekCount" : 123,
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "maxOccupancyPercentForDeferredWork" : 123,
-        "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-        "shrinkageOverrides" : {
-          "values" : [ {
-            "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-            "intervalIndex" : 123
-          } ],
-          "clear" : true
-        },
-        "startDayOfWeekend" : "aeiou"
-      },
-      "timeOff" : {
-        "submissionEarliestDaysFromNow" : 123,
-        "submissionRangeEnforced" : true,
-        "submissionLatestDaysFromNow" : 123
-      },
-      "shortTermForecasting" : {
-        "defaultHistoryWeeks" : 123
-      }
-    },
-    "metadata" : "",
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "timeZone" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "version" : 123
+    "startDayOfWeek" : "Sunday",
+    "division" : "{}",
+    "settings" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "timeZone" : "timeZone",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
+  }, {
+    "startDayOfWeek" : "Sunday",
+    "division" : "{}",
+    "settings" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "timeZone" : "timeZone",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter feature: (query)  (optional)
@@ -1843,26 +1346,18 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ManagementUnitListing> 
      */
-    open class func getWorkforcemanagementBusinessunitManagementunitsWithRequestBuilder(businessUnitId: String, feature: Feature_getWorkforcemanagementBusinessunitManagementunits? = nil, divisionId: String? = nil) -> RequestBuilder<ManagementUnitListing> {
+    open class func getWorkforcemanagementBusinessunitManagementunitsWithRequestBuilder(businessUnitId: String, feature: Feature_getWorkforcemanagementBusinessunitManagementunits? = nil, divisionId: String? = nil) -> RequestBuilder<ManagementUnitListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "feature": feature?.rawValue, 
-            
             "divisionId": divisionId
-            
         ])
 
         let requestBuilder: RequestBuilder<ManagementUnitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1872,11 +1367,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a planning group
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -1902,55 +1393,48 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a planning group
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "serviceGoalTemplate" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "metadata" : "{}",
+  "serviceGoalTemplate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "routePaths" : [ {
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "mediaType" : "aeiou",
-    "language" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "queue" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "mediaType" : "Voice",
+    "language" : "{}",
+    "queue" : "{}"
+  }, {
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "mediaType" : "Voice",
+    "language" : "{}",
+    "queue" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter planningGroupId: (path) The ID of a planning group to fetch 
 
      - returns: RequestBuilder<PlanningGroup> 
      */
-    open class func getWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String) -> RequestBuilder<PlanningGroup> {
+    open class func getWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String) -> RequestBuilder<PlanningGroup> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1959,12 +1443,7 @@ open class WorkforceManagementAPI {
         let planningGroupIdPostEscape = planningGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{planningGroupId}", with: planningGroupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1974,10 +1453,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Gets list of planning groups
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -2002,67 +1478,84 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets list of planning groups
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "serviceGoalTemplate" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
+    "metadata" : "{}",
+    "serviceGoalTemplate" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
     "routePaths" : [ {
       "skills" : [ {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
       } ],
-      "mediaType" : "aeiou",
-      "language" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "queue" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    }, {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    } ]
+  }, {
+    "metadata" : "{}",
+    "serviceGoalTemplate" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "routePaths" : [ {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    }, {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
 
      - returns: RequestBuilder<PlanningGroupList> 
      */
-    open class func getWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<PlanningGroupList> {
+    open class func getWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<PlanningGroupList> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2073,11 +1566,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a scheduling run
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -2103,68 +1592,44 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a scheduling run
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "messageSeverityCounts" : [ {
-    "severity" : "aeiou",
-    "count" : 123
+    "severity" : "Ignore",
+    "count" : 5
+  }, {
+    "severity" : "Ignore",
+    "count" : 5
   } ],
-  "messageCount" : 123,
-  "targetWeek" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "schedulingStartTime" : "2000-01-23T04:56:07.000+0000",
-  "schedulerRunId" : "aeiou",
-  "percentComplete" : 1.3579000000000001069366817318950779736042022705078125,
-  "weekCount" : 123,
-  "schedule" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "schedulingCanceledBy" : "",
-  "schedulingCompletedTime" : "2000-01-23T04:56:07.000+0000",
+  "messageCount" : 1,
+  "targetWeek" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "schedulingStartTime" : "2000-01-23T04:56:07.000+00:00",
+  "schedulerRunId" : "schedulerRunId",
+  "percentComplete" : 6.027456183070403,
+  "weekCount" : 0,
+  "schedule" : "{}",
+  "schedulingCanceledBy" : "{}",
+  "schedulingCompletedTime" : "2000-01-23T04:56:07.000+00:00",
   "intradayRescheduling" : true,
-  "scheduleDescription" : "aeiou",
-  "reschedulingOptions" : {
-    "endDate" : "2000-01-23T04:56:07.000+0000",
-    "activityCodeIds" : [ "aeiou" ],
-    "managementUnits" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "applied" : true
-    } ],
-    "doNotChangeManuallyEditedShifts" : true,
-    "doNotChangeDailyPaidTime" : true,
-    "doNotChangeShiftStartTimes" : true,
-    "existingSchedule" : "",
-    "agentCount" : 123,
-    "startDate" : "2000-01-23T04:56:07.000+0000",
-    "doNotChangeWeeklyPaidTime" : true
-  },
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+0000",
-  "schedulingStartedBy" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "scheduleDescription" : "scheduleDescription",
+  "reschedulingOptions" : "{}",
+  "id" : "id",
+  "state" : "None",
+  "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+00:00",
+  "schedulingStartedBy" : "{}"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter runId: (path) The ID of the schedule run 
 
      - returns: RequestBuilder<BuScheduleRun> 
      */
-    open class func getWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String) -> RequestBuilder<BuScheduleRun> {
+    open class func getWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String) -> RequestBuilder<BuScheduleRun> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2173,12 +1638,7 @@ open class WorkforceManagementAPI {
         let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2191,20 +1651,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    public enum Expand_getWorkforcemanagementBusinessunitSchedulingRunResult: String { 
-        case headcountforecast = "headcountForecast"
-        case generationresults = "generationResults"
-        case agentschedules = "agentSchedules"
-    }
-
-    
-    
     /**
-     
      Get the result of a rescheduling operation
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -2232,95 +1679,26 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the result of a rescheduling operation
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "headcountForecast" : {
-    "entities" : [ {
-      "requiredWithoutShrinkagePerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-      "requiredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-      "planningGroup" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
-    } ],
-    "referenceStartDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "generationResultsDownloadUrl" : "aeiou",
+  "headcountForecast" : "{}",
+  "generationResultsDownloadUrl" : "generationResultsDownloadUrl",
   "agentSchedules" : [ {
-    "downloadResult" : {
-      "agentSchedules" : [ {
-        "fullDayTimeOffMarkers" : [ {
-          "activityCodeId" : "aeiou",
-          "timeOffRequestId" : "aeiou",
-          "lengthMinutes" : 123,
-          "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
-          "paid" : true,
-          "description" : "aeiou"
-        } ],
-        "shifts" : [ {
-          "schedule" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou",
-            "weekDate" : "2000-01-23T04:56:07.000+0000"
-          },
-          "lengthMinutes" : 123,
-          "activities" : [ {
-            "activityCodeId" : "aeiou",
-            "externalActivityType" : "aeiou",
-            "timeOffRequestId" : "aeiou",
-            "lengthMinutes" : 123,
-            "externalActivityId" : "aeiou",
-            "paid" : true,
-            "description" : "aeiou",
-            "startDate" : "2000-01-23T04:56:07.000+0000"
-          } ],
-          "id" : "aeiou",
-          "startDate" : "2000-01-23T04:56:07.000+0000",
-          "manuallyEdited" : true
-        } ],
-        "workPlan" : {
-          "managementUnit" : "",
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "user" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "workPlansPerWeek" : [ "" ]
-      } ]
-    },
-    "managementUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "downloadUrl" : "aeiou"
+    "downloadResult" : "{}",
+    "managementUnit" : "{}",
+    "downloadUrl" : "downloadUrl"
+  }, {
+    "downloadResult" : "{}",
+    "managementUnit" : "{}",
+    "downloadUrl" : "downloadUrl"
   } ],
-  "generationResults" : {
-    "messageCount" : 123,
-    "messageSeverities" : [ {
-      "severity" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "messages" : [ {
-      "arguments" : [ {
-        "type" : "aeiou",
-        "value" : "aeiou"
-      } ],
-      "type" : "aeiou"
-    } ],
-    "failed" : true,
-    "runId" : "aeiou"
-  },
-  "headcountForecastDownloadUrl" : "aeiou"
-}}]
+  "generationResults" : "{}",
+  "headcountForecastDownloadUrl" : "headcountForecastDownloadUrl"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter runId: (path) The ID of the schedule run 
@@ -2329,7 +1707,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuRescheduleResult> 
      */
-    open class func getWorkforcemanagementBusinessunitSchedulingRunResultWithRequestBuilder(businessUnitId: String, runId: String, managementUnitIds: [String], expand: [String]) -> RequestBuilder<BuRescheduleResult> {
+    open class func getWorkforcemanagementBusinessunitSchedulingRunResultWithRequestBuilder(businessUnitId: String, runId: String, managementUnitIds: [String], expand: [String]) -> RequestBuilder<BuRescheduleResult> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2338,20 +1716,12 @@ open class WorkforceManagementAPI {
         let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "managementUnitIds": managementUnitIds, 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<BuRescheduleResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2360,10 +1730,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get the list of scheduling runs
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -2388,80 +1755,76 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the list of scheduling runs
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "messageSeverityCounts" : [ {
-      "severity" : "aeiou",
-      "count" : 123
+      "severity" : "Ignore",
+      "count" : 5
+    }, {
+      "severity" : "Ignore",
+      "count" : 5
     } ],
-    "messageCount" : 123,
-    "targetWeek" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "schedulingStartTime" : "2000-01-23T04:56:07.000+0000",
-    "schedulerRunId" : "aeiou",
-    "percentComplete" : 1.3579000000000001069366817318950779736042022705078125,
-    "weekCount" : 123,
-    "schedule" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "schedulingCanceledBy" : "",
-    "schedulingCompletedTime" : "2000-01-23T04:56:07.000+0000",
+    "messageCount" : 1,
+    "targetWeek" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "schedulingStartTime" : "2000-01-23T04:56:07.000+00:00",
+    "schedulerRunId" : "schedulerRunId",
+    "percentComplete" : 6.027456183070403,
+    "weekCount" : 0,
+    "schedule" : "{}",
+    "schedulingCanceledBy" : "{}",
+    "schedulingCompletedTime" : "2000-01-23T04:56:07.000+00:00",
     "intradayRescheduling" : true,
-    "scheduleDescription" : "aeiou",
-    "reschedulingOptions" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "activityCodeIds" : [ "aeiou" ],
-      "managementUnits" : [ {
-        "managementUnit" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "applied" : true
-      } ],
-      "doNotChangeManuallyEditedShifts" : true,
-      "doNotChangeDailyPaidTime" : true,
-      "doNotChangeShiftStartTimes" : true,
-      "existingSchedule" : "",
-      "agentCount" : 123,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "doNotChangeWeeklyPaidTime" : true
-    },
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+0000",
-    "schedulingStartedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "scheduleDescription" : "scheduleDescription",
+    "reschedulingOptions" : "{}",
+    "id" : "id",
+    "state" : "None",
+    "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+00:00",
+    "schedulingStartedBy" : "{}"
+  }, {
+    "messageSeverityCounts" : [ {
+      "severity" : "Ignore",
+      "count" : 5
+    }, {
+      "severity" : "Ignore",
+      "count" : 5
+    } ],
+    "messageCount" : 1,
+    "targetWeek" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "schedulingStartTime" : "2000-01-23T04:56:07.000+00:00",
+    "schedulerRunId" : "schedulerRunId",
+    "percentComplete" : 6.027456183070403,
+    "weekCount" : 0,
+    "schedule" : "{}",
+    "schedulingCanceledBy" : "{}",
+    "schedulingCompletedTime" : "2000-01-23T04:56:07.000+00:00",
+    "intradayRescheduling" : true,
+    "scheduleDescription" : "scheduleDescription",
+    "reschedulingOptions" : "{}",
+    "id" : "id",
+    "state" : "None",
+    "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+00:00",
+    "schedulingStartedBy" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
 
      - returns: RequestBuilder<BuScheduleRunListing> 
      */
-    open class func getWorkforcemanagementBusinessunitSchedulingRunsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BuScheduleRunListing> {
+    open class func getWorkforcemanagementBusinessunitSchedulingRunsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BuScheduleRunListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2472,11 +1835,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a service goal template
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -2502,49 +1861,27 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a service goal template
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "abandonRate" : {
-    "include" : true,
-    "percent" : 123
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "averageSpeedOfAnswer" : {
-    "include" : true,
-    "seconds" : 123
-  },
-  "id" : "aeiou",
-  "serviceLevel" : {
-    "include" : true,
-    "seconds" : 123,
-    "percent" : 123
-  }
-}}]
+  "metadata" : "{}",
+  "abandonRate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "averageSpeedOfAnswer" : "{}",
+  "id" : "id",
+  "serviceLevel" : "{}"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter serviceGoalTemplateId: (path) The ID of a service goal template to fetch 
 
      - returns: RequestBuilder<ServiceGoalTemplate> 
      */
-    open class func getWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String) -> RequestBuilder<ServiceGoalTemplate> {
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String) -> RequestBuilder<ServiceGoalTemplate> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2553,12 +1890,7 @@ open class WorkforceManagementAPI {
         let serviceGoalTemplateIdPostEscape = serviceGoalTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{serviceGoalTemplateId}", with: serviceGoalTemplateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2568,10 +1900,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Gets list of service goal templates
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -2596,61 +1925,42 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets list of service goal templates
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "abandonRate" : {
-      "include" : true,
-      "percent" : 123
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "averageSpeedOfAnswer" : {
-      "include" : true,
-      "seconds" : 123
-    },
-    "id" : "aeiou",
-    "serviceLevel" : {
-      "include" : true,
-      "seconds" : 123,
-      "percent" : 123
-    }
+    "metadata" : "{}",
+    "abandonRate" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "averageSpeedOfAnswer" : "{}",
+    "id" : "id",
+    "serviceLevel" : "{}"
+  }, {
+    "metadata" : "{}",
+    "abandonRate" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "averageSpeedOfAnswer" : "{}",
+    "id" : "id",
+    "serviceLevel" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
 
      - returns: RequestBuilder<ServiceGoalTemplateList> 
      */
-    open class func getWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String) -> RequestBuilder<ServiceGoalTemplateList> {
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String) -> RequestBuilder<ServiceGoalTemplateList> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2663,18 +1973,12 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     public enum Expand_getWorkforcemanagementBusinessunitWeekSchedule: String { 
         case managementunitsAgents = "managementUnits.agents"
     }
 
     
-    
     /**
-     
      Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -2702,57 +2006,47 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "metadata" : "{}",
   "managementUnits" : [ {
-    "managementUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "endDate" : "2000-01-23T04:56:07.000+0000",
-    "agentCount" : 123,
-    "startDate" : "2000-01-23T04:56:07.000+0000",
-    "agents" : [ "" ]
+    "managementUnit" : "{}",
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "agentCount" : 6,
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "agents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "managementUnit" : "{}",
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "agentCount" : 6,
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "agents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
   } ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "generationResults" : {
-    "messageSeverityCounts" : [ {
-      "severity" : "aeiou",
-      "count" : 123
-    } ],
-    "messageCount" : 123,
-    "failed" : true,
-    "runId" : "aeiou"
-  },
-  "id" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "generationResults" : "{}",
+  "id" : "id",
   "published" : true,
-  "weekDate" : "2000-01-23T04:56:07.000+0000",
-  "shortTermForecast" : {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "weekCount" : 123
-}}]
+  "weekDate" : "2000-01-23",
+  "shortTermForecast" : "{}",
+  "weekCount" : 0
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2761,7 +2055,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuScheduleMetadata> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedule? = nil) -> RequestBuilder<BuScheduleMetadata> {
+    open class func getWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedule? = nil) -> RequestBuilder<BuScheduleMetadata> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2773,18 +2067,11 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<BuScheduleMetadata>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2795,12 +2082,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get the generation results for a generated schedule
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -2827,30 +2109,42 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the generation results for a generated schedule
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "messageCount" : 123,
+  "messageCount" : 0,
   "messageSeverities" : [ {
-    "severity" : "aeiou",
-    "type" : "aeiou"
+    "severity" : "Ignore",
+    "type" : "AgentNotFound"
+  }, {
+    "severity" : "Ignore",
+    "type" : "AgentNotFound"
   } ],
   "messages" : [ {
     "arguments" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou"
+      "type" : "AgentId",
+      "value" : "value"
+    }, {
+      "type" : "AgentId",
+      "value" : "value"
     } ],
-    "type" : "aeiou"
+    "type" : "AgentNotFound"
+  }, {
+    "arguments" : [ {
+      "type" : "AgentId",
+      "value" : "value"
+    }, {
+      "type" : "AgentId",
+      "value" : "value"
+    } ],
+    "type" : "AgentNotFound"
   } ],
   "failed" : true,
-  "runId" : "aeiou"
-}}]
+  "runId" : "runId"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2858,7 +2152,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ScheduleGenerationResult> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String) -> RequestBuilder<ScheduleGenerationResult> {
+    open class func getWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String) -> RequestBuilder<ScheduleGenerationResult> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2870,12 +2164,7 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2888,13 +2177,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Get the headcount forecast by planning group for the schedule
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -2922,28 +2205,15 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the headcount forecast by planning group for the schedule
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "entities" : [ {
-      "requiredWithoutShrinkagePerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-      "requiredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-      "planningGroup" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
-    } ],
-    "referenceStartDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "downloadUrl" : "aeiou"
-}}]
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2952,7 +2222,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuHeadcountForecastResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, forceDownload: Bool? = nil) -> RequestBuilder<BuHeadcountForecastResponse> {
+    open class func getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, forceDownload: Bool? = nil) -> RequestBuilder<BuHeadcountForecastResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2964,18 +2234,11 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceDownload": forceDownload
-            
         ])
 
         let requestBuilder: RequestBuilder<BuHeadcountForecastResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2987,13 +2250,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Loads agent's schedule history.
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -3021,67 +2278,173 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Loads agent's schedule history.
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "basePublishedSchedule" : {
-    "fullDayTimeOffMarkers" : [ {
-      "activityCodeId" : "aeiou",
-      "timeOffRequestId" : "aeiou",
-      "lengthMinutes" : 123,
-      "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
-      "paid" : true,
-      "description" : "aeiou"
-    } ],
-    "metadata" : {
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
-    },
-    "deletes" : {
-      "agentSchedule" : true,
-      "shiftIds" : [ "aeiou" ],
-      "fullDayTimeOffMarkerDates" : [ "2000-01-23T04:56:07.000+0000" ]
-    },
-    "shifts" : [ {
-      "schedule" : "",
-      "lengthMinutes" : 123,
-      "activities" : [ {
-        "activityCodeId" : "aeiou",
-        "externalActivityType" : "aeiou",
-        "timeOffRequestId" : "aeiou",
-        "lengthMinutes" : 123,
-        "externalActivityId" : "aeiou",
-        "paid" : true,
-        "description" : "aeiou",
-        "startDate" : "2000-01-23T04:56:07.000+0000"
-      } ],
-      "id" : "aeiou",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "manuallyEdited" : true
-    } ]
-  },
+  "basePublishedSchedule" : "{}",
   "priorPublishedSchedules" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "weekDate" : "2000-01-23"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "weekDate" : "2000-01-23"
   } ],
   "droppedChanges" : [ {
-    "metadata" : "",
-    "deletes" : "",
-    "shiftIds" : [ "aeiou" ],
-    "fullDayTimeOffMarkerDates" : [ "2000-01-23T04:56:07.000+0000" ]
+    "metadata" : "{}",
+    "deletes" : "{}",
+    "shiftIds" : [ "shiftIds", "shiftIds" ],
+    "fullDayTimeOffMarkerDates" : [ "2000-01-23", "2000-01-23" ]
+  }, {
+    "metadata" : "{}",
+    "deletes" : "{}",
+    "shiftIds" : [ "shiftIds", "shiftIds" ],
+    "fullDayTimeOffMarkerDates" : [ "2000-01-23", "2000-01-23" ]
   } ],
-  "changes" : [ "" ]
-}}]
+  "changes" : [ {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 1,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 1,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "metadata" : "{}",
+    "deletes" : "{}",
+    "shifts" : [ {
+      "schedule" : "{}",
+      "lengthMinutes" : 0,
+      "activities" : [ {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "id" : "id",
+      "startDate" : "2000-01-23T04:56:07.000+00:00",
+      "manuallyEdited" : true
+    }, {
+      "schedule" : "{}",
+      "lengthMinutes" : 0,
+      "activities" : [ {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "id" : "id",
+      "startDate" : "2000-01-23T04:56:07.000+00:00",
+      "manuallyEdited" : true
+    } ]
+  }, {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 1,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 1,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "metadata" : "{}",
+    "deletes" : "{}",
+    "shifts" : [ {
+      "schedule" : "{}",
+      "lengthMinutes" : 0,
+      "activities" : [ {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "id" : "id",
+      "startDate" : "2000-01-23T04:56:07.000+00:00",
+      "manuallyEdited" : true
+    }, {
+      "schedule" : "{}",
+      "lengthMinutes" : 0,
+      "activities" : [ {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "id" : "id",
+      "startDate" : "2000-01-23T04:56:07.000+00:00",
+      "manuallyEdited" : true
+    } ]
+  } ]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -3090,7 +2453,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuAgentScheduleHistoryResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, agentId: String) -> RequestBuilder<BuAgentScheduleHistoryResponse> {
+    open class func getWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, agentId: String) -> RequestBuilder<BuAgentScheduleHistoryResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3105,12 +2468,7 @@ open class WorkforceManagementAPI {
         let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3123,18 +2481,12 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     public enum Expand_getWorkforcemanagementBusinessunitWeekSchedules: String { 
         case forecastDescription = "forecast.description"
     }
 
     
-    
     /**
-     
      Get the list of week schedules for the specified week
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -3162,9 +2514,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the list of week schedules for the specified week
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules
      - Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
      - OAuth:
@@ -3172,39 +2522,27 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "generationResults" : {
-      "messageSeverityCounts" : [ {
-        "severity" : "aeiou",
-        "count" : 123
-      } ],
-      "messageCount" : 123,
-      "failed" : true,
-      "runId" : "aeiou"
-    },
-    "id" : "aeiou",
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "generationResults" : "{}",
+    "id" : "id",
     "published" : true,
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "weekCount" : 123
+    "weekDate" : "2000-01-23",
+    "shortTermForecast" : "{}",
+    "weekCount" : 0
+  }, {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "generationResults" : "{}",
+    "id" : "id",
+    "published" : true,
+    "weekDate" : "2000-01-23",
+    "shortTermForecast" : "{}",
+    "weekCount" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules 
@@ -3213,7 +2551,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuScheduleListing> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: String, weekId: String, includeOnlyPublished: Bool? = nil, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedules? = nil) -> RequestBuilder<BuScheduleListing> {
+    open class func getWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: String, weekId: String, includeOnlyPublished: Bool? = nil, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedules? = nil) -> RequestBuilder<BuScheduleListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3222,20 +2560,12 @@ open class WorkforceManagementAPI {
         let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "includeOnlyPublished": includeOnlyPublished, 
-            
             "expand": expand?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<BuScheduleListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3247,19 +2577,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    public enum Expand_getWorkforcemanagementBusinessunitWeekShorttermforecast: String { 
-        case planninggroups = "planningGroups"
-        case generationresults = "generationResults"
-    }
-
-    
-    
     /**
-     
      Get a short term forecast
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -3287,103 +2605,77 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a short term forecast
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "metadata" : "{}",
   "legacy" : true,
-  "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "timeZone" : "aeiou",
+  "referenceStartDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "timeZone" : "timeZone",
   "sourceDays" : [ {
-    "date" : "aeiou",
-    "dataKey" : "aeiou",
-    "fileName" : "aeiou",
-    "dayOfWeek" : "aeiou",
-    "weight" : 123
+    "date" : "date",
+    "dataKey" : "dataKey",
+    "fileName" : "fileName",
+    "dayOfWeek" : "Sunday",
+    "weight" : 6
+  }, {
+    "date" : "date",
+    "dataKey" : "dataKey",
+    "fileName" : "fileName",
+    "dayOfWeek" : "Sunday",
+    "weight" : 6
   } ],
-  "weekCount" : 123,
-  "creationMethod" : "aeiou",
-  "planningGroupsVersion" : 123,
-  "planningGroups" : {
-    "entities" : [ {
-      "serviceGoalTemplate" : {
-        "abandonRate" : {
-          "percent" : 123
-        },
-        "averageSpeedOfAnswer" : {
-          "seconds" : 123
-        },
-        "serviceLevel" : {
-          "seconds" : 123,
-          "percent" : 123
-        }
-      },
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "routePaths" : [ {
-        "skills" : [ {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        } ],
-        "mediaType" : "aeiou",
-        "language" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "queue" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        }
-      } ]
-    } ]
-  },
-  "generationResults" : {
-    "planningGroupResults" : [ {
-      "planningGroupId" : "aeiou",
-      "metricResults" : [ {
-        "metric" : "aeiou",
-        "forecastingMethod" : "aeiou",
-        "forecastType" : "aeiou"
-      } ]
-    } ]
-  },
-  "id" : "aeiou",
-  "weekDate" : "2000-01-23T04:56:07.000+0000",
+  "weekCount" : 0,
+  "creationMethod" : "Import",
+  "planningGroupsVersion" : 9,
+  "planningGroups" : "{}",
+  "generationResults" : "{}",
+  "id" : "id",
+  "weekDate" : "2000-01-23",
   "canUseForScheduling" : true,
   "modifications" : [ {
-    "startIntervalIndex" : 123,
-    "legacyMetric" : "aeiou",
-    "displayGranularity" : "aeiou",
-    "endIntervalIndex" : 123,
-    "metric" : "aeiou",
-    "granularity" : "aeiou",
+    "startIntervalIndex" : 1,
+    "legacyMetric" : "AverageAfterCallWorkTimeSeconds",
+    "displayGranularity" : "displayGranularity",
+    "endIntervalIndex" : 5,
+    "metric" : "Offered",
+    "granularity" : "granularity",
     "values" : [ {
-      "intervalIndex" : 123,
-      "value" : 1.3579000000000001069366817318950779736042022705078125
+      "intervalIndex" : 2,
+      "value" : 7.061401241503109
+    }, {
+      "intervalIndex" : 2,
+      "value" : 7.061401241503109
     } ],
-    "type" : "aeiou",
-    "planningGroupIds" : [ "aeiou" ],
-    "value" : 1.3579000000000001069366817318950779736042022705078125,
+    "type" : "MinimumPerInterval",
+    "planningGroupIds" : [ "planningGroupIds", "planningGroupIds" ],
+    "value" : 5.637376656633329,
+    "enabled" : true
+  }, {
+    "startIntervalIndex" : 1,
+    "legacyMetric" : "AverageAfterCallWorkTimeSeconds",
+    "displayGranularity" : "displayGranularity",
+    "endIntervalIndex" : 5,
+    "metric" : "Offered",
+    "granularity" : "granularity",
+    "values" : [ {
+      "intervalIndex" : 2,
+      "value" : 7.061401241503109
+    }, {
+      "intervalIndex" : 2,
+      "value" : 7.061401241503109
+    } ],
+    "type" : "MinimumPerInterval",
+    "planningGroupIds" : [ "planningGroupIds", "planningGroupIds" ],
+    "value" : 5.637376656633329,
     "enabled" : true
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -3392,7 +2684,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuShortTermForecast> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, expand: [String]? = nil) -> RequestBuilder<BuShortTermForecast> {
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, expand: [String]? = nil) -> RequestBuilder<BuShortTermForecast> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3404,18 +2696,11 @@ open class WorkforceManagementAPI {
         let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<BuShortTermForecast>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3428,14 +2713,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Get the result of a short term forecast calculation
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -3464,27 +2742,16 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the result of a short term forecast calculation
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data
      - Includes modifications unless you pass the doNotApplyModifications query parameter
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
-    "planningGroups" : [ {
-      "averageHandleTimeSecondsPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-      "planningGroupId" : "aeiou",
-      "offeredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ]
-    } ],
-    "weekCount" : 123,
-    "weekNumber" : 123
-  },
-  "downloadUrl" : "aeiou"
-}}]
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -3494,7 +2761,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuForecastResultResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastDataWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumber: Int? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuForecastResultResponse> {
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastDataWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumber: Int? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuForecastResultResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3506,20 +2773,12 @@ open class WorkforceManagementAPI {
         let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "weekNumber": weekNumber?.encodeToJSON(), 
-            
             "forceDownloadService": forceDownloadService
-            
         ])
 
         let requestBuilder: RequestBuilder<BuForecastResultResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3530,12 +2789,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Gets the forecast generation results
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -3562,24 +2816,36 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets the forecast generation results
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "planningGroupResults" : [ {
-    "planningGroupId" : "aeiou",
+    "planningGroupId" : "planningGroupId",
     "metricResults" : [ {
-      "metric" : "aeiou",
-      "forecastingMethod" : "aeiou",
-      "forecastType" : "aeiou"
+      "metric" : "Offered",
+      "forecastingMethod" : "AutoRegressiveIntegratedMovingAverage",
+      "forecastType" : "LongTerm"
+    }, {
+      "metric" : "Offered",
+      "forecastingMethod" : "AutoRegressiveIntegratedMovingAverage",
+      "forecastType" : "LongTerm"
+    } ]
+  }, {
+    "planningGroupId" : "planningGroupId",
+    "metricResults" : [ {
+      "metric" : "Offered",
+      "forecastingMethod" : "AutoRegressiveIntegratedMovingAverage",
+      "forecastType" : "LongTerm"
+    }, {
+      "metric" : "Offered",
+      "forecastingMethod" : "AutoRegressiveIntegratedMovingAverage",
+      "forecastType" : "LongTerm"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -3587,7 +2853,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuForecastGenerationResult> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<BuForecastGenerationResult> {
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<BuForecastGenerationResult> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3599,12 +2865,7 @@ open class WorkforceManagementAPI {
         let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3617,13 +2878,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Get the result of a long term forecast calculation
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -3651,26 +2906,16 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the result of a long term forecast calculation
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata
      - Includes modifications unless you pass the doNotApplyModifications query parameter
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
-    "planningGroups" : [ {
-      "averageHandleTimeSecondsPerDay" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-      "planningGroupId" : "aeiou",
-      "offeredPerDay" : [ 1.3579000000000001069366817318950779736042022705078125 ]
-    } ],
-    "weekCount" : 123
-  },
-  "downloadUrl" : "aeiou"
-}}]
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -3679,7 +2924,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<LongTermForecastResultResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, forceDownloadService: Bool? = nil) -> RequestBuilder<LongTermForecastResultResponse> {
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, forceDownloadService: Bool? = nil) -> RequestBuilder<LongTermForecastResultResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3691,18 +2936,11 @@ open class WorkforceManagementAPI {
         let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceDownloadService": forceDownloadService
-            
         ])
 
         let requestBuilder: RequestBuilder<LongTermForecastResultResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3713,12 +2951,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Gets the forecast planning group snapshot
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -3745,47 +2978,68 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets the forecast planning group snapshot
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "serviceGoalTemplate" : {
-      "abandonRate" : {
-        "percent" : 123
-      },
-      "averageSpeedOfAnswer" : {
-        "seconds" : 123
-      },
-      "serviceLevel" : {
-        "seconds" : 123,
-        "percent" : 123
-      }
-    },
-    "name" : "aeiou",
-    "id" : "aeiou",
+    "serviceGoalTemplate" : "{}",
+    "name" : "name",
+    "id" : "id",
     "routePaths" : [ {
       "skills" : [ {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
       } ],
-      "mediaType" : "aeiou",
-      "language" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "queue" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    }, {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    } ]
+  }, {
+    "serviceGoalTemplate" : "{}",
+    "name" : "name",
+    "id" : "id",
+    "routePaths" : [ {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
+    }, {
+      "skills" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "mediaType" : "Voice",
+      "language" : "{}",
+      "queue" : "{}"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -3793,7 +3047,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ForecastPlanningGroupsResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<ForecastPlanningGroupsResponse> {
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<ForecastPlanningGroupsResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3805,12 +3059,7 @@ open class WorkforceManagementAPI {
         let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3821,11 +3070,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get short term forecasts
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -3851,9 +3096,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get short term forecasts
-     
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts
      - Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
      - OAuth:
@@ -3861,33 +3104,34 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
+    "metadata" : "{}",
     "legacy" : true,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "weekCount" : 123,
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "id" : "id",
+    "weekDate" : "2000-01-23",
+    "weekCount" : 0,
     "canUseForScheduling" : true,
-    "creationMethod" : "aeiou"
+    "creationMethod" : "Import"
+  }, {
+    "metadata" : "{}",
+    "legacy" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "id" : "id",
+    "weekDate" : "2000-01-23",
+    "weekCount" : 0,
+    "canUseForScheduling" : true,
+    "creationMethod" : "Import"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts 
 
      - returns: RequestBuilder<BuShortTermForecastListing> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastsWithRequestBuilder(businessUnitId: String, weekDateId: String) -> RequestBuilder<BuShortTermForecastListing> {
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastsWithRequestBuilder(businessUnitId: String, weekDateId: String) -> RequestBuilder<BuShortTermForecastListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3896,12 +3140,7 @@ open class WorkforceManagementAPI {
         let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -3910,7 +3149,6 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     
     public enum Feature_getWorkforcemanagementBusinessunits: String { 
         case agentSchedule = "AgentSchedule"
@@ -3943,10 +3181,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
     /**
-     
      Get business units
      
      - parameter feature: (query)  (optional)
@@ -3972,49 +3207,41 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get business units
-     
      - GET /api/v2/workforcemanagement/businessunits
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "division" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "division" : "{}",
     "authorized" : true,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "authorized" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter feature: (query)  (optional)
      - parameter divisionId: (query)  (optional)
 
      - returns: RequestBuilder<BusinessUnitListing> 
      */
-    open class func getWorkforcemanagementBusinessunitsWithRequestBuilder(feature: Feature_getWorkforcemanagementBusinessunits? = nil, divisionId: String? = nil) -> RequestBuilder<BusinessUnitListing> {
+    open class func getWorkforcemanagementBusinessunitsWithRequestBuilder(feature: Feature_getWorkforcemanagementBusinessunits? = nil, divisionId: String? = nil) -> RequestBuilder<BusinessUnitListing> {        
         let path = "/api/v2/workforcemanagement/businessunits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "feature": feature?.rawValue, 
-            
             "divisionId": divisionId
-            
         ])
 
         let requestBuilder: RequestBuilder<BusinessUnitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4023,10 +3250,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get business units across divisions
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return business units in all divisions (optional)
@@ -4051,46 +3275,39 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get business units across divisions
-     
      - GET /api/v2/workforcemanagement/businessunits/divisionviews
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "division" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "division" : "{}",
     "authorized" : true,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "authorized" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return business units in all divisions (optional)
 
      - returns: RequestBuilder<BusinessUnitListing> 
      */
-    open class func getWorkforcemanagementBusinessunitsDivisionviewsWithRequestBuilder(divisionId: [String]? = nil) -> RequestBuilder<BusinessUnitListing> {
+    open class func getWorkforcemanagementBusinessunitsDivisionviewsWithRequestBuilder(divisionId: [String]? = nil) -> RequestBuilder<BusinessUnitListing> {        
         let path = "/api/v2/workforcemanagement/businessunits/divisionviews"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "divisionId": divisionId
-            
         ])
 
         let requestBuilder: RequestBuilder<BusinessUnitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4099,10 +3316,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get ics formatted calendar based on shareable link
      
      - parameter calendarId: (query) The id of the ics-formatted calendar 
@@ -4127,32 +3341,21 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get ics formatted calendar based on shareable link
-     
      - GET /api/v2/workforcemanagement/calendar/data/ics
-     - 
-     - examples: [{output=none}]
      
      - parameter calendarId: (query) The id of the ics-formatted calendar 
 
      - returns: RequestBuilder<String> 
      */
-    open class func getWorkforcemanagementCalendarDataIcsWithRequestBuilder(calendarId: String) -> RequestBuilder<String> {
+    open class func getWorkforcemanagementCalendarDataIcsWithRequestBuilder(calendarId: String) -> RequestBuilder<String> {        
         let path = "/api/v2/workforcemanagement/calendar/data/ics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "calendarId": calendarId
-            
         ])
 
         let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4160,9 +3363,7 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get existing calendar link for the current user
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -4186,30 +3387,22 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get existing calendar link for the current user
-     
      - GET /api/v2/workforcemanagement/calendar/url/ics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "calendarUrl" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "calendarUrl" : "calendarUrl"
+}, statusCode=200}]
 
      - returns: RequestBuilder<CalendarUrlResponse> 
      */
-    open class func getWorkforcemanagementCalendarUrlIcsWithRequestBuilder() -> RequestBuilder<CalendarUrlResponse> {
+    open class func getWorkforcemanagementCalendarUrlIcsWithRequestBuilder() -> RequestBuilder<CalendarUrlResponse> {        
         let path = "/api/v2/workforcemanagement/calendar/url/ics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4218,9 +3411,7 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Retrieves delete job status for historical data imports of the organization
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -4244,32 +3435,24 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Retrieves delete job status for historical data imports of the organization
-     
      - GET /api/v2/workforcemanagement/historicaldata/deletejob
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "status" : "InProgress"
+}, statusCode=200}]
 
      - returns: RequestBuilder<HistoricalImportDeleteJobResponse> 
      */
-    open class func getWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder() -> RequestBuilder<HistoricalImportDeleteJobResponse> {
+    open class func getWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder() -> RequestBuilder<HistoricalImportDeleteJobResponse> {        
         let path = "/api/v2/workforcemanagement/historicaldata/deletejob"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4278,9 +3461,7 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Retrieves status of the historical data imports of the organization
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -4304,39 +3485,41 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Retrieves status of the historical data imports of the organization
-     
      - GET /api/v2/workforcemanagement/historicaldata/importstatus
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "requestId" : "aeiou",
-    "dateImportStarted" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "requestId" : "requestId",
+    "dateImportStarted" : "2000-01-23T04:56:07.000+00:00",
     "active" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "dateImportEnded" : "2000-01-23T04:56:07.000+0000",
-    "error" : "aeiou",
-    "type" : "aeiou",
-    "status" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateImportEnded" : "2000-01-23T04:56:07.000+00:00",
+    "error" : "error",
+    "type" : "Csv",
+    "status" : "Initiated"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "requestId" : "requestId",
+    "dateImportStarted" : "2000-01-23T04:56:07.000+00:00",
+    "active" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateImportEnded" : "2000-01-23T04:56:07.000+00:00",
+    "error" : "error",
+    "type" : "Csv",
+    "status" : "Initiated"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<HistoricalImportStatusListing> 
      */
-    open class func getWorkforcemanagementHistoricaldataImportstatusWithRequestBuilder() -> RequestBuilder<HistoricalImportStatusListing> {
+    open class func getWorkforcemanagementHistoricaldataImportstatusWithRequestBuilder() -> RequestBuilder<HistoricalImportStatusListing> {        
         let path = "/api/v2/workforcemanagement/historicaldata/importstatus"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4347,21 +3530,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    public enum Expand_getWorkforcemanagementManagementunit: String { 
-        case settings = "settings"
-        case settingsAdherence = "settings.adherence"
-        case settingsTimeoff = "settings.timeOff"
-        case settingsScheduling = "settings.scheduling"
-        case settingsShorttermforecasting = "settings.shortTermForecasting"
-        case settingsShifttrading = "settings.shiftTrading"
-    }
-
-    
-    
     /**
-     
      Get management unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -4387,122 +3556,43 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get management unit
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}
      - settings.shortTermForecasting is deprecated and now lives on the business unit
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "startDayOfWeek" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "settings" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "shiftTrading" : {
-      "weeklyMaxPaidViolations" : "aeiou",
-      "unequalPaid" : "aeiou",
-      "requiresMatchingLanguages" : true,
-      "oneSided" : "aeiou",
-      "allowDirectTrades" : true,
-      "autoReview" : true,
-      "enabled" : true,
-      "weeklyMinPaidViolations" : "aeiou",
-      "requiresMatchingSkills" : true,
-      "requiresMatchingQueues" : true,
-      "minHoursInFuture" : 123,
-      "activityCategoryRules" : [ {
-        "activityCodeIdReplacement" : "aeiou",
-        "activityCategory" : "aeiou",
-        "action" : "aeiou"
-      } ],
-      "requiresMatchingPlanningGroups" : true
-    },
-    "adherence" : {
-      "ignoredActivityCategories" : {
-        "values" : [ "aeiou" ]
-      },
-      "nonOnQueueActivitiesEquivalent" : true,
-      "adherenceTargetPercent" : 123,
-      "adherenceExceptionThresholdSeconds" : 123,
-      "trackOnQueueActivity" : true,
-      "severeAlertThresholdMinutes" : 123
-    },
-    "scheduling" : {
-      "planningPeriod" : {
-        "weekCount" : 123,
-        "startDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "maxOccupancyPercentForDeferredWork" : 123,
-      "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-      "shrinkageOverrides" : {
-        "values" : [ {
-          "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-          "intervalIndex" : 123
-        } ],
-        "clear" : true
-      },
-      "startDayOfWeekend" : "aeiou"
-    },
-    "timeOff" : {
-      "submissionEarliestDaysFromNow" : 123,
-      "submissionRangeEnforced" : true,
-      "submissionLatestDaysFromNow" : 123
-    },
-    "shortTermForecasting" : {
-      "defaultHistoryWeeks" : 123
-    }
-  },
-  "metadata" : "",
-  "businessUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "timeZone" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "version" : 123
-}}]
+  "startDayOfWeek" : "Sunday",
+  "division" : "{}",
+  "settings" : "{}",
+  "metadata" : "{}",
+  "businessUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "timeZone" : "timeZone",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter expand: (query)  (optional)
 
      - returns: RequestBuilder<ManagementUnit> 
      */
-    open class func getWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<ManagementUnit> {
+    open class func getWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<ManagementUnit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<ManagementUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4511,10 +3601,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get activity codes
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -4539,58 +3626,41 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get activity codes
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : "",
+  "metadata" : "{}",
   "activityCodes" : {
     "key" : {
-      "lengthInMinutes" : 123,
+      "lengthInMinutes" : 0,
       "isDefault" : true,
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
+      "metadata" : "{}",
       "countsAsWorkTime" : true,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
       "countsAsPaidTime" : true,
       "agentTimeOffSelectable" : true,
       "isActive" : true,
-      "category" : "aeiou"
+      "category" : "OnQueueWork"
     }
   }
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
 
      - returns: RequestBuilder<ActivityCodeContainer> 
      */
-    open class func getWorkforcemanagementManagementunitActivitycodesWithRequestBuilder(managementUnitId: String) -> RequestBuilder<ActivityCodeContainer> {
+    open class func getWorkforcemanagementManagementunitActivitycodesWithRequestBuilder(managementUnitId: String) -> RequestBuilder<ActivityCodeContainer> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4601,11 +3671,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a list of user schedule adherence records for the requested management unit
      
      - parameter managementUnitId: (path) The ID of the management unit 
@@ -4631,181 +3697,86 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a list of user schedule adherence records for the requested management unit
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "removedFromManagementUnit" : true,
-    "organizationSecondaryPresenceId" : "aeiou",
-    "businessUnit" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "settings" : {
-        "startDayOfWeek" : "aeiou",
-        "metadata" : {
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : "",
-          "modifiedBy" : "",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "version" : 123
-        },
-        "scheduling" : {
-          "messageSeverities" : [ {
-            "severity" : "aeiou",
-            "type" : "aeiou"
-          } ]
-        },
-        "timeZone" : "aeiou",
-        "shortTermForecasting" : {
-          "defaultHistoryWeeks" : 123
-        }
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "impact" : "aeiou",
-    "selfUri" : "aeiou",
-    "adherenceState" : "aeiou",
-    "team" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou"
-    },
-    "routingStatus" : "aeiou",
-    "presenceUpdateTime" : "2000-01-23T04:56:07.000+0000",
+    "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
+    "businessUnit" : "{}",
+    "impact" : "Positive",
+    "selfUri" : "https://openapi-generator.tech",
+    "adherenceState" : "InAdherence",
+    "team" : "{}",
+    "routingStatus" : "OFF_QUEUE",
+    "presenceUpdateTime" : "2000-01-23T04:56:07.000+00:00",
     "isOutOfOffice" : true,
-    "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+0000",
-    "managementUnit" : {
-      "startDayOfWeek" : "aeiou",
-      "division" : "",
-      "settings" : {
-        "metadata" : "",
-        "shiftTrading" : {
-          "weeklyMaxPaidViolations" : "aeiou",
-          "unequalPaid" : "aeiou",
-          "requiresMatchingLanguages" : true,
-          "oneSided" : "aeiou",
-          "allowDirectTrades" : true,
-          "autoReview" : true,
-          "enabled" : true,
-          "weeklyMinPaidViolations" : "aeiou",
-          "requiresMatchingSkills" : true,
-          "requiresMatchingQueues" : true,
-          "minHoursInFuture" : 123,
-          "activityCategoryRules" : [ {
-            "activityCodeIdReplacement" : "aeiou",
-            "activityCategory" : "aeiou",
-            "action" : "aeiou"
-          } ],
-          "requiresMatchingPlanningGroups" : true
-        },
-        "adherence" : {
-          "ignoredActivityCategories" : {
-            "values" : [ "aeiou" ]
-          },
-          "nonOnQueueActivitiesEquivalent" : true,
-          "adherenceTargetPercent" : 123,
-          "adherenceExceptionThresholdSeconds" : 123,
-          "trackOnQueueActivity" : true,
-          "severeAlertThresholdMinutes" : 123
-        },
-        "scheduling" : {
-          "planningPeriod" : {
-            "weekCount" : 123,
-            "startDate" : "2000-01-23T04:56:07.000+0000"
-          },
-          "maxOccupancyPercentForDeferredWork" : 123,
-          "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-          "shrinkageOverrides" : {
-            "values" : [ {
-              "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-              "intervalIndex" : 123
-            } ],
-            "clear" : true
-          },
-          "startDayOfWeekend" : "aeiou"
-        },
-        "timeOff" : {
-          "submissionEarliestDaysFromNow" : 123,
-          "submissionRangeEnforced" : true,
-          "submissionLatestDaysFromNow" : 123
-        },
-        "shortTermForecasting" : {
-          "defaultHistoryWeeks" : 123
-        }
-      },
-      "metadata" : "",
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "timeZone" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "modifiedBy" : "",
-      "id" : "aeiou",
-      "version" : 123
-    },
-    "timeOfAdherenceChange" : "2000-01-23T04:56:07.000+0000",
-    "systemPresence" : "aeiou",
-    "name" : "aeiou",
-    "actualActivityCategory" : "aeiou",
-    "scheduledActivityCategory" : "aeiou",
+    "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+00:00",
+    "managementUnit" : "{}",
+    "timeOfAdherenceChange" : "2000-01-23T04:56:07.000+00:00",
+    "systemPresence" : "Available",
+    "name" : "name",
+    "actualActivityCategory" : "OnQueueWork",
+    "scheduledActivityCategory" : "OnQueueWork",
     "activeQueues" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "id" : "aeiou",
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "id" : "id",
+    "user" : "{}"
+  }, {
+    "removedFromManagementUnit" : true,
+    "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
+    "businessUnit" : "{}",
+    "impact" : "Positive",
+    "selfUri" : "https://openapi-generator.tech",
+    "adherenceState" : "InAdherence",
+    "team" : "{}",
+    "routingStatus" : "OFF_QUEUE",
+    "presenceUpdateTime" : "2000-01-23T04:56:07.000+00:00",
+    "isOutOfOffice" : true,
+    "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+00:00",
+    "managementUnit" : "{}",
+    "timeOfAdherenceChange" : "2000-01-23T04:56:07.000+00:00",
+    "systemPresence" : "Available",
+    "name" : "name",
+    "actualActivityCategory" : "OnQueueWork",
+    "scheduledActivityCategory" : "OnQueueWork",
+    "activeQueues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "id" : "id",
+    "user" : "{}"
   } ],
-  "downloadUrl" : "aeiou"
-}}]
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
 
      - returns: RequestBuilder<UserScheduleAdherenceListing> 
      */
-    open class func getWorkforcemanagementManagementunitAdherenceWithRequestBuilder(managementUnitId: String, forceDownloadService: Bool? = nil) -> RequestBuilder<UserScheduleAdherenceListing> {
+    open class func getWorkforcemanagementManagementunitAdherenceWithRequestBuilder(managementUnitId: String, forceDownloadService: Bool? = nil) -> RequestBuilder<UserScheduleAdherenceListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceDownloadService": forceDownloadService
-            
         ])
 
         let requestBuilder: RequestBuilder<UserScheduleAdherenceListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4816,12 +3787,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get data for agent in the management unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -4848,55 +3814,42 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get data for agent in the management unit
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "skills" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "metadata" : "{}",
   "languages" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
   "schedulable" : true,
   "queues" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
-  "selfUri" : "aeiou",
-  "id" : "aeiou",
-  "workPlan" : {
-    "managementUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "workPlanRotation" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "workPlan" : "{}",
+  "user" : "{}",
+  "workPlanRotation" : "{}",
   "acceptDirectShiftTrades" : true
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
@@ -4904,7 +3857,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<WfmAgent> 
      */
-    open class func getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: String, agentId: String, excludeCapabilities: Bool? = nil) -> RequestBuilder<WfmAgent> {
+    open class func getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: String, agentId: String, excludeCapabilities: Bool? = nil) -> RequestBuilder<WfmAgent> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4913,18 +3866,11 @@ open class WorkforceManagementAPI {
         let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "excludeCapabilities": excludeCapabilities
-            
         ])
 
         let requestBuilder: RequestBuilder<WfmAgent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4934,11 +3880,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Gets all the shift trades for a given agent
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -4964,60 +3906,59 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets all the shift trades for a given agent
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : "",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-    "receivingShiftId" : "aeiou",
-    "receivingUser" : "",
-    "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+    "metadata" : "{}",
+    "receivingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+    "receivingShiftId" : "receivingShiftId",
+    "receivingUser" : "{}",
+    "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
     "oneSided" : true,
-    "reviewedBy" : "",
-    "initiatingUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "schedule" : {
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-    "acceptableIntervals" : [ "aeiou" ],
-    "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
-    "expiration" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-    "initiatingShiftId" : "aeiou"
+    "reviewedBy" : "{}",
+    "initiatingUser" : "{}",
+    "schedule" : "{}",
+    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+    "acceptableIntervals" : [ "acceptableIntervals", "acceptableIntervals" ],
+    "initiatingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "expiration" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Unmatched",
+    "weekDate" : "2000-01-23",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "initiatingShiftId" : "initiatingShiftId"
+  }, {
+    "metadata" : "{}",
+    "receivingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+    "receivingShiftId" : "receivingShiftId",
+    "receivingUser" : "{}",
+    "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "oneSided" : true,
+    "reviewedBy" : "{}",
+    "initiatingUser" : "{}",
+    "schedule" : "{}",
+    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+    "acceptableIntervals" : [ "acceptableIntervals", "acceptableIntervals" ],
+    "initiatingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "expiration" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Unmatched",
+    "weekDate" : "2000-01-23",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "initiatingShiftId" : "initiatingShiftId"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
 
      - returns: RequestBuilder<ShiftTradeListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitAgentShifttradesWithRequestBuilder(managementUnitId: String, agentId: String) -> RequestBuilder<ShiftTradeListResponse> {
+    open class func getWorkforcemanagementManagementunitAgentShifttradesWithRequestBuilder(managementUnitId: String, agentId: String) -> RequestBuilder<ShiftTradeListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5026,12 +3967,7 @@ open class WorkforceManagementAPI {
         let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5041,10 +3977,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Gets a summary of all shift trades in the matched state
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -5069,37 +4002,32 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets a summary of all shift trades in the matched state
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "count" : 123,
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
+    "count" : 0,
+    "weekDate" : "2000-01-23"
+  }, {
+    "count" : 0,
+    "weekDate" : "2000-01-23"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
 
      - returns: RequestBuilder<ShiftTradeMatchesSummaryResponse> 
      */
-    open class func getWorkforcemanagementManagementunitShifttradesMatchedWithRequestBuilder(managementUnitId: String) -> RequestBuilder<ShiftTradeMatchesSummaryResponse> {
+    open class func getWorkforcemanagementManagementunitShifttradesMatchedWithRequestBuilder(managementUnitId: String) -> RequestBuilder<ShiftTradeMatchesSummaryResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5109,10 +4037,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Gets list of users available for whom you can send direct shift trade requests
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -5137,301 +4062,596 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets list of users available for whom you can send direct shift trade requests
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "addresses" : [ "" ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
     "acdAutoAnswer" : true,
-    "routingStatus" : {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "status" : "aeiou"
-    },
-    "title" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "authorization" : {
-      "unusedRoles" : [ "" ],
-      "permissions" : [ "aeiou" ],
-      "permissionPolicies" : [ {
-        "policyDescription" : "aeiou",
-        "resourceConditionNode" : {
-          "operands" : [ {
-            "type" : "aeiou",
-            "value" : "aeiou"
-          } ],
-          "variableName" : "aeiou",
-          "conjunction" : "aeiou",
-          "terms" : [ "" ],
-          "operator" : "aeiou"
-        },
-        "actionSetKey" : "aeiou",
-        "namedResources" : [ "aeiou" ],
-        "policyName" : "aeiou",
-        "entityName" : "aeiou",
-        "domain" : "aeiou",
-        "allowConditions" : true,
-        "id" : "aeiou",
-        "resourceCondition" : "aeiou",
-        "actionSet" : [ "aeiou" ]
-      } ],
-      "roles" : [ {
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ]
-    },
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "skillUri" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
     } ],
-    "station" : {
-      "defaultStation" : "",
-      "lastAssociatedStation" : "",
-      "associatedStation" : {
-        "associatedDate" : "2000-01-23T04:56:07.000+0000",
-        "webRtcCallAppearances" : 123,
-        "name" : "aeiou",
-        "defaultUser" : "",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "associatedUser" : "",
-        "providerInfo" : {
-          "key" : "aeiou"
-        }
-      },
-      "effectiveStation" : ""
-    },
-    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "department" : "aeiou",
-    "presence" : {
-      "presenceDefinition" : {
-        "systemPresence" : "aeiou",
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "source" : "aeiou",
-      "message" : "aeiou",
-      "primary" : true
-    },
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
     "lastTokenIssued" : {
-      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
     },
-    "email" : "aeiou",
+    "email" : "email",
     "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "manager" : "",
     "employerInfo" : {
-      "employeeType" : "aeiou",
-      "dateHire" : "aeiou",
-      "employeeId" : "aeiou",
-      "officialName" : "aeiou"
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
     },
     "languages" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "languageUri" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
     } ],
-    "selfUri" : "aeiou",
-    "conversationSummary" : {
-      "call" : {
-        "enterprise" : "",
-        "contactCenter" : {
-          "acw" : 123,
-          "active" : 123
-        }
-      },
-      "socialExpression" : "",
-      "chat" : "",
-      "callback" : "",
-      "video" : "",
-      "message" : "",
-      "userId" : "aeiou",
-      "email" : ""
-    },
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
     "groups" : [ {
-      "images" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "display" : "aeiou",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "visibility" : "aeiou",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "owners" : [ "" ],
-      "type" : "aeiou",
-      "version" : 123,
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
       "rulesVisible" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou"
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
     } ],
     "primaryContactInfo" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
       "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
     } ],
     "biography" : {
       "education" : [ {
-        "notes" : "aeiou",
-        "school" : "aeiou",
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "dateEnd" : "2000-01-23T04:56:07.000+0000",
-        "fieldOfStudy" : "aeiou"
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
       } ],
-      "hobbies" : [ "aeiou" ],
-      "biography" : "aeiou",
-      "interests" : [ "aeiou" ],
-      "spouse" : "aeiou"
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
     },
-    "team" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou"
-    },
-    "certifications" : [ "aeiou" ],
-    "version" : 123,
-    "outOfOffice" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "user" : "",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "indefinite" : true
-    },
-    "languagePreference" : "aeiou",
-    "profileSkills" : [ "aeiou" ],
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
     "chat" : {
-      "jabberId" : "aeiou"
+      "jabberId" : "jabberId"
     },
-    "name" : "aeiou",
-    "integrationPresence" : "",
+    "name" : "name",
+    "integrationPresence" : "{}",
     "locations" : [ {
-      "notes" : "aeiou",
+      "notes" : "notes",
       "coordinates" : {
-        "key" : 1.3579000000000001069366817318950779736042022705078125
+        "key" : 1.4658129805029452
       },
-      "locationDefinition" : "",
-      "id" : "aeiou",
-      "floorplanId" : "aeiou"
-    } ],
-    "username" : "aeiou",
-    "geolocation" : {
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "locations" : [ {
-        "images" : "aeiou",
+      "locationDefinition" : {
+        "images" : "images",
         "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
         },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
         "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
         "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
+  }, {
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    } ],
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+    },
+    "email" : "email",
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "employerInfo" : {
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
+    },
+    "languages" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
+    "groups" : [ {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "region" : "aeiou",
-      "primary" : true,
-      "longitude" : 1.3579000000000001069366817318950779736042022705078125
-    }
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    } ],
+    "primaryContactInfo" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "biography" : {
+      "education" : [ {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      } ],
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
+    },
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
+    "chat" : {
+      "jabberId" : "jabberId"
+    },
+    "name" : "name",
+    "integrationPresence" : "{}",
+    "locations" : [ {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
 
      - returns: RequestBuilder<WfmUserEntityListing> 
      */
-    open class func getWorkforcemanagementManagementunitShifttradesUsersWithRequestBuilder(managementUnitId: String) -> RequestBuilder<WfmUserEntityListing> {
+    open class func getWorkforcemanagementManagementunitShifttradesUsersWithRequestBuilder(managementUnitId: String) -> RequestBuilder<WfmUserEntityListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5442,11 +4662,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Gets a time off limit object
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -5472,37 +4688,26 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets a time off limit object
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}
      - Returns properties of time off limit object, but not daily values.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "granularity" : "aeiou",
-  "defaultLimitMinutes" : 123,
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "metadata" : "{}",
+  "granularity" : "Daily",
+  "defaultLimitMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit to fetch 
 
      - returns: RequestBuilder<TimeOffLimit> 
      */
-    open class func getWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: String, timeOffLimitId: String) -> RequestBuilder<TimeOffLimit> {
+    open class func getWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: String, timeOffLimitId: String) -> RequestBuilder<TimeOffLimit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5511,12 +4716,7 @@ open class WorkforceManagementAPI {
         let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5526,10 +4726,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Gets a list of time off limit objects under management unit.
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -5554,9 +4751,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets a list of time off limit objects under management unit.
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits
      - Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
      - OAuth:
@@ -5564,39 +4759,31 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "granularity" : "aeiou",
-    "defaultLimitMinutes" : 123,
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "metadata" : "{}",
+    "granularity" : "Daily",
+    "defaultLimitMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "metadata" : "{}",
+    "granularity" : "Daily",
+    "defaultLimitMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
 
      - returns: RequestBuilder<TimeOffLimitListing> 
      */
-    open class func getWorkforcemanagementManagementunitTimeofflimitsWithRequestBuilder(managementUnitId: String) -> RequestBuilder<TimeOffLimitListing> {
+    open class func getWorkforcemanagementManagementunitTimeofflimitsWithRequestBuilder(managementUnitId: String) -> RequestBuilder<TimeOffLimitListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5607,11 +4794,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Gets a time off plan
      
      - parameter managementUnitId: (path) The ID of the management unit 
@@ -5637,44 +4820,35 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets a time off plan
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "activityCodeIds" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "metadata" : "{}",
+  "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "timeOffLimits" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
   "active" : true,
-  "id" : "aeiou",
-  "autoApprovalRule" : "aeiou",
-  "daysBeforeStartToExpireFromWaitlist" : 123
-}}]
+  "id" : "id",
+  "autoApprovalRule" : "Never",
+  "daysBeforeStartToExpireFromWaitlist" : 0
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to fetch 
 
      - returns: RequestBuilder<TimeOffPlan> 
      */
-    open class func getWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: String, timeOffPlanId: String) -> RequestBuilder<TimeOffPlan> {
+    open class func getWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: String, timeOffPlanId: String) -> RequestBuilder<TimeOffPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5683,12 +4857,7 @@ open class WorkforceManagementAPI {
         let timeOffPlanIdPostEscape = timeOffPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffPlanId}", with: timeOffPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5698,10 +4867,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Gets a list of time off plans
      
      - parameter managementUnitId: (path) The ID of the management unit 
@@ -5726,56 +4892,58 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets a list of time off plans
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "activityCodeIds" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
+    "metadata" : "{}",
+    "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "timeOffLimits" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
     "active" : true,
-    "id" : "aeiou",
-    "autoApprovalRule" : "aeiou",
-    "daysBeforeStartToExpireFromWaitlist" : 123
+    "id" : "id",
+    "autoApprovalRule" : "Never",
+    "daysBeforeStartToExpireFromWaitlist" : 0
+  }, {
+    "metadata" : "{}",
+    "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "timeOffLimits" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "active" : true,
+    "id" : "id",
+    "autoApprovalRule" : "Never",
+    "daysBeforeStartToExpireFromWaitlist" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
 
      - returns: RequestBuilder<TimeOffPlanListing> 
      */
-    open class func getWorkforcemanagementManagementunitTimeoffplansWithRequestBuilder(managementUnitId: String) -> RequestBuilder<TimeOffPlanListing> {
+    open class func getWorkforcemanagementManagementunitTimeoffplansWithRequestBuilder(managementUnitId: String) -> RequestBuilder<TimeOffPlanListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5787,12 +4955,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a time off request
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -5819,43 +4982,31 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a time off request
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "",
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "notes" : "aeiou",
-  "selfUri" : "aeiou",
-  "fullDayManagementUnitDates" : [ "aeiou" ],
-  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-  "submittedDate" : "2000-01-23T04:56:07.000+0000",
-  "reviewedBy" : "",
-  "activityCodeId" : "aeiou",
+  "submittedBy" : "{}",
+  "metadata" : "{}",
+  "notes" : "notes",
+  "selfUri" : "https://openapi-generator.tech",
+  "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewedBy" : "{}",
+  "activityCodeId" : "activityCodeId",
   "isFullDayRequest" : true,
   "markedAsRead" : true,
-  "dailyDurationMinutes" : 123,
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "dailyDurationMinutes" : 0,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "user" : "{}",
+  "status" : "PENDING"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
@@ -5863,7 +5014,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
-    open class func getWorkforcemanagementManagementunitUserTimeoffrequestWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String) -> RequestBuilder<TimeOffRequestResponse> {
+    open class func getWorkforcemanagementManagementunitUserTimeoffrequestWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String) -> RequestBuilder<TimeOffRequestResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5875,12 +5026,7 @@ open class WorkforceManagementAPI {
         let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffRequestId}", with: timeOffRequestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5892,12 +5038,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Retrieves time off limit, allocated and waitlisted values according to specific time off request
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -5924,38 +5065,32 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Retrieves time off limit, allocated and waitlisted values according to specific time off request
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeofflimits
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "values" : [ {
-    "allocatedMinutesPerInterval" : [ 123 ],
-    "timeOffLimit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "waitlistedMinutesPerInterval" : [ 123 ],
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "granularity" : "aeiou",
-    "waitlistedRequestsPerInterval" : [ 123 ],
-    "startDate" : "2000-01-23T04:56:07.000+0000",
-    "limitMinutesPerInterval" : [ 123 ]
+    "allocatedMinutesPerInterval" : [ 6, 6 ],
+    "timeOffLimit" : "{}",
+    "waitlistedMinutesPerInterval" : [ 1, 1 ],
+    "metadata" : "{}",
+    "granularity" : "Daily",
+    "waitlistedRequestsPerInterval" : [ 5, 5 ],
+    "startDate" : "2000-01-23",
+    "limitMinutesPerInterval" : [ 0, 0 ]
+  }, {
+    "allocatedMinutesPerInterval" : [ 6, 6 ],
+    "timeOffLimit" : "{}",
+    "waitlistedMinutesPerInterval" : [ 1, 1 ],
+    "metadata" : "{}",
+    "granularity" : "Daily",
+    "waitlistedRequestsPerInterval" : [ 5, 5 ],
+    "startDate" : "2000-01-23",
+    "limitMinutesPerInterval" : [ 0, 0 ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter userId: (path) The userId to whom the time off request applies. 
@@ -5963,7 +5098,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<QueryTimeOffLimitValuesResponse> 
      */
-    open class func getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String) -> RequestBuilder<QueryTimeOffLimitValuesResponse> {
+    open class func getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimitsWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String) -> RequestBuilder<QueryTimeOffLimitValuesResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeofflimits"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5975,12 +5110,7 @@ open class WorkforceManagementAPI {
         let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffRequestId}", with: timeOffRequestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -5992,17 +5122,12 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get a list of time off requests for a given user
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
-     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)
+     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: String, userId: String, recentlyReviewed: Bool? = nil, completion: @escaping ((_ data: TimeOffRequestList?,_ error: Error?) -> Void)) {
@@ -6024,56 +5149,63 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a list of time off requests for a given user
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "timeOffRequests" : [ {
-    "submittedBy" : "",
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : "",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "notes" : "aeiou",
-    "selfUri" : "aeiou",
-    "fullDayManagementUnitDates" : [ "aeiou" ],
-    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-    "submittedDate" : "2000-01-23T04:56:07.000+0000",
-    "reviewedBy" : "",
-    "activityCodeId" : "aeiou",
+    "submittedBy" : "{}",
+    "metadata" : "{}",
+    "notes" : "notes",
+    "selfUri" : "https://openapi-generator.tech",
+    "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewedBy" : "{}",
+    "activityCodeId" : "activityCodeId",
     "isFullDayRequest" : true,
     "markedAsRead" : true,
-    "dailyDurationMinutes" : 123,
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "status" : "aeiou"
+    "dailyDurationMinutes" : 0,
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "status" : "PENDING"
+  }, {
+    "submittedBy" : "{}",
+    "metadata" : "{}",
+    "notes" : "notes",
+    "selfUri" : "https://openapi-generator.tech",
+    "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewedBy" : "{}",
+    "activityCodeId" : "activityCodeId",
+    "isFullDayRequest" : true,
+    "markedAsRead" : true,
+    "dailyDurationMinutes" : 0,
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "status" : "PENDING"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
-     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)
+     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional)
 
      - returns: RequestBuilder<TimeOffRequestList> 
      */
-    open class func getWorkforcemanagementManagementunitUserTimeoffrequestsWithRequestBuilder(managementUnitId: String, userId: String, recentlyReviewed: Bool? = nil) -> RequestBuilder<TimeOffRequestList> {
+    open class func getWorkforcemanagementManagementunitUserTimeoffrequestsWithRequestBuilder(managementUnitId: String, userId: String, recentlyReviewed: Bool? = nil) -> RequestBuilder<TimeOffRequestList> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6082,18 +5214,11 @@ open class WorkforceManagementAPI {
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "recentlyReviewed": recentlyReviewed
-            
         ])
 
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6102,10 +5227,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get users in the management unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -6130,301 +5252,596 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get users in the management unit
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/users
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "addresses" : [ "" ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
     "acdAutoAnswer" : true,
-    "routingStatus" : {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "status" : "aeiou"
-    },
-    "title" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "authorization" : {
-      "unusedRoles" : [ "" ],
-      "permissions" : [ "aeiou" ],
-      "permissionPolicies" : [ {
-        "policyDescription" : "aeiou",
-        "resourceConditionNode" : {
-          "operands" : [ {
-            "type" : "aeiou",
-            "value" : "aeiou"
-          } ],
-          "variableName" : "aeiou",
-          "conjunction" : "aeiou",
-          "terms" : [ "" ],
-          "operator" : "aeiou"
-        },
-        "actionSetKey" : "aeiou",
-        "namedResources" : [ "aeiou" ],
-        "policyName" : "aeiou",
-        "entityName" : "aeiou",
-        "domain" : "aeiou",
-        "allowConditions" : true,
-        "id" : "aeiou",
-        "resourceCondition" : "aeiou",
-        "actionSet" : [ "aeiou" ]
-      } ],
-      "roles" : [ {
-        "name" : "aeiou",
-        "id" : "aeiou"
-      } ]
-    },
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "skillUri" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
     } ],
-    "station" : {
-      "defaultStation" : "",
-      "lastAssociatedStation" : "",
-      "associatedStation" : {
-        "associatedDate" : "2000-01-23T04:56:07.000+0000",
-        "webRtcCallAppearances" : 123,
-        "name" : "aeiou",
-        "defaultUser" : "",
-        "id" : "aeiou",
-        "type" : "aeiou",
-        "associatedUser" : "",
-        "providerInfo" : {
-          "key" : "aeiou"
-        }
-      },
-      "effectiveStation" : ""
-    },
-    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "department" : "aeiou",
-    "presence" : {
-      "presenceDefinition" : {
-        "systemPresence" : "aeiou",
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "source" : "aeiou",
-      "message" : "aeiou",
-      "primary" : true
-    },
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
     "lastTokenIssued" : {
-      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
     },
-    "email" : "aeiou",
+    "email" : "email",
     "images" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "manager" : "",
     "employerInfo" : {
-      "employeeType" : "aeiou",
-      "dateHire" : "aeiou",
-      "employeeId" : "aeiou",
-      "officialName" : "aeiou"
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
     },
     "languages" : [ {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "languageUri" : "aeiou",
-      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
     } ],
-    "selfUri" : "aeiou",
-    "conversationSummary" : {
-      "call" : {
-        "enterprise" : "",
-        "contactCenter" : {
-          "acw" : 123,
-          "active" : 123
-        }
-      },
-      "socialExpression" : "",
-      "chat" : "",
-      "callback" : "",
-      "video" : "",
-      "message" : "",
-      "userId" : "aeiou",
-      "email" : ""
-    },
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
     "groups" : [ {
-      "images" : [ "" ],
-      "addresses" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "display" : "aeiou",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "visibility" : "aeiou",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "owners" : [ "" ],
-      "type" : "aeiou",
-      "version" : 123,
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
       "rulesVisible" : true,
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou"
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
     } ],
     "primaryContactInfo" : [ {
-      "extension" : "aeiou",
-      "address" : "aeiou",
-      "countryCode" : "aeiou",
-      "display" : "aeiou",
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
       "integration" : "microsoftteams",
-      "mediaType" : "aeiou",
-      "type" : "aeiou"
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
     } ],
     "biography" : {
       "education" : [ {
-        "notes" : "aeiou",
-        "school" : "aeiou",
-        "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "dateEnd" : "2000-01-23T04:56:07.000+0000",
-        "fieldOfStudy" : "aeiou"
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
       } ],
-      "hobbies" : [ "aeiou" ],
-      "biography" : "aeiou",
-      "interests" : [ "aeiou" ],
-      "spouse" : "aeiou"
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
     },
-    "team" : {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "memberCount" : 123456789,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou"
-    },
-    "certifications" : [ "aeiou" ],
-    "version" : 123,
-    "outOfOffice" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "active" : true,
-      "id" : "aeiou",
-      "user" : "",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "indefinite" : true
-    },
-    "languagePreference" : "aeiou",
-    "profileSkills" : [ "aeiou" ],
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
     "chat" : {
-      "jabberId" : "aeiou"
+      "jabberId" : "jabberId"
     },
-    "name" : "aeiou",
-    "integrationPresence" : "",
+    "name" : "name",
+    "integrationPresence" : "{}",
     "locations" : [ {
-      "notes" : "aeiou",
+      "notes" : "notes",
       "coordinates" : {
-        "key" : 1.3579000000000001069366817318950779736042022705078125
+        "key" : 1.4658129805029452
       },
-      "locationDefinition" : "",
-      "id" : "aeiou",
-      "floorplanId" : "aeiou"
-    } ],
-    "username" : "aeiou",
-    "geolocation" : {
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "locations" : [ {
-        "images" : "aeiou",
+      "locationDefinition" : {
+        "images" : "images",
         "address" : {
-          "zipcode" : "aeiou",
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "street1" : "aeiou",
-          "countryName" : "aeiou",
-          "state" : "aeiou",
-          "street2" : "aeiou"
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
         },
-        "notes" : "aeiou",
-        "floorplanImage" : [ "" ],
-        "addressVerificationDetails" : {
-          "dateStarted" : "2000-01-23T04:56:07.000+0000",
-          "dateFinished" : "2000-01-23T04:56:07.000+0000",
-          "service" : "smartystreets-us",
-          "status" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "profileImage" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
         } ],
-        "emergencyNumber" : {
-          "number" : "aeiou",
-          "e164" : "aeiou",
-          "type" : "aeiou"
-        },
-        "version" : 123,
-        "path" : [ "aeiou" ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
         "addressStored" : true,
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "contactUser" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "state" : "aeiou",
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
         "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
+  }, {
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : "{}",
+    "title" : "title",
+    "division" : "{}",
+    "authorization" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "skillUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "state" : "active",
+      "proficiency" : 7.061401241503109
+    } ],
+    "station" : "{}",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "active",
+    "department" : "department",
+    "presence" : "{}",
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+    },
+    "email" : "email",
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "employerInfo" : {
+      "employeeType" : "employeeType",
+      "dateHire" : "dateHire",
+      "employeeId" : "employeeId",
+      "officialName" : "officialName"
+    },
+    "languages" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "state" : "active",
+      "languageUri" : "https://openapi-generator.tech",
+      "proficiency" : 9.301444243932576
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "conversationSummary" : "{}",
+    "groups" : [ {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
       } ],
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "region" : "aeiou",
-      "primary" : true,
-      "longitude" : 1.3579000000000001069366817318950779736042022705078125
-    }
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    }, {
+      "images" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addresses" : [ {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      }, {
+        "extension" : "extension",
+        "address" : "address",
+        "display" : "display",
+        "mediaType" : "PHONE",
+        "type" : "GROUPRING"
+      } ],
+      "visibility" : "public",
+      "memberCount" : 5,
+      "selfUri" : "https://openapi-generator.tech",
+      "description" : "description",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "owners" : [ null, null ],
+      "type" : "official",
+      "version" : 2,
+      "rulesVisible" : true,
+      "name" : "name",
+      "id" : "id",
+      "state" : "active"
+    } ],
+    "primaryContactInfo" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "biography" : {
+      "education" : [ {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      }, {
+        "notes" : "notes",
+        "school" : "school",
+        "dateStart" : "2000-01-23",
+        "dateEnd" : "2000-01-23",
+        "fieldOfStudy" : "fieldOfStudy"
+      } ],
+      "hobbies" : [ "hobbies", "hobbies" ],
+      "biography" : "biography",
+      "interests" : [ "interests", "interests" ],
+      "spouse" : "spouse"
+    },
+    "team" : "{}",
+    "certifications" : [ "certifications", "certifications" ],
+    "version" : 6,
+    "outOfOffice" : "{}",
+    "languagePreference" : "languagePreference",
+    "profileSkills" : [ "profileSkills", "profileSkills" ],
+    "chat" : {
+      "jabberId" : "jabberId"
+    },
+    "name" : "name",
+    "integrationPresence" : "{}",
+    "locations" : [ {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    }, {
+      "notes" : "notes",
+      "coordinates" : {
+        "key" : 1.4658129805029452
+      },
+      "locationDefinition" : {
+        "images" : "images",
+        "address" : {
+          "zipcode" : "zipcode",
+          "country" : "country",
+          "city" : "city",
+          "street1" : "street1",
+          "countryName" : "countryName",
+          "state" : "state",
+          "street2" : "street2"
+        },
+        "notes" : "notes",
+        "floorplanImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "addressVerificationDetails" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "profileImage" : [ {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        }, {
+          "imageUri" : "imageUri",
+          "resolution" : "resolution"
+        } ],
+        "emergencyNumber" : "{}",
+        "version" : 5,
+        "path" : [ "path", "path" ],
+        "addressStored" : true,
+        "name" : "name",
+        "id" : "id",
+        "contactUser" : "{}",
+        "state" : "active",
+        "addressVerified" : true
+      },
+      "id" : "id",
+      "floorplanId" : "floorplanId"
+    } ],
+    "username" : "username",
+    "geolocation" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
 
      - returns: RequestBuilder<WfmUserEntityListing> 
      */
-    open class func getWorkforcemanagementManagementunitUsersWithRequestBuilder(managementUnitId: String) -> RequestBuilder<WfmUserEntityListing> {
+    open class func getWorkforcemanagementManagementunitUsersWithRequestBuilder(managementUnitId: String) -> RequestBuilder<WfmUserEntityListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -6437,10 +5854,6 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     public enum Expand_getWorkforcemanagementManagementunitWeekSchedule: String { 
         case generationresults = "generationResults"
         case headcountforecast = "headcountForecast"
@@ -6448,10 +5861,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
     /**
-     
      Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -6480,99 +5890,15 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "headcountForecast" : {
-      "requiredWithoutShrinkage" : [ "" ],
-      "required" : [ {
-        "interval" : "2000-01-23T04:56:07.000+0000",
-        "value" : 1.3579000000000001069366817318950779736042022705078125
-      } ]
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "generationResults" : {
-      "agentWarningCount" : 123,
-      "agentWarnings" : [ {
-        "unableToScheduleRequiredDays" : [ "aeiou" ],
-        "userNotLicensed" : true,
-        "unableToMeetMaxDays" : true,
-        "noNeedDays" : [ "aeiou" ],
-        "unableToMeetMaxPaidForTheWeek" : true,
-        "unableToMeetMinPaidForTheWeek" : true,
-        "userId" : "aeiou",
-        "shiftsTooCloseTogether" : true
-      } ],
-      "failed" : true,
-      "runId" : "aeiou"
-    },
-    "id" : "aeiou",
-    "published" : true,
-    "weekDate" : "aeiou",
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "aeiou"
-    },
-    "agentSchedulesVersion" : 123,
-    "userSchedules" : {
-      "key" : {
-        "fullDayTimeOffMarkers" : [ {
-          "activityCodeId" : "aeiou",
-          "isPaid" : true,
-          "lengthInMinutes" : 123,
-          "description" : "aeiou",
-          "managementUnitDate" : "aeiou",
-          "delete" : true
-        } ],
-        "metadata" : "",
-        "workPlanId" : "aeiou",
-        "shifts" : [ {
-          "lengthInMinutes" : 123,
-          "activities" : [ {
-            "activityCodeId" : "aeiou",
-            "lengthInMinutes" : 123,
-            "timeOffRequestId" : "aeiou",
-            "description" : "aeiou",
-            "isDstFallback" : true,
-            "countsAsPaidTime" : true,
-            "startDate" : "2000-01-23T04:56:07.000+0000"
-          } ],
-          "weekSchedule" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou",
-            "weekDate" : "aeiou"
-          },
-          "id" : "aeiou",
-          "delete" : true,
-          "startDate" : "2000-01-23T04:56:07.000+0000",
-          "manuallyEdited" : true
-        } ],
-        "delete" : true
-      }
-    }
-  },
-  "downloadUrl" : "aeiou"
-}}]
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. 
@@ -6582,7 +5908,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<WeekScheduleResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWeekScheduleWithRequestBuilder(managementUnitId: String, weekId: String, scheduleId: String, expand: Expand_getWorkforcemanagementManagementunitWeekSchedule? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<WeekScheduleResponse> {
+    open class func getWorkforcemanagementManagementunitWeekScheduleWithRequestBuilder(managementUnitId: String, weekId: String, scheduleId: String, expand: Expand_getWorkforcemanagementManagementunitWeekSchedule? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<WeekScheduleResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6594,20 +5920,12 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand?.rawValue, 
-            
             "forceDownloadService": forceDownloadService
-            
         ])
 
         let requestBuilder: RequestBuilder<WeekScheduleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6620,14 +5938,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -6656,54 +5967,32 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "generationResults" : {
-      "agentWarningCount" : 123,
-      "agentWarnings" : [ {
-        "unableToScheduleRequiredDays" : [ "aeiou" ],
-        "userNotLicensed" : true,
-        "unableToMeetMaxDays" : true,
-        "noNeedDays" : [ "aeiou" ],
-        "unableToMeetMaxPaidForTheWeek" : true,
-        "unableToMeetMinPaidForTheWeek" : true,
-        "userId" : "aeiou",
-        "shiftsTooCloseTogether" : true
-      } ],
-      "failed" : true,
-      "runId" : "aeiou"
-    },
-    "id" : "aeiou",
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "generationResults" : "{}",
+    "id" : "id",
     "published" : true,
-    "weekDate" : "aeiou",
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "aeiou"
-    }
+    "weekDate" : "weekDate",
+    "shortTermForecast" : "{}"
+  }, {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "generationResults" : "{}",
+    "id" : "id",
+    "published" : true,
+    "weekDate" : "weekDate",
+    "shortTermForecast" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. 
@@ -6713,7 +6002,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<WeekScheduleListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWeekSchedulesWithRequestBuilder(managementUnitId: String, weekId: String, includeOnlyPublished: Bool? = nil, earliestWeekDate: String? = nil, latestWeekDate: String? = nil) -> RequestBuilder<WeekScheduleListResponse> {
+    open class func getWorkforcemanagementManagementunitWeekSchedulesWithRequestBuilder(managementUnitId: String, weekId: String, includeOnlyPublished: Bool? = nil, earliestWeekDate: String? = nil, latestWeekDate: String? = nil) -> RequestBuilder<WeekScheduleListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6722,22 +6011,13 @@ open class WorkforceManagementAPI {
         let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "includeOnlyPublished": includeOnlyPublished, 
-            
             "earliestWeekDate": earliestWeekDate, 
-            
             "latestWeekDate": latestWeekDate
-            
         ])
 
         let requestBuilder: RequestBuilder<WeekScheduleListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6748,17 +6028,12 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Gets all the shift trades for a given week
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional, default to true)
+     - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, completion: @escaping ((_ data: WeekShiftTradeListResponse?,_ error: Error?) -> Void)) {
@@ -6780,87 +6055,28 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets all the shift trades for a given week
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "trade" : {
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : "",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-      "receivingShiftId" : "aeiou",
-      "receivingUser" : "",
-      "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
-      "oneSided" : true,
-      "reviewedBy" : "",
-      "initiatingUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "schedule" : {
-        "businessUnit" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "id" : "aeiou",
-        "weekDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-      "acceptableIntervals" : [ "aeiou" ],
-      "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
-      "expiration" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000",
-      "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-      "initiatingShiftId" : "aeiou"
-    },
-    "matchReview" : {
-      "receivingUser" : "",
-      "violations" : [ {
-        "type" : "aeiou",
-        "params" : {
-          "key" : "aeiou"
-        }
-      } ],
-      "adminReviewViolations" : [ "" ],
-      "initiatingUser" : {
-        "postTradeNewShift" : {
-          "activities" : [ {
-            "activityCodeId" : "aeiou",
-            "lengthMinutes" : 123,
-            "countsAsPaidTime" : true,
-            "startDate" : "2000-01-23T04:56:07.000+0000"
-          } ]
-        },
-        "weeklyMaximumPaidMinutes" : 123,
-        "weeklyMinimumPaidMinutes" : 123,
-        "preTradeSchedulePaidMinutes" : 123,
-        "postTradeSchedulePaidMinutes" : 123
-      }
-    }
+    "trade" : "{}",
+    "matchReview" : "{}"
+  }, {
+    "trade" : "{}",
+    "matchReview" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional, default to true)
+     - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional)
 
      - returns: RequestBuilder<WeekShiftTradeListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil) -> RequestBuilder<WeekShiftTradeListResponse> {
+    open class func getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil) -> RequestBuilder<WeekShiftTradeListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6869,18 +6085,11 @@ open class WorkforceManagementAPI {
         let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "evaluateMatches": evaluateMatches
-            
         ])
 
         let requestBuilder: RequestBuilder<WeekShiftTradeListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6891,21 +6100,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    public enum IncludeOnly_getWorkforcemanagementManagementunitWorkplan: String { 
-        case agentcount = "agentCount"
-        case agents = "agents"
-        case optionaldays = "optionalDays"
-        case shifts = "shifts"
-        case shiftstartvariances = "shiftStartVariances"
-    }
-
-    
-    
     /**
-     
      Get a work plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -6932,110 +6127,170 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a work plan
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "maximumDaysOffPerPlanningPeriod" : 123,
-  "minimumPaidMinutesPerPlanningPeriod" : 123,
-  "optionalDays" : {
-    "values" : [ "aeiou" ]
-  },
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "maximumDaysOffPerPlanningPeriod" : 1,
+  "minimumPaidMinutesPerPlanningPeriod" : 1,
+  "optionalDays" : "{}",
+  "metadata" : "{}",
   "flexibleWeeklyPaidTime" : true,
-  "shiftStartVariances" : {
-    "values" : [ {
-      "applicableDays" : [ "aeiou" ],
-      "maxShiftStartVarianceMinutes" : 123
-    } ]
-  },
+  "shiftStartVariances" : "{}",
   "constrainWeeklyPaidTime" : true,
   "enabled" : true,
   "valid" : true,
-  "minimumShiftStartDistanceMinutes" : 123,
+  "minimumShiftStartDistanceMinutes" : 4,
   "constrainMaximumConsecutiveWorkingDays" : true,
-  "maximumConsecutiveWorkingDays" : 123,
+  "maximumConsecutiveWorkingDays" : 2,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
-    "exactStartTimeMinutesFromMidnight" : 123,
-    "validationId" : "aeiou",
-    "maximumContiguousWorkTimeMinutes" : 123,
-    "startIncrementMinutes" : 123,
+    "exactStartTimeMinutesFromMidnight" : 6,
+    "validationId" : "validationId",
+    "maximumContiguousWorkTimeMinutes" : 6,
+    "startIncrementMinutes" : 9,
     "flexiblePaidTime" : true,
     "constrainContiguousWorkTime" : true,
     "delete" : true,
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 123,
+    "latestStartTimeMinutesFromMidnight" : 1,
     "constrainStopTime" : true,
-    "earliestStopTimeMinutesFromMidnight" : 123,
-    "latestStopTimeMinutesFromMidnight" : 123,
+    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStopTimeMinutesFromMidnight" : 4,
     "activities" : [ {
-      "startTimeIncrementMinutes" : 123,
-      "validationId" : "aeiou",
-      "lengthMinutes" : 123,
-      "earliestStartTimeMinutes" : 123,
-      "description" : "aeiou",
-      "latestStartTimeMinutes" : 123,
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
       "countsAsPaidTime" : true,
       "delete" : true,
-      "activityCodeId" : "aeiou",
-      "minimumLengthFromShiftStartMinutes" : 123,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 123,
-      "exactStartTimeMinutes" : 123,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
       "countsAsContiguousWorkTime" : true,
-      "id" : "aeiou",
+      "id" : "id",
+      "flexibleStartTime" : true
+    }, {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 123,
-    "name" : "aeiou",
-    "days" : "",
-    "id" : "aeiou",
-    "minimumContiguousWorkTimeMinutes" : 123,
-    "exactPaidTimeMinutes" : 123,
-    "earliestStartTimeMinutesFromMidnight" : 123,
+    "maximumPaidTimeMinutes" : 8,
+    "name" : "name",
+    "days" : "{}",
+    "id" : "id",
+    "minimumContiguousWorkTimeMinutes" : 9,
+    "exactPaidTimeMinutes" : 9,
+    "earliestStartTimeMinutesFromMidnight" : 7,
     "flexibleStartTime" : true,
     "constrainEarliestStopTime" : true,
-    "minimumPaidTimeMinutes" : 123
+    "minimumPaidTimeMinutes" : 6
+  }, {
+    "exactStartTimeMinutesFromMidnight" : 6,
+    "validationId" : "validationId",
+    "maximumContiguousWorkTimeMinutes" : 6,
+    "startIncrementMinutes" : 9,
+    "flexiblePaidTime" : true,
+    "constrainContiguousWorkTime" : true,
+    "delete" : true,
+    "constrainLatestStopTime" : true,
+    "latestStartTimeMinutesFromMidnight" : 1,
+    "constrainStopTime" : true,
+    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStopTimeMinutesFromMidnight" : 4,
+    "activities" : [ {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
+      "flexibleStartTime" : true
+    }, {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
+      "flexibleStartTime" : true
+    } ],
+    "maximumPaidTimeMinutes" : 8,
+    "name" : "name",
+    "days" : "{}",
+    "id" : "id",
+    "minimumContiguousWorkTimeMinutes" : 9,
+    "exactPaidTimeMinutes" : 9,
+    "earliestStartTimeMinutesFromMidnight" : 7,
+    "flexibleStartTime" : true,
+    "constrainEarliestStopTime" : true,
+    "minimumPaidTimeMinutes" : 6
   } ],
-  "weeklyMinimumPaidMinutes" : 123,
-  "id" : "aeiou",
-  "paidTimeGranularityMinutes" : 123,
-  "maximumConsecutiveWorkingWeekends" : 123,
-  "weeklyExactPaidMinutes" : 123,
-  "shiftStartVarianceType" : "aeiou",
-  "maximumDays" : 123,
-  "minimumWorkingDaysPerWeek" : 123,
-  "minimumConsecutiveNonWorkingMinutesPerWeek" : 123,
-  "selfUri" : "aeiou",
-  "minimumTimeBetweenShiftsMinutes" : 123,
+  "weeklyMinimumPaidMinutes" : 6,
+  "id" : "id",
+  "paidTimeGranularityMinutes" : 5,
+  "maximumConsecutiveWorkingWeekends" : 9,
+  "weeklyExactPaidMinutes" : 0,
+  "shiftStartVarianceType" : "ShiftStart",
+  "maximumDays" : 2,
+  "minimumWorkingDaysPerWeek" : 3,
+  "minimumConsecutiveNonWorkingMinutesPerWeek" : 7,
+  "selfUri" : "https://openapi-generator.tech",
+  "minimumTimeBetweenShiftsMinutes" : 5,
   "constrainPaidTimeGranularity" : true,
-  "maximumPaidMinutesPerPlanningPeriod" : 123,
+  "maximumPaidMinutesPerPlanningPeriod" : 1,
   "agents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "delete" : true
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
     "delete" : true
   } ],
-  "weeklyMaximumPaidMinutes" : 123,
-  "name" : "aeiou",
-  "minimumDaysOffPerPlanningPeriod" : 123,
+  "weeklyMaximumPaidMinutes" : 1,
+  "name" : "name",
+  "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 123
-}}]
+  "agentCount" : 6
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to fetch 
@@ -7043,7 +6298,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func getWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, includeOnly: [String]? = nil) -> RequestBuilder<WorkPlan> {
+    open class func getWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, includeOnly: [String]? = nil) -> RequestBuilder<WorkPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7052,18 +6307,11 @@ open class WorkforceManagementAPI {
         let workPlanIdPostEscape = workPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanId}", with: workPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "includeOnly": includeOnly
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7073,11 +6321,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a work plan rotation
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -7103,57 +6347,37 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a work plan rotation
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "dateRange" : {
-    "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
-    "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "pattern" : {
-    "workPlans" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ]
-  },
-  "id" : "aeiou",
-  "agentCount" : 123,
+  "metadata" : "{}",
+  "dateRange" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "pattern" : "{}",
+  "id" : "id",
+  "agentCount" : 0,
   "enabled" : true,
   "agents" : [ {
-    "dateRange" : "",
-    "position" : 123,
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "dateRange" : "{}",
+    "position" : 6,
+    "user" : "{}"
+  }, {
+    "dateRange" : "{}",
+    "position" : 6,
+    "user" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanRotationId: (path) The ID of the work plan rotation to fetch 
 
      - returns: RequestBuilder<WorkPlanRotationResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String) -> RequestBuilder<WorkPlanRotationResponse> {
+    open class func getWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String) -> RequestBuilder<WorkPlanRotationResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7162,12 +6386,7 @@ open class WorkforceManagementAPI {
         let workPlanRotationIdPostEscape = workPlanRotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanRotationId}", with: workPlanRotationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -7178,16 +6397,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    public enum Expand_getWorkforcemanagementManagementunitWorkplanrotations: String { 
-        case agents = "agents"
-    }
-
-    
-    
     /**
-     
      Get work plan rotations
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -7213,76 +6423,67 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get work plan rotations
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : "",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "dateRange" : {
-      "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
-      "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "pattern" : {
-      "workPlans" : [ {
-        "managementUnit" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      } ]
-    },
-    "id" : "aeiou",
-    "agentCount" : 123,
+    "metadata" : "{}",
+    "dateRange" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "pattern" : "{}",
+    "id" : "id",
+    "agentCount" : 0,
     "enabled" : true,
     "agents" : [ {
-      "dateRange" : "",
-      "position" : 123,
-      "user" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
+      "dateRange" : "{}",
+      "position" : 6,
+      "user" : "{}"
+    }, {
+      "dateRange" : "{}",
+      "position" : 6,
+      "user" : "{}"
+    } ]
+  }, {
+    "metadata" : "{}",
+    "dateRange" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "pattern" : "{}",
+    "id" : "id",
+    "agentCount" : 0,
+    "enabled" : true,
+    "agents" : [ {
+      "dateRange" : "{}",
+      "position" : 6,
+      "user" : "{}"
+    }, {
+      "dateRange" : "{}",
+      "position" : 6,
+      "user" : "{}"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter expand: (query)  (optional)
 
      - returns: RequestBuilder<WorkPlanRotationListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<WorkPlanRotationListResponse> {
+    open class func getWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<WorkPlanRotationListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkPlanRotationListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7292,21 +6493,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    public enum Expand_getWorkforcemanagementManagementunitWorkplans: String { 
-        case agentcount = "agentCount"
-        case agents = "agents"
-        case optionaldays = "optionalDays"
-        case shifts = "shifts"
-        case shiftstartvariances = "shiftStartVariances"
-        case details = "details"
-    }
-
-    
-    
     /**
-     
      Get work plans
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -7332,9 +6519,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get work plans
-     
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans
      - \"expand=details\" is deprecated
      - OAuth:
@@ -7342,126 +6527,340 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "maximumDaysOffPerPlanningPeriod" : 123,
-    "minimumPaidMinutesPerPlanningPeriod" : 123,
-    "optionalDays" : {
-      "values" : [ "aeiou" ]
-    },
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
+    "maximumDaysOffPerPlanningPeriod" : 1,
+    "minimumPaidMinutesPerPlanningPeriod" : 1,
+    "optionalDays" : "{}",
+    "metadata" : "{}",
     "flexibleWeeklyPaidTime" : true,
-    "shiftStartVariances" : {
-      "values" : [ {
-        "applicableDays" : [ "aeiou" ],
-        "maxShiftStartVarianceMinutes" : 123
-      } ]
-    },
+    "shiftStartVariances" : "{}",
     "constrainWeeklyPaidTime" : true,
     "enabled" : true,
     "valid" : true,
-    "minimumShiftStartDistanceMinutes" : 123,
+    "minimumShiftStartDistanceMinutes" : 4,
     "constrainMaximumConsecutiveWorkingDays" : true,
-    "maximumConsecutiveWorkingDays" : 123,
+    "maximumConsecutiveWorkingDays" : 2,
     "constrainMinimumTimeBetweenShifts" : true,
     "shifts" : [ {
-      "exactStartTimeMinutesFromMidnight" : 123,
-      "validationId" : "aeiou",
-      "maximumContiguousWorkTimeMinutes" : 123,
-      "startIncrementMinutes" : 123,
+      "exactStartTimeMinutesFromMidnight" : 6,
+      "validationId" : "validationId",
+      "maximumContiguousWorkTimeMinutes" : 6,
+      "startIncrementMinutes" : 9,
       "flexiblePaidTime" : true,
       "constrainContiguousWorkTime" : true,
       "delete" : true,
       "constrainLatestStopTime" : true,
-      "latestStartTimeMinutesFromMidnight" : 123,
+      "latestStartTimeMinutesFromMidnight" : 1,
       "constrainStopTime" : true,
-      "earliestStopTimeMinutesFromMidnight" : 123,
-      "latestStopTimeMinutesFromMidnight" : 123,
+      "earliestStopTimeMinutesFromMidnight" : 5,
+      "latestStopTimeMinutesFromMidnight" : 4,
       "activities" : [ {
-        "startTimeIncrementMinutes" : 123,
-        "validationId" : "aeiou",
-        "lengthMinutes" : 123,
-        "earliestStartTimeMinutes" : 123,
-        "description" : "aeiou",
-        "latestStartTimeMinutes" : 123,
+        "startTimeIncrementMinutes" : 6,
+        "validationId" : "validationId",
+        "lengthMinutes" : 3,
+        "earliestStartTimeMinutes" : 6,
+        "description" : "description",
+        "latestStartTimeMinutes" : 1,
         "countsAsPaidTime" : true,
         "delete" : true,
-        "activityCodeId" : "aeiou",
-        "minimumLengthFromShiftStartMinutes" : 123,
+        "activityCodeId" : "activityCodeId",
+        "minimumLengthFromShiftStartMinutes" : 6,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 123,
-        "exactStartTimeMinutes" : 123,
+        "minimumLengthFromShiftEndMinutes" : 5,
+        "exactStartTimeMinutes" : 2,
         "countsAsContiguousWorkTime" : true,
-        "id" : "aeiou",
+        "id" : "id",
+        "flexibleStartTime" : true
+      }, {
+        "startTimeIncrementMinutes" : 6,
+        "validationId" : "validationId",
+        "lengthMinutes" : 3,
+        "earliestStartTimeMinutes" : 6,
+        "description" : "description",
+        "latestStartTimeMinutes" : 1,
+        "countsAsPaidTime" : true,
+        "delete" : true,
+        "activityCodeId" : "activityCodeId",
+        "minimumLengthFromShiftStartMinutes" : 6,
+        "startTimeIsRelativeToShiftStart" : true,
+        "minimumLengthFromShiftEndMinutes" : 5,
+        "exactStartTimeMinutes" : 2,
+        "countsAsContiguousWorkTime" : true,
+        "id" : "id",
         "flexibleStartTime" : true
       } ],
-      "maximumPaidTimeMinutes" : 123,
-      "name" : "aeiou",
-      "days" : "",
-      "id" : "aeiou",
-      "minimumContiguousWorkTimeMinutes" : 123,
-      "exactPaidTimeMinutes" : 123,
-      "earliestStartTimeMinutesFromMidnight" : 123,
+      "maximumPaidTimeMinutes" : 8,
+      "name" : "name",
+      "days" : "{}",
+      "id" : "id",
+      "minimumContiguousWorkTimeMinutes" : 9,
+      "exactPaidTimeMinutes" : 9,
+      "earliestStartTimeMinutesFromMidnight" : 7,
       "flexibleStartTime" : true,
       "constrainEarliestStopTime" : true,
-      "minimumPaidTimeMinutes" : 123
+      "minimumPaidTimeMinutes" : 6
+    }, {
+      "exactStartTimeMinutesFromMidnight" : 6,
+      "validationId" : "validationId",
+      "maximumContiguousWorkTimeMinutes" : 6,
+      "startIncrementMinutes" : 9,
+      "flexiblePaidTime" : true,
+      "constrainContiguousWorkTime" : true,
+      "delete" : true,
+      "constrainLatestStopTime" : true,
+      "latestStartTimeMinutesFromMidnight" : 1,
+      "constrainStopTime" : true,
+      "earliestStopTimeMinutesFromMidnight" : 5,
+      "latestStopTimeMinutesFromMidnight" : 4,
+      "activities" : [ {
+        "startTimeIncrementMinutes" : 6,
+        "validationId" : "validationId",
+        "lengthMinutes" : 3,
+        "earliestStartTimeMinutes" : 6,
+        "description" : "description",
+        "latestStartTimeMinutes" : 1,
+        "countsAsPaidTime" : true,
+        "delete" : true,
+        "activityCodeId" : "activityCodeId",
+        "minimumLengthFromShiftStartMinutes" : 6,
+        "startTimeIsRelativeToShiftStart" : true,
+        "minimumLengthFromShiftEndMinutes" : 5,
+        "exactStartTimeMinutes" : 2,
+        "countsAsContiguousWorkTime" : true,
+        "id" : "id",
+        "flexibleStartTime" : true
+      }, {
+        "startTimeIncrementMinutes" : 6,
+        "validationId" : "validationId",
+        "lengthMinutes" : 3,
+        "earliestStartTimeMinutes" : 6,
+        "description" : "description",
+        "latestStartTimeMinutes" : 1,
+        "countsAsPaidTime" : true,
+        "delete" : true,
+        "activityCodeId" : "activityCodeId",
+        "minimumLengthFromShiftStartMinutes" : 6,
+        "startTimeIsRelativeToShiftStart" : true,
+        "minimumLengthFromShiftEndMinutes" : 5,
+        "exactStartTimeMinutes" : 2,
+        "countsAsContiguousWorkTime" : true,
+        "id" : "id",
+        "flexibleStartTime" : true
+      } ],
+      "maximumPaidTimeMinutes" : 8,
+      "name" : "name",
+      "days" : "{}",
+      "id" : "id",
+      "minimumContiguousWorkTimeMinutes" : 9,
+      "exactPaidTimeMinutes" : 9,
+      "earliestStartTimeMinutesFromMidnight" : 7,
+      "flexibleStartTime" : true,
+      "constrainEarliestStopTime" : true,
+      "minimumPaidTimeMinutes" : 6
     } ],
-    "weeklyMinimumPaidMinutes" : 123,
-    "id" : "aeiou",
-    "paidTimeGranularityMinutes" : 123,
-    "maximumConsecutiveWorkingWeekends" : 123,
-    "weeklyExactPaidMinutes" : 123,
-    "shiftStartVarianceType" : "aeiou",
-    "maximumDays" : 123,
-    "minimumWorkingDaysPerWeek" : 123,
-    "minimumConsecutiveNonWorkingMinutesPerWeek" : 123,
-    "selfUri" : "aeiou",
-    "minimumTimeBetweenShiftsMinutes" : 123,
+    "weeklyMinimumPaidMinutes" : 6,
+    "id" : "id",
+    "paidTimeGranularityMinutes" : 5,
+    "maximumConsecutiveWorkingWeekends" : 9,
+    "weeklyExactPaidMinutes" : 0,
+    "shiftStartVarianceType" : "ShiftStart",
+    "maximumDays" : 2,
+    "minimumWorkingDaysPerWeek" : 3,
+    "minimumConsecutiveNonWorkingMinutesPerWeek" : 7,
+    "selfUri" : "https://openapi-generator.tech",
+    "minimumTimeBetweenShiftsMinutes" : 5,
     "constrainPaidTimeGranularity" : true,
-    "maximumPaidMinutesPerPlanningPeriod" : 123,
+    "maximumPaidMinutesPerPlanningPeriod" : 1,
     "agents" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "delete" : true
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
       "delete" : true
     } ],
-    "weeklyMaximumPaidMinutes" : 123,
-    "name" : "aeiou",
-    "minimumDaysOffPerPlanningPeriod" : 123,
+    "weeklyMaximumPaidMinutes" : 1,
+    "name" : "name",
+    "minimumDaysOffPerPlanningPeriod" : 7,
     "constrainMaximumConsecutiveWorkingWeekends" : true,
-    "agentCount" : 123
+    "agentCount" : 6
+  }, {
+    "maximumDaysOffPerPlanningPeriod" : 1,
+    "minimumPaidMinutesPerPlanningPeriod" : 1,
+    "optionalDays" : "{}",
+    "metadata" : "{}",
+    "flexibleWeeklyPaidTime" : true,
+    "shiftStartVariances" : "{}",
+    "constrainWeeklyPaidTime" : true,
+    "enabled" : true,
+    "valid" : true,
+    "minimumShiftStartDistanceMinutes" : 4,
+    "constrainMaximumConsecutiveWorkingDays" : true,
+    "maximumConsecutiveWorkingDays" : 2,
+    "constrainMinimumTimeBetweenShifts" : true,
+    "shifts" : [ {
+      "exactStartTimeMinutesFromMidnight" : 6,
+      "validationId" : "validationId",
+      "maximumContiguousWorkTimeMinutes" : 6,
+      "startIncrementMinutes" : 9,
+      "flexiblePaidTime" : true,
+      "constrainContiguousWorkTime" : true,
+      "delete" : true,
+      "constrainLatestStopTime" : true,
+      "latestStartTimeMinutesFromMidnight" : 1,
+      "constrainStopTime" : true,
+      "earliestStopTimeMinutesFromMidnight" : 5,
+      "latestStopTimeMinutesFromMidnight" : 4,
+      "activities" : [ {
+        "startTimeIncrementMinutes" : 6,
+        "validationId" : "validationId",
+        "lengthMinutes" : 3,
+        "earliestStartTimeMinutes" : 6,
+        "description" : "description",
+        "latestStartTimeMinutes" : 1,
+        "countsAsPaidTime" : true,
+        "delete" : true,
+        "activityCodeId" : "activityCodeId",
+        "minimumLengthFromShiftStartMinutes" : 6,
+        "startTimeIsRelativeToShiftStart" : true,
+        "minimumLengthFromShiftEndMinutes" : 5,
+        "exactStartTimeMinutes" : 2,
+        "countsAsContiguousWorkTime" : true,
+        "id" : "id",
+        "flexibleStartTime" : true
+      }, {
+        "startTimeIncrementMinutes" : 6,
+        "validationId" : "validationId",
+        "lengthMinutes" : 3,
+        "earliestStartTimeMinutes" : 6,
+        "description" : "description",
+        "latestStartTimeMinutes" : 1,
+        "countsAsPaidTime" : true,
+        "delete" : true,
+        "activityCodeId" : "activityCodeId",
+        "minimumLengthFromShiftStartMinutes" : 6,
+        "startTimeIsRelativeToShiftStart" : true,
+        "minimumLengthFromShiftEndMinutes" : 5,
+        "exactStartTimeMinutes" : 2,
+        "countsAsContiguousWorkTime" : true,
+        "id" : "id",
+        "flexibleStartTime" : true
+      } ],
+      "maximumPaidTimeMinutes" : 8,
+      "name" : "name",
+      "days" : "{}",
+      "id" : "id",
+      "minimumContiguousWorkTimeMinutes" : 9,
+      "exactPaidTimeMinutes" : 9,
+      "earliestStartTimeMinutesFromMidnight" : 7,
+      "flexibleStartTime" : true,
+      "constrainEarliestStopTime" : true,
+      "minimumPaidTimeMinutes" : 6
+    }, {
+      "exactStartTimeMinutesFromMidnight" : 6,
+      "validationId" : "validationId",
+      "maximumContiguousWorkTimeMinutes" : 6,
+      "startIncrementMinutes" : 9,
+      "flexiblePaidTime" : true,
+      "constrainContiguousWorkTime" : true,
+      "delete" : true,
+      "constrainLatestStopTime" : true,
+      "latestStartTimeMinutesFromMidnight" : 1,
+      "constrainStopTime" : true,
+      "earliestStopTimeMinutesFromMidnight" : 5,
+      "latestStopTimeMinutesFromMidnight" : 4,
+      "activities" : [ {
+        "startTimeIncrementMinutes" : 6,
+        "validationId" : "validationId",
+        "lengthMinutes" : 3,
+        "earliestStartTimeMinutes" : 6,
+        "description" : "description",
+        "latestStartTimeMinutes" : 1,
+        "countsAsPaidTime" : true,
+        "delete" : true,
+        "activityCodeId" : "activityCodeId",
+        "minimumLengthFromShiftStartMinutes" : 6,
+        "startTimeIsRelativeToShiftStart" : true,
+        "minimumLengthFromShiftEndMinutes" : 5,
+        "exactStartTimeMinutes" : 2,
+        "countsAsContiguousWorkTime" : true,
+        "id" : "id",
+        "flexibleStartTime" : true
+      }, {
+        "startTimeIncrementMinutes" : 6,
+        "validationId" : "validationId",
+        "lengthMinutes" : 3,
+        "earliestStartTimeMinutes" : 6,
+        "description" : "description",
+        "latestStartTimeMinutes" : 1,
+        "countsAsPaidTime" : true,
+        "delete" : true,
+        "activityCodeId" : "activityCodeId",
+        "minimumLengthFromShiftStartMinutes" : 6,
+        "startTimeIsRelativeToShiftStart" : true,
+        "minimumLengthFromShiftEndMinutes" : 5,
+        "exactStartTimeMinutes" : 2,
+        "countsAsContiguousWorkTime" : true,
+        "id" : "id",
+        "flexibleStartTime" : true
+      } ],
+      "maximumPaidTimeMinutes" : 8,
+      "name" : "name",
+      "days" : "{}",
+      "id" : "id",
+      "minimumContiguousWorkTimeMinutes" : 9,
+      "exactPaidTimeMinutes" : 9,
+      "earliestStartTimeMinutesFromMidnight" : 7,
+      "flexibleStartTime" : true,
+      "constrainEarliestStopTime" : true,
+      "minimumPaidTimeMinutes" : 6
+    } ],
+    "weeklyMinimumPaidMinutes" : 6,
+    "id" : "id",
+    "paidTimeGranularityMinutes" : 5,
+    "maximumConsecutiveWorkingWeekends" : 9,
+    "weeklyExactPaidMinutes" : 0,
+    "shiftStartVarianceType" : "ShiftStart",
+    "maximumDays" : 2,
+    "minimumWorkingDaysPerWeek" : 3,
+    "minimumConsecutiveNonWorkingMinutesPerWeek" : 7,
+    "selfUri" : "https://openapi-generator.tech",
+    "minimumTimeBetweenShiftsMinutes" : 5,
+    "constrainPaidTimeGranularity" : true,
+    "maximumPaidMinutesPerPlanningPeriod" : 1,
+    "agents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "delete" : true
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "delete" : true
+    } ],
+    "weeklyMaximumPaidMinutes" : 1,
+    "name" : "name",
+    "minimumDaysOffPerPlanningPeriod" : 7,
+    "constrainMaximumConsecutiveWorkingWeekends" : true,
+    "agentCount" : 6
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter expand: (query)  (optional)
 
      - returns: RequestBuilder<WorkPlanListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<WorkPlanListResponse> {
+    open class func getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<WorkPlanListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkPlanListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7472,14 +6871,10 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
     public enum Expand_getWorkforcemanagementManagementunits: String { 
         case details = "details"
     }
 
-    
     
     
     public enum Feature_getWorkforcemanagementManagementunits: String { 
@@ -7513,10 +6908,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
     /**
-     
      Get management units
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -7545,109 +6937,49 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get management units
-     
      - GET /api/v2/workforcemanagement/managementunits
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "startDayOfWeek" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "settings" : {
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "shiftTrading" : {
-        "weeklyMaxPaidViolations" : "aeiou",
-        "unequalPaid" : "aeiou",
-        "requiresMatchingLanguages" : true,
-        "oneSided" : "aeiou",
-        "allowDirectTrades" : true,
-        "autoReview" : true,
-        "enabled" : true,
-        "weeklyMinPaidViolations" : "aeiou",
-        "requiresMatchingSkills" : true,
-        "requiresMatchingQueues" : true,
-        "minHoursInFuture" : 123,
-        "activityCategoryRules" : [ {
-          "activityCodeIdReplacement" : "aeiou",
-          "activityCategory" : "aeiou",
-          "action" : "aeiou"
-        } ],
-        "requiresMatchingPlanningGroups" : true
-      },
-      "adherence" : {
-        "ignoredActivityCategories" : {
-          "values" : [ "aeiou" ]
-        },
-        "nonOnQueueActivitiesEquivalent" : true,
-        "adherenceTargetPercent" : 123,
-        "adherenceExceptionThresholdSeconds" : 123,
-        "trackOnQueueActivity" : true,
-        "severeAlertThresholdMinutes" : 123
-      },
-      "scheduling" : {
-        "planningPeriod" : {
-          "weekCount" : 123,
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "maxOccupancyPercentForDeferredWork" : 123,
-        "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-        "shrinkageOverrides" : {
-          "values" : [ {
-            "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-            "intervalIndex" : 123
-          } ],
-          "clear" : true
-        },
-        "startDayOfWeekend" : "aeiou"
-      },
-      "timeOff" : {
-        "submissionEarliestDaysFromNow" : 123,
-        "submissionRangeEnforced" : true,
-        "submissionLatestDaysFromNow" : 123
-      },
-      "shortTermForecasting" : {
-        "defaultHistoryWeeks" : 123
-      }
-    },
-    "metadata" : "",
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "timeZone" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "version" : 123
+    "startDayOfWeek" : "Sunday",
+    "division" : "{}",
+    "settings" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "timeZone" : "timeZone",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
+  }, {
+    "startDayOfWeek" : "Sunday",
+    "division" : "{}",
+    "settings" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "timeZone" : "timeZone",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
      - parameter pageNumber: (query) Deprecated, paging is not supported (optional)
@@ -7657,29 +6989,18 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ManagementUnitListing> 
      */
-    open class func getWorkforcemanagementManagementunitsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getWorkforcemanagementManagementunits? = nil, feature: Feature_getWorkforcemanagementManagementunits? = nil, divisionId: String? = nil) -> RequestBuilder<ManagementUnitListing> {
+    open class func getWorkforcemanagementManagementunitsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getWorkforcemanagementManagementunits? = nil, feature: Feature_getWorkforcemanagementManagementunits? = nil, divisionId: String? = nil) -> RequestBuilder<ManagementUnitListing> {        
         let path = "/api/v2/workforcemanagement/managementunits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "expand": expand?.rawValue, 
-            
             "feature": feature?.rawValue, 
-            
             "divisionId": divisionId
-            
         ])
 
         let requestBuilder: RequestBuilder<ManagementUnitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7688,10 +7009,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get management units across divisions
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -7716,129 +7034,62 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get management units across divisions
-     
      - GET /api/v2/workforcemanagement/managementunits/divisionviews
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "startDayOfWeek" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "settings" : {
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "shiftTrading" : {
-        "weeklyMaxPaidViolations" : "aeiou",
-        "unequalPaid" : "aeiou",
-        "requiresMatchingLanguages" : true,
-        "oneSided" : "aeiou",
-        "allowDirectTrades" : true,
-        "autoReview" : true,
-        "enabled" : true,
-        "weeklyMinPaidViolations" : "aeiou",
-        "requiresMatchingSkills" : true,
-        "requiresMatchingQueues" : true,
-        "minHoursInFuture" : 123,
-        "activityCategoryRules" : [ {
-          "activityCodeIdReplacement" : "aeiou",
-          "activityCategory" : "aeiou",
-          "action" : "aeiou"
-        } ],
-        "requiresMatchingPlanningGroups" : true
-      },
-      "adherence" : {
-        "ignoredActivityCategories" : {
-          "values" : [ "aeiou" ]
-        },
-        "nonOnQueueActivitiesEquivalent" : true,
-        "adherenceTargetPercent" : 123,
-        "adherenceExceptionThresholdSeconds" : 123,
-        "trackOnQueueActivity" : true,
-        "severeAlertThresholdMinutes" : 123
-      },
-      "scheduling" : {
-        "planningPeriod" : {
-          "weekCount" : 123,
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "maxOccupancyPercentForDeferredWork" : 123,
-        "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-        "shrinkageOverrides" : {
-          "values" : [ {
-            "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-            "intervalIndex" : 123
-          } ],
-          "clear" : true
-        },
-        "startDayOfWeekend" : "aeiou"
-      },
-      "timeOff" : {
-        "submissionEarliestDaysFromNow" : 123,
-        "submissionRangeEnforced" : true,
-        "submissionLatestDaysFromNow" : 123
-      },
-      "shortTermForecasting" : {
-        "defaultHistoryWeeks" : 123
-      }
-    },
-    "metadata" : "",
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "timeZone" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "version" : 123
+    "startDayOfWeek" : "Sunday",
+    "division" : "{}",
+    "settings" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "timeZone" : "timeZone",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
+  }, {
+    "startDayOfWeek" : "Sunday",
+    "division" : "{}",
+    "settings" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "timeZone" : "timeZone",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
 
      - returns: RequestBuilder<ManagementUnitListing> 
      */
-    open class func getWorkforcemanagementManagementunitsDivisionviewsWithRequestBuilder(divisionId: [String]? = nil) -> RequestBuilder<ManagementUnitListing> {
+    open class func getWorkforcemanagementManagementunitsDivisionviewsWithRequestBuilder(divisionId: [String]? = nil) -> RequestBuilder<ManagementUnitListing> {        
         let path = "/api/v2/workforcemanagement/managementunits/divisionviews"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "divisionId": divisionId
-            
         ])
 
         let requestBuilder: RequestBuilder<ManagementUnitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7846,9 +7097,7 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get a list of notifications for the current user
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -7872,9 +7121,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a list of notifications for the current user
-     
      - GET /api/v2/workforcemanagement/notifications
      - Notifications are only initially sent if you have the relevant Notify and Edit permissions
      - OAuth:
@@ -7882,66 +7129,36 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "adherenceExplanation" : {
-      "agent" : "",
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "notes" : "aeiou",
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "lengthMinutes" : 123,
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "type" : "aeiou",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "status" : "aeiou"
-    },
+    "adherenceExplanation" : "{}",
     "markedAsRead" : true,
-    "mutableGroupId" : "aeiou",
-    "otherNotificationIdsInGroup" : [ "aeiou" ],
-    "timeOffRequest" : {
-      "timeOffRequestId" : "aeiou",
-      "isFullDayRequest" : true,
-      "fullDayManagementUnitDates" : [ "aeiou" ],
-      "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-      "user" : "",
-      "status" : "aeiou"
-    },
-    "id" : "aeiou",
-    "shiftTrade" : {
-      "receivingUser" : "",
-      "receivingShiftDate" : "2000-01-23T04:56:07.000+0000",
-      "oneSided" : true,
-      "weekDate" : "aeiou",
-      "tradeId" : "aeiou",
-      "newState" : "aeiou",
-      "initiatingUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "initiatingShiftDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "type" : "aeiou",
-    "timestamp" : "2000-01-23T04:56:07.000+0000",
+    "mutableGroupId" : "mutableGroupId",
+    "otherNotificationIdsInGroup" : [ "otherNotificationIdsInGroup", "otherNotificationIdsInGroup" ],
+    "timeOffRequest" : "{}",
+    "id" : "id",
+    "shiftTrade" : "{}",
+    "type" : "AdherenceExplanation",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "agentNotification" : true
+  }, {
+    "adherenceExplanation" : "{}",
+    "markedAsRead" : true,
+    "mutableGroupId" : "mutableGroupId",
+    "otherNotificationIdsInGroup" : [ "otherNotificationIdsInGroup", "otherNotificationIdsInGroup" ],
+    "timeOffRequest" : "{}",
+    "id" : "id",
+    "shiftTrade" : "{}",
+    "type" : "AdherenceExplanation",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00",
     "agentNotification" : true
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<NotificationsResponse> 
      */
-    open class func getWorkforcemanagementNotificationsWithRequestBuilder() -> RequestBuilder<NotificationsResponse> {
+    open class func getWorkforcemanagementNotificationsWithRequestBuilder() -> RequestBuilder<NotificationsResponse> {        
         let path = "/api/v2/workforcemanagement/notifications"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -7951,10 +7168,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get status of the scheduling job
      
      - parameter jobId: (path) The id of the scheduling job 
@@ -7979,41 +7193,36 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get status of the scheduling job
-     
      - GET /api/v2/workforcemanagement/schedulingjobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "schedulingResultUri" : "aeiou",
-  "id" : "aeiou",
-  "percentComplete" : 123,
-  "status" : "aeiou",
+  "schedulingResultUri" : "schedulingResultUri",
+  "id" : "id",
+  "percentComplete" : 0,
+  "status" : "Pending",
   "errorDetails" : [ {
-    "description" : "aeiou",
-    "internalErrorCode" : "aeiou"
+    "description" : "description",
+    "internalErrorCode" : "BadJson"
+  }, {
+    "description" : "description",
+    "internalErrorCode" : "BadJson"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter jobId: (path) The id of the scheduling job 
 
      - returns: RequestBuilder<SchedulingStatusResponse> 
      */
-    open class func getWorkforcemanagementSchedulingjobWithRequestBuilder(jobId: String) -> RequestBuilder<SchedulingStatusResponse> {
+    open class func getWorkforcemanagementSchedulingjobWithRequestBuilder(jobId: String) -> RequestBuilder<SchedulingStatusResponse> {        
         var path = "/api/v2/workforcemanagement/schedulingjobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -8022,9 +7231,7 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Gets all of my shift trades
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -8048,65 +7255,59 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Gets all of my shift trades
-     
      - GET /api/v2/workforcemanagement/shifttrades
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : "",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-    "receivingShiftId" : "aeiou",
-    "receivingUser" : "",
-    "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+    "metadata" : "{}",
+    "receivingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+    "receivingShiftId" : "receivingShiftId",
+    "receivingUser" : "{}",
+    "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
     "oneSided" : true,
-    "reviewedBy" : "",
-    "initiatingUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "schedule" : {
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-    "acceptableIntervals" : [ "aeiou" ],
-    "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
-    "expiration" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-    "initiatingShiftId" : "aeiou"
+    "reviewedBy" : "{}",
+    "initiatingUser" : "{}",
+    "schedule" : "{}",
+    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+    "acceptableIntervals" : [ "acceptableIntervals", "acceptableIntervals" ],
+    "initiatingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "expiration" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Unmatched",
+    "weekDate" : "2000-01-23",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "initiatingShiftId" : "initiatingShiftId"
+  }, {
+    "metadata" : "{}",
+    "receivingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+    "receivingShiftId" : "receivingShiftId",
+    "receivingUser" : "{}",
+    "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "oneSided" : true,
+    "reviewedBy" : "{}",
+    "initiatingUser" : "{}",
+    "schedule" : "{}",
+    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+    "acceptableIntervals" : [ "acceptableIntervals", "acceptableIntervals" ],
+    "initiatingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "expiration" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Unmatched",
+    "weekDate" : "2000-01-23",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "initiatingShiftId" : "initiatingShiftId"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<ShiftTradeListResponse> 
      */
-    open class func getWorkforcemanagementShifttradesWithRequestBuilder() -> RequestBuilder<ShiftTradeListResponse> {
+    open class func getWorkforcemanagementShifttradesWithRequestBuilder() -> RequestBuilder<ShiftTradeListResponse> {        
         let path = "/api/v2/workforcemanagement/shifttrades"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -8116,10 +7317,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get a time off request for the current user
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
@@ -8144,60 +7342,43 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a time off request for the current user
-     
      - GET /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "",
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "notes" : "aeiou",
-  "selfUri" : "aeiou",
-  "fullDayManagementUnitDates" : [ "aeiou" ],
-  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-  "submittedDate" : "2000-01-23T04:56:07.000+0000",
-  "reviewedBy" : "",
-  "activityCodeId" : "aeiou",
+  "submittedBy" : "{}",
+  "metadata" : "{}",
+  "notes" : "notes",
+  "selfUri" : "https://openapi-generator.tech",
+  "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewedBy" : "{}",
+  "activityCodeId" : "activityCodeId",
   "isFullDayRequest" : true,
   "markedAsRead" : true,
-  "dailyDurationMinutes" : 123,
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "dailyDurationMinutes" : 0,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "user" : "{}",
+  "status" : "PENDING"
+}, statusCode=200}]
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
-    open class func getWorkforcemanagementTimeoffrequestWithRequestBuilder(timeOffRequestId: String) -> RequestBuilder<TimeOffRequestResponse> {
+    open class func getWorkforcemanagementTimeoffrequestWithRequestBuilder(timeOffRequestId: String) -> RequestBuilder<TimeOffRequestResponse> {        
         var path = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}"
         let timeOffRequestIdPreEscape = "\(timeOffRequestId)"
         let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffRequestId}", with: timeOffRequestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -8207,10 +7388,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get the daily waitlist positions of a time off request for the current user
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
@@ -8235,45 +7413,36 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get the daily waitlist positions of a time off request for the current user
-     
      - GET /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "date" : "2000-01-23T04:56:07.000+0000",
-    "timeOffLimit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "timeOffRequest" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "waitlistPosition" : 123
+    "date" : "2000-01-23",
+    "timeOffLimit" : "{}",
+    "timeOffRequest" : "{}",
+    "waitlistPosition" : 0
+  }, {
+    "date" : "2000-01-23",
+    "timeOffLimit" : "{}",
+    "timeOffRequest" : "{}",
+    "waitlistPosition" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
 
      - returns: RequestBuilder<WaitlistPositionListing> 
      */
-    open class func getWorkforcemanagementTimeoffrequestWaitlistpositionsWithRequestBuilder(timeOffRequestId: String) -> RequestBuilder<WaitlistPositionListing> {
+    open class func getWorkforcemanagementTimeoffrequestWaitlistpositionsWithRequestBuilder(timeOffRequestId: String) -> RequestBuilder<WaitlistPositionListing> {        
         var path = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions"
         let timeOffRequestIdPreEscape = "\(timeOffRequestId)"
         let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffRequestId}", with: timeOffRequestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -8283,13 +7452,10 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get a list of time off requests for the current user
      
-     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)
+     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementTimeoffrequests(recentlyReviewed: Bool? = nil, completion: @escaping ((_ data: TimeOffRequestList?,_ error: Error?) -> Void)) {
@@ -8311,68 +7477,68 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get a list of time off requests for the current user
-     
      - GET /api/v2/workforcemanagement/timeoffrequests
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "timeOffRequests" : [ {
-    "submittedBy" : "",
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : "",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "notes" : "aeiou",
-    "selfUri" : "aeiou",
-    "fullDayManagementUnitDates" : [ "aeiou" ],
-    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-    "submittedDate" : "2000-01-23T04:56:07.000+0000",
-    "reviewedBy" : "",
-    "activityCodeId" : "aeiou",
+    "submittedBy" : "{}",
+    "metadata" : "{}",
+    "notes" : "notes",
+    "selfUri" : "https://openapi-generator.tech",
+    "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewedBy" : "{}",
+    "activityCodeId" : "activityCodeId",
     "isFullDayRequest" : true,
     "markedAsRead" : true,
-    "dailyDurationMinutes" : 123,
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "status" : "aeiou"
+    "dailyDurationMinutes" : 0,
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "status" : "PENDING"
+  }, {
+    "submittedBy" : "{}",
+    "metadata" : "{}",
+    "notes" : "notes",
+    "selfUri" : "https://openapi-generator.tech",
+    "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewedBy" : "{}",
+    "activityCodeId" : "activityCodeId",
+    "isFullDayRequest" : true,
+    "markedAsRead" : true,
+    "dailyDurationMinutes" : 0,
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "status" : "PENDING"
   } ]
-}}]
+}, statusCode=200}]
      
-     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)
+     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional)
 
      - returns: RequestBuilder<TimeOffRequestList> 
      */
-    open class func getWorkforcemanagementTimeoffrequestsWithRequestBuilder(recentlyReviewed: Bool? = nil) -> RequestBuilder<TimeOffRequestList> {
+    open class func getWorkforcemanagementTimeoffrequestsWithRequestBuilder(recentlyReviewed: Bool? = nil) -> RequestBuilder<TimeOffRequestList> {        
         let path = "/api/v2/workforcemanagement/timeoffrequests"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "recentlyReviewed": recentlyReviewed
-            
         ])
 
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8382,11 +7548,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -8412,62 +7574,32 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Update business unit
-     
      - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "settings" : {
-    "startDayOfWeek" : "aeiou",
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "scheduling" : {
-      "messageSeverities" : [ {
-        "severity" : "aeiou",
-        "type" : "aeiou"
-      } ]
-    },
-    "timeZone" : "aeiou",
-    "shortTermForecasting" : {
-      "defaultHistoryWeeks" : 123
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "division" : "{}",
+  "settings" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BusinessUnit> 
      */
-    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnit> {
+    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnit> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8478,12 +7610,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update an activity code
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -8510,36 +7637,24 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Update an activity code
-     
      - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "lengthInMinutes" : 123,
+  "lengthInMinutes" : 0,
   "defaultCode" : true,
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "metadata" : "{}",
   "countsAsWorkTime" : true,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "countsAsPaidTime" : true,
   "agentTimeOffSelectable" : true,
-  "category" : "aeiou"
-}}]
+  "category" : "OnQueueWork"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter activityCodeId: (path) The ID of the activity code to update 
@@ -8547,7 +7662,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BusinessUnitActivityCode> 
      */
-    open class func patchWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: String, activityCodeId: String, body: UpdateActivityCodeRequest? = nil) -> RequestBuilder<BusinessUnitActivityCode> {
+    open class func patchWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: String, activityCodeId: String, body: UpdateActivityCodeRequest? = nil) -> RequestBuilder<BusinessUnitActivityCode> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8556,10 +7671,8 @@ open class WorkforceManagementAPI {
         let activityCodeIdPostEscape = activityCodeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{activityCodeId}", with: activityCodeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8570,12 +7683,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Updates the planning group
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -8602,48 +7710,41 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Updates the planning group
-     
      - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "serviceGoalTemplate" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "metadata" : "{}",
+  "serviceGoalTemplate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "routePaths" : [ {
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "mediaType" : "aeiou",
-    "language" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "queue" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "mediaType" : "Voice",
+    "language" : "{}",
+    "queue" : "{}"
+  }, {
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "mediaType" : "Voice",
+    "language" : "{}",
+    "queue" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter planningGroupId: (path) The ID of a planning group to update 
@@ -8651,7 +7752,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<PlanningGroup> 
      */
-    open class func patchWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String, body: UpdatePlanningGroupRequest? = nil) -> RequestBuilder<PlanningGroup> {
+    open class func patchWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String, body: UpdatePlanningGroupRequest? = nil) -> RequestBuilder<PlanningGroup> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8660,10 +7761,8 @@ open class WorkforceManagementAPI {
         let planningGroupIdPostEscape = planningGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{planningGroupId}", with: planningGroupIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PlanningGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8674,12 +7773,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Mark a schedule run as applied
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -8699,11 +7793,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Mark a schedule run as applied
-     
      - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -8714,7 +7805,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func patchWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String, body: PatchBuScheduleRunRequest? = nil) -> RequestBuilder<Void> {
+    open class func patchWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String, body: PatchBuScheduleRunRequest? = nil) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8723,10 +7814,8 @@ open class WorkforceManagementAPI {
         let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8737,12 +7826,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Updates a service goal template
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -8769,42 +7853,20 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Updates a service goal template
-     
      - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "abandonRate" : {
-    "include" : true,
-    "percent" : 123
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "averageSpeedOfAnswer" : {
-    "include" : true,
-    "seconds" : 123
-  },
-  "id" : "aeiou",
-  "serviceLevel" : {
-    "include" : true,
-    "seconds" : 123,
-    "percent" : 123
-  }
-}}]
+  "metadata" : "{}",
+  "abandonRate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "averageSpeedOfAnswer" : "{}",
+  "id" : "id",
+  "serviceLevel" : "{}"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter serviceGoalTemplateId: (path) The ID of a service goal template to update 
@@ -8812,7 +7874,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ServiceGoalTemplate> 
      */
-    open class func patchWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String, body: UpdateServiceGoalTemplate? = nil) -> RequestBuilder<ServiceGoalTemplate> {
+    open class func patchWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String, body: UpdateServiceGoalTemplate? = nil) -> RequestBuilder<ServiceGoalTemplate> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8821,10 +7883,8 @@ open class WorkforceManagementAPI {
         let serviceGoalTemplateIdPostEscape = serviceGoalTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{serviceGoalTemplateId}", with: serviceGoalTemplateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ServiceGoalTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8834,11 +7894,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update the requested management unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -8864,114 +7920,39 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Update the requested management unit
-     
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "startDayOfWeek" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "settings" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "shiftTrading" : {
-      "weeklyMaxPaidViolations" : "aeiou",
-      "unequalPaid" : "aeiou",
-      "requiresMatchingLanguages" : true,
-      "oneSided" : "aeiou",
-      "allowDirectTrades" : true,
-      "autoReview" : true,
-      "enabled" : true,
-      "weeklyMinPaidViolations" : "aeiou",
-      "requiresMatchingSkills" : true,
-      "requiresMatchingQueues" : true,
-      "minHoursInFuture" : 123,
-      "activityCategoryRules" : [ {
-        "activityCodeIdReplacement" : "aeiou",
-        "activityCategory" : "aeiou",
-        "action" : "aeiou"
-      } ],
-      "requiresMatchingPlanningGroups" : true
-    },
-    "adherence" : {
-      "ignoredActivityCategories" : {
-        "values" : [ "aeiou" ]
-      },
-      "nonOnQueueActivitiesEquivalent" : true,
-      "adherenceTargetPercent" : 123,
-      "adherenceExceptionThresholdSeconds" : 123,
-      "trackOnQueueActivity" : true,
-      "severeAlertThresholdMinutes" : 123
-    },
-    "scheduling" : {
-      "planningPeriod" : {
-        "weekCount" : 123,
-        "startDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "maxOccupancyPercentForDeferredWork" : 123,
-      "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-      "shrinkageOverrides" : {
-        "values" : [ {
-          "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-          "intervalIndex" : 123
-        } ],
-        "clear" : true
-      },
-      "startDayOfWeekend" : "aeiou"
-    },
-    "timeOff" : {
-      "submissionEarliestDaysFromNow" : 123,
-      "submissionRangeEnforced" : true,
-      "submissionLatestDaysFromNow" : 123
-    },
-    "shortTermForecasting" : {
-      "defaultHistoryWeeks" : 123
-    }
-  },
-  "metadata" : "",
-  "businessUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "timeZone" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "version" : 123
-}}]
+  "startDayOfWeek" : "Sunday",
+  "division" : "{}",
+  "settings" : "{}",
+  "metadata" : "{}",
+  "businessUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "timeZone" : "timeZone",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<ManagementUnit> 
      */
-    open class func patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, body: UpdateManagementUnitRequest? = nil) -> RequestBuilder<ManagementUnit> {
+    open class func patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, body: UpdateManagementUnitRequest? = nil) -> RequestBuilder<ManagementUnit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ManagementUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8982,12 +7963,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Updates a time off limit object.
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -9014,30 +7990,19 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Updates a time off limit object.
-     
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}
      - Updates time off limit object properties, but not daily values.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "granularity" : "aeiou",
-  "defaultLimitMinutes" : 123,
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "metadata" : "{}",
+  "granularity" : "Daily",
+  "defaultLimitMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The id of time off limit object to update 
@@ -9045,7 +8010,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<TimeOffLimit> 
      */
-    open class func patchWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: String, timeOffLimitId: String, body: UpdateTimeOffLimitRequest? = nil) -> RequestBuilder<TimeOffLimit> {
+    open class func patchWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: String, timeOffLimitId: String, body: UpdateTimeOffLimitRequest? = nil) -> RequestBuilder<TimeOffLimit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9054,10 +8019,8 @@ open class WorkforceManagementAPI {
         let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffLimit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9068,12 +8031,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Updates a time off plan
      
      - parameter managementUnitId: (path) The ID of the management unit 
@@ -9100,37 +8058,28 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Updates a time off plan
-     
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "activityCodeIds" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "metadata" : "{}",
+  "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "timeOffLimits" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
   "active" : true,
-  "id" : "aeiou",
-  "autoApprovalRule" : "aeiou",
-  "daysBeforeStartToExpireFromWaitlist" : 123
-}}]
+  "id" : "id",
+  "autoApprovalRule" : "Never",
+  "daysBeforeStartToExpireFromWaitlist" : 0
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to update 
@@ -9138,7 +8087,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<TimeOffPlan> 
      */
-    open class func patchWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: String, timeOffPlanId: String, body: UpdateTimeOffPlanRequest? = nil) -> RequestBuilder<TimeOffPlan> {
+    open class func patchWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: String, timeOffPlanId: String, body: UpdateTimeOffPlanRequest? = nil) -> RequestBuilder<TimeOffPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9147,10 +8096,8 @@ open class WorkforceManagementAPI {
         let timeOffPlanIdPostEscape = timeOffPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffPlanId}", with: timeOffPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9162,13 +8109,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Update a time off request
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -9196,43 +8137,31 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Update a time off request
-     
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "",
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "notes" : "aeiou",
-  "selfUri" : "aeiou",
-  "fullDayManagementUnitDates" : [ "aeiou" ],
-  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-  "submittedDate" : "2000-01-23T04:56:07.000+0000",
-  "reviewedBy" : "",
-  "activityCodeId" : "aeiou",
+  "submittedBy" : "{}",
+  "metadata" : "{}",
+  "notes" : "notes",
+  "selfUri" : "https://openapi-generator.tech",
+  "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewedBy" : "{}",
+  "activityCodeId" : "activityCodeId",
   "isFullDayRequest" : true,
   "markedAsRead" : true,
-  "dailyDurationMinutes" : 123,
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "dailyDurationMinutes" : 0,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "user" : "{}",
+  "status" : "PENDING"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The id of the user the requested time off request belongs to 
@@ -9241,7 +8170,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
-    open class func patchWorkforcemanagementManagementunitUserTimeoffrequestWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String, body: AdminTimeOffRequestPatch? = nil) -> RequestBuilder<TimeOffRequestResponse> {
+    open class func patchWorkforcemanagementManagementunitUserTimeoffrequestWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String, body: AdminTimeOffRequestPatch? = nil) -> RequestBuilder<TimeOffRequestResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9253,10 +8182,8 @@ open class WorkforceManagementAPI {
         let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffRequestId}", with: timeOffRequestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9268,23 +8195,17 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Updates a shift trade. This route can only be called by the initiating agent
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter body: (body) body 
      - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId: String, weekDateId: Date, body: PatchShiftTradeRequest, tradeId: String, completion: @escaping ((_ data: ShiftTradeResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchWorkforcemanagementManagementunitWeekShifttradeWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, tradeId: tradeId)
+    open class func patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId: String, weekDateId: Date, tradeId: String, body: PatchShiftTradeRequest, completion: @escaping ((_ data: ShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitWeekShifttradeWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, tradeId: tradeId, body: body)
         requestBuilder.execute { (response: Response<ShiftTradeResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -9302,60 +8223,40 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Updates a shift trade. This route can only be called by the initiating agent
-     
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-  "receivingShiftId" : "aeiou",
-  "receivingUser" : "",
-  "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+  "metadata" : "{}",
+  "receivingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+  "receivingShiftId" : "receivingShiftId",
+  "receivingUser" : "{}",
+  "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
   "oneSided" : true,
-  "reviewedBy" : "",
-  "initiatingUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "schedule" : {
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-  "acceptableIntervals" : [ "aeiou" ],
-  "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
-  "expiration" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "weekDate" : "2000-01-23T04:56:07.000+0000",
-  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-  "initiatingShiftId" : "aeiou"
-}}]
+  "reviewedBy" : "{}",
+  "initiatingUser" : "{}",
+  "schedule" : "{}",
+  "initiatingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+  "acceptableIntervals" : [ "acceptableIntervals", "acceptableIntervals" ],
+  "initiatingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+  "expiration" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Unmatched",
+  "weekDate" : "2000-01-23",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "initiatingShiftId" : "initiatingShiftId"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter body: (body) body 
      - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<ShiftTradeResponse> 
      */
-    open class func patchWorkforcemanagementManagementunitWeekShifttradeWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: PatchShiftTradeRequest, tradeId: String) -> RequestBuilder<ShiftTradeResponse> {
+    open class func patchWorkforcemanagementManagementunitWeekShifttradeWithRequestBuilder(managementUnitId: String, weekDateId: Date, tradeId: String, body: PatchShiftTradeRequest) -> RequestBuilder<ShiftTradeResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9367,10 +8268,8 @@ open class WorkforceManagementAPI {
         let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9381,11 +8280,6 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     public enum ValidationMode_patchWorkforcemanagementManagementunitWorkplan: String { 
         case ignore = "Ignore"
     }
@@ -9393,17 +8287,16 @@ open class WorkforceManagementAPI {
     
     
     /**
-     
      Update a work plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to update 
-     - parameter body: (body) body (optional)
      - parameter validationMode: (query) Allows to update work plan even if validation result is invalid (optional)
+     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitWorkplan(managementUnitId: String, workPlanId: String, body: WorkPlan? = nil, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, validationMode: validationMode)
+    open class func patchWorkforcemanagementManagementunitWorkplan(managementUnitId: String, workPlanId: String, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil, body: WorkPlan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, validationMode: validationMode, body: body)
         requestBuilder.execute { (response: Response<WorkPlan>?, error) -> Void in
             do {
                 if let e = error {
@@ -9421,119 +8314,179 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Update a work plan
-     
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "maximumDaysOffPerPlanningPeriod" : 123,
-  "minimumPaidMinutesPerPlanningPeriod" : 123,
-  "optionalDays" : {
-    "values" : [ "aeiou" ]
-  },
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "maximumDaysOffPerPlanningPeriod" : 1,
+  "minimumPaidMinutesPerPlanningPeriod" : 1,
+  "optionalDays" : "{}",
+  "metadata" : "{}",
   "flexibleWeeklyPaidTime" : true,
-  "shiftStartVariances" : {
-    "values" : [ {
-      "applicableDays" : [ "aeiou" ],
-      "maxShiftStartVarianceMinutes" : 123
-    } ]
-  },
+  "shiftStartVariances" : "{}",
   "constrainWeeklyPaidTime" : true,
   "enabled" : true,
   "valid" : true,
-  "minimumShiftStartDistanceMinutes" : 123,
+  "minimumShiftStartDistanceMinutes" : 4,
   "constrainMaximumConsecutiveWorkingDays" : true,
-  "maximumConsecutiveWorkingDays" : 123,
+  "maximumConsecutiveWorkingDays" : 2,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
-    "exactStartTimeMinutesFromMidnight" : 123,
-    "validationId" : "aeiou",
-    "maximumContiguousWorkTimeMinutes" : 123,
-    "startIncrementMinutes" : 123,
+    "exactStartTimeMinutesFromMidnight" : 6,
+    "validationId" : "validationId",
+    "maximumContiguousWorkTimeMinutes" : 6,
+    "startIncrementMinutes" : 9,
     "flexiblePaidTime" : true,
     "constrainContiguousWorkTime" : true,
     "delete" : true,
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 123,
+    "latestStartTimeMinutesFromMidnight" : 1,
     "constrainStopTime" : true,
-    "earliestStopTimeMinutesFromMidnight" : 123,
-    "latestStopTimeMinutesFromMidnight" : 123,
+    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStopTimeMinutesFromMidnight" : 4,
     "activities" : [ {
-      "startTimeIncrementMinutes" : 123,
-      "validationId" : "aeiou",
-      "lengthMinutes" : 123,
-      "earliestStartTimeMinutes" : 123,
-      "description" : "aeiou",
-      "latestStartTimeMinutes" : 123,
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
       "countsAsPaidTime" : true,
       "delete" : true,
-      "activityCodeId" : "aeiou",
-      "minimumLengthFromShiftStartMinutes" : 123,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 123,
-      "exactStartTimeMinutes" : 123,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
       "countsAsContiguousWorkTime" : true,
-      "id" : "aeiou",
+      "id" : "id",
+      "flexibleStartTime" : true
+    }, {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 123,
-    "name" : "aeiou",
-    "days" : "",
-    "id" : "aeiou",
-    "minimumContiguousWorkTimeMinutes" : 123,
-    "exactPaidTimeMinutes" : 123,
-    "earliestStartTimeMinutesFromMidnight" : 123,
+    "maximumPaidTimeMinutes" : 8,
+    "name" : "name",
+    "days" : "{}",
+    "id" : "id",
+    "minimumContiguousWorkTimeMinutes" : 9,
+    "exactPaidTimeMinutes" : 9,
+    "earliestStartTimeMinutesFromMidnight" : 7,
     "flexibleStartTime" : true,
     "constrainEarliestStopTime" : true,
-    "minimumPaidTimeMinutes" : 123
+    "minimumPaidTimeMinutes" : 6
+  }, {
+    "exactStartTimeMinutesFromMidnight" : 6,
+    "validationId" : "validationId",
+    "maximumContiguousWorkTimeMinutes" : 6,
+    "startIncrementMinutes" : 9,
+    "flexiblePaidTime" : true,
+    "constrainContiguousWorkTime" : true,
+    "delete" : true,
+    "constrainLatestStopTime" : true,
+    "latestStartTimeMinutesFromMidnight" : 1,
+    "constrainStopTime" : true,
+    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStopTimeMinutesFromMidnight" : 4,
+    "activities" : [ {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
+      "flexibleStartTime" : true
+    }, {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
+      "flexibleStartTime" : true
+    } ],
+    "maximumPaidTimeMinutes" : 8,
+    "name" : "name",
+    "days" : "{}",
+    "id" : "id",
+    "minimumContiguousWorkTimeMinutes" : 9,
+    "exactPaidTimeMinutes" : 9,
+    "earliestStartTimeMinutesFromMidnight" : 7,
+    "flexibleStartTime" : true,
+    "constrainEarliestStopTime" : true,
+    "minimumPaidTimeMinutes" : 6
   } ],
-  "weeklyMinimumPaidMinutes" : 123,
-  "id" : "aeiou",
-  "paidTimeGranularityMinutes" : 123,
-  "maximumConsecutiveWorkingWeekends" : 123,
-  "weeklyExactPaidMinutes" : 123,
-  "shiftStartVarianceType" : "aeiou",
-  "maximumDays" : 123,
-  "minimumWorkingDaysPerWeek" : 123,
-  "minimumConsecutiveNonWorkingMinutesPerWeek" : 123,
-  "selfUri" : "aeiou",
-  "minimumTimeBetweenShiftsMinutes" : 123,
+  "weeklyMinimumPaidMinutes" : 6,
+  "id" : "id",
+  "paidTimeGranularityMinutes" : 5,
+  "maximumConsecutiveWorkingWeekends" : 9,
+  "weeklyExactPaidMinutes" : 0,
+  "shiftStartVarianceType" : "ShiftStart",
+  "maximumDays" : 2,
+  "minimumWorkingDaysPerWeek" : 3,
+  "minimumConsecutiveNonWorkingMinutesPerWeek" : 7,
+  "selfUri" : "https://openapi-generator.tech",
+  "minimumTimeBetweenShiftsMinutes" : 5,
   "constrainPaidTimeGranularity" : true,
-  "maximumPaidMinutesPerPlanningPeriod" : 123,
+  "maximumPaidMinutesPerPlanningPeriod" : 1,
   "agents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "delete" : true
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
     "delete" : true
   } ],
-  "weeklyMaximumPaidMinutes" : 123,
-  "name" : "aeiou",
-  "minimumDaysOffPerPlanningPeriod" : 123,
+  "weeklyMaximumPaidMinutes" : 1,
+  "name" : "name",
+  "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 123
-}}]
+  "agentCount" : 6
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to update 
-     - parameter body: (body) body (optional)
      - parameter validationMode: (query) Allows to update work plan even if validation result is invalid (optional)
+     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, body: WorkPlan? = nil, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil) -> RequestBuilder<WorkPlan> {
+    open class func patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil, body: WorkPlan? = nil) -> RequestBuilder<WorkPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9542,15 +8495,11 @@ open class WorkforceManagementAPI {
         let workPlanIdPostEscape = workPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanId}", with: workPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "validationMode": validationMode?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9561,12 +8510,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Update a work plan rotation
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -9593,50 +8537,30 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Update a work plan rotation
-     
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "dateRange" : {
-    "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
-    "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "pattern" : {
-    "workPlans" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ]
-  },
-  "id" : "aeiou",
-  "agentCount" : 123,
+  "metadata" : "{}",
+  "dateRange" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "pattern" : "{}",
+  "id" : "id",
+  "agentCount" : 0,
   "enabled" : true,
   "agents" : [ {
-    "dateRange" : "",
-    "position" : 123,
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "dateRange" : "{}",
+    "position" : 6,
+    "user" : "{}"
+  }, {
+    "dateRange" : "{}",
+    "position" : 6,
+    "user" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanRotationId: (path) The ID of the work plan rotation to update 
@@ -9644,7 +8568,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<WorkPlanRotationResponse> 
      */
-    open class func patchWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: UpdateWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {
+    open class func patchWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: UpdateWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9653,10 +8577,8 @@ open class WorkforceManagementAPI {
         let workPlanRotationIdPostEscape = workPlanRotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanRotationId}", with: workPlanRotationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WorkPlanRotationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9666,11 +8588,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a time off request for the current user
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
@@ -9696,59 +8614,45 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Update a time off request for the current user
-     
      - PATCH /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "",
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "notes" : "aeiou",
-  "selfUri" : "aeiou",
-  "fullDayManagementUnitDates" : [ "aeiou" ],
-  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-  "submittedDate" : "2000-01-23T04:56:07.000+0000",
-  "reviewedBy" : "",
-  "activityCodeId" : "aeiou",
+  "submittedBy" : "{}",
+  "metadata" : "{}",
+  "notes" : "notes",
+  "selfUri" : "https://openapi-generator.tech",
+  "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewedBy" : "{}",
+  "activityCodeId" : "activityCodeId",
   "isFullDayRequest" : true,
   "markedAsRead" : true,
-  "dailyDurationMinutes" : 123,
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "dailyDurationMinutes" : 0,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "user" : "{}",
+  "status" : "PENDING"
+}, statusCode=200}]
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
-    open class func patchWorkforcemanagementTimeoffrequestWithRequestBuilder(timeOffRequestId: String, body: AgentTimeOffRequestPatch? = nil) -> RequestBuilder<TimeOffRequestResponse> {
+    open class func patchWorkforcemanagementTimeoffrequestWithRequestBuilder(timeOffRequestId: String, body: AgentTimeOffRequestPatch? = nil) -> RequestBuilder<TimeOffRequestResponse> {        
         var path = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}"
         let timeOffRequestIdPreEscape = "\(timeOffRequestId)"
         let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffRequestId}", with: timeOffRequestIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9757,10 +8661,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Request a historical adherence report for users across management units
      
      - parameter body: (body) body (optional)
@@ -9785,75 +8686,28 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Request a historical adherence report for users across management units
-     
      - POST /api/v2/workforcemanagement/adherence/historical
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "downloadResult" : {
-    "lookupIdToSecondaryPresenceId" : {
-      "key" : "aeiou"
-    },
-    "data" : [ {
-      "actuals" : [ {
-        "startOffsetSeconds" : 123,
-        "actualActivityCategory" : "aeiou",
-        "endOffsetSeconds" : 123
-      } ],
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "impact" : "aeiou",
-      "dayMetrics" : [ {
-        "exceptionDurationSecs" : 123,
-        "impactSeconds" : 123,
-        "conformanceScheduleSecs" : 123,
-        "adherenceScheduleSecs" : 123,
-        "exceptionCount" : 123,
-        "conformanceActualSecs" : 123,
-        "actualLengthSecs" : 123,
-        "conformancePercentage" : 1.3579000000000001069366817318950779736042022705078125,
-        "dayStartOffsetSecs" : 123,
-        "adherencePercentage" : 1.3579000000000001069366817318950779736042022705078125,
-        "scheduleLengthSecs" : 123
-      } ],
-      "conformancePercentage" : 1.3579000000000001069366817318950779736042022705078125,
-      "userId" : "aeiou",
-      "adherencePercentage" : 1.3579000000000001069366817318950779736042022705078125,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "exceptionInfo" : [ {
-        "secondaryPresenceLookupId" : "aeiou",
-        "scheduledActivityCodeId" : "aeiou",
-        "startOffsetSeconds" : 123,
-        "systemPresence" : "aeiou",
-        "impact" : "aeiou",
-        "actualActivityCategory" : "aeiou",
-        "endOffsetSeconds" : 123,
-        "scheduledActivityCategory" : "aeiou",
-        "routingStatus" : "aeiou"
-      } ]
-    } ],
-    "entityId" : "aeiou"
-  },
-  "downloadUrls" : [ "aeiou" ],
-  "downloadUrl" : "aeiou",
-  "queryState" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "downloadUrl" : "downloadUrl",
+  "queryState" : "Processing",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WfmHistoricalAdherenceResponse> 
      */
-    open class func postWorkforcemanagementAdherenceHistoricalWithRequestBuilder(body: WfmHistoricalAdherenceQueryForUsers? = nil) -> RequestBuilder<WfmHistoricalAdherenceResponse> {
+    open class func postWorkforcemanagementAdherenceHistoricalWithRequestBuilder(body: WfmHistoricalAdherenceQueryForUsers? = nil) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
         let path = "/api/v2/workforcemanagement/adherence/historical"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9862,10 +8716,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get published schedule for the current user
      
      - parameter body: (body) body (optional)
@@ -9890,76 +8741,181 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get published schedule for the current user
-     
      - POST /api/v2/workforcemanagement/agentschedules/mine
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "endDate" : "2000-01-23T04:56:07.000+0000",
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
   "agentSchedules" : [ {
     "fullDayTimeOffMarkers" : [ {
-      "activityCodeId" : "aeiou",
-      "timeOffRequestId" : "aeiou",
-      "lengthMinutes" : 123,
-      "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 1,
+      "businessUnitDate" : "2000-01-23",
       "paid" : true,
-      "description" : "aeiou"
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 1,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
     } ],
     "shifts" : [ {
-      "schedule" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou",
-        "weekDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "lengthMinutes" : 123,
+      "schedule" : "{}",
+      "lengthMinutes" : 0,
       "activities" : [ {
-        "activityCodeId" : "aeiou",
-        "externalActivityType" : "aeiou",
-        "timeOffRequestId" : "aeiou",
-        "lengthMinutes" : 123,
-        "externalActivityId" : "aeiou",
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
         "paid" : true,
-        "description" : "aeiou",
-        "startDate" : "2000-01-23T04:56:07.000+0000"
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
-      "id" : "aeiou",
-      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "id" : "id",
+      "startDate" : "2000-01-23T04:56:07.000+00:00",
+      "manuallyEdited" : true
+    }, {
+      "schedule" : "{}",
+      "lengthMinutes" : 0,
+      "activities" : [ {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "id" : "id",
+      "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
     } ],
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "user" : "{}"
+  }, {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 1,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 1,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "shifts" : [ {
+      "schedule" : "{}",
+      "lengthMinutes" : 0,
+      "activities" : [ {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "id" : "id",
+      "startDate" : "2000-01-23T04:56:07.000+00:00",
+      "manuallyEdited" : true
+    }, {
+      "schedule" : "{}",
+      "lengthMinutes" : 0,
+      "activities" : [ {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "externalActivityType" : "Coaching",
+        "timeOffRequestId" : "timeOffRequestId",
+        "lengthMinutes" : 6,
+        "externalActivityId" : "externalActivityId",
+        "paid" : true,
+        "description" : "description",
+        "startDate" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "id" : "id",
+      "startDate" : "2000-01-23T04:56:07.000+00:00",
+      "manuallyEdited" : true
+    } ],
+    "user" : "{}"
   } ],
   "publishedSchedules" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "weekCount" : 123
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "weekDate" : "2000-01-23",
+    "weekCount" : 5
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "weekDate" : "2000-01-23",
+    "weekCount" : 5
   } ],
   "updates" : [ {
-    "type" : "aeiou",
-    "shiftStartDates" : [ "2000-01-23T04:56:07.000+0000" ]
+    "type" : "Added",
+    "shiftStartDates" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ]
+  }, {
+    "type" : "Added",
+    "shiftStartDates" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ]
   } ],
-  "businessUnitTimeZone" : "aeiou",
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "businessUnitTimeZone" : "businessUnitTimeZone",
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BuCurrentAgentScheduleSearchResponse> 
      */
-    open class func postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: BuGetCurrentAgentScheduleRequest? = nil) -> RequestBuilder<BuCurrentAgentScheduleSearchResponse> {
+    open class func postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: BuGetCurrentAgentScheduleRequest? = nil) -> RequestBuilder<BuCurrentAgentScheduleSearchResponse> {        
         let path = "/api/v2/workforcemanagement/agentschedules/mine"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuCurrentAgentScheduleSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9969,11 +8925,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create a new activity code
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -9999,52 +8951,38 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a new activity code
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "lengthInMinutes" : 123,
+  "lengthInMinutes" : 0,
   "defaultCode" : true,
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "metadata" : "{}",
   "countsAsWorkTime" : true,
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "active" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "countsAsPaidTime" : true,
   "agentTimeOffSelectable" : true,
-  "category" : "aeiou"
-}}]
+  "category" : "OnQueueWork"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BusinessUnitActivityCode> 
      */
-    open class func postWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: String, body: CreateActivityCodeRequest? = nil) -> RequestBuilder<BusinessUnitActivityCode> {
+    open class func postWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: String, body: CreateActivityCodeRequest? = nil) -> RequestBuilder<BusinessUnitActivityCode> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10056,23 +8994,17 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Search published schedules
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+    open class func postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: String, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, body: BuSearchAgentSchedulesRequest? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: businessUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body)
         requestBuilder.execute { (response: Response<BuAsyncAgentSchedulesSearchResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -10090,89 +9022,38 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Search published schedules
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "agentSchedules" : [ {
-      "fullDayTimeOffMarkers" : [ {
-        "activityCodeId" : "aeiou",
-        "timeOffRequestId" : "aeiou",
-        "lengthMinutes" : 123,
-        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
-        "paid" : true,
-        "description" : "aeiou"
-      } ],
-      "shifts" : [ {
-        "schedule" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou",
-          "weekDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "lengthMinutes" : 123,
-        "activities" : [ {
-          "activityCodeId" : "aeiou",
-          "externalActivityType" : "aeiou",
-          "timeOffRequestId" : "aeiou",
-          "lengthMinutes" : 123,
-          "externalActivityId" : "aeiou",
-          "paid" : true,
-          "description" : "aeiou",
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        } ],
-        "id" : "aeiou",
-        "startDate" : "2000-01-23T04:56:07.000+0000",
-        "manuallyEdited" : true
-      } ],
-      "user" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
-    } ],
-    "publishedSchedules" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000",
-      "weekCount" : 123
-    } ],
-    "businessUnitTimeZone" : "aeiou"
-  },
-  "downloadUrl" : "aeiou",
-  "operationId" : "aeiou",
-  "progress" : 123,
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "operationId" : "operationId",
+  "progress" : 0,
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BuAsyncAgentSchedulesSearchResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {
+    open class func postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: String, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, body: BuSearchAgentSchedulesRequest? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceAsync": forceAsync, 
-            
             "forceDownloadService": forceDownloadService
-            
         ])
 
         let requestBuilder: RequestBuilder<BuAsyncAgentSchedulesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10183,12 +9064,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get intraday data for the given date for the requested planningGroupIds
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -10215,54 +9091,16 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get intraday data for the given date for the requested planningGroupIds
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "schedule" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "noDataReason" : "aeiou",
-    "intradayDataGroupings" : [ {
-      "forecastDataPerInterval" : [ "" ],
-      "scheduleDataPerInterval" : [ "" ],
-      "performancePredictionDataPerInterval" : [ "" ],
-      "mediaType" : "aeiou",
-      "forecastDataSummary" : {
-        "averageHandleTimeSeconds" : 1.3579000000000001069366817318950779736042022705078125,
-        "offered" : 1.3579000000000001069366817318950779736042022705078125
-      },
-      "scheduleDataSummary" : {
-        "onQueueTimeSeconds" : 123456789
-      },
-      "performancePredictionDataSummary" : {
-        "serviceLevelPercent" : 1.3579000000000001069366817318950779736042022705078125,
-        "occupancyPercent" : 1.3579000000000001069366817318950779736042022705078125,
-        "averageSpeedOfAnswerSeconds" : 1.3579000000000001069366817318950779736042022705078125
-      }
-    } ],
-    "endDate" : "2000-01-23T04:56:07.000+0000",
-    "categories" : [ "aeiou" ],
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "startDate" : "2000-01-23T04:56:07.000+0000",
-    "intervalLengthMinutes" : 123
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
@@ -10270,21 +9108,17 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<AsyncIntradayResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitIntradayWithRequestBuilder(businessUnitId: String, forceAsync: Bool? = nil, body: IntradayPlanningGroupRequest? = nil) -> RequestBuilder<AsyncIntradayResponse> {
+    open class func postWorkforcemanagementBusinessunitIntradayWithRequestBuilder(businessUnitId: String, forceAsync: Bool? = nil, body: IntradayPlanningGroupRequest? = nil) -> RequestBuilder<AsyncIntradayResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceAsync": forceAsync
-            
         ])
 
         let requestBuilder: RequestBuilder<AsyncIntradayResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10294,11 +9128,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Adds a new planning group
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -10324,64 +9154,55 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Adds a new planning group
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "serviceGoalTemplate" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "metadata" : "{}",
+  "serviceGoalTemplate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "routePaths" : [ {
     "skills" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
     } ],
-    "mediaType" : "aeiou",
-    "language" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "queue" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "mediaType" : "Voice",
+    "language" : "{}",
+    "queue" : "{}"
+  }, {
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "mediaType" : "Voice",
+    "language" : "{}",
+    "queue" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<PlanningGroup> 
      */
-    open class func postWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: String, body: CreatePlanningGroupRequest? = nil) -> RequestBuilder<PlanningGroup> {
+    open class func postWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: String, body: CreatePlanningGroupRequest? = nil) -> RequestBuilder<PlanningGroup> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PlanningGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10391,11 +9212,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Adds a new service goal template
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -10421,58 +9238,34 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Adds a new service goal template
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "abandonRate" : {
-    "include" : true,
-    "percent" : 123
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "averageSpeedOfAnswer" : {
-    "include" : true,
-    "seconds" : 123
-  },
-  "id" : "aeiou",
-  "serviceLevel" : {
-    "include" : true,
-    "seconds" : 123,
-    "percent" : 123
-  }
-}}]
+  "metadata" : "{}",
+  "abandonRate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "averageSpeedOfAnswer" : "{}",
+  "id" : "id",
+  "serviceLevel" : "{}"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<ServiceGoalTemplate> 
      */
-    open class func postWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String, body: CreateServiceGoalTemplate? = nil) -> RequestBuilder<ServiceGoalTemplate> {
+    open class func postWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String, body: CreateServiceGoalTemplate? = nil) -> RequestBuilder<ServiceGoalTemplate> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ServiceGoalTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10486,15 +9279,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Loads agent schedule data from the schedule. Used in combination with the metadata route
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -10524,74 +9309,18 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Loads agent schedule data from the schedule. Used in combination with the metadata route
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "agentSchedules" : [ {
-      "fullDayTimeOffMarkers" : [ {
-        "activityCodeId" : "aeiou",
-        "timeOffRequestId" : "aeiou",
-        "lengthMinutes" : 123,
-        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
-        "paid" : true,
-        "description" : "aeiou"
-      } ],
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : "",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "shifts" : [ {
-        "schedule" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou",
-          "weekDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "lengthMinutes" : 123,
-        "activities" : [ {
-          "activityCodeId" : "aeiou",
-          "externalActivityType" : "aeiou",
-          "timeOffRequestId" : "aeiou",
-          "lengthMinutes" : 123,
-          "externalActivityId" : "aeiou",
-          "paid" : true,
-          "description" : "aeiou",
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        } ],
-        "id" : "aeiou",
-        "startDate" : "2000-01-23T04:56:07.000+0000",
-        "manuallyEdited" : true
-      } ],
-      "workPlan" : {
-        "managementUnit" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "user" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "workPlansPerWeek" : [ "" ]
-    } ],
-    "businessUnitTimeZone" : "aeiou"
-  },
-  "downloadUrl" : "aeiou",
-  "operationId" : "aeiou",
-  "progress" : 123,
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "operationId" : "operationId",
+  "progress" : 0,
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -10602,7 +9331,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuAsyncAgentSchedulesQueryResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuQueryAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesQueryResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuQueryAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesQueryResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10614,17 +9343,12 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceAsync": forceAsync, 
-            
             "forceDownloadService": forceDownloadService
-            
         ])
 
         let requestBuilder: RequestBuilder<BuAsyncAgentSchedulesQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10636,13 +9360,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Copy a schedule
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -10670,61 +9388,16 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Copy a schedule
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "managementUnits" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "agentCount" : 123,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "agents" : [ "" ]
-    } ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "generationResults" : {
-      "messageSeverityCounts" : [ {
-        "severity" : "aeiou",
-        "count" : 123
-      } ],
-      "messageCount" : 123,
-      "failed" : true,
-      "runId" : "aeiou"
-    },
-    "id" : "aeiou",
-    "published" : true,
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "weekCount" : 123
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -10733,7 +9406,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuAsyncScheduleResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekScheduleCopyWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuCopyScheduleRequest) -> RequestBuilder<BuAsyncScheduleResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekScheduleCopyWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuCopyScheduleRequest) -> RequestBuilder<BuAsyncScheduleResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10745,10 +9418,8 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuAsyncScheduleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10760,13 +9431,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Start a rescheduling run
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -10794,65 +9459,16 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Start a rescheduling run
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "messageSeverityCounts" : [ {
-      "severity" : "aeiou",
-      "count" : 123
-    } ],
-    "messageCount" : 123,
-    "targetWeek" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "schedulingStartTime" : "2000-01-23T04:56:07.000+0000",
-    "schedulerRunId" : "aeiou",
-    "percentComplete" : 1.3579000000000001069366817318950779736042022705078125,
-    "weekCount" : 123,
-    "schedule" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "schedulingCanceledBy" : "",
-    "schedulingCompletedTime" : "2000-01-23T04:56:07.000+0000",
-    "intradayRescheduling" : true,
-    "scheduleDescription" : "aeiou",
-    "reschedulingOptions" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "activityCodeIds" : [ "aeiou" ],
-      "managementUnits" : [ {
-        "managementUnit" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "applied" : true
-      } ],
-      "doNotChangeManuallyEditedShifts" : true,
-      "doNotChangeDailyPaidTime" : true,
-      "doNotChangeShiftStartTimes" : true,
-      "existingSchedule" : "",
-      "agentCount" : 123,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "doNotChangeWeeklyPaidTime" : true
-    },
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+0000",
-    "schedulingStartedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -10861,7 +9477,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuAsyncScheduleRunResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekScheduleRescheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuRescheduleRequest) -> RequestBuilder<BuAsyncScheduleRunResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekScheduleRescheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuRescheduleRequest) -> RequestBuilder<BuAsyncScheduleRunResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10873,10 +9489,8 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuAsyncScheduleRunResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -10888,13 +9502,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Starts processing a schedule update
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -10922,61 +9530,17 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Starts processing a schedule update
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update
      - Call after uploading the schedule data to the url supplied by the /update/uploadurl route
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "managementUnits" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "agentCount" : 123,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "agents" : [ "" ]
-    } ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "generationResults" : {
-      "messageSeverityCounts" : [ {
-        "severity" : "aeiou",
-        "count" : 123
-      } ],
-      "messageCount" : 123,
-      "failed" : true,
-      "runId" : "aeiou"
-    },
-    "id" : "aeiou",
-    "published" : true,
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "weekCount" : 123
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -10985,7 +9549,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuAsyncScheduleResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekScheduleUpdateWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: ProcessScheduleUpdateUploadRequest) -> RequestBuilder<BuAsyncScheduleResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekScheduleUpdateWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: ProcessScheduleUpdateUploadRequest) -> RequestBuilder<BuAsyncScheduleResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10997,10 +9561,8 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuAsyncScheduleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11012,13 +9574,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Creates a signed upload URL for updating a schedule
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -11046,9 +9602,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Creates a signed upload URL for updating a schedule
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl
      - Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
      - OAuth:
@@ -11056,82 +9610,12 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "uploadBodySchema" : {
-    "metadata" : "",
-    "headcountForecast" : {
-      "entities" : [ {
-        "requiredWithoutShrinkagePerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-        "requiredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-        "planningGroup" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        }
-      } ],
-      "referenceStartDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "agentSchedules" : [ {
-      "fullDayTimeOffMarkers" : [ {
-        "activityCodeId" : "aeiou",
-        "timeOffRequestId" : "aeiou",
-        "lengthMinutes" : 123,
-        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
-        "paid" : true,
-        "description" : "aeiou"
-      } ],
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "workPlanId" : {
-        "value" : "aeiou"
-      },
-      "workPlanIdsPerWeek" : {
-        "values" : [ "aeiou" ]
-      },
-      "shifts" : [ {
-        "schedule" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou",
-          "weekDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "lengthMinutes" : 123,
-        "activities" : [ {
-          "activityCodeId" : "aeiou",
-          "externalActivityType" : "aeiou",
-          "timeOffRequestId" : "aeiou",
-          "lengthMinutes" : 123,
-          "externalActivityId" : "aeiou",
-          "paid" : true,
-          "description" : "aeiou",
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        } ],
-        "id" : "aeiou",
-        "startDate" : "2000-01-23T04:56:07.000+0000",
-        "manuallyEdited" : true
-      } ],
-      "userId" : "aeiou",
-      "delete" : true
-    } ],
-    "description" : "aeiou",
-    "published" : true,
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    }
-  },
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "uploadBodySchema" : "{}",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -11140,7 +9624,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<UpdateScheduleUploadResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: UploadUrlRequestBody) -> RequestBuilder<UpdateScheduleUploadResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: UploadUrlRequestBody) -> RequestBuilder<UpdateScheduleUploadResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11152,10 +9636,8 @@ open class WorkforceManagementAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UpdateScheduleUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11166,12 +9648,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Create a blank schedule
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -11198,57 +9675,47 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a blank schedule
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "metadata" : "{}",
   "managementUnits" : [ {
-    "managementUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "endDate" : "2000-01-23T04:56:07.000+0000",
-    "agentCount" : 123,
-    "startDate" : "2000-01-23T04:56:07.000+0000",
-    "agents" : [ "" ]
+    "managementUnit" : "{}",
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "agentCount" : 6,
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "agents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "managementUnit" : "{}",
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "agentCount" : 6,
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "agents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
   } ],
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "generationResults" : {
-    "messageSeverityCounts" : [ {
-      "severity" : "aeiou",
-      "count" : 123
-    } ],
-    "messageCount" : 123,
-    "failed" : true,
-    "runId" : "aeiou"
-  },
-  "id" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "generationResults" : "{}",
+  "id" : "id",
   "published" : true,
-  "weekDate" : "2000-01-23T04:56:07.000+0000",
-  "shortTermForecast" : {
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "weekCount" : 123
-}}]
+  "weekDate" : "2000-01-23",
+  "shortTermForecast" : "{}",
+  "weekCount" : 0
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -11256,7 +9723,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuScheduleMetadata> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: String, weekId: Date, body: BuCreateBlankScheduleRequest) -> RequestBuilder<BuScheduleMetadata> {
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: String, weekId: Date, body: BuCreateBlankScheduleRequest) -> RequestBuilder<BuScheduleMetadata> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11265,10 +9732,8 @@ open class WorkforceManagementAPI {
         let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuScheduleMetadata>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11279,12 +9744,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Generate a schedule
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -11311,65 +9771,16 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Generate a schedule
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/generate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "messageSeverityCounts" : [ {
-      "severity" : "aeiou",
-      "count" : 123
-    } ],
-    "messageCount" : 123,
-    "targetWeek" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "schedulingStartTime" : "2000-01-23T04:56:07.000+0000",
-    "schedulerRunId" : "aeiou",
-    "percentComplete" : 1.3579000000000001069366817318950779736042022705078125,
-    "weekCount" : 123,
-    "schedule" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "schedulingCanceledBy" : "",
-    "schedulingCompletedTime" : "2000-01-23T04:56:07.000+0000",
-    "intradayRescheduling" : true,
-    "scheduleDescription" : "aeiou",
-    "reschedulingOptions" : {
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "activityCodeIds" : [ "aeiou" ],
-      "managementUnits" : [ {
-        "managementUnit" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "applied" : true
-      } ],
-      "doNotChangeManuallyEditedShifts" : true,
-      "doNotChangeDailyPaidTime" : true,
-      "doNotChangeShiftStartTimes" : true,
-      "existingSchedule" : "",
-      "agentCount" : 123,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "doNotChangeWeeklyPaidTime" : true
-    },
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+0000",
-    "schedulingStartedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -11377,7 +9788,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BuAsyncScheduleRunResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekSchedulesGenerateWithRequestBuilder(businessUnitId: String, weekId: Date, body: BuGenerateScheduleRequest) -> RequestBuilder<BuAsyncScheduleRunResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesGenerateWithRequestBuilder(businessUnitId: String, weekId: Date, body: BuGenerateScheduleRequest) -> RequestBuilder<BuAsyncScheduleRunResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/generate"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11386,10 +9797,8 @@ open class WorkforceManagementAPI {
         let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuAsyncScheduleRunResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11400,12 +9809,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Starts processing a schedule import
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -11432,61 +9836,17 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Starts processing a schedule import
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import
      - Call after uploading the schedule data to the url supplied by the /import/uploadurl route
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "managementUnits" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "agentCount" : 123,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "agents" : [ "" ]
-    } ],
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "generationResults" : {
-      "messageSeverityCounts" : [ {
-        "severity" : "aeiou",
-        "count" : 123
-      } ],
-      "messageCount" : 123,
-      "failed" : true,
-      "runId" : "aeiou"
-    },
-    "id" : "aeiou",
-    "published" : true,
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "weekCount" : 123
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -11494,7 +9854,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ScheduleUploadProcessingResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekSchedulesImportWithRequestBuilder(businessUnitId: String, weekId: Date, body: WfmProcessUploadRequest) -> RequestBuilder<ScheduleUploadProcessingResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesImportWithRequestBuilder(businessUnitId: String, weekId: Date, body: WfmProcessUploadRequest) -> RequestBuilder<ScheduleUploadProcessingResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11503,10 +9863,8 @@ open class WorkforceManagementAPI {
         let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScheduleUploadProcessingResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11517,12 +9875,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Creates a signed upload URL for importing a schedule
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -11549,9 +9902,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Creates a signed upload URL for importing a schedule
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl
      - Once the upload is complete, call the /import route to start the schedule import process
      - OAuth:
@@ -11559,71 +9910,12 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "uploadBodySchema" : {
-    "headcountForecast" : {
-      "entities" : [ {
-        "requiredWithoutShrinkagePerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-        "requiredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-        "planningGroup" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        }
-      } ],
-      "referenceStartDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "agentSchedules" : [ {
-      "fullDayTimeOffMarkers" : [ {
-        "activityCodeId" : "aeiou",
-        "timeOffRequestId" : "aeiou",
-        "lengthMinutes" : 123,
-        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
-        "paid" : true,
-        "description" : "aeiou"
-      } ],
-      "workPlanId" : {
-        "value" : "aeiou"
-      },
-      "workPlanIdsPerWeek" : {
-        "values" : [ "aeiou" ]
-      },
-      "shifts" : [ {
-        "schedule" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou",
-          "weekDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "lengthMinutes" : 123,
-        "activities" : [ {
-          "activityCodeId" : "aeiou",
-          "externalActivityType" : "aeiou",
-          "timeOffRequestId" : "aeiou",
-          "lengthMinutes" : 123,
-          "externalActivityId" : "aeiou",
-          "paid" : true,
-          "description" : "aeiou",
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        } ],
-        "id" : "aeiou",
-        "startDate" : "2000-01-23T04:56:07.000+0000",
-        "manuallyEdited" : true
-      } ],
-      "userId" : "aeiou"
-    } ],
-    "description" : "aeiou",
-    "published" : true,
-    "shortTermForecast" : {
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "weekCount" : 123
-  },
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "uploadBodySchema" : "{}",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -11631,7 +9923,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ImportScheduleUploadResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithRequestBuilder(businessUnitId: String, weekId: Date, body: UploadUrlRequestBody) -> RequestBuilder<ImportScheduleUploadResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithRequestBuilder(businessUnitId: String, weekId: Date, body: UploadUrlRequestBody) -> RequestBuilder<ImportScheduleUploadResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11640,10 +9932,8 @@ open class WorkforceManagementAPI {
         let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ImportScheduleUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11656,14 +9946,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Copy a short term forecast
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -11692,108 +9975,17 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Copy a short term forecast
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "legacy" : true,
-    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "timeZone" : "aeiou",
-    "sourceDays" : [ {
-      "date" : "aeiou",
-      "dataKey" : "aeiou",
-      "fileName" : "aeiou",
-      "dayOfWeek" : "aeiou",
-      "weight" : 123
-    } ],
-    "weekCount" : 123,
-    "creationMethod" : "aeiou",
-    "planningGroupsVersion" : 123,
-    "planningGroups" : {
-      "entities" : [ {
-        "serviceGoalTemplate" : {
-          "abandonRate" : {
-            "percent" : 123
-          },
-          "averageSpeedOfAnswer" : {
-            "seconds" : 123
-          },
-          "serviceLevel" : {
-            "seconds" : 123,
-            "percent" : 123
-          }
-        },
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "routePaths" : [ {
-          "skills" : [ {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          } ],
-          "mediaType" : "aeiou",
-          "language" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "queue" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          }
-        } ]
-      } ]
-    },
-    "generationResults" : {
-      "planningGroupResults" : [ {
-        "planningGroupId" : "aeiou",
-        "metricResults" : [ {
-          "metric" : "aeiou",
-          "forecastingMethod" : "aeiou",
-          "forecastType" : "aeiou"
-        } ]
-      } ]
-    },
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "canUseForScheduling" : true,
-    "modifications" : [ {
-      "startIntervalIndex" : 123,
-      "legacyMetric" : "aeiou",
-      "displayGranularity" : "aeiou",
-      "endIntervalIndex" : 123,
-      "metric" : "aeiou",
-      "granularity" : "aeiou",
-      "values" : [ {
-        "intervalIndex" : 123,
-        "value" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "type" : "aeiou",
-      "planningGroupIds" : [ "aeiou" ],
-      "value" : 1.3579000000000001069366817318950779736042022705078125,
-      "enabled" : true
-    } ]
-  },
-  "operationId" : "aeiou",
-  "progress" : 123,
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "progress" : 0,
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -11803,7 +9995,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<AsyncForecastOperationResult> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, body: CopyBuForecastRequest, forceAsync: Bool? = nil) -> RequestBuilder<AsyncForecastOperationResult> {
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, body: CopyBuForecastRequest, forceAsync: Bool? = nil) -> RequestBuilder<AsyncForecastOperationResult> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11815,15 +10007,11 @@ open class WorkforceManagementAPI {
         let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceAsync": forceAsync
-            
         ])
 
         let requestBuilder: RequestBuilder<AsyncForecastOperationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -11835,13 +10023,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Generate a short term forecast
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -11869,108 +10051,17 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Generate a short term forecast
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "legacy" : true,
-    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "timeZone" : "aeiou",
-    "sourceDays" : [ {
-      "date" : "aeiou",
-      "dataKey" : "aeiou",
-      "fileName" : "aeiou",
-      "dayOfWeek" : "aeiou",
-      "weight" : 123
-    } ],
-    "weekCount" : 123,
-    "creationMethod" : "aeiou",
-    "planningGroupsVersion" : 123,
-    "planningGroups" : {
-      "entities" : [ {
-        "serviceGoalTemplate" : {
-          "abandonRate" : {
-            "percent" : 123
-          },
-          "averageSpeedOfAnswer" : {
-            "seconds" : 123
-          },
-          "serviceLevel" : {
-            "seconds" : 123,
-            "percent" : 123
-          }
-        },
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "routePaths" : [ {
-          "skills" : [ {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          } ],
-          "mediaType" : "aeiou",
-          "language" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "queue" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          }
-        } ]
-      } ]
-    },
-    "generationResults" : {
-      "planningGroupResults" : [ {
-        "planningGroupId" : "aeiou",
-        "metricResults" : [ {
-          "metric" : "aeiou",
-          "forecastingMethod" : "aeiou",
-          "forecastType" : "aeiou"
-        } ]
-      } ]
-    },
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "canUseForScheduling" : true,
-    "modifications" : [ {
-      "startIntervalIndex" : 123,
-      "legacyMetric" : "aeiou",
-      "displayGranularity" : "aeiou",
-      "endIntervalIndex" : 123,
-      "metric" : "aeiou",
-      "granularity" : "aeiou",
-      "values" : [ {
-        "intervalIndex" : 123,
-        "value" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "type" : "aeiou",
-      "planningGroupIds" : [ "aeiou" ],
-      "value" : 1.3579000000000001069366817318950779736042022705078125,
-      "enabled" : true
-    } ]
-  },
-  "operationId" : "aeiou",
-  "progress" : 123,
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "progress" : 0,
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -11979,7 +10070,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<AsyncForecastOperationResult> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: GenerateBuForecastRequest, forceAsync: Bool? = nil) -> RequestBuilder<AsyncForecastOperationResult> {
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: GenerateBuForecastRequest, forceAsync: Bool? = nil) -> RequestBuilder<AsyncForecastOperationResult> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11988,15 +10079,11 @@ open class WorkforceManagementAPI {
         let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceAsync": forceAsync
-            
         ])
 
         let requestBuilder: RequestBuilder<AsyncForecastOperationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12007,12 +10094,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Starts importing the uploaded short term forecast
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -12039,107 +10121,17 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Starts importing the uploaded short term forecast
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import
      - Call after uploading the forecast data to the url supplied by the /import/uploadurl route
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "legacy" : true,
-    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "timeZone" : "aeiou",
-    "sourceDays" : [ {
-      "date" : "aeiou",
-      "dataKey" : "aeiou",
-      "fileName" : "aeiou",
-      "dayOfWeek" : "aeiou",
-      "weight" : 123
-    } ],
-    "weekCount" : 123,
-    "creationMethod" : "aeiou",
-    "planningGroupsVersion" : 123,
-    "planningGroups" : {
-      "entities" : [ {
-        "serviceGoalTemplate" : {
-          "abandonRate" : {
-            "percent" : 123
-          },
-          "averageSpeedOfAnswer" : {
-            "seconds" : 123
-          },
-          "serviceLevel" : {
-            "seconds" : 123,
-            "percent" : 123
-          }
-        },
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "routePaths" : [ {
-          "skills" : [ {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          } ],
-          "mediaType" : "aeiou",
-          "language" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "queue" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          }
-        } ]
-      } ]
-    },
-    "generationResults" : {
-      "planningGroupResults" : [ {
-        "planningGroupId" : "aeiou",
-        "metricResults" : [ {
-          "metric" : "aeiou",
-          "forecastingMethod" : "aeiou",
-          "forecastType" : "aeiou"
-        } ]
-      } ]
-    },
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "canUseForScheduling" : true,
-    "modifications" : [ {
-      "startIntervalIndex" : 123,
-      "legacyMetric" : "aeiou",
-      "displayGranularity" : "aeiou",
-      "endIntervalIndex" : 123,
-      "metric" : "aeiou",
-      "granularity" : "aeiou",
-      "values" : [ {
-        "intervalIndex" : 123,
-        "value" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "type" : "aeiou",
-      "planningGroupIds" : [ "aeiou" ],
-      "value" : 1.3579000000000001069366817318950779736042022705078125,
-      "enabled" : true
-    } ]
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -12147,7 +10139,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ImportForecastResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: WfmProcessUploadRequest) -> RequestBuilder<ImportForecastResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: WfmProcessUploadRequest) -> RequestBuilder<ImportForecastResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12156,10 +10148,8 @@ open class WorkforceManagementAPI {
         let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ImportForecastResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12170,12 +10160,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Creates a signed upload URL for importing a short term forecast
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
@@ -12202,9 +10187,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Creates a signed upload URL for importing a short term forecast
-     
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl
      - Once the upload is complete, call the /import route to start the short term forecast import process
      - OAuth:
@@ -12212,26 +10195,12 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "headers" : {
-    "key" : "aeiou"
+    "key" : "headers"
   },
-  "uploadKey" : "aeiou",
-  "uploadBodySchema" : {
-    "longTermPlanningGroups" : [ {
-      "averageHandleTimeSecondsPerDay" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-      "planningGroupId" : "aeiou",
-      "offeredPerDay" : [ 1.3579000000000001069366817318950779736042022705078125 ]
-    } ],
-    "planningGroups" : [ {
-      "averageHandleTimeSecondsPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
-      "planningGroupId" : "aeiou",
-      "offeredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ]
-    } ],
-    "description" : "aeiou",
-    "weekCount" : 123,
-    "canUseForScheduling" : true
-  },
-  "url" : "aeiou"
-}}]
+  "uploadKey" : "uploadKey",
+  "uploadBodySchema" : "{}",
+  "url" : "url"
+}, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -12239,7 +10208,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ImportForecastUploadResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: UploadUrlRequestBody) -> RequestBuilder<ImportForecastUploadResponse> {
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: UploadUrlRequestBody) -> RequestBuilder<ImportForecastUploadResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12248,10 +10217,8 @@ open class WorkforceManagementAPI {
         let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ImportForecastUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12260,10 +10227,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Add a new business unit
      
      - parameter body: (body) body (optional)
@@ -12288,58 +10252,29 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Add a new business unit
-     
      - POST /api/v2/workforcemanagement/businessunits
      - It may take a minute or two for a new business unit to be available for api operations
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "settings" : {
-    "startDayOfWeek" : "aeiou",
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "scheduling" : {
-      "messageSeverities" : [ {
-        "severity" : "aeiou",
-        "type" : "aeiou"
-      } ]
-    },
-    "timeZone" : "aeiou",
-    "shortTermForecasting" : {
-      "defaultHistoryWeeks" : 123
-    }
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "division" : "{}",
+  "settings" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BusinessUnit> 
      */
-    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnit> {
+    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnit> {        
         let path = "/api/v2/workforcemanagement/businessunits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12348,13 +10283,10 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
      
-     - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)
+     - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postWorkforcemanagementCalendarUrlIcs(language: String? = nil, completion: @escaping ((_ data: CalendarUrlResponse?,_ error: Error?) -> Void)) {
@@ -12376,38 +10308,28 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
-     
      - POST /api/v2/workforcemanagement/calendar/url/ics
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "calendarUrl" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "calendarUrl" : "calendarUrl"
+}, statusCode=200}]
      
-     - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)
+     - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional)
 
      - returns: RequestBuilder<CalendarUrlResponse> 
      */
-    open class func postWorkforcemanagementCalendarUrlIcsWithRequestBuilder(language: String? = nil) -> RequestBuilder<CalendarUrlResponse> {
+    open class func postWorkforcemanagementCalendarUrlIcsWithRequestBuilder(language: String? = nil) -> RequestBuilder<CalendarUrlResponse> {        
         let path = "/api/v2/workforcemanagement/calendar/url/ics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "language": language
-            
         ])
 
         let requestBuilder: RequestBuilder<CalendarUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12415,9 +10337,7 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
-    
     /**
-     
      Delete the entries of the historical data imports in the organization
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -12441,32 +10361,24 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Delete the entries of the historical data imports in the organization
-     
      - POST /api/v2/workforcemanagement/historicaldata/deletejob
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "status" : "InProgress"
+}, statusCode=202}]
 
      - returns: RequestBuilder<HistoricalImportDeleteJobResponse> 
      */
-    open class func postWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder() -> RequestBuilder<HistoricalImportDeleteJobResponse> {
+    open class func postWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder() -> RequestBuilder<HistoricalImportDeleteJobResponse> {        
         let path = "/api/v2/workforcemanagement/historicaldata/deletejob"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -12476,10 +10388,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Trigger validation process for historical import
      
      - parameter body: (body) body (optional)
@@ -12497,11 +10406,8 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Trigger validation process for historical import
-     
      - POST /api/v2/workforcemanagement/historicaldata/validate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -12510,13 +10416,11 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: ValidationServiceRequest? = nil) -> RequestBuilder<Void> {
+    open class func postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: ValidationServiceRequest? = nil) -> RequestBuilder<Void> {        
         let path = "/api/v2/workforcemanagement/historicaldata/validate"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12528,23 +10432,17 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Query published schedules for given given time range for set of users
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(managementUnitId: managementUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: String, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, body: BuSearchAgentSchedulesRequest? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(managementUnitId: managementUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body)
         requestBuilder.execute { (response: Response<BuAsyncAgentSchedulesSearchResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -12562,89 +10460,38 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Query published schedules for given given time range for set of users
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "agentSchedules" : [ {
-      "fullDayTimeOffMarkers" : [ {
-        "activityCodeId" : "aeiou",
-        "timeOffRequestId" : "aeiou",
-        "lengthMinutes" : 123,
-        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
-        "paid" : true,
-        "description" : "aeiou"
-      } ],
-      "shifts" : [ {
-        "schedule" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou",
-          "weekDate" : "2000-01-23T04:56:07.000+0000"
-        },
-        "lengthMinutes" : 123,
-        "activities" : [ {
-          "activityCodeId" : "aeiou",
-          "externalActivityType" : "aeiou",
-          "timeOffRequestId" : "aeiou",
-          "lengthMinutes" : 123,
-          "externalActivityId" : "aeiou",
-          "paid" : true,
-          "description" : "aeiou",
-          "startDate" : "2000-01-23T04:56:07.000+0000"
-        } ],
-        "id" : "aeiou",
-        "startDate" : "2000-01-23T04:56:07.000+0000",
-        "manuallyEdited" : true
-      } ],
-      "user" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
-    } ],
-    "publishedSchedules" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000",
-      "weekCount" : 123
-    } ],
-    "businessUnitTimeZone" : "aeiou"
-  },
-  "downloadUrl" : "aeiou",
-  "operationId" : "aeiou",
-  "progress" : 123,
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "operationId" : "operationId",
+  "progress" : 0,
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BuAsyncAgentSchedulesSearchResponse> 
      */
-    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(managementUnitId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(managementUnitId: String, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, body: BuSearchAgentSchedulesRequest? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceAsync": forceAsync, 
-            
             "forceDownloadService": forceDownloadService
-            
         ])
 
         let requestBuilder: RequestBuilder<BuAsyncAgentSchedulesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12654,11 +10501,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Request a historical adherence report
      
      - parameter managementUnitId: (path) The ID of the management unit 
@@ -12684,79 +10527,33 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Request a historical adherence report
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery
      - The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "downloadResult" : {
-    "lookupIdToSecondaryPresenceId" : {
-      "key" : "aeiou"
-    },
-    "data" : [ {
-      "actuals" : [ {
-        "startOffsetSeconds" : 123,
-        "actualActivityCategory" : "aeiou",
-        "endOffsetSeconds" : 123
-      } ],
-      "endDate" : "2000-01-23T04:56:07.000+0000",
-      "impact" : "aeiou",
-      "dayMetrics" : [ {
-        "exceptionDurationSecs" : 123,
-        "impactSeconds" : 123,
-        "conformanceScheduleSecs" : 123,
-        "adherenceScheduleSecs" : 123,
-        "exceptionCount" : 123,
-        "conformanceActualSecs" : 123,
-        "actualLengthSecs" : 123,
-        "conformancePercentage" : 1.3579000000000001069366817318950779736042022705078125,
-        "dayStartOffsetSecs" : 123,
-        "adherencePercentage" : 1.3579000000000001069366817318950779736042022705078125,
-        "scheduleLengthSecs" : 123
-      } ],
-      "conformancePercentage" : 1.3579000000000001069366817318950779736042022705078125,
-      "userId" : "aeiou",
-      "adherencePercentage" : 1.3579000000000001069366817318950779736042022705078125,
-      "startDate" : "2000-01-23T04:56:07.000+0000",
-      "exceptionInfo" : [ {
-        "secondaryPresenceLookupId" : "aeiou",
-        "scheduledActivityCodeId" : "aeiou",
-        "startOffsetSeconds" : 123,
-        "systemPresence" : "aeiou",
-        "impact" : "aeiou",
-        "actualActivityCategory" : "aeiou",
-        "endOffsetSeconds" : 123,
-        "scheduledActivityCategory" : "aeiou",
-        "routingStatus" : "aeiou"
-      } ]
-    } ],
-    "entityId" : "aeiou"
-  },
-  "downloadUrls" : [ "aeiou" ],
-  "downloadUrl" : "aeiou",
-  "queryState" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "downloadUrl" : "downloadUrl",
+  "queryState" : "Processing",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WfmHistoricalAdherenceResponse> 
      */
-    open class func postWorkforcemanagementManagementunitHistoricaladherencequeryWithRequestBuilder(managementUnitId: String, body: WfmHistoricalAdherenceQuery? = nil) -> RequestBuilder<WfmHistoricalAdherenceResponse> {
+    open class func postWorkforcemanagementManagementunitHistoricaladherencequeryWithRequestBuilder(managementUnitId: String, body: WfmHistoricalAdherenceQuery? = nil) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12766,11 +10563,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Move the requested management unit to a new business unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -12796,37 +10589,30 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Move the requested management unit to a new business unit
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/move
      - Returns status 200 if the management unit is already in the requested business unit
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "businessUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "businessUnit" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<MoveManagementUnitResponse> 
      */
-    open class func postWorkforcemanagementManagementunitMoveWithRequestBuilder(managementUnitId: String, body: MoveManagementUnitRequest? = nil) -> RequestBuilder<MoveManagementUnitResponse> {
+    open class func postWorkforcemanagementManagementunitMoveWithRequestBuilder(managementUnitId: String, body: MoveManagementUnitRequest? = nil) -> RequestBuilder<MoveManagementUnitResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/move"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MoveManagementUnitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12836,11 +10622,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Query published schedules for given given time range for set of users
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -12866,79 +10648,108 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Query published schedules for given given time range for set of users
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/schedules/search
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "managementUnitTimeZone" : "aeiou",
+  "managementUnitTimeZone" : "managementUnitTimeZone",
   "publishedSchedules" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "weekDate" : "weekDate"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "weekDate" : "weekDate"
   } ],
   "userSchedules" : {
     "key" : {
       "fullDayTimeOffMarkers" : [ {
-        "activityCodeId" : "aeiou",
+        "activityCodeId" : "activityCodeId",
         "isPaid" : true,
-        "lengthInMinutes" : 123,
-        "description" : "aeiou",
-        "managementUnitDate" : "aeiou",
+        "lengthInMinutes" : 1,
+        "description" : "description",
+        "managementUnitDate" : "managementUnitDate",
+        "delete" : true
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "isPaid" : true,
+        "lengthInMinutes" : 1,
+        "description" : "description",
+        "managementUnitDate" : "managementUnitDate",
         "delete" : true
       } ],
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "workPlanId" : "aeiou",
+      "metadata" : "{}",
+      "workPlanId" : "workPlanId",
       "shifts" : [ {
-        "lengthInMinutes" : 123,
+        "lengthInMinutes" : 0,
         "activities" : [ {
-          "activityCodeId" : "aeiou",
-          "lengthInMinutes" : 123,
-          "timeOffRequestId" : "aeiou",
-          "description" : "aeiou",
+          "activityCodeId" : "activityCodeId",
+          "lengthInMinutes" : 6,
+          "timeOffRequestId" : "timeOffRequestId",
+          "description" : "description",
           "isDstFallback" : true,
           "countsAsPaidTime" : true,
-          "startDate" : "2000-01-23T04:56:07.000+0000"
+          "startDate" : "2000-01-23T04:56:07.000+00:00"
+        }, {
+          "activityCodeId" : "activityCodeId",
+          "lengthInMinutes" : 6,
+          "timeOffRequestId" : "timeOffRequestId",
+          "description" : "description",
+          "isDstFallback" : true,
+          "countsAsPaidTime" : true,
+          "startDate" : "2000-01-23T04:56:07.000+00:00"
         } ],
-        "weekSchedule" : "",
-        "id" : "aeiou",
+        "weekSchedule" : "{}",
+        "id" : "id",
         "delete" : true,
-        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "startDate" : "2000-01-23T04:56:07.000+00:00",
+        "manuallyEdited" : true
+      }, {
+        "lengthInMinutes" : 0,
+        "activities" : [ {
+          "activityCodeId" : "activityCodeId",
+          "lengthInMinutes" : 6,
+          "timeOffRequestId" : "timeOffRequestId",
+          "description" : "description",
+          "isDstFallback" : true,
+          "countsAsPaidTime" : true,
+          "startDate" : "2000-01-23T04:56:07.000+00:00"
+        }, {
+          "activityCodeId" : "activityCodeId",
+          "lengthInMinutes" : 6,
+          "timeOffRequestId" : "timeOffRequestId",
+          "description" : "description",
+          "isDstFallback" : true,
+          "countsAsPaidTime" : true,
+          "startDate" : "2000-01-23T04:56:07.000+00:00"
+        } ],
+        "weekSchedule" : "{}",
+        "id" : "id",
+        "delete" : true,
+        "startDate" : "2000-01-23T04:56:07.000+00:00",
         "manuallyEdited" : true
       } ],
       "delete" : true
     }
   }
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<UserScheduleContainer> 
      */
-    open class func postWorkforcemanagementManagementunitSchedulesSearchWithRequestBuilder(managementUnitId: String, body: UserListScheduleRequestBody? = nil) -> RequestBuilder<UserScheduleContainer> {
+    open class func postWorkforcemanagementManagementunitSchedulesSearchWithRequestBuilder(managementUnitId: String, body: UserListScheduleRequestBody? = nil) -> RequestBuilder<UserScheduleContainer> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/schedules/search"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12948,11 +10759,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Creates a new time off limit object under management unit.
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -12978,46 +10785,33 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Creates a new time off limit object under management unit.
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits
      - Only one limit object is allowed under management unit, so an attempt to create second object will fail.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "granularity" : "aeiou",
-  "defaultLimitMinutes" : 123,
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "metadata" : "{}",
+  "granularity" : "Daily",
+  "defaultLimitMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffLimit> 
      */
-    open class func postWorkforcemanagementManagementunitTimeofflimitsWithRequestBuilder(managementUnitId: String, body: CreateTimeOffLimitRequest? = nil) -> RequestBuilder<TimeOffLimit> {
+    open class func postWorkforcemanagementManagementunitTimeofflimitsWithRequestBuilder(managementUnitId: String, body: CreateTimeOffLimitRequest? = nil) -> RequestBuilder<TimeOffLimit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffLimit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13027,11 +10821,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieves time off limit related values based on a given set of filters.
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -13057,54 +10847,46 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Retrieves time off limit related values based on a given set of filters.
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "values" : [ {
-    "allocatedMinutesPerInterval" : [ 123 ],
-    "timeOffLimit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "waitlistedMinutesPerInterval" : [ 123 ],
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "granularity" : "aeiou",
-    "waitlistedRequestsPerInterval" : [ 123 ],
-    "startDate" : "2000-01-23T04:56:07.000+0000",
-    "limitMinutesPerInterval" : [ 123 ]
+    "allocatedMinutesPerInterval" : [ 6, 6 ],
+    "timeOffLimit" : "{}",
+    "waitlistedMinutesPerInterval" : [ 1, 1 ],
+    "metadata" : "{}",
+    "granularity" : "Daily",
+    "waitlistedRequestsPerInterval" : [ 5, 5 ],
+    "startDate" : "2000-01-23",
+    "limitMinutesPerInterval" : [ 0, 0 ]
+  }, {
+    "allocatedMinutesPerInterval" : [ 6, 6 ],
+    "timeOffLimit" : "{}",
+    "waitlistedMinutesPerInterval" : [ 1, 1 ],
+    "metadata" : "{}",
+    "granularity" : "Daily",
+    "waitlistedRequestsPerInterval" : [ 5, 5 ],
+    "startDate" : "2000-01-23",
+    "limitMinutesPerInterval" : [ 0, 0 ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<QueryTimeOffLimitValuesResponse> 
      */
-    open class func postWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithRequestBuilder(managementUnitId: String, body: QueryTimeOffLimitValuesRequest? = nil) -> RequestBuilder<QueryTimeOffLimitValuesResponse> {
+    open class func postWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithRequestBuilder(managementUnitId: String, body: QueryTimeOffLimitValuesRequest? = nil) -> RequestBuilder<QueryTimeOffLimitValuesResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<QueryTimeOffLimitValuesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13114,11 +10896,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Creates a new time off plan
      
      - parameter managementUnitId: (path) The ID of the management unit 
@@ -13144,53 +10922,42 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Creates a new time off plan
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "activityCodeIds" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "metadata" : "{}",
+  "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "timeOffLimits" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
   } ],
   "active" : true,
-  "id" : "aeiou",
-  "autoApprovalRule" : "aeiou",
-  "daysBeforeStartToExpireFromWaitlist" : 123
-}}]
+  "id" : "id",
+  "autoApprovalRule" : "Never",
+  "daysBeforeStartToExpireFromWaitlist" : 0
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffPlan> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffplansWithRequestBuilder(managementUnitId: String, body: CreateTimeOffPlanRequest? = nil) -> RequestBuilder<TimeOffPlan> {
+    open class func postWorkforcemanagementManagementunitTimeoffplansWithRequestBuilder(managementUnitId: String, body: CreateTimeOffPlanRequest? = nil) -> RequestBuilder<TimeOffPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13200,11 +10967,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create a new time off request
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -13230,64 +10993,69 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a new time off request
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
   "timeOffRequests" : [ {
-    "submittedBy" : "",
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : "",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "notes" : "aeiou",
-    "selfUri" : "aeiou",
-    "fullDayManagementUnitDates" : [ "aeiou" ],
-    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-    "submittedDate" : "2000-01-23T04:56:07.000+0000",
-    "reviewedBy" : "",
-    "activityCodeId" : "aeiou",
+    "submittedBy" : "{}",
+    "metadata" : "{}",
+    "notes" : "notes",
+    "selfUri" : "https://openapi-generator.tech",
+    "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewedBy" : "{}",
+    "activityCodeId" : "activityCodeId",
     "isFullDayRequest" : true,
     "markedAsRead" : true,
-    "dailyDurationMinutes" : 123,
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "status" : "aeiou"
+    "dailyDurationMinutes" : 0,
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "status" : "PENDING"
+  }, {
+    "submittedBy" : "{}",
+    "metadata" : "{}",
+    "notes" : "notes",
+    "selfUri" : "https://openapi-generator.tech",
+    "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewedBy" : "{}",
+    "activityCodeId" : "activityCodeId",
+    "isFullDayRequest" : true,
+    "markedAsRead" : true,
+    "dailyDurationMinutes" : 0,
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "status" : "PENDING"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestList> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsWithRequestBuilder(managementUnitId: String, body: CreateAdminTimeOffRequest? = nil) -> RequestBuilder<TimeOffRequestList> {
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsWithRequestBuilder(managementUnitId: String, body: CreateAdminTimeOffRequest? = nil) -> RequestBuilder<TimeOffRequestList> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13297,11 +11065,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Fetches time off requests matching the conditions specified in the request body
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -13327,9 +11091,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Fetches time off requests matching the conditions specified in the request body
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query
      - Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
      - OAuth:
@@ -13337,49 +11099,55 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "submittedBy" : "",
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : "",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "notes" : "aeiou",
-    "selfUri" : "aeiou",
-    "fullDayManagementUnitDates" : [ "aeiou" ],
-    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-    "submittedDate" : "2000-01-23T04:56:07.000+0000",
-    "reviewedBy" : "",
-    "activityCodeId" : "aeiou",
+    "submittedBy" : "{}",
+    "metadata" : "{}",
+    "notes" : "notes",
+    "selfUri" : "https://openapi-generator.tech",
+    "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewedBy" : "{}",
+    "activityCodeId" : "activityCodeId",
     "isFullDayRequest" : true,
     "markedAsRead" : true,
-    "dailyDurationMinutes" : 123,
-    "id" : "aeiou",
-    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "status" : "aeiou"
+    "dailyDurationMinutes" : 0,
+    "id" : "id",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "status" : "PENDING"
+  }, {
+    "submittedBy" : "{}",
+    "metadata" : "{}",
+    "notes" : "notes",
+    "selfUri" : "https://openapi-generator.tech",
+    "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewedBy" : "{}",
+    "activityCodeId" : "activityCodeId",
+    "isFullDayRequest" : true,
+    "markedAsRead" : true,
+    "dailyDurationMinutes" : 0,
+    "id" : "id",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "status" : "PENDING"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestListing> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: String, body: TimeOffRequestQueryBody? = nil) -> RequestBuilder<TimeOffRequestListing> {
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: String, body: TimeOffRequestQueryBody? = nil) -> RequestBuilder<TimeOffRequestListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13389,11 +11157,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieves daily waitlist position for a list of time off requests
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -13419,44 +11183,38 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Retrieves daily waitlist position for a list of time off requests
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "date" : "2000-01-23T04:56:07.000+0000",
-    "timeOffLimit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "timeOffRequest" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "waitlistPosition" : 123
+    "date" : "2000-01-23",
+    "timeOffLimit" : "{}",
+    "timeOffRequest" : "{}",
+    "waitlistPosition" : 0
+  }, {
+    "date" : "2000-01-23",
+    "timeOffLimit" : "{}",
+    "timeOffRequest" : "{}",
+    "waitlistPosition" : 0
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WaitlistPositionListing> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithRequestBuilder(managementUnitId: String, body: QueryWaitlistPositionsRequest? = nil) -> RequestBuilder<WaitlistPositionListing> {
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithRequestBuilder(managementUnitId: String, body: QueryWaitlistPositionsRequest? = nil) -> RequestBuilder<WaitlistPositionListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WaitlistPositionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13468,23 +11226,17 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Matches a shift trade. This route can only be called by the receiving agent
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter body: (body) body 
      - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId: String, weekDateId: Date, body: MatchShiftTradeRequest, tradeId: String, completion: @escaping ((_ data: MatchShiftTradeResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitWeekShifttradeMatchWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, tradeId: tradeId)
+    open class func postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId: String, weekDateId: Date, tradeId: String, body: MatchShiftTradeRequest, completion: @escaping ((_ data: MatchShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWeekShifttradeMatchWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, tradeId: tradeId, body: body)
         requestBuilder.execute { (response: Response<MatchShiftTradeResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -13502,69 +11254,45 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Matches a shift trade. This route can only be called by the receiving agent
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "trade" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : "",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-    "receivingShiftId" : "aeiou",
-    "receivingUser" : "",
-    "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
-    "oneSided" : true,
-    "reviewedBy" : "",
-    "initiatingUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "schedule" : {
-      "businessUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000"
-    },
-    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-    "acceptableIntervals" : [ "aeiou" ],
-    "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
-    "expiration" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000",
-    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-    "initiatingShiftId" : "aeiou"
-  },
+  "trade" : "{}",
   "violations" : [ {
-    "type" : "aeiou",
+    "type" : "AgentCapabilityMismatch",
     "params" : {
-      "key" : "aeiou"
+      "key" : "params"
+    }
+  }, {
+    "type" : "AgentCapabilityMismatch",
+    "params" : {
+      "key" : "params"
     }
   } ],
-  "adminReviewViolations" : [ "" ]
-}}]
+  "adminReviewViolations" : [ {
+    "type" : "AgentCapabilityMismatch",
+    "params" : {
+      "key" : "params"
+    }
+  }, {
+    "type" : "AgentCapabilityMismatch",
+    "params" : {
+      "key" : "params"
+    }
+  } ]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter body: (body) body 
      - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<MatchShiftTradeResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWeekShifttradeMatchWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: MatchShiftTradeRequest, tradeId: String) -> RequestBuilder<MatchShiftTradeResponse> {
+    open class func postWorkforcemanagementManagementunitWeekShifttradeMatchWithRequestBuilder(managementUnitId: String, weekDateId: Date, tradeId: String, body: MatchShiftTradeRequest) -> RequestBuilder<MatchShiftTradeResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13576,10 +11304,8 @@ open class WorkforceManagementAPI {
         let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MatchShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13590,12 +11316,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Adds a shift trade
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -13622,51 +11343,31 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Adds a shift trade
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-  "receivingShiftId" : "aeiou",
-  "receivingUser" : "",
-  "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+  "metadata" : "{}",
+  "receivingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+  "receivingShiftId" : "receivingShiftId",
+  "receivingUser" : "{}",
+  "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
   "oneSided" : true,
-  "reviewedBy" : "",
-  "initiatingUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "schedule" : {
-    "businessUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-  "acceptableIntervals" : [ "aeiou" ],
-  "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
-  "expiration" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "weekDate" : "2000-01-23T04:56:07.000+0000",
-  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-  "initiatingShiftId" : "aeiou"
-}}]
+  "reviewedBy" : "{}",
+  "initiatingUser" : "{}",
+  "schedule" : "{}",
+  "initiatingShiftEnd" : "2000-01-23T04:56:07.000+00:00",
+  "acceptableIntervals" : [ "acceptableIntervals", "acceptableIntervals" ],
+  "initiatingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+  "expiration" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Unmatched",
+  "weekDate" : "2000-01-23",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "initiatingShiftId" : "initiatingShiftId"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -13674,7 +11375,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<ShiftTradeResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: AddShiftTradeRequest) -> RequestBuilder<ShiftTradeResponse> {
+    open class func postWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: AddShiftTradeRequest) -> RequestBuilder<ShiftTradeResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13683,10 +11384,8 @@ open class WorkforceManagementAPI {
         let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13697,12 +11396,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Searches for potential shift trade matches for the current agent
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -13729,64 +11423,22 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Searches for potential shift trade matches for the current agent
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "trades" : [ {
-    "preview" : {
-      "activities" : [ {
-        "activityCodeId" : "aeiou",
-        "lengthMinutes" : 123,
-        "countsAsPaidTime" : true,
-        "startDate" : "2000-01-23T04:56:07.000+0000"
-      } ]
-    },
-    "trade" : {
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : "",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-      "receivingShiftId" : "aeiou",
-      "receivingUser" : "",
-      "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
-      "oneSided" : true,
-      "reviewedBy" : "",
-      "initiatingUser" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "schedule" : {
-        "businessUnit" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "selfUri" : "aeiou",
-        "id" : "aeiou",
-        "weekDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
-      "acceptableIntervals" : [ "aeiou" ],
-      "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
-      "expiration" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "weekDate" : "2000-01-23T04:56:07.000+0000",
-      "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-      "initiatingShiftId" : "aeiou"
-    },
-    "matchingReceivingShiftIds" : [ "aeiou" ]
+    "preview" : "{}",
+    "trade" : "{}",
+    "matchingReceivingShiftIds" : [ "matchingReceivingShiftIds", "matchingReceivingShiftIds" ]
+  }, {
+    "preview" : "{}",
+    "trade" : "{}",
+    "matchingReceivingShiftIds" : [ "matchingReceivingShiftIds", "matchingReceivingShiftIds" ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -13794,7 +11446,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<SearchShiftTradesResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWeekShifttradesSearchWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: SearchShiftTradesRequest) -> RequestBuilder<SearchShiftTradesResponse> {
+    open class func postWorkforcemanagementManagementunitWeekShifttradesSearchWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: SearchShiftTradesRequest) -> RequestBuilder<SearchShiftTradesResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13803,10 +11455,8 @@ open class WorkforceManagementAPI {
         let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SearchShiftTradesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13818,13 +11468,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    
     /**
-     
      Updates the state of a batch of shift trades
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -13852,37 +11496,17 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Updates the state of a batch of shift trades
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk
      - Admin functionality is not supported with \"mine\".
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "result" : {
-    "entities" : [ {
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : "",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "failureReason" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "reviewedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "reviewedDate" : "2000-01-23T04:56:07.000+0000"
-    } ]
-  },
-  "operationId" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "result" : "{}",
+  "operationId" : "operationId",
+  "status" : "Processing"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -13891,7 +11515,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<BulkUpdateShiftTradeStateResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWeekShifttradesStateBulkWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: BulkShiftTradeStateUpdateRequest, forceAsync: Bool? = nil) -> RequestBuilder<BulkUpdateShiftTradeStateResponse> {
+    open class func postWorkforcemanagementManagementunitWeekShifttradesStateBulkWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: BulkShiftTradeStateUpdateRequest, forceAsync: Bool? = nil) -> RequestBuilder<BulkUpdateShiftTradeStateResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13900,15 +11524,11 @@ open class WorkforceManagementAPI {
         let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "forceAsync": forceAsync
-            
         ])
 
         let requestBuilder: RequestBuilder<BulkUpdateShiftTradeStateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13919,12 +11539,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Create a copy of work plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -13951,110 +11566,170 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a copy of work plan
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "maximumDaysOffPerPlanningPeriod" : 123,
-  "minimumPaidMinutesPerPlanningPeriod" : 123,
-  "optionalDays" : {
-    "values" : [ "aeiou" ]
-  },
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "maximumDaysOffPerPlanningPeriod" : 1,
+  "minimumPaidMinutesPerPlanningPeriod" : 1,
+  "optionalDays" : "{}",
+  "metadata" : "{}",
   "flexibleWeeklyPaidTime" : true,
-  "shiftStartVariances" : {
-    "values" : [ {
-      "applicableDays" : [ "aeiou" ],
-      "maxShiftStartVarianceMinutes" : 123
-    } ]
-  },
+  "shiftStartVariances" : "{}",
   "constrainWeeklyPaidTime" : true,
   "enabled" : true,
   "valid" : true,
-  "minimumShiftStartDistanceMinutes" : 123,
+  "minimumShiftStartDistanceMinutes" : 4,
   "constrainMaximumConsecutiveWorkingDays" : true,
-  "maximumConsecutiveWorkingDays" : 123,
+  "maximumConsecutiveWorkingDays" : 2,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
-    "exactStartTimeMinutesFromMidnight" : 123,
-    "validationId" : "aeiou",
-    "maximumContiguousWorkTimeMinutes" : 123,
-    "startIncrementMinutes" : 123,
+    "exactStartTimeMinutesFromMidnight" : 6,
+    "validationId" : "validationId",
+    "maximumContiguousWorkTimeMinutes" : 6,
+    "startIncrementMinutes" : 9,
     "flexiblePaidTime" : true,
     "constrainContiguousWorkTime" : true,
     "delete" : true,
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 123,
+    "latestStartTimeMinutesFromMidnight" : 1,
     "constrainStopTime" : true,
-    "earliestStopTimeMinutesFromMidnight" : 123,
-    "latestStopTimeMinutesFromMidnight" : 123,
+    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStopTimeMinutesFromMidnight" : 4,
     "activities" : [ {
-      "startTimeIncrementMinutes" : 123,
-      "validationId" : "aeiou",
-      "lengthMinutes" : 123,
-      "earliestStartTimeMinutes" : 123,
-      "description" : "aeiou",
-      "latestStartTimeMinutes" : 123,
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
       "countsAsPaidTime" : true,
       "delete" : true,
-      "activityCodeId" : "aeiou",
-      "minimumLengthFromShiftStartMinutes" : 123,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 123,
-      "exactStartTimeMinutes" : 123,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
       "countsAsContiguousWorkTime" : true,
-      "id" : "aeiou",
+      "id" : "id",
+      "flexibleStartTime" : true
+    }, {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 123,
-    "name" : "aeiou",
-    "days" : "",
-    "id" : "aeiou",
-    "minimumContiguousWorkTimeMinutes" : 123,
-    "exactPaidTimeMinutes" : 123,
-    "earliestStartTimeMinutesFromMidnight" : 123,
+    "maximumPaidTimeMinutes" : 8,
+    "name" : "name",
+    "days" : "{}",
+    "id" : "id",
+    "minimumContiguousWorkTimeMinutes" : 9,
+    "exactPaidTimeMinutes" : 9,
+    "earliestStartTimeMinutesFromMidnight" : 7,
     "flexibleStartTime" : true,
     "constrainEarliestStopTime" : true,
-    "minimumPaidTimeMinutes" : 123
+    "minimumPaidTimeMinutes" : 6
+  }, {
+    "exactStartTimeMinutesFromMidnight" : 6,
+    "validationId" : "validationId",
+    "maximumContiguousWorkTimeMinutes" : 6,
+    "startIncrementMinutes" : 9,
+    "flexiblePaidTime" : true,
+    "constrainContiguousWorkTime" : true,
+    "delete" : true,
+    "constrainLatestStopTime" : true,
+    "latestStartTimeMinutesFromMidnight" : 1,
+    "constrainStopTime" : true,
+    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStopTimeMinutesFromMidnight" : 4,
+    "activities" : [ {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
+      "flexibleStartTime" : true
+    }, {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
+      "flexibleStartTime" : true
+    } ],
+    "maximumPaidTimeMinutes" : 8,
+    "name" : "name",
+    "days" : "{}",
+    "id" : "id",
+    "minimumContiguousWorkTimeMinutes" : 9,
+    "exactPaidTimeMinutes" : 9,
+    "earliestStartTimeMinutesFromMidnight" : 7,
+    "flexibleStartTime" : true,
+    "constrainEarliestStopTime" : true,
+    "minimumPaidTimeMinutes" : 6
   } ],
-  "weeklyMinimumPaidMinutes" : 123,
-  "id" : "aeiou",
-  "paidTimeGranularityMinutes" : 123,
-  "maximumConsecutiveWorkingWeekends" : 123,
-  "weeklyExactPaidMinutes" : 123,
-  "shiftStartVarianceType" : "aeiou",
-  "maximumDays" : 123,
-  "minimumWorkingDaysPerWeek" : 123,
-  "minimumConsecutiveNonWorkingMinutesPerWeek" : 123,
-  "selfUri" : "aeiou",
-  "minimumTimeBetweenShiftsMinutes" : 123,
+  "weeklyMinimumPaidMinutes" : 6,
+  "id" : "id",
+  "paidTimeGranularityMinutes" : 5,
+  "maximumConsecutiveWorkingWeekends" : 9,
+  "weeklyExactPaidMinutes" : 0,
+  "shiftStartVarianceType" : "ShiftStart",
+  "maximumDays" : 2,
+  "minimumWorkingDaysPerWeek" : 3,
+  "minimumConsecutiveNonWorkingMinutesPerWeek" : 7,
+  "selfUri" : "https://openapi-generator.tech",
+  "minimumTimeBetweenShiftsMinutes" : 5,
   "constrainPaidTimeGranularity" : true,
-  "maximumPaidMinutesPerPlanningPeriod" : 123,
+  "maximumPaidMinutesPerPlanningPeriod" : 1,
   "agents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "delete" : true
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
     "delete" : true
   } ],
-  "weeklyMaximumPaidMinutes" : 123,
-  "name" : "aeiou",
-  "minimumDaysOffPerPlanningPeriod" : 123,
+  "weeklyMaximumPaidMinutes" : 1,
+  "name" : "name",
+  "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 123
-}}]
+  "agentCount" : 6
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to create a copy 
@@ -14062,7 +11737,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplanCopyWithRequestBuilder(managementUnitId: String, workPlanId: String, body: CopyWorkPlan? = nil) -> RequestBuilder<WorkPlan> {
+    open class func postWorkforcemanagementManagementunitWorkplanCopyWithRequestBuilder(managementUnitId: String, workPlanId: String, body: CopyWorkPlan? = nil) -> RequestBuilder<WorkPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14071,10 +11746,8 @@ open class WorkforceManagementAPI {
         let workPlanIdPostEscape = workPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanId}", with: workPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14086,28 +11759,17 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
-    public enum Expand_postWorkforcemanagementManagementunitWorkplanValidate: String { 
-        case messages = "messages"
-    }
-
-    
-    
     /**
-     
      Validate Work Plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. 
-     - parameter body: (body) body (optional)
      - parameter expand: (query)  (optional)
+     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: String, workPlanId: String, body: WorkPlanValidationRequest? = nil, expand: [String]? = nil, completion: @escaping ((_ data: ValidateWorkPlanResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, expand: expand)
+    open class func postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: String, workPlanId: String, expand: [String]? = nil, body: WorkPlanValidationRequest? = nil, completion: @escaping ((_ data: ValidateWorkPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, expand: expand, body: body)
         requestBuilder.execute { (response: Response<ValidateWorkPlanResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -14125,54 +11787,25 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Validate Work Plan
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "valid" : true,
-  "messages" : {
-    "violationMessages" : [ {
-      "severity" : "aeiou",
-      "arguments" : [ {
-        "type" : "aeiou",
-        "value" : "aeiou"
-      } ],
-      "type" : "aeiou"
-    } ],
-    "constraintConflictMessage" : {
-      "conflictedConstraintMessages" : [ {
-        "arguments" : [ "" ],
-        "type" : "aeiou"
-      } ],
-      "message" : {
-        "arguments" : [ "" ],
-        "type" : "aeiou"
-      }
-    }
-  },
-  "workPlan" : {
-    "managementUnit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  }
-}}]
+  "messages" : "{}",
+  "workPlan" : "{}"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. 
-     - parameter body: (body) body (optional)
      - parameter expand: (query)  (optional)
+     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<ValidateWorkPlanResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: String, workPlanId: String, body: WorkPlanValidationRequest? = nil, expand: [String]? = nil) -> RequestBuilder<ValidateWorkPlanResponse> {
+    open class func postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: String, workPlanId: String, expand: [String]? = nil, body: WorkPlanValidationRequest? = nil) -> RequestBuilder<ValidateWorkPlanResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14181,15 +11814,11 @@ open class WorkforceManagementAPI {
         let workPlanIdPostEscape = workPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanId}", with: workPlanIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<ValidateWorkPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14200,12 +11829,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Create a copy of work plan rotation
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -14232,50 +11856,30 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a copy of work plan rotation
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "dateRange" : {
-    "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
-    "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "pattern" : {
-    "workPlans" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ]
-  },
-  "id" : "aeiou",
-  "agentCount" : 123,
+  "metadata" : "{}",
+  "dateRange" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "pattern" : "{}",
+  "id" : "id",
+  "agentCount" : 0,
   "enabled" : true,
   "agents" : [ {
-    "dateRange" : "",
-    "position" : 123,
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "dateRange" : "{}",
+    "position" : 6,
+    "user" : "{}"
+  }, {
+    "dateRange" : "{}",
+    "position" : 6,
+    "user" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanRotationId: (path) The ID of the work plan rotation to create a copy 
@@ -14283,7 +11887,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<WorkPlanRotationResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplanrotationCopyWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: CopyWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {
+    open class func postWorkforcemanagementManagementunitWorkplanrotationCopyWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: CopyWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14292,10 +11896,8 @@ open class WorkforceManagementAPI {
         let workPlanRotationIdPostEscape = workPlanRotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{workPlanRotationId}", with: workPlanRotationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WorkPlanRotationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14305,11 +11907,7 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
     /**
-     
      Create a new work plan rotation
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -14335,66 +11933,44 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a new work plan rotation
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "dateRange" : {
-    "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
-    "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "pattern" : {
-    "workPlans" : [ {
-      "managementUnit" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    } ]
-  },
-  "id" : "aeiou",
-  "agentCount" : 123,
+  "metadata" : "{}",
+  "dateRange" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "pattern" : "{}",
+  "id" : "id",
+  "agentCount" : 0,
   "enabled" : true,
   "agents" : [ {
-    "dateRange" : "",
-    "position" : 123,
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "dateRange" : "{}",
+    "position" : 6,
+    "user" : "{}"
+  }, {
+    "dateRange" : "{}",
+    "position" : 6,
+    "user" : "{}"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WorkPlanRotationResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: String, body: AddWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {
+    open class func postWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: String, body: AddWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WorkPlanRotationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14404,10 +11980,6 @@ open class WorkforceManagementAPI {
 
     
     
-    
-    
-    
-    
     public enum ValidationMode_postWorkforcemanagementManagementunitWorkplans: String { 
         case ignore = "Ignore"
     }
@@ -14415,16 +11987,15 @@ open class WorkforceManagementAPI {
     
     
     /**
-     
      Create a new work plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
      - parameter validationMode: (query) Allows to create work plan even if the validation result is invalid (optional)
+     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWorkplans(managementUnitId: String, body: CreateWorkPlan? = nil, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, body: body, validationMode: validationMode)
+    open class func postWorkforcemanagementManagementunitWorkplans(managementUnitId: String, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil, body: CreateWorkPlan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, validationMode: validationMode, body: body)
         requestBuilder.execute { (response: Response<WorkPlan>?, error) -> Void in
             do {
                 if let e = error {
@@ -14442,132 +12013,188 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a new work plan
-     
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "maximumDaysOffPerPlanningPeriod" : 123,
-  "minimumPaidMinutesPerPlanningPeriod" : 123,
-  "optionalDays" : {
-    "values" : [ "aeiou" ]
-  },
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
+  "maximumDaysOffPerPlanningPeriod" : 1,
+  "minimumPaidMinutesPerPlanningPeriod" : 1,
+  "optionalDays" : "{}",
+  "metadata" : "{}",
   "flexibleWeeklyPaidTime" : true,
-  "shiftStartVariances" : {
-    "values" : [ {
-      "applicableDays" : [ "aeiou" ],
-      "maxShiftStartVarianceMinutes" : 123
-    } ]
-  },
+  "shiftStartVariances" : "{}",
   "constrainWeeklyPaidTime" : true,
   "enabled" : true,
   "valid" : true,
-  "minimumShiftStartDistanceMinutes" : 123,
+  "minimumShiftStartDistanceMinutes" : 4,
   "constrainMaximumConsecutiveWorkingDays" : true,
-  "maximumConsecutiveWorkingDays" : 123,
+  "maximumConsecutiveWorkingDays" : 2,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
-    "exactStartTimeMinutesFromMidnight" : 123,
-    "validationId" : "aeiou",
-    "maximumContiguousWorkTimeMinutes" : 123,
-    "startIncrementMinutes" : 123,
+    "exactStartTimeMinutesFromMidnight" : 6,
+    "validationId" : "validationId",
+    "maximumContiguousWorkTimeMinutes" : 6,
+    "startIncrementMinutes" : 9,
     "flexiblePaidTime" : true,
     "constrainContiguousWorkTime" : true,
     "delete" : true,
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 123,
+    "latestStartTimeMinutesFromMidnight" : 1,
     "constrainStopTime" : true,
-    "earliestStopTimeMinutesFromMidnight" : 123,
-    "latestStopTimeMinutesFromMidnight" : 123,
+    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStopTimeMinutesFromMidnight" : 4,
     "activities" : [ {
-      "startTimeIncrementMinutes" : 123,
-      "validationId" : "aeiou",
-      "lengthMinutes" : 123,
-      "earliestStartTimeMinutes" : 123,
-      "description" : "aeiou",
-      "latestStartTimeMinutes" : 123,
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
       "countsAsPaidTime" : true,
       "delete" : true,
-      "activityCodeId" : "aeiou",
-      "minimumLengthFromShiftStartMinutes" : 123,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 123,
-      "exactStartTimeMinutes" : 123,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
       "countsAsContiguousWorkTime" : true,
-      "id" : "aeiou",
+      "id" : "id",
+      "flexibleStartTime" : true
+    }, {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 123,
-    "name" : "aeiou",
-    "days" : "",
-    "id" : "aeiou",
-    "minimumContiguousWorkTimeMinutes" : 123,
-    "exactPaidTimeMinutes" : 123,
-    "earliestStartTimeMinutesFromMidnight" : 123,
+    "maximumPaidTimeMinutes" : 8,
+    "name" : "name",
+    "days" : "{}",
+    "id" : "id",
+    "minimumContiguousWorkTimeMinutes" : 9,
+    "exactPaidTimeMinutes" : 9,
+    "earliestStartTimeMinutesFromMidnight" : 7,
     "flexibleStartTime" : true,
     "constrainEarliestStopTime" : true,
-    "minimumPaidTimeMinutes" : 123
+    "minimumPaidTimeMinutes" : 6
+  }, {
+    "exactStartTimeMinutesFromMidnight" : 6,
+    "validationId" : "validationId",
+    "maximumContiguousWorkTimeMinutes" : 6,
+    "startIncrementMinutes" : 9,
+    "flexiblePaidTime" : true,
+    "constrainContiguousWorkTime" : true,
+    "delete" : true,
+    "constrainLatestStopTime" : true,
+    "latestStartTimeMinutesFromMidnight" : 1,
+    "constrainStopTime" : true,
+    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStopTimeMinutesFromMidnight" : 4,
+    "activities" : [ {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
+      "flexibleStartTime" : true
+    }, {
+      "startTimeIncrementMinutes" : 6,
+      "validationId" : "validationId",
+      "lengthMinutes" : 3,
+      "earliestStartTimeMinutes" : 6,
+      "description" : "description",
+      "latestStartTimeMinutes" : 1,
+      "countsAsPaidTime" : true,
+      "delete" : true,
+      "activityCodeId" : "activityCodeId",
+      "minimumLengthFromShiftStartMinutes" : 6,
+      "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 5,
+      "exactStartTimeMinutes" : 2,
+      "countsAsContiguousWorkTime" : true,
+      "id" : "id",
+      "flexibleStartTime" : true
+    } ],
+    "maximumPaidTimeMinutes" : 8,
+    "name" : "name",
+    "days" : "{}",
+    "id" : "id",
+    "minimumContiguousWorkTimeMinutes" : 9,
+    "exactPaidTimeMinutes" : 9,
+    "earliestStartTimeMinutesFromMidnight" : 7,
+    "flexibleStartTime" : true,
+    "constrainEarliestStopTime" : true,
+    "minimumPaidTimeMinutes" : 6
   } ],
-  "weeklyMinimumPaidMinutes" : 123,
-  "id" : "aeiou",
-  "paidTimeGranularityMinutes" : 123,
-  "maximumConsecutiveWorkingWeekends" : 123,
-  "weeklyExactPaidMinutes" : 123,
-  "shiftStartVarianceType" : "aeiou",
-  "maximumDays" : 123,
-  "minimumWorkingDaysPerWeek" : 123,
-  "minimumConsecutiveNonWorkingMinutesPerWeek" : 123,
-  "selfUri" : "aeiou",
-  "minimumTimeBetweenShiftsMinutes" : 123,
+  "weeklyMinimumPaidMinutes" : 6,
+  "id" : "id",
+  "paidTimeGranularityMinutes" : 5,
+  "maximumConsecutiveWorkingWeekends" : 9,
+  "weeklyExactPaidMinutes" : 0,
+  "shiftStartVarianceType" : "ShiftStart",
+  "maximumDays" : 2,
+  "minimumWorkingDaysPerWeek" : 3,
+  "minimumConsecutiveNonWorkingMinutesPerWeek" : 7,
+  "selfUri" : "https://openapi-generator.tech",
+  "minimumTimeBetweenShiftsMinutes" : 5,
   "constrainPaidTimeGranularity" : true,
-  "maximumPaidMinutesPerPlanningPeriod" : 123,
+  "maximumPaidMinutesPerPlanningPeriod" : 1,
   "agents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "delete" : true
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
     "delete" : true
   } ],
-  "weeklyMaximumPaidMinutes" : 123,
-  "name" : "aeiou",
-  "minimumDaysOffPerPlanningPeriod" : 123,
+  "weeklyMaximumPaidMinutes" : 1,
+  "name" : "name",
+  "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 123
-}}]
+  "agentCount" : 6
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
      - parameter validationMode: (query) Allows to create work plan even if the validation result is invalid (optional)
+     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, body: CreateWorkPlan? = nil, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil) -> RequestBuilder<WorkPlan> {
+    open class func postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil, body: CreateWorkPlan? = nil) -> RequestBuilder<WorkPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "validationMode": validationMode?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14576,10 +12203,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Add a management unit
      
      - parameter body: (body) body (optional)
@@ -14604,110 +12228,36 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Add a management unit
-     
      - POST /api/v2/workforcemanagement/managementunits
      - It may take a minute or two for a new management unit to be available for api operations
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "startDayOfWeek" : "aeiou",
-  "division" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "settings" : {
-    "metadata" : {
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "createdBy" : "",
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "shiftTrading" : {
-      "weeklyMaxPaidViolations" : "aeiou",
-      "unequalPaid" : "aeiou",
-      "requiresMatchingLanguages" : true,
-      "oneSided" : "aeiou",
-      "allowDirectTrades" : true,
-      "autoReview" : true,
-      "enabled" : true,
-      "weeklyMinPaidViolations" : "aeiou",
-      "requiresMatchingSkills" : true,
-      "requiresMatchingQueues" : true,
-      "minHoursInFuture" : 123,
-      "activityCategoryRules" : [ {
-        "activityCodeIdReplacement" : "aeiou",
-        "activityCategory" : "aeiou",
-        "action" : "aeiou"
-      } ],
-      "requiresMatchingPlanningGroups" : true
-    },
-    "adherence" : {
-      "ignoredActivityCategories" : {
-        "values" : [ "aeiou" ]
-      },
-      "nonOnQueueActivitiesEquivalent" : true,
-      "adherenceTargetPercent" : 123,
-      "adherenceExceptionThresholdSeconds" : 123,
-      "trackOnQueueActivity" : true,
-      "severeAlertThresholdMinutes" : 123
-    },
-    "scheduling" : {
-      "planningPeriod" : {
-        "weekCount" : 123,
-        "startDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "maxOccupancyPercentForDeferredWork" : 123,
-      "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-      "shrinkageOverrides" : {
-        "values" : [ {
-          "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-          "intervalIndex" : 123
-        } ],
-        "clear" : true
-      },
-      "startDayOfWeekend" : "aeiou"
-    },
-    "timeOff" : {
-      "submissionEarliestDaysFromNow" : 123,
-      "submissionRangeEnforced" : true,
-      "submissionLatestDaysFromNow" : 123
-    },
-    "shortTermForecasting" : {
-      "defaultHistoryWeeks" : 123
-    }
-  },
-  "metadata" : "",
-  "businessUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "timeZone" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "version" : 123
-}}]
+  "startDayOfWeek" : "Sunday",
+  "division" : "{}",
+  "settings" : "{}",
+  "metadata" : "{}",
+  "businessUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "timeZone" : "timeZone",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
      
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<ManagementUnit> 
      */
-    open class func postWorkforcemanagementManagementunitsWithRequestBuilder(body: CreateManagementUnitApiRequest? = nil) -> RequestBuilder<ManagementUnit> {
+    open class func postWorkforcemanagementManagementunitsWithRequestBuilder(body: CreateManagementUnitApiRequest? = nil) -> RequestBuilder<ManagementUnit> {        
         let path = "/api/v2/workforcemanagement/managementunits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ManagementUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14716,10 +12266,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Mark a list of notifications as read or unread
      
      - parameter body: (body) body (optional)
@@ -14744,32 +12291,30 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Mark a list of notifications as read or unread
-     
      - POST /api/v2/workforcemanagement/notifications/update
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "mutableGroupId" : "aeiou",
-    "id" : "aeiou"
+    "mutableGroupId" : "mutableGroupId",
+    "id" : "id"
+  }, {
+    "mutableGroupId" : "mutableGroupId",
+    "id" : "id"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<UpdateNotificationsResponse> 
      */
-    open class func postWorkforcemanagementNotificationsUpdateWithRequestBuilder(body: UpdateNotificationsRequest? = nil) -> RequestBuilder<UpdateNotificationsResponse> {
+    open class func postWorkforcemanagementNotificationsUpdateWithRequestBuilder(body: UpdateNotificationsRequest? = nil) -> RequestBuilder<UpdateNotificationsResponse> {        
         let path = "/api/v2/workforcemanagement/notifications/update"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UpdateNotificationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14778,10 +12323,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Get published schedule for the current user
      
      - parameter body: (body) body (optional)
@@ -14806,75 +12348,104 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Get published schedule for the current user
-     
      - POST /api/v2/workforcemanagement/schedules
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "managementUnitTimeZone" : "aeiou",
+  "managementUnitTimeZone" : "managementUnitTimeZone",
   "publishedSchedules" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "weekDate" : "weekDate"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "weekDate" : "weekDate"
   } ],
   "userSchedules" : {
     "key" : {
       "fullDayTimeOffMarkers" : [ {
-        "activityCodeId" : "aeiou",
+        "activityCodeId" : "activityCodeId",
         "isPaid" : true,
-        "lengthInMinutes" : 123,
-        "description" : "aeiou",
-        "managementUnitDate" : "aeiou",
+        "lengthInMinutes" : 1,
+        "description" : "description",
+        "managementUnitDate" : "managementUnitDate",
+        "delete" : true
+      }, {
+        "activityCodeId" : "activityCodeId",
+        "isPaid" : true,
+        "lengthInMinutes" : 1,
+        "description" : "description",
+        "managementUnitDate" : "managementUnitDate",
         "delete" : true
       } ],
-      "metadata" : {
-        "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "createdBy" : "",
-        "modifiedBy" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "workPlanId" : "aeiou",
+      "metadata" : "{}",
+      "workPlanId" : "workPlanId",
       "shifts" : [ {
-        "lengthInMinutes" : 123,
+        "lengthInMinutes" : 0,
         "activities" : [ {
-          "activityCodeId" : "aeiou",
-          "lengthInMinutes" : 123,
-          "timeOffRequestId" : "aeiou",
-          "description" : "aeiou",
+          "activityCodeId" : "activityCodeId",
+          "lengthInMinutes" : 6,
+          "timeOffRequestId" : "timeOffRequestId",
+          "description" : "description",
           "isDstFallback" : true,
           "countsAsPaidTime" : true,
-          "startDate" : "2000-01-23T04:56:07.000+0000"
+          "startDate" : "2000-01-23T04:56:07.000+00:00"
+        }, {
+          "activityCodeId" : "activityCodeId",
+          "lengthInMinutes" : 6,
+          "timeOffRequestId" : "timeOffRequestId",
+          "description" : "description",
+          "isDstFallback" : true,
+          "countsAsPaidTime" : true,
+          "startDate" : "2000-01-23T04:56:07.000+00:00"
         } ],
-        "weekSchedule" : "",
-        "id" : "aeiou",
+        "weekSchedule" : "{}",
+        "id" : "id",
         "delete" : true,
-        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "startDate" : "2000-01-23T04:56:07.000+00:00",
+        "manuallyEdited" : true
+      }, {
+        "lengthInMinutes" : 0,
+        "activities" : [ {
+          "activityCodeId" : "activityCodeId",
+          "lengthInMinutes" : 6,
+          "timeOffRequestId" : "timeOffRequestId",
+          "description" : "description",
+          "isDstFallback" : true,
+          "countsAsPaidTime" : true,
+          "startDate" : "2000-01-23T04:56:07.000+00:00"
+        }, {
+          "activityCodeId" : "activityCodeId",
+          "lengthInMinutes" : 6,
+          "timeOffRequestId" : "timeOffRequestId",
+          "description" : "description",
+          "isDstFallback" : true,
+          "countsAsPaidTime" : true,
+          "startDate" : "2000-01-23T04:56:07.000+00:00"
+        } ],
+        "weekSchedule" : "{}",
+        "id" : "id",
+        "delete" : true,
+        "startDate" : "2000-01-23T04:56:07.000+00:00",
         "manuallyEdited" : true
       } ],
       "delete" : true
     }
   }
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<UserScheduleContainer> 
      */
-    open class func postWorkforcemanagementSchedulesWithRequestBuilder(body: CurrentUserScheduleRequestBody? = nil) -> RequestBuilder<UserScheduleContainer> {
+    open class func postWorkforcemanagementSchedulesWithRequestBuilder(body: CurrentUserScheduleRequestBody? = nil) -> RequestBuilder<UserScheduleContainer> {        
         let path = "/api/v2/workforcemanagement/schedules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14883,10 +12454,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Queries available time off for the current user
      
      - parameter body: (body) body (optional)
@@ -14911,39 +12479,38 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Queries available time off for the current user
-     
      - POST /api/v2/workforcemanagement/timeofflimits/available/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "values" : [ {
-    "timeOffLimit" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "availableMinutesPerInterval" : [ 123 ],
+    "timeOffLimit" : "{}",
+    "availableMinutesPerInterval" : [ 0, 0 ],
     "waitlistEnabled" : true,
-    "granularity" : "aeiou",
-    "waitlistedRequestsPerInterval" : [ 123 ],
-    "startDate" : "2000-01-23T04:56:07.000+0000"
+    "granularity" : "Daily",
+    "waitlistedRequestsPerInterval" : [ 6, 6 ],
+    "startDate" : "2000-01-23"
+  }, {
+    "timeOffLimit" : "{}",
+    "availableMinutesPerInterval" : [ 0, 0 ],
+    "waitlistEnabled" : true,
+    "granularity" : "Daily",
+    "waitlistedRequestsPerInterval" : [ 6, 6 ],
+    "startDate" : "2000-01-23"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<AvailableTimeOffResponse> 
      */
-    open class func postWorkforcemanagementTimeofflimitsAvailableQueryWithRequestBuilder(body: AvailableTimeOffRequest? = nil) -> RequestBuilder<AvailableTimeOffResponse> {
+    open class func postWorkforcemanagementTimeofflimitsAvailableQueryWithRequestBuilder(body: AvailableTimeOffRequest? = nil) -> RequestBuilder<AvailableTimeOffResponse> {        
         let path = "/api/v2/workforcemanagement/timeofflimits/available/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AvailableTimeOffResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14952,10 +12519,7 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
     /**
-     
      Create a time off request for the current user
      
      - parameter body: (body) body (optional)
@@ -14980,55 +12544,41 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Create a time off request for the current user
-     
      - POST /api/v2/workforcemanagement/timeoffrequests
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "",
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : "",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "notes" : "aeiou",
-  "selfUri" : "aeiou",
-  "fullDayManagementUnitDates" : [ "aeiou" ],
-  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
-  "submittedDate" : "2000-01-23T04:56:07.000+0000",
-  "reviewedBy" : "",
-  "activityCodeId" : "aeiou",
+  "submittedBy" : "{}",
+  "metadata" : "{}",
+  "notes" : "notes",
+  "selfUri" : "https://openapi-generator.tech",
+  "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
+  "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewedBy" : "{}",
+  "activityCodeId" : "activityCodeId",
   "isFullDayRequest" : true,
   "markedAsRead" : true,
-  "dailyDurationMinutes" : 123,
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
-  "user" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "dailyDurationMinutes" : 0,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "user" : "{}",
+  "status" : "PENDING"
+}, statusCode=200}]
      
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
-    open class func postWorkforcemanagementTimeoffrequestsWithRequestBuilder(body: CreateAgentTimeOffRequest? = nil) -> RequestBuilder<TimeOffRequestResponse> {
+    open class func postWorkforcemanagementTimeoffrequestsWithRequestBuilder(body: CreateAgentTimeOffRequest? = nil) -> RequestBuilder<TimeOffRequestResponse> {        
         let path = "/api/v2/workforcemanagement/timeoffrequests"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -15039,12 +12589,7 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Sets daily values for a date range of time off limit object
      
      - parameter managementUnitId: (path) The ID of the management unit. 
@@ -15071,30 +12616,19 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     
      Sets daily values for a date range of time off limit object
-     
      - PUT /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values
      - Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "metadata" : {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "modifiedBy" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123
-  },
-  "granularity" : "aeiou",
-  "defaultLimitMinutes" : 123,
-  "selfUri" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "metadata" : "{}",
+  "granularity" : "Daily",
+  "defaultLimitMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit object to set values for 
@@ -15102,7 +12636,7 @@ open class WorkforceManagementAPI {
 
      - returns: RequestBuilder<TimeOffLimit> 
      */
-    open class func putWorkforcemanagementManagementunitTimeofflimitValuesWithRequestBuilder(managementUnitId: String, timeOffLimitId: String, body: SetTimeOffLimitValuesRequest? = nil) -> RequestBuilder<TimeOffLimit> {
+    open class func putWorkforcemanagementManagementunitTimeofflimitValuesWithRequestBuilder(managementUnitId: String, timeOffLimitId: String, body: SetTimeOffLimitValuesRequest? = nil) -> RequestBuilder<TimeOffLimit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15111,10 +12645,8 @@ open class WorkforceManagementAPI {
         let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffLimit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -28,17 +28,11 @@ public class ConversationAppSettings: Codable {
     public var markdown: Markdown?
 
     public init(showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?, autoStart: AutoStart?, markdown: Markdown?) {
-        
         self.showAgentTypingIndicator = showAgentTypingIndicator
-        
         self.showUserTypingIndicator = showUserTypingIndicator
-        
         self.autoStartType = autoStartType
-        
         self.autoStart = autoStart
-        
         self.markdown = markdown
-        
     }
 
 

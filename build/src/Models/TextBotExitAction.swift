@@ -33,19 +33,12 @@ public class TextBotExitAction: Codable {
     public var flowOutcomes: [TextBotFlowOutcome]?
 
     public init(reason: Reason?, reasonExtendedInfo: String?, activeIntent: String?, flowLocation: TextBotFlowLocation?, outputData: TextBotInputOutputData?, flowOutcomes: [TextBotFlowOutcome]?) {
-        
         self.reason = reason
-        
         self.reasonExtendedInfo = reasonExtendedInfo
-        
         self.activeIntent = activeIntent
-        
         self.flowLocation = flowLocation
-        
         self.outputData = outputData
-        
         self.flowOutcomes = flowOutcomes
-        
     }
 
 

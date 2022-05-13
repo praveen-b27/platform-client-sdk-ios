@@ -15,11 +15,8 @@ public class AgentActivityChangedTopicOrganizationPresence: Codable {
     public var systemPresence: String?
 
     public init(_id: String?, systemPresence: String?) {
-        
         self._id = _id
-        
         self.systemPresence = systemPresence
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

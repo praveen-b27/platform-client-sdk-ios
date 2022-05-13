@@ -23,13 +23,9 @@ public class ExternalSegment: Codable {
     public var source: Source?
 
     public init(_id: String?, name: String?, source: Source?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.source = source
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

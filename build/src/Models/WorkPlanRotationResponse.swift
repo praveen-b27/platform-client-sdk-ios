@@ -30,25 +30,15 @@ public class WorkPlanRotationResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, enabled: Bool?, dateRange: DateRangeWithOptionalEnd?, pattern: WorkPlanPatternResponse?, agentCount: Int?, agents: [WorkPlanRotationAgentResponse]?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.enabled = enabled
-        
         self.dateRange = dateRange
-        
         self.pattern = pattern
-        
         self.agentCount = agentCount
-        
         self.agents = agents
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

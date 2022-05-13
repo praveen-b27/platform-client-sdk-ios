@@ -27,17 +27,11 @@ public class MessageEvaluation: Codable {
     public var timestamp: Date?
 
     public init(contactColumn: String?, contactAddress: String?, messageType: MessageType?, wrapupCodeId: String?, timestamp: Date?) {
-        
         self.contactColumn = contactColumn
-        
         self.contactAddress = contactAddress
-        
         self.messageType = messageType
-        
         self.wrapupCodeId = wrapupCodeId
-        
         self.timestamp = timestamp
-        
     }
 
 

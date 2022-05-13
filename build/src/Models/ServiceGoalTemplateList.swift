@@ -15,9 +15,7 @@ public class ServiceGoalTemplateList: Codable {
     public var entities: [ServiceGoalTemplate]?
 
     public init(entities: [ServiceGoalTemplate]?) {
-        
         self.entities = entities
-        
     }
 
 

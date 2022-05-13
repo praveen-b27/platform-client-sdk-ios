@@ -55,13 +55,9 @@ public class BuForecastTimeSeriesResult: Codable {
     public var forecastType: ForecastType?
 
     public init(metric: Metric?, forecastingMethod: ForecastingMethod?, forecastType: ForecastType?) {
-        
         self.metric = metric
-        
         self.forecastingMethod = forecastingMethod
-        
         self.forecastType = forecastType
-        
     }
 
 

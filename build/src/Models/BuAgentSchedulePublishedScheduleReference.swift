@@ -21,15 +21,10 @@ public class BuAgentSchedulePublishedScheduleReference: Codable {
     public var selfUri: String?
 
     public init(_id: String?, weekDate: Date?, weekCount: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.weekDate = weekDate
-        
         self.weekCount = weekCount
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

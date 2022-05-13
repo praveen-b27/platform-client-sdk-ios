@@ -32,21 +32,13 @@ public class ListItemComponent: Codable {
     public var actions: ContentActions?
 
     public init(_id: String?, rmid: String?, type: ModelType?, image: String?, title: String?, _description: String?, actions: ContentActions?) {
-        
         self._id = _id
-        
         self.rmid = rmid
-        
         self.type = type
-        
         self.image = image
-        
         self.title = title
-        
         self._description = _description
-        
         self.actions = actions
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

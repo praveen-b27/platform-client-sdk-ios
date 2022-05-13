@@ -15,9 +15,7 @@ public class Agent: Codable {
     public var stage: String?
 
     public init(stage: String?) {
-        
         self.stage = stage
-        
     }
 
 

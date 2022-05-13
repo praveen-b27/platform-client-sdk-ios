@@ -21,15 +21,10 @@ public class DialerRulesetConfigChangeAction: Codable {
     public var properties: [String:String]?
 
     public init(type: String?, actionTypeName: String?, updateOption: String?, properties: [String:String]?) {
-        
         self.type = type
-        
         self.actionTypeName = actionTypeName
-        
         self.updateOption = updateOption
-        
         self.properties = properties
-        
     }
 
 

@@ -15,9 +15,7 @@ public class ArticleContentBody: Codable {
     public var locationUrl: String?
 
     public init(locationUrl: String?) {
-        
         self.locationUrl = locationUrl
-        
     }
 
 

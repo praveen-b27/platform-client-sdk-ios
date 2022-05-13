@@ -20,13 +20,9 @@ public class ResponseQueryRequest: Codable {
     public var filters: [ResponseFilter]?
 
     public init(queryPhrase: String?, pageSize: Int?, filters: [ResponseFilter]?) {
-        
         self.queryPhrase = queryPhrase
-        
         self.pageSize = pageSize
-        
         self.filters = filters
-        
     }
 
 

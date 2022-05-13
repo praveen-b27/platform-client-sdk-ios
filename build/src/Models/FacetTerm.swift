@@ -20,19 +20,12 @@ public class FacetTerm: Codable {
     public var time: Date?
 
     public init(term: String?, key: Int64?, _id: String?, name: String?, count: Int64?, time: Date?) {
-        
         self.term = term
-        
         self.key = key
-        
         self._id = _id
-        
         self.name = name
-        
         self.count = count
-        
         self.time = time
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

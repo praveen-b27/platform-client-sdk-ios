@@ -25,19 +25,12 @@ public class CampaignProgress: Codable {
     public var percentage: Int64?
 
     public init(campaign: DomainEntityRef?, contactList: DomainEntityRef?, numberOfContactsCalled: Int64?, numberOfContactsMessaged: Int64?, totalNumberOfContacts: Int64?, percentage: Int64?) {
-        
         self.campaign = campaign
-        
         self.contactList = contactList
-        
         self.numberOfContactsCalled = numberOfContactsCalled
-        
         self.numberOfContactsMessaged = numberOfContactsMessaged
-        
         self.totalNumberOfContacts = totalNumberOfContacts
-        
         self.percentage = percentage
-        
     }
 
 

@@ -27,21 +27,13 @@ public class TrustRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, createdBy: OrgUser?, dateCreated: Date?, trustee: Organization?, users: [OrgUser]?, groups: [TrustGroup]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.trustee = trustee
-        
         self.users = users
-        
         self.groups = groups
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

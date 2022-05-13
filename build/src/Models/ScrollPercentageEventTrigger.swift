@@ -18,11 +18,8 @@ public class ScrollPercentageEventTrigger: Codable {
     public var eventName: String?
 
     public init(percentage: Int?, eventName: String?) {
-        
         self.percentage = percentage
-        
         self.eventName = eventName
-        
     }
 
 

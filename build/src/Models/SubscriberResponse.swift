@@ -17,11 +17,8 @@ public class SubscriberResponse: Codable {
     public var status: String?
 
     public init(messageReturned: [String]?, status: String?) {
-        
         self.messageReturned = messageReturned
-        
         self.status = status
-        
     }
 
 

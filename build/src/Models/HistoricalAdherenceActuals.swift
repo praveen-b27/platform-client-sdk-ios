@@ -30,13 +30,9 @@ public class HistoricalAdherenceActuals: Codable {
     public var endOffsetSeconds: Int?
 
     public init(actualActivityCategory: ActualActivityCategory?, startOffsetSeconds: Int?, endOffsetSeconds: Int?) {
-        
         self.actualActivityCategory = actualActivityCategory
-        
         self.startOffsetSeconds = startOffsetSeconds
-        
         self.endOffsetSeconds = endOffsetSeconds
-        
     }
 
 

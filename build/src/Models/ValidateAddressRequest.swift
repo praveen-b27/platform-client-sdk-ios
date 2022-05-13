@@ -15,9 +15,7 @@ public class ValidateAddressRequest: Codable {
     public var address: StreetAddress?
 
     public init(address: StreetAddress?) {
-        
         self.address = address
-        
     }
 
 

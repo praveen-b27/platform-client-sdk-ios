@@ -25,19 +25,12 @@ public class BuAgentScheduleQueryResponse: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(user: UserReference?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?, workPlan: WorkPlanReference?, workPlansPerWeek: [WorkPlanReference]?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.user = user
-        
         self.shifts = shifts
-        
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
-        
         self.workPlan = workPlan
-        
         self.workPlansPerWeek = workPlansPerWeek
-        
         self.metadata = metadata
-        
     }
 
 

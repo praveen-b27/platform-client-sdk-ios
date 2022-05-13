@@ -22,15 +22,10 @@ public class BotSummary: Codable {
     public var botCompositeTag: String?
 
     public init(name: String?, _id: String?, _description: String?, botCompositeTag: String?) {
-        
         self.name = name
-        
         self._id = _id
-        
         self._description = _description
-        
         self.botCompositeTag = botCompositeTag
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

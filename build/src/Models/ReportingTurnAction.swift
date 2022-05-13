@@ -57,15 +57,10 @@ public class ReportingTurnAction: Codable {
     public var actionType: ActionType?
 
     public init(actionId: String?, actionName: String?, actionNumber: Int?, actionType: ActionType?) {
-        
         self.actionId = actionId
-        
         self.actionName = actionName
-        
         self.actionNumber = actionNumber
-        
         self.actionType = actionType
-        
     }
 
 

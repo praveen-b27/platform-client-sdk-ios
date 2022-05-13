@@ -15,11 +15,8 @@ public class WfmIntradayDataUpdateTopicIntradayScheduleData: Codable {
     public var scheduledTimeSeconds: Int?
 
     public init(onQueueTimeSeconds: Int?, scheduledTimeSeconds: Int?) {
-        
         self.onQueueTimeSeconds = onQueueTimeSeconds
-        
         self.scheduledTimeSeconds = scheduledTimeSeconds
-        
     }
 
 

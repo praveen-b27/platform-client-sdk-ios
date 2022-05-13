@@ -24,11 +24,8 @@ public class AttendanceStatus: Codable {
     public var attendanceStatusType: AttendanceStatusType?
 
     public init(dateWorkday: Date?, attendanceStatusType: AttendanceStatusType?) {
-        
         self.dateWorkday = dateWorkday
-        
         self.attendanceStatusType = attendanceStatusType
-        
     }
 
 

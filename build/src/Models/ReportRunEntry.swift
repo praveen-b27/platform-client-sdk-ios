@@ -36,29 +36,17 @@ public class ReportRunEntry: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, reportId: String?, runTime: Date?, runStatus: RunStatus?, errorMessage: String?, runDurationMsec: Int64?, reportUrl: String?, reportFormat: String?, scheduleUri: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.reportId = reportId
-        
         self.runTime = runTime
-        
         self.runStatus = runStatus
-        
         self.errorMessage = errorMessage
-        
         self.runDurationMsec = runDurationMsec
-        
         self.reportUrl = reportUrl
-        
         self.reportFormat = reportFormat
-        
         self.scheduleUri = scheduleUri
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

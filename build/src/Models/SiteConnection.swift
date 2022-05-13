@@ -40,29 +40,17 @@ public class SiteConnection: Codable {
     public var secondaryCoreSites: [DomainEntityRef]?
 
     public init(_id: String?, name: String?, selfUri: String?, managed: Bool?, type: ModelType?, enabled: Bool?, mediaModel: MediaModel?, edgeList: [ConnectedEdge]?, coreSite: Bool?, primaryCoreSites: [DomainEntityRef]?, secondaryCoreSites: [DomainEntityRef]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.selfUri = selfUri
-        
         self.managed = managed
-        
         self.type = type
-        
         self.enabled = enabled
-        
         self.mediaModel = mediaModel
-        
         self.edgeList = edgeList
-        
         self.coreSite = coreSite
-        
         self.primaryCoreSites = primaryCoreSites
-        
         self.secondaryCoreSites = secondaryCoreSites
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

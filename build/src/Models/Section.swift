@@ -17,15 +17,10 @@ public class Section: Codable {
     public var state: String?
 
     public init(fieldList: [FieldList]?, instructionText: String?, key: String?, state: String?) {
-        
         self.fieldList = fieldList
-        
         self.instructionText = instructionText
-        
         self.key = key
-        
         self.state = state
-        
     }
 
 

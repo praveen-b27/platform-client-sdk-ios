@@ -21,11 +21,8 @@ public class TranscriptAggregateQueryClause: Codable {
     public var predicates: [TranscriptAggregateQueryPredicate]?
 
     public init(type: ModelType?, predicates: [TranscriptAggregateQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

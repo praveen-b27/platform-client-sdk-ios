@@ -59,33 +59,19 @@ public class ShiftTradeSettings: Codable {
     public var activityCategoryRules: [ShiftTradeActivityRule]?
 
     public init(enabled: Bool?, autoReview: Bool?, allowDirectTrades: Bool?, minHoursInFuture: Int?, unequalPaid: UnequalPaid?, oneSided: OneSided?, weeklyMinPaidViolations: WeeklyMinPaidViolations?, weeklyMaxPaidViolations: WeeklyMaxPaidViolations?, requiresMatchingQueues: Bool?, requiresMatchingLanguages: Bool?, requiresMatchingSkills: Bool?, requiresMatchingPlanningGroups: Bool?, activityCategoryRules: [ShiftTradeActivityRule]?) {
-        
         self.enabled = enabled
-        
         self.autoReview = autoReview
-        
         self.allowDirectTrades = allowDirectTrades
-        
         self.minHoursInFuture = minHoursInFuture
-        
         self.unequalPaid = unequalPaid
-        
         self.oneSided = oneSided
-        
         self.weeklyMinPaidViolations = weeklyMinPaidViolations
-        
         self.weeklyMaxPaidViolations = weeklyMaxPaidViolations
-        
         self.requiresMatchingQueues = requiresMatchingQueues
-        
         self.requiresMatchingLanguages = requiresMatchingLanguages
-        
         self.requiresMatchingSkills = requiresMatchingSkills
-        
         self.requiresMatchingPlanningGroups = requiresMatchingPlanningGroups
-        
         self.activityCategoryRules = activityCategoryRules
-        
     }
 
 

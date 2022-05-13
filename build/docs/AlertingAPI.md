@@ -196,7 +196,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let alertId: String = "" // Alert ID
-let expand: [String] = [AlertingAPI.Expand_getAlertingInteractionstatsAlert.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 AlertingAPI.getAlertingInteractionstatsAlert(alertId: alertId, expand: expand) { (response, error) in
@@ -249,7 +249,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let expand: [String] = [AlertingAPI.Expand_getAlertingInteractionstatsAlerts.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 AlertingAPI.getAlertingInteractionstatsAlerts(expand: expand) { (response, error) in
@@ -349,7 +349,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let ruleId: String = "" // Rule ID
-let expand: [String] = [AlertingAPI.Expand_getAlertingInteractionstatsRule.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 AlertingAPI.getAlertingInteractionstatsRule(ruleId: ruleId, expand: expand) { (response, error) in
@@ -402,7 +402,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let expand: [String] = [AlertingAPI.Expand_getAlertingInteractionstatsRules.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 AlertingAPI.getAlertingInteractionstatsRules(expand: expand) { (response, error) in
@@ -455,7 +455,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: InteractionStatsRule = new InteractionStatsRule(...) // AlertingRule
-let expand: [String] = [AlertingAPI.Expand_postAlertingInteractionstatsRules.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 AlertingAPI.postAlertingInteractionstatsRules(body: body, expand: expand) { (response, error) in
@@ -510,7 +510,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let alertId: String = "" // Alert ID
 let body: UnreadStatus = new UnreadStatus(...) // InteractionStatsAlert
-let expand: [String] = [AlertingAPI.Expand_putAlertingInteractionstatsAlert.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 AlertingAPI.putAlertingInteractionstatsAlert(alertId: alertId, body: body, expand: expand) { (response, error) in
@@ -566,7 +566,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let ruleId: String = "" // Rule ID
 let body: InteractionStatsRule = new InteractionStatsRule(...) // AlertingRule
-let expand: [String] = [AlertingAPI.Expand_putAlertingInteractionstatsRule.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 AlertingAPI.putAlertingInteractionstatsRule(ruleId: ruleId, body: body, expand: expand) { (response, error) in

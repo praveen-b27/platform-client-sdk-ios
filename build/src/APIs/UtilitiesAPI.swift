@@ -10,9 +10,7 @@ import Foundation
 
 
 open class UtilitiesAPI {
-    
     /**
-     
      Get the current system date/time
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -36,29 +34,21 @@ open class UtilitiesAPI {
     }
 
     /**
-     
      Get the current system date/time
-     
      - GET /api/v2/date
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "currentDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "currentDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
 
      - returns: RequestBuilder<ServerDate> 
      */
-    open class func getDateWithRequestBuilder() -> RequestBuilder<ServerDate> {
+    open class func getDateWithRequestBuilder() -> RequestBuilder<ServerDate> {        
         let path = "/api/v2/date"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,9 +57,7 @@ open class UtilitiesAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get public ip address ranges for Genesys Cloud
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -93,33 +81,29 @@ open class UtilitiesAPI {
     }
 
     /**
-     
      Get public ip address ranges for Genesys Cloud
-     
      - GET /api/v2/ipranges
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "service" : "aeiou",
-    "cidr" : "aeiou",
-    "region" : "aeiou"
+    "service" : "data-actions",
+    "cidr" : "cidr",
+    "region" : "region"
+  }, {
+    "service" : "data-actions",
+    "cidr" : "cidr",
+    "region" : "region"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<IpAddressRangeListing> 
      */
-    open class func getIprangesWithRequestBuilder() -> RequestBuilder<IpAddressRangeListing> {
+    open class func getIprangesWithRequestBuilder() -> RequestBuilder<IpAddressRangeListing> {        
         let path = "/api/v2/ipranges"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -130,15 +114,11 @@ open class UtilitiesAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get time zones list
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTimezones(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: TimeZoneEntityListing?,_ error: Error?) -> Void)) {
@@ -160,54 +140,48 @@ open class UtilitiesAPI {
     }
 
     /**
-     
      Get time zones list
-     
      - GET /api/v2/timezones
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "offset" : 123456789,
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+    "offset" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "offset" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<TimeZoneEntityListing> 
      */
-    open class func getTimezonesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TimeZoneEntityListing> {
+    open class func getTimezonesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TimeZoneEntityListing> {        
         let path = "/api/v2/timezones"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<TimeZoneEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -216,10 +190,7 @@ open class UtilitiesAPI {
     }
 
     
-    
-    
     /**
-     
      Returns the information about an X509 PEM encoded certificate or certificate chain.
      
      - parameter body: (body) Certificate 
@@ -244,11 +215,8 @@ open class UtilitiesAPI {
     }
 
     /**
-     
      Returns the information about an X509 PEM encoded certificate or certificate chain.
-     
      - POST /api/v2/certificate/details
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -257,24 +225,30 @@ open class UtilitiesAPI {
     "valid" : true,
     "signatureValid" : true,
     "expired" : true,
-    "subject" : "aeiou",
-    "issueDate" : "2000-01-23T04:56:07.000+0000",
-    "issuer" : "aeiou",
-    "expirationDate" : "2000-01-23T04:56:07.000+0000"
+    "subject" : "subject",
+    "issueDate" : "2000-01-23T04:56:07.000+00:00",
+    "issuer" : "issuer",
+    "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "valid" : true,
+    "signatureValid" : true,
+    "expired" : true,
+    "subject" : "subject",
+    "issueDate" : "2000-01-23T04:56:07.000+00:00",
+    "issuer" : "issuer",
+    "expirationDate" : "2000-01-23T04:56:07.000+00:00"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Certificate 
 
      - returns: RequestBuilder<ParsedCertificate> 
      */
-    open class func postCertificateDetailsWithRequestBuilder(body: Certificate) -> RequestBuilder<ParsedCertificate> {
+    open class func postCertificateDetailsWithRequestBuilder(body: Certificate) -> RequestBuilder<ParsedCertificate> {        
         let path = "/api/v2/certificate/details"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ParsedCertificate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

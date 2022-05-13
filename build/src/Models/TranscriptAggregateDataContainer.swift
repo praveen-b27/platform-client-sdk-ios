@@ -16,11 +16,8 @@ public class TranscriptAggregateDataContainer: Codable {
     public var data: [StatisticalResponse]?
 
     public init(group: [String:String]?, data: [StatisticalResponse]?) {
-        
         self.group = group
-        
         self.data = data
-        
     }
 
 

@@ -29,23 +29,14 @@ public class ParticipantMetrics: Codable {
     public var overtalkCount: Int?
 
     public init(agentDurationPercentage: Double?, customerDurationPercentage: Double?, silenceDurationPercentage: Double?, ivrDurationPercentage: Double?, acdDurationPercentage: Double?, overtalkDurationPercentage: Double?, otherDurationPercentage: Double?, overtalkCount: Int?) {
-        
         self.agentDurationPercentage = agentDurationPercentage
-        
         self.customerDurationPercentage = customerDurationPercentage
-        
         self.silenceDurationPercentage = silenceDurationPercentage
-        
         self.ivrDurationPercentage = ivrDurationPercentage
-        
         self.acdDurationPercentage = acdDurationPercentage
-        
         self.overtalkDurationPercentage = overtalkDurationPercentage
-        
         self.otherDurationPercentage = otherDurationPercentage
-        
         self.overtalkCount = overtalkCount
-        
     }
 
 

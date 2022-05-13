@@ -17,15 +17,10 @@ public class ArchitectFlowOutcomeNotificationErrorDetail: Codable {
     public var fieldName: String?
 
     public init(errorCode: String?, entityId: String?, entityName: String?, fieldName: String?) {
-        
         self.errorCode = errorCode
-        
         self.entityId = entityId
-        
         self.entityName = entityName
-        
         self.fieldName = fieldName
-        
     }
 
 

@@ -18,17 +18,11 @@ public class EmailAttachment: Codable {
     public var contentLength: Int?
 
     public init(name: String?, contentPath: String?, contentType: String?, attachmentId: String?, contentLength: Int?) {
-        
         self.name = name
-        
         self.contentPath = contentPath
-        
         self.contentType = contentType
-        
         self.attachmentId = attachmentId
-        
         self.contentLength = contentLength
-        
     }
 
 

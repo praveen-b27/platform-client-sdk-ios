@@ -23,13 +23,9 @@ public class ReplacementTerm: Codable {
     public var updatedValue: String?
 
     public init(type: ModelType?, existingValue: String?, updatedValue: String?) {
-        
         self.type = type
-        
         self.existingValue = existingValue
-        
         self.updatedValue = updatedValue
-        
     }
 
 

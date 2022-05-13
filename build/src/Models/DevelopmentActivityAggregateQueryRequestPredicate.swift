@@ -23,11 +23,8 @@ public class DevelopmentActivityAggregateQueryRequestPredicate: Codable {
     public var value: String?
 
     public init(dimension: Dimension?, value: String?) {
-        
         self.dimension = dimension
-        
         self.value = value
-        
     }
 
 

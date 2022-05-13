@@ -20,13 +20,9 @@ public class LearningModulePublishResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, version: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.version = version
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

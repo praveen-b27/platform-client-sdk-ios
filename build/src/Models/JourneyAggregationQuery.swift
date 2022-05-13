@@ -81,33 +81,23 @@ public class JourneyAggregationQuery: Codable {
     public var filter: JourneyAggregateQueryFilter?
     /** Behaves like a SQL SELECT clause. Only named metrics will be retrieved. */
     public var metrics: [Metrics]?
-    /** Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) */
+    /** Flattens any multivalued dimensions used in response groups (e.g. ['a','b','c']->'a,b,c') */
     public var flattenMultivaluedDimensions: Bool?
     /** Custom derived metric views */
     public var views: [JourneyAggregationView]?
-    /** Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. */
+    /** Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event. */
     public var alternateTimeDimension: AlternateTimeDimension?
 
     public init(interval: String?, granularity: String?, timeZone: String?, groupBy: [GroupBy]?, filter: JourneyAggregateQueryFilter?, metrics: [Metrics]?, flattenMultivaluedDimensions: Bool?, views: [JourneyAggregationView]?, alternateTimeDimension: AlternateTimeDimension?) {
-        
         self.interval = interval
-        
         self.granularity = granularity
-        
         self.timeZone = timeZone
-        
         self.groupBy = groupBy
-        
         self.filter = filter
-        
         self.metrics = metrics
-        
         self.flattenMultivaluedDimensions = flattenMultivaluedDimensions
-        
         self.views = views
-        
         self.alternateTimeDimension = alternateTimeDimension
-        
     }
 
 

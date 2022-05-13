@@ -15,11 +15,8 @@ public class WfmUserScheduleAdherenceUpdatedTopicActivityCodeReference: Codable 
     public var secondaryPresences: [WfmUserScheduleAdherenceUpdatedTopicSecondaryPresenceReference]?
 
     public init(_id: String?, secondaryPresences: [WfmUserScheduleAdherenceUpdatedTopicSecondaryPresenceReference]?) {
-        
         self._id = _id
-        
         self.secondaryPresences = secondaryPresences
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

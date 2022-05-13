@@ -25,19 +25,12 @@ public class KnowledgeSearchResponse: Codable {
     public var results: [KnowledgeSearchDocument]?
 
     public init(searchId: String?, total: Int?, pageCount: Int?, pageSize: Int?, pageNumber: Int?, results: [KnowledgeSearchDocument]?) {
-        
         self.searchId = searchId
-        
         self.total = total
-        
         self.pageCount = pageCount
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.results = results
-        
     }
 
 

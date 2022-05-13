@@ -22,25 +22,17 @@ public class JsonSearchResponse: Codable {
     /** Resource types the search was performed against */
     public var types: [String]?
     /** Search results */
-    public var results: ArrayNode?
-    public var aggregations: ArrayNode?
+    public var results: JSON?
+    public var aggregations: JSON?
 
-    public init(total: Int64?, pageCount: Int?, pageSize: Int?, pageNumber: Int?, types: [String]?, results: ArrayNode?, aggregations: ArrayNode?) {
-        
+    public init(total: Int64?, pageCount: Int?, pageSize: Int?, pageNumber: Int?, types: [String]?, results: JSON?, aggregations: JSON?) {
         self.total = total
-        
         self.pageCount = pageCount
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.types = types
-        
         self.results = results
-        
         self.aggregations = aggregations
-        
     }
 
 

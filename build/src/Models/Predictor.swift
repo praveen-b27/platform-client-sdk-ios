@@ -40,29 +40,17 @@ public class Predictor: Codable {
     public var selfUri: String?
 
     public init(_id: String?, queues: [AddressableEntityRef]?, kpi: String?, routingTimeoutSeconds: Int?, schedule: PredictorSchedule?, state: State?, dateCreated: Date?, dateModified: Date?, workloadBalancingConfig: PredictorWorkloadBalancing?, errorCode: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.queues = queues
-        
         self.kpi = kpi
-        
         self.routingTimeoutSeconds = routingTimeoutSeconds
-        
         self.schedule = schedule
-        
         self.state = state
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.workloadBalancingConfig = workloadBalancingConfig
-        
         self.errorCode = errorCode
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -33,23 +33,14 @@ public class TimeOffLimitValueRange: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(timeOffLimit: TimeOffLimitReference?, startDate: Date?, granularity: Granularity?, limitMinutesPerInterval: [Int]?, allocatedMinutesPerInterval: [Int]?, waitlistedMinutesPerInterval: [Int]?, waitlistedRequestsPerInterval: [Int]?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.timeOffLimit = timeOffLimit
-        
         self.startDate = startDate
-        
         self.granularity = granularity
-        
         self.limitMinutesPerInterval = limitMinutesPerInterval
-        
         self.allocatedMinutesPerInterval = allocatedMinutesPerInterval
-        
         self.waitlistedMinutesPerInterval = waitlistedMinutesPerInterval
-        
         self.waitlistedRequestsPerInterval = waitlistedRequestsPerInterval
-        
         self.metadata = metadata
-        
     }
 
 

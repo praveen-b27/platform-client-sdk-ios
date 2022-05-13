@@ -21,15 +21,10 @@ public class LearningModuleRule: Codable {
     public var selfUri: String?
 
     public init(_id: String?, isActive: Bool?, parts: [LearningModuleRuleParts]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.isActive = isActive
-        
         self.parts = parts
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

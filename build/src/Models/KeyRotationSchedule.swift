@@ -27,15 +27,10 @@ public class KeyRotationSchedule: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, period: Period?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.period = period
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

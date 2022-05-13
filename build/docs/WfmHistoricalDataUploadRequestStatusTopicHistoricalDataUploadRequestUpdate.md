@@ -8,6 +8,10 @@ title: WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdat
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **requestId** | **String** |  | [optional] |
+| **dateImportStarted** | [**Date**](Date.html) |  | [optional] |
+| **dateImportEnded** | [**Date**](Date.html) |  | [optional] |
+| **dateCreated** | [**Date**](Date.html) |  | [optional] |
+| **dateModified** | [**Date**](Date.html) |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **error** | **String** |  | [optional] |
 | **active** | **Bool** |  | [optional] |

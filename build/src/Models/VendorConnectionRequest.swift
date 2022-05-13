@@ -19,13 +19,9 @@ public class VendorConnectionRequest: Codable {
     public var name: String?
 
     public init(publisher: String?, type: String?, name: String?) {
-        
         self.publisher = publisher
-        
         self.type = type
-        
         self.name = name
-        
     }
 
 

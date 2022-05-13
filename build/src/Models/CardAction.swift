@@ -28,17 +28,11 @@ public class CardAction: Codable {
     public var isSelected: Bool?
 
     public init(type: ModelType?, text: String?, payload: String?, url: String?, isSelected: Bool?) {
-        
         self.type = type
-        
         self.text = text
-        
         self.payload = payload
-        
         self.url = url
-        
         self.isSelected = isSelected
-        
     }
 
 

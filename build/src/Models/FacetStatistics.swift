@@ -22,21 +22,13 @@ public class FacetStatistics: Codable {
     public var dateMax: Date?
 
     public init(count: Int64?, min: Double?, max: Double?, mean: Double?, stdDeviation: Double?, dateMin: Date?, dateMax: Date?) {
-        
         self.count = count
-        
         self.min = min
-        
         self.max = max
-        
         self.mean = mean
-        
         self.stdDeviation = stdDeviation
-        
         self.dateMin = dateMin
-        
         self.dateMax = dateMax
-        
     }
 
 

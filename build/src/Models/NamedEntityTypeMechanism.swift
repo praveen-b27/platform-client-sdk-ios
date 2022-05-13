@@ -25,13 +25,9 @@ public class NamedEntityTypeMechanism: Codable {
     public var type: ModelType?
 
     public init(items: [NamedEntityTypeItem]?, restricted: Bool?, type: ModelType?) {
-        
         self.items = items
-        
         self.restricted = restricted
-        
         self.type = type
-        
     }
 
 

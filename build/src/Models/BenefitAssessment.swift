@@ -32,21 +32,13 @@ public class BenefitAssessment: Codable {
     public var selfUri: String?
 
     public init(_id: String?, queues: [AddressableEntityRef]?, kpiAssessments: [KeyPerformanceIndicatorAssessment]?, state: State?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.queues = queues
-        
         self.kpiAssessments = kpiAssessments
-        
         self.state = state
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

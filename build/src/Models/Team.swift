@@ -29,23 +29,14 @@ public class Team: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, memberCount: Int64?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.memberCount = memberCount
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

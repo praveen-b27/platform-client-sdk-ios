@@ -11,10 +11,7 @@ import Foundation
 
 open class AnalyticsAPI {
     
-    
-    
     /**
-     
      Delete/cancel an async request
      
      - parameter jobId: (path) jobId 
@@ -32,11 +29,8 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Delete/cancel an async request
-     
      - DELETE /api/v2/analytics/conversations/details/jobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class AnalyticsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteAnalyticsConversationsDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<Void> {
+    open class func deleteAnalyticsConversationsDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/analytics/conversations/details/jobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +55,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a scheduled report job.
      
      - parameter scheduleId: (path) Schedule ID 
@@ -87,11 +73,8 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Delete a scheduled report job.
-     
      - DELETE /api/v2/analytics/reporting/schedules/{scheduleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -100,18 +83,13 @@ open class AnalyticsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String) -> RequestBuilder<Void> {
+    open class func deleteAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/analytics/reporting/schedules/{scheduleId}"
         let scheduleIdPreEscape = "\(scheduleId)"
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -121,10 +99,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Delete/cancel an async request
      
      - parameter jobId: (path) jobId 
@@ -142,11 +117,8 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Delete/cancel an async request
-     
      - DELETE /api/v2/analytics/users/details/jobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -155,18 +127,13 @@ open class AnalyticsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteAnalyticsUsersDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<Void> {
+    open class func deleteAnalyticsUsersDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/analytics/users/details/jobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -180,19 +147,12 @@ open class AnalyticsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
     /**
-     
      Get Reporting Turns.
      
      - parameter botFlowId: (path) ID of the bot flow. 
      - parameter after: (query) The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)
-     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional, default to 50)
+     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional)
      - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
      - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -216,97 +176,60 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get Reporting Turns.
-     
      - GET /api/v2/analytics/botflows/{botFlowId}/reportingturns
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "botPrompts" : [ "aeiou" ],
-    "userInput" : "aeiou",
-    "sessionId" : "aeiou",
-    "askAction" : {
-      "actionType" : "aeiou",
-      "actionNumber" : 123,
-      "actionId" : "aeiou",
-      "actionName" : "aeiou"
-    },
-    "askActionResult" : "aeiou",
-    "intent" : {
-      "slots" : [ {
-        "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-        "name" : "aeiou",
-        "type" : "aeiou",
-        "value" : "aeiou"
-      } ],
-      "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-      "name" : "aeiou"
-    },
-    "conversation" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "knowledge" : {
-      "feedback" : {
-        "searchId" : "aeiou",
-        "documents" : [ {
-          "question" : "aeiou",
-          "answer" : "aeiou",
-          "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-          "id" : "aeiou"
-        } ],
-        "rating" : 123
-      },
-      "search" : {
-        "searchId" : "aeiou",
-        "documents" : [ "" ],
-        "query" : "aeiou"
-      },
-      "knowledgeBaseId" : "aeiou"
-    }
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "userInput" : "userInput",
+    "sessionId" : "sessionId",
+    "askAction" : "{}",
+    "askActionResult" : "SuccessCollection",
+    "intent" : "{}",
+    "conversation" : "{}",
+    "knowledge" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "userInput" : "userInput",
+    "sessionId" : "sessionId",
+    "askAction" : "{}",
+    "askActionResult" : "SuccessCollection",
+    "intent" : "{}",
+    "conversation" : "{}",
+    "knowledge" : "{}"
   } ],
-  "selfUri" : "aeiou",
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
-}}]
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
      
      - parameter botFlowId: (path) ID of the bot flow. 
      - parameter after: (query) The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)
-     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional, default to 50)
+     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional)
      - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
      - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session (optional)
 
      - returns: RequestBuilder<ReportingTurnsResponse> 
      */
-    open class func getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil) -> RequestBuilder<ReportingTurnsResponse> {
+    open class func getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil) -> RequestBuilder<ReportingTurnsResponse> {        
         var path = "/api/v2/analytics/botflows/{botFlowId}/reportingturns"
         let botFlowIdPreEscape = "\(botFlowId)"
         let botFlowIdPostEscape = botFlowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{botFlowId}", with: botFlowIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "after": after, 
-            
             "pageSize": pageSize, 
-            
             "actionId": actionId, 
-            
             "sessionId": sessionId
-            
         ])
 
         let requestBuilder: RequestBuilder<ReportingTurnsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -315,10 +238,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a conversation by id
      
      - parameter conversationId: (path) conversationId 
@@ -343,240 +263,897 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get a conversation by id
-     
      - GET /api/v2/analytics/conversations/{conversationId}/details
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "conversationStart" : "2000-01-23T04:56:07.000+0000",
-  "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
+  "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+  "mediaStatsMinConversationMos" : 5.637376656633329,
   "evaluations" : [ {
-    "formId" : "aeiou",
-    "queueId" : "aeiou",
-    "oTotalScore" : 123456789,
-    "oTotalCriticalScore" : 123456789,
-    "contextId" : "aeiou",
-    "userId" : "aeiou",
-    "evaluationId" : "aeiou",
+    "formId" : "formId",
+    "queueId" : "queueId",
+    "oTotalScore" : 9,
+    "oTotalCriticalScore" : 7,
+    "contextId" : "contextId",
+    "userId" : "userId",
+    "evaluationId" : "evaluationId",
     "deleted" : true,
-    "formName" : "aeiou",
-    "eventTime" : "2000-01-23T04:56:07.000+0000",
+    "formName" : "formName",
+    "eventTime" : "2000-01-23T04:56:07.000+00:00",
     "rescored" : true,
-    "calibrationId" : "aeiou",
-    "evaluatorId" : "aeiou",
+    "calibrationId" : "calibrationId",
+    "evaluatorId" : "evaluatorId",
+    "released" : true
+  }, {
+    "formId" : "formId",
+    "queueId" : "queueId",
+    "oTotalScore" : 9,
+    "oTotalCriticalScore" : 7,
+    "contextId" : "contextId",
+    "userId" : "userId",
+    "evaluationId" : "evaluationId",
+    "deleted" : true,
+    "formName" : "formName",
+    "eventTime" : "2000-01-23T04:56:07.000+00:00",
+    "rescored" : true,
+    "calibrationId" : "calibrationId",
+    "evaluatorId" : "evaluatorId",
     "released" : true
   } ],
-  "conversationInitiator" : "aeiou",
-  "conversationId" : "aeiou",
+  "conversationInitiator" : "acd",
+  "conversationId" : "conversationId",
   "surveys" : [ {
-    "queueId" : "aeiou",
-    "surveyStatus" : "aeiou",
-    "oSurveyTotalScore" : 123456789,
-    "surveyId" : "aeiou",
-    "surveyFormName" : "aeiou",
-    "eventTime" : "2000-01-23T04:56:07.000+0000",
-    "surveyFormId" : "aeiou",
-    "surveyFormContextId" : "aeiou",
-    "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-    "surveyPromoterScore" : 123,
-    "userId" : "aeiou"
+    "queueId" : "queueId",
+    "surveyStatus" : "surveyStatus",
+    "oSurveyTotalScore" : 2,
+    "surveyId" : "surveyId",
+    "surveyFormName" : "surveyFormName",
+    "eventTime" : "2000-01-23T04:56:07.000+00:00",
+    "surveyFormId" : "surveyFormId",
+    "surveyFormContextId" : "surveyFormContextId",
+    "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+    "surveyPromoterScore" : 3,
+    "userId" : "userId"
+  }, {
+    "queueId" : "queueId",
+    "surveyStatus" : "surveyStatus",
+    "oSurveyTotalScore" : 2,
+    "surveyId" : "surveyId",
+    "surveyFormName" : "surveyFormName",
+    "eventTime" : "2000-01-23T04:56:07.000+00:00",
+    "surveyFormId" : "surveyFormId",
+    "surveyFormContextId" : "surveyFormContextId",
+    "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+    "surveyPromoterScore" : 3,
+    "userId" : "userId"
   } ],
-  "externalTag" : "aeiou",
+  "externalTag" : "externalTag",
   "resolutions" : [ {
-    "queueId" : "aeiou",
-    "eventTime" : "2000-01-23T04:56:07.000+0000",
-    "nNextContactAvoided" : 123456789,
-    "userId" : "aeiou"
+    "queueId" : "queueId",
+    "eventTime" : "2000-01-23T04:56:07.000+00:00",
+    "nNextContactAvoided" : 4,
+    "userId" : "userId"
+  }, {
+    "queueId" : "queueId",
+    "eventTime" : "2000-01-23T04:56:07.000+00:00",
+    "nNextContactAvoided" : 4,
+    "userId" : "userId"
   } ],
-  "originatingDirection" : "aeiou",
-  "divisionIds" : [ "aeiou" ],
-  "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-  "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+  "originatingDirection" : "inbound",
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+  "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
   "customerParticipation" : true,
-  "knowledgeBaseIds" : [ "aeiou" ],
+  "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
   "selfServed" : true,
   "participants" : [ {
-    "participantId" : "aeiou",
+    "participantId" : "participantId",
     "sessions" : [ {
       "authenticated" : true,
-      "usedRouting" : "aeiou",
-      "cobrowseRole" : "aeiou",
-      "monitoredParticipantId" : "aeiou",
-      "videoAddressSelf" : "aeiou",
+      "usedRouting" : "Bullseye",
+      "cobrowseRole" : "cobrowseRole",
+      "monitoredParticipantId" : "monitoredParticipantId",
+      "videoAddressSelf" : "videoAddressSelf",
       "agentOwned" : true,
-      "waitingInteractionCounts" : [ 123 ],
+      "waitingInteractionCounts" : [ 4, 4 ],
       "proposedAgents" : [ {
-        "proposedAgentId" : "aeiou",
-        "agentRank" : 123
+        "proposedAgentId" : "proposedAgentId",
+        "agentRank" : 5
+      }, {
+        "proposedAgentId" : "proposedAgentId",
+        "agentRank" : 5
       } ],
-      "addressSelf" : "aeiou",
+      "addressSelf" : "addressSelf",
       "skipEnabled" : true,
-      "journeyActionMapId" : "aeiou",
-      "remote" : "aeiou",
-      "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
-      "roomId" : "aeiou",
-      "messageType" : "aeiou",
-      "removedSkillIds" : [ "aeiou" ],
-      "requestedRoutings" : [ "aeiou" ],
-      "mediaCount" : 123,
-      "dnis" : "aeiou",
-      "videoRoomId" : "aeiou",
-      "flow" : {
-        "entryType" : "aeiou",
-        "issuedCallback" : true,
-        "exitReason" : "aeiou",
-        "transferTargetName" : "aeiou",
-        "flowVersion" : "aeiou",
-        "flowName" : "aeiou",
-        "transferTargetAddress" : "aeiou",
-        "outcomes" : [ {
-          "flowOutcomeId" : "aeiou",
-          "flowOutcome" : "aeiou",
-          "flowOutcomeStartTimestamp" : "2000-01-23T04:56:07.000+0000",
-          "flowOutcomeValue" : "aeiou",
-          "flowOutcomeEndTimestamp" : "2000-01-23T04:56:07.000+0000"
-        } ],
-        "transferType" : "aeiou",
-        "entryReason" : "aeiou",
-        "endingLanguage" : "aeiou",
-        "recognitionFailureReason" : "aeiou",
-        "flowId" : "aeiou",
-        "startingLanguage" : "aeiou",
-        "flowType" : "aeiou"
-      },
-      "dispositionAnalyzer" : "aeiou",
-      "addressOther" : "aeiou",
-      "cobrowseRoomId" : "aeiou",
-      "activeSkillIds" : [ "aeiou" ],
-      "protocolCallId" : "aeiou",
-      "destinationAddresses" : [ "aeiou" ],
-      "flowOutType" : "aeiou",
-      "mediaType" : "aeiou",
-      "outboundCampaignId" : "aeiou",
-      "addressTo" : "aeiou",
-      "edgeId" : "aeiou",
-      "timeoutSeconds" : 123,
+      "journeyActionMapId" : "journeyActionMapId",
+      "remote" : "remote",
+      "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+      "roomId" : "roomId",
+      "messageType" : "messageType",
+      "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "mediaCount" : 1,
+      "dnis" : "dnis",
+      "videoRoomId" : "videoRoomId",
+      "flow" : "{}",
+      "dispositionAnalyzer" : "dispositionAnalyzer",
+      "addressOther" : "addressOther",
+      "cobrowseRoomId" : "cobrowseRoomId",
+      "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+      "protocolCallId" : "protocolCallId",
+      "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+      "flowOutType" : "flowOutType",
+      "mediaType" : "callback",
+      "outboundCampaignId" : "outboundCampaignId",
+      "addressTo" : "addressTo",
+      "edgeId" : "edgeId",
+      "timeoutSeconds" : 1,
       "metrics" : [ {
-        "name" : "aeiou",
-        "emitDate" : "2000-01-23T04:56:07.000+0000",
-        "value" : 123456789
+        "name" : "name",
+        "emitDate" : "2000-01-23T04:56:07.000+00:00",
+        "value" : 2
+      }, {
+        "name" : "name",
+        "emitDate" : "2000-01-23T04:56:07.000+00:00",
+        "value" : 2
       } ],
-      "journeyActionMapVersion" : 123,
-      "mediaBridgeId" : "aeiou",
-      "agentAssistantId" : "aeiou",
-      "deliveryStatus" : "aeiou",
-      "screenShareRoomId" : "aeiou",
-      "assignerId" : "aeiou",
-      "outboundContactId" : "aeiou",
-      "peerId" : "aeiou",
-      "remoteNameDisplayable" : "aeiou",
-      "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-      "agentBullseyeRing" : 123,
-      "callbackNumbers" : [ "aeiou" ],
+      "journeyActionMapVersion" : 1,
+      "mediaBridgeId" : "mediaBridgeId",
+      "agentAssistantId" : "agentAssistantId",
+      "deliveryStatus" : "DeliveryFailed",
+      "screenShareRoomId" : "screenShareRoomId",
+      "assignerId" : "assignerId",
+      "outboundContactId" : "outboundContactId",
+      "peerId" : "peerId",
+      "remoteNameDisplayable" : "remoteNameDisplayable",
+      "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+      "agentBullseyeRing" : 7,
+      "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
-      "screenShareAddressSelf" : "aeiou",
+      "screenShareAddressSelf" : "screenShareAddressSelf",
       "sharingScreen" : true,
-      "sessionDnis" : "aeiou",
+      "sessionDnis" : "sessionDnis",
       "segments" : [ {
-        "queueId" : "aeiou",
+        "queueId" : "queueId",
         "conference" : true,
-        "subject" : "aeiou",
-        "groupId" : "aeiou",
-        "sourceConversationId" : "aeiou",
-        "errorCode" : "aeiou",
-        "requestedRoutingSkillIds" : [ "aeiou" ],
-        "segmentEnd" : "2000-01-23T04:56:07.000+0000",
-        "wrapUpNote" : "aeiou",
-        "destinationSessionId" : "aeiou",
-        "disconnectType" : "aeiou",
-        "requestedRoutingUserIds" : [ "aeiou" ],
-        "segmentStart" : "2000-01-23T04:56:07.000+0000",
+        "subject" : "subject",
+        "groupId" : "groupId",
+        "sourceConversationId" : "sourceConversationId",
+        "errorCode" : "errorCode",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+        "wrapUpNote" : "wrapUpNote",
+        "destinationSessionId" : "destinationSessionId",
+        "disconnectType" : "client",
+        "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
-          "scoredAgentId" : "aeiou",
-          "agentScore" : 123
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 123456789 ],
-        "wrapUpCode" : "aeiou",
-        "destinationConversationId" : "aeiou",
-        "wrapUpTags" : [ "aeiou" ],
-        "sourceSessionId" : "aeiou",
-        "sipResponseCodes" : [ 123456789 ],
-        "requestedLanguageId" : "aeiou",
-        "segmentType" : "aeiou",
+        "q850ResponseCodes" : [ 6, 6 ],
+        "wrapUpCode" : "wrapUpCode",
+        "destinationConversationId" : "destinationConversationId",
+        "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+        "sourceSessionId" : "sourceSessionId",
+        "sipResponseCodes" : [ 6, 6 ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "segmentType" : "alert",
         "properties" : [ {
-          "propertyType" : "aeiou",
-          "property" : "aeiou",
-          "value" : "aeiou"
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        }, {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        } ]
+      }, {
+        "queueId" : "queueId",
+        "conference" : true,
+        "subject" : "subject",
+        "groupId" : "groupId",
+        "sourceConversationId" : "sourceConversationId",
+        "errorCode" : "errorCode",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+        "wrapUpNote" : "wrapUpNote",
+        "destinationSessionId" : "destinationSessionId",
+        "disconnectType" : "client",
+        "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "videoMuted" : true,
+        "audioMuted" : true,
+        "q850ResponseCodes" : [ 6, 6 ],
+        "wrapUpCode" : "wrapUpCode",
+        "destinationConversationId" : "destinationConversationId",
+        "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+        "sourceSessionId" : "sourceSessionId",
+        "sipResponseCodes" : [ 6, 6 ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "segmentType" : "alert",
+        "properties" : [ {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        }, {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
         } ]
       } ],
-      "journeyCustomerSessionIdType" : "aeiou",
-      "extendedDeliveryStatus" : "aeiou",
-      "provider" : "aeiou",
-      "journeyCustomerIdType" : "aeiou",
-      "journeyCustomerId" : "aeiou",
-      "callbackUserName" : "aeiou",
-      "addressFrom" : "aeiou",
-      "flowInType" : "aeiou",
-      "ani" : "aeiou",
-      "direction" : "aeiou",
-      "routingRing" : 123,
-      "journeyCustomerSessionId" : "aeiou",
-      "sessionId" : "aeiou",
-      "journeyActionId" : "aeiou",
-      "eligibleAgentCounts" : [ 123 ],
-      "dispositionName" : "aeiou",
-      "scriptId" : "aeiou",
-      "selectedAgentId" : "aeiou",
-      "coachedParticipantId" : "aeiou",
+      "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+      "extendedDeliveryStatus" : "extendedDeliveryStatus",
+      "provider" : "provider",
+      "journeyCustomerIdType" : "journeyCustomerIdType",
+      "journeyCustomerId" : "journeyCustomerId",
+      "callbackUserName" : "callbackUserName",
+      "addressFrom" : "addressFrom",
+      "flowInType" : "flowInType",
+      "ani" : "ani",
+      "direction" : "inbound",
+      "routingRing" : 6,
+      "journeyCustomerSessionId" : "journeyCustomerSessionId",
+      "sessionId" : "sessionId",
+      "journeyActionId" : "journeyActionId",
+      "eligibleAgentCounts" : [ 1, 1 ],
+      "dispositionName" : "dispositionName",
+      "scriptId" : "scriptId",
+      "selectedAgentId" : "selectedAgentId",
+      "coachedParticipantId" : "coachedParticipantId",
       "acwSkipped" : true,
       "mediaEndpointStats" : [ {
-        "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-        "underrunPackets" : 123456789,
-        "overrunPackets" : 123456789,
-        "maxLatencyMs" : 123456789,
-        "minMos" : 1.3579000000000001069366817318950779736042022705078125,
-        "codecs" : [ "aeiou" ],
-        "eventTime" : "2000-01-23T04:56:07.000+0000",
-        "receivedPackets" : 123456789,
-        "duplicatePackets" : 123456789,
-        "invalidPackets" : 123456789,
-        "discardedPackets" : 123456789
+        "minRFactor" : 6.438423552598547,
+        "underrunPackets" : 1,
+        "overrunPackets" : 3,
+        "maxLatencyMs" : 8,
+        "minMos" : 9.018348186070783,
+        "codecs" : [ "codecs", "codecs" ],
+        "eventTime" : "2000-01-23T04:56:07.000+00:00",
+        "receivedPackets" : 6,
+        "duplicatePackets" : 9,
+        "invalidPackets" : 6,
+        "discardedPackets" : 9
+      }, {
+        "minRFactor" : 6.438423552598547,
+        "underrunPackets" : 1,
+        "overrunPackets" : 3,
+        "maxLatencyMs" : 8,
+        "minMos" : 9.018348186070783,
+        "codecs" : [ "codecs", "codecs" ],
+        "eventTime" : "2000-01-23T04:56:07.000+00:00",
+        "receivedPackets" : 6,
+        "duplicatePackets" : 9,
+        "invalidPackets" : 6,
+        "discardedPackets" : 9
       } ],
-      "selectedAgentRank" : 123,
-      "outboundContactListId" : "aeiou"
+      "selectedAgentRank" : 7,
+      "outboundContactListId" : "outboundContactListId"
+    }, {
+      "authenticated" : true,
+      "usedRouting" : "Bullseye",
+      "cobrowseRole" : "cobrowseRole",
+      "monitoredParticipantId" : "monitoredParticipantId",
+      "videoAddressSelf" : "videoAddressSelf",
+      "agentOwned" : true,
+      "waitingInteractionCounts" : [ 4, 4 ],
+      "proposedAgents" : [ {
+        "proposedAgentId" : "proposedAgentId",
+        "agentRank" : 5
+      }, {
+        "proposedAgentId" : "proposedAgentId",
+        "agentRank" : 5
+      } ],
+      "addressSelf" : "addressSelf",
+      "skipEnabled" : true,
+      "journeyActionMapId" : "journeyActionMapId",
+      "remote" : "remote",
+      "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+      "roomId" : "roomId",
+      "messageType" : "messageType",
+      "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "mediaCount" : 1,
+      "dnis" : "dnis",
+      "videoRoomId" : "videoRoomId",
+      "flow" : "{}",
+      "dispositionAnalyzer" : "dispositionAnalyzer",
+      "addressOther" : "addressOther",
+      "cobrowseRoomId" : "cobrowseRoomId",
+      "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+      "protocolCallId" : "protocolCallId",
+      "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+      "flowOutType" : "flowOutType",
+      "mediaType" : "callback",
+      "outboundCampaignId" : "outboundCampaignId",
+      "addressTo" : "addressTo",
+      "edgeId" : "edgeId",
+      "timeoutSeconds" : 1,
+      "metrics" : [ {
+        "name" : "name",
+        "emitDate" : "2000-01-23T04:56:07.000+00:00",
+        "value" : 2
+      }, {
+        "name" : "name",
+        "emitDate" : "2000-01-23T04:56:07.000+00:00",
+        "value" : 2
+      } ],
+      "journeyActionMapVersion" : 1,
+      "mediaBridgeId" : "mediaBridgeId",
+      "agentAssistantId" : "agentAssistantId",
+      "deliveryStatus" : "DeliveryFailed",
+      "screenShareRoomId" : "screenShareRoomId",
+      "assignerId" : "assignerId",
+      "outboundContactId" : "outboundContactId",
+      "peerId" : "peerId",
+      "remoteNameDisplayable" : "remoteNameDisplayable",
+      "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+      "agentBullseyeRing" : 7,
+      "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+      "recording" : true,
+      "screenShareAddressSelf" : "screenShareAddressSelf",
+      "sharingScreen" : true,
+      "sessionDnis" : "sessionDnis",
+      "segments" : [ {
+        "queueId" : "queueId",
+        "conference" : true,
+        "subject" : "subject",
+        "groupId" : "groupId",
+        "sourceConversationId" : "sourceConversationId",
+        "errorCode" : "errorCode",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+        "wrapUpNote" : "wrapUpNote",
+        "destinationSessionId" : "destinationSessionId",
+        "disconnectType" : "client",
+        "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "videoMuted" : true,
+        "audioMuted" : true,
+        "q850ResponseCodes" : [ 6, 6 ],
+        "wrapUpCode" : "wrapUpCode",
+        "destinationConversationId" : "destinationConversationId",
+        "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+        "sourceSessionId" : "sourceSessionId",
+        "sipResponseCodes" : [ 6, 6 ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "segmentType" : "alert",
+        "properties" : [ {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        }, {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        } ]
+      }, {
+        "queueId" : "queueId",
+        "conference" : true,
+        "subject" : "subject",
+        "groupId" : "groupId",
+        "sourceConversationId" : "sourceConversationId",
+        "errorCode" : "errorCode",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+        "wrapUpNote" : "wrapUpNote",
+        "destinationSessionId" : "destinationSessionId",
+        "disconnectType" : "client",
+        "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "videoMuted" : true,
+        "audioMuted" : true,
+        "q850ResponseCodes" : [ 6, 6 ],
+        "wrapUpCode" : "wrapUpCode",
+        "destinationConversationId" : "destinationConversationId",
+        "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+        "sourceSessionId" : "sourceSessionId",
+        "sipResponseCodes" : [ 6, 6 ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "segmentType" : "alert",
+        "properties" : [ {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        }, {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        } ]
+      } ],
+      "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+      "extendedDeliveryStatus" : "extendedDeliveryStatus",
+      "provider" : "provider",
+      "journeyCustomerIdType" : "journeyCustomerIdType",
+      "journeyCustomerId" : "journeyCustomerId",
+      "callbackUserName" : "callbackUserName",
+      "addressFrom" : "addressFrom",
+      "flowInType" : "flowInType",
+      "ani" : "ani",
+      "direction" : "inbound",
+      "routingRing" : 6,
+      "journeyCustomerSessionId" : "journeyCustomerSessionId",
+      "sessionId" : "sessionId",
+      "journeyActionId" : "journeyActionId",
+      "eligibleAgentCounts" : [ 1, 1 ],
+      "dispositionName" : "dispositionName",
+      "scriptId" : "scriptId",
+      "selectedAgentId" : "selectedAgentId",
+      "coachedParticipantId" : "coachedParticipantId",
+      "acwSkipped" : true,
+      "mediaEndpointStats" : [ {
+        "minRFactor" : 6.438423552598547,
+        "underrunPackets" : 1,
+        "overrunPackets" : 3,
+        "maxLatencyMs" : 8,
+        "minMos" : 9.018348186070783,
+        "codecs" : [ "codecs", "codecs" ],
+        "eventTime" : "2000-01-23T04:56:07.000+00:00",
+        "receivedPackets" : 6,
+        "duplicatePackets" : 9,
+        "invalidPackets" : 6,
+        "discardedPackets" : 9
+      }, {
+        "minRFactor" : 6.438423552598547,
+        "underrunPackets" : 1,
+        "overrunPackets" : 3,
+        "maxLatencyMs" : 8,
+        "minMos" : 9.018348186070783,
+        "codecs" : [ "codecs", "codecs" ],
+        "eventTime" : "2000-01-23T04:56:07.000+00:00",
+        "receivedPackets" : 6,
+        "duplicatePackets" : 9,
+        "invalidPackets" : 6,
+        "discardedPackets" : 9
+      } ],
+      "selectedAgentRank" : 7,
+      "outboundContactListId" : "outboundContactListId"
     } ],
-    "externalContactId" : "aeiou",
-    "purpose" : "aeiou",
-    "teamId" : "aeiou",
-    "externalOrganizationId" : "aeiou",
-    "participantName" : "aeiou",
-    "flaggedReason" : "aeiou",
-    "userId" : "aeiou"
+    "externalContactId" : "externalContactId",
+    "purpose" : "acd",
+    "teamId" : "teamId",
+    "externalOrganizationId" : "externalOrganizationId",
+    "participantName" : "participantName",
+    "flaggedReason" : "general",
+    "userId" : "userId"
+  }, {
+    "participantId" : "participantId",
+    "sessions" : [ {
+      "authenticated" : true,
+      "usedRouting" : "Bullseye",
+      "cobrowseRole" : "cobrowseRole",
+      "monitoredParticipantId" : "monitoredParticipantId",
+      "videoAddressSelf" : "videoAddressSelf",
+      "agentOwned" : true,
+      "waitingInteractionCounts" : [ 4, 4 ],
+      "proposedAgents" : [ {
+        "proposedAgentId" : "proposedAgentId",
+        "agentRank" : 5
+      }, {
+        "proposedAgentId" : "proposedAgentId",
+        "agentRank" : 5
+      } ],
+      "addressSelf" : "addressSelf",
+      "skipEnabled" : true,
+      "journeyActionMapId" : "journeyActionMapId",
+      "remote" : "remote",
+      "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+      "roomId" : "roomId",
+      "messageType" : "messageType",
+      "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "mediaCount" : 1,
+      "dnis" : "dnis",
+      "videoRoomId" : "videoRoomId",
+      "flow" : "{}",
+      "dispositionAnalyzer" : "dispositionAnalyzer",
+      "addressOther" : "addressOther",
+      "cobrowseRoomId" : "cobrowseRoomId",
+      "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+      "protocolCallId" : "protocolCallId",
+      "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+      "flowOutType" : "flowOutType",
+      "mediaType" : "callback",
+      "outboundCampaignId" : "outboundCampaignId",
+      "addressTo" : "addressTo",
+      "edgeId" : "edgeId",
+      "timeoutSeconds" : 1,
+      "metrics" : [ {
+        "name" : "name",
+        "emitDate" : "2000-01-23T04:56:07.000+00:00",
+        "value" : 2
+      }, {
+        "name" : "name",
+        "emitDate" : "2000-01-23T04:56:07.000+00:00",
+        "value" : 2
+      } ],
+      "journeyActionMapVersion" : 1,
+      "mediaBridgeId" : "mediaBridgeId",
+      "agentAssistantId" : "agentAssistantId",
+      "deliveryStatus" : "DeliveryFailed",
+      "screenShareRoomId" : "screenShareRoomId",
+      "assignerId" : "assignerId",
+      "outboundContactId" : "outboundContactId",
+      "peerId" : "peerId",
+      "remoteNameDisplayable" : "remoteNameDisplayable",
+      "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+      "agentBullseyeRing" : 7,
+      "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+      "recording" : true,
+      "screenShareAddressSelf" : "screenShareAddressSelf",
+      "sharingScreen" : true,
+      "sessionDnis" : "sessionDnis",
+      "segments" : [ {
+        "queueId" : "queueId",
+        "conference" : true,
+        "subject" : "subject",
+        "groupId" : "groupId",
+        "sourceConversationId" : "sourceConversationId",
+        "errorCode" : "errorCode",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+        "wrapUpNote" : "wrapUpNote",
+        "destinationSessionId" : "destinationSessionId",
+        "disconnectType" : "client",
+        "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "videoMuted" : true,
+        "audioMuted" : true,
+        "q850ResponseCodes" : [ 6, 6 ],
+        "wrapUpCode" : "wrapUpCode",
+        "destinationConversationId" : "destinationConversationId",
+        "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+        "sourceSessionId" : "sourceSessionId",
+        "sipResponseCodes" : [ 6, 6 ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "segmentType" : "alert",
+        "properties" : [ {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        }, {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        } ]
+      }, {
+        "queueId" : "queueId",
+        "conference" : true,
+        "subject" : "subject",
+        "groupId" : "groupId",
+        "sourceConversationId" : "sourceConversationId",
+        "errorCode" : "errorCode",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+        "wrapUpNote" : "wrapUpNote",
+        "destinationSessionId" : "destinationSessionId",
+        "disconnectType" : "client",
+        "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "videoMuted" : true,
+        "audioMuted" : true,
+        "q850ResponseCodes" : [ 6, 6 ],
+        "wrapUpCode" : "wrapUpCode",
+        "destinationConversationId" : "destinationConversationId",
+        "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+        "sourceSessionId" : "sourceSessionId",
+        "sipResponseCodes" : [ 6, 6 ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "segmentType" : "alert",
+        "properties" : [ {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        }, {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        } ]
+      } ],
+      "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+      "extendedDeliveryStatus" : "extendedDeliveryStatus",
+      "provider" : "provider",
+      "journeyCustomerIdType" : "journeyCustomerIdType",
+      "journeyCustomerId" : "journeyCustomerId",
+      "callbackUserName" : "callbackUserName",
+      "addressFrom" : "addressFrom",
+      "flowInType" : "flowInType",
+      "ani" : "ani",
+      "direction" : "inbound",
+      "routingRing" : 6,
+      "journeyCustomerSessionId" : "journeyCustomerSessionId",
+      "sessionId" : "sessionId",
+      "journeyActionId" : "journeyActionId",
+      "eligibleAgentCounts" : [ 1, 1 ],
+      "dispositionName" : "dispositionName",
+      "scriptId" : "scriptId",
+      "selectedAgentId" : "selectedAgentId",
+      "coachedParticipantId" : "coachedParticipantId",
+      "acwSkipped" : true,
+      "mediaEndpointStats" : [ {
+        "minRFactor" : 6.438423552598547,
+        "underrunPackets" : 1,
+        "overrunPackets" : 3,
+        "maxLatencyMs" : 8,
+        "minMos" : 9.018348186070783,
+        "codecs" : [ "codecs", "codecs" ],
+        "eventTime" : "2000-01-23T04:56:07.000+00:00",
+        "receivedPackets" : 6,
+        "duplicatePackets" : 9,
+        "invalidPackets" : 6,
+        "discardedPackets" : 9
+      }, {
+        "minRFactor" : 6.438423552598547,
+        "underrunPackets" : 1,
+        "overrunPackets" : 3,
+        "maxLatencyMs" : 8,
+        "minMos" : 9.018348186070783,
+        "codecs" : [ "codecs", "codecs" ],
+        "eventTime" : "2000-01-23T04:56:07.000+00:00",
+        "receivedPackets" : 6,
+        "duplicatePackets" : 9,
+        "invalidPackets" : 6,
+        "discardedPackets" : 9
+      } ],
+      "selectedAgentRank" : 7,
+      "outboundContactListId" : "outboundContactListId"
+    }, {
+      "authenticated" : true,
+      "usedRouting" : "Bullseye",
+      "cobrowseRole" : "cobrowseRole",
+      "monitoredParticipantId" : "monitoredParticipantId",
+      "videoAddressSelf" : "videoAddressSelf",
+      "agentOwned" : true,
+      "waitingInteractionCounts" : [ 4, 4 ],
+      "proposedAgents" : [ {
+        "proposedAgentId" : "proposedAgentId",
+        "agentRank" : 5
+      }, {
+        "proposedAgentId" : "proposedAgentId",
+        "agentRank" : 5
+      } ],
+      "addressSelf" : "addressSelf",
+      "skipEnabled" : true,
+      "journeyActionMapId" : "journeyActionMapId",
+      "remote" : "remote",
+      "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+      "roomId" : "roomId",
+      "messageType" : "messageType",
+      "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "mediaCount" : 1,
+      "dnis" : "dnis",
+      "videoRoomId" : "videoRoomId",
+      "flow" : "{}",
+      "dispositionAnalyzer" : "dispositionAnalyzer",
+      "addressOther" : "addressOther",
+      "cobrowseRoomId" : "cobrowseRoomId",
+      "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+      "protocolCallId" : "protocolCallId",
+      "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+      "flowOutType" : "flowOutType",
+      "mediaType" : "callback",
+      "outboundCampaignId" : "outboundCampaignId",
+      "addressTo" : "addressTo",
+      "edgeId" : "edgeId",
+      "timeoutSeconds" : 1,
+      "metrics" : [ {
+        "name" : "name",
+        "emitDate" : "2000-01-23T04:56:07.000+00:00",
+        "value" : 2
+      }, {
+        "name" : "name",
+        "emitDate" : "2000-01-23T04:56:07.000+00:00",
+        "value" : 2
+      } ],
+      "journeyActionMapVersion" : 1,
+      "mediaBridgeId" : "mediaBridgeId",
+      "agentAssistantId" : "agentAssistantId",
+      "deliveryStatus" : "DeliveryFailed",
+      "screenShareRoomId" : "screenShareRoomId",
+      "assignerId" : "assignerId",
+      "outboundContactId" : "outboundContactId",
+      "peerId" : "peerId",
+      "remoteNameDisplayable" : "remoteNameDisplayable",
+      "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+      "agentBullseyeRing" : 7,
+      "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+      "recording" : true,
+      "screenShareAddressSelf" : "screenShareAddressSelf",
+      "sharingScreen" : true,
+      "sessionDnis" : "sessionDnis",
+      "segments" : [ {
+        "queueId" : "queueId",
+        "conference" : true,
+        "subject" : "subject",
+        "groupId" : "groupId",
+        "sourceConversationId" : "sourceConversationId",
+        "errorCode" : "errorCode",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+        "wrapUpNote" : "wrapUpNote",
+        "destinationSessionId" : "destinationSessionId",
+        "disconnectType" : "client",
+        "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "videoMuted" : true,
+        "audioMuted" : true,
+        "q850ResponseCodes" : [ 6, 6 ],
+        "wrapUpCode" : "wrapUpCode",
+        "destinationConversationId" : "destinationConversationId",
+        "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+        "sourceSessionId" : "sourceSessionId",
+        "sipResponseCodes" : [ 6, 6 ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "segmentType" : "alert",
+        "properties" : [ {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        }, {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        } ]
+      }, {
+        "queueId" : "queueId",
+        "conference" : true,
+        "subject" : "subject",
+        "groupId" : "groupId",
+        "sourceConversationId" : "sourceConversationId",
+        "errorCode" : "errorCode",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+        "wrapUpNote" : "wrapUpNote",
+        "destinationSessionId" : "destinationSessionId",
+        "disconnectType" : "client",
+        "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "videoMuted" : true,
+        "audioMuted" : true,
+        "q850ResponseCodes" : [ 6, 6 ],
+        "wrapUpCode" : "wrapUpCode",
+        "destinationConversationId" : "destinationConversationId",
+        "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+        "sourceSessionId" : "sourceSessionId",
+        "sipResponseCodes" : [ 6, 6 ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "segmentType" : "alert",
+        "properties" : [ {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        }, {
+          "propertyType" : "bool",
+          "property" : "property",
+          "value" : "value"
+        } ]
+      } ],
+      "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+      "extendedDeliveryStatus" : "extendedDeliveryStatus",
+      "provider" : "provider",
+      "journeyCustomerIdType" : "journeyCustomerIdType",
+      "journeyCustomerId" : "journeyCustomerId",
+      "callbackUserName" : "callbackUserName",
+      "addressFrom" : "addressFrom",
+      "flowInType" : "flowInType",
+      "ani" : "ani",
+      "direction" : "inbound",
+      "routingRing" : 6,
+      "journeyCustomerSessionId" : "journeyCustomerSessionId",
+      "sessionId" : "sessionId",
+      "journeyActionId" : "journeyActionId",
+      "eligibleAgentCounts" : [ 1, 1 ],
+      "dispositionName" : "dispositionName",
+      "scriptId" : "scriptId",
+      "selectedAgentId" : "selectedAgentId",
+      "coachedParticipantId" : "coachedParticipantId",
+      "acwSkipped" : true,
+      "mediaEndpointStats" : [ {
+        "minRFactor" : 6.438423552598547,
+        "underrunPackets" : 1,
+        "overrunPackets" : 3,
+        "maxLatencyMs" : 8,
+        "minMos" : 9.018348186070783,
+        "codecs" : [ "codecs", "codecs" ],
+        "eventTime" : "2000-01-23T04:56:07.000+00:00",
+        "receivedPackets" : 6,
+        "duplicatePackets" : 9,
+        "invalidPackets" : 6,
+        "discardedPackets" : 9
+      }, {
+        "minRFactor" : 6.438423552598547,
+        "underrunPackets" : 1,
+        "overrunPackets" : 3,
+        "maxLatencyMs" : 8,
+        "minMos" : 9.018348186070783,
+        "codecs" : [ "codecs", "codecs" ],
+        "eventTime" : "2000-01-23T04:56:07.000+00:00",
+        "receivedPackets" : 6,
+        "duplicatePackets" : 9,
+        "invalidPackets" : 6,
+        "discardedPackets" : 9
+      } ],
+      "selectedAgentRank" : 7,
+      "outboundContactListId" : "outboundContactListId"
+    } ],
+    "externalContactId" : "externalContactId",
+    "purpose" : "acd",
+    "teamId" : "teamId",
+    "externalOrganizationId" : "externalOrganizationId",
+    "participantName" : "participantName",
+    "flaggedReason" : "general",
+    "userId" : "userId"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
 
      - returns: RequestBuilder<AnalyticsConversationWithoutAttributes> 
      */
-    open class func getAnalyticsConversationDetailsWithRequestBuilder(conversationId: String) -> RequestBuilder<AnalyticsConversationWithoutAttributes> {
+    open class func getAnalyticsConversationDetailsWithRequestBuilder(conversationId: String) -> RequestBuilder<AnalyticsConversationWithoutAttributes> {        
         var path = "/api/v2/analytics/conversations/{conversationId}/details"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -586,10 +1163,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Gets multiple conversations by id
      
      - parameter _id: (query) Comma-separated conversation ids (optional)
@@ -614,245 +1188,1773 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Gets multiple conversations by id
-     
      - GET /api/v2/analytics/conversations/details
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "conversations" : [ {
-    "conversationStart" : "2000-01-23T04:56:07.000+0000",
-    "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
+    "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+    "mediaStatsMinConversationMos" : 5.637376656633329,
     "evaluations" : [ {
-      "formId" : "aeiou",
-      "queueId" : "aeiou",
-      "oTotalScore" : 123456789,
-      "oTotalCriticalScore" : 123456789,
-      "contextId" : "aeiou",
-      "userId" : "aeiou",
-      "evaluationId" : "aeiou",
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
       "deleted" : true,
-      "formName" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
-      "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou",
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    }, {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
-    "conversationInitiator" : "aeiou",
-    "conversationId" : "aeiou",
+    "conversationInitiator" : "acd",
+    "conversationId" : "conversationId",
     "surveys" : [ {
-      "queueId" : "aeiou",
-      "surveyStatus" : "aeiou",
-      "oSurveyTotalScore" : 123456789,
-      "surveyId" : "aeiou",
-      "surveyFormName" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "surveyFormId" : "aeiou",
-      "surveyFormContextId" : "aeiou",
-      "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-      "surveyPromoterScore" : 123,
-      "userId" : "aeiou"
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
     } ],
-    "externalTag" : "aeiou",
+    "externalTag" : "externalTag",
     "resolutions" : [ {
-      "queueId" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "nNextContactAvoided" : 123456789,
-      "userId" : "aeiou"
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
     } ],
-    "originatingDirection" : "aeiou",
-    "divisionIds" : [ "aeiou" ],
-    "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-    "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "originatingDirection" : "inbound",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "knowledgeBaseIds" : [ "aeiou" ],
+    "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "selfServed" : true,
     "participants" : [ {
-      "participantId" : "aeiou",
+      "participantId" : "participantId",
       "sessions" : [ {
         "authenticated" : true,
-        "usedRouting" : "aeiou",
-        "cobrowseRole" : "aeiou",
-        "monitoredParticipantId" : "aeiou",
-        "videoAddressSelf" : "aeiou",
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 123 ],
+        "waitingInteractionCounts" : [ 4, 4 ],
         "proposedAgents" : [ {
-          "proposedAgentId" : "aeiou",
-          "agentRank" : 123
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
         } ],
-        "addressSelf" : "aeiou",
+        "addressSelf" : "addressSelf",
         "skipEnabled" : true,
-        "journeyActionMapId" : "aeiou",
-        "remote" : "aeiou",
-        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
-        "roomId" : "aeiou",
-        "messageType" : "aeiou",
-        "removedSkillIds" : [ "aeiou" ],
-        "requestedRoutings" : [ "aeiou" ],
-        "mediaCount" : 123,
-        "dnis" : "aeiou",
-        "videoRoomId" : "aeiou",
-        "flow" : {
-          "entryType" : "aeiou",
-          "issuedCallback" : true,
-          "exitReason" : "aeiou",
-          "transferTargetName" : "aeiou",
-          "flowVersion" : "aeiou",
-          "flowName" : "aeiou",
-          "transferTargetAddress" : "aeiou",
-          "outcomes" : [ {
-            "flowOutcomeId" : "aeiou",
-            "flowOutcome" : "aeiou",
-            "flowOutcomeStartTimestamp" : "2000-01-23T04:56:07.000+0000",
-            "flowOutcomeValue" : "aeiou",
-            "flowOutcomeEndTimestamp" : "2000-01-23T04:56:07.000+0000"
-          } ],
-          "transferType" : "aeiou",
-          "entryReason" : "aeiou",
-          "endingLanguage" : "aeiou",
-          "recognitionFailureReason" : "aeiou",
-          "flowId" : "aeiou",
-          "startingLanguage" : "aeiou",
-          "flowType" : "aeiou"
-        },
-        "dispositionAnalyzer" : "aeiou",
-        "addressOther" : "aeiou",
-        "cobrowseRoomId" : "aeiou",
-        "activeSkillIds" : [ "aeiou" ],
-        "protocolCallId" : "aeiou",
-        "destinationAddresses" : [ "aeiou" ],
-        "flowOutType" : "aeiou",
-        "mediaType" : "aeiou",
-        "outboundCampaignId" : "aeiou",
-        "addressTo" : "aeiou",
-        "edgeId" : "aeiou",
-        "timeoutSeconds" : 123,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
         "metrics" : [ {
-          "name" : "aeiou",
-          "emitDate" : "2000-01-23T04:56:07.000+0000",
-          "value" : 123456789
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
         } ],
-        "journeyActionMapVersion" : 123,
-        "mediaBridgeId" : "aeiou",
-        "agentAssistantId" : "aeiou",
-        "deliveryStatus" : "aeiou",
-        "screenShareRoomId" : "aeiou",
-        "assignerId" : "aeiou",
-        "outboundContactId" : "aeiou",
-        "peerId" : "aeiou",
-        "remoteNameDisplayable" : "aeiou",
-        "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-        "agentBullseyeRing" : 123,
-        "callbackNumbers" : [ "aeiou" ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
-        "screenShareAddressSelf" : "aeiou",
+        "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
-        "sessionDnis" : "aeiou",
+        "sessionDnis" : "sessionDnis",
         "segments" : [ {
-          "queueId" : "aeiou",
+          "queueId" : "queueId",
           "conference" : true,
-          "subject" : "aeiou",
-          "groupId" : "aeiou",
-          "sourceConversationId" : "aeiou",
-          "errorCode" : "aeiou",
-          "requestedRoutingSkillIds" : [ "aeiou" ],
-          "segmentEnd" : "2000-01-23T04:56:07.000+0000",
-          "wrapUpNote" : "aeiou",
-          "destinationSessionId" : "aeiou",
-          "disconnectType" : "aeiou",
-          "requestedRoutingUserIds" : [ "aeiou" ],
-          "segmentStart" : "2000-01-23T04:56:07.000+0000",
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
-            "scoredAgentId" : "aeiou",
-            "agentScore" : 123
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 123456789 ],
-          "wrapUpCode" : "aeiou",
-          "destinationConversationId" : "aeiou",
-          "wrapUpTags" : [ "aeiou" ],
-          "sourceSessionId" : "aeiou",
-          "sipResponseCodes" : [ 123456789 ],
-          "requestedLanguageId" : "aeiou",
-          "segmentType" : "aeiou",
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
           "properties" : [ {
-            "propertyType" : "aeiou",
-            "property" : "aeiou",
-            "value" : "aeiou"
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
           } ]
         } ],
-        "journeyCustomerSessionIdType" : "aeiou",
-        "extendedDeliveryStatus" : "aeiou",
-        "provider" : "aeiou",
-        "journeyCustomerIdType" : "aeiou",
-        "journeyCustomerId" : "aeiou",
-        "callbackUserName" : "aeiou",
-        "addressFrom" : "aeiou",
-        "flowInType" : "aeiou",
-        "ani" : "aeiou",
-        "direction" : "aeiou",
-        "routingRing" : 123,
-        "journeyCustomerSessionId" : "aeiou",
-        "sessionId" : "aeiou",
-        "journeyActionId" : "aeiou",
-        "eligibleAgentCounts" : [ 123 ],
-        "dispositionName" : "aeiou",
-        "scriptId" : "aeiou",
-        "selectedAgentId" : "aeiou",
-        "coachedParticipantId" : "aeiou",
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-          "underrunPackets" : 123456789,
-          "overrunPackets" : 123456789,
-          "maxLatencyMs" : 123456789,
-          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
-          "codecs" : [ "aeiou" ],
-          "eventTime" : "2000-01-23T04:56:07.000+0000",
-          "receivedPackets" : 123456789,
-          "duplicatePackets" : 123456789,
-          "invalidPackets" : 123456789,
-          "discardedPackets" : 123456789
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
         } ],
-        "selectedAgentRank" : 123,
-        "outboundContactListId" : "aeiou"
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
       } ],
-      "externalContactId" : "aeiou",
-      "purpose" : "aeiou",
-      "teamId" : "aeiou",
-      "externalOrganizationId" : "aeiou",
-      "participantName" : "aeiou",
-      "flaggedReason" : "aeiou",
-      "userId" : "aeiou"
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    }, {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    } ]
+  }, {
+    "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "evaluations" : [ {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    }, {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    } ],
+    "conversationInitiator" : "acd",
+    "conversationId" : "conversationId",
+    "surveys" : [ {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    } ],
+    "externalTag" : "externalTag",
+    "resolutions" : [ {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    } ],
+    "originatingDirection" : "inbound",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
+    "customerParticipation" : true,
+    "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "selfServed" : true,
+    "participants" : [ {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    }, {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter _id: (query) Comma-separated conversation ids (optional)
 
      - returns: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> 
      */
-    open class func getAnalyticsConversationsDetailsWithRequestBuilder(_id: [String]? = nil) -> RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> {
+    open class func getAnalyticsConversationsDetailsWithRequestBuilder(_id: [String]? = nil) -> RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> {        
         let path = "/api/v2/analytics/conversations/details"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "id": _id
-            
         ])
 
         let requestBuilder: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -861,10 +2963,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get status for async query for conversation details
      
      - parameter jobId: (path) jobId 
@@ -889,38 +2988,30 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get status for async query for conversation details
-     
      - GET /api/v2/analytics/conversations/details/jobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorMessage" : "aeiou",
-  "submissionDate" : "2000-01-23T04:56:07.000+0000",
-  "completionDate" : "2000-01-23T04:56:07.000+0000",
-  "state" : "aeiou",
-  "expirationDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "errorMessage" : "errorMessage",
+  "submissionDate" : "2000-01-23T04:56:07.000+00:00",
+  "completionDate" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "QUEUED",
+  "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter jobId: (path) jobId 
 
      - returns: RequestBuilder<AsyncQueryStatus> 
      */
-    open class func getAnalyticsConversationsDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<AsyncQueryStatus> {
+    open class func getAnalyticsConversationsDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<AsyncQueryStatus> {        
         var path = "/api/v2/analytics/conversations/details/jobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -932,12 +3023,7 @@ open class AnalyticsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Fetch a page of results for an async query
      
      - parameter jobId: (path) jobId 
@@ -964,230 +3050,1774 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Fetch a page of results for an async query
-     
      - GET /api/v2/analytics/conversations/details/jobs/{jobId}/results
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "cursor" : "aeiou",
-  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000",
+  "cursor" : "cursor",
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+00:00",
   "conversations" : [ {
-    "conversationStart" : "2000-01-23T04:56:07.000+0000",
-    "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
+    "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+    "mediaStatsMinConversationMos" : 0.8008281904610115,
     "evaluations" : [ {
-      "formId" : "aeiou",
-      "queueId" : "aeiou",
-      "oTotalScore" : 123456789,
-      "oTotalCriticalScore" : 123456789,
-      "contextId" : "aeiou",
-      "userId" : "aeiou",
-      "evaluationId" : "aeiou",
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
       "deleted" : true,
-      "formName" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
-      "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou",
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    }, {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
-    "conversationInitiator" : "aeiou",
-    "conversationId" : "aeiou",
+    "conversationInitiator" : "acd",
+    "conversationId" : "conversationId",
     "surveys" : [ {
-      "queueId" : "aeiou",
-      "surveyStatus" : "aeiou",
-      "oSurveyTotalScore" : 123456789,
-      "surveyId" : "aeiou",
-      "surveyFormName" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "surveyFormId" : "aeiou",
-      "surveyFormContextId" : "aeiou",
-      "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-      "surveyPromoterScore" : 123,
-      "userId" : "aeiou"
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
     } ],
-    "externalTag" : "aeiou",
+    "externalTag" : "externalTag",
     "resolutions" : [ {
-      "queueId" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "nNextContactAvoided" : 123456789,
-      "userId" : "aeiou"
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
     } ],
-    "originatingDirection" : "aeiou",
-    "divisionIds" : [ "aeiou" ],
-    "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-    "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "originatingDirection" : "inbound",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "mediaStatsMinConversationRFactor" : 6.027456183070403,
+    "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "knowledgeBaseIds" : [ "aeiou" ],
+    "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "selfServed" : true,
     "participants" : [ {
-      "participantId" : "aeiou",
+      "participantId" : "participantId",
       "sessions" : [ {
         "authenticated" : true,
-        "usedRouting" : "aeiou",
-        "cobrowseRole" : "aeiou",
-        "monitoredParticipantId" : "aeiou",
-        "videoAddressSelf" : "aeiou",
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 123 ],
+        "waitingInteractionCounts" : [ 4, 4 ],
         "proposedAgents" : [ {
-          "proposedAgentId" : "aeiou",
-          "agentRank" : 123
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
         } ],
-        "addressSelf" : "aeiou",
+        "addressSelf" : "addressSelf",
         "skipEnabled" : true,
-        "journeyActionMapId" : "aeiou",
-        "remote" : "aeiou",
-        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
-        "roomId" : "aeiou",
-        "messageType" : "aeiou",
-        "removedSkillIds" : [ "aeiou" ],
-        "requestedRoutings" : [ "aeiou" ],
-        "mediaCount" : 123,
-        "dnis" : "aeiou",
-        "videoRoomId" : "aeiou",
-        "flow" : {
-          "entryType" : "aeiou",
-          "issuedCallback" : true,
-          "exitReason" : "aeiou",
-          "transferTargetName" : "aeiou",
-          "flowVersion" : "aeiou",
-          "flowName" : "aeiou",
-          "transferTargetAddress" : "aeiou",
-          "outcomes" : [ {
-            "flowOutcomeId" : "aeiou",
-            "flowOutcome" : "aeiou",
-            "flowOutcomeStartTimestamp" : "2000-01-23T04:56:07.000+0000",
-            "flowOutcomeValue" : "aeiou",
-            "flowOutcomeEndTimestamp" : "2000-01-23T04:56:07.000+0000"
-          } ],
-          "transferType" : "aeiou",
-          "entryReason" : "aeiou",
-          "endingLanguage" : "aeiou",
-          "recognitionFailureReason" : "aeiou",
-          "flowId" : "aeiou",
-          "startingLanguage" : "aeiou",
-          "flowType" : "aeiou"
-        },
-        "dispositionAnalyzer" : "aeiou",
-        "addressOther" : "aeiou",
-        "cobrowseRoomId" : "aeiou",
-        "activeSkillIds" : [ "aeiou" ],
-        "protocolCallId" : "aeiou",
-        "destinationAddresses" : [ "aeiou" ],
-        "flowOutType" : "aeiou",
-        "mediaType" : "aeiou",
-        "outboundCampaignId" : "aeiou",
-        "addressTo" : "aeiou",
-        "edgeId" : "aeiou",
-        "timeoutSeconds" : 123,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
         "metrics" : [ {
-          "name" : "aeiou",
-          "emitDate" : "2000-01-23T04:56:07.000+0000",
-          "value" : 123456789
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
         } ],
-        "journeyActionMapVersion" : 123,
-        "mediaBridgeId" : "aeiou",
-        "agentAssistantId" : "aeiou",
-        "deliveryStatus" : "aeiou",
-        "screenShareRoomId" : "aeiou",
-        "assignerId" : "aeiou",
-        "outboundContactId" : "aeiou",
-        "peerId" : "aeiou",
-        "remoteNameDisplayable" : "aeiou",
-        "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-        "agentBullseyeRing" : 123,
-        "callbackNumbers" : [ "aeiou" ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
-        "screenShareAddressSelf" : "aeiou",
+        "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
-        "sessionDnis" : "aeiou",
+        "sessionDnis" : "sessionDnis",
         "segments" : [ {
-          "queueId" : "aeiou",
+          "queueId" : "queueId",
           "conference" : true,
-          "subject" : "aeiou",
-          "groupId" : "aeiou",
-          "sourceConversationId" : "aeiou",
-          "errorCode" : "aeiou",
-          "requestedRoutingSkillIds" : [ "aeiou" ],
-          "segmentEnd" : "2000-01-23T04:56:07.000+0000",
-          "wrapUpNote" : "aeiou",
-          "destinationSessionId" : "aeiou",
-          "disconnectType" : "aeiou",
-          "requestedRoutingUserIds" : [ "aeiou" ],
-          "segmentStart" : "2000-01-23T04:56:07.000+0000",
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
-            "scoredAgentId" : "aeiou",
-            "agentScore" : 123
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 123456789 ],
-          "wrapUpCode" : "aeiou",
-          "destinationConversationId" : "aeiou",
-          "wrapUpTags" : [ "aeiou" ],
-          "sourceSessionId" : "aeiou",
-          "sipResponseCodes" : [ 123456789 ],
-          "requestedLanguageId" : "aeiou",
-          "segmentType" : "aeiou",
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
           "properties" : [ {
-            "propertyType" : "aeiou",
-            "property" : "aeiou",
-            "value" : "aeiou"
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
           } ]
         } ],
-        "journeyCustomerSessionIdType" : "aeiou",
-        "extendedDeliveryStatus" : "aeiou",
-        "provider" : "aeiou",
-        "journeyCustomerIdType" : "aeiou",
-        "journeyCustomerId" : "aeiou",
-        "callbackUserName" : "aeiou",
-        "addressFrom" : "aeiou",
-        "flowInType" : "aeiou",
-        "ani" : "aeiou",
-        "direction" : "aeiou",
-        "routingRing" : 123,
-        "journeyCustomerSessionId" : "aeiou",
-        "sessionId" : "aeiou",
-        "journeyActionId" : "aeiou",
-        "eligibleAgentCounts" : [ 123 ],
-        "dispositionName" : "aeiou",
-        "scriptId" : "aeiou",
-        "selectedAgentId" : "aeiou",
-        "coachedParticipantId" : "aeiou",
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-          "underrunPackets" : 123456789,
-          "overrunPackets" : 123456789,
-          "maxLatencyMs" : 123456789,
-          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
-          "codecs" : [ "aeiou" ],
-          "eventTime" : "2000-01-23T04:56:07.000+0000",
-          "receivedPackets" : 123456789,
-          "duplicatePackets" : 123456789,
-          "invalidPackets" : 123456789,
-          "discardedPackets" : 123456789
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
         } ],
-        "selectedAgentRank" : 123,
-        "outboundContactListId" : "aeiou"
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
       } ],
-      "externalContactId" : "aeiou",
-      "purpose" : "aeiou",
-      "teamId" : "aeiou",
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
       "attributes" : {
-        "key" : "aeiou"
+        "key" : "attributes"
       },
-      "externalOrganizationId" : "aeiou",
-      "participantName" : "aeiou",
-      "flaggedReason" : "aeiou",
-      "userId" : "aeiou"
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    }, {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "attributes" : {
+        "key" : "attributes"
+      },
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    } ]
+  }, {
+    "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+    "mediaStatsMinConversationMos" : 0.8008281904610115,
+    "evaluations" : [ {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    }, {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    } ],
+    "conversationInitiator" : "acd",
+    "conversationId" : "conversationId",
+    "surveys" : [ {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    } ],
+    "externalTag" : "externalTag",
+    "resolutions" : [ {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    } ],
+    "originatingDirection" : "inbound",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "mediaStatsMinConversationRFactor" : 6.027456183070403,
+    "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
+    "customerParticipation" : true,
+    "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "selfServed" : true,
+    "participants" : [ {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "attributes" : {
+        "key" : "attributes"
+      },
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    }, {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "attributes" : {
+        "key" : "attributes"
+      },
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter jobId: (path) jobId 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
@@ -1195,26 +4825,18 @@ open class AnalyticsAPI {
 
      - returns: RequestBuilder<AnalyticsConversationAsyncQueryResponse> 
      */
-    open class func getAnalyticsConversationsDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AnalyticsConversationAsyncQueryResponse> {
+    open class func getAnalyticsConversationsDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AnalyticsConversationAsyncQueryResponse> {        
         var path = "/api/v2/analytics/conversations/details/jobs/{jobId}/results"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "cursor": cursor, 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<AnalyticsConversationAsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1222,9 +4844,7 @@ open class AnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Lookup the datalake availability date and time
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1248,29 +4868,21 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Lookup the datalake availability date and time
-     
      - GET /api/v2/analytics/conversations/details/jobs/availability
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
 
      - returns: RequestBuilder<DataAvailabilityResponse> 
      */
-    open class func getAnalyticsConversationsDetailsJobsAvailabilityWithRequestBuilder() -> RequestBuilder<DataAvailabilityResponse> {
+    open class func getAnalyticsConversationsDetailsJobsAvailabilityWithRequestBuilder() -> RequestBuilder<DataAvailabilityResponse> {        
         let path = "/api/v2/analytics/conversations/details/jobs/availability"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1281,15 +4893,11 @@ open class AnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get all view export requests for a user
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getAnalyticsReportingExports(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ReportingExportJobListing?,_ error: Error?) -> Void)) {
@@ -1311,253 +4919,116 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get all view export requests for a user
-     
      - GET /api/v2/analytics/reporting/exports
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
     "hasSummaryRow" : true,
-    "downloadUrl" : "aeiou",
-    "createdDateTime" : "2000-01-23T04:56:07.000+0000",
+    "downloadUrl" : "downloadUrl",
+    "createdDateTime" : "2000-01-23T04:56:07.000+00:00",
     "hasSplitByMedia" : true,
-    "locale" : "aeiou",
+    "locale" : "locale",
     "excludeEmptyRows" : true,
-    "exportErrorMessagesType" : "aeiou",
+    "exportErrorMessagesType" : "FAILED_CONVERTING_EXPORT_JOB",
     "enabled" : true,
-    "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
+    "modifiedDateTime" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
     "hasFormatDurations" : true,
-    "period" : "aeiou",
+    "period" : "period",
     "read" : true,
-    "selfUri" : "aeiou",
-    "timeZone" : "aeiou",
-    "csvDelimiter" : "aeiou",
-    "filter" : {
-      "surveyQuestionGroupScore" : "",
-      "developmentActivityOverdue" : true,
-      "abandonDurationsMilliseconds" : [ "" ],
-      "customerSentimentScore" : "",
-      "hasMedia" : true,
-      "botResultList" : [ "aeiou" ],
-      "botMessageTypes" : [ "aeiou" ],
-      "messageTypes" : [ "aeiou" ],
-      "surveyPromoterScore" : "",
-      "transcriptLanguages" : [ "aeiou" ],
-      "journeyActionMapIds" : [ "aeiou" ],
-      "developmentStatusList" : [ "aeiou" ],
-      "mos" : "",
-      "flowTypes" : [ "aeiou" ],
-      "isNotResponding" : true,
-      "skillIds" : [ "aeiou" ],
-      "acdDurationsMilliseconds" : [ "" ],
-      "participantPurposes" : [ "aeiou" ],
-      "customerSentimentTrend" : "",
-      "isAssessmentPassed" : true,
-      "botRecognitionFailureReasonList" : [ "aeiou" ],
-      "isEnded" : true,
-      "abandoned" : true,
-      "originatingDirections" : [ "aeiou" ],
-      "filterUsersByTeamIds" : [ "aeiou" ],
-      "locationIds" : [ "aeiou" ],
-      "addressTos" : [ "aeiou" ],
-      "addressFroms" : [ "aeiou" ],
-      "filterQueuesByUserIds" : [ "aeiou" ],
-      "contactIds" : [ "aeiou" ],
-      "providerList" : [ "aeiou" ],
-      "teamIds" : [ "aeiou" ],
-      "remoteParticipants" : [ "aeiou" ],
-      "hasEvaluation" : true,
-      "conversationIds" : [ "aeiou" ],
-      "surveyNpsScore" : "",
-      "reportsTos" : [ "aeiou" ],
-      "journeyFrequencyCapReasons" : [ "aeiou" ],
-      "conversationProperties" : {
-        "isAcd" : true,
-        "isVoicemail" : true,
-        "isCobrowse" : true,
-        "isWaiting" : true,
-        "filterWrapUpNotes" : true,
-        "isPreferred" : true,
-        "isMonitored" : true,
-        "isActive" : true,
-        "isScreenshare" : true,
-        "matchAll" : true,
-        "isFlagged" : true
-      },
-      "isCampaign" : true,
-      "promoterScores" : [ "" ],
-      "emailDeliveryStatusList" : [ "aeiou" ],
-      "sipCallIds" : [ "aeiou" ],
-      "flowOutcomeIds" : [ "aeiou" ],
-      "flowOutcomeValues" : [ "aeiou" ],
-      "conversationInitiators" : [ "aeiou" ],
-      "aniList" : [ "aeiou" ],
-      "wrapUpCodes" : [ "aeiou" ],
-      "journeyUrlEndsWithConditions" : [ "aeiou" ],
-      "isAuthenticated" : true,
-      "journeySegmentIds" : [ "aeiou" ],
-      "surveyFormContextIds" : [ "aeiou" ],
-      "agentCallbackOwnerIds" : [ "aeiou" ],
-      "journeyOutcomeIds" : [ "aeiou" ],
-      "languageGroups" : [ "aeiou" ],
-      "outboundCampaignIds" : [ "aeiou" ],
-      "evaluationFormIds" : [ "aeiou" ],
-      "surveyStatuses" : [ "aeiou" ],
-      "botProductList" : [ "aeiou" ],
-      "flowDisconnectReasons" : [ "aeiou" ],
-      "journeyUrlNotEqualConditions" : [ "aeiou" ],
-      "journeyUrlStartsWithConditions" : [ "aeiou" ],
-      "hasAgentAssistId" : true,
-      "flowMilestoneIds" : [ "aeiou" ],
-      "botVersions" : [ "aeiou" ],
-      "hasCustomerParticipated" : true,
-      "queueIds" : [ "aeiou" ],
-      "flowOutTypes" : [ "aeiou" ],
-      "developmentModuleIds" : [ "aeiou" ],
-      "roleIds" : [ "aeiou" ],
-      "managementUnitIds" : [ "aeiou" ],
-      "hasScoredEvaluation" : true,
-      "externalContactIds" : [ "aeiou" ],
-      "journeyUrlContainsAnyConditions" : [ "aeiou" ],
-      "dnisList" : [ "aeiou" ],
-      "journeyActionTargetIds" : [ "aeiou" ],
-      "developmentName" : "aeiou",
-      "journeyBlockingScheduleGroupIds" : [ "aeiou" ],
-      "sessionDnisList" : [ "aeiou" ],
-      "transferred" : true,
-      "journeyBlockingEmergencyScheduleGroupIds" : [ "aeiou" ],
-      "callbackNumberList" : [ "aeiou" ],
-      "isSurveyed" : true,
-      "divisionIds" : [ "aeiou" ],
-      "surveyTotalScore" : "",
-      "evaluatorIds" : [ "aeiou" ],
-      "evaluatedAgentIds" : [ "aeiou" ],
-      "flowEntryReasons" : [ "aeiou" ],
-      "groupIds" : [ "aeiou" ],
-      "surveyFormIds" : [ "aeiou" ],
-      "flowVersions" : [ "aeiou" ],
-      "journeyBlockingActionMapIds" : [ "aeiou" ],
-      "surveyScores" : [ "" ],
-      "isConsulted" : true,
-      "transcripts" : [ {
-        "contains" : [ "aeiou" ],
-        "exactMatch" : [ "aeiou" ],
-        "doesNotContain" : [ "aeiou" ]
-      } ],
-      "externalOrgIds" : [ "aeiou" ],
-      "languageIds" : [ "aeiou" ],
-      "hasJourneyActionMapId" : true,
-      "developmentTypeList" : [ "aeiou" ],
-      "botFinalIntentList" : [ "aeiou" ],
-      "directions" : [ "aeiou" ],
-      "hasJourneyCustomerId" : true,
-      "showFirstQueue" : true,
-      "journeyActionMapTypes" : [ "aeiou" ],
-      "holdDurationsMilliseconds" : [ "" ],
-      "journeyUrlNotContainsAnyConditions" : [ "aeiou" ],
-      "handleDurationsMilliseconds" : [ "" ],
-      "flowDestinationTypes" : [ "aeiou" ],
-      "journeyUrlNotContainsAllConditions" : [ "aeiou" ],
-      "callbackInterval" : "aeiou",
-      "usedRoutingTypes" : [ "aeiou" ],
-      "botProviderList" : [ "aeiou" ],
-      "botIntentList" : [ "aeiou" ],
-      "talkDurationsMilliseconds" : [ "" ],
-      "durationsMilliseconds" : [ {
-        "lt" : 1.3579000000000001069366817318950779736042022705078125,
-        "gte" : 1.3579000000000001069366817318950779736042022705078125,
-        "lte" : 1.3579000000000001069366817318950779736042022705078125,
-        "gt" : 1.3579000000000001069366817318950779736042022705078125
-      } ],
-      "skillGroups" : [ "aeiou" ],
-      "isConsultTransferred" : true,
-      "blockedReasons" : [ "aeiou" ],
-      "evaluationScore" : "",
-      "journeyUrlEqualConditions" : [ "aeiou" ],
-      "userIds" : [ "aeiou" ],
-      "acwDurationsMilliseconds" : [ "" ],
-      "botSlotList" : [ "aeiou" ],
-      "isBlindTransferred" : true,
-      "transcriptTopics" : [ {
-        "excludes" : [ "aeiou" ],
-        "includes" : [ "aeiou" ]
-      } ],
-      "externalTags" : [ "aeiou" ],
-      "isAcdInteraction" : true,
-      "outboundContactListIds" : [ "aeiou" ],
-      "answered" : true,
-      "journeyUrlContainsAllConditions" : [ "aeiou" ],
-      "requestedRoutingTypes" : [ "aeiou" ],
-      "flowTransferTargets" : [ "aeiou" ],
-      "filterUsersByQueueIds" : [ "aeiou" ],
-      "developmentRoleList" : [ "aeiou" ],
-      "evaluationCriticalScore" : "",
-      "isRecorded" : true,
-      "flowIds" : [ "aeiou" ],
-      "mediaTypes" : [ "aeiou" ],
-      "hasJourneyVisitId" : true,
-      "topicIds" : [ "aeiou" ],
-      "flowEntryTypes" : [ "aeiou" ],
-      "isAgentOwnedCallback" : true,
-      "botIds" : [ "aeiou" ]
-    },
+    "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
+    "csvDelimiter" : "SEMICOLON",
+    "filter" : "{}",
     "selectedColumns" : [ {
-      "columnOrder" : 123,
-      "columnName" : "aeiou"
+      "columnOrder" : 6,
+      "columnName" : "columnName"
+    }, {
+      "columnOrder" : 6,
+      "columnName" : "columnName"
     } ],
     "emailStatuses" : {
-      "key" : "aeiou"
+      "key" : "Sent"
     },
-    "emailErrorDescription" : "aeiou",
-    "percentageComplete" : 1.3579000000000001069366817318950779736042022705078125,
+    "emailErrorDescription" : "emailErrorDescription",
+    "percentageComplete" : 0.8008281904610115,
     "hasSplitFilters" : true,
-    "name" : "aeiou",
-    "viewType" : "aeiou",
-    "interval" : "aeiou",
-    "runId" : "aeiou",
+    "name" : "name",
+    "viewType" : "QUEUE_PERFORMANCE_SUMMARY_VIEW",
+    "interval" : "interval",
+    "runId" : "runId",
     "hasCustomParticipantAttributes" : true,
-    "recipientEmails" : [ "aeiou" ],
-    "exportFormat" : "aeiou",
-    "status" : "aeiou"
+    "recipientEmails" : [ "recipientEmails", "recipientEmails" ],
+    "exportFormat" : "CSV",
+    "status" : "SUBMITTED"
+  }, {
+    "hasSummaryRow" : true,
+    "downloadUrl" : "downloadUrl",
+    "createdDateTime" : "2000-01-23T04:56:07.000+00:00",
+    "hasSplitByMedia" : true,
+    "locale" : "locale",
+    "excludeEmptyRows" : true,
+    "exportErrorMessagesType" : "FAILED_CONVERTING_EXPORT_JOB",
+    "enabled" : true,
+    "modifiedDateTime" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "hasFormatDurations" : true,
+    "period" : "period",
+    "read" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
+    "csvDelimiter" : "SEMICOLON",
+    "filter" : "{}",
+    "selectedColumns" : [ {
+      "columnOrder" : 6,
+      "columnName" : "columnName"
+    }, {
+      "columnOrder" : 6,
+      "columnName" : "columnName"
+    } ],
+    "emailStatuses" : {
+      "key" : "Sent"
+    },
+    "emailErrorDescription" : "emailErrorDescription",
+    "percentageComplete" : 0.8008281904610115,
+    "hasSplitFilters" : true,
+    "name" : "name",
+    "viewType" : "QUEUE_PERFORMANCE_SUMMARY_VIEW",
+    "interval" : "interval",
+    "runId" : "runId",
+    "hasCustomParticipantAttributes" : true,
+    "recipientEmails" : [ "recipientEmails", "recipientEmails" ],
+    "exportFormat" : "CSV",
+    "status" : "SUBMITTED"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 1,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<ReportingExportJobListing> 
      */
-    open class func getAnalyticsReportingExportsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportingExportJobListing> {
+    open class func getAnalyticsReportingExportsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportingExportJobListing> {        
         let path = "/api/v2/analytics/reporting/exports"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<ReportingExportJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1565,9 +5036,7 @@ open class AnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get all export metadata
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1591,51 +5060,56 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get all export metadata
-     
      - GET /api/v2/analytics/reporting/exports/metadata
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "requiredFilters" : [ "aeiou" ],
-    "supportedFilters" : [ "aeiou" ],
-    "requiredColumnIds" : [ "aeiou" ],
-    "availableColumnIds" : [ "aeiou" ],
+    "requiredFilters" : [ "requiredFilters", "requiredFilters" ],
+    "supportedFilters" : [ "supportedFilters", "supportedFilters" ],
+    "requiredColumnIds" : [ "requiredColumnIds", "requiredColumnIds" ],
+    "availableColumnIds" : [ "availableColumnIds", "availableColumnIds" ],
     "dependentColumnIds" : {
-      "key" : [ "aeiou" ]
+      "key" : [ "dependentColumnIds", "dependentColumnIds" ]
     },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "viewType" : "aeiou",
-    "id" : "aeiou",
-    "dateLimitations" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "viewType" : "QUEUE_PERFORMANCE_SUMMARY_VIEW",
+    "id" : "id",
+    "dateLimitations" : "dateLimitations"
+  }, {
+    "requiredFilters" : [ "requiredFilters", "requiredFilters" ],
+    "supportedFilters" : [ "supportedFilters", "supportedFilters" ],
+    "requiredColumnIds" : [ "requiredColumnIds", "requiredColumnIds" ],
+    "availableColumnIds" : [ "availableColumnIds", "availableColumnIds" ],
+    "dependentColumnIds" : {
+      "key" : [ "dependentColumnIds", "dependentColumnIds" ]
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "viewType" : "QUEUE_PERFORMANCE_SUMMARY_VIEW",
+    "id" : "id",
+    "dateLimitations" : "dateLimitations"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
      */
-    open class func getAnalyticsReportingExportsMetadataWithRequestBuilder() -> RequestBuilder<ReportingExportMetadataJobListing> {
+    open class func getAnalyticsReportingExportsMetadataWithRequestBuilder() -> RequestBuilder<ReportingExportMetadataJobListing> {        
         let path = "/api/v2/analytics/reporting/exports/metadata"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1647,16 +5121,11 @@ open class AnalyticsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get list of reporting metadata.
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter locale: (query) Locale (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1679,67 +5148,80 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get list of reporting metadata.
-     
      - GET /api/v2/analytics/reporting/metadata
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "exampleUrl" : "aeiou",
-    "keywords" : [ "aeiou" ],
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
-    "id" : "aeiou",
-    "title" : "aeiou",
+    "exampleUrl" : "exampleUrl",
+    "keywords" : [ "keywords", "keywords" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "title" : "title",
     "parameters" : [ {
-      "parameterType" : "aeiou",
-      "domain" : "aeiou",
-      "name" : "aeiou",
+      "parameterType" : "UUID",
+      "domain" : "USERID",
+      "name" : "name",
+      "required" : true
+    }, {
+      "parameterType" : "UUID",
+      "domain" : "USERID",
+      "name" : "name",
       "required" : true
     } ],
-    "availableLocales" : [ "aeiou" ]
+    "availableLocales" : [ "availableLocales", "availableLocales" ]
+  }, {
+    "exampleUrl" : "exampleUrl",
+    "keywords" : [ "keywords", "keywords" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "title" : "title",
+    "parameters" : [ {
+      "parameterType" : "UUID",
+      "domain" : "USERID",
+      "name" : "name",
+      "required" : true
+    }, {
+      "parameterType" : "UUID",
+      "domain" : "USERID",
+      "name" : "name",
+      "required" : true
+    } ],
+    "availableLocales" : [ "availableLocales", "availableLocales" ]
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter locale: (query) Locale (optional)
 
      - returns: RequestBuilder<ReportMetaDataEntityListing> 
      */
-    open class func getAnalyticsReportingMetadataWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, locale: String? = nil) -> RequestBuilder<ReportMetaDataEntityListing> {
+    open class func getAnalyticsReportingMetadataWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, locale: String? = nil) -> RequestBuilder<ReportMetaDataEntityListing> {        
         let path = "/api/v2/analytics/reporting/metadata"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "locale": locale
-            
         ])
 
         let requestBuilder: RequestBuilder<ReportMetaDataEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1749,11 +5231,7 @@ open class AnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a reporting metadata.
      
      - parameter reportId: (path) Report ID 
@@ -1779,54 +5257,49 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get a reporting metadata.
-     
      - GET /api/v2/analytics/reporting/{reportId}/metadata
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "exampleUrl" : "aeiou",
-  "keywords" : [ "aeiou" ],
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "id" : "aeiou",
-  "title" : "aeiou",
+  "exampleUrl" : "exampleUrl",
+  "keywords" : [ "keywords", "keywords" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "title" : "title",
   "parameters" : [ {
-    "parameterType" : "aeiou",
-    "domain" : "aeiou",
-    "name" : "aeiou",
+    "parameterType" : "UUID",
+    "domain" : "USERID",
+    "name" : "name",
+    "required" : true
+  }, {
+    "parameterType" : "UUID",
+    "domain" : "USERID",
+    "name" : "name",
     "required" : true
   } ],
-  "availableLocales" : [ "aeiou" ]
-}}]
+  "availableLocales" : [ "availableLocales", "availableLocales" ]
+}, statusCode=200}]
      
      - parameter reportId: (path) Report ID 
      - parameter locale: (query) Locale (optional)
 
      - returns: RequestBuilder<ReportMetaData> 
      */
-    open class func getAnalyticsReportingReportIdMetadataWithRequestBuilder(reportId: String, locale: String? = nil) -> RequestBuilder<ReportMetaData> {
+    open class func getAnalyticsReportingReportIdMetadataWithRequestBuilder(reportId: String, locale: String? = nil) -> RequestBuilder<ReportMetaData> {        
         var path = "/api/v2/analytics/reporting/{reportId}/metadata"
         let reportIdPreEscape = "\(reportId)"
         let reportIdPostEscape = reportIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{reportId}", with: reportIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "locale": locale
-            
         ])
 
         let requestBuilder: RequestBuilder<ReportMetaData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1834,9 +5307,7 @@ open class AnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get a list of report formats
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1860,27 +5331,20 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get a list of report formats
-     
      - GET /api/v2/analytics/reporting/reportformats
      - Get a list of report formats.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example="", statusCode=200}]
 
      - returns: RequestBuilder<[String]> 
      */
-    open class func getAnalyticsReportingReportformatsWithRequestBuilder() -> RequestBuilder<[String]> {
+    open class func getAnalyticsReportingReportformatsWithRequestBuilder() -> RequestBuilder<[String]> {        
         let path = "/api/v2/analytics/reporting/reportformats"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1890,10 +5354,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a scheduled report job.
      
      - parameter scheduleId: (path) Schedule ID 
@@ -1918,64 +5379,56 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get a scheduled report job.
-     
      - GET /api/v2/analytics/reporting/schedules/{scheduleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "quartzCronExpression" : "aeiou",
-  "reportId" : "aeiou",
+  "quartzCronExpression" : "quartzCronExpression",
+  "reportId" : "reportId",
   "lastRun" : {
-    "reportId" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "errorMessage" : "aeiou",
-    "runDurationMsec" : 123456789,
-    "reportFormat" : "aeiou",
-    "id" : "aeiou",
-    "runTime" : "2000-01-23T04:56:07.000+0000",
-    "reportUrl" : "aeiou",
-    "scheduleUri" : "aeiou",
-    "runStatus" : "aeiou"
+    "reportId" : "reportId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "runDurationMsec" : 0,
+    "reportFormat" : "reportFormat",
+    "id" : "id",
+    "runTime" : "2000-01-23T04:56:07.000+00:00",
+    "reportUrl" : "reportUrl",
+    "scheduleUri" : "https://openapi-generator.tech",
+    "runStatus" : "RUNNING"
   },
-  "selfUri" : "aeiou",
-  "nextFireTime" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
-  "timeZone" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "reportFormat" : "aeiou",
-  "locale" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
+  "timeZone" : "timeZone",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "reportFormat" : "reportFormat",
+  "locale" : "locale",
   "enabled" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "timePeriod" : "aeiou",
-  "interval" : "aeiou",
-  "id" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "timePeriod" : "timePeriod",
+  "interval" : "interval",
+  "id" : "id",
   "parameters" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter scheduleId: (path) Schedule ID 
 
      - returns: RequestBuilder<ReportSchedule> 
      */
-    open class func getAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String) -> RequestBuilder<ReportSchedule> {
+    open class func getAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String) -> RequestBuilder<ReportSchedule> {        
         var path = "/api/v2/analytics/reporting/schedules/{scheduleId}"
         let scheduleIdPreEscape = "\(scheduleId)"
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1987,17 +5440,12 @@ open class AnalyticsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Get list of completed scheduled report jobs.
      
      - parameter scheduleId: (path) Schedule ID 
-     - parameter pageNumber: (query)  (optional, default to 1)
-     - parameter pageSize: (query)  (optional, default to 25)
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getAnalyticsReportingScheduleHistory(scheduleId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ReportRunEntryEntityDomainListing?,_ error: Error?) -> Void)) {
@@ -2019,65 +5467,66 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get list of completed scheduled report jobs.
-     
      - GET /api/v2/analytics/reporting/schedules/{scheduleId}/history
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
   "entities" : [ {
-    "reportId" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "errorMessage" : "aeiou",
-    "runDurationMsec" : 123456789,
-    "reportFormat" : "aeiou",
-    "id" : "aeiou",
-    "runTime" : "2000-01-23T04:56:07.000+0000",
-    "reportUrl" : "aeiou",
-    "scheduleUri" : "aeiou",
-    "runStatus" : "aeiou"
+    "reportId" : "reportId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "runDurationMsec" : 0,
+    "reportFormat" : "reportFormat",
+    "id" : "id",
+    "runTime" : "2000-01-23T04:56:07.000+00:00",
+    "reportUrl" : "reportUrl",
+    "scheduleUri" : "https://openapi-generator.tech",
+    "runStatus" : "RUNNING"
+  }, {
+    "reportId" : "reportId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "runDurationMsec" : 0,
+    "reportFormat" : "reportFormat",
+    "id" : "id",
+    "runTime" : "2000-01-23T04:56:07.000+00:00",
+    "reportUrl" : "reportUrl",
+    "scheduleUri" : "https://openapi-generator.tech",
+    "runStatus" : "RUNNING"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter scheduleId: (path) Schedule ID 
-     - parameter pageNumber: (query)  (optional, default to 1)
-     - parameter pageSize: (query)  (optional, default to 25)
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
 
      - returns: RequestBuilder<ReportRunEntryEntityDomainListing> 
      */
-    open class func getAnalyticsReportingScheduleHistoryWithRequestBuilder(scheduleId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportRunEntryEntityDomainListing> {
+    open class func getAnalyticsReportingScheduleHistoryWithRequestBuilder(scheduleId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportRunEntryEntityDomainListing> {        
         var path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history"
         let scheduleIdPreEscape = "\(scheduleId)"
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<ReportRunEntryEntityDomainListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2086,10 +5535,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get most recently completed scheduled report job.
      
      - parameter scheduleId: (path) Schedule ID 
@@ -2114,44 +5560,36 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get most recently completed scheduled report job.
-     
      - GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "reportId" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "errorMessage" : "aeiou",
-  "runDurationMsec" : 123456789,
-  "reportFormat" : "aeiou",
-  "id" : "aeiou",
-  "runTime" : "2000-01-23T04:56:07.000+0000",
-  "reportUrl" : "aeiou",
-  "scheduleUri" : "aeiou",
-  "runStatus" : "aeiou"
-}}]
+  "reportId" : "reportId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "errorMessage" : "errorMessage",
+  "runDurationMsec" : 0,
+  "reportFormat" : "reportFormat",
+  "id" : "id",
+  "runTime" : "2000-01-23T04:56:07.000+00:00",
+  "reportUrl" : "reportUrl",
+  "scheduleUri" : "https://openapi-generator.tech",
+  "runStatus" : "RUNNING"
+}, statusCode=200}]
      
      - parameter scheduleId: (path) Schedule ID 
 
      - returns: RequestBuilder<ReportRunEntry> 
      */
-    open class func getAnalyticsReportingScheduleHistoryLatestWithRequestBuilder(scheduleId: String) -> RequestBuilder<ReportRunEntry> {
+    open class func getAnalyticsReportingScheduleHistoryLatestWithRequestBuilder(scheduleId: String) -> RequestBuilder<ReportRunEntry> {        
         var path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest"
         let scheduleIdPreEscape = "\(scheduleId)"
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2162,11 +5600,7 @@ open class AnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      A completed scheduled report job
      
      - parameter runId: (path) Run ID 
@@ -2192,34 +5626,32 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      A completed scheduled report job
-     
      - GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}
      - A completed scheduled report job.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "reportId" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "errorMessage" : "aeiou",
-  "runDurationMsec" : 123456789,
-  "reportFormat" : "aeiou",
-  "id" : "aeiou",
-  "runTime" : "2000-01-23T04:56:07.000+0000",
-  "reportUrl" : "aeiou",
-  "scheduleUri" : "aeiou",
-  "runStatus" : "aeiou"
-}}]
+  "reportId" : "reportId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "errorMessage" : "errorMessage",
+  "runDurationMsec" : 0,
+  "reportFormat" : "reportFormat",
+  "id" : "id",
+  "runTime" : "2000-01-23T04:56:07.000+00:00",
+  "reportUrl" : "reportUrl",
+  "scheduleUri" : "https://openapi-generator.tech",
+  "runStatus" : "RUNNING"
+}, statusCode=200}]
      
      - parameter runId: (path) Run ID 
      - parameter scheduleId: (path) Schedule ID 
 
      - returns: RequestBuilder<ReportRunEntry> 
      */
-    open class func getAnalyticsReportingScheduleHistoryRunIdWithRequestBuilder(runId: String, scheduleId: String) -> RequestBuilder<ReportRunEntry> {
+    open class func getAnalyticsReportingScheduleHistoryRunIdWithRequestBuilder(runId: String, scheduleId: String) -> RequestBuilder<ReportRunEntry> {        
         var path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}"
         let runIdPreEscape = "\(runId)"
         let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2228,12 +5660,7 @@ open class AnalyticsAPI {
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2244,15 +5671,11 @@ open class AnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a list of scheduled report jobs
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getAnalyticsReportingSchedules(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ReportScheduleEntityListing?,_ error: Error?) -> Void)) {
@@ -2274,81 +5697,103 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get a list of scheduled report jobs
-     
      - GET /api/v2/analytics/reporting/schedules
      - Get a list of scheduled report jobs.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "quartzCronExpression" : "aeiou",
-    "reportId" : "aeiou",
+    "quartzCronExpression" : "quartzCronExpression",
+    "reportId" : "reportId",
     "lastRun" : {
-      "reportId" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "errorMessage" : "aeiou",
-      "runDurationMsec" : 123456789,
-      "reportFormat" : "aeiou",
-      "id" : "aeiou",
-      "runTime" : "2000-01-23T04:56:07.000+0000",
-      "reportUrl" : "aeiou",
-      "scheduleUri" : "aeiou",
-      "runStatus" : "aeiou"
+      "reportId" : "reportId",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "errorMessage" : "errorMessage",
+      "runDurationMsec" : 0,
+      "reportFormat" : "reportFormat",
+      "id" : "id",
+      "runTime" : "2000-01-23T04:56:07.000+00:00",
+      "reportUrl" : "reportUrl",
+      "scheduleUri" : "https://openapi-generator.tech",
+      "runStatus" : "RUNNING"
     },
-    "selfUri" : "aeiou",
-    "nextFireTime" : "2000-01-23T04:56:07.000+0000",
-    "description" : "aeiou",
-    "timeZone" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "reportFormat" : "aeiou",
-    "locale" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
+    "description" : "description",
+    "timeZone" : "timeZone",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "reportFormat" : "reportFormat",
+    "locale" : "locale",
     "enabled" : true,
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "timePeriod" : "aeiou",
-    "interval" : "aeiou",
-    "id" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "timePeriod" : "timePeriod",
+    "interval" : "interval",
+    "id" : "id",
+    "parameters" : {
+      "key" : "{}"
+    }
+  }, {
+    "quartzCronExpression" : "quartzCronExpression",
+    "reportId" : "reportId",
+    "lastRun" : {
+      "reportId" : "reportId",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "errorMessage" : "errorMessage",
+      "runDurationMsec" : 0,
+      "reportFormat" : "reportFormat",
+      "id" : "id",
+      "runTime" : "2000-01-23T04:56:07.000+00:00",
+      "reportUrl" : "reportUrl",
+      "scheduleUri" : "https://openapi-generator.tech",
+      "runStatus" : "RUNNING"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
+    "description" : "description",
+    "timeZone" : "timeZone",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "reportFormat" : "reportFormat",
+    "locale" : "locale",
+    "enabled" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "timePeriod" : "timePeriod",
+    "interval" : "interval",
+    "id" : "id",
     "parameters" : {
       "key" : "{}"
     }
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<ReportScheduleEntityListing> 
      */
-    open class func getAnalyticsReportingSchedulesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportScheduleEntityListing> {
+    open class func getAnalyticsReportingSchedulesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportScheduleEntityListing> {        
         let path = "/api/v2/analytics/reporting/schedules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<ReportScheduleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2356,9 +5801,7 @@ open class AnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get AnalyticsReportingSettings for an organization
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -2382,30 +5825,22 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get AnalyticsReportingSettings for an organization
-     
      - GET /api/v2/analytics/reporting/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "piiMaskingEnabled" : true,
   "queueAgentAccessObfuscation" : true
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<AnalyticsReportingSettings> 
      */
-    open class func getAnalyticsReportingSettingsWithRequestBuilder() -> RequestBuilder<AnalyticsReportingSettings> {
+    open class func getAnalyticsReportingSettingsWithRequestBuilder() -> RequestBuilder<AnalyticsReportingSettings> {        
         let path = "/api/v2/analytics/reporting/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2414,9 +5849,7 @@ open class AnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get a list of report time periods.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -2440,27 +5873,19 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get a list of report time periods.
-     
      - GET /api/v2/analytics/reporting/timeperiods
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ "aeiou" ]}]
+     - examples: [{contentType=application/json, example="", statusCode=200}]
 
      - returns: RequestBuilder<[String]> 
      */
-    open class func getAnalyticsReportingTimeperiodsWithRequestBuilder() -> RequestBuilder<[String]> {
+    open class func getAnalyticsReportingTimeperiodsWithRequestBuilder() -> RequestBuilder<[String]> {        
         let path = "/api/v2/analytics/reporting/timeperiods"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2470,10 +5895,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Get status for async query for user details
      
      - parameter jobId: (path) jobId 
@@ -2498,38 +5920,30 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Get status for async query for user details
-     
      - GET /api/v2/analytics/users/details/jobs/{jobId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorMessage" : "aeiou",
-  "submissionDate" : "2000-01-23T04:56:07.000+0000",
-  "completionDate" : "2000-01-23T04:56:07.000+0000",
-  "state" : "aeiou",
-  "expirationDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "errorMessage" : "errorMessage",
+  "submissionDate" : "2000-01-23T04:56:07.000+00:00",
+  "completionDate" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "QUEUED",
+  "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter jobId: (path) jobId 
 
      - returns: RequestBuilder<AsyncQueryStatus> 
      */
-    open class func getAnalyticsUsersDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<AsyncQueryStatus> {
+    open class func getAnalyticsUsersDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<AsyncQueryStatus> {        
         var path = "/api/v2/analytics/users/details/jobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2541,12 +5955,7 @@ open class AnalyticsAPI {
     
     
     
-    
-    
-    
-    
     /**
-     
      Fetch a page of results for an async query
      
      - parameter jobId: (path) jobId 
@@ -2573,32 +5982,60 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Fetch a page of results for an async query
-     
      - GET /api/v2/analytics/users/details/jobs/{jobId}/results
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "cursor" : "aeiou",
-  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000",
+  "cursor" : "cursor",
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+00:00",
   "userDetails" : [ {
     "primaryPresence" : [ {
-      "systemPresence" : "aeiou",
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "endTime" : "2000-01-23T04:56:07.000+0000",
-      "organizationPresenceId" : "aeiou"
+      "systemPresence" : "AVAILABLE",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "systemPresence" : "AVAILABLE",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "organizationPresenceId" : "organizationPresenceId"
     } ],
     "routingStatus" : [ {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "endTime" : "2000-01-23T04:56:07.000+0000",
-      "routingStatus" : "aeiou"
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatus" : "OFF_QUEUE"
+    }, {
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatus" : "OFF_QUEUE"
     } ],
-    "userId" : "aeiou"
+    "userId" : "userId"
+  }, {
+    "primaryPresence" : [ {
+      "systemPresence" : "AVAILABLE",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "systemPresence" : "AVAILABLE",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "routingStatus" : [ {
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatus" : "OFF_QUEUE"
+    }, {
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatus" : "OFF_QUEUE"
+    } ],
+    "userId" : "userId"
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter jobId: (path) jobId 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
@@ -2606,26 +6043,18 @@ open class AnalyticsAPI {
 
      - returns: RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse> 
      */
-    open class func getAnalyticsUsersDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse> {
+    open class func getAnalyticsUsersDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse> {        
         var path = "/api/v2/analytics/users/details/jobs/{jobId}/results"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "cursor": cursor, 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2633,9 +6062,7 @@ open class AnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Lookup the datalake availability date and time
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -2659,29 +6086,21 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Lookup the datalake availability date and time
-     
      - GET /api/v2/analytics/users/details/jobs/availability
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
 
      - returns: RequestBuilder<DataAvailabilityResponse> 
      */
-    open class func getAnalyticsUsersDetailsJobsAvailabilityWithRequestBuilder() -> RequestBuilder<DataAvailabilityResponse> {
+    open class func getAnalyticsUsersDetailsJobsAvailabilityWithRequestBuilder() -> RequestBuilder<DataAvailabilityResponse> {        
         let path = "/api/v2/analytics/users/details/jobs/availability"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -2691,10 +6110,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Patch AnalyticsReportingSettings values for an organization
      
      - parameter body: (body) AnalyticsReportingSettingsRequest 
@@ -2719,30 +6135,25 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Patch AnalyticsReportingSettings values for an organization
-     
      - PATCH /api/v2/analytics/reporting/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "piiMaskingEnabled" : true,
   "queueAgentAccessObfuscation" : true
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) AnalyticsReportingSettingsRequest 
 
      - returns: RequestBuilder<AnalyticsReportingSettings> 
      */
-    open class func patchAnalyticsReportingSettingsWithRequestBuilder(body: AnalyticsReportingSettings) -> RequestBuilder<AnalyticsReportingSettings> {
+    open class func patchAnalyticsReportingSettingsWithRequestBuilder(body: AnalyticsReportingSettings) -> RequestBuilder<AnalyticsReportingSettings> {        
         let path = "/api/v2/analytics/reporting/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AnalyticsReportingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2751,10 +6162,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for bot aggregates
      
      - parameter body: (body) query 
@@ -2779,57 +6187,298 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for bot aggregates
-     
      - POST /api/v2/analytics/bots/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<BotAggregateQueryResponse> 
      */
-    open class func postAnalyticsBotsAggregatesQueryWithRequestBuilder(body: BotAggregationQuery) -> RequestBuilder<BotAggregateQueryResponse> {
+    open class func postAnalyticsBotsAggregatesQueryWithRequestBuilder(body: BotAggregationQuery) -> RequestBuilder<BotAggregateQueryResponse> {        
         let path = "/api/v2/analytics/bots/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BotAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2839,11 +6488,7 @@ open class AnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Index conversation properties
      
      - parameter conversationId: (path) conversationId 
@@ -2869,39 +6514,38 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Index conversation properties
-     
      - POST /api/v2/analytics/conversations/{conversationId}/details/properties
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "targetDate" : "2000-01-23T04:56:07.000+0000",
-  "sessionId" : "aeiou",
+  "targetDate" : "2000-01-23T04:56:07.000+00:00",
+  "sessionId" : "sessionId",
   "properties" : [ {
-    "propertyType" : "aeiou",
-    "property" : "aeiou",
-    "value" : "aeiou"
+    "propertyType" : "bool",
+    "property" : "property",
+    "value" : "value"
+  }, {
+    "propertyType" : "bool",
+    "property" : "property",
+    "value" : "value"
   } ]
-}}]
+}, statusCode=202}]
      
      - parameter conversationId: (path) conversationId 
      - parameter body: (body) request 
 
      - returns: RequestBuilder<PropertyIndexRequest> 
      */
-    open class func postAnalyticsConversationDetailsPropertiesWithRequestBuilder(conversationId: String, body: PropertyIndexRequest) -> RequestBuilder<PropertyIndexRequest> {
+    open class func postAnalyticsConversationDetailsPropertiesWithRequestBuilder(conversationId: String, body: PropertyIndexRequest) -> RequestBuilder<PropertyIndexRequest> {        
         var path = "/api/v2/analytics/conversations/{conversationId}/details/properties"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PropertyIndexRequest>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2910,10 +6554,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for conversation aggregates
      
      - parameter body: (body) query 
@@ -2938,57 +6579,298 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for conversation aggregates
-     
      - POST /api/v2/analytics/conversations/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<ConversationAggregateQueryResponse> 
      */
-    open class func postAnalyticsConversationsAggregatesQueryWithRequestBuilder(body: ConversationAggregationQuery) -> RequestBuilder<ConversationAggregateQueryResponse> {
+    open class func postAnalyticsConversationsAggregatesQueryWithRequestBuilder(body: ConversationAggregationQuery) -> RequestBuilder<ConversationAggregateQueryResponse> {        
         let path = "/api/v2/analytics/conversations/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ConversationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2997,10 +6879,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for conversation details asynchronously
      
      - parameter body: (body) query 
@@ -3025,29 +6904,24 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for conversation details asynchronously
-     
      - POST /api/v2/analytics/conversations/details/jobs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "jobId" : "aeiou"
-}}]
+  "jobId" : "jobId"
+}, statusCode=202}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<AsyncQueryResponse> 
      */
-    open class func postAnalyticsConversationsDetailsJobsWithRequestBuilder(body: AsyncConversationQuery) -> RequestBuilder<AsyncQueryResponse> {
+    open class func postAnalyticsConversationsDetailsJobsWithRequestBuilder(body: AsyncConversationQuery) -> RequestBuilder<AsyncQueryResponse> {        
         let path = "/api/v2/analytics/conversations/details/jobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3056,10 +6930,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for conversation details
      
      - parameter body: (body) query 
@@ -3084,250 +6955,1804 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for conversation details
-     
      - POST /api/v2/analytics/conversations/details/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalHits" : 123,
+  "totalHits" : 6,
   "aggregations" : [ {
-    "metric" : "aeiou",
-    "count" : 123456789,
-    "type" : "aeiou",
-    "dimension" : "aeiou",
+    "metric" : "metric",
+    "count" : 0,
+    "type" : "termFrequency",
+    "dimension" : "dimension",
     "results" : [ {
-      "count" : 123456789,
-      "lt" : 1.3579000000000001069366817318950779736042022705078125,
-      "gte" : 1.3579000000000001069366817318950779736042022705078125,
-      "value" : "aeiou"
+      "count" : 6,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
+      "value" : "value"
+    }, {
+      "count" : 6,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
+      "value" : "value"
+    } ]
+  }, {
+    "metric" : "metric",
+    "count" : 0,
+    "type" : "termFrequency",
+    "dimension" : "dimension",
+    "results" : [ {
+      "count" : 6,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
+      "value" : "value"
+    }, {
+      "count" : 6,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
+      "value" : "value"
     } ]
   } ],
   "conversations" : [ {
-    "conversationStart" : "2000-01-23T04:56:07.000+0000",
-    "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
+    "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+    "mediaStatsMinConversationMos" : 5.637376656633329,
     "evaluations" : [ {
-      "formId" : "aeiou",
-      "queueId" : "aeiou",
-      "oTotalScore" : 123456789,
-      "oTotalCriticalScore" : 123456789,
-      "contextId" : "aeiou",
-      "userId" : "aeiou",
-      "evaluationId" : "aeiou",
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
       "deleted" : true,
-      "formName" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
-      "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou",
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    }, {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
-    "conversationInitiator" : "aeiou",
-    "conversationId" : "aeiou",
+    "conversationInitiator" : "acd",
+    "conversationId" : "conversationId",
     "surveys" : [ {
-      "queueId" : "aeiou",
-      "surveyStatus" : "aeiou",
-      "oSurveyTotalScore" : 123456789,
-      "surveyId" : "aeiou",
-      "surveyFormName" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "surveyFormId" : "aeiou",
-      "surveyFormContextId" : "aeiou",
-      "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-      "surveyPromoterScore" : 123,
-      "userId" : "aeiou"
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
     } ],
-    "externalTag" : "aeiou",
+    "externalTag" : "externalTag",
     "resolutions" : [ {
-      "queueId" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "nNextContactAvoided" : 123456789,
-      "userId" : "aeiou"
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
     } ],
-    "originatingDirection" : "aeiou",
-    "divisionIds" : [ "aeiou" ],
-    "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-    "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "originatingDirection" : "inbound",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "knowledgeBaseIds" : [ "aeiou" ],
+    "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "selfServed" : true,
     "participants" : [ {
-      "participantId" : "aeiou",
+      "participantId" : "participantId",
       "sessions" : [ {
         "authenticated" : true,
-        "usedRouting" : "aeiou",
-        "cobrowseRole" : "aeiou",
-        "monitoredParticipantId" : "aeiou",
-        "videoAddressSelf" : "aeiou",
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 123 ],
+        "waitingInteractionCounts" : [ 4, 4 ],
         "proposedAgents" : [ {
-          "proposedAgentId" : "aeiou",
-          "agentRank" : 123
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
         } ],
-        "addressSelf" : "aeiou",
+        "addressSelf" : "addressSelf",
         "skipEnabled" : true,
-        "journeyActionMapId" : "aeiou",
-        "remote" : "aeiou",
-        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
-        "roomId" : "aeiou",
-        "messageType" : "aeiou",
-        "removedSkillIds" : [ "aeiou" ],
-        "requestedRoutings" : [ "aeiou" ],
-        "mediaCount" : 123,
-        "dnis" : "aeiou",
-        "videoRoomId" : "aeiou",
-        "flow" : {
-          "entryType" : "aeiou",
-          "issuedCallback" : true,
-          "exitReason" : "aeiou",
-          "transferTargetName" : "aeiou",
-          "flowVersion" : "aeiou",
-          "flowName" : "aeiou",
-          "transferTargetAddress" : "aeiou",
-          "outcomes" : [ {
-            "flowOutcomeId" : "aeiou",
-            "flowOutcome" : "aeiou",
-            "flowOutcomeStartTimestamp" : "2000-01-23T04:56:07.000+0000",
-            "flowOutcomeValue" : "aeiou",
-            "flowOutcomeEndTimestamp" : "2000-01-23T04:56:07.000+0000"
-          } ],
-          "transferType" : "aeiou",
-          "entryReason" : "aeiou",
-          "endingLanguage" : "aeiou",
-          "recognitionFailureReason" : "aeiou",
-          "flowId" : "aeiou",
-          "startingLanguage" : "aeiou",
-          "flowType" : "aeiou"
-        },
-        "dispositionAnalyzer" : "aeiou",
-        "addressOther" : "aeiou",
-        "cobrowseRoomId" : "aeiou",
-        "activeSkillIds" : [ "aeiou" ],
-        "protocolCallId" : "aeiou",
-        "destinationAddresses" : [ "aeiou" ],
-        "flowOutType" : "aeiou",
-        "mediaType" : "aeiou",
-        "outboundCampaignId" : "aeiou",
-        "addressTo" : "aeiou",
-        "edgeId" : "aeiou",
-        "timeoutSeconds" : 123,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
         "metrics" : [ {
-          "name" : "aeiou",
-          "emitDate" : "2000-01-23T04:56:07.000+0000",
-          "value" : 123456789
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
         } ],
-        "journeyActionMapVersion" : 123,
-        "mediaBridgeId" : "aeiou",
-        "agentAssistantId" : "aeiou",
-        "deliveryStatus" : "aeiou",
-        "screenShareRoomId" : "aeiou",
-        "assignerId" : "aeiou",
-        "outboundContactId" : "aeiou",
-        "peerId" : "aeiou",
-        "remoteNameDisplayable" : "aeiou",
-        "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-        "agentBullseyeRing" : 123,
-        "callbackNumbers" : [ "aeiou" ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
-        "screenShareAddressSelf" : "aeiou",
+        "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
-        "sessionDnis" : "aeiou",
+        "sessionDnis" : "sessionDnis",
         "segments" : [ {
-          "queueId" : "aeiou",
+          "queueId" : "queueId",
           "conference" : true,
-          "subject" : "aeiou",
-          "groupId" : "aeiou",
-          "sourceConversationId" : "aeiou",
-          "errorCode" : "aeiou",
-          "requestedRoutingSkillIds" : [ "aeiou" ],
-          "segmentEnd" : "2000-01-23T04:56:07.000+0000",
-          "wrapUpNote" : "aeiou",
-          "destinationSessionId" : "aeiou",
-          "disconnectType" : "aeiou",
-          "requestedRoutingUserIds" : [ "aeiou" ],
-          "segmentStart" : "2000-01-23T04:56:07.000+0000",
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
-            "scoredAgentId" : "aeiou",
-            "agentScore" : 123
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 123456789 ],
-          "wrapUpCode" : "aeiou",
-          "destinationConversationId" : "aeiou",
-          "wrapUpTags" : [ "aeiou" ],
-          "sourceSessionId" : "aeiou",
-          "sipResponseCodes" : [ 123456789 ],
-          "requestedLanguageId" : "aeiou",
-          "segmentType" : "aeiou",
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
           "properties" : [ {
-            "propertyType" : "aeiou",
-            "property" : "aeiou",
-            "value" : "aeiou"
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
           } ]
         } ],
-        "journeyCustomerSessionIdType" : "aeiou",
-        "extendedDeliveryStatus" : "aeiou",
-        "provider" : "aeiou",
-        "journeyCustomerIdType" : "aeiou",
-        "journeyCustomerId" : "aeiou",
-        "callbackUserName" : "aeiou",
-        "addressFrom" : "aeiou",
-        "flowInType" : "aeiou",
-        "ani" : "aeiou",
-        "direction" : "aeiou",
-        "routingRing" : 123,
-        "journeyCustomerSessionId" : "aeiou",
-        "sessionId" : "aeiou",
-        "journeyActionId" : "aeiou",
-        "eligibleAgentCounts" : [ 123 ],
-        "dispositionName" : "aeiou",
-        "scriptId" : "aeiou",
-        "selectedAgentId" : "aeiou",
-        "coachedParticipantId" : "aeiou",
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-          "underrunPackets" : 123456789,
-          "overrunPackets" : 123456789,
-          "maxLatencyMs" : 123456789,
-          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
-          "codecs" : [ "aeiou" ],
-          "eventTime" : "2000-01-23T04:56:07.000+0000",
-          "receivedPackets" : 123456789,
-          "duplicatePackets" : 123456789,
-          "invalidPackets" : 123456789,
-          "discardedPackets" : 123456789
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
         } ],
-        "selectedAgentRank" : 123,
-        "outboundContactListId" : "aeiou"
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
       } ],
-      "externalContactId" : "aeiou",
-      "purpose" : "aeiou",
-      "teamId" : "aeiou",
-      "externalOrganizationId" : "aeiou",
-      "participantName" : "aeiou",
-      "flaggedReason" : "aeiou",
-      "userId" : "aeiou"
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    }, {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    } ]
+  }, {
+    "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "evaluations" : [ {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    }, {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    } ],
+    "conversationInitiator" : "acd",
+    "conversationId" : "conversationId",
+    "surveys" : [ {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    } ],
+    "externalTag" : "externalTag",
+    "resolutions" : [ {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    } ],
+    "originatingDirection" : "inbound",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
+    "customerParticipation" : true,
+    "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "selfServed" : true,
+    "participants" : [ {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    }, {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<AnalyticsConversationQueryResponse> 
      */
-    open class func postAnalyticsConversationsDetailsQueryWithRequestBuilder(body: ConversationQuery) -> RequestBuilder<AnalyticsConversationQueryResponse> {
+    open class func postAnalyticsConversationsDetailsQueryWithRequestBuilder(body: ConversationQuery) -> RequestBuilder<AnalyticsConversationQueryResponse> {        
         let path = "/api/v2/analytics/conversations/details/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AnalyticsConversationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3336,10 +8761,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Search resources.
      
      - parameter body: (body) Search request options 
@@ -3364,237 +8786,1770 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Search resources.
-     
      - POST /api/v2/analytics/conversations/transcripts/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "conversations" : [ {
-    "conversationStart" : "2000-01-23T04:56:07.000+0000",
-    "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
+    "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+    "mediaStatsMinConversationMos" : 5.637376656633329,
     "evaluations" : [ {
-      "formId" : "aeiou",
-      "queueId" : "aeiou",
-      "oTotalScore" : 123456789,
-      "oTotalCriticalScore" : 123456789,
-      "contextId" : "aeiou",
-      "userId" : "aeiou",
-      "evaluationId" : "aeiou",
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
       "deleted" : true,
-      "formName" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
-      "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou",
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    }, {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
-    "conversationInitiator" : "aeiou",
-    "conversationId" : "aeiou",
+    "conversationInitiator" : "acd",
+    "conversationId" : "conversationId",
     "surveys" : [ {
-      "queueId" : "aeiou",
-      "surveyStatus" : "aeiou",
-      "oSurveyTotalScore" : 123456789,
-      "surveyId" : "aeiou",
-      "surveyFormName" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "surveyFormId" : "aeiou",
-      "surveyFormContextId" : "aeiou",
-      "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-      "surveyPromoterScore" : 123,
-      "userId" : "aeiou"
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
     } ],
-    "externalTag" : "aeiou",
+    "externalTag" : "externalTag",
     "resolutions" : [ {
-      "queueId" : "aeiou",
-      "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "nNextContactAvoided" : 123456789,
-      "userId" : "aeiou"
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
     } ],
-    "originatingDirection" : "aeiou",
-    "divisionIds" : [ "aeiou" ],
-    "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-    "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "originatingDirection" : "inbound",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "knowledgeBaseIds" : [ "aeiou" ],
+    "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "selfServed" : true,
     "participants" : [ {
-      "participantId" : "aeiou",
+      "participantId" : "participantId",
       "sessions" : [ {
         "authenticated" : true,
-        "usedRouting" : "aeiou",
-        "cobrowseRole" : "aeiou",
-        "monitoredParticipantId" : "aeiou",
-        "videoAddressSelf" : "aeiou",
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 123 ],
+        "waitingInteractionCounts" : [ 4, 4 ],
         "proposedAgents" : [ {
-          "proposedAgentId" : "aeiou",
-          "agentRank" : 123
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
         } ],
-        "addressSelf" : "aeiou",
+        "addressSelf" : "addressSelf",
         "skipEnabled" : true,
-        "journeyActionMapId" : "aeiou",
-        "remote" : "aeiou",
-        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
-        "roomId" : "aeiou",
-        "messageType" : "aeiou",
-        "removedSkillIds" : [ "aeiou" ],
-        "requestedRoutings" : [ "aeiou" ],
-        "mediaCount" : 123,
-        "dnis" : "aeiou",
-        "videoRoomId" : "aeiou",
-        "flow" : {
-          "entryType" : "aeiou",
-          "issuedCallback" : true,
-          "exitReason" : "aeiou",
-          "transferTargetName" : "aeiou",
-          "flowVersion" : "aeiou",
-          "flowName" : "aeiou",
-          "transferTargetAddress" : "aeiou",
-          "outcomes" : [ {
-            "flowOutcomeId" : "aeiou",
-            "flowOutcome" : "aeiou",
-            "flowOutcomeStartTimestamp" : "2000-01-23T04:56:07.000+0000",
-            "flowOutcomeValue" : "aeiou",
-            "flowOutcomeEndTimestamp" : "2000-01-23T04:56:07.000+0000"
-          } ],
-          "transferType" : "aeiou",
-          "entryReason" : "aeiou",
-          "endingLanguage" : "aeiou",
-          "recognitionFailureReason" : "aeiou",
-          "flowId" : "aeiou",
-          "startingLanguage" : "aeiou",
-          "flowType" : "aeiou"
-        },
-        "dispositionAnalyzer" : "aeiou",
-        "addressOther" : "aeiou",
-        "cobrowseRoomId" : "aeiou",
-        "activeSkillIds" : [ "aeiou" ],
-        "protocolCallId" : "aeiou",
-        "destinationAddresses" : [ "aeiou" ],
-        "flowOutType" : "aeiou",
-        "mediaType" : "aeiou",
-        "outboundCampaignId" : "aeiou",
-        "addressTo" : "aeiou",
-        "edgeId" : "aeiou",
-        "timeoutSeconds" : 123,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
         "metrics" : [ {
-          "name" : "aeiou",
-          "emitDate" : "2000-01-23T04:56:07.000+0000",
-          "value" : 123456789
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
         } ],
-        "journeyActionMapVersion" : 123,
-        "mediaBridgeId" : "aeiou",
-        "agentAssistantId" : "aeiou",
-        "deliveryStatus" : "aeiou",
-        "screenShareRoomId" : "aeiou",
-        "assignerId" : "aeiou",
-        "outboundContactId" : "aeiou",
-        "peerId" : "aeiou",
-        "remoteNameDisplayable" : "aeiou",
-        "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-        "agentBullseyeRing" : 123,
-        "callbackNumbers" : [ "aeiou" ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
-        "screenShareAddressSelf" : "aeiou",
+        "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
-        "sessionDnis" : "aeiou",
+        "sessionDnis" : "sessionDnis",
         "segments" : [ {
-          "queueId" : "aeiou",
+          "queueId" : "queueId",
           "conference" : true,
-          "subject" : "aeiou",
-          "groupId" : "aeiou",
-          "sourceConversationId" : "aeiou",
-          "errorCode" : "aeiou",
-          "requestedRoutingSkillIds" : [ "aeiou" ],
-          "segmentEnd" : "2000-01-23T04:56:07.000+0000",
-          "wrapUpNote" : "aeiou",
-          "destinationSessionId" : "aeiou",
-          "disconnectType" : "aeiou",
-          "requestedRoutingUserIds" : [ "aeiou" ],
-          "segmentStart" : "2000-01-23T04:56:07.000+0000",
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
-            "scoredAgentId" : "aeiou",
-            "agentScore" : 123
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 123456789 ],
-          "wrapUpCode" : "aeiou",
-          "destinationConversationId" : "aeiou",
-          "wrapUpTags" : [ "aeiou" ],
-          "sourceSessionId" : "aeiou",
-          "sipResponseCodes" : [ 123456789 ],
-          "requestedLanguageId" : "aeiou",
-          "segmentType" : "aeiou",
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
           "properties" : [ {
-            "propertyType" : "aeiou",
-            "property" : "aeiou",
-            "value" : "aeiou"
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
           } ]
         } ],
-        "journeyCustomerSessionIdType" : "aeiou",
-        "extendedDeliveryStatus" : "aeiou",
-        "provider" : "aeiou",
-        "journeyCustomerIdType" : "aeiou",
-        "journeyCustomerId" : "aeiou",
-        "callbackUserName" : "aeiou",
-        "addressFrom" : "aeiou",
-        "flowInType" : "aeiou",
-        "ani" : "aeiou",
-        "direction" : "aeiou",
-        "routingRing" : 123,
-        "journeyCustomerSessionId" : "aeiou",
-        "sessionId" : "aeiou",
-        "journeyActionId" : "aeiou",
-        "eligibleAgentCounts" : [ 123 ],
-        "dispositionName" : "aeiou",
-        "scriptId" : "aeiou",
-        "selectedAgentId" : "aeiou",
-        "coachedParticipantId" : "aeiou",
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
-          "underrunPackets" : 123456789,
-          "overrunPackets" : 123456789,
-          "maxLatencyMs" : 123456789,
-          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
-          "codecs" : [ "aeiou" ],
-          "eventTime" : "2000-01-23T04:56:07.000+0000",
-          "receivedPackets" : 123456789,
-          "duplicatePackets" : 123456789,
-          "invalidPackets" : 123456789,
-          "discardedPackets" : 123456789
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
         } ],
-        "selectedAgentRank" : 123,
-        "outboundContactListId" : "aeiou"
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
       } ],
-      "externalContactId" : "aeiou",
-      "purpose" : "aeiou",
-      "teamId" : "aeiou",
-      "externalOrganizationId" : "aeiou",
-      "participantName" : "aeiou",
-      "flaggedReason" : "aeiou",
-      "userId" : "aeiou"
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    }, {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    } ]
+  }, {
+    "conversationStart" : "2000-01-23T04:56:07.000+00:00",
+    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "evaluations" : [ {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    }, {
+      "formId" : "formId",
+      "queueId" : "queueId",
+      "oTotalScore" : 9,
+      "oTotalCriticalScore" : 7,
+      "contextId" : "contextId",
+      "userId" : "userId",
+      "evaluationId" : "evaluationId",
+      "deleted" : true,
+      "formName" : "formName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "rescored" : true,
+      "calibrationId" : "calibrationId",
+      "evaluatorId" : "evaluatorId",
+      "released" : true
+    } ],
+    "conversationInitiator" : "acd",
+    "conversationId" : "conversationId",
+    "surveys" : [ {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "surveyStatus" : "surveyStatus",
+      "oSurveyTotalScore" : 2,
+      "surveyId" : "surveyId",
+      "surveyFormName" : "surveyFormName",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId",
+      "surveyFormContextId" : "surveyFormContextId",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPromoterScore" : 3,
+      "userId" : "userId"
+    } ],
+    "externalTag" : "externalTag",
+    "resolutions" : [ {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    }, {
+      "queueId" : "queueId",
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "nNextContactAvoided" : 4,
+      "userId" : "userId"
+    } ],
+    "originatingDirection" : "inbound",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
+    "customerParticipation" : true,
+    "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "selfServed" : true,
+    "participants" : [ {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
+    }, {
+      "participantId" : "participantId",
+      "sessions" : [ {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      }, {
+        "authenticated" : true,
+        "usedRouting" : "Bullseye",
+        "cobrowseRole" : "cobrowseRole",
+        "monitoredParticipantId" : "monitoredParticipantId",
+        "videoAddressSelf" : "videoAddressSelf",
+        "agentOwned" : true,
+        "waitingInteractionCounts" : [ 4, 4 ],
+        "proposedAgents" : [ {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        }, {
+          "proposedAgentId" : "proposedAgentId",
+          "agentRank" : 5
+        } ],
+        "addressSelf" : "addressSelf",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "journeyActionMapId",
+        "remote" : "remote",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
+        "roomId" : "roomId",
+        "messageType" : "messageType",
+        "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "mediaCount" : 1,
+        "dnis" : "dnis",
+        "videoRoomId" : "videoRoomId",
+        "flow" : "{}",
+        "dispositionAnalyzer" : "dispositionAnalyzer",
+        "addressOther" : "addressOther",
+        "cobrowseRoomId" : "cobrowseRoomId",
+        "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
+        "protocolCallId" : "protocolCallId",
+        "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "flowOutType" : "flowOutType",
+        "mediaType" : "callback",
+        "outboundCampaignId" : "outboundCampaignId",
+        "addressTo" : "addressTo",
+        "edgeId" : "edgeId",
+        "timeoutSeconds" : 1,
+        "metrics" : [ {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        }, {
+          "name" : "name",
+          "emitDate" : "2000-01-23T04:56:07.000+00:00",
+          "value" : 2
+        } ],
+        "journeyActionMapVersion" : 1,
+        "mediaBridgeId" : "mediaBridgeId",
+        "agentAssistantId" : "agentAssistantId",
+        "deliveryStatus" : "DeliveryFailed",
+        "screenShareRoomId" : "screenShareRoomId",
+        "assignerId" : "assignerId",
+        "outboundContactId" : "outboundContactId",
+        "peerId" : "peerId",
+        "remoteNameDisplayable" : "remoteNameDisplayable",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "agentBullseyeRing" : 7,
+        "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "screenShareAddressSelf",
+        "sharingScreen" : true,
+        "sessionDnis" : "sessionDnis",
+        "segments" : [ {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        }, {
+          "queueId" : "queueId",
+          "conference" : true,
+          "subject" : "subject",
+          "groupId" : "groupId",
+          "sourceConversationId" : "sourceConversationId",
+          "errorCode" : "errorCode",
+          "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+00:00",
+          "wrapUpNote" : "wrapUpNote",
+          "destinationSessionId" : "destinationSessionId",
+          "disconnectType" : "client",
+          "requestedRoutingUserIds" : [ "requestedRoutingUserIds", "requestedRoutingUserIds" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+          "scoredAgents" : [ {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          }, {
+            "scoredAgentId" : "scoredAgentId",
+            "agentScore" : 5
+          } ],
+          "videoMuted" : true,
+          "audioMuted" : true,
+          "q850ResponseCodes" : [ 6, 6 ],
+          "wrapUpCode" : "wrapUpCode",
+          "destinationConversationId" : "destinationConversationId",
+          "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
+          "sourceSessionId" : "sourceSessionId",
+          "sipResponseCodes" : [ 6, 6 ],
+          "requestedLanguageId" : "requestedLanguageId",
+          "segmentType" : "alert",
+          "properties" : [ {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          }, {
+            "propertyType" : "bool",
+            "property" : "property",
+            "value" : "value"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "journeyCustomerSessionIdType",
+        "extendedDeliveryStatus" : "extendedDeliveryStatus",
+        "provider" : "provider",
+        "journeyCustomerIdType" : "journeyCustomerIdType",
+        "journeyCustomerId" : "journeyCustomerId",
+        "callbackUserName" : "callbackUserName",
+        "addressFrom" : "addressFrom",
+        "flowInType" : "flowInType",
+        "ani" : "ani",
+        "direction" : "inbound",
+        "routingRing" : 6,
+        "journeyCustomerSessionId" : "journeyCustomerSessionId",
+        "sessionId" : "sessionId",
+        "journeyActionId" : "journeyActionId",
+        "eligibleAgentCounts" : [ 1, 1 ],
+        "dispositionName" : "dispositionName",
+        "scriptId" : "scriptId",
+        "selectedAgentId" : "selectedAgentId",
+        "coachedParticipantId" : "coachedParticipantId",
+        "acwSkipped" : true,
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        }, {
+          "minRFactor" : 6.438423552598547,
+          "underrunPackets" : 1,
+          "overrunPackets" : 3,
+          "maxLatencyMs" : 8,
+          "minMos" : 9.018348186070783,
+          "codecs" : [ "codecs", "codecs" ],
+          "eventTime" : "2000-01-23T04:56:07.000+00:00",
+          "receivedPackets" : 6,
+          "duplicatePackets" : 9,
+          "invalidPackets" : 6,
+          "discardedPackets" : 9
+        } ],
+        "selectedAgentRank" : 7,
+        "outboundContactListId" : "outboundContactListId"
+      } ],
+      "externalContactId" : "externalContactId",
+      "purpose" : "acd",
+      "teamId" : "teamId",
+      "externalOrganizationId" : "externalOrganizationId",
+      "participantName" : "participantName",
+      "flaggedReason" : "general",
+      "userId" : "userId"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Search request options 
 
      - returns: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> 
      */
-    open class func postAnalyticsConversationsTranscriptsQueryWithRequestBuilder(body: TranscriptConversationDetailSearchRequest) -> RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> {
+    open class func postAnalyticsConversationsTranscriptsQueryWithRequestBuilder(body: TranscriptConversationDetailSearchRequest) -> RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> {        
         let path = "/api/v2/analytics/conversations/transcripts/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3603,10 +10558,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for evaluation aggregates
      
      - parameter body: (body) query 
@@ -3631,57 +10583,298 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for evaluation aggregates
-     
      - POST /api/v2/analytics/evaluations/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<EvaluationAggregateQueryResponse> 
      */
-    open class func postAnalyticsEvaluationsAggregatesQueryWithRequestBuilder(body: EvaluationAggregationQuery) -> RequestBuilder<EvaluationAggregateQueryResponse> {
+    open class func postAnalyticsEvaluationsAggregatesQueryWithRequestBuilder(body: EvaluationAggregationQuery) -> RequestBuilder<EvaluationAggregateQueryResponse> {        
         let path = "/api/v2/analytics/evaluations/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3690,10 +10883,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for flow aggregates
      
      - parameter body: (body) query 
@@ -3718,57 +10908,298 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for flow aggregates
-     
      - POST /api/v2/analytics/flows/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<FlowAggregateQueryResponse> 
      */
-    open class func postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: FlowAggregationQuery) -> RequestBuilder<FlowAggregateQueryResponse> {
+    open class func postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: FlowAggregationQuery) -> RequestBuilder<FlowAggregateQueryResponse> {        
         let path = "/api/v2/analytics/flows/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3777,10 +11208,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for flow observations
      
      - parameter body: (body) query 
@@ -3805,75 +11233,314 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for flow observations
-     
      - POST /api/v2/analytics/flows/observations/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "metric" : "aeiou",
+      "metric" : "metric",
       "stats" : {
-        "current" : 1.3579000000000001069366817318950779736042022705078125,
-        "min" : 1.3579000000000001069366817318950779736042022705078125,
-        "max" : 1.3579000000000001069366817318950779736042022705078125,
-        "count" : 123456789,
-        "sum" : 1.3579000000000001069366817318950779736042022705078125,
-        "countPositive" : 123456789,
-        "countNegative" : 123456789,
-        "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-        "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-        "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-        "target" : 1.3579000000000001069366817318950779736042022705078125
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
       },
-      "qualifier" : "aeiou",
+      "qualifier" : "qualifier",
       "observations" : [ {
-        "usedRouting" : "aeiou",
-        "routingPriority" : 123456789,
-        "conversationId" : "aeiou",
-        "convertedTo" : "aeiou",
-        "requestedRoutingSkillIds" : [ "aeiou" ],
-        "sessionId" : "aeiou",
-        "userId" : "aeiou",
-        "addressTo" : "aeiou",
-        "observationDate" : "2000-01-23T04:56:07.000+0000",
-        "teamId" : "aeiou",
-        "requestedRoutings" : [ "aeiou" ],
-        "convertedFrom" : "aeiou",
-        "dnis" : "aeiou",
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
         "scoredAgents" : [ {
-          "scoredAgentId" : "aeiou",
-          "agentScore" : 123
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
         } ],
-        "requestedLanguageId" : "aeiou",
-        "participantName" : "aeiou",
-        "addressFrom" : "aeiou",
-        "ani" : "aeiou",
-        "direction" : "aeiou"
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    }, {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
       } ],
       "truncated" : true
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    }, {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<FlowObservationQueryResponse> 
      */
-    open class func postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: FlowObservationQuery) -> RequestBuilder<FlowObservationQueryResponse> {
+    open class func postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: FlowObservationQuery) -> RequestBuilder<FlowObservationQueryResponse> {        
         let path = "/api/v2/analytics/flows/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3882,10 +11549,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for journey aggregates
      
      - parameter body: (body) query 
@@ -3910,57 +11574,298 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for journey aggregates
-     
      - POST /api/v2/analytics/journeys/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<JourneyAggregateQueryResponse> 
      */
-    open class func postAnalyticsJourneysAggregatesQueryWithRequestBuilder(body: JourneyAggregationQuery) -> RequestBuilder<JourneyAggregateQueryResponse> {
+    open class func postAnalyticsJourneysAggregatesQueryWithRequestBuilder(body: JourneyAggregationQuery) -> RequestBuilder<JourneyAggregateQueryResponse> {        
         let path = "/api/v2/analytics/journeys/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3969,10 +11874,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for queue observations
      
      - parameter body: (body) query 
@@ -3997,78 +11899,317 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for queue observations
-     
      - POST /api/v2/analytics/queues/observations/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "systemToOrganizationMappings" : {
-    "key" : [ "aeiou" ]
+    "key" : [ "systemToOrganizationMappings", "systemToOrganizationMappings" ]
   },
   "results" : [ {
     "data" : [ {
-      "metric" : "aeiou",
+      "metric" : "metric",
       "stats" : {
-        "current" : 1.3579000000000001069366817318950779736042022705078125,
-        "min" : 1.3579000000000001069366817318950779736042022705078125,
-        "max" : 1.3579000000000001069366817318950779736042022705078125,
-        "count" : 123456789,
-        "sum" : 1.3579000000000001069366817318950779736042022705078125,
-        "countPositive" : 123456789,
-        "countNegative" : 123456789,
-        "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-        "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-        "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-        "target" : 1.3579000000000001069366817318950779736042022705078125
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
       },
-      "qualifier" : "aeiou",
+      "qualifier" : "qualifier",
       "observations" : [ {
-        "usedRouting" : "aeiou",
-        "routingPriority" : 123456789,
-        "conversationId" : "aeiou",
-        "convertedTo" : "aeiou",
-        "requestedRoutingSkillIds" : [ "aeiou" ],
-        "sessionId" : "aeiou",
-        "userId" : "aeiou",
-        "addressTo" : "aeiou",
-        "observationDate" : "2000-01-23T04:56:07.000+0000",
-        "teamId" : "aeiou",
-        "requestedRoutings" : [ "aeiou" ],
-        "convertedFrom" : "aeiou",
-        "dnis" : "aeiou",
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
         "scoredAgents" : [ {
-          "scoredAgentId" : "aeiou",
-          "agentScore" : 123
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
         } ],
-        "requestedLanguageId" : "aeiou",
-        "participantName" : "aeiou",
-        "addressFrom" : "aeiou",
-        "ani" : "aeiou",
-        "direction" : "aeiou"
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    }, {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
       } ],
       "truncated" : true
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    }, {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<QueueObservationQueryResponse> 
      */
-    open class func postAnalyticsQueuesObservationsQueryWithRequestBuilder(body: QueueObservationQuery) -> RequestBuilder<QueueObservationQueryResponse> {
+    open class func postAnalyticsQueuesObservationsQueryWithRequestBuilder(body: QueueObservationQuery) -> RequestBuilder<QueueObservationQueryResponse> {        
         let path = "/api/v2/analytics/queues/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<QueueObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4077,10 +12218,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Generate a view export request
      
      - parameter body: (body) ReportingExportJobRequest 
@@ -4105,9 +12243,7 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Generate a view export request
-     
      - POST /api/v2/analytics/reporting/exports
      - This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
      - OAuth:
@@ -4115,221 +12251,54 @@ open class AnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "hasSummaryRow" : true,
-  "downloadUrl" : "aeiou",
-  "createdDateTime" : "2000-01-23T04:56:07.000+0000",
+  "downloadUrl" : "downloadUrl",
+  "createdDateTime" : "2000-01-23T04:56:07.000+00:00",
   "hasSplitByMedia" : true,
-  "locale" : "aeiou",
+  "locale" : "locale",
   "excludeEmptyRows" : true,
-  "exportErrorMessagesType" : "aeiou",
+  "exportErrorMessagesType" : "FAILED_CONVERTING_EXPORT_JOB",
   "enabled" : true,
-  "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
+  "modifiedDateTime" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "hasFormatDurations" : true,
-  "period" : "aeiou",
+  "period" : "period",
   "read" : true,
-  "selfUri" : "aeiou",
-  "timeZone" : "aeiou",
-  "csvDelimiter" : "aeiou",
-  "filter" : {
-    "surveyQuestionGroupScore" : "",
-    "developmentActivityOverdue" : true,
-    "abandonDurationsMilliseconds" : [ "" ],
-    "customerSentimentScore" : "",
-    "hasMedia" : true,
-    "botResultList" : [ "aeiou" ],
-    "botMessageTypes" : [ "aeiou" ],
-    "messageTypes" : [ "aeiou" ],
-    "surveyPromoterScore" : "",
-    "transcriptLanguages" : [ "aeiou" ],
-    "journeyActionMapIds" : [ "aeiou" ],
-    "developmentStatusList" : [ "aeiou" ],
-    "mos" : "",
-    "flowTypes" : [ "aeiou" ],
-    "isNotResponding" : true,
-    "skillIds" : [ "aeiou" ],
-    "acdDurationsMilliseconds" : [ "" ],
-    "participantPurposes" : [ "aeiou" ],
-    "customerSentimentTrend" : "",
-    "isAssessmentPassed" : true,
-    "botRecognitionFailureReasonList" : [ "aeiou" ],
-    "isEnded" : true,
-    "abandoned" : true,
-    "originatingDirections" : [ "aeiou" ],
-    "filterUsersByTeamIds" : [ "aeiou" ],
-    "locationIds" : [ "aeiou" ],
-    "addressTos" : [ "aeiou" ],
-    "addressFroms" : [ "aeiou" ],
-    "filterQueuesByUserIds" : [ "aeiou" ],
-    "contactIds" : [ "aeiou" ],
-    "providerList" : [ "aeiou" ],
-    "teamIds" : [ "aeiou" ],
-    "remoteParticipants" : [ "aeiou" ],
-    "hasEvaluation" : true,
-    "conversationIds" : [ "aeiou" ],
-    "surveyNpsScore" : "",
-    "reportsTos" : [ "aeiou" ],
-    "journeyFrequencyCapReasons" : [ "aeiou" ],
-    "conversationProperties" : {
-      "isAcd" : true,
-      "isVoicemail" : true,
-      "isCobrowse" : true,
-      "isWaiting" : true,
-      "filterWrapUpNotes" : true,
-      "isPreferred" : true,
-      "isMonitored" : true,
-      "isActive" : true,
-      "isScreenshare" : true,
-      "matchAll" : true,
-      "isFlagged" : true
-    },
-    "isCampaign" : true,
-    "promoterScores" : [ "" ],
-    "emailDeliveryStatusList" : [ "aeiou" ],
-    "sipCallIds" : [ "aeiou" ],
-    "flowOutcomeIds" : [ "aeiou" ],
-    "flowOutcomeValues" : [ "aeiou" ],
-    "conversationInitiators" : [ "aeiou" ],
-    "aniList" : [ "aeiou" ],
-    "wrapUpCodes" : [ "aeiou" ],
-    "journeyUrlEndsWithConditions" : [ "aeiou" ],
-    "isAuthenticated" : true,
-    "journeySegmentIds" : [ "aeiou" ],
-    "surveyFormContextIds" : [ "aeiou" ],
-    "agentCallbackOwnerIds" : [ "aeiou" ],
-    "journeyOutcomeIds" : [ "aeiou" ],
-    "languageGroups" : [ "aeiou" ],
-    "outboundCampaignIds" : [ "aeiou" ],
-    "evaluationFormIds" : [ "aeiou" ],
-    "surveyStatuses" : [ "aeiou" ],
-    "botProductList" : [ "aeiou" ],
-    "flowDisconnectReasons" : [ "aeiou" ],
-    "journeyUrlNotEqualConditions" : [ "aeiou" ],
-    "journeyUrlStartsWithConditions" : [ "aeiou" ],
-    "hasAgentAssistId" : true,
-    "flowMilestoneIds" : [ "aeiou" ],
-    "botVersions" : [ "aeiou" ],
-    "hasCustomerParticipated" : true,
-    "queueIds" : [ "aeiou" ],
-    "flowOutTypes" : [ "aeiou" ],
-    "developmentModuleIds" : [ "aeiou" ],
-    "roleIds" : [ "aeiou" ],
-    "managementUnitIds" : [ "aeiou" ],
-    "hasScoredEvaluation" : true,
-    "externalContactIds" : [ "aeiou" ],
-    "journeyUrlContainsAnyConditions" : [ "aeiou" ],
-    "dnisList" : [ "aeiou" ],
-    "journeyActionTargetIds" : [ "aeiou" ],
-    "developmentName" : "aeiou",
-    "journeyBlockingScheduleGroupIds" : [ "aeiou" ],
-    "sessionDnisList" : [ "aeiou" ],
-    "transferred" : true,
-    "journeyBlockingEmergencyScheduleGroupIds" : [ "aeiou" ],
-    "callbackNumberList" : [ "aeiou" ],
-    "isSurveyed" : true,
-    "divisionIds" : [ "aeiou" ],
-    "surveyTotalScore" : "",
-    "evaluatorIds" : [ "aeiou" ],
-    "evaluatedAgentIds" : [ "aeiou" ],
-    "flowEntryReasons" : [ "aeiou" ],
-    "groupIds" : [ "aeiou" ],
-    "surveyFormIds" : [ "aeiou" ],
-    "flowVersions" : [ "aeiou" ],
-    "journeyBlockingActionMapIds" : [ "aeiou" ],
-    "surveyScores" : [ "" ],
-    "isConsulted" : true,
-    "transcripts" : [ {
-      "contains" : [ "aeiou" ],
-      "exactMatch" : [ "aeiou" ],
-      "doesNotContain" : [ "aeiou" ]
-    } ],
-    "externalOrgIds" : [ "aeiou" ],
-    "languageIds" : [ "aeiou" ],
-    "hasJourneyActionMapId" : true,
-    "developmentTypeList" : [ "aeiou" ],
-    "botFinalIntentList" : [ "aeiou" ],
-    "directions" : [ "aeiou" ],
-    "hasJourneyCustomerId" : true,
-    "showFirstQueue" : true,
-    "journeyActionMapTypes" : [ "aeiou" ],
-    "holdDurationsMilliseconds" : [ "" ],
-    "journeyUrlNotContainsAnyConditions" : [ "aeiou" ],
-    "handleDurationsMilliseconds" : [ "" ],
-    "flowDestinationTypes" : [ "aeiou" ],
-    "journeyUrlNotContainsAllConditions" : [ "aeiou" ],
-    "callbackInterval" : "aeiou",
-    "usedRoutingTypes" : [ "aeiou" ],
-    "botProviderList" : [ "aeiou" ],
-    "botIntentList" : [ "aeiou" ],
-    "talkDurationsMilliseconds" : [ "" ],
-    "durationsMilliseconds" : [ {
-      "lt" : 1.3579000000000001069366817318950779736042022705078125,
-      "gte" : 1.3579000000000001069366817318950779736042022705078125,
-      "lte" : 1.3579000000000001069366817318950779736042022705078125,
-      "gt" : 1.3579000000000001069366817318950779736042022705078125
-    } ],
-    "skillGroups" : [ "aeiou" ],
-    "isConsultTransferred" : true,
-    "blockedReasons" : [ "aeiou" ],
-    "evaluationScore" : "",
-    "journeyUrlEqualConditions" : [ "aeiou" ],
-    "userIds" : [ "aeiou" ],
-    "acwDurationsMilliseconds" : [ "" ],
-    "botSlotList" : [ "aeiou" ],
-    "isBlindTransferred" : true,
-    "transcriptTopics" : [ {
-      "excludes" : [ "aeiou" ],
-      "includes" : [ "aeiou" ]
-    } ],
-    "externalTags" : [ "aeiou" ],
-    "isAcdInteraction" : true,
-    "outboundContactListIds" : [ "aeiou" ],
-    "answered" : true,
-    "journeyUrlContainsAllConditions" : [ "aeiou" ],
-    "requestedRoutingTypes" : [ "aeiou" ],
-    "flowTransferTargets" : [ "aeiou" ],
-    "filterUsersByQueueIds" : [ "aeiou" ],
-    "developmentRoleList" : [ "aeiou" ],
-    "evaluationCriticalScore" : "",
-    "isRecorded" : true,
-    "flowIds" : [ "aeiou" ],
-    "mediaTypes" : [ "aeiou" ],
-    "hasJourneyVisitId" : true,
-    "topicIds" : [ "aeiou" ],
-    "flowEntryTypes" : [ "aeiou" ],
-    "isAgentOwnedCallback" : true,
-    "botIds" : [ "aeiou" ]
-  },
+  "selfUri" : "https://openapi-generator.tech",
+  "timeZone" : "timeZone",
+  "csvDelimiter" : "SEMICOLON",
+  "filter" : "{}",
   "selectedColumns" : [ {
-    "columnOrder" : 123,
-    "columnName" : "aeiou"
+    "columnOrder" : 6,
+    "columnName" : "columnName"
+  }, {
+    "columnOrder" : 6,
+    "columnName" : "columnName"
   } ],
   "emailStatuses" : {
-    "key" : "aeiou"
+    "key" : "Sent"
   },
-  "emailErrorDescription" : "aeiou",
-  "percentageComplete" : 1.3579000000000001069366817318950779736042022705078125,
+  "emailErrorDescription" : "emailErrorDescription",
+  "percentageComplete" : 0.8008281904610115,
   "hasSplitFilters" : true,
-  "name" : "aeiou",
-  "viewType" : "aeiou",
-  "interval" : "aeiou",
-  "runId" : "aeiou",
+  "name" : "name",
+  "viewType" : "QUEUE_PERFORMANCE_SUMMARY_VIEW",
+  "interval" : "interval",
+  "runId" : "runId",
   "hasCustomParticipantAttributes" : true,
-  "recipientEmails" : [ "aeiou" ],
-  "exportFormat" : "aeiou",
-  "status" : "aeiou"
-}}]
+  "recipientEmails" : [ "recipientEmails", "recipientEmails" ],
+  "exportFormat" : "CSV",
+  "status" : "SUBMITTED"
+}, statusCode=200}]
      
      - parameter body: (body) ReportingExportJobRequest 
 
      - returns: RequestBuilder<ReportingExportJobResponse> 
      */
-    open class func postAnalyticsReportingExportsWithRequestBuilder(body: ReportingExportJobRequest) -> RequestBuilder<ReportingExportJobResponse> {
+    open class func postAnalyticsReportingExportsWithRequestBuilder(body: ReportingExportJobRequest) -> RequestBuilder<ReportingExportJobResponse> {        
         let path = "/api/v2/analytics/reporting/exports"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ReportingExportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4338,10 +12307,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Place a scheduled report immediately into the reporting queue
      
      - parameter scheduleId: (path) Schedule ID 
@@ -4366,36 +12332,28 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Place a scheduled report immediately into the reporting queue
-     
      - POST /api/v2/analytics/reporting/schedules/{scheduleId}/runreport
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter scheduleId: (path) Schedule ID 
 
      - returns: RequestBuilder<RunNowResponse> 
      */
-    open class func postAnalyticsReportingScheduleRunreportWithRequestBuilder(scheduleId: String) -> RequestBuilder<RunNowResponse> {
+    open class func postAnalyticsReportingScheduleRunreportWithRequestBuilder(scheduleId: String) -> RequestBuilder<RunNowResponse> {        
         var path = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport"
         let scheduleIdPreEscape = "\(scheduleId)"
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -4405,10 +12363,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a scheduled report job
      
      - parameter body: (body) ReportSchedule 
@@ -4433,59 +12388,55 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Create a scheduled report job
-     
      - POST /api/v2/analytics/reporting/schedules
      - Create a scheduled report job.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "quartzCronExpression" : "aeiou",
-  "reportId" : "aeiou",
+  "quartzCronExpression" : "quartzCronExpression",
+  "reportId" : "reportId",
   "lastRun" : {
-    "reportId" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "errorMessage" : "aeiou",
-    "runDurationMsec" : 123456789,
-    "reportFormat" : "aeiou",
-    "id" : "aeiou",
-    "runTime" : "2000-01-23T04:56:07.000+0000",
-    "reportUrl" : "aeiou",
-    "scheduleUri" : "aeiou",
-    "runStatus" : "aeiou"
+    "reportId" : "reportId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "runDurationMsec" : 0,
+    "reportFormat" : "reportFormat",
+    "id" : "id",
+    "runTime" : "2000-01-23T04:56:07.000+00:00",
+    "reportUrl" : "reportUrl",
+    "scheduleUri" : "https://openapi-generator.tech",
+    "runStatus" : "RUNNING"
   },
-  "selfUri" : "aeiou",
-  "nextFireTime" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
-  "timeZone" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "reportFormat" : "aeiou",
-  "locale" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
+  "timeZone" : "timeZone",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "reportFormat" : "reportFormat",
+  "locale" : "locale",
   "enabled" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "timePeriod" : "aeiou",
-  "interval" : "aeiou",
-  "id" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "timePeriod" : "timePeriod",
+  "interval" : "interval",
+  "id" : "id",
   "parameters" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) ReportSchedule 
 
      - returns: RequestBuilder<ReportSchedule> 
      */
-    open class func postAnalyticsReportingSchedulesWithRequestBuilder(body: ReportSchedule) -> RequestBuilder<ReportSchedule> {
+    open class func postAnalyticsReportingSchedulesWithRequestBuilder(body: ReportSchedule) -> RequestBuilder<ReportSchedule> {        
         let path = "/api/v2/analytics/reporting/schedules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ReportSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4494,10 +12445,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for survey aggregates
      
      - parameter body: (body) query 
@@ -4522,57 +12470,298 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for survey aggregates
-     
      - POST /api/v2/analytics/surveys/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<SurveyAggregateQueryResponse> 
      */
-    open class func postAnalyticsSurveysAggregatesQueryWithRequestBuilder(body: SurveyAggregationQuery) -> RequestBuilder<SurveyAggregateQueryResponse> {
+    open class func postAnalyticsSurveysAggregatesQueryWithRequestBuilder(body: SurveyAggregationQuery) -> RequestBuilder<SurveyAggregateQueryResponse> {        
         let path = "/api/v2/analytics/surveys/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4581,10 +12770,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for transcript aggregates
      
      - parameter body: (body) query 
@@ -4609,57 +12795,298 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for transcript aggregates
-     
      - POST /api/v2/analytics/transcripts/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<TranscriptAggregateQueryResponse> 
      */
-    open class func postAnalyticsTranscriptsAggregatesQueryWithRequestBuilder(body: TranscriptAggregationQuery) -> RequestBuilder<TranscriptAggregateQueryResponse> {
+    open class func postAnalyticsTranscriptsAggregatesQueryWithRequestBuilder(body: TranscriptAggregationQuery) -> RequestBuilder<TranscriptAggregateQueryResponse> {        
         let path = "/api/v2/analytics/transcripts/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TranscriptAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4668,10 +13095,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for user aggregates
      
      - parameter body: (body) query 
@@ -4696,60 +13120,301 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for user aggregates
-     
      - POST /api/v2/analytics/users/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "systemToOrganizationMappings" : {
-    "key" : [ "aeiou" ]
+    "key" : [ "systemToOrganizationMappings", "systemToOrganizationMappings" ]
   },
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<UserAggregateQueryResponse> 
      */
-    open class func postAnalyticsUsersAggregatesQueryWithRequestBuilder(body: UserAggregationQuery) -> RequestBuilder<UserAggregateQueryResponse> {
+    open class func postAnalyticsUsersAggregatesQueryWithRequestBuilder(body: UserAggregationQuery) -> RequestBuilder<UserAggregateQueryResponse> {        
         let path = "/api/v2/analytics/users/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4758,10 +13423,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for user details asynchronously
      
      - parameter body: (body) query 
@@ -4786,29 +13448,24 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for user details asynchronously
-     
      - POST /api/v2/analytics/users/details/jobs
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "jobId" : "aeiou"
-}}]
+  "jobId" : "jobId"
+}, statusCode=202}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<AsyncQueryResponse> 
      */
-    open class func postAnalyticsUsersDetailsJobsWithRequestBuilder(body: AsyncUserDetailsQuery) -> RequestBuilder<AsyncQueryResponse> {
+    open class func postAnalyticsUsersDetailsJobsWithRequestBuilder(body: AsyncUserDetailsQuery) -> RequestBuilder<AsyncQueryResponse> {        
         let path = "/api/v2/analytics/users/details/jobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4817,10 +13474,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for user details
      
      - parameter body: (body) query 
@@ -4845,55 +13499,102 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for user details
-     
      - POST /api/v2/analytics/users/details/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalHits" : 123,
+  "totalHits" : 0,
   "userDetails" : [ {
     "primaryPresence" : [ {
-      "systemPresence" : "aeiou",
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "endTime" : "2000-01-23T04:56:07.000+0000",
-      "organizationPresenceId" : "aeiou"
+      "systemPresence" : "AVAILABLE",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "systemPresence" : "AVAILABLE",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "organizationPresenceId" : "organizationPresenceId"
     } ],
     "routingStatus" : [ {
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "endTime" : "2000-01-23T04:56:07.000+0000",
-      "routingStatus" : "aeiou"
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatus" : "OFF_QUEUE"
+    }, {
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatus" : "OFF_QUEUE"
     } ],
-    "userId" : "aeiou"
+    "userId" : "userId"
+  }, {
+    "primaryPresence" : [ {
+      "systemPresence" : "AVAILABLE",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "systemPresence" : "AVAILABLE",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "routingStatus" : [ {
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatus" : "OFF_QUEUE"
+    }, {
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatus" : "OFF_QUEUE"
+    } ],
+    "userId" : "userId"
   } ],
   "aggregations" : [ {
-    "metric" : "aeiou",
-    "count" : 123456789,
-    "type" : "aeiou",
-    "dimension" : "aeiou",
+    "metric" : "metric",
+    "count" : 0,
+    "type" : "termFrequency",
+    "dimension" : "dimension",
     "results" : [ {
-      "count" : 123456789,
-      "lt" : 1.3579000000000001069366817318950779736042022705078125,
-      "gte" : 1.3579000000000001069366817318950779736042022705078125,
-      "value" : "aeiou"
+      "count" : 6,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
+      "value" : "value"
+    }, {
+      "count" : 6,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
+      "value" : "value"
+    } ]
+  }, {
+    "metric" : "metric",
+    "count" : 0,
+    "type" : "termFrequency",
+    "dimension" : "dimension",
+    "results" : [ {
+      "count" : 6,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
+      "value" : "value"
+    }, {
+      "count" : 6,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
+      "value" : "value"
     } ]
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<AnalyticsUserDetailsQueryResponse> 
      */
-    open class func postAnalyticsUsersDetailsQueryWithRequestBuilder(body: UserDetailsQuery) -> RequestBuilder<AnalyticsUserDetailsQueryResponse> {
+    open class func postAnalyticsUsersDetailsQueryWithRequestBuilder(body: UserDetailsQuery) -> RequestBuilder<AnalyticsUserDetailsQueryResponse> {        
         let path = "/api/v2/analytics/users/details/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AnalyticsUserDetailsQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4902,10 +13603,7 @@ open class AnalyticsAPI {
     }
 
     
-    
-    
     /**
-     
      Query for user observations
      
      - parameter body: (body) query 
@@ -4930,75 +13628,314 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Query for user observations
-     
      - POST /api/v2/analytics/users/observations/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "metric" : "aeiou",
+      "metric" : "metric",
       "stats" : {
-        "current" : 1.3579000000000001069366817318950779736042022705078125,
-        "min" : 1.3579000000000001069366817318950779736042022705078125,
-        "max" : 1.3579000000000001069366817318950779736042022705078125,
-        "count" : 123456789,
-        "sum" : 1.3579000000000001069366817318950779736042022705078125,
-        "countPositive" : 123456789,
-        "countNegative" : 123456789,
-        "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-        "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-        "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-        "target" : 1.3579000000000001069366817318950779736042022705078125
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
       },
-      "qualifier" : "aeiou",
+      "qualifier" : "qualifier",
       "observations" : [ {
-        "usedRouting" : "aeiou",
-        "routingPriority" : 123456789,
-        "conversationId" : "aeiou",
-        "convertedTo" : "aeiou",
-        "requestedRoutingSkillIds" : [ "aeiou" ],
-        "sessionId" : "aeiou",
-        "userId" : "aeiou",
-        "addressTo" : "aeiou",
-        "observationDate" : "2000-01-23T04:56:07.000+0000",
-        "teamId" : "aeiou",
-        "requestedRoutings" : [ "aeiou" ],
-        "convertedFrom" : "aeiou",
-        "dnis" : "aeiou",
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
         "scoredAgents" : [ {
-          "scoredAgentId" : "aeiou",
-          "agentScore" : 123
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
         } ],
-        "requestedLanguageId" : "aeiou",
-        "participantName" : "aeiou",
-        "addressFrom" : "aeiou",
-        "ani" : "aeiou",
-        "direction" : "aeiou"
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    }, {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
       } ],
       "truncated" : true
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    }, {
+      "metric" : "metric",
+      "stats" : {
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "max" : 0.8008281904610115,
+        "count" : 1,
+        "sum" : 2.3021358869347655,
+        "countPositive" : 5,
+        "countNegative" : 5,
+        "ratio" : 9.301444243932576,
+        "numerator" : 3.616076749251911,
+        "denominator" : 2.027123023002322,
+        "target" : 4.145608029883936
+      },
+      "qualifier" : "qualifier",
+      "observations" : [ {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      }, {
+        "usedRouting" : "Bullseye",
+        "routingPriority" : 0,
+        "conversationId" : "conversationId",
+        "convertedTo" : "convertedTo",
+        "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+        "sessionId" : "sessionId",
+        "userId" : "userId",
+        "addressTo" : "addressTo",
+        "observationDate" : "2000-01-23T04:56:07.000+00:00",
+        "teamId" : "teamId",
+        "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+        "convertedFrom" : "convertedFrom",
+        "dnis" : "dnis",
+        "scoredAgents" : [ {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        }, {
+          "scoredAgentId" : "scoredAgentId",
+          "agentScore" : 5
+        } ],
+        "requestedLanguageId" : "requestedLanguageId",
+        "participantName" : "participantName",
+        "addressFrom" : "addressFrom",
+        "ani" : "ani",
+        "direction" : "inbound"
+      } ],
+      "truncated" : true
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<UserObservationQueryResponse> 
      */
-    open class func postAnalyticsUsersObservationsQueryWithRequestBuilder(body: UserObservationQuery) -> RequestBuilder<UserObservationQueryResponse> {
+    open class func postAnalyticsUsersObservationsQueryWithRequestBuilder(body: UserObservationQuery) -> RequestBuilder<UserObservationQueryResponse> {        
         let path = "/api/v2/analytics/users/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5008,11 +13945,7 @@ open class AnalyticsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a scheduled report job.
      
      - parameter scheduleId: (path) Schedule ID 
@@ -5038,63 +13971,58 @@ open class AnalyticsAPI {
     }
 
     /**
-     
      Update a scheduled report job.
-     
      - PUT /api/v2/analytics/reporting/schedules/{scheduleId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "quartzCronExpression" : "aeiou",
-  "reportId" : "aeiou",
+  "quartzCronExpression" : "quartzCronExpression",
+  "reportId" : "reportId",
   "lastRun" : {
-    "reportId" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "errorMessage" : "aeiou",
-    "runDurationMsec" : 123456789,
-    "reportFormat" : "aeiou",
-    "id" : "aeiou",
-    "runTime" : "2000-01-23T04:56:07.000+0000",
-    "reportUrl" : "aeiou",
-    "scheduleUri" : "aeiou",
-    "runStatus" : "aeiou"
+    "reportId" : "reportId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "runDurationMsec" : 0,
+    "reportFormat" : "reportFormat",
+    "id" : "id",
+    "runTime" : "2000-01-23T04:56:07.000+00:00",
+    "reportUrl" : "reportUrl",
+    "scheduleUri" : "https://openapi-generator.tech",
+    "runStatus" : "RUNNING"
   },
-  "selfUri" : "aeiou",
-  "nextFireTime" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
-  "timeZone" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "reportFormat" : "aeiou",
-  "locale" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
+  "timeZone" : "timeZone",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "reportFormat" : "reportFormat",
+  "locale" : "locale",
   "enabled" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "timePeriod" : "aeiou",
-  "interval" : "aeiou",
-  "id" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "timePeriod" : "timePeriod",
+  "interval" : "interval",
+  "id" : "id",
   "parameters" : {
     "key" : "{}"
   }
-}}]
+}, statusCode=200}]
      
      - parameter scheduleId: (path) Schedule ID 
      - parameter body: (body) ReportSchedule 
 
      - returns: RequestBuilder<ReportSchedule> 
      */
-    open class func putAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String, body: ReportSchedule) -> RequestBuilder<ReportSchedule> {
+    open class func putAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String, body: ReportSchedule) -> RequestBuilder<ReportSchedule> {        
         var path = "/api/v2/analytics/reporting/schedules/{scheduleId}"
         let scheduleIdPreEscape = "\(scheduleId)"
         let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ReportSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -26,29 +26,17 @@ public class EvaluatorActivity: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, evaluator: User?, numEvaluationsAssigned: Int?, numEvaluationsStarted: Int?, numEvaluationsCompleted: Int?, numCalibrationsAssigned: Int?, numCalibrationsStarted: Int?, numCalibrationsCompleted: Int?, numEvaluationsWithoutViewPermission: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.evaluator = evaluator
-        
         self.numEvaluationsAssigned = numEvaluationsAssigned
-        
         self.numEvaluationsStarted = numEvaluationsStarted
-        
         self.numEvaluationsCompleted = numEvaluationsCompleted
-        
         self.numCalibrationsAssigned = numCalibrationsAssigned
-        
         self.numCalibrationsStarted = numCalibrationsStarted
-        
         self.numCalibrationsCompleted = numCalibrationsCompleted
-        
         self.numEvaluationsWithoutViewPermission = numEvaluationsWithoutViewPermission
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

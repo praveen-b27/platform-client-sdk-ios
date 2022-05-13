@@ -15,9 +15,7 @@ public class NluQualityReportSummary: Codable {
     public var metrics: [NluQualityReportSummaryMetric]?
 
     public init(metrics: [NluQualityReportSummaryMetric]?) {
-        
         self.metrics = metrics
-        
     }
 
 

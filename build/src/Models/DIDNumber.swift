@@ -27,7 +27,7 @@ public class DIDNumber: Codable {
     public var assigned: Bool?
     /** A Uri reference to the DID Pool this DID is a part of. */
     public var didPool: AddressableEntityRef?
-    /** A Uri reference to the owner of this DID.  The owner&#39;s type can be found in ownerType.  If the DID is unassigned, this will be NULL. */
+    /** A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL. */
     public var owner: DomainEntityRef?
     /** The type of the entity that owns this DID.  If the DID is unassigned, this will be NULL. */
     public var ownerType: OwnerType?
@@ -35,23 +35,14 @@ public class DIDNumber: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, number: String?, assigned: Bool?, didPool: AddressableEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.number = number
-        
         self.assigned = assigned
-        
         self.didPool = didPool
-        
         self.owner = owner
-        
         self.ownerType = ownerType
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

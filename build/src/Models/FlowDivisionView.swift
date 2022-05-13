@@ -54,29 +54,17 @@ public class FlowDivisionView: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, _description: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, supportedLanguages: [SupportedLanguage]?, publishedVersion: FlowVersion?, debugVersion: FlowVersion?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self.type = type
-        
         self._description = _description
-        
         self.inputSchema = inputSchema
-        
         self.outputSchema = outputSchema
-        
         self.supportedLanguages = supportedLanguages
-        
         self.publishedVersion = publishedVersion
-        
         self.debugVersion = debugVersion
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

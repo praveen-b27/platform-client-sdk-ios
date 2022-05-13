@@ -15,9 +15,7 @@ public class EdgeLogsJobUploadRequest: Codable {
     public var fileIds: [String]?
 
     public init(fileIds: [String]?) {
-        
         self.fileIds = fileIds
-        
     }
 
 

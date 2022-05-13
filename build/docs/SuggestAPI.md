@@ -40,7 +40,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let q64: String = "" // q64
-let expand: [String] = [SuggestAPI.Expand_getSearch.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 let profile: Bool = true // profile
 
 // Code example
@@ -61,7 +61,7 @@ SuggestAPI.getSearch(q64: q64, expand: expand, profile: profile) { (response, er
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation"), images ("images"), addressverificationdetails ("addressVerificationDetails") |
-| **profile** | **Bool**| profile | [optional] [default to true] |
+| **profile** | **Bool**| profile | [optional] |
 {: class="table-striped"}
 
 
@@ -96,7 +96,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let q64: String = "" // q64
-let expand: [String] = [SuggestAPI.Expand_getSearchSuggest.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 let profile: Bool = true // profile
 
 // Code example
@@ -117,7 +117,7 @@ SuggestAPI.getSearchSuggest(q64: q64, expand: expand, profile: profile) { (respo
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation"), images ("images"), addressverificationdetails ("addressVerificationDetails") |
-| **profile** | **Bool**| profile | [optional] [default to true] |
+| **profile** | **Bool**| profile | [optional] |
 {: class="table-striped"}
 
 
@@ -171,7 +171,7 @@ SuggestAPI.postSearch(body: body, profile: profile) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**SearchRequest**](SearchRequest.html)| Search request options | |
-| **profile** | **Bool**| profile | [optional] [default to true] |
+| **profile** | **Bool**| profile | [optional] |
 {: class="table-striped"}
 
 
@@ -225,7 +225,7 @@ SuggestAPI.postSearchSuggest(body: body, profile: profile) { (response, error) i
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**SuggestSearchRequest**](SuggestSearchRequest.html)| Search request options | |
-| **profile** | **Bool**| profile | [optional] [default to true] |
+| **profile** | **Bool**| profile | [optional] |
 {: class="table-striped"}
 
 

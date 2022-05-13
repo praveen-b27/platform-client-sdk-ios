@@ -17,11 +17,8 @@ public class TrustRequestCreate: Codable {
     public var groupIds: [String]?
 
     public init(userIds: [String]?, groupIds: [String]?) {
-        
         self.userIds = userIds
-        
         self.groupIds = groupIds
-        
     }
 
 

@@ -30,41 +30,23 @@ public class FaxTopicFaxDataV2: Codable {
     public var read: Bool?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, workspace: FaxTopicWorkspaceData?, createdBy: FaxTopicUserData?, contentType: String?, contentLength: Int?, filename: String?, changeNumber: Int?, dateUploaded: Date?, uploadedBy: FaxTopicUserData?, lockInfo: FaxTopicLockData?, selfUri: String?, callerAddress: String?, receiverAddress: String?, read: Bool?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.workspace = workspace
-        
         self.createdBy = createdBy
-        
         self.contentType = contentType
-        
         self.contentLength = contentLength
-        
         self.filename = filename
-        
         self.changeNumber = changeNumber
-        
         self.dateUploaded = dateUploaded
-        
         self.uploadedBy = uploadedBy
-        
         self.lockInfo = lockInfo
-        
         self.selfUri = selfUri
-        
         self.callerAddress = callerAddress
-        
         self.receiverAddress = receiverAddress
-        
         self.read = read
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

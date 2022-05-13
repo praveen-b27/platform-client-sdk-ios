@@ -36,31 +36,18 @@ public class ResponseAsset: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, contentLength: Int64?, contentLocation: String?, contentType: String?, dateCreated: Date?, createdBy: DomainEntityRef?, dateModified: Date?, modifiedBy: DomainEntityRef?, responses: [DomainEntityRef]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self.contentLength = contentLength
-        
         self.contentLocation = contentLocation
-        
         self.contentType = contentType
-        
         self.dateCreated = dateCreated
-        
         self.createdBy = createdBy
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.responses = responses
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -39,30 +39,20 @@ public class TranscriptSearchCriteria: Codable {
     public var _operator: Operator?
     /** Groups multiple conditions */
     public var group: [TranscriptSearchCriteria]?
-    /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX. */
+    /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd'T'HH:mm:ss.SSSX. */
     public var dateFormat: String?
     public var type: ModelType?
 
     public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [TranscriptSearchCriteria]?, dateFormat: String?, type: ModelType?) {
-        
         self.endValue = endValue
-        
         self.values = values
-        
         self.startValue = startValue
-        
         self.fields = fields
-        
         self.value = value
-        
         self._operator = _operator
-        
         self.group = group
-        
         self.dateFormat = dateFormat
-        
         self.type = type
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

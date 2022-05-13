@@ -22,17 +22,11 @@ public class BusinessUnit: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, settings: BusinessUnitSettings?, division: DivisionReference?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.settings = settings
-        
         self.division = division
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

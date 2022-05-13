@@ -17,11 +17,8 @@ public class ForecastServiceLevelResponse: Codable {
     public var seconds: Int?
 
     public init(percent: Int?, seconds: Int?) {
-        
         self.percent = percent
-        
         self.seconds = seconds
-        
     }
 
 

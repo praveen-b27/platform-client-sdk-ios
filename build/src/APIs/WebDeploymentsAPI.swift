@@ -11,10 +11,7 @@ import Foundation
 
 open class WebDeploymentsAPI {
     
-    
-    
     /**
-     
      Delete all versions of a configuration
      
      - parameter configurationId: (path) The configuration version ID 
@@ -32,11 +29,8 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Delete all versions of a configuration
-     
      - DELETE /api/v2/webdeployments/configurations/{configurationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class WebDeploymentsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWebdeploymentsConfigurationWithRequestBuilder(configurationId: String) -> RequestBuilder<Void> {
+    open class func deleteWebdeploymentsConfigurationWithRequestBuilder(configurationId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/webdeployments/configurations/{configurationId}"
         let configurationIdPreEscape = "\(configurationId)"
         let configurationIdPostEscape = configurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{configurationId}", with: configurationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +55,7 @@ open class WebDeploymentsAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a deployment
      
      - parameter deploymentId: (path) The deployment ID 
@@ -87,11 +73,8 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Delete a deployment
-     
      - DELETE /api/v2/webdeployments/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -100,18 +83,13 @@ open class WebDeploymentsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteWebdeploymentsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<Void> {
+    open class func deleteWebdeploymentsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/webdeployments/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -122,11 +100,7 @@ open class WebDeploymentsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a configuration version
      
      - parameter configurationId: (path) The configuration version ID 
@@ -152,146 +126,40 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Get a configuration version
-     
      - GET /api/v2/webdeployments/configurations/{configurationId}/versions/{versionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "languages" : "en-us, de-de",
-  "journeyEvents" : {
-    "formsTrackEvents" : [ {
-      "formName" : "aeiou",
-      "selector" : "aeiou",
-      "captureDataOnFormSubmit" : true,
-      "captureDataOnFormAbandon" : true
-    } ],
-    "idleEvents" : [ {
-      "eventName" : "aeiou",
-      "idleAfterSeconds" : 123456789
-    } ],
-    "inViewportEvents" : [ "" ],
-    "pageviewConfig" : "aeiou",
-    "excludedQueryParameters" : [ "aeiou" ],
-    "scrollDepthEvents" : [ {
-      "percentage" : 123,
-      "eventName" : "aeiou"
-    } ],
-    "searchQueryParameters" : [ "aeiou" ],
-    "clickEvents" : [ {
-      "eventName" : "aeiou",
-      "selector" : "aeiou"
-    } ],
-    "enabled" : true,
-    "shouldKeepUrlFragment" : true
-  },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "cobrowse" : {
-    "allowAgentControl" : true,
-    "maskSelectors" : [ "aeiou" ],
-    "enabled" : true
-  },
-  "authenticationSettings" : {
-    "integrationId" : "aeiou",
-    "enabled" : true
-  },
+  "journeyEvents" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "cobrowse" : "{}",
+  "authenticationSettings" : "{}",
   "version" : "DRAFT, 1, 2",
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "defaultLanguage" : "en-us, de-de",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "messenger" : {
-    "launcherButton" : {
-      "visibility" : "aeiou"
-    },
-    "homeScreen" : {
-      "enabled" : true
-    },
-    "styles" : {
-      "primaryColor" : "#a7017c"
-    },
-    "fileUpload" : {
-      "modes" : [ {
-        "maxFileSizeKB" : 123456789,
-        "fileTypes" : [ "aeiou" ]
-      } ]
-    },
-    "enabled" : true,
-    "apps" : {
-      "conversations" : {
-        "showUserTypingIndicator" : true,
-        "markdown" : {
-          "enabled" : true
-        },
-        "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true,
-        "autoStart" : {
-          "enabled" : true
-        }
-      },
-      "knowledge" : {
-        "knowledgeBase" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "enabled" : true
-      }
-    }
-  },
-  "publishedUser" : "",
-  "name" : "aeiou",
-  "lastModifiedUser" : "",
-  "id" : "aeiou",
-  "position" : {
-    "bottomSpace" : 123,
-    "sideSpace" : 123,
-    "alignment" : "aeiou"
-  },
-  "supportCenter" : {
-    "customMessages" : [ {
-      "defaultValue" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "knowledgeBase" : "",
-    "screens" : [ {
-      "type" : "aeiou",
-      "moduleSettings" : [ {
-        "type" : "aeiou",
-        "enabled" : true
-      } ]
-    } ],
-    "enabledCategories" : [ "" ],
-    "routerType" : "aeiou",
-    "enabled" : true,
-    "styleSetting" : {
-      "globalStyle" : {
-        "backgroundColor" : "aeiou",
-        "fontFamily" : "aeiou",
-        "primaryColorDark" : "aeiou",
-        "primaryColor" : "aeiou",
-        "primaryColorLight" : "aeiou",
-        "textColor" : "aeiou"
-      },
-      "heroStyle" : {
-        "backgroundColor" : "aeiou",
-        "textColor" : "aeiou"
-      }
-    }
-  },
-  "createdUser" : "",
-  "status" : "aeiou"
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "messenger" : "{}",
+  "publishedUser" : "{}",
+  "name" : "name",
+  "lastModifiedUser" : "{}",
+  "id" : "id",
+  "position" : "{}",
+  "supportCenter" : "{}",
+  "createdUser" : "{}",
+  "status" : "Pending"
+}, statusCode=200}]
      
      - parameter configurationId: (path) The configuration version ID 
      - parameter versionId: (path) The version of the configuration to get 
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersion> 
      */
-    open class func getWebdeploymentsConfigurationVersionWithRequestBuilder(configurationId: String, versionId: String) -> RequestBuilder<WebDeploymentConfigurationVersion> {
+    open class func getWebdeploymentsConfigurationVersionWithRequestBuilder(configurationId: String, versionId: String) -> RequestBuilder<WebDeploymentConfigurationVersion> {        
         var path = "/api/v2/webdeployments/configurations/{configurationId}/versions/{versionId}"
         let configurationIdPreEscape = "\(configurationId)"
         let configurationIdPostEscape = configurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -300,12 +168,7 @@ open class WebDeploymentsAPI {
         let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -315,10 +178,7 @@ open class WebDeploymentsAPI {
     }
 
     
-    
-    
     /**
-     
      Get the versions of a configuration
      
      - parameter configurationId: (path) The configuration version ID 
@@ -343,160 +203,71 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Get the versions of a configuration
-     
      - GET /api/v2/webdeployments/configurations/{configurationId}/versions
      - This returns the 50 most recent versions for this configuration
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
     "languages" : "en-us, de-de",
-    "journeyEvents" : {
-      "formsTrackEvents" : [ {
-        "formName" : "aeiou",
-        "selector" : "aeiou",
-        "captureDataOnFormSubmit" : true,
-        "captureDataOnFormAbandon" : true
-      } ],
-      "idleEvents" : [ {
-        "eventName" : "aeiou",
-        "idleAfterSeconds" : 123456789
-      } ],
-      "inViewportEvents" : [ "" ],
-      "pageviewConfig" : "aeiou",
-      "excludedQueryParameters" : [ "aeiou" ],
-      "scrollDepthEvents" : [ {
-        "percentage" : 123,
-        "eventName" : "aeiou"
-      } ],
-      "searchQueryParameters" : [ "aeiou" ],
-      "clickEvents" : [ {
-        "eventName" : "aeiou",
-        "selector" : "aeiou"
-      } ],
-      "enabled" : true,
-      "shouldKeepUrlFragment" : true
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "cobrowse" : {
-      "allowAgentControl" : true,
-      "maskSelectors" : [ "aeiou" ],
-      "enabled" : true
-    },
-    "authenticationSettings" : {
-      "integrationId" : "aeiou",
-      "enabled" : true
-    },
+    "journeyEvents" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "cobrowse" : "{}",
+    "authenticationSettings" : "{}",
     "version" : "DRAFT, 1, 2",
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "defaultLanguage" : "en-us, de-de",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "messenger" : {
-      "launcherButton" : {
-        "visibility" : "aeiou"
-      },
-      "homeScreen" : {
-        "enabled" : true
-      },
-      "styles" : {
-        "primaryColor" : "#a7017c"
-      },
-      "fileUpload" : {
-        "modes" : [ {
-          "maxFileSizeKB" : 123456789,
-          "fileTypes" : [ "aeiou" ]
-        } ]
-      },
-      "enabled" : true,
-      "apps" : {
-        "conversations" : {
-          "showUserTypingIndicator" : true,
-          "markdown" : {
-            "enabled" : true
-          },
-          "autoStartType" : "aeiou",
-          "showAgentTypingIndicator" : true,
-          "autoStart" : {
-            "enabled" : true
-          }
-        },
-        "knowledge" : {
-          "knowledgeBase" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "enabled" : true
-        }
-      }
-    },
-    "publishedUser" : "",
-    "name" : "aeiou",
-    "lastModifiedUser" : "",
-    "id" : "aeiou",
-    "position" : {
-      "bottomSpace" : 123,
-      "sideSpace" : 123,
-      "alignment" : "aeiou"
-    },
-    "supportCenter" : {
-      "customMessages" : [ {
-        "defaultValue" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "knowledgeBase" : "",
-      "screens" : [ {
-        "type" : "aeiou",
-        "moduleSettings" : [ {
-          "type" : "aeiou",
-          "enabled" : true
-        } ]
-      } ],
-      "enabledCategories" : [ "" ],
-      "routerType" : "aeiou",
-      "enabled" : true,
-      "styleSetting" : {
-        "globalStyle" : {
-          "backgroundColor" : "aeiou",
-          "fontFamily" : "aeiou",
-          "primaryColorDark" : "aeiou",
-          "primaryColor" : "aeiou",
-          "primaryColorLight" : "aeiou",
-          "textColor" : "aeiou"
-        },
-        "heroStyle" : {
-          "backgroundColor" : "aeiou",
-          "textColor" : "aeiou"
-        }
-      }
-    },
-    "createdUser" : "",
-    "status" : "aeiou"
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "messenger" : "{}",
+    "publishedUser" : "{}",
+    "name" : "name",
+    "lastModifiedUser" : "{}",
+    "id" : "id",
+    "position" : "{}",
+    "supportCenter" : "{}",
+    "createdUser" : "{}",
+    "status" : "Pending"
+  }, {
+    "languages" : "en-us, de-de",
+    "journeyEvents" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "cobrowse" : "{}",
+    "authenticationSettings" : "{}",
+    "version" : "DRAFT, 1, 2",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "defaultLanguage" : "en-us, de-de",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "messenger" : "{}",
+    "publishedUser" : "{}",
+    "name" : "name",
+    "lastModifiedUser" : "{}",
+    "id" : "id",
+    "position" : "{}",
+    "supportCenter" : "{}",
+    "createdUser" : "{}",
+    "status" : "Pending"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter configurationId: (path) The configuration version ID 
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersionEntityListing> 
      */
-    open class func getWebdeploymentsConfigurationVersionsWithRequestBuilder(configurationId: String) -> RequestBuilder<WebDeploymentConfigurationVersionEntityListing> {
+    open class func getWebdeploymentsConfigurationVersionsWithRequestBuilder(configurationId: String) -> RequestBuilder<WebDeploymentConfigurationVersionEntityListing> {        
         var path = "/api/v2/webdeployments/configurations/{configurationId}/versions"
         let configurationIdPreEscape = "\(configurationId)"
         let configurationIdPostEscape = configurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{configurationId}", with: configurationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -506,10 +277,7 @@ open class WebDeploymentsAPI {
     }
 
     
-    
-    
     /**
-     
      Get the configuration draft
      
      - parameter configurationId: (path) The configuration version ID 
@@ -534,156 +302,45 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Get the configuration draft
-     
      - GET /api/v2/webdeployments/configurations/{configurationId}/versions/draft
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "languages" : "en-us, de-de",
-  "journeyEvents" : {
-    "formsTrackEvents" : [ {
-      "formName" : "aeiou",
-      "selector" : "aeiou",
-      "captureDataOnFormSubmit" : true,
-      "captureDataOnFormAbandon" : true
-    } ],
-    "idleEvents" : [ {
-      "eventName" : "aeiou",
-      "idleAfterSeconds" : 123456789
-    } ],
-    "inViewportEvents" : [ "" ],
-    "pageviewConfig" : "aeiou",
-    "excludedQueryParameters" : [ "aeiou" ],
-    "scrollDepthEvents" : [ {
-      "percentage" : 123,
-      "eventName" : "aeiou"
-    } ],
-    "searchQueryParameters" : [ "aeiou" ],
-    "clickEvents" : [ {
-      "eventName" : "aeiou",
-      "selector" : "aeiou"
-    } ],
-    "enabled" : true,
-    "shouldKeepUrlFragment" : true
-  },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "cobrowse" : {
-    "allowAgentControl" : true,
-    "maskSelectors" : [ "aeiou" ],
-    "enabled" : true
-  },
-  "authenticationSettings" : {
-    "integrationId" : "aeiou",
-    "enabled" : true
-  },
+  "journeyEvents" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "cobrowse" : "{}",
+  "authenticationSettings" : "{}",
   "version" : "DRAFT, 1, 2",
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "defaultLanguage" : "en-us, de-de",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "messenger" : {
-    "launcherButton" : {
-      "visibility" : "aeiou"
-    },
-    "homeScreen" : {
-      "enabled" : true
-    },
-    "styles" : {
-      "primaryColor" : "#a7017c"
-    },
-    "fileUpload" : {
-      "modes" : [ {
-        "maxFileSizeKB" : 123456789,
-        "fileTypes" : [ "aeiou" ]
-      } ]
-    },
-    "enabled" : true,
-    "apps" : {
-      "conversations" : {
-        "showUserTypingIndicator" : true,
-        "markdown" : {
-          "enabled" : true
-        },
-        "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true,
-        "autoStart" : {
-          "enabled" : true
-        }
-      },
-      "knowledge" : {
-        "knowledgeBase" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "enabled" : true
-      }
-    }
-  },
-  "publishedUser" : "",
-  "name" : "aeiou",
-  "lastModifiedUser" : "",
-  "id" : "aeiou",
-  "position" : {
-    "bottomSpace" : 123,
-    "sideSpace" : 123,
-    "alignment" : "aeiou"
-  },
-  "supportCenter" : {
-    "customMessages" : [ {
-      "defaultValue" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "knowledgeBase" : "",
-    "screens" : [ {
-      "type" : "aeiou",
-      "moduleSettings" : [ {
-        "type" : "aeiou",
-        "enabled" : true
-      } ]
-    } ],
-    "enabledCategories" : [ "" ],
-    "routerType" : "aeiou",
-    "enabled" : true,
-    "styleSetting" : {
-      "globalStyle" : {
-        "backgroundColor" : "aeiou",
-        "fontFamily" : "aeiou",
-        "primaryColorDark" : "aeiou",
-        "primaryColor" : "aeiou",
-        "primaryColorLight" : "aeiou",
-        "textColor" : "aeiou"
-      },
-      "heroStyle" : {
-        "backgroundColor" : "aeiou",
-        "textColor" : "aeiou"
-      }
-    }
-  },
-  "createdUser" : "",
-  "status" : "aeiou"
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "messenger" : "{}",
+  "publishedUser" : "{}",
+  "name" : "name",
+  "lastModifiedUser" : "{}",
+  "id" : "id",
+  "position" : "{}",
+  "supportCenter" : "{}",
+  "createdUser" : "{}",
+  "status" : "Pending"
+}, statusCode=200}]
      
      - parameter configurationId: (path) The configuration version ID 
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersion> 
      */
-    open class func getWebdeploymentsConfigurationVersionsDraftWithRequestBuilder(configurationId: String) -> RequestBuilder<WebDeploymentConfigurationVersion> {
+    open class func getWebdeploymentsConfigurationVersionsDraftWithRequestBuilder(configurationId: String) -> RequestBuilder<WebDeploymentConfigurationVersion> {        
         var path = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft"
         let configurationIdPreEscape = "\(configurationId)"
         let configurationIdPostEscape = configurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{configurationId}", with: configurationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -693,13 +350,10 @@ open class WebDeploymentsAPI {
     }
 
     
-    
-    
     /**
-     
      View configuration drafts
      
-     - parameter showOnlyPublished: (query) Get only configuration drafts with published versions (optional, default to false)
+     - parameter showOnlyPublished: (query) Get only configuration drafts with published versions (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWebdeploymentsConfigurations(showOnlyPublished: Bool? = nil, completion: @escaping ((_ data: WebDeploymentConfigurationVersionEntityListing?,_ error: Error?) -> Void)) {
@@ -721,163 +375,71 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      View configuration drafts
-     
      - GET /api/v2/webdeployments/configurations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
     "languages" : "en-us, de-de",
-    "journeyEvents" : {
-      "formsTrackEvents" : [ {
-        "formName" : "aeiou",
-        "selector" : "aeiou",
-        "captureDataOnFormSubmit" : true,
-        "captureDataOnFormAbandon" : true
-      } ],
-      "idleEvents" : [ {
-        "eventName" : "aeiou",
-        "idleAfterSeconds" : 123456789
-      } ],
-      "inViewportEvents" : [ "" ],
-      "pageviewConfig" : "aeiou",
-      "excludedQueryParameters" : [ "aeiou" ],
-      "scrollDepthEvents" : [ {
-        "percentage" : 123,
-        "eventName" : "aeiou"
-      } ],
-      "searchQueryParameters" : [ "aeiou" ],
-      "clickEvents" : [ {
-        "eventName" : "aeiou",
-        "selector" : "aeiou"
-      } ],
-      "enabled" : true,
-      "shouldKeepUrlFragment" : true
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "cobrowse" : {
-      "allowAgentControl" : true,
-      "maskSelectors" : [ "aeiou" ],
-      "enabled" : true
-    },
-    "authenticationSettings" : {
-      "integrationId" : "aeiou",
-      "enabled" : true
-    },
+    "journeyEvents" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "cobrowse" : "{}",
+    "authenticationSettings" : "{}",
     "version" : "DRAFT, 1, 2",
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "defaultLanguage" : "en-us, de-de",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "messenger" : {
-      "launcherButton" : {
-        "visibility" : "aeiou"
-      },
-      "homeScreen" : {
-        "enabled" : true
-      },
-      "styles" : {
-        "primaryColor" : "#a7017c"
-      },
-      "fileUpload" : {
-        "modes" : [ {
-          "maxFileSizeKB" : 123456789,
-          "fileTypes" : [ "aeiou" ]
-        } ]
-      },
-      "enabled" : true,
-      "apps" : {
-        "conversations" : {
-          "showUserTypingIndicator" : true,
-          "markdown" : {
-            "enabled" : true
-          },
-          "autoStartType" : "aeiou",
-          "showAgentTypingIndicator" : true,
-          "autoStart" : {
-            "enabled" : true
-          }
-        },
-        "knowledge" : {
-          "knowledgeBase" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "enabled" : true
-        }
-      }
-    },
-    "publishedUser" : "",
-    "name" : "aeiou",
-    "lastModifiedUser" : "",
-    "id" : "aeiou",
-    "position" : {
-      "bottomSpace" : 123,
-      "sideSpace" : 123,
-      "alignment" : "aeiou"
-    },
-    "supportCenter" : {
-      "customMessages" : [ {
-        "defaultValue" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "knowledgeBase" : "",
-      "screens" : [ {
-        "type" : "aeiou",
-        "moduleSettings" : [ {
-          "type" : "aeiou",
-          "enabled" : true
-        } ]
-      } ],
-      "enabledCategories" : [ "" ],
-      "routerType" : "aeiou",
-      "enabled" : true,
-      "styleSetting" : {
-        "globalStyle" : {
-          "backgroundColor" : "aeiou",
-          "fontFamily" : "aeiou",
-          "primaryColorDark" : "aeiou",
-          "primaryColor" : "aeiou",
-          "primaryColorLight" : "aeiou",
-          "textColor" : "aeiou"
-        },
-        "heroStyle" : {
-          "backgroundColor" : "aeiou",
-          "textColor" : "aeiou"
-        }
-      }
-    },
-    "createdUser" : "",
-    "status" : "aeiou"
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "messenger" : "{}",
+    "publishedUser" : "{}",
+    "name" : "name",
+    "lastModifiedUser" : "{}",
+    "id" : "id",
+    "position" : "{}",
+    "supportCenter" : "{}",
+    "createdUser" : "{}",
+    "status" : "Pending"
+  }, {
+    "languages" : "en-us, de-de",
+    "journeyEvents" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "cobrowse" : "{}",
+    "authenticationSettings" : "{}",
+    "version" : "DRAFT, 1, 2",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "defaultLanguage" : "en-us, de-de",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "messenger" : "{}",
+    "publishedUser" : "{}",
+    "name" : "name",
+    "lastModifiedUser" : "{}",
+    "id" : "id",
+    "position" : "{}",
+    "supportCenter" : "{}",
+    "createdUser" : "{}",
+    "status" : "Pending"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter showOnlyPublished: (query) Get only configuration drafts with published versions (optional, default to false)
+     - parameter showOnlyPublished: (query) Get only configuration drafts with published versions (optional)
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersionEntityListing> 
      */
-    open class func getWebdeploymentsConfigurationsWithRequestBuilder(showOnlyPublished: Bool? = nil) -> RequestBuilder<WebDeploymentConfigurationVersionEntityListing> {
+    open class func getWebdeploymentsConfigurationsWithRequestBuilder(showOnlyPublished: Bool? = nil) -> RequestBuilder<WebDeploymentConfigurationVersionEntityListing> {        
         let path = "/api/v2/webdeployments/configurations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "showOnlyPublished": showOnlyPublished
-            
         ])
 
         let requestBuilder: RequestBuilder<WebDeploymentConfigurationVersionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -886,10 +448,7 @@ open class WebDeploymentsAPI {
     }
 
     
-    
-    
     /**
-     
      Get a deployment
      
      - parameter deploymentId: (path) The deployment ID 
@@ -914,58 +473,38 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Get a deployment
-     
      - GET /api/v2/webdeployments/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "snippet" : "aeiou",
+  "snippet" : "snippet",
   "allowAllDomains" : true,
-  "allowedDomains" : [ "aeiou" ],
-  "configuration" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "version" : "DRAFT, 1, 2"
-  },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "lastModifiedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+  "configuration" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "lastModifiedUser" : "{}",
+  "id" : "id",
+  "flow" : "{}",
+  "status" : "Pending"
+}, statusCode=200}]
      
      - parameter deploymentId: (path) The deployment ID 
 
      - returns: RequestBuilder<WebDeployment> 
      */
-    open class func getWebdeploymentsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<WebDeployment> {
+    open class func getWebdeploymentsDeploymentWithRequestBuilder(deploymentId: String) -> RequestBuilder<WebDeployment> {        
         var path = "/api/v2/webdeployments/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -974,9 +513,7 @@ open class WebDeploymentsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get deployments
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -1000,57 +537,51 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Get deployments
-     
      - GET /api/v2/webdeployments/deployments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
+  "total" : 0,
   "entities" : [ {
-    "snippet" : "aeiou",
+    "snippet" : "snippet",
     "allowAllDomains" : true,
-    "allowedDomains" : [ "aeiou" ],
-    "configuration" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "version" : "DRAFT, 1, 2"
-    },
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "lastModifiedUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "id" : "aeiou",
-    "flow" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "status" : "aeiou"
+    "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+    "configuration" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "lastModifiedUser" : "{}",
+    "id" : "id",
+    "flow" : "{}",
+    "status" : "Pending"
+  }, {
+    "snippet" : "snippet",
+    "allowAllDomains" : true,
+    "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+    "configuration" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "lastModifiedUser" : "{}",
+    "id" : "id",
+    "flow" : "{}",
+    "status" : "Pending"
   } ],
-  "selfUri" : "aeiou"
-}}]
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
 
      - returns: RequestBuilder<WebDeploymentEntityListing> 
      */
-    open class func getWebdeploymentsDeploymentsWithRequestBuilder() -> RequestBuilder<WebDeploymentEntityListing> {
+    open class func getWebdeploymentsDeploymentsWithRequestBuilder() -> RequestBuilder<WebDeploymentEntityListing> {        
         let path = "/api/v2/webdeployments/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1060,10 +591,7 @@ open class WebDeploymentsAPI {
     }
 
     
-    
-    
     /**
-     
      Publish the configuration draft and create a new version
      
      - parameter configurationId: (path) The configuration version ID 
@@ -1088,156 +616,45 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Publish the configuration draft and create a new version
-     
      - POST /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "languages" : "en-us, de-de",
-  "journeyEvents" : {
-    "formsTrackEvents" : [ {
-      "formName" : "aeiou",
-      "selector" : "aeiou",
-      "captureDataOnFormSubmit" : true,
-      "captureDataOnFormAbandon" : true
-    } ],
-    "idleEvents" : [ {
-      "eventName" : "aeiou",
-      "idleAfterSeconds" : 123456789
-    } ],
-    "inViewportEvents" : [ "" ],
-    "pageviewConfig" : "aeiou",
-    "excludedQueryParameters" : [ "aeiou" ],
-    "scrollDepthEvents" : [ {
-      "percentage" : 123,
-      "eventName" : "aeiou"
-    } ],
-    "searchQueryParameters" : [ "aeiou" ],
-    "clickEvents" : [ {
-      "eventName" : "aeiou",
-      "selector" : "aeiou"
-    } ],
-    "enabled" : true,
-    "shouldKeepUrlFragment" : true
-  },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "cobrowse" : {
-    "allowAgentControl" : true,
-    "maskSelectors" : [ "aeiou" ],
-    "enabled" : true
-  },
-  "authenticationSettings" : {
-    "integrationId" : "aeiou",
-    "enabled" : true
-  },
+  "journeyEvents" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "cobrowse" : "{}",
+  "authenticationSettings" : "{}",
   "version" : "DRAFT, 1, 2",
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "defaultLanguage" : "en-us, de-de",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "messenger" : {
-    "launcherButton" : {
-      "visibility" : "aeiou"
-    },
-    "homeScreen" : {
-      "enabled" : true
-    },
-    "styles" : {
-      "primaryColor" : "#a7017c"
-    },
-    "fileUpload" : {
-      "modes" : [ {
-        "maxFileSizeKB" : 123456789,
-        "fileTypes" : [ "aeiou" ]
-      } ]
-    },
-    "enabled" : true,
-    "apps" : {
-      "conversations" : {
-        "showUserTypingIndicator" : true,
-        "markdown" : {
-          "enabled" : true
-        },
-        "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true,
-        "autoStart" : {
-          "enabled" : true
-        }
-      },
-      "knowledge" : {
-        "knowledgeBase" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "enabled" : true
-      }
-    }
-  },
-  "publishedUser" : "",
-  "name" : "aeiou",
-  "lastModifiedUser" : "",
-  "id" : "aeiou",
-  "position" : {
-    "bottomSpace" : 123,
-    "sideSpace" : 123,
-    "alignment" : "aeiou"
-  },
-  "supportCenter" : {
-    "customMessages" : [ {
-      "defaultValue" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "knowledgeBase" : "",
-    "screens" : [ {
-      "type" : "aeiou",
-      "moduleSettings" : [ {
-        "type" : "aeiou",
-        "enabled" : true
-      } ]
-    } ],
-    "enabledCategories" : [ "" ],
-    "routerType" : "aeiou",
-    "enabled" : true,
-    "styleSetting" : {
-      "globalStyle" : {
-        "backgroundColor" : "aeiou",
-        "fontFamily" : "aeiou",
-        "primaryColorDark" : "aeiou",
-        "primaryColor" : "aeiou",
-        "primaryColorLight" : "aeiou",
-        "textColor" : "aeiou"
-      },
-      "heroStyle" : {
-        "backgroundColor" : "aeiou",
-        "textColor" : "aeiou"
-      }
-    }
-  },
-  "createdUser" : "",
-  "status" : "aeiou"
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "messenger" : "{}",
+  "publishedUser" : "{}",
+  "name" : "name",
+  "lastModifiedUser" : "{}",
+  "id" : "id",
+  "position" : "{}",
+  "supportCenter" : "{}",
+  "createdUser" : "{}",
+  "status" : "Pending"
+}, statusCode=200}]
      
      - parameter configurationId: (path) The configuration version ID 
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersion> 
      */
-    open class func postWebdeploymentsConfigurationVersionsDraftPublishWithRequestBuilder(configurationId: String) -> RequestBuilder<WebDeploymentConfigurationVersion> {
+    open class func postWebdeploymentsConfigurationVersionsDraftPublishWithRequestBuilder(configurationId: String) -> RequestBuilder<WebDeploymentConfigurationVersion> {        
         var path = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish"
         let configurationIdPreEscape = "\(configurationId)"
         let configurationIdPostEscape = configurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{configurationId}", with: configurationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1247,10 +664,7 @@ open class WebDeploymentsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a configuration draft
      
      - parameter configurationVersion: (body)  
@@ -1275,151 +689,43 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Create a configuration draft
-     
      - POST /api/v2/webdeployments/configurations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "languages" : "en-us, de-de",
-  "journeyEvents" : {
-    "formsTrackEvents" : [ {
-      "formName" : "aeiou",
-      "selector" : "aeiou",
-      "captureDataOnFormSubmit" : true,
-      "captureDataOnFormAbandon" : true
-    } ],
-    "idleEvents" : [ {
-      "eventName" : "aeiou",
-      "idleAfterSeconds" : 123456789
-    } ],
-    "inViewportEvents" : [ "" ],
-    "pageviewConfig" : "aeiou",
-    "excludedQueryParameters" : [ "aeiou" ],
-    "scrollDepthEvents" : [ {
-      "percentage" : 123,
-      "eventName" : "aeiou"
-    } ],
-    "searchQueryParameters" : [ "aeiou" ],
-    "clickEvents" : [ {
-      "eventName" : "aeiou",
-      "selector" : "aeiou"
-    } ],
-    "enabled" : true,
-    "shouldKeepUrlFragment" : true
-  },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "cobrowse" : {
-    "allowAgentControl" : true,
-    "maskSelectors" : [ "aeiou" ],
-    "enabled" : true
-  },
-  "authenticationSettings" : {
-    "integrationId" : "aeiou",
-    "enabled" : true
-  },
+  "journeyEvents" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "cobrowse" : "{}",
+  "authenticationSettings" : "{}",
   "version" : "DRAFT, 1, 2",
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "defaultLanguage" : "en-us, de-de",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "messenger" : {
-    "launcherButton" : {
-      "visibility" : "aeiou"
-    },
-    "homeScreen" : {
-      "enabled" : true
-    },
-    "styles" : {
-      "primaryColor" : "#a7017c"
-    },
-    "fileUpload" : {
-      "modes" : [ {
-        "maxFileSizeKB" : 123456789,
-        "fileTypes" : [ "aeiou" ]
-      } ]
-    },
-    "enabled" : true,
-    "apps" : {
-      "conversations" : {
-        "showUserTypingIndicator" : true,
-        "markdown" : {
-          "enabled" : true
-        },
-        "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true,
-        "autoStart" : {
-          "enabled" : true
-        }
-      },
-      "knowledge" : {
-        "knowledgeBase" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "enabled" : true
-      }
-    }
-  },
-  "publishedUser" : "",
-  "name" : "aeiou",
-  "lastModifiedUser" : "",
-  "id" : "aeiou",
-  "position" : {
-    "bottomSpace" : 123,
-    "sideSpace" : 123,
-    "alignment" : "aeiou"
-  },
-  "supportCenter" : {
-    "customMessages" : [ {
-      "defaultValue" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "knowledgeBase" : "",
-    "screens" : [ {
-      "type" : "aeiou",
-      "moduleSettings" : [ {
-        "type" : "aeiou",
-        "enabled" : true
-      } ]
-    } ],
-    "enabledCategories" : [ "" ],
-    "routerType" : "aeiou",
-    "enabled" : true,
-    "styleSetting" : {
-      "globalStyle" : {
-        "backgroundColor" : "aeiou",
-        "fontFamily" : "aeiou",
-        "primaryColorDark" : "aeiou",
-        "primaryColor" : "aeiou",
-        "primaryColorLight" : "aeiou",
-        "textColor" : "aeiou"
-      },
-      "heroStyle" : {
-        "backgroundColor" : "aeiou",
-        "textColor" : "aeiou"
-      }
-    }
-  },
-  "createdUser" : "",
-  "status" : "aeiou"
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "messenger" : "{}",
+  "publishedUser" : "{}",
+  "name" : "name",
+  "lastModifiedUser" : "{}",
+  "id" : "id",
+  "position" : "{}",
+  "supportCenter" : "{}",
+  "createdUser" : "{}",
+  "status" : "Pending"
+}, statusCode=200}]
      
      - parameter configurationVersion: (body)  
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersion> 
      */
-    open class func postWebdeploymentsConfigurationsWithRequestBuilder(configurationVersion: WebDeploymentConfigurationVersion) -> RequestBuilder<WebDeploymentConfigurationVersion> {
+    open class func postWebdeploymentsConfigurationsWithRequestBuilder(configurationVersion: WebDeploymentConfigurationVersion) -> RequestBuilder<WebDeploymentConfigurationVersion> {        
         let path = "/api/v2/webdeployments/configurations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: configurationVersion)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebDeploymentConfigurationVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1428,10 +734,7 @@ open class WebDeploymentsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a deployment
      
      - parameter deployment: (body)  
@@ -1456,53 +759,36 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Create a deployment
-     
      - POST /api/v2/webdeployments/deployments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "snippet" : "aeiou",
+  "snippet" : "snippet",
   "allowAllDomains" : true,
-  "allowedDomains" : [ "aeiou" ],
-  "configuration" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "version" : "DRAFT, 1, 2"
-  },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "lastModifiedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+  "configuration" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "lastModifiedUser" : "{}",
+  "id" : "id",
+  "flow" : "{}",
+  "status" : "Pending"
+}, statusCode=200}]
      
      - parameter deployment: (body)  
 
      - returns: RequestBuilder<WebDeployment> 
      */
-    open class func postWebdeploymentsDeploymentsWithRequestBuilder(deployment: WebDeployment) -> RequestBuilder<WebDeployment> {
+    open class func postWebdeploymentsDeploymentsWithRequestBuilder(deployment: WebDeployment) -> RequestBuilder<WebDeployment> {        
         let path = "/api/v2/webdeployments/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: deployment)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1512,11 +798,7 @@ open class WebDeploymentsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update the configuration draft
      
      - parameter configurationId: (path) The configuration version ID 
@@ -1542,155 +824,47 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Update the configuration draft
-     
      - PUT /api/v2/webdeployments/configurations/{configurationId}/versions/draft
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "languages" : "en-us, de-de",
-  "journeyEvents" : {
-    "formsTrackEvents" : [ {
-      "formName" : "aeiou",
-      "selector" : "aeiou",
-      "captureDataOnFormSubmit" : true,
-      "captureDataOnFormAbandon" : true
-    } ],
-    "idleEvents" : [ {
-      "eventName" : "aeiou",
-      "idleAfterSeconds" : 123456789
-    } ],
-    "inViewportEvents" : [ "" ],
-    "pageviewConfig" : "aeiou",
-    "excludedQueryParameters" : [ "aeiou" ],
-    "scrollDepthEvents" : [ {
-      "percentage" : 123,
-      "eventName" : "aeiou"
-    } ],
-    "searchQueryParameters" : [ "aeiou" ],
-    "clickEvents" : [ {
-      "eventName" : "aeiou",
-      "selector" : "aeiou"
-    } ],
-    "enabled" : true,
-    "shouldKeepUrlFragment" : true
-  },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "cobrowse" : {
-    "allowAgentControl" : true,
-    "maskSelectors" : [ "aeiou" ],
-    "enabled" : true
-  },
-  "authenticationSettings" : {
-    "integrationId" : "aeiou",
-    "enabled" : true
-  },
+  "journeyEvents" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "cobrowse" : "{}",
+  "authenticationSettings" : "{}",
   "version" : "DRAFT, 1, 2",
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "defaultLanguage" : "en-us, de-de",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "messenger" : {
-    "launcherButton" : {
-      "visibility" : "aeiou"
-    },
-    "homeScreen" : {
-      "enabled" : true
-    },
-    "styles" : {
-      "primaryColor" : "#a7017c"
-    },
-    "fileUpload" : {
-      "modes" : [ {
-        "maxFileSizeKB" : 123456789,
-        "fileTypes" : [ "aeiou" ]
-      } ]
-    },
-    "enabled" : true,
-    "apps" : {
-      "conversations" : {
-        "showUserTypingIndicator" : true,
-        "markdown" : {
-          "enabled" : true
-        },
-        "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true,
-        "autoStart" : {
-          "enabled" : true
-        }
-      },
-      "knowledge" : {
-        "knowledgeBase" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "enabled" : true
-      }
-    }
-  },
-  "publishedUser" : "",
-  "name" : "aeiou",
-  "lastModifiedUser" : "",
-  "id" : "aeiou",
-  "position" : {
-    "bottomSpace" : 123,
-    "sideSpace" : 123,
-    "alignment" : "aeiou"
-  },
-  "supportCenter" : {
-    "customMessages" : [ {
-      "defaultValue" : "aeiou",
-      "type" : "aeiou"
-    } ],
-    "knowledgeBase" : "",
-    "screens" : [ {
-      "type" : "aeiou",
-      "moduleSettings" : [ {
-        "type" : "aeiou",
-        "enabled" : true
-      } ]
-    } ],
-    "enabledCategories" : [ "" ],
-    "routerType" : "aeiou",
-    "enabled" : true,
-    "styleSetting" : {
-      "globalStyle" : {
-        "backgroundColor" : "aeiou",
-        "fontFamily" : "aeiou",
-        "primaryColorDark" : "aeiou",
-        "primaryColor" : "aeiou",
-        "primaryColorLight" : "aeiou",
-        "textColor" : "aeiou"
-      },
-      "heroStyle" : {
-        "backgroundColor" : "aeiou",
-        "textColor" : "aeiou"
-      }
-    }
-  },
-  "createdUser" : "",
-  "status" : "aeiou"
-}}]
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "messenger" : "{}",
+  "publishedUser" : "{}",
+  "name" : "name",
+  "lastModifiedUser" : "{}",
+  "id" : "id",
+  "position" : "{}",
+  "supportCenter" : "{}",
+  "createdUser" : "{}",
+  "status" : "Pending"
+}, statusCode=200}]
      
      - parameter configurationId: (path) The configuration version ID 
      - parameter configurationVersion: (body)  
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersion> 
      */
-    open class func putWebdeploymentsConfigurationVersionsDraftWithRequestBuilder(configurationId: String, configurationVersion: WebDeploymentConfigurationVersion) -> RequestBuilder<WebDeploymentConfigurationVersion> {
+    open class func putWebdeploymentsConfigurationVersionsDraftWithRequestBuilder(configurationId: String, configurationVersion: WebDeploymentConfigurationVersion) -> RequestBuilder<WebDeploymentConfigurationVersion> {        
         var path = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft"
         let configurationIdPreEscape = "\(configurationId)"
         let configurationIdPostEscape = configurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{configurationId}", with: configurationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: configurationVersion)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebDeploymentConfigurationVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1700,11 +874,7 @@ open class WebDeploymentsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a deployment
      
      - parameter deploymentId: (path) The deployment ID 
@@ -1730,57 +900,40 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     
      Update a deployment
-     
      - PUT /api/v2/webdeployments/deployments/{deploymentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "snippet" : "aeiou",
+  "snippet" : "snippet",
   "allowAllDomains" : true,
-  "allowedDomains" : [ "aeiou" ],
-  "configuration" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "version" : "DRAFT, 1, 2"
-  },
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "name" : "aeiou",
-  "lastModifiedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "id" : "aeiou",
-  "flow" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "status" : "aeiou"
-}}]
+  "allowedDomains" : [ "allowedDomains", "allowedDomains" ],
+  "configuration" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "lastModifiedUser" : "{}",
+  "id" : "id",
+  "flow" : "{}",
+  "status" : "Pending"
+}, statusCode=200}]
      
      - parameter deploymentId: (path) The deployment ID 
      - parameter deployment: (body)  
 
      - returns: RequestBuilder<WebDeployment> 
      */
-    open class func putWebdeploymentsDeploymentWithRequestBuilder(deploymentId: String, deployment: WebDeployment) -> RequestBuilder<WebDeployment> {
+    open class func putWebdeploymentsDeploymentWithRequestBuilder(deploymentId: String, deployment: WebDeployment) -> RequestBuilder<WebDeployment> {        
         var path = "/api/v2/webdeployments/deployments/{deploymentId}"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: deployment)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

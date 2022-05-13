@@ -29,23 +29,14 @@ public class UserExpands: Codable {
     public var authorization: UserAuthorization?
 
     public init(routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?) {
-        
         self.routingStatus = routingStatus
-        
         self.presence = presence
-        
         self.integrationPresence = integrationPresence
-        
         self.conversationSummary = conversationSummary
-        
         self.outOfOffice = outOfOffice
-        
         self.geolocation = geolocation
-        
         self.station = station
-        
         self.authorization = authorization
-        
     }
 
 

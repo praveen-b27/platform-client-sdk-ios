@@ -21,19 +21,12 @@ public class AuthzGrantRole: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, policies: [AuthzGrantPolicy]?, _default: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.policies = policies
-        
         self._default = _default
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

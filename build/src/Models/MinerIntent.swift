@@ -25,19 +25,12 @@ public class MinerIntent: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, miner: Miner?, utterances: [Utterance]?, analyticVolumePercent: Double?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.miner = miner
-        
         self.utterances = utterances
-        
         self.analyticVolumePercent = analyticVolumePercent
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

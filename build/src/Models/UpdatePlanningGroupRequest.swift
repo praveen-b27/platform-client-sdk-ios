@@ -21,15 +21,10 @@ public class UpdatePlanningGroupRequest: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(name: String?, routePaths: SetWrapperRoutePathRequest?, serviceGoalTemplateId: String?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.name = name
-        
         self.routePaths = routePaths
-        
         self.serviceGoalTemplateId = serviceGoalTemplateId
-        
         self.metadata = metadata
-        
     }
 
 

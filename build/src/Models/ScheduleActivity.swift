@@ -32,23 +32,14 @@ public class ScheduleActivity: Codable {
     public var externalActivityType: ExternalActivityType?
 
     public init(dateStart: Date?, lengthMinutes: Int?, _description: String?, activityCodeId: String?, paid: Bool?, timeOffRequestId: String?, externalActivityId: String?, externalActivityType: ExternalActivityType?) {
-        
         self.dateStart = dateStart
-        
         self.lengthMinutes = lengthMinutes
-        
         self._description = _description
-        
         self.activityCodeId = activityCodeId
-        
         self.paid = paid
-        
         self.timeOffRequestId = timeOffRequestId
-        
         self.externalActivityId = externalActivityId
-        
         self.externalActivityType = externalActivityType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

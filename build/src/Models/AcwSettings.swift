@@ -24,11 +24,8 @@ public class AcwSettings: Codable {
     public var timeoutMs: Int?
 
     public init(wrapupPrompt: WrapupPrompt?, timeoutMs: Int?) {
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.timeoutMs = timeoutMs
-        
     }
 
 

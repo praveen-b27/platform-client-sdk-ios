@@ -22,13 +22,9 @@ public class CampaignRuleCondition: Codable {
     public var conditionType: ConditionType?
 
     public init(_id: String?, parameters: CampaignRuleParameters?, conditionType: ConditionType?) {
-        
         self._id = _id
-        
         self.parameters = parameters
-        
         self.conditionType = conditionType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

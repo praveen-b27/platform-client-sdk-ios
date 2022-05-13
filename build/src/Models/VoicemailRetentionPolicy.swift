@@ -23,11 +23,8 @@ public class VoicemailRetentionPolicy: Codable {
     public var numberOfDays: Int?
 
     public init(voicemailRetentionPolicyType: VoicemailRetentionPolicyType?, numberOfDays: Int?) {
-        
         self.voicemailRetentionPolicyType = voicemailRetentionPolicyType
-        
         self.numberOfDays = numberOfDays
-        
     }
 
 

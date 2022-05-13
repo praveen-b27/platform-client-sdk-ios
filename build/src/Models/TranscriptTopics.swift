@@ -17,11 +17,8 @@ public class TranscriptTopics: Codable {
     public var excludes: [String]?
 
     public init(includes: [String]?, excludes: [String]?) {
-        
         self.includes = includes
-        
         self.excludes = excludes
-        
     }
 
 

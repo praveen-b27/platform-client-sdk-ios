@@ -21,23 +21,14 @@ public class TranscriptionTopicTranscriptionMessage: Codable {
     public var status: TranscriptionTopicTranscriptionRequestStatus?
 
     public init(eventTime: Date?, organizationId: String?, conversationId: String?, communicationId: String?, sessionStartTimeMs: Int?, transcriptionStartTimeMs: Int?, transcripts: [TranscriptionTopicTranscriptResult]?, status: TranscriptionTopicTranscriptionRequestStatus?) {
-        
         self.eventTime = eventTime
-        
         self.organizationId = organizationId
-        
         self.conversationId = conversationId
-        
         self.communicationId = communicationId
-        
         self.sessionStartTimeMs = sessionStartTimeMs
-        
         self.transcriptionStartTimeMs = transcriptionStartTimeMs
-        
         self.transcripts = transcripts
-        
         self.status = status
-        
     }
 
 

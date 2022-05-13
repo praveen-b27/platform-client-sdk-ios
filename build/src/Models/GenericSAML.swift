@@ -39,35 +39,20 @@ public class GenericSAML: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, sloURI: String?, sloBinding: String?, relyingPartyIdentifier: String?, certificate: String?, certificates: [String]?, logoImageData: String?, endpointCompression: Bool?, nameIdentifierFormat: NameIdentifierFormat?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.disabled = disabled
-        
         self.issuerURI = issuerURI
-        
         self.ssoTargetURI = ssoTargetURI
-        
         self.sloURI = sloURI
-        
         self.sloBinding = sloBinding
-        
         self.relyingPartyIdentifier = relyingPartyIdentifier
-        
         self.certificate = certificate
-        
         self.certificates = certificates
-        
         self.logoImageData = logoImageData
-        
         self.endpointCompression = endpointCompression
-        
         self.nameIdentifierFormat = nameIdentifierFormat
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

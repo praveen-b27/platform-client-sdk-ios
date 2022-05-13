@@ -25,25 +25,15 @@ public class ListedProgram: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, published: Bool?, topicsCount: Int?, tags: [String]?, modifiedBy: AddressableEntityRef?, dateModified: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.published = published
-        
         self.topicsCount = topicsCount
-        
         self.tags = tags
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -15,9 +15,7 @@ public class PatchActionSurvey: Codable {
     public var questions: [PatchSurveyQuestion]?
 
     public init(questions: [PatchSurveyQuestion]?) {
-        
         self.questions = questions
-        
     }
 
 

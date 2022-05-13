@@ -22,15 +22,10 @@ public class LearningModuleSummary: Codable {
     public var completedSum: Float?
 
     public init(assignedCount: Int?, completedCount: Int?, passedCount: Int?, completedSum: Float?) {
-        
         self.assignedCount = assignedCount
-        
         self.completedCount = completedCount
-        
         self.passedCount = passedCount
-        
         self.completedSum = completedSum
-        
     }
 
 

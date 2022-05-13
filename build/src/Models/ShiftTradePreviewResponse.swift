@@ -15,9 +15,7 @@ public class ShiftTradePreviewResponse: Codable {
     public var activities: [ShiftTradeActivityPreviewResponse]?
 
     public init(activities: [ShiftTradeActivityPreviewResponse]?) {
-        
         self.activities = activities
-        
     }
 
 

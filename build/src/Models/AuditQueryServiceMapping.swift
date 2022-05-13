@@ -15,9 +15,7 @@ public class AuditQueryServiceMapping: Codable {
     public var services: [AuditQueryService]?
 
     public init(services: [AuditQueryService]?) {
-        
         self.services = services
-        
     }
 
 

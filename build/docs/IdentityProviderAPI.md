@@ -49,7 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersAdfs()
+> [JSON](JSON.html) deleteIdentityprovidersAdfs()
 
 Delete ADFS Identity Provider
 
@@ -89,7 +89,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersCic"></a>
 
@@ -97,7 +97,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersCic()
+> [JSON](JSON.html) deleteIdentityprovidersCic()
 
 Delete Customer Interaction Center (CIC) Identity Provider
 
@@ -137,7 +137,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersGeneric"></a>
 
@@ -145,7 +145,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersGeneric()
+> [JSON](JSON.html) deleteIdentityprovidersGeneric()
 
 Delete Generic SAML Identity Provider
 
@@ -185,7 +185,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersGsuite"></a>
 
@@ -193,7 +193,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersGsuite()
+> [JSON](JSON.html) deleteIdentityprovidersGsuite()
 
 Delete G Suite Identity Provider
 
@@ -233,7 +233,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersIdentitynow"></a>
 
@@ -241,7 +241,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersIdentitynow()
+> [JSON](JSON.html) deleteIdentityprovidersIdentitynow()
 
 Delete IdentityNow Provider
 
@@ -281,7 +281,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersOkta"></a>
 
@@ -289,7 +289,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersOkta()
+> [JSON](JSON.html) deleteIdentityprovidersOkta()
 
 Delete Okta Identity Provider
 
@@ -329,7 +329,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersOnelogin"></a>
 
@@ -337,7 +337,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersOnelogin()
+> [JSON](JSON.html) deleteIdentityprovidersOnelogin()
 
 Delete OneLogin Identity Provider
 
@@ -377,7 +377,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersPing"></a>
 
@@ -385,7 +385,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersPing()
+> [JSON](JSON.html) deleteIdentityprovidersPing()
 
 Delete Ping Identity Provider
 
@@ -425,7 +425,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersPurecloud"></a>
 
@@ -433,7 +433,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersPurecloud()
+> [JSON](JSON.html) deleteIdentityprovidersPurecloud()
 
 Delete PureCloud Identity Provider
 
@@ -473,7 +473,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersPureengage"></a>
 
@@ -481,7 +481,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersPureengage()
+> [JSON](JSON.html) deleteIdentityprovidersPureengage()
 
 Delete PureEngage Identity Provider
 
@@ -521,7 +521,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="deleteIdentityprovidersSalesforce"></a>
 
@@ -529,7 +529,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Empty](Empty.html) deleteIdentityprovidersSalesforce()
+> [JSON](JSON.html) deleteIdentityprovidersSalesforce()
 
 Delete Salesforce Identity Provider
 
@@ -569,7 +569,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Empty**](Empty.html)
+[**JSON**](JSON.html)
 
 <a name="getIdentityproviders"></a>
 

@@ -17,15 +17,10 @@ public class AuditChange: Codable {
     public var newValues: [String]?
 
     public init(property: String?, entity: AuditEntityReference?, oldValues: [String]?, newValues: [String]?) {
-        
         self.property = property
-        
         self.entity = entity
-        
         self.oldValues = oldValues
-        
         self.newValues = newValues
-        
     }
 
 

@@ -15,9 +15,7 @@ public class EstimatedWaitTimePredictions: Codable {
     public var results: [PredictionResults]?
 
     public init(results: [PredictionResults]?) {
-        
         self.results = results
-        
     }
 
 

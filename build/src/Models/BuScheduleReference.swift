@@ -19,13 +19,9 @@ public class BuScheduleReference: Codable {
     public var selfUri: String?
 
     public init(_id: String?, weekDate: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.weekDate = weekDate
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

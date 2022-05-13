@@ -24,17 +24,11 @@ public class UserSchedule: Codable {
     public var workPlanId: String?
 
     public init(shifts: [UserScheduleShift]?, fullDayTimeOffMarkers: [UserScheduleFullDayTimeOffMarker]?, delete: Bool?, metadata: WfmVersionedEntityMetadata?, workPlanId: String?) {
-        
         self.shifts = shifts
-        
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
-        
         self.delete = delete
-        
         self.metadata = metadata
-        
         self.workPlanId = workPlanId
-        
     }
 
 

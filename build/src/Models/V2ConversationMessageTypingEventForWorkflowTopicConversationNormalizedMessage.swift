@@ -47,31 +47,18 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationNormali
     public var metadata: [String:String]?
 
     public init(_id: String?, channel: V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel?, type: ModelType?, text: String?, content: [V2ConversationMessageTypingEventForWorkflowTopicConversationMessageContent]?, events: [V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent]?, status: Status?, reasons: [V2ConversationMessageTypingEventForWorkflowTopicConversationReason]?, originatingEntity: OriginatingEntity?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
-        
         self._id = _id
-        
         self.channel = channel
-        
         self.type = type
-        
         self.text = text
-        
         self.content = content
-        
         self.events = events
-        
         self.status = status
-        
         self.reasons = reasons
-        
         self.originatingEntity = originatingEntity
-        
         self.isFinalReceipt = isFinalReceipt
-        
         self.direction = direction
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

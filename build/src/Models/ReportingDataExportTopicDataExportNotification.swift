@@ -123,37 +123,21 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
     public var scheduleExpression: String?
 
     public init(_id: String?, runId: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?, emailStatuses: [String:String]?, emailErrorDescription: String?, scheduleExpression: String?) {
-        
         self._id = _id
-        
         self.runId = runId
-        
         self.name = name
-        
         self.status = status
-        
         self.exportFormat = exportFormat
-        
         self.downloadUrl = downloadUrl
-        
         self.viewType = viewType
-        
         self.exportErrorMessagesType = exportErrorMessagesType
-        
         self.read = read
-        
         self.createdDateTime = createdDateTime
-        
         self.modifiedDateTime = modifiedDateTime
-        
         self.percentageComplete = percentageComplete
-        
         self.emailStatuses = emailStatuses
-        
         self.emailErrorDescription = emailErrorDescription
-        
         self.scheduleExpression = scheduleExpression
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

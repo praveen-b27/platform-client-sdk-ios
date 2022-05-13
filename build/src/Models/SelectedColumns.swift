@@ -17,11 +17,8 @@ public class SelectedColumns: Codable {
     public var columnName: String?
 
     public init(columnOrder: Int?, columnName: String?) {
-        
         self.columnOrder = columnOrder
-        
         self.columnName = columnName
-        
     }
 
 

@@ -27,21 +27,13 @@ public class AssessmentQuestionScore: Codable {
     public var freeTextAnswer: String?
 
     public init(failedKillQuestion: Bool?, comments: String?, questionId: String?, answerId: String?, score: Int?, markedNA: Bool?, freeTextAnswer: String?) {
-        
         self.failedKillQuestion = failedKillQuestion
-        
         self.comments = comments
-        
         self.questionId = questionId
-        
         self.answerId = answerId
-        
         self.score = score
-        
         self.markedNA = markedNA
-        
         self.freeTextAnswer = freeTextAnswer
-        
     }
 
 

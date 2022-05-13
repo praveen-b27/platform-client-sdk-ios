@@ -17,11 +17,8 @@ public class MaxLength: Codable {
     public var max: Int64?
 
     public init(min: Int64?, max: Int64?) {
-        
         self.min = min
-        
         self.max = max
-        
     }
 
 

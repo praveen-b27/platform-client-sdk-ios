@@ -70,11 +70,8 @@ public class SchedulerMessageTypeSeverity: Codable {
     public var severity: Severity?
 
     public init(type: ModelType?, severity: Severity?) {
-        
         self.type = type
-        
         self.severity = severity
-        
     }
 
 

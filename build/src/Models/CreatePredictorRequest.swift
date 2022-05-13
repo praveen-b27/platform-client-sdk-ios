@@ -23,17 +23,11 @@ public class CreatePredictorRequest: Codable {
     public var workloadBalancingConfig: PredictorWorkloadBalancing?
 
     public init(queueIds: [String]?, kpi: String?, routingTimeoutSeconds: Int?, schedule: PredictorSchedule?, workloadBalancingConfig: PredictorWorkloadBalancing?) {
-        
         self.queueIds = queueIds
-        
         self.kpi = kpi
-        
         self.routingTimeoutSeconds = routingTimeoutSeconds
-        
         self.schedule = schedule
-        
         self.workloadBalancingConfig = workloadBalancingConfig
-        
     }
 
 

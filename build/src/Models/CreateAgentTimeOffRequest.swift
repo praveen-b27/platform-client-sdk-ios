@@ -15,7 +15,7 @@ public class CreateAgentTimeOffRequest: Codable {
     public var activityCodeId: String?
     /** Notes about the time off request */
     public var notes: String?
-    /** A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone. */
+    /** A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone. */
     public var fullDayManagementUnitDates: [String]?
     /** A set of start date-times in ISO-8601 format for partial day requests. */
     public var partialDayStartDateTimes: [Date]?
@@ -23,17 +23,11 @@ public class CreateAgentTimeOffRequest: Codable {
     public var dailyDurationMinutes: Int?
 
     public init(activityCodeId: String?, notes: String?, fullDayManagementUnitDates: [String]?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?) {
-        
         self.activityCodeId = activityCodeId
-        
         self.notes = notes
-        
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
-        
         self.partialDayStartDateTimes = partialDayStartDateTimes
-        
         self.dailyDurationMinutes = dailyDurationMinutes
-        
     }
 
 

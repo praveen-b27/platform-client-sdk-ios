@@ -16,13 +16,9 @@ public class FaxSummary: Codable {
     public var totalCount: Int?
 
     public init(readCount: Int?, unreadCount: Int?, totalCount: Int?) {
-        
         self.readCount = readCount
-        
         self.unreadCount = unreadCount
-        
         self.totalCount = totalCount
-        
     }
 
 

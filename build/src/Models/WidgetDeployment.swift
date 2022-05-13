@@ -38,27 +38,16 @@ public class WidgetDeployment: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, authenticationRequired: Bool?, disabled: Bool?, flow: DomainEntityRef?, allowedDomains: [String]?, clientType: ClientType?, clientConfig: WidgetClientConfig?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.authenticationRequired = authenticationRequired
-        
         self.disabled = disabled
-        
         self.flow = flow
-        
         self.allowedDomains = allowedDomains
-        
         self.clientType = clientType
-        
         self.clientConfig = clientConfig
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

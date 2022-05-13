@@ -19,13 +19,9 @@ public class UserTimeOffRequestReference: Codable {
     public var selfUri: String?
 
     public init(_id: String?, user: UserReference?, selfUri: String?) {
-        
         self._id = _id
-        
         self.user = user
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

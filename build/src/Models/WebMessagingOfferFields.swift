@@ -17,11 +17,8 @@ public class WebMessagingOfferFields: Codable {
     public var architectFlow: AddressableEntityRef?
 
     public init(offerText: String?, architectFlow: AddressableEntityRef?) {
-        
         self.offerText = offerText
-        
         self.architectFlow = architectFlow
-        
     }
 
 

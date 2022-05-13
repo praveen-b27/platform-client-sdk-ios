@@ -43,39 +43,22 @@ public class AuditMessage: Codable {
     public var serviceContext: ServiceContext?
 
     public init(_id: String?, user: AuditUser?, correlationId: String?, transactionId: String?, transactionInitiator: Bool?, application: String?, serviceName: String?, level: String?, timestamp: String?, receivedTimestamp: String?, status: String?, actionContext: String?, action: String?, changes: [Change]?, entity: AuditEntity?, serviceContext: ServiceContext?) {
-        
         self._id = _id
-        
         self.user = user
-        
         self.correlationId = correlationId
-        
         self.transactionId = transactionId
-        
         self.transactionInitiator = transactionInitiator
-        
         self.application = application
-        
         self.serviceName = serviceName
-        
         self.level = level
-        
         self.timestamp = timestamp
-        
         self.receivedTimestamp = receivedTimestamp
-        
         self.status = status
-        
         self.actionContext = actionContext
-        
         self.action = action
-        
         self.changes = changes
-        
         self.entity = entity
-        
         self.serviceContext = serviceContext
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

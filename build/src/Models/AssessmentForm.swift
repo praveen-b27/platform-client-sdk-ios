@@ -27,21 +27,13 @@ public class AssessmentForm: Codable {
     public var questionGroups: [AssessmentFormQuestionGroup]?
 
     public init(_id: String?, dateModified: Date?, contextId: String?, selfUri: String?, published: Bool?, passPercent: Int?, questionGroups: [AssessmentFormQuestionGroup]?) {
-        
         self._id = _id
-        
         self.dateModified = dateModified
-        
         self.contextId = contextId
-        
         self.selfUri = selfUri
-        
         self.published = published
-        
         self.passPercent = passPercent
-        
         self.questionGroups = questionGroups
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

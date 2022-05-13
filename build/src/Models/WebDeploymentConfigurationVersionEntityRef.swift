@@ -20,15 +20,10 @@ public class WebDeploymentConfigurationVersionEntityRef: Codable {
     public var version: String?
 
     public init(_id: String?, name: String?, selfUri: String?, version: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.selfUri = selfUri
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

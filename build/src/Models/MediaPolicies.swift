@@ -21,15 +21,10 @@ public class MediaPolicies: Codable {
     public var messagePolicy: MessageMediaPolicy?
 
     public init(callPolicy: CallMediaPolicy?, chatPolicy: ChatMediaPolicy?, emailPolicy: EmailMediaPolicy?, messagePolicy: MessageMediaPolicy?) {
-        
         self.callPolicy = callPolicy
-        
         self.chatPolicy = chatPolicy
-        
         self.emailPolicy = emailPolicy
-        
         self.messagePolicy = messagePolicy
-        
     }
 
 

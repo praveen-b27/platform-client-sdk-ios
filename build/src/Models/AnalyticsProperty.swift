@@ -27,13 +27,9 @@ public class AnalyticsProperty: Codable {
     public var value: String?
 
     public init(property: String?, propertyType: PropertyType?, value: String?) {
-        
         self.property = property
-        
         self.propertyType = propertyType
-        
         self.value = value
-        
     }
 
 

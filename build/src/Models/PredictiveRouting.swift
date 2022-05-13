@@ -15,9 +15,7 @@ public class PredictiveRouting: Codable {
     public var respectSkills: Bool?
 
     public init(respectSkills: Bool?) {
-        
         self.respectSkills = respectSkills
-        
     }
 
 

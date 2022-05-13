@@ -20,23 +20,17 @@ public class QuickReply: Codable {
     public var payload: String?
     /** The location of the image file associated with quick reply */
     public var url: String?
-    /** Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text. */
+    /** Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text. */
     public var action: Action?
     /** Indicates if the quick reply option is selected by end customer */
     public var isSelected: Bool?
 
     public init(text: String?, payload: String?, url: String?, action: Action?, isSelected: Bool?) {
-        
         self.text = text
-        
         self.payload = payload
-        
         self.url = url
-        
         self.action = action
-        
         self.isSelected = isSelected
-        
     }
 
 

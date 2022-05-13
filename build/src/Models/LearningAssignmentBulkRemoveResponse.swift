@@ -17,11 +17,8 @@ public class LearningAssignmentBulkRemoveResponse: Codable {
     public var disallowedEntities: [DisallowedEntityLearningAssignmentReference]?
 
     public init(entities: [LearningAssignmentEntity]?, disallowedEntities: [DisallowedEntityLearningAssignmentReference]?) {
-        
         self.entities = entities
-        
         self.disallowedEntities = disallowedEntities
-        
     }
 
 

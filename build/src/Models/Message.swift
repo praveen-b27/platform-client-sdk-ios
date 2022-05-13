@@ -57,7 +57,7 @@ public class Message: Codable {
     public var _id: String?
     /** True if this call is held and the person on this side hears silence. */
     public var held: Bool?
-    /** The time line of the participant&#39;s message, divided into activity segments. */
+    /** The time line of the participant's message, divided into activity segments. */
     public var segments: [Segment]?
     /** The direction of the message. */
     public var direction: Direction?
@@ -94,7 +94,7 @@ public class Message: Codable {
     public var fromAddress: Address?
     /** The messages sent on this communication channel. */
     public var messages: [MessageDetails]?
-    /** A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). */
+    /** A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context). */
     public var journeyContext: JourneyContext?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
@@ -106,61 +106,33 @@ public class Message: Codable {
     public var agentAssistantId: String?
 
     public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.held = held
-        
         self.segments = segments
-        
         self.direction = direction
-        
         self.recordingId = recordingId
-        
         self.errorInfo = errorInfo
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.startAlertingTime = startAlertingTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.provider = provider
-        
         self.authenticated = authenticated
-        
         self.type = type
-        
         self.recipientCountry = recipientCountry
-        
         self.recipientType = recipientType
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.toAddress = toAddress
-        
         self.fromAddress = fromAddress
-        
         self.messages = messages
-        
         self.journeyContext = journeyContext
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
         self.agentAssistantId = agentAssistantId
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -16,17 +16,14 @@ public class SchedulingProcessingError: Codable {
         case notFound = "NotFound"
         case fail = "Fail"
     }
-    /** An internal code representing the type of error. BadJson for &#39;Unable to parse json.&#39; NotFound for &#39;Resource not found.&#39; Fail for &#39;An unexpected server error occured.&#39; */
+    /** An internal code representing the type of error. BadJson for 'Unable to parse json.' NotFound for 'Resource not found.' Fail for 'An unexpected server error occured.' */
     public var internalErrorCode: InternalErrorCode?
     /** A text description of the error */
     public var _description: String?
 
     public init(internalErrorCode: InternalErrorCode?, _description: String?) {
-        
         self.internalErrorCode = internalErrorCode
-        
         self._description = _description
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

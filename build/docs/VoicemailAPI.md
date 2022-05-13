@@ -46,6 +46,8 @@ Delete a voicemail message.
 
 A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
 
+
+
 Wraps DELETE /api/v2/voicemail/messages/{messageId}  
 
 Requires NO permissions: 
@@ -207,8 +209,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let groupId: String = "" // Group ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 VoicemailAPI.getVoicemailGroupMessages(groupId: groupId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -227,8 +229,8 @@ VoicemailAPI.getVoicemailGroupMessages(groupId: groupId, pageSize: pageSize, pag
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -408,8 +410,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 VoicemailAPI.getVoicemailMeMessages(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -427,8 +429,8 @@ VoicemailAPI.getVoicemailMeMessages(pageSize: pageSize, pageNumber: pageNumber) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -509,7 +511,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let messageId: String = "" // Message ID
-let expand: [String] = [VoicemailAPI.Expand_getVoicemailMessage.enummember.rawValue] // If the caller is a known user, which fields, if any, to expand
+let expand: [String] = [""] // If the caller is a known user, which fields, if any, to expand
 
 // Code example
 VoicemailAPI.getVoicemailMessage(messageId: messageId, expand: expand) { (response, error) in
@@ -581,7 +583,7 @@ VoicemailAPI.getVoicemailMessageMedia(messageId: messageId, formatId: formatId) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageId** | **String**| Message ID | |
-| **formatId** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 {: class="table-striped"}
 
 
@@ -615,7 +617,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let ids: String = "" // An optional comma separated list of VoicemailMessage ids
-let expand: [String] = [VoicemailAPI.Expand_getVoicemailMessages.enummember.rawValue] // If the caller is a known user, which fields, if any, to expand
+let expand: [String] = [""] // If the caller is a known user, which fields, if any, to expand
 
 // Code example
 VoicemailAPI.getVoicemailMessages(ids: ids, expand: expand) { (response, error) in
@@ -717,8 +719,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 VoicemailAPI.getVoicemailQueueMessages(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -737,8 +739,8 @@ VoicemailAPI.getVoicemailQueueMessages(queueId: queueId, pageSize: pageSize, pag
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -897,7 +899,7 @@ VoicemailAPI.patchVoicemailGroupPolicy(groupId: groupId, body: body) { (response
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-| **body** | [**VoicemailGroupPolicy**](VoicemailGroupPolicy.html)| The group&#39;s voicemail policy | |
+| **body** | [**VoicemailGroupPolicy**](VoicemailGroupPolicy.html)| The group's voicemail policy | |
 {: class="table-striped"}
 
 
@@ -948,7 +950,7 @@ VoicemailAPI.patchVoicemailMePolicy(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy | |
+| **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user's voicemail policy | |
 {: class="table-striped"}
 
 
@@ -967,6 +969,8 @@ VoicemailAPI.patchVoicemailMePolicy(body: body) { (response, error) in
 Update a voicemail message
 
 A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+
+
 
 Wraps PATCH /api/v2/voicemail/messages/{messageId}  
 
@@ -1054,7 +1058,7 @@ VoicemailAPI.patchVoicemailUserpolicy(userId: userId, body: body) { (response, e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy | |
+| **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user's voicemail policy | |
 {: class="table-striped"}
 
 
@@ -1175,6 +1179,8 @@ VoicemailAPI.postVoicemailSearch(body: body) { (response, error) in
 Update a voicemail message
 
 A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+
+
 
 Wraps PUT /api/v2/voicemail/messages/{messageId}  
 
@@ -1315,7 +1321,7 @@ VoicemailAPI.putVoicemailUserpolicy(userId: userId, body: body) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-| **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy | |
+| **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user's voicemail policy | |
 {: class="table-striped"}
 
 

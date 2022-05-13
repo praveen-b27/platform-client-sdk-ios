@@ -28,15 +28,10 @@ public class RoutePathResponse: Codable {
     public var skills: [RoutingSkillReference]?
 
     public init(queue: QueueReference?, mediaType: MediaType?, language: LanguageReference?, skills: [RoutingSkillReference]?) {
-        
         self.queue = queue
-        
         self.mediaType = mediaType
-        
         self.language = language
-        
         self.skills = skills
-        
     }
 
 

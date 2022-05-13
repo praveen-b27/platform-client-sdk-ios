@@ -24,13 +24,9 @@ public class WebMessagingEvent: Codable {
     public var presence: WebMessagingEventPresence?
 
     public init(eventType: EventType?, coBrowse: WebMessagingEventCoBrowse?, presence: WebMessagingEventPresence?) {
-        
         self.eventType = eventType
-        
         self.coBrowse = coBrowse
-        
         self.presence = presence
-        
     }
 
 

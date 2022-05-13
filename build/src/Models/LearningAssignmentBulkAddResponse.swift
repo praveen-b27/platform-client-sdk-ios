@@ -17,11 +17,8 @@ public class LearningAssignmentBulkAddResponse: Codable {
     public var disallowedEntities: [DisallowedEntityLearningAssignmentItem]?
 
     public init(entities: [LearningAssignment]?, disallowedEntities: [DisallowedEntityLearningAssignmentItem]?) {
-        
         self.entities = entities
-        
         self.disallowedEntities = disallowedEntities
-        
     }
 
 

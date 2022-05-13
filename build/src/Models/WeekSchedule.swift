@@ -36,29 +36,17 @@ public class WeekSchedule: Codable {
     public var agentSchedulesVersion: Int?
 
     public init(_id: String?, selfUri: String?, weekDate: String?, _description: String?, published: Bool?, generationResults: WeekScheduleGenerationResult?, shortTermForecast: ShortTermForecastReference?, metadata: WfmVersionedEntityMetadata?, userSchedules: [String:UserSchedule]?, headcountForecast: HeadcountForecast?, agentSchedulesVersion: Int?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.weekDate = weekDate
-        
         self._description = _description
-        
         self.published = published
-        
         self.generationResults = generationResults
-        
         self.shortTermForecast = shortTermForecast
-        
         self.metadata = metadata
-        
         self.userSchedules = userSchedules
-        
         self.headcountForecast = headcountForecast
-        
         self.agentSchedulesVersion = agentSchedulesVersion
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

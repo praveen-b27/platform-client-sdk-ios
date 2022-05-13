@@ -22,17 +22,11 @@ public class ChatConversation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, participants: [ChatMediaParticipant]?, otherMediaUris: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.participants = participants
-        
         self.otherMediaUris = otherMediaUris
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

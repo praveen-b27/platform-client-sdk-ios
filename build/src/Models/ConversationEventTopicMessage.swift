@@ -85,11 +85,11 @@ public class ConversationEventTopicMessage: Codable {
     public var recipientCountry: String?
     /** The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type. */
     public var recipientType: String?
-    /** A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). */
+    /** A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context). */
     public var journeyContext: ConversationEventTopicJourneyContext?
     /** Call wrap up or disposition data. */
     public var wrapup: ConversationEventTopicWrapup?
-    /** A communication&#39;s after-call work data. */
+    /** A communication's after-call work data. */
     public var afterCallWork: ConversationEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
@@ -97,53 +97,29 @@ public class ConversationEventTopicMessage: Codable {
     public var agentAssistantId: String?
 
     public init(_id: String?, state: State?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: ConversationEventTopicJourneyContext?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.held = held
-        
         self.errorInfo = errorInfo
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.toAddress = toAddress
-        
         self.fromAddress = fromAddress
-        
         self.messages = messages
-        
         self.messagesTranscriptUri = messagesTranscriptUri
-        
         self.type = type
-        
         self.recipientCountry = recipientCountry
-        
         self.recipientType = recipientType
-        
         self.journeyContext = journeyContext
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
         self.agentAssistantId = agentAssistantId
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

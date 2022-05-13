@@ -19,17 +19,11 @@ public class ProgramMappings: Codable {
     public var dateModified: Date?
 
     public init(program: BaseProgramEntity?, queues: [AddressableEntityRef]?, flows: [AddressableEntityRef]?, modifiedBy: AddressableEntityRef?, dateModified: Date?) {
-        
         self.program = program
-        
         self.queues = queues
-        
         self.flows = flows
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
     }
 
 

@@ -18,11 +18,8 @@ public class MediaTypeAccess: Codable {
     public var outbound: [MediaType]?
 
     public init(inbound: [MediaType]?, outbound: [MediaType]?) {
-        
         self.inbound = inbound
-        
         self.outbound = outbound
-        
     }
 
 

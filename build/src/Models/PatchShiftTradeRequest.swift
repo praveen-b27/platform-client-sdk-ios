@@ -21,15 +21,10 @@ public class PatchShiftTradeRequest: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(receivingUserId: ValueWrapperString?, expiration: ValueWrapperDate?, acceptableIntervals: ListWrapperInterval?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.receivingUserId = receivingUserId
-        
         self.expiration = expiration
-        
         self.acceptableIntervals = acceptableIntervals
-        
         self.metadata = metadata
-        
     }
 
 

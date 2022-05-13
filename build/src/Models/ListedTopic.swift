@@ -42,33 +42,19 @@ public class ListedTopic: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, published: Bool?, strictness: Strictness?, programsCount: Int?, tags: [String]?, dialect: String?, participants: Participants?, phrasesCount: Int?, modifiedBy: AddressableEntityRef?, dateModified: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.published = published
-        
         self.strictness = strictness
-        
         self.programsCount = programsCount
-        
         self.tags = tags
-        
         self.dialect = dialect
-        
         self.participants = participants
-        
         self.phrasesCount = phrasesCount
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -25,13 +25,9 @@ public class FlowObservationQuery: Codable {
     public var detailMetrics: [DetailMetrics]?
 
     public init(filter: FlowObservationQueryFilter?, metrics: [Metrics]?, detailMetrics: [DetailMetrics]?) {
-        
         self.filter = filter
-        
         self.metrics = metrics
-        
         self.detailMetrics = detailMetrics
-        
     }
 
 

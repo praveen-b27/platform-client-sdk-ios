@@ -24,25 +24,20 @@ public class UserState: Codable {
         case conduct = "Conduct"
         case unknown = "Unknown"
     }
-    /** User&#39;s current state. */
+    /** User's current state. */
     public var state: State?
     /** Version of this user. */
     public var version: Int?
-    /** Reason for a change in the user&#39;s state. */
+    /** Reason for a change in the user's state. */
     public var stateChangeReason: StateChangeReason?
     /** Date that the state was last changed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var stateChangeDate: Date?
 
     public init(state: State?, version: Int?, stateChangeReason: StateChangeReason?, stateChangeDate: Date?) {
-        
         self.state = state
-        
         self.version = version
-        
         self.stateChangeReason = stateChangeReason
-        
         self.stateChangeDate = stateChangeDate
-        
     }
 
 

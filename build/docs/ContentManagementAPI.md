@@ -111,6 +111,8 @@ Deletes an existing share.
 
 This revokes sharing rights specified in the share record
 
+
+
 Wraps DELETE /api/v2/contentmanagement/shares/{shareId}  
 
 Requires NO permissions: 
@@ -315,6 +317,8 @@ Delete workspace tag
 
 Delete a tag from a workspace. Will remove this tag from all documents.
 
+
+
 Wraps DELETE /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}  
 
 Requires NO permissions: 
@@ -381,7 +385,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let documentId: String = "" // Document ID
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementDocument.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementDocument(documentId: documentId, expand: expand) { (response, error) in
@@ -434,12 +438,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let documentId: String = "" // Document ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let transactionFilter: String = "" // Transaction filter
-let level: String = "USER" // level
+let level: String = "" // level
 let sortBy: String = "" // Sort by
-let sortOrder: String = "ascending" // Sort order
+let sortOrder: String = "" // Sort order
 
 // Code example
 ContentManagementAPI.getContentmanagementDocumentAudits(documentId: documentId, pageSize: pageSize, pageNumber: pageNumber, transactionFilter: transactionFilter, level: level, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
@@ -458,12 +462,12 @@ ContentManagementAPI.getContentmanagementDocumentAudits(documentId: documentId, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **transactionFilter** | **String**| Transaction filter | [optional] |
-| **level** | **String**| level | [optional] [default to USER] |
+| **level** | **String**| level | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ascending] |
+| **sortOrder** | **String**| Sort order | [optional] |
 {: class="table-striped"}
 
 
@@ -530,7 +534,7 @@ ContentManagementAPI.getContentmanagementDocumentContent(documentId: documentId,
 
 # **getContentmanagementDocuments**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [DocumentEntityListing](DocumentEntityListing.html) getContentmanagementDocuments(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder)
 
@@ -553,11 +557,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workspaceId: String = "" // Workspace ID
 let name: String = "" // Name
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementDocuments.enummember.rawValue] // Which fields, if any, to expand.
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let expand: [String] = [""] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortBy: String = "" // name or dateCreated
-let sortOrder: String = "ascending" // ascending or descending
+let sortOrder: String = "" // ascending or descending
 
 // Code example
 ContentManagementAPI.getContentmanagementDocuments(workspaceId: workspaceId, name: name, expand: expand, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
@@ -578,10 +582,10 @@ ContentManagementAPI.getContentmanagementDocuments(workspaceId: workspaceId, nam
 | **workspaceId** | **String**| Workspace ID | |
 | **name** | **String**| Name | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| name or dateCreated | [optional] |
-| **sortOrder** | **String**| ascending or descending | [optional] [default to ascending] |
+| **sortOrder** | **String**| ascending or descending | [optional] |
 {: class="table-striped"}
 
 
@@ -615,11 +619,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queryPhrase: String = "" // Phrase tokens are ANDed together over all searchable fields
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "name" // name or dateCreated
-let sortOrder: String = "ascending" // ascending or descending
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementQuery.enummember.rawValue] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // name or dateCreated
+let sortOrder: String = "" // ascending or descending
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementQuery(queryPhrase: queryPhrase, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -638,10 +642,10 @@ ContentManagementAPI.getContentmanagementQuery(queryPhrase: queryPhrase, pageSiz
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queryPhrase** | **String**| Phrase tokens are ANDed together over all searchable fields | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| name or dateCreated | [optional] [default to name] |
-| **sortOrder** | **String**| ascending or descending | [optional] [default to ascending] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| name or dateCreated | [optional] |
+| **sortOrder** | **String**| ascending or descending | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
 {: class="table-striped"}
 
@@ -774,7 +778,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let shareId: String = "" // Share ID
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementShare.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementShare(shareId: shareId, expand: expand) { (response, error) in
@@ -813,6 +817,8 @@ Get shared documents. Securely download a shared document.
 
 This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
 
+
+
 Wraps GET /api/v2/contentmanagement/shared/{sharedId}  
 
 Requires NO permissions: 
@@ -849,8 +855,8 @@ ContentManagementAPI.getContentmanagementSharedSharedId(sharedId: sharedId, redi
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sharedId** | **String**| Shared ID | |
-| **redirect** | **Bool**| Turn on or off redirect | [optional] [default to true] |
-| **disposition** | **String**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional] [default to attachment]<br />**Values**: attachment ("attachment"), inline ("inline"), _none ("none") |
+| **redirect** | **Bool**| Turn on or off redirect | [optional] |
+| **disposition** | **String**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional]<br />**Values**: attachment ("attachment"), inline ("inline"), _none ("none") |
 | **contentType** | **String**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav | [optional] |
 | **expand** | **String**| Expand some document fields | [optional]<br />**Values**: documentAcl ("document.acl") |
 {: class="table-striped"}
@@ -872,6 +878,8 @@ Gets a list of shares.  You must specify at least one filter (e.g. entityId).
 
 Failing to specify a filter will return 400.
 
+
+
 Wraps GET /api/v2/contentmanagement/shares  
 
 Requires NO permissions: 
@@ -886,9 +894,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let entityId: String = "" // Filters the shares returned to only the entity specified by the value of this parameter.
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementShares.enummember.rawValue] // Which fields, if any, to expand.
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let expand: [String] = [""] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 ContentManagementAPI.getContentmanagementShares(entityId: entityId, expand: expand, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -908,8 +916,8 @@ ContentManagementAPI.getContentmanagementShares(entityId: entityId, expand: expa
 | ------------- | ------------- | ------------- | ------------- |
 | **entityId** | **String**| Filters the shares returned to only the entity specified by the value of this parameter. | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -942,8 +950,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 ContentManagementAPI.getContentmanagementStatus(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -961,8 +969,8 @@ ContentManagementAPI.getContentmanagementStatus(pageSize: pageSize, pageNumber: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1094,7 +1102,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workspaceId: String = "" // Workspace ID
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementWorkspace.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementWorkspace(workspaceId: workspaceId, expand: expand) { (response, error) in
@@ -1147,11 +1155,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workspaceId: String = "" // Workspace ID
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementWorkspaceDocuments.enummember.rawValue] // Which fields, if any, to expand.
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let expand: [String] = [""] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortBy: String = "" // name or dateCreated
-let sortOrder: String = "ascending" // ascending or descending
+let sortOrder: String = "" // ascending or descending
 
 // Code example
 ContentManagementAPI.getContentmanagementWorkspaceDocuments(workspaceId: workspaceId, expand: expand, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
@@ -1171,10 +1179,10 @@ ContentManagementAPI.getContentmanagementWorkspaceDocuments(workspaceId: workspa
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| name or dateCreated | [optional] |
-| **sortOrder** | **String**| ascending or descending | [optional] [default to ascending] |
+| **sortOrder** | **String**| ascending or descending | [optional] |
 {: class="table-striped"}
 
 
@@ -1209,7 +1217,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workspaceId: String = "" // Workspace ID
 let memberId: String = "" // Member ID
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementWorkspaceMember.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementWorkspaceMember(workspaceId: workspaceId, memberId: memberId, expand: expand) { (response, error) in
@@ -1263,9 +1271,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workspaceId: String = "" // Workspace ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementWorkspaceMembers.enummember.rawValue] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementWorkspaceMembers(workspaceId: workspaceId, pageSize: pageSize, pageNumber: pageNumber, expand: expand) { (response, error) in
@@ -1284,8 +1292,8 @@ ContentManagementAPI.getContentmanagementWorkspaceMembers(workspaceId: workspace
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
 {: class="table-striped"}
 
@@ -1321,7 +1329,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workspaceId: String = "" // Workspace ID
 let tagId: String = "" // Tag ID
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementWorkspaceTagvalue.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementWorkspaceTagvalue(workspaceId: workspaceId, tagId: tagId, expand: expand) { (response, error) in
@@ -1376,9 +1384,9 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workspaceId: String = "" // Workspace ID
 let value: String = "" // filter the list of tags returned
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementWorkspaceTagvalues.enummember.rawValue] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementWorkspaceTagvalues(workspaceId: workspaceId, value: value, pageSize: pageSize, pageNumber: pageNumber, expand: expand) { (response, error) in
@@ -1398,8 +1406,8 @@ ContentManagementAPI.getContentmanagementWorkspaceTagvalues(workspaceId: workspa
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **value** | **String**| filter the list of tags returned | [optional] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl") |
 {: class="table-striped"}
 
@@ -1420,6 +1428,8 @@ Get a list of workspaces.
 
 Specifying &#39;content&#39; access will return all workspaces the user has document access to, while &#39;admin&#39; access will return all group workspaces the user has administrative rights to.
 
+
+
 Wraps GET /api/v2/contentmanagement/workspaces  
 
 Requires NO permissions: 
@@ -1433,10 +1443,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let access: [String] = [ContentManagementAPI.Access_getContentmanagementWorkspaces.enummember.rawValue] // Requested access level.
-let expand: [String] = [ContentManagementAPI.Expand_getContentmanagementWorkspaces.enummember.rawValue] // Which fields, if any, to expand.
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let access: [String] = [""] // Requested access level.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.getContentmanagementWorkspaces(pageSize: pageSize, pageNumber: pageNumber, access: access, expand: expand) { (response, error) in
@@ -1454,8 +1464,8 @@ ContentManagementAPI.getContentmanagementWorkspaces(pageSize: pageSize, pageNumb
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **access** | [**[String]**](String.html)| Requested access level. | [optional]<br />**Values**: content ("content"), admin ("admin"), documentCreate ("document:create"), documentViewcontent ("document:viewContent"), documentViewmetadata ("document:viewMetadata"), documentDownload ("document:download"), documentDelete ("document:delete"), documentUpdate ("document:update"), documentShare ("document:share"), documentShareview ("document:shareView"), documentEmail ("document:email"), documentPrint ("document:print"), documentAuditview ("document:auditView"), documentReplace ("document:replace"), documentTag ("document:tag"), tagCreate ("tag:create"), tagView ("tag:view"), tagUpdate ("tag:update"), tagApply ("tag:apply"), tagRemove ("tag:remove"), tagDelete ("tag:delete") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: summary ("summary"), acl ("acl") |
 {: class="table-striped"}
@@ -1869,7 +1879,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workspaceId: String = "" // Workspace ID
 let body: TagQueryRequest = new TagQueryRequest(...) // query
-let expand: [String] = [ContentManagementAPI.Expand_postContentmanagementWorkspaceTagvaluesQuery.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 ContentManagementAPI.postContentmanagementWorkspaceTagvaluesQuery(workspaceId: workspaceId, body: body, expand: expand) { (response, error) in

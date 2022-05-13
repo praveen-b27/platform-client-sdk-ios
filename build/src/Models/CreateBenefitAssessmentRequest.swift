@@ -15,9 +15,7 @@ public class CreateBenefitAssessmentRequest: Codable {
     public var queueIds: [String]?
 
     public init(queueIds: [String]?) {
-        
         self.queueIds = queueIds
-        
     }
 
 

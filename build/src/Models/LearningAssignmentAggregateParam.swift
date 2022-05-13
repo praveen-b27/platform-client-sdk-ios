@@ -29,21 +29,16 @@ public class LearningAssignmentAggregateParam: Codable {
     public var interval: String?
     /** The list of metrics to be returned. If omitted, all metrics are returned. */
     public var metrics: [Metrics]?
-    /** Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \&quot;attendeeId\&quot;) */
+    /** Specifies if the aggregated data is combined into a single set of metrics (groupBy is empty or not specified), or contains an element per attendeeId (groupBy is \"attendeeId\") */
     public var groupBy: [GroupBy]?
     /** The filter applied to the data.  This is ANDed with the interval parameter.  */
     public var filter: LearningAssignmentAggregateQueryRequestFilter?
 
     public init(interval: String?, metrics: [Metrics]?, groupBy: [GroupBy]?, filter: LearningAssignmentAggregateQueryRequestFilter?) {
-        
         self.interval = interval
-        
         self.metrics = metrics
-        
         self.groupBy = groupBy
-        
         self.filter = filter
-        
     }
 
 

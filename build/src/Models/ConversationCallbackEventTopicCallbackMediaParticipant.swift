@@ -95,93 +95,49 @@ public class ConversationCallbackEventTopicCallbackMediaParticipant: Codable {
     public var automatedCallbackConfigId: String?
 
     public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationCallbackEventTopicUriReference?, queue: ConversationCallbackEventTopicUriReference?, team: ConversationCallbackEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationCallbackEventTopicErrorBody?, script: ConversationCallbackEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationCallbackEventTopicUriReference?, externalOrganization: ConversationCallbackEventTopicUriReference?, wrapup: ConversationCallbackEventTopicWrapup?, conversationRoutingData: ConversationCallbackEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationCallbackEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: ConversationCallbackEventTopicDialerPreview?, voicemail: ConversationCallbackEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, externalCampaign: Bool?, timeoutSeconds: Int?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.address = address
-        
         self.startTime = startTime
-        
         self.connectedTime = connectedTime
-        
         self.endTime = endTime
-        
         self.startHoldTime = startHoldTime
-        
         self.purpose = purpose
-        
         self.state = state
-        
         self.direction = direction
-        
         self.disconnectType = disconnectType
-        
         self.held = held
-        
         self.wrapupRequired = wrapupRequired
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.user = user
-        
         self.queue = queue
-        
         self.team = team
-        
         self.attributes = attributes
-        
         self.errorInfo = errorInfo
-        
         self.script = script
-        
         self.wrapupTimeoutMs = wrapupTimeoutMs
-        
         self.wrapupSkipped = wrapupSkipped
-        
         self.alertingTimeoutMs = alertingTimeoutMs
-        
         self.provider = provider
-        
         self.externalContact = externalContact
-        
         self.externalOrganization = externalOrganization
-        
         self.wrapup = wrapup
-        
         self.conversationRoutingData = conversationRoutingData
-        
         self.peer = peer
-        
         self.screenRecordingState = screenRecordingState
-        
         self.flaggedReason = flaggedReason
-        
         self.journeyContext = journeyContext
-        
         self.startAcwTime = startAcwTime
-        
         self.endAcwTime = endAcwTime
-        
         self.outboundPreview = outboundPreview
-        
         self.voicemail = voicemail
-        
         self.callbackNumbers = callbackNumbers
-        
         self.callbackUserName = callbackUserName
-        
         self.skipEnabled = skipEnabled
-        
         self.externalCampaign = externalCampaign
-        
         self.timeoutSeconds = timeoutSeconds
-        
         self.callbackScheduledTime = callbackScheduledTime
-        
         self.automatedCallbackConfigId = automatedCallbackConfigId
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

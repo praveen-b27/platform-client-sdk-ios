@@ -27,15 +27,10 @@ public class IntentFeedback: Codable {
     public var assessment: Assessment?
 
     public init(name: String?, probability: Double?, entities: [DetectedNamedEntity]?, assessment: Assessment?) {
-        
         self.name = name
-        
         self.probability = probability
-        
         self.entities = entities
-        
         self.assessment = assessment
-        
     }
 
 

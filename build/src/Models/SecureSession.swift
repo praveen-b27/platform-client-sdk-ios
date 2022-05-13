@@ -32,21 +32,13 @@ public class SecureSession: Codable {
     public var selfUri: String?
 
     public init(_id: String?, flow: DomainEntityRef?, userData: String?, state: State?, sourceParticipantId: String?, disconnect: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.flow = flow
-        
         self.userData = userData
-        
         self.state = state
-        
         self.sourceParticipantId = sourceParticipantId
-        
         self.disconnect = disconnect
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

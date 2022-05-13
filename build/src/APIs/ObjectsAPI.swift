@@ -12,15 +12,11 @@ import Foundation
 open class ObjectsAPI {
     
     
-    
-    
-    
     /**
-     
      Delete a division.
      
      - parameter divisionId: (path) Division ID 
-     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional, default to false)
+     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteAuthorizationDivision(divisionId: String, force: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -35,38 +31,28 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Delete a division.
-     
      - DELETE /api/v2/authorization/divisions/{divisionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      
      - parameter divisionId: (path) Division ID 
-     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional, default to false)
+     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteAuthorizationDivisionWithRequestBuilder(divisionId: String, force: Bool? = nil) -> RequestBuilder<Void> {
+    open class func deleteAuthorizationDivisionWithRequestBuilder(divisionId: String, force: Bool? = nil) -> RequestBuilder<Void> {        
         var path = "/api/v2/authorization/divisions/{divisionId}"
         let divisionIdPreEscape = "\(divisionId)"
         let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{divisionId}", with: divisionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "force": force
-            
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -76,15 +62,11 @@ open class ObjectsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Returns an authorization division.
      
      - parameter divisionId: (path) Division ID 
-     - parameter objectCount: (query) Get count of objects in this division, grouped by type (optional, default to false)
+     - parameter objectCount: (query) Get count of objects in this division, grouped by type (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getAuthorizationDivision(divisionId: String, objectCount: Bool? = nil, completion: @escaping ((_ data: AuthzDivision?,_ error: Error?) -> Void)) {
@@ -106,48 +88,38 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Returns an authorization division.
-     
      - GET /api/v2/authorization/divisions/{divisionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "objectCounts" : {
-    "key" : 123456789
+    "key" : 0
   },
-  "id" : "aeiou",
+  "id" : "id",
   "homeDivision" : true
-}}]
+}, statusCode=200}]
      
      - parameter divisionId: (path) Division ID 
-     - parameter objectCount: (query) Get count of objects in this division, grouped by type (optional, default to false)
+     - parameter objectCount: (query) Get count of objects in this division, grouped by type (optional)
 
      - returns: RequestBuilder<AuthzDivision> 
      */
-    open class func getAuthorizationDivisionWithRequestBuilder(divisionId: String, objectCount: Bool? = nil) -> RequestBuilder<AuthzDivision> {
+    open class func getAuthorizationDivisionWithRequestBuilder(divisionId: String, objectCount: Bool? = nil) -> RequestBuilder<AuthzDivision> {        
         var path = "/api/v2/authorization/divisions/{divisionId}"
         let divisionIdPreEscape = "\(divisionId)"
         let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{divisionId}", with: divisionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "objectCount": objectCount
-            
         ])
 
         let requestBuilder: RequestBuilder<AuthzDivision>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -164,27 +136,16 @@ open class ObjectsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Retrieve a list of all divisions defined for the organization
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter objectCount: (query) Include the count of objects contained in the division (optional, default to false)
+     - parameter objectCount: (query) Include the count of objects contained in the division (optional)
      - parameter _id: (query) Optionally request specific divisions by their IDs (optional)
      - parameter name: (query) Search term to filter by division name (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -208,79 +169,71 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Retrieve a list of all divisions defined for the organization
-     
      - GET /api/v2/authorization/divisions
      - Request specific divisions by id using a query param \"id\", e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&id=72e9fb25-c484-488d-9312-7acba82435b3
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "description" : "aeiou",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
     "objectCounts" : {
-      "key" : 123456789
+      "key" : 0
     },
-    "id" : "aeiou",
+    "id" : "id",
+    "homeDivision" : true
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "objectCounts" : {
+      "key" : 0
+    },
+    "id" : "id",
     "homeDivision" : true
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) The total page size requested (optional, default to 25)
-     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
      - parameter sortBy: (query) variable name requested to sort by (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter objectCount: (query) Include the count of objects contained in the division (optional, default to false)
+     - parameter objectCount: (query) Include the count of objects contained in the division (optional)
      - parameter _id: (query) Optionally request specific divisions by their IDs (optional)
      - parameter name: (query) Search term to filter by division name (optional)
 
      - returns: RequestBuilder<AuthzDivisionEntityListing> 
      */
-    open class func getAuthorizationDivisionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, _id: [String]? = nil, name: String? = nil) -> RequestBuilder<AuthzDivisionEntityListing> {
+    open class func getAuthorizationDivisionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, _id: [String]? = nil, name: String? = nil) -> RequestBuilder<AuthzDivisionEntityListing> {        
         let path = "/api/v2/authorization/divisions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "expand": expand, 
-            
             "nextPage": nextPage, 
-            
             "previousPage": previousPage, 
-            
             "objectCount": objectCount, 
-            
             "id": _id, 
-            
             "name": name
-            
         ])
 
         let requestBuilder: RequestBuilder<AuthzDivisionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -288,9 +241,7 @@ open class ObjectsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Retrieve the home division for the organization.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -314,36 +265,29 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Retrieve the home division for the organization.
-     
      - GET /api/v2/authorization/divisions/home
      - Will not include object counts.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "objectCounts" : {
-    "key" : 123456789
+    "key" : 0
   },
-  "id" : "aeiou",
+  "id" : "id",
   "homeDivision" : true
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<AuthzDivision> 
      */
-    open class func getAuthorizationDivisionsHomeWithRequestBuilder() -> RequestBuilder<AuthzDivision> {
+    open class func getAuthorizationDivisionsHomeWithRequestBuilder() -> RequestBuilder<AuthzDivision> {        
         let path = "/api/v2/authorization/divisions/home"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -352,9 +296,7 @@ open class ObjectsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Returns the maximum allowed number of divisions.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -378,27 +320,18 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Returns the maximum allowed number of divisions.
-     
      - GET /api/v2/authorization/divisions/limit
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=123}]
 
      - returns: RequestBuilder<Int> 
      */
-    open class func getAuthorizationDivisionsLimitWithRequestBuilder() -> RequestBuilder<Int> {
+    open class func getAuthorizationDivisionsLimitWithRequestBuilder() -> RequestBuilder<Int> {        
         let path = "/api/v2/authorization/divisions/limit"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -407,8 +340,6 @@ open class ObjectsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
     
     
     public enum ObjectType_postAuthorizationDivisionObject: String { 
@@ -439,10 +370,7 @@ open class ObjectsAPI {
 
     
     
-    
-    
     /**
-     
      Assign a list of objects to a division
      
      - parameter divisionId: (path) Division ID 
@@ -462,9 +390,7 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Assign a list of objects to a division
-     
      - POST /api/v2/authorization/divisions/{divisionId}/objects/{objectType}
      - Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, DATATABLES or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\"206ce31f-61ec-40ed-a8b1-be6f06303998\",\"250a754e-f5e4-4f51-800f-a92f09d3bf8c\"]
      - OAuth:
@@ -477,7 +403,7 @@ open class ObjectsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postAuthorizationDivisionObjectWithRequestBuilder(divisionId: String, objectType: ObjectType_postAuthorizationDivisionObject, body: [String]) -> RequestBuilder<Void> {
+    open class func postAuthorizationDivisionObjectWithRequestBuilder(divisionId: String, objectType: ObjectType_postAuthorizationDivisionObject, body: [String]) -> RequestBuilder<Void> {        
         var path = "/api/v2/authorization/divisions/{divisionId}/objects/{objectType}"
         let divisionIdPreEscape = "\(divisionId)"
         let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -486,10 +412,8 @@ open class ObjectsAPI {
         let objectTypePostEscape = objectTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{objectType}", with: objectTypePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -499,11 +423,7 @@ open class ObjectsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Recreate a previously deleted division.
      
      - parameter divisionId: (path) Division ID 
@@ -529,40 +449,35 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Recreate a previously deleted division.
-     
      - POST /api/v2/authorization/divisions/{divisionId}/restore
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "objectCounts" : {
-    "key" : 123456789
+    "key" : 0
   },
-  "id" : "aeiou",
+  "id" : "id",
   "homeDivision" : true
-}}]
+}, statusCode=200}]
      
      - parameter divisionId: (path) Division ID 
      - parameter body: (body) Recreated division data 
 
      - returns: RequestBuilder<AuthzDivision> 
      */
-    open class func postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: String, body: AuthzDivision) -> RequestBuilder<AuthzDivision> {
+    open class func postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: String, body: AuthzDivision) -> RequestBuilder<AuthzDivision> {        
         var path = "/api/v2/authorization/divisions/{divisionId}/restore"
         let divisionIdPreEscape = "\(divisionId)"
         let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{divisionId}", with: divisionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AuthzDivision>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -571,10 +486,7 @@ open class ObjectsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a division.
      
      - parameter body: (body) Division 
@@ -599,36 +511,31 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Create a division.
-     
      - POST /api/v2/authorization/divisions
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "objectCounts" : {
-    "key" : 123456789
+    "key" : 0
   },
-  "id" : "aeiou",
+  "id" : "id",
   "homeDivision" : true
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Division 
 
      - returns: RequestBuilder<AuthzDivision> 
      */
-    open class func postAuthorizationDivisionsWithRequestBuilder(body: AuthzDivision) -> RequestBuilder<AuthzDivision> {
+    open class func postAuthorizationDivisionsWithRequestBuilder(body: AuthzDivision) -> RequestBuilder<AuthzDivision> {        
         let path = "/api/v2/authorization/divisions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AuthzDivision>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -638,11 +545,7 @@ open class ObjectsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a division.
      
      - parameter divisionId: (path) Division ID 
@@ -668,40 +571,35 @@ open class ObjectsAPI {
     }
 
     /**
-     
      Update a division.
-     
      - PUT /api/v2/authorization/divisions/{divisionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
   "objectCounts" : {
-    "key" : 123456789
+    "key" : 0
   },
-  "id" : "aeiou",
+  "id" : "id",
   "homeDivision" : true
-}}]
+}, statusCode=200}]
      
      - parameter divisionId: (path) Division ID 
      - parameter body: (body) Updated division data 
 
      - returns: RequestBuilder<AuthzDivision> 
      */
-    open class func putAuthorizationDivisionWithRequestBuilder(divisionId: String, body: AuthzDivision) -> RequestBuilder<AuthzDivision> {
+    open class func putAuthorizationDivisionWithRequestBuilder(divisionId: String, body: AuthzDivision) -> RequestBuilder<AuthzDivision> {        
         var path = "/api/v2/authorization/divisions/{divisionId}"
         let divisionIdPreEscape = "\(divisionId)"
         let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{divisionId}", with: divisionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AuthzDivision>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -19,13 +19,9 @@ public class NamedEntityTypeDefinition: Codable {
     public var mechanism: NamedEntityTypeMechanism?
 
     public init(name: String?, _description: String?, mechanism: NamedEntityTypeMechanism?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.mechanism = mechanism
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

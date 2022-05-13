@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Defines a request in the SCIM service provider&#39;s configuration. */
+/** Defines a request in the SCIM service provider's configuration. */
 
 public class ScimServiceProviderConfigSimpleFeature: Codable {
 
@@ -16,9 +16,7 @@ public class ScimServiceProviderConfigSimpleFeature: Codable {
     public var supported: Bool?
 
     public init(supported: Bool?) {
-        
         self.supported = supported
-        
     }
 
 

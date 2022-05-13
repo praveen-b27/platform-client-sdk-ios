@@ -21,15 +21,10 @@ public class IntentDefinition: Codable {
     public var utterances: [NluUtterance]?
 
     public init(name: String?, entityTypeBindings: [NamedEntityTypeBinding]?, entityNameReferences: [String]?, utterances: [NluUtterance]?) {
-        
         self.name = name
-        
         self.entityTypeBindings = entityTypeBindings
-        
         self.entityNameReferences = entityNameReferences
-        
         self.utterances = utterances
-        
     }
 
 

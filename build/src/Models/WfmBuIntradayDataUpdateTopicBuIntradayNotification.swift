@@ -15,11 +15,8 @@ public class WfmBuIntradayDataUpdateTopicBuIntradayNotification: Codable {
     public var result: WfmBuIntradayDataUpdateTopicBuIntradayResult?
 
     public init(operationId: String?, result: WfmBuIntradayDataUpdateTopicBuIntradayResult?) {
-        
         self.operationId = operationId
-        
         self.result = result
-        
     }
 
 

@@ -19,13 +19,9 @@ public class ConversationUserDisposition: Codable {
     public var user: AddressableEntityRef?
 
     public init(code: String?, notes: String?, user: AddressableEntityRef?) {
-        
         self.code = code
-        
         self.notes = notes
-        
         self.user = user
-        
     }
 
 

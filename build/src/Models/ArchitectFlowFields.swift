@@ -17,11 +17,8 @@ public class ArchitectFlowFields: Codable {
     public var flowRequestMappings: [RequestMapping]?
 
     public init(architectFlow: AddressableEntityRef?, flowRequestMappings: [RequestMapping]?) {
-        
         self.architectFlow = architectFlow
-        
         self.flowRequestMappings = flowRequestMappings
-        
     }
 
 

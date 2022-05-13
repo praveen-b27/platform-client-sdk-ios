@@ -43,39 +43,22 @@ public class DialerContactlistConfigChangeContactList: Codable {
     public var version: Int?
 
     public init(columnNames: [String]?, phoneColumns: [DialerContactlistConfigChangeContactPhoneNumberColumn]?, emailColumns: [DialerContactlistConfigChangeEmailColumn]?, importStatus: DialerContactlistConfigChangeImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int?, attemptLimits: DialerContactlistConfigChangeUriReference?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, division: DialerContactlistConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.columnNames = columnNames
-        
         self.phoneColumns = phoneColumns
-        
         self.emailColumns = emailColumns
-        
         self.importStatus = importStatus
-        
         self.previewModeColumnName = previewModeColumnName
-        
         self.previewModeAcceptedValues = previewModeAcceptedValues
-        
         self.size = size
-        
         self.attemptLimits = attemptLimits
-        
         self.automaticTimeZoneMapping = automaticTimeZoneMapping
-        
         self.zipCodeColumnName = zipCodeColumnName
-        
         self.division = division
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

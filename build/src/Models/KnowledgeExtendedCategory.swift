@@ -45,27 +45,16 @@ public class KnowledgeExtendedCategory: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, knowledgeBase: KnowledgeBase?, languageCode: LanguageCode?, dateCreated: Date?, dateModified: Date?, parent: KnowledgeCategory?, children: [KnowledgeCategory]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.knowledgeBase = knowledgeBase
-        
         self.languageCode = languageCode
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.parent = parent
-        
         self.children = children
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

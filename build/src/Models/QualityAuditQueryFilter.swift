@@ -28,11 +28,8 @@ public class QualityAuditQueryFilter: Codable {
     public var value: String?
 
     public init(property: Property?, value: String?) {
-        
         self.property = property
-        
         self.value = value
-        
     }
 
 

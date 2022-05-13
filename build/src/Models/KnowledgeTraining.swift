@@ -45,27 +45,16 @@ public class KnowledgeTraining: Codable {
     public var selfUri: String?
 
     public init(_id: String?, dateTriggered: Date?, dateCompleted: Date?, status: Status?, languageCode: String?, knowledgeBase: KnowledgeBase?, errorMessage: String?, knowledgeDocumentsState: KnowledgeDocumentsState?, datePromoted: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.dateTriggered = dateTriggered
-        
         self.dateCompleted = dateCompleted
-        
         self.status = status
-        
         self.languageCode = languageCode
-        
         self.knowledgeBase = knowledgeBase
-        
         self.errorMessage = errorMessage
-        
         self.knowledgeDocumentsState = knowledgeDocumentsState
-        
         self.datePromoted = datePromoted
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

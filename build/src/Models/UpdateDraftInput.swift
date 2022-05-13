@@ -26,19 +26,12 @@ public class UpdateDraftInput: Codable {
     public var version: Int?
 
     public init(category: String?, name: String?, config: ActionConfig?, contract: ActionContractInput?, secure: Bool?, version: Int?) {
-        
         self.category = category
-        
         self.name = name
-        
         self.config = config
-        
         self.contract = contract
-        
         self.secure = secure
-        
         self.version = version
-        
     }
 
 

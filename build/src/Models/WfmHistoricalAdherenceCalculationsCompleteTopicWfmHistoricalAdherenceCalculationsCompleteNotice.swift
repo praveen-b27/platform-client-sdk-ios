@@ -23,15 +23,10 @@ public class WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdheren
     public var queryState: QueryState?
 
     public init(_id: String?, downloadUrl: String?, downloadUrls: [String]?, queryState: QueryState?) {
-        
         self._id = _id
-        
         self.downloadUrl = downloadUrl
-        
         self.downloadUrls = downloadUrls
-        
         self.queryState = queryState
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

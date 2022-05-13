@@ -27,17 +27,11 @@ public class ImportStatus: Codable {
     public var failureReason: String?
 
     public init(state: State?, totalRecords: Int64?, completedRecords: Int64?, percentComplete: Int?, failureReason: String?) {
-        
         self.state = state
-        
         self.totalRecords = totalRecords
-        
         self.completedRecords = completedRecords
-        
         self.percentComplete = percentComplete
-        
         self.failureReason = failureReason
-        
     }
 
 

@@ -19,13 +19,9 @@ public class TrustMemberCreate: Codable {
     public var roleDivisions: RoleDivisionGrants?
 
     public init(_id: String?, roleIds: [String]?, roleDivisions: RoleDivisionGrants?) {
-        
         self._id = _id
-        
         self.roleIds = roleIds
-        
         self.roleDivisions = roleDivisions
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

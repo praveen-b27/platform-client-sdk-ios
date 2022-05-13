@@ -17,11 +17,8 @@ public class BuAgentSchedulesQueryResponse: Codable {
     public var businessUnitTimeZone: String?
 
     public init(agentSchedules: [BuAgentScheduleQueryResponse]?, businessUnitTimeZone: String?) {
-        
         self.agentSchedules = agentSchedules
-        
         self.businessUnitTimeZone = businessUnitTimeZone
-        
     }
 
 

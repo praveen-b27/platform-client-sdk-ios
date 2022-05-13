@@ -29,19 +29,12 @@ public class KnowledgeDocumentBulkRequest: Codable {
     public var _id: String?
 
     public init(type: ModelType?, externalUrl: String?, faq: DocumentFaq?, categories: [DocumentCategoryInput]?, article: DocumentArticle?, _id: String?) {
-        
         self.type = type
-        
         self.externalUrl = externalUrl
-        
         self.faq = faq
-        
         self.categories = categories
-        
         self.article = article
-        
         self._id = _id
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

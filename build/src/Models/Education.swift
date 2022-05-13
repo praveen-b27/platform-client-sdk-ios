@@ -21,17 +21,11 @@ public class Education: Codable {
     public var dateEnd: Date?
 
     public init(school: String?, fieldOfStudy: String?, notes: String?, dateStart: Date?, dateEnd: Date?) {
-        
         self.school = school
-        
         self.fieldOfStudy = fieldOfStudy
-        
         self.notes = notes
-        
         self.dateStart = dateStart
-        
         self.dateEnd = dateEnd
-        
     }
 
 

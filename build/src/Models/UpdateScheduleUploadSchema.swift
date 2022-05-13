@@ -25,19 +25,12 @@ public class UpdateScheduleUploadSchema: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(_description: String?, published: Bool?, shortTermForecast: BuShortTermForecastReference?, headcountForecast: BuHeadcountForecast?, agentSchedules: [BuUpdateAgentScheduleUploadSchema]?, metadata: WfmVersionedEntityMetadata?) {
-        
         self._description = _description
-        
         self.published = published
-        
         self.shortTermForecast = shortTermForecast
-        
         self.headcountForecast = headcountForecast
-        
         self.agentSchedules = agentSchedules
-        
         self.metadata = metadata
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

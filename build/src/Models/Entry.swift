@@ -17,11 +17,8 @@ public class Entry: Codable {
     public var count: Int?
 
     public init(value: String?, count: Int?) {
-        
         self.value = value
-        
         self.count = count
-        
     }
 
 

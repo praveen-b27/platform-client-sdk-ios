@@ -25,13 +25,9 @@ public class BuAsyncScheduleResponse: Codable {
     public var result: BuScheduleMetadata?
 
     public init(status: Status?, operationId: String?, result: BuScheduleMetadata?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.result = result
-        
     }
 
 

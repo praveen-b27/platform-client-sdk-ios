@@ -17,11 +17,8 @@ public class NluConfusionMatrixColumn: Codable {
     public var value: Float?
 
     public init(name: String?, value: Float?) {
-        
         self.name = name
-        
         self.value = value
-        
     }
 
 

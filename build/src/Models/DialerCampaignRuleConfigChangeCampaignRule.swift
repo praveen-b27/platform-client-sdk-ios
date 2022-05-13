@@ -14,7 +14,7 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
     public var campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?
     /** The list of conditions that will trigger this Campaign Rule */
     public var campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?
-    /** The list of actions that will be taken when this Campaign Rule&#39;s conditions are met */
+    /** The list of actions that will be taken when this Campaign Rule's conditions are met */
     public var campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?
     /** Whether this Campaign Rule should match any conditions (inclusive OR) or match all conditions (ALL) */
     public var matchAnyConditions: Bool?
@@ -32,27 +32,16 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
     public var version: Int?
 
     public init(campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?, campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?, campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.campaignRuleEntities = campaignRuleEntities
-        
         self.campaignRuleConditions = campaignRuleConditions
-        
         self.campaignRuleActions = campaignRuleActions
-        
         self.matchAnyConditions = matchAnyConditions
-        
         self.enabled = enabled
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

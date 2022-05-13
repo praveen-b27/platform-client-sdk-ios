@@ -19,13 +19,9 @@ public class LocalEncryptionKeyRequest: Codable {
     public var keypairId: String?
 
     public init(configId: String?, publicKey: String?, keypairId: String?) {
-        
         self.configId = configId
-        
         self.publicKey = publicKey
-        
         self.keypairId = keypairId
-        
     }
 
 

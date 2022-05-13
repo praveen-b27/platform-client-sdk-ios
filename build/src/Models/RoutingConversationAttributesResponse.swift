@@ -21,15 +21,10 @@ public class RoutingConversationAttributesResponse: Codable {
     public var scoredAgents: [ScoredAgent]?
 
     public init(priority: Int?, skills: [RoutingSkill]?, language: Language?, scoredAgents: [ScoredAgent]?) {
-        
         self.priority = priority
-        
         self.skills = skills
-        
         self.language = language
-        
         self.scoredAgents = scoredAgents
-        
     }
 
 

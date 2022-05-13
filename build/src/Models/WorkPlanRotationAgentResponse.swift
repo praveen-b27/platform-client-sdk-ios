@@ -19,13 +19,9 @@ public class WorkPlanRotationAgentResponse: Codable {
     public var position: Int?
 
     public init(user: UserReference?, dateRange: DateRangeWithOptionalEnd?, position: Int?) {
-        
         self.user = user
-        
         self.dateRange = dateRange
-        
         self.position = position
-        
     }
 
 

@@ -23,13 +23,9 @@ public class ArchitectJobMessage: Codable {
     public var text: String?
 
     public init(dateTime: Date?, type: ModelType?, text: String?) {
-        
         self.dateTime = dateTime
-        
         self.type = type
-        
         self.text = text
-        
     }
 
 

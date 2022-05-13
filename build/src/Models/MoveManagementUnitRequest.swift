@@ -15,9 +15,7 @@ public class MoveManagementUnitRequest: Codable {
     public var businessUnitId: String?
 
     public init(businessUnitId: String?) {
-        
         self.businessUnitId = businessUnitId
-        
     }
 
 

@@ -22,15 +22,10 @@ public class ShortTermForecastReference: Codable {
     public var _description: String?
 
     public init(_id: String?, selfUri: String?, weekDate: String?, _description: String?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.weekDate = weekDate
-        
         self._description = _description
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

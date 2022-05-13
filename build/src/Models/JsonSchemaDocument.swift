@@ -22,23 +22,14 @@ public class JsonSchemaDocument: Codable {
     public var additionalProperties: JSON?
 
     public init(_id: String?, schema: String?, title: String?, _description: String?, type: String?, _required: [String]?, properties: [String:JSON]?, additionalProperties: JSON?) {
-        
         self._id = _id
-        
         self.schema = schema
-        
         self.title = title
-        
         self._description = _description
-        
         self.type = type
-        
         self._required = _required
-        
         self.properties = properties
-        
         self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

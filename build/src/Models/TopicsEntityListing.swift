@@ -19,19 +19,12 @@ public class TopicsEntityListing: Codable {
     public var pageCount: Int?
 
     public init(entities: [ListedTopic]?, pageSize: Int?, total: Int?, selfUri: String?, nextUri: String?, pageCount: Int?) {
-        
         self.entities = entities
-        
         self.pageSize = pageSize
-        
         self.total = total
-        
         self.selfUri = selfUri
-        
         self.nextUri = nextUri
-        
         self.pageCount = pageCount
-        
     }
 
 

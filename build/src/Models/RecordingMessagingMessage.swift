@@ -37,31 +37,18 @@ public class RecordingMessagingMessage: Codable {
     public var story: RecordingContentStory?
 
     public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?, story: RecordingContentStory?) {
-        
         self.from = from
-        
         self.fromUser = fromUser
-        
         self.fromExternalContact = fromExternalContact
-        
         self.to = to
-        
         self.timestamp = timestamp
-        
         self._id = _id
-        
         self.messageText = messageText
-        
         self.messageMediaAttachments = messageMediaAttachments
-        
         self.messageStickerAttachments = messageStickerAttachments
-        
         self.quickReplies = quickReplies
-        
         self.buttonResponse = buttonResponse
-        
         self.story = story
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

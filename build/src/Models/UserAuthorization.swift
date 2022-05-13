@@ -20,15 +20,10 @@ public class UserAuthorization: Codable {
     public var permissionPolicies: [ResourcePermissionPolicy]?
 
     public init(roles: [DomainRole]?, unusedRoles: [DomainRole]?, permissions: [String]?, permissionPolicies: [ResourcePermissionPolicy]?) {
-        
         self.roles = roles
-        
         self.unusedRoles = unusedRoles
-        
         self.permissions = permissions
-        
         self.permissionPolicies = permissionPolicies
-        
     }
 
 

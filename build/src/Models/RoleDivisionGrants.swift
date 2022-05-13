@@ -15,9 +15,7 @@ public class RoleDivisionGrants: Codable {
     public var grants: [RoleDivisionPair]?
 
     public init(grants: [RoleDivisionPair]?) {
-        
         self.grants = grants
-        
     }
 
 

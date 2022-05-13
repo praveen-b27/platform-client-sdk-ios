@@ -18,17 +18,11 @@ public class UnpublishedProgramsEntityListing: Codable {
     public var pageCount: Int?
 
     public init(entities: [Program]?, pageSize: Int?, selfUri: String?, nextUri: String?, pageCount: Int?) {
-        
         self.entities = entities
-        
         self.pageSize = pageSize
-        
         self.selfUri = selfUri
-        
         self.nextUri = nextUri
-        
         self.pageCount = pageCount
-        
     }
 
 

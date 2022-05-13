@@ -17,11 +17,8 @@ public class BatchDownloadRequest: Codable {
     public var recordingId: String?
 
     public init(conversationId: String?, recordingId: String?) {
-        
         self.conversationId = conversationId
-        
         self.recordingId = recordingId
-        
     }
 
 

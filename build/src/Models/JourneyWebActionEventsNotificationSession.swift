@@ -16,13 +16,9 @@ public class JourneyWebActionEventsNotificationSession: Codable {
     public var type: String?
 
     public init(_id: String?, selfUri: String?, type: String?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.type = type
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

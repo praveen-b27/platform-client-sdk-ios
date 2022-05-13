@@ -25,13 +25,9 @@ public class AsyncIntradayResponse: Codable {
     public var result: BuIntradayResponse?
 
     public init(status: Status?, operationId: String?, result: BuIntradayResponse?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.result = result
-        
     }
 
 

@@ -29,17 +29,11 @@ public class CreateShareRequest: Codable {
     public var members: [CreateShareRequestMember]?
 
     public init(sharedEntityType: SharedEntityType?, sharedEntity: SharedEntity?, memberType: MemberType?, member: SharedEntity?, members: [CreateShareRequestMember]?) {
-        
         self.sharedEntityType = sharedEntityType
-        
         self.sharedEntity = sharedEntity
-        
         self.memberType = memberType
-        
         self.member = member
-        
         self.members = members
-        
     }
 
 

@@ -33,23 +33,14 @@ public class UserDetailsQuery: Codable {
     public var paging: PagingSpec?
 
     public init(interval: String?, userFilters: [UserDetailQueryFilter]?, presenceFilters: [PresenceDetailQueryFilter]?, routingStatusFilters: [RoutingStatusDetailQueryFilter]?, order: Order?, presenceAggregations: [AnalyticsQueryAggregation]?, routingStatusAggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?) {
-        
         self.interval = interval
-        
         self.userFilters = userFilters
-        
         self.presenceFilters = presenceFilters
-        
         self.routingStatusFilters = routingStatusFilters
-        
         self.order = order
-        
         self.presenceAggregations = presenceAggregations
-        
         self.routingStatusAggregations = routingStatusAggregations
-        
         self.paging = paging
-        
     }
 
 

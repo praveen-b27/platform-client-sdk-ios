@@ -17,11 +17,8 @@ public class PagingSpec: Codable {
     public var pageNumber: Int?
 
     public init(pageSize: Int?, pageNumber: Int?) {
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
     }
 
 

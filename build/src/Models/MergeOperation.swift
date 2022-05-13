@@ -19,13 +19,9 @@ public class MergeOperation: Codable {
     public var resultingContact: AddressableEntityRef?
 
     public init(sourceContact: AddressableEntityRef?, targetContact: AddressableEntityRef?, resultingContact: AddressableEntityRef?) {
-        
         self.sourceContact = sourceContact
-        
         self.targetContact = targetContact
-        
         self.resultingContact = resultingContact
-        
     }
 
 

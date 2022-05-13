@@ -24,19 +24,12 @@ public class LocalEncryptionConfiguration: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, url: String?, apiId: String?, apiKey: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.url = url
-        
         self.apiId = apiId
-        
         self.apiKey = apiKey
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

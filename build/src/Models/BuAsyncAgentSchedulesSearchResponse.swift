@@ -29,17 +29,11 @@ public class BuAsyncAgentSchedulesSearchResponse: Codable {
     public var downloadUrl: String?
 
     public init(status: Status?, operationId: String?, result: BuAgentSchedulesSearchResponse?, progress: Int?, downloadUrl: String?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.result = result
-        
         self.progress = progress
-        
         self.downloadUrl = downloadUrl
-        
     }
 
 

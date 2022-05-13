@@ -23,17 +23,11 @@ public class AnalyticsFlowOutcome: Codable {
     public var flowOutcomeValue: String?
 
     public init(flowOutcome: String?, flowOutcomeEndTimestamp: Date?, flowOutcomeId: String?, flowOutcomeStartTimestamp: Date?, flowOutcomeValue: String?) {
-        
         self.flowOutcome = flowOutcome
-        
         self.flowOutcomeEndTimestamp = flowOutcomeEndTimestamp
-        
         self.flowOutcomeId = flowOutcomeId
-        
         self.flowOutcomeStartTimestamp = flowOutcomeStartTimestamp
-        
         self.flowOutcomeValue = flowOutcomeValue
-        
     }
 
 

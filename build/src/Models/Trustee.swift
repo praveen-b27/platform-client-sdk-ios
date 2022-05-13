@@ -29,23 +29,14 @@ public class Trustee: Codable {
     public var selfUri: String?
 
     public init(_id: String?, enabled: Bool?, usesDefaultRole: Bool?, dateCreated: Date?, dateExpired: Date?, createdBy: OrgUser?, organization: Organization?, selfUri: String?) {
-        
         self._id = _id
-        
         self.enabled = enabled
-        
         self.usesDefaultRole = usesDefaultRole
-        
         self.dateCreated = dateCreated
-        
         self.dateExpired = dateExpired
-        
         self.createdBy = createdBy
-        
         self.organization = organization
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

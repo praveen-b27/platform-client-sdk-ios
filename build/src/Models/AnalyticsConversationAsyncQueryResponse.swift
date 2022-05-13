@@ -18,13 +18,9 @@ public class AnalyticsConversationAsyncQueryResponse: Codable {
     public var conversations: [AnalyticsConversation]?
 
     public init(cursor: String?, dataAvailabilityDate: Date?, conversations: [AnalyticsConversation]?) {
-        
         self.cursor = cursor
-        
         self.dataAvailabilityDate = dataAvailabilityDate
-        
         self.conversations = conversations
-        
     }
 
 

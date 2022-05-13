@@ -23,17 +23,11 @@ public class Card: Codable {
     public var actions: [CardAction]?
 
     public init(title: String?, _description: String?, url: String?, defaultAction: CardAction?, actions: [CardAction]?) {
-        
         self.title = title
-        
         self._description = _description
-        
         self.url = url
-        
         self.defaultAction = defaultAction
-        
         self.actions = actions
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

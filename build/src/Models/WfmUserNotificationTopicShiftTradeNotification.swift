@@ -29,23 +29,14 @@ public class WfmUserNotificationTopicShiftTradeNotification: Codable {
     public var receivingShiftDate: Date?
 
     public init(weekDate: String?, tradeId: String?, oneSided: Bool?, newState: NewState?, initiatingUser: WfmUserNotificationTopicUserReference?, initiatingShiftDate: Date?, receivingUser: WfmUserNotificationTopicUserReference?, receivingShiftDate: Date?) {
-        
         self.weekDate = weekDate
-        
         self.tradeId = tradeId
-        
         self.oneSided = oneSided
-        
         self.newState = newState
-        
         self.initiatingUser = initiatingUser
-        
         self.initiatingShiftDate = initiatingShiftDate
-        
         self.receivingUser = receivingUser
-        
         self.receivingShiftDate = receivingShiftDate
-        
     }
 
 

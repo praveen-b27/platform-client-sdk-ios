@@ -17,11 +17,8 @@ public class DialogflowIntent: Codable {
     public var parameters: [String:DialogflowParameter]?
 
     public init(name: String?, parameters: [String:DialogflowParameter]?) {
-        
         self.name = name
-        
         self.parameters = parameters
-        
     }
 
 

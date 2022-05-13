@@ -15,9 +15,7 @@ public class DynamicContactQueueingSettings: Codable {
     public var sort: Bool?
 
     public init(sort: Bool?) {
-        
         self.sort = sort
-        
     }
 
 

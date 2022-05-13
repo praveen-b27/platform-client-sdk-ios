@@ -34,25 +34,15 @@ public class CallForwarding: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, user: User?, enabled: Bool?, phoneNumber: String?, calls: [CallRoute]?, voicemail: Voicemail?, modifiedDate: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.user = user
-        
         self.enabled = enabled
-        
         self.phoneNumber = phoneNumber
-        
         self.calls = calls
-        
         self.voicemail = voicemail
-        
         self.modifiedDate = modifiedDate
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -58,45 +58,25 @@ public class CoachingAppointmentResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, facilitator: UserReference?, attendees: [UserReference]?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, conversations: [ConversationReference]?, documents: [DocumentReference]?, isOverdue: Bool?, wfmSchedule: WfmScheduleReference?, dateCompleted: Date?, externalLinks: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.dateStart = dateStart
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.status = status
-        
         self.facilitator = facilitator
-        
         self.attendees = attendees
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.conversations = conversations
-        
         self.documents = documents
-        
         self.isOverdue = isOverdue
-        
         self.wfmSchedule = wfmSchedule
-        
         self.dateCompleted = dateCompleted
-        
         self.externalLinks = externalLinks
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

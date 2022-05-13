@@ -501,13 +501,15 @@ TelephonyProvidersEdgeAPI.deleteTelephonyProvidersEdgesExtensionpool(extensionPo
 
 # **deleteTelephonyProvidersEdgesOutboundroute**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > Void deleteTelephonyProvidersEdgesOutboundroute(outboundRouteId)
 
 Delete Outbound Route
 
 This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
+
+
 
 Wraps DELETE /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
 
@@ -809,7 +811,7 @@ TelephonyProvidersEdgeAPI.deleteTelephonyProvidersEdgesTrunkbasesetting(trunkBas
 
 # **getConfigurationSchemasEdgesVnext**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [SchemaCategoryEntityListing](SchemaCategoryEntityListing.html) getConfigurationSchemasEdgesVnext(pageSize, pageNumber)
 
@@ -830,8 +832,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnext(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -849,8 +851,8 @@ TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnext(pageSize: pageSize, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -862,7 +864,7 @@ TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnext(pageSize: pageSize, 
 
 # **getConfigurationSchemasEdgesVnextSchemaCategory**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [SchemaReferenceEntityListing](SchemaReferenceEntityListing.html) getConfigurationSchemasEdgesVnextSchemaCategory(schemaCategory, pageSize, pageNumber)
 
@@ -884,8 +886,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let schemaCategory: String = "" // Schema category
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnextSchemaCategory(schemaCategory: schemaCategory, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -904,8 +906,8 @@ TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnextSchemaCategory(schema
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **schemaCategory** | **String**| Schema category | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -917,7 +919,7 @@ TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnextSchemaCategory(schema
 
 # **getConfigurationSchemasEdgesVnextSchemaCategorySchemaType**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [SchemaReferenceEntityListing](SchemaReferenceEntityListing.html) getConfigurationSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory, schemaType, pageSize, pageNumber)
 
@@ -940,8 +942,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let schemaCategory: String = "" // Schema category
 let schemaType: String = "" // Schema type
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory: schemaCategory, schemaType: schemaType, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -961,8 +963,8 @@ TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnextSchemaCategorySchemaT
 | ------------- | ------------- | ------------- | ------------- |
 | **schemaCategory** | **String**| Schema category | |
 | **schemaType** | **String**| Schema type | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -974,7 +976,7 @@ TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnextSchemaCategorySchemaT
 
 # **getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [Organization](Organization.html) getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory, schemaType, schemaId)
 
@@ -1029,7 +1031,7 @@ TelephonyProvidersEdgeAPI.getConfigurationSchemasEdgesVnextSchemaCategorySchemaT
 
 # **getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [Organization](Organization.html) getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type)
 
@@ -1113,7 +1115,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let edgeId: String = "" // Edge ID
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdge.enummember.rawValue] // Fields to expand in the response, comma-separated
+let expand: [String] = [""] // Fields to expand in the response, comma-separated
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdge(edgeId: edgeId, expand: expand) { (response, error) in
@@ -1352,7 +1354,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticTracepath(edgeId: e
 
 # **getTelephonyProvidersEdgeLine**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EdgeLine](EdgeLine.html) getTelephonyProvidersEdgeLine(edgeId, lineId)
 
@@ -1406,7 +1408,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLine(edgeId: edgeId, lineId: 
 
 # **getTelephonyProvidersEdgeLines**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EdgeLineEntityListing](EdgeLineEntityListing.html) getTelephonyProvidersEdgeLines(edgeId, pageSize, pageNumber)
 
@@ -1429,8 +1431,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let edgeId: String = "" // Edge ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLines(edgeId: edgeId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -1449,8 +1451,8 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLines(edgeId: edgeId, pageSiz
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **edgeId** | **String**| Edge ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1486,7 +1488,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let edgeId: String = "" // Edge ID
 let interfaceId: String = "" // Interface ID
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgeLogicalinterface.enummember.rawValue] // Field to expand in the response
+let expand: [String] = [""] // Field to expand in the response
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLogicalinterface(edgeId: edgeId, interfaceId: interfaceId, expand: expand) { (response, error) in
@@ -1526,6 +1528,8 @@ Get edge logical interfaces.
 
 Retrieve a list of all configured logical interfaces from a specific edge.
 
+
+
 Wraps GET /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces  
 
 Requires ANY permissions: 
@@ -1541,7 +1545,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let edgeId: String = "" // Edge ID
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgeLogicalinterfaces.enummember.rawValue] // Field to expand in the response
+let expand: [String] = [""] // Field to expand in the response
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLogicalinterfaces(edgeId: edgeId, expand: expand) { (response, error) in
@@ -1685,6 +1689,8 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeMetrics(edgeId: edgeId) { (re
 Get edge physical interface.
 
 Retrieve a physical interface from a specific edge.
+
+
 
 Wraps GET /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId}  
 
@@ -1946,6 +1952,8 @@ Get the list of available trunks for the given Edge.
 
 Trunks are created by assigning trunk base settings to an Edge or Edge Group.
 
+
+
 Wraps GET /api/v2/telephony/providers/edges/{edgeId}/trunks  
 
 Requires ANY permissions: 
@@ -1961,10 +1969,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let edgeId: String = "" // Edge ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Value by which to sort
-let sortOrder: String = "ASC" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Value by which to sort
+let sortOrder: String = "" // Sort order
 let trunkBaseId: String = "" // Filter by Trunk Base Ids
 let trunkType: TelephonyProvidersEdgeAPI.TrunkType_getTelephonyProvidersEdgeTrunks = TelephonyProvidersEdgeAPI.TrunkType_getTelephonyProvidersEdgeTrunks.enummember // Filter by a Trunk type
 
@@ -1985,10 +1993,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeTrunks(edgeId: edgeId, pageNu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **edgeId** | **String**| Edge ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Value by which to sort | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Value by which to sort | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **trunkBaseId** | **String**| Filter by Trunk Base Ids | [optional] |
 | **trunkType** | **String**| Filter by a Trunk type | [optional]<br />**Values**: external ("EXTERNAL"), phone ("PHONE"), edge ("EDGE") |
 {: class="table-striped"}
@@ -2024,12 +2032,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
 let siteId: String = "" // Filter by site.id
 let edgeGroupId: String = "" // Filter by edgeGroup.id
-let sortBy: String = "name" // Sort by
+let sortBy: String = "" // Sort by
 let managed: Bool = true // Filter by managed
 
 // Code example
@@ -2048,12 +2056,12 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdges(pageSize: pageSize, pageNum
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
 | **siteId** | **String**| Filter by site.id | [optional] |
 | **edgeGroupId** | **String**| Filter by edgeGroup.id | [optional] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
+| **sortBy** | **String**| Sort by | [optional] |
 | **managed** | **Bool**| Filter by managed | [optional] |
 {: class="table-striped"}
 
@@ -2339,9 +2347,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "number" // Sort by
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
 let _id: [String] = [""] // Filter by a specific list of ID's
 
 // Code example
@@ -2360,10 +2368,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpools(pageSize: pageSize,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to number] |
-| **_id** | [**[String]**](String.html)| Filter by a specific list of ID&#39;s | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **_id** | [**[String]**](String.html)| Filter by a specific list of ID's | [optional] |
 {: class="table-striped"}
 
 
@@ -2400,9 +2408,9 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let type: TelephonyProvidersEdgeAPI.ModelType_getTelephonyProvidersEdgesDidpoolsDids = TelephonyProvidersEdgeAPI.ModelType_getTelephonyProvidersEdgesDidpoolsDids.enummember // The type of numbers to return.
 let _id: [String] = [""] // Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned.
 let numberMatch: String = "" // A number to filter the results by.
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortOrder: String = "ascending" // Sort order
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortOrder: String = "" // Sort order
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpoolsDids(type: type, _id: _id, numberMatch: numberMatch, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in
@@ -2423,9 +2431,9 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpoolsDids(type: type, _id
 | **type** | **String**| The type of numbers to return. |<br />**Values**: assignedAndUnassigned ("ASSIGNED_AND_UNASSIGNED"), unassigned ("UNASSIGNED") |
 | **_id** | [**[String]**](String.html)| Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. | [optional] |
 | **numberMatch** | **String**| A number to filter the results by. | [optional] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ascending] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 {: class="table-striped"}
 
 
@@ -2459,10 +2467,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "number" // Sort by
-let sortOrder: String = "ASC" // Sort order
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let phoneNumber: String = "" // Filter by phoneNumber
 let ownerId: String = "" // Filter by the owner of a phone number
 let didPoolId: String = "" // Filter by the DID Pool assignment
@@ -2484,14 +2492,14 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDids(pageSize: pageSize, pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to number] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **phoneNumber** | **String**| Filter by phoneNumber | [optional] |
 | **ownerId** | **String**| Filter by the owner of a phone number | [optional] |
 | **didPoolId** | **String**| Filter by the DID Pool assignment | [optional] |
-| **_id** | [**[String]**](String.html)| Filter by a specific list of ID&#39;s | [optional] |
+| **_id** | [**[String]**](String.html)| Filter by a specific list of ID's | [optional] |
 {: class="table-striped"}
 
 
@@ -2526,7 +2534,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let edgeGroupId: String = "" // Edge group ID
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesEdgegroup.enummember.rawValue] // Fields to expand in the response
+let expand: [String] = [""] // Fields to expand in the response
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesEdgegroup(edgeGroupId: edgeGroupId, expand: expand) { (response, error) in
@@ -2633,10 +2641,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
-let sortBy: String = "name" // Sort by
+let sortBy: String = "" // Sort by
 let managed: Bool = true // Filter by managed
 
 // Code example
@@ -2655,10 +2663,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesEdgegroups(pageSize: pageSiz
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
+| **sortBy** | **String**| Sort by | [optional] |
 | **managed** | **Bool**| Filter by managed | [optional] |
 {: class="table-striped"}
 
@@ -2678,6 +2686,8 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesEdgegroups(pageSize: pageSiz
 Get the edge version report.
 
 The report will not have consistent data about the edge version(s) until all edges have been reset.
+
+
 
 Wraps GET /api/v2/telephony/providers/edges/edgeversionreport  
 
@@ -2893,8 +2903,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let sortBy: String = "" // Sort by
 let number: String = "" // Deprecated, filtering by number not supported
 
@@ -2914,8 +2924,8 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpools(pageSize: pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **number** | **String**| Deprecated, filtering by number not supported | [optional] |
 {: class="table-striped"}
@@ -2951,10 +2961,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "number" // Sort by
-let sortOrder: String = "ASC" // Sort order
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let number: String = "" // Filter by number
 
 // Code example
@@ -2973,10 +2983,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensions(pageSize: pageSiz
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to number] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **number** | **String**| Filter by number | [optional] |
 {: class="table-striped"}
 
@@ -3115,11 +3125,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Value by which to sort
-let sortOrder: String = "ASC" // Sort order
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesLinebasesettings.enummember.rawValue] // Fields to expand in the response, comma-separated
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Value by which to sort
+let sortOrder: String = "" // Sort order
+let expand: [String] = [""] // Fields to expand in the response, comma-separated
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLinebasesettings(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -3137,10 +3147,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLinebasesettings(pageNumber:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Value by which to sort | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Value by which to sort | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated | [optional]<br />**Values**: properties ("properties") |
 {: class="table-striped"}
 
@@ -3175,11 +3185,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
-let sortBy: String = "name" // Value by which to sort
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesLines.enummember.rawValue] // Fields to expand in the response, comma-separated
+let sortBy: String = "" // Value by which to sort
+let expand: [String] = [""] // Fields to expand in the response, comma-separated
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLines(pageSize: pageSize, pageNumber: pageNumber, name: name, sortBy: sortBy, expand: expand) { (response, error) in
@@ -3197,10 +3207,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLines(pageSize: pageSize, pa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
-| **sortBy** | **String**| Value by which to sort | [optional] [default to name] |
+| **sortBy** | **String**| Value by which to sort | [optional] |
 | **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated | [optional]<br />**Values**: properties ("properties"), site ("site"), edgegroup ("edgeGroup"), primaryedge ("primaryEdge"), secondaryedge ("secondaryEdge"), edges ("edges"), assigneduser ("assignedUser") |
 {: class="table-striped"}
 
@@ -3273,6 +3283,8 @@ Get edge logical interfaces.
 
 Retrieve the configured logical interfaces for a list edges. Only 100 edges can be requested at a time.
 
+
+
 Wraps GET /api/v2/telephony/providers/edges/logicalinterfaces  
 
 Requires ANY permissions: 
@@ -3288,7 +3300,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let edgeIds: String = "" // Comma separated list of Edge Id's
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesLogicalinterfaces.enummember.rawValue] // Field to expand in the response
+let expand: [String] = [""] // Field to expand in the response
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLogicalinterfaces(edgeIds: edgeIds, expand: expand) { (response, error) in
@@ -3306,7 +3318,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLogicalinterfaces(edgeIds: e
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **edgeIds** | **String**| Comma separated list of Edge Id&#39;s | |
+| **edgeIds** | **String**| Comma separated list of Edge Id's | |
 | **expand** | [**[String]**](String.html)| Field to expand in the response | [optional]<br />**Values**: externaltrunkbaseassignments ("externalTrunkBaseAssignments"), phonetrunkbaseassignments ("phoneTrunkBaseAssignments") |
 {: class="table-striped"}
 
@@ -3359,7 +3371,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesMetrics(edgeIds: edgeIds) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **edgeIds** | **String**| Comma separated list of Edge Id&#39;s | |
+| **edgeIds** | **String**| Comma separated list of Edge Id's | |
 {: class="table-striped"}
 
 
@@ -3371,13 +3383,15 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesMetrics(edgeIds: edgeIds) { 
 
 # **getTelephonyProvidersEdgesOutboundroute**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [OutboundRoute](OutboundRoute.html) getTelephonyProvidersEdgesOutboundroute(outboundRouteId)
 
 Get outbound route
 
 This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
+
+
 
 Wraps GET /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
 
@@ -3445,12 +3459,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
 let siteId: String = "" // Filter by site.id
 let externalTrunkBasesIds: String = "" // Filter by externalTrunkBases.ids
-let sortBy: String = "name" // Sort by
+let sortBy: String = "" // Sort by
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesOutboundroutes(pageSize: pageSize, pageNumber: pageNumber, name: name, siteId: siteId, externalTrunkBasesIds: externalTrunkBasesIds, sortBy: sortBy) { (response, error) in
@@ -3468,12 +3482,12 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesOutboundroutes(pageSize: pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
 | **siteId** | **String**| Filter by site.id | [optional] |
 | **externalTrunkBasesIds** | **String**| Filter by externalTrunkBases.ids | [optional] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
+| **sortBy** | **String**| Sort by | [optional] |
 {: class="table-striped"}
 
 
@@ -3611,11 +3625,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "name" // Value by which to sort
-let sortOrder: String = "ASC" // Sort order
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesPhonebasesettings.enummember.rawValue] // Fields to expand in the response, comma-separated
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Value by which to sort
+let sortOrder: String = "" // Sort order
+let expand: [String] = [""] // Fields to expand in the response, comma-separated
 let name: String = "" // Name
 
 // Code example
@@ -3634,10 +3648,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhonebasesettings(pageSize: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Value by which to sort | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Value by which to sort | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated | [optional]<br />**Values**: properties ("properties"), lines ("lines") |
 | **name** | **String**| Name | [optional] |
 {: class="table-striped"}
@@ -3673,8 +3687,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhonebasesettingsAvailablemetabases(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -3692,8 +3706,8 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhonebasesettingsAvailableme
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -3779,10 +3793,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let sortBy: TelephonyProvidersEdgeAPI.SortBy_getTelephonyProvidersEdgesPhones = TelephonyProvidersEdgeAPI.SortBy_getTelephonyProvidersEdgesPhones.enummember // The field to sort by
-let sortOrder: String = "ASC" // Sort order
+let sortOrder: String = "" // Sort order
 let siteId: String = "" // Filter by site.id
 let webRtcUserId: String = "" // Filter by webRtcUser.id
 let phoneBaseSettingsId: String = "" // Filter by phoneBaseSettings.id
@@ -3794,8 +3808,8 @@ let linesName: String = "" // Filter by lines.name
 let name: String = "" // Name of the Phone to filter by
 let statusOperationalStatus: String = "" // The primary status to filter by
 let secondaryStatusOperationalStatus: String = "" // The secondary status to filter by
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesPhones.enummember.rawValue] // Fields to expand in the response, comma-separated
-let fields: [String] = [TelephonyProvidersEdgeAPI.Fields_getTelephonyProvidersEdgesPhones.enummember.rawValue] // Fields and properties to get, comma-separated
+let expand: [String] = [""] // Fields to expand in the response, comma-separated
+let fields: [String] = [""] // Fields and properties to get, comma-separated
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, siteId: siteId, webRtcUserId: webRtcUserId, phoneBaseSettingsId: phoneBaseSettingsId, linesLoggedInUserId: linesLoggedInUserId, linesDefaultForUserId: linesDefaultForUserId, phoneHardwareId: phoneHardwareId, linesId: linesId, linesName: linesName, name: name, statusOperationalStatus: statusOperationalStatus, secondaryStatusOperationalStatus: secondaryStatusOperationalStatus, expand: expand, fields: fields) { (response, error) in
@@ -3813,10 +3827,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhones(pageNumber: pageNumbe
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| The field to sort by | [optional] [default to name]<br />**Values**: name ("name"), statusOperationalstatus ("status.operationalStatus"), secondarystatusOperationalstatus ("secondaryStatus.operationalStatus") |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| The field to sort by | [optional]<br />**Values**: name ("name"), statusOperationalstatus ("status.operationalStatus"), secondarystatusOperationalstatus ("secondaryStatus.operationalStatus") |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **siteId** | **String**| Filter by site.id | [optional] |
 | **webRtcUserId** | **String**| Filter by webRtcUser.id | [optional] |
 | **phoneBaseSettingsId** | **String**| Filter by phoneBaseSettings.id | [optional] |
@@ -3901,6 +3915,8 @@ Get physical interfaces for edges.
 
 Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
 
+
+
 Wraps GET /api/v2/telephony/providers/edges/physicalinterfaces  
 
 Requires ANY permissions: 
@@ -3933,7 +3949,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhysicalinterfaces(edgeIds: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **edgeIds** | **String**| Comma separated list of Edge Id&#39;s | |
+| **edgeIds** | **String**| Comma separated list of Edge Id's | |
 {: class="table-striped"}
 
 
@@ -4235,11 +4251,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let siteId: String = "" // Site ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
 let externalTrunkBasesIds: String = "" // externalTrunkBases.ids
-let sortBy: String = "name" // Sort by
+let sortBy: String = "" // Sort by
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSiteOutboundroutes(siteId: siteId, pageSize: pageSize, pageNumber: pageNumber, name: name, externalTrunkBasesIds: externalTrunkBasesIds, sortBy: sortBy) { (response, error) in
@@ -4258,11 +4274,11 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSiteOutboundroutes(siteId: s
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **siteId** | **String**| Site ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
 | **externalTrunkBasesIds** | **String**| externalTrunkBases.ids | [optional] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
+| **sortBy** | **String**| Sort by | [optional] |
 {: class="table-striped"}
 
 
@@ -4295,10 +4311,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "name" // Sort by
-let sortOrder: String = "ASC" // Sort order
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
 let name: String = "" // Name
 let locationId: String = "" // Location Id
 let managed: Bool = true // Filter by managed
@@ -4319,10 +4335,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSites(pageSize: pageSize, pa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name | [optional] |
 | **locationId** | **String**| Location Id | [optional] |
 | **managed** | **Bool**| Filter by managed | [optional] |
@@ -4358,8 +4374,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 1000 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTimezones(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -4377,8 +4393,8 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTimezones(pageSize: pageSize
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 1000] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -4502,6 +4518,8 @@ Get a Trunk Base Settings object by ID
 
 Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
 
+
+
 Wraps GET /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}  
 
 Requires ANY permissions: 
@@ -4556,6 +4574,8 @@ Get Trunk Base Settings listing
 
 Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
 
+
+
 Wraps GET /api/v2/telephony/providers/edges/trunkbasesettings  
 
 Requires ANY permissions: 
@@ -4570,14 +4590,14 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Value by which to sort
-let sortOrder: String = "ASC" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Value by which to sort
+let sortOrder: String = "" // Sort order
 let recordingEnabled: Bool = true // Filter trunks by recording enabled
 let ignoreHidden: Bool = true // Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only.
 let managed: Bool = true // Filter by managed
-let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesTrunkbasesettings.enummember.rawValue] // Fields to expand in the response, comma-separated
+let expand: [String] = [""] // Fields to expand in the response, comma-separated
 let name: String = "" // Name of the TrunkBase to filter by
 
 // Code example
@@ -4596,10 +4616,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkbasesettings(pageNumber
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Value by which to sort | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Value by which to sort | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **recordingEnabled** | **Bool**| Filter trunks by recording enabled | [optional] |
 | **ignoreHidden** | **Bool**| Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. | [optional] |
 | **managed** | **Bool**| Filter by managed | [optional] |
@@ -4639,8 +4659,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let type: TelephonyProvidersEdgeAPI.ModelType_getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases = TelephonyProvidersEdgeAPI.ModelType_getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases.enummember // 
-let pageSize: Int = 25 // 
-let pageNumber: Int = 1 // 
+let pageSize: Int = 0 // 
+let pageNumber: Int = 0 // 
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases(type: type, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -4659,8 +4679,8 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkbasesettingsAvailableme
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | **String**|  | [optional]<br />**Values**: external ("EXTERNAL"), phone ("PHONE"), edge ("EDGE") |
-| **pageSize** | **Int**|  | [optional] [default to 25] |
-| **pageNumber** | **Int**|  | [optional] [default to 1] |
+| **pageSize** | **Int**|  | [optional] |
+| **pageNumber** | **Int**|  | [optional] |
 {: class="table-striped"}
 
 
@@ -4732,6 +4752,8 @@ Get the list of available trunks.
 
 Trunks are created by assigning trunk base settings to an Edge or Edge Group.
 
+
+
 Wraps GET /api/v2/telephony/providers/edges/trunks  
 
 Requires ANY permissions: 
@@ -4746,10 +4768,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Value by which to sort
-let sortOrder: String = "ASC" // Sort order
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Value by which to sort
+let sortOrder: String = "" // Sort order
 let edgeId: String = "" // Filter by Edge Ids
 let trunkBaseId: String = "" // Filter by Trunk Base Ids
 let trunkType: TelephonyProvidersEdgeAPI.TrunkType_getTelephonyProvidersEdgesTrunks = TelephonyProvidersEdgeAPI.TrunkType_getTelephonyProvidersEdgesTrunks.enummember // Filter by a Trunk type
@@ -4770,10 +4792,10 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunks(pageNumber: pageNumbe
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Value by which to sort | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Value by which to sort | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 | **edgeId** | **String**| Filter by Edge Ids | [optional] |
 | **trunkBaseId** | **String**| Filter by Trunk Base Ids | [optional] |
 | **trunkType** | **String**| Filter by a Trunk type | [optional]<br />**Values**: external ("EXTERNAL"), phone ("PHONE"), edge ("EDGE") |
@@ -4828,7 +4850,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunksMetrics(trunkIds: trun
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **trunkIds** | **String**| Comma separated list of Trunk Id&#39;s | |
+| **trunkIds** | **String**| Comma separated list of Trunk Id's | |
 {: class="table-striped"}
 
 
@@ -5116,6 +5138,8 @@ TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticTracepath(edgeId: 
 Create an edge logical interface.
 
 Create
+
+
 
 Wraps POST /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces  
 
@@ -5796,13 +5820,15 @@ TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesExtensionpools(body: body) 
 
 # **postTelephonyProvidersEdgesOutboundroutes**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [OutboundRoute](OutboundRoute.html) postTelephonyProvidersEdgesOutboundroutes(body)
 
 Create outbound rule
 
 This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
+
+
 
 Wraps POST /api/v2/telephony/providers/edges/outboundroutes  
 
@@ -6317,7 +6343,7 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdge(edgeId: edgeId, body: body) 
 
 # **putTelephonyProvidersEdgeLine**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EdgeLine](EdgeLine.html) putTelephonyProvidersEdgeLine(edgeId, lineId, body)
 
@@ -6483,7 +6509,7 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesCertificateauthority(certifi
 
 # **putTelephonyProvidersEdgesDid**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [DID](DID.html) putTelephonyProvidersEdgesDid(didId, body)
 
@@ -6701,7 +6727,7 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesEdgegroupEdgetrunkbase(edgeg
 
 # **putTelephonyProvidersEdgesExtension**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [Extension](Extension.html) putTelephonyProvidersEdgesExtension(extensionId, body)
 
@@ -6809,13 +6835,15 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesExtensionpool(extensionPoolI
 
 # **putTelephonyProvidersEdgesOutboundroute**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [OutboundRoute](OutboundRoute.html) putTelephonyProvidersEdgesOutboundroute(outboundRouteId, body)
 
 Update outbound route
 
 This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
+
+
 
 Wraps PUT /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
 

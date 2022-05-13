@@ -22,15 +22,10 @@ public class WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation: C
     public var status: Status?
 
     public init(_id: String?, startDate: Date?, lengthMinutes: Int?, status: Status?) {
-        
         self._id = _id
-        
         self.startDate = startDate
-        
         self.lengthMinutes = lengthMinutes
-        
         self.status = status
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

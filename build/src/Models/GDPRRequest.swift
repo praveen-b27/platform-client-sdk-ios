@@ -46,27 +46,16 @@ public class GDPRRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, createdBy: DomainEntityRef?, replacementTerms: [ReplacementTerm]?, requestType: RequestType?, createdDate: Date?, status: Status?, subject: GDPRSubject?, resultsUrl: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.createdBy = createdBy
-        
         self.replacementTerms = replacementTerms
-        
         self.requestType = requestType
-        
         self.createdDate = createdDate
-        
         self.status = status
-        
         self.subject = subject
-        
         self.resultsUrl = resultsUrl
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -44,27 +44,16 @@ public class OAuthClientRequest: Codable {
     public var dateToDelete: Date?
 
     public init(name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, roleIds: [String]?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, dateToDelete: Date?) {
-        
         self.name = name
-        
         self.accessTokenValiditySeconds = accessTokenValiditySeconds
-        
         self._description = _description
-        
         self.registeredRedirectUri = registeredRedirectUri
-        
         self.roleIds = roleIds
-        
         self.authorizedGrantType = authorizedGrantType
-        
         self.scope = scope
-        
         self.roleDivisions = roleDivisions
-        
         self.state = state
-        
         self.dateToDelete = dateToDelete
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

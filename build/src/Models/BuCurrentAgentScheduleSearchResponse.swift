@@ -25,19 +25,12 @@ public class BuCurrentAgentScheduleSearchResponse: Codable {
     public var updates: [BuAgentScheduleUpdate]?
 
     public init(agentSchedules: [BuAgentScheduleSearchResponse]?, businessUnitTimeZone: String?, publishedSchedules: [BuAgentSchedulePublishedScheduleReference]?, startDate: Date?, endDate: Date?, updates: [BuAgentScheduleUpdate]?) {
-        
         self.agentSchedules = agentSchedules
-        
         self.businessUnitTimeZone = businessUnitTimeZone
-        
         self.publishedSchedules = publishedSchedules
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.updates = updates
-        
     }
 
 

@@ -23,17 +23,11 @@ public class SurveyAssignment: Codable {
     public var sendingDomain: String?
 
     public init(surveyForm: PublishedSurveyFormReference?, flow: DomainEntityRef?, inviteTimeInterval: String?, sendingUser: String?, sendingDomain: String?) {
-        
         self.surveyForm = surveyForm
-        
         self.flow = flow
-        
         self.inviteTimeInterval = inviteTimeInterval
-        
         self.sendingUser = sendingUser
-        
         self.sendingDomain = sendingDomain
-        
     }
 
 

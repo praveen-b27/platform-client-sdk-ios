@@ -89,9 +89,9 @@ public class UserScheduleAdherence: Codable {
     public var actualActivityCategory: ActualActivityCategory?
     /** Whether the user is marked OutOfOffice */
     public var isOutOfOffice: Bool?
-    /** The user&#39;s current adherence state */
+    /** The user's current adherence state */
     public var adherenceState: AdherenceState?
-    /** The impact of the user&#39;s current adherenceState */
+    /** The impact of the user's current adherenceState */
     public var impact: Impact?
     /** Time when the user entered the current adherenceState in ISO-8601 format */
     public var timeOfAdherenceChange: Date?
@@ -107,47 +107,26 @@ public class UserScheduleAdherence: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, user: UserReference?, businessUnit: BusinessUnit?, managementUnit: ManagementUnit?, team: Team?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.user = user
-        
         self.businessUnit = businessUnit
-        
         self.managementUnit = managementUnit
-        
         self.team = team
-        
         self.scheduledActivityCategory = scheduledActivityCategory
-        
         self.systemPresence = systemPresence
-        
         self.organizationSecondaryPresenceId = organizationSecondaryPresenceId
-        
         self.routingStatus = routingStatus
-        
         self.actualActivityCategory = actualActivityCategory
-        
         self.isOutOfOffice = isOutOfOffice
-        
         self.adherenceState = adherenceState
-        
         self.impact = impact
-        
         self.timeOfAdherenceChange = timeOfAdherenceChange
-        
         self.presenceUpdateTime = presenceUpdateTime
-        
         self.activeQueues = activeQueues
-        
         self.activeQueuesModifiedTime = activeQueuesModifiedTime
-        
         self.removedFromManagementUnit = removedFromManagementUnit
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

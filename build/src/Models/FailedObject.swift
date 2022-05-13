@@ -17,15 +17,10 @@ public class FailedObject: Codable {
     public var errorCode: String?
 
     public init(_id: String?, version: String?, name: String?, errorCode: String?) {
-        
         self._id = _id
-        
         self.version = version
-        
         self.name = name
-        
         self.errorCode = errorCode
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

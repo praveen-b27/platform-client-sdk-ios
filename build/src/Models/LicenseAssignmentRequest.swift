@@ -19,13 +19,9 @@ public class LicenseAssignmentRequest: Codable {
     public var userIdsRemove: [String]?
 
     public init(licenseId: String?, userIdsAdd: [String]?, userIdsRemove: [String]?) {
-        
         self.licenseId = licenseId
-        
         self.userIdsAdd = userIdsAdd
-        
         self.userIdsRemove = userIdsRemove
-        
     }
 
 

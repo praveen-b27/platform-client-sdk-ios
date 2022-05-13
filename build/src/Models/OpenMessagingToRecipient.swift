@@ -33,21 +33,13 @@ public class OpenMessagingToRecipient: Codable {
     public var email: String?
 
     public init(nickname: String?, _id: String?, idType: IdType?, firstName: String?, lastName: String?, image: String?, email: String?) {
-        
         self.nickname = nickname
-        
         self._id = _id
-        
         self.idType = idType
-        
         self.firstName = firstName
-        
         self.lastName = lastName
-        
         self.image = image
-        
         self.email = email
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -17,11 +17,8 @@ public class ReplyToEmailAddress: Codable {
     public var route: DomainEntityRef?
 
     public init(domain: DomainEntityRef?, route: DomainEntityRef?) {
-        
         self.domain = domain
-        
         self.route = route
-        
     }
 
 

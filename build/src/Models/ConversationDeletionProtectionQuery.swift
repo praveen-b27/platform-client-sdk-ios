@@ -15,9 +15,7 @@ public class ConversationDeletionProtectionQuery: Codable {
     public var conversationIds: [String]?
 
     public init(conversationIds: [String]?) {
-        
         self.conversationIds = conversationIds
-        
     }
 
 

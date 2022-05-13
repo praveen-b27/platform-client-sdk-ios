@@ -28,15 +28,10 @@ public class ConversationMessageEvent: Codable {
     public var presence: ConversationEventPresence?
 
     public init(eventType: EventType?, coBrowse: ConversationEventCoBrowse?, typing: ConversationEventTyping?, presence: ConversationEventPresence?) {
-        
         self.eventType = eventType
-        
         self.coBrowse = coBrowse
-        
         self.typing = typing
-        
         self.presence = presence
-        
     }
 
 

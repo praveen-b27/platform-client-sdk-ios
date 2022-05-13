@@ -19,13 +19,9 @@ public class QMAuditQueryRequest: Codable {
     public var sort: [AuditQuerySort]?
 
     public init(interval: String?, filters: [QualityAuditQueryFilter]?, sort: [AuditQuerySort]?) {
-        
         self.interval = interval
-        
         self.filters = filters
-        
         self.sort = sort
-        
     }
 
 

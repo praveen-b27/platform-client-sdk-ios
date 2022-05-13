@@ -32,11 +32,8 @@ public class Check: Codable {
     public var type: ModelType?
 
     public init(result: Result?, type: ModelType?) {
-        
         self.result = result
-        
         self.type = type
-        
     }
 
 

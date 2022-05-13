@@ -15,9 +15,7 @@ public class UCIcon: Codable {
     public var vector: String?
 
     public init(vector: String?) {
-        
         self.vector = vector
-        
     }
 
 

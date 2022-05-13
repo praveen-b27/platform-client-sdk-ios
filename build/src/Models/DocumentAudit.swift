@@ -127,39 +127,22 @@ public class DocumentAudit: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, user: DomainEntityRef?, workspace: DomainEntityRef?, transactionId: String?, transactionInitiator: Bool?, application: String?, serviceName: String?, level: Level?, timestamp: Date?, status: Status?, actionContext: ActionContext?, action: Action?, entity: AuditEntityReference?, changes: [AuditChange]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.user = user
-        
         self.workspace = workspace
-        
         self.transactionId = transactionId
-        
         self.transactionInitiator = transactionInitiator
-        
         self.application = application
-        
         self.serviceName = serviceName
-        
         self.level = level
-        
         self.timestamp = timestamp
-        
         self.status = status
-        
         self.actionContext = actionContext
-        
         self.action = action
-        
         self.entity = entity
-        
         self.changes = changes
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

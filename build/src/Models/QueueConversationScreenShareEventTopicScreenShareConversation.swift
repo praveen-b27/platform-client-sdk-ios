@@ -17,15 +17,10 @@ public class QueueConversationScreenShareEventTopicScreenShareConversation: Coda
     public var otherMediaUris: [String]?
 
     public init(_id: String?, name: String?, participants: [QueueConversationScreenShareEventTopicScreenShareMediaParticipant]?, otherMediaUris: [String]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.participants = participants
-        
         self.otherMediaUris = otherMediaUris
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

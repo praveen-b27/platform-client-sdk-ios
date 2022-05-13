@@ -16,7 +16,7 @@ public class ScimConfigResourceTypesListResponse: Codable {
     public var schemas: [String]?
     /** The total number of results. */
     public var totalResults: Int64?
-    /** The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results. */
+    /** The 1-based index of the first result returned by this request. Add this to \"itemsPerPage\" when requesting the next page of results. */
     public var startIndex: Int64?
     /** The number of resources returned per page. */
     public var itemsPerPage: Int64?
@@ -24,17 +24,11 @@ public class ScimConfigResourceTypesListResponse: Codable {
     public var resources: [ScimConfigResourceType]?
 
     public init(schemas: [String]?, totalResults: Int64?, startIndex: Int64?, itemsPerPage: Int64?, resources: [ScimConfigResourceType]?) {
-        
         self.schemas = schemas
-        
         self.totalResults = totalResults
-        
         self.startIndex = startIndex
-        
         self.itemsPerPage = itemsPerPage
-        
         self.resources = resources
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

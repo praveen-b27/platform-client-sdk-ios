@@ -18,11 +18,8 @@ public class ConversationNotificationTemplateBody: Codable {
     public var parameters: [ConversationNotificationTemplateParameter]?
 
     public init(text: String?, parameters: [ConversationNotificationTemplateParameter]?) {
-        
         self.text = text
-        
         self.parameters = parameters
-        
     }
 
 

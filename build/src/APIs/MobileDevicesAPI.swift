@@ -11,10 +11,7 @@ import Foundation
 
 open class MobileDevicesAPI {
     
-    
-    
     /**
-     
      Delete device
      
      - parameter deviceId: (path) Device ID 
@@ -32,11 +29,8 @@ open class MobileDevicesAPI {
     }
 
     /**
-     
      Delete device
-     
      - DELETE /api/v2/mobiledevices/{deviceId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class MobileDevicesAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteMobiledeviceWithRequestBuilder(deviceId: String) -> RequestBuilder<Void> {
+    open class func deleteMobiledeviceWithRequestBuilder(deviceId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/mobiledevices/{deviceId}"
         let deviceIdPreEscape = "\(deviceId)"
         let deviceIdPostEscape = deviceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deviceId}", with: deviceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +55,7 @@ open class MobileDevicesAPI {
     }
 
     
-    
-    
     /**
-     
      Get device
      
      - parameter deviceId: (path) Device ID 
@@ -94,43 +80,35 @@ open class MobileDevicesAPI {
     }
 
     /**
-     
      Get device
-     
      - GET /api/v2/mobiledevices/{deviceId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "sessionHash" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "notificationId" : "aeiou",
-  "model" : "aeiou",
+  "sessionHash" : "sessionHash",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "notificationId" : "notificationId",
+  "model" : "model",
   "acceptNotifications" : true,
-  "id" : "aeiou",
-  "type" : "aeiou",
-  "make" : "aeiou",
-  "deviceToken" : "aeiou"
-}}]
+  "id" : "id",
+  "type" : "android",
+  "make" : "make",
+  "deviceToken" : "deviceToken"
+}, statusCode=200}]
      
      - parameter deviceId: (path) Device ID 
 
      - returns: RequestBuilder<UserDevice> 
      */
-    open class func getMobiledeviceWithRequestBuilder(deviceId: String) -> RequestBuilder<UserDevice> {
+    open class func getMobiledeviceWithRequestBuilder(deviceId: String) -> RequestBuilder<UserDevice> {        
         var path = "/api/v2/mobiledevices/{deviceId}"
         let deviceIdPreEscape = "\(deviceId)"
         let deviceIdPostEscape = deviceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deviceId}", with: deviceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -142,23 +120,18 @@ open class MobileDevicesAPI {
     
     
     
-    
-    
-    
     public enum SortOrder_getMobiledevices: String { 
         case ascending = "ascending"
         case descending = "descending"
     }
 
     
-    
     /**
-     
      Get a list of all devices.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ascending)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getMobiledevices(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getMobiledevices? = nil, completion: @escaping ((_ data: DirectoryUserDevicesListing?,_ error: Error?) -> Void)) {
@@ -180,63 +153,62 @@ open class MobileDevicesAPI {
     }
 
     /**
-     
      Get a list of all devices.
-     
      - GET /api/v2/mobiledevices
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "sessionHash" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "notificationId" : "aeiou",
-    "model" : "aeiou",
+    "sessionHash" : "sessionHash",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "notificationId" : "notificationId",
+    "model" : "model",
     "acceptNotifications" : true,
-    "id" : "aeiou",
-    "type" : "aeiou",
-    "make" : "aeiou",
-    "deviceToken" : "aeiou"
+    "id" : "id",
+    "type" : "android",
+    "make" : "make",
+    "deviceToken" : "deviceToken"
+  }, {
+    "sessionHash" : "sessionHash",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "notificationId" : "notificationId",
+    "model" : "model",
+    "acceptNotifications" : true,
+    "id" : "id",
+    "type" : "android",
+    "make" : "make",
+    "deviceToken" : "deviceToken"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ascending)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
 
      - returns: RequestBuilder<DirectoryUserDevicesListing> 
      */
-    open class func getMobiledevicesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getMobiledevices? = nil) -> RequestBuilder<DirectoryUserDevicesListing> {
+    open class func getMobiledevicesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getMobiledevices? = nil) -> RequestBuilder<DirectoryUserDevicesListing> {        
         let path = "/api/v2/mobiledevices"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortOrder": sortOrder?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<DirectoryUserDevicesListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -245,10 +217,7 @@ open class MobileDevicesAPI {
     }
 
     
-    
-    
     /**
-     
      Create User device
      
      - parameter body: (body) Device 
@@ -273,38 +242,33 @@ open class MobileDevicesAPI {
     }
 
     /**
-     
      Create User device
-     
      - POST /api/v2/mobiledevices
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "sessionHash" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "notificationId" : "aeiou",
-  "model" : "aeiou",
+  "sessionHash" : "sessionHash",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "notificationId" : "notificationId",
+  "model" : "model",
   "acceptNotifications" : true,
-  "id" : "aeiou",
-  "type" : "aeiou",
-  "make" : "aeiou",
-  "deviceToken" : "aeiou"
-}}]
+  "id" : "id",
+  "type" : "android",
+  "make" : "make",
+  "deviceToken" : "deviceToken"
+}, statusCode=200}]
      
      - parameter body: (body) Device 
 
      - returns: RequestBuilder<UserDevice> 
      */
-    open class func postMobiledevicesWithRequestBuilder(body: UserDevice) -> RequestBuilder<UserDevice> {
+    open class func postMobiledevicesWithRequestBuilder(body: UserDevice) -> RequestBuilder<UserDevice> {        
         let path = "/api/v2/mobiledevices"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserDevice>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -314,11 +278,7 @@ open class MobileDevicesAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update device
      
      - parameter deviceId: (path) Device ID 
@@ -344,42 +304,37 @@ open class MobileDevicesAPI {
     }
 
     /**
-     
      Update device
-     
      - PUT /api/v2/mobiledevices/{deviceId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "sessionHash" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "notificationId" : "aeiou",
-  "model" : "aeiou",
+  "sessionHash" : "sessionHash",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "notificationId" : "notificationId",
+  "model" : "model",
   "acceptNotifications" : true,
-  "id" : "aeiou",
-  "type" : "aeiou",
-  "make" : "aeiou",
-  "deviceToken" : "aeiou"
-}}]
+  "id" : "id",
+  "type" : "android",
+  "make" : "make",
+  "deviceToken" : "deviceToken"
+}, statusCode=200}]
      
      - parameter deviceId: (path) Device ID 
      - parameter body: (body) Device (optional)
 
      - returns: RequestBuilder<UserDevice> 
      */
-    open class func putMobiledeviceWithRequestBuilder(deviceId: String, body: UserDevice? = nil) -> RequestBuilder<UserDevice> {
+    open class func putMobiledeviceWithRequestBuilder(deviceId: String, body: UserDevice? = nil) -> RequestBuilder<UserDevice> {        
         var path = "/api/v2/mobiledevices/{deviceId}"
         let deviceIdPreEscape = "\(deviceId)"
         let deviceIdPostEscape = deviceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{deviceId}", with: deviceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserDevice>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

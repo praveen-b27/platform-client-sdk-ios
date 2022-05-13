@@ -21,7 +21,7 @@ public class ResponseSet: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
-    /** Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}. */
+    /** Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}. */
     public var responses: [String:Reaction]?
     /** Whether to enable answering machine beep detection */
     public var beepDetectionEnabled: Bool?
@@ -29,23 +29,14 @@ public class ResponseSet: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, responses: [String:Reaction]?, beepDetectionEnabled: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
         self.responses = responses
-        
         self.beepDetectionEnabled = beepDetectionEnabled
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

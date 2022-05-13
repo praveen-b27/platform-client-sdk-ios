@@ -28,17 +28,11 @@ public class MessageMediaAttachment: Codable {
     public var _id: String?
 
     public init(url: String?, mediaType: MediaType?, contentLength: Int64?, name: String?, _id: String?) {
-        
         self.url = url
-        
         self.mediaType = mediaType
-        
         self.contentLength = contentLength
-        
         self.name = name
-        
         self._id = _id
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

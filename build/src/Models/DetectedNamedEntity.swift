@@ -21,15 +21,10 @@ public class DetectedNamedEntity: Codable {
     public var value: DetectedNamedEntityValue?
 
     public init(name: String?, entityType: String?, probability: Double?, value: DetectedNamedEntityValue?) {
-        
         self.name = name
-        
         self.entityType = entityType
-        
         self.probability = probability
-        
         self.value = value
-        
     }
 
 

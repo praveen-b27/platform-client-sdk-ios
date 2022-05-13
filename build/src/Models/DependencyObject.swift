@@ -89,27 +89,16 @@ public class DependencyObject: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, version: String?, type: ModelType?, deleted: Bool?, updated: Bool?, stateUnknown: Bool?, consumedResources: [Dependency]?, consumingResources: [Dependency]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.version = version
-        
         self.type = type
-        
         self.deleted = deleted
-        
         self.updated = updated
-        
         self.stateUnknown = stateUnknown
-        
         self.consumedResources = consumedResources
-        
         self.consumingResources = consumingResources
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

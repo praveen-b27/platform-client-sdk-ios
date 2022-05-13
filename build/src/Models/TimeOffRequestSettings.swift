@@ -20,13 +20,9 @@ public class TimeOffRequestSettings: Codable {
     public var submissionLatestDaysFromNow: Int?
 
     public init(submissionRangeEnforced: Bool?, submissionEarliestDaysFromNow: Int?, submissionLatestDaysFromNow: Int?) {
-        
         self.submissionRangeEnforced = submissionRangeEnforced
-        
         self.submissionEarliestDaysFromNow = submissionEarliestDaysFromNow
-        
         self.submissionLatestDaysFromNow = submissionLatestDaysFromNow
-        
     }
 
 

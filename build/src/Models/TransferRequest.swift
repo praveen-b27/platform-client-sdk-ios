@@ -23,17 +23,11 @@ public class TransferRequest: Codable {
     public var voicemail: Bool?
 
     public init(userId: String?, address: String?, userName: String?, queueId: String?, voicemail: Bool?) {
-        
         self.userId = userId
-        
         self.address = address
-        
         self.userName = userName
-        
         self.queueId = queueId
-        
         self.voicemail = voicemail
-        
     }
 
 

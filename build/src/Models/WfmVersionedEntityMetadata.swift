@@ -24,17 +24,11 @@ public class WfmVersionedEntityMetadata: Codable {
     public var dateCreated: Date?
 
     public init(version: Int?, modifiedBy: UserReference?, dateModified: Date?, createdBy: UserReference?, dateCreated: Date?) {
-        
         self.version = version
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
     }
 
 

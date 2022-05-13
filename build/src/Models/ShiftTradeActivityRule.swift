@@ -35,13 +35,9 @@ public class ShiftTradeActivityRule: Codable {
     public var activityCodeIdReplacement: String?
 
     public init(activityCategory: ActivityCategory?, action: Action?, activityCodeIdReplacement: String?) {
-        
         self.activityCategory = activityCategory
-        
         self.action = action
-        
         self.activityCodeIdReplacement = activityCodeIdReplacement
-        
     }
 
 

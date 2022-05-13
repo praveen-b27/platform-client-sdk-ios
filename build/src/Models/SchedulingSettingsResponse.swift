@@ -33,17 +33,11 @@ public class SchedulingSettingsResponse: Codable {
     public var startDayOfWeekend: StartDayOfWeekend?
 
     public init(maxOccupancyPercentForDeferredWork: Int?, defaultShrinkagePercent: Double?, shrinkageOverrides: ShrinkageOverrides?, planningPeriod: PlanningPeriodSettings?, startDayOfWeekend: StartDayOfWeekend?) {
-        
         self.maxOccupancyPercentForDeferredWork = maxOccupancyPercentForDeferredWork
-        
         self.defaultShrinkagePercent = defaultShrinkagePercent
-        
         self.shrinkageOverrides = shrinkageOverrides
-        
         self.planningPeriod = planningPeriod
-        
         self.startDayOfWeekend = startDayOfWeekend
-        
     }
 
 

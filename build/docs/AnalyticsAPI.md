@@ -236,7 +236,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let botFlowId: String = "" // ID of the bot flow.
 let after: String = "" // The cursor that points to the ID of the last item in the list of entities that has been returned.
-let pageSize: String = "50" // Max number of entities to return. Maximum of 250
+let pageSize: String = "" // Max number of entities to return. Maximum of 250
 let actionId: String = "" // Optional action ID to get the reporting turns associated to a particular flow action
 let sessionId: String = "" // Optional session ID to get the reporting turns for a particular session
 
@@ -258,7 +258,7 @@ AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: afte
 | ------------- | ------------- | ------------- | ------------- |
 | **botFlowId** | **String**| ID of the bot flow. | |
 | **after** | **String**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional] |
-| **pageSize** | **String**| Max number of entities to return. Maximum of 250 | [optional] [default to 50] |
+| **pageSize** | **String**| Max number of entities to return. Maximum of 250 | [optional] |
 | **actionId** | **String**| Optional action ID to get the reporting turns associated to a particular flow action | [optional] |
 | **sessionId** | **String**| Optional session ID to get the reporting turns for a particular session | [optional] |
 {: class="table-striped"}
@@ -558,8 +558,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 AnalyticsAPI.getAnalyticsReportingExports(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -577,8 +577,8 @@ AnalyticsAPI.getAnalyticsReportingExports(pageNumber: pageNumber, pageSize: page
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -660,8 +660,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let locale: String = "" // Locale
 
 // Code example
@@ -680,8 +680,8 @@ AnalyticsAPI.getAnalyticsReportingMetadata(pageNumber: pageNumber, pageSize: pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **locale** | **String**| Locale | [optional] |
 {: class="table-striped"}
 
@@ -755,6 +755,8 @@ AnalyticsAPI.getAnalyticsReportingReportIdMetadata(reportId: reportId, locale: l
 Get a list of report formats
 
 Get a list of report formats.
+
+
 
 Wraps GET /api/v2/analytics/reporting/reportformats  
 
@@ -868,8 +870,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let scheduleId: String = "" // Schedule ID
-let pageNumber: Int = 1 // 
-let pageSize: Int = 25 // 
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // 
 
 // Code example
 AnalyticsAPI.getAnalyticsReportingScheduleHistory(scheduleId: scheduleId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -888,8 +890,8 @@ AnalyticsAPI.getAnalyticsReportingScheduleHistory(scheduleId: scheduleId, pageNu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scheduleId** | **String**| Schedule ID | |
-| **pageNumber** | **Int**|  | [optional] [default to 1] |
-| **pageSize** | **Int**|  | [optional] [default to 25] |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**|  | [optional] |
 {: class="table-striped"}
 
 
@@ -960,6 +962,8 @@ A completed scheduled report job
 
 A completed scheduled report job.
 
+
+
 Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}  
 
 Requires NO permissions: 
@@ -1013,6 +1017,8 @@ Get a list of scheduled report jobs
 
 Get a list of scheduled report jobs.
 
+
+
 Wraps GET /api/v2/analytics/reporting/schedules  
 
 Requires ANY permissions: 
@@ -1027,8 +1033,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 AnalyticsAPI.getAnalyticsReportingSchedules(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1046,8 +1052,8 @@ AnalyticsAPI.getAnalyticsReportingSchedules(pageNumber: pageNumber, pageSize: pa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1948,6 +1954,8 @@ Generate a view export request
 
 This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
 
+
+
 Wraps POST /api/v2/analytics/reporting/exports  
 
 Requires ALL permissions: 
@@ -2051,6 +2059,8 @@ AnalyticsAPI.postAnalyticsReportingScheduleRunreport(scheduleId: scheduleId) { (
 Create a scheduled report job
 
 Create a scheduled report job.
+
+
 
 Wraps POST /api/v2/analytics/reporting/schedules  
 

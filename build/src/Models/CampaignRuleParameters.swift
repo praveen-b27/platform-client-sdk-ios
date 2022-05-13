@@ -37,21 +37,16 @@ public class CampaignRuleParameters: Codable {
     public var _operator: Operator?
     /** The value for comparison. Required for a CampaignRuleCondition. */
     public var value: String?
-    /** The priority to set a campaign to. Required for the &#39;setCampaignPriority&#39; action. */
+    /** The priority to set a campaign to. Required for the 'setCampaignPriority' action. */
     public var priority: Priority?
-    /** The dialing mode to set a campaign to. Required for the &#39;setCampaignDialingMode&#39; action. */
+    /** The dialing mode to set a campaign to. Required for the 'setCampaignDialingMode' action. */
     public var dialingMode: DialingMode?
 
     public init(_operator: Operator?, value: String?, priority: Priority?, dialingMode: DialingMode?) {
-        
         self._operator = _operator
-        
         self.value = value
-        
         self.priority = priority
-        
         self.dialingMode = dialingMode
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

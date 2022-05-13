@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Defines a \&quot;filter\&quot; request in the SCIM service provider&#39;s configuration. */
+/** Defines a \"filter\" request in the SCIM service provider's configuration. */
 
 public class ScimServiceProviderConfigFilterFeature: Codable {
 
@@ -18,11 +18,8 @@ public class ScimServiceProviderConfigFilterFeature: Codable {
     public var maxResults: Int?
 
     public init(supported: Bool?, maxResults: Int?) {
-        
         self.supported = supported
-        
         self.maxResults = maxResults
-        
     }
 
 

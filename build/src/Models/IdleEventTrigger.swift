@@ -18,11 +18,8 @@ public class IdleEventTrigger: Codable {
     public var idleAfterSeconds: Int64?
 
     public init(eventName: String?, idleAfterSeconds: Int64?) {
-        
         self.eventName = eventName
-        
         self.idleAfterSeconds = idleAfterSeconds
-        
     }
 
 

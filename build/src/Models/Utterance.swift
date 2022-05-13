@@ -15,9 +15,7 @@ public class Utterance: Codable {
     public var utteranceText: String?
 
     public init(utteranceText: String?) {
-        
         self.utteranceText = utteranceText
-        
     }
 
 

@@ -15,15 +15,6 @@ public class ObservationValue: Codable {
         case inbound = "inbound"
         case outbound = "outbound"
     }
-    public enum RequestedRoutings: String, Codable { 
-        case bullseye = "Bullseye"
-        case conditional = "Conditional"
-        case last = "Last"
-        case manual = "Manual"
-        case predictive = "Predictive"
-        case preferred = "Preferred"
-        case standard = "Standard"
-    }
     public enum UsedRouting: String, Codable { 
         case bullseye = "Bullseye"
         case conditional = "Conditional"
@@ -59,58 +50,38 @@ public class ObservationValue: Codable {
     public var addressFrom: String?
     /** The address receiving an action */
     public var addressTo: String?
-    /** Automatic Number Identification (caller&#39;s number) */
+    /** Automatic Number Identification (caller's number) */
     public var ani: String?
     /** Dialed number identification service (number dialed by the calling party) */
     public var dnis: String?
     /** The team id the user is a member of */
     public var teamId: String?
     /** All routing types for requested/attempted routing methods */
-    public var requestedRoutings: [RequestedRoutings]?
+    public var requestedRoutings: [String]?
     /** Complete routing method */
     public var usedRouting: UsedRouting?
     public var scoredAgents: [AnalyticsScoredAgent]?
 
     public init(observationDate: Date?, conversationId: String?, sessionId: String?, requestedRoutingSkillIds: [String]?, requestedLanguageId: String?, routingPriority: Int64?, participantName: String?, userId: String?, direction: Direction?, convertedFrom: String?, convertedTo: String?, addressFrom: String?, addressTo: String?, ani: String?, dnis: String?, teamId: String?, requestedRoutings: [RequestedRoutings]?, usedRouting: UsedRouting?, scoredAgents: [AnalyticsScoredAgent]?) {
-        
         self.observationDate = observationDate
-        
         self.conversationId = conversationId
-        
         self.sessionId = sessionId
-        
         self.requestedRoutingSkillIds = requestedRoutingSkillIds
-        
         self.requestedLanguageId = requestedLanguageId
-        
         self.routingPriority = routingPriority
-        
         self.participantName = participantName
-        
         self.userId = userId
-        
         self.direction = direction
-        
         self.convertedFrom = convertedFrom
-        
         self.convertedTo = convertedTo
-        
         self.addressFrom = addressFrom
-        
         self.addressTo = addressTo
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.teamId = teamId
-        
         self.requestedRoutings = requestedRoutings
-        
         self.usedRouting = usedRouting
-        
         self.scoredAgents = scoredAgents
-        
     }
 
 

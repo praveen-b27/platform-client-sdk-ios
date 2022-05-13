@@ -27,21 +27,13 @@ public class Draft: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, miner: Miner?, intents: [DraftIntents]?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.miner = miner
-        
         self.intents = intents
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

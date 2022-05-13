@@ -26,13 +26,9 @@ public class ConversationEventCoBrowse: Codable {
     public var sessionJoinToken: String?
 
     public init(type: ModelType?, sessionId: String?, sessionJoinToken: String?) {
-        
         self.type = type
-        
         self.sessionId = sessionId
-        
         self.sessionJoinToken = sessionJoinToken
-        
     }
 
 

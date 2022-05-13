@@ -113,27 +113,16 @@ public class ReportingExportMetadataJobResponse: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, viewType: ViewType?, dateLimitations: String?, requiredFilters: [String]?, supportedFilters: [String]?, requiredColumnIds: [String]?, dependentColumnIds: [String:[String]]?, availableColumnIds: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.viewType = viewType
-        
         self.dateLimitations = dateLimitations
-        
         self.requiredFilters = requiredFilters
-        
         self.supportedFilters = supportedFilters
-        
         self.requiredColumnIds = requiredColumnIds
-        
         self.dependentColumnIds = dependentColumnIds
-        
         self.availableColumnIds = availableColumnIds
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

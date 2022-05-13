@@ -25,11 +25,8 @@ public class ConversationEventTopicVoicemail: Codable {
     public var uploadStatus: UploadStatus?
 
     public init(_id: String?, uploadStatus: UploadStatus?) {
-        
         self._id = _id
-        
         self.uploadStatus = uploadStatus
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

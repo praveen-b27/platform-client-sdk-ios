@@ -15,9 +15,7 @@ public class ServerDate: Codable {
     public var currentDate: Date?
 
     public init(currentDate: Date?) {
-        
         self.currentDate = currentDate
-        
     }
 
 

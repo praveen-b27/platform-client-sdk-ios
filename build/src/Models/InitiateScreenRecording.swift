@@ -16,13 +16,9 @@ public class InitiateScreenRecording: Codable {
     public var deleteRetention: DeleteRetention?
 
     public init(recordACW: Bool?, archiveRetention: ArchiveRetention?, deleteRetention: DeleteRetention?) {
-        
         self.recordACW = recordACW
-        
         self.archiveRetention = archiveRetention
-        
         self.deleteRetention = deleteRetention
-        
     }
 
 

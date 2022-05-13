@@ -19,13 +19,9 @@ public class WfmHistoricalAdherenceResultWrapper: Codable {
     public var lookupIdToSecondaryPresenceId: [String:String]?
 
     public init(entityId: String?, data: [HistoricalAdherenceQueryResult]?, lookupIdToSecondaryPresenceId: [String:String]?) {
-        
         self.entityId = entityId
-        
         self.data = data
-        
         self.lookupIdToSecondaryPresenceId = lookupIdToSecondaryPresenceId
-        
     }
 
 

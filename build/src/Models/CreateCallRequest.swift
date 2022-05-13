@@ -27,7 +27,7 @@ public class CreateCallRequest: Codable {
     public var priority: Int?
     /** The language skill ID to use for routing this call (if calling a queue). */
     public var languageId: String?
-    /** The skill ID&#39;s to use for routing this call (if calling a queue). */
+    /** The skill ID's to use for routing this call (if calling a queue). */
     public var routingSkillsIds: [String]?
     /** The list of existing call conversations to merge into a new ad-hoc conference. */
     public var conversationIds: [String]?
@@ -39,33 +39,19 @@ public class CreateCallRequest: Codable {
     public var externalContactId: String?
 
     public init(phoneNumber: String?, callerId: String?, callerIdName: String?, callFromQueueId: String?, callQueueId: String?, callUserId: String?, priority: Int?, languageId: String?, routingSkillsIds: [String]?, conversationIds: [String]?, participants: [Destination]?, uuiData: String?, externalContactId: String?) {
-        
         self.phoneNumber = phoneNumber
-        
         self.callerId = callerId
-        
         self.callerIdName = callerIdName
-        
         self.callFromQueueId = callFromQueueId
-        
         self.callQueueId = callQueueId
-        
         self.callUserId = callUserId
-        
         self.priority = priority
-        
         self.languageId = languageId
-        
         self.routingSkillsIds = routingSkillsIds
-        
         self.conversationIds = conversationIds
-        
         self.participants = participants
-        
         self.uuiData = uuiData
-        
         self.externalContactId = externalContactId
-        
     }
 
 

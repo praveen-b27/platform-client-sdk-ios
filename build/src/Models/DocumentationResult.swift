@@ -53,47 +53,26 @@ public class DocumentationResult: Codable {
     public var videoCategories: [Int]?
 
     public init(_id: Int?, categories: [Int]?, _description: String?, content: String?, excerpt: String?, link: String?, modified: Date?, name: String?, service: [Int]?, slug: String?, title: String?, getType: String?, facetFeature: [Int]?, facetRole: [Int]?, facetService: [Int]?, faqCategories: [Int]?, releasenoteCategory: [Int]?, releasenoteTag: [Int]?, serviceArea: [Int]?, videoCategories: [Int]?) {
-        
         self._id = _id
-        
         self.categories = categories
-        
         self._description = _description
-        
         self.content = content
-        
         self.excerpt = excerpt
-        
         self.link = link
-        
         self.modified = modified
-        
         self.name = name
-        
         self.service = service
-        
         self.slug = slug
-        
         self.title = title
-        
         self.getType = getType
-        
         self.facetFeature = facetFeature
-        
         self.facetRole = facetRole
-        
         self.facetService = facetService
-        
         self.faqCategories = faqCategories
-        
         self.releasenoteCategory = releasenoteCategory
-        
         self.releasenoteTag = releasenoteTag
-        
         self.serviceArea = serviceArea
-        
         self.videoCategories = videoCategories
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

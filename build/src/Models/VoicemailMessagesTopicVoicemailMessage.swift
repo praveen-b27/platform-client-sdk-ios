@@ -27,35 +27,20 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
     public var copiedFrom: VoicemailMessagesTopicVoicemailCopyRecord?
 
     public init(_id: String?, read: Bool?, audioRecordingDurationSeconds: Int?, audioRecordingSizeBytes: Int?, createdDate: Date?, modifiedDate: Date?, callerAddress: String?, callerName: String?, action: String?, note: String?, deleted: Bool?, modifiedByUserId: String?, copiedTo: [VoicemailMessagesTopicVoicemailCopyRecord]?, copiedFrom: VoicemailMessagesTopicVoicemailCopyRecord?) {
-        
         self._id = _id
-        
         self.read = read
-        
         self.audioRecordingDurationSeconds = audioRecordingDurationSeconds
-        
         self.audioRecordingSizeBytes = audioRecordingSizeBytes
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
         self.callerAddress = callerAddress
-        
         self.callerName = callerName
-        
         self.action = action
-        
         self.note = note
-        
         self.deleted = deleted
-        
         self.modifiedByUserId = modifiedByUserId
-        
         self.copiedTo = copiedTo
-        
         self.copiedFrom = copiedFrom
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

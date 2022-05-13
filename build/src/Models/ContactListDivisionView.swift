@@ -28,23 +28,14 @@ public class ContactListDivisionView: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, importStatus: ImportStatus?, size: Int64?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self.columnNames = columnNames
-        
         self.phoneColumns = phoneColumns
-        
         self.importStatus = importStatus
-        
         self.size = size
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

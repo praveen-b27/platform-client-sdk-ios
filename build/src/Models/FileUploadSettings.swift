@@ -16,9 +16,7 @@ public class FileUploadSettings: Codable {
     public var modes: [FileUploadMode]?
 
     public init(modes: [FileUploadMode]?) {
-        
         self.modes = modes
-        
     }
 
 

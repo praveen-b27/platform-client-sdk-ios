@@ -33,23 +33,14 @@ public class MessageMediaData: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, url: String?, mediaType: String?, contentLengthBytes: Int?, uploadUrl: String?, status: Status?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.url = url
-        
         self.mediaType = mediaType
-        
         self.contentLengthBytes = contentLengthBytes
-        
         self.uploadUrl = uploadUrl
-        
         self.status = status
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

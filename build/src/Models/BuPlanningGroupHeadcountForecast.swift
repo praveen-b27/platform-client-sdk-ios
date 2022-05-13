@@ -19,13 +19,9 @@ public class BuPlanningGroupHeadcountForecast: Codable {
     public var requiredWithoutShrinkagePerInterval: [Double]?
 
     public init(planningGroup: PlanningGroupReference?, requiredPerInterval: [Double]?, requiredWithoutShrinkagePerInterval: [Double]?) {
-        
         self.planningGroup = planningGroup
-        
         self.requiredPerInterval = requiredPerInterval
-        
         self.requiredWithoutShrinkagePerInterval = requiredWithoutShrinkagePerInterval
-        
     }
 
 

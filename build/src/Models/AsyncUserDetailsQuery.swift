@@ -29,19 +29,12 @@ public class AsyncUserDetailsQuery: Codable {
     public var limit: Int?
 
     public init(interval: String?, userFilters: [UserDetailQueryFilter]?, presenceFilters: [PresenceDetailQueryFilter]?, routingStatusFilters: [RoutingStatusDetailQueryFilter]?, order: Order?, limit: Int?) {
-        
         self.interval = interval
-        
         self.userFilters = userFilters
-        
         self.presenceFilters = presenceFilters
-        
         self.routingStatusFilters = routingStatusFilters
-        
         self.order = order
-        
         self.limit = limit
-        
     }
 
 

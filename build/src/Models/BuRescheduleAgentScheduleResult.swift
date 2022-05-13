@@ -19,13 +19,9 @@ public class BuRescheduleAgentScheduleResult: Codable {
     public var downloadUrl: String?
 
     public init(managementUnit: ManagementUnitReference?, downloadResult: MuRescheduleResultWrapper?, downloadUrl: String?) {
-        
         self.managementUnit = managementUnit
-        
         self.downloadResult = downloadResult
-        
         self.downloadUrl = downloadUrl
-        
     }
 
 

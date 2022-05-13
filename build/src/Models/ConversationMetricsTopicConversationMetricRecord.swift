@@ -181,7 +181,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     public var agentBullseyeRing: Int?
     /** Flag indicating an agent-owned callback */
     public var agentOwned: Bool?
-    /** Automatic Number Identification (caller&#39;s number) */
+    /** Automatic Number Identification (caller's number) */
     public var ani: String?
     /** ID of the user that manually assigned a conversation */
     public var assignerId: String?
@@ -271,7 +271,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     public var peerId: String?
     /** The source provider for the communication. */
     public var provider: String?
-    /** The participant&#39;s purpose */
+    /** The participant's purpose */
     public var purpose: Purpose?
     /** Queue identifier */
     public var queueId: String?
@@ -321,165 +321,85 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     public var scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?
 
     public init(metric: Metric?, metricDate: Date?, value: Int?, recordId: String?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowInType: String?, flowOutType: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseIds: [String]?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, remote: String?, removedSkillIds: [String]?, reoffered: Bool?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int?, routingRing: Int?, selectedAgentId: String?, selectedAgentRank: Int?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, stationId: String?, teamId: String?, usedRouting: UsedRouting?, userId: String?, waitingInteractionCounts: [Int]?, wrapUpCode: String?, proposedAgents: [ConversationMetricsTopicConversationProposedAgent]?, scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?) {
-        
         self.metric = metric
-        
         self.metricDate = metricDate
-        
         self.value = value
-        
         self.recordId = recordId
-        
         self.activeSkillIds = activeSkillIds
-        
         self.addressFrom = addressFrom
-        
         self.addressTo = addressTo
-        
         self.agentAssistantId = agentAssistantId
-        
         self.agentBullseyeRing = agentBullseyeRing
-        
         self.agentOwned = agentOwned
-        
         self.ani = ani
-        
         self.assignerId = assignerId
-        
         self.authenticated = authenticated
-        
         self.conversationId = conversationId
-        
         self.conversationInitiator = conversationInitiator
-        
         self.convertedFrom = convertedFrom
-        
         self.convertedTo = convertedTo
-        
         self.customerParticipation = customerParticipation
-        
         self.deliveryStatus = deliveryStatus
-        
         self.destinationAddresses = destinationAddresses
-        
         self.direction = direction
-        
         self.disconnectType = disconnectType
-        
         self.divisionIds = divisionIds
-        
         self.dnis = dnis
-        
         self.edgeId = edgeId
-        
         self.eligibleAgentCounts = eligibleAgentCounts
-        
         self.extendedDeliveryStatus = extendedDeliveryStatus
-        
         self.externalContactId = externalContactId
-        
         self.externalMediaCount = externalMediaCount
-        
         self.externalOrganizationId = externalOrganizationId
-        
         self.externalTag = externalTag
-        
         self.firstQueue = firstQueue
-        
         self.flaggedReason = flaggedReason
-        
         self.flowInType = flowInType
-        
         self.flowOutType = flowOutType
-        
         self.groupId = groupId
-        
         self.interactionType = interactionType
-        
         self.journeyActionId = journeyActionId
-        
         self.journeyActionMapId = journeyActionMapId
-        
         self.journeyActionMapVersion = journeyActionMapVersion
-        
         self.journeyCustomerId = journeyCustomerId
-        
         self.journeyCustomerIdType = journeyCustomerIdType
-        
         self.journeyCustomerSessionId = journeyCustomerSessionId
-        
         self.journeyCustomerSessionIdType = journeyCustomerSessionIdType
-        
         self.knowledgeBaseIds = knowledgeBaseIds
-        
         self.mediaCount = mediaCount
-        
         self.mediaType = mediaType
-        
         self.messageType = messageType
-        
         self.originatingDirection = originatingDirection
-        
         self.outboundCampaignId = outboundCampaignId
-        
         self.outboundContactId = outboundContactId
-        
         self.outboundContactListId = outboundContactListId
-        
         self.participantName = participantName
-        
         self.peerId = peerId
-        
         self.provider = provider
-        
         self.purpose = purpose
-        
         self.queueId = queueId
-        
         self.remote = remote
-        
         self.removedSkillIds = removedSkillIds
-        
         self.reoffered = reoffered
-        
         self.requestedLanguageId = requestedLanguageId
-        
         self.requestedRoutingSkillIds = requestedRoutingSkillIds
-        
         self.requestedRoutings = requestedRoutings
-        
         self.roomId = roomId
-        
         self.routingPriority = routingPriority
-        
         self.routingRing = routingRing
-        
         self.selectedAgentId = selectedAgentId
-        
         self.selectedAgentRank = selectedAgentRank
-        
         self.selfServed = selfServed
-        
         self.sessionDnis = sessionDnis
-        
         self.sessionId = sessionId
-        
         self.stationId = stationId
-        
         self.teamId = teamId
-        
         self.usedRouting = usedRouting
-        
         self.userId = userId
-        
         self.waitingInteractionCounts = waitingInteractionCounts
-        
         self.wrapUpCode = wrapUpCode
-        
         self.proposedAgents = proposedAgents
-        
         self.scoredAgents = scoredAgents
-        
     }
 
 

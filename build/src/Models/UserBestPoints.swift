@@ -17,11 +17,8 @@ public class UserBestPoints: Codable {
     public var bestPoints: [UserBestPointsItem]?
 
     public init(user: UserReference?, bestPoints: [UserBestPointsItem]?) {
-        
         self.user = user
-        
         self.bestPoints = bestPoints
-        
     }
 
 

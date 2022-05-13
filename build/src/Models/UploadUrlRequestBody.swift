@@ -15,9 +15,7 @@ public class UploadUrlRequestBody: Codable {
     public var contentLengthBytes: Int64?
 
     public init(contentLengthBytes: Int64?) {
-        
         self.contentLengthBytes = contentLengthBytes
-        
     }
 
 

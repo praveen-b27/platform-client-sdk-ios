@@ -21,11 +21,8 @@ public class QueueObservationQueryClause: Codable {
     public var predicates: [QueueObservationQueryPredicate]?
 
     public init(type: ModelType?, predicates: [QueueObservationQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

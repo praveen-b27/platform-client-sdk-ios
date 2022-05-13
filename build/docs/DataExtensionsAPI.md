@@ -56,7 +56,7 @@ DataExtensionsAPI.getDataextensionsCoretype(coretypeName: coretypeName) { (respo
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **coretypeName** | **String**| The core type&#39;s name |<br />**Values**: text ("text"), longtext ("longtext"), url ("url"), identifier ("identifier"), _enum ("enum"), date ("date"), datetime ("datetime"), integer ("integer"), number ("number"), checkbox ("checkbox"), tag ("tag") |
+| **coretypeName** | **String**| The core type's name |<br />**Values**: text ("text"), longtext ("longtext"), url ("url"), identifier ("identifier"), _enum ("enum"), date ("date"), datetime ("datetime"), integer ("integer"), number ("number"), checkbox ("checkbox"), tag ("tag") |
 {: class="table-striped"}
 
 

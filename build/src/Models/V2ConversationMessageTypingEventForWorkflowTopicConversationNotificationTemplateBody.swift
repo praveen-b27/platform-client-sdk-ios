@@ -15,11 +15,8 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationNotific
     public var parameters: [V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTemplateParameter]?
 
     public init(text: String?, parameters: [V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTemplateParameter]?) {
-        
         self.text = text
-        
         self.parameters = parameters
-        
     }
 
 

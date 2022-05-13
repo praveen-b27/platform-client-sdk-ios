@@ -17,11 +17,8 @@ public class DivisionReference: Codable {
     public var selfUri: String?
 
     public init(_id: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

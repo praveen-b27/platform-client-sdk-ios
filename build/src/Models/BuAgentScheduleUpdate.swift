@@ -22,11 +22,8 @@ public class BuAgentScheduleUpdate: Codable {
     public var shiftStartDates: [Date]?
 
     public init(type: ModelType?, shiftStartDates: [Date]?) {
-        
         self.type = type
-        
         self.shiftStartDates = shiftStartDates
-        
     }
 
 

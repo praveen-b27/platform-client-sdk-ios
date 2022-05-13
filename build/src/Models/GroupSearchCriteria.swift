@@ -40,31 +40,21 @@ public class GroupSearchCriteria: Codable {
     public var _operator: Operator?
     /** Groups multiple conditions */
     public var group: [GroupSearchCriteria]?
-    /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX. */
+    /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd'T'HH:mm:ss.SSSX. */
     public var dateFormat: String?
     /** Search Type */
     public var type: ModelType?
 
     public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [GroupSearchCriteria]?, dateFormat: String?, type: ModelType?) {
-        
         self.endValue = endValue
-        
         self.values = values
-        
         self.startValue = startValue
-        
         self.fields = fields
-        
         self.value = value
-        
         self._operator = _operator
-        
         self.group = group
-        
         self.dateFormat = dateFormat
-        
         self.type = type
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

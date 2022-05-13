@@ -24,19 +24,12 @@ public class Prompt: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, resources: [PromptAsset]?, currentOperation: Operation?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.resources = resources
-        
         self.currentOperation = currentOperation
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

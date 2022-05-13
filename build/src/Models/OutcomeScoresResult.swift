@@ -17,11 +17,8 @@ public class OutcomeScoresResult: Codable {
     public var modifiedDate: Date?
 
     public init(outcomeScores: [OutcomeEventScore]?, modifiedDate: Date?) {
-        
         self.outcomeScores = outcomeScores
-        
         self.modifiedDate = modifiedDate
-        
     }
 
 

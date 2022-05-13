@@ -40,17 +40,11 @@ public class JourneyWebEventsNotificationEventAction: Codable {
     public var prompt: String?
 
     public init(_id: String?, createdDate: Date?, state: State?, mediaType: MediaType?, prompt: String?) {
-        
         self._id = _id
-        
         self.createdDate = createdDate
-        
         self.state = state
-        
         self.mediaType = mediaType
-        
         self.prompt = prompt
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

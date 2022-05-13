@@ -15,9 +15,7 @@ public class Bullseye: Codable {
     public var rings: [Ring]?
 
     public init(rings: [Ring]?) {
-        
         self.rings = rings
-        
     }
 
 

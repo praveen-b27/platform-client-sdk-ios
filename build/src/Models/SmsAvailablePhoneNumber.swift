@@ -49,27 +49,16 @@ public class SmsAvailablePhoneNumber: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, phoneNumber: String?, countryCode: String?, region: String?, city: String?, capabilities: [Capabilities]?, phoneNumberType: PhoneNumberType?, addressRequirement: AddressRequirement?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.phoneNumber = phoneNumber
-        
         self.countryCode = countryCode
-        
         self.region = region
-        
         self.city = city
-        
         self.capabilities = capabilities
-        
         self.phoneNumberType = phoneNumberType
-        
         self.addressRequirement = addressRequirement
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

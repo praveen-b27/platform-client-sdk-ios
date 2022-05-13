@@ -16,13 +16,9 @@ public class MetaData: Codable {
     public var pairingUrl: String?
 
     public init(pairingToken: String?, pairingTrust: [String]?, pairingUrl: String?) {
-        
         self.pairingToken = pairingToken
-        
         self.pairingTrust = pairingTrust
-        
         self.pairingUrl = pairingUrl
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

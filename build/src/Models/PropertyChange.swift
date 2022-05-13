@@ -19,13 +19,9 @@ public class PropertyChange: Codable {
     public var newValues: [String]?
 
     public init(property: String?, oldValues: [String]?, newValues: [String]?) {
-        
         self.property = property
-        
         self.oldValues = oldValues
-        
         self.newValues = newValues
-        
     }
 
 

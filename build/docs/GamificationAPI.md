@@ -397,6 +397,8 @@ All metric definitions
 
 Retrieves the metric definitions and their corresponding default objectives used to create a gamified metric
 
+
+
 Wraps GET /api/v2/gamification/metricdefinitions  
 
 Requires ANY permissions: 
@@ -682,7 +684,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let profileId: String = "" // Performance Profile Id
-let expand: [String] = [GamificationAPI.Expand_getGamificationProfileMetrics.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 let workday: Date = new Date(...) // The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
@@ -951,7 +953,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let expand: [String] = [GamificationAPI.Expand_getGamificationScorecards.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 GamificationAPI.getGamificationScorecards(workday: workday, expand: expand) { (response, error) in
@@ -1268,7 +1270,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // 
 let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let expand: [String] = [GamificationAPI.Expand_getGamificationScorecardsUser.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 GamificationAPI.getGamificationScorecardsUser(userId: userId, workday: workday, expand: expand) { (response, error) in
@@ -1545,7 +1547,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let userId: String = "" // 
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
+let timeZone: String = "" // Timezone for the workday. Defaults to UTC
 
 // Code example
 GamificationAPI.getGamificationScorecardsUserValuesTrends(userId: userId, startWorkday: startWorkday, endWorkday: endWorkday, timeZone: timeZone) { (response, error) in
@@ -1566,7 +1568,7 @@ GamificationAPI.getGamificationScorecardsUserValuesTrends(userId: userId, startW
 | **userId** | **String**|  | |
 | **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] |
 {: class="table-striped"}
 
 
@@ -1659,7 +1661,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let filterType: GamificationAPI.FilterType_getGamificationScorecardsUsersValuesAverage = GamificationAPI.FilterType_getGamificationScorecardsUsersValuesAverage.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type. For example, division Id
 let workday: Date = new Date(...) // The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
+let timeZone: String = "" // Timezone for the workday. Defaults to UTC
 
 // Code example
 GamificationAPI.getGamificationScorecardsUsersValuesAverage(filterType: filterType, filterId: filterId, workday: workday, timeZone: timeZone) { (response, error) in
@@ -1680,7 +1682,7 @@ GamificationAPI.getGamificationScorecardsUsersValuesAverage(filterType: filterTy
 | **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
 | **filterId** | **String**| ID for the filter type. For example, division Id | |
 | **workday** | **Date**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] |
 {: class="table-striped"}
 
 
@@ -1718,7 +1720,7 @@ let filterType: GamificationAPI.FilterType_getGamificationScorecardsUsersValuesT
 let filterId: String = "" // ID for the filter type.
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
+let timeZone: String = "" // Timezone for the workday. Defaults to UTC
 
 // Code example
 GamificationAPI.getGamificationScorecardsUsersValuesTrends(filterType: filterType, filterId: filterId, startWorkday: startWorkday, endWorkday: endWorkday, timeZone: timeZone) { (response, error) in
@@ -1740,7 +1742,7 @@ GamificationAPI.getGamificationScorecardsUsersValuesTrends(filterType: filterTyp
 | **filterId** | **String**| ID for the filter type. | |
 | **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] |
 {: class="table-striped"}
 
 
@@ -1775,7 +1777,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workday: Date = new Date(...) // The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
+let timeZone: String = "" // Timezone for the workday. Defaults to UTC
 
 // Code example
 GamificationAPI.getGamificationScorecardsValuesAverage(workday: workday, timeZone: timeZone) { (response, error) in
@@ -1794,7 +1796,7 @@ GamificationAPI.getGamificationScorecardsValuesAverage(workday: workday, timeZon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workday** | **Date**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] |
 {: class="table-striped"}
 
 
@@ -1832,7 +1834,7 @@ let startWorkday: Date = new Date(...) // Start workday of querying workdays ran
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let filterType: GamificationAPI.FilterType_getGamificationScorecardsValuesTrends = GamificationAPI.FilterType_getGamificationScorecardsValuesTrends.enummember // Filter type for the query request. If not set, then the request is for the requesting user.
 let referenceWorkday: Date = new Date(...) // Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user's current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
+let timeZone: String = "" // Timezone for the workday. Defaults to UTC
 
 // Code example
 GamificationAPI.getGamificationScorecardsValuesTrends(startWorkday: startWorkday, endWorkday: endWorkday, filterType: filterType, referenceWorkday: referenceWorkday, timeZone: timeZone) { (response, error) in
@@ -1853,8 +1855,8 @@ GamificationAPI.getGamificationScorecardsValuesTrends(startWorkday: startWorkday
 | **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **filterType** | **String**| Filter type for the query request. If not set, then the request is for the requesting user. | [optional]<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
-| **referenceWorkday** | **Date**| Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
+| **referenceWorkday** | **Date**| Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user's current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] |
 {: class="table-striped"}
 
 
@@ -2432,7 +2434,7 @@ GamificationAPI.postGamificationProfiles(body: body, copyMetrics: copyMetrics) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**CreatePerformanceProfile**](CreatePerformanceProfile.html)| performanceProfile | |
-| **copyMetrics** | **Bool**| Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. | [optional] [default to true] |
+| **copyMetrics** | **Bool**| Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. | [optional] |
 {: class="table-striped"}
 
 

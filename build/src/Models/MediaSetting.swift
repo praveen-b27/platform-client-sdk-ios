@@ -15,11 +15,8 @@ public class MediaSetting: Codable {
     public var serviceLevel: ServiceLevel?
 
     public init(alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?) {
-        
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
-        
         self.serviceLevel = serviceLevel
-        
     }
 
 

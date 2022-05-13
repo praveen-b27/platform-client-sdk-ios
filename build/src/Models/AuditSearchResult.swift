@@ -23,19 +23,12 @@ public class AuditSearchResult: Codable {
     public var auditMessages: [AuditMessage]?
 
     public init(pageNumber: Int?, pageSize: Int?, total: Int?, pageCount: Int?, facetInfo: [FacetInfo]?, auditMessages: [AuditMessage]?) {
-        
         self.pageNumber = pageNumber
-        
         self.pageSize = pageSize
-        
         self.total = total
-        
         self.pageCount = pageCount
-        
         self.facetInfo = facetInfo
-        
         self.auditMessages = auditMessages
-        
     }
 
 

@@ -17,11 +17,8 @@ public class TrustUserDetails: Codable {
     public var createdBy: OrgUser?
 
     public init(dateCreated: Date?, createdBy: OrgUser?) {
-        
         self.dateCreated = dateCreated
-        
         self.createdBy = createdBy
-        
     }
 
 

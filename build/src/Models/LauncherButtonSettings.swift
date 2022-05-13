@@ -21,9 +21,7 @@ public class LauncherButtonSettings: Codable {
     public var visibility: Visibility?
 
     public init(visibility: Visibility?) {
-        
         self.visibility = visibility
-        
     }
 
 

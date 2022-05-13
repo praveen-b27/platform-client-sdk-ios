@@ -31,25 +31,15 @@ public class DraftTopics: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, miner: Miner?, conversationCount: Int?, conversationPercent: Float?, utteranceCount: Int?, phraseCount: Int?, phrases: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.miner = miner
-        
         self.conversationCount = conversationCount
-        
         self.conversationPercent = conversationPercent
-        
         self.utteranceCount = utteranceCount
-        
         self.phraseCount = phraseCount
-        
         self.phrases = phrases
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

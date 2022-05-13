@@ -299,8 +299,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration Id
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -323,8 +323,8 @@ IntegrationsAPI.getIntegration(integrationId: integrationId, pageSize: pageSize,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration Id | |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -414,8 +414,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -437,8 +437,8 @@ IntegrationsAPI.getIntegrations(pageSize: pageSize, pageNumber: pageNumber, sort
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -479,7 +479,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let expand: IntegrationsAPI.Expand_getIntegrationsAction = IntegrationsAPI.Expand_getIntegrationsAction.enummember // Indicates a field in the response which should be expanded.
-let includeConfig: Bool = false // Return config in response.
+let includeConfig: IntegrationsAPI.IncludeConfig_getIntegrationsAction = IntegrationsAPI.IncludeConfig_getIntegrationsAction.enummember // Return config in response.
 
 // Code example
 IntegrationsAPI.getIntegrationsAction(actionId: actionId, expand: expand, includeConfig: includeConfig) { (response, error) in
@@ -499,7 +499,7 @@ IntegrationsAPI.getIntegrationsAction(actionId: actionId, expand: expand, includ
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **expand** | **String**| Indicates a field in the response which should be expanded. | [optional]<br />**Values**: contract ("contract") |
-| **includeConfig** | **Bool**| Return config in response. | [optional] [default to false] |
+| **includeConfig** | **Bool**| Return config in response. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -536,7 +536,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let expand: IntegrationsAPI.Expand_getIntegrationsActionDraft = IntegrationsAPI.Expand_getIntegrationsActionDraft.enummember // Indicates a field in the response which should be expanded.
-let includeConfig: Bool = false // Return config in response.
+let includeConfig: IntegrationsAPI.IncludeConfig_getIntegrationsActionDraft = IntegrationsAPI.IncludeConfig_getIntegrationsActionDraft.enummember // Return config in response.
 
 // Code example
 IntegrationsAPI.getIntegrationsActionDraft(actionId: actionId, expand: expand, includeConfig: includeConfig) { (response, error) in
@@ -556,7 +556,7 @@ IntegrationsAPI.getIntegrationsActionDraft(actionId: actionId, expand: expand, i
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **expand** | **String**| Indicates a field in the response which should be expanded. | [optional]<br />**Values**: contract ("contract") |
-| **includeConfig** | **Bool**| Return config in response. | [optional] [default to false] |
+| **includeConfig** | **Bool**| Return config in response. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -863,8 +863,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let sortBy: String = "" // Root level field name to sort on.
@@ -891,17 +891,17 @@ IntegrationsAPI.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumbe
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **sortBy** | **String**| Root level field name to sort on. | [optional] |
-| **sortOrder** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: asc ("ASC"), desc ("DESC") |
+| **sortOrder** | **String**| Direction to sort 'sortBy' field. | [optional]<br />**Values**: asc ("ASC"), desc ("DESC") |
 | **category** | **String**| Filter by category name. | [optional] |
 | **name** | **String**| Filter by partial or complete action name. | [optional] |
 | **ids** | **String**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional] |
-| **secure** | **String**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
-| **includeAuthActions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: _true ("true"), _false ("false") |
+| **secure** | **String**| Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **includeAuthActions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -936,8 +936,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let sortBy: String = "" // Root level field name to sort on.  Only 'name' is supported on this endpoint.
@@ -960,12 +960,12 @@ IntegrationsAPI.getIntegrationsActionsCategories(pageSize: pageSize, pageNumber:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **sortBy** | **String**| Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. | [optional] |
-| **sortOrder** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: asc ("ASC"), desc ("DESC") |
+| **sortBy** | **String**| Root level field name to sort on.  Only 'name' is supported on this endpoint. | [optional] |
+| **sortOrder** | **String**| Direction to sort 'sortBy' field. | [optional]<br />**Values**: asc ("ASC"), desc ("DESC") |
 | **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
@@ -1001,8 +1001,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let sortBy: String = "" // Root level field name to sort on.
@@ -1029,17 +1029,17 @@ IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **sortBy** | **String**| Root level field name to sort on. | [optional] |
-| **sortOrder** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: asc ("ASC"), desc ("DESC") |
+| **sortOrder** | **String**| Direction to sort 'sortBy' field. | [optional]<br />**Values**: asc ("ASC"), desc ("DESC") |
 | **category** | **String**| Filter by category name. | [optional] |
 | **name** | **String**| Filter by partial or complete action name. | [optional] |
 | **ids** | **String**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional] |
-| **secure** | **String**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
-| **includeAuthActions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: _true ("true"), _false ("false") |
+| **secure** | **String**| Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **includeAuthActions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -1131,8 +1131,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // The integration ID for this bot group
 let botId: String = "" // The botID for this bot
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBotVersions(integrationId: integrationId, botId: botId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1152,8 +1152,8 @@ IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBotVersions(integrationI
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| The integration ID for this bot group | |
 | **botId** | **String**| The botID for this bot | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1240,8 +1240,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // The integration ID for this group of bots
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBotsSummaries(integrationId: integrationId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1260,8 +1260,8 @@ IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBotsSummaries(integratio
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| The integration ID for this group of bots | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1294,8 +1294,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -1317,8 +1317,8 @@ IntegrationsAPI.getIntegrationsClientapps(pageSize: pageSize, pageNumber: pageNu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -1342,6 +1342,8 @@ UC integration client application configuration.
 
 This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
 
+
+
 Wraps GET /api/v2/integrations/clientapps/unifiedcommunications  
 
 Requires ANY permissions: 
@@ -1356,8 +1358,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -1379,8 +1381,8 @@ IntegrationsAPI.getIntegrationsClientappsUnifiedcommunications(pageSize: pageSiz
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -1468,8 +1470,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 IntegrationsAPI.getIntegrationsCredentials(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -1487,8 +1489,8 @@ IntegrationsAPI.getIntegrationsCredentials(pageNumber: pageNumber, pageSize: pag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -1570,10 +1572,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "timestamp" // Sort by
-let sortOrder: String = "descending" // Order by
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Order by
 let entityId: String = "" // Include only events with this entity ID
 
 // Code example
@@ -1592,10 +1594,10 @@ IntegrationsAPI.getIntegrationsEventlog(pageSize: pageSize, pageNumber: pageNumb
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to timestamp] |
-| **sortOrder** | **String**| Order by | [optional] [default to descending] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Order by | [optional] |
 | **entityId** | **String**| Include only events with this entity ID | [optional] |
 {: class="table-striped"}
 
@@ -1735,8 +1737,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let name: String = "" // Filter on agent name
 
 // Code example
@@ -1755,8 +1757,8 @@ IntegrationsAPI.getIntegrationsSpeechDialogflowAgents(pageNumber: pageNumber, pa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **name** | **String**| Filter on agent name | [optional] |
 {: class="table-striped"}
 
@@ -1844,8 +1846,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let botId: String = "" // The bot ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let status: IntegrationsAPI.Status_getIntegrationsSpeechLexBotBotIdAliases = IntegrationsAPI.Status_getIntegrationsSpeechLexBotBotIdAliases.enummember // Filter on alias status
 let name: String = "" // Filter on alias name
 
@@ -1866,8 +1868,8 @@ IntegrationsAPI.getIntegrationsSpeechLexBotBotIdAliases(botId: botId, pageNumber
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **botId** | **String**| The bot ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **status** | **String**| Filter on alias status | [optional]<br />**Values**: ready ("READY"), failed ("FAILED"), building ("BUILDING"), notBuilt ("NOT_BUILT") |
 | **name** | **String**| Filter on alias name | [optional] |
 {: class="table-striped"}
@@ -1903,8 +1905,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 let name: String = "" // Filter on bot name
 
 // Code example
@@ -1923,8 +1925,8 @@ IntegrationsAPI.getIntegrationsSpeechLexBots(pageNumber: pageNumber, pageSize: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **name** | **String**| Filter on bot name | [optional] |
 {: class="table-striped"}
 
@@ -1960,7 +1962,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let engineId: String = "" // The engine ID
-let includeVoices: Bool = false // Include voices for the engine
+let includeVoices: Bool = true // Include voices for the engine
 
 // Code example
 IntegrationsAPI.getIntegrationsSpeechTtsEngine(engineId: engineId, includeVoices: includeVoices) { (response, error) in
@@ -1979,7 +1981,7 @@ IntegrationsAPI.getIntegrationsSpeechTtsEngine(engineId: engineId, includeVoices
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **engineId** | **String**| The engine ID | |
-| **includeVoices** | **Bool**| Include voices for the engine | [optional] [default to false] |
+| **includeVoices** | **Bool**| Include voices for the engine | [optional] |
 {: class="table-striped"}
 
 
@@ -2068,8 +2070,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let engineId: String = "" // The engine ID
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
 
 // Code example
 IntegrationsAPI.getIntegrationsSpeechTtsEngineVoices(engineId: engineId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -2088,8 +2090,8 @@ IntegrationsAPI.getIntegrationsSpeechTtsEngineVoices(engineId: engineId, pageNum
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **engineId** | **String**| The engine ID | |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
 {: class="table-striped"}
 
 
@@ -2123,9 +2125,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
-let includeVoices: Bool = false // Include voices for the engine
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let includeVoices: Bool = true // Include voices for the engine
 let name: String = "" // Filter on engine name
 let language: String = "" // Filter on supported language. If includeVoices=true then the voices are also filtered.
 
@@ -2145,9 +2147,9 @@ IntegrationsAPI.getIntegrationsSpeechTtsEngines(pageNumber: pageNumber, pageSize
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **includeVoices** | **Bool**| Include voices for the engine | [optional] [default to false] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **includeVoices** | **Bool**| Include voices for the engine | [optional] |
 | **name** | **String**| Filter on engine name | [optional] |
 | **language** | **String**| Filter on supported language. If includeVoices=true then the voices are also filtered. | [optional] |
 {: class="table-striped"}
@@ -2337,8 +2339,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -2360,8 +2362,8 @@ IntegrationsAPI.getIntegrationsTypes(pageSize: pageSize, pageNumber: pageNumber,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -2398,8 +2400,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -2422,8 +2424,8 @@ IntegrationsAPI.getIntegrationsUserapps(pageSize: pageSize, pageNumber: pageNumb
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -2442,7 +2444,7 @@ IntegrationsAPI.getIntegrationsUserapps(pageSize: pageSize, pageNumber: pageNumb
 
 
 
-> [Integration](Integration.html) patchIntegration(integrationId, body, pageSize, pageNumber, sortBy, expand, nextPage, previousPage)
+> [Integration](Integration.html) patchIntegration(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, body)
 
 Update an integration.
 
@@ -2463,16 +2465,16 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration Id
-let body: Integration = new Integration(...) // Integration Update
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
+let body: Integration = new Integration(...) // Integration Update
 
 // Code example
-IntegrationsAPI.patchIntegration(integrationId: integrationId, body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage) { (response, error) in
+IntegrationsAPI.patchIntegration(integrationId: integrationId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2488,13 +2490,13 @@ IntegrationsAPI.patchIntegration(integrationId: integrationId, body: body, pageS
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration Id | |
-| **body** | [**Integration**](Integration.html)| Integration Update | [optional] |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
+| **body** | [**Integration**](Integration.html)| Integration Update | [optional] |
 {: class="table-striped"}
 
 
@@ -2795,7 +2797,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
-let body: JSON = new JSON(...) // Map of parameters used for variable substitution.
+let body: [String:JSON] = new JSON(...) // Map of parameters used for variable substitution.
 
 // Code example
 IntegrationsAPI.postIntegrationsActionDraftTest(actionId: actionId, body: body) { (response, error) in
@@ -2814,7 +2816,7 @@ IntegrationsAPI.postIntegrationsActionDraftTest(actionId: actionId, body: body) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
-| **body** | [**JSON**](JSON.html)| Map of parameters used for variable substitution. | |
+| **body** | [**[String:JSON]**](JSON.html)| Map of parameters used for variable substitution. | |
 {: class="table-striped"}
 
 
@@ -2850,7 +2852,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
-let body: JSON = new JSON(...) // Map of parameters used for variable substitution.
+let body: [String:JSON] = new JSON(...) // Map of parameters used for variable substitution.
 
 // Code example
 IntegrationsAPI.postIntegrationsActionExecute(actionId: actionId, body: body) { (response, error) in
@@ -2869,7 +2871,7 @@ IntegrationsAPI.postIntegrationsActionExecute(actionId: actionId, body: body) { 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
-| **body** | [**JSON**](JSON.html)| Map of parameters used for variable substitution. | |
+| **body** | [**[String:JSON]**](JSON.html)| Map of parameters used for variable substitution. | |
 {: class="table-striped"}
 
 
@@ -2905,7 +2907,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
-let body: JSON = new JSON(...) // Map of parameters used for variable substitution.
+let body: [String:JSON] = new JSON(...) // Map of parameters used for variable substitution.
 
 // Code example
 IntegrationsAPI.postIntegrationsActionTest(actionId: actionId, body: body) { (response, error) in
@@ -2924,7 +2926,7 @@ IntegrationsAPI.postIntegrationsActionTest(actionId: actionId, body: body) { (re
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
-| **body** | [**JSON**](JSON.html)| Map of parameters used for variable substitution. | |
+| **body** | [**[String:JSON]**](JSON.html)| Map of parameters used for variable substitution. | |
 {: class="table-striped"}
 
 

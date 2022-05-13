@@ -18,11 +18,8 @@ public class NotificationTemplateBody: Codable {
     public var parameters: [NotificationTemplateParameter]?
 
     public init(text: String?, parameters: [NotificationTemplateParameter]?) {
-        
         self.text = text
-        
         self.parameters = parameters
-        
     }
 
 

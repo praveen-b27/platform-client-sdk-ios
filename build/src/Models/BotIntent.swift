@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** A botConnector&#39;s bot intention */
+/** A botConnector's bot intention */
 
 public class BotIntent: Codable {
 
@@ -18,11 +18,8 @@ public class BotIntent: Codable {
     public var slots: [String:BotSlot]?
 
     public init(name: String?, slots: [String:BotSlot]?) {
-        
         self.name = name
-        
         self.slots = slots
-        
     }
 
 

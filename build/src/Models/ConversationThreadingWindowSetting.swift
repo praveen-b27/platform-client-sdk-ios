@@ -27,11 +27,8 @@ public class ConversationThreadingWindowSetting: Codable {
     public var timeoutInMinutes: Int64?
 
     public init(messengerType: MessengerType?, timeoutInMinutes: Int64?) {
-        
         self.messengerType = messengerType
-        
         self.timeoutInMinutes = timeoutInMinutes
-        
     }
 
 

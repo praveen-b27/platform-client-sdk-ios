@@ -22,13 +22,9 @@ public class WfmBuScheduleRunTopicBuSchedulingRunProgressNotification: Codable {
     public var result: WfmBuScheduleRunTopicBuScheduleRun?
 
     public init(status: Status?, operationId: String?, result: WfmBuScheduleRunTopicBuScheduleRun?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.result = result
-        
     }
 
 

@@ -21,11 +21,8 @@ public class DevelopmentActivityAggregateQueryRequestFilter: Codable {
     public var clauses: [DevelopmentActivityAggregateQueryRequestClause]?
 
     public init(type: ModelType?, clauses: [DevelopmentActivityAggregateQueryRequestClause]?) {
-        
         self.type = type
-        
         self.clauses = clauses
-        
     }
 
 

@@ -17,11 +17,8 @@ public class NamedEntityTypeItem: Codable {
     public var synonyms: [String]?
 
     public init(value: String?, synonyms: [String]?) {
-        
         self.value = value
-        
         self.synonyms = synonyms
-        
     }
 
 

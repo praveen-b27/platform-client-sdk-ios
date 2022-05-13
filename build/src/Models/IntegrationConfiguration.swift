@@ -30,23 +30,14 @@ public class IntegrationConfiguration: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, version: Int?, properties: JSON?, advanced: JSON?, notes: String?, credentials: [String:CredentialInfo]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.version = version
-        
         self.properties = properties
-        
         self.advanced = advanced
-        
         self.notes = notes
-        
         self.credentials = credentials
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

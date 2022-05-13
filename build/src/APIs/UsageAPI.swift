@@ -11,10 +11,7 @@ import Foundation
 
 open class UsageAPI {
     
-    
-    
     /**
-     
      Get the results of a usage query
      
      - parameter executionId: (path) ID of the query execution 
@@ -39,49 +36,55 @@ open class UsageAPI {
     }
 
     /**
-     
      Get the results of a usage query
-     
      - GET /api/v2/usage/query/{executionId}/results
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "queryStatus" : "aeiou",
+  "queryStatus" : "Complete",
   "results" : [ {
-    "date" : "2000-01-23T04:56:07.000+0000",
-    "clientId" : "aeiou",
-    "clientName" : "aeiou",
-    "templateUri" : "aeiou",
-    "requests" : 123456789,
-    "httpMethod" : "aeiou",
-    "userId" : "aeiou",
-    "organizationId" : "aeiou",
-    "status429" : 123456789,
-    "status400" : 123456789,
-    "status500" : 123456789,
-    "status200" : 123456789,
-    "status300" : 123456789
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "clientId" : "clientId",
+    "clientName" : "clientName",
+    "templateUri" : "templateUri",
+    "requests" : 2,
+    "httpMethod" : "httpMethod",
+    "userId" : "userId",
+    "organizationId" : "organizationId",
+    "status429" : 5,
+    "status400" : 1,
+    "status500" : 5,
+    "status200" : 0,
+    "status300" : 6
+  }, {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "clientId" : "clientId",
+    "clientName" : "clientName",
+    "templateUri" : "templateUri",
+    "requests" : 2,
+    "httpMethod" : "httpMethod",
+    "userId" : "userId",
+    "organizationId" : "organizationId",
+    "status429" : 5,
+    "status400" : 1,
+    "status500" : 5,
+    "status200" : 0,
+    "status300" : 6
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter executionId: (path) ID of the query execution 
 
      - returns: RequestBuilder<ApiUsageQueryResult> 
      */
-    open class func getUsageQueryExecutionIdResultsWithRequestBuilder(executionId: String) -> RequestBuilder<ApiUsageQueryResult> {
+    open class func getUsageQueryExecutionIdResultsWithRequestBuilder(executionId: String) -> RequestBuilder<ApiUsageQueryResult> {        
         var path = "/api/v2/usage/query/{executionId}/results"
         let executionIdPreEscape = "\(executionId)"
         let executionIdPostEscape = executionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{executionId}", with: executionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -91,10 +94,7 @@ open class UsageAPI {
     }
 
     
-    
-    
     /**
-     
      Query organization API Usage - 
      
      - parameter body: (body) Query 
@@ -119,30 +119,26 @@ open class UsageAPI {
     }
 
     /**
-     
      Query organization API Usage - 
-     
      - POST /api/v2/usage/query
      - After calling this method, you will then need to poll for the query results based on the returned execution Id
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "executionId" : "aeiou",
-  "resultsUri" : "aeiou"
-}}]
+  "executionId" : "executionId",
+  "resultsUri" : "resultsUri"
+}, statusCode=200}]
      
      - parameter body: (body) Query 
 
      - returns: RequestBuilder<UsageExecutionResult> 
      */
-    open class func postUsageQueryWithRequestBuilder(body: ApiUsageQuery) -> RequestBuilder<UsageExecutionResult> {
+    open class func postUsageQueryWithRequestBuilder(body: ApiUsageQuery) -> RequestBuilder<UsageExecutionResult> {        
         let path = "/api/v2/usage/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UsageExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

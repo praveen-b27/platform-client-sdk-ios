@@ -27,27 +27,16 @@ public class WebChatDeployment: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, authenticationRequired: Bool?, authenticationUrl: String?, disabled: Bool?, webChatConfig: WebChatConfig?, allowedDomains: [String]?, flow: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.authenticationRequired = authenticationRequired
-        
         self.authenticationUrl = authenticationUrl
-        
         self.disabled = disabled
-        
         self.webChatConfig = webChatConfig
-        
         self.allowedDomains = allowedDomains
-        
         self.flow = flow
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

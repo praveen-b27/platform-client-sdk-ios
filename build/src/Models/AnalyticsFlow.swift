@@ -70,37 +70,21 @@ public class AnalyticsFlow: Codable {
     public var outcomes: [AnalyticsFlowOutcome]?
 
     public init(endingLanguage: String?, entryReason: String?, entryType: EntryType?, exitReason: String?, flowId: String?, flowName: String?, flowType: FlowType?, flowVersion: String?, issuedCallback: Bool?, recognitionFailureReason: String?, startingLanguage: String?, transferTargetAddress: String?, transferTargetName: String?, transferType: String?, outcomes: [AnalyticsFlowOutcome]?) {
-        
         self.endingLanguage = endingLanguage
-        
         self.entryReason = entryReason
-        
         self.entryType = entryType
-        
         self.exitReason = exitReason
-        
         self.flowId = flowId
-        
         self.flowName = flowName
-        
         self.flowType = flowType
-        
         self.flowVersion = flowVersion
-        
         self.issuedCallback = issuedCallback
-        
         self.recognitionFailureReason = recognitionFailureReason
-        
         self.startingLanguage = startingLanguage
-        
         self.transferTargetAddress = transferTargetAddress
-        
         self.transferTargetName = transferTargetName
-        
         self.transferType = transferType
-        
         self.outcomes = outcomes
-        
     }
 
 

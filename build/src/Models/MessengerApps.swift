@@ -18,11 +18,8 @@ public class MessengerApps: Codable {
     public var knowledge: Knowledge?
 
     public init(conversations: ConversationAppSettings?, knowledge: Knowledge?) {
-        
         self.conversations = conversations
-        
         self.knowledge = knowledge
-        
     }
 
 

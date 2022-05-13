@@ -79,39 +79,22 @@ public class Condition: Codable {
     public var predicates: [DataActionConditionPredicate]?
 
     public init(type: ModelType?, inverted: Bool?, attributeName: String?, value: String?, valueType: ValueType?, _operator: Operator?, codes: [String]?, property: String?, propertyType: PropertyType?, dataAction: DomainEntityRef?, dataNotFoundResolution: Bool?, contactIdField: String?, callAnalysisResultField: String?, agentWrapupField: String?, contactColumnToDataActionFieldMappings: [ContactColumnToDataActionFieldMapping]?, predicates: [DataActionConditionPredicate]?) {
-        
         self.type = type
-        
         self.inverted = inverted
-        
         self.attributeName = attributeName
-        
         self.value = value
-        
         self.valueType = valueType
-        
         self._operator = _operator
-        
         self.codes = codes
-        
         self.property = property
-        
         self.propertyType = propertyType
-        
         self.dataAction = dataAction
-        
         self.dataNotFoundResolution = dataNotFoundResolution
-        
         self.contactIdField = contactIdField
-        
         self.callAnalysisResultField = callAnalysisResultField
-        
         self.agentWrapupField = agentWrapupField
-        
         self.contactColumnToDataActionFieldMappings = contactColumnToDataActionFieldMappings
-        
         self.predicates = predicates
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -27,21 +27,13 @@ public class TestMessage: Codable {
     public var time: Date?
 
     public init(_id: String?, to: [EmailAddress]?, from: EmailAddress?, subject: String?, textBody: String?, htmlBody: String?, time: Date?) {
-        
         self._id = _id
-        
         self.to = to
-        
         self.from = from
-        
         self.subject = subject
-        
         self.textBody = textBody
-        
         self.htmlBody = htmlBody
-        
         self.time = time
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

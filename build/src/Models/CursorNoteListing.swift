@@ -17,15 +17,10 @@ public class CursorNoteListing: Codable {
     public var previousUri: String?
 
     public init(entities: [Note]?, nextUri: String?, selfUri: String?, previousUri: String?) {
-        
         self.entities = entities
-        
         self.nextUri = nextUri
-        
         self.selfUri = selfUri
-        
         self.previousUri = previousUri
-        
     }
 
 

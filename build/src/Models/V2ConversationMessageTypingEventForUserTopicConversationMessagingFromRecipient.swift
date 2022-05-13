@@ -26,23 +26,14 @@ public class V2ConversationMessageTypingEventForUserTopicConversationMessagingFr
     public var additionalIds: [V2ConversationMessageTypingEventForUserTopicConversationRecipientAdditionalIdentifier]?
 
     public init(nickname: String?, _id: String?, idType: IdType?, image: String?, firstName: String?, lastName: String?, email: String?, additionalIds: [V2ConversationMessageTypingEventForUserTopicConversationRecipientAdditionalIdentifier]?) {
-        
         self.nickname = nickname
-        
         self._id = _id
-        
         self.idType = idType
-        
         self.image = image
-        
         self.firstName = firstName
-        
         self.lastName = lastName
-        
         self.email = email
-        
         self.additionalIds = additionalIds
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

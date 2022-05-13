@@ -18,11 +18,8 @@ public class ActionContractInput: Codable {
     public var output: PostOutputContract?
 
     public init(input: PostInputContract?, output: PostOutputContract?) {
-        
         self.input = input
-        
         self.output = output
-        
     }
 
 

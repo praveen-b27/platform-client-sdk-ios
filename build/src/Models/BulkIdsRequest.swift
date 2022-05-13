@@ -14,9 +14,7 @@ public class BulkIdsRequest: Codable {
     public var entities: [Entity]?
 
     public init(entities: [Entity]?) {
-        
         self.entities = entities
-        
     }
 
 

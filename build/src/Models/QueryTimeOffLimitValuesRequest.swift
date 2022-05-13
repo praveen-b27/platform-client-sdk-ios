@@ -20,13 +20,9 @@ public class QueryTimeOffLimitValuesRequest: Codable {
     public var dateRanges: [LocalDateRange]?
 
     public init(timeOffLimitId: String?, activityCodeId: String?, dateRanges: [LocalDateRange]?) {
-        
         self.timeOffLimitId = timeOffLimitId
-        
         self.activityCodeId = activityCodeId
-        
         self.dateRanges = dateRanges
-        
     }
 
 

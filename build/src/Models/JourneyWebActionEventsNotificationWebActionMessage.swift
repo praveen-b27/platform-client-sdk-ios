@@ -26,33 +26,19 @@ public class JourneyWebActionEventsNotificationWebActionMessage: Codable {
     public var visitReferrer: JourneyWebActionEventsNotificationReferrer?
 
     public init(action: JourneyWebActionEventsNotificationEventAction?, actionTarget: JourneyWebActionEventsNotificationActionTarget?, actionMap: JourneyWebActionEventsNotificationActionMap?, errorCode: String?, errorMessage: String?, userAgentString: String?, ipAddress: String?, ipOrganization: String?, browser: JourneyWebActionEventsNotificationBrowser?, device: JourneyWebActionEventsNotificationDevice?, geolocation: JourneyWebActionEventsNotificationGeoLocation?, mktCampaign: JourneyWebActionEventsNotificationMktCampaign?, visitReferrer: JourneyWebActionEventsNotificationReferrer?) {
-        
         self.action = action
-        
         self.actionTarget = actionTarget
-        
         self.actionMap = actionMap
-        
         self.errorCode = errorCode
-        
         self.errorMessage = errorMessage
-        
         self.userAgentString = userAgentString
-        
         self.ipAddress = ipAddress
-        
         self.ipOrganization = ipOrganization
-        
         self.browser = browser
-        
         self.device = device
-        
         self.geolocation = geolocation
-        
         self.mktCampaign = mktCampaign
-        
         self.visitReferrer = visitReferrer
-        
     }
 
 

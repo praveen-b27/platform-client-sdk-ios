@@ -17,11 +17,8 @@ public class RestErrorDetail: Codable {
     public var details: String?
 
     public init(error: String?, details: String?) {
-        
         self.error = error
-        
         self.details = details
-        
     }
 
 

@@ -19,13 +19,9 @@ public class SessionLastEvent: Codable {
     public var createdDate: Date?
 
     public init(_id: String?, eventName: String?, createdDate: Date?) {
-        
         self._id = _id
-        
         self.eventName = eventName
-        
         self.createdDate = createdDate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

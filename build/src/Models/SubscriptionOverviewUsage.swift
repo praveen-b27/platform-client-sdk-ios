@@ -37,31 +37,18 @@ public class SubscriptionOverviewUsage: Codable {
     public var isThirdParty: Bool?
 
     public init(name: String?, partNumber: String?, grouping: String?, unitOfMeasureType: String?, usageQuantity: String?, overagePrice: String?, prepayQuantity: String?, prepayPrice: String?, usageNotes: String?, isCancellable: Bool?, bundleQuantity: String?, isThirdParty: Bool?) {
-        
         self.name = name
-        
         self.partNumber = partNumber
-        
         self.grouping = grouping
-        
         self.unitOfMeasureType = unitOfMeasureType
-        
         self.usageQuantity = usageQuantity
-        
         self.overagePrice = overagePrice
-        
         self.prepayQuantity = prepayQuantity
-        
         self.prepayPrice = prepayPrice
-        
         self.usageNotes = usageNotes
-        
         self.isCancellable = isCancellable
-        
         self.bundleQuantity = bundleQuantity
-        
         self.isThirdParty = isThirdParty
-        
     }
 
 

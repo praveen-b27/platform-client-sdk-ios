@@ -30,19 +30,12 @@ public class SentimentFeedback: Codable {
     public var createdBy: AddressableEntityRef?
 
     public init(_id: String?, phrase: String?, dialect: String?, feedbackValue: FeedbackValue?, dateCreated: Date?, createdBy: AddressableEntityRef?) {
-        
         self._id = _id
-        
         self.phrase = phrase
-        
         self.dialect = dialect
-        
         self.feedbackValue = feedbackValue
-        
         self.dateCreated = dateCreated
-        
         self.createdBy = createdBy
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

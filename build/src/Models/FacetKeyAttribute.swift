@@ -16,13 +16,9 @@ public class FacetKeyAttribute: Codable {
     public var count: Int?
 
     public init(_id: String?, name: String?, count: Int?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.count = count
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

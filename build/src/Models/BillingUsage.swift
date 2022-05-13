@@ -19,13 +19,9 @@ public class BillingUsage: Codable {
     public var resources: [BillingUsageResource]?
 
     public init(name: String?, totalUsage: String?, resources: [BillingUsageResource]?) {
-        
         self.name = name
-        
         self.totalUsage = totalUsage
-        
         self.resources = resources
-        
     }
 
 

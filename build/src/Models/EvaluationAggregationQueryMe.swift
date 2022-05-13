@@ -49,25 +49,18 @@ public class EvaluationAggregationQueryMe: Codable {
     public var groupBy: [GroupBy]?
     /** Behaves like a SQL SELECT clause. Only named metrics will be retrieved. */
     public var metrics: [Metrics]?
-    /** Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. */
+    /** Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event. */
     public var alternateTimeDimension: AlternateTimeDimension?
     /** Evaluation context Id */
     public var contextId: String?
 
     public init(interval: String?, timeZone: String?, groupBy: [GroupBy]?, metrics: [Metrics]?, alternateTimeDimension: AlternateTimeDimension?, contextId: String?) {
-        
         self.interval = interval
-        
         self.timeZone = timeZone
-        
         self.groupBy = groupBy
-        
         self.metrics = metrics
-        
         self.alternateTimeDimension = alternateTimeDimension
-        
         self.contextId = contextId
-        
     }
 
 

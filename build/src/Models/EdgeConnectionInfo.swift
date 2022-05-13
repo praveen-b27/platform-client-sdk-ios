@@ -25,21 +25,13 @@ public class EdgeConnectionInfo: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, interfaceName: String?, interfaceIpAddress: String?, connectionErrors: [String]?, site: AddressableEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.interfaceName = interfaceName
-        
         self.interfaceIpAddress = interfaceIpAddress
-        
         self.connectionErrors = connectionErrors
-        
         self.site = site
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

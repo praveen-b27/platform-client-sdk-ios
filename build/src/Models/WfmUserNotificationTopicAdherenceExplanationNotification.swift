@@ -30,25 +30,15 @@ public class WfmUserNotificationTopicAdherenceExplanationNotification: Codable {
     public var notes: String?
 
     public init(_id: String?, agent: WfmUserNotificationTopicUserReference?, managementUnit: WfmUserNotificationTopicManagementUnit?, businessUnit: WfmUserNotificationTopicBusinessUnit?, startDate: Date?, lengthMinutes: Int?, status: Status?, type: ModelType?, notes: String?) {
-        
         self._id = _id
-        
         self.agent = agent
-        
         self.managementUnit = managementUnit
-        
         self.businessUnit = businessUnit
-        
         self.startDate = startDate
-        
         self.lengthMinutes = lengthMinutes
-        
         self.status = status
-        
         self.type = type
-        
         self.notes = notes
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

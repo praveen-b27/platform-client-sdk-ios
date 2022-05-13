@@ -28,17 +28,11 @@ public class JourneyPattern: Codable {
     public var eventName: String?
 
     public init(criteria: [Criteria]?, count: Int?, streamType: StreamType?, sessionType: String?, eventName: String?) {
-        
         self.criteria = criteria
-        
         self.count = count
-        
         self.streamType = streamType
-        
         self.sessionType = sessionType
-        
         self.eventName = eventName
-        
     }
 
 

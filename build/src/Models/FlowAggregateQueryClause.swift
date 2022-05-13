@@ -21,11 +21,8 @@ public class FlowAggregateQueryClause: Codable {
     public var predicates: [FlowAggregateQueryPredicate]?
 
     public init(type: ModelType?, predicates: [FlowAggregateQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

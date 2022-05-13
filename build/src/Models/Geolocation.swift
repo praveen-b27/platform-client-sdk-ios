@@ -28,29 +28,17 @@ public class Geolocation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, type: String?, primary: Bool?, latitude: Double?, longitude: Double?, country: String?, region: String?, city: String?, locations: [LocationDefinition]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.type = type
-        
         self.primary = primary
-        
         self.latitude = latitude
-        
         self.longitude = longitude
-        
         self.country = country
-        
         self.region = region
-        
         self.city = city
-        
         self.locations = locations
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

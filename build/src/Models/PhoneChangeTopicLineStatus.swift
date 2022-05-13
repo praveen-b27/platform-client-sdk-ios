@@ -18,17 +18,11 @@ public class PhoneChangeTopicLineStatus: Codable {
     public var reachableStateTime: Date?
 
     public init(_id: String?, reachable: Bool?, addressOfRecord: String?, contactAddresses: [String]?, reachableStateTime: Date?) {
-        
         self._id = _id
-        
         self.reachable = reachable
-        
         self.addressOfRecord = addressOfRecord
-        
         self.contactAddresses = contactAddresses
-        
         self.reachableStateTime = reachableStateTime
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

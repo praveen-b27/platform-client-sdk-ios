@@ -77,79 +77,42 @@ public class OrgUser: Codable {
     public var organization: Organization?
 
     public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, organization: Organization?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self.chat = chat
-        
         self.department = department
-        
         self.email = email
-        
         self.primaryContactInfo = primaryContactInfo
-        
         self.addresses = addresses
-        
         self.state = state
-        
         self.title = title
-        
         self.username = username
-        
         self.manager = manager
-        
         self.images = images
-        
         self.version = version
-        
         self.certifications = certifications
-        
         self.biography = biography
-        
         self.employerInfo = employerInfo
-        
         self.routingStatus = routingStatus
-        
         self.presence = presence
-        
         self.integrationPresence = integrationPresence
-        
         self.conversationSummary = conversationSummary
-        
         self.outOfOffice = outOfOffice
-        
         self.geolocation = geolocation
-        
         self.station = station
-        
         self.authorization = authorization
-        
         self.profileSkills = profileSkills
-        
         self.locations = locations
-        
         self.groups = groups
-        
         self.team = team
-        
         self.skills = skills
-        
         self.languages = languages
-        
         self.acdAutoAnswer = acdAutoAnswer
-        
         self.languagePreference = languagePreference
-        
         self.lastTokenIssued = lastTokenIssued
-        
         self.dateLastLogin = dateLastLogin
-        
         self.organization = organization
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

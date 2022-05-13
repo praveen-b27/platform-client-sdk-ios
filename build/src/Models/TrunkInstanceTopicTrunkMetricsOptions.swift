@@ -17,15 +17,10 @@ public class TrunkInstanceTopicTrunkMetricsOptions: Codable {
     public var errorInfo: TrunkInstanceTopicTrunkErrorInfo?
 
     public init(proxyAddress: String?, optionState: Bool?, optionStateTime: Date?, errorInfo: TrunkInstanceTopicTrunkErrorInfo?) {
-        
         self.proxyAddress = proxyAddress
-        
         self.optionState = optionState
-        
         self.optionStateTime = optionStateTime
-        
         self.errorInfo = errorInfo
-        
     }
 
 

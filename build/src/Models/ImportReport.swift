@@ -17,15 +17,10 @@ public class ImportReport: Codable {
     public var totalDocuments: Int?
 
     public init(errors: [ImportError]?, validated: ResultCounters?, imported: ResultCounters?, totalDocuments: Int?) {
-        
         self.errors = errors
-        
         self.validated = validated
-        
         self.imported = imported
-        
         self.totalDocuments = totalDocuments
-        
     }
 
 

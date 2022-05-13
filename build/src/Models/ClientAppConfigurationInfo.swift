@@ -18,11 +18,8 @@ public class ClientAppConfigurationInfo: Codable {
     public var effective: EffectiveConfiguration?
 
     public init(current: IntegrationConfiguration?, effective: EffectiveConfiguration?) {
-        
         self.current = current
-        
         self.effective = effective
-        
     }
 
 

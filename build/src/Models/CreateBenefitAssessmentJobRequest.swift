@@ -15,9 +15,7 @@ public class CreateBenefitAssessmentJobRequest: Codable {
     public var divisionIds: [String]?
 
     public init(divisionIds: [String]?) {
-        
         self.divisionIds = divisionIds
-        
     }
 
 

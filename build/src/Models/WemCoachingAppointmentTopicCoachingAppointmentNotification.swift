@@ -41,39 +41,22 @@ public class WemCoachingAppointmentTopicCoachingAppointmentNotification: Codable
     public var externalLinks: [WemCoachingAppointmentTopicCoachingAppointmentExternalLink]?
 
     public init(_id: String?, name: String?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, facilitator: WemCoachingAppointmentTopicUserReference?, attendees: [WemCoachingAppointmentTopicUserReference]?, createdBy: WemCoachingAppointmentTopicUserReference?, dateCreated: Date?, modifiedBy: WemCoachingAppointmentTopicUserReference?, dateModified: Date?, conversations: [WemCoachingAppointmentTopicCoachingAppointmentConversation]?, documents: [WemCoachingAppointmentTopicCoachingAppointmentDocument]?, changeType: ChangeType?, dateCompleted: Date?, externalLinks: [WemCoachingAppointmentTopicCoachingAppointmentExternalLink]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateStart = dateStart
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.status = status
-        
         self.facilitator = facilitator
-        
         self.attendees = attendees
-        
         self.createdBy = createdBy
-        
         self.dateCreated = dateCreated
-        
         self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
-        
         self.conversations = conversations
-        
         self.documents = documents
-        
         self.changeType = changeType
-        
         self.dateCompleted = dateCompleted
-        
         self.externalLinks = externalLinks
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

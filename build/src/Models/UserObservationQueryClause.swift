@@ -21,11 +21,8 @@ public class UserObservationQueryClause: Codable {
     public var predicates: [UserObservationQueryPredicate]?
 
     public init(type: ModelType?, predicates: [UserObservationQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

@@ -57,41 +57,23 @@ public class OutboundDetailEventTopicOutboundInitEvent: Codable {
     public var outboundContactId: String?
 
     public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, outboundCampaignId: String?, divisionId: String?, outboundContactListId: String?, outboundContactId: String?) {
-        
         self.eventTime = eventTime
-        
         self.conversationId = conversationId
-        
         self.participantId = participantId
-        
         self.sessionId = sessionId
-        
         self.mediaType = mediaType
-        
         self.provider = provider
-        
         self.direction = direction
-        
         self.ani = ani
-        
         self.dnis = dnis
-        
         self.addressTo = addressTo
-        
         self.addressFrom = addressFrom
-        
         self.subject = subject
-        
         self.messageType = messageType
-        
         self.outboundCampaignId = outboundCampaignId
-        
         self.divisionId = divisionId
-        
         self.outboundContactListId = outboundContactListId
-        
         self.outboundContactId = outboundContactId
-        
     }
 
 

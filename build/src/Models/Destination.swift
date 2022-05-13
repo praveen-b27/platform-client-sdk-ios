@@ -18,15 +18,10 @@ public class Destination: Codable {
     public var queueId: String?
 
     public init(address: String?, name: String?, userId: String?, queueId: String?) {
-        
         self.address = address
-        
         self.name = name
-        
         self.userId = userId
-        
         self.queueId = queueId
-        
     }
 
 

@@ -20,13 +20,9 @@ public class TextBotFlowLocation: Codable {
     public var sequenceName: String?
 
     public init(actionName: String?, actionNumber: Int?, sequenceName: String?) {
-        
         self.actionName = actionName
-        
         self.actionNumber = actionNumber
-        
         self.sequenceName = sequenceName
-        
     }
 
 

@@ -18,11 +18,8 @@ public class BuAbandonRate: Codable {
     public var percent: Int?
 
     public init(include: Bool?, percent: Int?) {
-        
         self.include = include
-        
         self.percent = percent
-        
     }
 
 

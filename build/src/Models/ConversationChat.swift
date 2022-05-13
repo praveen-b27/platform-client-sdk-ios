@@ -47,7 +47,7 @@ public class ConversationChat: Codable {
     public var roomId: String?
     /** A globally unique identifier for the recording associated with this chat. */
     public var recordingId: String?
-    /** The time line of the participant&#39;s chat, divided into activity segments. */
+    /** The time line of the participant's chat, divided into activity segments. */
     public var segments: [Segment]?
     /** True if this call is held and the person on this side hears silence. */
     public var held: Bool?
@@ -71,7 +71,7 @@ public class ConversationChat: Codable {
     public var peerId: String?
     /** If available, the URI to the avatar image of this communication. */
     public var avatarImageUrl: String?
-    /** A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). */
+    /** A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context). */
     public var journeyContext: JourneyContext?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
@@ -81,47 +81,26 @@ public class ConversationChat: Codable {
     public var afterCallWorkRequired: Bool?
 
     public init(state: State?, _id: String?, roomId: String?, recordingId: String?, segments: [Segment]?, held: Bool?, direction: Direction?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, avatarImageUrl: String?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.roomId = roomId
-        
         self.recordingId = recordingId
-        
         self.segments = segments
-        
         self.held = held
-        
         self.direction = direction
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.startAlertingTime = startAlertingTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.provider = provider
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.avatarImageUrl = avatarImageUrl
-        
         self.journeyContext = journeyContext
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

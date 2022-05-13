@@ -31,21 +31,13 @@ public class VoicemailSearchRequest: Codable {
     public var query: [VoicemailSearchCriteria]?
 
     public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, expand: [String]?, query: [VoicemailSearchCriteria]?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sort = sort
-        
         self.expand = expand
-        
         self.query = query
-        
     }
 
 

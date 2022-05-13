@@ -109,103 +109,56 @@ public class ParticipantBasic: Codable {
     public var startAcwTime: Date?
     /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endAcwTime: Date?
-    /** If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant. */
+    /** If this participant barged in a participant's call, then this will be the id of the targeted participant. */
     public var bargedParticipantId: String?
 
     public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [CallBasic]?, callbacks: [CallbackBasic]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?, bargedParticipantId: String?) {
-        
         self._id = _id
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.connectedTime = connectedTime
-        
         self.name = name
-        
         self.userUri = userUri
-        
         self.userId = userId
-        
         self.externalContactId = externalContactId
-        
         self.externalOrganizationId = externalOrganizationId
-        
         self.queueId = queueId
-        
         self.groupId = groupId
-        
         self.teamId = teamId
-        
         self.queueName = queueName
-        
         self.purpose = purpose
-        
         self.participantType = participantType
-        
         self.consultParticipantId = consultParticipantId
-        
         self.address = address
-        
         self.ani = ani
-        
         self.aniName = aniName
-        
         self.dnis = dnis
-        
         self.locale = locale
-        
         self.wrapupRequired = wrapupRequired
-        
         self.wrapupPrompt = wrapupPrompt
-        
         self.wrapupTimeoutMs = wrapupTimeoutMs
-        
         self.wrapupSkipped = wrapupSkipped
-        
         self.wrapup = wrapup
-        
         self.conversationRoutingData = conversationRoutingData
-        
         self.alertingTimeoutMs = alertingTimeoutMs
-        
         self.monitoredParticipantId = monitoredParticipantId
-        
         self.coachedParticipantId = coachedParticipantId
-        
         self.attributes = attributes
-        
         self.calls = calls
-        
         self.callbacks = callbacks
-        
         self.chats = chats
-        
         self.cobrowsesessions = cobrowsesessions
-        
         self.emails = emails
-        
         self.messages = messages
-        
         self.screenshares = screenshares
-        
         self.socialExpressions = socialExpressions
-        
         self.videos = videos
-        
         self.evaluations = evaluations
-        
         self.screenRecordingState = screenRecordingState
-        
         self.flaggedReason = flaggedReason
-        
         self.startAcwTime = startAcwTime
-        
         self.endAcwTime = endAcwTime
-        
         self.bargedParticipantId = bargedParticipantId
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -15,9 +15,7 @@ public class ContextPattern: Codable {
     public var criteria: [EntityTypeCriteria]?
 
     public init(criteria: [EntityTypeCriteria]?) {
-        
         self.criteria = criteria
-        
     }
 
 

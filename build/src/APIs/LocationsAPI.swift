@@ -11,10 +11,7 @@ import Foundation
 
 open class LocationsAPI {
     
-    
-    
     /**
-     
      Delete a location
      
      - parameter locationId: (path) Location ID 
@@ -32,11 +29,8 @@ open class LocationsAPI {
     }
 
     /**
-     
      Delete a location
-     
      - DELETE /api/v2/locations/{locationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class LocationsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteLocationWithRequestBuilder(locationId: String) -> RequestBuilder<Void> {
+    open class func deleteLocationWithRequestBuilder(locationId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/locations/{locationId}"
         let locationIdPreEscape = "\(locationId)"
         let locationIdPostEscape = locationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{locationId}", with: locationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,17 +56,7 @@ open class LocationsAPI {
 
     
     
-    
-    
-    public enum Expand_getLocation: String { 
-        case images = "images"
-        case addressverificationdetails = "addressVerificationDetails"
-    }
-
-    
-    
     /**
-     
      Get Location by ID.
      
      - parameter locationId: (path) Location ID 
@@ -103,79 +82,66 @@ open class LocationsAPI {
     }
 
     /**
-     
      Get Location by ID.
-     
      - GET /api/v2/locations/{locationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "images" : "aeiou",
+  "images" : "images",
   "address" : {
-    "zipcode" : "aeiou",
-    "country" : "aeiou",
-    "city" : "aeiou",
-    "street1" : "aeiou",
-    "countryName" : "aeiou",
-    "state" : "aeiou",
-    "street2" : "aeiou"
+    "zipcode" : "zipcode",
+    "country" : "country",
+    "city" : "city",
+    "street1" : "street1",
+    "countryName" : "countryName",
+    "state" : "state",
+    "street2" : "street2"
   },
-  "notes" : "aeiou",
-  "floorplanImage" : [ "" ],
-  "addressVerificationDetails" : {
-    "dateStarted" : "2000-01-23T04:56:07.000+0000",
-    "dateFinished" : "2000-01-23T04:56:07.000+0000",
-    "service" : "smartystreets-us",
-    "status" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "profileImage" : [ {
-    "imageUri" : "aeiou",
-    "resolution" : "aeiou"
+  "notes" : "notes",
+  "floorplanImage" : [ {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  }, {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
   } ],
-  "emergencyNumber" : {
-    "number" : "aeiou",
-    "e164" : "aeiou",
-    "type" : "aeiou"
-  },
-  "version" : 123,
-  "path" : [ "aeiou" ],
+  "addressVerificationDetails" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "profileImage" : [ {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  }, {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  } ],
+  "emergencyNumber" : "{}",
+  "version" : 5,
+  "path" : [ "path", "path" ],
   "addressStored" : true,
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "contactUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "state" : "aeiou",
+  "name" : "name",
+  "id" : "id",
+  "contactUser" : "{}",
+  "state" : "active",
   "addressVerified" : true
-}}]
+}, statusCode=200}]
      
      - parameter locationId: (path) Location ID 
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<LocationDefinition> 
      */
-    open class func getLocationWithRequestBuilder(locationId: String, expand: [String]? = nil) -> RequestBuilder<LocationDefinition> {
+    open class func getLocationWithRequestBuilder(locationId: String, expand: [String]? = nil) -> RequestBuilder<LocationDefinition> {        
         var path = "/api/v2/locations/{locationId}"
         let locationIdPreEscape = "\(locationId)"
         let locationIdPostEscape = locationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{locationId}", with: locationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<LocationDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -184,10 +150,7 @@ open class LocationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get sublocations for location ID.
      
      - parameter locationId: (path) Location ID 
@@ -212,83 +175,109 @@ open class LocationsAPI {
     }
 
     /**
-     
      Get sublocations for location ID.
-     
      - GET /api/v2/locations/{locationId}/sublocations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "images" : "aeiou",
+    "images" : "images",
     "address" : {
-      "zipcode" : "aeiou",
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "street1" : "aeiou",
-      "countryName" : "aeiou",
-      "state" : "aeiou",
-      "street2" : "aeiou"
+      "zipcode" : "zipcode",
+      "country" : "country",
+      "city" : "city",
+      "street1" : "street1",
+      "countryName" : "countryName",
+      "state" : "state",
+      "street2" : "street2"
     },
-    "notes" : "aeiou",
-    "floorplanImage" : [ "" ],
-    "addressVerificationDetails" : {
-      "dateStarted" : "2000-01-23T04:56:07.000+0000",
-      "dateFinished" : "2000-01-23T04:56:07.000+0000",
-      "service" : "smartystreets-us",
-      "status" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "profileImage" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+    "notes" : "notes",
+    "floorplanImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "emergencyNumber" : {
-      "number" : "aeiou",
-      "e164" : "aeiou",
-      "type" : "aeiou"
-    },
-    "version" : 123,
-    "path" : [ "aeiou" ],
+    "addressVerificationDetails" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "profileImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "emergencyNumber" : "{}",
+    "version" : 5,
+    "path" : [ "path", "path" ],
     "addressStored" : true,
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "contactUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+    "name" : "name",
+    "id" : "id",
+    "contactUser" : "{}",
+    "state" : "active",
+    "addressVerified" : true
+  }, {
+    "images" : "images",
+    "address" : {
+      "zipcode" : "zipcode",
+      "country" : "country",
+      "city" : "city",
+      "street1" : "street1",
+      "countryName" : "countryName",
+      "state" : "state",
+      "street2" : "street2"
     },
-    "state" : "aeiou",
+    "notes" : "notes",
+    "floorplanImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "addressVerificationDetails" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "profileImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "emergencyNumber" : "{}",
+    "version" : 5,
+    "path" : [ "path", "path" ],
+    "addressStored" : true,
+    "name" : "name",
+    "id" : "id",
+    "contactUser" : "{}",
+    "state" : "active",
     "addressVerified" : true
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
      - parameter locationId: (path) Location ID 
 
      - returns: RequestBuilder<LocationEntityListing> 
      */
-    open class func getLocationSublocationsWithRequestBuilder(locationId: String) -> RequestBuilder<LocationEntityListing> {
+    open class func getLocationSublocationsWithRequestBuilder(locationId: String) -> RequestBuilder<LocationEntityListing> {        
         var path = "/api/v2/locations/{locationId}/sublocations"
         let locationIdPreEscape = "\(locationId)"
         let locationIdPostEscape = locationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{locationId}", with: locationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -301,23 +290,17 @@ open class LocationsAPI {
     
     
     
-    
-    
-    
-    
     public enum SortOrder_getLocations: String { 
         case asc = "asc"
         case desc = "desc"
     }
 
     
-    
     /**
-     
      Get a list of all locations.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter _id: (query) id (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -341,95 +324,116 @@ open class LocationsAPI {
     }
 
     /**
-     
      Get a list of all locations.
-     
      - GET /api/v2/locations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "images" : "aeiou",
+    "images" : "images",
     "address" : {
-      "zipcode" : "aeiou",
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "street1" : "aeiou",
-      "countryName" : "aeiou",
-      "state" : "aeiou",
-      "street2" : "aeiou"
+      "zipcode" : "zipcode",
+      "country" : "country",
+      "city" : "city",
+      "street1" : "street1",
+      "countryName" : "countryName",
+      "state" : "state",
+      "street2" : "street2"
     },
-    "notes" : "aeiou",
-    "floorplanImage" : [ "" ],
-    "addressVerificationDetails" : {
-      "dateStarted" : "2000-01-23T04:56:07.000+0000",
-      "dateFinished" : "2000-01-23T04:56:07.000+0000",
-      "service" : "smartystreets-us",
-      "status" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "profileImage" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+    "notes" : "notes",
+    "floorplanImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "emergencyNumber" : {
-      "number" : "aeiou",
-      "e164" : "aeiou",
-      "type" : "aeiou"
-    },
-    "version" : 123,
-    "path" : [ "aeiou" ],
+    "addressVerificationDetails" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "profileImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "emergencyNumber" : "{}",
+    "version" : 5,
+    "path" : [ "path", "path" ],
     "addressStored" : true,
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "contactUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+    "name" : "name",
+    "id" : "id",
+    "contactUser" : "{}",
+    "state" : "active",
+    "addressVerified" : true
+  }, {
+    "images" : "images",
+    "address" : {
+      "zipcode" : "zipcode",
+      "country" : "country",
+      "city" : "city",
+      "street1" : "street1",
+      "countryName" : "countryName",
+      "state" : "state",
+      "street2" : "street2"
     },
-    "state" : "aeiou",
+    "notes" : "notes",
+    "floorplanImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "addressVerificationDetails" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "profileImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "emergencyNumber" : "{}",
+    "version" : 5,
+    "path" : [ "path", "path" ],
+    "addressStored" : true,
+    "name" : "name",
+    "id" : "id",
+    "contactUser" : "{}",
+    "state" : "active",
     "addressVerified" : true
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter _id: (query) id (optional)
      - parameter sortOrder: (query) Sort order (optional)
 
      - returns: RequestBuilder<LocationEntityListing> 
      */
-    open class func getLocationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, sortOrder: SortOrder_getLocations? = nil) -> RequestBuilder<LocationEntityListing> {
+    open class func getLocationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, sortOrder: SortOrder_getLocations? = nil) -> RequestBuilder<LocationEntityListing> {        
         let path = "/api/v2/locations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "id": _id, 
-            
             "sortOrder": sortOrder?.rawValue
-            
         ])
 
         let requestBuilder: RequestBuilder<LocationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -439,17 +443,7 @@ open class LocationsAPI {
 
     
     
-    
-    
-    public enum Expand_getLocationsSearch: String { 
-        case images = "images"
-        case addressverificationdetails = "addressVerificationDetails"
-    }
-
-    
-    
     /**
-     
      Search locations using the q64 value returned from a previous search
      
      - parameter q64: (query) q64 
@@ -475,88 +469,111 @@ open class LocationsAPI {
     }
 
     /**
-     
      Search locations using the q64 value returned from a previous search
-     
      - GET /api/v2/locations/search
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "types" : [ "aeiou" ],
-  "pageNumber" : 123,
-  "previousPage" : "aeiou",
-  "nextPage" : "aeiou",
-  "pageSize" : 123,
-  "currentPage" : "aeiou",
+  "total" : 0,
+  "pageCount" : 6,
+  "types" : [ "types", "types" ],
+  "pageNumber" : 5,
+  "previousPage" : "previousPage",
+  "nextPage" : "nextPage",
+  "pageSize" : 1,
+  "currentPage" : "currentPage",
   "results" : [ {
-    "images" : "aeiou",
+    "images" : "images",
     "address" : {
-      "zipcode" : "aeiou",
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "street1" : "aeiou",
-      "countryName" : "aeiou",
-      "state" : "aeiou",
-      "street2" : "aeiou"
+      "zipcode" : "zipcode",
+      "country" : "country",
+      "city" : "city",
+      "street1" : "street1",
+      "countryName" : "countryName",
+      "state" : "state",
+      "street2" : "street2"
     },
-    "notes" : "aeiou",
-    "floorplanImage" : [ "" ],
-    "addressVerificationDetails" : {
-      "dateStarted" : "2000-01-23T04:56:07.000+0000",
-      "dateFinished" : "2000-01-23T04:56:07.000+0000",
-      "service" : "smartystreets-us",
-      "status" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "profileImage" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+    "notes" : "notes",
+    "floorplanImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "emergencyNumber" : {
-      "number" : "aeiou",
-      "e164" : "aeiou",
-      "type" : "aeiou"
-    },
-    "version" : 123,
-    "path" : [ "aeiou" ],
+    "addressVerificationDetails" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "profileImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "emergencyNumber" : "{}",
+    "version" : 5,
+    "path" : [ "path", "path" ],
     "addressStored" : true,
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "contactUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+    "name" : "name",
+    "id" : "id",
+    "contactUser" : "{}",
+    "state" : "active",
+    "addressVerified" : true
+  }, {
+    "images" : "images",
+    "address" : {
+      "zipcode" : "zipcode",
+      "country" : "country",
+      "city" : "city",
+      "street1" : "street1",
+      "countryName" : "countryName",
+      "state" : "state",
+      "street2" : "street2"
     },
-    "state" : "aeiou",
+    "notes" : "notes",
+    "floorplanImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "addressVerificationDetails" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "profileImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "emergencyNumber" : "{}",
+    "version" : 5,
+    "path" : [ "path", "path" ],
+    "addressStored" : true,
+    "name" : "name",
+    "id" : "id",
+    "contactUser" : "{}",
+    "state" : "active",
     "addressVerified" : true
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter q64: (query) q64 
      - parameter expand: (query) Provides more details about a specified resource (optional)
 
      - returns: RequestBuilder<LocationsSearchResponse> 
      */
-    open class func getLocationsSearchWithRequestBuilder(q64: String, expand: [String]? = nil) -> RequestBuilder<LocationsSearchResponse> {
+    open class func getLocationsSearchWithRequestBuilder(q64: String, expand: [String]? = nil) -> RequestBuilder<LocationsSearchResponse> {        
         let path = "/api/v2/locations/search"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "q64": q64, 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<LocationsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -566,11 +583,7 @@ open class LocationsAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a location
      
      - parameter locationId: (path) Location ID 
@@ -596,71 +609,63 @@ open class LocationsAPI {
     }
 
     /**
-     
      Update a location
-     
      - PATCH /api/v2/locations/{locationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "images" : "aeiou",
+  "images" : "images",
   "address" : {
-    "zipcode" : "aeiou",
-    "country" : "aeiou",
-    "city" : "aeiou",
-    "street1" : "aeiou",
-    "countryName" : "aeiou",
-    "state" : "aeiou",
-    "street2" : "aeiou"
+    "zipcode" : "zipcode",
+    "country" : "country",
+    "city" : "city",
+    "street1" : "street1",
+    "countryName" : "countryName",
+    "state" : "state",
+    "street2" : "street2"
   },
-  "notes" : "aeiou",
-  "floorplanImage" : [ "" ],
-  "addressVerificationDetails" : {
-    "dateStarted" : "2000-01-23T04:56:07.000+0000",
-    "dateFinished" : "2000-01-23T04:56:07.000+0000",
-    "service" : "smartystreets-us",
-    "status" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "profileImage" : [ {
-    "imageUri" : "aeiou",
-    "resolution" : "aeiou"
+  "notes" : "notes",
+  "floorplanImage" : [ {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  }, {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
   } ],
-  "emergencyNumber" : {
-    "number" : "aeiou",
-    "e164" : "aeiou",
-    "type" : "aeiou"
-  },
-  "version" : 123,
-  "path" : [ "aeiou" ],
+  "addressVerificationDetails" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "profileImage" : [ {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  }, {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  } ],
+  "emergencyNumber" : "{}",
+  "version" : 5,
+  "path" : [ "path", "path" ],
   "addressStored" : true,
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "contactUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "state" : "aeiou",
+  "name" : "name",
+  "id" : "id",
+  "contactUser" : "{}",
+  "state" : "active",
   "addressVerified" : true
-}}]
+}, statusCode=200}]
      
      - parameter locationId: (path) Location ID 
      - parameter body: (body) Location 
 
      - returns: RequestBuilder<LocationDefinition> 
      */
-    open class func patchLocationWithRequestBuilder(locationId: String, body: LocationUpdateDefinition) -> RequestBuilder<LocationDefinition> {
+    open class func patchLocationWithRequestBuilder(locationId: String, body: LocationUpdateDefinition) -> RequestBuilder<LocationDefinition> {        
         var path = "/api/v2/locations/{locationId}"
         let locationIdPreEscape = "\(locationId)"
         let locationIdPostEscape = locationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{locationId}", with: locationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LocationDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -669,10 +674,7 @@ open class LocationsAPI {
     }
 
     
-    
-    
     /**
-     
      Create a location
      
      - parameter body: (body) Location 
@@ -697,67 +699,59 @@ open class LocationsAPI {
     }
 
     /**
-     
      Create a location
-     
      - POST /api/v2/locations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "images" : "aeiou",
+  "images" : "images",
   "address" : {
-    "zipcode" : "aeiou",
-    "country" : "aeiou",
-    "city" : "aeiou",
-    "street1" : "aeiou",
-    "countryName" : "aeiou",
-    "state" : "aeiou",
-    "street2" : "aeiou"
+    "zipcode" : "zipcode",
+    "country" : "country",
+    "city" : "city",
+    "street1" : "street1",
+    "countryName" : "countryName",
+    "state" : "state",
+    "street2" : "street2"
   },
-  "notes" : "aeiou",
-  "floorplanImage" : [ "" ],
-  "addressVerificationDetails" : {
-    "dateStarted" : "2000-01-23T04:56:07.000+0000",
-    "dateFinished" : "2000-01-23T04:56:07.000+0000",
-    "service" : "smartystreets-us",
-    "status" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "profileImage" : [ {
-    "imageUri" : "aeiou",
-    "resolution" : "aeiou"
+  "notes" : "notes",
+  "floorplanImage" : [ {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  }, {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
   } ],
-  "emergencyNumber" : {
-    "number" : "aeiou",
-    "e164" : "aeiou",
-    "type" : "aeiou"
-  },
-  "version" : 123,
-  "path" : [ "aeiou" ],
+  "addressVerificationDetails" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "profileImage" : [ {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  }, {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  } ],
+  "emergencyNumber" : "{}",
+  "version" : 5,
+  "path" : [ "path", "path" ],
   "addressStored" : true,
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "contactUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "state" : "aeiou",
+  "name" : "name",
+  "id" : "id",
+  "contactUser" : "{}",
+  "state" : "active",
   "addressVerified" : true
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Location 
 
      - returns: RequestBuilder<LocationDefinition> 
      */
-    open class func postLocationsWithRequestBuilder(body: LocationCreateDefinition) -> RequestBuilder<LocationDefinition> {
+    open class func postLocationsWithRequestBuilder(body: LocationCreateDefinition) -> RequestBuilder<LocationDefinition> {        
         let path = "/api/v2/locations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LocationDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -766,10 +760,7 @@ open class LocationsAPI {
     }
 
     
-    
-    
     /**
-     
      Search locations
      
      - parameter body: (body) Search request options 
@@ -794,77 +785,106 @@ open class LocationsAPI {
     }
 
     /**
-     
      Search locations
-     
      - POST /api/v2/locations/search
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "types" : [ "aeiou" ],
-  "pageNumber" : 123,
-  "previousPage" : "aeiou",
-  "nextPage" : "aeiou",
-  "pageSize" : 123,
-  "currentPage" : "aeiou",
+  "total" : 0,
+  "pageCount" : 6,
+  "types" : [ "types", "types" ],
+  "pageNumber" : 5,
+  "previousPage" : "previousPage",
+  "nextPage" : "nextPage",
+  "pageSize" : 1,
+  "currentPage" : "currentPage",
   "results" : [ {
-    "images" : "aeiou",
+    "images" : "images",
     "address" : {
-      "zipcode" : "aeiou",
-      "country" : "aeiou",
-      "city" : "aeiou",
-      "street1" : "aeiou",
-      "countryName" : "aeiou",
-      "state" : "aeiou",
-      "street2" : "aeiou"
+      "zipcode" : "zipcode",
+      "country" : "country",
+      "city" : "city",
+      "street1" : "street1",
+      "countryName" : "countryName",
+      "state" : "state",
+      "street2" : "street2"
     },
-    "notes" : "aeiou",
-    "floorplanImage" : [ "" ],
-    "addressVerificationDetails" : {
-      "dateStarted" : "2000-01-23T04:56:07.000+0000",
-      "dateFinished" : "2000-01-23T04:56:07.000+0000",
-      "service" : "smartystreets-us",
-      "status" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "profileImage" : [ {
-      "imageUri" : "aeiou",
-      "resolution" : "aeiou"
+    "notes" : "notes",
+    "floorplanImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
     } ],
-    "emergencyNumber" : {
-      "number" : "aeiou",
-      "e164" : "aeiou",
-      "type" : "aeiou"
-    },
-    "version" : 123,
-    "path" : [ "aeiou" ],
+    "addressVerificationDetails" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "profileImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "emergencyNumber" : "{}",
+    "version" : 5,
+    "path" : [ "path", "path" ],
     "addressStored" : true,
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "contactUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+    "name" : "name",
+    "id" : "id",
+    "contactUser" : "{}",
+    "state" : "active",
+    "addressVerified" : true
+  }, {
+    "images" : "images",
+    "address" : {
+      "zipcode" : "zipcode",
+      "country" : "country",
+      "city" : "city",
+      "street1" : "street1",
+      "countryName" : "countryName",
+      "state" : "state",
+      "street2" : "street2"
     },
-    "state" : "aeiou",
+    "notes" : "notes",
+    "floorplanImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "addressVerificationDetails" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "profileImage" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "emergencyNumber" : "{}",
+    "version" : 5,
+    "path" : [ "path", "path" ],
+    "addressStored" : true,
+    "name" : "name",
+    "id" : "id",
+    "contactUser" : "{}",
+    "state" : "active",
     "addressVerified" : true
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) Search request options 
 
      - returns: RequestBuilder<LocationsSearchResponse> 
      */
-    open class func postLocationsSearchWithRequestBuilder(body: LocationSearchRequest) -> RequestBuilder<LocationsSearchResponse> {
+    open class func postLocationsSearchWithRequestBuilder(body: LocationSearchRequest) -> RequestBuilder<LocationsSearchResponse> {        
         let path = "/api/v2/locations/search"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LocationsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

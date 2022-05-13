@@ -17,9 +17,9 @@ public class VoicemailMessage: Codable {
     public var conversation: Conversation?
     /** Whether the voicemail message is marked as read */
     public var read: Bool?
-    /** The voicemail message&#39;s audio recording duration in seconds */
+    /** The voicemail message's audio recording duration in seconds */
     public var audioRecordingDurationSeconds: Int?
-    /** The voicemail message&#39;s audio recording size in bytes */
+    /** The voicemail message's audio recording size in bytes */
     public var audioRecordingSizeBytes: Int64?
     /** The date the voicemail message was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
@@ -53,47 +53,26 @@ public class VoicemailMessage: Codable {
     public var selfUri: String?
 
     public init(_id: String?, conversation: Conversation?, read: Bool?, audioRecordingDurationSeconds: Int?, audioRecordingSizeBytes: Int64?, createdDate: Date?, modifiedDate: Date?, deletedDate: Date?, callerAddress: String?, callerName: String?, callerUser: User?, deleted: Bool?, note: String?, user: User?, group: Group?, queue: Queue?, copiedFrom: VoicemailCopyRecord?, copiedTo: [VoicemailCopyRecord]?, deleteRetentionPolicy: VoicemailRetentionPolicy?, selfUri: String?) {
-        
         self._id = _id
-        
         self.conversation = conversation
-        
         self.read = read
-        
         self.audioRecordingDurationSeconds = audioRecordingDurationSeconds
-        
         self.audioRecordingSizeBytes = audioRecordingSizeBytes
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
         self.deletedDate = deletedDate
-        
         self.callerAddress = callerAddress
-        
         self.callerName = callerName
-        
         self.callerUser = callerUser
-        
         self.deleted = deleted
-        
         self.note = note
-        
         self.user = user
-        
         self.group = group
-        
         self.queue = queue
-        
         self.copiedFrom = copiedFrom
-        
         self.copiedTo = copiedTo
-        
         self.deleteRetentionPolicy = deleteRetentionPolicy
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

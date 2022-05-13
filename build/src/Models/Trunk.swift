@@ -37,7 +37,7 @@ public class Trunk: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -91,65 +91,35 @@ public class Trunk: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkType: TrunkType?, edge: DomainEntityRef?, trunkBase: DomainEntityRef?, trunkMetabase: DomainEntityRef?, edgeGroup: DomainEntityRef?, inService: Bool?, enabled: Bool?, logicalInterface: DomainEntityRef?, connectedStatus: TrunkConnectedStatus?, optionsStatus: [TrunkMetricsOptions]?, registersStatus: [TrunkMetricsRegisters]?, ipStatus: TrunkMetricsNetworkTypeIp?, optionsEnabledStatus: OptionsEnabledStatus?, registersEnabledStatus: RegistersEnabledStatus?, family: Int?, proxyAddressList: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.trunkType = trunkType
-        
         self.edge = edge
-        
         self.trunkBase = trunkBase
-        
         self.trunkMetabase = trunkMetabase
-        
         self.edgeGroup = edgeGroup
-        
         self.inService = inService
-        
         self.enabled = enabled
-        
         self.logicalInterface = logicalInterface
-        
         self.connectedStatus = connectedStatus
-        
         self.optionsStatus = optionsStatus
-        
         self.registersStatus = registersStatus
-        
         self.ipStatus = ipStatus
-        
         self.optionsEnabledStatus = optionsEnabledStatus
-        
         self.registersEnabledStatus = registersEnabledStatus
-        
         self.family = family
-        
         self.proxyAddressList = proxyAddressList
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

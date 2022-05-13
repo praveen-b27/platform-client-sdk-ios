@@ -178,7 +178,7 @@ QualityAPI.deleteQualityConversationEvaluation(conversationId: conversationId, e
 
 # **deleteQualityForm**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > Void deleteQualityForm(formId)
 
@@ -339,6 +339,8 @@ Gets a list of Agent Activities
 
 Each item on the list shows one agent&#39;s evaluation activity comprised of the number of evaluations and the highest, average, and lowest standard and critical scores, as well as a sub list showing the number and average score of evaluations for each evaluator for that agent.  evaluatorUserId, startTime, and endTime are all filtering criteria. If specified, the only evaluations used to compile the agent activity response will be ones that match the filtering criteria. agentUserId, name, group, and agentTeamId are all agent selection criteria. criteria.  If one or more agent selection criteria are specified, then the returned activity will include users that match the criteria even if those users did not have any agent activity or evaluations that do not match any filtering criteria.  If no agent selection criteria are specified but an evaluatorUserId is, then the returned activity will be only for those agents that had evaluations where the evaluator is the evaluatorUserId.  If no agent selection criteria are specified and no evaluatorUserId is specified, then the returned activity will be for all users
 
+
+
 Wraps GET /api/v2/quality/agents/activity  
 
 Requires ANY permissions: 
@@ -353,8 +355,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -382,8 +384,8 @@ QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -484,8 +486,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let calibratorId: String = "" // user id of calibrator
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -511,8 +513,8 @@ QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **calibratorId** | **String**| user id of calibrator | |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -715,8 +717,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let transactionId: String = "" // Transaction ID
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
-let pageSize: Int = 25 // Page size
-let expand: [String] = [QualityAPI.Expand_getQualityConversationsAuditsQueryTransactionIdResults.enummember.rawValue] // Which fields, if any, to expand
+let pageSize: Int = 0 // Page size
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
 QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand) { (response, error) in
@@ -736,7 +738,7 @@ QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId:
 | ------------- | ------------- | ------------- | ------------- |
 | **transactionId** | **String**| Transaction ID | |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageSize** | **Int**| Page size | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
 {: class="table-striped"}
 
@@ -757,6 +759,8 @@ Queries Evaluations and returns a paged list
 
 Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to &#39;Never Release&#39; are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
 
+
+
 Wraps GET /api/v2/quality/evaluations/query  
 
 Requires ANY permissions: 
@@ -771,8 +775,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -806,8 +810,8 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -823,7 +827,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **agentHasRead** | **Bool**| agent has the evaluation | [optional] |
 | **expandAnswerTotalScores** | **Bool**| get the total scores for evaluations | [optional] |
 | **maximum** | **Int**| maximum | [optional] |
-| **sortOrder** | **String**| sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; | [optional] |
+| **sortOrder** | **String**| sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending' | [optional] |
 {: class="table-striped"}
 
 
@@ -857,8 +861,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
@@ -885,8 +889,8 @@ QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumb
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
@@ -907,7 +911,7 @@ QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumb
 
 # **getQualityForm**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EvaluationForm](EvaluationForm.html) getQualityForm(formId)
 
@@ -959,7 +963,7 @@ QualityAPI.getQualityForm(formId: formId) { (response, error) in
 
 # **getQualityFormVersions**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityFormVersions(formId, pageSize, pageNumber)
 
@@ -982,8 +986,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let formId: String = "" // Form ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 QualityAPI.getQualityFormVersions(formId: formId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -1002,8 +1006,8 @@ QualityAPI.getQualityFormVersions(formId: formId, pageSize: pageSize, pageNumber
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1015,7 +1019,7 @@ QualityAPI.getQualityFormVersions(formId: formId, pageSize: pageSize, pageNumber
 
 # **getQualityForms**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
 
@@ -1037,8 +1041,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
@@ -1062,8 +1066,8 @@ QualityAPI.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: s
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
@@ -1156,9 +1160,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let formId: String = "" // Form ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
-let sortOrder: String = "asc" // Sort order
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortOrder: String = "" // Sort order
 
 // Code example
 QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in
@@ -1177,9 +1181,9 @@ QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
 {: class="table-striped"}
 
 
@@ -1213,8 +1217,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
@@ -1238,8 +1242,8 @@ QualityAPI.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
@@ -1384,8 +1388,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let formId: String = "" // Form ID
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 QualityAPI.getQualityFormsSurveyVersions(formId: formId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -1404,8 +1408,8 @@ QualityAPI.getQualityFormsSurveyVersions(formId: formId, pageSize: pageSize, pag
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -1439,8 +1443,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
@@ -1464,8 +1468,8 @@ QualityAPI.getQualityFormsSurveys(pageSize: pageSize, pageNumber: pageNumber, so
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
@@ -1577,7 +1581,7 @@ QualityAPI.getQualityFormsSurveysBulkContexts(contextId: contextId, published: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contextId** | [**[String]**](String.html)| A comma-delimited list of valid survey form context ids | |
-| **published** | **Bool**| If true, the latest published version will be included. If false, only the unpublished version will be included. | [optional] [default to true] |
+| **published** | **Bool**| If true, the latest published version will be included. If false, only the unpublished version will be included. | [optional] |
 {: class="table-striped"}
 
 
@@ -1589,7 +1593,7 @@ QualityAPI.getQualityFormsSurveysBulkContexts(contextId: contextId, published: p
 
 # **getQualityPublishedform**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EvaluationForm](EvaluationForm.html) getQualityPublishedform(formId)
 
@@ -1641,7 +1645,7 @@ QualityAPI.getQualityPublishedform(formId: formId) { (response, error) in
 
 # **getQualityPublishedforms**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext)
 
@@ -1663,10 +1667,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
-let onlyLatestPerContext: Bool = false // onlyLatestPerContext
+let onlyLatestPerContext: Bool = true // onlyLatestPerContext
 
 // Code example
 QualityAPI.getQualityPublishedforms(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestPerContext: onlyLatestPerContext) { (response, error) in
@@ -1684,10 +1688,10 @@ QualityAPI.getQualityPublishedforms(pageSize: pageSize, pageNumber: pageNumber, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
-| **onlyLatestPerContext** | **Bool**| onlyLatestPerContext | [optional] [default to false] |
+| **onlyLatestPerContext** | **Bool**| onlyLatestPerContext | [optional] |
 {: class="table-striped"}
 
 
@@ -1773,10 +1777,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
-let onlyLatestPerContext: Bool = false // onlyLatestPerContext
+let onlyLatestPerContext: Bool = true // onlyLatestPerContext
 
 // Code example
 QualityAPI.getQualityPublishedformsEvaluations(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestPerContext: onlyLatestPerContext) { (response, error) in
@@ -1794,10 +1798,10 @@ QualityAPI.getQualityPublishedformsEvaluations(pageSize: pageSize, pageNumber: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
-| **onlyLatestPerContext** | **Bool**| onlyLatestPerContext | [optional] [default to false] |
+| **onlyLatestPerContext** | **Bool**| onlyLatestPerContext | [optional] |
 {: class="table-striped"}
 
 
@@ -1883,10 +1887,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
-let onlyLatestEnabledPerContext: Bool = false // onlyLatestEnabledPerContext
+let onlyLatestEnabledPerContext: Bool = true // onlyLatestEnabledPerContext
 
 // Code example
 QualityAPI.getQualityPublishedformsSurveys(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestEnabledPerContext: onlyLatestEnabledPerContext) { (response, error) in
@@ -1904,10 +1908,10 @@ QualityAPI.getQualityPublishedformsSurveys(pageSize: pageSize, pageNumber: pageN
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
-| **onlyLatestEnabledPerContext** | **Bool**| onlyLatestEnabledPerContext | [optional] [default to false] |
+| **onlyLatestEnabledPerContext** | **Bool**| onlyLatestEnabledPerContext | [optional] |
 {: class="table-striped"}
 
 
@@ -2444,7 +2448,7 @@ QualityAPI.postQualityEvaluationsScoring(body: body) { (response, error) in
 
 # **postQualityForms**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EvaluationForm](EvaluationForm.html) postQualityForms(body)
 
@@ -2600,7 +2604,7 @@ QualityAPI.postQualityFormsSurveys(body: body) { (response, error) in
 
 # **postQualityPublishedforms**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EvaluationForm](EvaluationForm.html) postQualityPublishedforms(body)
 
@@ -2869,6 +2873,8 @@ Update an evaluation
 
 The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
 
+
+
 Wraps PUT /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}  
 
 Requires ANY permissions: 
@@ -2921,7 +2927,7 @@ QualityAPI.putQualityConversationEvaluation(conversationId: conversationId, eval
 
 # **putQualityForm**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [EvaluationForm](EvaluationForm.html) putQualityForm(formId, body)
 
@@ -3085,7 +3091,7 @@ QualityAPI.putQualityFormsSurvey(formId: formId, body: body) { (response, error)
 
 
 
-> [ScorableSurvey](ScorableSurvey.html) putQualitySurveysScorable(body, customerSurveyUrl)
+> [ScorableSurvey](ScorableSurvey.html) putQualitySurveysScorable(customerSurveyUrl, body)
 
 Update a survey as an end-customer, for the purposes of scoring it.
 
@@ -3104,11 +3110,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ScorableSurvey = new ScorableSurvey(...) // survey
 let customerSurveyUrl: String = "" // customerSurveyUrl
+let body: ScorableSurvey = new ScorableSurvey(...) // survey
 
 // Code example
-QualityAPI.putQualitySurveysScorable(body: body, customerSurveyUrl: customerSurveyUrl) { (response, error) in
+QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3123,8 +3129,8 @@ QualityAPI.putQualitySurveysScorable(body: body, customerSurveyUrl: customerSurv
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey | |
 | **customerSurveyUrl** | **String**| customerSurveyUrl | |
+| **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey | |
 {: class="table-striped"}
 
 

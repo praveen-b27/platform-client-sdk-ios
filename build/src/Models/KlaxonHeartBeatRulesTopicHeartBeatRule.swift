@@ -30,25 +30,15 @@ public class KlaxonHeartBeatRulesTopicHeartBeatRule: Codable {
     public var ruleType: RuleType?
 
     public init(_id: String?, name: String?, senderId: String?, heartBeatTimeoutInMinutes: Double?, enabled: Bool?, inAlarm: Bool?, notificationUsers: [KlaxonHeartBeatRulesTopicNotificationUser]?, alertTypes: [AlertTypes]?, ruleType: RuleType?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.senderId = senderId
-        
         self.heartBeatTimeoutInMinutes = heartBeatTimeoutInMinutes
-        
         self.enabled = enabled
-        
         self.inAlarm = inAlarm
-        
         self.notificationUsers = notificationUsers
-        
         self.alertTypes = alertTypes
-        
         self.ruleType = ruleType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

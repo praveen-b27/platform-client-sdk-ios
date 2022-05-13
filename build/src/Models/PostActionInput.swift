@@ -26,19 +26,12 @@ public class PostActionInput: Codable {
     public var secure: Bool?
 
     public init(category: String?, name: String?, integrationId: String?, config: ActionConfig?, contract: ActionContractInput?, secure: Bool?) {
-        
         self.category = category
-        
         self.name = name
-        
         self.integrationId = integrationId
-        
         self.config = config
-        
         self.contract = contract
-        
         self.secure = secure
-        
     }
 
 

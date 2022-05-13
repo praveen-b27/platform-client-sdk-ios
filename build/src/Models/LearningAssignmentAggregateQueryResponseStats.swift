@@ -21,15 +21,10 @@ public class LearningAssignmentAggregateQueryResponseStats: Codable {
     public var sum: Double?
 
     public init(count: Int?, min: Double?, max: Double?, sum: Double?) {
-        
         self.count = count
-        
         self.min = min
-        
         self.max = max
-        
         self.sum = sum
-        
     }
 
 

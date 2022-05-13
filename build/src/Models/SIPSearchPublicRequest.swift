@@ -32,27 +32,16 @@ public class SIPSearchPublicRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, callId: String?, toUser: String?, fromUser: String?, conversationId: String?, participantId: String?, dateStart: Date?, dateEnd: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.callId = callId
-        
         self.toUser = toUser
-        
         self.fromUser = fromUser
-        
         self.conversationId = conversationId
-        
         self.participantId = participantId
-        
         self.dateStart = dateStart
-        
         self.dateEnd = dateEnd
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

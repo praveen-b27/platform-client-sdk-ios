@@ -15,9 +15,7 @@ public class Digits: Codable {
     public var digits: String?
 
     public init(digits: String?) {
-        
         self.digits = digits
-        
     }
 
 

@@ -35,29 +35,17 @@ public class Metric: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.metricDefinitionId = metricDefinitionId
-        
         self.externalMetricDefinitionId = externalMetricDefinitionId
-        
         self.objective = objective
-        
         self.performanceProfileId = performanceProfileId
-        
         self.linkedMetric = linkedMetric
-        
         self.dateCreated = dateCreated
-        
         self.dateUnlinked = dateUnlinked
-        
         self.sourcePerformanceProfile = sourcePerformanceProfile
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

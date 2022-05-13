@@ -13,7 +13,7 @@ public class EdgeMetricsProcessor: Codable {
 
     /** Percent time processor was active. */
     public var activeTimePct: Double?
-    /** Machine CPU identifier. &#39;total&#39; will always be included in the array and is the total of all CPU resources. */
+    /** Machine CPU identifier. 'total' will always be included in the array and is the total of all CPU resources. */
     public var cpuId: String?
     /** Percent time processor was idle. */
     public var idleTimePct: Double?
@@ -23,17 +23,11 @@ public class EdgeMetricsProcessor: Codable {
     public var userTimePct: Double?
 
     public init(activeTimePct: Double?, cpuId: String?, idleTimePct: Double?, privilegedTimePct: Double?, userTimePct: Double?) {
-        
         self.activeTimePct = activeTimePct
-        
         self.cpuId = cpuId
-        
         self.idleTimePct = idleTimePct
-        
         self.privilegedTimePct = privilegedTimePct
-        
         self.userTimePct = userTimePct
-        
     }
 
 

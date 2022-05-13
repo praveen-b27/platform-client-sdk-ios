@@ -21,15 +21,10 @@ public class ProgramRequest: Codable {
     public var tags: [String]?
 
     public init(name: String?, _description: String?, topicIds: [String]?, tags: [String]?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.topicIds = topicIds
-        
         self.tags = tags
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -13,7 +13,7 @@ public class TokenInfo: Codable {
 
     /** The current organization */
     public var organization: NamedEntity?
-    /** The token&#39;s home organization */
+    /** The token's home organization */
     public var homeOrganization: NamedEntity?
     /** The list of scopes authorized for the OAuth client */
     public var authorizedScope: [String]?
@@ -22,17 +22,11 @@ public class TokenInfo: Codable {
     public var oAuthClient: OrgOAuthClient?
 
     public init(organization: NamedEntity?, homeOrganization: NamedEntity?, authorizedScope: [String]?, clonedUser: TokenInfoClonedUser?, oAuthClient: OrgOAuthClient?) {
-        
         self.organization = organization
-        
         self.homeOrganization = homeOrganization
-        
         self.authorizedScope = authorizedScope
-        
         self.clonedUser = clonedUser
-        
         self.oAuthClient = oAuthClient
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

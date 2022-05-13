@@ -26,15 +26,10 @@ public class NotificationTemplateHeader: Codable {
     public var parameters: [NotificationTemplateParameter]?
 
     public init(type: ModelType?, text: String?, media: ContentAttachment?, parameters: [NotificationTemplateParameter]?) {
-        
         self.type = type
-        
         self.text = text
-        
         self.media = media
-        
         self.parameters = parameters
-        
     }
 
 

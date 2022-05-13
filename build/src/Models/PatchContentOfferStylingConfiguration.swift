@@ -27,21 +27,13 @@ public class PatchContentOfferStylingConfiguration: Codable {
     public var body: PatchTextStyleProperties?
 
     public init(position: PatchContentPositionProperties?, offer: PatchContentOfferStyleProperties?, closeButton: PatchCloseButtonStyleProperties?, ctaButton: PatchCtaButtonStyleProperties?, title: PatchTextStyleProperties?, headline: PatchTextStyleProperties?, body: PatchTextStyleProperties?) {
-        
         self.position = position
-        
         self.offer = offer
-        
         self.closeButton = closeButton
-        
         self.ctaButton = ctaButton
-        
         self.title = title
-        
         self.headline = headline
-        
         self.body = body
-        
     }
 
 

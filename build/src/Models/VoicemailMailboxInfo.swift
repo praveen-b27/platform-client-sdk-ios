@@ -25,19 +25,12 @@ public class VoicemailMailboxInfo: Codable {
     public var modifiedDate: Date?
 
     public init(usageSizeBytes: Int64?, totalCount: Int?, unreadCount: Int?, deletedCount: Int?, createdDate: Date?, modifiedDate: Date?) {
-        
         self.usageSizeBytes = usageSizeBytes
-        
         self.totalCount = totalCount
-        
         self.unreadCount = unreadCount
-        
         self.deletedCount = deletedCount
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
     }
 
 

@@ -19,13 +19,9 @@ public class OutcomeEventScore: Codable {
     public var probability: Float?
 
     public init(outcome: AddressableEntityRef?, sessionMaxProbability: Float?, probability: Float?) {
-        
         self.outcome = outcome
-        
         self.sessionMaxProbability = sessionMaxProbability
-        
         self.probability = probability
-        
     }
 
 

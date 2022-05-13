@@ -17,11 +17,8 @@ public class LearningAssessmentScoringRequest: Codable {
     public var answers: AssessmentScoringSet?
 
     public init(assessmentForm: AssessmentForm?, answers: AssessmentScoringSet?) {
-        
         self.assessmentForm = assessmentForm
-        
         self.answers = answers
-        
     }
 
 

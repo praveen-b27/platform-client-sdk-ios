@@ -72,57 +72,31 @@ public class Evaluation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.conversation = conversation
-        
         self.evaluationForm = evaluationForm
-        
         self.evaluator = evaluator
-        
         self.agent = agent
-        
         self.calibration = calibration
-        
         self.status = status
-        
         self.answers = answers
-        
         self.agentHasRead = agentHasRead
-        
         self.releaseDate = releaseDate
-        
         self.assignedDate = assignedDate
-        
         self.changedDate = changedDate
-        
         self.queue = queue
-        
         self.mediaType = mediaType
-        
         self.rescore = rescore
-        
         self.conversationDate = conversationDate
-        
         self.conversationEndDate = conversationEndDate
-        
         self.neverRelease = neverRelease
-        
         self.resourceId = resourceId
-        
         self.resourceType = resourceType
-        
         self.redacted = redacted
-        
         self.isScoringIndex = isScoringIndex
-        
         self.authorizedActions = authorizedActions
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

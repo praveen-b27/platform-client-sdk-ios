@@ -25,23 +25,14 @@ public class CallMediaPolicyConditions: Codable {
     public var duration: DurationCondition?
 
     public init(forUsers: [User]?, dateRanges: [String]?, forQueues: [Queue]?, wrapupCodes: [WrapupCode]?, languages: [Language]?, timeAllowed: TimeAllowed?, directions: [Directions]?, duration: DurationCondition?) {
-        
         self.forUsers = forUsers
-        
         self.dateRanges = dateRanges
-        
         self.forQueues = forQueues
-        
         self.wrapupCodes = wrapupCodes
-        
         self.languages = languages
-        
         self.timeAllowed = timeAllowed
-        
         self.directions = directions
-        
         self.duration = duration
-        
     }
 
 

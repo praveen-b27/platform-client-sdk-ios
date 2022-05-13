@@ -39,21 +39,13 @@ public class HistoryEntry: Codable {
     public var secure: Bool?
 
     public init(action: Action?, resource: String?, timestamp: Date?, user: User?, client: DomainEntityRef?, version: String?, secure: Bool?) {
-        
         self.action = action
-        
         self.resource = resource
-        
         self.timestamp = timestamp
-        
         self.user = user
-        
         self.client = client
-        
         self.version = version
-        
         self.secure = secure
-        
     }
 
 

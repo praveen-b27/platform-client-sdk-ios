@@ -17,11 +17,8 @@ public class ConversationCallbackEventTopicUriReference: Codable {
     public var name: String?
 
     public init(_id: String?, name: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

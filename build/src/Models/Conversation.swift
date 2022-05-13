@@ -46,9 +46,9 @@ public class Conversation: Codable {
     public var conversationIds: [String]?
     /** If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference. */
     public var maxParticipants: Int?
-    /** On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording. */
+    /** On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording. */
     public var recordingState: RecordingState?
-    /** The conversation&#39;s state */
+    /** The conversation's state */
     public var state: State?
     /** Identifiers of divisions associated with this conversation */
     public var divisions: [ConversationDivisionMembership]?
@@ -56,33 +56,19 @@ public class Conversation: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, externalTag: String?, startTime: Date?, endTime: Date?, address: String?, participants: [Participant]?, conversationIds: [String]?, maxParticipants: Int?, recordingState: RecordingState?, state: State?, divisions: [ConversationDivisionMembership]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.externalTag = externalTag
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.address = address
-        
         self.participants = participants
-        
         self.conversationIds = conversationIds
-        
         self.maxParticipants = maxParticipants
-        
         self.recordingState = recordingState
-        
         self.state = state
-        
         self.divisions = divisions
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

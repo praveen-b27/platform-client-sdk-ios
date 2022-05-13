@@ -371,7 +371,7 @@ public class ViewFilter: Codable {
     public var flowOutTypes: [String]?
     /** A list of providers */
     public var providerList: [String]?
-    /** A list of callback numbers or substrings of numbers (ex: [\&quot;317\&quot;, \&quot;13172222222\&quot;]) */
+    /** A list of callback numbers or substrings of numbers (ex: [\"317\", \"13172222222\"]) */
     public var callbackNumberList: [String]?
     /** An interval of time to filter for scheduled callbacks. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var callbackInterval: String?
@@ -501,293 +501,149 @@ public class ViewFilter: Codable {
     public var isAcdInteraction: Bool?
 
     public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, managementUnitIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, externalContactIds: [String]?, externalOrgIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, acdDurationsMilliseconds: [NumericRange]?, talkDurationsMilliseconds: [NumericRange]?, acwDurationsMilliseconds: [NumericRange]?, handleDurationsMilliseconds: [NumericRange]?, holdDurationsMilliseconds: [NumericRange]?, abandonDurationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, answered: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, hasMedia: Bool?, roleIds: [String]?, reportsTos: [String]?, locationIds: [String]?, flowOutTypes: [String]?, providerList: [String]?, callbackNumberList: [String]?, callbackInterval: String?, usedRoutingTypes: [UsedRoutingTypes]?, requestedRoutingTypes: [RequestedRoutingTypes]?, hasAgentAssistId: Bool?, transcripts: [Transcripts]?, transcriptLanguages: [String]?, participantPurposes: [ParticipantPurposes]?, showFirstQueue: Bool?, teamIds: [String]?, filterUsersByTeamIds: [String]?, journeyActionMapIds: [String]?, journeyOutcomeIds: [String]?, journeySegmentIds: [String]?, journeyActionMapTypes: [JourneyActionMapTypes]?, developmentRoleList: [DevelopmentRoleList]?, developmentTypeList: [DevelopmentTypeList]?, developmentStatusList: [DevelopmentStatusList]?, developmentModuleIds: [String]?, developmentActivityOverdue: Bool?, customerSentimentScore: NumericRange?, customerSentimentTrend: NumericRange?, flowTransferTargets: [String]?, developmentName: String?, topicIds: [String]?, externalTags: [String]?, isNotResponding: Bool?, isAuthenticated: Bool?, botIds: [String]?, botVersions: [String]?, botMessageTypes: [BotMessageTypes]?, botProviderList: [BotProviderList]?, botProductList: [BotProductList]?, botRecognitionFailureReasonList: [BotRecognitionFailureReasonList]?, botIntentList: [String]?, botFinalIntentList: [String]?, botSlotList: [String]?, botResultList: [BotResultList]?, blockedReasons: [BlockedReasons]?, isRecorded: Bool?, hasEvaluation: Bool?, hasScoredEvaluation: Bool?, emailDeliveryStatusList: [EmailDeliveryStatusList]?, isAgentOwnedCallback: Bool?, agentCallbackOwnerIds: [String]?, transcriptTopics: [TranscriptTopics]?, journeyFrequencyCapReasons: [String]?, journeyBlockingActionMapIds: [String]?, journeyActionTargetIds: [String]?, journeyBlockingScheduleGroupIds: [String]?, journeyBlockingEmergencyScheduleGroupIds: [String]?, journeyUrlEqualConditions: [String]?, journeyUrlNotEqualConditions: [String]?, journeyUrlStartsWithConditions: [String]?, journeyUrlEndsWithConditions: [String]?, journeyUrlContainsAnyConditions: [String]?, journeyUrlNotContainsAnyConditions: [String]?, journeyUrlContainsAllConditions: [String]?, journeyUrlNotContainsAllConditions: [String]?, flowMilestoneIds: [String]?, isAssessmentPassed: Bool?, conversationInitiators: [String]?, hasCustomerParticipated: Bool?, isAcdInteraction: Bool?) {
-        
         self.mediaTypes = mediaTypes
-        
         self.queueIds = queueIds
-        
         self.skillIds = skillIds
-        
         self.skillGroups = skillGroups
-        
         self.languageIds = languageIds
-        
         self.languageGroups = languageGroups
-        
         self.directions = directions
-        
         self.originatingDirections = originatingDirections
-        
         self.wrapUpCodes = wrapUpCodes
-        
         self.dnisList = dnisList
-        
         self.sessionDnisList = sessionDnisList
-        
         self.filterQueuesByUserIds = filterQueuesByUserIds
-        
         self.filterUsersByQueueIds = filterUsersByQueueIds
-        
         self.userIds = userIds
-        
         self.managementUnitIds = managementUnitIds
-        
         self.addressTos = addressTos
-        
         self.addressFroms = addressFroms
-        
         self.outboundCampaignIds = outboundCampaignIds
-        
         self.outboundContactListIds = outboundContactListIds
-        
         self.contactIds = contactIds
-        
         self.externalContactIds = externalContactIds
-        
         self.externalOrgIds = externalOrgIds
-        
         self.aniList = aniList
-        
         self.durationsMilliseconds = durationsMilliseconds
-        
         self.acdDurationsMilliseconds = acdDurationsMilliseconds
-        
         self.talkDurationsMilliseconds = talkDurationsMilliseconds
-        
         self.acwDurationsMilliseconds = acwDurationsMilliseconds
-        
         self.handleDurationsMilliseconds = handleDurationsMilliseconds
-        
         self.holdDurationsMilliseconds = holdDurationsMilliseconds
-        
         self.abandonDurationsMilliseconds = abandonDurationsMilliseconds
-        
         self.evaluationScore = evaluationScore
-        
         self.evaluationCriticalScore = evaluationCriticalScore
-        
         self.evaluationFormIds = evaluationFormIds
-        
         self.evaluatedAgentIds = evaluatedAgentIds
-        
         self.evaluatorIds = evaluatorIds
-        
         self.transferred = transferred
-        
         self.abandoned = abandoned
-        
         self.answered = answered
-        
         self.messageTypes = messageTypes
-        
         self.divisionIds = divisionIds
-        
         self.surveyFormIds = surveyFormIds
-        
         self.surveyTotalScore = surveyTotalScore
-        
         self.surveyNpsScore = surveyNpsScore
-        
         self.mos = mos
-        
         self.surveyQuestionGroupScore = surveyQuestionGroupScore
-        
         self.surveyPromoterScore = surveyPromoterScore
-        
         self.surveyFormContextIds = surveyFormContextIds
-        
         self.conversationIds = conversationIds
-        
         self.sipCallIds = sipCallIds
-        
         self.isEnded = isEnded
-        
         self.isSurveyed = isSurveyed
-        
         self.surveyScores = surveyScores
-        
         self.promoterScores = promoterScores
-        
         self.isCampaign = isCampaign
-        
         self.surveyStatuses = surveyStatuses
-        
         self.conversationProperties = conversationProperties
-        
         self.isBlindTransferred = isBlindTransferred
-        
         self.isConsulted = isConsulted
-        
         self.isConsultTransferred = isConsultTransferred
-        
         self.remoteParticipants = remoteParticipants
-        
         self.flowIds = flowIds
-        
         self.flowOutcomeIds = flowOutcomeIds
-        
         self.flowOutcomeValues = flowOutcomeValues
-        
         self.flowDestinationTypes = flowDestinationTypes
-        
         self.flowDisconnectReasons = flowDisconnectReasons
-        
         self.flowTypes = flowTypes
-        
         self.flowEntryTypes = flowEntryTypes
-        
         self.flowEntryReasons = flowEntryReasons
-        
         self.flowVersions = flowVersions
-        
         self.groupIds = groupIds
-        
         self.hasJourneyCustomerId = hasJourneyCustomerId
-        
         self.hasJourneyActionMapId = hasJourneyActionMapId
-        
         self.hasJourneyVisitId = hasJourneyVisitId
-        
         self.hasMedia = hasMedia
-        
         self.roleIds = roleIds
-        
         self.reportsTos = reportsTos
-        
         self.locationIds = locationIds
-        
         self.flowOutTypes = flowOutTypes
-        
         self.providerList = providerList
-        
         self.callbackNumberList = callbackNumberList
-        
         self.callbackInterval = callbackInterval
-        
         self.usedRoutingTypes = usedRoutingTypes
-        
         self.requestedRoutingTypes = requestedRoutingTypes
-        
         self.hasAgentAssistId = hasAgentAssistId
-        
         self.transcripts = transcripts
-        
         self.transcriptLanguages = transcriptLanguages
-        
         self.participantPurposes = participantPurposes
-        
         self.showFirstQueue = showFirstQueue
-        
         self.teamIds = teamIds
-        
         self.filterUsersByTeamIds = filterUsersByTeamIds
-        
         self.journeyActionMapIds = journeyActionMapIds
-        
         self.journeyOutcomeIds = journeyOutcomeIds
-        
         self.journeySegmentIds = journeySegmentIds
-        
         self.journeyActionMapTypes = journeyActionMapTypes
-        
         self.developmentRoleList = developmentRoleList
-        
         self.developmentTypeList = developmentTypeList
-        
         self.developmentStatusList = developmentStatusList
-        
         self.developmentModuleIds = developmentModuleIds
-        
         self.developmentActivityOverdue = developmentActivityOverdue
-        
         self.customerSentimentScore = customerSentimentScore
-        
         self.customerSentimentTrend = customerSentimentTrend
-        
         self.flowTransferTargets = flowTransferTargets
-        
         self.developmentName = developmentName
-        
         self.topicIds = topicIds
-        
         self.externalTags = externalTags
-        
         self.isNotResponding = isNotResponding
-        
         self.isAuthenticated = isAuthenticated
-        
         self.botIds = botIds
-        
         self.botVersions = botVersions
-        
         self.botMessageTypes = botMessageTypes
-        
         self.botProviderList = botProviderList
-        
         self.botProductList = botProductList
-        
         self.botRecognitionFailureReasonList = botRecognitionFailureReasonList
-        
         self.botIntentList = botIntentList
-        
         self.botFinalIntentList = botFinalIntentList
-        
         self.botSlotList = botSlotList
-        
         self.botResultList = botResultList
-        
         self.blockedReasons = blockedReasons
-        
         self.isRecorded = isRecorded
-        
         self.hasEvaluation = hasEvaluation
-        
         self.hasScoredEvaluation = hasScoredEvaluation
-        
         self.emailDeliveryStatusList = emailDeliveryStatusList
-        
         self.isAgentOwnedCallback = isAgentOwnedCallback
-        
         self.agentCallbackOwnerIds = agentCallbackOwnerIds
-        
         self.transcriptTopics = transcriptTopics
-        
         self.journeyFrequencyCapReasons = journeyFrequencyCapReasons
-        
         self.journeyBlockingActionMapIds = journeyBlockingActionMapIds
-        
         self.journeyActionTargetIds = journeyActionTargetIds
-        
         self.journeyBlockingScheduleGroupIds = journeyBlockingScheduleGroupIds
-        
         self.journeyBlockingEmergencyScheduleGroupIds = journeyBlockingEmergencyScheduleGroupIds
-        
         self.journeyUrlEqualConditions = journeyUrlEqualConditions
-        
         self.journeyUrlNotEqualConditions = journeyUrlNotEqualConditions
-        
         self.journeyUrlStartsWithConditions = journeyUrlStartsWithConditions
-        
         self.journeyUrlEndsWithConditions = journeyUrlEndsWithConditions
-        
         self.journeyUrlContainsAnyConditions = journeyUrlContainsAnyConditions
-        
         self.journeyUrlNotContainsAnyConditions = journeyUrlNotContainsAnyConditions
-        
         self.journeyUrlContainsAllConditions = journeyUrlContainsAllConditions
-        
         self.journeyUrlNotContainsAllConditions = journeyUrlNotContainsAllConditions
-        
         self.flowMilestoneIds = flowMilestoneIds
-        
         self.isAssessmentPassed = isAssessmentPassed
-        
         self.conversationInitiators = conversationInitiators
-        
         self.hasCustomerParticipated = hasCustomerParticipated
-        
         self.isAcdInteraction = isAcdInteraction
-        
     }
 
 

@@ -17,11 +17,8 @@ public class BulkResult: Codable {
     public var entity: JSON?
 
     public init(error: BulkError?, entity: JSON?) {
-        
         self.error = error
-        
         self.entity = entity
-        
     }
 
 

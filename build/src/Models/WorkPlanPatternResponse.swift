@@ -15,9 +15,7 @@ public class WorkPlanPatternResponse: Codable {
     public var workPlans: [WorkPlanReference]?
 
     public init(workPlans: [WorkPlanReference]?) {
-        
         self.workPlans = workPlans
-        
     }
 
 

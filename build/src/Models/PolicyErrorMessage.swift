@@ -21,21 +21,13 @@ public class PolicyErrorMessage: Codable {
     public var insertDate: Date?
 
     public init(statusCode: Int?, userMessage: JSON?, userParamsMessage: String?, errorCode: String?, correlationId: String?, userParams: [UserParam]?, insertDate: Date?) {
-        
         self.statusCode = statusCode
-        
         self.userMessage = userMessage
-        
         self.userParamsMessage = userParamsMessage
-        
         self.errorCode = errorCode
-        
         self.correlationId = correlationId
-        
         self.userParams = userParams
-        
         self.insertDate = insertDate
-        
     }
 
 

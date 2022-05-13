@@ -38,29 +38,17 @@ public class TwitterIntegrationRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, accessTokenKey: String?, accessTokenSecret: String?, consumerKey: String?, consumerSecret: String?, tier: Tier?, envName: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.supportedContent = supportedContent
-        
         self.messagingSetting = messagingSetting
-        
         self.accessTokenKey = accessTokenKey
-        
         self.accessTokenSecret = accessTokenSecret
-        
         self.consumerKey = consumerKey
-        
         self.consumerSecret = consumerSecret
-        
         self.tier = tier
-        
         self.envName = envName
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

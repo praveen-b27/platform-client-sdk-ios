@@ -19,15 +19,10 @@ public class PureCloud: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, disabled: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.disabled = disabled
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

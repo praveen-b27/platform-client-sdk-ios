@@ -22,11 +22,8 @@ public class ApiUsageQueryResult: Codable {
     public var queryStatus: QueryStatus?
 
     public init(results: [ApiUsageRow]?, queryStatus: QueryStatus?) {
-        
         self.results = results
-        
         self.queryStatus = queryStatus
-        
     }
 
 

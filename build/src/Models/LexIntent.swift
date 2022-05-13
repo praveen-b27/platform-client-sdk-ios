@@ -21,15 +21,10 @@ public class LexIntent: Codable {
     public var version: String?
 
     public init(name: String?, _description: String?, slots: [String:LexSlot]?, version: String?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.slots = slots
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

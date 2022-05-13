@@ -17,15 +17,10 @@ public class PhoneChangeTopicPhone: Codable {
     public var secondaryStatus: PhoneChangeTopicPhoneStatus?
 
     public init(userAgentInfo: PhoneChangeTopicUserAgentInfo?, _id: String?, status: PhoneChangeTopicPhoneStatus?, secondaryStatus: PhoneChangeTopicPhoneStatus?) {
-        
         self.userAgentInfo = userAgentInfo
-        
         self._id = _id
-        
         self.status = status
-        
         self.secondaryStatus = secondaryStatus
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

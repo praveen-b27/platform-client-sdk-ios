@@ -27,23 +27,14 @@ public class JourneyWebEventsNotificationDevice: Codable {
     public var category: Category?
 
     public init(type: String?, isMobile: Bool?, screenHeight: Int?, screenWidth: Int?, fingerprint: String?, osFamily: String?, osVersion: String?, category: Category?) {
-        
         self.type = type
-        
         self.isMobile = isMobile
-        
         self.screenHeight = screenHeight
-        
         self.screenWidth = screenWidth
-        
         self.fingerprint = fingerprint
-        
         self.osFamily = osFamily
-        
         self.osVersion = osVersion
-        
         self.category = category
-        
     }
 
 

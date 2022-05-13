@@ -57,43 +57,24 @@ public class BuScheduleRun: Codable {
     public var selfUri: String?
 
     public init(_id: String?, schedulerRunId: String?, intradayRescheduling: Bool?, state: State?, weekCount: Int?, percentComplete: Double?, targetWeek: Date?, schedule: BuScheduleReference?, scheduleDescription: String?, schedulingStartTime: Date?, schedulingStartedBy: UserReference?, schedulingCanceledBy: UserReference?, schedulingCompletedTime: Date?, messageCount: Int?, messageSeverityCounts: [SchedulerMessageSeverityCount]?, reschedulingOptions: ReschedulingOptionsRunResponse?, reschedulingResultExpiration: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.schedulerRunId = schedulerRunId
-        
         self.intradayRescheduling = intradayRescheduling
-        
         self.state = state
-        
         self.weekCount = weekCount
-        
         self.percentComplete = percentComplete
-        
         self.targetWeek = targetWeek
-        
         self.schedule = schedule
-        
         self.scheduleDescription = scheduleDescription
-        
         self.schedulingStartTime = schedulingStartTime
-        
         self.schedulingStartedBy = schedulingStartedBy
-        
         self.schedulingCanceledBy = schedulingCanceledBy
-        
         self.schedulingCompletedTime = schedulingCompletedTime
-        
         self.messageCount = messageCount
-        
         self.messageSeverityCounts = messageSeverityCounts
-        
         self.reschedulingOptions = reschedulingOptions
-        
         self.reschedulingResultExpiration = reschedulingResultExpiration
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -29,29 +29,17 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
     public var outcomeAchievedEvent: JourneyWebEventsNotificationOutcomeAchievedMessage?
 
     public init(_id: String?, correlationId: String?, externalContact: JourneyWebEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, session: JourneyWebEventsNotificationSession?, eventType: EventType?, webEvent: JourneyWebEventsNotificationWebMessage?, webActionEvent: JourneyWebEventsNotificationWebActionMessage?, outcomeAchievedEvent: JourneyWebEventsNotificationOutcomeAchievedMessage?) {
-        
         self._id = _id
-        
         self.correlationId = correlationId
-        
         self.externalContact = externalContact
-        
         self.createdDate = createdDate
-        
         self.customerId = customerId
-        
         self.customerIdType = customerIdType
-        
         self.session = session
-        
         self.eventType = eventType
-        
         self.webEvent = webEvent
-        
         self.webActionEvent = webActionEvent
-        
         self.outcomeAchievedEvent = outcomeAchievedEvent
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

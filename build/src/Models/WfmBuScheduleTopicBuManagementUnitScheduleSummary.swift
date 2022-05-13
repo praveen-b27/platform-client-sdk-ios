@@ -18,17 +18,11 @@ public class WfmBuScheduleTopicBuManagementUnitScheduleSummary: Codable {
     public var agentCount: Int?
 
     public init(managementUnit: WfmBuScheduleTopicManagementUnit?, startDate: Date?, endDate: Date?, agents: [WfmBuScheduleTopicUserReference]?, agentCount: Int?) {
-        
         self.managementUnit = managementUnit
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.agents = agents
-        
         self.agentCount = agentCount
-        
     }
 
 

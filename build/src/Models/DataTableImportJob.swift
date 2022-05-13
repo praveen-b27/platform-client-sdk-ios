@@ -35,7 +35,7 @@ public class DataTableImportJob: Codable {
     public var dateCompleted: Date?
     /** The URL of the location at which the caller can upload the file to be imported */
     public var uploadURI: String?
-    /** The indication of whether the processing should remove rows that don&#39;t appear in the import file */
+    /** The indication of whether the processing should remove rows that don't appear in the import file */
     public var importMode: ImportMode?
     /** Any error information, or null of the processing is not in an error state */
     public var errorInformation: ErrorBody?
@@ -49,33 +49,19 @@ public class DataTableImportJob: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, owner: AddressableEntityRef?, status: Status?, dateCreated: Date?, dateCompleted: Date?, uploadURI: String?, importMode: ImportMode?, errorInformation: ErrorBody?, countRecordsUpdated: Int?, countRecordsDeleted: Int?, countRecordsFailed: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.owner = owner
-        
         self.status = status
-        
         self.dateCreated = dateCreated
-        
         self.dateCompleted = dateCompleted
-        
         self.uploadURI = uploadURI
-        
         self.importMode = importMode
-        
         self.errorInformation = errorInformation
-        
         self.countRecordsUpdated = countRecordsUpdated
-        
         self.countRecordsDeleted = countRecordsDeleted
-        
         self.countRecordsFailed = countRecordsFailed
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

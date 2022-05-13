@@ -28,15 +28,10 @@ public class DialerCampaignRuleConfigChangeCampaignRuleAction: Codable {
     public var campaignRuleActionEntities: DialerCampaignRuleConfigChangeCampaignRuleActionEntities?
 
     public init(_id: String?, parameters: [String:String]?, actionType: ActionType?, campaignRuleActionEntities: DialerCampaignRuleConfigChangeCampaignRuleActionEntities?) {
-        
         self._id = _id
-        
         self.parameters = parameters
-        
         self.actionType = actionType
-        
         self.campaignRuleActionEntities = campaignRuleActionEntities
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

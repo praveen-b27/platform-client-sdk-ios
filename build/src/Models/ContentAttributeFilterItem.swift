@@ -27,13 +27,9 @@ public class ContentAttributeFilterItem: Codable {
     public var values: [String]?
 
     public init(_id: String?, _operator: Operator?, values: [String]?) {
-        
         self._id = _id
-        
         self._operator = _operator
-        
         self.values = values
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

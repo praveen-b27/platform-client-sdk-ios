@@ -33,23 +33,14 @@ public class LocationCreateDefinition: Codable {
     public var address: LocationAddress?
 
     public init(name: String?, version: Int?, state: State?, path: [String]?, notes: String?, contactUser: String?, emergencyNumber: LocationEmergencyNumber?, address: LocationAddress?) {
-        
         self.name = name
-        
         self.version = version
-        
         self.state = state
-        
         self.path = path
-        
         self.notes = notes
-        
         self.contactUser = contactUser
-        
         self.emergencyNumber = emergencyNumber
-        
         self.address = address
-        
     }
 
 

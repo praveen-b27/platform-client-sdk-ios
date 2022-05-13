@@ -15,9 +15,7 @@ public class TimeOffRequestListing: Codable {
     public var entities: [TimeOffRequest]?
 
     public init(entities: [TimeOffRequest]?) {
-        
         self.entities = entities
-        
     }
 
 

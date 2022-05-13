@@ -93,7 +93,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let minerId: String = "" // Miner ID
-let body: Empty = new Empty(...) // query
+let body: JSON = new JSON(...) // query
 
 // Code example
 UploadsAPI.postLanguageunderstandingMinerUploads(minerId: minerId, body: body) { (response, error) in
@@ -112,7 +112,7 @@ UploadsAPI.postLanguageunderstandingMinerUploads(minerId: minerId, body: body) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **minerId** | **String**| Miner ID | |
-| **body** | [**Empty**](Empty.html)| query | |
+| **body** | **JSON**| query | |
 {: class="table-striped"}
 
 

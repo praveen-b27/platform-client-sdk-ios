@@ -35,13 +35,9 @@ public class PredictionResults: Codable {
     public var estimatedWaitTimeSeconds: Int?
 
     public init(intent: Intent?, formula: Formula?, estimatedWaitTimeSeconds: Int?) {
-        
         self.intent = intent
-        
         self.formula = formula
-        
         self.estimatedWaitTimeSeconds = estimatedWaitTimeSeconds
-        
     }
 
 

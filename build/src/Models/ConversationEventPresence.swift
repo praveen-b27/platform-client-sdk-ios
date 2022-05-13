@@ -19,9 +19,7 @@ public class ConversationEventPresence: Codable {
     public var type: ModelType?
 
     public init(type: ModelType?) {
-        
         self.type = type
-        
     }
 
 

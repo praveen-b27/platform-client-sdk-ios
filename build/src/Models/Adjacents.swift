@@ -16,13 +16,9 @@ public class Adjacents: Codable {
     public var directReports: [User]?
 
     public init(superiors: [User]?, siblings: [User]?, directReports: [User]?) {
-        
         self.superiors = superiors
-        
         self.siblings = siblings
-        
         self.directReports = directReports
-        
     }
 
 

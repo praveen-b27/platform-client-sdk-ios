@@ -21,11 +21,8 @@ public class WfmIntradayPlanningGroupListing: Codable {
     public var noDataReason: NoDataReason?
 
     public init(entities: [ForecastPlanningGroupResponse]?, noDataReason: NoDataReason?) {
-        
         self.entities = entities
-        
         self.noDataReason = noDataReason
-        
     }
 
 

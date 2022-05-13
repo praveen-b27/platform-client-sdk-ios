@@ -26,19 +26,12 @@ public class ContentGeneric: Codable {
     public var components: [ButtonComponent]?
 
     public init(title: String?, _description: String?, image: String?, video: String?, actions: ContentActions?, components: [ButtonComponent]?) {
-        
         self.title = title
-        
         self._description = _description
-        
         self.image = image
-        
         self.video = video
-        
         self.actions = actions
-        
         self.components = components
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

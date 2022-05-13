@@ -27,17 +27,11 @@ public class BenefitAssessmentJob: Codable {
     public var selfUri: String?
 
     public init(_id: String?, state: State?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.state = state
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

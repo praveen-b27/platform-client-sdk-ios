@@ -19,9 +19,7 @@ public class WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadP
     public var status: Status?
 
     public init(status: Status?) {
-        
         self.status = status
-        
     }
 
 

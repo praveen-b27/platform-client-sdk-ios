@@ -22,11 +22,8 @@ public class SearchSort: Codable {
     public var sortBy: String?
 
     public init(sortOrder: SortOrder?, sortBy: String?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
     }
 
 

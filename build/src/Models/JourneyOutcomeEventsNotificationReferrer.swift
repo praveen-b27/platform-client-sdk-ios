@@ -30,25 +30,15 @@ public class JourneyOutcomeEventsNotificationReferrer: Codable {
     public var medium: Medium?
 
     public init(url: String?, domain: String?, hostname: String?, keywords: String?, pathname: String?, queryString: String?, fragment: String?, name: String?, medium: Medium?) {
-        
         self.url = url
-        
         self.domain = domain
-        
         self.hostname = hostname
-        
         self.keywords = keywords
-        
         self.pathname = pathname
-        
         self.queryString = queryString
-        
         self.fragment = fragment
-        
         self.name = name
-        
         self.medium = medium
-        
     }
 
 

@@ -28,15 +28,10 @@ public class LockInfo: Codable {
     public var action: Action?
 
     public init(lockedBy: DomainEntityRef?, dateCreated: Date?, dateExpires: Date?, action: Action?) {
-        
         self.lockedBy = lockedBy
-        
         self.dateCreated = dateCreated
-        
         self.dateExpires = dateExpires
-        
         self.action = action
-        
     }
 
 

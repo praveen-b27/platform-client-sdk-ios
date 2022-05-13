@@ -20,13 +20,9 @@ public class BuServiceLevel: Codable {
     public var seconds: Int?
 
     public init(include: Bool?, percent: Int?, seconds: Int?) {
-        
         self.include = include
-        
         self.percent = percent
-        
         self.seconds = seconds
-        
     }
 
 

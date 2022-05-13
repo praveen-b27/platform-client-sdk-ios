@@ -26,19 +26,12 @@ public class AdherenceSettings: Codable {
     public var ignoredActivityCategories: IgnoredActivityCategories?
 
     public init(severeAlertThresholdMinutes: Int?, adherenceTargetPercent: Int?, adherenceExceptionThresholdSeconds: Int?, nonOnQueueActivitiesEquivalent: Bool?, trackOnQueueActivity: Bool?, ignoredActivityCategories: IgnoredActivityCategories?) {
-        
         self.severeAlertThresholdMinutes = severeAlertThresholdMinutes
-        
         self.adherenceTargetPercent = adherenceTargetPercent
-        
         self.adherenceExceptionThresholdSeconds = adherenceExceptionThresholdSeconds
-        
         self.nonOnQueueActivitiesEquivalent = nonOnQueueActivitiesEquivalent
-        
         self.trackOnQueueActivity = trackOnQueueActivity
-        
         self.ignoredActivityCategories = ignoredActivityCategories
-        
     }
 
 

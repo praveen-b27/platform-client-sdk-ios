@@ -21,15 +21,10 @@ public class TestExecutionResult: Codable {
     public var success: Bool?
 
     public init(operations: [TestExecutionOperationResult]?, error: ErrorBody?, finalResult: JSON?, success: Bool?) {
-        
         self.operations = operations
-        
         self.error = error
-        
         self.finalResult = finalResult
-        
         self.success = success
-        
     }
 
 

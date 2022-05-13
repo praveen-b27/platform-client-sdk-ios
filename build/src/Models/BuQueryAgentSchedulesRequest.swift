@@ -17,11 +17,8 @@ public class BuQueryAgentSchedulesRequest: Codable {
     public var userIds: [String]?
 
     public init(managementUnitId: String?, userIds: [String]?) {
-        
         self.managementUnitId = managementUnitId
-        
         self.userIds = userIds
-        
     }
 
 

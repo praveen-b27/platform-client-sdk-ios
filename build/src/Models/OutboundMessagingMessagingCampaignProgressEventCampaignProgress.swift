@@ -22,17 +22,11 @@ public class OutboundMessagingMessagingCampaignProgressEventCampaignProgress: Co
     public var percentage: Int?
 
     public init(campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?) {
-        
         self.campaign = campaign
-        
         self.numberOfContactsCalled = numberOfContactsCalled
-        
         self.numberOfContactsMessaged = numberOfContactsMessaged
-        
         self.totalNumberOfContacts = totalNumberOfContacts
-        
         self.percentage = percentage
-        
     }
 
 

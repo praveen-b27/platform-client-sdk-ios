@@ -34,23 +34,14 @@ public class LearningAssessment: Codable {
     public var dateSubmitted: Date?
 
     public init(assessmentId: String?, contextId: String?, assessmentFormId: String?, status: Status?, answers: AssessmentScoringSet?, dateCreated: Date?, dateModified: Date?, dateSubmitted: Date?) {
-        
         self.assessmentId = assessmentId
-        
         self.contextId = contextId
-        
         self.assessmentFormId = assessmentFormId
-        
         self.status = status
-        
         self.answers = answers
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.dateSubmitted = dateSubmitted
-        
     }
 
 

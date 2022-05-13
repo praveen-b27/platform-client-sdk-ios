@@ -23,13 +23,9 @@ public class QueueConversationSocialExpressionEventTopicDisconnectReason: Codabl
     public var phrase: String?
 
     public init(type: ModelType?, code: Int?, phrase: String?) {
-        
         self.type = type
-        
         self.code = code
-        
         self.phrase = phrase
-        
     }
 
 

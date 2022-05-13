@@ -21,27 +21,19 @@ public class Leaderboard: Codable {
     public var dateEndWorkday: Date?
     /** The list of leaders generated. */
     public var leaders: [LeaderboardItem]?
-    /** The requesting user&#39;s rank */
+    /** The requesting user's rank */
     public var userRank: LeaderboardItem?
     /** The targeted performance profile for the average points */
     public var performanceProfile: AddressableEntityRef?
 
     public init(division: Division?, metric: AddressableEntityRef?, dateStartWorkday: Date?, dateEndWorkday: Date?, leaders: [LeaderboardItem]?, userRank: LeaderboardItem?, performanceProfile: AddressableEntityRef?) {
-        
         self.division = division
-        
         self.metric = metric
-        
         self.dateStartWorkday = dateStartWorkday
-        
         self.dateEndWorkday = dateEndWorkday
-        
         self.leaders = leaders
-        
         self.userRank = userRank
-        
         self.performanceProfile = performanceProfile
-        
     }
 
 

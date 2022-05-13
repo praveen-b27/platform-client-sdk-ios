@@ -92,7 +92,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let expand: [String] = [NotificationsAPI.Expand_getNotificationsAvailabletopics.enummember.rawValue] // Which fields, if any, to expand
+let expand: [String] = [""] // Which fields, if any, to expand
 let includePreview: Bool = true // Whether or not to include Preview topics
 
 // Code example
@@ -112,7 +112,7 @@ NotificationsAPI.getNotificationsAvailabletopics(expand: expand, includePreview:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: _description ("description"), enforced ("enforced"), schema ("schema"), visibility ("visibility"), transports ("transports"), publicapitemplateuripaths ("publicApiTemplateUriPaths"), requirespermissions ("requiresPermissions"), permissiondetails ("permissionDetails"), topicparameters ("topicParameters") |
-| **includePreview** | **Bool**| Whether or not to include Preview topics | [optional] [default to true] |
+| **includePreview** | **Bool**| Whether or not to include Preview topics | [optional] |
 {: class="table-striped"}
 
 
@@ -214,7 +214,7 @@ NotificationsAPI.getNotificationsChannels(includechannels: includechannels) { (r
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **includechannels** | **String**| Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. | [optional] [default to token]<br />**Values**: token ("token"), oauthclient ("oauthclient") |
+| **includechannels** | **String**| Show user's channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. | [optional]<br />**Values**: token ("token"), oauthclient ("oauthclient") |
 {: class="table-striped"}
 
 
@@ -233,6 +233,8 @@ NotificationsAPI.getNotificationsChannels(includechannels: includechannels) { (r
 Verify a channel still exists and is valid
 
 Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
+
+
 
 Wraps HEAD /api/v2/notifications/channels/{channelId}  
 
@@ -336,6 +338,8 @@ NotificationsAPI.postNotificationsChannelSubscriptions(channelId: channelId, bod
 Create a new channel
 
 There is a limit of 20 channels per user/app combination. Creating a 21st channel will remove the channel with oldest last used date. Channels without an active connection will be removed first.
+
+
 
 Wraps POST /api/v2/notifications/channels  
 

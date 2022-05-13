@@ -15,11 +15,8 @@ public class LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification
     public var total: Int?
 
     public init(entities: [LearningAssignmentRuleRunTopicLearningAssignmentsCreated]?, total: Int?) {
-        
         self.entities = entities
-        
         self.total = total
-        
     }
 
 

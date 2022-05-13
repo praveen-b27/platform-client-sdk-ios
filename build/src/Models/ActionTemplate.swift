@@ -28,7 +28,7 @@ public class ActionTemplate: Codable {
     public var _id: String?
     /** Name of the action template. */
     public var name: String?
-    /** Description of the action template&#39;s functionality. */
+    /** Description of the action template's functionality. */
     public var _description: String?
     /** Media type of action described by the action template. */
     public var mediaType: MediaType?
@@ -44,25 +44,15 @@ public class ActionTemplate: Codable {
     public var modifiedDate: Date?
 
     public init(_id: String?, name: String?, _description: String?, mediaType: MediaType?, state: State?, contentOffer: ContentOffer?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.mediaType = mediaType
-        
         self.state = state
-        
         self.contentOffer = contentOffer
-        
         self.selfUri = selfUri
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

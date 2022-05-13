@@ -22,7 +22,7 @@ public class EdgeGroup: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -44,49 +44,31 @@ public class EdgeGroup: Codable {
     public var managed: Bool?
     /** Is this edge group hybrid. */
     public var hybrid: Bool?
-    /** A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication. */
+    /** A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication. */
     public var edgeTrunkBaseAssignment: TrunkBaseAssignment?
-    /** Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication. */
+    /** Trunk base settings of trunkType \"PHONE\" to inherit to edge logical interface for phone communication. */
     public var phoneTrunkBases: [TrunkBase]?
     /** The URI for this object */
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, managed: Bool?, hybrid: Bool?, edgeTrunkBaseAssignment: TrunkBaseAssignment?, phoneTrunkBases: [TrunkBase]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.managed = managed
-        
         self.hybrid = hybrid
-        
         self.edgeTrunkBaseAssignment = edgeTrunkBaseAssignment
-        
         self.phoneTrunkBases = phoneTrunkBases
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

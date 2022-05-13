@@ -28,9 +28,9 @@ public class Organization: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** The default language for this organization. Example: &#39;en&#39; */
+    /** The default language for this organization. Example: 'en' */
     public var defaultLanguage: String?
-    /** The default country code for this organization. Example: &#39;US&#39; */
+    /** The default country code for this organization. Example: 'US' */
     public var defaultCountryCode: String?
     /** The short name for the organization. This field is globally unique and cannot be changed. */
     public var thirdPartyOrgName: String?
@@ -52,37 +52,21 @@ public class Organization: Codable {
     public var features: [String:Bool]?
 
     public init(_id: String?, name: String?, defaultLanguage: String?, defaultCountryCode: String?, thirdPartyOrgName: String?, thirdPartyURI: String?, domain: String?, version: Int?, state: State?, defaultSiteId: String?, supportURI: String?, voicemailEnabled: Bool?, productPlatform: ProductPlatform?, selfUri: String?, features: [String:Bool]?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.defaultLanguage = defaultLanguage
-        
         self.defaultCountryCode = defaultCountryCode
-        
         self.thirdPartyOrgName = thirdPartyOrgName
-        
         self.thirdPartyURI = thirdPartyURI
-        
         self.domain = domain
-        
         self.version = version
-        
         self.state = state
-        
         self.defaultSiteId = defaultSiteId
-        
         self.supportURI = supportURI
-        
         self.voicemailEnabled = voicemailEnabled
-        
         self.productPlatform = productPlatform
-        
         self.selfUri = selfUri
-        
         self.features = features
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

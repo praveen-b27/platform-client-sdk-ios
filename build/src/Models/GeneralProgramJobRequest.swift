@@ -37,11 +37,8 @@ public class GeneralProgramJobRequest: Codable {
     public var mode: Mode?
 
     public init(dialect: Dialect?, mode: Mode?) {
-        
         self.dialect = dialect
-        
         self.mode = mode
-        
     }
 
 

@@ -42,19 +42,12 @@ public class DialerContactlistfilterConfigChangeFilterPredicate: Codable {
     public var inverted: Bool?
 
     public init(column: String?, columnType: ColumnType?, _operator: Operator?, value: String?, range: DialerContactlistfilterConfigChangeRange?, inverted: Bool?) {
-        
         self.column = column
-        
         self.columnType = columnType
-        
         self._operator = _operator
-        
         self.value = value
-        
         self.range = range
-        
         self.inverted = inverted
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

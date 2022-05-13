@@ -21,15 +21,10 @@ public class QualityAuditQueryExecutionResultsResponse: Codable {
     public var entities: [QualityAuditLogMessage]?
 
     public init(_id: String?, pageSize: Int?, cursor: String?, entities: [QualityAuditLogMessage]?) {
-        
         self._id = _id
-        
         self.pageSize = pageSize
-        
         self.cursor = cursor
-        
         self.entities = entities
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

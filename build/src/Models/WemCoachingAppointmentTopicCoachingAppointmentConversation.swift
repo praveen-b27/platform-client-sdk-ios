@@ -20,11 +20,8 @@ public class WemCoachingAppointmentTopicCoachingAppointmentConversation: Codable
     public var action: Action?
 
     public init(_id: String?, action: Action?) {
-        
         self._id = _id
-        
         self.action = action
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

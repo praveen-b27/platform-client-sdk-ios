@@ -29,19 +29,12 @@ public class AvailableTimeOffRange: Codable {
     public var waitlistEnabled: Bool?
 
     public init(timeOffLimit: TimeOffLimitReference?, startDate: Date?, granularity: Granularity?, availableMinutesPerInterval: [Int]?, waitlistedRequestsPerInterval: [Int]?, waitlistEnabled: Bool?) {
-        
         self.timeOffLimit = timeOffLimit
-        
         self.startDate = startDate
-        
         self.granularity = granularity
-        
         self.availableMinutesPerInterval = availableMinutesPerInterval
-        
         self.waitlistedRequestsPerInterval = waitlistedRequestsPerInterval
-        
         self.waitlistEnabled = waitlistEnabled
-        
     }
 
 

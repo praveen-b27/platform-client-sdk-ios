@@ -15,9 +15,7 @@ public class PresenceSetting: Codable {
     public var join: SettingDirection?
 
     public init(join: SettingDirection?) {
-        
         self.join = join
-        
     }
 
 

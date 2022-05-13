@@ -29,19 +29,12 @@ public class GKNDocumentationSearchRequest: Codable {
     public var query: [GKNDocumentationSearchCriteria]?
 
     public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, query: [GKNDocumentationSearchCriteria]?) {
-        
         self.sortOrder = sortOrder
-        
         self.sortBy = sortBy
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.sort = sort
-        
         self.query = query
-        
     }
 
 

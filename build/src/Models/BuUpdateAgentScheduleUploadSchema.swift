@@ -23,25 +23,17 @@ public class BuUpdateAgentScheduleUploadSchema: Codable {
     public var fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?
     /** Version metadata for this agent schedule. Required if updating or deleting an existing agent schedule, otherwise should be omitted */
     public var metadata: WfmVersionedEntityMetadata?
-    /** Whether to delete this agent&#39;s schedule. Defaults to false if not set */
+    /** Whether to delete this agent's schedule. Defaults to false if not set */
     public var delete: Bool?
 
     public init(userId: String?, workPlanId: ValueWrapperString?, workPlanIdsPerWeek: ListWrapperString?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?, metadata: WfmVersionedEntityMetadata?, delete: Bool?) {
-        
         self.userId = userId
-        
         self.workPlanId = workPlanId
-        
         self.workPlanIdsPerWeek = workPlanIdsPerWeek
-        
         self.shifts = shifts
-        
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
-        
         self.metadata = metadata
-        
         self.delete = delete
-        
     }
 
 

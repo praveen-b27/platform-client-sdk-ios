@@ -23,27 +23,16 @@ public class EvaluationEntityListing: Codable {
     public var pageCount: Int?
 
     public init(entities: [Evaluation]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
-        
         self.entities = entities
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.total = total
-        
         self.lastUri = lastUri
-        
         self.firstUri = firstUri
-        
         self.selfUri = selfUri
-        
         self.previousUri = previousUri
-        
         self.nextUri = nextUri
-        
         self.pageCount = pageCount
-        
     }
 
 

@@ -19,15 +19,10 @@ public class RegionTimeZone: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, offset: Int64?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.offset = offset
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

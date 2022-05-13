@@ -35,19 +35,12 @@ public class CreateManagementUnitApiRequest: Codable {
     public var businessUnitId: String?
 
     public init(name: String?, timeZone: String?, startDayOfWeek: StartDayOfWeek?, settings: CreateManagementUnitSettingsRequest?, divisionId: String?, businessUnitId: String?) {
-        
         self.name = name
-        
         self.timeZone = timeZone
-        
         self.startDayOfWeek = startDayOfWeek
-        
         self.settings = settings
-        
         self.divisionId = divisionId
-        
         self.businessUnitId = businessUnitId
-        
     }
 
 

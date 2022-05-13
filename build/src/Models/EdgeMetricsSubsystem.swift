@@ -19,13 +19,9 @@ public class EdgeMetricsSubsystem: Codable {
     public var mediaSubsystem: EdgeMetricsSubsystem?
 
     public init(delayMs: Int?, processName: String?, mediaSubsystem: EdgeMetricsSubsystem?) {
-        
         self.delayMs = delayMs
-        
         self.processName = processName
-        
         self.mediaSubsystem = mediaSubsystem
-        
     }
 
 

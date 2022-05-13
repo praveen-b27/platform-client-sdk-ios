@@ -16,9 +16,7 @@ public class MediaTypes: Codable {
     public var allow: MediaTypeAccess?
 
     public init(allow: MediaTypeAccess?) {
-        
         self.allow = allow
-        
     }
 
 

@@ -38,41 +38,23 @@ public class ReportSchedule: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, quartzCronExpression: String?, nextFireTime: Date?, dateCreated: Date?, dateModified: Date?, _description: String?, timeZone: String?, timePeriod: String?, interval: String?, reportFormat: String?, locale: String?, enabled: Bool?, reportId: String?, parameters: [String:JSON]?, lastRun: ReportRunEntry?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.quartzCronExpression = quartzCronExpression
-        
         self.nextFireTime = nextFireTime
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self._description = _description
-        
         self.timeZone = timeZone
-        
         self.timePeriod = timePeriod
-        
         self.interval = interval
-        
         self.reportFormat = reportFormat
-        
         self.locale = locale
-        
         self.enabled = enabled
-        
         self.reportId = reportId
-        
         self.parameters = parameters
-        
         self.lastRun = lastRun
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

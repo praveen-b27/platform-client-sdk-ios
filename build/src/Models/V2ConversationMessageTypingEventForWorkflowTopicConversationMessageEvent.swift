@@ -20,13 +20,9 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationMessage
     public var typing: V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping?
 
     public init(eventType: EventType?, coBrowse: V2ConversationMessageTypingEventForWorkflowTopicConversationEventCoBrowse?, typing: V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping?) {
-        
         self.eventType = eventType
-        
         self.coBrowse = coBrowse
-        
         self.typing = typing
-        
     }
 
 

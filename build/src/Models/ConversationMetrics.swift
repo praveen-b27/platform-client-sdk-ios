@@ -31,17 +31,11 @@ public class ConversationMetrics: Codable {
     public var participantMetrics: ParticipantMetrics?
 
     public init(conversation: AddressableEntityRef?, sentimentScore: Double?, sentimentTrend: Double?, sentimentTrendClass: SentimentTrendClass?, participantMetrics: ParticipantMetrics?) {
-        
         self.conversation = conversation
-        
         self.sentimentScore = sentimentScore
-        
         self.sentimentTrend = sentimentTrend
-        
         self.sentimentTrendClass = sentimentTrendClass
-        
         self.participantMetrics = participantMetrics
-        
     }
 
 

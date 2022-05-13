@@ -15,11 +15,8 @@ public class V2ConversationMessageTypingEventForUserTopicMessageData: Codable {
     public var normalizedMessage: V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage?
 
     public init(conversationId: String?, normalizedMessage: V2ConversationMessageTypingEventForUserTopicConversationNormalizedMessage?) {
-        
         self.conversationId = conversationId
-        
         self.normalizedMessage = normalizedMessage
-        
     }
 
 

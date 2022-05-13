@@ -35,37 +35,21 @@ public class Script: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, versionId: String?, createdDate: Date?, modifiedDate: Date?, publishedDate: Date?, versionDate: Date?, startPageId: String?, startPageName: String?, features: JSON?, variables: JSON?, customActions: JSON?, pages: [Page]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self.versionId = versionId
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
         self.publishedDate = publishedDate
-        
         self.versionDate = versionDate
-        
         self.startPageId = startPageId
-        
         self.startPageName = startPageName
-        
         self.features = features
-        
         self.variables = variables
-        
         self.customActions = customActions
-        
         self.pages = pages
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

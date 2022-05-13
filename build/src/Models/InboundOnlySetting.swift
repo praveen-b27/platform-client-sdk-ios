@@ -18,9 +18,7 @@ public class InboundOnlySetting: Codable {
     public var inbound: Inbound?
 
     public init(inbound: Inbound?) {
-        
         self.inbound = inbound
-        
     }
 
 

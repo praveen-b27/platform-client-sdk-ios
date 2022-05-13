@@ -41,15 +41,10 @@ public class ApiUsageQuery: Codable {
     public var metrics: [Metrics]?
 
     public init(interval: String?, granularity: Granularity?, groupBy: [GroupBy]?, metrics: [Metrics]?) {
-        
         self.interval = interval
-        
         self.granularity = granularity
-        
         self.groupBy = groupBy
-        
         self.metrics = metrics
-        
     }
 
 

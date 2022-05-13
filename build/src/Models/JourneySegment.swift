@@ -47,37 +47,21 @@ public class JourneySegment: Codable {
     public var modifiedDate: Date?
 
     public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, color: String?, scope: Scope?, shouldDisplayToAgent: Bool?, context: Context?, journey: Journey?, externalSegment: ExternalSegment?, assignmentExpirationDays: Int?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
-        
         self._id = _id
-        
         self.isActive = isActive
-        
         self.displayName = displayName
-        
         self.version = version
-        
         self._description = _description
-        
         self.color = color
-        
         self.scope = scope
-        
         self.shouldDisplayToAgent = shouldDisplayToAgent
-        
         self.context = context
-        
         self.journey = journey
-        
         self.externalSegment = externalSegment
-        
         self.assignmentExpirationDays = assignmentExpirationDays
-        
         self.selfUri = selfUri
-        
         self.createdDate = createdDate
-        
         self.modifiedDate = modifiedDate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

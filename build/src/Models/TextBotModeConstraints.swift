@@ -16,9 +16,7 @@ public class TextBotModeConstraints: Codable {
     public var text: TextBotTextModeConstraints?
 
     public init(text: TextBotTextModeConstraints?) {
-        
         self.text = text
-        
     }
 
 

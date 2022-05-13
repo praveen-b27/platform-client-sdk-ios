@@ -28,23 +28,14 @@ public class OpenIntegrationRequest: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, outboundNotificationWebhookUrl: String?, outboundNotificationWebhookSignatureSecretToken: String?, webhookHeaders: [String:String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.supportedContent = supportedContent
-        
         self.messagingSetting = messagingSetting
-        
         self.outboundNotificationWebhookUrl = outboundNotificationWebhookUrl
-        
         self.outboundNotificationWebhookSignatureSecretToken = outboundNotificationWebhookSignatureSecretToken
-        
         self.webhookHeaders = webhookHeaders
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

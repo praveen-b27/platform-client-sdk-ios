@@ -10,9 +10,7 @@ import Foundation
 
 
 open class AuditAPI {
-    
     /**
-     
      Get service mapping information used in realtime audits.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -36,35 +34,39 @@ open class AuditAPI {
     }
 
     /**
-     
      Get service mapping information used in realtime audits.
-     
      - GET /api/v2/audits/query/realtime/servicemapping
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "services" : [ {
     "entities" : [ {
-      "name" : "aeiou",
-      "actions" : [ "aeiou" ]
+      "name" : "AccessToken",
+      "actions" : [ "Create", "Create" ]
+    }, {
+      "name" : "AccessToken",
+      "actions" : [ "Create", "Create" ]
     } ],
-    "name" : "aeiou"
+    "name" : "AnalyticsReporting"
+  }, {
+    "entities" : [ {
+      "name" : "AccessToken",
+      "actions" : [ "Create", "Create" ]
+    }, {
+      "name" : "AccessToken",
+      "actions" : [ "Create", "Create" ]
+    } ],
+    "name" : "AnalyticsReporting"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<AuditQueryServiceMapping> 
      */
-    open class func getAuditsQueryRealtimeServicemappingWithRequestBuilder() -> RequestBuilder<AuditQueryServiceMapping> {
+    open class func getAuditsQueryRealtimeServicemappingWithRequestBuilder() -> RequestBuilder<AuditQueryServiceMapping> {        
         let path = "/api/v2/audits/query/realtime/servicemapping"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -73,9 +75,7 @@ open class AuditAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get service mapping information used in audits.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -99,35 +99,39 @@ open class AuditAPI {
     }
 
     /**
-     
      Get service mapping information used in audits.
-     
      - GET /api/v2/audits/query/servicemapping
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "services" : [ {
     "entities" : [ {
-      "name" : "aeiou",
-      "actions" : [ "aeiou" ]
+      "name" : "AccessToken",
+      "actions" : [ "Create", "Create" ]
+    }, {
+      "name" : "AccessToken",
+      "actions" : [ "Create", "Create" ]
     } ],
-    "name" : "aeiou"
+    "name" : "AnalyticsReporting"
+  }, {
+    "entities" : [ {
+      "name" : "AccessToken",
+      "actions" : [ "Create", "Create" ]
+    }, {
+      "name" : "AccessToken",
+      "actions" : [ "Create", "Create" ]
+    } ],
+    "name" : "AnalyticsReporting"
   } ]
-}}]
+}, statusCode=200}]
 
      - returns: RequestBuilder<AuditQueryServiceMapping> 
      */
-    open class func getAuditsQueryServicemappingWithRequestBuilder() -> RequestBuilder<AuditQueryServiceMapping> {
+    open class func getAuditsQueryServicemappingWithRequestBuilder() -> RequestBuilder<AuditQueryServiceMapping> {        
         let path = "/api/v2/audits/query/servicemapping"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -137,10 +141,7 @@ open class AuditAPI {
     }
 
     
-    
-    
     /**
-     
      Get status of audit query execution
      
      - parameter transactionId: (path) Transaction ID 
@@ -165,46 +166,44 @@ open class AuditAPI {
     }
 
     /**
-     
      Get status of audit query execution
-     
      - GET /api/v2/audits/query/{transactionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "interval" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "interval" : "interval",
+  "id" : "id",
+  "state" : "Queued",
   "filters" : [ {
-    "property" : "aeiou",
-    "value" : "aeiou"
+    "property" : "UserId",
+    "value" : "value"
+  }, {
+    "property" : "UserId",
+    "value" : "value"
   } ],
   "sort" : [ {
-    "sortOrder" : "aeiou",
-    "name" : "aeiou"
+    "sortOrder" : "ascending",
+    "name" : "Timestamp"
+  }, {
+    "sortOrder" : "ascending",
+    "name" : "Timestamp"
   } ],
-  "serviceName" : "aeiou",
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "serviceName" : "AnalyticsReporting",
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter transactionId: (path) Transaction ID 
 
      - returns: RequestBuilder<AuditQueryExecutionStatusResponse> 
      */
-    open class func getAuditsQueryTransactionIdWithRequestBuilder(transactionId: String) -> RequestBuilder<AuditQueryExecutionStatusResponse> {
+    open class func getAuditsQueryTransactionIdWithRequestBuilder(transactionId: String) -> RequestBuilder<AuditQueryExecutionStatusResponse> {        
         var path = "/api/v2/audits/query/{transactionId}"
         let transactionIdPreEscape = "\(transactionId)"
         let transactionIdPostEscape = transactionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{transactionId}", with: transactionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -217,23 +216,12 @@ open class AuditAPI {
     
     
     
-    
-    
-    
-    
-    public enum Expand_getAuditsQueryTransactionIdResults: String { 
-        case user = "user"
-    }
-
-    
-    
     /**
-     
      Get results of audit query
      
      - parameter transactionId: (path) Transaction ID 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageSize: (query) Page size (optional)
      - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -256,85 +244,88 @@ open class AuditAPI {
     }
 
     /**
-     
      Get results of audit query
-     
      - GET /api/v2/audits/query/{transactionId}/results
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "cursor" : "aeiou",
+  "cursor" : "cursor",
   "entities" : [ {
-    "remoteIp" : [ "aeiou" ],
+    "remoteIp" : [ "remoteIp", "remoteIp" ],
     "propertyChanges" : [ {
-      "property" : "aeiou",
-      "newValues" : [ "aeiou" ],
-      "oldValues" : [ "aeiou" ]
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
     } ],
-    "entityType" : "aeiou",
-    "serviceName" : "aeiou",
-    "message" : {
-      "messageWithParams" : "aeiou",
-      "localizableMessageCode" : "aeiou",
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou"
-    },
+    "entityType" : "AccessToken",
+    "serviceName" : "AnalyticsReporting",
+    "message" : "{}",
     "context" : {
-      "key" : "aeiou"
+      "key" : "context"
     },
-    "client" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+    "client" : "{}",
+    "action" : "Create",
+    "userHomeOrgId" : "userHomeOrgId",
+    "id" : "id",
+    "user" : "{}",
+    "entity" : "{}",
+    "eventDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "SUCCESS"
+  }, {
+    "remoteIp" : [ "remoteIp", "remoteIp" ],
+    "propertyChanges" : [ {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
+    "entityType" : "AccessToken",
+    "serviceName" : "AnalyticsReporting",
+    "message" : "{}",
+    "context" : {
+      "key" : "context"
     },
-    "action" : "aeiou",
-    "userHomeOrgId" : "aeiou",
-    "id" : "aeiou",
-    "user" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "entity" : "",
-    "eventDate" : "2000-01-23T04:56:07.000+0000",
-    "status" : "aeiou"
+    "client" : "{}",
+    "action" : "Create",
+    "userHomeOrgId" : "userHomeOrgId",
+    "id" : "id",
+    "user" : "{}",
+    "entity" : "{}",
+    "eventDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "SUCCESS"
   } ],
-  "pageSize" : 123,
-  "id" : "aeiou"
-}}]
+  "pageSize" : 0,
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter transactionId: (path) Transaction ID 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageSize: (query) Page size (optional)
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<AuditQueryExecutionResultsResponse> 
      */
-    open class func getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<AuditQueryExecutionResultsResponse> {
+    open class func getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<AuditQueryExecutionResultsResponse> {        
         var path = "/api/v2/audits/query/{transactionId}/results"
         let transactionIdPreEscape = "\(transactionId)"
         let transactionIdPostEscape = transactionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{transactionId}", with: transactionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "cursor": cursor, 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<AuditQueryExecutionResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -343,10 +334,7 @@ open class AuditAPI {
     }
 
     
-    
-    
     /**
-     
      Create audit query execution
      
      - parameter body: (body) query 
@@ -371,41 +359,42 @@ open class AuditAPI {
     }
 
     /**
-     
      Create audit query execution
-     
      - POST /api/v2/audits/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "interval" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "interval" : "interval",
+  "id" : "id",
+  "state" : "Queued",
   "filters" : [ {
-    "property" : "aeiou",
-    "value" : "aeiou"
+    "property" : "UserId",
+    "value" : "value"
+  }, {
+    "property" : "UserId",
+    "value" : "value"
   } ],
   "sort" : [ {
-    "sortOrder" : "aeiou",
-    "name" : "aeiou"
+    "sortOrder" : "ascending",
+    "name" : "Timestamp"
+  }, {
+    "sortOrder" : "ascending",
+    "name" : "Timestamp"
   } ],
-  "serviceName" : "aeiou",
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "serviceName" : "AnalyticsReporting",
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<AuditQueryExecutionStatusResponse> 
      */
-    open class func postAuditsQueryWithRequestBuilder(body: AuditQueryRequest) -> RequestBuilder<AuditQueryExecutionStatusResponse> {
+    open class func postAuditsQueryWithRequestBuilder(body: AuditQueryRequest) -> RequestBuilder<AuditQueryExecutionStatusResponse> {        
         let path = "/api/v2/audits/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AuditQueryExecutionStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -415,16 +404,7 @@ open class AuditAPI {
 
     
     
-    
-    
-    public enum Expand_postAuditsQueryRealtime: String { 
-        case user = "user"
-    }
-
-    
-    
     /**
-     
      This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
      
      - parameter body: (body) query 
@@ -450,74 +430,82 @@ open class AuditAPI {
     }
 
     /**
-     
      This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
-     
      - POST /api/v2/audits/query/realtime
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "remoteIp" : [ "aeiou" ],
+    "remoteIp" : [ "remoteIp", "remoteIp" ],
     "propertyChanges" : [ {
-      "property" : "aeiou",
-      "newValues" : [ "aeiou" ],
-      "oldValues" : [ "aeiou" ]
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
     } ],
-    "entityType" : "aeiou",
-    "serviceName" : "aeiou",
-    "message" : {
-      "messageWithParams" : "aeiou",
-      "localizableMessageCode" : "aeiou",
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou"
-    },
+    "entityType" : "AccessToken",
+    "serviceName" : "AnalyticsReporting",
+    "message" : "{}",
     "context" : {
-      "key" : "aeiou"
+      "key" : "context"
     },
-    "client" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
+    "client" : "{}",
+    "action" : "Create",
+    "userHomeOrgId" : "userHomeOrgId",
+    "id" : "id",
+    "user" : "{}",
+    "entity" : "{}",
+    "eventDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "SUCCESS"
+  }, {
+    "remoteIp" : [ "remoteIp", "remoteIp" ],
+    "propertyChanges" : [ {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
+    "entityType" : "AccessToken",
+    "serviceName" : "AnalyticsReporting",
+    "message" : "{}",
+    "context" : {
+      "key" : "context"
     },
-    "action" : "aeiou",
-    "userHomeOrgId" : "aeiou",
-    "id" : "aeiou",
-    "user" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "entity" : "",
-    "eventDate" : "2000-01-23T04:56:07.000+0000",
-    "status" : "aeiou"
+    "client" : "{}",
+    "action" : "Create",
+    "userHomeOrgId" : "userHomeOrgId",
+    "id" : "id",
+    "user" : "{}",
+    "entity" : "{}",
+    "eventDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "SUCCESS"
   } ],
-  "pageSize" : 123
-}}]
+  "pageSize" : 0
+}, statusCode=200}]
      
      - parameter body: (body) query 
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<AuditRealtimeQueryResultsResponse> 
      */
-    open class func postAuditsQueryRealtimeWithRequestBuilder(body: AuditRealtimeQueryRequest, expand: [String]? = nil) -> RequestBuilder<AuditRealtimeQueryResultsResponse> {
+    open class func postAuditsQueryRealtimeWithRequestBuilder(body: AuditRealtimeQueryRequest, expand: [String]? = nil) -> RequestBuilder<AuditRealtimeQueryResultsResponse> {        
         let path = "/api/v2/audits/query/realtime"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "expand": expand
-            
         ])
 
         let requestBuilder: RequestBuilder<AuditRealtimeQueryResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

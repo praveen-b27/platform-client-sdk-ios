@@ -56,17 +56,13 @@ public class WorkPlanConfigurationViolationMessage: Codable {
     public var type: ModelType?
     /** Arguments of the message that provide information about the misconfigured value or the threshold that is exceeded by the misconfigured value */
     public var arguments: [WorkPlanValidationMessageArgument]?
-    /** Severity of the message. A message with Error severity indicates the scheduler won&#39;t be able to produce schedules and thus the work plan is invalid. */
+    /** Severity of the message. A message with Error severity indicates the scheduler won't be able to produce schedules and thus the work plan is invalid. */
     public var severity: Severity?
 
     public init(type: ModelType?, arguments: [WorkPlanValidationMessageArgument]?, severity: Severity?) {
-        
         self.type = type
-        
         self.arguments = arguments
-        
         self.severity = severity
-        
     }
 
 

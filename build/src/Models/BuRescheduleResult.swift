@@ -23,17 +23,11 @@ public class BuRescheduleResult: Codable {
     public var agentSchedules: [BuRescheduleAgentScheduleResult]?
 
     public init(generationResults: ScheduleGenerationResult?, generationResultsDownloadUrl: String?, headcountForecast: BuHeadcountForecast?, headcountForecastDownloadUrl: String?, agentSchedules: [BuRescheduleAgentScheduleResult]?) {
-        
         self.generationResults = generationResults
-        
         self.generationResultsDownloadUrl = generationResultsDownloadUrl
-        
         self.headcountForecast = headcountForecast
-        
         self.headcountForecastDownloadUrl = headcountForecastDownloadUrl
-        
         self.agentSchedules = agentSchedules
-        
     }
 
 

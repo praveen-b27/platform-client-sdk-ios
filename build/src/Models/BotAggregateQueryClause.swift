@@ -21,11 +21,8 @@ public class BotAggregateQueryClause: Codable {
     public var predicates: [BotAggregateQueryPredicate]?
 
     public init(type: ModelType?, predicates: [BotAggregateQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

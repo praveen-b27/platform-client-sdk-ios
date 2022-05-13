@@ -21,15 +21,10 @@ public class ReportingTurnIntentSlot: Codable {
     public var confidence: Double?
 
     public init(name: String?, value: String?, type: String?, confidence: Double?) {
-        
         self.name = name
-        
         self.value = value
-        
         self.type = type
-        
         self.confidence = confidence
-        
     }
 
 

@@ -13,15 +13,12 @@ public class EmailColumn: Codable {
 
     /** The name of the email column. */
     public var columnName: String?
-    /** Indicates the type of the email column. For example, &#39;work&#39; or &#39;personal&#39;. */
+    /** Indicates the type of the email column. For example, 'work' or 'personal'. */
     public var type: String?
 
     public init(columnName: String?, type: String?) {
-        
         self.columnName = columnName
-        
         self.type = type
-        
     }
 
 

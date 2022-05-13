@@ -19,13 +19,9 @@ public class WeekScheduleReference: Codable {
     public var weekDate: String?
 
     public init(_id: String?, selfUri: String?, weekDate: String?) {
-        
         self._id = _id
-        
         self.selfUri = selfUri
-        
         self.weekDate = weekDate
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

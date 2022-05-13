@@ -26,23 +26,14 @@ public class UserPresence: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, source: String?, primary: Bool?, presenceDefinition: PresenceDefinition?, message: String?, modifiedDate: Date?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.source = source
-        
         self.primary = primary
-        
         self.presenceDefinition = presenceDefinition
-        
         self.message = message
-        
         self.modifiedDate = modifiedDate
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

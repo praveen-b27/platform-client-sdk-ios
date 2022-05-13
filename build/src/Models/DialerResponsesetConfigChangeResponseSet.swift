@@ -11,7 +11,7 @@ import Foundation
 
 public class DialerResponsesetConfigChangeResponseSet: Codable {
 
-    /** Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}} */
+    /** Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}} */
     public var responses: [String:DialerResponsesetConfigChangeReaction]?
     /** When beep detection is enabled, answering machine detection will wait for the beep before transferring the call */
     public var beepDetectionEnabled: Bool?
@@ -27,21 +27,13 @@ public class DialerResponsesetConfigChangeResponseSet: Codable {
     public var version: Int?
 
     public init(responses: [String:DialerResponsesetConfigChangeReaction]?, beepDetectionEnabled: Bool?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.responses = responses
-        
         self.beepDetectionEnabled = beepDetectionEnabled
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

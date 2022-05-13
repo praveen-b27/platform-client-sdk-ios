@@ -53,43 +53,24 @@ public class FacebookIntegration: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, appId: String?, pageId: String?, pageName: String?, pageProfileImageUrl: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.supportedContent = supportedContent
-        
         self.messagingSetting = messagingSetting
-        
         self.appId = appId
-        
         self.pageId = pageId
-        
         self.pageName = pageName
-        
         self.pageProfileImageUrl = pageProfileImageUrl
-        
         self.status = status
-        
         self.recipient = recipient
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.version = version
-        
         self.createStatus = createStatus
-        
         self.createError = createError
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -21,11 +21,8 @@ public class EvaluationDetailQueryClause: Codable {
     public var predicates: [EvaluationDetailQueryPredicate]?
 
     public init(type: ModelType?, predicates: [EvaluationDetailQueryPredicate]?) {
-        
         self.type = type
-        
         self.predicates = predicates
-        
     }
 
 

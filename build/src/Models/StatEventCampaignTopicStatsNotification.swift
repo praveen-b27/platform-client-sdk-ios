@@ -15,11 +15,8 @@ public class StatEventCampaignTopicStatsNotification: Codable {
     public var data: [StatEventCampaignTopicIntervalMetrics]?
 
     public init(group: [String:String]?, data: [StatEventCampaignTopicIntervalMetrics]?) {
-        
         self.group = group
-        
         self.data = data
-        
     }
 
 

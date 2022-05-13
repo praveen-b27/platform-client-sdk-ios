@@ -29,11 +29,8 @@ public class DevelopmentActivityAggregateQueryResponseMetric: Codable {
     public var stats: DevelopmentActivityAggregateQueryResponseStatistics?
 
     public init(metric: Metric?, stats: DevelopmentActivityAggregateQueryResponseStatistics?) {
-        
         self.metric = metric
-        
         self.stats = stats
-        
     }
 
 

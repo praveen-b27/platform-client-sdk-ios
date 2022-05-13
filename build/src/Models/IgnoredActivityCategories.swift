@@ -26,9 +26,7 @@ public class IgnoredActivityCategories: Codable {
     public var values: [Values]?
 
     public init(values: [Values]?) {
-        
         self.values = values
-        
     }
 
 

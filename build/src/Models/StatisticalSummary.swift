@@ -24,29 +24,17 @@ public class StatisticalSummary: Codable {
     public var target: Double?
 
     public init(max: Double?, min: Double?, count: Int64?, countNegative: Int64?, countPositive: Int64?, sum: Double?, current: Double?, ratio: Double?, numerator: Double?, denominator: Double?, target: Double?) {
-        
         self.max = max
-        
         self.min = min
-        
         self.count = count
-        
         self.countNegative = countNegative
-        
         self.countPositive = countPositive
-        
         self.sum = sum
-        
         self.current = current
-        
         self.ratio = ratio
-        
         self.numerator = numerator
-        
         self.denominator = denominator
-        
         self.target = target
-        
     }
 
 

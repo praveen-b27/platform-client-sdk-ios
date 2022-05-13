@@ -15,9 +15,7 @@ public class BulkCallbackDisconnectRequest: Codable {
     public var callbackDisconnectIdentifiers: [CallbackDisconnectIdentifier]?
 
     public init(callbackDisconnectIdentifiers: [CallbackDisconnectIdentifier]?) {
-        
         self.callbackDisconnectIdentifiers = callbackDisconnectIdentifiers
-        
     }
 
 

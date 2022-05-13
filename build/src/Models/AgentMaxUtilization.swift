@@ -20,11 +20,8 @@ public class AgentMaxUtilization: Codable {
     public var level: Level?
 
     public init(utilization: [String:MediaUtilization]?, level: Level?) {
-        
         self.utilization = utilization
-        
         self.level = level
-        
     }
 
 

@@ -17,11 +17,8 @@ public class BillingUsageResource: Codable {
     public var date: Date?
 
     public init(name: String?, date: Date?) {
-        
         self.name = name
-        
         self.date = date
-        
     }
 
 

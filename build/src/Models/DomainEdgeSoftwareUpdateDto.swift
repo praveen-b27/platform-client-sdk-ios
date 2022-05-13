@@ -38,27 +38,16 @@ public class DomainEdgeSoftwareUpdateDto: Codable {
     public var current: Bool?
 
     public init(version: DomainEdgeSoftwareVersionDto?, maxDownloadRate: Int?, downloadStartTime: Date?, executeStartTime: Date?, executeStopTime: Date?, executeOnIdle: Bool?, status: Status?, edgeUri: String?, callDrainingWaitTimeSeconds: Int64?, current: Bool?) {
-        
         self.version = version
-        
         self.maxDownloadRate = maxDownloadRate
-        
         self.downloadStartTime = downloadStartTime
-        
         self.executeStartTime = executeStartTime
-        
         self.executeStopTime = executeStopTime
-        
         self.executeOnIdle = executeOnIdle
-        
         self.status = status
-        
         self.edgeUri = edgeUri
-        
         self.callDrainingWaitTimeSeconds = callDrainingWaitTimeSeconds
-        
         self.current = current
-        
     }
 
 

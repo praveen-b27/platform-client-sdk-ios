@@ -15,11 +15,8 @@ public class GroupGreetingEventGreetingAudioFile: Codable {
     public var sizeBytes: Int?
 
     public init(durationMilliseconds: Int?, sizeBytes: Int?) {
-        
         self.durationMilliseconds = durationMilliseconds
-        
         self.sizeBytes = sizeBytes
-        
     }
 
 

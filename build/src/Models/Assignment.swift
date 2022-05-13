@@ -19,13 +19,9 @@ public class Assignment: Codable {
     public var assignmentErrors: [AssignmentError]?
 
     public init(assignedMembers: [UserReference]?, removedMembers: [UserReference]?, assignmentErrors: [AssignmentError]?) {
-        
         self.assignedMembers = assignedMembers
-        
         self.removedMembers = removedMembers
-        
         self.assignmentErrors = assignmentErrors
-        
     }
 
 

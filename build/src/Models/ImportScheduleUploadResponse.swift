@@ -21,15 +21,10 @@ public class ImportScheduleUploadResponse: Codable {
     public var uploadBodySchema: ImportScheduleUploadSchema?
 
     public init(uploadKey: String?, url: String?, headers: [String:String]?, uploadBodySchema: ImportScheduleUploadSchema?) {
-        
         self.uploadKey = uploadKey
-        
         self.url = url
-        
         self.headers = headers
-        
         self.uploadBodySchema = uploadBodySchema
-        
     }
 
 

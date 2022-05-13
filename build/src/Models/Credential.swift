@@ -21,17 +21,11 @@ public class Credential: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, type: CredentialType?, credentialFields: [String:String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.type = type
-        
         self.credentialFields = credentialFields
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

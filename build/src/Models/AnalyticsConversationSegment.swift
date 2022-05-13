@@ -102,57 +102,31 @@ public class AnalyticsConversationSegment: Codable {
     public var properties: [AnalyticsProperty]?
 
     public init(audioMuted: Bool?, conference: Bool?, destinationConversationId: String?, destinationSessionId: String?, disconnectType: DisconnectType?, errorCode: String?, groupId: String?, q850ResponseCodes: [Int64]?, queueId: String?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutingUserIds: [String]?, segmentEnd: Date?, segmentStart: Date?, segmentType: SegmentType?, sipResponseCodes: [Int64]?, sourceConversationId: String?, sourceSessionId: String?, subject: String?, videoMuted: Bool?, wrapUpCode: String?, wrapUpNote: String?, wrapUpTags: [String]?, scoredAgents: [AnalyticsScoredAgent]?, properties: [AnalyticsProperty]?) {
-        
         self.audioMuted = audioMuted
-        
         self.conference = conference
-        
         self.destinationConversationId = destinationConversationId
-        
         self.destinationSessionId = destinationSessionId
-        
         self.disconnectType = disconnectType
-        
         self.errorCode = errorCode
-        
         self.groupId = groupId
-        
         self.q850ResponseCodes = q850ResponseCodes
-        
         self.queueId = queueId
-        
         self.requestedLanguageId = requestedLanguageId
-        
         self.requestedRoutingSkillIds = requestedRoutingSkillIds
-        
         self.requestedRoutingUserIds = requestedRoutingUserIds
-        
         self.segmentEnd = segmentEnd
-        
         self.segmentStart = segmentStart
-        
         self.segmentType = segmentType
-        
         self.sipResponseCodes = sipResponseCodes
-        
         self.sourceConversationId = sourceConversationId
-        
         self.sourceSessionId = sourceSessionId
-        
         self.subject = subject
-        
         self.videoMuted = videoMuted
-        
         self.wrapUpCode = wrapUpCode
-        
         self.wrapUpNote = wrapUpNote
-        
         self.wrapUpTags = wrapUpTags
-        
         self.scoredAgents = scoredAgents
-        
         self.properties = properties
-        
     }
 
 

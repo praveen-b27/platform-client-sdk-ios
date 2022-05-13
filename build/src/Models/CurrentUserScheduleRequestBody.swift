@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** POST request body for fetching the current user&#39;s schedule over a given range */
+/** POST request body for fetching the current user's schedule over a given range */
 
 public class CurrentUserScheduleRequestBody: Codable {
 
@@ -16,17 +16,13 @@ public class CurrentUserScheduleRequestBody: Codable {
     public var startDate: Date?
     /** End of the range of schedules to fetch, in ISO-8601 format */
     public var endDate: Date?
-    /** Whether to load the full week&#39;s schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false */
+    /** Whether to load the full week's schedule (for the current user) of any week overlapping the start/end date query parameters, defaults to false */
     public var loadFullWeeks: Bool?
 
     public init(startDate: Date?, endDate: Date?, loadFullWeeks: Bool?) {
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.loadFullWeeks = loadFullWeeks
-        
     }
 
 

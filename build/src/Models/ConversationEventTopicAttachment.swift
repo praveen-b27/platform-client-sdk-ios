@@ -23,17 +23,11 @@ public class ConversationEventTopicAttachment: Codable {
     public var contentLength: Int?
 
     public init(attachmentId: String?, name: String?, contentUri: String?, contentType: String?, contentLength: Int?) {
-        
         self.attachmentId = attachmentId
-        
         self.name = name
-        
         self.contentUri = contentUri
-        
         self.contentType = contentType
-        
         self.contentLength = contentLength
-        
     }
 
 

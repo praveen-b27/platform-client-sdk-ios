@@ -26,17 +26,11 @@ public class CreateOutboundMessagingConversationRequest: Codable {
     public var externalContactId: String?
 
     public init(queueId: String?, toAddress: String?, toAddressMessengerType: ToAddressMessengerType?, useExistingConversation: Bool?, externalContactId: String?) {
-        
         self.queueId = queueId
-        
         self.toAddress = toAddress
-        
         self.toAddressMessengerType = toAddressMessengerType
-        
         self.useExistingConversation = useExistingConversation
-        
         self.externalContactId = externalContactId
-        
     }
 
 

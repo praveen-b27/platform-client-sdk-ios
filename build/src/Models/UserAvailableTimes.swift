@@ -17,11 +17,8 @@ public class UserAvailableTimes: Codable {
     public var availableTimes: [AvailableTime]?
 
     public init(user: UserReference?, availableTimes: [AvailableTime]?) {
-        
         self.user = user
-        
         self.availableTimes = availableTimes
-        
     }
 
 

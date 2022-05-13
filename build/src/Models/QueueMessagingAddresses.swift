@@ -14,9 +14,7 @@ public class QueueMessagingAddresses: Codable {
     public var smsAddress: DomainEntityRef?
 
     public init(smsAddress: DomainEntityRef?) {
-        
         self.smsAddress = smsAddress
-        
     }
 
 

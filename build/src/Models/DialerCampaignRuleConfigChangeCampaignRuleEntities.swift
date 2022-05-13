@@ -17,11 +17,8 @@ public class DialerCampaignRuleConfigChangeCampaignRuleEntities: Codable {
     public var sequences: [DialerCampaignRuleConfigChangeUriReference]?
 
     public init(campaigns: [DialerCampaignRuleConfigChangeUriReference]?, sequences: [DialerCampaignRuleConfigChangeUriReference]?) {
-        
         self.campaigns = campaigns
-        
         self.sequences = sequences
-        
     }
 
 

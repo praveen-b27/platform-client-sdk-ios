@@ -36,27 +36,16 @@ public class DialerOutboundSettingsConfigChangeOutboundSettings: Codable {
     public var version: Int?
 
     public init(maxCallsPerAgent: Int?, maxLineUtilization: Double?, abandonSeconds: Double?, complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?, automaticTimeZoneMapping: DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
-        
         self.maxCallsPerAgent = maxCallsPerAgent
-        
         self.maxLineUtilization = maxLineUtilization
-        
         self.abandonSeconds = abandonSeconds
-        
         self.complianceAbandonRateDenominator = complianceAbandonRateDenominator
-        
         self.automaticTimeZoneMapping = automaticTimeZoneMapping
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.version = version
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

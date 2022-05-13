@@ -23,11 +23,8 @@ public class WfmIntradayDataUpdateTopicIntradayMetric: Codable {
     public var version: String?
 
     public init(category: Category?, version: String?) {
-        
         self.category = category
-        
         self.version = version
-        
     }
 
 

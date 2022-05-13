@@ -40,19 +40,12 @@ public class SearchAggregation: Codable {
     public var order: [Order]?
 
     public init(field: String?, name: String?, type: ModelType?, value: String?, size: Int?, order: [Order]?) {
-        
         self.field = field
-        
         self.name = name
-        
         self.type = type
-        
         self.value = value
-        
         self.size = size
-        
         self.order = order
-        
     }
 
 

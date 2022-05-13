@@ -41,11 +41,8 @@ public class WorkPlanValidationMessageArgument: Codable {
     public var value: String?
 
     public init(type: ModelType?, value: String?) {
-        
         self.type = type
-        
         self.value = value
-        
     }
 
 

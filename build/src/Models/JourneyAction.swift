@@ -17,11 +17,8 @@ public class JourneyAction: Codable {
     public var actionMap: JourneyActionMap?
 
     public init(_id: String?, actionMap: JourneyActionMap?) {
-        
         self._id = _id
-        
         self.actionMap = actionMap
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

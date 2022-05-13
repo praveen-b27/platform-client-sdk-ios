@@ -21,11 +21,8 @@ public class QueryRequestFilter: Codable {
     public var clauses: [QueryRequestClause]?
 
     public init(type: ModelType?, clauses: [QueryRequestClause]?) {
-        
         self.type = type
-        
         self.clauses = clauses
-        
     }
 
 

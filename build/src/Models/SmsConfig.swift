@@ -21,15 +21,10 @@ public class SmsConfig: Codable {
     public var contentTemplate: DomainEntityRef?
 
     public init(messageColumn: String?, phoneColumn: String?, senderSmsPhoneNumber: SmsPhoneNumberRef?, contentTemplate: DomainEntityRef?) {
-        
         self.messageColumn = messageColumn
-        
         self.phoneColumn = phoneColumn
-        
         self.senderSmsPhoneNumber = senderSmsPhoneNumber
-        
         self.contentTemplate = contentTemplate
-        
     }
 
 

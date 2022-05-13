@@ -15,9 +15,7 @@ public class UpdateNotificationsRequest: Codable {
     public var entities: [WfmUserNotification]?
 
     public init(entities: [WfmUserNotification]?) {
-        
         self.entities = entities
-        
     }
 
 

@@ -37,25 +37,15 @@ public class UpdateCoachingAppointmentRequest: Codable {
     public var externalLinks: [String]?
 
     public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, conversationIds: [String]?, documentIds: [String]?, status: Status?, wfmSchedule: WfmScheduleReference?, externalLinks: [String]?) {
-        
         self.name = name
-        
         self._description = _description
-        
         self.dateStart = dateStart
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self.conversationIds = conversationIds
-        
         self.documentIds = documentIds
-        
         self.status = status
-        
         self.wfmSchedule = wfmSchedule
-        
         self.externalLinks = externalLinks
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

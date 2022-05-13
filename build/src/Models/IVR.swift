@@ -23,7 +23,7 @@ public class IVR: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -47,7 +47,7 @@ public class IVR: Codable {
     public var openHoursFlow: DomainEntityRef?
     /** The Architect flow to execute during the hours an organization is closed. */
     public var closedHoursFlow: DomainEntityRef?
-    /** The Architect flow to execute during an organization&#39;s holiday hours. */
+    /** The Architect flow to execute during an organization's holiday hours. */
     public var holidayHoursFlow: DomainEntityRef?
     /** The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well. */
     public var scheduleGroup: DomainEntityRef?
@@ -55,43 +55,24 @@ public class IVR: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, dnis: [String]?, openHoursFlow: DomainEntityRef?, closedHoursFlow: DomainEntityRef?, holidayHoursFlow: DomainEntityRef?, scheduleGroup: DomainEntityRef?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.dnis = dnis
-        
         self.openHoursFlow = openHoursFlow
-        
         self.closedHoursFlow = closedHoursFlow
-        
         self.holidayHoursFlow = holidayHoursFlow
-        
         self.scheduleGroup = scheduleGroup
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

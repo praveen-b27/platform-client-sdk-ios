@@ -23,17 +23,11 @@ public class QueueConversationVideoEventTopicDialerPreview: Codable {
     public var phoneNumberColumns: [QueueConversationVideoEventTopicPhoneNumberColumn]?
 
     public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [QueueConversationVideoEventTopicPhoneNumberColumn]?) {
-        
         self._id = _id
-        
         self.contactId = contactId
-        
         self.contactListId = contactListId
-        
         self.campaignId = campaignId
-        
         self.phoneNumberColumns = phoneNumberColumns
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

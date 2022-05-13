@@ -17,11 +17,8 @@ public class AssignUsers: Codable {
     public var membersToRemove: [String]?
 
     public init(membersToAssign: [String]?, membersToRemove: [String]?) {
-        
         self.membersToAssign = membersToAssign
-        
         self.membersToRemove = membersToRemove
-        
     }
 
 

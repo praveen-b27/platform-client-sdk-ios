@@ -29,11 +29,8 @@ public class SchedulingNoForecastOptionsRequest: Codable {
     public var shiftStart: ShiftStart?
 
     public init(shiftLength: ShiftLength?, shiftStart: ShiftStart?) {
-        
         self.shiftLength = shiftLength
-        
         self.shiftStart = shiftStart
-        
     }
 
 

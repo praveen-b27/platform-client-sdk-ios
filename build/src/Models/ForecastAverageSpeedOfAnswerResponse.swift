@@ -15,9 +15,7 @@ public class ForecastAverageSpeedOfAnswerResponse: Codable {
     public var seconds: Int?
 
     public init(seconds: Int?) {
-        
         self.seconds = seconds
-        
     }
 
 

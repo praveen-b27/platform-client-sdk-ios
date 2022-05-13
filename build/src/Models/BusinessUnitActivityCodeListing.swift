@@ -15,9 +15,7 @@ public class BusinessUnitActivityCodeListing: Codable {
     public var entities: [BusinessUnitActivityCode]?
 
     public init(entities: [BusinessUnitActivityCode]?) {
-        
         self.entities = entities
-        
     }
 
 

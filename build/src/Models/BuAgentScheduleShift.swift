@@ -25,19 +25,12 @@ public class BuAgentScheduleShift: Codable {
     public var schedule: BuScheduleReference?
 
     public init(_id: String?, startDate: Date?, lengthMinutes: Int?, activities: [BuAgentScheduleActivity]?, manuallyEdited: Bool?, schedule: BuScheduleReference?) {
-        
         self._id = _id
-        
         self.startDate = startDate
-        
         self.lengthMinutes = lengthMinutes
-        
         self.activities = activities
-        
         self.manuallyEdited = manuallyEdited
-        
         self.schedule = schedule
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

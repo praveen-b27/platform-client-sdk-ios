@@ -15,9 +15,7 @@ public class PatchBuReschedulingOptionsRequest: Codable {
     public var managementUnits: [PatchBuReschedulingOptionsManagementUnitRequest]?
 
     public init(managementUnits: [PatchBuReschedulingOptionsManagementUnitRequest]?) {
-        
         self.managementUnits = managementUnits
-        
     }
 
 

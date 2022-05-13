@@ -11,7 +11,7 @@ import Foundation
 
 public class FaxStatus: Codable {
 
-    /** The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;. */
+    /** The fax direction, either \"send\" or \"receive\". */
     public var direction: String?
     /** Total number of expected pages, if known. */
     public var expectedPages: Int64?
@@ -29,23 +29,14 @@ public class FaxStatus: Codable {
     public var lineErrors: Int64?
 
     public init(direction: String?, expectedPages: Int64?, activePage: Int64?, linesTransmitted: Int64?, bytesTransmitted: Int64?, baudRate: Int64?, pageErrors: Int64?, lineErrors: Int64?) {
-        
         self.direction = direction
-        
         self.expectedPages = expectedPages
-        
         self.activePage = activePage
-        
         self.linesTransmitted = linesTransmitted
-        
         self.bytesTransmitted = bytesTransmitted
-        
         self.baudRate = baudRate
-        
         self.pageErrors = pageErrors
-        
         self.lineErrors = lineErrors
-        
     }
 
 

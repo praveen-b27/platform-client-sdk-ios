@@ -17,11 +17,8 @@ public class AmazonLexRequest: Codable {
     public var sessionAttributes: [String:String]?
 
     public init(requestAttributes: [String:String]?, sessionAttributes: [String:String]?) {
-        
         self.requestAttributes = requestAttributes
-        
         self.sessionAttributes = sessionAttributes
-        
     }
 
 

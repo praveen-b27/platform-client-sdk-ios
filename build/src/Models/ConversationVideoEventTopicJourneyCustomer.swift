@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** A subset of the Journey System&#39;s customer data at a point-in-time (for external linkage and internal usage/context) */
+/** A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context) */
 
 public class ConversationVideoEventTopicJourneyCustomer: Codable {
 
@@ -18,11 +18,8 @@ public class ConversationVideoEventTopicJourneyCustomer: Codable {
     public var idType: String?
 
     public init(_id: String?, idType: String?) {
-        
         self._id = _id
-        
         self.idType = idType
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

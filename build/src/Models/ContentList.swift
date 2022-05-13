@@ -32,21 +32,13 @@ public class ContentList: Codable {
     public var components: [ListItemComponent]?
 
     public init(_id: String?, listType: ListType?, title: String?, _description: String?, submitLabel: String?, actions: ContentActions?, components: [ListItemComponent]?) {
-        
         self._id = _id
-        
         self.listType = listType
-        
         self.title = title
-        
         self._description = _description
-        
         self.submitLabel = submitLabel
-        
         self.actions = actions
-        
         self.components = components
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

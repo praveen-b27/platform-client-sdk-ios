@@ -11,10 +11,7 @@ import Foundation
 
 open class StationsAPI {
     
-    
-    
     /**
-     
      Unassigns the user assigned to this station
      
      - parameter stationId: (path) Station ID 
@@ -32,11 +29,8 @@ open class StationsAPI {
     }
 
     /**
-     
      Unassigns the user assigned to this station
-     
      - DELETE /api/v2/stations/{stationId}/associateduser
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class StationsAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteStationAssociateduserWithRequestBuilder(stationId: String) -> RequestBuilder<Void> {
+    open class func deleteStationAssociateduserWithRequestBuilder(stationId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/stations/{stationId}/associateduser"
         let stationIdPreEscape = "\(stationId)"
         let stationIdPostEscape = stationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{stationId}", with: stationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -66,10 +55,7 @@ open class StationsAPI {
     }
 
     
-    
-    
     /**
-     
      Get station.
      
      - parameter stationId: (path) Station ID 
@@ -94,52 +80,48 @@ open class StationsAPI {
     }
 
     /**
-     
      Get station.
-     
      - GET /api/v2/stations/{stationId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "webRtcCallAppearances" : 123,
-  "webRtcMediaDscp" : 123,
+  "webRtcCallAppearances" : 6,
+  "webRtcMediaDscp" : 0,
   "webRtcForceTurn" : true,
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "webRtcUserId" : "aeiou",
-  "type" : "aeiou",
-  "userId" : "aeiou",
-  "secondaryEdge" : "",
-  "webRtcPersistentEnabled" : true,
-  "name" : "aeiou",
-  "lineAppearanceId" : "aeiou",
-  "id" : "aeiou",
-  "primaryEdge" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "webRtcUserId" : "webRtcUserId",
+  "type" : "type",
+  "userId" : "userId",
+  "secondaryEdge" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
   },
-  "status" : "aeiou"
-}}]
+  "webRtcPersistentEnabled" : true,
+  "name" : "name",
+  "lineAppearanceId" : "lineAppearanceId",
+  "id" : "id",
+  "primaryEdge" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  },
+  "status" : "AVAILABLE"
+}, statusCode=200}]
      
      - parameter stationId: (path) Station ID 
 
      - returns: RequestBuilder<Station> 
      */
-    open class func getStationWithRequestBuilder(stationId: String) -> RequestBuilder<Station> {
+    open class func getStationWithRequestBuilder(stationId: String) -> RequestBuilder<Station> {        
         var path = "/api/v2/stations/{stationId}"
         let stationIdPreEscape = "\(stationId)"
         let stationIdPostEscape = stationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{stationId}", with: stationIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -156,22 +138,12 @@ open class StationsAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Get the list of available stations.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter name: (query) Name (optional)
      - parameter userSelectable: (query) True for stations that the user can select otherwise false (optional)
      - parameter webRtcUserId: (query) Filter for the webRtc station of the webRtcUserId (optional)
@@ -198,50 +170,75 @@ open class StationsAPI {
     }
 
     /**
-     
      Get the list of available stations.
-     
      - GET /api/v2/stations
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "webRtcCallAppearances" : 123,
-    "webRtcMediaDscp" : 123,
+    "webRtcCallAppearances" : 6,
+    "webRtcMediaDscp" : 0,
     "webRtcForceTurn" : true,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "webRtcUserId" : "aeiou",
-    "type" : "aeiou",
-    "userId" : "aeiou",
-    "secondaryEdge" : "",
-    "webRtcPersistentEnabled" : true,
-    "name" : "aeiou",
-    "lineAppearanceId" : "aeiou",
-    "id" : "aeiou",
-    "primaryEdge" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "webRtcUserId" : "webRtcUserId",
+    "type" : "type",
+    "userId" : "userId",
+    "secondaryEdge" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
     },
-    "status" : "aeiou"
+    "webRtcPersistentEnabled" : true,
+    "name" : "name",
+    "lineAppearanceId" : "lineAppearanceId",
+    "id" : "id",
+    "primaryEdge" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "status" : "AVAILABLE"
+  }, {
+    "webRtcCallAppearances" : 6,
+    "webRtcMediaDscp" : 0,
+    "webRtcForceTurn" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "webRtcUserId" : "webRtcUserId",
+    "type" : "type",
+    "userId" : "userId",
+    "secondaryEdge" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "webRtcPersistentEnabled" : true,
+    "name" : "name",
+    "lineAppearanceId" : "lineAppearanceId",
+    "id" : "id",
+    "primaryEdge" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    },
+    "status" : "AVAILABLE"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter name: (query) Name (optional)
      - parameter userSelectable: (query) True for stations that the user can select otherwise false (optional)
      - parameter webRtcUserId: (query) Filter for the webRtc station of the webRtcUserId (optional)
@@ -250,35 +247,21 @@ open class StationsAPI {
 
      - returns: RequestBuilder<StationEntityListing> 
      */
-    open class func getStationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, userSelectable: String? = nil, webRtcUserId: String? = nil, _id: String? = nil, lineAppearanceId: String? = nil) -> RequestBuilder<StationEntityListing> {
+    open class func getStationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, userSelectable: String? = nil, webRtcUserId: String? = nil, _id: String? = nil, lineAppearanceId: String? = nil) -> RequestBuilder<StationEntityListing> {        
         let path = "/api/v2/stations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "name": name, 
-            
             "userSelectable": userSelectable, 
-            
             "webRtcUserId": webRtcUserId, 
-            
             "id": _id, 
-            
             "lineAppearanceId": lineAppearanceId
-            
         ])
 
         let requestBuilder: RequestBuilder<StationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -286,9 +269,7 @@ open class StationsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
     /**
-     
      Get an organization's StationSettings
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -312,32 +293,21 @@ open class StationsAPI {
     }
 
     /**
-     
      Get an organization's StationSettings
-     
      - GET /api/v2/stations/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "freeSeatingConfiguration" : {
-    "freeSeatingState" : "aeiou",
-    "ttlMinutes" : 123
-  }
-}}]
+  "freeSeatingConfiguration" : "{}"
+}, statusCode=200}]
 
      - returns: RequestBuilder<StationSettings> 
      */
-    open class func getStationsSettingsWithRequestBuilder() -> RequestBuilder<StationSettings> {
+    open class func getStationsSettingsWithRequestBuilder() -> RequestBuilder<StationSettings> {        
         let path = "/api/v2/stations/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -347,10 +317,7 @@ open class StationsAPI {
     }
 
     
-    
-    
     /**
-     
      Patch an organization's StationSettings
      
      - parameter body: (body) Station settings 
@@ -375,32 +342,24 @@ open class StationsAPI {
     }
 
     /**
-     
      Patch an organization's StationSettings
-     
      - PATCH /api/v2/stations/settings
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "freeSeatingConfiguration" : {
-    "freeSeatingState" : "aeiou",
-    "ttlMinutes" : 123
-  }
-}}]
+  "freeSeatingConfiguration" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body) Station settings 
 
      - returns: RequestBuilder<StationSettings> 
      */
-    open class func patchStationsSettingsWithRequestBuilder(body: StationSettings) -> RequestBuilder<StationSettings> {
+    open class func patchStationsSettingsWithRequestBuilder(body: StationSettings) -> RequestBuilder<StationSettings> {        
         let path = "/api/v2/stations/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<StationSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

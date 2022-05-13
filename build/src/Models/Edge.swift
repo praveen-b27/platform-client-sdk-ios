@@ -54,7 +54,7 @@ public class Edge: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The resource&#39;s description. */
+    /** The resource's description. */
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
@@ -101,7 +101,7 @@ public class Edge: Codable {
     public var physicalEdge: Bool?
     public var managed: Bool?
     public var edgeDeploymentType: EdgeDeploymentType?
-    /** The current state of the Edge&#39;s call draining process before it can be safely rebooted or updated. */
+    /** The current state of the Edge's call draining process before it can be safely rebooted or updated. */
     public var callDrainingState: CallDrainingState?
     /** The remaining number of conversations the Edge has to drain before it can be safely rebooted or updated. When an Edge is not draining conversations, this will be NULL or 0. */
     public var conversationCount: Int?
@@ -115,91 +115,48 @@ public class Edge: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, interfaces: [EdgeInterface]?, make: String?, model: String?, apiVersion: String?, softwareVersion: String?, softwareVersionTimestamp: String?, softwareVersionPlatform: String?, softwareVersionConfiguration: String?, fullSoftwareVersion: String?, pairingId: String?, fingerprint: String?, fingerprintHint: String?, currentVersion: String?, stagedVersion: String?, patch: String?, statusCode: StatusCode?, edgeGroup: EdgeGroup?, site: Site?, softwareStatus: DomainEdgeSoftwareUpdateDto?, onlineStatus: OnlineStatus?, serialNumber: String?, physicalEdge: Bool?, managed: Bool?, edgeDeploymentType: EdgeDeploymentType?, callDrainingState: CallDrainingState?, conversationCount: Int?, proxy: String?, offlineConfigCalled: Bool?, osName: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.division = division
-        
         self._description = _description
-        
         self.version = version
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.modifiedBy = modifiedBy
-        
         self.createdBy = createdBy
-        
         self.state = state
-        
         self.modifiedByApp = modifiedByApp
-        
         self.createdByApp = createdByApp
-        
         self.interfaces = interfaces
-        
         self.make = make
-        
         self.model = model
-        
         self.apiVersion = apiVersion
-        
         self.softwareVersion = softwareVersion
-        
         self.softwareVersionTimestamp = softwareVersionTimestamp
-        
         self.softwareVersionPlatform = softwareVersionPlatform
-        
         self.softwareVersionConfiguration = softwareVersionConfiguration
-        
         self.fullSoftwareVersion = fullSoftwareVersion
-        
         self.pairingId = pairingId
-        
         self.fingerprint = fingerprint
-        
         self.fingerprintHint = fingerprintHint
-        
         self.currentVersion = currentVersion
-        
         self.stagedVersion = stagedVersion
-        
         self.patch = patch
-        
         self.statusCode = statusCode
-        
         self.edgeGroup = edgeGroup
-        
         self.site = site
-        
         self.softwareStatus = softwareStatus
-        
         self.onlineStatus = onlineStatus
-        
         self.serialNumber = serialNumber
-        
         self.physicalEdge = physicalEdge
-        
         self.managed = managed
-        
         self.edgeDeploymentType = edgeDeploymentType
-        
         self.callDrainingState = callDrainingState
-        
         self.conversationCount = conversationCount
-        
         self.proxy = proxy
-        
         self.offlineConfigCalled = offlineConfigCalled
-        
         self.osName = osName
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

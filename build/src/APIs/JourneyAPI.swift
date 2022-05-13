@@ -11,10 +11,7 @@ import Foundation
 
 open class JourneyAPI {
     
-    
-    
     /**
-     
      Delete single action map.
      
      - parameter actionMapId: (path) ID of the action map. 
@@ -32,11 +29,8 @@ open class JourneyAPI {
     }
 
     /**
-     
      Delete single action map.
-     
      - DELETE /api/v2/journey/actionmaps/{actionMapId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteJourneyActionmapWithRequestBuilder(actionMapId: String) -> RequestBuilder<Void> {
+    open class func deleteJourneyActionmapWithRequestBuilder(actionMapId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/journey/actionmaps/{actionMapId}"
         let actionMapIdPreEscape = "\(actionMapId)"
         let actionMapIdPostEscape = actionMapIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionMapId}", with: actionMapIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,11 +56,7 @@ open class JourneyAPI {
 
     
     
-    
-    
-    
     /**
-     
      Delete a single action template.
      
      - parameter actionTemplateId: (path) ID of the action template. 
@@ -90,11 +75,8 @@ open class JourneyAPI {
     }
 
     /**
-     
      Delete a single action template.
-     
      - DELETE /api/v2/journey/actiontemplates/{actionTemplateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -104,24 +86,17 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteJourneyActiontemplateWithRequestBuilder(actionTemplateId: String, hardDelete: Bool? = nil) -> RequestBuilder<Void> {
+    open class func deleteJourneyActiontemplateWithRequestBuilder(actionTemplateId: String, hardDelete: Bool? = nil) -> RequestBuilder<Void> {        
         var path = "/api/v2/journey/actiontemplates/{actionTemplateId}"
         let actionTemplateIdPreEscape = "\(actionTemplateId)"
         let actionTemplateIdPostEscape = actionTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionTemplateId}", with: actionTemplateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "hardDelete": hardDelete
-            
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -130,10 +105,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Delete an outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
@@ -151,11 +123,8 @@ open class JourneyAPI {
     }
 
     /**
-     
      Delete an outcome.
-     
      - DELETE /api/v2/journey/outcomes/{outcomeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -164,18 +133,13 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteJourneyOutcomeWithRequestBuilder(outcomeId: String) -> RequestBuilder<Void> {
+    open class func deleteJourneyOutcomeWithRequestBuilder(outcomeId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/journey/outcomes/{outcomeId}"
         let outcomeIdPreEscape = "\(outcomeId)"
         let outcomeIdPostEscape = outcomeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outcomeId}", with: outcomeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -185,10 +149,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Delete a segment.
      
      - parameter segmentId: (path) ID of the segment. 
@@ -206,11 +167,8 @@ open class JourneyAPI {
     }
 
     /**
-     
      Delete a segment.
-     
      - DELETE /api/v2/journey/segments/{segmentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -219,18 +177,13 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteJourneySegmentWithRequestBuilder(segmentId: String) -> RequestBuilder<Void> {
+    open class func deleteJourneySegmentWithRequestBuilder(segmentId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/journey/segments/{segmentId}"
         let segmentIdPreEscape = "\(segmentId)"
         let segmentIdPostEscape = segmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{segmentId}", with: segmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -240,10 +193,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve a single action map.
      
      - parameter actionMapId: (path) ID of the action map. 
@@ -268,105 +218,71 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve a single action map.
-     
      - GET /api/v2/journey/actionmaps/{actionMapId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "ignoreFrequencyCap" : true,
-  "endDate" : "2000-01-23T04:56:07.000+0000",
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "weight" : 123,
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "weight" : 5,
   "isActive" : true,
-  "version" : 123,
-  "triggerWithSegments" : [ "aeiou" ],
+  "version" : 0,
+  "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
   "triggerWithOutcomeProbabilityConditions" : [ {
-    "probability" : 1.3579000000000001069366817318950779736042022705078125,
-    "outcomeId" : "aeiou",
-    "maximumProbability" : 1.3579000000000001069366817318950779736042022705078125
+    "probability" : 1.4658129,
+    "outcomeId" : "outcomeId",
+    "maximumProbability" : 6.0274563
+  }, {
+    "probability" : 1.4658129,
+    "outcomeId" : "outcomeId",
+    "maximumProbability" : 6.0274563
   } ],
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "triggerWithEventConditions" : [ {
-    "streamType" : "aeiou",
-    "values" : [ "aeiou" ],
-    "sessionType" : "aeiou",
-    "eventName" : "aeiou",
-    "key" : "aeiou",
-    "operator" : "aeiou"
+    "streamType" : "Web",
+    "values" : [ "values", "values" ],
+    "sessionType" : "sessionType",
+    "eventName" : "eventName",
+    "key" : "key",
+    "operator" : "containsAll"
+  }, {
+    "streamType" : "Web",
+    "values" : [ "values", "values" ],
+    "sessionType" : "sessionType",
+    "eventName" : "eventName",
+    "key" : "key",
+    "operator" : "containsAll"
   } ],
   "pageUrlConditions" : [ {
-    "values" : [ "aeiou" ],
-    "operator" : "aeiou"
+    "values" : [ "values", "values" ],
+    "operator" : "containsAll"
+  }, {
+    "values" : [ "values", "values" ],
+    "operator" : "containsAll"
   } ],
-  "actionMapScheduleGroups" : {
-    "actionMapScheduleGroup" : {
-      "id" : "aeiou"
-    },
-    "emergencyActionMapScheduleGroup" : ""
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "action" : {
-    "openActionFields" : {
-      "openAction" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "configurationFields" : {
-        "key" : "{}"
-      }
-    },
-    "actionTemplate" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "mediaType" : "aeiou",
-    "webMessagingOfferFields" : {
-      "architectFlow" : "",
-      "offerText" : "aeiou"
-    },
-    "architectFlowFields" : {
-      "architectFlow" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "flowRequestMappings" : [ {
-        "attributeType" : "aeiou",
-        "mappingType" : "aeiou",
-        "name" : "aeiou",
-        "value" : "aeiou"
-      } ]
-    }
-  },
-  "id" : "aeiou",
-  "activation" : {
-    "delayInSeconds" : 123,
-    "type" : "aeiou"
-  },
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "actionMapScheduleGroups" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "action" : "{}",
+  "id" : "id",
+  "activation" : "{}",
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter actionMapId: (path) ID of the action map. 
 
      - returns: RequestBuilder<ActionMap> 
      */
-    open class func getJourneyActionmapWithRequestBuilder(actionMapId: String) -> RequestBuilder<ActionMap> {
+    open class func getJourneyActionmapWithRequestBuilder(actionMapId: String) -> RequestBuilder<ActionMap> {        
         var path = "/api/v2/journey/actionmaps/{actionMapId}"
         let actionMapIdPreEscape = "\(actionMapId)"
         let actionMapIdPostEscape = actionMapIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionMapId}", with: actionMapIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -383,23 +299,13 @@ open class JourneyAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Retrieve all action maps.
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
-     - parameter filterField: (query) Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
+     - parameter filterField: (query) Field to filter by (e.g. filterField&#x3D;weight or filterField&#x3D;action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. (optional)
      - parameter filterValue: (query) Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)
      - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)
      - parameter queryFields: (query) Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
@@ -425,104 +331,122 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve all action maps.
-     
      - GET /api/v2/journey/actionmaps
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "ignoreFrequencyCap" : true,
-    "endDate" : "2000-01-23T04:56:07.000+0000",
-    "displayName" : "aeiou",
-    "selfUri" : "aeiou",
-    "weight" : 123,
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "displayName" : "displayName",
+    "selfUri" : "https://openapi-generator.tech",
+    "weight" : 5,
     "isActive" : true,
-    "version" : 123,
-    "triggerWithSegments" : [ "aeiou" ],
+    "version" : 0,
+    "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
     "triggerWithOutcomeProbabilityConditions" : [ {
-      "probability" : 1.3579000000000001069366817318950779736042022705078125,
-      "outcomeId" : "aeiou",
-      "maximumProbability" : 1.3579000000000001069366817318950779736042022705078125
+      "probability" : 1.4658129,
+      "outcomeId" : "outcomeId",
+      "maximumProbability" : 6.0274563
+    }, {
+      "probability" : 1.4658129,
+      "outcomeId" : "outcomeId",
+      "maximumProbability" : 6.0274563
     } ],
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "triggerWithEventConditions" : [ {
-      "streamType" : "aeiou",
-      "values" : [ "aeiou" ],
-      "sessionType" : "aeiou",
-      "eventName" : "aeiou",
-      "key" : "aeiou",
-      "operator" : "aeiou"
+      "streamType" : "Web",
+      "values" : [ "values", "values" ],
+      "sessionType" : "sessionType",
+      "eventName" : "eventName",
+      "key" : "key",
+      "operator" : "containsAll"
+    }, {
+      "streamType" : "Web",
+      "values" : [ "values", "values" ],
+      "sessionType" : "sessionType",
+      "eventName" : "eventName",
+      "key" : "key",
+      "operator" : "containsAll"
     } ],
     "pageUrlConditions" : [ {
-      "values" : [ "aeiou" ],
-      "operator" : "aeiou"
+      "values" : [ "values", "values" ],
+      "operator" : "containsAll"
+    }, {
+      "values" : [ "values", "values" ],
+      "operator" : "containsAll"
     } ],
-    "actionMapScheduleGroups" : {
-      "actionMapScheduleGroup" : {
-        "id" : "aeiou"
-      },
-      "emergencyActionMapScheduleGroup" : ""
-    },
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "action" : {
-      "openActionFields" : {
-        "openAction" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
-        "configurationFields" : {
-          "key" : "{}"
-        }
-      },
-      "actionTemplate" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "mediaType" : "aeiou",
-      "webMessagingOfferFields" : {
-        "architectFlow" : "",
-        "offerText" : "aeiou"
-      },
-      "architectFlowFields" : {
-        "architectFlow" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "flowRequestMappings" : [ {
-          "attributeType" : "aeiou",
-          "mappingType" : "aeiou",
-          "name" : "aeiou",
-          "value" : "aeiou"
-        } ]
-      }
-    },
-    "id" : "aeiou",
-    "activation" : {
-      "delayInSeconds" : 123,
-      "type" : "aeiou"
-    },
-    "startDate" : "2000-01-23T04:56:07.000+0000"
+    "actionMapScheduleGroups" : "{}",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "action" : "{}",
+    "id" : "id",
+    "activation" : "{}",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "ignoreFrequencyCap" : true,
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "displayName" : "displayName",
+    "selfUri" : "https://openapi-generator.tech",
+    "weight" : 5,
+    "isActive" : true,
+    "version" : 0,
+    "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
+    "triggerWithOutcomeProbabilityConditions" : [ {
+      "probability" : 1.4658129,
+      "outcomeId" : "outcomeId",
+      "maximumProbability" : 6.0274563
+    }, {
+      "probability" : 1.4658129,
+      "outcomeId" : "outcomeId",
+      "maximumProbability" : 6.0274563
+    } ],
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "triggerWithEventConditions" : [ {
+      "streamType" : "Web",
+      "values" : [ "values", "values" ],
+      "sessionType" : "sessionType",
+      "eventName" : "eventName",
+      "key" : "key",
+      "operator" : "containsAll"
+    }, {
+      "streamType" : "Web",
+      "values" : [ "values", "values" ],
+      "sessionType" : "sessionType",
+      "eventName" : "eventName",
+      "key" : "key",
+      "operator" : "containsAll"
+    } ],
+    "pageUrlConditions" : [ {
+      "values" : [ "values", "values" ],
+      "operator" : "containsAll"
+    }, {
+      "values" : [ "values", "values" ],
+      "operator" : "containsAll"
+    } ],
+    "actionMapScheduleGroups" : "{}",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "action" : "{}",
+    "id" : "id",
+    "activation" : "{}",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
-     - parameter filterField: (query) Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
+     - parameter filterField: (query) Field to filter by (e.g. filterField&#x3D;weight or filterField&#x3D;action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. (optional)
      - parameter filterValue: (query) Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)
      - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)
      - parameter queryFields: (query) Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
@@ -530,35 +454,21 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<ActionMapListing> 
      */
-    open class func getJourneyActionmapsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<ActionMapListing> {
+    open class func getJourneyActionmapsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<ActionMapListing> {        
         let path = "/api/v2/journey/actionmaps"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "filterField": filterField, 
-            
             "filterValue": filterValue, 
-            
             "actionMapIds": actionMapIds, 
-            
             "queryFields": queryFields, 
-            
             "queryValue": queryValue
-            
         ])
 
         let requestBuilder: RequestBuilder<ActionMapListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -567,10 +477,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve a single action target.
      
      - parameter actionTargetId: (path) ID of the action target. 
@@ -595,50 +502,42 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve a single action target.
-     
      - GET /api/v2/journey/actiontargets/{actionTargetId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "supportedMediaTypes" : [ "aeiou" ],
-  "shortAbandonThreshold" : 123,
+  "supportedMediaTypes" : [ "callback", "callback" ],
+  "shortAbandonThreshold" : 0,
   "userData" : [ {
-    "value" : "aeiou",
-    "key" : "aeiou"
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
   } ],
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "serviceLevel" : {
-    "percentage" : 1.3579000000000001069366817318950779736042022705078125,
-    "durationMs" : 123456789
-  }
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
+  "id" : "id",
+  "state" : "active",
+  "serviceLevel" : "{}"
+}, statusCode=200}]
      
      - parameter actionTargetId: (path) ID of the action target. 
 
      - returns: RequestBuilder<ActionTarget> 
      */
-    open class func getJourneyActiontargetWithRequestBuilder(actionTargetId: String) -> RequestBuilder<ActionTarget> {
+    open class func getJourneyActiontargetWithRequestBuilder(actionTargetId: String) -> RequestBuilder<ActionTarget> {        
         var path = "/api/v2/journey/actiontargets/{actionTargetId}"
         let actionTargetIdPreEscape = "\(actionTargetId)"
         let actionTargetIdPostEscape = actionTargetIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionTargetId}", with: actionTargetIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -649,15 +548,11 @@ open class JourneyAPI {
 
     
     
-    
-    
-    
     /**
-     
      Retrieve all action targets.
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getJourneyActiontargets(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ActionTargetListing?,_ error: Error?) -> Void)) {
@@ -679,67 +574,74 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve all action targets.
-     
      - GET /api/v2/journey/actiontargets
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "supportedMediaTypes" : [ "aeiou" ],
-    "shortAbandonThreshold" : 123,
+    "supportedMediaTypes" : [ "callback", "callback" ],
+    "shortAbandonThreshold" : 0,
     "userData" : [ {
-      "value" : "aeiou",
-      "key" : "aeiou"
+      "value" : "value",
+      "key" : "key"
+    }, {
+      "value" : "value",
+      "key" : "key"
     } ],
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "description" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "serviceLevel" : {
-      "percentage" : 1.3579000000000001069366817318950779736042022705078125,
-      "durationMs" : 123456789
-    }
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "description" : "description",
+    "id" : "id",
+    "state" : "active",
+    "serviceLevel" : "{}"
+  }, {
+    "supportedMediaTypes" : [ "callback", "callback" ],
+    "shortAbandonThreshold" : 0,
+    "userData" : [ {
+      "value" : "value",
+      "key" : "key"
+    }, {
+      "value" : "value",
+      "key" : "key"
+    } ],
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "description" : "description",
+    "id" : "id",
+    "state" : "active",
+    "serviceLevel" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
 
      - returns: RequestBuilder<ActionTargetListing> 
      */
-    open class func getJourneyActiontargetsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ActionTargetListing> {
+    open class func getJourneyActiontargetsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ActionTargetListing> {        
         let path = "/api/v2/journey/actiontargets"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<ActionTargetListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -748,10 +650,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve a single action template.
      
      - parameter actionTemplateId: (path) ID of the action template. 
@@ -776,86 +675,34 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve a single action template.
-     
      - GET /api/v2/journey/actiontemplates/{actionTemplateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
-  "mediaType" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "contentOffer" : {
-    "imageUrl" : "aeiou",
-    "layoutMode" : "aeiou",
-    "style" : {
-      "offer" : {
-        "padding" : "aeiou",
-        "backgroundColor" : "aeiou",
-        "color" : "aeiou"
-      },
-      "ctaButton" : {
-        "backgroundColor" : "aeiou",
-        "color" : "aeiou",
-        "textAlign" : "aeiou",
-        "fontSize" : "aeiou",
-        "font" : "aeiou"
-      },
-      "closeButton" : {
-        "color" : "aeiou",
-        "opacity" : 1.3579000000000001069366817318950779736042022705078125
-      },
-      "position" : {
-        "top" : "aeiou",
-        "left" : "aeiou",
-        "bottom" : "aeiou",
-        "right" : "aeiou"
-      },
-      "title" : {
-        "color" : "aeiou",
-        "textAlign" : "aeiou",
-        "fontSize" : "aeiou",
-        "font" : "aeiou"
-      },
-      "body" : "",
-      "headline" : ""
-    },
-    "title" : "aeiou",
-    "body" : "aeiou",
-    "headline" : "aeiou",
-    "displayMode" : "aeiou",
-    "callToAction" : {
-      "text" : "aeiou",
-      "url" : "aeiou",
-      "target" : "aeiou"
-    }
-  }
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
+  "mediaType" : "webchat",
+  "id" : "id",
+  "state" : "Active",
+  "contentOffer" : "{}"
+}, statusCode=200}]
      
      - parameter actionTemplateId: (path) ID of the action template. 
 
      - returns: RequestBuilder<ActionTemplate> 
      */
-    open class func getJourneyActiontemplateWithRequestBuilder(actionTemplateId: String) -> RequestBuilder<ActionTemplate> {
+    open class func getJourneyActiontemplateWithRequestBuilder(actionTemplateId: String) -> RequestBuilder<ActionTemplate> {        
         var path = "/api/v2/journey/actiontemplates/{actionTemplateId}"
         let actionTemplateIdPreEscape = "\(actionTemplateId)"
         let actionTemplateIdPostEscape = actionTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionTemplateId}", with: actionTemplateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -864,10 +711,6 @@ open class JourneyAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
-    
-    
-    
-    
     
     
     
@@ -883,7 +726,6 @@ open class JourneyAPI {
 
     
     
-    
     public enum State_getJourneyActiontemplates: String { 
         case active = "Active"
         case inactive = "Inactive"
@@ -893,16 +735,12 @@ open class JourneyAPI {
     
     
     
-    
-    
-    
     /**
-     
      Retrieve all action templates.
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;name,-createdDate). (optional)
      - parameter mediaType: (query) Media type (optional)
      - parameter state: (query) Action template state. (optional)
      - parameter queryFields: (query) ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
@@ -928,84 +766,47 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve all action templates.
-     
      - GET /api/v2/journey/actiontemplates
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "description" : "aeiou",
-    "mediaType" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
-    "contentOffer" : {
-      "imageUrl" : "aeiou",
-      "layoutMode" : "aeiou",
-      "style" : {
-        "offer" : {
-          "padding" : "aeiou",
-          "backgroundColor" : "aeiou",
-          "color" : "aeiou"
-        },
-        "ctaButton" : {
-          "backgroundColor" : "aeiou",
-          "color" : "aeiou",
-          "textAlign" : "aeiou",
-          "fontSize" : "aeiou",
-          "font" : "aeiou"
-        },
-        "closeButton" : {
-          "color" : "aeiou",
-          "opacity" : 1.3579000000000001069366817318950779736042022705078125
-        },
-        "position" : {
-          "top" : "aeiou",
-          "left" : "aeiou",
-          "bottom" : "aeiou",
-          "right" : "aeiou"
-        },
-        "title" : {
-          "color" : "aeiou",
-          "textAlign" : "aeiou",
-          "fontSize" : "aeiou",
-          "font" : "aeiou"
-        },
-        "body" : "",
-        "headline" : ""
-      },
-      "title" : "aeiou",
-      "body" : "aeiou",
-      "headline" : "aeiou",
-      "displayMode" : "aeiou",
-      "callToAction" : {
-        "text" : "aeiou",
-        "url" : "aeiou",
-        "target" : "aeiou"
-      }
-    }
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "description" : "description",
+    "mediaType" : "webchat",
+    "id" : "id",
+    "state" : "Active",
+    "contentOffer" : "{}"
+  }, {
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "description" : "description",
+    "mediaType" : "webchat",
+    "id" : "id",
+    "state" : "Active",
+    "contentOffer" : "{}"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;name,-createdDate). (optional)
      - parameter mediaType: (query) Media type (optional)
      - parameter state: (query) Action template state. (optional)
      - parameter queryFields: (query) ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
@@ -1013,33 +814,20 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<ActionTemplateListing> 
      */
-    open class func getJourneyActiontemplatesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<ActionTemplateListing> {
+    open class func getJourneyActiontemplatesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<ActionTemplateListing> {        
         let path = "/api/v2/journey/actiontemplates"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "mediaType": mediaType?.rawValue, 
-            
             "state": state?.rawValue, 
-            
             "queryFields": queryFields, 
-            
             "queryValue": queryValue
-            
         ])
 
         let requestBuilder: RequestBuilder<ActionTemplateListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1048,10 +836,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve a single outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
@@ -1076,71 +861,37 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve a single outcome.
-     
      - GET /api/v2/journey/outcomes/{outcomeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "associatedValueField" : {
-    "dataType" : "aeiou",
-    "name" : "aeiou"
-  },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "journey" : {
-    "patterns" : [ {
-      "streamType" : "aeiou",
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ],
-      "count" : 123,
-      "sessionType" : "aeiou",
-      "eventName" : "aeiou"
-    } ]
-  },
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "context" : {
-    "patterns" : [ {
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "entityType" : "aeiou",
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ]
-    } ]
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
+  "associatedValueField" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "journey" : "{}",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "context" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
   "isPositive" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "isActive" : true,
-  "version" : 123
-}}]
+  "version" : 0
+}, statusCode=200}]
      
      - parameter outcomeId: (path) ID of the outcome. 
 
      - returns: RequestBuilder<Outcome> 
      */
-    open class func getJourneyOutcomeWithRequestBuilder(outcomeId: String) -> RequestBuilder<Outcome> {
+    open class func getJourneyOutcomeWithRequestBuilder(outcomeId: String) -> RequestBuilder<Outcome> {        
         var path = "/api/v2/journey/outcomes/{outcomeId}"
         let outcomeIdPreEscape = "\(outcomeId)"
         let outcomeIdPostEscape = outcomeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outcomeId}", with: outcomeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1155,20 +906,12 @@ open class JourneyAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Retrieve all outcomes.
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
      - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)
      - parameter queryFields: (query) Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
      - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
@@ -1193,100 +936,72 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve all outcomes.
-     
      - GET /api/v2/journey/outcomes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "associatedValueField" : {
-      "dataType" : "aeiou",
-      "name" : "aeiou"
-    },
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "journey" : {
-      "patterns" : [ {
-        "streamType" : "aeiou",
-        "criteria" : [ {
-          "shouldIgnoreCase" : true,
-          "values" : [ "aeiou" ],
-          "key" : "aeiou",
-          "operator" : "aeiou"
-        } ],
-        "count" : 123,
-        "sessionType" : "aeiou",
-        "eventName" : "aeiou"
-      } ]
-    },
-    "displayName" : "aeiou",
-    "selfUri" : "aeiou",
-    "context" : {
-      "patterns" : [ {
-        "criteria" : [ {
-          "shouldIgnoreCase" : true,
-          "entityType" : "aeiou",
-          "values" : [ "aeiou" ],
-          "key" : "aeiou",
-          "operator" : "aeiou"
-        } ]
-      } ]
-    },
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "description" : "aeiou",
+    "associatedValueField" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "journey" : "{}",
+    "displayName" : "displayName",
+    "selfUri" : "https://openapi-generator.tech",
+    "context" : "{}",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "description" : "description",
     "isPositive" : true,
-    "id" : "aeiou",
+    "id" : "id",
     "isActive" : true,
-    "version" : 123
+    "version" : 0
+  }, {
+    "associatedValueField" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "journey" : "{}",
+    "displayName" : "displayName",
+    "selfUri" : "https://openapi-generator.tech",
+    "context" : "{}",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "description" : "description",
+    "isPositive" : true,
+    "id" : "id",
+    "isActive" : true,
+    "version" : 0
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
      - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)
      - parameter queryFields: (query) Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
      - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<OutcomeListing> 
      */
-    open class func getJourneyOutcomesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<OutcomeListing> {
+    open class func getJourneyOutcomesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<OutcomeListing> {        
         let path = "/api/v2/journey/outcomes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "sortBy": sortBy, 
-            
             "outcomeIds": outcomeIds, 
-            
             "queryFields": queryFields, 
-            
             "queryValue": queryValue
-            
         ])
 
         let requestBuilder: RequestBuilder<OutcomeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1295,10 +1010,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve a single segment.
      
      - parameter segmentId: (path) ID of the segment. 
@@ -1323,75 +1035,40 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve a single segment.
-     
      - GET /api/v2/journey/segments/{segmentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "color" : "aeiou",
-  "journey" : {
-    "patterns" : [ {
-      "streamType" : "aeiou",
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ],
-      "count" : 123,
-      "sessionType" : "aeiou",
-      "eventName" : "aeiou"
-    } ]
-  },
-  "externalSegment" : {
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "source" : "aeiou"
-  },
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
+  "color" : "color",
+  "journey" : "{}",
+  "externalSegment" : "{}",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
   "isActive" : true,
-  "version" : 123,
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "assignmentExpirationDays" : 123,
-  "scope" : "aeiou",
-  "context" : {
-    "patterns" : [ {
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "entityType" : "aeiou",
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ]
-    } ]
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "version" : 0,
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "assignmentExpirationDays" : 6,
+  "scope" : "Session",
+  "context" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "shouldDisplayToAgent" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter segmentId: (path) ID of the segment. 
 
      - returns: RequestBuilder<JourneySegment> 
      */
-    open class func getJourneySegmentWithRequestBuilder(segmentId: String) -> RequestBuilder<JourneySegment> {
+    open class func getJourneySegmentWithRequestBuilder(segmentId: String) -> RequestBuilder<JourneySegment> {        
         var path = "/api/v2/journey/segments/{segmentId}"
         let segmentIdPreEscape = "\(segmentId)"
         let segmentIdPostEscape = segmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{segmentId}", with: segmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1407,21 +1084,12 @@ open class JourneyAPI {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     
      Retrieve all segments.
      
-     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
      - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)
      - parameter queryFields: (query) Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
@@ -1447,73 +1115,59 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve all segments.
-     
      - GET /api/v2/journey/segments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "color" : "aeiou",
-    "journey" : {
-      "patterns" : [ {
-        "streamType" : "aeiou",
-        "criteria" : [ {
-          "shouldIgnoreCase" : true,
-          "values" : [ "aeiou" ],
-          "key" : "aeiou",
-          "operator" : "aeiou"
-        } ],
-        "count" : 123,
-        "sessionType" : "aeiou",
-        "eventName" : "aeiou"
-      } ]
-    },
-    "externalSegment" : {
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "source" : "aeiou"
-    },
-    "displayName" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
+    "color" : "color",
+    "journey" : "{}",
+    "externalSegment" : "{}",
+    "displayName" : "displayName",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
     "isActive" : true,
-    "version" : 123,
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "assignmentExpirationDays" : 123,
-    "scope" : "aeiou",
-    "context" : {
-      "patterns" : [ {
-        "criteria" : [ {
-          "shouldIgnoreCase" : true,
-          "entityType" : "aeiou",
-          "values" : [ "aeiou" ],
-          "key" : "aeiou",
-          "operator" : "aeiou"
-        } ]
-      } ]
-    },
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+    "version" : 0,
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "assignmentExpirationDays" : 6,
+    "scope" : "Session",
+    "context" : "{}",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "shouldDisplayToAgent" : true,
-    "id" : "aeiou"
+    "id" : "id"
+  }, {
+    "color" : "color",
+    "journey" : "{}",
+    "externalSegment" : "{}",
+    "displayName" : "displayName",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "isActive" : true,
+    "version" : 0,
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "assignmentExpirationDays" : 6,
+    "scope" : "Session",
+    "context" : "{}",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "shouldDisplayToAgent" : true,
+    "id" : "id"
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
      - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)
      - parameter queryFields: (query) Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
@@ -1521,33 +1175,20 @@ open class JourneyAPI {
 
      - returns: RequestBuilder<SegmentListing> 
      */
-    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<SegmentListing> {
+    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<SegmentListing> {        
         let path = "/api/v2/journey/segments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "sortBy": sortBy, 
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
             "isActive": isActive, 
-            
             "segmentIds": segmentIds, 
-            
             "queryFields": queryFields, 
-            
             "queryValue": queryValue
-            
         ])
 
         let requestBuilder: RequestBuilder<SegmentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1556,10 +1197,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve a single session.
      
      - parameter sessionId: (path) ID of the session. 
@@ -1584,179 +1222,97 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve a single session.
-     
      - GET /api/v2/journey/sessions/{sessionId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "screenviewCount" : 123,
-  "shortId" : "aeiou",
+  "screenviewCount" : 5,
+  "shortId" : "shortId",
   "authenticated" : true,
-  "lastPage" : {
-    "fragment" : "aeiou",
-    "hostname" : "aeiou",
-    "keywords" : "aeiou",
-    "breadcrumb" : [ "aeiou" ],
-    "domain" : "aeiou",
-    "title" : "aeiou",
-    "lang" : "aeiou",
-    "queryString" : "aeiou",
-    "url" : "aeiou",
-    "pathname" : "aeiou"
-  },
-  "durationInSeconds" : 123,
-  "searchTerms" : [ "aeiou" ],
-  "conversationSubject" : "aeiou",
-  "userAgentString" : "aeiou",
-  "eventCount" : 123,
-  "type" : "aeiou",
-  "lastConnectedQueue" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "browser" : {
-    "featuresPdf" : true,
-    "featuresFlash" : true,
-    "viewWidth" : 123,
-    "featuresJava" : true,
-    "fingerprint" : "aeiou",
-    "viewHeight" : 123,
-    "isMobile" : true,
-    "featuresWebrtc" : true,
-    "family" : "aeiou",
-    "lang" : "aeiou",
-    "version" : "aeiou"
-  },
-  "customerId" : "aeiou",
-  "id" : "aeiou",
-  "customerIdType" : "aeiou",
-  "awayDate" : "2000-01-23T04:56:07.000+0000",
-  "lastAcdOutcome" : "aeiou",
+  "lastPage" : "{}",
+  "durationInSeconds" : 0,
+  "searchTerms" : [ "searchTerms", "searchTerms" ],
+  "conversationSubject" : "conversationSubject",
+  "userAgentString" : "userAgentString",
+  "eventCount" : 6,
+  "type" : "type",
+  "lastConnectedQueue" : "{}",
+  "browser" : "{}",
+  "customerId" : "customerId",
+  "id" : "id",
+  "customerIdType" : "customerIdType",
+  "awayDate" : "2000-01-23T04:56:07.000+00:00",
+  "lastAcdOutcome" : "Unknown",
   "attributeLists" : {
     "key" : {
-      "dataType" : "aeiou",
-      "values" : [ "aeiou" ]
+      "dataType" : "dataType",
+      "values" : [ "values", "values" ]
     }
   },
-  "mktCampaign" : {
-    "name" : "aeiou",
-    "clickId" : "aeiou",
-    "term" : "aeiou",
-    "medium" : "aeiou",
-    "source" : "aeiou",
-    "content" : "aeiou",
-    "network" : "aeiou"
-  },
-  "conversation" : "",
-  "ipOrganization" : "aeiou",
-  "externalUrl" : "aeiou",
-  "endedDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "idleDate" : "2000-01-23T04:56:07.000+0000",
-  "ipAddress" : "aeiou",
-  "externalId" : "aeiou",
-  "lastUserDisconnectType" : "aeiou",
-  "pageviewCount" : 123,
-  "externalContact" : "",
-  "originatingDirection" : "aeiou",
-  "referrer" : {
-    "hostname" : "aeiou",
-    "fragment" : "aeiou",
-    "keywords" : "aeiou",
-    "domain" : "aeiou",
-    "name" : "aeiou",
-    "medium" : "aeiou",
-    "queryString" : "aeiou",
-    "url" : "aeiou",
-    "pathname" : "aeiou"
-  },
-  "lastUserDisposition" : {
-    "code" : "aeiou",
-    "notes" : "aeiou",
-    "user" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
-  },
+  "mktCampaign" : "{}",
+  "conversation" : "{}",
+  "ipOrganization" : "ipOrganization",
+  "externalUrl" : "externalUrl",
+  "endedDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "idleDate" : "2000-01-23T04:56:07.000+00:00",
+  "ipAddress" : "ipAddress",
+  "externalId" : "externalId",
+  "lastUserDisconnectType" : "Unknown",
+  "pageviewCount" : 1,
+  "externalContact" : "{}",
+  "originatingDirection" : "Unknown",
+  "referrer" : "{}",
+  "lastUserDisposition" : "{}",
   "outcomeAchievements" : [ {
-    "achievedDate" : "2000-01-23T04:56:07.000+0000",
-    "outcome" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "achievedDate" : "2000-01-23T04:56:07.000+00:00",
+    "outcome" : "{}"
+  }, {
+    "achievedDate" : "2000-01-23T04:56:07.000+00:00",
+    "outcome" : "{}"
   } ],
-  "lastConnectedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "lastConnectedUser" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "conversationChannels" : [ {
-    "messageType" : "aeiou",
-    "type" : "aeiou",
-    "platform" : "aeiou"
+    "messageType" : "Unknown",
+    "type" : "Unknown",
+    "platform" : "platform"
+  }, {
+    "messageType" : "Unknown",
+    "type" : "Unknown",
+    "platform" : "platform"
   } ],
   "segmentAssignments" : [ {
-    "assignedDate" : "2000-01-23T04:56:07.000+0000",
-    "segment" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+    "segment" : "{}"
+  }, {
+    "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+    "segment" : "{}"
   } ],
-  "lastEvent" : {
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "eventName" : "aeiou",
-    "id" : "aeiou"
-  },
+  "lastEvent" : "{}",
   "attributes" : {
     "key" : {
-      "dataType" : "aeiou",
-      "value" : "aeiou"
+      "dataType" : "dataType",
+      "value" : "value"
     }
   },
-  "device" : {
-    "screenWidth" : 123,
-    "osFamily" : "aeiou",
-    "osVersion" : "aeiou",
-    "screenHeight" : 123,
-    "fingerprint" : "aeiou",
-    "isMobile" : true,
-    "category" : "aeiou",
-    "type" : "aeiou"
-  },
-  "geolocation" : {
-    "country" : "aeiou",
-    "timezone" : "aeiou",
-    "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-    "postalCode" : "aeiou",
-    "regionName" : "aeiou",
-    "locality" : "aeiou",
-    "countryName" : "aeiou",
-    "source" : "aeiou",
-    "region" : "aeiou",
-    "longitude" : 1.3579000000000001069366817318950779736042022705078125
-  }
-}}]
+  "device" : "{}",
+  "geolocation" : "{}"
+}, statusCode=200}]
      
      - parameter sessionId: (path) ID of the session. 
 
      - returns: RequestBuilder<Session> 
      */
-    open class func getJourneySessionWithRequestBuilder(sessionId: String) -> RequestBuilder<Session> {
+    open class func getJourneySessionWithRequestBuilder(sessionId: String) -> RequestBuilder<Session> {        
         var path = "/api/v2/journey/sessions/{sessionId}"
         let sessionIdPreEscape = "\(sessionId)"
         let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1766,10 +1322,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Retrieve latest outcome score associated with a session for all outcomes.
      
      - parameter sessionId: (path) ID of the session. 
@@ -1794,42 +1347,35 @@ open class JourneyAPI {
     }
 
     /**
-     
      Retrieve latest outcome score associated with a session for all outcomes.
-     
      - GET /api/v2/journey/sessions/{sessionId}/outcomescores
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "outcomeScores" : [ {
-    "sessionMaxProbability" : 1.3579000000000001069366817318950779736042022705078125,
-    "probability" : 1.3579000000000001069366817318950779736042022705078125,
-    "outcome" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    }
+    "sessionMaxProbability" : 0.8008282,
+    "probability" : 6.0274563,
+    "outcome" : "{}"
+  }, {
+    "sessionMaxProbability" : 0.8008282,
+    "probability" : 6.0274563,
+    "outcome" : "{}"
   } ],
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter sessionId: (path) ID of the session. 
 
      - returns: RequestBuilder<OutcomeScoresResult> 
      */
-    open class func getJourneySessionOutcomescoresWithRequestBuilder(sessionId: String) -> RequestBuilder<OutcomeScoresResult> {
+    open class func getJourneySessionOutcomescoresWithRequestBuilder(sessionId: String) -> RequestBuilder<OutcomeScoresResult> {        
         var path = "/api/v2/journey/sessions/{sessionId}/outcomescores"
         let sessionIdPreEscape = "\(sessionId)"
         let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -1840,11 +1386,7 @@ open class JourneyAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update single action map.
      
      - parameter actionMapId: (path) ID of the action map. 
@@ -1870,104 +1412,73 @@ open class JourneyAPI {
     }
 
     /**
-     
      Update single action map.
-     
      - PATCH /api/v2/journey/actionmaps/{actionMapId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "ignoreFrequencyCap" : true,
-  "endDate" : "2000-01-23T04:56:07.000+0000",
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "weight" : 123,
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "weight" : 5,
   "isActive" : true,
-  "version" : 123,
-  "triggerWithSegments" : [ "aeiou" ],
+  "version" : 0,
+  "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
   "triggerWithOutcomeProbabilityConditions" : [ {
-    "probability" : 1.3579000000000001069366817318950779736042022705078125,
-    "outcomeId" : "aeiou",
-    "maximumProbability" : 1.3579000000000001069366817318950779736042022705078125
+    "probability" : 1.4658129,
+    "outcomeId" : "outcomeId",
+    "maximumProbability" : 6.0274563
+  }, {
+    "probability" : 1.4658129,
+    "outcomeId" : "outcomeId",
+    "maximumProbability" : 6.0274563
   } ],
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "triggerWithEventConditions" : [ {
-    "streamType" : "aeiou",
-    "values" : [ "aeiou" ],
-    "sessionType" : "aeiou",
-    "eventName" : "aeiou",
-    "key" : "aeiou",
-    "operator" : "aeiou"
+    "streamType" : "Web",
+    "values" : [ "values", "values" ],
+    "sessionType" : "sessionType",
+    "eventName" : "eventName",
+    "key" : "key",
+    "operator" : "containsAll"
+  }, {
+    "streamType" : "Web",
+    "values" : [ "values", "values" ],
+    "sessionType" : "sessionType",
+    "eventName" : "eventName",
+    "key" : "key",
+    "operator" : "containsAll"
   } ],
   "pageUrlConditions" : [ {
-    "values" : [ "aeiou" ],
-    "operator" : "aeiou"
+    "values" : [ "values", "values" ],
+    "operator" : "containsAll"
+  }, {
+    "values" : [ "values", "values" ],
+    "operator" : "containsAll"
   } ],
-  "actionMapScheduleGroups" : {
-    "actionMapScheduleGroup" : {
-      "id" : "aeiou"
-    },
-    "emergencyActionMapScheduleGroup" : ""
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "action" : {
-    "openActionFields" : {
-      "openAction" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "configurationFields" : {
-        "key" : "{}"
-      }
-    },
-    "actionTemplate" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "mediaType" : "aeiou",
-    "webMessagingOfferFields" : {
-      "architectFlow" : "",
-      "offerText" : "aeiou"
-    },
-    "architectFlowFields" : {
-      "architectFlow" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "flowRequestMappings" : [ {
-        "attributeType" : "aeiou",
-        "mappingType" : "aeiou",
-        "name" : "aeiou",
-        "value" : "aeiou"
-      } ]
-    }
-  },
-  "id" : "aeiou",
-  "activation" : {
-    "delayInSeconds" : 123,
-    "type" : "aeiou"
-  },
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "actionMapScheduleGroups" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "action" : "{}",
+  "id" : "id",
+  "activation" : "{}",
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter actionMapId: (path) ID of the action map. 
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<ActionMap> 
      */
-    open class func patchJourneyActionmapWithRequestBuilder(actionMapId: String, body: PatchActionMap? = nil) -> RequestBuilder<ActionMap> {
+    open class func patchJourneyActionmapWithRequestBuilder(actionMapId: String, body: PatchActionMap? = nil) -> RequestBuilder<ActionMap> {        
         var path = "/api/v2/journey/actionmaps/{actionMapId}"
         let actionMapIdPreEscape = "\(actionMapId)"
         let actionMapIdPostEscape = actionMapIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionMapId}", with: actionMapIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActionMap>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1977,11 +1488,7 @@ open class JourneyAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a single action target.
      
      - parameter actionTargetId: (path) ID of the action target. 
@@ -2007,49 +1514,44 @@ open class JourneyAPI {
     }
 
     /**
-     
      Update a single action target.
-     
      - PATCH /api/v2/journey/actiontargets/{actionTargetId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "supportedMediaTypes" : [ "aeiou" ],
-  "shortAbandonThreshold" : 123,
+  "supportedMediaTypes" : [ "callback", "callback" ],
+  "shortAbandonThreshold" : 0,
   "userData" : [ {
-    "value" : "aeiou",
-    "key" : "aeiou"
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
   } ],
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "serviceLevel" : {
-    "percentage" : 1.3579000000000001069366817318950779736042022705078125,
-    "durationMs" : 123456789
-  }
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
+  "id" : "id",
+  "state" : "active",
+  "serviceLevel" : "{}"
+}, statusCode=200}]
      
      - parameter actionTargetId: (path) ID of the action target. 
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<ActionTarget> 
      */
-    open class func patchJourneyActiontargetWithRequestBuilder(actionTargetId: String, body: PatchActionTarget? = nil) -> RequestBuilder<ActionTarget> {
+    open class func patchJourneyActiontargetWithRequestBuilder(actionTargetId: String, body: PatchActionTarget? = nil) -> RequestBuilder<ActionTarget> {        
         var path = "/api/v2/journey/actiontargets/{actionTargetId}"
         let actionTargetIdPreEscape = "\(actionTargetId)"
         let actionTargetIdPostEscape = actionTargetIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionTargetId}", with: actionTargetIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActionTarget>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2059,11 +1561,7 @@ open class JourneyAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a single action template.
      
      - parameter actionTemplateId: (path) ID of the action template. 
@@ -2089,85 +1587,36 @@ open class JourneyAPI {
     }
 
     /**
-     
      Update a single action template.
-     
      - PATCH /api/v2/journey/actiontemplates/{actionTemplateId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
-  "mediaType" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "contentOffer" : {
-    "imageUrl" : "aeiou",
-    "layoutMode" : "aeiou",
-    "style" : {
-      "offer" : {
-        "padding" : "aeiou",
-        "backgroundColor" : "aeiou",
-        "color" : "aeiou"
-      },
-      "ctaButton" : {
-        "backgroundColor" : "aeiou",
-        "color" : "aeiou",
-        "textAlign" : "aeiou",
-        "fontSize" : "aeiou",
-        "font" : "aeiou"
-      },
-      "closeButton" : {
-        "color" : "aeiou",
-        "opacity" : 1.3579000000000001069366817318950779736042022705078125
-      },
-      "position" : {
-        "top" : "aeiou",
-        "left" : "aeiou",
-        "bottom" : "aeiou",
-        "right" : "aeiou"
-      },
-      "title" : {
-        "color" : "aeiou",
-        "textAlign" : "aeiou",
-        "fontSize" : "aeiou",
-        "font" : "aeiou"
-      },
-      "body" : "",
-      "headline" : ""
-    },
-    "title" : "aeiou",
-    "body" : "aeiou",
-    "headline" : "aeiou",
-    "displayMode" : "aeiou",
-    "callToAction" : {
-      "text" : "aeiou",
-      "url" : "aeiou",
-      "target" : "aeiou"
-    }
-  }
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
+  "mediaType" : "webchat",
+  "id" : "id",
+  "state" : "Active",
+  "contentOffer" : "{}"
+}, statusCode=200}]
      
      - parameter actionTemplateId: (path) ID of the action template. 
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<ActionTemplate> 
      */
-    open class func patchJourneyActiontemplateWithRequestBuilder(actionTemplateId: String, body: PatchActionTemplate? = nil) -> RequestBuilder<ActionTemplate> {
+    open class func patchJourneyActiontemplateWithRequestBuilder(actionTemplateId: String, body: PatchActionTemplate? = nil) -> RequestBuilder<ActionTemplate> {        
         var path = "/api/v2/journey/actiontemplates/{actionTemplateId}"
         let actionTemplateIdPreEscape = "\(actionTemplateId)"
         let actionTemplateIdPostEscape = actionTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{actionTemplateId}", with: actionTemplateIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActionTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2177,11 +1626,7 @@ open class JourneyAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update an outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
@@ -2207,70 +1652,39 @@ open class JourneyAPI {
     }
 
     /**
-     
      Update an outcome.
-     
      - PATCH /api/v2/journey/outcomes/{outcomeId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "associatedValueField" : {
-    "dataType" : "aeiou",
-    "name" : "aeiou"
-  },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "journey" : {
-    "patterns" : [ {
-      "streamType" : "aeiou",
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ],
-      "count" : 123,
-      "sessionType" : "aeiou",
-      "eventName" : "aeiou"
-    } ]
-  },
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "context" : {
-    "patterns" : [ {
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "entityType" : "aeiou",
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ]
-    } ]
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
+  "associatedValueField" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "journey" : "{}",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "context" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
   "isPositive" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "isActive" : true,
-  "version" : 123
-}}]
+  "version" : 0
+}, statusCode=200}]
      
      - parameter outcomeId: (path) ID of the outcome. 
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<Outcome> 
      */
-    open class func patchJourneyOutcomeWithRequestBuilder(outcomeId: String, body: PatchOutcome? = nil) -> RequestBuilder<Outcome> {
+    open class func patchJourneyOutcomeWithRequestBuilder(outcomeId: String, body: PatchOutcome? = nil) -> RequestBuilder<Outcome> {        
         var path = "/api/v2/journey/outcomes/{outcomeId}"
         let outcomeIdPreEscape = "\(outcomeId)"
         let outcomeIdPostEscape = outcomeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{outcomeId}", with: outcomeIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Outcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2280,11 +1694,7 @@ open class JourneyAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a segment.
      
      - parameter segmentId: (path) ID of the segment. 
@@ -2310,74 +1720,42 @@ open class JourneyAPI {
     }
 
     /**
-     
      Update a segment.
-     
      - PATCH /api/v2/journey/segments/{segmentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "color" : "aeiou",
-  "journey" : {
-    "patterns" : [ {
-      "streamType" : "aeiou",
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ],
-      "count" : 123,
-      "sessionType" : "aeiou",
-      "eventName" : "aeiou"
-    } ]
-  },
-  "externalSegment" : {
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "source" : "aeiou"
-  },
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
+  "color" : "color",
+  "journey" : "{}",
+  "externalSegment" : "{}",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
   "isActive" : true,
-  "version" : 123,
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "assignmentExpirationDays" : 123,
-  "scope" : "aeiou",
-  "context" : {
-    "patterns" : [ {
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "entityType" : "aeiou",
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ]
-    } ]
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "version" : 0,
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "assignmentExpirationDays" : 6,
+  "scope" : "Session",
+  "context" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "shouldDisplayToAgent" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter segmentId: (path) ID of the segment. 
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<JourneySegment> 
      */
-    open class func patchJourneySegmentWithRequestBuilder(segmentId: String, body: PatchSegment? = nil) -> RequestBuilder<JourneySegment> {
+    open class func patchJourneySegmentWithRequestBuilder(segmentId: String, body: PatchSegment? = nil) -> RequestBuilder<JourneySegment> {        
         var path = "/api/v2/journey/segments/{segmentId}"
         let segmentIdPreEscape = "\(segmentId)"
         let segmentIdPostEscape = segmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{segmentId}", with: segmentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneySegment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2386,10 +1764,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Query for journey aggregates
      
      - parameter body: (body) query 
@@ -2414,57 +1789,298 @@ open class JourneyAPI {
     }
 
     /**
-     
      Query for journey aggregates
-     
      - POST /api/v2/analytics/journeys/aggregates/query
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "results" : [ {
     "data" : [ {
-      "interval" : "aeiou",
+      "interval" : "interval",
       "metrics" : [ {
-        "metric" : "aeiou",
+        "metric" : "metric",
         "stats" : {
-          "current" : 1.3579000000000001069366817318950779736042022705078125,
-          "min" : 1.3579000000000001069366817318950779736042022705078125,
-          "max" : 1.3579000000000001069366817318950779736042022705078125,
-          "count" : 123456789,
-          "sum" : 1.3579000000000001069366817318950779736042022705078125,
-          "countPositive" : 123456789,
-          "countNegative" : 123456789,
-          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
-          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
-          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
-          "target" : 1.3579000000000001069366817318950779736042022705078125
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
         },
-        "qualifier" : "aeiou"
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
       } ],
       "views" : [ {
-        "stats" : "",
-        "name" : "aeiou"
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
       } ]
     } ],
     "group" : {
-      "key" : "aeiou"
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "countPositive" : 5,
+          "countNegative" : 5,
+          "ratio" : 9.301444243932576,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
     }
   } ]
-}}]
+}, statusCode=200}]
      
      - parameter body: (body) query 
 
      - returns: RequestBuilder<JourneyAggregateQueryResponse> 
      */
-    open class func postAnalyticsJourneysAggregatesQueryWithRequestBuilder(body: JourneyAggregationQuery) -> RequestBuilder<JourneyAggregateQueryResponse> {
+    open class func postAnalyticsJourneysAggregatesQueryWithRequestBuilder(body: JourneyAggregationQuery) -> RequestBuilder<JourneyAggregateQueryResponse> {        
         let path = "/api/v2/analytics/journeys/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2473,10 +2089,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Create an action map.
      
      - parameter body: (body)  (optional)
@@ -2501,100 +2114,69 @@ open class JourneyAPI {
     }
 
     /**
-     
      Create an action map.
-     
      - POST /api/v2/journey/actionmaps
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "ignoreFrequencyCap" : true,
-  "endDate" : "2000-01-23T04:56:07.000+0000",
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "weight" : 123,
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "weight" : 5,
   "isActive" : true,
-  "version" : 123,
-  "triggerWithSegments" : [ "aeiou" ],
+  "version" : 0,
+  "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
   "triggerWithOutcomeProbabilityConditions" : [ {
-    "probability" : 1.3579000000000001069366817318950779736042022705078125,
-    "outcomeId" : "aeiou",
-    "maximumProbability" : 1.3579000000000001069366817318950779736042022705078125
+    "probability" : 1.4658129,
+    "outcomeId" : "outcomeId",
+    "maximumProbability" : 6.0274563
+  }, {
+    "probability" : 1.4658129,
+    "outcomeId" : "outcomeId",
+    "maximumProbability" : 6.0274563
   } ],
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "triggerWithEventConditions" : [ {
-    "streamType" : "aeiou",
-    "values" : [ "aeiou" ],
-    "sessionType" : "aeiou",
-    "eventName" : "aeiou",
-    "key" : "aeiou",
-    "operator" : "aeiou"
+    "streamType" : "Web",
+    "values" : [ "values", "values" ],
+    "sessionType" : "sessionType",
+    "eventName" : "eventName",
+    "key" : "key",
+    "operator" : "containsAll"
+  }, {
+    "streamType" : "Web",
+    "values" : [ "values", "values" ],
+    "sessionType" : "sessionType",
+    "eventName" : "eventName",
+    "key" : "key",
+    "operator" : "containsAll"
   } ],
   "pageUrlConditions" : [ {
-    "values" : [ "aeiou" ],
-    "operator" : "aeiou"
+    "values" : [ "values", "values" ],
+    "operator" : "containsAll"
+  }, {
+    "values" : [ "values", "values" ],
+    "operator" : "containsAll"
   } ],
-  "actionMapScheduleGroups" : {
-    "actionMapScheduleGroup" : {
-      "id" : "aeiou"
-    },
-    "emergencyActionMapScheduleGroup" : ""
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "action" : {
-    "openActionFields" : {
-      "openAction" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "configurationFields" : {
-        "key" : "{}"
-      }
-    },
-    "actionTemplate" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "mediaType" : "aeiou",
-    "webMessagingOfferFields" : {
-      "architectFlow" : "",
-      "offerText" : "aeiou"
-    },
-    "architectFlowFields" : {
-      "architectFlow" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "flowRequestMappings" : [ {
-        "attributeType" : "aeiou",
-        "mappingType" : "aeiou",
-        "name" : "aeiou",
-        "value" : "aeiou"
-      } ]
-    }
-  },
-  "id" : "aeiou",
-  "activation" : {
-    "delayInSeconds" : 123,
-    "type" : "aeiou"
-  },
-  "startDate" : "2000-01-23T04:56:07.000+0000"
-}}]
+  "actionMapScheduleGroups" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "action" : "{}",
+  "id" : "id",
+  "activation" : "{}",
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
      
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<ActionMap> 
      */
-    open class func postJourneyActionmapsWithRequestBuilder(body: ActionMap? = nil) -> RequestBuilder<ActionMap> {
+    open class func postJourneyActionmapsWithRequestBuilder(body: ActionMap? = nil) -> RequestBuilder<ActionMap> {        
         let path = "/api/v2/journey/actionmaps"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActionMap>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2603,10 +2185,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Create a single action template.
      
      - parameter body: (body)  (optional)
@@ -2631,81 +2210,32 @@ open class JourneyAPI {
     }
 
     /**
-     
      Create a single action template.
-     
      - POST /api/v2/journey/actiontemplates
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
-  "mediaType" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
-  "contentOffer" : {
-    "imageUrl" : "aeiou",
-    "layoutMode" : "aeiou",
-    "style" : {
-      "offer" : {
-        "padding" : "aeiou",
-        "backgroundColor" : "aeiou",
-        "color" : "aeiou"
-      },
-      "ctaButton" : {
-        "backgroundColor" : "aeiou",
-        "color" : "aeiou",
-        "textAlign" : "aeiou",
-        "fontSize" : "aeiou",
-        "font" : "aeiou"
-      },
-      "closeButton" : {
-        "color" : "aeiou",
-        "opacity" : 1.3579000000000001069366817318950779736042022705078125
-      },
-      "position" : {
-        "top" : "aeiou",
-        "left" : "aeiou",
-        "bottom" : "aeiou",
-        "right" : "aeiou"
-      },
-      "title" : {
-        "color" : "aeiou",
-        "textAlign" : "aeiou",
-        "fontSize" : "aeiou",
-        "font" : "aeiou"
-      },
-      "body" : "",
-      "headline" : ""
-    },
-    "title" : "aeiou",
-    "body" : "aeiou",
-    "headline" : "aeiou",
-    "displayMode" : "aeiou",
-    "callToAction" : {
-      "text" : "aeiou",
-      "url" : "aeiou",
-      "target" : "aeiou"
-    }
-  }
-}}]
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
+  "mediaType" : "webchat",
+  "id" : "id",
+  "state" : "Active",
+  "contentOffer" : "{}"
+}, statusCode=200}]
      
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<ActionTemplate> 
      */
-    open class func postJourneyActiontemplatesWithRequestBuilder(body: ActionTemplate? = nil) -> RequestBuilder<ActionTemplate> {
+    open class func postJourneyActiontemplatesWithRequestBuilder(body: ActionTemplate? = nil) -> RequestBuilder<ActionTemplate> {        
         let path = "/api/v2/journey/actiontemplates"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActionTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2714,10 +2244,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Create an outcome.
      
      - parameter body: (body)  (optional)
@@ -2742,66 +2269,35 @@ open class JourneyAPI {
     }
 
     /**
-     
      Create an outcome.
-     
      - POST /api/v2/journey/outcomes
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "associatedValueField" : {
-    "dataType" : "aeiou",
-    "name" : "aeiou"
-  },
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "journey" : {
-    "patterns" : [ {
-      "streamType" : "aeiou",
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ],
-      "count" : 123,
-      "sessionType" : "aeiou",
-      "eventName" : "aeiou"
-    } ]
-  },
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "context" : {
-    "patterns" : [ {
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "entityType" : "aeiou",
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ]
-    } ]
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-  "description" : "aeiou",
+  "associatedValueField" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "journey" : "{}",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "context" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "description" : "description",
   "isPositive" : true,
-  "id" : "aeiou",
+  "id" : "id",
   "isActive" : true,
-  "version" : 123
-}}]
+  "version" : 0
+}, statusCode=200}]
      
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<Outcome> 
      */
-    open class func postJourneyOutcomesWithRequestBuilder(body: Outcome? = nil) -> RequestBuilder<Outcome> {
+    open class func postJourneyOutcomesWithRequestBuilder(body: Outcome? = nil) -> RequestBuilder<Outcome> {        
         let path = "/api/v2/journey/outcomes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Outcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2810,10 +2306,7 @@ open class JourneyAPI {
     }
 
     
-    
-    
     /**
-     
      Create a segment.
      
      - parameter body: (body)  (optional)
@@ -2838,70 +2331,38 @@ open class JourneyAPI {
     }
 
     /**
-     
      Create a segment.
-     
      - POST /api/v2/journey/segments
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "color" : "aeiou",
-  "journey" : {
-    "patterns" : [ {
-      "streamType" : "aeiou",
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ],
-      "count" : 123,
-      "sessionType" : "aeiou",
-      "eventName" : "aeiou"
-    } ]
-  },
-  "externalSegment" : {
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "source" : "aeiou"
-  },
-  "displayName" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
+  "color" : "color",
+  "journey" : "{}",
+  "externalSegment" : "{}",
+  "displayName" : "displayName",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
   "isActive" : true,
-  "version" : 123,
-  "createdDate" : "2000-01-23T04:56:07.000+0000",
-  "assignmentExpirationDays" : 123,
-  "scope" : "aeiou",
-  "context" : {
-    "patterns" : [ {
-      "criteria" : [ {
-        "shouldIgnoreCase" : true,
-        "entityType" : "aeiou",
-        "values" : [ "aeiou" ],
-        "key" : "aeiou",
-        "operator" : "aeiou"
-      } ]
-    } ]
-  },
-  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "version" : 0,
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "assignmentExpirationDays" : 6,
+  "scope" : "Session",
+  "context" : "{}",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "shouldDisplayToAgent" : true,
-  "id" : "aeiou"
-}}]
+  "id" : "id"
+}, statusCode=200}]
      
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<JourneySegment> 
      */
-    open class func postJourneySegmentsWithRequestBuilder(body: JourneySegment? = nil) -> RequestBuilder<JourneySegment> {
+    open class func postJourneySegmentsWithRequestBuilder(body: JourneySegment? = nil) -> RequestBuilder<JourneySegment> {        
         let path = "/api/v2/journey/segments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneySegment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

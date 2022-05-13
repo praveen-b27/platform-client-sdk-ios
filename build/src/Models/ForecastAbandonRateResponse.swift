@@ -15,9 +15,7 @@ public class ForecastAbandonRateResponse: Codable {
     public var percent: Int?
 
     public init(percent: Int?) {
-        
         self.percent = percent
-        
     }
 
 

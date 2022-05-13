@@ -25,13 +25,9 @@ public class BulkUpdateShiftTradeStateResponse: Codable {
     public var result: BulkUpdateShiftTradeStateResult?
 
     public init(status: Status?, operationId: String?, result: BulkUpdateShiftTradeStateResult?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.result = result
-        
     }
 
 

@@ -79,39 +79,22 @@ public class Miner: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, language: Language?, dateCreated: Date?, status: Status?, conversationsDateRangeStart: Date?, conversationsDateRangeEnd: Date?, dateCompleted: Date?, message: String?, conversationDataUploaded: Bool?, mediaType: MediaType?, queueIds: [String]?, dateTriggered: Date?, dateModified: Date?, latestDraftVersion: Draft?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.language = language
-        
         self.dateCreated = dateCreated
-        
         self.status = status
-        
         self.conversationsDateRangeStart = conversationsDateRangeStart
-        
         self.conversationsDateRangeEnd = conversationsDateRangeEnd
-        
         self.dateCompleted = dateCompleted
-        
         self.message = message
-        
         self.conversationDataUploaded = conversationDataUploaded
-        
         self.mediaType = mediaType
-        
         self.queueIds = queueIds
-        
         self.dateTriggered = dateTriggered
-        
         self.dateModified = dateModified
-        
         self.latestDraftVersion = latestDraftVersion
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

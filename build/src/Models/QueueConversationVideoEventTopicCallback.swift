@@ -85,7 +85,7 @@ public class QueueConversationVideoEventTopicCallback: Codable {
     public var automatedCallbackConfigId: String?
     /** Call wrap up or disposition data. */
     public var wrapup: QueueConversationVideoEventTopicWrapup?
-    /** A communication&#39;s after-call work data. */
+    /** A communication's after-call work data. */
     public var afterCallWork: QueueConversationVideoEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
@@ -95,57 +95,31 @@ public class QueueConversationVideoEventTopicCallback: Codable {
     public var callerIdName: String?
 
     public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationVideoEventTopicDialerPreview?, voicemail: QueueConversationVideoEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.direction = direction
-        
         self.held = held
-        
         self.disconnectType = disconnectType
-        
         self.startHoldTime = startHoldTime
-        
         self.dialerPreview = dialerPreview
-        
         self.voicemail = voicemail
-        
         self.callbackNumbers = callbackNumbers
-        
         self.callbackUserName = callbackUserName
-        
         self.scriptId = scriptId
-        
         self.peerId = peerId
-        
         self.externalCampaign = externalCampaign
-        
         self.skipEnabled = skipEnabled
-        
         self.provider = provider
-        
         self.timeoutSeconds = timeoutSeconds
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.callbackScheduledTime = callbackScheduledTime
-        
         self.automatedCallbackConfigId = automatedCallbackConfigId
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
         self.callerId = callerId
-        
         self.callerIdName = callerIdName
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

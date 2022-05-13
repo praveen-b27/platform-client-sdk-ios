@@ -16,13 +16,9 @@ public class ArchitectFlowNotificationHomeOrganization: Codable {
     public var thirdPartyOrgName: String?
 
     public init(_id: String?, name: String?, thirdPartyOrgName: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.thirdPartyOrgName = thirdPartyOrgName
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -17,11 +17,8 @@ public class TrunkBaseAssignment: Codable {
     public var trunkBase: TrunkBase?
 
     public init(family: Int?, trunkBase: TrunkBase?) {
-        
         self.family = family
-        
         self.trunkBase = trunkBase
-        
     }
 
 

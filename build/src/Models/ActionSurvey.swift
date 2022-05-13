@@ -15,9 +15,7 @@ public class ActionSurvey: Codable {
     public var questions: [JourneySurveyQuestion]?
 
     public init(questions: [JourneySurveyQuestion]?) {
-        
         self.questions = questions
-        
     }
 
 

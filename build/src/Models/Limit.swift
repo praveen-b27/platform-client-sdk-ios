@@ -17,11 +17,8 @@ public class Limit: Codable {
     public var value: Double?
 
     public init(key: String?, value: Double?) {
-        
         self.key = key
-        
         self.value = value
-        
     }
 
 

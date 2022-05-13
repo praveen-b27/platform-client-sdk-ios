@@ -15,9 +15,7 @@ public class ChatSettings: Codable {
     public var messageRetentionPeriodDays: Int?
 
     public init(messageRetentionPeriodDays: Int?) {
-        
         self.messageRetentionPeriodDays = messageRetentionPeriodDays
-        
     }
 
 

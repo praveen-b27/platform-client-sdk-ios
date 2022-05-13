@@ -32,7 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 # **deleteWebchatDeployment**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > Void deleteWebchatDeployment(deploymentId)
 
@@ -182,7 +182,7 @@ This endpoint does not require any parameters.
 
 # **getWebchatDeployment**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [WebChatDeployment](WebChatDeployment.html) getWebchatDeployment(deploymentId)
 
@@ -234,7 +234,7 @@ WebChatAPI.getWebchatDeployment(deploymentId: deploymentId) { (response, error) 
 
 # **getWebchatDeployments**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [WebChatDeploymentEntityListing](WebChatDeploymentEntityListing.html) getWebchatDeployments()
 
@@ -461,9 +461,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
-let pageSize: Int = 25 // The number of entries to return per page, or omitted for the default.
-let pageNumber: Int = 1 // The page number to return, or omitted for the first page.
-let excludeDisconnectedMembers: Bool = false // If true, the results will not contain members who have a DISCONNECTED state.
+let pageSize: Int = 0 // The number of entries to return per page, or omitted for the default.
+let pageNumber: Int = 0 // The page number to return, or omitted for the first page.
+let excludeDisconnectedMembers: Bool = true // If true, the results will not contain members who have a DISCONNECTED state.
 
 // Code example
 WebChatAPI.getWebchatGuestConversationMembers(conversationId: conversationId, pageSize: pageSize, pageNumber: pageNumber, excludeDisconnectedMembers: excludeDisconnectedMembers) { (response, error) in
@@ -482,9 +482,9 @@ WebChatAPI.getWebchatGuestConversationMembers(conversationId: conversationId, pa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
-| **pageSize** | **Int**| The number of entries to return per page, or omitted for the default. | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number to return, or omitted for the first page. | [optional] [default to 1] |
-| **excludeDisconnectedMembers** | **Bool**| If true, the results will not contain members who have a DISCONNECTED state. | [optional] [default to false] |
+| **pageSize** | **Int**| The number of entries to return per page, or omitted for the default. | [optional] |
+| **pageNumber** | **Int**| The page number to return, or omitted for the first page. | [optional] |
+| **excludeDisconnectedMembers** | **Bool**| If true, the results will not contain members who have a DISCONNECTED state. | [optional] |
 {: class="table-striped"}
 
 
@@ -574,7 +574,7 @@ let conversationId: String = "" // conversationId
 let after: String = "" // If available, get the messages chronologically after the id of this message
 let before: String = "" // If available, get the messages chronologically before the id of this message
 let sortOrder: WebChatAPI.SortOrder_getWebchatGuestConversationMessages = WebChatAPI.SortOrder_getWebchatGuestConversationMessages.enummember // Sort order
-let maxResults: Int = 100 // Limit the returned number of messages, up to a maximum of 100
+let maxResults: Int = 0 // Limit the returned number of messages, up to a maximum of 100
 
 // Code example
 WebChatAPI.getWebchatGuestConversationMessages(conversationId: conversationId, after: after, before: before, sortOrder: sortOrder, maxResults: maxResults) { (response, error) in
@@ -595,8 +595,8 @@ WebChatAPI.getWebchatGuestConversationMessages(conversationId: conversationId, a
 | **conversationId** | **String**| conversationId | |
 | **after** | **String**| If available, get the messages chronologically after the id of this message | [optional] |
 | **before** | **String**| If available, get the messages chronologically before the id of this message | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |
-| **maxResults** | **Int**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **maxResults** | **Int**| Limit the returned number of messages, up to a maximum of 100 | [optional] |
 {: class="table-striped"}
 
 
@@ -711,7 +711,7 @@ WebChatAPI.patchWebchatGuestConversationMediarequest(conversationId: conversatio
 
 # **postWebchatDeployments**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [WebChatDeployment](WebChatDeployment.html) postWebchatDeployments(body)
 
@@ -877,7 +877,9 @@ WebChatAPI.postWebchatGuestConversationMemberTyping(conversationId: conversation
 
 Create an ACD chat conversation from an external customer.
 
-This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
+This endpoint will create a new ACD Chat conversation under the specified Chat Deployment.  The conversation will begin with a guest member in it (with a role&#x3D;CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the &#39;memberAuthToken&#39; field should include his JWT as generated by the &#39;POST /api/v2/signeddata&#39; resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted.  The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the &#39;eventStreamUri&#39; field of the response; the conversation is not routed until the event stream is attached.
+
+
 
 Wraps POST /api/v2/webchat/guest/conversations  
 
@@ -922,7 +924,7 @@ WebChatAPI.postWebchatGuestConversations(body: body) { (response, error) in
 
 # **putWebchatDeployment**
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 
 > [WebChatDeployment](WebChatDeployment.html) putWebchatDeployment(deploymentId, body)
 

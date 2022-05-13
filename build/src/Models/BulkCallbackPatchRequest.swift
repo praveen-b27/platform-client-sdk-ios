@@ -15,9 +15,7 @@ public class BulkCallbackPatchRequest: Codable {
     public var patchCallbackRequests: [PatchCallbackRequest]?
 
     public init(patchCallbackRequests: [PatchCallbackRequest]?) {
-        
         self.patchCallbackRequests = patchCallbackRequests
-        
     }
 
 

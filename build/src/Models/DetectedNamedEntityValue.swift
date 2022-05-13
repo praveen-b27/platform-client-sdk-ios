@@ -17,11 +17,8 @@ public class DetectedNamedEntityValue: Codable {
     public var resolved: String?
 
     public init(raw: String?, resolved: String?) {
-        
         self.raw = raw
-        
         self.resolved = resolved
-        
     }
 
 

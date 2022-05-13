@@ -30,19 +30,12 @@ public class CreateTimeOffPlanRequest: Codable {
     public var active: Bool?
 
     public init(name: String?, activityCodeIds: [String]?, timeOffLimitIds: [String]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, active: Bool?) {
-        
         self.name = name
-        
         self.activityCodeIds = activityCodeIds
-        
         self.timeOffLimitIds = timeOffLimitIds
-        
         self.autoApprovalRule = autoApprovalRule
-        
         self.daysBeforeStartToExpireFromWaitlist = daysBeforeStartToExpireFromWaitlist
-        
         self.active = active
-        
     }
 
 

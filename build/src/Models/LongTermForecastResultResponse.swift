@@ -17,11 +17,8 @@ public class LongTermForecastResultResponse: Codable {
     public var downloadUrl: String?
 
     public init(result: LongTermForecastResult?, downloadUrl: String?) {
-        
         self.result = result
-        
         self.downloadUrl = downloadUrl
-        
     }
 
 

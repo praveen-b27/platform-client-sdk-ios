@@ -25,13 +25,9 @@ public class AfterCallWork: Codable {
     public var state: State?
 
     public init(startTime: Date?, endTime: Date?, state: State?) {
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.state = state
-        
     }
 
 

@@ -19,19 +19,12 @@ public class QueueConversationEventTopicConversation: Codable {
     public var externalTag: String?
 
     public init(_id: String?, maxParticipants: Int?, participants: [QueueConversationEventTopicParticipant]?, recordingState: String?, address: String?, externalTag: String?) {
-        
         self._id = _id
-        
         self.maxParticipants = maxParticipants
-        
         self.participants = participants
-        
         self.recordingState = recordingState
-        
         self.address = address
-        
         self.externalTag = externalTag
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

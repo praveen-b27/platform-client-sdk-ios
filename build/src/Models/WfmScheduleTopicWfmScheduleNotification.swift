@@ -31,17 +31,11 @@ public class WfmScheduleTopicWfmScheduleNotification: Codable {
     public var eventType: EventType?
 
     public init(status: Status?, operationId: String?, downloadUrl: String?, percentComplete: Int?, eventType: EventType?) {
-        
         self.status = status
-        
         self.operationId = operationId
-        
         self.downloadUrl = downloadUrl
-        
         self.percentComplete = percentComplete
-        
         self.eventType = eventType
-        
     }
 
 

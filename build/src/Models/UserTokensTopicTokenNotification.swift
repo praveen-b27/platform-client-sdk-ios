@@ -20,21 +20,13 @@ public class UserTokensTopicTokenNotification: Codable {
     public var tokenHash: String?
 
     public init(user: UserTokensTopicUriReference?, ipAddress: String?, dateCreated: String?, tokenExpirationDate: String?, sessionId: String?, clientId: String?, tokenHash: String?) {
-        
         self.user = user
-        
         self.ipAddress = ipAddress
-        
         self.dateCreated = dateCreated
-        
         self.tokenExpirationDate = tokenExpirationDate
-        
         self.sessionId = sessionId
-        
         self.clientId = clientId
-        
         self.tokenHash = tokenHash
-        
     }
 
 

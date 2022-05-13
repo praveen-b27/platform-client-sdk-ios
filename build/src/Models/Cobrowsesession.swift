@@ -66,7 +66,7 @@ public class Cobrowsesession: Codable {
     public var provider: String?
     /** The id of the peer communication corresponding to a matching leg for this communication. */
     public var peerId: String?
-    /** The time line of the participant&#39;s call, divided into activity segments. */
+    /** The time line of the participant's call, divided into activity segments. */
     public var segments: [Segment]?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
@@ -76,43 +76,24 @@ public class Cobrowsesession: Codable {
     public var afterCallWorkRequired: Bool?
 
     public init(state: State?, _id: String?, disconnectType: DisconnectType?, _self: Address?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, providerEventTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, segments: [Segment]?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.disconnectType = disconnectType
-        
         self._self = _self
-        
         self.cobrowseSessionId = cobrowseSessionId
-        
         self.cobrowseRole = cobrowseRole
-        
         self.controlling = controlling
-        
         self.viewerUrl = viewerUrl
-        
         self.providerEventTime = providerEventTime
-        
         self.startAlertingTime = startAlertingTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.provider = provider
-        
         self.peerId = peerId
-        
         self.segments = segments
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

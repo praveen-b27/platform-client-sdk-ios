@@ -19,13 +19,9 @@ public class CampaignTimeSlot: Codable {
     public var day: Int?
 
     public init(startTime: String?, stopTime: String?, day: Int?) {
-        
         self.startTime = startTime
-        
         self.stopTime = stopTime
-        
         self.day = day
-        
     }
 
 

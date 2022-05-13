@@ -34,21 +34,13 @@ public class TextBotFlowTurnResponse: Codable {
     public var nextActionExit: TextBotExitAction?
 
     public init(_id: String?, previousTurn: TextBotTurnReference?, prompts: TextBotOutputPrompts?, nextActionType: NextActionType?, nextActionDisconnect: TextBotDisconnectAction?, nextActionWaitForInput: TextBotWaitForInputAction?, nextActionExit: TextBotExitAction?) {
-        
         self._id = _id
-        
         self.previousTurn = previousTurn
-        
         self.prompts = prompts
-        
         self.nextActionType = nextActionType
-        
         self.nextActionDisconnect = nextActionDisconnect
-        
         self.nextActionWaitForInput = nextActionWaitForInput
-        
         self.nextActionExit = nextActionExit
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

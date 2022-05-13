@@ -25,19 +25,12 @@ public class UpdateWorkPlanRotationRequest: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(name: String?, enabled: Bool?, dateRange: DateRangeWithOptionalEnd?, agents: [UpdateWorkPlanRotationAgentRequest]?, pattern: WorkPlanPatternRequest?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.name = name
-        
         self.enabled = enabled
-        
         self.dateRange = dateRange
-        
         self.agents = agents
-        
         self.pattern = pattern
-        
         self.metadata = metadata
-        
     }
 
 

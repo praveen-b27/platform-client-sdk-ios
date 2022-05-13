@@ -18,11 +18,8 @@ public class OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress: 
     public var route: OutboundMessagingMessagingCampaignConfigChangeUriReference?
 
     public init(domain: OutboundMessagingMessagingCampaignConfigChangeUriReference?, route: OutboundMessagingMessagingCampaignConfigChangeUriReference?) {
-        
         self.domain = domain
-        
         self.route = route
-        
     }
 
 

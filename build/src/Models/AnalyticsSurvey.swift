@@ -34,29 +34,17 @@ public class AnalyticsSurvey: Codable {
     public var oSurveyTotalScore: Int64?
 
     public init(eventTime: Date?, queueId: String?, surveyCompletedDate: Date?, surveyFormContextId: String?, surveyFormId: String?, surveyFormName: String?, surveyId: String?, surveyPromoterScore: Int?, surveyStatus: String?, userId: String?, oSurveyTotalScore: Int64?) {
-        
         self.eventTime = eventTime
-        
         self.queueId = queueId
-        
         self.surveyCompletedDate = surveyCompletedDate
-        
         self.surveyFormContextId = surveyFormContextId
-        
         self.surveyFormId = surveyFormId
-        
         self.surveyFormName = surveyFormName
-        
         self.surveyId = surveyId
-        
         self.surveyPromoterScore = surveyPromoterScore
-        
         self.surveyStatus = surveyStatus
-        
         self.userId = userId
-        
         self.oSurveyTotalScore = oSurveyTotalScore
-        
     }
 
 

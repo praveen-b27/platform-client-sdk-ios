@@ -40,25 +40,15 @@ public class Recipient: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, flow: Flow?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, messengerType: MessengerType?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.flow = flow
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.messengerType = messengerType
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

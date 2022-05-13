@@ -8,7 +8,7 @@ Message content element.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **contentType** | **String** | Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. | [optional] |
+| **contentType** | **String** | Type of this content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed. | [optional] |
 | **attachment** | [**WebMessagingAttachment**](WebMessagingAttachment.html) | Attachment content. | [optional] |
 | **quickReply** | [**WebMessagingQuickReply**](WebMessagingQuickReply.html) | Quick reply content. | [optional] |
 | **buttonResponse** | [**WebMessagingButtonResponse**](WebMessagingButtonResponse.html) | Button response content. | [optional] |

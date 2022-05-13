@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Message content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
+/** Message content element. If contentType = \"Attachment\" only one item is allowed. */
 
 public class MessageContent: Codable {
 
@@ -57,35 +57,20 @@ public class MessageContent: Codable {
     public var carousel: ContentCarousel?
 
     public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, buttonResponse: ContentButtonResponse?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?, story: ContentStory?, card: ContentCard?, carousel: ContentCarousel?) {
-        
         self.contentType = contentType
-        
         self.location = location
-        
         self.attachment = attachment
-        
         self.quickReply = quickReply
-        
         self.buttonResponse = buttonResponse
-        
         self.generic = generic
-        
         self.list = list
-        
         self.template = template
-        
         self.reactions = reactions
-        
         self.mention = mention
-        
         self.postback = postback
-        
         self.story = story
-        
         self.card = card
-        
         self.carousel = carousel
-        
     }
 
 

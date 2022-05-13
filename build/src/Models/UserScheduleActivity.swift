@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Represents a single activity in a user&#39;s shift */
+/** Represents a single activity in a user's shift */
 
 public class UserScheduleActivity: Codable {
 
@@ -28,21 +28,13 @@ public class UserScheduleActivity: Codable {
     public var timeOffRequestId: String?
 
     public init(activityCodeId: String?, startDate: Date?, lengthInMinutes: Int?, _description: String?, countsAsPaidTime: Bool?, isDstFallback: Bool?, timeOffRequestId: String?) {
-        
         self.activityCodeId = activityCodeId
-        
         self.startDate = startDate
-        
         self.lengthInMinutes = lengthInMinutes
-        
         self._description = _description
-        
         self.countsAsPaidTime = countsAsPaidTime
-        
         self.isDstFallback = isDstFallback
-        
         self.timeOffRequestId = timeOffRequestId
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

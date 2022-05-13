@@ -31,19 +31,12 @@ public class ScorableSurvey: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, surveyForm: SurveyForm?, status: Status?, answers: SurveyScoringSet?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.surveyForm = surveyForm
-        
         self.status = status
-        
         self.answers = answers
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

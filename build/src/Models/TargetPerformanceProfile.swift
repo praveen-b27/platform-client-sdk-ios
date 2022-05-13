@@ -15,9 +15,7 @@ public class TargetPerformanceProfile: Codable {
     public var targetPerformanceProfileId: String?
 
     public init(targetPerformanceProfileId: String?) {
-        
         self.targetPerformanceProfileId = targetPerformanceProfileId
-        
     }
 
 

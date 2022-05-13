@@ -38,27 +38,16 @@ public class DataTableExportJob: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, owner: AddressableEntityRef?, status: Status?, dateCreated: Date?, dateCompleted: Date?, downloadURI: String?, errorInformation: ErrorBody?, countRecordsProcessed: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.owner = owner
-        
         self.status = status
-        
         self.dateCreated = dateCreated
-        
         self.dateCompleted = dateCompleted
-        
         self.downloadURI = downloadURI
-        
         self.errorInformation = errorInformation
-        
         self.countRecordsProcessed = countRecordsProcessed
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

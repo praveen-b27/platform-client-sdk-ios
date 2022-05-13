@@ -16,11 +16,8 @@ public class UserImage: Codable {
     public var imageUri: String?
 
     public init(resolution: String?, imageUri: String?) {
-        
         self.resolution = resolution
-        
         self.imageUri = imageUri
-        
     }
 
 

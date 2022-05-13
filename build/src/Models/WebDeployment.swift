@@ -47,33 +47,19 @@ public class WebDeployment: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, _description: String?, configuration: WebDeploymentConfigurationVersionEntityRef?, allowAllDomains: Bool?, allowedDomains: [String]?, snippet: String?, dateCreated: Date?, dateModified: Date?, lastModifiedUser: AddressableEntityRef?, flow: DomainEntityRef?, status: Status?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self._description = _description
-        
         self.configuration = configuration
-        
         self.allowAllDomains = allowAllDomains
-        
         self.allowedDomains = allowedDomains
-        
         self.snippet = snippet
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.lastModifiedUser = lastModifiedUser
-        
         self.flow = flow
-        
         self.status = status
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

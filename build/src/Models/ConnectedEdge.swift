@@ -23,19 +23,12 @@ public class ConnectedEdge: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, interfaceName: String?, interfaceIpAddress: String?, edgeConnectionList: [EdgeConnectionInfo]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.interfaceName = interfaceName
-        
         self.interfaceIpAddress = interfaceIpAddress
-        
         self.edgeConnectionList = edgeConnectionList
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

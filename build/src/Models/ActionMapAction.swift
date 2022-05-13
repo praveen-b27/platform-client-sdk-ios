@@ -31,17 +31,11 @@ public class ActionMapAction: Codable {
     public var openActionFields: OpenActionFields?
 
     public init(actionTemplate: ActionMapActionTemplate?, mediaType: MediaType?, architectFlowFields: ArchitectFlowFields?, webMessagingOfferFields: WebMessagingOfferFields?, openActionFields: OpenActionFields?) {
-        
         self.actionTemplate = actionTemplate
-        
         self.mediaType = mediaType
-        
         self.architectFlowFields = architectFlowFields
-        
         self.webMessagingOfferFields = webMessagingOfferFields
-        
         self.openActionFields = openActionFields
-        
     }
 
 

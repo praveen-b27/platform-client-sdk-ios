@@ -59,45 +59,25 @@ public class RecordingMetadata: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, conversationId: String?, path: String?, startTime: String?, endTime: String?, media: String?, annotations: [Annotation]?, fileState: FileState?, restoreExpirationTime: Date?, archiveDate: Date?, archiveMedium: ArchiveMedium?, deleteDate: Date?, exportDate: Date?, exportedDate: Date?, maxAllowedRestorationsForOrg: Int?, remainingRestorationsAllowedForOrg: Int?, sessionId: String?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.conversationId = conversationId
-        
         self.path = path
-        
         self.startTime = startTime
-        
         self.endTime = endTime
-        
         self.media = media
-        
         self.annotations = annotations
-        
         self.fileState = fileState
-        
         self.restoreExpirationTime = restoreExpirationTime
-        
         self.archiveDate = archiveDate
-        
         self.archiveMedium = archiveMedium
-        
         self.deleteDate = deleteDate
-        
         self.exportDate = exportDate
-        
         self.exportedDate = exportedDate
-        
         self.maxAllowedRestorationsForOrg = maxAllowedRestorationsForOrg
-        
         self.remainingRestorationsAllowedForOrg = remainingRestorationsAllowedForOrg
-        
         self.sessionId = sessionId
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

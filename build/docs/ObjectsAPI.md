@@ -45,7 +45,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
-let force: Bool = false // Force delete this division as well as the grants and objects associated with it
+let force: Bool = true // Force delete this division as well as the grants and objects associated with it
 
 // Code example
 ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (error) in
@@ -63,7 +63,7 @@ ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **force** | **Bool**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
+| **force** | **Bool**| Force delete this division as well as the grants and objects associated with it | [optional] |
 {: class="table-striped"}
 
 
@@ -97,7 +97,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
-let objectCount: Bool = false // Get count of objects in this division, grouped by type
+let objectCount: ObjectsAPI.ObjectCount_getAuthorizationDivision = ObjectsAPI.ObjectCount_getAuthorizationDivision.enummember // Get count of objects in this division, grouped by type
 
 // Code example
 ObjectsAPI.getAuthorizationDivision(divisionId: divisionId, objectCount: objectCount) { (response, error) in
@@ -116,7 +116,7 @@ ObjectsAPI.getAuthorizationDivision(divisionId: divisionId, objectCount: objectC
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **objectCount** | **Bool**| Get count of objects in this division, grouped by type | [optional] [default to false] |
+| **objectCount** | **Bool**| Get count of objects in this division, grouped by type | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -134,7 +134,9 @@ ObjectsAPI.getAuthorizationDivision(divisionId: divisionId, objectCount: objectC
 
 Retrieve a list of all divisions defined for the organization
 
-Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id&#x3D;5f777167-63be-4c24-ad41-374155d9e28b&amp;id&#x3D;72e9fb25-c484-488d-9312-7acba82435b3
+
+
 
 Wraps GET /api/v2/authorization/divisions  
 
@@ -149,13 +151,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let objectCount: Bool = false // Include the count of objects contained in the division
+let objectCount: Bool = true // Include the count of objects contained in the division
 let _id: [String] = [""] // Optionally request specific divisions by their IDs
 let name: String = "" // Search term to filter by division name
 
@@ -175,13 +177,13 @@ ObjectsAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **objectCount** | **Bool**| Include the count of objects contained in the division | [optional] [default to false] |
+| **objectCount** | **Bool**| Include the count of objects contained in the division | [optional] |
 | **_id** | [**[String]**](String.html)| Optionally request specific divisions by their IDs | [optional] |
 | **name** | **String**| Search term to filter by division name | [optional] |
 {: class="table-striped"}
@@ -202,6 +204,8 @@ ObjectsAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber,
 Retrieve the home division for the organization.
 
 Will not include object counts.
+
+
 
 Wraps GET /api/v2/authorization/divisions/home  
 
@@ -297,6 +301,8 @@ Assign a list of objects to a division
 
 Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, DATATABLES or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
 
+
+
 Wraps POST /api/v2/authorization/divisions/{divisionId}/objects/{objectType}  
 
 Requires NO permissions: 
@@ -312,7 +318,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
 let objectType: ObjectsAPI.ObjectType_postAuthorizationDivisionObject = ObjectsAPI.ObjectType_postAuthorizationDivisionObject.enummember // The type of the objects. Must be one of the valid object types
-let body: [String] = [new [String](...)] // Object Id List
+let body: [String] = [""] // Object Id List
 
 // Code example
 ObjectsAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectType: objectType, body: body) { (error) in
@@ -331,7 +337,7 @@ ObjectsAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectType: o
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
 | **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), emailcampaign ("EMAILCAMPAIGN"), messagingcampaign ("MESSAGINGCAMPAIGN"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), user ("USER"), callroute ("CALLROUTE"), emergencygroups ("EMERGENCYGROUPS"), routingschedules ("ROUTINGSCHEDULES"), routingschedulegroups ("ROUTINGSCHEDULEGROUPS"), datatables ("DATATABLES"), team ("TEAM"), workbin ("WORKBIN"), worktype ("WORKTYPE"), extensionpool ("EXTENSIONPOOL"), skillgroup ("SKILLGROUP"), script ("SCRIPT") |
-| **body** | **[String]**| Object Id List | |
+| **body** | [**[String]**](String.html)| Object Id List | |
 {: class="table-striped"}
 
 

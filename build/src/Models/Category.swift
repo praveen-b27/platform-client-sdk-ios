@@ -16,9 +16,7 @@ public class Category: Codable {
     public var name: String?
 
     public init(name: String?) {
-        
         self.name = name
-        
     }
 
 

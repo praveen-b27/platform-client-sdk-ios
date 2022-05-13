@@ -21,15 +21,10 @@ public class AdditionalMessage: Codable {
     public var messagingTemplate: MessagingTemplateRequest?
 
     public init(textBody: String?, mediaIds: [String]?, stickerIds: [String]?, messagingTemplate: MessagingTemplateRequest?) {
-        
         self.textBody = textBody
-        
         self.mediaIds = mediaIds
-        
         self.stickerIds = stickerIds
-        
         self.messagingTemplate = messagingTemplate
-        
     }
 
 

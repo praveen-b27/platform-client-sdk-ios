@@ -29,25 +29,15 @@ public class WorkspaceMember: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, workspace: DomainEntityRef?, memberType: MemberType?, member: DomainEntityRef?, user: User?, group: Group?, securityProfile: SecurityProfile?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.workspace = workspace
-        
         self.memberType = memberType
-        
         self.member = member
-        
         self.user = user
-        
         self.group = group
-        
         self.securityProfile = securityProfile
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

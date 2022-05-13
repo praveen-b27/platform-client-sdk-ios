@@ -37,23 +37,14 @@ public class ShiftTradeNotification: Codable {
     public var receivingShiftDate: Date?
 
     public init(weekDate: String?, tradeId: String?, oneSided: Bool?, newState: NewState?, initiatingUser: UserReference?, initiatingShiftDate: Date?, receivingUser: UserReference?, receivingShiftDate: Date?) {
-        
         self.weekDate = weekDate
-        
         self.tradeId = tradeId
-        
         self.oneSided = oneSided
-        
         self.newState = newState
-        
         self.initiatingUser = initiatingUser
-        
         self.initiatingShiftDate = initiatingShiftDate
-        
         self.receivingUser = receivingUser
-        
         self.receivingShiftDate = receivingShiftDate
-        
     }
 
 

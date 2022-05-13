@@ -40,35 +40,20 @@ public class SchemaQuantityLimits: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, minFieldNameCharacters: Int?, maxFieldNameCharacters: Int?, minFieldDescriptionCharacters: Int?, maxFieldDescriptionCharacters: Int?, minSchemaNameCharacters: Int?, maxSchemaNameCharacters: Int?, minSchemaDescriptionCharacters: Int?, maxSchemaDescriptionCharacters: Int?, maxNumberOfSchemasPerOrg: Int?, maxNumberOfFieldsPerSchema: Int?, maxNumberOfFieldsPerOrg: Int?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.minFieldNameCharacters = minFieldNameCharacters
-        
         self.maxFieldNameCharacters = maxFieldNameCharacters
-        
         self.minFieldDescriptionCharacters = minFieldDescriptionCharacters
-        
         self.maxFieldDescriptionCharacters = maxFieldDescriptionCharacters
-        
         self.minSchemaNameCharacters = minSchemaNameCharacters
-        
         self.maxSchemaNameCharacters = maxSchemaNameCharacters
-        
         self.minSchemaDescriptionCharacters = minSchemaDescriptionCharacters
-        
         self.maxSchemaDescriptionCharacters = maxSchemaDescriptionCharacters
-        
         self.maxNumberOfSchemasPerOrg = maxNumberOfSchemasPerOrg
-        
         self.maxNumberOfFieldsPerSchema = maxNumberOfFieldsPerSchema
-        
         self.maxNumberOfFieldsPerOrg = maxNumberOfFieldsPerOrg
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

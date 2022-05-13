@@ -20,13 +20,9 @@ public class DeletableUserReference: Codable {
     public var selfUri: String?
 
     public init(_id: String?, delete: Bool?, selfUri: String?) {
-        
         self._id = _id
-        
         self.delete = delete
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

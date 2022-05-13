@@ -16,13 +16,9 @@ public class QueueConversationEmailEventTopicJourneyContext: Codable {
     public var triggeringAction: QueueConversationEmailEventTopicJourneyAction?
 
     public init(customer: QueueConversationEmailEventTopicJourneyCustomer?, customerSession: QueueConversationEmailEventTopicJourneyCustomerSession?, triggeringAction: QueueConversationEmailEventTopicJourneyAction?) {
-        
         self.customer = customer
-        
         self.customerSession = customerSession
-        
         self.triggeringAction = triggeringAction
-        
     }
 
 

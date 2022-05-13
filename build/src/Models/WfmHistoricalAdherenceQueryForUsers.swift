@@ -23,17 +23,11 @@ public class WfmHistoricalAdherenceQueryForUsers: Codable {
     public var includeExceptions: Bool?
 
     public init(startDate: Date?, endDate: Date?, timeZone: String?, userIds: [String]?, includeExceptions: Bool?) {
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.timeZone = timeZone
-        
         self.userIds = userIds
-        
         self.includeExceptions = includeExceptions
-        
     }
 
 

@@ -18,13 +18,9 @@ public class UserLicenses: Codable {
     public var selfUri: String?
 
     public init(_id: String?, licenses: [String]?, selfUri: String?) {
-        
         self._id = _id
-        
         self.licenses = licenses
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

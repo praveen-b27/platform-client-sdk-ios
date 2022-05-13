@@ -19,13 +19,9 @@ public class AgentOwnedRouting: Codable {
     public var maxOwnedCallbackDelayHours: Int?
 
     public init(enableAgentOwnedCallbacks: Bool?, maxOwnedCallbackHours: Int?, maxOwnedCallbackDelayHours: Int?) {
-        
         self.enableAgentOwnedCallbacks = enableAgentOwnedCallbacks
-        
         self.maxOwnedCallbackHours = maxOwnedCallbackHours
-        
         self.maxOwnedCallbackDelayHours = maxOwnedCallbackDelayHours
-        
     }
 
 

@@ -17,11 +17,8 @@ public class ContactableStatus: Codable {
     public var columnStatus: [String:ColumnStatus]?
 
     public init(contactable: Bool?, columnStatus: [String:ColumnStatus]?) {
-        
         self.contactable = contactable
-        
         self.columnStatus = columnStatus
-        
     }
 
 

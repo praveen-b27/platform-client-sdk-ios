@@ -8,7 +8,7 @@ Message content element.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **contentType** | **String** | Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. | |
+| **contentType** | **String** | Type of this content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed. | |
 | **attachment** | [**ContentAttachment**](ContentAttachment.html) | Attachment content. | [optional] |
 {: class="table table-striped"}
 

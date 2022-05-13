@@ -44,23 +44,14 @@ public class WebMessagingMessage: Codable {
     public var originatingEntity: OriginatingEntity?
 
     public init(_id: String?, channel: WebMessagingChannel?, type: ModelType?, text: String?, content: [WebMessagingContent]?, events: [WebMessagingEvent]?, direction: Direction?, originatingEntity: OriginatingEntity?) {
-        
         self._id = _id
-        
         self.channel = channel
-        
         self.type = type
-        
         self.text = text
-        
         self.content = content
-        
         self.events = events
-        
         self.direction = direction
-        
         self.originatingEntity = originatingEntity
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

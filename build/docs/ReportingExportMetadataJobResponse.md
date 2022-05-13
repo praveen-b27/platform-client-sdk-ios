@@ -14,7 +14,7 @@ title: ReportingExportMetadataJobResponse
 | **requiredFilters** | **[String]** | The list of required filters for the export metadata | [optional] |
 | **supportedFilters** | **[String]** | The list of supported filters for the export metadata | [optional] |
 | **requiredColumnIds** | **[String]** | The list of required column ids for the export metadata | [optional] |
-| **dependentColumnIds** | [**[String:[String]]**](Array.html) | The list of dependent column ids for the export metadata | [optional] |
+| **dependentColumnIds** | [**[String:[String]]**](StringJSON.html) | The list of dependent column ids for the export metadata | [optional] |
 | **availableColumnIds** | **[String]** | The list of available column ids for the export metadata | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

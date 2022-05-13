@@ -20,7 +20,7 @@ public class WebMessagingContent: Codable {
         case card = "Card"
         case carousel = "Carousel"
     }
-    /** Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
+    /** Type of this content element. If contentType = \"Attachment\" only one item is allowed. */
     public var contentType: ContentType?
     /** Attachment content. */
     public var attachment: WebMessagingAttachment?
@@ -36,21 +36,13 @@ public class WebMessagingContent: Codable {
     public var carousel: ContentCarousel?
 
     public init(contentType: ContentType?, attachment: WebMessagingAttachment?, quickReply: WebMessagingQuickReply?, buttonResponse: WebMessagingButtonResponse?, generic: WebMessagingGeneric?, card: ContentCard?, carousel: ContentCarousel?) {
-        
         self.contentType = contentType
-        
         self.attachment = attachment
-        
         self.quickReply = quickReply
-        
         self.buttonResponse = buttonResponse
-        
         self.generic = generic
-        
         self.card = card
-        
         self.carousel = carousel
-        
     }
 
 

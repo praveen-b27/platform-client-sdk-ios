@@ -234,6 +234,8 @@ Get a page of users and their licenses
 
 Retrieve a page of users in an organization along with the licenses they possess.
 
+
+
 Wraps GET /api/v2/license/users  
 
 Requires NO permissions: 
@@ -247,8 +249,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
-let pageNumber: Int = 1 // Page number
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 
 // Code example
 LicenseAPI.getLicenseUsers(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
@@ -266,8 +268,8 @@ LicenseAPI.getLicenseUsers(pageSize: pageSize, pageNumber: pageNumber) { (respon
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 {: class="table-striped"}
 
 
@@ -300,7 +302,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: [String] = [new [String](...)] // The roleIds to use while inferring licenses
+let body: [String] = [""] // The roleIds to use while inferring licenses
 
 // Code example
 LicenseAPI.postLicenseInfer(body: body) { (response, error) in
@@ -318,7 +320,7 @@ LicenseAPI.postLicenseInfer(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | **[String]**| The roleIds to use while inferring licenses | [optional] |
+| **body** | [**[String]**](String.html)| The roleIds to use while inferring licenses | [optional] |
 {: class="table-striped"}
 
 
@@ -456,7 +458,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: [String] = [new [String](...)] // The user IDs to fetch.
+let body: [String] = [""] // The user IDs to fetch.
 
 // Code example
 LicenseAPI.postLicenseUsers(body: body) { (response, error) in
@@ -474,7 +476,7 @@ LicenseAPI.postLicenseUsers(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | **[String]**| The user IDs to fetch. | [optional] |
+| **body** | [**[String]**](String.html)| The user IDs to fetch. | [optional] |
 {: class="table-striped"}
 
 

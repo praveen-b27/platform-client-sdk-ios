@@ -32,17 +32,11 @@ public class BusinessUnitSettings: Codable {
     public var metadata: WfmVersionedEntityMetadata?
 
     public init(startDayOfWeek: StartDayOfWeek?, timeZone: String?, shortTermForecasting: BuShortTermForecastingSettings?, scheduling: BuSchedulingSettings?, metadata: WfmVersionedEntityMetadata?) {
-        
         self.startDayOfWeek = startDayOfWeek
-        
         self.timeZone = timeZone
-        
         self.shortTermForecasting = shortTermForecasting
-        
         self.scheduling = scheduling
-        
         self.metadata = metadata
-        
     }
 
 

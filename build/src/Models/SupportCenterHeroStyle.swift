@@ -17,11 +17,8 @@ public class SupportCenterHeroStyle: Codable {
     public var textColor: String?
 
     public init(backgroundColor: String?, textColor: String?) {
-        
         self.backgroundColor = backgroundColor
-        
         self.textColor = textColor
-        
     }
 
 

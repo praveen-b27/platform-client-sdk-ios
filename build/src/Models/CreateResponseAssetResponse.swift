@@ -19,13 +19,9 @@ public class CreateResponseAssetResponse: Codable {
     public var headers: [String:String]?
 
     public init(_id: String?, url: String?, headers: [String:String]?) {
-        
         self._id = _id
-        
         self.url = url
-        
         self.headers = headers
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

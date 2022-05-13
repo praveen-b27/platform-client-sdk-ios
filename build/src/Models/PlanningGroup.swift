@@ -24,19 +24,12 @@ public class PlanningGroup: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, serviceGoalTemplate: ServiceGoalTemplateReference?, routePaths: [RoutePathResponse]?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.serviceGoalTemplate = serviceGoalTemplate
-        
         self.routePaths = routePaths
-        
         self.metadata = metadata
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

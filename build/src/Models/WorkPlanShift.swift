@@ -60,53 +60,29 @@ public class WorkPlanShift: Codable {
     public var validationId: String?
 
     public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, constrainEarliestStopTime: Bool?, earliestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, activities: [WorkPlanActivity]?, _id: String?, delete: Bool?, validationId: String?) {
-        
         self.name = name
-        
         self.days = days
-        
         self.flexibleStartTime = flexibleStartTime
-        
         self.exactStartTimeMinutesFromMidnight = exactStartTimeMinutesFromMidnight
-        
         self.earliestStartTimeMinutesFromMidnight = earliestStartTimeMinutesFromMidnight
-        
         self.latestStartTimeMinutesFromMidnight = latestStartTimeMinutesFromMidnight
-        
         self.constrainStopTime = constrainStopTime
-        
         self.constrainLatestStopTime = constrainLatestStopTime
-        
         self.latestStopTimeMinutesFromMidnight = latestStopTimeMinutesFromMidnight
-        
         self.constrainEarliestStopTime = constrainEarliestStopTime
-        
         self.earliestStopTimeMinutesFromMidnight = earliestStopTimeMinutesFromMidnight
-        
         self.startIncrementMinutes = startIncrementMinutes
-        
         self.flexiblePaidTime = flexiblePaidTime
-        
         self.exactPaidTimeMinutes = exactPaidTimeMinutes
-        
         self.minimumPaidTimeMinutes = minimumPaidTimeMinutes
-        
         self.maximumPaidTimeMinutes = maximumPaidTimeMinutes
-        
         self.constrainContiguousWorkTime = constrainContiguousWorkTime
-        
         self.minimumContiguousWorkTimeMinutes = minimumContiguousWorkTimeMinutes
-        
         self.maximumContiguousWorkTimeMinutes = maximumContiguousWorkTimeMinutes
-        
         self.activities = activities
-        
         self._id = _id
-        
         self.delete = delete
-        
         self.validationId = validationId
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

@@ -17,11 +17,8 @@ public class EventEntity: Codable {
     public var _id: String?
 
     public init(entityType: String?, _id: String?) {
-        
         self.entityType = entityType
-        
         self._id = _id
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

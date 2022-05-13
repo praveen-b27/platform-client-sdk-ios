@@ -45,35 +45,22 @@ public class OrgOAuthClient: Codable {
     public var state: State?
     /** The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateToDelete: Date?
-    /** The  oauth client&#39;s organization. */
+    /** The  oauth client's organization. */
     public var organization: NamedEntity?
 
     public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, dateToDelete: Date?, organization: NamedEntity?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.dateCreated = dateCreated
-        
         self.dateModified = dateModified
-        
         self.createdBy = createdBy
-        
         self.modifiedBy = modifiedBy
-        
         self.authorizedGrantType = authorizedGrantType
-        
         self.scope = scope
-        
         self.roleDivisions = roleDivisions
-        
         self.state = state
-        
         self.dateToDelete = dateToDelete
-        
         self.organization = organization
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

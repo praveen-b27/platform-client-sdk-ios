@@ -11,10 +11,7 @@ import Foundation
 
 open class MessagingAPI {
     
-    
-    
     /**
-     
      Delete a supported content profile
      
      - parameter supportedContentId: (path) Supported Content ID 
@@ -32,11 +29,8 @@ open class MessagingAPI {
     }
 
     /**
-     
      Delete a supported content profile
-     
      - DELETE /api/v2/messaging/supportedcontent/{supportedContentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -45,18 +39,13 @@ open class MessagingAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String) -> RequestBuilder<Void> {
+    open class func deleteMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/messaging/supportedcontent/{supportedContentId}"
         let supportedContentIdPreEscape = "\(supportedContentId)"
         let supportedContentIdPostEscape = supportedContentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{supportedContentId}", with: supportedContentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -67,15 +56,11 @@ open class MessagingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Get a list of Supported Content profiles
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getMessagingSupportedcontent(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: SupportedContentListing?,_ error: Error?) -> Void)) {
@@ -97,70 +82,58 @@ open class MessagingAPI {
     }
 
     /**
-     
      Get a list of Supported Content profiles
-     
      - GET /api/v2/messaging/supportedcontent
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
-    "mediaTypes" : {
-      "allow" : {
-        "inbound" : [ {
-          "type" : "aeiou"
-        } ],
-        "outbound" : [ "" ]
-      }
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "version" : 123
+    "mediaTypes" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
+  }, {
+    "mediaTypes" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
   } ],
-  "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
-}}]
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
 
      - returns: RequestBuilder<SupportedContentListing> 
      */
-    open class func getMessagingSupportedcontentWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SupportedContentListing> {
+    open class func getMessagingSupportedcontentWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SupportedContentListing> {        
         let path = "/api/v2/messaging/supportedcontent"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
             "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON()
-            
         ])
 
         let requestBuilder: RequestBuilder<SupportedContentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -169,10 +142,7 @@ open class MessagingAPI {
     }
 
     
-    
-    
     /**
-     
      Get a supported content profile
      
      - parameter supportedContentId: (path) Supported Content ID 
@@ -197,53 +167,34 @@ open class MessagingAPI {
     }
 
     /**
-     
      Get a supported content profile
-     
      - GET /api/v2/messaging/supportedcontent/{supportedContentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "mediaTypes" : {
-    "allow" : {
-      "inbound" : [ {
-        "type" : "aeiou"
-      } ],
-      "outbound" : [ "" ]
-    }
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "version" : 123
-}}]
+  "mediaTypes" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
      
      - parameter supportedContentId: (path) Supported Content ID 
 
      - returns: RequestBuilder<SupportedContent> 
      */
-    open class func getMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String) -> RequestBuilder<SupportedContent> {
+    open class func getMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String) -> RequestBuilder<SupportedContent> {        
         var path = "/api/v2/messaging/supportedcontent/{supportedContentId}"
         let supportedContentIdPreEscape = "\(supportedContentId)"
         let supportedContentIdPostEscape = supportedContentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{supportedContentId}", with: supportedContentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
         let body: Data? = nil
-            
         
         let url = URLComponents(string: URLString)
 
@@ -254,11 +205,7 @@ open class MessagingAPI {
 
     
     
-    
-    
-    
     /**
-     
      Update a supported content profile
      
      - parameter supportedContentId: (path) Supported Content ID 
@@ -284,52 +231,36 @@ open class MessagingAPI {
     }
 
     /**
-     
      Update a supported content profile
-     
      - PATCH /api/v2/messaging/supportedcontent/{supportedContentId}
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "mediaTypes" : {
-    "allow" : {
-      "inbound" : [ {
-        "type" : "aeiou"
-      } ],
-      "outbound" : [ "" ]
-    }
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "version" : 123
-}}]
+  "mediaTypes" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
      
      - parameter supportedContentId: (path) Supported Content ID 
      - parameter body: (body) SupportedContent 
 
      - returns: RequestBuilder<SupportedContent> 
      */
-    open class func patchMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String, body: SupportedContent) -> RequestBuilder<SupportedContent> {
+    open class func patchMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String, body: SupportedContent) -> RequestBuilder<SupportedContent> {        
         var path = "/api/v2/messaging/supportedcontent/{supportedContentId}"
         let supportedContentIdPreEscape = "\(supportedContentId)"
         let supportedContentIdPostEscape = supportedContentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{supportedContentId}", with: supportedContentIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SupportedContent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -338,10 +269,7 @@ open class MessagingAPI {
     }
 
     
-    
-    
     /**
-     
      Create a Supported Content profile
      
      - parameter body: (body) SupportedContent 
@@ -366,48 +294,32 @@ open class MessagingAPI {
     }
 
     /**
-     
      Create a Supported Content profile
-     
      - POST /api/v2/messaging/supportedcontent
-     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "mediaTypes" : {
-    "allow" : {
-      "inbound" : [ {
-        "type" : "aeiou"
-      } ],
-      "outbound" : [ "" ]
-    }
-  },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "version" : 123
-}}]
+  "mediaTypes" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
      
      - parameter body: (body) SupportedContent 
 
      - returns: RequestBuilder<SupportedContent> 
      */
-    open class func postMessagingSupportedcontentWithRequestBuilder(body: SupportedContent) -> RequestBuilder<SupportedContent> {
+    open class func postMessagingSupportedcontentWithRequestBuilder(body: SupportedContent) -> RequestBuilder<SupportedContent> {        
         let path = "/api/v2/messaging/supportedcontent"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
+
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SupportedContent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

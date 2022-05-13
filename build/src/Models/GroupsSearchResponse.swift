@@ -31,25 +31,15 @@ public class GroupsSearchResponse: Codable {
     public var results: [Group]?
 
     public init(total: Int64?, pageCount: Int?, pageSize: Int?, pageNumber: Int?, previousPage: String?, currentPage: String?, nextPage: String?, types: [String]?, results: [Group]?) {
-        
         self.total = total
-        
         self.pageCount = pageCount
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.previousPage = previousPage
-        
         self.currentPage = currentPage
-        
         self.nextPage = nextPage
-        
         self.types = types
-        
         self.results = results
-        
     }
 
 

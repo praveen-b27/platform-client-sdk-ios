@@ -26,21 +26,13 @@ public class CertificateDetails: Codable {
     public var signatureValid: Bool?
 
     public init(issuer: String?, subject: String?, expirationDate: Date?, issueDate: Date?, expired: Bool?, valid: Bool?, signatureValid: Bool?) {
-        
         self.issuer = issuer
-        
         self.subject = subject
-        
         self.expirationDate = expirationDate
-        
         self.issueDate = issueDate
-        
         self.expired = expired
-        
         self.valid = valid
-        
         self.signatureValid = signatureValid
-        
     }
 
 

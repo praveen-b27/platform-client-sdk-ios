@@ -29,39 +29,22 @@ public class JourneyWebEventsNotificationWebMessage: Codable {
     public var traits: [String:JourneyWebEventsNotificationCustomEventAttribute]?
 
     public init(eventName: String?, totalEventCount: Int?, totalPageviewCount: Int?, userAgentString: String?, ipAddress: String?, ipOrganization: String?, searchQuery: String?, authenticated: Bool?, browser: JourneyWebEventsNotificationBrowser?, device: JourneyWebEventsNotificationDevice?, geolocation: JourneyWebEventsNotificationGeoLocation?, mktCampaign: JourneyWebEventsNotificationMktCampaign?, page: JourneyWebEventsNotificationPage?, referrer: JourneyWebEventsNotificationReferrer?, attributes: [String:JourneyWebEventsNotificationCustomEventAttribute]?, traits: [String:JourneyWebEventsNotificationCustomEventAttribute]?) {
-        
         self.eventName = eventName
-        
         self.totalEventCount = totalEventCount
-        
         self.totalPageviewCount = totalPageviewCount
-        
         self.userAgentString = userAgentString
-        
         self.ipAddress = ipAddress
-        
         self.ipOrganization = ipOrganization
-        
         self.searchQuery = searchQuery
-        
         self.authenticated = authenticated
-        
         self.browser = browser
-        
         self.device = device
-        
         self.geolocation = geolocation
-        
         self.mktCampaign = mktCampaign
-        
         self.page = page
-        
         self.referrer = referrer
-        
         self.attributes = attributes
-        
         self.traits = traits
-        
     }
 
 

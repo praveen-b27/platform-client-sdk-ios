@@ -23,17 +23,11 @@ public class ResponseAssetSearchResults: Codable {
     public var results: [ResponseAsset]?
 
     public init(total: Int64?, pageCount: Int?, pageSize: Int?, pageNumber: Int?, results: [ResponseAsset]?) {
-        
         self.total = total
-        
         self.pageCount = pageCount
-        
         self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
-        
         self.results = results
-        
     }
 
 

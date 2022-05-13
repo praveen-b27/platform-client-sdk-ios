@@ -26,23 +26,14 @@ public class WfmBuIntradayDataUpdateTopicBuIntradayResult: Codable {
     public var shortTermForecast: WfmBuIntradayDataUpdateTopicBuShortTermForecastReference?
 
     public init(startDate: Date?, endDate: Date?, intervalLengthMinutes: Int?, intradayDataGroupings: [WfmBuIntradayDataUpdateTopicBuIntradayDataGroup]?, categories: [Categories]?, noDataReason: String?, schedule: WfmBuIntradayDataUpdateTopicBuScheduleReference?, shortTermForecast: WfmBuIntradayDataUpdateTopicBuShortTermForecastReference?) {
-        
         self.startDate = startDate
-        
         self.endDate = endDate
-        
         self.intervalLengthMinutes = intervalLengthMinutes
-        
         self.intradayDataGroupings = intradayDataGroupings
-        
         self.categories = categories
-        
         self.noDataReason = noDataReason
-        
         self.schedule = schedule
-        
         self.shortTermForecast = shortTermForecast
-        
     }
 
 

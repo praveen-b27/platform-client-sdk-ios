@@ -11,7 +11,7 @@ import Foundation
 
 public class ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification: Codable {
 
-    /** The organization&#39;s new dependency tracking build status */
+    /** The organization's new dependency tracking build status */
     public var status: String?
     public var user: ArchitectDependencyTrackingBuildNotificationUser?
     public var client: ArchitectDependencyTrackingBuildNotificationClient?
@@ -19,15 +19,10 @@ public class ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuild
     public var startTime: Date?
 
     public init(status: String?, user: ArchitectDependencyTrackingBuildNotificationUser?, client: ArchitectDependencyTrackingBuildNotificationClient?, startTime: Date?) {
-        
         self.status = status
-        
         self.user = user
-        
         self.client = client
-        
         self.startTime = startTime
-        
     }
 
 

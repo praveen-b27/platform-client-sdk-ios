@@ -15,9 +15,7 @@ public class ParticipantAttributes: Codable {
     public var attributes: [String:String]?
 
     public init(attributes: [String:String]?) {
-        
         self.attributes = attributes
-        
     }
 
 

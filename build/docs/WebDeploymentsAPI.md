@@ -190,6 +190,8 @@ Get the versions of a configuration
 
 This returns the 50 most recent versions for this configuration
 
+
+
 Wraps GET /api/v2/webdeployments/configurations/{configurationId}/versions  
 
 Requires ALL permissions: 
@@ -308,7 +310,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let showOnlyPublished: Bool = false // Get only configuration drafts with published versions
+let showOnlyPublished: Bool = true // Get only configuration drafts with published versions
 
 // Code example
 WebDeploymentsAPI.getWebdeploymentsConfigurations(showOnlyPublished: showOnlyPublished) { (response, error) in
@@ -326,7 +328,7 @@ WebDeploymentsAPI.getWebdeploymentsConfigurations(showOnlyPublished: showOnlyPub
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **showOnlyPublished** | **Bool**| Get only configuration drafts with published versions | [optional] [default to false] |
+| **showOnlyPublished** | **Bool**| Get only configuration drafts with published versions | [optional] |
 {: class="table-striped"}
 
 

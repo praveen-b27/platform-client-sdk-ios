@@ -19,15 +19,10 @@ public class QueryResult: Codable {
     public var selfUri: String?
 
     public init(_id: String?, name: String?, body: DomainEntity?, selfUri: String?) {
-        
         self._id = _id
-        
         self.name = name
-        
         self.body = body
-        
         self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

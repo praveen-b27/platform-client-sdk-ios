@@ -19,13 +19,9 @@ public class ForecastPlanningGroupData: Codable {
     public var averageHandleTimeSecondsPerInterval: [Double]?
 
     public init(planningGroupId: String?, offeredPerInterval: [Double]?, averageHandleTimeSecondsPerInterval: [Double]?) {
-        
         self.planningGroupId = planningGroupId
-        
         self.offeredPerInterval = offeredPerInterval
-        
         self.averageHandleTimeSecondsPerInterval = averageHandleTimeSecondsPerInterval
-        
     }
 
 

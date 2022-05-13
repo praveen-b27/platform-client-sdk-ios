@@ -77,43 +77,24 @@ public class Video: Codable {
     public var afterCallWorkRequired: Bool?
 
     public init(state: State?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
-        
         self.state = state
-        
         self._id = _id
-        
         self.context = context
-        
         self.audioMuted = audioMuted
-        
         self.videoMuted = videoMuted
-        
         self.sharingScreen = sharingScreen
-        
         self.peerCount = peerCount
-        
         self.disconnectType = disconnectType
-        
         self.startAlertingTime = startAlertingTime
-        
         self.connectedTime = connectedTime
-        
         self.disconnectedTime = disconnectedTime
-        
         self.provider = provider
-        
         self.peerId = peerId
-        
         self.msids = msids
-        
         self._self = _self
-        
         self.wrapup = wrapup
-        
         self.afterCallWork = afterCallWork
-        
         self.afterCallWorkRequired = afterCallWorkRequired
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

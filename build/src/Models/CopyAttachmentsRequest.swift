@@ -17,11 +17,8 @@ public class CopyAttachmentsRequest: Codable {
     public var attachments: [Attachment]?
 
     public init(sourceMessage: DomainEntityRef?, attachments: [Attachment]?) {
-        
         self.sourceMessage = sourceMessage
-        
         self.attachments = attachments
-        
     }
 
 

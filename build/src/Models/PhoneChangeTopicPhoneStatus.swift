@@ -21,19 +21,15 @@ public class PhoneChangeTopicPhoneStatus: Codable {
     public var edge: PhoneChangeTopicEdgeReference?
     public var provision: PhoneChangeTopicProvisionInfo?
     public var lineStatuses: [PhoneChangeTopicLineStatus]?
+    public var eventCreationTime: Date?
 
-    public init(_id: String?, operationalStatus: OperationalStatus?, edge: PhoneChangeTopicEdgeReference?, provision: PhoneChangeTopicProvisionInfo?, lineStatuses: [PhoneChangeTopicLineStatus]?) {
-        
+    public init(_id: String?, operationalStatus: OperationalStatus?, edge: PhoneChangeTopicEdgeReference?, provision: PhoneChangeTopicProvisionInfo?, lineStatuses: [PhoneChangeTopicLineStatus]?, eventCreationTime: Date?) {
         self._id = _id
-        
         self.operationalStatus = operationalStatus
-        
         self.edge = edge
-        
         self.provision = provision
-        
         self.lineStatuses = lineStatuses
-        
+        self.eventCreationTime = eventCreationTime
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -42,6 +38,7 @@ public class PhoneChangeTopicPhoneStatus: Codable {
         case edge
         case provision
         case lineStatuses
+        case eventCreationTime
     }
 
 

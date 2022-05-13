@@ -23,17 +23,11 @@ public class QueueConversationVideoEventTopicMessageMedia: Codable {
     public var _id: String?
 
     public init(url: String?, mediaType: String?, contentLengthBytes: Int?, name: String?, _id: String?) {
-        
         self.url = url
-        
         self.mediaType = mediaType
-        
         self.contentLengthBytes = contentLengthBytes
-        
         self.name = name
-        
         self._id = _id
-        
     }
 
     public enum CodingKeys: String, CodingKey { 

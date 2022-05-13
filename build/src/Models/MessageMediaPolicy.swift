@@ -17,11 +17,8 @@ public class MessageMediaPolicy: Codable {
     public var conditions: MessageMediaPolicyConditions?
 
     public init(actions: PolicyActions?, conditions: MessageMediaPolicyConditions?) {
-        
         self.actions = actions
-        
         self.conditions = conditions
-        
     }
 
 

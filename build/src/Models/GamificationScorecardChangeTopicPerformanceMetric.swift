@@ -17,15 +17,10 @@ public class GamificationScorecardChangeTopicPerformanceMetric: Codable {
     public var punctualityEvents: [GamificationScorecardChangeTopicPunctualityEvent]?
 
     public init(metric: GamificationScorecardChangeTopicMetric?, points: Int?, value: Double?, punctualityEvents: [GamificationScorecardChangeTopicPunctualityEvent]?) {
-        
         self.metric = metric
-        
         self.points = points
-        
         self.value = value
-        
         self.punctualityEvents = punctualityEvents
-        
     }
 
 

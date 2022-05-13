@@ -15,9 +15,7 @@ public class ChangePasswordRequest: Codable {
     public var newPassword: String?
 
     public init(newPassword: String?) {
-        
         self.newPassword = newPassword
-        
     }
 
 

@@ -23,7 +23,7 @@ public class JourneyEventsSettings: Codable {
     public var excludedQueryParameters: [String]?
     /** Whether or not to keep the URL fragment. */
     public var shouldKeepUrlFragment: Bool?
-    /** List of query parameters used for search (e.g. &#39;q&#39;). */
+    /** List of query parameters used for search (e.g. 'q'). */
     public var searchQueryParameters: [String]?
     /** Controls how the pageview events are tracked. */
     public var pageviewConfig: PageviewConfig?
@@ -39,27 +39,16 @@ public class JourneyEventsSettings: Codable {
     public var scrollDepthEvents: [ScrollPercentageEventTrigger]?
 
     public init(enabled: Bool?, excludedQueryParameters: [String]?, shouldKeepUrlFragment: Bool?, searchQueryParameters: [String]?, pageviewConfig: PageviewConfig?, clickEvents: [SelectorEventTrigger]?, formsTrackEvents: [FormsTrackTrigger]?, idleEvents: [IdleEventTrigger]?, inViewportEvents: [SelectorEventTrigger]?, scrollDepthEvents: [ScrollPercentageEventTrigger]?) {
-        
         self.enabled = enabled
-        
         self.excludedQueryParameters = excludedQueryParameters
-        
         self.shouldKeepUrlFragment = shouldKeepUrlFragment
-        
         self.searchQueryParameters = searchQueryParameters
-        
         self.pageviewConfig = pageviewConfig
-        
         self.clickEvents = clickEvents
-        
         self.formsTrackEvents = formsTrackEvents
-        
         self.idleEvents = idleEvents
-        
         self.inViewportEvents = inViewportEvents
-        
         self.scrollDepthEvents = scrollDepthEvents
-        
     }
 
 

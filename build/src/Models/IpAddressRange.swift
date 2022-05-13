@@ -20,13 +20,9 @@ public class IpAddressRange: Codable {
     public var region: String?
 
     public init(cidr: String?, service: Service?, region: String?) {
-        
         self.cidr = cidr
-        
         self.service = service
-        
         self.region = region
-        
     }
 
 

@@ -17,11 +17,8 @@ public class NluUtteranceSegment: Codable {
     public var entity: NamedEntityAnnotation?
 
     public init(text: String?, entity: NamedEntityAnnotation?) {
-        
         self.text = text
-        
         self.entity = entity
-        
     }
 
 

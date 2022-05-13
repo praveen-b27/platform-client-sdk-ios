@@ -44,29 +44,17 @@ public class WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification: Co
     public var planningGroupIds: [String]?
 
     public init(type: ModelType?, startIntervalIndex: Int?, endIntervalIndex: Int?, metric: Metric?, legacyMetric: LegacyMetric?, value: Double?, values: [WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue]?, enabled: Bool?, granularity: String?, displayGranularity: String?, planningGroupIds: [String]?) {
-        
         self.type = type
-        
         self.startIntervalIndex = startIntervalIndex
-        
         self.endIntervalIndex = endIntervalIndex
-        
         self.metric = metric
-        
         self.legacyMetric = legacyMetric
-        
         self.value = value
-        
         self.values = values
-        
         self.enabled = enabled
-        
         self.granularity = granularity
-        
         self.displayGranularity = displayGranularity
-        
         self.planningGroupIds = planningGroupIds
-        
     }
 
 

@@ -35,15 +35,10 @@ public class LearningModuleRuleParts: Codable {
     public var order: Int?
 
     public init(operation: Operation?, selector: Selector?, value: [String]?, order: Int?) {
-        
         self.operation = operation
-        
         self.selector = selector
-        
         self.value = value
-        
         self.order = order
-        
     }
 
 

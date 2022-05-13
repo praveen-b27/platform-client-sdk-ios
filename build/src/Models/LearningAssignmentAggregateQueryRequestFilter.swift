@@ -21,11 +21,8 @@ public class LearningAssignmentAggregateQueryRequestFilter: Codable {
     public var clauses: [LearningAssignmentAggregateQueryRequestClause]?
 
     public init(type: ModelType?, clauses: [LearningAssignmentAggregateQueryRequestClause]?) {
-        
         self.type = type
-        
         self.clauses = clauses
-        
     }
 
 

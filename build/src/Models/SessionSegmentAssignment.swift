@@ -17,11 +17,8 @@ public class SessionSegmentAssignment: Codable {
     public var assignedDate: Date?
 
     public init(segment: AssignedSegment?, assignedDate: Date?) {
-        
         self.segment = segment
-        
         self.assignedDate = assignedDate
-        
     }
 
 

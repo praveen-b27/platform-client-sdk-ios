@@ -2,7 +2,7 @@
 title: WebMessagingGeneric
 ---
 ## WebMessagingGeneric
-Generic content object.
+Generic content object. (Deprecated
 
 ## Properties
 

@@ -1355,6 +1355,7 @@ open class SpeechTextAnalyticsAPI {
         case ptBr = "pt-BR"
         case plPl = "pl-PL"
         case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
     }
 
     

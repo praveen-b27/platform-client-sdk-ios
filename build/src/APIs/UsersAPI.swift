@@ -734,11 +734,11 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -827,11 +827,11 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1241,7 +1241,6 @@ open class UsersAPI {
     public enum IntegrationPresenceSource_getProfilesUsers: String { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
 
     
@@ -1304,11 +1303,11 @@ open class UsersAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -1409,7 +1408,6 @@ open class UsersAPI {
     public enum IntegrationPresenceSource_getUser: String { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
 
     
@@ -4860,11 +4858,11 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -5392,7 +5390,6 @@ open class UsersAPI {
     public enum IntegrationPresenceSource_getUserProfile: String { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
 
     
@@ -5815,11 +5812,11 @@ open class UsersAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6031,11 +6028,11 @@ open class UsersAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6128,11 +6125,11 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6732,11 +6729,11 @@ open class UsersAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6780,7 +6777,6 @@ open class UsersAPI {
     public enum IntegrationPresenceSource_getUsers: String { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
 
     
@@ -7406,11 +7402,11 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -7559,11 +7555,11 @@ open class UsersAPI {
     "status" : "Planned"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
@@ -7716,11 +7712,11 @@ open class UsersAPI {
     "status" : "Planned"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
@@ -7853,7 +7849,6 @@ open class UsersAPI {
     public enum IntegrationPresenceSource_getUsersMe: String { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
 
     
@@ -14912,7 +14907,6 @@ open class UsersAPI {
     public enum IntegrationPresenceSource_getUsersSearch: String { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
 
     
@@ -16890,11 +16884,11 @@ open class UsersAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -17042,11 +17036,11 @@ open class UsersAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -17122,11 +17116,11 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -17756,11 +17750,11 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Users 
@@ -21242,11 +21236,11 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 

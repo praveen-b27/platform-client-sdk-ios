@@ -339,11 +339,11 @@ open class CoachingAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -602,11 +602,11 @@ open class CoachingAPI {
     "status" : "Scheduled"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userIds: (query) The user IDs for which to retrieve appointments 
@@ -798,11 +798,11 @@ open class CoachingAPI {
     "status" : "Scheduled"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter interval: (query) Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
@@ -978,11 +978,11 @@ open class CoachingAPI {
     "status" : "Scheduled"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)

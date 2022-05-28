@@ -26,6 +26,7 @@ public class GeneralProgramJobRequest: Codable {
         case ptBr = "pt-BR"
         case plPl = "pl-PL"
         case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
     }
     public enum Mode: String, Codable { 
         case skip = "Skip"

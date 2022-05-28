@@ -35,10 +35,14 @@ public class MetricDefinition: Codable {
     public var defaultObjective: DefaultObjective?
     /** An optional field to specify if this metric definition is locked to certain template. e.g. punctuality */
     public var lockTemplateId: String?
+    /** Flag to indicate if this metricDefinition allows filter based on media types */
+    public var mediaTypeFilteringAllowed: Bool?
+    /** Flag to indicate if this metricDefinition allows filter based on queues */
+    public var queueFilteringAllowed: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, unitType: UnitType?, shortName: String?, dividendMetrics: [String]?, divisorMetrics: [String]?, defaultObjective: DefaultObjective?, lockTemplateId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, unitType: UnitType?, shortName: String?, dividendMetrics: [String]?, divisorMetrics: [String]?, defaultObjective: DefaultObjective?, lockTemplateId: String?, mediaTypeFilteringAllowed: Bool?, queueFilteringAllowed: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.unitType = unitType
@@ -47,6 +51,8 @@ public class MetricDefinition: Codable {
         self.divisorMetrics = divisorMetrics
         self.defaultObjective = defaultObjective
         self.lockTemplateId = lockTemplateId
+        self.mediaTypeFilteringAllowed = mediaTypeFilteringAllowed
+        self.queueFilteringAllowed = queueFilteringAllowed
         self.selfUri = selfUri
     }
 
@@ -59,6 +65,8 @@ public class MetricDefinition: Codable {
         case divisorMetrics
         case defaultObjective
         case lockTemplateId
+        case mediaTypeFilteringAllowed
+        case queueFilteringAllowed
         case selfUri
     }
 

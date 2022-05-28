@@ -30,8 +30,10 @@ public class SupportCenterSettings: Codable {
     public var enabledCategories: [AddressableEntityRef]?
     /** Style attributes for support center */
     public var styleSetting: SupportCenterStyleSetting?
+    /** Customer feedback settings */
+    public var feedback: SupportCenterFeedbackSettings?
 
-    public init(enabled: Bool?, knowledgeBase: AddressableEntityRef?, customMessages: [SupportCenterCustomMessage]?, routerType: RouterType?, screens: [SupportCenterScreen]?, enabledCategories: [AddressableEntityRef]?, styleSetting: SupportCenterStyleSetting?) {
+    public init(enabled: Bool?, knowledgeBase: AddressableEntityRef?, customMessages: [SupportCenterCustomMessage]?, routerType: RouterType?, screens: [SupportCenterScreen]?, enabledCategories: [AddressableEntityRef]?, styleSetting: SupportCenterStyleSetting?, feedback: SupportCenterFeedbackSettings?) {
         self.enabled = enabled
         self.knowledgeBase = knowledgeBase
         self.customMessages = customMessages
@@ -39,6 +41,7 @@ public class SupportCenterSettings: Codable {
         self.screens = screens
         self.enabledCategories = enabledCategories
         self.styleSetting = styleSetting
+        self.feedback = feedback
     }
 
 

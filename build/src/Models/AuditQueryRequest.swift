@@ -50,7 +50,7 @@ public class AuditQueryRequest: Codable {
         case scim = "SCIM"
         case numberPurchasing = "NumberPurchasing"
     }
-    /** Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
+    /** Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ */
     public var interval: String?
     /** Name of the service to query audits for. */
     public var serviceName: ServiceName?

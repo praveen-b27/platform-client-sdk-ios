@@ -264,9 +264,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
     "isPassed" : true,
     "isManual" : true,
@@ -307,11 +307,11 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "lastUri" : "https://openapi-generator.tech",
+  "pageSize" : 1,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -445,9 +445,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
     "isPassed" : true,
     "isManual" : true,
@@ -488,11 +488,11 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "lastUri" : "https://openapi-generator.tech",
+  "pageSize" : 1,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -940,11 +940,11 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter isArchived: (query) Archive status (optional)
@@ -1692,11 +1692,11 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "unfilteredTotal" : 5
 }, statusCode=200}]
      

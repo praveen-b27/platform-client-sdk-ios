@@ -28,7 +28,7 @@ public class WebMessagingContent: Codable {
     public var quickReply: WebMessagingQuickReply?
     /** Button response content. */
     public var buttonResponse: WebMessagingButtonResponse?
-    /** Generic content. */
+    /** Generic content (Deprecated). */
     public var generic: WebMessagingGeneric?
     /** Card content */
     public var card: ContentCard?

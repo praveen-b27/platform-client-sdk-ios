@@ -450,8 +450,10 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "unitType" : "None",
+  "mediaTypeFilteringAllowed" : true,
   "defaultObjective" : "{}",
   "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
+  "queueFilteringAllowed" : true,
   "lockTemplateId" : "lockTemplateId",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
@@ -513,8 +515,10 @@ open class GamificationAPI {
   "total" : 0,
   "entities" : [ {
     "unitType" : "None",
+    "mediaTypeFilteringAllowed" : true,
     "defaultObjective" : "{}",
     "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
+    "queueFilteringAllowed" : true,
     "lockTemplateId" : "lockTemplateId",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -523,8 +527,10 @@ open class GamificationAPI {
     "shortName" : "shortName"
   }, {
     "unitType" : "None",
+    "mediaTypeFilteringAllowed" : true,
     "defaultObjective" : "{}",
     "divisorMetrics" : [ "divisorMetrics", "divisorMetrics" ],
+    "queueFilteringAllowed" : true,
     "lockTemplateId" : "lockTemplateId",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",

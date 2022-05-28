@@ -35,6 +35,7 @@ Wraps GET /api/v2/license/definitions/{licenseId}
 Requires ANY permissions: 
 
 * authorization:grant:add
+* authorization:license:view
 
 ### Example
 
@@ -87,6 +88,7 @@ Wraps GET /api/v2/license/definitions
 Requires ANY permissions: 
 
 * authorization:grant:add
+* authorization:license:view
 
 ### Example
 
@@ -187,6 +189,7 @@ Wraps GET /api/v2/license/users/{userId}
 Requires ANY permissions: 
 
 * authorization:grant:add
+* authorization:license:view
 
 ### Example
 
@@ -449,6 +452,7 @@ Wraps POST /api/v2/license/users
 Requires ANY permissions: 
 
 * authorization:grant:add
+* authorization:license:view
 
 ### Example
 

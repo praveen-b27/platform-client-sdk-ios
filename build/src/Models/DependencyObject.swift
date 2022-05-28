@@ -36,6 +36,7 @@ public class DependencyObject: Codable {
         case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
+        case image = "IMAGE"
         case inboundcallflow = "INBOUNDCALLFLOW"
         case inboundchatflow = "INBOUNDCHATFLOW"
         case inboundemailflow = "INBOUNDEMAILFLOW"

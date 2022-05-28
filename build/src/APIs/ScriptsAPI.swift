@@ -403,11 +403,11 @@ open class ScriptsAPI {
     "publishedDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -598,11 +598,11 @@ open class ScriptsAPI {
     "publishedDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -777,11 +777,11 @@ open class ScriptsAPI {
     "publishedDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -952,11 +952,11 @@ open class ScriptsAPI {
     "publishedDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -1242,7 +1242,26 @@ open class ScriptsAPI {
 
     
     
+    public enum Input_getScriptsPublishedScriptIdVariables: String { 
+        case _true = "true"
+        case _false = "false"
+    }
+
     
+    
+    public enum Output_getScriptsPublishedScriptIdVariables: String { 
+        case _true = "true"
+        case _false = "false"
+    }
+
+    
+    
+    public enum ModelType_getScriptsPublishedScriptIdVariables: String { 
+        case string = "string"
+        case number = "number"
+        case boolean = "boolean"
+    }
+
     
     
     /**
@@ -1255,7 +1274,7 @@ open class ScriptsAPI {
      - parameter scriptDataVersion: (query) Advanced usage - controls the data version of the script (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScriptsPublishedScriptIdVariables(scriptId: String, input: String? = nil, output: String? = nil, type: String? = nil, scriptDataVersion: String? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+    open class func getScriptsPublishedScriptIdVariables(scriptId: String, input: Input_getScriptsPublishedScriptIdVariables? = nil, output: Output_getScriptsPublishedScriptIdVariables? = nil, type: ModelType_getScriptsPublishedScriptIdVariables? = nil, scriptDataVersion: String? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
         let requestBuilder = getScriptsPublishedScriptIdVariablesWithRequestBuilder(scriptId: scriptId, input: input, output: output, type: type, scriptDataVersion: scriptDataVersion)
         requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
@@ -1288,7 +1307,7 @@ open class ScriptsAPI {
 
      - returns: RequestBuilder<JSON> 
      */
-    open class func getScriptsPublishedScriptIdVariablesWithRequestBuilder(scriptId: String, input: String? = nil, output: String? = nil, type: String? = nil, scriptDataVersion: String? = nil) -> RequestBuilder<JSON> {        
+    open class func getScriptsPublishedScriptIdVariablesWithRequestBuilder(scriptId: String, input: Input_getScriptsPublishedScriptIdVariables? = nil, output: Output_getScriptsPublishedScriptIdVariables? = nil, type: ModelType_getScriptsPublishedScriptIdVariables? = nil, scriptDataVersion: String? = nil) -> RequestBuilder<JSON> {        
         var path = "/api/v2/scripts/published/{scriptId}/variables"
         let scriptIdPreEscape = "\(scriptId)"
         let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1298,9 +1317,9 @@ open class ScriptsAPI {
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "input": input, 
-            "output": output, 
-            "type": type, 
+            "input": input?.rawValue, 
+            "output": output?.rawValue, 
+            "type": type?.rawValue, 
             "scriptDataVersion": scriptDataVersion
         ])
 

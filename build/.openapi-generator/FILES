@@ -1173,6 +1173,7 @@ docs/ExpiredEdgeListing.md
 docs/ExportScriptRequest.md
 docs/ExportScriptResponse.md
 docs/ExportUri.md
+docs/ExtendedWrapup.md
 docs/Extension.md
 docs/ExtensionEntityListing.md
 docs/ExtensionPool.md
@@ -1547,6 +1548,7 @@ docs/LearningAssignmentUser.md
 docs/LearningAssignmentUserListing.md
 docs/LearningAssignmentUserQuery.md
 docs/LearningAssignmentsDomainEntity.md
+docs/LearningCoverArtThumbnail.md
 docs/LearningModule.md
 docs/LearningModuleCoverArtRequest.md
 docs/LearningModuleCoverArtResponse.md
@@ -2511,6 +2513,7 @@ docs/SuggestAPI.md
 docs/SuggestSearchCriteria.md
 docs/SuggestSearchRequest.md
 docs/SupportCenterCustomMessage.md
+docs/SupportCenterFeedbackSettings.md
 docs/SupportCenterGlobalStyle.md
 docs/SupportCenterHeroStyle.md
 docs/SupportCenterModuleSetting.md
@@ -6177,6 +6180,7 @@ src/Models/ExpiredEdgeListing.swift
 src/Models/ExportScriptRequest.swift
 src/Models/ExportScriptResponse.swift
 src/Models/ExportUri.swift
+src/Models/ExtendedWrapup.swift
 src/Models/Extension.swift
 src/Models/ExtensionEntityListing.swift
 src/Models/ExtensionPool.swift
@@ -6521,6 +6525,7 @@ src/Models/LearningAssignmentUser.swift
 src/Models/LearningAssignmentUserListing.swift
 src/Models/LearningAssignmentUserQuery.swift
 src/Models/LearningAssignmentsDomainEntity.swift
+src/Models/LearningCoverArtThumbnail.swift
 src/Models/LearningModule.swift
 src/Models/LearningModuleCoverArtRequest.swift
 src/Models/LearningModuleCoverArtResponse.swift
@@ -7444,6 +7449,7 @@ src/Models/SubscriptionOverviewUsage.swift
 src/Models/SuggestSearchCriteria.swift
 src/Models/SuggestSearchRequest.swift
 src/Models/SupportCenterCustomMessage.swift
+src/Models/SupportCenterFeedbackSettings.swift
 src/Models/SupportCenterGlobalStyle.swift
 src/Models/SupportCenterHeroStyle.swift
 src/Models/SupportCenterModuleSetting.swift

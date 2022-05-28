@@ -2,7 +2,7 @@
 title: ConversationContentGeneric
 ---
 ## ConversationContentGeneric
-Generic content object.
+Generic content object (Deprecated).
 
 ## Properties
 

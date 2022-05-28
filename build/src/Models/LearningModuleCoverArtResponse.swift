@@ -18,17 +18,21 @@ public class LearningModuleCoverArtResponse: Codable {
     public var selfUri: String?
     /** The URL for the cover art */
     public var url: String?
+    /** Thumbnails for the cover art */
+    public var thumbnails: [LearningCoverArtThumbnail]?
 
-    public init(_id: String?, selfUri: String?, url: String?) {
+    public init(_id: String?, selfUri: String?, url: String?, thumbnails: [LearningCoverArtThumbnail]?) {
         self._id = _id
         self.selfUri = selfUri
         self.url = url
+        self.thumbnails = thumbnails
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case selfUri
         case url
+        case thumbnails
     }
 
 

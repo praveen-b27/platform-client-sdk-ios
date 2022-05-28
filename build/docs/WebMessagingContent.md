@@ -12,7 +12,7 @@ Message content element.
 | **attachment** | [**WebMessagingAttachment**](WebMessagingAttachment.html) | Attachment content. | [optional] |
 | **quickReply** | [**WebMessagingQuickReply**](WebMessagingQuickReply.html) | Quick reply content. | [optional] |
 | **buttonResponse** | [**WebMessagingButtonResponse**](WebMessagingButtonResponse.html) | Button response content. | [optional] |
-| **generic** | [**WebMessagingGeneric**](WebMessagingGeneric.html) | Generic content. | [optional] |
+| **generic** | [**WebMessagingGeneric**](WebMessagingGeneric.html) | Generic content (Deprecated). | [optional] |
 | **card** | [**ContentCard**](ContentCard.html) | Card content | [optional] |
 | **carousel** | [**ContentCarousel**](ContentCarousel.html) | Carousel content | [optional] |
 {: class="table table-striped"}

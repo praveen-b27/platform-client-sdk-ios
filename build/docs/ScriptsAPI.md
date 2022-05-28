@@ -647,9 +647,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let scriptId: String = "" // Script ID
-let input: String = "" // input
-let output: String = "" // output
-let type: String = "" // type
+let input: ScriptsAPI.Input_getScriptsPublishedScriptIdVariables = ScriptsAPI.Input_getScriptsPublishedScriptIdVariables.enummember // input
+let output: ScriptsAPI.Output_getScriptsPublishedScriptIdVariables = ScriptsAPI.Output_getScriptsPublishedScriptIdVariables.enummember // output
+let type: ScriptsAPI.ModelType_getScriptsPublishedScriptIdVariables = ScriptsAPI.ModelType_getScriptsPublishedScriptIdVariables.enummember // type
 let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
 
 // Code example
@@ -669,9 +669,9 @@ ScriptsAPI.getScriptsPublishedScriptIdVariables(scriptId: scriptId, input: input
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scriptId** | **String**| Script ID | |
-| **input** | **String**| input | [optional] |
-| **output** | **String**| output | [optional] |
-| **type** | **String**| type | [optional] |
+| **input** | **String**| input | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **output** | **String**| output | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **type** | **String**| type | [optional]<br />**Values**: string ("string"), number ("number"), boolean ("boolean") |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
 {: class="table-striped"}
 

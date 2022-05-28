@@ -15,6 +15,7 @@ Settings concerning support center
 | **screens** | [**[SupportCenterScreen]**](SupportCenterScreen.html) | Available screens for the support center with its modules | [optional] |
 | **enabledCategories** | [**[AddressableEntityRef]**](AddressableEntityRef.html) | Enabled article categories for support center | [optional] |
 | **styleSetting** | [**SupportCenterStyleSetting**](SupportCenterStyleSetting.html) | Style attributes for support center | [optional] |
+| **feedback** | [**SupportCenterFeedbackSettings**](SupportCenterFeedbackSettings.html) | Customer feedback settings | [optional] |
 {: class="table table-striped"}
 
 

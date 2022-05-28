@@ -23,7 +23,7 @@ public class Survey: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var conversation: Conversation?
+    public var conversation: ConversationReference?
     /** Survey form used for this survey. */
     public var surveyForm: SurveyForm?
     public var agent: DomainEntityRef?
@@ -37,7 +37,7 @@ public class Survey: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: Conversation?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation

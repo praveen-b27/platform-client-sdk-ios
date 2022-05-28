@@ -11,19 +11,27 @@ import Foundation
 
 public class KeyPerformanceIndicator: Codable {
 
+    public enum OptimizationType: String, Codable { 
+        case maximization = "Maximization"
+        case minimization = "Minimization"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the Key Performance Indicator. */
     public var name: String?
+    /** The optimization type of the Key Performance Indicator. */
+    public var optimizationType: OptimizationType?
 
-    public init(_id: String?, name: String?) {
+    public init(_id: String?, name: String?, optimizationType: OptimizationType?) {
         self._id = _id
         self.name = name
+        self.optimizationType = optimizationType
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case optimizationType
     }
 
 

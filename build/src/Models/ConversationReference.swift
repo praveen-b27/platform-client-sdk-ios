@@ -11,9 +11,7 @@ import Foundation
 
 public class ConversationReference: Codable {
 
-    /** The globally unique identifier for the object. */
     public var _id: String?
-    /** The URI for this object */
     public var selfUri: String?
 
     public init(_id: String?, selfUri: String?) {

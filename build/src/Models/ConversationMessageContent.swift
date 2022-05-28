@@ -37,7 +37,7 @@ public class ConversationMessageContent: Codable {
     public var template: ConversationContentNotificationTemplate?
     /** Button response content. */
     public var buttonResponse: ConversationContentButtonResponse?
-    /** Generic Template Object */
+    /** Generic Template Object (Deprecated). */
     public var generic: ConversationContentGeneric?
     /** Card (Generic Template) Object */
     public var card: ConversationContentCard?

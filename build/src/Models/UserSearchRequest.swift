@@ -19,7 +19,6 @@ public class UserSearchRequest: Codable {
     public enum IntegrationPresenceSource: String, Codable { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
     /** The sort order for results */
     public var sortOrder: SortOrder?

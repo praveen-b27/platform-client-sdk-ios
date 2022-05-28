@@ -15,7 +15,7 @@ Message content element.
 | **quickReply** | [**ConversationContentQuickReply**](ConversationContentQuickReply.html) | Quick reply content. | [optional] |
 | **template** | [**ConversationContentNotificationTemplate**](ConversationContentNotificationTemplate.html) | Template notification content. | [optional] |
 | **buttonResponse** | [**ConversationContentButtonResponse**](ConversationContentButtonResponse.html) | Button response content. | [optional] |
-| **generic** | [**ConversationContentGeneric**](ConversationContentGeneric.html) | Generic Template Object | [optional] |
+| **generic** | [**ConversationContentGeneric**](ConversationContentGeneric.html) | Generic Template Object (Deprecated). | [optional] |
 | **card** | [**ConversationContentCard**](ConversationContentCard.html) | Card (Generic Template) Object | [optional] |
 | **carousel** | [**ConversationContentCarousel**](ConversationContentCarousel.html) | Carousel (Multiple Generic Template) Object | [optional] |
 {: class="table table-striped"}

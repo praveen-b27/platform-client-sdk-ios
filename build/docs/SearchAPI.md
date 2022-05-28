@@ -396,7 +396,7 @@ SearchAPI.getUsersSearch(q64: q64, expand: expand, integrationPresenceSource: in
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
 | **expand** | [**[String]**](String.html)| expand | [optional] |
-| **integrationPresenceSource** | **String**| integrationPresenceSource | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
+| **integrationPresenceSource** | **String**| integrationPresenceSource | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone") |
 {: class="table-striped"}
 
 

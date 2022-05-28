@@ -5485,8 +5485,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 
 // Code example
@@ -5506,8 +5506,8 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAgentschedulesSearch(b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 | **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -5711,8 +5711,8 @@ let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let scheduleId: String = "" // The ID of the schedule
 let body: BuQueryAgentSchedulesRequest = new BuQueryAgentSchedulesRequest(...) // body
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
 // Code example
 WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
@@ -5734,8 +5734,8 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleAgentsched
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
 | **body** | [**BuQueryAgentSchedulesRequest**](BuQueryAgentSchedulesRequest.html)| body | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 {: class="table-striped"}
 
 
@@ -6675,8 +6675,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 
 // Code example
@@ -6696,8 +6696,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 | **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
 {: class="table-striped"}
 

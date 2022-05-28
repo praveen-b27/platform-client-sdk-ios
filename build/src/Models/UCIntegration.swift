@@ -15,7 +15,6 @@ public class UCIntegration: Codable {
     public enum IntegrationPresenceSource: String, Codable { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

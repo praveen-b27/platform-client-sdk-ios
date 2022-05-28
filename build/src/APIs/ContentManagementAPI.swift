@@ -634,11 +634,11 @@ open class ContentManagementAPI {
     "status" : "SUCCESS"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter documentId: (path) Document ID 
@@ -1047,11 +1047,11 @@ open class ContentManagementAPI {
     "uploadDestinationUri" : "https://openapi-generator.tech"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (query) Workspace ID 
@@ -1233,11 +1233,11 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 0,
-    "previousUri" : "https://openapi-generator.tech",
-    "nextUri" : "https://openapi-generator.tech"
+    "nextUri" : "https://openapi-generator.tech",
+    "previousUri" : "https://openapi-generator.tech"
   }
 }, statusCode=200}]
      
@@ -1372,11 +1372,11 @@ open class ContentManagementAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<SecurityProfileEntityListing> 
@@ -3089,11 +3089,11 @@ open class ContentManagementAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter entityId: (query) Filters the shares returned to only the entity specified by the value of this parameter. (optional)
@@ -3420,11 +3420,11 @@ open class ContentManagementAPI {
     "statusCode" : "INPROGRESS"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -4052,11 +4052,11 @@ open class ContentManagementAPI {
     "uploadDestinationUri" : "https://openapi-generator.tech"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -5220,11 +5220,11 @@ open class ContentManagementAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -5381,11 +5381,11 @@ open class ContentManagementAPI {
     "acl" : [ "acl", "acl" ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -5501,11 +5501,11 @@ open class ContentManagementAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -5671,11 +5671,11 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 0,
-    "previousUri" : "https://openapi-generator.tech",
-    "nextUri" : "https://openapi-generator.tech"
+    "nextUri" : "https://openapi-generator.tech",
+    "previousUri" : "https://openapi-generator.tech"
   }
 }, statusCode=200}]
      
@@ -6288,11 +6288,11 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "https://openapi-generator.tech",
-    "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
+    "lastUri" : "https://openapi-generator.tech",
     "pageSize" : 0,
-    "previousUri" : "https://openapi-generator.tech",
-    "nextUri" : "https://openapi-generator.tech"
+    "nextUri" : "https://openapi-generator.tech",
+    "previousUri" : "https://openapi-generator.tech"
   }
 }, statusCode=200}]
      
@@ -7891,11 +7891,11 @@ open class ContentManagementAPI {
     "acl" : [ "acl", "acl" ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (path) Workspace ID 

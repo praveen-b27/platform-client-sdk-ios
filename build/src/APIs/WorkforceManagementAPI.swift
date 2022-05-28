@@ -1336,8 +1336,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -6977,8 +6977,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -7074,8 +7074,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -8998,8 +8998,8 @@ open class WorkforceManagementAPI {
      Search published schedules
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
-     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -9036,8 +9036,8 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
-     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BuAsyncAgentSchedulesSearchResponse> 
@@ -9286,8 +9286,8 @@ open class WorkforceManagementAPI {
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter scheduleId: (path) The ID of the schedule 
      - parameter body: (body) body 
-     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
-     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery(businessUnitId: String, weekId: Date, scheduleId: String, body: BuQueryAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesQueryResponse?,_ error: Error?) -> Void)) {
@@ -9326,8 +9326,8 @@ open class WorkforceManagementAPI {
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter scheduleId: (path) The ID of the schedule 
      - parameter body: (body) body 
-     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
-     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
      - returns: RequestBuilder<BuAsyncAgentSchedulesQueryResponse> 
      */
@@ -10436,8 +10436,8 @@ open class WorkforceManagementAPI {
      Query published schedules for given given time range for set of users
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
-     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -10474,8 +10474,8 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
-     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BuAsyncAgentSchedulesSearchResponse> 

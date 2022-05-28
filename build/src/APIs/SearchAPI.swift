@@ -600,7 +600,6 @@ open class SearchAPI {
     public enum IntegrationPresenceSource_getUsersSearch: String { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
-        case ringCentral = "RingCentral"
     }
 
     

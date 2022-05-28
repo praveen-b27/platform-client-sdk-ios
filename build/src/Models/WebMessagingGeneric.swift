@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Generic content object. */
+/** Generic content object. (Deprecated */
 
 public class WebMessagingGeneric: Codable {
 

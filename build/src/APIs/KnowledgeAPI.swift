@@ -432,7 +432,7 @@ open class KnowledgeAPI {
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter name: (query) Filter to return the categories that starts with the given category name. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -490,7 +490,7 @@ open class KnowledgeAPI {
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter name: (query) Filter to return the categories that starts with the given category name. (optional)
 
@@ -783,7 +783,7 @@ open class KnowledgeAPI {
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter categories: (query) Filter by categories ids, comma separated values expected. (optional)
      - parameter title: (query) Filter by document title. (optional)
@@ -889,7 +889,7 @@ open class KnowledgeAPI {
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter categories: (query) Filter by categories ids, comma separated values expected. (optional)
      - parameter title: (query) Filter by document title. (optional)
@@ -1144,7 +1144,7 @@ open class KnowledgeAPI {
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter knowledgeDocumentsState: (query) Return the training with the specified state of the trained documents. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1206,7 +1206,7 @@ open class KnowledgeAPI {
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter knowledgeDocumentsState: (query) Return the training with the specified state of the trained documents. (optional)
 
@@ -1279,7 +1279,7 @@ open class KnowledgeAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter name: (query) Filter by Name. (optional)
      - parameter coreLanguage: (query) Filter by core language. (optional)
@@ -1345,7 +1345,7 @@ open class KnowledgeAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter name: (query) Filter by Name. (optional)
      - parameter coreLanguage: (query) Filter by core language. (optional)

@@ -72,11 +72,11 @@ public class UserScheduleAdherence: Codable {
     /** The user for whom this status applies */
     public var user: UserReference?
     /** The business unit to which this user belongs */
-    public var businessUnit: BusinessUnit?
+    public var businessUnit: BusinessUnitReference?
     /** The management unit to which this user belongs */
-    public var managementUnit: ManagementUnit?
+    public var managementUnit: ManagementUnitReference?
     /** The team to which this user belongs */
-    public var team: Team?
+    public var team: TeamReference?
     /** Activity for which the user is scheduled */
     public var scheduledActivityCategory: ScheduledActivityCategory?
     /** Actual underlying system presence value */
@@ -106,7 +106,7 @@ public class UserScheduleAdherence: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: UserReference?, businessUnit: BusinessUnit?, managementUnit: ManagementUnit?, team: Team?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: UserReference?, businessUnit: BusinessUnitReference?, managementUnit: ManagementUnitReference?, team: TeamReference?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.user = user

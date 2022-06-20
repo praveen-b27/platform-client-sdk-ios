@@ -551,13 +551,13 @@ GamificationAPI.getGamificationProfile(profileId: profileId) { (response, error)
 
 
 
-> [MemberListing](MemberListing.html) getGamificationProfileMembers(performanceProfileId)
+> [MemberListing](MemberListing.html) getGamificationProfileMembers(profileId)
 
 Members of a given performance profile
 
 
 
-Wraps GET /api/v2/gamification/profiles/{performanceProfileId}/members  
+Wraps GET /api/v2/gamification/profiles/{profileId}/members  
 
 Requires ANY permissions: 
 
@@ -571,10 +571,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let performanceProfileId: String = "" // Performance Profile Id
+let profileId: String = "" // Profile Id
 
 // Code example
-GamificationAPI.getGamificationProfileMembers(performanceProfileId: performanceProfileId) { (response, error) in
+GamificationAPI.getGamificationProfileMembers(profileId: profileId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -589,7 +589,7 @@ GamificationAPI.getGamificationProfileMembers(performanceProfileId: performanceP
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **performanceProfileId** | **String**| Performance Profile Id | |
+| **profileId** | **String**| Profile Id | |
 {: class="table-striped"}
 
 
@@ -661,7 +661,7 @@ GamificationAPI.getGamificationProfileMetric(profileId: profileId, metricId: met
 
 
 
-> [GetMetricResponse](GetMetricResponse.html) getGamificationProfileMetrics(profileId, expand, workday)
+> [GetMetricResponse](GetMetricResponse.html) getGamificationProfileMetrics(profileId, expand, workday, metricIds)
 
 All gamified metrics for a given performance profile
 
@@ -686,9 +686,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let profileId: String = "" // Performance Profile Id
 let expand: [String] = [""] // Which fields, if any, to expand.
 let workday: Date = new Date(...) // The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let metricIds: String = "" // List of metric ids to filter the response (Optional, comma-separated).
 
 // Code example
-GamificationAPI.getGamificationProfileMetrics(profileId: profileId, expand: expand, workday: workday) { (response, error) in
+GamificationAPI.getGamificationProfileMetrics(profileId: profileId, expand: expand, workday: workday, metricIds: metricIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -706,6 +707,7 @@ GamificationAPI.getGamificationProfileMetrics(profileId: profileId, expand: expa
 | **profileId** | **String**| Performance Profile Id | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: objective ("objective") |
 | **workday** | **Date**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **metricIds** | **String**| List of metric ids to filter the response (Optional, comma-separated). | [optional] |
 {: class="table-striped"}
 
 
@@ -2176,13 +2178,13 @@ GamificationAPI.postGamificationProfileDeactivate(profileId: profileId) { (respo
 
 
 
-> [Assignment](Assignment.html) postGamificationProfileMembers(performanceProfileId, body)
+> [Assignment](Assignment.html) postGamificationProfileMembers(profileId, body)
 
 Assign members to a given performance profile
 
 
 
-Wraps POST /api/v2/gamification/profiles/{performanceProfileId}/members  
+Wraps POST /api/v2/gamification/profiles/{profileId}/members  
 
 Requires ANY permissions: 
 
@@ -2196,11 +2198,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let performanceProfileId: String = "" // Performance Profile Id
+let profileId: String = "" // Profile Id
 let body: AssignUsers = new AssignUsers(...) // assignUsers
 
 // Code example
-GamificationAPI.postGamificationProfileMembers(performanceProfileId: performanceProfileId, body: body) { (response, error) in
+GamificationAPI.postGamificationProfileMembers(profileId: profileId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2215,7 +2217,7 @@ GamificationAPI.postGamificationProfileMembers(performanceProfileId: performance
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **performanceProfileId** | **String**| Performance Profile Id | |
+| **profileId** | **String**| Profile Id | |
 | **body** | [**AssignUsers**](AssignUsers.html)| assignUsers | |
 {: class="table-striped"}
 
@@ -2230,13 +2232,13 @@ GamificationAPI.postGamificationProfileMembers(performanceProfileId: performance
 
 
 
-> [AssignmentValidation](AssignmentValidation.html) postGamificationProfileMembersValidate(performanceProfileId, body)
+> [AssignmentValidation](AssignmentValidation.html) postGamificationProfileMembersValidate(profileId, body)
 
 Validate member assignment
 
 
 
-Wraps POST /api/v2/gamification/profiles/{performanceProfileId}/members/validate  
+Wraps POST /api/v2/gamification/profiles/{profileId}/members/validate  
 
 Requires ANY permissions: 
 
@@ -2250,11 +2252,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let performanceProfileId: String = "" // Performance Profile Id
+let profileId: String = "" // Profile Id
 let body: ValidateAssignUsers = new ValidateAssignUsers(...) // memberAssignments
 
 // Code example
-GamificationAPI.postGamificationProfileMembersValidate(performanceProfileId: performanceProfileId, body: body) { (response, error) in
+GamificationAPI.postGamificationProfileMembersValidate(profileId: profileId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2269,7 +2271,7 @@ GamificationAPI.postGamificationProfileMembersValidate(performanceProfileId: per
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **performanceProfileId** | **String**| Performance Profile Id | |
+| **profileId** | **String**| Profile Id | |
 | **body** | [**ValidateAssignUsers**](ValidateAssignUsers.html)| memberAssignments | |
 {: class="table-striped"}
 

@@ -1,13 +1,13 @@
 ---
-title: ExternalContactsContactChangedTopicEntity
+title: SetRecordingState
 ---
-## ExternalContactsContactChangedTopicEntity
+## SetRecordingState
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** |  | [optional] |
+| **recordingState** | **String** | The value of the recordingState to set. | [optional] |
 {: class="table table-striped"}
 
 

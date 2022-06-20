@@ -162,10 +162,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI.html#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**putConversationTags**](ConversationsAPI.html#putConversationTags) | Update the tags on a conversation. |
 | [**putConversationsCallParticipantCommunicationUuidata**](ConversationsAPI.html#putConversationsCallParticipantCommunicationUuidata) | Set uuiData to be sent on future commands. |
+| [**putConversationsCallRecordingstate**](ConversationsAPI.html#putConversationsCallRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsCallbackRecordingstate**](ConversationsAPI.html#putConversationsCallbackRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsChatRecordingstate**](ConversationsAPI.html#putConversationsChatRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsCobrowsesessionRecordingstate**](ConversationsAPI.html#putConversationsCobrowsesessionRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsEmailMessagesDraft**](ConversationsAPI.html#putConversationsEmailMessagesDraft) | Update conversation draft reply |
+| [**putConversationsEmailRecordingstate**](ConversationsAPI.html#putConversationsEmailRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsMessageRecordingstate**](ConversationsAPI.html#putConversationsMessageRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration |
 | [**putConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#putConversationsMessagingSupportedcontentDefault) | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**putConversationsMessagingThreadingtimeline**](ConversationsAPI.html#putConversationsMessagingThreadingtimeline) | Update conversation threading window timeline for each messaging type |
+| [**putConversationsScreenshareRecordingstate**](ConversationsAPI.html#putConversationsScreenshareRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsSocialRecordingstate**](ConversationsAPI.html#putConversationsSocialRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsVideoRecordingstate**](ConversationsAPI.html#putConversationsVideoRecordingstate) | Update a conversation by setting its recording state |
 {: class="table-striped"}
 
 <a name="deleteAnalyticsConversationsDetailsJob"></a>
@@ -8469,6 +8478,222 @@ ConversationsAPI.putConversationsCallParticipantCommunicationUuidata(conversatio
 
 [**JSON**](JSON.html)
 
+<a name="putConversationsCallRecordingstate"></a>
+
+# **putConversationsCallRecordingstate**
+
+
+
+> String putConversationsCallRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/calls/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsCallRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsCallRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
+<a name="putConversationsCallbackRecordingstate"></a>
+
+# **putConversationsCallbackRecordingstate**
+
+
+
+> String putConversationsCallbackRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/callbacks/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsCallbackRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsCallbackRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
+<a name="putConversationsChatRecordingstate"></a>
+
+# **putConversationsChatRecordingstate**
+
+
+
+> String putConversationsChatRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/chats/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsChatRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsChatRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
+<a name="putConversationsCobrowsesessionRecordingstate"></a>
+
+# **putConversationsCobrowsesessionRecordingstate**
+
+
+
+> String putConversationsCobrowsesessionRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/cobrowsesessions/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsCobrowsesessionRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsCobrowsesessionRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
 <a name="putConversationsEmailMessagesDraft"></a>
 
 # **putConversationsEmailMessagesDraft**
@@ -8521,6 +8746,114 @@ ConversationsAPI.putConversationsEmailMessagesDraft(conversationId: conversation
 ### Return type
 
 [**EmailMessage**](EmailMessage.html)
+
+<a name="putConversationsEmailRecordingstate"></a>
+
+# **putConversationsEmailRecordingstate**
+
+
+
+> String putConversationsEmailRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/emails/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsEmailRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsEmailRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
+<a name="putConversationsMessageRecordingstate"></a>
+
+# **putConversationsMessageRecordingstate**
+
+
+
+> String putConversationsMessageRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/messages/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsMessageRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsMessageRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
 
 <a name="putConversationsMessagingIntegrationsLineIntegrationId"></a>
 
@@ -8683,4 +9016,166 @@ ConversationsAPI.putConversationsMessagingThreadingtimeline(body: body) { (respo
 ### Return type
 
 [**ConversationThreadingWindow**](ConversationThreadingWindow.html)
+
+<a name="putConversationsScreenshareRecordingstate"></a>
+
+# **putConversationsScreenshareRecordingstate**
+
+
+
+> String putConversationsScreenshareRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/screenshares/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsScreenshareRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsScreenshareRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
+<a name="putConversationsSocialRecordingstate"></a>
+
+# **putConversationsSocialRecordingstate**
+
+
+
+> String putConversationsSocialRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/socials/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsSocialRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsSocialRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
+<a name="putConversationsVideoRecordingstate"></a>
+
+# **putConversationsVideoRecordingstate**
+
+
+
+> String putConversationsVideoRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PUT /api/v2/conversations/videos/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsVideoRecordingstate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**SetRecordingState**](SetRecordingState.html)| SetRecordingState | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
 

@@ -15,6 +15,7 @@ public class UCIntegration: Codable {
     public enum IntegrationPresenceSource: String, Codable { 
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
+        case eightByEight = "EightByEight"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
@@ -27,18 +28,21 @@ public class UCIntegration: Codable {
     public var pbxPermission: String?
     /** icon */
     public var icon: UCIcon?
+    /** badgeIcon */
+    public var badgeIcons: [String:UCIcon]?
     /** i10n */
     public var i10n: [String:UCI10n]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, ucIntegrationKey: String?, integrationPresenceSource: IntegrationPresenceSource?, pbxPermission: String?, icon: UCIcon?, i10n: [String:UCI10n]?, selfUri: String?) {
+    public init(_id: String?, name: String?, ucIntegrationKey: String?, integrationPresenceSource: IntegrationPresenceSource?, pbxPermission: String?, icon: UCIcon?, badgeIcons: [String:UCIcon]?, i10n: [String:UCI10n]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.ucIntegrationKey = ucIntegrationKey
         self.integrationPresenceSource = integrationPresenceSource
         self.pbxPermission = pbxPermission
         self.icon = icon
+        self.badgeIcons = badgeIcons
         self.i10n = i10n
         self.selfUri = selfUri
     }
@@ -50,6 +54,7 @@ public class UCIntegration: Codable {
         case integrationPresenceSource
         case pbxPermission
         case icon
+        case badgeIcons
         case i10n
         case selfUri
     }

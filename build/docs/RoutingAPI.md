@@ -689,7 +689,7 @@ RoutingAPI.deleteRoutingSmsAddress(addressId: addressId) { (error) in
 
 
 
-> Void deleteRoutingSmsPhonenumber(addressId, async)
+> Void deleteRoutingSmsPhonenumber(addressId)
 
 Delete a phone number provisioned for SMS.
 
@@ -710,10 +710,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let addressId: String = "" // Address ID
-let async: Bool = true // Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number. 
 
 // Code example
-RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId, async: async) { (error) in
+RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -728,7 +727,6 @@ RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId, async: async) { (er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
-| **async** | **Bool**| Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  | [optional] |
 {: class="table-striped"}
 
 
@@ -1073,7 +1071,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let queueId: [String] = [""] // Queue ID(s) to filter assessments by.
 
@@ -1095,7 +1093,7 @@ RoutingAPI.getRoutingAssessments(before: before, after: after, limit: limit, pag
 | ------------- | ------------- | ------------- | ------------- |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **queueId** | [**[String]**](String.html)| Queue ID(s) to filter assessments by. | [optional] |
 {: class="table-striped"}
@@ -1721,7 +1719,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let queueId: [String] = [""] // Comma-separated list of queue Ids to filter by.
 
@@ -1743,7 +1741,7 @@ RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, page
 | ------------- | ------------- | ------------- | ------------- |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **queueId** | [**[String]**](String.html)| Comma-separated list of queue Ids to filter by. | [optional] |
 {: class="table-striped"}
@@ -3050,7 +3048,7 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 | **countryCode** | [**[String]**](String.html)| Filter on country code | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **sortBy** | **String**| Optional field to sort results | [optional]<br />**Values**: phonenumber ("phoneNumber"), countrycode ("countryCode"), country ("country"), phonenumberstatus ("phoneNumberStatus"), phonenumbertype ("phoneNumberType"), purchasedate ("purchaseDate"), supportsmms ("supportsMms"), supportssms ("supportsSms"), supportsvoice ("supportsVoice") |
+| **sortBy** | **String**| Optional field to sort results | [optional]<br />**Values**: phonenumber ("phoneNumber"), countrycode ("countryCode"), country ("country"), datecreated ("dateCreated"), datemodified ("dateModified"), phonenumberstatus ("phoneNumberStatus"), phonenumbertype ("phoneNumberType"), purchasedate ("purchaseDate"), supportsmms ("supportsMms"), supportssms ("supportsSms"), supportsvoice ("supportsVoice") |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **language** | **String**| A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations | [optional] |
 {: class="table-striped"}
@@ -4974,7 +4972,7 @@ RoutingAPI.postRoutingSmsAddresses(body: body) { (response, error) in
 
 
 
-> [SmsPhoneNumber](SmsPhoneNumber.html) postRoutingSmsPhonenumbers(body, async)
+> [SmsPhoneNumber](SmsPhoneNumber.html) postRoutingSmsPhonenumbers(body)
 
 Provision a phone number for SMS
 
@@ -4995,10 +4993,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: SmsPhoneNumberProvision = new SmsPhoneNumberProvision(...) // SmsPhoneNumber
-let async: Bool = true // Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber's provisioningStatus for completion of this request.
 
 // Code example
-RoutingAPI.postRoutingSmsPhonenumbers(body: body, async: async) { (response, error) in
+RoutingAPI.postRoutingSmsPhonenumbers(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5014,7 +5011,6 @@ RoutingAPI.postRoutingSmsPhonenumbers(body: body, async: async) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**SmsPhoneNumberProvision**](SmsPhoneNumberProvision.html)| SmsPhoneNumber | |
-| **async** | **Bool**| Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber's provisioningStatus for completion of this request. | [optional] |
 {: class="table-striped"}
 
 
@@ -5457,7 +5453,7 @@ RoutingAPI.putRoutingSettingsTranscription(body: body) { (response, error) in
 
 
 
-> [SmsPhoneNumber](SmsPhoneNumber.html) putRoutingSmsPhonenumber(addressId, body, async)
+> [SmsPhoneNumber](SmsPhoneNumber.html) putRoutingSmsPhonenumber(addressId, body)
 
 Update a phone number provisioned for SMS.
 
@@ -5479,10 +5475,9 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let addressId: String = "" // Address ID
 let body: SmsPhoneNumber = new SmsPhoneNumber(...) // SmsPhoneNumber
-let async: Bool = true // Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber's provisioningStatus for the progress of this request.
 
 // Code example
-RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body, async: async) { (response, error) in
+RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5499,7 +5494,6 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body, async: asy
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
 | **body** | [**SmsPhoneNumber**](SmsPhoneNumber.html)| SmsPhoneNumber | |
-| **async** | **Bool**| Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber's provisioningStatus for the progress of this request. | [optional] |
 {: class="table-striped"}
 
 

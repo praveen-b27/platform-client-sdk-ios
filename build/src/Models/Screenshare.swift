@@ -39,6 +39,16 @@ public class Screenshare: Codable {
         case spam = "spam"
         case uncallable = "uncallable"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
     /** The connection state of this communication. */
     public var state: State?
     /** A globally unique identifier for this communication. */
@@ -69,8 +79,10 @@ public class Screenshare: Codable {
     public var afterCallWork: AfterCallWork?
     /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
 
-    public init(state: State?, _id: String?, context: String?, sharing: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, segments: [Segment]?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, _id: String?, context: String?, sharing: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, segments: [Segment]?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, initialState: InitialState?) {
         self.state = state
         self._id = _id
         self.context = context
@@ -86,6 +98,7 @@ public class Screenshare: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.initialState = initialState
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -104,6 +117,7 @@ public class Screenshare: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case initialState
     }
 
 

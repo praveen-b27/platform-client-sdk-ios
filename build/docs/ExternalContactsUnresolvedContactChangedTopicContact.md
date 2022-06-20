@@ -1,0 +1,33 @@
+---
+title: ExternalContactsUnresolvedContactChangedTopicContact
+---
+## ExternalContactsUnresolvedContactChangedTopicContact
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **_id** | **String** |  | [optional] |
+| **type** | **String** |  | [optional] |
+| **firstName** | **String** |  | [optional] |
+| **middleName** | **String** |  | [optional] |
+| **lastName** | **String** |  | [optional] |
+| **salutation** | **String** |  | [optional] |
+| **title** | **String** |  | [optional] |
+| **workPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber.html) |  | [optional] |
+| **cellPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber.html) |  | [optional] |
+| **homePhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber.html) |  | [optional] |
+| **otherPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber.html) |  | [optional] |
+| **workEmail** | **String** |  | [optional] |
+| **personalEmail** | **String** |  | [optional] |
+| **otherEmail** | **String** |  | [optional] |
+| **address** | [**ExternalContactsUnresolvedContactChangedTopicContactAddress**](ExternalContactsUnresolvedContactChangedTopicContactAddress.html) |  | [optional] |
+| **surveyOptOut** | **Bool** |  | [optional] |
+| **externalSystemUrl** | **String** |  | [optional] |
+| **twitterId** | [**ExternalContactsUnresolvedContactChangedTopicTwitterId**](ExternalContactsUnresolvedContactChangedTopicTwitterId.html) |  | [optional] |
+| **lineId** | [**ExternalContactsUnresolvedContactChangedTopicLineId**](ExternalContactsUnresolvedContactChangedTopicLineId.html) |  | [optional] |
+| **whatsAppId** | [**ExternalContactsUnresolvedContactChangedTopicWhatsAppId**](ExternalContactsUnresolvedContactChangedTopicWhatsAppId.html) |  | [optional] |
+| **facebookId** | [**ExternalContactsUnresolvedContactChangedTopicFacebookId**](ExternalContactsUnresolvedContactChangedTopicFacebookId.html) |  | [optional] |
+{: class="table table-striped"}
+
+

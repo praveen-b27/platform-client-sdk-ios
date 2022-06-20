@@ -7111,8 +7111,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7373,8 +7373,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7632,8 +7632,8 @@ open class RecordingAPI {
     "conversation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7771,8 +7771,8 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 5
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8202,8 +8202,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8402,8 +8402,8 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8911,6 +8911,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
@@ -8951,6 +8952,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
@@ -8993,6 +8995,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "videoMuted" : true,
           "peerCount" : 4,
           "msids" : [ "msids", "msids" ],
@@ -9012,6 +9015,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "videoMuted" : true,
           "peerCount" : 4,
           "msids" : [ "msids", "msids" ],
@@ -9036,6 +9040,7 @@ open class RecordingAPI {
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
           "cobrowseSessionId" : "cobrowseSessionId",
+          "initialState" : "alerting",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -9067,6 +9072,7 @@ open class RecordingAPI {
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
           "cobrowseSessionId" : "cobrowseSessionId",
+          "initialState" : "alerting",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -9096,8 +9102,7 @@ open class RecordingAPI {
         "emails" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
-          "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -9115,7 +9120,6 @@ open class RecordingAPI {
             "contentType" : "contentType"
           } ],
           "subject" : "subject",
-          "messagesSent" : 5,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "messageWithParams",
@@ -9141,7 +9145,6 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "messageId" : "messageId",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -9155,23 +9158,26 @@ open class RecordingAPI {
             "endTime" : "2000-01-23T04:56:07.000+00:00",
             "type" : "type"
           } ],
-          "scriptId" : "scriptId",
           "provider" : "provider",
           "afterCallWork" : "{}",
           "disconnectType" : "endpoint",
           "connectedTime" : "2000-01-23T04:56:07.000+00:00",
           "state" : "alerting",
           "id" : "id",
+          "direction" : "inbound",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "wrapup" : "{}",
+          "messagesSent" : 5,
+          "messageId" : "messageId",
+          "scriptId" : "scriptId",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "autoGenerated" : true,
           "recordingId" : "recordingId",
-          "spam" : true,
-          "direction" : "inbound"
+          "spam" : true
         }, {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
-          "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -9189,7 +9195,6 @@ open class RecordingAPI {
             "contentType" : "contentType"
           } ],
           "subject" : "subject",
-          "messagesSent" : 5,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "messageWithParams",
@@ -9215,7 +9220,6 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "messageId" : "messageId",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -9229,18 +9233,22 @@ open class RecordingAPI {
             "endTime" : "2000-01-23T04:56:07.000+00:00",
             "type" : "type"
           } ],
-          "scriptId" : "scriptId",
           "provider" : "provider",
           "afterCallWork" : "{}",
           "disconnectType" : "endpoint",
           "connectedTime" : "2000-01-23T04:56:07.000+00:00",
           "state" : "alerting",
           "id" : "id",
+          "direction" : "inbound",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "wrapup" : "{}",
+          "messagesSent" : 5,
+          "messageId" : "messageId",
+          "scriptId" : "scriptId",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "autoGenerated" : true,
           "recordingId" : "recordingId",
-          "spam" : true,
-          "direction" : "inbound"
+          "spam" : true
         } ],
         "conversationRoutingData" : "{}",
         "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
@@ -11094,8 +11102,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -13549,8 +13557,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -14178,6 +14186,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "other" : "{}",
           "confined" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -14231,6 +14240,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "other" : "{}",
           "confined" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -14288,6 +14298,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
@@ -14321,6 +14332,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
@@ -14354,6 +14366,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "authenticated" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
@@ -14411,6 +14424,7 @@ open class RecordingAPI {
           "messages" : [ {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -14438,6 +14452,7 @@ open class RecordingAPI {
           }, {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -14471,6 +14486,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "authenticated" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
@@ -14528,6 +14544,7 @@ open class RecordingAPI {
           "messages" : [ {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -14555,6 +14572,7 @@ open class RecordingAPI {
           }, {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -14661,6 +14679,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "peerCount" : 2,
           "afterCallWorkRequired" : true,
           "sharing" : true,
@@ -14689,6 +14708,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "peerCount" : 2,
           "afterCallWorkRequired" : true,
           "sharing" : true,
@@ -14726,6 +14746,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
@@ -14766,6 +14787,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
@@ -14808,6 +14830,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "videoMuted" : true,
           "peerCount" : 4,
           "msids" : [ "msids", "msids" ],
@@ -14827,6 +14850,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "videoMuted" : true,
           "peerCount" : 4,
           "msids" : [ "msids", "msids" ],
@@ -14851,6 +14875,7 @@ open class RecordingAPI {
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
           "cobrowseSessionId" : "cobrowseSessionId",
+          "initialState" : "alerting",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -14882,6 +14907,7 @@ open class RecordingAPI {
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
           "cobrowseSessionId" : "cobrowseSessionId",
+          "initialState" : "alerting",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -14911,8 +14937,7 @@ open class RecordingAPI {
         "emails" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
-          "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -14930,7 +14955,6 @@ open class RecordingAPI {
             "contentType" : "contentType"
           } ],
           "subject" : "subject",
-          "messagesSent" : 5,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "messageWithParams",
@@ -14956,7 +14980,6 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "messageId" : "messageId",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -14970,23 +14993,26 @@ open class RecordingAPI {
             "endTime" : "2000-01-23T04:56:07.000+00:00",
             "type" : "type"
           } ],
-          "scriptId" : "scriptId",
           "provider" : "provider",
           "afterCallWork" : "{}",
           "disconnectType" : "endpoint",
           "connectedTime" : "2000-01-23T04:56:07.000+00:00",
           "state" : "alerting",
           "id" : "id",
+          "direction" : "inbound",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "wrapup" : "{}",
+          "messagesSent" : 5,
+          "messageId" : "messageId",
+          "scriptId" : "scriptId",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "autoGenerated" : true,
           "recordingId" : "recordingId",
-          "spam" : true,
-          "direction" : "inbound"
+          "spam" : true
         }, {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
-          "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -15004,7 +15030,6 @@ open class RecordingAPI {
             "contentType" : "contentType"
           } ],
           "subject" : "subject",
-          "messagesSent" : 5,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "messageWithParams",
@@ -15030,7 +15055,6 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "messageId" : "messageId",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -15044,18 +15068,22 @@ open class RecordingAPI {
             "endTime" : "2000-01-23T04:56:07.000+00:00",
             "type" : "type"
           } ],
-          "scriptId" : "scriptId",
           "provider" : "provider",
           "afterCallWork" : "{}",
           "disconnectType" : "endpoint",
           "connectedTime" : "2000-01-23T04:56:07.000+00:00",
           "state" : "alerting",
           "id" : "id",
+          "direction" : "inbound",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "wrapup" : "{}",
+          "messagesSent" : 5,
+          "messageId" : "messageId",
+          "scriptId" : "scriptId",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "autoGenerated" : true,
           "recordingId" : "recordingId",
-          "spam" : true,
-          "direction" : "inbound"
+          "spam" : true
         } ],
         "conversationRoutingData" : "{}",
         "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
@@ -16909,8 +16937,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -19364,8 +19392,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -19993,6 +20021,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "other" : "{}",
           "confined" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -20046,6 +20075,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "other" : "{}",
           "confined" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -20103,6 +20133,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
@@ -20136,6 +20167,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
@@ -20169,6 +20201,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "authenticated" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
@@ -20226,6 +20259,7 @@ open class RecordingAPI {
           "messages" : [ {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -20253,6 +20287,7 @@ open class RecordingAPI {
           }, {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -20286,6 +20321,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "authenticated" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
@@ -20343,6 +20379,7 @@ open class RecordingAPI {
           "messages" : [ {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -20370,6 +20407,7 @@ open class RecordingAPI {
           }, {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -20476,6 +20514,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "peerCount" : 2,
           "afterCallWorkRequired" : true,
           "sharing" : true,
@@ -20504,6 +20543,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "peerCount" : 2,
           "afterCallWorkRequired" : true,
           "sharing" : true,
@@ -20870,6 +20910,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
@@ -20910,6 +20951,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
@@ -20952,6 +20994,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "videoMuted" : true,
           "peerCount" : 4,
           "msids" : [ "msids", "msids" ],
@@ -20971,6 +21014,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "videoMuted" : true,
           "peerCount" : 4,
           "msids" : [ "msids", "msids" ],
@@ -20995,6 +21039,7 @@ open class RecordingAPI {
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
           "cobrowseSessionId" : "cobrowseSessionId",
+          "initialState" : "alerting",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -21026,6 +21071,7 @@ open class RecordingAPI {
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
           "cobrowseSessionId" : "cobrowseSessionId",
+          "initialState" : "alerting",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -21055,8 +21101,7 @@ open class RecordingAPI {
         "emails" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
-          "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -21074,7 +21119,6 @@ open class RecordingAPI {
             "contentType" : "contentType"
           } ],
           "subject" : "subject",
-          "messagesSent" : 5,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "messageWithParams",
@@ -21100,7 +21144,6 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "messageId" : "messageId",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -21114,23 +21157,26 @@ open class RecordingAPI {
             "endTime" : "2000-01-23T04:56:07.000+00:00",
             "type" : "type"
           } ],
-          "scriptId" : "scriptId",
           "provider" : "provider",
           "afterCallWork" : "{}",
           "disconnectType" : "endpoint",
           "connectedTime" : "2000-01-23T04:56:07.000+00:00",
           "state" : "alerting",
           "id" : "id",
+          "direction" : "inbound",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "wrapup" : "{}",
+          "messagesSent" : 5,
+          "messageId" : "messageId",
+          "scriptId" : "scriptId",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "autoGenerated" : true,
           "recordingId" : "recordingId",
-          "spam" : true,
-          "direction" : "inbound"
+          "spam" : true
         }, {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
-          "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -21148,7 +21194,6 @@ open class RecordingAPI {
             "contentType" : "contentType"
           } ],
           "subject" : "subject",
-          "messagesSent" : 5,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "messageWithParams",
@@ -21174,7 +21219,6 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "messageId" : "messageId",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -21188,18 +21232,22 @@ open class RecordingAPI {
             "endTime" : "2000-01-23T04:56:07.000+00:00",
             "type" : "type"
           } ],
-          "scriptId" : "scriptId",
           "provider" : "provider",
           "afterCallWork" : "{}",
           "disconnectType" : "endpoint",
           "connectedTime" : "2000-01-23T04:56:07.000+00:00",
           "state" : "alerting",
           "id" : "id",
+          "direction" : "inbound",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "wrapup" : "{}",
+          "messagesSent" : 5,
+          "messageId" : "messageId",
+          "scriptId" : "scriptId",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "autoGenerated" : true,
           "recordingId" : "recordingId",
-          "spam" : true,
-          "direction" : "inbound"
+          "spam" : true
         } ],
         "conversationRoutingData" : "{}",
         "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
@@ -23053,8 +23101,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -25508,8 +25556,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -26137,6 +26185,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "other" : "{}",
           "confined" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -26190,6 +26239,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "other" : "{}",
           "confined" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -26247,6 +26297,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
@@ -26280,6 +26331,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
@@ -26313,6 +26365,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "authenticated" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
@@ -26370,6 +26423,7 @@ open class RecordingAPI {
           "messages" : [ {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -26397,6 +26451,7 @@ open class RecordingAPI {
           }, {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -26430,6 +26485,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "authenticated" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
@@ -26487,6 +26543,7 @@ open class RecordingAPI {
           "messages" : [ {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -26514,6 +26571,7 @@ open class RecordingAPI {
           }, {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -26620,6 +26678,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "peerCount" : 2,
           "afterCallWorkRequired" : true,
           "sharing" : true,
@@ -26648,6 +26707,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "peerCount" : 2,
           "afterCallWorkRequired" : true,
           "sharing" : true,
@@ -26685,6 +26745,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
@@ -26725,6 +26786,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
@@ -26767,6 +26829,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "videoMuted" : true,
           "peerCount" : 4,
           "msids" : [ "msids", "msids" ],
@@ -26786,6 +26849,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "videoMuted" : true,
           "peerCount" : 4,
           "msids" : [ "msids", "msids" ],
@@ -26810,6 +26874,7 @@ open class RecordingAPI {
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
           "cobrowseSessionId" : "cobrowseSessionId",
+          "initialState" : "alerting",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -26841,6 +26906,7 @@ open class RecordingAPI {
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
           "cobrowseSessionId" : "cobrowseSessionId",
+          "initialState" : "alerting",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -26870,8 +26936,7 @@ open class RecordingAPI {
         "emails" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
-          "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -26889,7 +26954,6 @@ open class RecordingAPI {
             "contentType" : "contentType"
           } ],
           "subject" : "subject",
-          "messagesSent" : 5,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "messageWithParams",
@@ -26915,7 +26979,6 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "messageId" : "messageId",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -26929,23 +26992,26 @@ open class RecordingAPI {
             "endTime" : "2000-01-23T04:56:07.000+00:00",
             "type" : "type"
           } ],
-          "scriptId" : "scriptId",
           "provider" : "provider",
           "afterCallWork" : "{}",
           "disconnectType" : "endpoint",
           "connectedTime" : "2000-01-23T04:56:07.000+00:00",
           "state" : "alerting",
           "id" : "id",
+          "direction" : "inbound",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "wrapup" : "{}",
+          "messagesSent" : 5,
+          "messageId" : "messageId",
+          "scriptId" : "scriptId",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "autoGenerated" : true,
           "recordingId" : "recordingId",
-          "spam" : true,
-          "direction" : "inbound"
+          "spam" : true
         }, {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
-          "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -26963,7 +27029,6 @@ open class RecordingAPI {
             "contentType" : "contentType"
           } ],
           "subject" : "subject",
-          "messagesSent" : 5,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "messageWithParams",
@@ -26989,7 +27054,6 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "messageId" : "messageId",
           "segments" : [ {
             "howEnded" : "howEnded",
             "disconnectType" : "disconnectType",
@@ -27003,18 +27067,22 @@ open class RecordingAPI {
             "endTime" : "2000-01-23T04:56:07.000+00:00",
             "type" : "type"
           } ],
-          "scriptId" : "scriptId",
           "provider" : "provider",
           "afterCallWork" : "{}",
           "disconnectType" : "endpoint",
           "connectedTime" : "2000-01-23T04:56:07.000+00:00",
           "state" : "alerting",
           "id" : "id",
+          "direction" : "inbound",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "wrapup" : "{}",
+          "messagesSent" : 5,
+          "messageId" : "messageId",
+          "scriptId" : "scriptId",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "autoGenerated" : true,
           "recordingId" : "recordingId",
-          "spam" : true,
-          "direction" : "inbound"
+          "spam" : true
         } ],
         "conversationRoutingData" : "{}",
         "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
@@ -28868,8 +28936,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -31323,8 +31391,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -31952,6 +32020,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "other" : "{}",
           "confined" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -32005,6 +32074,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "other" : "{}",
           "confined" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -32062,6 +32132,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
@@ -32095,6 +32166,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "held" : true,
           "avatarImageUrl" : "avatarImageUrl",
           "afterCallWorkRequired" : true,
@@ -32128,6 +32200,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "authenticated" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
@@ -32185,6 +32258,7 @@ open class RecordingAPI {
           "messages" : [ {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -32212,6 +32286,7 @@ open class RecordingAPI {
           }, {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -32245,6 +32320,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "authenticated" : true,
+          "initialState" : "alerting",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : {
@@ -32302,6 +32378,7 @@ open class RecordingAPI {
           "messages" : [ {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -32329,6 +32406,7 @@ open class RecordingAPI {
           }, {
             "messageStatus" : "queued",
             "messageTime" : "2000-01-23T04:56:07.000+00:00",
+            "messageMetadata" : "{}",
             "messageId" : "messageId",
             "errorInfo" : "{}",
             "stickers" : [ {
@@ -32435,6 +32513,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "peerCount" : 2,
           "afterCallWorkRequired" : true,
           "sharing" : true,
@@ -32463,6 +32542,7 @@ open class RecordingAPI {
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
+          "initialState" : "alerting",
           "peerCount" : 2,
           "afterCallWorkRequired" : true,
           "sharing" : true,
@@ -32492,8 +32572,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

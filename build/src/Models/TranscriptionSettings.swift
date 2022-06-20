@@ -20,12 +20,15 @@ public class TranscriptionSettings: Codable {
     public var transcription: Transcription?
     /** Configure confidence threshold. The possible values are from 1 to 100. */
     public var transcriptionConfidenceThreshold: Int?
+    /** Boolean flag indicating whether low latency transcription via Notification API is enabled */
+    public var lowLatencyTranscriptionEnabled: Bool?
     /** Setting to enable/disable content search */
     public var contentSearchEnabled: Bool?
 
-    public init(transcription: Transcription?, transcriptionConfidenceThreshold: Int?, contentSearchEnabled: Bool?) {
+    public init(transcription: Transcription?, transcriptionConfidenceThreshold: Int?, lowLatencyTranscriptionEnabled: Bool?, contentSearchEnabled: Bool?) {
         self.transcription = transcription
         self.transcriptionConfidenceThreshold = transcriptionConfidenceThreshold
+        self.lowLatencyTranscriptionEnabled = lowLatencyTranscriptionEnabled
         self.contentSearchEnabled = contentSearchEnabled
     }
 

@@ -20,8 +20,13 @@ public class ConversationMessageContent: Codable {
         case notification = "Notification"
         case buttonResponse = "ButtonResponse"
         case genericTemplate = "GenericTemplate"
+        case listTemplate = "ListTemplate"
+        case postback = "Postback"
+        case reactions = "Reactions"
+        case mention = "Mention"
         case card = "Card"
         case carousel = "Carousel"
+        case unknown = "Unknown"
     }
     /** Type of this content element. If contentType = \"Attachment\" only one item is allowed. */
     public var contentType: ContentType?

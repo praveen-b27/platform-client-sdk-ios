@@ -14,6 +14,7 @@ UC Integration UI configuration data
 | **integrationPresenceSource** | **String** | integrationPresenceType | |
 | **pbxPermission** | **String** | pbxPermission | |
 | **icon** | [**UCIcon**](UCIcon.html) | icon | |
+| **badgeIcons** | [**[String:UCIcon]**](UCIcon.html) | badgeIcon | |
 | **i10n** | [**[String:UCI10n]**](UCI10n.html) | i10n | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

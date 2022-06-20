@@ -9,6 +9,7 @@ title: TranscriptionSettings
 |------------ | ------------- | ------------- | -------------|
 | **transcription** | **String** | Setting to enable/disable transcription capability | |
 | **transcriptionConfidenceThreshold** | **Int** | Configure confidence threshold. The possible values are from 1 to 100. | |
+| **lowLatencyTranscriptionEnabled** | **Bool** | Boolean flag indicating whether low latency transcription via Notification API is enabled | [optional] |
 | **contentSearchEnabled** | **Bool** | Setting to enable/disable content search | [optional] |
 {: class="table table-striped"}
 

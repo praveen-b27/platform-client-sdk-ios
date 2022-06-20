@@ -106,6 +106,12 @@ public class ReportingExportJobResponse: Codable {
         case predictiveRoutingModelView = "PREDICTIVE_ROUTING_MODEL_VIEW"
         case dataActionsPerformanceSummaryView = "DATA_ACTIONS_PERFORMANCE_SUMMARY_VIEW"
         case dataActionsPerformanceDetailView = "DATA_ACTIONS_PERFORMANCE_DETAIL_VIEW"
+        case agentTimelineSummaryView = "AGENT_TIMELINE_SUMMARY_VIEW"
+        case agentTimelineDetailView = "AGENT_TIMELINE_DETAIL_VIEW"
+        case agentLoginLogoutSummaryView = "AGENT_LOGIN_LOGOUT_SUMMARY_VIEW"
+        case agentLoginLogoutDetailView = "AGENT_LOGIN_LOGOUT_DETAIL_VIEW"
+        case campaignPerformanceSummaryView = "CAMPAIGN_PERFORMANCE_SUMMARY_VIEW"
+        case campaignPerformanceDetailView = "CAMPAIGN_PERFORMANCE_DETAIL_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

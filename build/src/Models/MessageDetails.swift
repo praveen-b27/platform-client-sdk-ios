@@ -34,10 +34,12 @@ public class MessageDetails: Codable {
     public var media: [MessageMedia]?
     /** One or more stickers associated with this message, if any */
     public var stickers: [MessageSticker]?
+    /** Information that describes the content of the message, if any */
+    public var messageMetadata: ConversationMessageMetadata?
     /** Provider specific error information for a communication. */
     public var errorInfo: ErrorBody?
 
-    public init(messageId: String?, messageURI: String?, messageStatus: MessageStatus?, messageSegmentCount: Int?, messageTime: Date?, media: [MessageMedia]?, stickers: [MessageSticker]?, errorInfo: ErrorBody?) {
+    public init(messageId: String?, messageURI: String?, messageStatus: MessageStatus?, messageSegmentCount: Int?, messageTime: Date?, media: [MessageMedia]?, stickers: [MessageSticker]?, messageMetadata: ConversationMessageMetadata?, errorInfo: ErrorBody?) {
         self.messageId = messageId
         self.messageURI = messageURI
         self.messageStatus = messageStatus
@@ -45,6 +47,7 @@ public class MessageDetails: Codable {
         self.messageTime = messageTime
         self.media = media
         self.stickers = stickers
+        self.messageMetadata = messageMetadata
         self.errorInfo = errorInfo
     }
 

@@ -44,6 +44,17 @@ public class CallbackBasic: Codable {
         case spam = "spam"
         case uncallable = "uncallable"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case scheduled = "scheduled"
+        case _none = "none"
+    }
     /** The connection state of this communication. */
     public var state: State?
     /** A globally unique identifier for this communication. */
@@ -98,8 +109,10 @@ public class CallbackBasic: Codable {
     public var callerId: String?
     /** The name displayed to recipients of the phone call. */
     public var callerIdName: String?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
 
-    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
+    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?, initialState: InitialState?) {
         self.state = state
         self._id = _id
         self.segments = segments
@@ -127,6 +140,7 @@ public class CallbackBasic: Codable {
         self.afterCallWorkRequired = afterCallWorkRequired
         self.callerId = callerId
         self.callerIdName = callerIdName
+        self.initialState = initialState
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -157,6 +171,7 @@ public class CallbackBasic: Codable {
         case afterCallWorkRequired
         case callerId
         case callerIdName
+        case initialState
     }
 
 

@@ -24,6 +24,7 @@ public class EventLog: Codable {
         case campaignRule = "CAMPAIGN_RULE"
         case contact = "CONTACT"
         case contactListFilter = "CONTACT_LIST_FILTER"
+        case digitalRule = "DIGITAL_RULE"
         case dncList = "DNC_LIST"
         case entityLimit = "ENTITY_LIMIT"
         case importError = "IMPORT_ERROR"

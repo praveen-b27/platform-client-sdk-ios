@@ -21,8 +21,9 @@ public class JourneyOutcomeEventsNotificationOutcomeAchievedMessage: Codable {
     public var geolocation: JourneyOutcomeEventsNotificationGeoLocation?
     public var mktCampaign: JourneyOutcomeEventsNotificationMktCampaign?
     public var visitReferrer: JourneyOutcomeEventsNotificationReferrer?
+    public var associatedValue: JourneyOutcomeEventsNotificationAssociatedValue?
 
-    public init(outcome: JourneyOutcomeEventsNotificationOutcome?, browser: JourneyOutcomeEventsNotificationBrowser?, visitCreatedDate: Date?, ipAddress: String?, ipOrganization: String?, userAgentString: String?, device: JourneyOutcomeEventsNotificationDevice?, geolocation: JourneyOutcomeEventsNotificationGeoLocation?, mktCampaign: JourneyOutcomeEventsNotificationMktCampaign?, visitReferrer: JourneyOutcomeEventsNotificationReferrer?) {
+    public init(outcome: JourneyOutcomeEventsNotificationOutcome?, browser: JourneyOutcomeEventsNotificationBrowser?, visitCreatedDate: Date?, ipAddress: String?, ipOrganization: String?, userAgentString: String?, device: JourneyOutcomeEventsNotificationDevice?, geolocation: JourneyOutcomeEventsNotificationGeoLocation?, mktCampaign: JourneyOutcomeEventsNotificationMktCampaign?, visitReferrer: JourneyOutcomeEventsNotificationReferrer?, associatedValue: JourneyOutcomeEventsNotificationAssociatedValue?) {
         self.outcome = outcome
         self.browser = browser
         self.visitCreatedDate = visitCreatedDate
@@ -33,6 +34,7 @@ public class JourneyOutcomeEventsNotificationOutcomeAchievedMessage: Codable {
         self.geolocation = geolocation
         self.mktCampaign = mktCampaign
         self.visitReferrer = visitReferrer
+        self.associatedValue = associatedValue
     }
 
 

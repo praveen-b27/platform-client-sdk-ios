@@ -13,6 +13,7 @@ public class Condition: Codable {
 
     public enum ModelType: String, Codable { 
         case wrapupcondition = "wrapupCondition"
+        case systemdispositioncondition = "systemDispositionCondition"
         case contactattributecondition = "contactAttributeCondition"
         case phonenumbercondition = "phoneNumberCondition"
         case phonenumbertypecondition = "phoneNumberTypeCondition"

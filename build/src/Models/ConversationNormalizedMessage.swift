@@ -17,6 +17,7 @@ public class ConversationNormalizedMessage: Codable {
         case structured = "Structured"
         case receipt = "Receipt"
         case event = "Event"
+        case unknown = "Unknown"
     }
     public enum Status: String, Codable { 
         case sent = "Sent"

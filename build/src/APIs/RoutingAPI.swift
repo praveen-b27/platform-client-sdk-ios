@@ -518,16 +518,14 @@ open class RoutingAPI {
     }
 
     
-    
     /**
      Delete a phone number provisioned for SMS.
      
      - parameter addressId: (path) Address ID 
-     - parameter async: (query) Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteRoutingSmsPhonenumber(addressId: String, async: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId, async: async)
+    open class func deleteRoutingSmsPhonenumber(addressId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId)
         requestBuilder.execute { (response: Response<Void>?, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -545,11 +543,10 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      
      - parameter addressId: (path) Address ID 
-     - parameter async: (query) Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteRoutingSmsPhonenumberWithRequestBuilder(addressId: String, async: Bool? = nil) -> RequestBuilder<Void> {        
+    open class func deleteRoutingSmsPhonenumberWithRequestBuilder(addressId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/routing/sms/phonenumbers/{addressId}"
         let addressIdPreEscape = "\(addressId)"
         let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -557,10 +554,7 @@ open class RoutingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "async": async
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -888,7 +882,7 @@ open class RoutingAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter queueId: (query) Queue ID(s) to filter assessments by. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -994,7 +988,7 @@ open class RoutingAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter queueId: (query) Queue ID(s) to filter assessments by. (optional)
 
@@ -1393,8 +1387,8 @@ open class RoutingAPI {
     "spamFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1480,8 +1474,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1618,8 +1612,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1786,8 +1780,8 @@ open class RoutingAPI {
     "flow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1896,7 +1890,7 @@ open class RoutingAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter queueId: (query) Comma-separated list of queue Ids to filter by. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1970,7 +1964,7 @@ open class RoutingAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter queueId: (query) Comma-separated list of queue Ids to filter by. (optional)
 
@@ -3921,8 +3915,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4028,8 +4022,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4367,8 +4361,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4719,8 +4713,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5058,8 +5052,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5391,8 +5385,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5549,7 +5543,8 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "transcription" : "Disabled",
   "contentSearchEnabled" : true,
-  "transcriptionConfidenceThreshold" : 0
+  "transcriptionConfidenceThreshold" : 0,
+  "lowLatencyTranscriptionEnabled" : true
 }, statusCode=200}]
 
      - returns: RequestBuilder<TranscriptionSettings> 
@@ -5682,8 +5677,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5835,8 +5830,8 @@ open class RoutingAPI {
     "region" : "region"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6068,6 +6063,8 @@ open class RoutingAPI {
         case phonenumber = "phoneNumber"
         case countrycode = "countryCode"
         case country = "country"
+        case datecreated = "dateCreated"
+        case datemodified = "dateModified"
         case phonenumberstatus = "phoneNumberStatus"
         case phonenumbertype = "phoneNumberType"
         case purchasedate = "purchaseDate"
@@ -6181,8 +6178,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6470,8 +6467,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6803,8 +6800,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6902,8 +6899,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6999,8 +6996,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8713,8 +8710,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9264,8 +9261,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9416,8 +9413,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9496,8 +9493,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9591,10 +9588,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9617,10 +9614,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9661,10 +9658,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9687,10 +9684,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9736,10 +9733,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9762,10 +9759,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9806,10 +9803,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9832,10 +9829,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10800,16 +10797,14 @@ open class RoutingAPI {
     }
 
     
-    
     /**
      Provision a phone number for SMS
      
      - parameter body: (body) SmsPhoneNumber 
-     - parameter async: (query) Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingSmsPhonenumbers(body: SmsPhoneNumberProvision, async: Bool? = nil, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
-        let requestBuilder = postRoutingSmsPhonenumbersWithRequestBuilder(body: body, async: async)
+    open class func postRoutingSmsPhonenumbers(body: SmsPhoneNumberProvision, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingSmsPhonenumbersWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<SmsPhoneNumber>?, error) -> Void in
             do {
                 if let e = error {
@@ -10861,19 +10856,15 @@ open class RoutingAPI {
 }, statusCode=200}]
      
      - parameter body: (body) SmsPhoneNumber 
-     - parameter async: (query) Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional)
 
      - returns: RequestBuilder<SmsPhoneNumber> 
      */
-    open class func postRoutingSmsPhonenumbersWithRequestBuilder(body: SmsPhoneNumberProvision, async: Bool? = nil) -> RequestBuilder<SmsPhoneNumber> {        
+    open class func postRoutingSmsPhonenumbersWithRequestBuilder(body: SmsPhoneNumberProvision) -> RequestBuilder<SmsPhoneNumber> {        
         let path = "/api/v2/routing/sms/phonenumbers"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "async": async
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SmsPhoneNumber>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -11483,7 +11474,8 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "transcription" : "Disabled",
   "contentSearchEnabled" : true,
-  "transcriptionConfidenceThreshold" : 0
+  "transcriptionConfidenceThreshold" : 0,
+  "lowLatencyTranscriptionEnabled" : true
 }, statusCode=200}]
      
      - parameter body: (body) Organization Settings 
@@ -11504,17 +11496,15 @@ open class RoutingAPI {
 
     
     
-    
     /**
      Update a phone number provisioned for SMS.
      
      - parameter addressId: (path) Address ID 
      - parameter body: (body) SmsPhoneNumber 
-     - parameter async: (query) Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingSmsPhonenumber(addressId: String, body: SmsPhoneNumber, async: Bool? = nil, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
-        let requestBuilder = putRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId, body: body, async: async)
+    open class func putRoutingSmsPhonenumber(addressId: String, body: SmsPhoneNumber, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId, body: body)
         requestBuilder.execute { (response: Response<SmsPhoneNumber>?, error) -> Void in
             do {
                 if let e = error {
@@ -11567,11 +11557,10 @@ open class RoutingAPI {
      
      - parameter addressId: (path) Address ID 
      - parameter body: (body) SmsPhoneNumber 
-     - parameter async: (query) Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional)
 
      - returns: RequestBuilder<SmsPhoneNumber> 
      */
-    open class func putRoutingSmsPhonenumberWithRequestBuilder(addressId: String, body: SmsPhoneNumber, async: Bool? = nil) -> RequestBuilder<SmsPhoneNumber> {        
+    open class func putRoutingSmsPhonenumberWithRequestBuilder(addressId: String, body: SmsPhoneNumber) -> RequestBuilder<SmsPhoneNumber> {        
         var path = "/api/v2/routing/sms/phonenumbers/{addressId}"
         let addressIdPreEscape = "\(addressId)"
         let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11579,10 +11568,7 @@ open class RoutingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "async": async
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SmsPhoneNumber>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -11894,8 +11880,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

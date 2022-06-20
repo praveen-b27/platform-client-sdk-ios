@@ -22,6 +22,7 @@ public class ScimPhoneNumber: Codable {
         case other = "other"
         case microsoftteams = "microsoftteams"
         case zoomphone = "zoomphone"
+        case eighbyeight = "eighbyeight"
     }
     /** The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx. */
     public var value: String?

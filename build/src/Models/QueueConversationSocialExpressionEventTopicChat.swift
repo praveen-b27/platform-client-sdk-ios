@@ -21,6 +21,16 @@ public class QueueConversationSocialExpressionEventTopicChat: Codable {
         case terminated = "terminated"
         case _none = "none"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
     public enum DisconnectType: String, Codable { 
         case endpoint = "endpoint"
         case client = "client"
@@ -39,8 +49,8 @@ public class QueueConversationSocialExpressionEventTopicChat: Codable {
         case spam = "spam"
         case uncallable = "uncallable"
     }
-    /** The connection state of this communication. */
     public var state: State?
+    public var initialState: InitialState?
     /** A globally unique identifier for this communication. */
     public var _id: String?
     /** The source provider of the chat. */
@@ -71,8 +81,9 @@ public class QueueConversationSocialExpressionEventTopicChat: Codable {
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
         self.state = state
+        self.initialState = initialState
         self._id = _id
         self.provider = provider
         self.scriptId = scriptId
@@ -92,6 +103,7 @@ public class QueueConversationSocialExpressionEventTopicChat: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case state
+        case initialState
         case _id = "id"
         case provider
         case scriptId

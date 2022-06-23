@@ -23,6 +23,18 @@ public class QueueConversationVideoEventTopicCallback: Codable {
         case uploading = "uploading"
         case _none = "none"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case scheduled = "scheduled"
+        case uploading = "uploading"
+        case _none = "none"
+    }
     public enum Direction: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
@@ -45,8 +57,8 @@ public class QueueConversationVideoEventTopicCallback: Codable {
         case spam = "spam"
         case uncallable = "uncallable"
     }
-    /** The connection state of this communication. */
     public var state: State?
+    public var initialState: InitialState?
     /** A globally unique identifier for this communication. */
     public var _id: String?
     /** The direction of the call */
@@ -94,8 +106,9 @@ public class QueueConversationVideoEventTopicCallback: Codable {
     /** The name displayed to recipients of the phone call. */
     public var callerIdName: String?
 
-    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationVideoEventTopicDialerPreview?, voicemail: QueueConversationVideoEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationVideoEventTopicDialerPreview?, voicemail: QueueConversationVideoEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
         self.state = state
+        self.initialState = initialState
         self._id = _id
         self.direction = direction
         self.held = held
@@ -124,6 +137,7 @@ public class QueueConversationVideoEventTopicCallback: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case state
+        case initialState
         case _id = "id"
         case direction
         case held

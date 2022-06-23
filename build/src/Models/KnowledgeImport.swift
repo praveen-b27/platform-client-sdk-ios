@@ -26,6 +26,8 @@ public class KnowledgeImport: Codable {
         case completed = "Completed"
         case partialCompleted = "PartialCompleted"
         case failed = "Failed"
+        case abortRequested = "AbortRequested"
+        case aborted = "Aborted"
     }
     public enum LanguageCode: String, Codable { 
         case enUs = "en-US"
@@ -38,6 +40,7 @@ public class KnowledgeImport: Codable {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
     /** Id of the import operation */
     public var _id: String?

@@ -634,6 +634,68 @@ open class LearningAPI {
     }
 
     
+    
+    /**
+     Get a specific Learning Module job status
+     
+     - parameter moduleId: (path) The ID of the learning module 
+     - parameter jobId: (path) The ID of the learning module job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLearningModuleJob(moduleId: String, jobId: String, completion: @escaping ((_ data: LearningModuleJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningModuleJobWithRequestBuilder(moduleId: moduleId, jobId: jobId)
+        requestBuilder.execute { (response: Response<LearningModuleJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a specific Learning Module job status
+     - GET /api/v2/learning/modules/{moduleId}/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "status" : "Accepted"
+}, statusCode=200}]
+     
+     - parameter moduleId: (path) The ID of the learning module 
+     - parameter jobId: (path) The ID of the learning module job 
+
+     - returns: RequestBuilder<LearningModuleJobResponse> 
+     */
+    open class func getLearningModuleJobWithRequestBuilder(moduleId: String, jobId: String) -> RequestBuilder<LearningModuleJobResponse> {        
+        var path = "/api/v2/learning/modules/{moduleId}/jobs/{jobId}"
+        let moduleIdPreEscape = "\(moduleId)"
+        let moduleIdPostEscape = moduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{moduleId}", with: moduleIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningModuleJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      Get a learning module rule
      
@@ -813,6 +875,9 @@ open class LearningAPI {
     
     public enum SortBy_getLearningModules: String { 
         case name = "name"
+        case createddate = "createddate"
+        case percentpassed = "percentpassed"
+        case averagescore = "averagescore"
     }
 
     
@@ -865,9 +930,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
   "entities" : [ {
     "isArchived" : true,
     "isPublished" : true,
@@ -942,7 +1007,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -1174,6 +1239,150 @@ open class LearningAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AssessmentScoringSet>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Reassign Learning Assignment
+     
+     - parameter assignmentId: (path) The Learning Assignment ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLearningAssignmentReassign(assignmentId: String, completion: @escaping ((_ data: LearningAssignment?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningAssignmentReassignWithRequestBuilder(assignmentId: assignmentId)
+        requestBuilder.execute { (response: Response<LearningAssignment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Reassign Learning Assignment
+     - POST /api/v2/learning/assignments/{assignmentId}/reassign
+     - This will reassign the state of the assignment to 'Assigned' and update the assignment to the latest version of the module
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "isPassed" : true,
+  "isManual" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "module" : "{}",
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 6,
+  "isRule" : true,
+  "assessment" : "{}",
+  "assessmentForm" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isOverdue" : true,
+  "createdBy" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "percentageScore" : 0.8008282,
+  "state" : "Assigned",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter assignmentId: (path) The Learning Assignment ID 
+
+     - returns: RequestBuilder<LearningAssignment> 
+     */
+    open class func postLearningAssignmentReassignWithRequestBuilder(assignmentId: String) -> RequestBuilder<LearningAssignment> {        
+        var path = "/api/v2/learning/assignments/{assignmentId}/reassign"
+        let assignmentIdPreEscape = "\(assignmentId)"
+        let assignmentIdPostEscape = assignmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assignmentId}", with: assignmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Reset Learning Assignment
+     
+     - parameter assignmentId: (path) The Learning Assignment ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLearningAssignmentReset(assignmentId: String, completion: @escaping ((_ data: LearningAssignment?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningAssignmentResetWithRequestBuilder(assignmentId: assignmentId)
+        requestBuilder.execute { (response: Response<LearningAssignment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Reset Learning Assignment
+     - POST /api/v2/learning/assignments/{assignmentId}/reset
+     - This will reset the state of the assignment to 'Assigned' and remove the version of Learning module associated with the assignment
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "isPassed" : true,
+  "isManual" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "module" : "{}",
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 6,
+  "isRule" : true,
+  "assessment" : "{}",
+  "assessmentForm" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isOverdue" : true,
+  "createdBy" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "percentageScore" : 0.8008282,
+  "state" : "Assigned",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter assignmentId: (path) The Learning Assignment ID 
+
+     - returns: RequestBuilder<LearningAssignment> 
+     */
+    open class func postLearningAssignmentResetWithRequestBuilder(assignmentId: String) -> RequestBuilder<LearningAssignment> {        
+        var path = "/api/v2/learning/assignments/{assignmentId}/reset"
+        let assignmentIdPreEscape = "\(assignmentId)"
+        let assignmentIdPostEscape = assignmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assignmentId}", with: assignmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -1497,6 +1706,66 @@ open class LearningAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignmentBulkRemoveResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Starts a specified operation on learning module
+     
+     - parameter moduleId: (path) The ID of the learning module 
+     - parameter body: (body) The learning module job request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLearningModuleJobs(moduleId: String, body: LearningModuleJobRequest, completion: @escaping ((_ data: LearningModuleJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningModuleJobsWithRequestBuilder(moduleId: moduleId, body: body)
+        requestBuilder.execute { (response: Response<LearningModuleJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Starts a specified operation on learning module
+     - POST /api/v2/learning/modules/{moduleId}/jobs
+     - This will initiate operation specified in the request body for a learning module
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "status" : "Accepted"
+}, statusCode=202}]
+     
+     - parameter moduleId: (path) The ID of the learning module 
+     - parameter body: (body) The learning module job request 
+
+     - returns: RequestBuilder<LearningModuleJobResponse> 
+     */
+    open class func postLearningModuleJobsWithRequestBuilder(moduleId: String, body: LearningModuleJobRequest) -> RequestBuilder<LearningModuleJobResponse> {        
+        var path = "/api/v2/learning/modules/{moduleId}/jobs"
+        let moduleIdPreEscape = "\(moduleId)"
+        let moduleIdPostEscape = moduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{moduleId}", with: moduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningModuleJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

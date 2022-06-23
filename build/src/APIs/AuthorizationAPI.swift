@@ -15932,11 +15932,11 @@ open class AuthorizationAPI {
     /**
      Returns a listing of roles and permissions for a user.
      
-     - parameter userId: (path) User ID 
+     - parameter subjectId: (path) User ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUserRoles(userId: String, completion: @escaping ((_ data: UserAuthorization?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUserRolesWithRequestBuilder(userId: userId)
+    open class func getUserRoles(subjectId: String, completion: @escaping ((_ data: UserAuthorization?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserRolesWithRequestBuilder(subjectId: subjectId)
         requestBuilder.execute { (response: Response<UserAuthorization>?, error) -> Void in
             do {
                 if let e = error {
@@ -15955,7 +15955,7 @@ open class AuthorizationAPI {
 
     /**
      Returns a listing of roles and permissions for a user.
-     - GET /api/v2/users/{userId}/roles
+     - GET /api/v2/users/{subjectId}/roles
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -16026,15 +16026,15 @@ open class AuthorizationAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter userId: (path) User ID 
+     - parameter subjectId: (path) User ID 
 
      - returns: RequestBuilder<UserAuthorization> 
      */
-    open class func getUserRolesWithRequestBuilder(userId: String) -> RequestBuilder<UserAuthorization> {        
-        var path = "/api/v2/users/{userId}/roles"
-        let userIdPreEscape = "\(userId)"
-        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+    open class func getUserRolesWithRequestBuilder(subjectId: String) -> RequestBuilder<UserAuthorization> {        
+        var path = "/api/v2/users/{subjectId}/roles"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
@@ -37542,12 +37542,12 @@ open class AuthorizationAPI {
     /**
      Sets the user's roles
      
-     - parameter userId: (path) User ID 
+     - parameter subjectId: (path) User ID 
      - parameter body: (body) List of roles 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putUserRoles(userId: String, body: [String], completion: @escaping ((_ data: UserAuthorization?,_ error: Error?) -> Void)) {
-        let requestBuilder = putUserRolesWithRequestBuilder(userId: userId, body: body)
+    open class func putUserRoles(subjectId: String, body: [String], completion: @escaping ((_ data: UserAuthorization?,_ error: Error?) -> Void)) {
+        let requestBuilder = putUserRolesWithRequestBuilder(subjectId: subjectId, body: body)
         requestBuilder.execute { (response: Response<UserAuthorization>?, error) -> Void in
             do {
                 if let e = error {
@@ -37566,7 +37566,7 @@ open class AuthorizationAPI {
 
     /**
      Sets the user's roles
-     - PUT /api/v2/users/{userId}/roles
+     - PUT /api/v2/users/{subjectId}/roles
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -37637,16 +37637,16 @@ open class AuthorizationAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter userId: (path) User ID 
+     - parameter subjectId: (path) User ID 
      - parameter body: (body) List of roles 
 
      - returns: RequestBuilder<UserAuthorization> 
      */
-    open class func putUserRolesWithRequestBuilder(userId: String, body: [String]) -> RequestBuilder<UserAuthorization> {        
-        var path = "/api/v2/users/{userId}/roles"
-        let userIdPreEscape = "\(userId)"
-        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+    open class func putUserRolesWithRequestBuilder(subjectId: String, body: [String]) -> RequestBuilder<UserAuthorization> {        
+        var path = "/api/v2/users/{subjectId}/roles"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 

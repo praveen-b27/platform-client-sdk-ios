@@ -21,6 +21,16 @@ public class QueueConversationSocialExpressionEventTopicCobrowse: Codable {
         case terminated = "terminated"
         case _none = "none"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
     public enum DisconnectType: String, Codable { 
         case endpoint = "endpoint"
         case client = "client"
@@ -37,8 +47,8 @@ public class QueueConversationSocialExpressionEventTopicCobrowse: Codable {
         case spam = "spam"
         case uncallable = "uncallable"
     }
-    /** The connection state of this communication. */
     public var state: State?
+    public var initialState: InitialState?
     /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
     public var disconnectType: DisconnectType?
     /** A globally unique identifier for this communication. */
@@ -74,8 +84,9 @@ public class QueueConversationSocialExpressionEventTopicCobrowse: Codable {
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
         self.state = state
+        self.initialState = initialState
         self.disconnectType = disconnectType
         self._id = _id
         self._self = _self
@@ -97,6 +108,7 @@ public class QueueConversationSocialExpressionEventTopicCobrowse: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case state
+        case initialState
         case disconnectType
         case _id = "id"
         case _self = "self"

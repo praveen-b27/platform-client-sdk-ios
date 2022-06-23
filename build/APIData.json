@@ -3934,16 +3934,16 @@
   "getuserroles": {
     "operationId": "getuserroles",
     "functionName": "getUserRoles",
-    "signature": "getUserRoles(userId)",
+    "signature": "getUserRoles(subjectId)",
     "parameters": [
       {
-        "name": "userId",
+        "name": "subjectId",
         "type": "String",
         "required": "true"
       }
     ],
     "return": "UserAuthorization",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\n\n// Returns a listing of roles and permissions for a user.\nGetUserRolesRequest.getUserRoles(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUserRolesRequest.getUserRoles was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet subjectId: String = \"\" // User ID\n\n// Returns a listing of roles and permissions for a user.\nGetUserRolesRequest.getUserRoles(subjectId: subjectId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUserRolesRequest.getUserRoles was successful\")\n        dump(response)\n    }\n}"
   },
   "patchauthorizationrole": {
     "operationId": "patchauthorizationrole",
@@ -4280,10 +4280,10 @@
   "putuserroles": {
     "operationId": "putuserroles",
     "functionName": "putUserRoles",
-    "signature": "putUserRoles(userId, body)",
+    "signature": "putUserRoles(subjectId, body)",
     "parameters": [
       {
-        "name": "userId",
+        "name": "subjectId",
         "type": "String",
         "required": "true"
       },
@@ -4294,7 +4294,7 @@
       }
     ],
     "return": "UserAuthorization",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet body: [String] = [\"\"] // List of roles\n\n// Sets the user's roles\nPutUserRolesRequest.putUserRoles(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutUserRolesRequest.putUserRoles was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet subjectId: String = \"\" // User ID\nlet body: [String] = [\"\"] // List of roles\n\n// Sets the user's roles\nPutUserRolesRequest.putUserRoles(subjectId: subjectId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutUserRolesRequest.putUserRoles was successful\")\n        dump(response)\n    }\n}"
   },
   "getbillingreportsbillableusage": {
     "operationId": "getbillingreportsbillableusage",
@@ -15380,6 +15380,25 @@
     "return": "LearningModule",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // The ID of the learning module\nlet expand: [String] = [\"\"] // Fields to expand in response(case insensitive)\n\n// Get a learning module\nGetLearningModuleRequest.getLearningModule(moduleId: moduleId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningModuleRequest.getLearningModule was successful\")\n        dump(response)\n    }\n}"
   },
+  "getlearningmodulejob": {
+    "operationId": "getlearningmodulejob",
+    "functionName": "getLearningModuleJob",
+    "signature": "getLearningModuleJob(moduleId, jobId)",
+    "parameters": [
+      {
+        "name": "moduleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "LearningModuleJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // The ID of the learning module\nlet jobId: String = \"\" // The ID of the learning module job\n\n// Get a specific Learning Module job status\nGetLearningModuleJobRequest.getLearningModuleJob(moduleId: moduleId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningModuleJobRequest.getLearningModuleJob was successful\")\n        dump(response)\n    }\n}"
+  },
   "getlearningmodulerule": {
     "operationId": "getlearningmodulerule",
     "functionName": "getLearningModuleRule",
@@ -15505,6 +15524,34 @@
     "return": "AssessmentScoringSet",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: LearningAssessmentScoringRequest = new LearningAssessmentScoringRequest(...) // Assessment form and answers to score\n\n// Score learning assessment for preview\nPostLearningAssessmentsScoringRequest.postLearningAssessmentsScoring(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningAssessmentsScoringRequest.postLearningAssessmentsScoring was successful\")\n        dump(response)\n    }\n}"
   },
+  "postlearningassignmentreassign": {
+    "operationId": "postlearningassignmentreassign",
+    "functionName": "postLearningAssignmentReassign",
+    "signature": "postLearningAssignmentReassign(assignmentId)",
+    "parameters": [
+      {
+        "name": "assignmentId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "LearningAssignment",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assignmentId: String = \"\" // The Learning Assignment ID\n\n// Reassign Learning Assignment\nPostLearningAssignmentReassignRequest.postLearningAssignmentReassign(assignmentId: assignmentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningAssignmentReassignRequest.postLearningAssignmentReassign was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postlearningassignmentreset": {
+    "operationId": "postlearningassignmentreset",
+    "functionName": "postLearningAssignmentReset",
+    "signature": "postLearningAssignmentReset(assignmentId)",
+    "parameters": [
+      {
+        "name": "assignmentId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "LearningAssignment",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assignmentId: String = \"\" // The Learning Assignment ID\n\n// Reset Learning Assignment\nPostLearningAssignmentResetRequest.postLearningAssignmentReset(assignmentId: assignmentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningAssignmentResetRequest.postLearningAssignmentReset was successful\")\n        dump(response)\n    }\n}"
+  },
   "postlearningassignments": {
     "operationId": "postlearningassignments",
     "functionName": "postLearningAssignments",
@@ -15560,6 +15607,25 @@
     ],
     "return": "LearningAssignmentBulkRemoveResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [String] = [\"\"] // The IDs of the learning assignments to be removed\n\n// Remove multiple Learning Assignments\nPostLearningAssignmentsBulkremoveRequest.postLearningAssignmentsBulkremove(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningAssignmentsBulkremoveRequest.postLearningAssignmentsBulkremove was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postlearningmodulejobs": {
+    "operationId": "postlearningmodulejobs",
+    "functionName": "postLearningModuleJobs",
+    "signature": "postLearningModuleJobs(moduleId, body)",
+    "parameters": [
+      {
+        "name": "moduleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "LearningModuleJobRequest",
+        "required": "true"
+      }
+    ],
+    "return": "LearningModuleJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // The ID of the learning module\nlet body: LearningModuleJobRequest = new LearningModuleJobRequest(...) // The learning module job request\n\n// Starts a specified operation on learning module\nPostLearningModuleJobsRequest.postLearningModuleJobs(moduleId: moduleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningModuleJobsRequest.postLearningModuleJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "postlearningmodulepublish": {
     "operationId": "postlearningmodulepublish",
@@ -20662,7 +20728,7 @@
       }
     ],
     "return": "[SurveyForm]",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contextId: [String] = [\"\"] // A comma-delimited list of valid survey form context ids\nlet published: Bool = true // If true, the latest published version will be included. If false, only the unpublished version will be included.\n\n// Retrieve a list of the latest form versions by context ids\nGetQualityFormsSurveysBulkContextsRequest.getQualityFormsSurveysBulkContexts(contextId: contextId, published: published) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsSurveysBulkContextsRequest.getQualityFormsSurveysBulkContexts was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contextId: [String] = [\"\"] // A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.\nlet published: Bool = true // If true, the latest published version will be included. If false, only the unpublished version will be included.\n\n// Retrieve a list of the latest form versions by context ids\nGetQualityFormsSurveysBulkContextsRequest.getQualityFormsSurveysBulkContexts(contextId: contextId, published: published) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsSurveysBulkContextsRequest.getQualityFormsSurveysBulkContexts was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualitypublishedform": {
     "operationId": "getqualitypublishedform",
@@ -23169,9 +23235,16 @@
   "getroutingpredictorskeyperformanceindicators": {
     "operationId": "getroutingpredictorskeyperformanceindicators",
     "functionName": "getRoutingPredictorsKeyperformanceindicators",
-    "signature": "getRoutingPredictorsKeyperformanceindicators()",
+    "signature": "getRoutingPredictorsKeyperformanceindicators(kpiGroup)",
+    "parameters": [
+      {
+        "name": "kpiGroup",
+        "type": "String",
+        "required": "false"
+      }
+    ],
     "return": "[KeyPerformanceIndicator]",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of Key Performance Indicators available for the predictors.\nGetRoutingPredictorsKeyperformanceindicatorsRequest.getRoutingPredictorsKeyperformanceindicators() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingPredictorsKeyperformanceindicatorsRequest.getRoutingPredictorsKeyperformanceindicators was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet kpiGroup: GetRoutingPredictorsKeyperformanceindicatorsRequest.KpiGroup_getRoutingPredictorsKeyperformanceindicators = GetRoutingPredictorsKeyperformanceindicatorsRequest.KpiGroup_getRoutingPredictorsKeyperformanceindicators.enummember // The Group of Key Performance Indicators to return\n\n// Get a list of Key Performance Indicators\nGetRoutingPredictorsKeyperformanceindicatorsRequest.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingPredictorsKeyperformanceindicatorsRequest.getRoutingPredictorsKeyperformanceindicators was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingqueue": {
     "operationId": "getroutingqueue",

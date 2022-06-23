@@ -1989,13 +1989,21 @@ open class RoutingAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    
+    public enum KpiGroup_getRoutingPredictorsKeyperformanceindicators: String { 
+        case standard = "Standard"
+        case custom = "Custom"
+    }
+
+    
     /**
-     Get a list of Key Performance Indicators available for the predictors.
+     Get a list of Key Performance Indicators
      
+     - parameter kpiGroup: (query) The Group of Key Performance Indicators to return (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingPredictorsKeyperformanceindicators(completion: @escaping ((_ data: [KeyPerformanceIndicator]?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder()
+    open class func getRoutingPredictorsKeyperformanceindicators(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil, completion: @escaping ((_ data: [KeyPerformanceIndicator]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: kpiGroup)
         requestBuilder.execute { (response: Response<[KeyPerformanceIndicator]>?, error) -> Void in
             do {
                 if let e = error {
@@ -2013,25 +2021,39 @@ open class RoutingAPI {
     }
 
     /**
-     Get a list of Key Performance Indicators available for the predictors.
+     Get a list of Key Performance Indicators
      - GET /api/v2/routing/predictors/keyperformanceindicators
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "optimizationType" : "Maximization",
+  "kpiType" : "SalesConversion",
+  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
-  "id" : "id"
+  "description" : "description",
+  "wrapUpCodeConfig" : "{}",
+  "kpiGroup" : "Standard",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "WrapUpCode",
+  "status" : "Enabled"
 }, statusCode=200}]
+     
+     - parameter kpiGroup: (query) The Group of Key Performance Indicators to return (optional)
 
      - returns: RequestBuilder<[KeyPerformanceIndicator]> 
      */
-    open class func getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder() -> RequestBuilder<[KeyPerformanceIndicator]> {        
+    open class func getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil) -> RequestBuilder<[KeyPerformanceIndicator]> {        
         let path = "/api/v2/routing/predictors/keyperformanceindicators"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "kpiGroup": kpiGroup?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<[KeyPerformanceIndicator]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -9588,10 +9610,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9614,10 +9636,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9658,10 +9680,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9684,10 +9706,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9733,10 +9755,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9759,10 +9781,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9803,10 +9825,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9829,10 +9851,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

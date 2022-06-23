@@ -45,6 +45,9 @@ open class WebMessagingAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "metadata" : {
+      "key" : "metadata"
+    },
     "originatingEntity" : "Human",
     "channel" : "{}",
     "id" : "id",
@@ -78,6 +81,9 @@ open class WebMessagingAPI {
     } ],
     "direction" : "Inbound"
   }, {
+    "metadata" : {
+      "key" : "metadata"
+    },
     "originatingEntity" : "Human",
     "channel" : "{}",
     "id" : "id",

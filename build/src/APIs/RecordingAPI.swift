@@ -8512,6 +8512,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "regionalRecordingStorageEnabled" : true,
   "maxConfigurableScreenRecordingStreams" : 6,
   "maxSimultaneousStreams" : 0
 }, statusCode=200}]
@@ -35984,6 +35985,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "regionalRecordingStorageEnabled" : true,
   "maxConfigurableScreenRecordingStreams" : 6,
   "maxSimultaneousStreams" : 0
 }, statusCode=200}]

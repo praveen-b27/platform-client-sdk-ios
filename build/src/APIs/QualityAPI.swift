@@ -25123,7 +25123,7 @@ open class QualityAPI {
     /**
      Retrieve a list of the latest form versions by context ids
      
-     - parameter contextId: (query) A comma-delimited list of valid survey form context ids 
+     - parameter contextId: (query) A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100. 
      - parameter published: (query) If true, the latest published version will be included. If false, only the unpublished version will be included. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -25326,7 +25326,7 @@ open class QualityAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter contextId: (query) A comma-delimited list of valid survey form context ids 
+     - parameter contextId: (query) A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100. 
      - parameter published: (query) If true, the latest published version will be included. If false, only the unpublished version will be included. (optional)
 
      - returns: RequestBuilder<[SurveyForm]> 

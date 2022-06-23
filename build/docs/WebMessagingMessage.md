@@ -16,6 +16,7 @@ A web messaging message
 | **events** | [**[WebMessagingEvent]**](WebMessagingEvent.html) | List of event elements. | [optional] |
 | **direction** | **String** | The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest. | [optional] |
 | **originatingEntity** | **String** | Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies. | [optional] |
+| **metadata** | **[String:String]** | Additional metadata about this message. | [optional] |
 {: class="table table-striped"}
 
 

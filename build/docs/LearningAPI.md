@@ -13,15 +13,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLearningAssignments**](LearningAPI.html#getLearningAssignments) | List of Learning module Assignments |
 | [**getLearningAssignmentsMe**](LearningAPI.html#getLearningAssignmentsMe) | List of Learning Assignments assigned to current user |
 | [**getLearningModule**](LearningAPI.html#getLearningModule) | Get a learning module |
+| [**getLearningModuleJob**](LearningAPI.html#getLearningModuleJob) | Get a specific Learning Module job status |
 | [**getLearningModuleRule**](LearningAPI.html#getLearningModuleRule) | Get a learning module rule |
 | [**getLearningModuleVersion**](LearningAPI.html#getLearningModuleVersion) | Get specific version of a published module |
 | [**getLearningModules**](LearningAPI.html#getLearningModules) | Get all learning modules of an organization |
 | [**patchLearningAssignment**](LearningAPI.html#patchLearningAssignment) | Update Learning Assignment |
 | [**postLearningAssessmentsScoring**](LearningAPI.html#postLearningAssessmentsScoring) | Score learning assessment for preview |
+| [**postLearningAssignmentReassign**](LearningAPI.html#postLearningAssignmentReassign) | Reassign Learning Assignment |
+| [**postLearningAssignmentReset**](LearningAPI.html#postLearningAssignmentReset) | Reset Learning Assignment |
 | [**postLearningAssignments**](LearningAPI.html#postLearningAssignments) | Create Learning Assignment |
 | [**postLearningAssignmentsAggregatesQuery**](LearningAPI.html#postLearningAssignmentsAggregatesQuery) | Retrieve aggregated assignment data |
 | [**postLearningAssignmentsBulkadd**](LearningAPI.html#postLearningAssignmentsBulkadd) | Add multiple learning assignments |
 | [**postLearningAssignmentsBulkremove**](LearningAPI.html#postLearningAssignmentsBulkremove) | Remove multiple Learning Assignments |
+| [**postLearningModuleJobs**](LearningAPI.html#postLearningModuleJobs) | Starts a specified operation on learning module |
 | [**postLearningModulePublish**](LearningAPI.html#postLearningModulePublish) | Publish a Learning module |
 | [**postLearningModules**](LearningAPI.html#postLearningModules) | Create a new learning module |
 | [**postLearningRulesQuery**](LearningAPI.html#postLearningRulesQuery) | Get users for learning module rule |
@@ -402,6 +406,60 @@ LearningAPI.getLearningModule(moduleId: moduleId, expand: expand) { (response, e
 
 [**LearningModule**](LearningModule.html)
 
+<a name="getLearningModuleJob"></a>
+
+# **getLearningModuleJob**
+
+
+
+> [LearningModuleJobResponse](LearningModuleJobResponse.html) getLearningModuleJob(moduleId, jobId)
+
+Get a specific Learning Module job status
+
+
+
+Wraps GET /api/v2/learning/modules/{moduleId}/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* learning:module:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let moduleId: String = "" // The ID of the learning module
+let jobId: String = "" // The ID of the learning module job
+
+// Code example
+LearningAPI.getLearningModuleJob(moduleId: moduleId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.getLearningModuleJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **moduleId** | **String**| The ID of the learning module | |
+| **jobId** | **String**| The ID of the learning module job | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningModuleJobResponse**](LearningModuleJobResponse.html)
+
 <a name="getLearningModuleRule"></a>
 
 # **getLearningModuleRule**
@@ -567,7 +625,7 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
-| **sortBy** | **String**| Sort by | [optional]<br />**Values**: name ("name") |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: name ("name"), createddate ("createddate"), percentpassed ("percentpassed"), averagescore ("averagescore") |
 | **searchTerm** | **String**| Search Term (searchable by name) | [optional] |
 | **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: rule ("rule"), summarydata ("summaryData") |
 | **isPublished** | **String**| Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
@@ -684,6 +742,114 @@ LearningAPI.postLearningAssessmentsScoring(body: body) { (response, error) in
 ### Return type
 
 [**AssessmentScoringSet**](AssessmentScoringSet.html)
+
+<a name="postLearningAssignmentReassign"></a>
+
+# **postLearningAssignmentReassign**
+
+
+
+> [LearningAssignment](LearningAssignment.html) postLearningAssignmentReassign(assignmentId)
+
+Reassign Learning Assignment
+
+This will reassign the state of the assignment to &#39;Assigned&#39; and update the assignment to the latest version of the module
+
+
+
+Wraps POST /api/v2/learning/assignments/{assignmentId}/reassign  
+
+Requires ANY permissions: 
+
+* learning:assignment:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assignmentId: String = "" // The Learning Assignment ID
+
+// Code example
+LearningAPI.postLearningAssignmentReassign(assignmentId: assignmentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.postLearningAssignmentReassign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assignmentId** | **String**| The Learning Assignment ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningAssignment**](LearningAssignment.html)
+
+<a name="postLearningAssignmentReset"></a>
+
+# **postLearningAssignmentReset**
+
+
+
+> [LearningAssignment](LearningAssignment.html) postLearningAssignmentReset(assignmentId)
+
+Reset Learning Assignment
+
+This will reset the state of the assignment to &#39;Assigned&#39; and remove the version of Learning module associated with the assignment
+
+
+
+Wraps POST /api/v2/learning/assignments/{assignmentId}/reset  
+
+Requires ANY permissions: 
+
+* learning:assignment:reset
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assignmentId: String = "" // The Learning Assignment ID
+
+// Code example
+LearningAPI.postLearningAssignmentReset(assignmentId: assignmentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.postLearningAssignmentReset was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assignmentId** | **String**| The Learning Assignment ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningAssignment**](LearningAssignment.html)
 
 <a name="postLearningAssignments"></a>
 
@@ -892,6 +1058,62 @@ LearningAPI.postLearningAssignmentsBulkremove(body: body) { (response, error) in
 ### Return type
 
 [**LearningAssignmentBulkRemoveResponse**](LearningAssignmentBulkRemoveResponse.html)
+
+<a name="postLearningModuleJobs"></a>
+
+# **postLearningModuleJobs**
+
+
+
+> [LearningModuleJobResponse](LearningModuleJobResponse.html) postLearningModuleJobs(moduleId, body)
+
+Starts a specified operation on learning module
+
+This will initiate operation specified in the request body for a learning module
+
+
+
+Wraps POST /api/v2/learning/modules/{moduleId}/jobs  
+
+Requires ANY permissions: 
+
+* learning:module:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let moduleId: String = "" // The ID of the learning module
+let body: LearningModuleJobRequest = new LearningModuleJobRequest(...) // The learning module job request
+
+// Code example
+LearningAPI.postLearningModuleJobs(moduleId: moduleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.postLearningModuleJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **moduleId** | **String**| The ID of the learning module | |
+| **body** | [**LearningModuleJobRequest**](LearningModuleJobRequest.html)| The learning module job request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningModuleJobResponse**](LearningModuleJobResponse.html)
 
 <a name="postLearningModulePublish"></a>
 

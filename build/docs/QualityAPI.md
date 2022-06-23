@@ -1561,7 +1561,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let contextId: [String] = [""] // A comma-delimited list of valid survey form context ids
+let contextId: [String] = [""] // A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100.
 let published: Bool = true // If true, the latest published version will be included. If false, only the unpublished version will be included.
 
 // Code example
@@ -1580,7 +1580,7 @@ QualityAPI.getQualityFormsSurveysBulkContexts(contextId: contextId, published: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contextId** | [**[String]**](String.html)| A comma-delimited list of valid survey form context ids | |
+| **contextId** | [**[String]**](String.html)| A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100. | |
 | **published** | **Bool**| If true, the latest published version will be included. If false, only the unpublished version will be included. | [optional] |
 {: class="table-striped"}
 

@@ -38,7 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingMessageRecipients**](RoutingAPI.html#getRoutingMessageRecipients) | Get recipients |
 | [**getRoutingPredictor**](RoutingAPI.html#getRoutingPredictor) | Retrieve a single predictor. |
 | [**getRoutingPredictors**](RoutingAPI.html#getRoutingPredictors) | Retrieve all predictors. |
-| [**getRoutingPredictorsKeyperformanceindicators**](RoutingAPI.html#getRoutingPredictorsKeyperformanceindicators) | Get a list of Key Performance Indicators available for the predictors. |
+| [**getRoutingPredictorsKeyperformanceindicators**](RoutingAPI.html#getRoutingPredictorsKeyperformanceindicators) | Get a list of Key Performance Indicators |
 | [**getRoutingQueue**](RoutingAPI.html#getRoutingQueue) | Get details about this queue. |
 | [**getRoutingQueueComparisonperiod**](RoutingAPI.html#getRoutingQueueComparisonperiod) | Get a Comparison Period. |
 | [**getRoutingQueueComparisonperiods**](RoutingAPI.html#getRoutingQueueComparisonperiods) | Get list of comparison periods |
@@ -1757,9 +1757,9 @@ RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, page
 
 
 
-> [[KeyPerformanceIndicator]](KeyPerformanceIndicator.html) getRoutingPredictorsKeyperformanceindicators()
+> [[KeyPerformanceIndicator]](KeyPerformanceIndicator.html) getRoutingPredictorsKeyperformanceindicators(kpiGroup)
 
-Get a list of Key Performance Indicators available for the predictors.
+Get a list of Key Performance Indicators
 
 
 
@@ -1777,9 +1777,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let kpiGroup: RoutingAPI.KpiGroup_getRoutingPredictorsKeyperformanceindicators = RoutingAPI.KpiGroup_getRoutingPredictorsKeyperformanceindicators.enummember // The Group of Key Performance Indicators to return
 
 // Code example
-RoutingAPI.getRoutingPredictorsKeyperformanceindicators() { (response, error) in
+RoutingAPI.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1791,8 +1792,11 @@ RoutingAPI.getRoutingPredictorsKeyperformanceindicators() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **kpiGroup** | **String**| The Group of Key Performance Indicators to return | [optional]<br />**Values**: standard ("Standard"), custom ("Custom") |
+{: class="table-striped"}
 
 
 ### Return type

@@ -285,6 +285,8 @@ This endpoint does not require any parameters.
 
 Gamified metric by id
 
+This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
+
 
 
 Wraps GET /api/v2/gamification/metrics/{metricId}  
@@ -444,6 +446,8 @@ This endpoint does not require any parameters.
 > [GetMetricsResponse](GetMetricsResponse.html) getGamificationMetrics(performanceProfileId, workday)
 
 All gamified metrics for a given profile
+
+This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
 
 
 
@@ -2026,6 +2030,8 @@ This endpoint does not require any parameters.
 
 Creates a gamified metric with a given metric definition and metric objective
 
+This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
+
 
 
 Wraps POST /api/v2/gamification/metrics  
@@ -2453,6 +2459,8 @@ GamificationAPI.postGamificationProfiles(body: body, copyMetrics: copyMetrics) {
 > [Metric](Metric.html) putGamificationMetric(metricId, body, performanceProfileId)
 
 Updates a metric
+
+This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
 
 
 

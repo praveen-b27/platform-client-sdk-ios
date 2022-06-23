@@ -7,7 +7,8 @@ title: QueueConversationVideoEventTopicScreenshare
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **state** | **String** | The connection state of this communication. | [optional] |
+| **state** | **String** |  | [optional] |
+| **initialState** | **String** |  | [optional] |
 | **_self** | [**QueueConversationVideoEventTopicAddress**](QueueConversationVideoEventTopicAddress.html) | Address and name data for a call endpoint. | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **context** | **String** | The room id context (xmpp jid) for the conference session. | [optional] |

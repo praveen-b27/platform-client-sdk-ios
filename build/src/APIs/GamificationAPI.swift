@@ -375,6 +375,7 @@ open class GamificationAPI {
     /**
      Gamified metric by id
      - GET /api/v2/gamification/metrics/{metricId}
+     - This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -585,6 +586,7 @@ open class GamificationAPI {
     /**
      All gamified metrics for a given profile
      - GET /api/v2/gamification/metrics
+     - This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2945,6 +2947,7 @@ open class GamificationAPI {
     /**
      Creates a gamified metric with a given metric definition and metric objective
      - POST /api/v2/gamification/metrics
+     - This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3526,6 +3529,7 @@ open class GamificationAPI {
     /**
      Updates a metric
      - PUT /api/v2/gamification/metrics/{metricId}
+     - This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

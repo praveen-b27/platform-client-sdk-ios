@@ -22,6 +22,7 @@ public class KnowledgeDocument: Codable {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
     public enum ModelType: String, Codable { 
         case faq = "Faq"

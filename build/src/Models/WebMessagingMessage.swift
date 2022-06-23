@@ -42,8 +42,10 @@ public class WebMessagingMessage: Codable {
     public var direction: Direction?
     /** Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies. */
     public var originatingEntity: OriginatingEntity?
+    /** Additional metadata about this message. */
+    public var metadata: [String:String]?
 
-    public init(_id: String?, channel: WebMessagingChannel?, type: ModelType?, text: String?, content: [WebMessagingContent]?, events: [WebMessagingEvent]?, direction: Direction?, originatingEntity: OriginatingEntity?) {
+    public init(_id: String?, channel: WebMessagingChannel?, type: ModelType?, text: String?, content: [WebMessagingContent]?, events: [WebMessagingEvent]?, direction: Direction?, originatingEntity: OriginatingEntity?, metadata: [String:String]?) {
         self._id = _id
         self.channel = channel
         self.type = type
@@ -52,6 +54,7 @@ public class WebMessagingMessage: Codable {
         self.events = events
         self.direction = direction
         self.originatingEntity = originatingEntity
+        self.metadata = metadata
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -63,6 +66,7 @@ public class WebMessagingMessage: Codable {
         case events
         case direction
         case originatingEntity
+        case metadata
     }
 
 

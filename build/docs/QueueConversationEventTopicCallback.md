@@ -7,7 +7,8 @@ title: QueueConversationEventTopicCallback
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **state** | **String** | The connection state of this communication. | [optional] |
+| **state** | **String** |  | [optional] |
+| **initialState** | **String** |  | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **direction** | **String** | The direction of the call | [optional] |
 | **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |

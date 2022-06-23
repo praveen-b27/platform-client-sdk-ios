@@ -27,8 +27,9 @@ public class QueueConversationMessageEventTopicMessageDetails: Codable {
     public var media: [QueueConversationMessageEventTopicMessageMedia]?
     public var stickers: [QueueConversationMessageEventTopicMessageSticker]?
     public var errorInfo: QueueConversationMessageEventTopicErrorDetails?
+    public var messageMetadata: QueueConversationMessageEventTopicMessageMetadata?
 
-    public init(message: QueueConversationMessageEventTopicUriReference?, messageTime: Date?, messageSegmentCount: Int?, messageStatus: MessageStatus?, media: [QueueConversationMessageEventTopicMessageMedia]?, stickers: [QueueConversationMessageEventTopicMessageSticker]?, errorInfo: QueueConversationMessageEventTopicErrorDetails?) {
+    public init(message: QueueConversationMessageEventTopicUriReference?, messageTime: Date?, messageSegmentCount: Int?, messageStatus: MessageStatus?, media: [QueueConversationMessageEventTopicMessageMedia]?, stickers: [QueueConversationMessageEventTopicMessageSticker]?, errorInfo: QueueConversationMessageEventTopicErrorDetails?, messageMetadata: QueueConversationMessageEventTopicMessageMetadata?) {
         self.message = message
         self.messageTime = messageTime
         self.messageSegmentCount = messageSegmentCount
@@ -36,6 +37,7 @@ public class QueueConversationMessageEventTopicMessageDetails: Codable {
         self.media = media
         self.stickers = stickers
         self.errorInfo = errorInfo
+        self.messageMetadata = messageMetadata
     }
 
 

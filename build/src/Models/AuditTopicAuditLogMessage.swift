@@ -80,6 +80,8 @@ public class AuditTopicAuditLogMessage: Codable {
         case unassign = "Unassign"
         case reset = "Reset"
         case reassign = "Reassign"
+        case archive = "Archive"
+        case unarchive = "Unarchive"
     }
     public enum EntityType: String, Codable { 
         case accessToken = "AccessToken"

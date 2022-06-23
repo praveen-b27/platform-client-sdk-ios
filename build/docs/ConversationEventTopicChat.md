@@ -7,7 +7,8 @@ title: ConversationEventTopicChat
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **state** | **String** | The connection state of this communication. | [optional] |
+| **state** | **String** |  | [optional] |
+| **initialState** | **String** |  | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **provider** | **String** | The source provider of the chat. | [optional] |
 | **scriptId** | **String** | The UUID of the script to use. | [optional] |

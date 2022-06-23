@@ -24,6 +24,19 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
         case transmitting = "transmitting"
         case _none = "none"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case uploading = "uploading"
+        case converting = "converting"
+        case transmitting = "transmitting"
+        case _none = "none"
+    }
     public enum RecordingState: String, Codable { 
         case _none = "none"
         case active = "active"
@@ -53,8 +66,8 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
     }
     /** A globally unique identifier for this communication. */
     public var _id: String?
-    /** The connection state of this communication. */
     public var state: State?
+    public var initialState: InitialState?
     /** True if this call is being recorded. */
     public var recording: Bool?
     /** State of recording on this call. */
@@ -102,9 +115,10 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
 
-    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, other: QueueConversationSocialExpressionEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationSocialExpressionEventTopicDisconnectReason]?, faxStatus: QueueConversationSocialExpressionEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, other: QueueConversationSocialExpressionEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationSocialExpressionEventTopicDisconnectReason]?, faxStatus: QueueConversationSocialExpressionEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         self._id = _id
         self.state = state
+        self.initialState = initialState
         self.recording = recording
         self.recordingState = recordingState
         self.muted = muted
@@ -135,6 +149,7 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case state
+        case initialState
         case recording
         case recordingState
         case muted

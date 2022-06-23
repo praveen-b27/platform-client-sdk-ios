@@ -700,6 +700,9 @@ docs/ConversationEventTopicJourneyCustomerSession.md
 docs/ConversationEventTopicMessage.md
 docs/ConversationEventTopicMessageDetails.md
 docs/ConversationEventTopicMessageMedia.md
+docs/ConversationEventTopicMessageMetadata.md
+docs/ConversationEventTopicMessageMetadataContent.md
+docs/ConversationEventTopicMessageMetadataEvent.md
 docs/ConversationEventTopicMessageSticker.md
 docs/ConversationEventTopicObject.md
 docs/ConversationEventTopicParticipant.md
@@ -727,6 +730,9 @@ docs/ConversationMessageEventTopicMessageConversation.md
 docs/ConversationMessageEventTopicMessageDetails.md
 docs/ConversationMessageEventTopicMessageMedia.md
 docs/ConversationMessageEventTopicMessageMediaParticipant.md
+docs/ConversationMessageEventTopicMessageMetadata.md
+docs/ConversationMessageEventTopicMessageMetadataContent.md
+docs/ConversationMessageEventTopicMessageMetadataEvent.md
 docs/ConversationMessageEventTopicMessageSticker.md
 docs/ConversationMessageEventTopicScoredAgent.md
 docs/ConversationMessageEventTopicUriReference.md
@@ -1596,6 +1602,8 @@ docs/LearningModuleCoverArtRequest.md
 docs/LearningModuleCoverArtResponse.md
 docs/LearningModuleInformStep.md
 docs/LearningModuleInformStepRequest.md
+docs/LearningModuleJobRequest.md
+docs/LearningModuleJobResponse.md
 docs/LearningModulePublishResponse.md
 docs/LearningModuleReassignSummary.md
 docs/LearningModuleRequest.md
@@ -2109,6 +2117,9 @@ docs/QueueConversationEventTopicJourneyCustomerSession.md
 docs/QueueConversationEventTopicMessage.md
 docs/QueueConversationEventTopicMessageDetails.md
 docs/QueueConversationEventTopicMessageMedia.md
+docs/QueueConversationEventTopicMessageMetadata.md
+docs/QueueConversationEventTopicMessageMetadataContent.md
+docs/QueueConversationEventTopicMessageMetadataEvent.md
 docs/QueueConversationEventTopicMessageSticker.md
 docs/QueueConversationEventTopicObject.md
 docs/QueueConversationEventTopicParticipant.md
@@ -2133,6 +2144,9 @@ docs/QueueConversationMessageEventTopicMessageConversation.md
 docs/QueueConversationMessageEventTopicMessageDetails.md
 docs/QueueConversationMessageEventTopicMessageMedia.md
 docs/QueueConversationMessageEventTopicMessageMediaParticipant.md
+docs/QueueConversationMessageEventTopicMessageMetadata.md
+docs/QueueConversationMessageEventTopicMessageMetadataContent.md
+docs/QueueConversationMessageEventTopicMessageMetadataEvent.md
 docs/QueueConversationMessageEventTopicMessageSticker.md
 docs/QueueConversationMessageEventTopicScoredAgent.md
 docs/QueueConversationMessageEventTopicUriReference.md
@@ -2172,6 +2186,9 @@ docs/QueueConversationSocialExpressionEventTopicJourneyCustomerSession.md
 docs/QueueConversationSocialExpressionEventTopicMessage.md
 docs/QueueConversationSocialExpressionEventTopicMessageDetails.md
 docs/QueueConversationSocialExpressionEventTopicMessageMedia.md
+docs/QueueConversationSocialExpressionEventTopicMessageMetadata.md
+docs/QueueConversationSocialExpressionEventTopicMessageMetadataContent.md
+docs/QueueConversationSocialExpressionEventTopicMessageMetadataEvent.md
 docs/QueueConversationSocialExpressionEventTopicMessageSticker.md
 docs/QueueConversationSocialExpressionEventTopicObject.md
 docs/QueueConversationSocialExpressionEventTopicParticipant.md
@@ -2205,6 +2222,9 @@ docs/QueueConversationVideoEventTopicJourneyCustomerSession.md
 docs/QueueConversationVideoEventTopicMessage.md
 docs/QueueConversationVideoEventTopicMessageDetails.md
 docs/QueueConversationVideoEventTopicMessageMedia.md
+docs/QueueConversationVideoEventTopicMessageMetadata.md
+docs/QueueConversationVideoEventTopicMessageMetadataContent.md
+docs/QueueConversationVideoEventTopicMessageMetadataEvent.md
 docs/QueueConversationVideoEventTopicMessageSticker.md
 docs/QueueConversationVideoEventTopicObject.md
 docs/QueueConversationVideoEventTopicParticipant.md
@@ -3194,6 +3214,7 @@ docs/WorkspaceEntityListing.md
 docs/WorkspaceMember.md
 docs/WorkspaceMemberEntityListing.md
 docs/WorkspaceSummary.md
+docs/WrapUpCodeConfig.md
 docs/WrapUpCodeMapping.md
 docs/WrapUpCodeReference.md
 docs/Wrapup.md
@@ -3808,6 +3829,7 @@ docs/getLearningAssignment-example.txt
 docs/getLearningAssignments-example.txt
 docs/getLearningAssignmentsMe-example.txt
 docs/getLearningModule-example.txt
+docs/getLearningModuleJob-example.txt
 docs/getLearningModuleRule-example.txt
 docs/getLearningModuleVersion-example.txt
 docs/getLearningModules-example.txt
@@ -4614,10 +4636,13 @@ docs/postLanguageunderstandingMinerExecute-example.txt
 docs/postLanguageunderstandingMinerUploads-example.txt
 docs/postLanguageunderstandingMiners-example.txt
 docs/postLearningAssessmentsScoring-example.txt
+docs/postLearningAssignmentReassign-example.txt
+docs/postLearningAssignmentReset-example.txt
 docs/postLearningAssignments-example.txt
 docs/postLearningAssignmentsAggregatesQuery-example.txt
 docs/postLearningAssignmentsBulkadd-example.txt
 docs/postLearningAssignmentsBulkremove-example.txt
+docs/postLearningModuleJobs-example.txt
 docs/postLearningModulePublish-example.txt
 docs/postLearningModules-example.txt
 docs/postLearningRulesQuery-example.txt
@@ -5764,6 +5789,9 @@ src/Models/ConversationEventTopicJourneyCustomerSession.swift
 src/Models/ConversationEventTopicMessage.swift
 src/Models/ConversationEventTopicMessageDetails.swift
 src/Models/ConversationEventTopicMessageMedia.swift
+src/Models/ConversationEventTopicMessageMetadata.swift
+src/Models/ConversationEventTopicMessageMetadataContent.swift
+src/Models/ConversationEventTopicMessageMetadataEvent.swift
 src/Models/ConversationEventTopicMessageSticker.swift
 src/Models/ConversationEventTopicObject.swift
 src/Models/ConversationEventTopicParticipant.swift
@@ -5791,6 +5819,9 @@ src/Models/ConversationMessageEventTopicMessageConversation.swift
 src/Models/ConversationMessageEventTopicMessageDetails.swift
 src/Models/ConversationMessageEventTopicMessageMedia.swift
 src/Models/ConversationMessageEventTopicMessageMediaParticipant.swift
+src/Models/ConversationMessageEventTopicMessageMetadata.swift
+src/Models/ConversationMessageEventTopicMessageMetadataContent.swift
+src/Models/ConversationMessageEventTopicMessageMetadataEvent.swift
 src/Models/ConversationMessageEventTopicMessageSticker.swift
 src/Models/ConversationMessageEventTopicScoredAgent.swift
 src/Models/ConversationMessageEventTopicUriReference.swift
@@ -6626,6 +6657,8 @@ src/Models/LearningModuleCoverArtRequest.swift
 src/Models/LearningModuleCoverArtResponse.swift
 src/Models/LearningModuleInformStep.swift
 src/Models/LearningModuleInformStepRequest.swift
+src/Models/LearningModuleJobRequest.swift
+src/Models/LearningModuleJobResponse.swift
 src/Models/LearningModulePublishResponse.swift
 src/Models/LearningModuleReassignSummary.swift
 src/Models/LearningModuleRequest.swift
@@ -7117,6 +7150,9 @@ src/Models/QueueConversationEventTopicJourneyCustomerSession.swift
 src/Models/QueueConversationEventTopicMessage.swift
 src/Models/QueueConversationEventTopicMessageDetails.swift
 src/Models/QueueConversationEventTopicMessageMedia.swift
+src/Models/QueueConversationEventTopicMessageMetadata.swift
+src/Models/QueueConversationEventTopicMessageMetadataContent.swift
+src/Models/QueueConversationEventTopicMessageMetadataEvent.swift
 src/Models/QueueConversationEventTopicMessageSticker.swift
 src/Models/QueueConversationEventTopicObject.swift
 src/Models/QueueConversationEventTopicParticipant.swift
@@ -7141,6 +7177,9 @@ src/Models/QueueConversationMessageEventTopicMessageConversation.swift
 src/Models/QueueConversationMessageEventTopicMessageDetails.swift
 src/Models/QueueConversationMessageEventTopicMessageMedia.swift
 src/Models/QueueConversationMessageEventTopicMessageMediaParticipant.swift
+src/Models/QueueConversationMessageEventTopicMessageMetadata.swift
+src/Models/QueueConversationMessageEventTopicMessageMetadataContent.swift
+src/Models/QueueConversationMessageEventTopicMessageMetadataEvent.swift
 src/Models/QueueConversationMessageEventTopicMessageSticker.swift
 src/Models/QueueConversationMessageEventTopicScoredAgent.swift
 src/Models/QueueConversationMessageEventTopicUriReference.swift
@@ -7180,6 +7219,9 @@ src/Models/QueueConversationSocialExpressionEventTopicJourneyCustomerSession.swi
 src/Models/QueueConversationSocialExpressionEventTopicMessage.swift
 src/Models/QueueConversationSocialExpressionEventTopicMessageDetails.swift
 src/Models/QueueConversationSocialExpressionEventTopicMessageMedia.swift
+src/Models/QueueConversationSocialExpressionEventTopicMessageMetadata.swift
+src/Models/QueueConversationSocialExpressionEventTopicMessageMetadataContent.swift
+src/Models/QueueConversationSocialExpressionEventTopicMessageMetadataEvent.swift
 src/Models/QueueConversationSocialExpressionEventTopicMessageSticker.swift
 src/Models/QueueConversationSocialExpressionEventTopicObject.swift
 src/Models/QueueConversationSocialExpressionEventTopicParticipant.swift
@@ -7213,6 +7255,9 @@ src/Models/QueueConversationVideoEventTopicJourneyCustomerSession.swift
 src/Models/QueueConversationVideoEventTopicMessage.swift
 src/Models/QueueConversationVideoEventTopicMessageDetails.swift
 src/Models/QueueConversationVideoEventTopicMessageMedia.swift
+src/Models/QueueConversationVideoEventTopicMessageMetadata.swift
+src/Models/QueueConversationVideoEventTopicMessageMetadataContent.swift
+src/Models/QueueConversationVideoEventTopicMessageMetadataEvent.swift
 src/Models/QueueConversationVideoEventTopicMessageSticker.swift
 src/Models/QueueConversationVideoEventTopicObject.swift
 src/Models/QueueConversationVideoEventTopicParticipant.swift
@@ -8152,6 +8197,7 @@ src/Models/WorkspaceEntityListing.swift
 src/Models/WorkspaceMember.swift
 src/Models/WorkspaceMemberEntityListing.swift
 src/Models/WorkspaceSummary.swift
+src/Models/WrapUpCodeConfig.swift
 src/Models/WrapUpCodeMapping.swift
 src/Models/WrapUpCodeReference.swift
 src/Models/Wrapup.swift

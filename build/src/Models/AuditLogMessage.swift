@@ -138,6 +138,7 @@ public class AuditLogMessage: Codable {
         case actionMap = "ActionMap"
         case actionTemplate = "ActionTemplate"
         case activityCode = "ActivityCode"
+        case adherenceExplanation = "AdherenceExplanation"
         case agentRoutingInfo = "AgentRoutingInfo"
         case analyticsReportingSettings = "AnalyticsReportingSettings"
         case annotation = "Annotation"

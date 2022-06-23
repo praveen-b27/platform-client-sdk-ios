@@ -22,6 +22,7 @@ public class KnowledgeExtendedCategory: Codable {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

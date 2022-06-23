@@ -88,6 +88,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -175,6 +176,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -283,6 +285,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -417,6 +420,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -535,6 +539,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -642,6 +647,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -750,6 +756,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -941,6 +948,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -1032,6 +1040,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -1121,6 +1130,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -1254,6 +1264,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -1459,6 +1470,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -1569,6 +1581,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -1680,6 +1693,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -1822,6 +1836,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -1971,6 +1986,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -2075,6 +2091,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -2181,6 +2198,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -2269,6 +2287,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     
@@ -2358,6 +2377,7 @@ open class KnowledgeAPI {
         case ptBr = "pt-BR"
         case nlNl = "nl-NL"
         case itIt = "it-IT"
+        case frCa = "fr-CA"
     }
 
     

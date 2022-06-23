@@ -1225,13 +1225,13 @@ AuthorizationAPI.getAuthorizationSubjectsRolecounts(_id: _id) { (response, error
 
 
 
-> [UserAuthorization](UserAuthorization.html) getUserRoles(userId)
+> [UserAuthorization](UserAuthorization.html) getUserRoles(subjectId)
 
 Returns a listing of roles and permissions for a user.
 
 
 
-Wraps GET /api/v2/users/{userId}/roles  
+Wraps GET /api/v2/users/{subjectId}/roles  
 
 Requires ANY permissions: 
 
@@ -1245,10 +1245,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let userId: String = "" // User ID
+let subjectId: String = "" // User ID
 
 // Code example
-AuthorizationAPI.getUserRoles(userId: userId) { (response, error) in
+AuthorizationAPI.getUserRoles(subjectId: subjectId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1263,7 +1263,7 @@ AuthorizationAPI.getUserRoles(userId: userId) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| User ID | |
+| **subjectId** | **String**| User ID | |
 {: class="table-striped"}
 
 
@@ -2208,13 +2208,13 @@ AuthorizationAPI.putAuthorizationRolesDefault(body: body) { (response, error) in
 
 
 
-> [UserAuthorization](UserAuthorization.html) putUserRoles(userId, body)
+> [UserAuthorization](UserAuthorization.html) putUserRoles(subjectId, body)
 
 Sets the user&#39;s roles
 
 
 
-Wraps PUT /api/v2/users/{userId}/roles  
+Wraps PUT /api/v2/users/{subjectId}/roles  
 
 Requires ANY permissions: 
 
@@ -2228,11 +2228,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let userId: String = "" // User ID
+let subjectId: String = "" // User ID
 let body: [String] = [""] // List of roles
 
 // Code example
-AuthorizationAPI.putUserRoles(userId: userId, body: body) { (response, error) in
+AuthorizationAPI.putUserRoles(subjectId: subjectId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2247,7 +2247,7 @@ AuthorizationAPI.putUserRoles(userId: userId, body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| User ID | |
+| **subjectId** | **String**| User ID | |
 | **body** | [**[String]**](String.html)| List of roles | |
 {: class="table-striped"}
 

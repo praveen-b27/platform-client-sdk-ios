@@ -2,7 +2,6 @@
 title: CurrentUserScheduleRequestBody
 ---
 ## CurrentUserScheduleRequestBody
-POST request body for fetching the current user&#39;s schedule over a given range
 
 ## Properties
 

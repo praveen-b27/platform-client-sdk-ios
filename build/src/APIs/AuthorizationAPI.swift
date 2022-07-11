@@ -430,8 +430,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -697,8 +697,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -790,8 +790,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -918,8 +918,8 @@ open class AuthorizationAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1338,9 +1338,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -1755,9 +1762,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -2187,9 +2201,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -2604,9 +2625,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -3104,9 +3132,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -3521,9 +3556,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -3953,9 +3995,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -4370,9 +4419,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -4803,9 +4859,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -5220,9 +5283,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -5652,9 +5722,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -6069,9 +6146,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -6507,9 +6591,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -6924,9 +7015,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -7356,9 +7454,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -7773,9 +7878,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -8214,9 +8326,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -8631,9 +8750,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -9063,9 +9189,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -9480,9 +9613,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -9918,9 +10058,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -10335,9 +10482,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -10767,9 +10921,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -11184,9 +11345,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -11435,8 +11603,8 @@ open class AuthorizationAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12087,8 +12255,8 @@ open class AuthorizationAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12472,9 +12640,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -12889,9 +13064,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -13321,9 +13503,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -13738,9 +13927,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -14183,9 +14379,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -14600,9 +14803,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -15032,9 +15242,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -15449,9 +15666,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -15598,8 +15822,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16377,9 +16601,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -16794,9 +17025,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -17226,9 +17464,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -17643,9 +17888,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -18398,9 +18650,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -18815,9 +19074,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -19247,9 +19513,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -19664,9 +19937,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -20097,9 +20377,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -20514,9 +20801,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -20946,9 +21240,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -21363,9 +21664,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -21801,9 +22109,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -22218,9 +22533,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -22650,9 +22972,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -23067,9 +23396,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -23508,9 +23844,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -23925,9 +24268,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -24357,9 +24707,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -24774,9 +25131,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -25212,9 +25576,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -25629,9 +26000,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -26061,9 +26439,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -26478,9 +26863,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -26981,9 +27373,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -27398,9 +27797,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -27830,9 +28236,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -28247,9 +28660,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -28746,9 +29166,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -29163,9 +29590,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -29595,9 +30029,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -30012,9 +30453,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -30457,9 +30905,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -30874,9 +31329,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -31306,9 +31768,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -31723,9 +32192,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -31872,8 +32348,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -32510,9 +32986,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -32927,9 +33410,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -33359,9 +33849,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -33776,9 +34273,16 @@ open class AuthorizationAPI {
         },
         "value" : "value",
         "queue" : {
+          "peerId" : "peerId",
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 5,
+              "enableAutoAnswer" : true,
+              "subTypeSettings" : {
+                "key" : {
+                  "enableAutoAnswer" : true
+                }
+              },
               "serviceLevel" : {
                 "percentage" : 5.637376656633329,
                 "durationMs" : 2
@@ -34388,9 +34892,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -34805,9 +35316,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -35237,9 +35755,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -35654,9 +36179,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -36099,9 +36631,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -36516,9 +37055,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -36948,9 +37494,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -37365,9 +37918,16 @@ open class AuthorizationAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -37514,8 +38074,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

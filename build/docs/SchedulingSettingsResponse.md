@@ -2,7 +2,6 @@
 title: SchedulingSettingsResponse
 ---
 ## SchedulingSettingsResponse
-Scheduling Settings
 
 ## Properties
 

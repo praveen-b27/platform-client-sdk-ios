@@ -2,7 +2,6 @@
 title: TimeOffLimitRange
 ---
 ## TimeOffLimitRange
-A single range filled with time off limit interval values
 
 ## Properties
 

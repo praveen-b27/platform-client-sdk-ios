@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** User reference with delete flag to remove the user from an associated entity */
 
 public class DeletableUserReference: Codable {
 

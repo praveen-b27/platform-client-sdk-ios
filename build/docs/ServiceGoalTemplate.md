@@ -2,7 +2,6 @@
 title: ServiceGoalTemplate
 ---
 ## ServiceGoalTemplate
-Service Goal Template
 
 ## Properties
 

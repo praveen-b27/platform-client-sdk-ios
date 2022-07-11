@@ -2,7 +2,6 @@
 title: WorkPlan
 ---
 ## WorkPlan
-Work plan information
 
 ## Properties
 

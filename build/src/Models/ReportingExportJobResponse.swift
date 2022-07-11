@@ -112,6 +112,7 @@ public class ReportingExportJobResponse: Codable {
         case agentLoginLogoutDetailView = "AGENT_LOGIN_LOGOUT_DETAIL_VIEW"
         case campaignPerformanceSummaryView = "CAMPAIGN_PERFORMANCE_SUMMARY_VIEW"
         case campaignPerformanceDetailView = "CAMPAIGN_PERFORMANCE_DETAIL_VIEW"
+        case knowledgePerformanceView = "KNOWLEDGE_PERFORMANCE_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

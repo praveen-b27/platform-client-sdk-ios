@@ -2,7 +2,6 @@
 title: WeekSchedule
 ---
 ## WeekSchedule
-Week schedule information
 
 ## Properties
 

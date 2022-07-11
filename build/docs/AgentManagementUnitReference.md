@@ -2,7 +2,6 @@
 title: AgentManagementUnitReference
 ---
 ## AgentManagementUnitReference
-A reference from agent to management unit
 
 ## Properties
 

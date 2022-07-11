@@ -45,10 +45,12 @@ public class ReportingTurn: Codable {
     public var dateCreated: Date?
     /** Result of the bot flow 'ask' action. */
     public var askActionResult: AskActionResult?
+    /** The details related to end of bot flow session. */
+    public var sessionEndDetails: SessionEndDetails?
     /** The conversation details, across potentially multiple Bot Flow sessions. */
     public var conversation: AddressableEntityRef?
 
-    public init(userInput: String?, botPrompts: [String]?, sessionId: String?, askAction: ReportingTurnAction?, intent: ReportingTurnIntent?, knowledge: ReportingTurnKnowledge?, dateCreated: Date?, askActionResult: AskActionResult?, conversation: AddressableEntityRef?) {
+    public init(userInput: String?, botPrompts: [String]?, sessionId: String?, askAction: ReportingTurnAction?, intent: ReportingTurnIntent?, knowledge: ReportingTurnKnowledge?, dateCreated: Date?, askActionResult: AskActionResult?, sessionEndDetails: SessionEndDetails?, conversation: AddressableEntityRef?) {
         self.userInput = userInput
         self.botPrompts = botPrompts
         self.sessionId = sessionId
@@ -57,6 +59,7 @@ public class ReportingTurn: Codable {
         self.knowledge = knowledge
         self.dateCreated = dateCreated
         self.askActionResult = askActionResult
+        self.sessionEndDetails = sessionEndDetails
         self.conversation = conversation
     }
 

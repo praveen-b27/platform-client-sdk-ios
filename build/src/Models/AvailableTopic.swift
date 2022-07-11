@@ -19,6 +19,7 @@ public class AvailableTopic: Codable {
         case all = "All"
         case websocket = "Websocket"
         case eventBridge = "EventBridge"
+        case processAutomation = "ProcessAutomation"
     }
     public var _description: String?
     public var _id: String?

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Management Unit object for Workforce Management */
 
 public class ManagementUnit: Codable {
 

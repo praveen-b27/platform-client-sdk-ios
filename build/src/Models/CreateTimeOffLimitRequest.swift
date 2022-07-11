@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Contains property values of time off limit to be created */
 
 public class CreateTimeOffLimitRequest: Codable {
 
@@ -17,7 +16,7 @@ public class CreateTimeOffLimitRequest: Codable {
     }
     /** Granularity choice for time off limit. If not specified, 'Daily' is assumed */
     public var granularity: Granularity?
-    /** The default limit value in minutes per granularity.If not specified, then 0 is assumed, which means there are no time off minutes available */
+    /** The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available */
     public var defaultLimitMinutes: Int?
 
     public init(granularity: Granularity?, defaultLimitMinutes: Int?) {

@@ -21,6 +21,9 @@ public class Check: Codable {
     public enum ModelType: String, Codable { 
         case handleTimeValue = "HandleTimeValue"
         case transferRateValue = "TransferRateValue"
+        case salesConversionRateValue = "SalesConversionRateValue"
+        case retentionRateValue = "RetentionRateValue"
+        case churnRateValue = "ChurnRateValue"
         case interactionVolume = "InteractionVolume"
         case userVariance = "UserVariance"
         case dataCoverage = "DataCoverage"

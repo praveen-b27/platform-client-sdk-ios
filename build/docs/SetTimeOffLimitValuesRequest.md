@@ -2,7 +2,6 @@
 title: SetTimeOffLimitValuesRequest
 ---
 ## SetTimeOffLimitValuesRequest
-The non-empty list of the time off limit value intervals
 
 ## Properties
 

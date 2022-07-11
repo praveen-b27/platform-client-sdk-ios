@@ -17,6 +17,15 @@ public class TimeOffRequest: Codable {
         case denied = "DENIED"
         case canceled = "CANCELED"
     }
+    public enum Substatus: String, Codable { 
+        case advanceTimeElapsed = "AdvanceTimeElapsed"
+        case autoApproved = "AutoApproved"
+        case insufficientBalance = "InsufficientBalance"
+        case invalidDailyDuration = "InvalidDailyDuration"
+        case outsideShift = "OutsideShift"
+        case removedFromWaitlist = "RemovedFromWaitlist"
+        case waitlisted = "Waitlisted"
+    }
     /** The id of the time off request */
     public var _id: String?
     /** The user that the time off request belongs to */
@@ -27,8 +36,12 @@ public class TimeOffRequest: Codable {
     public var markedAsRead: Bool?
     /** The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category */
     public var activityCodeId: String?
+    /** Whether this is a paid time off request */
+    public var paid: Bool?
     /** The status of this time off request */
     public var status: Status?
+    /** The substatus of this time off request */
+    public var substatus: Substatus?
     /** A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false */
     public var partialDayStartDateTimes: [Date]?
     /** A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true */
@@ -50,13 +63,15 @@ public class TimeOffRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, user: UserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, status: Status?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, submittedBy: UserReference?, submittedDate: Date?, reviewedBy: UserReference?, reviewedDate: Date?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, user: UserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, submittedBy: UserReference?, submittedDate: Date?, reviewedBy: UserReference?, reviewedDate: Date?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         self._id = _id
         self.user = user
         self.isFullDayRequest = isFullDayRequest
         self.markedAsRead = markedAsRead
         self.activityCodeId = activityCodeId
+        self.paid = paid
         self.status = status
+        self.substatus = substatus
         self.partialDayStartDateTimes = partialDayStartDateTimes
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
         self.dailyDurationMinutes = dailyDurationMinutes
@@ -75,7 +90,9 @@ public class TimeOffRequest: Codable {
         case isFullDayRequest
         case markedAsRead
         case activityCodeId
+        case paid
         case status
+        case substatus
         case partialDayStartDateTimes
         case fullDayManagementUnitDates
         case dailyDurationMinutes

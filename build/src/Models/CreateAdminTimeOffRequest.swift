@@ -29,8 +29,10 @@ public class CreateAdminTimeOffRequest: Codable {
     public var partialDayStartDateTimes: [Date]?
     /** The daily duration of this time off request in minutes */
     public var dailyDurationMinutes: Int?
+    /** Whether this is a paid time off request */
+    public var paid: Bool?
 
-    public init(status: Status?, users: [UserReference]?, activityCodeId: String?, notes: String?, fullDayManagementUnitDates: [String]?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?) {
+    public init(status: Status?, users: [UserReference]?, activityCodeId: String?, notes: String?, fullDayManagementUnitDates: [String]?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?, paid: Bool?) {
         self.status = status
         self.users = users
         self.activityCodeId = activityCodeId
@@ -38,6 +40,7 @@ public class CreateAdminTimeOffRequest: Codable {
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
         self.partialDayStartDateTimes = partialDayStartDateTimes
         self.dailyDurationMinutes = dailyDurationMinutes
+        self.paid = paid
     }
 
 

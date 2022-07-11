@@ -2,7 +2,6 @@
 title: BuServiceLevel
 ---
 ## BuServiceLevel
-Service goal service level configuration
 
 ## Properties
 

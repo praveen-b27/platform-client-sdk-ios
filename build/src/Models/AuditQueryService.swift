@@ -40,6 +40,7 @@ public class AuditQueryService: Codable {
         case topicsDefinitions = "TopicsDefinitions"
         case triggers = "Triggers"
         case processAutomation = "ProcessAutomation"
+        case voicemail = "Voicemail"
         case webDeployments = "WebDeployments"
         case webhooks = "Webhooks"
         case workforceManagement = "WorkforceManagement"

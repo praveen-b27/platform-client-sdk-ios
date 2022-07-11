@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Contains time off limit object property values to be updated. */
 
 public class UpdateTimeOffLimitRequest: Codable {
 

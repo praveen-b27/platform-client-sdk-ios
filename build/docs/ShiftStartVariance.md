@@ -2,7 +2,6 @@
 title: ShiftStartVariance
 ---
 ## ShiftStartVariance
-Variance in minutes among start times of shifts in work plan
 
 ## Properties
 

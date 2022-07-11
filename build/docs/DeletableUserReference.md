@@ -2,7 +2,6 @@
 title: DeletableUserReference
 ---
 ## DeletableUserReference
-User reference with delete flag to remove the user from an associated entity
 
 ## Properties
 

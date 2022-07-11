@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Headcount interval information for schedule */
 
 public class HeadcountInterval: Codable {
 

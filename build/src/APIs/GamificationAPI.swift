@@ -1724,6 +1724,294 @@ open class GamificationAPI {
     
     
     
+    
+    
+    
+    
+    /**
+     Average performance values trends by metric of a user
+     
+     - parameter profileId: (path) performanceProfileId 
+     - parameter metricId: (path) metricId 
+     - parameter userId: (path)  
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationScorecardsProfileMetricUserValuesTrends(profileId: String, metricId: String, userId: String, startWorkday: Date, endWorkday: Date, referenceWorkday: Date? = nil, timeZone: String? = nil, completion: @escaping ((_ data: MetricValueTrendAverage?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationScorecardsProfileMetricUserValuesTrendsWithRequestBuilder(profileId: profileId, metricId: metricId, userId: userId, startWorkday: startWorkday, endWorkday: endWorkday, referenceWorkday: referenceWorkday, timeZone: timeZone)
+        requestBuilder.execute { (response: Response<MetricValueTrendAverage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Average performance values trends by metric of a user
+     - GET /api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/{userId}/values/trends
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "result" : "{}",
+  "performanceProfile" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "metric" : "{}",
+  "timezone" : "timezone",
+  "dateStartWorkday" : "2000-01-23",
+  "dateReferenceWorkday" : "2000-01-23",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter profileId: (path) performanceProfileId 
+     - parameter metricId: (path) metricId 
+     - parameter userId: (path)  
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
+
+     - returns: RequestBuilder<MetricValueTrendAverage> 
+     */
+    open class func getGamificationScorecardsProfileMetricUserValuesTrendsWithRequestBuilder(profileId: String, metricId: String, userId: String, startWorkday: Date, endWorkday: Date, referenceWorkday: Date? = nil, timeZone: String? = nil) -> RequestBuilder<MetricValueTrendAverage> {        
+        var path = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/{userId}/values/trends"
+        let profileIdPreEscape = "\(profileId)"
+        let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
+        let metricIdPreEscape = "\(metricId)"
+        let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "startWorkday": startWorkday.encodeToJSON(), 
+            "endWorkday": endWorkday.encodeToJSON(), 
+            "referenceWorkday": referenceWorkday?.encodeToJSON(), 
+            "timeZone": timeZone
+        ])
+
+        let requestBuilder: RequestBuilder<MetricValueTrendAverage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    public enum FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Average performance values trends by metric of a division or a performance profile
+     
+     - parameter profileId: (path) performanceProfileId 
+     - parameter metricId: (path) metricId 
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. For example, division Id 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationScorecardsProfileMetricUsersValuesTrends(profileId: String, metricId: String, filterType: FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends, filterId: String, startWorkday: Date, endWorkday: Date, referenceWorkday: Date? = nil, timeZone: String? = nil, completion: @escaping ((_ data: MetricValueTrendAverage?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationScorecardsProfileMetricUsersValuesTrendsWithRequestBuilder(profileId: profileId, metricId: metricId, filterType: filterType, filterId: filterId, startWorkday: startWorkday, endWorkday: endWorkday, referenceWorkday: referenceWorkday, timeZone: timeZone)
+        requestBuilder.execute { (response: Response<MetricValueTrendAverage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Average performance values trends by metric of a division or a performance profile
+     - GET /api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "result" : "{}",
+  "performanceProfile" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "metric" : "{}",
+  "timezone" : "timezone",
+  "dateStartWorkday" : "2000-01-23",
+  "dateReferenceWorkday" : "2000-01-23",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter profileId: (path) performanceProfileId 
+     - parameter metricId: (path) metricId 
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. For example, division Id 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
+
+     - returns: RequestBuilder<MetricValueTrendAverage> 
+     */
+    open class func getGamificationScorecardsProfileMetricUsersValuesTrendsWithRequestBuilder(profileId: String, metricId: String, filterType: FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends, filterId: String, startWorkday: Date, endWorkday: Date, referenceWorkday: Date? = nil, timeZone: String? = nil) -> RequestBuilder<MetricValueTrendAverage> {        
+        var path = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends"
+        let profileIdPreEscape = "\(profileId)"
+        let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
+        let metricIdPreEscape = "\(metricId)"
+        let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "startWorkday": startWorkday.encodeToJSON(), 
+            "endWorkday": endWorkday.encodeToJSON(), 
+            "referenceWorkday": referenceWorkday?.encodeToJSON(), 
+            "timeZone": timeZone
+        ])
+
+        let requestBuilder: RequestBuilder<MetricValueTrendAverage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum FilterType_getGamificationScorecardsProfileMetricValuesTrends: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    /**
+     Average performance values trends by metric of the requesting user
+     
+     - parameter profileId: (path) performanceProfileId 
+     - parameter metricId: (path) metricId 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter filterType: (query) Filter type for the query request. If not set, returns the values trends of the requesting user (optional)
+     - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationScorecardsProfileMetricValuesTrends(profileId: String, metricId: String, startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsProfileMetricValuesTrends? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil, completion: @escaping ((_ data: MetricValueTrendAverage?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationScorecardsProfileMetricValuesTrendsWithRequestBuilder(profileId: profileId, metricId: metricId, startWorkday: startWorkday, endWorkday: endWorkday, filterType: filterType, referenceWorkday: referenceWorkday, timeZone: timeZone)
+        requestBuilder.execute { (response: Response<MetricValueTrendAverage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Average performance values trends by metric of the requesting user
+     - GET /api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/values/trends
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "result" : "{}",
+  "performanceProfile" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "metric" : "{}",
+  "timezone" : "timezone",
+  "dateStartWorkday" : "2000-01-23",
+  "dateReferenceWorkday" : "2000-01-23",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter profileId: (path) performanceProfileId 
+     - parameter metricId: (path) metricId 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter filterType: (query) Filter type for the query request. If not set, returns the values trends of the requesting user (optional)
+     - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
+
+     - returns: RequestBuilder<MetricValueTrendAverage> 
+     */
+    open class func getGamificationScorecardsProfileMetricValuesTrendsWithRequestBuilder(profileId: String, metricId: String, startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsProfileMetricValuesTrends? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil) -> RequestBuilder<MetricValueTrendAverage> {        
+        var path = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/values/trends"
+        let profileIdPreEscape = "\(profileId)"
+        let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
+        let metricIdPreEscape = "\(metricId)"
+        let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType?.rawValue, 
+            "startWorkday": startWorkday.encodeToJSON(), 
+            "endWorkday": endWorkday.encodeToJSON(), 
+            "referenceWorkday": referenceWorkday?.encodeToJSON(), 
+            "timeZone": timeZone
+        ])
+
+        let requestBuilder: RequestBuilder<MetricValueTrendAverage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      Workday performance metrics for a user
      

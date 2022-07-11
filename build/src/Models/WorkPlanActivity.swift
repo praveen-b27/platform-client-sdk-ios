@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Activity configured for shift in work plan */
 
 public class WorkPlanActivity: Codable {
 

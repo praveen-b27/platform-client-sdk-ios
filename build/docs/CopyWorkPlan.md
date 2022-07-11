@@ -2,7 +2,6 @@
 title: CopyWorkPlan
 ---
 ## CopyWorkPlan
-Information associated with a work plan thats created as a copy
 
 ## Properties
 

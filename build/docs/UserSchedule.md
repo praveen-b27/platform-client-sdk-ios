@@ -2,7 +2,6 @@
 title: UserSchedule
 ---
 ## UserSchedule
-A schedule for a single user over a given time range
 
 ## Properties
 

@@ -2,7 +2,6 @@
 title: AvailableTimeOffRange
 ---
 ## AvailableTimeOffRange
-A list of available time off values in minutes and a number of time off requests currently in waitlist for each interval in requested date range, according to granularity.
 
 ## Properties
 

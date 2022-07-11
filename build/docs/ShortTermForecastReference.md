@@ -2,7 +2,6 @@
 title: ShortTermForecastReference
 ---
 ## ShortTermForecastReference
-A pointer to a short term forecast
 
 ## Properties
 

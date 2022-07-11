@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Service Goal Template */
 
 public class ServiceGoalTemplate: Codable {
 

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Metadata to associate with a given entity */
 
 public class WfmVersionedEntityMetadata: Codable {
 

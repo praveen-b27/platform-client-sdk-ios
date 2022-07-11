@@ -2,7 +2,6 @@
 title: ManagementUnit
 ---
 ## ManagementUnit
-Management Unit object for Workforce Management
 
 ## Properties
 

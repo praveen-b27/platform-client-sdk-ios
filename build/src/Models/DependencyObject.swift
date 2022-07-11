@@ -64,6 +64,7 @@ public class DependencyObject: Codable {
         case schedulegroup = "SCHEDULEGROUP"
         case secureaction = "SECUREACTION"
         case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"

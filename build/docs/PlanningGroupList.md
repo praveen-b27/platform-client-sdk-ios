@@ -2,7 +2,6 @@
 title: PlanningGroupList
 ---
 ## PlanningGroupList
-List of planning groups
 
 ## Properties
 

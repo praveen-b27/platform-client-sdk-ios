@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Variance in minutes among start times of shifts in work plan */
 
 public class ShiftStartVariance: Codable {
 

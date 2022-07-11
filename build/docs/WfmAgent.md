@@ -2,7 +2,6 @@
 title: WfmAgent
 ---
 ## WfmAgent
-Workforce management agent data
 
 ## Properties
 

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Pointer to look up source data for a short term forecast */
 
 public class ForecastSourceDayPointer: Codable {
 

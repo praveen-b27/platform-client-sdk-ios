@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Schedule generation warning */
 
 public class ScheduleGenerationWarning: Codable {
 

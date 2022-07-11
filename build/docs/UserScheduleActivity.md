@@ -2,7 +2,6 @@
 title: UserScheduleActivity
 ---
 ## UserScheduleActivity
-Represents a single activity in a user&#39;s shift
 
 ## Properties
 

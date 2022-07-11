@@ -2,7 +2,6 @@
 title: ActivityCodeContainer
 ---
 ## ActivityCodeContainer
-Container for a map of ActivityCodeId to ActivityCode
 
 ## Properties
 

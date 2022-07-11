@@ -2,7 +2,6 @@
 title: UserScheduleContainer
 ---
 ## UserScheduleContainer
-Container object to hold a map of user schedules
 
 ## Properties
 

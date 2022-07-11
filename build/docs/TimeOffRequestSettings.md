@@ -2,7 +2,6 @@
 title: TimeOffRequestSettings
 ---
 ## TimeOffRequestSettings
-Time Off Request Settings
 
 ## Properties
 

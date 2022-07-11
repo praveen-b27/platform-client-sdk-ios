@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Schedule Adherence Configuration */
 
 public class AdherenceSettings: Codable {
 

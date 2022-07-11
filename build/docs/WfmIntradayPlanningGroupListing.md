@@ -2,7 +2,6 @@
 title: WfmIntradayPlanningGroupListing
 ---
 ## WfmIntradayPlanningGroupListing
-A list of IntradayPlanningGroup objects
 
 ## Properties
 

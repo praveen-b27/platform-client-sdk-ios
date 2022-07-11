@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Management Unit Settings */
 
 public class CreateManagementUnitSettingsRequest: Codable {
 

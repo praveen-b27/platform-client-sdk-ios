@@ -2,7 +2,6 @@
 title: AvailableTimeOffResponse
 ---
 ## AvailableTimeOffResponse
-The list of date ranges with available time off values and the current waitlist per granularity.
 
 ## Properties
 

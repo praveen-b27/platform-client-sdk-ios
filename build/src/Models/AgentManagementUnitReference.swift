@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** A reference from agent to management unit */
 
 public class AgentManagementUnitReference: Codable {
 

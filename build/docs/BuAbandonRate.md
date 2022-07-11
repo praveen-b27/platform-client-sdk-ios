@@ -2,7 +2,6 @@
 title: BuAbandonRate
 ---
 ## BuAbandonRate
-Service goal abandon rate configuration
 
 ## Properties
 

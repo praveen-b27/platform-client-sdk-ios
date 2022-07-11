@@ -2,7 +2,6 @@
 title: WfmHistoricalAdherenceResponse
 ---
 ## WfmHistoricalAdherenceResponse
-Response for Historical Adherence Query, intended to tell the client what to listen for on a notification topic
 
 ## Properties
 

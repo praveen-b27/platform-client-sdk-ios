@@ -2,7 +2,6 @@
 title: HeadcountForecast
 ---
 ## HeadcountForecast
-Headcount interval information for schedule
 
 ## Properties
 

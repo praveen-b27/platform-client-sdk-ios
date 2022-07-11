@@ -2,7 +2,6 @@
 title: WorkPlanListItemResponse
 ---
 ## WorkPlanListItemResponse
-Work plan information
 
 ## Properties
 

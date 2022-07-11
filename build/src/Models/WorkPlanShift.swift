@@ -8,10 +8,13 @@
 import Foundation
 
 
-/** Shift in a work plan */
 
 public class WorkPlanShift: Codable {
 
+    public enum DayOffRule: String, Codable { 
+        case nextDayOff = "NextDayOff"
+        case previousDayOff = "PreviousDayOff"
+    }
     /** Name of the shift */
     public var name: String?
     /** Days of the week applicable for this shift */
@@ -50,6 +53,10 @@ public class WorkPlanShift: Codable {
     public var minimumContiguousWorkTimeMinutes: Int?
     /** Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true */
     public var maximumContiguousWorkTimeMinutes: Int?
+    /** Whether day off rule is enabled */
+    public var constrainDayOff: Bool?
+    /** The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true */
+    public var dayOffRule: DayOffRule?
     /** Activities configured for this shift */
     public var activities: [WorkPlanActivity]?
     /** ID of the shift. This is required only for the case of updating an existing shift */
@@ -59,7 +66,7 @@ public class WorkPlanShift: Codable {
     /** ID of shift in the context of work plan validation */
     public var validationId: String?
 
-    public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, constrainEarliestStopTime: Bool?, earliestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, activities: [WorkPlanActivity]?, _id: String?, delete: Bool?, validationId: String?) {
+    public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, constrainEarliestStopTime: Bool?, earliestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, constrainDayOff: Bool?, dayOffRule: DayOffRule?, activities: [WorkPlanActivity]?, _id: String?, delete: Bool?, validationId: String?) {
         self.name = name
         self.days = days
         self.flexibleStartTime = flexibleStartTime
@@ -79,6 +86,8 @@ public class WorkPlanShift: Codable {
         self.constrainContiguousWorkTime = constrainContiguousWorkTime
         self.minimumContiguousWorkTimeMinutes = minimumContiguousWorkTimeMinutes
         self.maximumContiguousWorkTimeMinutes = maximumContiguousWorkTimeMinutes
+        self.constrainDayOff = constrainDayOff
+        self.dayOffRule = dayOffRule
         self.activities = activities
         self._id = _id
         self.delete = delete
@@ -105,6 +114,8 @@ public class WorkPlanShift: Codable {
         case constrainContiguousWorkTime
         case minimumContiguousWorkTimeMinutes
         case maximumContiguousWorkTimeMinutes
+        case constrainDayOff
+        case dayOffRule
         case activities
         case _id = "id"
         case delete

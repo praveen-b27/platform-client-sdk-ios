@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Time Off Request Settings */
 
 public class TimeOffRequestSettings: Codable {
 

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** List of planning groups */
 
 public class PlanningGroupList: Codable {
 

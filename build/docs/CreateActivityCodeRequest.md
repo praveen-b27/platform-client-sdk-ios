@@ -2,7 +2,6 @@
 title: CreateActivityCodeRequest
 ---
 ## CreateActivityCodeRequest
-Activity Code
 
 ## Properties
 
@@ -14,6 +13,10 @@ Activity Code
 | **countsAsPaidTime** | **Bool** | Whether an agent is paid while performing this activity | [optional] |
 | **countsAsWorkTime** | **Bool** | Indicates whether or not the activity should be counted as work time | [optional] |
 | **agentTimeOffSelectable** | **Bool** | Whether an agent can select this activity code when creating or editing a time off request | [optional] |
+| **countsTowardShrinkage** | **Bool** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
+| **plannedShrinkage** | **Bool** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
+| **interruptible** | **Bool** | Whether this activity code is considered interruptible | [optional] |
+| **secondaryPresences** | [**[SecondaryPresence]**](SecondaryPresence.html) | The secondary presences of this activity code | [optional] |
 {: class="table table-striped"}
 
 

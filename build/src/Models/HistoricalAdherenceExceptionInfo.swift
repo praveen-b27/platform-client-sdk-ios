@@ -66,6 +66,10 @@ public class HistoricalAdherenceExceptionInfo: Codable {
     public var scheduledActivityCodeId: String?
     /** Activity for which the user is scheduled */
     public var scheduledActivityCategory: ScheduledActivityCategory?
+    /** The lookup IDs used to retrieve the scheduled secondary statuses from map of lookup ID to corresponding secondary presence ID */
+    public var scheduledSecondaryPresenceLookupIds: [String]?
+    /** The ID of the actual activity code for this user */
+    public var actualActivityCodeId: String?
     /** Activity for which the user is actually engaged */
     public var actualActivityCategory: ActualActivityCategory?
     /** Actual underlying system presence value */
@@ -77,11 +81,13 @@ public class HistoricalAdherenceExceptionInfo: Codable {
     /** The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID */
     public var secondaryPresenceLookupId: String?
 
-    public init(startOffsetSeconds: Int?, endOffsetSeconds: Int?, scheduledActivityCodeId: String?, scheduledActivityCategory: ScheduledActivityCategory?, actualActivityCategory: ActualActivityCategory?, systemPresence: SystemPresence?, routingStatus: RoutingStatus?, impact: Impact?, secondaryPresenceLookupId: String?) {
+    public init(startOffsetSeconds: Int?, endOffsetSeconds: Int?, scheduledActivityCodeId: String?, scheduledActivityCategory: ScheduledActivityCategory?, scheduledSecondaryPresenceLookupIds: [String]?, actualActivityCodeId: String?, actualActivityCategory: ActualActivityCategory?, systemPresence: SystemPresence?, routingStatus: RoutingStatus?, impact: Impact?, secondaryPresenceLookupId: String?) {
         self.startOffsetSeconds = startOffsetSeconds
         self.endOffsetSeconds = endOffsetSeconds
         self.scheduledActivityCodeId = scheduledActivityCodeId
         self.scheduledActivityCategory = scheduledActivityCategory
+        self.scheduledSecondaryPresenceLookupIds = scheduledSecondaryPresenceLookupIds
+        self.actualActivityCodeId = actualActivityCodeId
         self.actualActivityCategory = actualActivityCategory
         self.systemPresence = systemPresence
         self.routingStatus = routingStatus

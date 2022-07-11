@@ -2,7 +2,6 @@
 title: CreateWorkPlanShift
 ---
 ## CreateWorkPlanShift
-Shift in a work plan
 
 ## Properties
 
@@ -27,6 +26,8 @@ Shift in a work plan
 | **constrainContiguousWorkTime** | **Bool** | Whether the contiguous time constraint for the shift is enabled | [optional] |
 | **minimumContiguousWorkTimeMinutes** | **Int** | Minimum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime &#x3D;&#x3D; true | [optional] |
 | **maximumContiguousWorkTimeMinutes** | **Int** | Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime &#x3D;&#x3D; true | [optional] |
+| **constrainDayOff** | **Bool** | Whether day off rule is enabled | [optional] |
+| **dayOffRule** | **String** | The day off rule for agents to have next day off or previous day off. used if constrainDayOff &#x3D; true | [optional] |
 | **activities** | [**[CreateWorkPlanActivity]**](CreateWorkPlanActivity.html) | Activities configured for this shift | [optional] |
 {: class="table table-striped"}
 

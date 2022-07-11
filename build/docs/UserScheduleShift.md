@@ -2,7 +2,6 @@
 title: UserScheduleShift
 ---
 ## UserScheduleShift
-Single shift in a user&#39;s schedule
 
 ## Properties
 

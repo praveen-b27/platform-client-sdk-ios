@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Represents a single activity in a user's shift */
 
 public class UserScheduleActivity: Codable {
 

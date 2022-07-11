@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Container object to hold a map of user schedules */
 
 public class UserScheduleContainer: Codable {
 

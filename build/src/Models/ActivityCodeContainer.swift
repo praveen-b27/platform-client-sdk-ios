@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Container for a map of ActivityCodeId to ActivityCode */
 
 public class ActivityCodeContainer: Codable {
 

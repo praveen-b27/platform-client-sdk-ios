@@ -2,7 +2,6 @@
 title: WeekScheduleListResponse
 ---
 ## WeekScheduleListResponse
-Week schedule list
 
 ## Properties
 

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** A single range filled with time off limit interval values */
 
 public class TimeOffLimitRange: Codable {
 

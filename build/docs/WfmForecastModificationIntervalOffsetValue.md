@@ -2,7 +2,6 @@
 title: WfmForecastModificationIntervalOffsetValue
 ---
 ## WfmForecastModificationIntervalOffsetValue
-Override the value of a single interval in a forecast
 
 ## Properties
 

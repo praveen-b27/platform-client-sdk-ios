@@ -2,7 +2,6 @@
 title: UserScheduleFullDayTimeOffMarker
 ---
 ## UserScheduleFullDayTimeOffMarker
-Marker to indicate an approved full day time off request
 
 ## Properties
 

@@ -2,7 +2,6 @@
 title: ManagementUnitReference
 ---
 ## ManagementUnitReference
-Management unit reference object for Workforce Management (ID/selfUri only)
 
 ## Properties
 

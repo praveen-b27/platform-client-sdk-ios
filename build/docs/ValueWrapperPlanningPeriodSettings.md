@@ -2,7 +2,6 @@
 title: ValueWrapperPlanningPeriodSettings
 ---
 ## ValueWrapperPlanningPeriodSettings
-An object to provide context to nullable fields in PATCH requests
 
 ## Properties
 

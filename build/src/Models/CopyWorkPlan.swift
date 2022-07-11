@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Information associated with a work plan thats created as a copy */
 
 public class CopyWorkPlan: Codable {
 

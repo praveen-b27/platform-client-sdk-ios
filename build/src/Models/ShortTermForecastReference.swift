@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** A pointer to a short term forecast */
 
 public class ShortTermForecastReference: Codable {
 

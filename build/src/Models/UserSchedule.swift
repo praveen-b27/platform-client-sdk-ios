@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** A schedule for a single user over a given time range */
 
 public class UserSchedule: Codable {
 

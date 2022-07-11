@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Week schedule information */
 
 public class WeekSchedule: Codable {
 

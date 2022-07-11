@@ -2,7 +2,6 @@
 title: WeekScheduleResponse
 ---
 ## WeekScheduleResponse
-Response for query for week schedule for a given week in management unit
 
 ## Properties
 

@@ -2,7 +2,6 @@
 title: TimeOffLimitListing
 ---
 ## TimeOffLimitListing
-The list of time off limit objects
 
 ## Properties
 

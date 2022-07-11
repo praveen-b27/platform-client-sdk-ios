@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Management unit reference object for Workforce Management (ID/selfUri only) */
 
 public class ManagementUnitReference: Codable {
 

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** The non-empty list of the time off limit value intervals */
 
 public class SetTimeOffLimitValuesRequest: Codable {
 

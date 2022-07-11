@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Response for query for week schedule for a given week in management unit */
 
 public class WeekScheduleResponse: Codable {
 

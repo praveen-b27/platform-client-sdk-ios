@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Override the value of a single interval in a forecast */
 
 public class WfmForecastModificationIntervalOffsetValue: Codable {
 

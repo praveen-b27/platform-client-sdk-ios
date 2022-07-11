@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** List of service goal templates */
 
 public class ServiceGoalTemplateList: Codable {
 

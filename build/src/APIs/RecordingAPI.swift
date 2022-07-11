@@ -7111,8 +7111,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7373,8 +7373,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7632,8 +7632,8 @@ open class RecordingAPI {
     "conversation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7771,8 +7771,8 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 5
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8202,8 +8202,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8402,8 +8402,8 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8512,7 +8512,6 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "regionalRecordingStorageEnabled" : true,
   "maxConfigurableScreenRecordingStreams" : 6,
   "maxSimultaneousStreams" : 0
 }, statusCode=200}]
@@ -11103,8 +11102,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -11589,9 +11588,16 @@ open class RecordingAPI {
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -13558,8 +13564,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -14044,9 +14050,16 @@ open class RecordingAPI {
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -16938,8 +16951,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -17424,9 +17437,16 @@ open class RecordingAPI {
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -19393,8 +19413,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -19879,9 +19899,16 @@ open class RecordingAPI {
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -23102,8 +23129,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -23588,9 +23615,16 @@ open class RecordingAPI {
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -25557,8 +25591,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -26043,9 +26077,16 @@ open class RecordingAPI {
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -28937,8 +28978,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -29423,9 +29464,16 @@ open class RecordingAPI {
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -31392,8 +31440,8 @@ open class RecordingAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -31878,9 +31926,16 @@ open class RecordingAPI {
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -32573,8 +32628,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -35985,7 +36040,6 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "regionalRecordingStorageEnabled" : true,
   "maxConfigurableScreenRecordingStreams" : 6,
   "maxSimultaneousStreams" : 0
 }, statusCode=200}]

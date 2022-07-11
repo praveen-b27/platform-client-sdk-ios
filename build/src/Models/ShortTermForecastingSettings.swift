@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Short Term Forecasting Settings */
 
 public class ShortTermForecastingSettings: Codable {
 

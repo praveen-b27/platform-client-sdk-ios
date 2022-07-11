@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** This sets up a filter to request date ranges of time off limit, allocated and waitlisted minutes */
 
 public class QueryTimeOffLimitValuesRequest: Codable {
 
@@ -16,7 +15,7 @@ public class QueryTimeOffLimitValuesRequest: Codable {
     public var timeOffLimitId: String?
     /** The activity code id to filter the affected limit objects by. Required if timeOffLimitId is not specified */
     public var activityCodeId: String?
-    /** The list of the date ranges to return time off limit, allocated and waitlisted minutes. */
+    /** The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366. */
     public var dateRanges: [LocalDateRange]?
 
     public init(timeOffLimitId: String?, activityCodeId: String?, dateRanges: [LocalDateRange]?) {

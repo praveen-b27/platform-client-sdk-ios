@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Time Off Limit */
 
 public class TimeOffLimit: Codable {
 

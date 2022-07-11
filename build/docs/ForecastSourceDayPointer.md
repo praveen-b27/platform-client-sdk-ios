@@ -2,7 +2,6 @@
 title: ForecastSourceDayPointer
 ---
 ## ForecastSourceDayPointer
-Pointer to look up source data for a short term forecast
 
 ## Properties
 

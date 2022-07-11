@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Service goal average speed of answer configuration */
 
 public class BuAverageSpeedOfAnswer: Codable {
 

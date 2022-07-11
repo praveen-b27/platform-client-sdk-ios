@@ -734,8 +734,8 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -827,8 +827,8 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1304,8 +1304,8 @@ open class UsersAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4860,8 +4860,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5560,9 +5560,16 @@ open class UsersAPI {
   "pageCount" : 7,
   "pageNumber" : 5,
   "entities" : [ {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -5687,9 +5694,16 @@ open class UsersAPI {
     "createdBy" : "createdBy",
     "name" : "name"
   }, {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -5815,8 +5829,8 @@ open class UsersAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6031,8 +6045,8 @@ open class UsersAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6128,8 +6142,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6732,8 +6746,8 @@ open class UsersAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7406,8 +7420,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7559,8 +7573,8 @@ open class UsersAPI {
     "status" : "Planned"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7716,8 +7730,8 @@ open class UsersAPI {
     "status" : "Planned"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -10641,9 +10655,16 @@ open class UsersAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -11058,9 +11079,16 @@ open class UsersAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -11490,9 +11518,16 @@ open class UsersAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -11907,9 +11942,16 @@ open class UsersAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -12352,9 +12394,16 @@ open class UsersAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -12769,9 +12818,16 @@ open class UsersAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -13201,9 +13257,16 @@ open class UsersAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -13618,9 +13681,16 @@ open class UsersAPI {
           },
           "value" : "value",
           "queue" : {
+            "peerId" : "peerId",
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 5,
+                "enableAutoAnswer" : true,
+                "subTypeSettings" : {
+                  "key" : {
+                    "enableAutoAnswer" : true
+                  }
+                },
                 "serviceLevel" : {
                   "percentage" : 5.637376656633329,
                   "durationMs" : 2
@@ -16443,9 +16513,16 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "peerId" : "peerId",
   "mediaSettings" : {
     "key" : {
       "alertingTimeoutSeconds" : 5,
+      "enableAutoAnswer" : true,
+      "subTypeSettings" : {
+        "key" : {
+          "enableAutoAnswer" : true
+        }
+      },
       "serviceLevel" : {
         "percentage" : 5.637376656633329,
         "durationMs" : 2
@@ -16635,9 +16712,16 @@ open class UsersAPI {
   "pageCount" : 7,
   "pageNumber" : 5,
   "entities" : [ {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -16762,9 +16846,16 @@ open class UsersAPI {
     "createdBy" : "createdBy",
     "name" : "name"
   }, {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -16890,8 +16981,8 @@ open class UsersAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17042,8 +17133,8 @@ open class UsersAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17122,8 +17213,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17756,8 +17847,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -18352,10 +18443,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18378,10 +18469,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18422,10 +18513,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18448,10 +18539,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18497,10 +18588,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18523,10 +18614,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18567,10 +18658,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18593,10 +18684,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -21242,8 +21333,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

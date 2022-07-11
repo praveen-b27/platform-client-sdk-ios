@@ -2,7 +2,6 @@
 title: ValueWrapperString
 ---
 ## ValueWrapperString
-An object to provide context to nullable fields in PATCH requests
 
 ## Properties
 

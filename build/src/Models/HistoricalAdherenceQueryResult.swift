@@ -35,8 +35,10 @@ public class HistoricalAdherenceQueryResult: Codable {
     public var dayMetrics: [HistoricalAdherenceDayMetrics]?
     /** List of actual activity with offset for this user */
     public var actuals: [HistoricalAdherenceActuals]?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var actualsEndsDate: Date?
 
-    public init(userId: String?, startDate: Date?, endDate: Date?, adherencePercentage: Double?, conformancePercentage: Double?, impact: Impact?, exceptionInfo: [HistoricalAdherenceExceptionInfo]?, dayMetrics: [HistoricalAdherenceDayMetrics]?, actuals: [HistoricalAdherenceActuals]?) {
+    public init(userId: String?, startDate: Date?, endDate: Date?, adherencePercentage: Double?, conformancePercentage: Double?, impact: Impact?, exceptionInfo: [HistoricalAdherenceExceptionInfo]?, dayMetrics: [HistoricalAdherenceDayMetrics]?, actuals: [HistoricalAdherenceActuals]?, actualsEndsDate: Date?) {
         self.userId = userId
         self.startDate = startDate
         self.endDate = endDate
@@ -46,6 +48,7 @@ public class HistoricalAdherenceQueryResult: Codable {
         self.exceptionInfo = exceptionInfo
         self.dayMetrics = dayMetrics
         self.actuals = actuals
+        self.actualsEndsDate = actualsEndsDate
     }
 
 

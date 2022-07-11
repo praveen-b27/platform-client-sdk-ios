@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Work plan information */
 
 public class CreateWorkPlan: Codable {
 

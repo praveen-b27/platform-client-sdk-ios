@@ -2,7 +2,6 @@
 title: ActivityCode
 ---
 ## ActivityCode
-Activity code data
 
 ## Properties
 

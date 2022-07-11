@@ -2,7 +2,6 @@
 title: QueryTimeOffLimitValuesResponse
 ---
 ## QueryTimeOffLimitValuesResponse
-The list of date ranges with the time off limit, allocated and waitlisted values.
 
 ## Properties
 

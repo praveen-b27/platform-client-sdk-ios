@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** An object to provide context to nullable fields in PATCH requests */
 
 public class ValueWrapperString: Codable {
 

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Activity code data */
 
 public class ActivityCode: Codable {
 

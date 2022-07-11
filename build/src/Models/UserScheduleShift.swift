@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Single shift in a user's schedule */
 
 public class UserScheduleShift: Codable {
 

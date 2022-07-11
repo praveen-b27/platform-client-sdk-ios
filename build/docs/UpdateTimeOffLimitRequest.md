@@ -2,7 +2,6 @@
 title: UpdateTimeOffLimitRequest
 ---
 ## UpdateTimeOffLimitRequest
-Contains time off limit object property values to be updated.
 
 ## Properties
 

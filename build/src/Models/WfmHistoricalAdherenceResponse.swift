@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Response for Historical Adherence Query, intended to tell the client what to listen for on a notification topic */
 
 public class WfmHistoricalAdherenceResponse: Codable {
 

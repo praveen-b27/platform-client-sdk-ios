@@ -2,7 +2,6 @@
 title: BusinessUnitActivityCodeListing
 ---
 ## BusinessUnitActivityCodeListing
-List of BusinessUnitActivityCode
 
 ## Properties
 

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** The date range with lists of time off limit, allocated and waitlisted minutes. */
 
 public class TimeOffLimitValueRange: Codable {
 

@@ -21,13 +21,16 @@ public class WfmHistoricalAdherenceQuery: Codable {
     public var userIds: [String]?
     /** Whether user exceptions should be returned as part of the results */
     public var includeExceptions: Bool?
+    /** The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: If teamIds is also specified, only adherence for users in the requested teams will be returned */
+    public var teamIds: [String]?
 
-    public init(startDate: Date?, endDate: Date?, timeZone: String?, userIds: [String]?, includeExceptions: Bool?) {
+    public init(startDate: Date?, endDate: Date?, timeZone: String?, userIds: [String]?, includeExceptions: Bool?, teamIds: [String]?) {
         self.startDate = startDate
         self.endDate = endDate
         self.timeZone = timeZone
         self.userIds = userIds
         self.includeExceptions = includeExceptions
+        self.teamIds = teamIds
     }
 
 

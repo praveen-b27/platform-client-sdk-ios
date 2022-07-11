@@ -2,7 +2,6 @@
 title: CreateWorkPlanActivity
 ---
 ## CreateWorkPlanActivity
-Activity configured for shift in work plan
 
 ## Properties
 

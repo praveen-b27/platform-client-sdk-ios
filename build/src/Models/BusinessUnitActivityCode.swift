@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Activity code data */
 
 public class BusinessUnitActivityCode: Codable {
 
@@ -40,12 +39,20 @@ public class BusinessUnitActivityCode: Codable {
     public var countsAsWorkTime: Bool?
     /** Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off. */
     public var agentTimeOffSelectable: Bool?
+    /** Whether or not this activity code counts toward shrinkage calculations */
+    public var countsTowardShrinkage: Bool?
+    /** Whether this activity code is considered planned or unplanned shrinkage */
+    public var plannedShrinkage: Bool?
+    /** Whether this activity code is considered interruptible */
+    public var interruptible: Bool?
+    /** The secondary presences of this activity code */
+    public var secondaryPresences: [SecondaryPresence]?
     /** Version metadata of this activity code */
     public var metadata: WfmVersionedEntityMetadata?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, active: Bool?, defaultCode: Bool?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, name: String?, active: Bool?, defaultCode: Bool?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, countsTowardShrinkage: Bool?, plannedShrinkage: Bool?, interruptible: Bool?, secondaryPresences: [SecondaryPresence]?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.active = active
@@ -55,6 +62,10 @@ public class BusinessUnitActivityCode: Codable {
         self.countsAsPaidTime = countsAsPaidTime
         self.countsAsWorkTime = countsAsWorkTime
         self.agentTimeOffSelectable = agentTimeOffSelectable
+        self.countsTowardShrinkage = countsTowardShrinkage
+        self.plannedShrinkage = plannedShrinkage
+        self.interruptible = interruptible
+        self.secondaryPresences = secondaryPresences
         self.metadata = metadata
         self.selfUri = selfUri
     }
@@ -69,6 +80,10 @@ public class BusinessUnitActivityCode: Codable {
         case countsAsPaidTime
         case countsAsWorkTime
         case agentTimeOffSelectable
+        case countsTowardShrinkage
+        case plannedShrinkage
+        case interruptible
+        case secondaryPresences
         case metadata
         case selfUri
     }

@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** The list of date ranges with the time off limit, allocated and waitlisted values. */
 
 public class QueryTimeOffLimitValuesResponse: Codable {
 

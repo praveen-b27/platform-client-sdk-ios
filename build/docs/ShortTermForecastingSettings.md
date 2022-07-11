@@ -2,7 +2,6 @@
 title: ShortTermForecastingSettings
 ---
 ## ShortTermForecastingSettings
-Short Term Forecasting Settings
 
 ## Properties
 

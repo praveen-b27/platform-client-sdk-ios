@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Service goal service level configuration */
 
 public class BuServiceLevel: Codable {
 

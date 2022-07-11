@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLearningModuleRule**](LearningAPI.html#getLearningModuleRule) | Get a learning module rule |
 | [**getLearningModuleVersion**](LearningAPI.html#getLearningModuleVersion) | Get specific version of a published module |
 | [**getLearningModules**](LearningAPI.html#getLearningModules) | Get all learning modules of an organization |
+| [**getLearningModulesAssignments**](LearningAPI.html#getLearningModulesAssignments) | Get all learning modules of an organization including assignments for a specific user |
 | [**patchLearningAssignment**](LearningAPI.html#patchLearningAssignment) | Update Learning Assignment |
 | [**postLearningAssessmentsScoring**](LearningAPI.html#postLearningAssessmentsScoring) | Score learning assessment for preview |
 | [**postLearningAssignmentReassign**](LearningAPI.html#postLearningAssignmentReassign) | Reassign Learning Assignment |
@@ -635,6 +636,71 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 ### Return type
 
 [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing.html)
+
+<a name="getLearningModulesAssignments"></a>
+
+# **getLearningModulesAssignments**
+
+
+
+> [AssignedLearningModuleDomainEntityListing](AssignedLearningModuleDomainEntityListing.html) getLearningModulesAssignments(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand)
+
+Get all learning modules of an organization including assignments for a specific user
+
+
+
+Wraps GET /api/v2/learning/modules/assignments  
+
+Requires ALL permissions: 
+
+* learning:module:view
+* learning:assignment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userIds: [String] = [""] // The IDs of the users to include
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let searchTerm: String = "" // Search Term (searches by name and description)
+let overdue: LearningAPI.Overdue_getLearningModulesAssignments = LearningAPI.Overdue_getLearningModulesAssignments.enummember // Specifies if only modules with overdue/not overdue (overdue is \"True\" or \"False\") assignments are returned. If overdue is \"Any\" or omitted, both are returned and can including modules that are unassigned.
+let assignmentStates: [String] = [""] // Specifies the assignment states to return.
+let expand: [String] = [""] // Fields to expand in response(case insensitive)
+
+// Code example
+LearningAPI.getLearningModulesAssignments(userIds: userIds, pageSize: pageSize, pageNumber: pageNumber, searchTerm: searchTerm, overdue: overdue, assignmentStates: assignmentStates, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.getLearningModulesAssignments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userIds** | [**[String]**](String.html)| The IDs of the users to include | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **searchTerm** | **String**| Search Term (searches by name and description) | [optional] |
+| **overdue** | **String**| Specifies if only modules with overdue/not overdue (overdue is \"True\" or \"False\") assignments are returned. If overdue is \"Any\" or omitted, both are returned and can including modules that are unassigned. | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **assignmentStates** | [**[String]**](String.html)| Specifies the assignment states to return. | [optional]<br />**Values**: notAssigned ("NotAssigned"), assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed") |
+| **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: coverart ("coverArt") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedLearningModuleDomainEntityListing**](AssignedLearningModuleDomainEntityListing.html)
 
 <a name="patchLearningAssignment"></a>
 

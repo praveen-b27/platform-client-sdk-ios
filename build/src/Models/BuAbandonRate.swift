@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Service goal abandon rate configuration */
 
 public class BuAbandonRate: Codable {
 

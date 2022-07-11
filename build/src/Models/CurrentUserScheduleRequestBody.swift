@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** POST request body for fetching the current user's schedule over a given range */
 
 public class CurrentUserScheduleRequestBody: Codable {
 

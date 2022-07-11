@@ -2,7 +2,6 @@
 title: HeadcountInterval
 ---
 ## HeadcountInterval
-Headcount interval information for schedule
 
 ## Properties
 

@@ -2,7 +2,6 @@
 title: CreateManagementUnitSettingsRequest
 ---
 ## CreateManagementUnitSettingsRequest
-Management Unit Settings
 
 ## Properties
 

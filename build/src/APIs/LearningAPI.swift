@@ -307,8 +307,8 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -488,8 +488,8 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1005,8 +1005,8 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1043,6 +1043,248 @@ open class LearningAPI {
         ])
 
         let requestBuilder: RequestBuilder<LearningModulesDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum Overdue_getLearningModulesAssignments: String { 
+        case _true = "True"
+        case _false = "False"
+        case any = "Any"
+    }
+
+    
+    
+    
+    /**
+     Get all learning modules of an organization including assignments for a specific user
+     
+     - parameter userIds: (query) The IDs of the users to include 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter searchTerm: (query) Search Term (searches by name and description) (optional)
+     - parameter overdue: (query) Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional)
+     - parameter assignmentStates: (query) Specifies the assignment states to return. (optional)
+     - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLearningModulesAssignments(userIds: [String], pageSize: Int? = nil, pageNumber: Int? = nil, searchTerm: String? = nil, overdue: Overdue_getLearningModulesAssignments? = nil, assignmentStates: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: AssignedLearningModuleDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningModulesAssignmentsWithRequestBuilder(userIds: userIds, pageSize: pageSize, pageNumber: pageNumber, searchTerm: searchTerm, overdue: overdue, assignmentStates: assignmentStates, expand: expand)
+        requestBuilder.execute { (response: Response<AssignedLearningModuleDomainEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all learning modules of an organization including assignments for a specific user
+     - GET /api/v2/learning/modules/assignments
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
+  "entities" : [ {
+    "isArchived" : true,
+    "isPublished" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "externalId" : "externalId",
+    "rule" : "{}",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "UserCreated",
+    "coverArt" : "{}",
+    "type" : "Informational",
+    "version" : 0,
+    "completionTimeInDays" : 6,
+    "summaryData" : "{}",
+    "informSteps" : [ {
+      "name" : "name",
+      "type" : "Url",
+      "value" : "value",
+      "contentType" : "contentType",
+      "sharingUri" : "sharingUri",
+      "order" : 1
+    }, {
+      "name" : "name",
+      "type" : "Url",
+      "value" : "value",
+      "contentType" : "contentType",
+      "sharingUri" : "sharingUri",
+      "order" : 1
+    } ],
+    "assessmentForm" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "currentAssignments" : [ {
+      "isPassed" : true,
+      "isManual" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "module" : "{}",
+      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "version" : 6,
+      "isRule" : true,
+      "assessment" : "{}",
+      "assessmentForm" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "isOverdue" : true,
+      "createdBy" : "{}",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "percentageScore" : 0.8008282,
+      "state" : "Assigned",
+      "user" : "{}"
+    }, {
+      "isPassed" : true,
+      "isManual" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "module" : "{}",
+      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "version" : 6,
+      "isRule" : true,
+      "assessment" : "{}",
+      "assessmentForm" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "isOverdue" : true,
+      "createdBy" : "{}",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "percentageScore" : 0.8008282,
+      "state" : "Assigned",
+      "user" : "{}"
+    } ]
+  }, {
+    "isArchived" : true,
+    "isPublished" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "externalId" : "externalId",
+    "rule" : "{}",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "UserCreated",
+    "coverArt" : "{}",
+    "type" : "Informational",
+    "version" : 0,
+    "completionTimeInDays" : 6,
+    "summaryData" : "{}",
+    "informSteps" : [ {
+      "name" : "name",
+      "type" : "Url",
+      "value" : "value",
+      "contentType" : "contentType",
+      "sharingUri" : "sharingUri",
+      "order" : 1
+    }, {
+      "name" : "name",
+      "type" : "Url",
+      "value" : "value",
+      "contentType" : "contentType",
+      "sharingUri" : "sharingUri",
+      "order" : 1
+    } ],
+    "assessmentForm" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "name" : "name",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "currentAssignments" : [ {
+      "isPassed" : true,
+      "isManual" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "module" : "{}",
+      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "version" : 6,
+      "isRule" : true,
+      "assessment" : "{}",
+      "assessmentForm" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "isOverdue" : true,
+      "createdBy" : "{}",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "percentageScore" : 0.8008282,
+      "state" : "Assigned",
+      "user" : "{}"
+    }, {
+      "isPassed" : true,
+      "isManual" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "module" : "{}",
+      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "version" : 6,
+      "isRule" : true,
+      "assessment" : "{}",
+      "assessmentForm" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "isOverdue" : true,
+      "createdBy" : "{}",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "percentageScore" : 0.8008282,
+      "state" : "Assigned",
+      "user" : "{}"
+    } ]
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "pageSize" : 1,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter userIds: (query) The IDs of the users to include 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter searchTerm: (query) Search Term (searches by name and description) (optional)
+     - parameter overdue: (query) Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional)
+     - parameter assignmentStates: (query) Specifies the assignment states to return. (optional)
+     - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
+
+     - returns: RequestBuilder<AssignedLearningModuleDomainEntityListing> 
+     */
+    open class func getLearningModulesAssignmentsWithRequestBuilder(userIds: [String], pageSize: Int? = nil, pageNumber: Int? = nil, searchTerm: String? = nil, overdue: Overdue_getLearningModulesAssignments? = nil, assignmentStates: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<AssignedLearningModuleDomainEntityListing> {        
+        let path = "/api/v2/learning/modules/assignments"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "userIds": userIds, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "searchTerm": searchTerm, 
+            "overdue": overdue?.rawValue, 
+            "assignmentStates": assignmentStates, 
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<AssignedLearningModuleDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1961,8 +2203,8 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",

@@ -2,7 +2,6 @@
 title: BuShortTermForecastReference
 ---
 ## BuShortTermForecastReference
-A pointer to a short term forecast
 
 ## Properties
 

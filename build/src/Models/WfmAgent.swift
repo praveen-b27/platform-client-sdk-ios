@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Workforce management agent data */
 
 public class WfmAgent: Codable {
 

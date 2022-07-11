@@ -2,7 +2,6 @@
 title: WorkPlanReference
 ---
 ## WorkPlanReference
-Work plan information
 
 ## Properties
 

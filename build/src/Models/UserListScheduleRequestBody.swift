@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Request body for fetching the schedule for a group of users over a given time range */
 
 public class UserListScheduleRequestBody: Codable {
 

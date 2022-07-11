@@ -2,7 +2,6 @@
 title: TimeOffLimitValueRange
 ---
 ## TimeOffLimitValueRange
-The date range with lists of time off limit, allocated and waitlisted minutes.
 
 ## Properties
 

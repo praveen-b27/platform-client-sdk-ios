@@ -11,12 +11,18 @@ import Foundation
 
 public class MediaSetting: Codable {
 
+    /** Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings. */
+    public var enableAutoAnswer: Bool?
     public var alertingTimeoutSeconds: Int?
     public var serviceLevel: ServiceLevel?
+    /** Map of media subtype to media subtype specific settings. */
+    public var subTypeSettings: [String:BaseMediaSettings]?
 
-    public init(alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?) {
+    public init(enableAutoAnswer: Bool?, alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?, subTypeSettings: [String:BaseMediaSettings]?) {
+        self.enableAutoAnswer = enableAutoAnswer
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
         self.serviceLevel = serviceLevel
+        self.subTypeSettings = subTypeSettings
     }
 
 

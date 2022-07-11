@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** List of BusinessUnitActivityCode */
 
 public class BusinessUnitActivityCodeListing: Codable {
 

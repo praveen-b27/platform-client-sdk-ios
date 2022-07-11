@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Scheduling Settings */
 
 public class SchedulingSettingsResponse: Codable {
 

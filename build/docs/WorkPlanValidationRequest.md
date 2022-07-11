@@ -2,7 +2,6 @@
 title: WorkPlanValidationRequest
 ---
 ## WorkPlanValidationRequest
-Work plan information
 
 ## Properties
 

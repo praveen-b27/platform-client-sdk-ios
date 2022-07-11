@@ -158,6 +158,8 @@ docs/AssessmentQuestionGroupScore.md
 docs/AssessmentQuestionScore.md
 docs/AssessmentScoringSet.md
 docs/AssignUsers.md
+docs/AssignedLearningModule.md
+docs/AssignedLearningModuleDomainEntityListing.md
 docs/AssignedSegment.md
 docs/AssignedWrapupCode.md
 docs/Assignment.md
@@ -228,6 +230,7 @@ docs/AvailableTimeOffResponse.md
 docs/AvailableTopic.md
 docs/AvailableTopicEntityListing.md
 docs/AvailableTranslations.md
+docs/BaseMediaSettings.md
 docs/BaseProgramEntity.md
 docs/BaseTopicEntitiy.md
 docs/BatchDownloadJobResult.md
@@ -1742,6 +1745,7 @@ docs/MeteredAssignmentByAgent.md
 docs/MeteredEvaluationAssignment.md
 docs/Metric.md
 docs/MetricDefinition.md
+docs/MetricValueTrendAverage.md
 docs/Metrics.md
 docs/MinLength.md
 docs/MinedIntentsListing.md
@@ -2481,6 +2485,7 @@ docs/ServiceGoalTemplateList.md
 docs/ServiceGoalTemplateReference.md
 docs/ServiceLevel.md
 docs/Session.md
+docs/SessionEndDetails.md
 docs/SessionLastEvent.md
 docs/SessionSegmentAssignment.md
 docs/SetRecordingState.md
@@ -3703,6 +3708,9 @@ docs/getGamificationScorecardsBestpoints-example.txt
 docs/getGamificationScorecardsPointsAlltime-example.txt
 docs/getGamificationScorecardsPointsAverage-example.txt
 docs/getGamificationScorecardsPointsTrends-example.txt
+docs/getGamificationScorecardsProfileMetricUserValuesTrends-example.txt
+docs/getGamificationScorecardsProfileMetricUsersValuesTrends-example.txt
+docs/getGamificationScorecardsProfileMetricValuesTrends-example.txt
 docs/getGamificationScorecardsUser-example.txt
 docs/getGamificationScorecardsUserAttendance-example.txt
 docs/getGamificationScorecardsUserBestpoints-example.txt
@@ -3833,6 +3841,7 @@ docs/getLearningModuleJob-example.txt
 docs/getLearningModuleRule-example.txt
 docs/getLearningModuleVersion-example.txt
 docs/getLearningModules-example.txt
+docs/getLearningModulesAssignments-example.txt
 docs/getLicenseDefinition-example.txt
 docs/getLicenseDefinitions-example.txt
 docs/getLicenseToggle-example.txt
@@ -5259,6 +5268,8 @@ src/Models/AssessmentQuestionGroupScore.swift
 src/Models/AssessmentQuestionScore.swift
 src/Models/AssessmentScoringSet.swift
 src/Models/AssignUsers.swift
+src/Models/AssignedLearningModule.swift
+src/Models/AssignedLearningModuleDomainEntityListing.swift
 src/Models/AssignedSegment.swift
 src/Models/AssignedWrapupCode.swift
 src/Models/Assignment.swift
@@ -5325,6 +5336,7 @@ src/Models/AvailableTimeOffResponse.swift
 src/Models/AvailableTopic.swift
 src/Models/AvailableTopicEntityListing.swift
 src/Models/AvailableTranslations.swift
+src/Models/BaseMediaSettings.swift
 src/Models/BaseProgramEntity.swift
 src/Models/BaseTopicEntitiy.swift
 src/Models/BatchDownloadJobResult.swift
@@ -6791,6 +6803,7 @@ src/Models/MeteredAssignmentByAgent.swift
 src/Models/MeteredEvaluationAssignment.swift
 src/Models/Metric.swift
 src/Models/MetricDefinition.swift
+src/Models/MetricValueTrendAverage.swift
 src/Models/Metrics.swift
 src/Models/MinLength.swift
 src/Models/MinedIntentsListing.swift
@@ -7501,6 +7514,7 @@ src/Models/ServiceGoalTemplateList.swift
 src/Models/ServiceGoalTemplateReference.swift
 src/Models/ServiceLevel.swift
 src/Models/Session.swift
+src/Models/SessionEndDetails.swift
 src/Models/SessionLastEvent.swift
 src/Models/SessionSegmentAssignment.swift
 src/Models/SetRecordingState.swift

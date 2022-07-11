@@ -2,7 +2,6 @@
 title: CreateManagementUnitApiRequest
 ---
 ## CreateManagementUnitApiRequest
-Create Management Unit
 
 ## Properties
 

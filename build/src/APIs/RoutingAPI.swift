@@ -1387,8 +1387,8 @@ open class RoutingAPI {
     "spamFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1474,8 +1474,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1612,8 +1612,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1780,8 +1780,8 @@ open class RoutingAPI {
     "flow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2092,9 +2092,16 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "peerId" : "peerId",
   "mediaSettings" : {
     "key" : {
       "alertingTimeoutSeconds" : 5,
+      "enableAutoAnswer" : true,
+      "subTypeSettings" : {
+        "key" : {
+          "enableAutoAnswer" : true
+        }
+      },
       "serviceLevel" : {
         "percentage" : 5.637376656633329,
         "durationMs" : 2
@@ -3937,8 +3944,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4044,8 +4051,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4088,6 +4095,8 @@ open class RoutingAPI {
     
     
     
+    
+    
     /**
      Get list of queues.
      
@@ -4097,10 +4106,12 @@ open class RoutingAPI {
      - parameter name: (query) Filter by queue name (optional)
      - parameter _id: (query) Filter by queue ID(s) (optional)
      - parameter divisionId: (query) Filter by queue division ID(s) (optional)
+     - parameter peerId: (query) Filter by queue peer ID(s) (optional)
+     - parameter hasPeer: (query) Filter by queues associated with peer (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueues(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId)
+    open class func getRoutingQueues(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, hasPeer: Bool? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, hasPeer: hasPeer)
         requestBuilder.execute { (response: Response<QueueEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4128,9 +4139,16 @@ open class RoutingAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -4255,9 +4273,16 @@ open class RoutingAPI {
     "createdBy" : "createdBy",
     "name" : "name"
   }, {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -4383,8 +4408,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4396,10 +4421,12 @@ open class RoutingAPI {
      - parameter name: (query) Filter by queue name (optional)
      - parameter _id: (query) Filter by queue ID(s) (optional)
      - parameter divisionId: (query) Filter by queue division ID(s) (optional)
+     - parameter peerId: (query) Filter by queue peer ID(s) (optional)
+     - parameter hasPeer: (query) Filter by queues associated with peer (optional)
 
      - returns: RequestBuilder<QueueEntityListing> 
      */
-    open class func getRoutingQueuesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil) -> RequestBuilder<QueueEntityListing> {        
+    open class func getRoutingQueuesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, hasPeer: Bool? = nil) -> RequestBuilder<QueueEntityListing> {        
         let path = "/api/v2/routing/queues"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -4411,7 +4438,9 @@ open class RoutingAPI {
             "sortOrder": sortOrder?.rawValue, 
             "name": name, 
             "id": _id, 
-            "divisionId": divisionId
+            "divisionId": divisionId, 
+            "peerId": peerId, 
+            "hasPeer": hasPeer
         ])
 
         let requestBuilder: RequestBuilder<QueueEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4480,9 +4509,16 @@ open class RoutingAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -4607,9 +4643,16 @@ open class RoutingAPI {
     "createdBy" : "createdBy",
     "name" : "name"
   }, {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -4735,8 +4778,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4819,9 +4862,16 @@ open class RoutingAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -4946,9 +4996,16 @@ open class RoutingAPI {
     "createdBy" : "createdBy",
     "name" : "name"
   }, {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -5074,8 +5131,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5152,9 +5209,16 @@ open class RoutingAPI {
   "pageCount" : 7,
   "pageNumber" : 5,
   "entities" : [ {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -5279,9 +5343,16 @@ open class RoutingAPI {
     "createdBy" : "createdBy",
     "name" : "name"
   }, {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -5407,8 +5478,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5699,8 +5770,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5852,8 +5923,8 @@ open class RoutingAPI {
     "region" : "region"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6200,8 +6271,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6489,8 +6560,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6567,9 +6638,16 @@ open class RoutingAPI {
   "pageCount" : 7,
   "pageNumber" : 5,
   "entities" : [ {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -6694,9 +6772,16 @@ open class RoutingAPI {
     "createdBy" : "createdBy",
     "name" : "name"
   }, {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -6822,8 +6907,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6921,8 +7006,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7018,8 +7103,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8732,8 +8817,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8836,9 +8921,16 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "peerId" : "peerId",
   "mediaSettings" : {
     "key" : {
       "alertingTimeoutSeconds" : 5,
+      "enableAutoAnswer" : true,
+      "subTypeSettings" : {
+        "key" : {
+          "enableAutoAnswer" : true
+        }
+      },
       "serviceLevel" : {
         "percentage" : 5.637376656633329,
         "durationMs" : 2
@@ -9028,9 +9120,16 @@ open class RoutingAPI {
   "pageCount" : 7,
   "pageNumber" : 5,
   "entities" : [ {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -9155,9 +9254,16 @@ open class RoutingAPI {
     "createdBy" : "createdBy",
     "name" : "name"
   }, {
+    "peerId" : "peerId",
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 5,
+        "enableAutoAnswer" : true,
+        "subTypeSettings" : {
+          "key" : {
+            "enableAutoAnswer" : true
+          }
+        },
         "serviceLevel" : {
           "percentage" : 5.637376656633329,
           "durationMs" : 2
@@ -9283,8 +9389,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9435,8 +9541,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9515,8 +9621,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9610,10 +9716,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9636,10 +9742,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9680,10 +9786,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9706,10 +9812,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9755,10 +9861,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9781,10 +9887,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9825,10 +9931,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9851,10 +9957,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10559,9 +10665,16 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "peerId" : "peerId",
   "mediaSettings" : {
     "key" : {
       "alertingTimeoutSeconds" : 5,
+      "enableAutoAnswer" : true,
+      "subTypeSettings" : {
+        "key" : {
+          "enableAutoAnswer" : true
+        }
+      },
       "serviceLevel" : {
         "percentage" : 5.637376656633329,
         "durationMs" : 2
@@ -11263,9 +11376,16 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "peerId" : "peerId",
   "mediaSettings" : {
     "key" : {
       "alertingTimeoutSeconds" : 5,
+      "enableAutoAnswer" : true,
+      "subTypeSettings" : {
+        "key" : {
+          "enableAutoAnswer" : true
+        }
+      },
       "serviceLevel" : {
         "percentage" : 5.637376656633329,
         "durationMs" : 2
@@ -11902,8 +12022,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

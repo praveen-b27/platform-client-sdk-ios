@@ -2287,7 +2287,7 @@ RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, page
 
 
 
-> [QueueEntityListing](QueueEntityListing.html) getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId)
+> [QueueEntityListing](QueueEntityListing.html) getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId, peerId, hasPeer)
 
 Get list of queues.
 
@@ -2313,9 +2313,11 @@ let sortOrder: RoutingAPI.SortOrder_getRoutingQueues = RoutingAPI.SortOrder_getR
 let name: String = "" // Filter by queue name
 let _id: [String] = [""] // Filter by queue ID(s)
 let divisionId: [String] = [""] // Filter by queue division ID(s)
+let peerId: [String] = [""] // Filter by queue peer ID(s)
+let hasPeer: Bool = true // Filter by queues associated with peer
 
 // Code example
-RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId) { (response, error) in
+RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, hasPeer: hasPeer) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2336,6 +2338,8 @@ RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrde
 | **name** | **String**| Filter by queue name | [optional] |
 | **_id** | [**[String]**](String.html)| Filter by queue ID(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Filter by queue division ID(s) | [optional] |
+| **peerId** | [**[String]**](String.html)| Filter by queue peer ID(s) | [optional] |
+| **hasPeer** | **Bool**| Filter by queues associated with peer | [optional] |
 {: class="table-striped"}
 
 

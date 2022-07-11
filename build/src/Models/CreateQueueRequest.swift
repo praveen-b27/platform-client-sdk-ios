@@ -73,12 +73,14 @@ public class CreateQueueRequest: Codable {
     /** The messaging addresses for the queue. */
     public var outboundMessagingAddresses: QueueMessagingAddresses?
     public var outboundEmailAddress: QueueEmailAddress?
+    /** The ID of the external Queue */
+    public var peerId: String?
     /** The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue. */
     public var sourceQueueId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, sourceQueueId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, sourceQueueId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -108,6 +110,7 @@ public class CreateQueueRequest: Codable {
         self.defaultScripts = defaultScripts
         self.outboundMessagingAddresses = outboundMessagingAddresses
         self.outboundEmailAddress = outboundEmailAddress
+        self.peerId = peerId
         self.sourceQueueId = sourceQueueId
         self.selfUri = selfUri
     }
@@ -142,6 +145,7 @@ public class CreateQueueRequest: Codable {
         case defaultScripts
         case outboundMessagingAddresses
         case outboundEmailAddress
+        case peerId
         case sourceQueueId
         case selfUri
     }

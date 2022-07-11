@@ -2,7 +2,6 @@
 title: WfmVersionedEntityMetadata
 ---
 ## WfmVersionedEntityMetadata
-Metadata to associate with a given entity
 
 ## Properties
 

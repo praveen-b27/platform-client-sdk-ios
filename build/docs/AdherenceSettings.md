@@ -2,7 +2,6 @@
 title: AdherenceSettings
 ---
 ## AdherenceSettings
-Schedule Adherence Configuration
 
 ## Properties
 

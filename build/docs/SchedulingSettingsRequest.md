@@ -2,7 +2,6 @@
 title: SchedulingSettingsRequest
 ---
 ## SchedulingSettingsRequest
-Scheduling Settings
 
 ## Properties
 

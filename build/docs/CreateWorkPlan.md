@@ -2,7 +2,6 @@
 title: CreateWorkPlan
 ---
 ## CreateWorkPlan
-Work plan information
 
 ## Properties
 

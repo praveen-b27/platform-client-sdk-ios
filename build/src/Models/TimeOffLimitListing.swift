@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** The list of time off limit objects */
 
 public class TimeOffLimitListing: Codable {
 

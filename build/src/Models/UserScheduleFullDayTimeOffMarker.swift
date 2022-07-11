@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Marker to indicate an approved full day time off request */
 
 public class UserScheduleFullDayTimeOffMarker: Codable {
 

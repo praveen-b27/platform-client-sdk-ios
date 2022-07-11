@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Create Management Unit */
 
 public class CreateManagementUnitApiRequest: Codable {
 

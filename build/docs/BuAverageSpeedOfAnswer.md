@@ -2,7 +2,6 @@
 title: BuAverageSpeedOfAnswer
 ---
 ## BuAverageSpeedOfAnswer
-Service goal average speed of answer configuration
 
 ## Properties
 

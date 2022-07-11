@@ -2,7 +2,6 @@
 title: UserListScheduleRequestBody
 ---
 ## UserListScheduleRequestBody
-Request body for fetching the schedule for a group of users over a given time range
 
 ## Properties
 

@@ -743,6 +743,65 @@ open class WorkforceManagementAPI {
 
     
     /**
+     Query the status of a historical adherence request operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAdherenceHistoricalJob(jobId: String, completion: @escaping ((_ data: WfmHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAdherenceHistoricalJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<WfmHistoricalAdherenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of a historical adherence request operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/adherence/historical/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "downloadUrl" : "downloadUrl",
+  "queryState" : "Processing",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<WfmHistoricalAdherenceResponse> 
+     */
+    open class func getWorkforcemanagementAdherenceHistoricalJobWithRequestBuilder(jobId: String) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
+        var path = "/api/v2/workforcemanagement/adherence/historical/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
      Get status of the modeling job
      
      - parameter jobId: (path) The id of the modeling job 

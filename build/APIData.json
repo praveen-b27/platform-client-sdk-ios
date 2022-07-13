@@ -26205,6 +26205,20 @@
     "return": "JsonSearchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: TranscriptSearchRequest = new TranscriptSearchRequest(...) // Search request options\n\n// Search resources.\nPostSpeechandtextanalyticsTranscriptsSearchRequest.postSpeechandtextanalyticsTranscriptsSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSpeechandtextanalyticsTranscriptsSearchRequest.postSpeechandtextanalyticsTranscriptsSearch was successful\")\n        dump(response)\n    }\n}"
   },
+  "postteamssearch": {
+    "operationId": "postteamssearch",
+    "functionName": "postTeamsSearch",
+    "signature": "postTeamsSearch(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "TeamSearchRequest",
+        "required": "true"
+      }
+    ],
+    "return": "TeamsSearchResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: TeamSearchRequest = new TeamSearchRequest(...) // Search request options\n\n// Search resources.\nPostTeamsSearchRequest.postTeamsSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTeamsSearchRequest.postTeamsSearch was successful\")\n        dump(response)\n    }\n}"
+  },
   "postuserssearch": {
     "operationId": "postuserssearch",
     "functionName": "postUsersSearch",
@@ -26815,6 +26829,100 @@
     ],
     "return": "StationSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: StationSettings = new StationSettings(...) // Station settings\n\n// Patch an organization's StationSettings\nPatchStationsSettingsRequest.patchStationsSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchStationsSettingsRequest.patchStationsSettings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "deleteteam": {
+    "operationId": "deleteteam",
+    "functionName": "deleteTeam",
+    "signature": "deleteTeam(teamId)",
+    "parameters": [
+      {
+        "name": "teamId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet teamId: String = \"\" // Team ID\n\n// Delete team\nDeleteTeamRequest.deleteTeam(teamId: teamId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTeamRequest.deleteTeam was successful\")\n    }\n}"
+  },
+  "getteam": {
+    "operationId": "getteam",
+    "functionName": "getTeam",
+    "signature": "getTeam(teamId)",
+    "parameters": [
+      {
+        "name": "teamId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Team",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet teamId: String = \"\" // Team ID\n\n// Get team\nGetTeamRequest.getTeam(teamId: teamId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTeamRequest.getTeam was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getteams": {
+    "operationId": "getteams",
+    "functionName": "getTeams",
+    "signature": "getTeams(pageSize, name, after, before, expand)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "TeamEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet name: String = \"\" // Return only teams whose names start with this value (case-insensitive matching)\nlet after: String = \"\" // The cursor that points to the next item in the complete list of teams\nlet before: String = \"\" // The cursor that points to the previous item in the complete list of teams\nlet expand: GetTeamsRequest.Expand_getTeams = GetTeamsRequest.Expand_getTeams.enummember // Expand the name on each user\n\n// Get Team listing\nGetTeamsRequest.getTeams(pageSize: pageSize, name: name, after: after, before: before, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTeamsRequest.getTeams was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchteam": {
+    "operationId": "patchteam",
+    "functionName": "patchTeam",
+    "signature": "patchTeam(teamId, body)",
+    "parameters": [
+      {
+        "name": "teamId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "Team",
+        "required": "true"
+      }
+    ],
+    "return": "Team",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet teamId: String = \"\" // Team ID\nlet body: Team = new Team(...) // Team\n\n// Update team\nPatchTeamRequest.patchTeam(teamId: teamId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTeamRequest.patchTeam was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postteams": {
+    "operationId": "postteams",
+    "functionName": "postTeams",
+    "signature": "postTeams(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "Team",
+        "required": "true"
+      }
+    ],
+    "return": "Team",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Team = new Team(...) // Team\n\n// Create a team\nPostTeamsRequest.postTeams(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTeamsRequest.postTeams was successful\")\n        dump(response)\n    }\n}"
   },
   "gettelephonysiptraces": {
     "operationId": "gettelephonysiptraces",
@@ -31826,6 +31934,20 @@
     ],
     "return": "[UserScheduleAdherence]",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: [String] = [\"\"] // User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request\n\n// Get a list of UserScheduleAdherence records for the requested users\nGetWorkforcemanagementAdherenceRequest.getWorkforcemanagementAdherence(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAdherenceRequest.getWorkforcemanagementAdherence was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementadherencehistoricaljob": {
+    "operationId": "getworkforcemanagementadherencehistoricaljob",
+    "functionName": "getWorkforcemanagementAdherenceHistoricalJob",
+    "signature": "getWorkforcemanagementAdherenceHistoricalJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WfmHistoricalAdherenceResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\n\n// Query the status of a historical adherence request operation. Only the user who started the operation can query the status\nGetWorkforcemanagementAdherenceHistoricalJobRequest.getWorkforcemanagementAdherenceHistoricalJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAdherenceHistoricalJobRequest.getWorkforcemanagementAdherenceHistoricalJob was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementadhocmodelingjob": {
     "operationId": "getworkforcemanagementadhocmodelingjob",

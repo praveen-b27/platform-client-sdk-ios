@@ -31,6 +31,8 @@ public class WebDeploymentConfigurationVersion: Codable {
     public var languages: [String]?
     /** The default language to use for the configuration required if the messenger is enabled */
     public var defaultLanguage: String?
+    /** The localization settings for homescreen app */
+    public var customI18nLabels: [CustomI18nLabels]?
     /** The settings for messenger */
     public var messenger: MessengerSettings?
     /** The settings for position */
@@ -60,13 +62,14 @@ public class WebDeploymentConfigurationVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: String?, _description: String?, languages: [String]?, defaultLanguage: String?, messenger: MessengerSettings?, position: PositionSettings?, supportCenter: SupportCenterSettings?, cobrowse: CobrowseSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: String?, _description: String?, languages: [String]?, defaultLanguage: String?, customI18nLabels: [CustomI18nLabels]?, messenger: MessengerSettings?, position: PositionSettings?, supportCenter: SupportCenterSettings?, cobrowse: CobrowseSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.version = version
         self._description = _description
         self.languages = languages
         self.defaultLanguage = defaultLanguage
+        self.customI18nLabels = customI18nLabels
         self.messenger = messenger
         self.position = position
         self.supportCenter = supportCenter
@@ -90,6 +93,7 @@ public class WebDeploymentConfigurationVersion: Codable {
         case _description = "description"
         case languages
         case defaultLanguage
+        case customI18nLabels
         case messenger
         case position
         case supportCenter

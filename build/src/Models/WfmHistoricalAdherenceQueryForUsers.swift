@@ -15,7 +15,7 @@ public class WfmHistoricalAdherenceQueryForUsers: Codable {
     public var startDate: Date?
     /** End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time */
     public var endDate: Date?
-    /** The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence */
+    /** The time zone, in olson format, to use in defining days when computing adherence. If it is not set, the business unit time zone will be used. The results will be returned as UTC timestamps regardless of the time zone input. */
     public var timeZone: String?
     /** The userIds to report on */
     public var userIds: [String]?

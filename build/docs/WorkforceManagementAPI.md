@@ -21,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplan) | Delete a work plan |
 | [**deleteWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplanrotation) | Delete a work plan rotation |
 | [**getWorkforcemanagementAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementAdherence) | Get a list of UserScheduleAdherence records for the requested users |
+| [**getWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalJob) | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdhocmodelingjob**](WorkforceManagementAPI.html#getWorkforcemanagementAdhocmodelingjob) | Get status of the modeling job |
 | [**getWorkforcemanagementAgentManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentManagementunit) | Get the management unit to which the agent belongs |
 | [**getWorkforcemanagementAgentsMeManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentsMeManagementunit) | Get the management unit to which the currently logged in agent belongs |
@@ -886,6 +887,60 @@ WorkforceManagementAPI.getWorkforcemanagementAdherence(userId: userId) { (respon
 ### Return type
 
 [**[UserScheduleAdherence]**](UserScheduleAdherence.html)
+
+<a name="getWorkforcemanagementAdherenceHistoricalJob"></a>
+
+# **getWorkforcemanagementAdherenceHistoricalJob**
+
+
+
+> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) getWorkforcemanagementAdherenceHistoricalJob(jobId)
+
+Query the status of a historical adherence request operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/adherence/historical/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:historicalAdherence:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
 
 <a name="getWorkforcemanagementAdhocmodelingjob"></a>
 

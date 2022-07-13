@@ -35,6 +35,7 @@ public class BotAggregationQuery: Codable {
         case nbotsessions = "nBotSessions"
         case obotintent = "oBotIntent"
         case obotsessionquery = "oBotSessionQuery"
+        case obotsessionqueryselfserved = "oBotSessionQuerySelfServed"
         case obotsessionturn = "oBotSessionTurn"
         case obotslot = "oBotSlot"
         case tbotdisconnect = "tBotDisconnect"

@@ -24,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSearch**](SearchAPI.html#postSearch) | Search resources. |
 | [**postSearchSuggest**](SearchAPI.html#postSearchSuggest) | Suggest resources. |
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SearchAPI.html#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
+| [**postTeamsSearch**](SearchAPI.html#postTeamsSearch) | Search resources. |
 | [**postUsersSearch**](SearchAPI.html#postUsersSearch) | Search users |
 | [**postVoicemailSearch**](SearchAPI.html#postVoicemailSearch) | Search voicemails |
 {: class="table-striped"}
@@ -927,6 +928,58 @@ SearchAPI.postSpeechandtextanalyticsTranscriptsSearch(body: body) { (response, e
 ### Return type
 
 [**JsonSearchResponse**](JsonSearchResponse.html)
+
+<a name="postTeamsSearch"></a>
+
+# **postTeamsSearch**
+
+
+
+> [TeamsSearchResponse](TeamsSearchResponse.html) postTeamsSearch(body)
+
+Search resources.
+
+
+
+Wraps POST /api/v2/teams/search  
+
+Requires ANY permissions: 
+
+* groups:team:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TeamSearchRequest = new TeamSearchRequest(...) // Search request options
+
+// Code example
+SearchAPI.postTeamsSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SearchAPI.postTeamsSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TeamSearchRequest**](TeamSearchRequest.html)| Search request options | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TeamsSearchResponse**](TeamsSearchResponse.html)
 
 <a name="postUsersSearch"></a>
 

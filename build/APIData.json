@@ -26361,7 +26361,7 @@
   "getspeechandtextanalyticsprograms": {
     "operationId": "getspeechandtextanalyticsprograms",
     "functionName": "getSpeechandtextanalyticsPrograms",
-    "signature": "getSpeechandtextanalyticsPrograms(nextPage, pageSize)",
+    "signature": "getSpeechandtextanalyticsPrograms(nextPage, pageSize, state)",
     "parameters": [
       {
         "name": "nextPage",
@@ -26372,10 +26372,15 @@
         "name": "pageSize",
         "type": "Int",
         "required": "false"
+      },
+      {
+        "name": "state",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "ProgramsEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\n\n// Get the list of Speech & Text Analytics programs\nGetSpeechandtextanalyticsProgramsRequest.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsProgramsRequest.getSpeechandtextanalyticsPrograms was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\nlet state: GetSpeechandtextanalyticsProgramsRequest.State_getSpeechandtextanalyticsPrograms = GetSpeechandtextanalyticsProgramsRequest.State_getSpeechandtextanalyticsPrograms.enummember // Program state. Defaults to Latest\n\n// Get the list of Speech & Text Analytics programs\nGetSpeechandtextanalyticsProgramsRequest.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize, state: state) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsProgramsRequest.getSpeechandtextanalyticsPrograms was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticsprogramsgeneraljob": {
     "operationId": "getspeechandtextanalyticsprogramsgeneraljob",

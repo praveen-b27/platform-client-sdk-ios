@@ -460,7 +460,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramMappings(programId: progr
 
 
 
-> [ProgramsEntityListing](ProgramsEntityListing.html) getSpeechandtextanalyticsPrograms(nextPage, pageSize)
+> [ProgramsEntityListing](ProgramsEntityListing.html) getSpeechandtextanalyticsPrograms(nextPage, pageSize, state)
 
 Get the list of Speech &amp; Text Analytics programs
 
@@ -482,9 +482,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let nextPage: String = "" // The key for listing the next page
 let pageSize: Int = 0 // The page size for the listing
+let state: SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsPrograms = SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsPrograms.enummember // Program state. Defaults to Latest
 
 // Code example
-SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize) { (response, error) in
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize, state: state) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -501,6 +502,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pag
 | ------------- | ------------- | ------------- | ------------- |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
 | **pageSize** | **Int**| The page size for the listing | [optional] |
+| **state** | **String**| Program state. Defaults to Latest | [optional]<br />**Values**: latest ("Latest"), published ("Published") |
 {: class="table-striped"}
 
 

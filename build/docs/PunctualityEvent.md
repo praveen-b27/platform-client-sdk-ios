@@ -13,6 +13,7 @@ title: PunctualityEvent
 | **_description** | **String** | The description of the activity | [optional] |
 | **activityCodeId** | **String** | The ID of the activity code associated with this activity | [optional] |
 | **activityCode** | **String** | The activity code | [optional] |
+| **activityName** | **String** | The activity name | [optional] |
 | **category** | **String** | The category for the activity | [optional] |
 | **points** | **Int** | The points earned for this activity | [optional] |
 | **delta** | **Double** | Difference between this activity and the last activity in seconds | [optional] |

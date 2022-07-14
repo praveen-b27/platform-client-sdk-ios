@@ -717,6 +717,7 @@ docs/ConversationEventTopicSocialExpression.md
 docs/ConversationEventTopicUriReference.md
 docs/ConversationEventTopicVideo.md
 docs/ConversationEventTopicVoicemail.md
+docs/ConversationEventTopicWorkflow.md
 docs/ConversationEventTopicWrapup.md
 docs/ConversationEventTyping.md
 docs/ConversationMessageContent.md
@@ -2137,6 +2138,7 @@ docs/QueueConversationEventTopicSocialExpression.md
 docs/QueueConversationEventTopicUriReference.md
 docs/QueueConversationEventTopicVideo.md
 docs/QueueConversationEventTopicVoicemail.md
+docs/QueueConversationEventTopicWorkflow.md
 docs/QueueConversationEventTopicWrapup.md
 docs/QueueConversationMessageEventTopicConversationRoutingData.md
 docs/QueueConversationMessageEventTopicDetail.md
@@ -2206,6 +2208,7 @@ docs/QueueConversationSocialExpressionEventTopicSocialExpression.md
 docs/QueueConversationSocialExpressionEventTopicUriReference.md
 docs/QueueConversationSocialExpressionEventTopicVideo.md
 docs/QueueConversationSocialExpressionEventTopicVoicemail.md
+docs/QueueConversationSocialExpressionEventTopicWorkflow.md
 docs/QueueConversationSocialExpressionEventTopicWrapup.md
 docs/QueueConversationVideoEventTopicAddress.md
 docs/QueueConversationVideoEventTopicAfterCallWork.md
@@ -2242,6 +2245,7 @@ docs/QueueConversationVideoEventTopicSocialExpression.md
 docs/QueueConversationVideoEventTopicUriReference.md
 docs/QueueConversationVideoEventTopicVideo.md
 docs/QueueConversationVideoEventTopicVoicemail.md
+docs/QueueConversationVideoEventTopicWorkflow.md
 docs/QueueConversationVideoEventTopicWrapup.md
 docs/QueueEmailAddress.md
 docs/QueueEntityListing.md
@@ -3222,6 +3226,8 @@ docs/WorkdayValuesTrend.md
 docs/WorkdayValuesTrendItem.md
 docs/WorkforceManagementAPI.json
 docs/WorkforceManagementAPI.md
+docs/WorkitemsUserEventsNotificationDelta.md
+docs/WorkitemsUserEventsNotificationWorkitem.md
 docs/Workspace.md
 docs/WorkspaceCreate.md
 docs/WorkspaceEntityListing.md
@@ -5833,6 +5839,7 @@ src/Models/ConversationEventTopicSocialExpression.swift
 src/Models/ConversationEventTopicUriReference.swift
 src/Models/ConversationEventTopicVideo.swift
 src/Models/ConversationEventTopicVoicemail.swift
+src/Models/ConversationEventTopicWorkflow.swift
 src/Models/ConversationEventTopicWrapup.swift
 src/Models/ConversationEventTyping.swift
 src/Models/ConversationMessageContent.swift
@@ -7197,6 +7204,7 @@ src/Models/QueueConversationEventTopicSocialExpression.swift
 src/Models/QueueConversationEventTopicUriReference.swift
 src/Models/QueueConversationEventTopicVideo.swift
 src/Models/QueueConversationEventTopicVoicemail.swift
+src/Models/QueueConversationEventTopicWorkflow.swift
 src/Models/QueueConversationEventTopicWrapup.swift
 src/Models/QueueConversationMessageEventTopicConversationRoutingData.swift
 src/Models/QueueConversationMessageEventTopicDetail.swift
@@ -7266,6 +7274,7 @@ src/Models/QueueConversationSocialExpressionEventTopicSocialExpression.swift
 src/Models/QueueConversationSocialExpressionEventTopicUriReference.swift
 src/Models/QueueConversationSocialExpressionEventTopicVideo.swift
 src/Models/QueueConversationSocialExpressionEventTopicVoicemail.swift
+src/Models/QueueConversationSocialExpressionEventTopicWorkflow.swift
 src/Models/QueueConversationSocialExpressionEventTopicWrapup.swift
 src/Models/QueueConversationVideoEventTopicAddress.swift
 src/Models/QueueConversationVideoEventTopicAfterCallWork.swift
@@ -7302,6 +7311,7 @@ src/Models/QueueConversationVideoEventTopicSocialExpression.swift
 src/Models/QueueConversationVideoEventTopicUriReference.swift
 src/Models/QueueConversationVideoEventTopicVideo.swift
 src/Models/QueueConversationVideoEventTopicVoicemail.swift
+src/Models/QueueConversationVideoEventTopicWorkflow.swift
 src/Models/QueueConversationVideoEventTopicWrapup.swift
 src/Models/QueueEmailAddress.swift
 src/Models/QueueEntityListing.swift
@@ -8230,6 +8240,8 @@ src/Models/WorkdayPointsTrendItem.swift
 src/Models/WorkdayValuesMetricItem.swift
 src/Models/WorkdayValuesTrend.swift
 src/Models/WorkdayValuesTrendItem.swift
+src/Models/WorkitemsUserEventsNotificationDelta.swift
+src/Models/WorkitemsUserEventsNotificationWorkitem.swift
 src/Models/Workspace.swift
 src/Models/WorkspaceCreate.swift
 src/Models/WorkspaceEntityListing.swift

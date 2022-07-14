@@ -460,15 +460,23 @@ open class SpeechTextAnalyticsAPI {
 
     
     
+    
+    public enum State_getSpeechandtextanalyticsPrograms: String { 
+        case latest = "Latest"
+        case published = "Published"
+    }
+
+    
     /**
      Get the list of Speech & Text Analytics programs
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
+     - parameter state: (query) Program state. Defaults to Latest (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsPrograms(nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ProgramsEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize)
+    open class func getSpeechandtextanalyticsPrograms(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil, completion: @escaping ((_ data: ProgramsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state)
         requestBuilder.execute { (response: Response<ProgramsEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -527,10 +535,11 @@ open class SpeechTextAnalyticsAPI {
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
+     - parameter state: (query) Program state. Defaults to Latest (optional)
 
      - returns: RequestBuilder<ProgramsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ProgramsEntityListing> {        
+    open class func getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil) -> RequestBuilder<ProgramsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/programs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -538,7 +547,8 @@ open class SpeechTextAnalyticsAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             "nextPage": nextPage, 
-            "pageSize": pageSize?.encodeToJSON()
+            "pageSize": pageSize?.encodeToJSON(), 
+            "state": state?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<ProgramsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

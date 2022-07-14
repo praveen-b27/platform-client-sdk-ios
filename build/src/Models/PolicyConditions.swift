@@ -19,6 +19,10 @@ public class PolicyConditions: Codable {
         case call = "CALL"
         case chat = "CHAT"
     }
+    public enum CustomerParticipation: String, Codable { 
+        case yes = "YES"
+        case no = "NO"
+    }
     public var forUsers: [User]?
     public var directions: [Directions]?
     public var dateRanges: [String]?
@@ -27,8 +31,10 @@ public class PolicyConditions: Codable {
     public var duration: DurationCondition?
     public var wrapupCodes: [WrapupCode]?
     public var timeAllowed: TimeAllowed?
+    /** This condition is to filter out conversation with and without customer participation. */
+    public var customerParticipation: CustomerParticipation?
 
-    public init(forUsers: [User]?, directions: [Directions]?, dateRanges: [String]?, mediaTypes: [MediaTypes]?, forQueues: [Queue]?, duration: DurationCondition?, wrapupCodes: [WrapupCode]?, timeAllowed: TimeAllowed?) {
+    public init(forUsers: [User]?, directions: [Directions]?, dateRanges: [String]?, mediaTypes: [MediaTypes]?, forQueues: [Queue]?, duration: DurationCondition?, wrapupCodes: [WrapupCode]?, timeAllowed: TimeAllowed?, customerParticipation: CustomerParticipation?) {
         self.forUsers = forUsers
         self.directions = directions
         self.dateRanges = dateRanges
@@ -37,6 +43,7 @@ public class PolicyConditions: Codable {
         self.duration = duration
         self.wrapupCodes = wrapupCodes
         self.timeAllowed = timeAllowed
+        self.customerParticipation = customerParticipation
     }
 
 

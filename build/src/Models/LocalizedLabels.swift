@@ -13,8 +13,8 @@ import Foundation
 public class LocalizedLabels: Codable {
 
     public enum Key: String, Codable { 
-        case messengerHomeTitle = "MessengerHomeTitle"
-        case messengerHomeSubTitle = "MessengerHomeSubTitle"
+        case messengerHomeHeaderTitle = "MessengerHomeHeaderTitle"
+        case messengerHomeHeaderSubTitle = "MessengerHomeHeaderSubTitle"
     }
     /** Contains localized label key used in messenger homescreen */
     public var key: Key?

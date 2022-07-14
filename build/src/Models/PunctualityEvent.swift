@@ -23,6 +23,8 @@ public class PunctualityEvent: Codable {
     public var activityCodeId: String?
     /** The activity code */
     public var activityCode: String?
+    /** The activity name */
+    public var activityName: String?
     /** The category for the activity */
     public var category: String?
     /** The points earned for this activity */
@@ -31,13 +33,14 @@ public class PunctualityEvent: Codable {
     public var delta: Double?
     public var bullseye: Bool?
 
-    public init(dateScheduleStart: Date?, dateStart: Date?, lengthMinutes: Int?, _description: String?, activityCodeId: String?, activityCode: String?, category: String?, points: Int?, delta: Double?, bullseye: Bool?) {
+    public init(dateScheduleStart: Date?, dateStart: Date?, lengthMinutes: Int?, _description: String?, activityCodeId: String?, activityCode: String?, activityName: String?, category: String?, points: Int?, delta: Double?, bullseye: Bool?) {
         self.dateScheduleStart = dateScheduleStart
         self.dateStart = dateStart
         self.lengthMinutes = lengthMinutes
         self._description = _description
         self.activityCodeId = activityCodeId
         self.activityCode = activityCode
+        self.activityName = activityName
         self.category = category
         self.points = points
         self.delta = delta
@@ -51,6 +54,7 @@ public class PunctualityEvent: Codable {
         case _description = "description"
         case activityCodeId
         case activityCode
+        case activityName
         case category
         case points
         case delta

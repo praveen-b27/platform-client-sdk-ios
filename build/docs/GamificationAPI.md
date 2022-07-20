@@ -7,6 +7,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteEmployeeperformanceExternalmetricsDefinition**](GamificationAPI.html#deleteEmployeeperformanceExternalmetricsDefinition) | Delete an External Metric Definition |
+| [**getEmployeeperformanceExternalmetricsDefinition**](GamificationAPI.html#getEmployeeperformanceExternalmetricsDefinition) | Get an External Metric Definition |
+| [**getEmployeeperformanceExternalmetricsDefinitions**](GamificationAPI.html#getEmployeeperformanceExternalmetricsDefinitions) | Get a list of External Metric Definitions of an organization, sorted by name in ascending order |
 | [**getGamificationLeaderboard**](GamificationAPI.html#getGamificationLeaderboard) | Leaderboard of the requesting user&#39;s division or performance profile |
 | [**getGamificationLeaderboardAll**](GamificationAPI.html#getGamificationLeaderboardAll) | Leaderboard by filter type |
 | [**getGamificationLeaderboardAllBestpoints**](GamificationAPI.html#getGamificationLeaderboardAllBestpoints) | Best Points by division or performance profile |
@@ -46,6 +49,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getGamificationStatus**](GamificationAPI.html#getGamificationStatus) | Gamification activation status |
 | [**getGamificationTemplate**](GamificationAPI.html#getGamificationTemplate) | Objective template by id |
 | [**getGamificationTemplates**](GamificationAPI.html#getGamificationTemplates) | All objective templates |
+| [**patchEmployeeperformanceExternalmetricsDefinition**](GamificationAPI.html#patchEmployeeperformanceExternalmetricsDefinition) | Update External Metric Definition |
+| [**postEmployeeperformanceExternalmetricsData**](GamificationAPI.html#postEmployeeperformanceExternalmetricsData) | Write External Metric Data |
+| [**postEmployeeperformanceExternalmetricsDefinitions**](GamificationAPI.html#postEmployeeperformanceExternalmetricsDefinitions) | Create External Metric Definition |
 | [**postGamificationMetrics**](GamificationAPI.html#postGamificationMetrics) | Creates a gamified metric with a given metric definition and metric objective |
 | [**postGamificationProfileActivate**](GamificationAPI.html#postGamificationProfileActivate) | Activate a performance profile |
 | [**postGamificationProfileDeactivate**](GamificationAPI.html#postGamificationProfileDeactivate) | Deactivate a performance profile |
@@ -59,6 +65,163 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putGamificationProfileMetric**](GamificationAPI.html#putGamificationProfileMetric) | Updates a metric in performance profile |
 | [**putGamificationStatus**](GamificationAPI.html#putGamificationStatus) | Update gamification activation status |
 {: class="table-striped"}
+
+<a name="deleteEmployeeperformanceExternalmetricsDefinition"></a>
+
+# **deleteEmployeeperformanceExternalmetricsDefinition**
+
+
+
+> Void deleteEmployeeperformanceExternalmetricsDefinition(metricId)
+
+Delete an External Metric Definition
+
+
+
+Wraps DELETE /api/v2/employeeperformance/externalmetrics/definitions/{metricId}  
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let metricId: String = "" // Specifies the External Metric Definition ID
+
+// Code example
+GamificationAPI.deleteEmployeeperformanceExternalmetricsDefinition(metricId: metricId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("GamificationAPI.deleteEmployeeperformanceExternalmetricsDefinition was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **metricId** | **String**| Specifies the External Metric Definition ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="getEmployeeperformanceExternalmetricsDefinition"></a>
+
+# **getEmployeeperformanceExternalmetricsDefinition**
+
+
+
+> [ExternalMetricDefinition](ExternalMetricDefinition.html) getEmployeeperformanceExternalmetricsDefinition(metricId)
+
+Get an External Metric Definition
+
+
+
+Wraps GET /api/v2/employeeperformance/externalmetrics/definitions/{metricId}  
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let metricId: String = "" // Specifies the External Metric Definition ID
+
+// Code example
+GamificationAPI.getEmployeeperformanceExternalmetricsDefinition(metricId: metricId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getEmployeeperformanceExternalmetricsDefinition was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **metricId** | **String**| Specifies the External Metric Definition ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalMetricDefinition**](ExternalMetricDefinition.html)
+
+<a name="getEmployeeperformanceExternalmetricsDefinitions"></a>
+
+# **getEmployeeperformanceExternalmetricsDefinitions**
+
+
+
+> [ExternalMetricDefinitionListing](ExternalMetricDefinitionListing.html) getEmployeeperformanceExternalmetricsDefinitions(pageSize, pageNumber)
+
+Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+
+
+
+Wraps GET /api/v2/employeeperformance/externalmetrics/definitions  
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// Code example
+GamificationAPI.getEmployeeperformanceExternalmetricsDefinitions(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getEmployeeperformanceExternalmetricsDefinitions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalMetricDefinitionListing**](ExternalMetricDefinitionListing.html)
 
 <a name="getGamificationLeaderboard"></a>
 
@@ -2216,6 +2379,164 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**GetTemplatesResponse**](GetTemplatesResponse.html)
+
+<a name="patchEmployeeperformanceExternalmetricsDefinition"></a>
+
+# **patchEmployeeperformanceExternalmetricsDefinition**
+
+
+
+> [ExternalMetricDefinition](ExternalMetricDefinition.html) patchEmployeeperformanceExternalmetricsDefinition(metricId, body)
+
+Update External Metric Definition
+
+
+
+Wraps PATCH /api/v2/employeeperformance/externalmetrics/definitions/{metricId}  
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let metricId: String = "" // Specifies the metric definition ID
+let body: ExternalMetricDefinitionUpdateRequest = new ExternalMetricDefinitionUpdateRequest(...) // The External Metric Definition parameters to be updated
+
+// Code example
+GamificationAPI.patchEmployeeperformanceExternalmetricsDefinition(metricId: metricId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.patchEmployeeperformanceExternalmetricsDefinition was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **metricId** | **String**| Specifies the metric definition ID | |
+| **body** | [**ExternalMetricDefinitionUpdateRequest**](ExternalMetricDefinitionUpdateRequest.html)| The External Metric Definition parameters to be updated | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalMetricDefinition**](ExternalMetricDefinition.html)
+
+<a name="postEmployeeperformanceExternalmetricsData"></a>
+
+# **postEmployeeperformanceExternalmetricsData**
+
+
+
+> [ExternalMetricDataWriteResponse](ExternalMetricDataWriteResponse.html) postEmployeeperformanceExternalmetricsData(body)
+
+Write External Metric Data
+
+
+
+Wraps POST /api/v2/employeeperformance/externalmetrics/data  
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricData:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ExternalMetricDataWriteRequest = new ExternalMetricDataWriteRequest(...) // The External Metric Data to be added
+
+// Code example
+GamificationAPI.postEmployeeperformanceExternalmetricsData(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postEmployeeperformanceExternalmetricsData was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ExternalMetricDataWriteRequest**](ExternalMetricDataWriteRequest.html)| The External Metric Data to be added | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalMetricDataWriteResponse**](ExternalMetricDataWriteResponse.html)
+
+<a name="postEmployeeperformanceExternalmetricsDefinitions"></a>
+
+# **postEmployeeperformanceExternalmetricsDefinitions**
+
+
+
+> [ExternalMetricDefinition](ExternalMetricDefinition.html) postEmployeeperformanceExternalmetricsDefinitions(body)
+
+Create External Metric Definition
+
+
+
+Wraps POST /api/v2/employeeperformance/externalmetrics/definitions  
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ExternalMetricDefinitionCreateRequest = new ExternalMetricDefinitionCreateRequest(...) // The External Metric Definition to be created
+
+// Code example
+GamificationAPI.postEmployeeperformanceExternalmetricsDefinitions(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postEmployeeperformanceExternalmetricsDefinitions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ExternalMetricDefinitionCreateRequest**](ExternalMetricDefinitionCreateRequest.html)| The External Metric Definition to be created | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalMetricDefinition**](ExternalMetricDefinition.html)
 
 <a name="postGamificationMetrics"></a>
 

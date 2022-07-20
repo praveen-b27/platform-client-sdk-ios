@@ -47,6 +47,8 @@ public class UserQueue: Codable {
     public var acwSettings: AcwSettings?
     /** The skill evaluation method to use when routing conversations. */
     public var skillEvaluationMethod: SkillEvaluationMethod?
+    /** The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes. */
+    public var memberGroups: [MemberGroup]?
     /** The in-queue flow to use for call conversations waiting in queue. */
     public var queueFlow: DomainEntityRef?
     /** The in-queue flow to use for email conversations waiting in queue. */
@@ -61,6 +63,8 @@ public class UserQueue: Codable {
     public var enableTranscription: Bool?
     /** Indicates whether manual assignment is enabled for this queue. */
     public var enableManualAssignment: Bool?
+    /** The Agent Owned Routing settings for the queue */
+    public var agentOwnedRouting: AgentOwnedRouting?
     /** The name to use for caller identification for outbound calls from this queue. */
     public var callingPartyName: String?
     /** The phone number to use for caller identification for outbound calls from this queue. */
@@ -70,13 +74,13 @@ public class UserQueue: Codable {
     /** The messaging addresses for the queue. */
     public var outboundMessagingAddresses: QueueMessagingAddresses?
     public var outboundEmailAddress: QueueEmailAddress?
-    /** The ID of the external Queue */
+    /** The ID of an associated external queue. */
     public var peerId: String?
     public var joined: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, joined: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, joined: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -93,6 +97,7 @@ public class UserQueue: Codable {
         self.bullseye = bullseye
         self.acwSettings = acwSettings
         self.skillEvaluationMethod = skillEvaluationMethod
+        self.memberGroups = memberGroups
         self.queueFlow = queueFlow
         self.emailInQueueFlow = emailInQueueFlow
         self.messageInQueueFlow = messageInQueueFlow
@@ -100,6 +105,7 @@ public class UserQueue: Codable {
         self.onHoldPrompt = onHoldPrompt
         self.enableTranscription = enableTranscription
         self.enableManualAssignment = enableManualAssignment
+        self.agentOwnedRouting = agentOwnedRouting
         self.callingPartyName = callingPartyName
         self.callingPartyNumber = callingPartyNumber
         self.defaultScripts = defaultScripts
@@ -127,6 +133,7 @@ public class UserQueue: Codable {
         case bullseye
         case acwSettings
         case skillEvaluationMethod
+        case memberGroups
         case queueFlow
         case emailInQueueFlow
         case messageInQueueFlow
@@ -134,6 +141,7 @@ public class UserQueue: Codable {
         case onHoldPrompt
         case enableTranscription
         case enableManualAssignment
+        case agentOwnedRouting
         case callingPartyName
         case callingPartyNumber
         case defaultScripts

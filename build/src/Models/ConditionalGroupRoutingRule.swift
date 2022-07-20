@@ -20,7 +20,7 @@ public class ConditionalGroupRoutingRule: Codable {
         case lessThan = "LessThan"
         case lessThanOrEqualTo = "LessThanOrEqualTo"
     }
-    /** The queue being evaluated for this rule.  For rule 1, this is always the current queue. */
+    /** The queue being evaluated for this rule.  For rule 1, this is always the current queue, so should not be specified. */
     public var queue: DomainEntityRef?
     /** The queue metric being evaluated */
     public var metric: Metric?
@@ -30,7 +30,7 @@ public class ConditionalGroupRoutingRule: Codable {
     public var conditionValue: Double?
     /** The group(s) to activate if the rule evaluates as true */
     public var groups: [MemberGroup]?
-    /** The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule */
+    /** The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule.  For the final rule, this is ignored, so need not be specified. */
     public var waitSeconds: Int?
 
     public init(queue: DomainEntityRef?, metric: Metric?, _operator: Operator?, conditionValue: Double?, groups: [MemberGroup]?, waitSeconds: Int?) {

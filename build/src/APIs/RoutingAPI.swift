@@ -1244,7 +1244,7 @@ open class RoutingAPI {
     "name" : "name",
     "email" : "email"
   } ],
-  "priority" : 3,
+  "priority" : 2,
   "fromEmail" : "fromEmail",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -1339,7 +1339,7 @@ open class RoutingAPI {
       "name" : "name",
       "email" : "email"
     } ],
-    "priority" : 3,
+    "priority" : 2,
     "fromEmail" : "fromEmail",
     "skills" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -1368,7 +1368,7 @@ open class RoutingAPI {
       "name" : "name",
       "email" : "email"
     } ],
-    "priority" : 3,
+    "priority" : 2,
     "fromEmail" : "fromEmail",
     "skills" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -1387,8 +1387,8 @@ open class RoutingAPI {
     "spamFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1474,8 +1474,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1612,8 +1612,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1780,8 +1780,8 @@ open class RoutingAPI {
     "flow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2175,6 +2175,21 @@ open class RoutingAPI {
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
+  "memberGroups" : [ {
+    "division" : "{}",
+    "memberCount" : 3,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TEAM"
+  }, {
+    "division" : "{}",
+    "memberCount" : 3,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TEAM"
+  } ],
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
@@ -2197,7 +2212,7 @@ open class RoutingAPI {
         "name" : "name",
         "email" : "email"
       } ],
-      "priority" : 3,
+      "priority" : 2,
       "fromEmail" : "fromEmail",
       "skills" : [ {
         "selfUri" : "https://openapi-generator.tech",
@@ -2224,7 +2239,8 @@ open class RoutingAPI {
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
-  "name" : "name"
+  "name" : "name",
+  "agentOwnedRouting" : "{}"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -3944,8 +3960,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4051,8 +4067,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4222,6 +4238,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -4244,7 +4275,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -4271,7 +4302,8 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
     "mediaSettings" : {
@@ -4356,6 +4388,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -4378,7 +4425,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -4405,11 +4452,12 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4592,6 +4640,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -4614,7 +4677,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -4641,7 +4704,8 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
     "mediaSettings" : {
@@ -4726,6 +4790,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -4748,7 +4827,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -4775,11 +4854,12 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4945,6 +5025,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -4967,7 +5062,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -4994,7 +5089,8 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
     "mediaSettings" : {
@@ -5079,6 +5175,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5101,7 +5212,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -5128,11 +5239,12 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5291,6 +5403,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5314,7 +5441,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -5341,7 +5468,8 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
     "mediaSettings" : {
@@ -5425,6 +5553,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -5448,7 +5591,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -5475,11 +5618,12 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5770,8 +5914,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5923,8 +6067,8 @@ open class RoutingAPI {
     "region" : "region"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6271,8 +6415,8 @@ open class RoutingAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6560,8 +6704,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6720,6 +6864,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -6743,7 +6902,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -6770,7 +6929,8 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
     "mediaSettings" : {
@@ -6854,6 +7014,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -6877,7 +7052,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -6904,11 +7079,12 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7006,8 +7182,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7103,8 +7279,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8817,8 +8993,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9003,6 +9179,21 @@ open class RoutingAPI {
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
+  "memberGroups" : [ {
+    "division" : "{}",
+    "memberCount" : 3,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TEAM"
+  }, {
+    "division" : "{}",
+    "memberCount" : 3,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TEAM"
+  } ],
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
@@ -9026,7 +9217,7 @@ open class RoutingAPI {
         "name" : "name",
         "email" : "email"
       } ],
-      "priority" : 3,
+      "priority" : 2,
       "fromEmail" : "fromEmail",
       "skills" : [ {
         "selfUri" : "https://openapi-generator.tech",
@@ -9053,7 +9244,8 @@ open class RoutingAPI {
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
-  "name" : "name"
+  "name" : "name",
+  "agentOwnedRouting" : "{}"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -9202,6 +9394,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -9225,7 +9432,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -9252,7 +9459,8 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
     "mediaSettings" : {
@@ -9336,6 +9544,21 @@ open class RoutingAPI {
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
+    "memberGroups" : [ {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    }, {
+      "division" : "{}",
+      "memberCount" : 3,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "type" : "TEAM"
+    } ],
     "joinedMemberCount" : 1,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
@@ -9359,7 +9582,7 @@ open class RoutingAPI {
           "name" : "name",
           "email" : "email"
         } ],
-        "priority" : 3,
+        "priority" : 2,
         "fromEmail" : "fromEmail",
         "skills" : [ {
           "selfUri" : "https://openapi-generator.tech",
@@ -9386,11 +9609,12 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
-    "name" : "name"
+    "name" : "name",
+    "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9541,8 +9765,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9621,8 +9845,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9716,10 +9940,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9742,10 +9966,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9786,10 +10010,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9812,10 +10036,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9861,10 +10085,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9887,10 +10111,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9931,10 +10155,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -9957,10 +10181,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10175,7 +10399,7 @@ open class RoutingAPI {
     "name" : "name",
     "email" : "email"
   } ],
-  "priority" : 3,
+  "priority" : 2,
   "fromEmail" : "fromEmail",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -10748,6 +10972,21 @@ open class RoutingAPI {
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
+  "memberGroups" : [ {
+    "division" : "{}",
+    "memberCount" : 3,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TEAM"
+  }, {
+    "division" : "{}",
+    "memberCount" : 3,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TEAM"
+  } ],
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
@@ -10770,7 +11009,7 @@ open class RoutingAPI {
         "name" : "name",
         "email" : "email"
       } ],
-      "priority" : 3,
+      "priority" : 2,
       "fromEmail" : "fromEmail",
       "skills" : [ {
         "selfUri" : "https://openapi-generator.tech",
@@ -10797,7 +11036,8 @@ open class RoutingAPI {
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
-  "name" : "name"
+  "name" : "name",
+  "agentOwnedRouting" : "{}"
 }, statusCode=200}]
      
      - parameter body: (body) Queue 
@@ -11234,7 +11474,7 @@ open class RoutingAPI {
     "name" : "name",
     "email" : "email"
   } ],
-  "priority" : 3,
+  "priority" : 2,
   "fromEmail" : "fromEmail",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -11459,6 +11699,21 @@ open class RoutingAPI {
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
+  "memberGroups" : [ {
+    "division" : "{}",
+    "memberCount" : 3,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TEAM"
+  }, {
+    "division" : "{}",
+    "memberCount" : 3,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TEAM"
+  } ],
   "joinedMemberCount" : 1,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
@@ -11481,7 +11736,7 @@ open class RoutingAPI {
         "name" : "name",
         "email" : "email"
       } ],
-      "priority" : 3,
+      "priority" : 2,
       "fromEmail" : "fromEmail",
       "skills" : [ {
         "selfUri" : "https://openapi-generator.tech",
@@ -11508,7 +11763,8 @@ open class RoutingAPI {
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
-  "name" : "name"
+  "name" : "name",
+  "agentOwnedRouting" : "{}"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -12022,8 +12278,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

@@ -2356,8 +2356,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "selfUri" : "https://openapi-generator.tech",
               "lastUri" : "https://openapi-generator.tech",
+              "selfUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -2925,6 +2925,21 @@ open class UserRecordingsAPI {
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
+          "memberGroups" : [ {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          }, {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          } ],
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -2947,7 +2962,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 3,
+              "priority" : 2,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -2974,7 +2989,8 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
-          "name" : "name"
+          "name" : "name",
+          "agentOwnedRouting" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -4818,8 +4834,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "selfUri" : "https://openapi-generator.tech",
               "lastUri" : "https://openapi-generator.tech",
+              "selfUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -5387,6 +5403,21 @@ open class UserRecordingsAPI {
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
+          "memberGroups" : [ {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          }, {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          } ],
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -5409,7 +5440,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 3,
+              "priority" : 2,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -5436,7 +5467,8 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
-          "name" : "name"
+          "name" : "name",
+          "agentOwnedRouting" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -8205,8 +8237,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "selfUri" : "https://openapi-generator.tech",
               "lastUri" : "https://openapi-generator.tech",
+              "selfUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -8774,6 +8806,21 @@ open class UserRecordingsAPI {
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
+          "memberGroups" : [ {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          }, {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          } ],
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -8796,7 +8843,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 3,
+              "priority" : 2,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -8823,7 +8870,8 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
-          "name" : "name"
+          "name" : "name",
+          "agentOwnedRouting" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -10667,8 +10715,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "selfUri" : "https://openapi-generator.tech",
               "lastUri" : "https://openapi-generator.tech",
+              "selfUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -11236,6 +11284,21 @@ open class UserRecordingsAPI {
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
+          "memberGroups" : [ {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          }, {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          } ],
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -11258,7 +11321,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 3,
+              "priority" : 2,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -11285,7 +11348,8 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
-          "name" : "name"
+          "name" : "name",
+          "agentOwnedRouting" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -14269,8 +14333,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -14838,6 +14902,21 @@ open class UserRecordingsAPI {
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
+            "memberGroups" : [ {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            }, {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            } ],
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -14860,7 +14939,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 3,
+                "priority" : 2,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -14887,7 +14966,8 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
-            "name" : "name"
+            "name" : "name",
+            "agentOwnedRouting" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -16731,8 +16811,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -17300,6 +17380,21 @@ open class UserRecordingsAPI {
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
+            "memberGroups" : [ {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            }, {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            } ],
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -17322,7 +17417,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 3,
+                "priority" : 2,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -17349,7 +17444,8 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
-            "name" : "name"
+            "name" : "name",
+            "agentOwnedRouting" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -20118,8 +20214,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -20687,6 +20783,21 @@ open class UserRecordingsAPI {
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
+            "memberGroups" : [ {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            }, {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            } ],
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -20709,7 +20820,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 3,
+                "priority" : 2,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -20736,7 +20847,8 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
-            "name" : "name"
+            "name" : "name",
+            "agentOwnedRouting" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -22580,8 +22692,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -23149,6 +23261,21 @@ open class UserRecordingsAPI {
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
+            "memberGroups" : [ {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            }, {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            } ],
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -23171,7 +23298,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 3,
+                "priority" : 2,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -23198,7 +23325,8 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
-            "name" : "name"
+            "name" : "name",
+            "agentOwnedRouting" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -26035,8 +26163,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -26604,6 +26732,21 @@ open class UserRecordingsAPI {
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
+            "memberGroups" : [ {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            }, {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            } ],
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -26626,7 +26769,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 3,
+                "priority" : 2,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -26653,7 +26796,8 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
-            "name" : "name"
+            "name" : "name",
+            "agentOwnedRouting" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -28497,8 +28641,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -29066,6 +29210,21 @@ open class UserRecordingsAPI {
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
+            "memberGroups" : [ {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            }, {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            } ],
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -29088,7 +29247,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 3,
+                "priority" : 2,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -29115,7 +29274,8 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
-            "name" : "name"
+            "name" : "name",
+            "agentOwnedRouting" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -31884,8 +32044,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -32453,6 +32613,21 @@ open class UserRecordingsAPI {
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
+            "memberGroups" : [ {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            }, {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            } ],
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -32475,7 +32650,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 3,
+                "priority" : 2,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -32502,7 +32677,8 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
-            "name" : "name"
+            "name" : "name",
+            "agentOwnedRouting" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -34346,8 +34522,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
                 "lastUri" : "https://openapi-generator.tech",
+                "selfUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -34915,6 +35091,21 @@ open class UserRecordingsAPI {
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
+            "memberGroups" : [ {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            }, {
+              "division" : "{}",
+              "memberCount" : 3,
+              "selfUri" : "https://openapi-generator.tech",
+              "name" : "name",
+              "id" : "id",
+              "type" : "TEAM"
+            } ],
             "joinedMemberCount" : 1,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
@@ -34937,7 +35128,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 3,
+                "priority" : 2,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -34964,7 +35155,8 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
-            "name" : "name"
+            "name" : "name",
+            "agentOwnedRouting" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -35534,8 +35726,8 @@ open class UserRecordingsAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -37917,8 +38109,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "selfUri" : "https://openapi-generator.tech",
               "lastUri" : "https://openapi-generator.tech",
+              "selfUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -38486,6 +38678,21 @@ open class UserRecordingsAPI {
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
+          "memberGroups" : [ {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          }, {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          } ],
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -38508,7 +38715,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 3,
+              "priority" : 2,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -38535,7 +38742,8 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
-          "name" : "name"
+          "name" : "name",
+          "agentOwnedRouting" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -40379,8 +40587,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "selfUri" : "https://openapi-generator.tech",
               "lastUri" : "https://openapi-generator.tech",
+              "selfUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -40948,6 +41156,21 @@ open class UserRecordingsAPI {
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
+          "memberGroups" : [ {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          }, {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          } ],
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -40970,7 +41193,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 3,
+              "priority" : 2,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -40997,7 +41220,8 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
-          "name" : "name"
+          "name" : "name",
+          "agentOwnedRouting" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -43766,8 +43990,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "selfUri" : "https://openapi-generator.tech",
               "lastUri" : "https://openapi-generator.tech",
+              "selfUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -44335,6 +44559,21 @@ open class UserRecordingsAPI {
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
+          "memberGroups" : [ {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          }, {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          } ],
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -44357,7 +44596,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 3,
+              "priority" : 2,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -44384,7 +44623,8 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
-          "name" : "name"
+          "name" : "name",
+          "agentOwnedRouting" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -46228,8 +46468,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "selfUri" : "https://openapi-generator.tech",
               "lastUri" : "https://openapi-generator.tech",
+              "selfUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -46797,6 +47037,21 @@ open class UserRecordingsAPI {
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
+          "memberGroups" : [ {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          }, {
+            "division" : "{}",
+            "memberCount" : 3,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "id" : "id",
+            "type" : "TEAM"
+          } ],
           "joinedMemberCount" : 1,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
@@ -46819,7 +47074,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 3,
+              "priority" : 2,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -46846,7 +47101,8 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
-          "name" : "name"
+          "name" : "name",
+          "agentOwnedRouting" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",

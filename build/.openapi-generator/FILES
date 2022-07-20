@@ -1216,6 +1216,14 @@ docs/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.md
 docs/ExternalContactsUnresolvedContactChangedTopicTwitterId.md
 docs/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.md
 docs/ExternalDataSource.md
+docs/ExternalMetricDataItem.md
+docs/ExternalMetricDataUnprocessedItem.md
+docs/ExternalMetricDataWriteRequest.md
+docs/ExternalMetricDataWriteResponse.md
+docs/ExternalMetricDefinition.md
+docs/ExternalMetricDefinitionCreateRequest.md
+docs/ExternalMetricDefinitionListing.md
+docs/ExternalMetricDefinitionUpdateRequest.md
 docs/ExternalOrganization.md
 docs/ExternalOrganizationListing.md
 docs/ExternalOrganizationTrustorLink.md
@@ -3284,6 +3292,7 @@ docs/deleteConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/deleteConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/deleteConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/deleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
+docs/deleteEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/deleteExternalcontactsContact-example.txt
 docs/deleteExternalcontactsContactNote-example.txt
 docs/deleteExternalcontactsContactsSchema-example.txt
@@ -3646,6 +3655,8 @@ docs/getDataextensionsLimits-example.txt
 docs/getDate-example.txt
 docs/getDocumentationGknSearch-example.txt
 docs/getDocumentationSearch-example.txt
+docs/getEmployeeperformanceExternalmetricsDefinition-example.txt
+docs/getEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/getExternalcontactsContact-example.txt
 docs/getExternalcontactsContactNote-example.txt
 docs/getExternalcontactsContactNotes-example.txt
@@ -4373,6 +4384,7 @@ docs/patchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/patchConversationsMessagingSupportedcontentSupportedContentId-example.txt
+docs/patchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/patchGeolocationsSettings-example.txt
 docs/patchIntegration-example.txt
 docs/patchIntegrationsAction-example.txt
@@ -4574,6 +4586,8 @@ docs/postConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/postConversationsMessagingSupportedcontent-example.txt
 docs/postDocumentationGknSearch-example.txt
 docs/postDocumentationSearch-example.txt
+docs/postEmployeeperformanceExternalmetricsData-example.txt
+docs/postEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/postExternalcontactsBulkContacts-example.txt
 docs/postExternalcontactsBulkContactsAdd-example.txt
 docs/postExternalcontactsBulkContactsRemove-example.txt
@@ -6332,6 +6346,14 @@ src/Models/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicTwitterId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.swift
 src/Models/ExternalDataSource.swift
+src/Models/ExternalMetricDataItem.swift
+src/Models/ExternalMetricDataUnprocessedItem.swift
+src/Models/ExternalMetricDataWriteRequest.swift
+src/Models/ExternalMetricDataWriteResponse.swift
+src/Models/ExternalMetricDefinition.swift
+src/Models/ExternalMetricDefinitionCreateRequest.swift
+src/Models/ExternalMetricDefinitionListing.swift
+src/Models/ExternalMetricDefinitionUpdateRequest.swift
 src/Models/ExternalOrganization.swift
 src/Models/ExternalOrganizationListing.swift
 src/Models/ExternalOrganizationTrustorLink.swift

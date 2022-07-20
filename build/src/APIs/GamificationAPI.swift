@@ -11,6 +11,205 @@ import Foundation
 
 open class GamificationAPI {
     
+    /**
+     Delete an External Metric Definition
+     
+     - parameter metricId: (path) Specifies the External Metric Definition ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteEmployeeperformanceExternalmetricsDefinition(metricId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteEmployeeperformanceExternalmetricsDefinitionWithRequestBuilder(metricId: metricId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an External Metric Definition
+     - DELETE /api/v2/employeeperformance/externalmetrics/definitions/{metricId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter metricId: (path) Specifies the External Metric Definition ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteEmployeeperformanceExternalmetricsDefinitionWithRequestBuilder(metricId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}"
+        let metricIdPreEscape = "\(metricId)"
+        let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
+     Get an External Metric Definition
+     
+     - parameter metricId: (path) Specifies the External Metric Definition ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getEmployeeperformanceExternalmetricsDefinition(metricId: String, completion: @escaping ((_ data: ExternalMetricDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = getEmployeeperformanceExternalmetricsDefinitionWithRequestBuilder(metricId: metricId)
+        requestBuilder.execute { (response: Response<ExternalMetricDefinition>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an External Metric Definition
+     - GET /api/v2/employeeperformance/externalmetrics/definitions/{metricId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "unit" : "Seconds",
+  "unitDefinition" : "unitDefinition",
+  "defaultObjectiveType" : "HigherIsBetter",
+  "precision" : 0,
+  "dateLastRefreshed" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "inUse" : true,
+  "id" : "id",
+  "retentionMonths" : 6,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter metricId: (path) Specifies the External Metric Definition ID 
+
+     - returns: RequestBuilder<ExternalMetricDefinition> 
+     */
+    open class func getEmployeeperformanceExternalmetricsDefinitionWithRequestBuilder(metricId: String) -> RequestBuilder<ExternalMetricDefinition> {        
+        var path = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}"
+        let metricIdPreEscape = "\(metricId)"
+        let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalMetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getEmployeeperformanceExternalmetricsDefinitions(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: ExternalMetricDefinitionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getEmployeeperformanceExternalmetricsDefinitionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<ExternalMetricDefinitionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+     - GET /api/v2/employeeperformance/externalmetrics/definitions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "unit" : "Seconds",
+    "unitDefinition" : "unitDefinition",
+    "defaultObjectiveType" : "HigherIsBetter",
+    "precision" : 0,
+    "dateLastRefreshed" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "inUse" : true,
+    "id" : "id",
+    "retentionMonths" : 6,
+    "enabled" : true
+  }, {
+    "unit" : "Seconds",
+    "unitDefinition" : "unitDefinition",
+    "defaultObjectiveType" : "HigherIsBetter",
+    "precision" : 0,
+    "dateLastRefreshed" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "inUse" : true,
+    "id" : "id",
+    "retentionMonths" : 6,
+    "enabled" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+
+     - returns: RequestBuilder<ExternalMetricDefinitionListing> 
+     */
+    open class func getEmployeeperformanceExternalmetricsDefinitionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<ExternalMetricDefinitionListing> {        
+        let path = "/api/v2/employeeperformance/externalmetrics/definitions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<ExternalMetricDefinitionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -3213,6 +3412,218 @@ open class GamificationAPI {
         let requestBuilder: RequestBuilder<GetTemplatesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update External Metric Definition
+     
+     - parameter metricId: (path) Specifies the metric definition ID 
+     - parameter body: (body) The External Metric Definition parameters to be updated 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchEmployeeperformanceExternalmetricsDefinition(metricId: String, body: ExternalMetricDefinitionUpdateRequest, completion: @escaping ((_ data: ExternalMetricDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchEmployeeperformanceExternalmetricsDefinitionWithRequestBuilder(metricId: metricId, body: body)
+        requestBuilder.execute { (response: Response<ExternalMetricDefinition>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update External Metric Definition
+     - PATCH /api/v2/employeeperformance/externalmetrics/definitions/{metricId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "unit" : "Seconds",
+  "unitDefinition" : "unitDefinition",
+  "defaultObjectiveType" : "HigherIsBetter",
+  "precision" : 0,
+  "dateLastRefreshed" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "inUse" : true,
+  "id" : "id",
+  "retentionMonths" : 6,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter metricId: (path) Specifies the metric definition ID 
+     - parameter body: (body) The External Metric Definition parameters to be updated 
+
+     - returns: RequestBuilder<ExternalMetricDefinition> 
+     */
+    open class func patchEmployeeperformanceExternalmetricsDefinitionWithRequestBuilder(metricId: String, body: ExternalMetricDefinitionUpdateRequest) -> RequestBuilder<ExternalMetricDefinition> {        
+        var path = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}"
+        let metricIdPreEscape = "\(metricId)"
+        let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{metricId}", with: metricIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalMetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    /**
+     Write External Metric Data
+     
+     - parameter body: (body) The External Metric Data to be added (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postEmployeeperformanceExternalmetricsData(body: ExternalMetricDataWriteRequest? = nil, completion: @escaping ((_ data: ExternalMetricDataWriteResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postEmployeeperformanceExternalmetricsDataWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ExternalMetricDataWriteResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Write External Metric Data
+     - POST /api/v2/employeeperformance/externalmetrics/data
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "processedEntities" : [ {
+    "metricId" : "metricId",
+    "count" : 6,
+    "userEmail" : "userEmail",
+    "dateOccurred" : "2000-01-23",
+    "userId" : "userId",
+    "value" : 0.8008281904610115
+  }, {
+    "metricId" : "metricId",
+    "count" : 6,
+    "userEmail" : "userEmail",
+    "dateOccurred" : "2000-01-23",
+    "userId" : "userId",
+    "value" : 0.8008281904610115
+  } ],
+  "unprocessedEntities" : [ {
+    "code" : "code",
+    "metricId" : "metricId",
+    "count" : 5,
+    "userEmail" : "userEmail",
+    "dateOccurred" : "2000-01-23",
+    "message" : "message",
+    "userId" : "userId",
+    "value" : 1.4658129805029452
+  }, {
+    "code" : "code",
+    "metricId" : "metricId",
+    "count" : 5,
+    "userEmail" : "userEmail",
+    "dateOccurred" : "2000-01-23",
+    "message" : "message",
+    "userId" : "userId",
+    "value" : 1.4658129805029452
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) The External Metric Data to be added (optional)
+
+     - returns: RequestBuilder<ExternalMetricDataWriteResponse> 
+     */
+    open class func postEmployeeperformanceExternalmetricsDataWithRequestBuilder(body: ExternalMetricDataWriteRequest? = nil) -> RequestBuilder<ExternalMetricDataWriteResponse> {        
+        let path = "/api/v2/employeeperformance/externalmetrics/data"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalMetricDataWriteResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Create External Metric Definition
+     
+     - parameter body: (body) The External Metric Definition to be created (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postEmployeeperformanceExternalmetricsDefinitions(body: ExternalMetricDefinitionCreateRequest? = nil, completion: @escaping ((_ data: ExternalMetricDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = postEmployeeperformanceExternalmetricsDefinitionsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ExternalMetricDefinition>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create External Metric Definition
+     - POST /api/v2/employeeperformance/externalmetrics/definitions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "unit" : "Seconds",
+  "unitDefinition" : "unitDefinition",
+  "defaultObjectiveType" : "HigherIsBetter",
+  "precision" : 0,
+  "dateLastRefreshed" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "inUse" : true,
+  "id" : "id",
+  "retentionMonths" : 6,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) The External Metric Definition to be created (optional)
+
+     - returns: RequestBuilder<ExternalMetricDefinition> 
+     */
+    open class func postEmployeeperformanceExternalmetricsDefinitionsWithRequestBuilder(body: ExternalMetricDefinitionCreateRequest? = nil) -> RequestBuilder<ExternalMetricDefinition> {        
+        let path = "/api/v2/employeeperformance/externalmetrics/definitions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalMetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
     

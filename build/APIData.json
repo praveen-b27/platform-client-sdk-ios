@@ -9936,6 +9936,52 @@
     "return": "FaxDocument",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet body: FaxDocument = new FaxDocument(...) // Document\n\n// Update a fax document.\nPutFaxDocumentRequest.putFaxDocument(documentId: documentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutFaxDocumentRequest.putFaxDocument was successful\")\n        dump(response)\n    }\n}"
   },
+  "deleteemployeeperformanceexternalmetricsdefinition": {
+    "operationId": "deleteemployeeperformanceexternalmetricsdefinition",
+    "functionName": "deleteEmployeeperformanceExternalmetricsDefinition",
+    "signature": "deleteEmployeeperformanceExternalmetricsDefinition(metricId)",
+    "parameters": [
+      {
+        "name": "metricId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet metricId: String = \"\" // Specifies the External Metric Definition ID\n\n// Delete an External Metric Definition\nDeleteEmployeeperformanceExternalmetricsDefinitionRequest.deleteEmployeeperformanceExternalmetricsDefinition(metricId: metricId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteEmployeeperformanceExternalmetricsDefinitionRequest.deleteEmployeeperformanceExternalmetricsDefinition was successful\")\n    }\n}"
+  },
+  "getemployeeperformanceexternalmetricsdefinition": {
+    "operationId": "getemployeeperformanceexternalmetricsdefinition",
+    "functionName": "getEmployeeperformanceExternalmetricsDefinition",
+    "signature": "getEmployeeperformanceExternalmetricsDefinition(metricId)",
+    "parameters": [
+      {
+        "name": "metricId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ExternalMetricDefinition",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet metricId: String = \"\" // Specifies the External Metric Definition ID\n\n// Get an External Metric Definition\nGetEmployeeperformanceExternalmetricsDefinitionRequest.getEmployeeperformanceExternalmetricsDefinition(metricId: metricId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetEmployeeperformanceExternalmetricsDefinitionRequest.getEmployeeperformanceExternalmetricsDefinition was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getemployeeperformanceexternalmetricsdefinitions": {
+    "operationId": "getemployeeperformanceexternalmetricsdefinitions",
+    "functionName": "getEmployeeperformanceExternalmetricsDefinitions",
+    "signature": "getEmployeeperformanceExternalmetricsDefinitions(pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalMetricDefinitionListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Get a list of External Metric Definitions of an organization, sorted by name in ascending order\nGetEmployeeperformanceExternalmetricsDefinitionsRequest.getEmployeeperformanceExternalmetricsDefinitions(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetEmployeeperformanceExternalmetricsDefinitionsRequest.getEmployeeperformanceExternalmetricsDefinitions was successful\")\n        dump(response)\n    }\n}"
+  },
   "getgamificationleaderboard": {
     "operationId": "getgamificationleaderboard",
     "functionName": "getGamificationLeaderboard",
@@ -10764,6 +10810,53 @@
     "signature": "getGamificationTemplates()",
     "return": "GetTemplatesResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// All objective templates\nGetGamificationTemplatesRequest.getGamificationTemplates() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationTemplatesRequest.getGamificationTemplates was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchemployeeperformanceexternalmetricsdefinition": {
+    "operationId": "patchemployeeperformanceexternalmetricsdefinition",
+    "functionName": "patchEmployeeperformanceExternalmetricsDefinition",
+    "signature": "patchEmployeeperformanceExternalmetricsDefinition(metricId, body)",
+    "parameters": [
+      {
+        "name": "metricId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExternalMetricDefinitionUpdateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ExternalMetricDefinition",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet metricId: String = \"\" // Specifies the metric definition ID\nlet body: ExternalMetricDefinitionUpdateRequest = new ExternalMetricDefinitionUpdateRequest(...) // The External Metric Definition parameters to be updated\n\n// Update External Metric Definition\nPatchEmployeeperformanceExternalmetricsDefinitionRequest.patchEmployeeperformanceExternalmetricsDefinition(metricId: metricId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchEmployeeperformanceExternalmetricsDefinitionRequest.patchEmployeeperformanceExternalmetricsDefinition was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postemployeeperformanceexternalmetricsdata": {
+    "operationId": "postemployeeperformanceexternalmetricsdata",
+    "functionName": "postEmployeeperformanceExternalmetricsData",
+    "signature": "postEmployeeperformanceExternalmetricsData(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ExternalMetricDataWriteRequest",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalMetricDataWriteResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExternalMetricDataWriteRequest = new ExternalMetricDataWriteRequest(...) // The External Metric Data to be added\n\n// Write External Metric Data\nPostEmployeeperformanceExternalmetricsDataRequest.postEmployeeperformanceExternalmetricsData(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostEmployeeperformanceExternalmetricsDataRequest.postEmployeeperformanceExternalmetricsData was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postemployeeperformanceexternalmetricsdefinitions": {
+    "operationId": "postemployeeperformanceexternalmetricsdefinitions",
+    "functionName": "postEmployeeperformanceExternalmetricsDefinitions",
+    "signature": "postEmployeeperformanceExternalmetricsDefinitions(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ExternalMetricDefinitionCreateRequest",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalMetricDefinition",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExternalMetricDefinitionCreateRequest = new ExternalMetricDefinitionCreateRequest(...) // The External Metric Definition to be created\n\n// Create External Metric Definition\nPostEmployeeperformanceExternalmetricsDefinitionsRequest.postEmployeeperformanceExternalmetricsDefinitions(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostEmployeeperformanceExternalmetricsDefinitionsRequest.postEmployeeperformanceExternalmetricsDefinitions was successful\")\n        dump(response)\n    }\n}"
   },
   "postgamificationmetrics": {
     "operationId": "postgamificationmetrics",

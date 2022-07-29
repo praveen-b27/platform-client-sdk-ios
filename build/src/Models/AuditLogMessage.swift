@@ -50,6 +50,7 @@ public class AuditLogMessage: Codable {
         case workitems = "Workitems"
         case scim = "SCIM"
         case numberPurchasing = "NumberPurchasing"
+        case marketplace = "Marketplace"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -188,6 +189,7 @@ public class AuditLogMessage: Codable {
         case edgePreferences = "EdgePreferences"
         case edgeTraceLevel = "EdgeTraceLevel"
         case emergencyGroup = "EmergencyGroup"
+        case enterpriseAgreement = "EnterpriseAgreement"
         case evaluation = "Evaluation"
         case evaluationForm = "EvaluationForm"
         case eventType = "EventType"

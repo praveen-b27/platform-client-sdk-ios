@@ -67,6 +67,7 @@ public class AuditQueryEntity: Codable {
         case edgePreferences = "EdgePreferences"
         case edgeTraceLevel = "EdgeTraceLevel"
         case emergencyGroup = "EmergencyGroup"
+        case enterpriseAgreement = "EnterpriseAgreement"
         case evaluation = "Evaluation"
         case evaluationForm = "EvaluationForm"
         case eventType = "EventType"

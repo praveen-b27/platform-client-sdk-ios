@@ -181,8 +181,8 @@ open class GamificationAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2036,15 +2036,15 @@ open class GamificationAPI {
      - parameter profileId: (path) performanceProfileId 
      - parameter metricId: (path) metricId 
      - parameter filterType: (query) Filter type for the query request. 
-     - parameter filterId: (query) ID for the filter type. For example, division Id 
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter filterId: (query) ID for the filter type. Only required when filterType is Division. (optional)
      - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationScorecardsProfileMetricUsersValuesTrends(profileId: String, metricId: String, filterType: FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends, filterId: String, startWorkday: Date, endWorkday: Date, referenceWorkday: Date? = nil, timeZone: String? = nil, completion: @escaping ((_ data: MetricValueTrendAverage?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationScorecardsProfileMetricUsersValuesTrendsWithRequestBuilder(profileId: profileId, metricId: metricId, filterType: filterType, filterId: filterId, startWorkday: startWorkday, endWorkday: endWorkday, referenceWorkday: referenceWorkday, timeZone: timeZone)
+    open class func getGamificationScorecardsProfileMetricUsersValuesTrends(profileId: String, metricId: String, filterType: FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends, startWorkday: Date, endWorkday: Date, filterId: String? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil, completion: @escaping ((_ data: MetricValueTrendAverage?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationScorecardsProfileMetricUsersValuesTrendsWithRequestBuilder(profileId: profileId, metricId: metricId, filterType: filterType, startWorkday: startWorkday, endWorkday: endWorkday, filterId: filterId, referenceWorkday: referenceWorkday, timeZone: timeZone)
         requestBuilder.execute { (response: Response<MetricValueTrendAverage>?, error) -> Void in
             do {
                 if let e = error {
@@ -2082,15 +2082,15 @@ open class GamificationAPI {
      - parameter profileId: (path) performanceProfileId 
      - parameter metricId: (path) metricId 
      - parameter filterType: (query) Filter type for the query request. 
-     - parameter filterId: (query) ID for the filter type. For example, division Id 
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter filterId: (query) ID for the filter type. Only required when filterType is Division. (optional)
      - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional)
 
      - returns: RequestBuilder<MetricValueTrendAverage> 
      */
-    open class func getGamificationScorecardsProfileMetricUsersValuesTrendsWithRequestBuilder(profileId: String, metricId: String, filterType: FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends, filterId: String, startWorkday: Date, endWorkday: Date, referenceWorkday: Date? = nil, timeZone: String? = nil) -> RequestBuilder<MetricValueTrendAverage> {        
+    open class func getGamificationScorecardsProfileMetricUsersValuesTrendsWithRequestBuilder(profileId: String, metricId: String, filterType: FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends, startWorkday: Date, endWorkday: Date, filterId: String? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil) -> RequestBuilder<MetricValueTrendAverage> {        
         var path = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

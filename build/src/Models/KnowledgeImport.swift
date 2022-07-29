@@ -14,7 +14,6 @@ public class KnowledgeImport: Codable {
     public enum FileType: String, Codable { 
         case csv = "Csv"
         case jsonLines = "JsonLines"
-        case json = "Json"
     }
     public enum Status: String, Codable { 
         case created = "Created"

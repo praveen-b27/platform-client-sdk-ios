@@ -21,6 +21,7 @@ public class ConversationMessageMetadataEvent: Codable {
     public enum SubType: String, Codable { 
         case on = "On"
         case join = "Join"
+        case disconnect = "Disconnect"
         case offering = "Offering"
         case offeringExpired = "OfferingExpired"
         case offeringAccepted = "OfferingAccepted"

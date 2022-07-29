@@ -14,6 +14,7 @@ public class ConversationEventPresence: Codable {
 
     public enum ModelType: String, Codable { 
         case join = "Join"
+        case disconnect = "Disconnect"
     }
     /** Describes the type of Presence event. */
     public var type: ModelType?

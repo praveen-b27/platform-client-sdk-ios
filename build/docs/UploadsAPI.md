@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**postKnowledgeDocumentuploads**](UploadsAPI.html#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**postLanguageunderstandingMinerUploads**](UploadsAPI.html#postLanguageunderstandingMinerUploads) | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
+| [**postUploadsLearningCoverart**](UploadsAPI.html#postUploadsLearningCoverart) | Generates pre-signed URL to upload cover art for learning modules |
 | [**postUploadsPublicassetsImages**](UploadsAPI.html#postUploadsPublicassetsImages) | Creates presigned url for uploading a public asset image |
 | [**postUploadsRecordings**](UploadsAPI.html#postUploadsRecordings) | Creates presigned url for uploading a recording file |
 | [**postUploadsWorkforcemanagementHistoricaldataCsv**](UploadsAPI.html#postUploadsWorkforcemanagementHistoricaldataCsv) | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
@@ -113,6 +114,58 @@ UploadsAPI.postLanguageunderstandingMinerUploads(minerId: minerId, body: body) {
 | ------------- | ------------- | ------------- | ------------- |
 | **minerId** | **String**| Miner ID | |
 | **body** | **JSON**| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse.html)
+
+<a name="postUploadsLearningCoverart"></a>
+
+# **postUploadsLearningCoverart**
+
+
+
+> [UploadUrlResponse](UploadUrlResponse.html) postUploadsLearningCoverart(body)
+
+Generates pre-signed URL to upload cover art for learning modules
+
+
+
+Wraps POST /api/v2/uploads/learning/coverart  
+
+Requires ALL permissions: 
+
+* learning:coverart:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: LearningCoverArtUploadUrlRequest = new LearningCoverArtUploadUrlRequest(...) // query
+
+// Code example
+UploadsAPI.postUploadsLearningCoverart(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UploadsAPI.postUploadsLearningCoverart was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**LearningCoverArtUploadUrlRequest**](LearningCoverArtUploadUrlRequest.html)| query | |
 {: class="table-striped"}
 
 

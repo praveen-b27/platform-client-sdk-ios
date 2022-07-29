@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLearningModuleVersion**](LearningAPI.html#getLearningModuleVersion) | Get specific version of a published module |
 | [**getLearningModules**](LearningAPI.html#getLearningModules) | Get all learning modules of an organization |
 | [**getLearningModulesAssignments**](LearningAPI.html#getLearningModulesAssignments) | Get all learning modules of an organization including assignments for a specific user |
+| [**getLearningModulesCoverartCoverArtId**](LearningAPI.html#getLearningModulesCoverartCoverArtId) | Get a specific Learning Module cover art using ID |
 | [**patchLearningAssignment**](LearningAPI.html#patchLearningAssignment) | Update Learning Assignment |
 | [**postLearningAssessmentsScoring**](LearningAPI.html#postLearningAssessmentsScoring) | Score learning assessment for preview |
 | [**postLearningAssignmentReassign**](LearningAPI.html#postLearningAssignmentReassign) | Reassign Learning Assignment |
@@ -701,6 +702,58 @@ LearningAPI.getLearningModulesAssignments(userIds: userIds, pageSize: pageSize, 
 ### Return type
 
 [**AssignedLearningModuleDomainEntityListing**](AssignedLearningModuleDomainEntityListing.html)
+
+<a name="getLearningModulesCoverartCoverArtId"></a>
+
+# **getLearningModulesCoverartCoverArtId**
+
+
+
+> [LearningModuleCoverArtResponse](LearningModuleCoverArtResponse.html) getLearningModulesCoverartCoverArtId(coverArtId)
+
+Get a specific Learning Module cover art using ID
+
+
+
+Wraps GET /api/v2/learning/modules/coverart/{coverArtId}  
+
+Requires ANY permissions: 
+
+* learning:coverart:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let coverArtId: String = "" // Key identifier for the cover art
+
+// Code example
+LearningAPI.getLearningModulesCoverartCoverArtId(coverArtId: coverArtId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.getLearningModulesCoverartCoverArtId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **coverArtId** | **String**| Key identifier for the cover art | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningModuleCoverArtResponse**](LearningModuleCoverArtResponse.html)
 
 <a name="patchLearningAssignment"></a>
 

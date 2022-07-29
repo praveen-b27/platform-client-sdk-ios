@@ -1484,7 +1484,7 @@ GamificationAPI.getGamificationScorecardsProfileMetricUserValuesTrends(profileId
 
 
 
-> [MetricValueTrendAverage](MetricValueTrendAverage.html) getGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone)
+> [MetricValueTrendAverage](MetricValueTrendAverage.html) getGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, startWorkday, endWorkday, filterId, referenceWorkday, timeZone)
 
 Average performance values trends by metric of a division or a performance profile
 
@@ -1507,14 +1507,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let profileId: String = "" // performanceProfileId
 let metricId: String = "" // metricId
 let filterType: GamificationAPI.FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends = GamificationAPI.FilterType_getGamificationScorecardsProfileMetricUsersValuesTrends.enummember // Filter type for the query request.
-let filterId: String = "" // ID for the filter type. For example, division Id
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let filterId: String = "" // ID for the filter type. Only required when filterType is Division.
 let referenceWorkday: Date = new Date(...) // Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let timeZone: String = "" // Timezone for the workday. Defaults to UTC
 
 // Code example
-GamificationAPI.getGamificationScorecardsProfileMetricUsersValuesTrends(profileId: profileId, metricId: metricId, filterType: filterType, filterId: filterId, startWorkday: startWorkday, endWorkday: endWorkday, referenceWorkday: referenceWorkday, timeZone: timeZone) { (response, error) in
+GamificationAPI.getGamificationScorecardsProfileMetricUsersValuesTrends(profileId: profileId, metricId: metricId, filterType: filterType, startWorkday: startWorkday, endWorkday: endWorkday, filterId: filterId, referenceWorkday: referenceWorkday, timeZone: timeZone) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1532,9 +1532,9 @@ GamificationAPI.getGamificationScorecardsProfileMetricUsersValuesTrends(profileI
 | **profileId** | **String**| performanceProfileId | |
 | **metricId** | **String**| metricId | |
 | **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
-| **filterId** | **String**| ID for the filter type. For example, division Id | |
 | **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **filterId** | **String**| ID for the filter type. Only required when filterType is Division. | [optional] |
 | **referenceWorkday** | **Date**| Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] |
 {: class="table-striped"}

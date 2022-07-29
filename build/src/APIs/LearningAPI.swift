@@ -307,8 +307,8 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -488,8 +488,8 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1005,8 +1005,8 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1251,8 +1251,8 @@ open class LearningAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1285,6 +1285,69 @@ open class LearningAPI {
         ])
 
         let requestBuilder: RequestBuilder<AssignedLearningModuleDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get a specific Learning Module cover art using ID
+     
+     - parameter coverArtId: (path) Key identifier for the cover art 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLearningModulesCoverartCoverArtId(coverArtId: String, completion: @escaping ((_ data: LearningModuleCoverArtResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningModulesCoverartCoverArtIdWithRequestBuilder(coverArtId: coverArtId)
+        requestBuilder.execute { (response: Response<LearningModuleCoverArtResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a specific Learning Module cover art using ID
+     - GET /api/v2/learning/modules/coverart/{coverArtId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "thumbnails" : [ {
+    "resolution" : "resolution",
+    "url" : "url"
+  }, {
+    "resolution" : "resolution",
+    "url" : "url"
+  } ],
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter coverArtId: (path) Key identifier for the cover art 
+
+     - returns: RequestBuilder<LearningModuleCoverArtResponse> 
+     */
+    open class func getLearningModulesCoverartCoverArtIdWithRequestBuilder(coverArtId: String) -> RequestBuilder<LearningModuleCoverArtResponse> {        
+        var path = "/api/v2/learning/modules/coverart/{coverArtId}"
+        let coverArtIdPreEscape = "\(coverArtId)"
+        let coverArtIdPostEscape = coverArtIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{coverArtId}", with: coverArtIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningModuleCoverArtResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2203,8 +2266,8 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",

@@ -16,6 +16,8 @@ UC Integration UI configuration data
 | **icon** | [**UCIcon**](UCIcon.html) | icon | |
 | **badgeIcons** | [**[String:UCIcon]**](UCIcon.html) | badgeIcon | |
 | **i10n** | [**[String:UCI10n]**](UCI10n.html) | i10n | |
+| **polledPresence** | **Bool** | polledPresence | |
+| **userPermissions** | **[String]** | userPermissions | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

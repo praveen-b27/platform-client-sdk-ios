@@ -11,11 +11,11 @@ import Foundation
 
 public class BuRescheduleResult: Codable {
 
-    /** The generation results.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation */
+    /** The generation results.  Note the result will always be delivered via the generationResultsDownloadUrl; however the schema is included for documentation */
     public var generationResults: ScheduleGenerationResult?
     /** The download URL from which to fetch the generation results for the rescheduling run */
     public var generationResultsDownloadUrl: String?
-    /** The headcount forecast.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation */
+    /** The headcount forecast.  Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation */
     public var headcountForecast: BuHeadcountForecast?
     /** The download URL from which to fetch the headcount forecast for the rescheduling run */
     public var headcountForecastDownloadUrl: String?

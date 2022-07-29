@@ -1458,8 +1458,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1697,8 +1697,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1874,8 +1874,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2061,8 +2061,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2400,8 +2400,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2569,8 +2569,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2816,8 +2816,8 @@ open class ArchitectAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3004,8 +3004,8 @@ open class ArchitectAPI {
     "closedHoursFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3702,8 +3702,8 @@ open class ArchitectAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3862,8 +3862,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4196,8 +4196,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4315,8 +4315,8 @@ open class ArchitectAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5022,8 +5022,8 @@ open class ArchitectAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5187,8 +5187,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8920,8 +8920,8 @@ open class ArchitectAPI {
     "commitVersion" : "commitVersion"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12983,8 +12983,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13468,8 +13468,8 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13577,8 +13577,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13761,8 +13761,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13895,8 +13895,8 @@ open class ArchitectAPI {
     "debugVersion" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -14207,8 +14207,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -14309,8 +14309,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15411,8 +15411,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15513,8 +15513,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

@@ -32,10 +32,14 @@ public class UCIntegration: Codable {
     public var badgeIcons: [String:UCIcon]?
     /** i10n */
     public var i10n: [String:UCI10n]?
+    /** polledPresence */
+    public var polledPresence: Bool?
+    /** userPermissions */
+    public var userPermissions: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, ucIntegrationKey: String?, integrationPresenceSource: IntegrationPresenceSource?, pbxPermission: String?, icon: UCIcon?, badgeIcons: [String:UCIcon]?, i10n: [String:UCI10n]?, selfUri: String?) {
+    public init(_id: String?, name: String?, ucIntegrationKey: String?, integrationPresenceSource: IntegrationPresenceSource?, pbxPermission: String?, icon: UCIcon?, badgeIcons: [String:UCIcon]?, i10n: [String:UCI10n]?, polledPresence: Bool?, userPermissions: [String]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.ucIntegrationKey = ucIntegrationKey
@@ -44,6 +48,8 @@ public class UCIntegration: Codable {
         self.icon = icon
         self.badgeIcons = badgeIcons
         self.i10n = i10n
+        self.polledPresence = polledPresence
+        self.userPermissions = userPermissions
         self.selfUri = selfUri
     }
 
@@ -56,6 +62,8 @@ public class UCIntegration: Codable {
         case icon
         case badgeIcons
         case i10n
+        case polledPresence
+        case userPermissions
         case selfUri
     }
 

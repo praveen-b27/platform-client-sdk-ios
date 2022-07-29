@@ -47,6 +47,8 @@ public class ReportingTurnAction: Codable {
         case digitalMenuAction = "DigitalMenuAction"
         case waitForInputAction = "WaitForInputAction"
         case showKnowledgeArticleAction = "ShowKnowledgeArticleAction"
+        case findSystemPromptAction = "FindSystemPromptAction"
+        case findUserPromptAction = "FindUserPromptAction"
         case unknown = "Unknown"
     }
     /** The ID of the action in the bot flow. */

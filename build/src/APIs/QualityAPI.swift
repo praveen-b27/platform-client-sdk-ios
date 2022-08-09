@@ -1493,8 +1493,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -1715,9 +1715,9 @@ open class QualityAPI {
      - parameter expand: (query) evaluatorId, evaluationForm (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteQualityConversationEvaluation(conversationId: String, evaluationId: String, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
+    open class func deleteQualityConversationEvaluation(conversationId: String, evaluationId: String, expand: String? = nil, completion: @escaping ((_ data: EvaluationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteQualityConversationEvaluationWithRequestBuilder(conversationId: conversationId, evaluationId: evaluationId, expand: expand)
-        requestBuilder.execute { (response: Response<Evaluation>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -3578,8 +3578,8 @@ open class QualityAPI {
         "pageNumber" : 1,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -4223,9 +4223,9 @@ open class QualityAPI {
      - parameter evaluationId: (path) evaluationId 
      - parameter expand: (query) evaluatorId, evaluationForm (optional)
 
-     - returns: RequestBuilder<Evaluation> 
+     - returns: RequestBuilder<EvaluationResponse> 
      */
-    open class func deleteQualityConversationEvaluationWithRequestBuilder(conversationId: String, evaluationId: String, expand: String? = nil) -> RequestBuilder<Evaluation> {        
+    open class func deleteQualityConversationEvaluationWithRequestBuilder(conversationId: String, evaluationId: String, expand: String? = nil) -> RequestBuilder<EvaluationResponse> {        
         var path = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4241,7 +4241,7 @@ open class QualityAPI {
             "expand": expand
         ])
 
-        let requestBuilder: RequestBuilder<Evaluation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
@@ -7354,8 +7354,8 @@ open class QualityAPI {
     "lowestCriticalScore" : 9.301444
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8887,8 +8887,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -10603,8 +10603,8 @@ open class QualityAPI {
         "pageNumber" : 1,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -12239,8 +12239,8 @@ open class QualityAPI {
         "pageNumber" : 1,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -12427,8 +12427,8 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12482,9 +12482,9 @@ open class QualityAPI {
      - parameter expand: (query) agent, evaluator, evaluationForm (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityConversationEvaluation(conversationId: String, evaluationId: String, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
+    open class func getQualityConversationEvaluation(conversationId: String, evaluationId: String, expand: String? = nil, completion: @escaping ((_ data: EvaluationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityConversationEvaluationWithRequestBuilder(conversationId: conversationId, evaluationId: evaluationId, expand: expand)
-        requestBuilder.execute { (response: Response<Evaluation>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -14345,8 +14345,8 @@ open class QualityAPI {
         "pageNumber" : 1,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -14990,9 +14990,9 @@ open class QualityAPI {
      - parameter evaluationId: (path) evaluationId 
      - parameter expand: (query) agent, evaluator, evaluationForm (optional)
 
-     - returns: RequestBuilder<Evaluation> 
+     - returns: RequestBuilder<EvaluationResponse> 
      */
-    open class func getQualityConversationEvaluationWithRequestBuilder(conversationId: String, evaluationId: String, expand: String? = nil) -> RequestBuilder<Evaluation> {        
+    open class func getQualityConversationEvaluationWithRequestBuilder(conversationId: String, evaluationId: String, expand: String? = nil) -> RequestBuilder<EvaluationResponse> {        
         var path = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15008,7 +15008,7 @@ open class QualityAPI {
             "expand": expand
         ])
 
-        let requestBuilder: RequestBuilder<Evaluation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -17244,8 +17244,8 @@ open class QualityAPI {
           "pageNumber" : 1,
           "entities" : [ null, null ],
           "firstUri" : "https://openapi-generator.tech",
-          "selfUri" : "https://openapi-generator.tech",
           "lastUri" : "https://openapi-generator.tech",
+          "selfUri" : "https://openapi-generator.tech",
           "pageSize" : 1,
           "nextUri" : "https://openapi-generator.tech",
           "previousUri" : "https://openapi-generator.tech"
@@ -19722,8 +19722,8 @@ open class QualityAPI {
           "pageNumber" : 1,
           "entities" : [ null, null ],
           "firstUri" : "https://openapi-generator.tech",
-          "selfUri" : "https://openapi-generator.tech",
           "lastUri" : "https://openapi-generator.tech",
+          "selfUri" : "https://openapi-generator.tech",
           "pageSize" : 1,
           "nextUri" : "https://openapi-generator.tech",
           "previousUri" : "https://openapi-generator.tech"
@@ -20363,8 +20363,8 @@ open class QualityAPI {
     "resourceType" : "EMAIL"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -21074,8 +21074,8 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -21158,8 +21158,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -21410,8 +21410,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -21602,8 +21602,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -21789,8 +21789,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -21877,8 +21877,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -22069,8 +22069,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -22256,8 +22256,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -22334,8 +22334,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -22588,8 +22588,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -22780,8 +22780,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -22967,8 +22967,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -23057,8 +23057,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -23249,8 +23249,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -23436,8 +23436,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -23514,8 +23514,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -24332,8 +24332,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -24761,8 +24761,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -25184,8 +25184,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -25477,8 +25477,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -25731,8 +25731,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -25923,8 +25923,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -26110,8 +26110,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -26180,8 +26180,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -26434,8 +26434,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -26626,8 +26626,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -26813,8 +26813,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -27459,8 +27459,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -30086,8 +30086,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -32168,8 +32168,8 @@ open class QualityAPI {
         "pageNumber" : 1,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -33406,8 +33406,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -33647,8 +33647,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -34110,8 +34110,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -34351,8 +34351,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -36360,8 +36360,8 @@ open class QualityAPI {
       "pageNumber" : 1,
       "entities" : [ null, null ],
       "firstUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
       "lastUri" : "https://openapi-generator.tech",
+      "selfUri" : "https://openapi-generator.tech",
       "pageSize" : 1,
       "nextUri" : "https://openapi-generator.tech",
       "previousUri" : "https://openapi-generator.tech"
@@ -36581,9 +36581,9 @@ open class QualityAPI {
      - parameter expand: (query) evaluatorId, evaluationForm (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putQualityConversationEvaluation(conversationId: String, evaluationId: String, body: Evaluation, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
+    open class func putQualityConversationEvaluation(conversationId: String, evaluationId: String, body: Evaluation, expand: String? = nil, completion: @escaping ((_ data: EvaluationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = putQualityConversationEvaluationWithRequestBuilder(conversationId: conversationId, evaluationId: evaluationId, body: body, expand: expand)
-        requestBuilder.execute { (response: Response<Evaluation>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -38445,8 +38445,8 @@ open class QualityAPI {
         "pageNumber" : 1,
         "entities" : [ null, null ],
         "firstUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
         "lastUri" : "https://openapi-generator.tech",
+        "selfUri" : "https://openapi-generator.tech",
         "pageSize" : 1,
         "nextUri" : "https://openapi-generator.tech",
         "previousUri" : "https://openapi-generator.tech"
@@ -39091,9 +39091,9 @@ open class QualityAPI {
      - parameter body: (body) evaluation 
      - parameter expand: (query) evaluatorId, evaluationForm (optional)
 
-     - returns: RequestBuilder<Evaluation> 
+     - returns: RequestBuilder<EvaluationResponse> 
      */
-    open class func putQualityConversationEvaluationWithRequestBuilder(conversationId: String, evaluationId: String, body: Evaluation, expand: String? = nil) -> RequestBuilder<Evaluation> {        
+    open class func putQualityConversationEvaluationWithRequestBuilder(conversationId: String, evaluationId: String, body: Evaluation, expand: String? = nil) -> RequestBuilder<EvaluationResponse> {        
         var path = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -39109,7 +39109,7 @@ open class QualityAPI {
             "expand": expand
         ])
 
-        let requestBuilder: RequestBuilder<Evaluation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -39154,8 +39154,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"
@@ -39401,8 +39401,8 @@ open class QualityAPI {
     "pageNumber" : 1,
     "entities" : [ null, null ],
     "firstUri" : "https://openapi-generator.tech",
-    "selfUri" : "https://openapi-generator.tech",
     "lastUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 1,
     "nextUri" : "https://openapi-generator.tech",
     "previousUri" : "https://openapi-generator.tech"

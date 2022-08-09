@@ -124,7 +124,7 @@ QualityAPI.deleteQualityCalibration(calibrationId: calibrationId, calibratorId: 
 
 
 
-> [Evaluation](Evaluation.html) deleteQualityConversationEvaluation(conversationId, evaluationId, expand)
+> [EvaluationResponse](EvaluationResponse.html) deleteQualityConversationEvaluation(conversationId, evaluationId, expand)
 
 Delete an evaluation
 
@@ -172,7 +172,7 @@ QualityAPI.deleteQualityConversationEvaluation(conversationId: conversationId, e
 
 ### Return type
 
-[**Evaluation**](Evaluation.html)
+[**EvaluationResponse**](EvaluationResponse.html)
 
 <a name="deleteQualityForm"></a>
 
@@ -535,7 +535,7 @@ QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize
 
 
 
-> [Evaluation](Evaluation.html) getQualityConversationEvaluation(conversationId, evaluationId, expand)
+> [EvaluationResponse](EvaluationResponse.html) getQualityConversationEvaluation(conversationId, evaluationId, expand)
 
 Get an evaluation
 
@@ -583,7 +583,7 @@ QualityAPI.getQualityConversationEvaluation(conversationId: conversationId, eval
 
 ### Return type
 
-[**Evaluation**](Evaluation.html)
+[**EvaluationResponse**](EvaluationResponse.html)
 
 <a name="getQualityConversationSurveys"></a>
 
@@ -2867,7 +2867,7 @@ QualityAPI.putQualityCalibration(calibrationId: calibrationId, body: body) { (re
 
 
 
-> [Evaluation](Evaluation.html) putQualityConversationEvaluation(conversationId, evaluationId, body, expand)
+> [EvaluationResponse](EvaluationResponse.html) putQualityConversationEvaluation(conversationId, evaluationId, body, expand)
 
 Update an evaluation
 
@@ -2921,7 +2921,7 @@ QualityAPI.putQualityConversationEvaluation(conversationId: conversationId, eval
 
 ### Return type
 
-[**Evaluation**](Evaluation.html)
+[**EvaluationResponse**](EvaluationResponse.html)
 
 <a name="putQualityForm"></a>
 

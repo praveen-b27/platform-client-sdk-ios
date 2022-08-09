@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingAssessments**](RoutingAPI.html#getRoutingAssessments) | Retrieve all benefit assessments. |
 | [**getRoutingAssessmentsJob**](RoutingAPI.html#getRoutingAssessmentsJob) | Retrieve a single benefit assessments job. |
 | [**getRoutingAssessmentsJobs**](RoutingAPI.html#getRoutingAssessmentsJobs) | Retrieve all benefit assessment jobs. |
+| [**getRoutingAvailablemediatypes**](RoutingAPI.html#getRoutingAvailablemediatypes) | Get available media types |
 | [**getRoutingEmailDomain**](RoutingAPI.html#getRoutingEmailDomain) | Get domain |
 | [**getRoutingEmailDomainRoute**](RoutingAPI.html#getRoutingEmailDomainRoute) | Get a route |
 | [**getRoutingEmailDomainRoutes**](RoutingAPI.html#getRoutingEmailDomainRoutes) | Get routes |
@@ -1206,6 +1207,53 @@ RoutingAPI.getRoutingAssessmentsJobs(divisionId: divisionId) { (response, error)
 ### Return type
 
 [**AssessmentJobListing**](AssessmentJobListing.html)
+
+<a name="getRoutingAvailablemediatypes"></a>
+
+# **getRoutingAvailablemediatypes**
+
+
+
+> [AvailableMediaTypeEntityListing](AvailableMediaTypeEntityListing.html) getRoutingAvailablemediatypes()
+
+Get available media types
+
+
+
+Wraps GET /api/v2/routing/availablemediatypes  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RoutingAPI.getRoutingAvailablemediatypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingAvailablemediatypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**AvailableMediaTypeEntityListing**](AvailableMediaTypeEntityListing.html)
 
 <a name="getRoutingEmailDomain"></a>
 

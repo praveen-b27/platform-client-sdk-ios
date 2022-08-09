@@ -36,10 +36,14 @@ public class EmailMessage: Codable {
     public var time: Date?
     /** Indicates whether the history of previous emails of the conversation is included within the email bodies of this message. */
     public var historyIncluded: Bool?
+    /** Indicates an estimation of the size of the current email as a whole, in its final, ready to be sent form. */
+    public var emailSizeBytes: Int?
+    /** Indicates the maximum allowed size for an email to be send via SMTP server, based on the email domain configuration */
+    public var maxEmailSizeBytes: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, replyTo: EmailAddress?, subject: String?, attachments: [Attachment]?, textBody: String?, htmlBody: String?, time: Date?, historyIncluded: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, replyTo: EmailAddress?, subject: String?, attachments: [Attachment]?, textBody: String?, htmlBody: String?, time: Date?, historyIncluded: Bool?, emailSizeBytes: Int?, maxEmailSizeBytes: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.to = to
@@ -53,6 +57,8 @@ public class EmailMessage: Codable {
         self.htmlBody = htmlBody
         self.time = time
         self.historyIncluded = historyIncluded
+        self.emailSizeBytes = emailSizeBytes
+        self.maxEmailSizeBytes = maxEmailSizeBytes
         self.selfUri = selfUri
     }
 
@@ -70,6 +76,8 @@ public class EmailMessage: Codable {
         case htmlBody
         case time
         case historyIncluded
+        case emailSizeBytes
+        case maxEmailSizeBytes
         case selfUri
     }
 

@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationParticipantSecureivrsessions**](ConversationsAPI.html#getConversationParticipantSecureivrsessions) | Get a list of secure sessions for this participant. |
 | [**getConversationParticipantWrapup**](ConversationsAPI.html#getConversationParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationParticipantWrapupcodes**](ConversationsAPI.html#getConversationParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
+| [**getConversationSecureattributes**](ConversationsAPI.html#getConversationSecureattributes) | Get the secure attributes on a conversation. |
 | [**getConversations**](ConversationsAPI.html#getConversations) | Get active conversations for the logged in user |
 | [**getConversationsCall**](ConversationsAPI.html#getConversationsCall) | Get call conversation |
 | [**getConversationsCallParticipantWrapup**](ConversationsAPI.html#getConversationsCallParticipantWrapup) | Get the wrap-up for this conversation participant.  |
@@ -57,6 +58,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsEmailParticipantWrapupcodes**](ConversationsAPI.html#getConversationsEmailParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsEmailSettings**](ConversationsAPI.html#getConversationsEmailSettings) | Get emails settings for a given conversation |
 | [**getConversationsEmails**](ConversationsAPI.html#getConversationsEmails) | Get active email conversations for the logged in user |
+| [**getConversationsKeyconfiguration**](ConversationsAPI.html#getConversationsKeyconfiguration) | Get the encryption key configurations |
+| [**getConversationsKeyconfigurations**](ConversationsAPI.html#getConversationsKeyconfigurations) | Get a list of key configurations data |
 | [**getConversationsMessage**](ConversationsAPI.html#getConversationsMessage) | Get message conversation |
 | [**getConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsAPI.html#getConversationsMessageCommunicationMessagesMediaMediaId) | Get media |
 | [**getConversationsMessageDetails**](ConversationsAPI.html#getConversationsMessageDetails) | Get message |
@@ -83,6 +86,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingThreadingtimeline**](ConversationsAPI.html#getConversationsMessagingThreadingtimeline) | Get conversation threading window timeline for each messaging type |
 | [**patchConversationParticipant**](ConversationsAPI.html#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI.html#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
+| [**patchConversationSecureattributes**](ConversationsAPI.html#patchConversationSecureattributes) | Update the secure attributes on a conversation. |
 | [**patchConversationsCall**](ConversationsAPI.html#patchConversationsCall) | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**patchConversationsCallParticipant**](ConversationsAPI.html#patchConversationsCallParticipant) | Update conversation participant |
 | [**patchConversationsCallParticipantAttributes**](ConversationsAPI.html#patchConversationsCallParticipantAttributes) | Update the attributes on a conversation participant. |
@@ -146,6 +150,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsEmailParticipantReplace**](ConversationsAPI.html#postConversationsEmailParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsEmails**](ConversationsAPI.html#postConversationsEmails) | Create an email conversation |
 | [**postConversationsFaxes**](ConversationsAPI.html#postConversationsFaxes) | Create Fax Conversation |
+| [**postConversationsKeyconfigurations**](ConversationsAPI.html#postConversationsKeyconfigurations) | Setup configurations for encryption key creation |
+| [**postConversationsKeyconfigurationsValidate**](ConversationsAPI.html#postConversationsKeyconfigurationsValidate) | Validate encryption key configurations without saving it |
 | [**postConversationsMessageCommunicationMessages**](ConversationsAPI.html#postConversationsMessageCommunicationMessages) | Send message |
 | [**postConversationsMessageCommunicationMessagesMedia**](ConversationsAPI.html#postConversationsMessageCommunicationMessagesMedia) | Create media |
 | [**postConversationsMessageMessagesBulk**](ConversationsAPI.html#postConversationsMessageMessagesBulk) | Get messages in batch |
@@ -160,6 +166,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | Create a WhatsApp Integration |
 | [**postConversationsMessagingSupportedcontent**](ConversationsAPI.html#postConversationsMessagingSupportedcontent) | Create a Supported Content profile |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI.html#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
+| [**putConversationSecureattributes**](ConversationsAPI.html#putConversationSecureattributes) | Set the secure attributes on a conversation. |
 | [**putConversationTags**](ConversationsAPI.html#putConversationTags) | Update the tags on a conversation. |
 | [**putConversationsCallParticipantCommunicationUuidata**](ConversationsAPI.html#putConversationsCallParticipantCommunicationUuidata) | Set uuiData to be sent on future commands. |
 | [**putConversationsCallRecordingstate**](ConversationsAPI.html#putConversationsCallRecordingstate) | Update a conversation by setting its recording state |
@@ -168,6 +175,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsCobrowsesessionRecordingstate**](ConversationsAPI.html#putConversationsCobrowsesessionRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsEmailMessagesDraft**](ConversationsAPI.html#putConversationsEmailMessagesDraft) | Update conversation draft reply |
 | [**putConversationsEmailRecordingstate**](ConversationsAPI.html#putConversationsEmailRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsKeyconfiguration**](ConversationsAPI.html#putConversationsKeyconfiguration) | Update the encryption key configurations |
 | [**putConversationsMessageRecordingstate**](ConversationsAPI.html#putConversationsMessageRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration |
 | [**putConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#putConversationsMessagingSupportedcontentDefault) | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
@@ -1279,6 +1287,58 @@ ConversationsAPI.getConversationParticipantWrapupcodes(conversationId: conversat
 ### Return type
 
 [**[WrapupCode]**](WrapupCode.html)
+
+<a name="getConversationSecureattributes"></a>
+
+# **getConversationSecureattributes**
+
+
+
+> [ConversationSecureAttributes](ConversationSecureAttributes.html) getConversationSecureattributes(conversationId)
+
+Get the secure attributes on a conversation.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/secureattributes  
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesview
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+
+// Code example
+ConversationsAPI.getConversationSecureattributes(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationSecureattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationSecureAttributes**](ConversationSecureAttributes.html)
 
 <a name="getConversations"></a>
 
@@ -2787,6 +2847,106 @@ This endpoint does not require any parameters.
 
 [**EmailConversationEntityListing**](EmailConversationEntityListing.html)
 
+<a name="getConversationsKeyconfiguration"></a>
+
+# **getConversationsKeyconfiguration**
+
+
+
+> [ConversationEncryptionConfiguration](ConversationEncryptionConfiguration.html) getConversationsKeyconfiguration(keyconfigurationsId)
+
+Get the encryption key configurations
+
+
+
+Wraps GET /api/v2/conversations/keyconfigurations/{keyconfigurationsId}  
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let keyconfigurationsId: String = "" // Key Configurations Id
+
+// Code example
+ConversationsAPI.getConversationsKeyconfiguration(keyconfigurationsId: keyconfigurationsId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsKeyconfiguration was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **keyconfigurationsId** | **String**| Key Configurations Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+
+<a name="getConversationsKeyconfigurations"></a>
+
+# **getConversationsKeyconfigurations**
+
+
+
+> [ConversationEncryptionConfigurationListing](ConversationEncryptionConfigurationListing.html) getConversationsKeyconfigurations()
+
+Get a list of key configurations data
+
+
+
+Wraps GET /api/v2/conversations/keyconfigurations  
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsKeyconfigurations() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsKeyconfigurations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing.html)
+
 <a name="getConversationsMessage"></a>
 
 # **getConversationsMessage**
@@ -4201,6 +4361,60 @@ ConversationsAPI.patchConversationParticipantAttributes(conversationId: conversa
 ### Return type
 
 `nil` (empty response body)
+
+<a name="patchConversationSecureattributes"></a>
+
+# **patchConversationSecureattributes**
+
+
+
+> String patchConversationSecureattributes(conversationId, body)
+
+Update the secure attributes on a conversation.
+
+
+
+Wraps PATCH /api/v2/conversations/{conversationId}/secureattributes  
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesedit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: ConversationSecureAttributes = new ConversationSecureAttributes(...) // Conversation Secure Attributes
+
+// Code example
+ConversationsAPI.patchConversationSecureattributes(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationSecureattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes.html)| Conversation Secure Attributes | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
 
 <a name="patchConversationsCall"></a>
 
@@ -7610,6 +7824,110 @@ ConversationsAPI.postConversationsFaxes(body: body) { (response, error) in
 
 [**FaxSendResponse**](FaxSendResponse.html)
 
+<a name="postConversationsKeyconfigurations"></a>
+
+# **postConversationsKeyconfigurations**
+
+
+
+> [ConversationEncryptionConfiguration](ConversationEncryptionConfiguration.html) postConversationsKeyconfigurations(body)
+
+Setup configurations for encryption key creation
+
+
+
+Wraps POST /api/v2/conversations/keyconfigurations  
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationEncryptionConfiguration = new ConversationEncryptionConfiguration(...) // Encryption Configuration
+
+// Code example
+ConversationsAPI.postConversationsKeyconfigurations(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsKeyconfigurations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption Configuration | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+
+<a name="postConversationsKeyconfigurationsValidate"></a>
+
+# **postConversationsKeyconfigurationsValidate**
+
+
+
+> [ConversationEncryptionConfiguration](ConversationEncryptionConfiguration.html) postConversationsKeyconfigurationsValidate(body)
+
+Validate encryption key configurations without saving it
+
+
+
+Wraps POST /api/v2/conversations/keyconfigurations/validate  
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationEncryptionConfiguration = new ConversationEncryptionConfiguration(...) // Encryption Configuration
+
+// Code example
+ConversationsAPI.postConversationsKeyconfigurationsValidate(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsKeyconfigurationsValidate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption Configuration | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+
 <a name="postConversationsMessageCommunicationMessages"></a>
 
 # **postConversationsMessageCommunicationMessages**
@@ -8367,6 +8685,60 @@ ConversationsAPI.putConversationParticipantFlaggedreason(conversationId: convers
 
 `nil` (empty response body)
 
+<a name="putConversationSecureattributes"></a>
+
+# **putConversationSecureattributes**
+
+
+
+> String putConversationSecureattributes(conversationId, body)
+
+Set the secure attributes on a conversation.
+
+
+
+Wraps PUT /api/v2/conversations/{conversationId}/secureattributes  
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesedit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: ConversationSecureAttributes = new ConversationSecureAttributes(...) // Conversation Secure Attributes
+
+// Code example
+ConversationsAPI.putConversationSecureattributes(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationSecureattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes.html)| Conversation Secure Attributes | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
 <a name="putConversationTags"></a>
 
 # **putConversationTags**
@@ -8800,6 +9172,60 @@ ConversationsAPI.putConversationsEmailRecordingstate(conversationId: conversatio
 ### Return type
 
 **String**
+
+<a name="putConversationsKeyconfiguration"></a>
+
+# **putConversationsKeyconfiguration**
+
+
+
+> [ConversationEncryptionConfiguration](ConversationEncryptionConfiguration.html) putConversationsKeyconfiguration(keyconfigurationsId, body)
+
+Update the encryption key configurations
+
+
+
+Wraps PUT /api/v2/conversations/keyconfigurations/{keyconfigurationsId}  
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let keyconfigurationsId: String = "" // Key Configurations Id
+let body: ConversationEncryptionConfiguration = new ConversationEncryptionConfiguration(...) // Encryption key configuration metadata
+
+// Code example
+ConversationsAPI.putConversationsKeyconfiguration(keyconfigurationsId: keyconfigurationsId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsKeyconfiguration was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **keyconfigurationsId** | **String**| Key Configurations Id | |
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption key configuration metadata | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
 
 <a name="putConversationsMessageRecordingstate"></a>
 

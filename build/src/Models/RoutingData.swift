@@ -21,9 +21,9 @@ public class RoutingData: Codable {
     public var skillIds: [String]?
     /** A list of agents to be preferred in routing */
     public var preferredAgentIds: [String]?
-    /** A list of scored agents for routing decisions */
+    /** A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100. */
     public var scoredAgents: [ScoredAgent]?
-    /** An array of flags indicating how the conversation should be routed */
+    /** An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback. */
     public var routingFlags: [String]?
 
     public init(queueId: String?, languageId: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?, routingFlags: [String]?) {

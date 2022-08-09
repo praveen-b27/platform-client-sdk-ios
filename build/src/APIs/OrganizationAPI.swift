@@ -274,29 +274,27 @@ open class OrganizationAPI {
   "statusHistory" : [ {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "changedBy" : "changedBy",
+    "namespace" : "contacts",
     "message" : "message",
-    "status" : "Open",
-    "previousStatus" : "Open"
+    "status" : "Approved",
+    "previousStatus" : "Approved"
   }, {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "changedBy" : "changedBy",
+    "namespace" : "contacts",
     "message" : "message",
-    "status" : "Open",
-    "previousStatus" : "Open"
+    "status" : "Approved",
+    "previousStatus" : "Approved"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "rejectReason" : "AlternativeExists",
-  "createdBy" : "createdBy",
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-  "namespace" : "namespace",
+  "namespace" : "contacts",
   "id" : "id",
-  "lastChangedBy" : "lastChangedBy",
   "key" : "key",
   "currentValue" : 6.027456183070403,
   "supportCaseUrl" : "supportCaseUrl",
-  "status" : "Open"
+  "status" : "Approved"
 }, statusCode=200}]
      
      - parameter requestId: (path) Unique id for the limit change request 
@@ -322,12 +320,17 @@ open class OrganizationAPI {
     
     
     public enum Status_getOrganizationsLimitsChangerequests: String { 
-        case _open = "Open"
         case approved = "Approved"
-        case implementingChange = "ImplementingChange"
-        case changeImplemented = "ChangeImplemented"
         case rejected = "Rejected"
         case rollback = "Rollback"
+        case pending = "Pending"
+        case _open = "Open"
+        case secondaryApprovalNamespacesAdded = "SecondaryApprovalNamespacesAdded"
+        case reviewerApproved = "ReviewerApproved"
+        case reviewerRejected = "ReviewerRejected"
+        case reviewerRollback = "ReviewerRollback"
+        case implementingChange = "ImplementingChange"
+        case changeImplemented = "ChangeImplemented"
         case implementingRollback = "ImplementingRollback"
         case rollbackImplemented = "RollbackImplemented"
     }
@@ -378,29 +381,27 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "changedBy" : "changedBy",
+      "namespace" : "contacts",
       "message" : "message",
-      "status" : "Open",
-      "previousStatus" : "Open"
+      "status" : "Approved",
+      "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "changedBy" : "changedBy",
+      "namespace" : "contacts",
       "message" : "message",
-      "status" : "Open",
-      "previousStatus" : "Open"
+      "status" : "Approved",
+      "previousStatus" : "Approved"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "createdBy" : "createdBy",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "namespace",
+    "namespace" : "contacts",
     "id" : "id",
-    "lastChangedBy" : "lastChangedBy",
     "key" : "key",
     "currentValue" : 6.027456183070403,
     "supportCaseUrl" : "supportCaseUrl",
-    "status" : "Open"
+    "status" : "Approved"
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
@@ -408,29 +409,27 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "changedBy" : "changedBy",
+      "namespace" : "contacts",
       "message" : "message",
-      "status" : "Open",
-      "previousStatus" : "Open"
+      "status" : "Approved",
+      "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "changedBy" : "changedBy",
+      "namespace" : "contacts",
       "message" : "message",
-      "status" : "Open",
-      "previousStatus" : "Open"
+      "status" : "Approved",
+      "previousStatus" : "Approved"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "createdBy" : "createdBy",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "namespace",
+    "namespace" : "contacts",
     "id" : "id",
-    "lastChangedBy" : "lastChangedBy",
     "key" : "key",
     "currentValue" : 6.027456183070403,
     "supportCaseUrl" : "supportCaseUrl",
-    "status" : "Open"
+    "status" : "Approved"
   } ],
   "selfUri" : "selfUri",
   "nextUri" : "nextUri",

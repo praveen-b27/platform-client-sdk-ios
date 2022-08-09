@@ -14,6 +14,7 @@ public class IpAddressRange: Codable {
     public enum Service: String, Codable { 
         case dataActions = "data-actions"
         case smtp = "smtp"
+        case audiohook = "audiohook"
     }
     public var cidr: String?
     public var service: Service?

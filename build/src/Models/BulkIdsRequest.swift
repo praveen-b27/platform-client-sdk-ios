@@ -11,9 +11,9 @@ import Foundation
 
 public class BulkIdsRequest: Codable {
 
-    public var entities: [Entity]?
+    public var entities: [WritableEntity]?
 
-    public init(entities: [Entity]?) {
+    public init(entities: [WritableEntity]?) {
         self.entities = entities
     }
 

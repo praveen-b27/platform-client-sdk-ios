@@ -70,8 +70,9 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
     public var assignmentState: AssignmentState?
     public var assignmentId: String?
     public var alertTimeoutSeconds: Int?
+    public var customFields: [String:WorkitemsUserEventsNotificationCustomAttribute]?
 
-    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsUserEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?) {
+    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsUserEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, customFields: [String:WorkitemsUserEventsNotificationCustomAttribute]?) {
         self._id = _id
         self.name = name
         self.typeId = typeId
@@ -98,6 +99,7 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
         self.assignmentState = assignmentState
         self.assignmentId = assignmentId
         self.alertTimeoutSeconds = alertTimeoutSeconds
+        self.customFields = customFields
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -127,6 +129,7 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
         case assignmentState
         case assignmentId
         case alertTimeoutSeconds
+        case customFields
     }
 
 

@@ -275,7 +275,7 @@ OrganizationAPI.getOrganizationsLimitsChangerequests(after: after, before: befor
 | ------------- | ------------- | ------------- | ------------- |
 | **after** | **Int64**| Timestamp indicating the date to begin after when searching for requests. | [optional] |
 | **before** | **Int64**| Timestamp indicating the date to end before when searching for requests. | [optional] |
-| **status** | **String**| Status of the request to be filtered by | [optional]<br />**Values**: _open ("Open"), approved ("Approved"), implementingChange ("ImplementingChange"), changeImplemented ("ChangeImplemented"), rejected ("Rejected"), rollback ("Rollback"), implementingRollback ("ImplementingRollback"), rollbackImplemented ("RollbackImplemented") |
+| **status** | **String**| Status of the request to be filtered by | [optional]<br />**Values**: approved ("Approved"), rejected ("Rejected"), rollback ("Rollback"), pending ("Pending"), _open ("Open"), secondaryApprovalNamespacesAdded ("SecondaryApprovalNamespacesAdded"), reviewerApproved ("ReviewerApproved"), reviewerRejected ("ReviewerRejected"), reviewerRollback ("ReviewerRollback"), implementingChange ("ImplementingChange"), changeImplemented ("ChangeImplemented"), implementingRollback ("ImplementingRollback"), rollbackImplemented ("RollbackImplemented") |
 | **pageSize** | **Int**| Page Size | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: statushistory ("statusHistory") |
 {: class="table-striped"}

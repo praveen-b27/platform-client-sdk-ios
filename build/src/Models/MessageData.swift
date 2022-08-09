@@ -33,6 +33,7 @@ public class MessageData: Codable {
         case deliverySuccess = "delivery-success"
         case deliveryFailed = "delivery-failed"
         case read = "read"
+        case removed = "removed"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

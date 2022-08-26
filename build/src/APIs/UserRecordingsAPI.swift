@@ -904,6 +904,7 @@ open class UserRecordingsAPI {
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+        "hasAssistanceFailed" : true,
         "id" : "id",
         "rescore" : true,
         "calibration" : {
@@ -3382,6 +3383,7 @@ open class UserRecordingsAPI {
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+        "hasAssistanceFailed" : true,
         "id" : "id",
         "rescore" : true,
         "calibration" : {
@@ -6785,6 +6787,7 @@ open class UserRecordingsAPI {
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+        "hasAssistanceFailed" : true,
         "id" : "id",
         "rescore" : true,
         "calibration" : {
@@ -9263,6 +9266,7 @@ open class UserRecordingsAPI {
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+        "hasAssistanceFailed" : true,
         "id" : "id",
         "rescore" : true,
         "calibration" : {
@@ -12881,6 +12885,7 @@ open class UserRecordingsAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -15359,6 +15364,7 @@ open class UserRecordingsAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -18762,6 +18768,7 @@ open class UserRecordingsAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -21240,6 +21247,7 @@ open class UserRecordingsAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -24711,6 +24719,7 @@ open class UserRecordingsAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -27189,6 +27198,7 @@ open class UserRecordingsAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -30592,6 +30602,7 @@ open class UserRecordingsAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -33070,6 +33081,7 @@ open class UserRecordingsAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -36657,6 +36669,7 @@ open class UserRecordingsAPI {
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+        "hasAssistanceFailed" : true,
         "id" : "id",
         "rescore" : true,
         "calibration" : {
@@ -39135,6 +39148,7 @@ open class UserRecordingsAPI {
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+        "hasAssistanceFailed" : true,
         "id" : "id",
         "rescore" : true,
         "calibration" : {
@@ -42538,6 +42552,7 @@ open class UserRecordingsAPI {
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+        "hasAssistanceFailed" : true,
         "id" : "id",
         "rescore" : true,
         "calibration" : {
@@ -45016,6 +45031,7 @@ open class UserRecordingsAPI {
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+        "hasAssistanceFailed" : true,
         "id" : "id",
         "rescore" : true,
         "calibration" : {

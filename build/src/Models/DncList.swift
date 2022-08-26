@@ -40,6 +40,8 @@ public class DncList: Codable {
     public var contactMethod: ContactMethod?
     /** A dnc.com loginId. Required if the dncSourceType is dnc.com. */
     public var loginId: String?
+    /** A dnc.com campaignId. Optional if the dncSourceType is dnc.com. */
+    public var campaignId: String?
     /** The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com. */
     public var dncCodes: [String]?
     /** A gryphon license number. Required if the dncSourceType is gryphon. */
@@ -49,7 +51,7 @@ public class DncList: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, contactMethod: ContactMethod?, loginId: String?, dncCodes: [String]?, licenseId: String?, division: DomainEntityRef?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, contactMethod: ContactMethod?, loginId: String?, campaignId: String?, dncCodes: [String]?, licenseId: String?, division: DomainEntityRef?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -60,6 +62,7 @@ public class DncList: Codable {
         self.dncSourceType = dncSourceType
         self.contactMethod = contactMethod
         self.loginId = loginId
+        self.campaignId = campaignId
         self.dncCodes = dncCodes
         self.licenseId = licenseId
         self.division = division
@@ -77,6 +80,7 @@ public class DncList: Codable {
         case dncSourceType
         case contactMethod
         case loginId
+        case campaignId
         case dncCodes
         case licenseId
         case division

@@ -970,7 +970,8 @@ open class RecordingAPI {
     "properties" : {
       "key" : "{}"
     }
-  }
+  },
+  "region" : "af-south-1"
 }, statusCode=200}]
      
      - parameter orphanId: (path) Orphan ID 
@@ -4334,7 +4335,8 @@ open class RecordingAPI {
     "properties" : {
       "key" : "{}"
     }
-  }
+  },
+  "region" : "af-south-1"
 }, statusCode=200}]
      
      - parameter orphanId: (path) Orphan ID 
@@ -6234,7 +6236,8 @@ open class RecordingAPI {
       "properties" : {
         "key" : "{}"
       }
-    }
+    },
+    "region" : "af-south-1"
   }, {
     "sourceOrphaningId" : "sourceOrphaningId",
     "orphanStatus" : "NO_CONVERSATION",
@@ -7108,7 +7111,8 @@ open class RecordingAPI {
       "properties" : {
         "key" : "{}"
       }
-    }
+    },
+    "region" : "af-south-1"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -9650,6 +9654,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -12128,6 +12133,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -15531,6 +15537,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -18009,6 +18016,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -21741,6 +21749,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -24219,6 +24228,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -27622,6 +27632,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {
@@ -30100,6 +30111,7 @@ open class RecordingAPI {
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
+          "hasAssistanceFailed" : true,
           "id" : "id",
           "rescore" : true,
           "calibration" : {

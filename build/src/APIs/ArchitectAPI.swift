@@ -2926,6 +2926,7 @@ open class ArchitectAPI {
     
     
     
+    
     /**
      Get IVR configs.
      
@@ -2934,10 +2935,11 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Name of the IVR to filter by. (optional)
+     - parameter dnis: (query) The phone number of the IVR to filter by. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectIvrs(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, completion: @escaping ((_ data: IVREntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectIvrsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name)
+    open class func getArchitectIvrs(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil, completion: @escaping ((_ data: IVREntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectIvrsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, dnis: dnis)
         requestBuilder.execute { (response: Response<IVREntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -3016,10 +3018,11 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Name of the IVR to filter by. (optional)
+     - parameter dnis: (query) The phone number of the IVR to filter by. (optional)
 
      - returns: RequestBuilder<IVREntityListing> 
      */
-    open class func getArchitectIvrsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil) -> RequestBuilder<IVREntityListing> {        
+    open class func getArchitectIvrsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil) -> RequestBuilder<IVREntityListing> {        
         let path = "/api/v2/architect/ivrs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -3030,7 +3033,8 @@ open class ArchitectAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
             "sortOrder": sortOrder, 
-            "name": name
+            "name": name, 
+            "dnis": dnis
         ])
 
         let requestBuilder: RequestBuilder<IVREntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -5546,6 +5550,7 @@ open class ArchitectAPI {
     "geolocation" : "{}"
   },
   "savedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -5580,6 +5585,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -5893,6 +5899,7 @@ open class ArchitectAPI {
   "type" : "BOT",
   "lockedUser" : "{}",
   "debugVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -5927,6 +5934,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -6233,6 +6241,7 @@ open class ArchitectAPI {
   "lockedClient" : "{}",
   "division" : "{}",
   "publishedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -6267,6 +6276,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -6894,6 +6904,7 @@ open class ArchitectAPI {
   } ],
   "name" : "name",
   "checkedInVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -6928,6 +6939,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -7775,6 +7787,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateSaved" : 1,
   "generationId" : "generationId",
   "debug" : true,
   "outputSchema" : {
@@ -7809,6 +7822,7 @@ open class ArchitectAPI {
   },
   "selfUri" : "https://openapi-generator.tech",
   "nluInfo" : "{}",
+  "dateCheckedIn" : 6,
   "type" : "PUBLISH",
   "secure" : true,
   "configurationUri" : "configurationUri",
@@ -8245,6 +8259,7 @@ open class ArchitectAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -8279,6 +8294,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -8582,6 +8598,7 @@ open class ArchitectAPI {
     "id" : "id",
     "commitVersion" : "commitVersion"
   }, {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -8616,6 +8633,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -9321,6 +9339,7 @@ open class ArchitectAPI {
       "geolocation" : "{}"
     },
     "savedVersion" : {
+      "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
       "outputSchema" : {
@@ -9355,6 +9374,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "https://openapi-generator.tech",
       "nluInfo" : "{}",
+      "dateCheckedIn" : 6,
       "type" : "PUBLISH",
       "secure" : true,
       "configurationUri" : "configurationUri",
@@ -9668,6 +9688,7 @@ open class ArchitectAPI {
     "type" : "BOT",
     "lockedUser" : "{}",
     "debugVersion" : {
+      "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
       "outputSchema" : {
@@ -9702,6 +9723,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "https://openapi-generator.tech",
       "nluInfo" : "{}",
+      "dateCheckedIn" : 6,
       "type" : "PUBLISH",
       "secure" : true,
       "configurationUri" : "configurationUri",
@@ -10008,6 +10030,7 @@ open class ArchitectAPI {
     "lockedClient" : "{}",
     "division" : "{}",
     "publishedVersion" : {
+      "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
       "outputSchema" : {
@@ -10042,6 +10065,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "https://openapi-generator.tech",
       "nluInfo" : "{}",
+      "dateCheckedIn" : 6,
       "type" : "PUBLISH",
       "secure" : true,
       "configurationUri" : "configurationUri",
@@ -10669,6 +10693,7 @@ open class ArchitectAPI {
     } ],
     "name" : "name",
     "checkedInVersion" : {
+      "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
       "outputSchema" : {
@@ -10703,6 +10728,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "https://openapi-generator.tech",
       "nluInfo" : "{}",
+      "dateCheckedIn" : 6,
       "type" : "PUBLISH",
       "secure" : true,
       "configurationUri" : "configurationUri",
@@ -11295,6 +11321,7 @@ open class ArchitectAPI {
       "geolocation" : "{}"
     },
     "savedVersion" : {
+      "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
       "outputSchema" : {
@@ -11329,6 +11356,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "https://openapi-generator.tech",
       "nluInfo" : "{}",
+      "dateCheckedIn" : 6,
       "type" : "PUBLISH",
       "secure" : true,
       "configurationUri" : "configurationUri",
@@ -11642,6 +11670,7 @@ open class ArchitectAPI {
     "type" : "BOT",
     "lockedUser" : "{}",
     "debugVersion" : {
+      "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
       "outputSchema" : {
@@ -11676,6 +11705,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "https://openapi-generator.tech",
       "nluInfo" : "{}",
+      "dateCheckedIn" : 6,
       "type" : "PUBLISH",
       "secure" : true,
       "configurationUri" : "configurationUri",
@@ -11982,6 +12012,7 @@ open class ArchitectAPI {
     "lockedClient" : "{}",
     "division" : "{}",
     "publishedVersion" : {
+      "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
       "outputSchema" : {
@@ -12016,6 +12047,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "https://openapi-generator.tech",
       "nluInfo" : "{}",
+      "dateCheckedIn" : 6,
       "type" : "PUBLISH",
       "secure" : true,
       "configurationUri" : "configurationUri",
@@ -12643,6 +12675,7 @@ open class ArchitectAPI {
     } ],
     "name" : "name",
     "checkedInVersion" : {
+      "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
       "outputSchema" : {
@@ -12677,6 +12710,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "https://openapi-generator.tech",
       "nluInfo" : "{}",
+      "dateCheckedIn" : 6,
       "type" : "PUBLISH",
       "secure" : true,
       "configurationUri" : "configurationUri",
@@ -17261,6 +17295,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateSaved" : 1,
   "generationId" : "generationId",
   "debug" : true,
   "outputSchema" : {
@@ -17295,6 +17330,7 @@ open class ArchitectAPI {
   },
   "selfUri" : "https://openapi-generator.tech",
   "nluInfo" : "{}",
+  "dateCheckedIn" : 6,
   "type" : "PUBLISH",
   "secure" : true,
   "configurationUri" : "configurationUri",
@@ -17940,6 +17976,7 @@ open class ArchitectAPI {
     "geolocation" : "{}"
   },
   "savedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -17974,6 +18011,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -18287,6 +18325,7 @@ open class ArchitectAPI {
   "type" : "BOT",
   "lockedUser" : "{}",
   "debugVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -18321,6 +18360,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -18627,6 +18667,7 @@ open class ArchitectAPI {
   "lockedClient" : "{}",
   "division" : "{}",
   "publishedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -18661,6 +18702,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -19288,6 +19330,7 @@ open class ArchitectAPI {
   } ],
   "name" : "name",
   "checkedInVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -19322,6 +19365,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -20332,6 +20376,7 @@ open class ArchitectAPI {
     "geolocation" : "{}"
   },
   "savedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -20366,6 +20411,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -20679,6 +20725,7 @@ open class ArchitectAPI {
   "type" : "BOT",
   "lockedUser" : "{}",
   "debugVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -20713,6 +20760,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -21019,6 +21067,7 @@ open class ArchitectAPI {
   "lockedClient" : "{}",
   "division" : "{}",
   "publishedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -21053,6 +21102,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -21680,6 +21730,7 @@ open class ArchitectAPI {
   } ],
   "name" : "name",
   "checkedInVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -21714,6 +21765,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -22358,6 +22410,7 @@ open class ArchitectAPI {
     "geolocation" : "{}"
   },
   "savedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -22392,6 +22445,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -22705,6 +22759,7 @@ open class ArchitectAPI {
   "type" : "BOT",
   "lockedUser" : "{}",
   "debugVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -22739,6 +22794,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -23045,6 +23101,7 @@ open class ArchitectAPI {
   "lockedClient" : "{}",
   "division" : "{}",
   "publishedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -23079,6 +23136,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -23706,6 +23764,7 @@ open class ArchitectAPI {
   } ],
   "name" : "name",
   "checkedInVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -23740,6 +23799,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -24753,6 +24813,7 @@ open class ArchitectAPI {
     "geolocation" : "{}"
   },
   "savedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -24787,6 +24848,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -25100,6 +25162,7 @@ open class ArchitectAPI {
   "type" : "BOT",
   "lockedUser" : "{}",
   "debugVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -25134,6 +25197,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -25440,6 +25504,7 @@ open class ArchitectAPI {
   "lockedClient" : "{}",
   "division" : "{}",
   "publishedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -25474,6 +25539,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -26101,6 +26167,7 @@ open class ArchitectAPI {
   } ],
   "name" : "name",
   "checkedInVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -26135,6 +26202,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -26780,6 +26848,7 @@ open class ArchitectAPI {
     "geolocation" : "{}"
   },
   "savedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -26814,6 +26883,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -27127,6 +27197,7 @@ open class ArchitectAPI {
   "type" : "BOT",
   "lockedUser" : "{}",
   "debugVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -27161,6 +27232,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -27467,6 +27539,7 @@ open class ArchitectAPI {
   "lockedClient" : "{}",
   "division" : "{}",
   "publishedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -27501,6 +27574,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -28128,6 +28202,7 @@ open class ArchitectAPI {
   } ],
   "name" : "name",
   "checkedInVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -28162,6 +28237,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -30170,6 +30246,7 @@ open class ArchitectAPI {
     "geolocation" : "{}"
   },
   "savedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -30204,6 +30281,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -30517,6 +30595,7 @@ open class ArchitectAPI {
   "type" : "BOT",
   "lockedUser" : "{}",
   "debugVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -30551,6 +30630,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -30857,6 +30937,7 @@ open class ArchitectAPI {
   "lockedClient" : "{}",
   "division" : "{}",
   "publishedVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -30891,6 +30972,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",
@@ -31518,6 +31600,7 @@ open class ArchitectAPI {
   } ],
   "name" : "name",
   "checkedInVersion" : {
+    "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
     "outputSchema" : {
@@ -31552,6 +31635,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "https://openapi-generator.tech",
     "nluInfo" : "{}",
+    "dateCheckedIn" : 6,
     "type" : "PUBLISH",
     "secure" : true,
     "configurationUri" : "configurationUri",

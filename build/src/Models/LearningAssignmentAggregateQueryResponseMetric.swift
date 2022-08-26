@@ -17,6 +17,7 @@ public class LearningAssignmentAggregateQueryResponseMetric: Codable {
         case ninprogressactivities = "nInProgressActivities"
         case ncompleteactivities = "nCompleteActivities"
         case noverdueactivities = "nOverdueActivities"
+        case ninvalidscheduleactivities = "nInvalidScheduleActivities"
         case npassedactivities = "nPassedActivities"
         case nfailedactivities = "nFailedActivities"
         case oactivityscore = "oActivityScore"

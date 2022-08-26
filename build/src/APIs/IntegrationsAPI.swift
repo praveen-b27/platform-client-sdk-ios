@@ -2477,6 +2477,7 @@ open class IntegrationsAPI {
   "environments" : [ "environments", "environments" ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "integration" : "{}",
   "project" : "{}",
   "id" : "id"
 }, statusCode=200}]

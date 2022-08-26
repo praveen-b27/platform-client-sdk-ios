@@ -1560,7 +1560,7 @@ ArchitectAPI.getArchitectIvr(ivrId: ivrId) { (response, error) in
 
 
 
-> [IVREntityListing](IVREntityListing.html) getArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name)
+> [IVREntityListing](IVREntityListing.html) getArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name, dnis)
 
 Get IVR configs.
 
@@ -1585,9 +1585,10 @@ let pageSize: Int = 0 // Page size
 let sortBy: String = "" // Sort by
 let sortOrder: String = "" // Sort order
 let name: String = "" // Name of the IVR to filter by.
+let dnis: String = "" // The phone number of the IVR to filter by.
 
 // Code example
-ArchitectAPI.getArchitectIvrs(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name) { (response, error) in
+ArchitectAPI.getArchitectIvrs(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, dnis: dnis) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1607,6 +1608,7 @@ ArchitectAPI.getArchitectIvrs(pageNumber: pageNumber, pageSize: pageSize, sortBy
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name of the IVR to filter by. | [optional] |
+| **dnis** | **String**| The phone number of the IVR to filter by. | [optional] |
 {: class="table-striped"}
 
 

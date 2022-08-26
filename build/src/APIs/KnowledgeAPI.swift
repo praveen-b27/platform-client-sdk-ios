@@ -76,19 +76,376 @@ open class KnowledgeAPI {
 
     
     
+    /**
+     Delete category
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter categoryId: (path) Category ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseCategory(knowledgeBaseId: String, categoryId: String, completion: @escaping ((_ data: CategoryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, categoryId: categoryId)
+        requestBuilder.execute { (response: Response<CategoryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete category
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "documentCount" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "parentCategory" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter categoryId: (path) Category ID 
+
+     - returns: RequestBuilder<CategoryResponse> 
+     */
+    open class func deleteKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: String, categoryId: String) -> RequestBuilder<CategoryResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let categoryIdPreEscape = "\(categoryId)"
+        let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{categoryId}", with: categoryIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Delete document.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseDocument(knowledgeBaseId: String, documentId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseDocumentWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete document.
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeKnowledgebaseDocumentWithRequestBuilder(knowledgeBaseId: String, documentId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Delete a variation for a document.
+     
+     - parameter documentVariationId: (path) Globally unique identifier for a document variation. 
+     - parameter documentId: (path) Globally unique identifier for a document. 
+     - parameter knowledgeBaseId: (path) Globally unique identifier for a knowledge base. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseDocumentVariation(documentVariationId: String, documentId: String, knowledgeBaseId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: documentVariationId, documentId: documentId, knowledgeBaseId: knowledgeBaseId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a variation for a document.
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter documentVariationId: (path) Globally unique identifier for a document variation. 
+     - parameter documentId: (path) Globally unique identifier for a document. 
+     - parameter knowledgeBaseId: (path) Globally unique identifier for a knowledge base. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: String, documentId: String, knowledgeBaseId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}"
+        let documentVariationIdPreEscape = "\(documentVariationId)"
+        let documentVariationIdPostEscape = documentVariationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentVariationId}", with: documentVariationIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Delete export job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter exportJobId: (path) Export job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseExportJob(knowledgeBaseId: String, exportJobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseExportJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, exportJobId: exportJobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete export job
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter exportJobId: (path) Export job ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeKnowledgebaseExportJobWithRequestBuilder(knowledgeBaseId: String, exportJobId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let exportJobIdPreEscape = "\(exportJobId)"
+        let exportJobIdPostEscape = exportJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportJobId}", with: exportJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Delete import job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter importJobId: (path) Import job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseImportJob(knowledgeBaseId: String, importJobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, importJobId: importJobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete import job
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter importJobId: (path) Import job ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: String, importJobId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let importJobIdPreEscape = "\(importJobId)"
+        let importJobIdPostEscape = importJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importJobId}", with: importJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Delete label
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter labelId: (path) Label ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseLabel(knowledgeBaseId: String, labelId: String, completion: @escaping ((_ data: LabelResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseLabelWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, labelId: labelId)
+        requestBuilder.execute { (response: Response<LabelResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete label
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "documentCount" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "color" : "color",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter labelId: (path) Label ID 
+
+     - returns: RequestBuilder<LabelResponse> 
+     */
+    open class func deleteKnowledgeKnowledgebaseLabelWithRequestBuilder(knowledgeBaseId: String, labelId: String) -> RequestBuilder<LabelResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let labelIdPreEscape = "\(labelId)"
+        let labelIdPostEscape = labelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{labelId}", with: labelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LabelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
     
     public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageCategory: String { 
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -169,14 +526,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -278,14 +652,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -341,6 +732,475 @@ open class KnowledgeAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum SortBy_getKnowledgeGuestSessionCategories: String { 
+        case name = "Name"
+        case hierarchy = "Hierarchy"
+    }
+
+    
+    
+    
+    /**
+     Get categories
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter parentId: (query) If specified, retrieves the children categories by parent category ID. (optional)
+     - parameter isRoot: (query) If specified, retrieves only the root categories. (optional)
+     - parameter name: (query) Filter to return the categories that starts with the given category name. (optional)
+     - parameter sortBy: (query) Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically (optional)
+     - parameter expand: (query) The specified entity attribute will be filled. Supported value:\&quot;Ancestors\&quot;: every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. (optional)
+     - parameter includeDocumentCount: (query) If specified, retrieves the number of documents related to category. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeGuestSessionCategories(sessionId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, parentId: String? = nil, isRoot: Bool? = nil, name: String? = nil, sortBy: SortBy_getKnowledgeGuestSessionCategories? = nil, expand: String? = nil, includeDocumentCount: Bool? = nil, completion: @escaping ((_ data: GuestCategoryResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeGuestSessionCategoriesWithRequestBuilder(sessionId: sessionId, before: before, after: after, pageSize: pageSize, parentId: parentId, isRoot: isRoot, name: name, sortBy: sortBy, expand: expand, includeDocumentCount: includeDocumentCount)
+        requestBuilder.execute { (response: Response<GuestCategoryResponseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get categories
+     - GET /api/v2/knowledge/guest/sessions/{sessionId}/categories
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "parentCategory" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "parentCategory" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "selfUri" : "selfUri",
+  "sessionId" : "sessionId",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter parentId: (query) If specified, retrieves the children categories by parent category ID. (optional)
+     - parameter isRoot: (query) If specified, retrieves only the root categories. (optional)
+     - parameter name: (query) Filter to return the categories that starts with the given category name. (optional)
+     - parameter sortBy: (query) Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically (optional)
+     - parameter expand: (query) The specified entity attribute will be filled. Supported value:\&quot;Ancestors\&quot;: every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. (optional)
+     - parameter includeDocumentCount: (query) If specified, retrieves the number of documents related to category. (optional)
+
+     - returns: RequestBuilder<GuestCategoryResponseListing> 
+     */
+    open class func getKnowledgeGuestSessionCategoriesWithRequestBuilder(sessionId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, parentId: String? = nil, isRoot: Bool? = nil, name: String? = nil, sortBy: SortBy_getKnowledgeGuestSessionCategories? = nil, expand: String? = nil, includeDocumentCount: Bool? = nil) -> RequestBuilder<GuestCategoryResponseListing> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/categories"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "parentId": parentId, 
+            "isRoot": isRoot, 
+            "name": name, 
+            "sortBy": sortBy?.rawValue, 
+            "expand": expand, 
+            "includeDocumentCount": includeDocumentCount
+        ])
+
+        let requestBuilder: RequestBuilder<GuestCategoryResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get a knowledge document by ID.
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter documentId: (path) Document ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeGuestSessionDocument(sessionId: String, documentId: String, completion: @escaping ((_ data: KnowledgeGuestDocument?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeGuestSessionDocumentWithRequestBuilder(sessionId: sessionId, documentId: documentId)
+        requestBuilder.execute { (response: Response<KnowledgeGuestDocument>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a knowledge document by ID.
+     - GET /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}
+     - examples: [{contentType=application/json, example={
+  "visible" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "sessionId" : "sessionId",
+  "title" : "title",
+  "documentVersion" : "{}",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastPublishedVersionNumber" : 0,
+  "createdBy" : "{}",
+  "variations" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  } ],
+  "alternatives" : [ {
+    "phrase" : "phrase",
+    "autocomplete" : true
+  }, {
+    "phrase" : "phrase",
+    "autocomplete" : true
+  } ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Draft",
+  "category" : "{}"
+}, statusCode=200}]
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter documentId: (path) Document ID 
+
+     - returns: RequestBuilder<KnowledgeGuestDocument> 
+     */
+    open class func getKnowledgeGuestSessionDocumentWithRequestBuilder(sessionId: String, documentId: String) -> RequestBuilder<KnowledgeGuestDocument> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeGuestDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get documents.
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
+     - parameter includeSubcategories: (query) Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeGuestSessionDocuments(sessionId: String, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, pageSize: String? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: sessionId, categoryId: categoryId, includeSubcategories: includeSubcategories, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<KnowledgeGuestDocumentResponseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get documents.
+     - GET /api/v2/knowledge/guest/sessions/{sessionId}/documents
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "visible" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "sessionId" : "sessionId",
+    "title" : "title",
+    "documentVersion" : "{}",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastPublishedVersionNumber" : 0,
+    "createdBy" : "{}",
+    "variations" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "body" : "{}",
+      "documentVersion" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "body" : "{}",
+      "documentVersion" : "{}"
+    } ],
+    "alternatives" : [ {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    }, {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    } ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Draft",
+    "category" : "{}"
+  }, {
+    "visible" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "sessionId" : "sessionId",
+    "title" : "title",
+    "documentVersion" : "{}",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastPublishedVersionNumber" : 0,
+    "createdBy" : "{}",
+    "variations" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "body" : "{}",
+      "documentVersion" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "body" : "{}",
+      "documentVersion" : "{}"
+    } ],
+    "alternatives" : [ {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    }, {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    } ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Draft",
+    "category" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
+     - parameter includeSubcategories: (query) Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<KnowledgeGuestDocumentResponseListing> 
+     */
+    open class func getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: String, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, pageSize: String? = nil) -> RequestBuilder<KnowledgeGuestDocumentResponseListing> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "categoryId": categoryId, 
+            "includeSubcategories": includeSubcategories, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeGuestDocumentResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
     
@@ -409,18 +1269,1624 @@ open class KnowledgeAPI {
 
     
     
+    
+    
+    
+    
+    
+    
+    public enum SortBy_getKnowledgeKnowledgebaseCategories: String { 
+        case name = "Name"
+        case hierarchy = "Hierarchy"
+    }
+
+    
+    
+    
+    /**
+     Get categories
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter parentId: (query) If specified, retrieves the children categories by parent category ID. (optional)
+     - parameter isRoot: (query) If specified, retrieves only the root categories. (optional)
+     - parameter name: (query) Filter to return the categories that starts with the given category name. (optional)
+     - parameter sortBy: (query) Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically (optional)
+     - parameter expand: (query) The specified entity attribute will be filled. Supported value:\&quot;Ancestors\&quot;: every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. (optional)
+     - parameter includeDocumentCount: (query) If specified, retrieves the number of documents related to category. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseCategories(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, parentId: String? = nil, isRoot: Bool? = nil, name: String? = nil, sortBy: SortBy_getKnowledgeKnowledgebaseCategories? = nil, expand: String? = nil, includeDocumentCount: Bool? = nil, completion: @escaping ((_ data: CategoryResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseCategoriesWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, parentId: parentId, isRoot: isRoot, name: name, sortBy: sortBy, expand: expand, includeDocumentCount: includeDocumentCount)
+        requestBuilder.execute { (response: Response<CategoryResponseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get categories
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeBase" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "parentCategory" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeBase" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "parentCategory" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter parentId: (query) If specified, retrieves the children categories by parent category ID. (optional)
+     - parameter isRoot: (query) If specified, retrieves only the root categories. (optional)
+     - parameter name: (query) Filter to return the categories that starts with the given category name. (optional)
+     - parameter sortBy: (query) Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically (optional)
+     - parameter expand: (query) The specified entity attribute will be filled. Supported value:\&quot;Ancestors\&quot;: every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. (optional)
+     - parameter includeDocumentCount: (query) If specified, retrieves the number of documents related to category. (optional)
+
+     - returns: RequestBuilder<CategoryResponseListing> 
+     */
+    open class func getKnowledgeKnowledgebaseCategoriesWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, parentId: String? = nil, isRoot: Bool? = nil, name: String? = nil, sortBy: SortBy_getKnowledgeKnowledgebaseCategories? = nil, expand: String? = nil, includeDocumentCount: Bool? = nil) -> RequestBuilder<CategoryResponseListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "parentId": parentId, 
+            "isRoot": isRoot, 
+            "name": name, 
+            "sortBy": sortBy?.rawValue, 
+            "expand": expand, 
+            "includeDocumentCount": includeDocumentCount
+        ])
+
+        let requestBuilder: RequestBuilder<CategoryResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get category
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter categoryId: (path) Category ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseCategory(knowledgeBaseId: String, categoryId: String, completion: @escaping ((_ data: CategoryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, categoryId: categoryId)
+        requestBuilder.execute { (response: Response<CategoryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get category
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "documentCount" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "parentCategory" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter categoryId: (path) Category ID 
+
+     - returns: RequestBuilder<CategoryResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: String, categoryId: String) -> RequestBuilder<CategoryResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let categoryIdPreEscape = "\(categoryId)"
+        let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{categoryId}", with: categoryIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum State_getKnowledgeKnowledgebaseDocument: String { 
+        case draft = "Draft"
+        case published = "Published"
+    }
+
+    
+    /**
+     Get document.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. Max No. of variations that can be returned on expand is 20. (optional)
+     - parameter state: (query) \&quot;when state is \&quot;Draft\&quot;, draft version of the document is returned,otherwise by default published version is returned in the response. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocument(knowledgeBaseId: String, documentId: String, expand: [String]? = nil, state: State_getKnowledgeKnowledgebaseDocument? = nil, completion: @escaping ((_ data: KnowledgeDocumentResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, expand: expand, state: state)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get document.
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "visible" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "title" : "title",
+  "documentVersion" : "{}",
+  "labels" : [ {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "color" : "color",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "color" : "color",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastPublishedVersionNumber" : 0,
+  "knowledgeBase" : "{}",
+  "createdBy" : "{}",
+  "variations" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  } ],
+  "alternatives" : [ {
+    "phrase" : "phrase",
+    "autocomplete" : true
+  }, {
+    "phrase" : "phrase",
+    "autocomplete" : true
+  } ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Draft",
+  "category" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. Max No. of variations that can be returned on expand is 20. (optional)
+     - parameter state: (query) \&quot;when state is \&quot;Draft\&quot;, draft version of the document is returned,otherwise by default published version is returned in the response. (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentWithRequestBuilder(knowledgeBaseId: String, documentId: String, expand: [String]? = nil, state: State_getKnowledgeKnowledgebaseDocument? = nil) -> RequestBuilder<KnowledgeDocumentResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand, 
+            "state": state?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum DocumentState_getKnowledgeKnowledgebaseDocumentVariation: String { 
+        case draft = "Draft"
+        case published = "Published"
+    }
+
+    
+    /**
+     Get a variation for a document.
+     
+     - parameter documentVariationId: (path) Globally unique identifier for a document variation. 
+     - parameter documentId: (path) Globally unique identifier for a document. 
+     - parameter knowledgeBaseId: (path) Globally unique identifier for a knowledge base. 
+     - parameter documentState: (query) The state of the document. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVariation(documentVariationId: String, documentId: String, knowledgeBaseId: String, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariation? = nil, completion: @escaping ((_ data: DocumentVariation?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: documentVariationId, documentId: documentId, knowledgeBaseId: knowledgeBaseId, documentState: documentState)
+        requestBuilder.execute { (response: Response<DocumentVariation>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a variation for a document.
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "document" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "contexts" : [ {
+    "values" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "context" : "{}"
+  }, {
+    "values" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "context" : "{}"
+  } ],
+  "body" : "{}",
+  "documentVersion" : "{}"
+}, statusCode=200}]
+     
+     - parameter documentVariationId: (path) Globally unique identifier for a document variation. 
+     - parameter documentId: (path) Globally unique identifier for a document. 
+     - parameter knowledgeBaseId: (path) Globally unique identifier for a knowledge base. 
+     - parameter documentState: (query) The state of the document. (optional)
+
+     - returns: RequestBuilder<DocumentVariation> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: String, documentId: String, knowledgeBaseId: String, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariation? = nil) -> RequestBuilder<DocumentVariation> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}"
+        let documentVariationIdPreEscape = "\(documentVariationId)"
+        let documentVariationIdPostEscape = documentVariationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentVariationId}", with: documentVariationIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "documentState": documentState?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<DocumentVariation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum DocumentState_getKnowledgeKnowledgebaseDocumentVariations: String { 
+        case draft = "Draft"
+        case published = "Published"
+    }
+
+    
+    /**
+     Get variations for a document.
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter documentState: (query) The state of the document. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariations? = nil, completion: @escaping ((_ data: DocumentVariationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentVariationsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, before: before, after: after, pageSize: pageSize, documentState: documentState)
+        requestBuilder.execute { (response: Response<DocumentVariationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get variations for a document.
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter documentState: (query) The state of the document. (optional)
+
+     - returns: RequestBuilder<DocumentVariationListing> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVariationsWithRequestBuilder(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariations? = nil) -> RequestBuilder<DocumentVariationListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "documentState": documentState?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<DocumentVariationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get document version.
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter versionId: (path) Globally unique identifier for the document version. 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVersion(knowledgeBaseId: String, documentId: String, versionId: String, expand: [String]? = nil, completion: @escaping ((_ data: KnowledgeDocumentVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentVersionWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, versionId: versionId, expand: expand)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get document version.
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "document" : "{}",
+  "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "restoreFromVersionId" : "restoreFromVersionId",
+  "id" : "id",
+  "versionNumber" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter versionId: (path) Globally unique identifier for the document version. 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentVersion> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVersionWithRequestBuilder(knowledgeBaseId: String, documentId: String, versionId: String, expand: [String]? = nil) -> RequestBuilder<KnowledgeDocumentVersion> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get variation for the given document version.
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter versionId: (path) Globally unique identifier for the document version. 
+     - parameter variationId: (path) Globally unique identifier for the document version variation. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVersionVariation(knowledgeBaseId: String, documentId: String, versionId: String, variationId: String, completion: @escaping ((_ data: KnowledgeDocumentVersionVariation?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentVersionVariationWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, versionId: versionId, variationId: variationId)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentVersionVariation>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get variation for the given document version.
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations/{variationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "contexts" : [ {
+    "values" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "context" : "{}"
+  }, {
+    "values" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "context" : "{}"
+  } ],
+  "body" : "{}",
+  "documentVersion" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter versionId: (path) Globally unique identifier for the document version. 
+     - parameter variationId: (path) Globally unique identifier for the document version variation. 
+
+     - returns: RequestBuilder<KnowledgeDocumentVersionVariation> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVersionVariationWithRequestBuilder(knowledgeBaseId: String, documentId: String, versionId: String, variationId: String) -> RequestBuilder<KnowledgeDocumentVersionVariation> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations/{variationId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let variationIdPreEscape = "\(variationId)"
+        let variationIdPostEscape = variationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{variationId}", with: variationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentVersionVariation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get variations for the given document version.
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter versionId: (path) Globally unique identifier for the document version. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVersionVariations(knowledgeBaseId: String, documentId: String, versionId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: KnowledgeDocumentVersionVariationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentVersionVariationsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, versionId: versionId, before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentVersionVariationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get variations for the given document version.
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter versionId: (path) Globally unique identifier for the document version. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentVersionVariationListing> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVersionVariationsWithRequestBuilder(knowledgeBaseId: String, documentId: String, versionId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<KnowledgeDocumentVersionVariationListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentVersionVariationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get document versions.
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVersions(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: KnowledgeDocumentVersionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentVersionsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, before: before, after: after, pageSize: pageSize, expand: expand)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentVersionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get document versions.
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "restoreFromVersionId" : "restoreFromVersionId",
+    "id" : "id",
+    "versionNumber" : 0
+  }, {
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "restoreFromVersionId" : "restoreFromVersionId",
+    "id" : "id",
+    "versionNumber" : 0
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentVersionListing> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentVersionsWithRequestBuilder(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, expand: [String]? = nil) -> RequestBuilder<KnowledgeDocumentVersionListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentVersionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get documents.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter interval: (query) Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)
+     - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
+     - parameter includeSubcategories: (query) Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
+     - parameter includeDrafts: (query) If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)
+     - parameter labelIds: (query) If specified, retrieves documents associated with label ids, comma separated values expected. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: KnowledgeDocumentResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentResponseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get documents.
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "visible" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "title" : "title",
+    "documentVersion" : "{}",
+    "labels" : [ {
+      "documentCount" : 0,
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "color" : "color",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id"
+    }, {
+      "documentCount" : 0,
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "color" : "color",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id"
+    } ],
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastPublishedVersionNumber" : 0,
+    "knowledgeBase" : "{}",
+    "createdBy" : "{}",
+    "variations" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "body" : "{}",
+      "documentVersion" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "body" : "{}",
+      "documentVersion" : "{}"
+    } ],
+    "alternatives" : [ {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    }, {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    } ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Draft",
+    "category" : "{}"
+  }, {
+    "visible" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "title" : "title",
+    "documentVersion" : "{}",
+    "labels" : [ {
+      "documentCount" : 0,
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "color" : "color",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id"
+    }, {
+      "documentCount" : 0,
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "color" : "color",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id"
+    } ],
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastPublishedVersionNumber" : 0,
+    "knowledgeBase" : "{}",
+    "createdBy" : "{}",
+    "variations" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "body" : "{}",
+      "documentVersion" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "body" : "{}",
+      "documentVersion" : "{}"
+    } ],
+    "alternatives" : [ {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    }, {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    } ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Draft",
+    "category" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter interval: (query) Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)
+     - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
+     - parameter includeSubcategories: (query) Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
+     - parameter includeDrafts: (query) If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)
+     - parameter labelIds: (query) If specified, retrieves documents associated with label ids, comma separated values expected. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentResponseListing> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<KnowledgeDocumentResponseListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "interval": interval, 
+            "categoryId": categoryId, 
+            "includeSubcategories": includeSubcategories, 
+            "includeDrafts": includeDrafts, 
+            "labelIds": labelIds, 
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get export job report
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter exportJobId: (path) Export job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseExportJob(knowledgeBaseId: String, exportJobId: String, completion: @escaping ((_ data: KnowledgeExportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseExportJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, exportJobId: exportJobId)
+        requestBuilder.execute { (response: Response<KnowledgeExportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get export job report
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "exportFilter" : "{}",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "errorInformation" : "{}",
+  "countDocumentProcessed" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter exportJobId: (path) Export job ID 
+
+     - returns: RequestBuilder<KnowledgeExportJobResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseExportJobWithRequestBuilder(knowledgeBaseId: String, exportJobId: String) -> RequestBuilder<KnowledgeExportJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let exportJobIdPreEscape = "\(exportJobId)"
+        let exportJobIdPostEscape = exportJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportJobId}", with: exportJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeExportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get import job report
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter importJobId: (path) Import job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseImportJob(knowledgeBaseId: String, importJobId: String, completion: @escaping ((_ data: KnowledgeImportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, importJobId: importJobId)
+        requestBuilder.execute { (response: Response<KnowledgeImportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get import job report
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : "{}",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "selfUri" : "https://openapi-generator.tech",
+  "report" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "fileType" : "Json",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter importJobId: (path) Import job ID 
+
+     - returns: RequestBuilder<KnowledgeImportJobResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: String, importJobId: String) -> RequestBuilder<KnowledgeImportJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let importJobIdPreEscape = "\(importJobId)"
+        let importJobIdPostEscape = importJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importJobId}", with: importJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get label
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter labelId: (path) Label ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseLabel(knowledgeBaseId: String, labelId: String, completion: @escaping ((_ data: LabelResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseLabelWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, labelId: labelId)
+        requestBuilder.execute { (response: Response<LabelResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get label
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "documentCount" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "color" : "color",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter labelId: (path) Label ID 
+
+     - returns: RequestBuilder<LabelResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseLabelWithRequestBuilder(knowledgeBaseId: String, labelId: String) -> RequestBuilder<LabelResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let labelIdPreEscape = "\(labelId)"
+        let labelIdPostEscape = labelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{labelId}", with: labelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LabelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get labels
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter name: (query) Filter to return the labels that contains the given phrase in the name. (optional)
+     - parameter includeDocumentCount: (query) If specified, retrieves the number of documents related to label. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseLabels(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, name: String? = nil, includeDocumentCount: Bool? = nil, completion: @escaping ((_ data: LabelListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseLabelsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, name: name, includeDocumentCount: includeDocumentCount)
+        requestBuilder.execute { (response: Response<LabelListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get labels
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "color" : "color",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "color" : "color",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter name: (query) Filter to return the labels that contains the given phrase in the name. (optional)
+     - parameter includeDocumentCount: (query) If specified, retrieves the number of documents related to label. (optional)
+
+     - returns: RequestBuilder<LabelListing> 
+     */
+    open class func getKnowledgeKnowledgebaseLabelsWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, name: String? = nil, includeDocumentCount: Bool? = nil) -> RequestBuilder<LabelListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "name": name, 
+            "includeDocumentCount": includeDocumentCount
+        ])
+
+        let requestBuilder: RequestBuilder<LabelListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageCategories: String { 
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -532,14 +2998,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -640,14 +3123,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -749,14 +3249,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -941,14 +3458,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -1033,14 +3567,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -1123,14 +3674,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -1250,6 +3818,371 @@ open class KnowledgeAPI {
     
     
     
+    public enum App_getKnowledgeKnowledgebaseUnansweredGroup: String { 
+        case supportCenter = "SupportCenter"
+        case messengerKnowledgeApp = "MessengerKnowledgeApp"
+        case botFlow = "BotFlow"
+        case assistant = "Assistant"
+        case smartAdvisor = "SmartAdvisor"
+    }
+
+    
+    /**
+     Get knowledge base unanswered group for a particular groupId
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter groupId: (path) The ID of the group to be retrieved. 
+     - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId: String, groupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroup? = nil, completion: @escaping ((_ data: UnansweredGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, groupId: groupId, app: app)
+        requestBuilder.execute { (response: Response<UnansweredGroup>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get knowledge base unanswered group for a particular groupId
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "label" : "label",
+  "suggestedDocuments" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "phraseGroups" : [ {
+    "unlinkedPhraseHitCount" : 6,
+    "unlinkedPhraseCount" : 1,
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "label" : "label",
+    "phrases" : [ {
+      "unlinkedPhraseHitCount" : 0,
+      "id" : "id",
+      "text" : "text"
+    }, {
+      "unlinkedPhraseHitCount" : 0,
+      "id" : "id",
+      "text" : "text"
+    } ]
+  }, {
+    "unlinkedPhraseHitCount" : 6,
+    "unlinkedPhraseCount" : 1,
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "label" : "label",
+    "phrases" : [ {
+      "unlinkedPhraseHitCount" : 0,
+      "id" : "id",
+      "text" : "text"
+    }, {
+      "unlinkedPhraseHitCount" : 0,
+      "id" : "id",
+      "text" : "text"
+    } ]
+  } ],
+  "statistics" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter groupId: (path) The ID of the group to be retrieved. 
+     - parameter app: (query) The app value to be used for filtering phrases. (optional)
+
+     - returns: RequestBuilder<UnansweredGroup> 
+     */
+    open class func getKnowledgeKnowledgebaseUnansweredGroupWithRequestBuilder(knowledgeBaseId: String, groupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroup? = nil) -> RequestBuilder<UnansweredGroup> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let groupIdPreEscape = "\(groupId)"
+        let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "app": app?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<UnansweredGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup: String { 
+        case supportCenter = "SupportCenter"
+        case messengerKnowledgeApp = "MessengerKnowledgeApp"
+        case botFlow = "BotFlow"
+        case assistant = "Assistant"
+        case smartAdvisor = "SmartAdvisor"
+    }
+
+    
+    /**
+     Get knowledge base unanswered phrase group for a particular phraseGroupId
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter groupId: (path) The ID of the group to be retrieved. 
+     - parameter phraseGroupId: (path) The ID of the phraseGroup to be retrieved. 
+     - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId: String, groupId: String, phraseGroupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup? = nil, completion: @escaping ((_ data: UnansweredPhraseGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, groupId: groupId, phraseGroupId: phraseGroupId, app: app)
+        requestBuilder.execute { (response: Response<UnansweredPhraseGroup>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get knowledge base unanswered phrase group for a particular phraseGroupId
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "unlinkedPhraseHitCount" : 6,
+  "unlinkedPhraseCount" : 1,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "label" : "label",
+  "phrases" : [ {
+    "unlinkedPhraseHitCount" : 0,
+    "id" : "id",
+    "text" : "text"
+  }, {
+    "unlinkedPhraseHitCount" : 0,
+    "id" : "id",
+    "text" : "text"
+  } ]
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter groupId: (path) The ID of the group to be retrieved. 
+     - parameter phraseGroupId: (path) The ID of the phraseGroup to be retrieved. 
+     - parameter app: (query) The app value to be used for filtering phrases. (optional)
+
+     - returns: RequestBuilder<UnansweredPhraseGroup> 
+     */
+    open class func getKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithRequestBuilder(knowledgeBaseId: String, groupId: String, phraseGroupId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup? = nil) -> RequestBuilder<UnansweredPhraseGroup> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let groupIdPreEscape = "\(groupId)"
+        let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
+        let phraseGroupIdPreEscape = "\(phraseGroupId)"
+        let phraseGroupIdPostEscape = phraseGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{phraseGroupId}", with: phraseGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "app": app?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<UnansweredPhraseGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    public enum App_getKnowledgeKnowledgebaseUnansweredGroups: String { 
+        case supportCenter = "SupportCenter"
+        case messengerKnowledgeApp = "MessengerKnowledgeApp"
+        case botFlow = "BotFlow"
+        case assistant = "Assistant"
+        case smartAdvisor = "SmartAdvisor"
+    }
+
+    
+    /**
+     Get knowledge base unanswered groups
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter app: (query) The app value to be used for filtering phrases. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroups? = nil, completion: @escaping ((_ data: UnansweredGroups?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseUnansweredGroupsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, app: app)
+        requestBuilder.execute { (response: Response<UnansweredGroups>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get knowledge base unanswered groups
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "label" : "label",
+    "suggestedDocuments" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "phraseGroups" : [ {
+      "unlinkedPhraseHitCount" : 6,
+      "unlinkedPhraseCount" : 1,
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "label" : "label",
+      "phrases" : [ {
+        "unlinkedPhraseHitCount" : 0,
+        "id" : "id",
+        "text" : "text"
+      }, {
+        "unlinkedPhraseHitCount" : 0,
+        "id" : "id",
+        "text" : "text"
+      } ]
+    }, {
+      "unlinkedPhraseHitCount" : 6,
+      "unlinkedPhraseCount" : 1,
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "label" : "label",
+      "phrases" : [ {
+        "unlinkedPhraseHitCount" : 0,
+        "id" : "id",
+        "text" : "text"
+      }, {
+        "unlinkedPhraseHitCount" : 0,
+        "id" : "id",
+        "text" : "text"
+      } ]
+    } ],
+    "statistics" : "{}"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "label" : "label",
+    "suggestedDocuments" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "phraseGroups" : [ {
+      "unlinkedPhraseHitCount" : 6,
+      "unlinkedPhraseCount" : 1,
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "label" : "label",
+      "phrases" : [ {
+        "unlinkedPhraseHitCount" : 0,
+        "id" : "id",
+        "text" : "text"
+      }, {
+        "unlinkedPhraseHitCount" : 0,
+        "id" : "id",
+        "text" : "text"
+      } ]
+    }, {
+      "unlinkedPhraseHitCount" : 6,
+      "unlinkedPhraseCount" : 1,
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "label" : "label",
+      "phrases" : [ {
+        "unlinkedPhraseHitCount" : 0,
+        "id" : "id",
+        "text" : "text"
+      }, {
+        "unlinkedPhraseHitCount" : 0,
+        "id" : "id",
+        "text" : "text"
+      } ]
+    } ],
+    "statistics" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter app: (query) The app value to be used for filtering phrases. (optional)
+
+     - returns: RequestBuilder<UnansweredGroups> 
+     */
+    open class func getKnowledgeKnowledgebaseUnansweredGroupsWithRequestBuilder(knowledgeBaseId: String, app: App_getKnowledgeKnowledgebaseUnansweredGroups? = nil) -> RequestBuilder<UnansweredGroups> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "app": app?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<UnansweredGroups>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -1257,14 +4190,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -1391,6 +4341,56 @@ open class KnowledgeAPI {
 
     
     
+    
+    /**
+     Update search result.
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter searchId: (path) Search Result ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeGuestSessionDocumentsSearchSearchId(sessionId: String, searchId: String, body: SearchUpdateRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeGuestSessionDocumentsSearchSearchIdWithRequestBuilder(sessionId: sessionId, searchId: searchId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update search result.
+     - PATCH /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId}
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter searchId: (path) Search Result ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func patchKnowledgeGuestSessionDocumentsSearchSearchIdWithRequestBuilder(sessionId: String, searchId: String, body: SearchUpdateRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId}"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let searchIdPreEscape = "\(searchId)"
+        let searchIdPostEscape = searchIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{searchId}", with: searchIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
     /**
      Update knowledge base
      
@@ -1459,18 +4459,549 @@ open class KnowledgeAPI {
     
     
     
+    /**
+     Update category
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter categoryId: (path) Category ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseCategory(knowledgeBaseId: String, categoryId: String, body: CategoryRequest, completion: @escaping ((_ data: CategoryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, categoryId: categoryId, body: body)
+        requestBuilder.execute { (response: Response<CategoryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update category
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "documentCount" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "parentCategory" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter categoryId: (path) Category ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<CategoryResponse> 
+     */
+    open class func patchKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: String, categoryId: String, body: CategoryRequest) -> RequestBuilder<CategoryResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let categoryIdPreEscape = "\(categoryId)"
+        let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{categoryId}", with: categoryIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Update document.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseDocument(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentReq, completion: @escaping ((_ data: KnowledgeDocumentResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseDocumentWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update document.
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "visible" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "title" : "title",
+  "documentVersion" : "{}",
+  "labels" : [ {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "color" : "color",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "color" : "color",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastPublishedVersionNumber" : 0,
+  "knowledgeBase" : "{}",
+  "createdBy" : "{}",
+  "variations" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  } ],
+  "alternatives" : [ {
+    "phrase" : "phrase",
+    "autocomplete" : true
+  }, {
+    "phrase" : "phrase",
+    "autocomplete" : true
+  } ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Draft",
+  "category" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeDocumentResponse> 
+     */
+    open class func patchKnowledgeKnowledgebaseDocumentWithRequestBuilder(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentReq) -> RequestBuilder<KnowledgeDocumentResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a variation for a document.
+     
+     - parameter documentVariationId: (path) Globally unique identifier for a document variation. 
+     - parameter documentId: (path) Globally unique identifier for a document. 
+     - parameter knowledgeBaseId: (path) Globally unique identifier for a knowledge base. 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseDocumentVariation(documentVariationId: String, documentId: String, knowledgeBaseId: String, body: DocumentVariation, completion: @escaping ((_ data: DocumentVariation?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: documentVariationId, documentId: documentId, knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<DocumentVariation>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a variation for a document.
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "document" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "contexts" : [ {
+    "values" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "context" : "{}"
+  }, {
+    "values" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "context" : "{}"
+  } ],
+  "body" : "{}",
+  "documentVersion" : "{}"
+}, statusCode=200}]
+     
+     - parameter documentVariationId: (path) Globally unique identifier for a document variation. 
+     - parameter documentId: (path) Globally unique identifier for a document. 
+     - parameter knowledgeBaseId: (path) Globally unique identifier for a knowledge base. 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<DocumentVariation> 
+     */
+    open class func patchKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: String, documentId: String, knowledgeBaseId: String, body: DocumentVariation) -> RequestBuilder<DocumentVariation> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}"
+        let documentVariationIdPreEscape = "\(documentVariationId)"
+        let documentVariationIdPostEscape = documentVariationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentVariationId}", with: documentVariationIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DocumentVariation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Update search result.
+     
+     - parameter knowledgeBaseId: (path) The ID of knowledge base containing the documents to query. 
+     - parameter searchId: (path) Search Result ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseDocumentsSearchSearchId(knowledgeBaseId: String, searchId: String, body: SearchUpdateRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseDocumentsSearchSearchIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, searchId: searchId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update search result.
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/{searchId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) The ID of knowledge base containing the documents to query. 
+     - parameter searchId: (path) Search Result ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func patchKnowledgeKnowledgebaseDocumentsSearchSearchIdWithRequestBuilder(knowledgeBaseId: String, searchId: String, body: SearchUpdateRequest? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/{searchId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let searchIdPreEscape = "\(searchId)"
+        let searchIdPostEscape = searchIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{searchId}", with: searchIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Start import job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter importJobId: (path) Import job ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseImportJob(knowledgeBaseId: String, importJobId: String, body: ImportStatusRequest, completion: @escaping ((_ data: KnowledgeImportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, importJobId: importJobId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeImportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start import job
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : "{}",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "selfUri" : "https://openapi-generator.tech",
+  "report" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "fileType" : "Json",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter importJobId: (path) Import job ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeImportJobResponse> 
+     */
+    open class func patchKnowledgeKnowledgebaseImportJobWithRequestBuilder(knowledgeBaseId: String, importJobId: String, body: ImportStatusRequest) -> RequestBuilder<KnowledgeImportJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let importJobIdPreEscape = "\(importJobId)"
+        let importJobIdPostEscape = importJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importJobId}", with: importJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Update label
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter labelId: (path) Label ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseLabel(knowledgeBaseId: String, labelId: String, body: LabelUpdateRequest, completion: @escaping ((_ data: LabelResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseLabelWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, labelId: labelId, body: body)
+        requestBuilder.execute { (response: Response<LabelResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update label
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "documentCount" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "color" : "color",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter labelId: (path) Label ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<LabelResponse> 
+     */
+    open class func patchKnowledgeKnowledgebaseLabelWithRequestBuilder(knowledgeBaseId: String, labelId: String, body: LabelUpdateRequest) -> RequestBuilder<LabelResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let labelIdPreEscape = "\(labelId)"
+        let labelIdPostEscape = labelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{labelId}", with: labelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LabelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageCategory: String { 
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -1574,14 +5105,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -1686,14 +5234,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -1829,14 +5394,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -1919,6 +5501,82 @@ open class KnowledgeAPI {
     }
 
     
+    
+    
+    
+    /**
+     Update a Knowledge base unanswered phrase group
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter groupId: (path) The ID of the group to be updated. 
+     - parameter phraseGroupId: (path) The ID of the phraseGroup to be updated. 
+     - parameter body: (body) Request body of the update unanswered group endpoint. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId: String, groupId: String, phraseGroupId: String, body: UnansweredPhraseGroupPatchRequestBody, completion: @escaping ((_ data: UnansweredPhraseGroupUpdateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, groupId: groupId, phraseGroupId: phraseGroupId, body: body)
+        requestBuilder.execute { (response: Response<UnansweredPhraseGroupUpdateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a Knowledge base unanswered phrase group
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "phraseAssociations" : [ {
+    "phraseId" : "phraseId",
+    "documentId" : "documentId"
+  }, {
+    "phraseId" : "phraseId",
+    "documentId" : "documentId"
+  } ],
+  "group" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter groupId: (path) The ID of the group to be updated. 
+     - parameter phraseGroupId: (path) The ID of the phraseGroup to be updated. 
+     - parameter body: (body) Request body of the update unanswered group endpoint. 
+
+     - returns: RequestBuilder<UnansweredPhraseGroupUpdateResponse> 
+     */
+    open class func patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroupWithRequestBuilder(knowledgeBaseId: String, groupId: String, phraseGroupId: String, body: UnansweredPhraseGroupPatchRequestBody) -> RequestBuilder<UnansweredPhraseGroupUpdateResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let groupIdPreEscape = "\(groupId)"
+        let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
+        let phraseGroupIdPreEscape = "\(phraseGroupId)"
+        let phraseGroupIdPostEscape = phraseGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{phraseGroupId}", with: phraseGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UnansweredPhraseGroupUpdateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
     /**
      Creates a presigned URL for uploading a knowledge import file with a set of documents
      
@@ -1975,18 +5633,951 @@ open class KnowledgeAPI {
 
     
     
+    
+    /**
+     Search the documents in a guest session.
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter expand: (query) Fields, if any, to expand for each document in the search result matching the query. (optional)
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeGuestSessionDocumentsSearch(sessionId: String, expand: [String]? = nil, body: KnowledgeDocumentGuestSearchRequest? = nil, completion: @escaping ((_ data: KnowledgeDocumentGuestSearch?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeGuestSessionDocumentsSearchWithRequestBuilder(sessionId: sessionId, expand: expand, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentGuestSearch>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search the documents in a guest session.
+     - POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/search
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "searchId" : "searchId",
+  "query" : "query",
+  "pageSize" : 0,
+  "sessionId" : "sessionId",
+  "results" : [ {
+    "confidence" : 5.637376656633329,
+    "document" : "{}"
+  }, {
+    "confidence" : 5.637376656633329,
+    "document" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter expand: (query) Fields, if any, to expand for each document in the search result matching the query. (optional)
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentGuestSearch> 
+     */
+    open class func postKnowledgeGuestSessionDocumentsSearchWithRequestBuilder(sessionId: String, expand: [String]? = nil, body: KnowledgeDocumentGuestSearchRequest? = nil) -> RequestBuilder<KnowledgeDocumentGuestSearch> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentGuestSearch>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Query the knowledge documents to provide suggestions for auto completion.
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeGuestSessionDocumentsSearchSuggestions(sessionId: String, body: KnowledgeDocumentSuggestionRequest? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentSuggestion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeGuestSessionDocumentsSearchSuggestionsWithRequestBuilder(sessionId: sessionId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeGuestDocumentSuggestion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the knowledge documents to provide suggestions for auto completion.
+     - POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions
+     - examples: [{contentType=application/json, example={
+  "query" : "query",
+  "pageSize" : 0,
+  "sessionId" : "sessionId",
+  "results" : [ {
+    "matchedPhrase" : "matchedPhrase"
+  }, {
+    "matchedPhrase" : "matchedPhrase"
+  } ]
+}, statusCode=200}]
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeGuestDocumentSuggestion> 
+     */
+    open class func postKnowledgeGuestSessionDocumentsSearchSuggestionsWithRequestBuilder(sessionId: String, body: KnowledgeDocumentSuggestionRequest? = nil) -> RequestBuilder<KnowledgeGuestDocumentSuggestion> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeGuestDocumentSuggestion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Create guest session
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeGuestSessions(body: KnowledgeGuestSession, completion: @escaping ((_ data: KnowledgeGuestSession?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeGuestSessionsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<KnowledgeGuestSession>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create guest session
+     - POST /api/v2/knowledge/guest/sessions
+     - examples: [{contentType=application/json, example={
+  "app" : "{}",
+  "customerId" : "customerId",
+  "pageUrl" : "pageUrl",
+  "id" : "id",
+  "contexts" : [ {
+    "values" : [ {
+      "id" : "id"
+    }, {
+      "id" : "id"
+    } ],
+    "id" : "id"
+  }, {
+    "values" : [ {
+      "id" : "id"
+    }, {
+      "id" : "id"
+    } ],
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeGuestSession> 
+     */
+    open class func postKnowledgeGuestSessionsWithRequestBuilder(body: KnowledgeGuestSession) -> RequestBuilder<KnowledgeGuestSession> {        
+        let path = "/api/v2/knowledge/guest/sessions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeGuestSession>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Create new category
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseCategories(knowledgeBaseId: String, body: CategoryRequest, completion: @escaping ((_ data: CategoryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseCategoriesWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<CategoryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create new category
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "documentCount" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "parentCategory" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<CategoryResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseCategoriesWithRequestBuilder(knowledgeBaseId: String, body: CategoryRequest) -> RequestBuilder<CategoryResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Create a variation for a document.
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: String, documentId: String, body: DocumentVariation, completion: @escaping ((_ data: DocumentVariation?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentVariationsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<DocumentVariation>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a variation for a document.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "document" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "contexts" : [ {
+    "values" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "context" : "{}"
+  }, {
+    "values" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "context" : "{}"
+  } ],
+  "body" : "{}",
+  "documentVersion" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<DocumentVariation> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentVariationsWithRequestBuilder(knowledgeBaseId: String, documentId: String, body: DocumentVariation) -> RequestBuilder<DocumentVariation> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DocumentVariation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Creates or restores a document version.
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentVersions(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentVersion, completion: @escaping ((_ data: KnowledgeDocumentVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentVersionsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates or restores a document version.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "document" : "{}",
+  "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "restoreFromVersionId" : "restoreFromVersionId",
+  "id" : "id",
+  "versionNumber" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Globally unique identifier for the knowledge base. 
+     - parameter documentId: (path) Globally unique identifier for the document. 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeDocumentVersion> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentVersionsWithRequestBuilder(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentVersion) -> RequestBuilder<KnowledgeDocumentVersion> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Create document.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: String, body: KnowledgeDocumentReq, completion: @escaping ((_ data: KnowledgeDocumentResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create document.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "visible" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "title" : "title",
+  "documentVersion" : "{}",
+  "labels" : [ {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "color" : "color",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "documentCount" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "color" : "color",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastPublishedVersionNumber" : 0,
+  "knowledgeBase" : "{}",
+  "createdBy" : "{}",
+  "variations" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "contexts" : [ {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    }, {
+      "values" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ],
+      "context" : "{}"
+    } ],
+    "body" : "{}",
+    "documentVersion" : "{}"
+  } ],
+  "alternatives" : [ {
+    "phrase" : "phrase",
+    "autocomplete" : true
+  }, {
+    "phrase" : "phrase",
+    "autocomplete" : true
+  } ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Draft",
+  "category" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeDocumentResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentReq) -> RequestBuilder<KnowledgeDocumentResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Search the documents in a knowledge base.
+     
+     - parameter knowledgeBaseId: (path) The ID of knowledge base containing the documents to query. 
+     - parameter expand: (query) Fields, if any, to expand for each document in the search result matching the query. (optional)
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsSearch(knowledgeBaseId: String, expand: [String]? = nil, body: KnowledgeDocumentSearchRequest? = nil, completion: @escaping ((_ data: KnowledgeDocumentSearch?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentsSearchWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, expand: expand, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentSearch>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search the documents in a knowledge base.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "searchId" : "searchId",
+  "query" : "query",
+  "pageSize" : 0,
+  "results" : [ {
+    "confidence" : 5.637376656633329,
+    "document" : "{}"
+  }, {
+    "confidence" : 5.637376656633329,
+    "document" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) The ID of knowledge base containing the documents to query. 
+     - parameter expand: (query) Fields, if any, to expand for each document in the search result matching the query. (optional)
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentSearch> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsSearchWithRequestBuilder(knowledgeBaseId: String, expand: [String]? = nil, body: KnowledgeDocumentSearchRequest? = nil) -> RequestBuilder<KnowledgeDocumentSearch> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentSearch>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Query the knowledge documents to provide suggestions for auto completion.
+     
+     - parameter knowledgeBaseId: (path) The ID of knowledge base containing the documents to query. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsSearchSuggestions(knowledgeBaseId: String, body: KnowledgeDocumentSuggestionRequest? = nil, completion: @escaping ((_ data: KnowledgeDocumentSuggestion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentsSearchSuggestionsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentSuggestion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the knowledge documents to provide suggestions for auto completion.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "query" : "query",
+  "pageSize" : 0,
+  "results" : [ {
+    "document" : {
+      "knowledgeBase" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "title" : "title"
+    },
+    "matchedPhrase" : "matchedPhrase"
+  }, {
+    "document" : {
+      "knowledgeBase" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "title" : "title"
+    },
+    "matchedPhrase" : "matchedPhrase"
+  } ]
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) The ID of knowledge base containing the documents to query. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentSuggestion> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsSearchSuggestionsWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentSuggestionRequest? = nil) -> RequestBuilder<KnowledgeDocumentSuggestion> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentSuggestion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Create export job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseExportJobs(knowledgeBaseId: String, body: KnowledgeExportJobRequest, completion: @escaping ((_ data: KnowledgeExportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseExportJobsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeExportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create export job
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "exportFilter" : "{}",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "errorInformation" : "{}",
+  "countDocumentProcessed" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeExportJobResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseExportJobsWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeExportJobRequest) -> RequestBuilder<KnowledgeExportJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeExportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Create import job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseImportJobs(knowledgeBaseId: String, body: KnowledgeImportJobRequest, completion: @escaping ((_ data: KnowledgeImportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseImportJobsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeImportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create import job
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : "{}",
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "selfUri" : "https://openapi-generator.tech",
+  "report" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "fileType" : "Json",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeImportJobResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseImportJobsWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeImportJobRequest) -> RequestBuilder<KnowledgeImportJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Create new label
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseLabels(knowledgeBaseId: String, body: LabelCreateRequest, completion: @escaping ((_ data: LabelResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseLabelsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<LabelResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create new label
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "documentCount" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "color" : "color",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<LabelResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseLabelsWithRequestBuilder(knowledgeBaseId: String, body: LabelCreateRequest) -> RequestBuilder<LabelResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LabelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageCategories: String { 
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -2084,14 +6675,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -2191,14 +6799,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -2280,14 +6905,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     
@@ -2370,14 +7012,31 @@ open class KnowledgeAPI {
         case enUs = "en-US"
         case enUk = "en-UK"
         case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
         case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
         case esUs = "es-US"
         case esEs = "es-ES"
         case frFr = "fr-FR"
-        case ptBr = "pt-BR"
-        case nlNl = "nl-NL"
-        case itIt = "it-IT"
+        case frBe = "fr-BE"
         case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
     }
 
     

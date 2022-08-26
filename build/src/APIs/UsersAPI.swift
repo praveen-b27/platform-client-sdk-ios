@@ -7558,9 +7558,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -7607,7 +7607,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -7715,9 +7715,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -7764,7 +7764,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -18651,10 +18651,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18677,10 +18677,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18721,10 +18721,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18747,10 +18747,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18796,10 +18796,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18822,10 +18822,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18866,10 +18866,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18892,10 +18892,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -19392,6 +19392,7 @@ open class UsersAPI {
     /**
      Create user
      - POST /api/v2/users
+     - If user creation is successful but the provided password is invalid or configuration fails, POST api/v2/users/{userId}/password can be used to re-attempt password configuration.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

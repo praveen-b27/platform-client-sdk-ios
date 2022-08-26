@@ -48,6 +48,8 @@ public class FlowVersion: Codable {
     public var createdByClient: DomainEntityRef?
     public var configurationUri: String?
     public var dateCreated: Int64?
+    public var dateCheckedIn: Int64?
+    public var dateSaved: Int64?
     public var generationId: String?
     public var publishResultUri: String?
     public var inputSchema: JsonSchemaDocument?
@@ -61,7 +63,7 @@ public class FlowVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, debug: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, generationId: String?, publishResultUri: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, compatibleFlowTypes: [CompatibleFlowTypes]?, selfUri: String?) {
+    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, debug: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, dateCheckedIn: Int64?, dateSaved: Int64?, generationId: String?, publishResultUri: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, compatibleFlowTypes: [CompatibleFlowTypes]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.commitVersion = commitVersion
@@ -73,6 +75,8 @@ public class FlowVersion: Codable {
         self.createdByClient = createdByClient
         self.configurationUri = configurationUri
         self.dateCreated = dateCreated
+        self.dateCheckedIn = dateCheckedIn
+        self.dateSaved = dateSaved
         self.generationId = generationId
         self.publishResultUri = publishResultUri
         self.inputSchema = inputSchema
@@ -95,6 +99,8 @@ public class FlowVersion: Codable {
         case createdByClient
         case configurationUri
         case dateCreated
+        case dateCheckedIn
+        case dateSaved
         case generationId
         case publishResultUri
         case inputSchema

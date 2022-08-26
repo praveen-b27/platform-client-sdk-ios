@@ -69,6 +69,7 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
         case inboundchat = "INBOUNDCHAT"
         case workflow = "WORKFLOW"
         case bot = "BOT"
+        case digitalbot = "DIGITALBOT"
     }
     public var eventTime: Int?
     public var conversationId: String?

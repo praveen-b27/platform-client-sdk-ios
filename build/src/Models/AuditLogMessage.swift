@@ -52,6 +52,10 @@ public class AuditLogMessage: Codable {
         case numberPurchasing = "NumberPurchasing"
         case marketplace = "Marketplace"
     }
+    public enum Level: String, Codable { 
+        case user = "USER"
+        case system = "SYSTEM"
+    }
     public enum Action: String, Codable { 
         case create = "Create"
         case view = "View"
@@ -131,6 +135,8 @@ public class AuditLogMessage: Codable {
         case softDelete = "SoftDelete"
         case hardDelete = "HardDelete"
         case reset = "Reset"
+        case rotate = "Rotate"
+        case restore = "Restore"
         case unarchive = "Unarchive"
     }
     public enum EntityType: String, Codable { 
@@ -250,6 +256,8 @@ public class AuditLogMessage: Codable {
         case queue = "Queue"
         case recording = "Recording"
         case recordingAnnotation = "RecordingAnnotation"
+        case recordingKey = "RecordingKey"
+        case recordingKeyConfig = "RecordingKeyConfig"
         case recordingSettings = "RecordingSettings"
         case response = "Response"
         case responseAsset = "ResponseAsset"
@@ -319,6 +327,8 @@ public class AuditLogMessage: Codable {
     public var remoteIp: [String]?
     /** Name of the service that logged this audit message. */
     public var serviceName: ServiceName?
+    /** Level of this audit message, USER or SYSTEM. */
+    public var level: Level?
     /** Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var eventDate: Date?
     /** Message describing the event being audited. */
@@ -336,13 +346,14 @@ public class AuditLogMessage: Codable {
     /** Additional context for this message. */
     public var context: [String:String]?
 
-    public init(_id: String?, userHomeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, status: Status?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
+    public init(_id: String?, userHomeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, level: Level?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, status: Status?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
         self._id = _id
         self.userHomeOrgId = userHomeOrgId
         self.user = user
         self.client = client
         self.remoteIp = remoteIp
         self.serviceName = serviceName
+        self.level = level
         self.eventDate = eventDate
         self.message = message
         self.action = action
@@ -360,6 +371,7 @@ public class AuditLogMessage: Codable {
         case client
         case remoteIp
         case serviceName
+        case level
         case eventDate
         case message
         case action

@@ -128,6 +128,8 @@ public class AuditQueryEntity: Codable {
         case queue = "Queue"
         case recording = "Recording"
         case recordingAnnotation = "RecordingAnnotation"
+        case recordingKey = "RecordingKey"
+        case recordingKeyConfig = "RecordingKeyConfig"
         case recordingSettings = "RecordingSettings"
         case response = "Response"
         case responseAsset = "ResponseAsset"
@@ -259,6 +261,8 @@ public class AuditQueryEntity: Codable {
         case softDelete = "SoftDelete"
         case hardDelete = "HardDelete"
         case reset = "Reset"
+        case rotate = "Rotate"
+        case restore = "Restore"
         case unarchive = "Unarchive"
     }
     /** Name of the Entity */

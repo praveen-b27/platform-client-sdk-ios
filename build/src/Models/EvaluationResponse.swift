@@ -68,10 +68,12 @@ public class EvaluationResponse: Codable {
     public var isScoringIndex: Bool?
     /** List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit */
     public var authorizedActions: [String]?
+    /** Is true when evaluation assistance didn't execute successfully */
+    public var hasAssistanceFailed: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
@@ -96,6 +98,7 @@ public class EvaluationResponse: Codable {
         self.redacted = redacted
         self.isScoringIndex = isScoringIndex
         self.authorizedActions = authorizedActions
+        self.hasAssistanceFailed = hasAssistanceFailed
         self.selfUri = selfUri
     }
 
@@ -124,6 +127,7 @@ public class EvaluationResponse: Codable {
         case redacted
         case isScoringIndex
         case authorizedActions
+        case hasAssistanceFailed
         case selfUri
     }
 

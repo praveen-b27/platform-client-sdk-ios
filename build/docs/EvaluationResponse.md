@@ -31,6 +31,7 @@ title: EvaluationResponse
 | **redacted** | **Bool** | Is only true when the user making the request does not have sufficient permissions to see evaluation | [optional] |
 | **isScoringIndex** | **Bool** |  | [optional] |
 | **authorizedActions** | **[String]** | List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit | [optional] |
+| **hasAssistanceFailed** | **Bool** | Is true when evaluation assistance didn&#39;t execute successfully | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -22,16 +22,19 @@ public class DialogflowAgent: Codable {
     public var intents: [DialogflowIntent]?
     /** Available environments for this agent */
     public var environments: [String]?
+    /** The Integration this Dialogflow agent was referenced from. */
+    public var integration: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, project: DialogflowProject?, languages: [String]?, intents: [DialogflowIntent]?, environments: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, project: DialogflowProject?, languages: [String]?, intents: [DialogflowIntent]?, environments: [String]?, integration: DomainEntityRef?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.project = project
         self.languages = languages
         self.intents = intents
         self.environments = environments
+        self.integration = integration
         self.selfUri = selfUri
     }
 
@@ -42,6 +45,7 @@ public class DialogflowAgent: Codable {
         case languages
         case intents
         case environments
+        case integration
         case selfUri
     }
 

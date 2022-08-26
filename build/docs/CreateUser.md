@@ -12,7 +12,7 @@ title: CreateUser
 | **email** | **String** | User&#39;s email and username | |
 | **addresses** | [**[Contact]**](Contact.html) | Email addresses and phone numbers for this user | [optional] |
 | **title** | **String** |  | [optional] |
-| **password** | **String** | User&#39;s password | |
+| **password** | **String** | User&#39;s password | [optional] |
 | **divisionId** | **String** | The division to which this user will belong | |
 | **state** | **String** | Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive. | [optional] |
 {: class="table table-striped"}

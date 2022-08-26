@@ -262,6 +262,7 @@ open class AuditAPI {
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
     } ],
+    "level" : "USER",
     "entityType" : "AccessToken",
     "serviceName" : "AnalyticsReporting",
     "message" : "{}",
@@ -287,6 +288,7 @@ open class AuditAPI {
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
     } ],
+    "level" : "USER",
     "entityType" : "AccessToken",
     "serviceName" : "AnalyticsReporting",
     "message" : "{}",
@@ -450,6 +452,7 @@ open class AuditAPI {
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
     } ],
+    "level" : "USER",
     "entityType" : "AccessToken",
     "serviceName" : "AnalyticsReporting",
     "message" : "{}",
@@ -475,6 +478,7 @@ open class AuditAPI {
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
     } ],
+    "level" : "USER",
     "entityType" : "AccessToken",
     "serviceName" : "AnalyticsReporting",
     "message" : "{}",

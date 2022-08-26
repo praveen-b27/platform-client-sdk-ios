@@ -43,6 +43,7 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
         case disconnected = "Disconnected"
         case parked = "Parked"
         case held = "Held"
+        case acdCancelled = "AcdCancelled"
     }
     public var _id: String?
     public var name: String?

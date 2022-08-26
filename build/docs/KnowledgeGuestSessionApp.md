@@ -1,0 +1,14 @@
+---
+title: KnowledgeGuestSessionApp
+---
+## KnowledgeGuestSessionApp
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **deploymentId** | **String** | App deployment ID. | |
+| **type** | **String** | App type. | |
+{: class="table table-striped"}
+
+

@@ -104,6 +104,7 @@ public class ReportingExportJobResponse: Codable {
         case predictiveRoutingView = "PREDICTIVE_ROUTING_VIEW"
         case predictiveRoutingQueueOverview = "PREDICTIVE_ROUTING_QUEUE_OVERVIEW"
         case predictiveRoutingModelView = "PREDICTIVE_ROUTING_MODEL_VIEW"
+        case predictiveRoutingImpactView = "PREDICTIVE_ROUTING_IMPACT_VIEW"
         case dataActionsPerformanceSummaryView = "DATA_ACTIONS_PERFORMANCE_SUMMARY_VIEW"
         case dataActionsPerformanceDetailView = "DATA_ACTIONS_PERFORMANCE_DETAIL_VIEW"
         case agentTimelineSummaryView = "AGENT_TIMELINE_SUMMARY_VIEW"

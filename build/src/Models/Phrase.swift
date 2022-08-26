@@ -29,7 +29,7 @@ public class Phrase: Codable {
     public var text: String?
     /** The phrase strictness, default value is null */
     public var strictness: Strictness?
-    /** The phrase sentiment, default value is Unspecified */
+    /** The phrase sentiment, default value is Unspecified. */
     public var sentiment: Sentiment?
 
     public init(text: String?, strictness: Strictness?, sentiment: Sentiment?) {

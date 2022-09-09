@@ -33,8 +33,10 @@ public class ConversationContentAttachment: Codable {
     public var sha256: String?
     /** Suggested file name for attachment. */
     public var filename: String?
+    /** Size in bytes of the attachment content. */
+    public var contentSizeBytes: Int64?
 
-    public init(_id: String?, mediaType: MediaType?, url: String?, mime: String?, text: String?, sha256: String?, filename: String?) {
+    public init(_id: String?, mediaType: MediaType?, url: String?, mime: String?, text: String?, sha256: String?, filename: String?, contentSizeBytes: Int64?) {
         self._id = _id
         self.mediaType = mediaType
         self.url = url
@@ -42,6 +44,7 @@ public class ConversationContentAttachment: Codable {
         self.text = text
         self.sha256 = sha256
         self.filename = filename
+        self.contentSizeBytes = contentSizeBytes
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -52,6 +55,7 @@ public class ConversationContentAttachment: Codable {
         case text
         case sha256
         case filename
+        case contentSizeBytes
     }
 
 

@@ -1046,7 +1046,7 @@ let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let expand: String = "" // Expand
+let expand: QualityAPI.Expand_getQualityForms = QualityAPI.Expand_getQualityForms.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions
 let name: String = "" // Name
 let sortOrder: String = "" // Order to sort results, either asc or desc
 
@@ -1071,7 +1071,7 @@ QualityAPI.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: s
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **expand** | **String**| Expand | [optional] |
+| **expand** | **String**| If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions | [optional]<br />**Values**: publishhistory ("publishHistory") |
 | **name** | **String**| Name | [optional] |
 | **sortOrder** | **String**| Order to sort results, either asc or desc | [optional] |
 {: class="table-striped"}
@@ -1222,7 +1222,7 @@ let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let expand: String = "" // Expand
+let expand: QualityAPI.Expand_getQualityFormsEvaluations = QualityAPI.Expand_getQualityFormsEvaluations.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions
 let name: String = "" // Name
 let sortOrder: String = "" // Order to sort results, either asc or desc
 
@@ -1247,7 +1247,7 @@ QualityAPI.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **expand** | **String**| Expand | [optional] |
+| **expand** | **String**| If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions | [optional]<br />**Values**: publishhistory ("publishHistory") |
 | **name** | **String**| Name | [optional] |
 | **sortOrder** | **String**| Order to sort results, either asc or desc | [optional] |
 {: class="table-striped"}
@@ -1448,7 +1448,7 @@ let pageNumber: Int = 0 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let expand: String = "" // Expand
+let expand: QualityAPI.Expand_getQualityFormsSurveys = QualityAPI.Expand_getQualityFormsSurveys.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions
 let name: String = "" // Name
 let sortOrder: String = "" // Order to sort results, either asc or desc
 
@@ -1473,7 +1473,7 @@ QualityAPI.getQualityFormsSurveys(pageSize: pageSize, pageNumber: pageNumber, so
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **expand** | **String**| Expand | [optional] |
+| **expand** | **String**| If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions | [optional]<br />**Values**: publishhistory ("publishHistory") |
 | **name** | **String**| Name | [optional] |
 | **sortOrder** | **String**| Order to sort results, either asc or desc | [optional] |
 {: class="table-striped"}

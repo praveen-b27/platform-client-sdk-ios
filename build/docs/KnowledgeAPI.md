@@ -1402,7 +1402,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVersions(knowledgeBaseId: knowledg
 
 
 
-> [KnowledgeDocumentResponseListing](KnowledgeDocumentResponseListing.html) getKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, categoryId, includeSubcategories, includeDrafts, labelIds, expand)
+> [KnowledgeDocumentResponseListing](KnowledgeDocumentResponseListing.html) getKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand)
 
 Get documents.
 
@@ -1427,6 +1427,7 @@ let before: String = "" // The cursor that points to the start of the set of ent
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let interval: String = "" // Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ
+let documentId: [String] = [""] // Retrieves the specified documents, comma separated values expected.
 let categoryId: [String] = [""] // If specified, retrieves documents associated with category ids, comma separated values expected.
 let includeSubcategories: Bool = true // Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories.
 let includeDrafts: Bool = true // If includeDrafts is true, Documents in the draft state are also returned in the response.
@@ -1434,7 +1435,7 @@ let labelIds: [String] = [""] // If specified, retrieves documents associated wi
 let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, documentId: documentId, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1454,6 +1455,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **interval** | **String**| Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ | [optional] |
+| **documentId** | [**[String]**](String.html)| Retrieves the specified documents, comma separated values expected. | [optional] |
 | **categoryId** | [**[String]**](String.html)| If specified, retrieves documents associated with category ids, comma separated values expected. | [optional] |
 | **includeSubcategories** | **Bool**| Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional] |
 | **includeDrafts** | **Bool**| If includeDrafts is true, Documents in the draft state are also returned in the response. | [optional] |

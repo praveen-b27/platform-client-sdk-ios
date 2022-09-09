@@ -25,7 +25,8 @@ public class WhatsAppIntegrationUpdateRequest: Codable {
     public var name: String?
     /** Defines the SupportedContent profile configured for an integration */
     public var supportedContent: SupportedContentReference?
-    public var messagingSetting: MessagingSettingReference?
+    /** Defines the message settings to be applied for this integration */
+    public var messagingSetting: MessagingSettingRequestReference?
     /** The action used to activate and then confirm a WhatsApp Integration. */
     public var action: Action?
     /** The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field.  */
@@ -37,7 +38,7 @@ public class WhatsAppIntegrationUpdateRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, action: Action?, authenticationMethod: AuthenticationMethod?, confirmationCode: String?, phoneNumber: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingRequestReference?, action: Action?, authenticationMethod: AuthenticationMethod?, confirmationCode: String?, phoneNumber: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.supportedContent = supportedContent

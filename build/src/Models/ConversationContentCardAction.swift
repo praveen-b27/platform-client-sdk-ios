@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** CardAction Object */
+/** A card action that a user can take. */
 
 public class ConversationContentCardAction: Codable {
 
@@ -21,7 +21,7 @@ public class ConversationContentCardAction: Codable {
     public var type: ModelType?
     /** The response text from the button click. */
     public var text: String?
-    /** Text to be returned as the payload from a ButtonResponse when a button is clicked. */
+    /** Text to be returned as the payload from a ButtonResponse when a button is clicked. The payload and text are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel. */
     public var payload: String?
     /** A URL of a web page to direct the user to. */
     public var url: String?

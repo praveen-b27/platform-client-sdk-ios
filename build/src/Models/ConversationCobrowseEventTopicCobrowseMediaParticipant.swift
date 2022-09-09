@@ -25,6 +25,20 @@ public class ConversationCobrowseEventTopicCobrowseMediaParticipant: Codable {
         case scheduled = "scheduled"
         case _none = "none"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case converting = "converting"
+        case uploading = "uploading"
+        case transmitting = "transmitting"
+        case scheduled = "scheduled"
+        case _none = "none"
+    }
     public enum Direction: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
@@ -59,6 +73,7 @@ public class ConversationCobrowseEventTopicCobrowseMediaParticipant: Codable {
     public var startHoldTime: Date?
     public var purpose: String?
     public var state: State?
+    public var initialState: InitialState?
     public var direction: Direction?
     public var disconnectType: DisconnectType?
     public var held: Bool?
@@ -90,7 +105,7 @@ public class ConversationCobrowseEventTopicCobrowseMediaParticipant: Codable {
     public var providerEventTime: Date?
     public var controlling: [String]?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationCobrowseEventTopicUriReference?, queue: ConversationCobrowseEventTopicUriReference?, team: ConversationCobrowseEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationCobrowseEventTopicErrorBody?, script: ConversationCobrowseEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationCobrowseEventTopicUriReference?, externalOrganization: ConversationCobrowseEventTopicUriReference?, wrapup: ConversationCobrowseEventTopicWrapup?, conversationRoutingData: ConversationCobrowseEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationCobrowseEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, cobrowseSessionId: String?, cobrowseRole: String?, viewerUrl: String?, providerEventTime: Date?, controlling: [String]?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationCobrowseEventTopicUriReference?, queue: ConversationCobrowseEventTopicUriReference?, team: ConversationCobrowseEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationCobrowseEventTopicErrorBody?, script: ConversationCobrowseEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationCobrowseEventTopicUriReference?, externalOrganization: ConversationCobrowseEventTopicUriReference?, wrapup: ConversationCobrowseEventTopicWrapup?, conversationRoutingData: ConversationCobrowseEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationCobrowseEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, cobrowseSessionId: String?, cobrowseRole: String?, viewerUrl: String?, providerEventTime: Date?, controlling: [String]?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -100,6 +115,7 @@ public class ConversationCobrowseEventTopicCobrowseMediaParticipant: Codable {
         self.startHoldTime = startHoldTime
         self.purpose = purpose
         self.state = state
+        self.initialState = initialState
         self.direction = direction
         self.disconnectType = disconnectType
         self.held = held
@@ -142,6 +158,7 @@ public class ConversationCobrowseEventTopicCobrowseMediaParticipant: Codable {
         case startHoldTime
         case purpose
         case state
+        case initialState
         case direction
         case disconnectType
         case held

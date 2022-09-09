@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRecordingRecordingkeys**](RecordingAPI.html#getRecordingRecordingkeys) | Get encryption key list |
 | [**getRecordingRecordingkeysRotationschedule**](RecordingAPI.html#getRecordingRecordingkeysRotationschedule) | Get key rotation schedule |
 | [**getRecordingSettings**](RecordingAPI.html#getRecordingSettings) | Get the Recording Settings for the Organization |
+| [**getRecordingsRetentionQuery**](RecordingAPI.html#getRecordingsRetentionQuery) | Query for recording retention data |
 | [**getRecordingsScreensessions**](RecordingAPI.html#getRecordingsScreensessions) | Retrieves a paged listing of screen recording sessions |
 | [**patchRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#patchRecordingCrossplatformMediaretentionpolicy) | Patch a media retention policy |
 | [**patchRecordingMediaretentionpolicy**](RecordingAPI.html#patchRecordingMediaretentionpolicy) | Patch a media retention policy |
@@ -1805,6 +1806,62 @@ RecordingAPI.getRecordingSettings(createDefault: createDefault) { (response, err
 ### Return type
 
 [**RecordingSettings**](RecordingSettings.html)
+
+<a name="getRecordingsRetentionQuery"></a>
+
+# **getRecordingsRetentionQuery**
+
+
+
+> [RecordingRetentionCursorEntityListing](RecordingRetentionCursorEntityListing.html) getRecordingsRetentionQuery(retentionThresholdDays, cursor, pageSize)
+
+Query for recording retention data
+
+
+
+Wraps GET /api/v2/recordings/retention/query  
+
+Requires ANY permissions: 
+
+* recording:recording:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let retentionThresholdDays: Int = 0 // Fetch retention data for recordings retained for more days than the provided value.
+let cursor: String = "" // Indicates where to resume query results (not required for first page)
+let pageSize: Int = 0 // Page size. Maximum is 500.
+
+// Code example
+RecordingAPI.getRecordingsRetentionQuery(retentionThresholdDays: retentionThresholdDays, cursor: cursor, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.getRecordingsRetentionQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **retentionThresholdDays** | **Int**| Fetch retention data for recordings retained for more days than the provided value. | |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
+| **pageSize** | **Int**| Page size. Maximum is 500. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing.html)
 
 <a name="getRecordingsScreensessions"></a>
 

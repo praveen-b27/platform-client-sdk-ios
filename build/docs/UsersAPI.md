@@ -67,6 +67,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAuthorizationSubjectBulkremove**](UsersAPI.html#postAuthorizationSubjectBulkremove) | Bulk-remove grants from a subject. |
 | [**postAuthorizationSubjectBulkreplace**](UsersAPI.html#postAuthorizationSubjectBulkreplace) | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**postAuthorizationSubjectDivisionRole**](UsersAPI.html#postAuthorizationSubjectDivisionRole) | Make a grant of a role in a division |
+| [**postUserExternalid**](UsersAPI.html#postUserExternalid) | Create mapping between external identifier and user. Limit 100 per entity. |
 | [**postUserInvite**](UsersAPI.html#postUserInvite) | Send an activation email to the user |
 | [**postUserPassword**](UsersAPI.html#postUserPassword) | Change a users password |
 | [**postUserRoutinglanguages**](UsersAPI.html#postUserRoutinglanguages) | Add routing language to user |
@@ -3383,6 +3384,62 @@ UsersAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: 
 ### Return type
 
 `nil` (empty response body)
+
+<a name="postUserExternalid"></a>
+
+# **postUserExternalid**
+
+
+
+> [[UserExternalIdentifier]](UserExternalIdentifier.html) postUserExternalid(userId, body)
+
+Create mapping between external identifier and user. Limit 100 per entity.
+
+Authority Name and External key are case sensitive.
+
+
+
+Wraps POST /api/v2/users/{userId}/externalid  
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: UserExternalIdentifier = new UserExternalIdentifier(...) // 
+
+// Code example
+UsersAPI.postUserExternalid(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postUserExternalid was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**UserExternalIdentifier**](UserExternalIdentifier.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**[UserExternalIdentifier]**](UserExternalIdentifier.html)
 
 <a name="postUserInvite"></a>
 

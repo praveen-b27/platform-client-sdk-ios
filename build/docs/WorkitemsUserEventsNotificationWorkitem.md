@@ -20,6 +20,7 @@ title: WorkitemsUserEventsNotificationWorkitem
 | **durationSeconds** | **Int** |  | [optional] |
 | **ttl** | **Int** |  | [optional] |
 | **statusId** | **String** |  | [optional] |
+| **statusCategory** | **String** |  | [optional] |
 | **dateClosed** | **String** |  | [optional] |
 | **workbinId** | **String** |  | [optional] |
 | **reporterId** | **String** |  | [optional] |
@@ -33,6 +34,7 @@ title: WorkitemsUserEventsNotificationWorkitem
 | **assignmentState** | **String** |  | [optional] |
 | **assignmentId** | **String** |  | [optional] |
 | **alertTimeoutSeconds** | **Int** |  | [optional] |
+| **queueId** | **String** |  | [optional] |
 | **customFields** | [**[String:WorkitemsUserEventsNotificationCustomAttribute]**](WorkitemsUserEventsNotificationCustomAttribute.html) |  | [optional] |
 {: class="table table-striped"}
 

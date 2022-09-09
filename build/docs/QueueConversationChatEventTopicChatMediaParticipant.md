@@ -16,6 +16,7 @@ title: QueueConversationChatEventTopicChatMediaParticipant
 | **startHoldTime** | [**Date**](Date.html) |  | [optional] |
 | **purpose** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
+| **initialState** | **String** |  | [optional] |
 | **direction** | **String** |  | [optional] |
 | **disconnectType** | **String** |  | [optional] |
 | **held** | **Bool** |  | [optional] |

@@ -627,6 +627,67 @@ open class WebDeploymentsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    
+    
+    /**
+     Get active configuration for a given deployment
+     
+     - parameter deploymentId: (path) The deployment ID 
+     - parameter type: (query) Get active configuration on a deployment (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWebdeploymentsDeploymentConfigurations(deploymentId: String, type: String? = nil, completion: @escaping ((_ data: WebDeploymentActiveConfigurationOnDeployment?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsDeploymentConfigurationsWithRequestBuilder(deploymentId: deploymentId, type: type)
+        requestBuilder.execute { (response: Response<WebDeploymentActiveConfigurationOnDeployment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get active configuration for a given deployment
+     - GET /api/v2/webdeployments/deployments/{deploymentId}/configurations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "configurationVersion" : "{}",
+  "deployment" : "{}"
+}, statusCode=200}]
+     
+     - parameter deploymentId: (path) The deployment ID 
+     - parameter type: (query) Get active configuration on a deployment (optional)
+
+     - returns: RequestBuilder<WebDeploymentActiveConfigurationOnDeployment> 
+     */
+    open class func getWebdeploymentsDeploymentConfigurationsWithRequestBuilder(deploymentId: String, type: String? = nil) -> RequestBuilder<WebDeploymentActiveConfigurationOnDeployment> {        
+        var path = "/api/v2/webdeployments/deployments/{deploymentId}/configurations"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "type": type
+        ])
+
+        let requestBuilder: RequestBuilder<WebDeploymentActiveConfigurationOnDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
     /**
      Get deployments
      

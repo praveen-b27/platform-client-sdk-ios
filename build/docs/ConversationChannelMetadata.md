@@ -1,7 +1,7 @@
 ---
-title: ConversationMessagingChannelMetadata
+title: ConversationChannelMetadata
 ---
-## ConversationMessagingChannelMetadata
+## ConversationChannelMetadata
 Information about the channel.
 
 ## Properties

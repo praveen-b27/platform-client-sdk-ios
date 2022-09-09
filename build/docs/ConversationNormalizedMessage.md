@@ -12,7 +12,7 @@ General rich media message structure with normalized feature support across many
 | **channel** | [**ConversationMessagingChannel**](ConversationMessagingChannel.html) | Channel-specific information that describes the message and the message channel/provider. | [optional] |
 | **type** | **String** | Message type. | |
 | **text** | **String** | Message text. | [optional] |
-| **content** | [**[ConversationMessageContent]**](ConversationMessageContent.html) | List of content elements | [optional] |
+| **content** | [**[ConversationMessageContent]**](ConversationMessageContent.html) | List of content elements. | [optional] |
 | **events** | [**[ConversationMessageEvent]**](ConversationMessageEvent.html) | List of event elements. | [optional] |
 | **status** | **String** | Message receipt status, only used with type Receipt. | [optional] |
 | **reasons** | [**[ConversationReason]**](ConversationReason.html) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |

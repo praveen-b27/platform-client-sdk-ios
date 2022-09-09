@@ -86,6 +86,7 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
     public enum FlowType: String, Codable { 
         case bot = "bot"
         case commonmodule = "commonmodule"
+        case digitalbot = "digitalbot"
         case inboundcall = "inboundcall"
         case inboundchat = "inboundchat"
         case inboundemail = "inboundemail"

@@ -88,6 +88,7 @@ docs/AnalyticsConversationQueryResponse.md
 docs/AnalyticsConversationSegment.md
 docs/AnalyticsConversationWithoutAttributes.md
 docs/AnalyticsConversationWithoutAttributesMultiGetResponse.md
+docs/AnalyticsDataRetentionResponse.md
 docs/AnalyticsEvaluation.md
 docs/AnalyticsFlow.md
 docs/AnalyticsFlowOutcome.md
@@ -113,6 +114,7 @@ docs/AnswerOption.md
 docs/ApiUsageQuery.md
 docs/ApiUsageQueryResult.md
 docs/ApiUsageRow.md
+docs/AppendToDncActionSettings.md
 docs/ArchitectAPI.json
 docs/ArchitectAPI.md
 docs/ArchitectDependencyTrackingBuildNotificationClient.md
@@ -525,9 +527,12 @@ docs/ConsumedResourcesEntityListing.md
 docs/ConsumingResourcesEntityListing.md
 docs/Contact.md
 docs/ContactAddress.md
+docs/ContactAddressConditionSettings.md
+docs/ContactAddressTypeConditionSettings.md
 docs/ContactAddressableEntityRef.md
 docs/ContactCallbackRequest.md
 docs/ContactCenterSettings.md
+docs/ContactColumnConditionSettings.md
 docs/ContactColumnTimeZone.md
 docs/ContactColumnToDataActionFieldMapping.md
 docs/ContactDetailEventTopicContactUpdateEvent.md
@@ -595,7 +600,6 @@ docs/ConversationAggregationView.md
 docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
 docs/ConversationBasic.md
-docs/ConversationButtonComponent.md
 docs/ConversationCallEventTopicCallConversation.md
 docs/ConversationCallEventTopicCallMediaParticipant.md
 docs/ConversationCallEventTopicConversationRoutingData.md
@@ -627,6 +631,7 @@ docs/ConversationCallbackEventTopicUriReference.md
 docs/ConversationCallbackEventTopicVoicemail.md
 docs/ConversationCallbackEventTopicWrapup.md
 docs/ConversationChannel.md
+docs/ConversationChannelMetadata.md
 docs/ConversationChat.md
 docs/ConversationChatEventTopicChatConversation.md
 docs/ConversationChatEventTopicChatMediaParticipant.md
@@ -654,13 +659,11 @@ docs/ConversationCobrowseEventTopicJourneyCustomerSession.md
 docs/ConversationCobrowseEventTopicScoredAgent.md
 docs/ConversationCobrowseEventTopicUriReference.md
 docs/ConversationCobrowseEventTopicWrapup.md
-docs/ConversationContentActions.md
 docs/ConversationContentAttachment.md
 docs/ConversationContentButtonResponse.md
 docs/ConversationContentCard.md
 docs/ConversationContentCardAction.md
 docs/ConversationContentCarousel.md
-docs/ConversationContentGeneric.md
 docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentQuickReply.md
@@ -755,7 +758,6 @@ docs/ConversationMessageMetadata.md
 docs/ConversationMessageMetadataContent.md
 docs/ConversationMessageMetadataEvent.md
 docs/ConversationMessagingChannel.md
-docs/ConversationMessagingChannelMetadata.md
 docs/ConversationMessagingFromRecipient.md
 docs/ConversationMessagingToRecipient.md
 docs/ConversationMetrics.md
@@ -1015,6 +1017,11 @@ docs/DialogflowIntent.md
 docs/DialogflowParameter.md
 docs/DialogflowProject.md
 docs/DigitLength.md
+docs/DigitalAction.md
+docs/DigitalCondition.md
+docs/DigitalRule.md
+docs/DigitalRuleSet.md
+docs/DigitalRuleSetEntityListing.md
 docs/Digits.md
 docs/DirectoryUserDevicesListing.md
 docs/DisallowedEntityLearningAssignmentItem.md
@@ -1030,6 +1037,7 @@ docs/DncListDivisionViewListing.md
 docs/DncListEntityListing.md
 docs/DnclistDownloadReadyExportUri.md
 docs/DnclistImportStatusImportStatus.md
+docs/DoNotSendActionSettings.md
 docs/Document.md
 docs/DocumentArticle.md
 docs/DocumentAttribute.md
@@ -1244,6 +1252,7 @@ docs/ExternalContactsUnresolvedContactChangedTopicTwitterId.md
 docs/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.md
 docs/ExternalDataSource.md
 docs/ExternalMetricDataItem.md
+docs/ExternalMetricDataProcessedItem.md
 docs/ExternalMetricDataUnprocessedItem.md
 docs/ExternalMetricDataWriteRequest.md
 docs/ExternalMetricDataWriteResponse.md
@@ -1652,6 +1661,10 @@ docs/LanguageUnderstandingAPI.json
 docs/LanguageUnderstandingAPI.md
 docs/LanguagesAPI.json
 docs/LanguagesAPI.md
+docs/LastAttemptByColumnConditionSettings.md
+docs/LastAttemptOverallConditionSettings.md
+docs/LastResultByColumnConditionSettings.md
+docs/LastResultOverallConditionSettings.md
 docs/LauncherButtonSettings.md
 docs/Leaderboard.md
 docs/LeaderboardItem.md
@@ -1771,6 +1784,8 @@ docs/ManagementUnitReference.md
 docs/ManagementUnitSettingsRequest.md
 docs/ManagementUnitSettingsResponse.md
 docs/Manager.md
+docs/MarkContactAddressUncontactableActionSettings.md
+docs/MarkContactUncontactableActionSettings.md
 docs/Markdown.md
 docs/MatchShiftTradeRequest.md
 docs/MatchShiftTradeResponse.md
@@ -1821,6 +1836,7 @@ docs/MessagingIntegration.md
 docs/MessagingIntegrationEntityListing.md
 docs/MessagingRecipient.md
 docs/MessagingSettingReference.md
+docs/MessagingSettingRequestReference.md
 docs/MessagingSticker.md
 docs/MessagingStickerEntityListing.md
 docs/MessagingTemplate.md
@@ -2381,6 +2397,8 @@ docs/RecordingJobFailedRecording.md
 docs/RecordingJobsQuery.md
 docs/RecordingMessagingMessage.md
 docs/RecordingMetadata.md
+docs/RecordingRetention.md
+docs/RecordingRetentionCursorEntityListing.md
 docs/RecordingSettings.md
 docs/RecordingTranscodeCompleteTopicMediaResult.md
 docs/RecordingTranscodeCompleteTopicRecording.md
@@ -2585,6 +2603,7 @@ docs/Session.md
 docs/SessionEndDetails.md
 docs/SessionLastEvent.md
 docs/SessionSegmentAssignment.md
+docs/SetContentTemplateActionSettings.md
 docs/SetRecordingState.md
 docs/SetTimeOffLimitValuesRequest.md
 docs/SetUuiDataRequest.md
@@ -2795,6 +2814,7 @@ docs/Topic.md
 docs/TopicDuration.md
 docs/TopicJob.md
 docs/TopicJobRequest.md
+docs/TopicOffset.md
 docs/TopicRequest.md
 docs/TopicsEntityListing.md
 docs/TrainingListing.md
@@ -2890,9 +2910,11 @@ docs/UnreadMetric.md
 docs/UnreadStatus.md
 docs/UpdateActionInput.md
 docs/UpdateActivityCodeRequest.md
+docs/UpdateAnalyticsDataRetentionRequest.md
 docs/UpdateBusinessUnitRequest.md
 docs/UpdateBusinessUnitSettings.md
 docs/UpdateCoachingAppointmentRequest.md
+docs/UpdateContactColumnActionSettings.md
 docs/UpdateDraftInput.md
 docs/UpdateManagementUnitRequest.md
 docs/UpdateNotificationResponse.md
@@ -2950,6 +2972,7 @@ docs/UserDevice.md
 docs/UserEndDetailEventTopicUserEndEvent.md
 docs/UserEntityListing.md
 docs/UserExpands.md
+docs/UserExternalIdentifier.md
 docs/UserGreetingEventGreeting.md
 docs/UserGreetingEventGreetingAudioFile.md
 docs/UserGreetingEventGreetingOwner.md
@@ -3115,6 +3138,7 @@ docs/WebChatRoutingTarget.md
 docs/WebChatSettings.md
 docs/WebChatTyping.md
 docs/WebDeployment.md
+docs/WebDeploymentActiveConfigurationOnDeployment.md
 docs/WebDeploymentConfigurationVersion.md
 docs/WebDeploymentConfigurationVersionEntityListing.md
 docs/WebDeploymentConfigurationVersionEntityRef.md
@@ -3463,6 +3487,7 @@ docs/deleteOutboundContactlistContact-example.txt
 docs/deleteOutboundContactlistContacts-example.txt
 docs/deleteOutboundContactlistfilter-example.txt
 docs/deleteOutboundContactlists-example.txt
+docs/deleteOutboundDigitalruleset-example.txt
 docs/deleteOutboundDnclist-example.txt
 docs/deleteOutboundMessagingcampaign-example.txt
 docs/deleteOutboundMessagingcampaignProgress-example.txt
@@ -3572,6 +3597,7 @@ docs/getAnalyticsConversationsDetailsJobResults-example.txt
 docs/getAnalyticsConversationsDetailsJobResults-example.txt
 docs/getAnalyticsConversationsDetailsJobsAvailability-example.txt
 docs/getAnalyticsConversationsDetailsJobsAvailability-example.txt
+docs/getAnalyticsDataretentionSettings-example.txt
 docs/getAnalyticsReportingExports-example.txt
 docs/getAnalyticsReportingExportsMetadata-example.txt
 docs/getAnalyticsReportingMetadata-example.txt
@@ -4073,6 +4099,8 @@ docs/getOutboundContactlistfilters-example.txt
 docs/getOutboundContactlists-example.txt
 docs/getOutboundContactlistsDivisionview-example.txt
 docs/getOutboundContactlistsDivisionviews-example.txt
+docs/getOutboundDigitalruleset-example.txt
+docs/getOutboundDigitalrulesets-example.txt
 docs/getOutboundDnclist-example.txt
 docs/getOutboundDnclistExport-example.txt
 docs/getOutboundDnclistImportstatus-example.txt
@@ -4148,6 +4176,7 @@ docs/getRecordingMediaretentionpolicy-example.txt
 docs/getRecordingRecordingkeys-example.txt
 docs/getRecordingRecordingkeysRotationschedule-example.txt
 docs/getRecordingSettings-example.txt
+docs/getRecordingsRetentionQuery-example.txt
 docs/getRecordingsScreensessions-example.txt
 docs/getResponsemanagementLibraries-example.txt
 docs/getResponsemanagementLibrary-example.txt
@@ -4398,6 +4427,7 @@ docs/getWebdeploymentsConfigurationVersions-example.txt
 docs/getWebdeploymentsConfigurationVersionsDraft-example.txt
 docs/getWebdeploymentsConfigurations-example.txt
 docs/getWebdeploymentsDeployment-example.txt
+docs/getWebdeploymentsDeploymentConfigurations-example.txt
 docs/getWebdeploymentsDeployments-example.txt
 docs/getWebmessagingMessages-example.txt
 docs/getWidgetsDeployment-example.txt
@@ -4873,6 +4903,7 @@ docs/postOutboundContactlistfilters-example.txt
 docs/postOutboundContactlistfiltersPreview-example.txt
 docs/postOutboundContactlists-example.txt
 docs/postOutboundConversationDnc-example.txt
+docs/postOutboundDigitalrulesets-example.txt
 docs/postOutboundDnclistExport-example.txt
 docs/postOutboundDnclistPhonenumbers-example.txt
 docs/postOutboundDnclists-example.txt
@@ -4978,6 +5009,7 @@ docs/postUploadsPublicassetsImages-example.txt
 docs/postUploadsRecordings-example.txt
 docs/postUploadsWorkforcemanagementHistoricaldataCsv-example.txt
 docs/postUsageQuery-example.txt
+docs/postUserExternalid-example.txt
 docs/postUserGreetings-example.txt
 docs/postUserInvite-example.txt
 docs/postUserPassword-example.txt
@@ -5051,6 +5083,7 @@ docs/postWorkforcemanagementTimeofflimitsAvailableQuery-example.txt
 docs/postWorkforcemanagementTimeoffrequests-example.txt
 docs/putAlertingInteractionstatsAlert-example.txt
 docs/putAlertingInteractionstatsRule-example.txt
+docs/putAnalyticsDataretentionSettings-example.txt
 docs/putAnalyticsReportingSchedule-example.txt
 docs/putArchitectEmergencygroup-example.txt
 docs/putArchitectIvr-example.txt
@@ -5152,6 +5185,7 @@ docs/putOutboundCampaignrule-example.txt
 docs/putOutboundContactlist-example.txt
 docs/putOutboundContactlistContact-example.txt
 docs/putOutboundContactlistfilter-example.txt
+docs/putOutboundDigitalruleset-example.txt
 docs/putOutboundDnclist-example.txt
 docs/putOutboundMessagingcampaign-example.txt
 docs/putOutboundRuleset-example.txt
@@ -5388,6 +5422,7 @@ src/Models/AnalyticsConversationQueryResponse.swift
 src/Models/AnalyticsConversationSegment.swift
 src/Models/AnalyticsConversationWithoutAttributes.swift
 src/Models/AnalyticsConversationWithoutAttributesMultiGetResponse.swift
+src/Models/AnalyticsDataRetentionResponse.swift
 src/Models/AnalyticsEvaluation.swift
 src/Models/AnalyticsFlow.swift
 src/Models/AnalyticsFlowOutcome.swift
@@ -5413,6 +5448,7 @@ src/Models/AnswerOption.swift
 src/Models/ApiUsageQuery.swift
 src/Models/ApiUsageQueryResult.swift
 src/Models/ApiUsageRow.swift
+src/Models/AppendToDncActionSettings.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationClient.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationHomeOrganization.swift
@@ -5813,9 +5849,12 @@ src/Models/ConsumedResourcesEntityListing.swift
 src/Models/ConsumingResourcesEntityListing.swift
 src/Models/Contact.swift
 src/Models/ContactAddress.swift
+src/Models/ContactAddressConditionSettings.swift
+src/Models/ContactAddressTypeConditionSettings.swift
 src/Models/ContactAddressableEntityRef.swift
 src/Models/ContactCallbackRequest.swift
 src/Models/ContactCenterSettings.swift
+src/Models/ContactColumnConditionSettings.swift
 src/Models/ContactColumnTimeZone.swift
 src/Models/ContactColumnToDataActionFieldMapping.swift
 src/Models/ContactDetailEventTopicContactUpdateEvent.swift
@@ -5881,7 +5920,6 @@ src/Models/ConversationAggregationView.swift
 src/Models/ConversationAppSettings.swift
 src/Models/ConversationAssociation.swift
 src/Models/ConversationBasic.swift
-src/Models/ConversationButtonComponent.swift
 src/Models/ConversationCallEventTopicCallConversation.swift
 src/Models/ConversationCallEventTopicCallMediaParticipant.swift
 src/Models/ConversationCallEventTopicConversationRoutingData.swift
@@ -5913,6 +5951,7 @@ src/Models/ConversationCallbackEventTopicUriReference.swift
 src/Models/ConversationCallbackEventTopicVoicemail.swift
 src/Models/ConversationCallbackEventTopicWrapup.swift
 src/Models/ConversationChannel.swift
+src/Models/ConversationChannelMetadata.swift
 src/Models/ConversationChat.swift
 src/Models/ConversationChatEventTopicChatConversation.swift
 src/Models/ConversationChatEventTopicChatMediaParticipant.swift
@@ -5940,13 +5979,11 @@ src/Models/ConversationCobrowseEventTopicJourneyCustomerSession.swift
 src/Models/ConversationCobrowseEventTopicScoredAgent.swift
 src/Models/ConversationCobrowseEventTopicUriReference.swift
 src/Models/ConversationCobrowseEventTopicWrapup.swift
-src/Models/ConversationContentActions.swift
 src/Models/ConversationContentAttachment.swift
 src/Models/ConversationContentButtonResponse.swift
 src/Models/ConversationContentCard.swift
 src/Models/ConversationContentCardAction.swift
 src/Models/ConversationContentCarousel.swift
-src/Models/ConversationContentGeneric.swift
 src/Models/ConversationContentLocation.swift
 src/Models/ConversationContentNotificationTemplate.swift
 src/Models/ConversationContentQuickReply.swift
@@ -6041,7 +6078,6 @@ src/Models/ConversationMessageMetadata.swift
 src/Models/ConversationMessageMetadataContent.swift
 src/Models/ConversationMessageMetadataEvent.swift
 src/Models/ConversationMessagingChannel.swift
-src/Models/ConversationMessagingChannelMetadata.swift
 src/Models/ConversationMessagingFromRecipient.swift
 src/Models/ConversationMessagingToRecipient.swift
 src/Models/ConversationMetrics.swift
@@ -6297,6 +6333,11 @@ src/Models/DialogflowIntent.swift
 src/Models/DialogflowParameter.swift
 src/Models/DialogflowProject.swift
 src/Models/DigitLength.swift
+src/Models/DigitalAction.swift
+src/Models/DigitalCondition.swift
+src/Models/DigitalRule.swift
+src/Models/DigitalRuleSet.swift
+src/Models/DigitalRuleSetEntityListing.swift
 src/Models/Digits.swift
 src/Models/DirectoryUserDevicesListing.swift
 src/Models/DisallowedEntityLearningAssignmentItem.swift
@@ -6312,6 +6353,7 @@ src/Models/DncListDivisionViewListing.swift
 src/Models/DncListEntityListing.swift
 src/Models/DnclistDownloadReadyExportUri.swift
 src/Models/DnclistImportStatusImportStatus.swift
+src/Models/DoNotSendActionSettings.swift
 src/Models/Document.swift
 src/Models/DocumentArticle.swift
 src/Models/DocumentAttribute.swift
@@ -6524,6 +6566,7 @@ src/Models/ExternalContactsUnresolvedContactChangedTopicTwitterId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.swift
 src/Models/ExternalDataSource.swift
 src/Models/ExternalMetricDataItem.swift
+src/Models/ExternalMetricDataProcessedItem.swift
 src/Models/ExternalMetricDataUnprocessedItem.swift
 src/Models/ExternalMetricDataWriteRequest.swift
 src/Models/ExternalMetricDataWriteResponse.swift
@@ -6906,6 +6949,10 @@ src/Models/Language.swift
 src/Models/LanguageEntityListing.swift
 src/Models/LanguageOverride.swift
 src/Models/LanguageReference.swift
+src/Models/LastAttemptByColumnConditionSettings.swift
+src/Models/LastAttemptOverallConditionSettings.swift
+src/Models/LastResultByColumnConditionSettings.swift
+src/Models/LastResultOverallConditionSettings.swift
 src/Models/LauncherButtonSettings.swift
 src/Models/Leaderboard.swift
 src/Models/LeaderboardItem.swift
@@ -7019,6 +7066,8 @@ src/Models/ManagementUnitReference.swift
 src/Models/ManagementUnitSettingsRequest.swift
 src/Models/ManagementUnitSettingsResponse.swift
 src/Models/Manager.swift
+src/Models/MarkContactAddressUncontactableActionSettings.swift
+src/Models/MarkContactUncontactableActionSettings.swift
 src/Models/Markdown.swift
 src/Models/MatchShiftTradeRequest.swift
 src/Models/MatchShiftTradeResponse.swift
@@ -7067,6 +7116,7 @@ src/Models/MessagingIntegration.swift
 src/Models/MessagingIntegrationEntityListing.swift
 src/Models/MessagingRecipient.swift
 src/Models/MessagingSettingReference.swift
+src/Models/MessagingSettingRequestReference.swift
 src/Models/MessagingSticker.swift
 src/Models/MessagingStickerEntityListing.swift
 src/Models/MessagingTemplate.swift
@@ -7609,6 +7659,8 @@ src/Models/RecordingJobFailedRecording.swift
 src/Models/RecordingJobsQuery.swift
 src/Models/RecordingMessagingMessage.swift
 src/Models/RecordingMetadata.swift
+src/Models/RecordingRetention.swift
+src/Models/RecordingRetentionCursorEntityListing.swift
 src/Models/RecordingSettings.swift
 src/Models/RecordingTranscodeCompleteTopicMediaResult.swift
 src/Models/RecordingTranscodeCompleteTopicRecording.swift
@@ -7802,6 +7854,7 @@ src/Models/Session.swift
 src/Models/SessionEndDetails.swift
 src/Models/SessionLastEvent.swift
 src/Models/SessionSegmentAssignment.swift
+src/Models/SetContentTemplateActionSettings.swift
 src/Models/SetRecordingState.swift
 src/Models/SetTimeOffLimitValuesRequest.swift
 src/Models/SetUuiDataRequest.swift
@@ -7996,6 +8049,7 @@ src/Models/Topic.swift
 src/Models/TopicDuration.swift
 src/Models/TopicJob.swift
 src/Models/TopicJobRequest.swift
+src/Models/TopicOffset.swift
 src/Models/TopicRequest.swift
 src/Models/TopicsEntityListing.swift
 src/Models/TrainingListing.swift
@@ -8091,9 +8145,11 @@ src/Models/UnreadMetric.swift
 src/Models/UnreadStatus.swift
 src/Models/UpdateActionInput.swift
 src/Models/UpdateActivityCodeRequest.swift
+src/Models/UpdateAnalyticsDataRetentionRequest.swift
 src/Models/UpdateBusinessUnitRequest.swift
 src/Models/UpdateBusinessUnitSettings.swift
 src/Models/UpdateCoachingAppointmentRequest.swift
+src/Models/UpdateContactColumnActionSettings.swift
 src/Models/UpdateDraftInput.swift
 src/Models/UpdateManagementUnitRequest.swift
 src/Models/UpdateNotificationResponse.swift
@@ -8147,6 +8203,7 @@ src/Models/UserDevice.swift
 src/Models/UserEndDetailEventTopicUserEndEvent.swift
 src/Models/UserEntityListing.swift
 src/Models/UserExpands.swift
+src/Models/UserExternalIdentifier.swift
 src/Models/UserGreetingEventGreeting.swift
 src/Models/UserGreetingEventGreetingAudioFile.swift
 src/Models/UserGreetingEventGreetingOwner.swift
@@ -8301,6 +8358,7 @@ src/Models/WebChatRoutingTarget.swift
 src/Models/WebChatSettings.swift
 src/Models/WebChatTyping.swift
 src/Models/WebDeployment.swift
+src/Models/WebDeploymentActiveConfigurationOnDeployment.swift
 src/Models/WebDeploymentConfigurationVersion.swift
 src/Models/WebDeploymentConfigurationVersionEntityListing.swift
 src/Models/WebDeploymentConfigurationVersionEntityRef.swift

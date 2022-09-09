@@ -2,6 +2,7 @@
 title: ConversationContentCard
 ---
 ## ConversationContentCard
+Card content object.
 
 ## Properties
 

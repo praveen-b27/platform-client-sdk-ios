@@ -145,7 +145,7 @@ open class UserRecordingsAPI {
         "id" : "id"
       } ]
     } ],
-    "maxParticipants" : 6,
+    "maxParticipants" : 0,
     "conversationIds" : [ "conversationIds", "conversationIds" ],
     "recordingState" : "ACTIVE",
     "name" : "name",
@@ -881,6 +881,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -891,6 +893,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -2357,8 +2361,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -3360,6 +3364,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -3370,6 +3376,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -4836,8 +4844,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -6764,6 +6772,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -6774,6 +6784,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -8240,8 +8252,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -9243,6 +9255,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -9253,6 +9267,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -10719,8 +10735,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -12126,7 +12142,7 @@ open class UserRecordingsAPI {
           "id" : "id"
         } ]
       } ],
-      "maxParticipants" : 6,
+      "maxParticipants" : 0,
       "conversationIds" : [ "conversationIds", "conversationIds" ],
       "recordingState" : "ACTIVE",
       "name" : "name",
@@ -12862,6 +12878,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -12872,6 +12890,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -14338,8 +14358,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -15341,6 +15361,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -15351,6 +15373,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -16817,8 +16841,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -18745,6 +18769,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -18755,6 +18781,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -20221,8 +20249,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -21224,6 +21252,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -21234,6 +21264,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -22700,8 +22732,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -23960,7 +23992,7 @@ open class UserRecordingsAPI {
           "id" : "id"
         } ]
       } ],
-      "maxParticipants" : 6,
+      "maxParticipants" : 0,
       "conversationIds" : [ "conversationIds", "conversationIds" ],
       "recordingState" : "ACTIVE",
       "name" : "name",
@@ -24696,6 +24728,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -24706,6 +24740,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -26172,8 +26208,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -27175,6 +27211,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -27185,6 +27223,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -28651,8 +28691,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -30579,6 +30619,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -30589,6 +30631,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -32055,8 +32099,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -33058,6 +33102,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -33068,6 +33114,8 @@ open class UserRecordingsAPI {
               "duration" : {
                 "totalMilliseconds" : 7
               },
+              "offset" : "{}",
+              "recordingLocation" : 6,
               "startTimeMilliseconds" : 0,
               "confidence" : 7,
               "name" : "name",
@@ -34534,8 +34582,8 @@ open class UserRecordingsAPI {
                 "pageNumber" : 1,
                 "entities" : [ null, null ],
                 "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
                 "selfUri" : "https://openapi-generator.tech",
+                "lastUri" : "https://openapi-generator.tech",
                 "pageSize" : 1,
                 "nextUri" : "https://openapi-generator.tech",
                 "previousUri" : "https://openapi-generator.tech"
@@ -35738,8 +35786,8 @@ open class UserRecordingsAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -35910,7 +35958,7 @@ open class UserRecordingsAPI {
         "id" : "id"
       } ]
     } ],
-    "maxParticipants" : 6,
+    "maxParticipants" : 0,
     "conversationIds" : [ "conversationIds", "conversationIds" ],
     "recordingState" : "ACTIVE",
     "name" : "name",
@@ -36646,6 +36694,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -36656,6 +36706,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -38122,8 +38174,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -39125,6 +39177,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -39135,6 +39189,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -40601,8 +40657,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -42529,6 +42585,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -42539,6 +42597,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -44005,8 +44065,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"
@@ -45008,6 +45068,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -45018,6 +45080,8 @@ open class UserRecordingsAPI {
             "duration" : {
               "totalMilliseconds" : 7
             },
+            "offset" : "{}",
+            "recordingLocation" : 6,
             "startTimeMilliseconds" : 0,
             "confidence" : 7,
             "name" : "name",
@@ -46484,8 +46548,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 1,
               "entities" : [ null, null ],
               "firstUri" : "https://openapi-generator.tech",
-              "lastUri" : "https://openapi-generator.tech",
               "selfUri" : "https://openapi-generator.tech",
+              "lastUri" : "https://openapi-generator.tech",
               "pageSize" : 1,
               "nextUri" : "https://openapi-generator.tech",
               "previousUri" : "https://openapi-generator.tech"

@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Card content object. */
 
 public class ConversationContentCard: Codable {
 

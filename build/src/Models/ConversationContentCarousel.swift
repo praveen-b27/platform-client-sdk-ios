@@ -8,10 +8,11 @@
 import Foundation
 
 
+/** Carousel content object. */
 
 public class ConversationContentCarousel: Codable {
 
-    /** A List of card objects. */
+    /** An array of card objects. */
     public var cards: [ConversationContentCard]?
 
     public init(cards: [ConversationContentCard]?) {

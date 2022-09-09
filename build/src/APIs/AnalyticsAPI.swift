@@ -401,6 +401,7 @@ open class AnalyticsAPI {
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
         "value" : 2
       } ],
+      "bargedParticipantId" : "bargedParticipantId",
       "journeyActionMapVersion" : 1,
       "mediaBridgeId" : "mediaBridgeId",
       "agentAssistantId" : "agentAssistantId",
@@ -601,6 +602,7 @@ open class AnalyticsAPI {
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
         "value" : 2
       } ],
+      "bargedParticipantId" : "bargedParticipantId",
       "journeyActionMapVersion" : 1,
       "mediaBridgeId" : "mediaBridgeId",
       "agentAssistantId" : "agentAssistantId",
@@ -811,6 +813,7 @@ open class AnalyticsAPI {
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
         "value" : 2
       } ],
+      "bargedParticipantId" : "bargedParticipantId",
       "journeyActionMapVersion" : 1,
       "mediaBridgeId" : "mediaBridgeId",
       "agentAssistantId" : "agentAssistantId",
@@ -1011,6 +1014,7 @@ open class AnalyticsAPI {
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
         "value" : 2
       } ],
+      "bargedParticipantId" : "bargedParticipantId",
       "journeyActionMapVersion" : 1,
       "mediaBridgeId" : "mediaBridgeId",
       "agentAssistantId" : "agentAssistantId",
@@ -1355,6 +1359,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -1555,6 +1560,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -1765,6 +1771,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -1965,6 +1972,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -2256,6 +2264,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -2456,6 +2465,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -2666,6 +2676,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -2866,6 +2877,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -3275,6 +3287,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -3475,6 +3488,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -3688,6 +3702,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -3888,6 +3903,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -4182,6 +4198,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -4382,6 +4399,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -4595,6 +4613,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -4795,6 +4814,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -5033,6 +5053,55 @@ open class AnalyticsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    /**
+     Get analytics data retention setting
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsDataretentionSettings(completion: @escaping ((_ data: AnalyticsDataRetentionResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsDataretentionSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AnalyticsDataRetentionResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get analytics data retention setting
+     - GET /api/v2/analytics/dataretention/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "retentionDays" : 0,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<AnalyticsDataRetentionResponse> 
+     */
+    open class func getAnalyticsDataretentionSettingsWithRequestBuilder() -> RequestBuilder<AnalyticsDataRetentionResponse> {        
+        let path = "/api/v2/analytics/dataretention/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsDataRetentionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
     
     
     /**
@@ -5150,8 +5219,8 @@ open class AnalyticsAPI {
     "status" : "SUBMITTED"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5239,8 +5308,8 @@ open class AnalyticsAPI {
     "dateLimitations" : "dateLimitations"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5341,8 +5410,8 @@ open class AnalyticsAPI {
     "availableLocales" : [ "availableLocales", "availableLocales" ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5644,8 +5713,8 @@ open class AnalyticsAPI {
     "runStatus" : "RUNNING"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5915,8 +5984,8 @@ open class AnalyticsAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7268,6 +7337,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -7468,6 +7538,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -7678,6 +7749,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -7878,6 +7950,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -8169,6 +8242,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -8369,6 +8443,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -8579,6 +8654,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -8779,6 +8855,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -9121,6 +9198,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -9321,6 +9399,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -9531,6 +9610,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -9731,6 +9811,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -10022,6 +10103,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -10222,6 +10304,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -10432,6 +10515,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -10632,6 +10716,7 @@ open class AnalyticsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
           "value" : 2
         } ],
+        "bargedParticipantId" : "bargedParticipantId",
         "journeyActionMapVersion" : 1,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
@@ -14195,6 +14280,59 @@ open class AnalyticsAPI {
         let requestBuilder: RequestBuilder<UserObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Update analytics data retention setting
+     
+     - parameter body: (body) retentionDays 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putAnalyticsDataretentionSettings(body: UpdateAnalyticsDataRetentionRequest, completion: @escaping ((_ data: AnalyticsDataRetentionResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAnalyticsDataretentionSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AnalyticsDataRetentionResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update analytics data retention setting
+     - PUT /api/v2/analytics/dataretention/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "retentionDays" : 0,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter body: (body) retentionDays 
+
+     - returns: RequestBuilder<AnalyticsDataRetentionResponse> 
+     */
+    open class func putAnalyticsDataretentionSettingsWithRequestBuilder(body: UpdateAnalyticsDataRetentionRequest) -> RequestBuilder<AnalyticsDataRetentionResponse> {        
+        let path = "/api/v2/analytics/dataretention/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsDataRetentionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
     

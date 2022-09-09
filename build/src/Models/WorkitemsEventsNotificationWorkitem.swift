@@ -11,6 +11,13 @@ import Foundation
 
 public class WorkitemsEventsNotificationWorkitem: Codable {
 
+    public enum StatusCategory: String, Codable { 
+        case unknown = "Unknown"
+        case _open = "Open"
+        case inProgress = "InProgress"
+        case waiting = "Waiting"
+        case closed = "Closed"
+    }
     public enum Operation: String, Codable { 
         case unknown = "unknown"
         case add = "add"
@@ -58,6 +65,7 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
     public var durationSeconds: Int?
     public var ttl: Int?
     public var statusId: String?
+    public var statusCategory: StatusCategory?
     public var dateClosed: String?
     public var workbinId: String?
     public var reporterId: String?
@@ -71,9 +79,10 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
     public var assignmentState: AssignmentState?
     public var assignmentId: String?
     public var alertTimeoutSeconds: Int?
+    public var queueId: String?
     public var customFields: [String:WorkitemsEventsNotificationCustomAttribute]?
 
-    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, customFields: [String:WorkitemsEventsNotificationCustomAttribute]?) {
+    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, statusCategory: StatusCategory?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, queueId: String?, customFields: [String:WorkitemsEventsNotificationCustomAttribute]?) {
         self._id = _id
         self.name = name
         self.typeId = typeId
@@ -87,6 +96,7 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
         self.durationSeconds = durationSeconds
         self.ttl = ttl
         self.statusId = statusId
+        self.statusCategory = statusCategory
         self.dateClosed = dateClosed
         self.workbinId = workbinId
         self.reporterId = reporterId
@@ -100,6 +110,7 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
         self.assignmentState = assignmentState
         self.assignmentId = assignmentId
         self.alertTimeoutSeconds = alertTimeoutSeconds
+        self.queueId = queueId
         self.customFields = customFields
     }
 
@@ -117,6 +128,7 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
         case durationSeconds
         case ttl
         case statusId
+        case statusCategory
         case dateClosed
         case workbinId
         case reporterId
@@ -130,6 +142,7 @@ public class WorkitemsEventsNotificationWorkitem: Codable {
         case assignmentState
         case assignmentId
         case alertTimeoutSeconds
+        case queueId
         case customFields
     }
 

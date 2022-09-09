@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Story object. */
+/** An ephemeral story. */
 
 public class ConversationContentStory: Codable {
 

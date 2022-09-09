@@ -8,56 +8,49 @@
 import Foundation
 
 
-/** Message content element. */
+/** Message content element. If contentType = \"Attachment\" only one item is allowed. */
 
 public class ConversationMessageContent: Codable {
 
     public enum ContentType: String, Codable { 
         case attachment = "Attachment"
         case location = "Location"
-        case story = "Story"
         case quickReply = "QuickReply"
         case notification = "Notification"
         case buttonResponse = "ButtonResponse"
-        case genericTemplate = "GenericTemplate"
-        case listTemplate = "ListTemplate"
-        case postback = "Postback"
-        case reactions = "Reactions"
+        case story = "Story"
         case mention = "Mention"
         case card = "Card"
         case carousel = "Carousel"
         case unknown = "Unknown"
     }
-    /** Type of this content element. If contentType = \"Attachment\" only one item is allowed. */
+    /** Type of this content element. */
     public var contentType: ContentType?
     /** Location content. */
     public var location: ConversationContentLocation?
-    /** Ephemeral story content. */
-    public var story: ConversationContentStory?
     /** Attachment content. */
     public var attachment: ConversationContentAttachment?
     /** Quick reply content. */
     public var quickReply: ConversationContentQuickReply?
-    /** Template notification content. */
-    public var template: ConversationContentNotificationTemplate?
     /** Button response content. */
     public var buttonResponse: ConversationContentButtonResponse?
-    /** Generic Template Object (Deprecated). */
-    public var generic: ConversationContentGeneric?
-    /** Card (Generic Template) Object */
+    /** Template notification content. */
+    public var template: ConversationContentNotificationTemplate?
+    /** Ephemeral story content. */
+    public var story: ConversationContentStory?
+    /** Card content */
     public var card: ConversationContentCard?
-    /** Carousel (Multiple Generic Template) Object */
+    /** Carousel content */
     public var carousel: ConversationContentCarousel?
 
-    public init(contentType: ContentType?, location: ConversationContentLocation?, story: ConversationContentStory?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, template: ConversationContentNotificationTemplate?, buttonResponse: ConversationContentButtonResponse?, generic: ConversationContentGeneric?, card: ConversationContentCard?, carousel: ConversationContentCarousel?) {
+    public init(contentType: ContentType?, location: ConversationContentLocation?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, buttonResponse: ConversationContentButtonResponse?, template: ConversationContentNotificationTemplate?, story: ConversationContentStory?, card: ConversationContentCard?, carousel: ConversationContentCarousel?) {
         self.contentType = contentType
         self.location = location
-        self.story = story
         self.attachment = attachment
         self.quickReply = quickReply
-        self.template = template
         self.buttonResponse = buttonResponse
-        self.generic = generic
+        self.template = template
+        self.story = story
         self.card = card
         self.carousel = carousel
     }

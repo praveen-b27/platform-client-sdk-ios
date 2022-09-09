@@ -24,8 +24,12 @@ public class TranscriptTopic: Codable {
     /** The start time of the topic phrase. */
     public var startTimeMilliseconds: Int64?
     public var duration: TopicDuration?
+    /** Location of the phrase */
+    public var offset: TopicOffset?
+    /** Location of the phrase in the recording in milliseconds */
+    public var recordingLocation: Int64?
 
-    public init(_id: String?, name: String?, topicPhrase: String?, transcriptPhrase: String?, confidence: Int?, startTimeMilliseconds: Int64?, duration: TopicDuration?) {
+    public init(_id: String?, name: String?, topicPhrase: String?, transcriptPhrase: String?, confidence: Int?, startTimeMilliseconds: Int64?, duration: TopicDuration?, offset: TopicOffset?, recordingLocation: Int64?) {
         self._id = _id
         self.name = name
         self.topicPhrase = topicPhrase
@@ -33,6 +37,8 @@ public class TranscriptTopic: Codable {
         self.confidence = confidence
         self.startTimeMilliseconds = startTimeMilliseconds
         self.duration = duration
+        self.offset = offset
+        self.recordingLocation = recordingLocation
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -43,6 +49,8 @@ public class TranscriptTopic: Codable {
         case confidence
         case startTimeMilliseconds
         case duration
+        case offset
+        case recordingLocation
     }
 
 

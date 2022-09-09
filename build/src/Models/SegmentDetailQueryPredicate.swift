@@ -23,6 +23,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case agentowned = "agentOwned"
         case ani = "ani"
         case authenticated = "authenticated"
+        case bargedparticipantid = "bargedParticipantId"
         case callbacknumber = "callbackNumber"
         case callbackscheduledtime = "callbackScheduledTime"
         case coachedparticipantid = "coachedParticipantId"

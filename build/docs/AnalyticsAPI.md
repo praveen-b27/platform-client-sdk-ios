@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsConversationsDetailsJob**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
 | [**getAnalyticsConversationsDetailsJobResults**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsConversationsDetailsJobsAvailability**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJobsAvailability) | Lookup the datalake availability date and time |
+| [**getAnalyticsDataretentionSettings**](AnalyticsAPI.html#getAnalyticsDataretentionSettings) | Get analytics data retention setting |
 | [**getAnalyticsReportingExports**](AnalyticsAPI.html#getAnalyticsReportingExports) | Get all view export requests for a user |
 | [**getAnalyticsReportingExportsMetadata**](AnalyticsAPI.html#getAnalyticsReportingExportsMetadata) | Get all export metadata |
 | [**getAnalyticsReportingMetadata**](AnalyticsAPI.html#getAnalyticsReportingMetadata) | Get list of reporting metadata. |
@@ -52,6 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsUsersDetailsJobs**](AnalyticsAPI.html#postAnalyticsUsersDetailsJobs) | Query for user details asynchronously |
 | [**postAnalyticsUsersDetailsQuery**](AnalyticsAPI.html#postAnalyticsUsersDetailsQuery) | Query for user details |
 | [**postAnalyticsUsersObservationsQuery**](AnalyticsAPI.html#postAnalyticsUsersObservationsQuery) | Query for user observations |
+| [**putAnalyticsDataretentionSettings**](AnalyticsAPI.html#putAnalyticsDataretentionSettings) | Update analytics data retention setting |
 | [**putAnalyticsReportingSchedule**](AnalyticsAPI.html#putAnalyticsReportingSchedule) | Update a scheduled report job. |
 {: class="table-striped"}
 
@@ -531,6 +533,54 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse.html)
+
+<a name="getAnalyticsDataretentionSettings"></a>
+
+# **getAnalyticsDataretentionSettings**
+
+
+
+> [AnalyticsDataRetentionResponse](AnalyticsDataRetentionResponse.html) getAnalyticsDataretentionSettings()
+
+Get analytics data retention setting
+
+
+
+Wraps GET /api/v2/analytics/dataretention/settings  
+
+Requires ANY permissions: 
+
+* analytics:dataRetention:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AnalyticsAPI.getAnalyticsDataretentionSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsDataretentionSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html)
 
 <a name="getAnalyticsReportingExports"></a>
 
@@ -2413,6 +2463,58 @@ AnalyticsAPI.postAnalyticsUsersObservationsQuery(body: body) { (response, error)
 ### Return type
 
 [**UserObservationQueryResponse**](UserObservationQueryResponse.html)
+
+<a name="putAnalyticsDataretentionSettings"></a>
+
+# **putAnalyticsDataretentionSettings**
+
+
+
+> [AnalyticsDataRetentionResponse](AnalyticsDataRetentionResponse.html) putAnalyticsDataretentionSettings(body)
+
+Update analytics data retention setting
+
+
+
+Wraps PUT /api/v2/analytics/dataretention/settings  
+
+Requires ANY permissions: 
+
+* analytics:dataRetention:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UpdateAnalyticsDataRetentionRequest = new UpdateAnalyticsDataRetentionRequest(...) // retentionDays
+
+// Code example
+AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.putAnalyticsDataretentionSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UpdateAnalyticsDataRetentionRequest**](UpdateAnalyticsDataRetentionRequest.html)| retentionDays | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html)
 
 <a name="putAnalyticsReportingSchedule"></a>
 

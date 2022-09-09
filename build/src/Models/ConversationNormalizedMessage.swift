@@ -43,7 +43,7 @@ public class ConversationNormalizedMessage: Codable {
     public var type: ModelType?
     /** Message text. */
     public var text: String?
-    /** List of content elements */
+    /** List of content elements. */
     public var content: [ConversationMessageContent]?
     /** List of event elements. */
     public var events: [ConversationMessageEvent]?

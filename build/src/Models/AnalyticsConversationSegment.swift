@@ -31,6 +31,7 @@ public class AnalyticsConversationSegment: Codable {
     }
     public enum SegmentType: String, Codable { 
         case alert = "alert"
+        case barging = "barging"
         case callback = "callback"
         case coaching = "coaching"
         case contacting = "contacting"

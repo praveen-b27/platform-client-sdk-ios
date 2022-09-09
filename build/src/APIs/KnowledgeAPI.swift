@@ -2284,6 +2284,7 @@ open class KnowledgeAPI {
     
     
     
+    
     /**
      Get documents.
      
@@ -2292,6 +2293,7 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter interval: (query) Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)
+     - parameter documentId: (query) Retrieves the specified documents, comma separated values expected. (optional)
      - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
      - parameter includeSubcategories: (query) Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
      - parameter includeDrafts: (query) If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)
@@ -2299,8 +2301,8 @@ open class KnowledgeAPI {
      - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: KnowledgeDocumentResponseListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand)
+    open class func getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, documentId: [String]? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: KnowledgeDocumentResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, documentId: documentId, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand)
         requestBuilder.execute { (response: Response<KnowledgeDocumentResponseListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2523,6 +2525,7 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter interval: (query) Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)
+     - parameter documentId: (query) Retrieves the specified documents, comma separated values expected. (optional)
      - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
      - parameter includeSubcategories: (query) Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
      - parameter includeDrafts: (query) If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)
@@ -2531,7 +2534,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeDocumentResponseListing> 
      */
-    open class func getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<KnowledgeDocumentResponseListing> {        
+    open class func getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, documentId: [String]? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<KnowledgeDocumentResponseListing> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2545,6 +2548,7 @@ open class KnowledgeAPI {
             "after": after, 
             "pageSize": pageSize, 
             "interval": interval, 
+            "documentId": documentId, 
             "categoryId": categoryId, 
             "includeSubcategories": includeSubcategories, 
             "includeDrafts": includeDrafts, 

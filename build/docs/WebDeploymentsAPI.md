@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsAPI.html#getWebdeploymentsConfigurationVersionsDraft) | Get the configuration draft |
 | [**getWebdeploymentsConfigurations**](WebDeploymentsAPI.html#getWebdeploymentsConfigurations) | View configuration drafts |
 | [**getWebdeploymentsDeployment**](WebDeploymentsAPI.html#getWebdeploymentsDeployment) | Get a deployment |
+| [**getWebdeploymentsDeploymentConfigurations**](WebDeploymentsAPI.html#getWebdeploymentsDeploymentConfigurations) | Get active configuration for a given deployment |
 | [**getWebdeploymentsDeployments**](WebDeploymentsAPI.html#getWebdeploymentsDeployments) | Get deployments |
 | [**postWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsAPI.html#postWebdeploymentsConfigurationVersionsDraftPublish) | Publish the configuration draft and create a new version |
 | [**postWebdeploymentsConfigurations**](WebDeploymentsAPI.html#postWebdeploymentsConfigurations) | Create a configuration draft |
@@ -387,6 +388,59 @@ WebDeploymentsAPI.getWebdeploymentsDeployment(deploymentId: deploymentId) { (res
 ### Return type
 
 [**WebDeployment**](WebDeployment.html)
+
+<a name="getWebdeploymentsDeploymentConfigurations"></a>
+
+# **getWebdeploymentsDeploymentConfigurations**
+
+
+
+> [WebDeploymentActiveConfigurationOnDeployment](WebDeploymentActiveConfigurationOnDeployment.html) getWebdeploymentsDeploymentConfigurations(deploymentId, type)
+
+Get active configuration for a given deployment
+
+
+
+Wraps GET /api/v2/webdeployments/deployments/{deploymentId}/configurations  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let deploymentId: String = "" // The deployment ID
+let type: String = "" // Get active configuration on a deployment
+
+// Code example
+WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations(deploymentId: deploymentId, type: type) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **String**| The deployment ID | |
+| **type** | **String**| Get active configuration on a deployment | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment.html)
 
 <a name="getWebdeploymentsDeployments"></a>
 

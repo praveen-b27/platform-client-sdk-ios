@@ -318,6 +318,13 @@
     "return": "DataAvailabilityResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Lookup the datalake availability date and time\nGetAnalyticsConversationsDetailsJobsAvailabilityRequest.getAnalyticsConversationsDetailsJobsAvailability() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsConversationsDetailsJobsAvailabilityRequest.getAnalyticsConversationsDetailsJobsAvailability was successful\")\n        dump(response)\n    }\n}"
   },
+  "getanalyticsdataretentionsettings": {
+    "operationId": "getanalyticsdataretentionsettings",
+    "functionName": "getAnalyticsDataretentionSettings",
+    "signature": "getAnalyticsDataretentionSettings()",
+    "return": "AnalyticsDataRetentionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get analytics data retention setting\nGetAnalyticsDataretentionSettingsRequest.getAnalyticsDataretentionSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsDataretentionSettingsRequest.getAnalyticsDataretentionSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "getanalyticsreportingexports": {
     "operationId": "getanalyticsreportingexports",
     "functionName": "getAnalyticsReportingExports",
@@ -841,6 +848,20 @@
     ],
     "return": "UserObservationQueryResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UserObservationQuery = new UserObservationQuery(...) // query\n\n// Query for user observations\nPostAnalyticsUsersObservationsQueryRequest.postAnalyticsUsersObservationsQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsUsersObservationsQueryRequest.postAnalyticsUsersObservationsQuery was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putanalyticsdataretentionsettings": {
+    "operationId": "putanalyticsdataretentionsettings",
+    "functionName": "putAnalyticsDataretentionSettings",
+    "signature": "putAnalyticsDataretentionSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "UpdateAnalyticsDataRetentionRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AnalyticsDataRetentionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UpdateAnalyticsDataRetentionRequest = new UpdateAnalyticsDataRetentionRequest(...) // retentionDays\n\n// Update analytics data retention setting\nPutAnalyticsDataretentionSettingsRequest.putAnalyticsDataretentionSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutAnalyticsDataretentionSettingsRequest.putAnalyticsDataretentionSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "putanalyticsreportingschedule": {
     "operationId": "putanalyticsreportingschedule",
@@ -14701,7 +14722,7 @@
   "getknowledgeknowledgebasedocuments": {
     "operationId": "getknowledgeknowledgebasedocuments",
     "functionName": "getKnowledgeKnowledgebaseDocuments",
-    "signature": "getKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, categoryId, includeSubcategories, includeDrafts, labelIds, expand)",
+    "signature": "getKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand)",
     "parameters": [
       {
         "name": "knowledgeBaseId",
@@ -14726,6 +14747,11 @@
       {
         "name": "interval",
         "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "documentId",
+        "type": "[String]",
         "required": "false"
       },
       {
@@ -14755,7 +14781,7 @@
       }
     ],
     "return": "KnowledgeDocumentResponseListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet interval: String = \"\" // Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ\nlet categoryId: [String] = [\"\"] // If specified, retrieves documents associated with category ids, comma separated values expected.\nlet includeSubcategories: Bool = true // Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories.\nlet includeDrafts: Bool = true // If includeDrafts is true, Documents in the draft state are also returned in the response.\nlet labelIds: [String] = [\"\"] // If specified, retrieves documents associated with label ids, comma separated values expected.\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected.\n\n// Get documents.\nGetKnowledgeKnowledgebaseDocumentsRequest.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseDocumentsRequest.getKnowledgeKnowledgebaseDocuments was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet interval: String = \"\" // Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ\nlet documentId: [String] = [\"\"] // Retrieves the specified documents, comma separated values expected.\nlet categoryId: [String] = [\"\"] // If specified, retrieves documents associated with category ids, comma separated values expected.\nlet includeSubcategories: Bool = true // Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories.\nlet includeDrafts: Bool = true // If includeDrafts is true, Documents in the draft state are also returned in the response.\nlet labelIds: [String] = [\"\"] // If specified, retrieves documents associated with label ids, comma separated values expected.\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected.\n\n// Get documents.\nGetKnowledgeKnowledgebaseDocumentsRequest.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, documentId: documentId, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseDocumentsRequest.getKnowledgeKnowledgebaseDocuments was successful\")\n        dump(response)\n    }\n}"
   },
   "getknowledgeknowledgebaseexportjob": {
     "operationId": "getknowledgeknowledgebaseexportjob",
@@ -19036,6 +19062,19 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet _id: [String] = [\"\"] // contact list id(s) to delete\n\n// Delete multiple contact lists.\nDeleteOutboundContactlistsRequest.deleteOutboundContactlists(_id: _id) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundContactlistsRequest.deleteOutboundContactlists was successful\")\n    }\n}"
   },
+  "deleteoutbounddigitalruleset": {
+    "operationId": "deleteoutbounddigitalruleset",
+    "functionName": "deleteOutboundDigitalruleset",
+    "signature": "deleteOutboundDigitalruleset(digitalRuleSetId)",
+    "parameters": [
+      {
+        "name": "digitalRuleSetId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet digitalRuleSetId: String = \"\" // The Digital Rule Set ID\n\n// Delete an Outbound Digital Rule Set\nDeleteOutboundDigitalrulesetRequest.deleteOutboundDigitalruleset(digitalRuleSetId: digitalRuleSetId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundDigitalrulesetRequest.deleteOutboundDigitalruleset was successful\")\n    }\n}"
+  },
   "deleteoutbounddnclist": {
     "operationId": "deleteoutbounddnclist",
     "functionName": "deleteOutboundDnclist",
@@ -19985,6 +20024,59 @@
     "return": "ContactListDivisionViewListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet includeImportStatus: Bool = true // Include import status\nlet includeSize: Bool = true // Include size\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet filterType: GetOutboundContactlistsDivisionviewsRequest.FilterType_getOutboundContactlistsDivisionviews = GetOutboundContactlistsDivisionviewsRequest.FilterType_getOutboundContactlistsDivisionviews.enummember // Filter type\nlet name: String = \"\" // Name\nlet _id: [String] = [\"\"] // id\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: GetOutboundContactlistsDivisionviewsRequest.SortOrder_getOutboundContactlistsDivisionviews = GetOutboundContactlistsDivisionviewsRequest.SortOrder_getOutboundContactlistsDivisionviews.enummember // Sort order\n\n// Query a list of simplified contact list objects.\nGetOutboundContactlistsDivisionviewsRequest.getOutboundContactlistsDivisionviews(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, _id: _id, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundContactlistsDivisionviewsRequest.getOutboundContactlistsDivisionviews was successful\")\n        dump(response)\n    }\n}"
   },
+  "getoutbounddigitalruleset": {
+    "operationId": "getoutbounddigitalruleset",
+    "functionName": "getOutboundDigitalruleset",
+    "signature": "getOutboundDigitalruleset(digitalRuleSetId)",
+    "parameters": [
+      {
+        "name": "digitalRuleSetId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "DigitalRuleSet",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet digitalRuleSetId: String = \"\" // The Digital Rule Set ID\n\n// Get an Outbound Digital Rule Set\nGetOutboundDigitalrulesetRequest.getOutboundDigitalruleset(digitalRuleSetId: digitalRuleSetId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundDigitalrulesetRequest.getOutboundDigitalruleset was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutbounddigitalrulesets": {
+    "operationId": "getoutbounddigitalrulesets",
+    "functionName": "getOutboundDigitalrulesets",
+    "signature": "getOutboundDigitalrulesets(pageSize, pageNumber, sortBy, sortOrder, name, _id)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "_id",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "DigitalRuleSetEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetOutboundDigitalrulesetsRequest.SortBy_getOutboundDigitalrulesets = GetOutboundDigitalrulesetsRequest.SortBy_getOutboundDigitalrulesets.enummember // The field to sort by\nlet sortOrder: GetOutboundDigitalrulesetsRequest.SortOrder_getOutboundDigitalrulesets = GetOutboundDigitalrulesetsRequest.SortOrder_getOutboundDigitalrulesets.enummember // The direction to sort\nlet name: String = \"\" // Name\nlet _id: [String] = [\"\"] // A list of digital rule set ids to bulk fetch\n\n// Query a list of Outbound Digital Rule Sets\nGetOutboundDigitalrulesetsRequest.getOutboundDigitalrulesets(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, _id: _id) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundDigitalrulesetsRequest.getOutboundDigitalrulesets was successful\")\n        dump(response)\n    }\n}"
+  },
   "getoutbounddnclist": {
     "operationId": "getoutbounddnclist",
     "functionName": "getOutboundDnclist",
@@ -20910,6 +21002,20 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\n\n// Add phone numbers to a Dialer DNC list.\nPostOutboundConversationDncRequest.postOutboundConversationDnc(conversationId: conversationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostOutboundConversationDncRequest.postOutboundConversationDnc was successful\")\n    }\n}"
   },
+  "postoutbounddigitalrulesets": {
+    "operationId": "postoutbounddigitalrulesets",
+    "functionName": "postOutboundDigitalrulesets",
+    "signature": "postOutboundDigitalrulesets(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "DigitalRuleSet",
+        "required": "true"
+      }
+    ],
+    "return": "DigitalRuleSet",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DigitalRuleSet = new DigitalRuleSet(...) // Digital Rule Set\n\n// Create an Outbound Digital Rule Set\nPostOutboundDigitalrulesetsRequest.postOutboundDigitalrulesets(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundDigitalrulesetsRequest.postOutboundDigitalrulesets was successful\")\n        dump(response)\n    }\n}"
+  },
   "postoutbounddnclistexport": {
     "operationId": "postoutbounddnclistexport",
     "functionName": "postOutboundDnclistExport",
@@ -21197,6 +21303,25 @@
     ],
     "return": "ContactListFilter",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListFilterId: String = \"\" // Contact List Filter ID\nlet body: ContactListFilter = new ContactListFilter(...) // ContactListFilter\n\n// Update Contact List Filter\nPutOutboundContactlistfilterRequest.putOutboundContactlistfilter(contactListFilterId: contactListFilterId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundContactlistfilterRequest.putOutboundContactlistfilter was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putoutbounddigitalruleset": {
+    "operationId": "putoutbounddigitalruleset",
+    "functionName": "putOutboundDigitalruleset",
+    "signature": "putOutboundDigitalruleset(digitalRuleSetId, body)",
+    "parameters": [
+      {
+        "name": "digitalRuleSetId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DigitalRuleSet",
+        "required": "true"
+      }
+    ],
+    "return": "DigitalRuleSet",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet digitalRuleSetId: String = \"\" // The Digital Rule Set ID\nlet body: DigitalRuleSet = new DigitalRuleSet(...) // Digital Rule Set\n\n// Update an Outbound Digital Rule Set\nPutOutboundDigitalrulesetRequest.putOutboundDigitalruleset(digitalRuleSetId: digitalRuleSetId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundDigitalrulesetRequest.putOutboundDigitalruleset was successful\")\n        dump(response)\n    }\n}"
   },
   "putoutbounddnclist": {
     "operationId": "putoutbounddnclist",
@@ -22118,7 +22243,7 @@
       }
     ],
     "return": "EvaluationFormEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: String = \"\" // Expand\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms\nGetQualityFormsRequest.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsRequest.getQualityForms was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsRequest.Expand_getQualityForms = GetQualityFormsRequest.Expand_getQualityForms.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms\nGetQualityFormsRequest.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsRequest.getQualityForms was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformsevaluation": {
     "operationId": "getqualityformsevaluation",
@@ -22210,7 +22335,7 @@
       }
     ],
     "return": "EvaluationFormEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: String = \"\" // Expand\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms\nGetQualityFormsEvaluationsRequest.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsEvaluationsRequest.getQualityFormsEvaluations was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsEvaluationsRequest.Expand_getQualityFormsEvaluations = GetQualityFormsEvaluationsRequest.Expand_getQualityFormsEvaluations.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms\nGetQualityFormsEvaluationsRequest.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsEvaluationsRequest.getQualityFormsEvaluations was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformsevaluationsbulkcontexts": {
     "operationId": "getqualityformsevaluationsbulkcontexts",
@@ -22311,7 +22436,7 @@
       }
     ],
     "return": "SurveyFormEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: String = \"\" // Expand\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of survey forms\nGetQualityFormsSurveysRequest.getQualityFormsSurveys(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsSurveysRequest.getQualityFormsSurveys was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsSurveysRequest.Expand_getQualityFormsSurveys = GetQualityFormsSurveysRequest.Expand_getQualityFormsSurveys.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of survey forms\nGetQualityFormsSurveysRequest.getQualityFormsSurveys(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsSurveysRequest.getQualityFormsSurveys was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformssurveysbulk": {
     "operationId": "getqualityformssurveysbulk",
@@ -23560,6 +23685,30 @@
     ],
     "return": "RecordingSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet createDefault: Bool = true // If no settings are found, a new one is created with default values\n\n// Get the Recording Settings for the Organization\nGetRecordingSettingsRequest.getRecordingSettings(createDefault: createDefault) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingSettingsRequest.getRecordingSettings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getrecordingsretentionquery": {
+    "operationId": "getrecordingsretentionquery",
+    "functionName": "getRecordingsRetentionQuery",
+    "signature": "getRecordingsRetentionQuery(retentionThresholdDays, cursor, pageSize)",
+    "parameters": [
+      {
+        "name": "retentionThresholdDays",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "RecordingRetentionCursorEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet retentionThresholdDays: Int = 0 // Fetch retention data for recordings retained for more days than the provided value.\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page)\nlet pageSize: Int = 0 // Page size. Maximum is 500.\n\n// Query for recording retention data\nGetRecordingsRetentionQueryRequest.getRecordingsRetentionQuery(retentionThresholdDays: retentionThresholdDays, cursor: cursor, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingsRetentionQueryRequest.getRecordingsRetentionQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "getrecordingsscreensessions": {
     "operationId": "getrecordingsscreensessions",
@@ -31953,6 +32102,25 @@
     "return": "UserEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [PatchUser] = [new PatchUser(...)] // Users\n\n// Update bulk acd autoanswer on users\nPatchUsersBulkRequest.patchUsersBulk(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchUsersBulkRequest.patchUsersBulk was successful\")\n        dump(response)\n    }\n}"
   },
+  "postuserexternalid": {
+    "operationId": "postuserexternalid",
+    "functionName": "postUserExternalid",
+    "signature": "postUserExternalid(userId, body)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UserExternalIdentifier",
+        "required": "true"
+      }
+    ],
+    "return": "[UserExternalIdentifier]",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet body: UserExternalIdentifier = new UserExternalIdentifier(...) // \n\n// Create mapping between external identifier and user. Limit 100 per entity.\nPostUserExternalidRequest.postUserExternalid(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUserExternalidRequest.postUserExternalid was successful\")\n        dump(response)\n    }\n}"
+  },
   "postuserinvite": {
     "operationId": "postuserinvite",
     "functionName": "postUserInvite",
@@ -32985,6 +33153,25 @@
     ],
     "return": "WebDeployment",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\n\n// Get a deployment\nGetWebdeploymentsDeploymentRequest.getWebdeploymentsDeployment(deploymentId: deploymentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentRequest.getWebdeploymentsDeployment was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getwebdeploymentsdeploymentconfigurations": {
+    "operationId": "getwebdeploymentsdeploymentconfigurations",
+    "functionName": "getWebdeploymentsDeploymentConfigurations",
+    "signature": "getWebdeploymentsDeploymentConfigurations(deploymentId, type)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "type",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "WebDeploymentActiveConfigurationOnDeployment",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\nlet type: String = \"\" // Get active configuration on a deployment\n\n// Get active configuration for a given deployment\nGetWebdeploymentsDeploymentConfigurationsRequest.getWebdeploymentsDeploymentConfigurations(deploymentId: deploymentId, type: type) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentConfigurationsRequest.getWebdeploymentsDeploymentConfigurations was successful\")\n        dump(response)\n    }\n}"
   },
   "getwebdeploymentsdeployments": {
     "operationId": "getwebdeploymentsdeployments",

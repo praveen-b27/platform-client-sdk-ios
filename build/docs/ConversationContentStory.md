@@ -2,7 +2,7 @@
 title: ConversationContentStory
 ---
 ## ConversationContentStory
-Story object.
+An ephemeral story.
 
 ## Properties
 

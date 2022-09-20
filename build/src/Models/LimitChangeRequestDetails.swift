@@ -59,6 +59,7 @@ public class LimitChangeRequestDetails: Codable {
         case routing = "routing"
         case scim = "scim"
         case search = "search"
+        case skills = "skills"
         case speechAndTextAnalytics = "speech.and.text.analytics"
         case speechIntegration = "speech.integration"
         case supportability = "supportability"

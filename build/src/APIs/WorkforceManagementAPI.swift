@@ -977,9 +977,9 @@ open class WorkforceManagementAPI {
      - parameter expand: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunit(businessUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: BusinessUnit?,_ error: Error?) -> Void)) {
+    open class func getWorkforcemanagementBusinessunit(businessUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, expand: expand)
-        requestBuilder.execute { (response: Response<BusinessUnit>?, error) -> Void in
+        requestBuilder.execute { (response: Response<BusinessUnitResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1013,9 +1013,9 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter expand: (query)  (optional)
 
-     - returns: RequestBuilder<BusinessUnit> 
+     - returns: RequestBuilder<BusinessUnitResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, expand: [String]? = nil) -> RequestBuilder<BusinessUnit> {        
+    open class func getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, expand: [String]? = nil) -> RequestBuilder<BusinessUnitResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1028,7 +1028,7 @@ open class WorkforceManagementAPI {
             "expand": expand
         ])
 
-        let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<BusinessUnitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -7671,9 +7671,9 @@ open class WorkforceManagementAPI {
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunit(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil, completion: @escaping ((_ data: BusinessUnit?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunit(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, body: body)
-        requestBuilder.execute { (response: Response<BusinessUnit>?, error) -> Void in
+        requestBuilder.execute { (response: Response<BusinessUnitResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -7706,9 +7706,9 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
-     - returns: RequestBuilder<BusinessUnit> 
+     - returns: RequestBuilder<BusinessUnitResponse> 
      */
-    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnit> {        
+    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnitResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7718,7 +7718,7 @@ open class WorkforceManagementAPI {
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<BusinessUnitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -10377,9 +10377,9 @@ open class WorkforceManagementAPI {
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunits(body: CreateBusinessUnitRequest? = nil, completion: @escaping ((_ data: BusinessUnit?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunits(body: CreateBusinessUnitRequest? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<BusinessUnit>?, error) -> Void in
+        requestBuilder.execute { (response: Response<BusinessUnitResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -10412,16 +10412,16 @@ open class WorkforceManagementAPI {
      
      - parameter body: (body) body (optional)
 
-     - returns: RequestBuilder<BusinessUnit> 
+     - returns: RequestBuilder<BusinessUnitResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnit> {        
+    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnitResponse> {        
         let path = "/api/v2/workforcemanagement/businessunits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<BusinessUnitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

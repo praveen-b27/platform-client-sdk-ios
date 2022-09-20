@@ -65,6 +65,8 @@ public class ConversationDetailQueryPredicate: Codable {
         case tcontacting = "tContacting"
         case tconversationduration = "tConversationDuration"
         case tdialing = "tDialing"
+        case tfirstconnect = "tFirstConnect"
+        case tfirstdial = "tFirstDial"
         case tflow = "tFlow"
         case tflowdisconnect = "tFlowDisconnect"
         case tflowexit = "tFlowExit"

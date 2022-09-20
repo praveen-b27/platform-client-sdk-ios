@@ -1161,7 +1161,7 @@ This endpoint does not require any parameters.
 
 
 
-> [BusinessUnit](BusinessUnit.html) getWorkforcemanagementBusinessunit(businessUnitId, expand)
+> [BusinessUnitResponse](BusinessUnitResponse.html) getWorkforcemanagementBusinessunit(businessUnitId, expand)
 
 Get business unit
 
@@ -1272,7 +1272,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: busine
 
 ### Return type
 
-[**BusinessUnit**](BusinessUnit.html)
+[**BusinessUnitResponse**](BusinessUnitResponse.html)
 
 <a name="getWorkforcemanagementBusinessunitActivitycode"></a>
 
@@ -4631,7 +4631,7 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequests(recentlyReviewed: r
 
 
 
-> [BusinessUnit](BusinessUnit.html) patchWorkforcemanagementBusinessunit(businessUnitId, body)
+> [BusinessUnitResponse](BusinessUnitResponse.html) patchWorkforcemanagementBusinessunit(businessUnitId, body)
 
 Update business unit
 
@@ -4677,7 +4677,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunit(businessUnitId: busi
 
 ### Return type
 
-[**BusinessUnit**](BusinessUnit.html)
+[**BusinessUnitResponse**](BusinessUnitResponse.html)
 
 <a name="patchWorkforcemanagementBusinessunitActivitycode"></a>
 
@@ -6502,7 +6502,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 
 
 
-> [BusinessUnit](BusinessUnit.html) postWorkforcemanagementBusinessunits(body)
+> [BusinessUnitResponse](BusinessUnitResponse.html) postWorkforcemanagementBusinessunits(body)
 
 Add a new business unit
 
@@ -6548,7 +6548,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body) { (respo
 
 ### Return type
 
-[**BusinessUnit**](BusinessUnit.html)
+[**BusinessUnitResponse**](BusinessUnitResponse.html)
 
 <a name="postWorkforcemanagementCalendarUrlIcs"></a>
 

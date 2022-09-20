@@ -33,8 +33,6 @@ public class UserSearchCriteria: Codable {
     public var values: [String]?
     /** The start value of the range. This field is used for range search types. */
     public var startValue: String?
-    /** Field names to search against */
-    public var fields: [String]?
     /** A value for the search to match against */
     public var value: String?
     /** How to apply this search criteria against other criteria */
@@ -43,18 +41,20 @@ public class UserSearchCriteria: Codable {
     public var group: [UserSearchCriteria]?
     /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd'T'HH:mm:ss.SSSX. */
     public var dateFormat: String?
+    /** Field names to search against */
+    public var fields: [String]?
     /** Search Type */
     public var type: ModelType?
 
-    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [UserSearchCriteria]?, dateFormat: String?, type: ModelType?) {
+    public init(endValue: String?, values: [String]?, startValue: String?, value: String?, _operator: Operator?, group: [UserSearchCriteria]?, dateFormat: String?, fields: [String]?, type: ModelType?) {
         self.endValue = endValue
         self.values = values
         self.startValue = startValue
-        self.fields = fields
         self.value = value
         self._operator = _operator
         self.group = group
         self.dateFormat = dateFormat
+        self.fields = fields
         self.type = type
     }
 
@@ -62,11 +62,11 @@ public class UserSearchCriteria: Codable {
         case endValue
         case values
         case startValue
-        case fields
         case value
         case _operator = "operator"
         case group
         case dateFormat
+        case fields
         case type
     }
 

@@ -934,8 +934,8 @@ open class GroupsAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1581,8 +1581,8 @@ open class GroupsAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1800,8 +1800,8 @@ open class GroupsAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1970,6 +1970,7 @@ open class GroupsAPI {
     
     
     
+    
     public enum SortOrder_getProfilesGroups: String { 
         case ascending = "ascending"
         case descending = "descending"
@@ -1982,11 +1983,12 @@ open class GroupsAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter _id: (query) id (optional)
+     - parameter jabberId: (query) A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getProfilesGroups(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, sortOrder: SortOrder_getProfilesGroups? = nil, completion: @escaping ((_ data: GroupProfileEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getProfilesGroupsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, sortOrder: sortOrder)
+    open class func getProfilesGroups(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getProfilesGroups? = nil, completion: @escaping ((_ data: GroupProfileEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getProfilesGroupsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<GroupProfileEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2030,8 +2032,8 @@ open class GroupsAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2040,11 +2042,12 @@ open class GroupsAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter _id: (query) id (optional)
+     - parameter jabberId: (query) A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional)
 
      - returns: RequestBuilder<GroupProfileEntityListing> 
      */
-    open class func getProfilesGroupsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, sortOrder: SortOrder_getProfilesGroups? = nil) -> RequestBuilder<GroupProfileEntityListing> {        
+    open class func getProfilesGroupsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getProfilesGroups? = nil) -> RequestBuilder<GroupProfileEntityListing> {        
         let path = "/api/v2/profiles/groups"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2054,6 +2057,7 @@ open class GroupsAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "id": _id, 
+            "jabberId": jabberId, 
             "sortOrder": sortOrder?.rawValue
         ])
 

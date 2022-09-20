@@ -17,6 +17,7 @@ public class LearningAssignmentUpdate: Codable {
         case completed = "Completed"
         case deleted = "Deleted"
         case notCompleted = "NotCompleted"
+        case invalidSchedule = "InvalidSchedule"
     }
     /** The Learning Assignment state */
     public var state: State?

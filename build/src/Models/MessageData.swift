@@ -50,13 +50,13 @@ public class MessageData: Codable {
     public var direction: Direction?
     /** Type of text messenger. */
     public var messengerType: MessengerType?
-    /** The body of the text message. */
+    /** The body of the text message. (Deprecated - Instead use normalizedMessage.text) */
     public var textBody: String?
     /** The status of the message. */
     public var status: Status?
-    /** The media details associated to a message. */
+    /** The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment) */
     public var media: [MessageMedia]?
-    /** The sticker details associated to a message. */
+    /** The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment */
     public var stickers: [MessageSticker]?
     /** The message into normalized format */
     public var normalizedMessage: ConversationNormalizedMessage?

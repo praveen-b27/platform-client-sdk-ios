@@ -33,8 +33,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsCredential**](IntegrationsAPI.html#getIntegrationsCredential) | Get a single credential with sensitive fields redacted |
 | [**getIntegrationsCredentials**](IntegrationsAPI.html#getIntegrationsCredentials) | List multiple sets of credentials |
 | [**getIntegrationsCredentialsTypes**](IntegrationsAPI.html#getIntegrationsCredentialsTypes) | List all credential types |
-| [**getIntegrationsEventlog**](IntegrationsAPI.html#getIntegrationsEventlog) | List all events |
-| [**getIntegrationsEventlogEventId**](IntegrationsAPI.html#getIntegrationsEventlogEventId) | Get a single event |
 | [**getIntegrationsSpeechDialogflowAgent**](IntegrationsAPI.html#getIntegrationsSpeechDialogflowAgent) | Get details about a Dialogflow agent |
 | [**getIntegrationsSpeechDialogflowAgents**](IntegrationsAPI.html#getIntegrationsSpeechDialogflowAgents) | Get a list of Dialogflow agents in the customers&#39; Google accounts |
 | [**getIntegrationsSpeechLexBotAlias**](IntegrationsAPI.html#getIntegrationsSpeechLexBotAlias) | Get details about a Lex bot alias |
@@ -61,7 +59,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postIntegrationsActions**](IntegrationsAPI.html#postIntegrationsActions) | Create a new Action |
 | [**postIntegrationsActionsDrafts**](IntegrationsAPI.html#postIntegrationsActionsDrafts) | Create a new Draft |
 | [**postIntegrationsCredentials**](IntegrationsAPI.html#postIntegrationsCredentials) | Create a set of credentials |
-| [**postIntegrationsWorkforcemanagementVendorconnection**](IntegrationsAPI.html#postIntegrationsWorkforcemanagementVendorconnection) | Add a vendor connection |
 | [**putIntegrationConfigCurrent**](IntegrationsAPI.html#putIntegrationConfigCurrent) | Update integration configuration. |
 | [**putIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI.html#putIntegrationsBotconnectorIntegrationIdBots) | Set a list of botConnector bots plus versions for this integration |
 | [**putIntegrationsCredential**](IntegrationsAPI.html#putIntegrationsCredential) | Update a set of credentials |
@@ -1545,120 +1542,6 @@ This endpoint does not require any parameters.
 
 [**CredentialTypeListing**](CredentialTypeListing.html)
 
-<a name="getIntegrationsEventlog"></a>
-
-# **getIntegrationsEventlog**
-
-
-
-> [IntegrationEventEntityListing](IntegrationEventEntityListing.html) getIntegrationsEventlog(pageSize, pageNumber, sortBy, sortOrder, entityId)
-
-List all events
-
-
-
-Wraps GET /api/v2/integrations/eventlog  
-
-Requires ANY permissions: 
-
-* integrations:integration:view
-* bridge:notification:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let pageSize: Int = 0 // Page size
-let pageNumber: Int = 0 // Page number
-let sortBy: String = "" // Sort by
-let sortOrder: String = "" // Order by
-let entityId: String = "" // Include only events with this entity ID
-
-// Code example
-IntegrationsAPI.getIntegrationsEventlog(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, entityId: entityId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("IntegrationsAPI.getIntegrationsEventlog was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] |
-| **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Order by | [optional] |
-| **entityId** | **String**| Include only events with this entity ID | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**IntegrationEventEntityListing**](IntegrationEventEntityListing.html)
-
-<a name="getIntegrationsEventlogEventId"></a>
-
-# **getIntegrationsEventlogEventId**
-
-
-
-> [IntegrationEvent](IntegrationEvent.html) getIntegrationsEventlogEventId(eventId)
-
-Get a single event
-
-
-
-Wraps GET /api/v2/integrations/eventlog/{eventId}  
-
-Requires ANY permissions: 
-
-* integrations:integration:view
-* bridge:notification:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let eventId: String = "" // Event Id
-
-// Code example
-IntegrationsAPI.getIntegrationsEventlogEventId(eventId: eventId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("IntegrationsAPI.getIntegrationsEventlogEventId was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **eventId** | **String**| Event Id | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**IntegrationEvent**](IntegrationEvent.html)
-
 <a name="getIntegrationsSpeechDialogflowAgent"></a>
 
 # **getIntegrationsSpeechDialogflowAgent**
@@ -3088,57 +2971,6 @@ IntegrationsAPI.postIntegrationsCredentials(body: body) { (response, error) in
 ### Return type
 
 [**CredentialInfo**](CredentialInfo.html)
-
-<a name="postIntegrationsWorkforcemanagementVendorconnection"></a>
-
-# **postIntegrationsWorkforcemanagementVendorconnection**
-
-
-
-> [UserActionCategoryEntityListing](UserActionCategoryEntityListing.html) postIntegrationsWorkforcemanagementVendorconnection(body)
-
-Add a vendor connection
-
-
-
-Wraps POST /api/v2/integrations/workforcemanagement/vendorconnection  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: VendorConnectionRequest = new VendorConnectionRequest(...) // 
-
-// Code example
-IntegrationsAPI.postIntegrationsWorkforcemanagementVendorconnection(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("IntegrationsAPI.postIntegrationsWorkforcemanagementVendorconnection was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**VendorConnectionRequest**](VendorConnectionRequest.html)|  | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html)
 
 <a name="putIntegrationConfigCurrent"></a>
 

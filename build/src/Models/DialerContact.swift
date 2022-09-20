@@ -26,6 +26,8 @@ public class DialerContact: Codable {
     public var callable: Bool?
     /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
     public var phoneNumberStatus: [String:PhoneNumberStatus]?
+    /** A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type. */
+    public var contactableStatus: [String:ContactableStatus]?
     /** Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip */
     public var contactColumnTimeZones: [String:ContactColumnTimeZone]?
     /** the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue */
@@ -33,7 +35,7 @@ public class DialerContact: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.contactListId = contactListId
@@ -42,6 +44,7 @@ public class DialerContact: Codable {
         self.latestSmsEvaluations = latestSmsEvaluations
         self.callable = callable
         self.phoneNumberStatus = phoneNumberStatus
+        self.contactableStatus = contactableStatus
         self.contactColumnTimeZones = contactColumnTimeZones
         self.configurationOverrides = configurationOverrides
         self.selfUri = selfUri
@@ -56,6 +59,7 @@ public class DialerContact: Codable {
         case latestSmsEvaluations
         case callable
         case phoneNumberStatus
+        case contactableStatus
         case contactColumnTimeZones
         case configurationOverrides
         case selfUri

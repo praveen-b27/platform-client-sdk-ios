@@ -27,6 +27,7 @@ public class AuditQueryService: Codable {
         case languageUnderstanding = "LanguageUnderstanding"
         case learning = "Learning"
         case limits = "Limits"
+        case logCapture = "LogCapture"
         case outbound = "Outbound"
         case peoplePermissions = "PeoplePermissions"
         case employeePerformance = "EmployeePerformance"

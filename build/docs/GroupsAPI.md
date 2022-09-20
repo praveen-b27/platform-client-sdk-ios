@@ -512,7 +512,7 @@ GroupsAPI.getGroupsSearch(q64: q64, expand: expand) { (response, error) in
 
 
 
-> [GroupProfileEntityListing](GroupProfileEntityListing.html) getProfilesGroups(pageSize, pageNumber, _id, sortOrder)
+> [GroupProfileEntityListing](GroupProfileEntityListing.html) getProfilesGroups(pageSize, pageNumber, _id, jabberId, sortOrder)
 
 Get group profile listing
 
@@ -536,10 +536,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let _id: [String] = [""] // id
+let jabberId: [String] = [""] // A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter)
 let sortOrder: GroupsAPI.SortOrder_getProfilesGroups = GroupsAPI.SortOrder_getProfilesGroups.enummember // Ascending or descending sort order
 
 // Code example
-GroupsAPI.getProfilesGroups(pageSize: pageSize, pageNumber: pageNumber, _id: _id, sortOrder: sortOrder) { (response, error) in
+GroupsAPI.getProfilesGroups(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -557,6 +558,7 @@ GroupsAPI.getProfilesGroups(pageSize: pageSize, pageNumber: pageNumber, _id: _id
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
+| **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 

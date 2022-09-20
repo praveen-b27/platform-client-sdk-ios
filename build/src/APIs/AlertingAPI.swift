@@ -2004,8 +2004,8 @@ open class AlertingAPI {
     "ruleUri" : "https://openapi-generator.tech"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3927,8 +3927,8 @@ open class AlertingAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

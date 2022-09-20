@@ -23,14 +23,17 @@ public class WritableDialerContact: Codable {
     public var callable: Bool?
     /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
     public var phoneNumberStatus: [String:PhoneNumberStatus]?
+    /** A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type. */
+    public var contactableStatus: [String:ContactableStatus]?
 
-    public init(_id: String?, contactListId: String?, data: [String:JSON]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?) {
+    public init(_id: String?, contactListId: String?, data: [String:JSON]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?) {
         self._id = _id
         self.contactListId = contactListId
         self.data = data
         self.latestSmsEvaluations = latestSmsEvaluations
         self.callable = callable
         self.phoneNumberStatus = phoneNumberStatus
+        self.contactableStatus = contactableStatus
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -40,6 +43,7 @@ public class WritableDialerContact: Codable {
         case latestSmsEvaluations
         case callable
         case phoneNumberStatus
+        case contactableStatus
     }
 
 

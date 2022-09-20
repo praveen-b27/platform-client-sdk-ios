@@ -437,8 +437,8 @@ open class IntegrationsAPI {
     "config" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1075,8 +1075,8 @@ open class IntegrationsAPI {
     "config" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1314,8 +1314,8 @@ open class IntegrationsAPI {
     "config" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1526,8 +1526,8 @@ open class IntegrationsAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1761,8 +1761,8 @@ open class IntegrationsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1864,8 +1864,8 @@ open class IntegrationsAPI {
     "config" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1988,8 +1988,8 @@ open class IntegrationsAPI {
     "userPermissions" : [ "userPermissions", "userPermissions" ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2137,8 +2137,8 @@ open class IntegrationsAPI {
     "type" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2212,8 +2212,8 @@ open class IntegrationsAPI {
     "required" : [ "required", "required" ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2229,197 +2229,6 @@ open class IntegrationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CredentialTypeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
-    
-    
-    
-    
-    /**
-     List all events
-     
-     - parameter pageSize: (query) Page size (optional)
-     - parameter pageNumber: (query) Page number (optional)
-     - parameter sortBy: (query) Sort by (optional)
-     - parameter sortOrder: (query) Order by (optional)
-     - parameter entityId: (query) Include only events with this entity ID (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getIntegrationsEventlog(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, entityId: String? = nil, completion: @escaping ((_ data: IntegrationEventEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsEventlogWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, entityId: entityId)
-        requestBuilder.execute { (response: Response<IntegrationEventEntityListing>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     List all events
-     - GET /api/v2/integrations/eventlog
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
-  "entities" : [ {
-    "eventCode" : "eventCode",
-    "level" : "INFO",
-    "entities" : [ {
-      "entityType" : "entityType",
-      "id" : "id"
-    }, {
-      "entityType" : "entityType",
-      "id" : "id"
-    } ],
-    "selfUri" : "https://openapi-generator.tech",
-    "contextAttributes" : {
-      "key" : "contextAttributes"
-    },
-    "correlationId" : "correlationId",
-    "id" : "id",
-    "detailMessage" : "{}",
-    "message" : "{}",
-    "user" : "{}",
-    "timestamp" : "2000-01-23T04:56:07.000+00:00"
-  }, {
-    "eventCode" : "eventCode",
-    "level" : "INFO",
-    "entities" : [ {
-      "entityType" : "entityType",
-      "id" : "id"
-    }, {
-      "entityType" : "entityType",
-      "id" : "id"
-    } ],
-    "selfUri" : "https://openapi-generator.tech",
-    "contextAttributes" : {
-      "key" : "contextAttributes"
-    },
-    "correlationId" : "correlationId",
-    "id" : "id",
-    "detailMessage" : "{}",
-    "message" : "{}",
-    "user" : "{}",
-    "timestamp" : "2000-01-23T04:56:07.000+00:00"
-  } ],
-  "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
-}, statusCode=200}]
-     
-     - parameter pageSize: (query) Page size (optional)
-     - parameter pageNumber: (query) Page number (optional)
-     - parameter sortBy: (query) Sort by (optional)
-     - parameter sortOrder: (query) Order by (optional)
-     - parameter entityId: (query) Include only events with this entity ID (optional)
-
-     - returns: RequestBuilder<IntegrationEventEntityListing> 
-     */
-    open class func getIntegrationsEventlogWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, entityId: String? = nil) -> RequestBuilder<IntegrationEventEntityListing> {        
-        let path = "/api/v2/integrations/eventlog"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "pageSize": pageSize?.encodeToJSON(), 
-            "pageNumber": pageNumber?.encodeToJSON(), 
-            "sortBy": sortBy, 
-            "sortOrder": sortOrder, 
-            "entityId": entityId
-        ])
-
-        let requestBuilder: RequestBuilder<IntegrationEventEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
-    /**
-     Get a single event
-     
-     - parameter eventId: (path) Event Id 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getIntegrationsEventlogEventId(eventId: String, completion: @escaping ((_ data: IntegrationEvent?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsEventlogEventIdWithRequestBuilder(eventId: eventId)
-        requestBuilder.execute { (response: Response<IntegrationEvent>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get a single event
-     - GET /api/v2/integrations/eventlog/{eventId}
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "eventCode" : "eventCode",
-  "level" : "INFO",
-  "entities" : [ {
-    "entityType" : "entityType",
-    "id" : "id"
-  }, {
-    "entityType" : "entityType",
-    "id" : "id"
-  } ],
-  "selfUri" : "https://openapi-generator.tech",
-  "contextAttributes" : {
-    "key" : "contextAttributes"
-  },
-  "correlationId" : "correlationId",
-  "id" : "id",
-  "detailMessage" : "{}",
-  "message" : "{}",
-  "user" : "{}",
-  "timestamp" : "2000-01-23T04:56:07.000+00:00"
-}, statusCode=200}]
-     
-     - parameter eventId: (path) Event Id 
-
-     - returns: RequestBuilder<IntegrationEvent> 
-     */
-    open class func getIntegrationsEventlogEventIdWithRequestBuilder(eventId: String) -> RequestBuilder<IntegrationEvent> {        
-        var path = "/api/v2/integrations/eventlog/{eventId}"
-        let eventIdPreEscape = "\(eventId)"
-        let eventIdPostEscape = eventIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{eventId}", with: eventIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<IntegrationEvent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2556,8 +2365,8 @@ open class IntegrationsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2793,8 +2602,8 @@ open class IntegrationsAPI {
     "status" : "BUILDING"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2880,8 +2689,8 @@ open class IntegrationsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3116,8 +2925,8 @@ open class IntegrationsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3243,8 +3052,8 @@ open class IntegrationsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3642,8 +3451,8 @@ open class IntegrationsAPI {
     "vendorOAuthClientIds" : [ "vendorOAuthClientIds", "vendorOAuthClientIds" ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3745,8 +3554,8 @@ open class IntegrationsAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4562,74 +4371,6 @@ open class IntegrationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CredentialInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: url!, body: body)
-    }
-
-    
-    /**
-     Add a vendor connection
-     
-     - parameter body: (body)  (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postIntegrationsWorkforcemanagementVendorconnection(body: VendorConnectionRequest? = nil, completion: @escaping ((_ data: UserActionCategoryEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = postIntegrationsWorkforcemanagementVendorconnectionWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<UserActionCategoryEntityListing>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Add a vendor connection
-     - POST /api/v2/integrations/workforcemanagement/vendorconnection
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
-  "entities" : [ {
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "id" : "id"
-  }, {
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "id" : "id"
-  } ],
-  "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
-}, statusCode=200}]
-     
-     - parameter body: (body)  (optional)
-
-     - returns: RequestBuilder<UserActionCategoryEntityListing> 
-     */
-    open class func postIntegrationsWorkforcemanagementVendorconnectionWithRequestBuilder(body: VendorConnectionRequest? = nil) -> RequestBuilder<UserActionCategoryEntityListing> {        
-        let path = "/api/v2/integrations/workforcemanagement/vendorconnection"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<UserActionCategoryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

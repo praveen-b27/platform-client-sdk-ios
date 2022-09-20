@@ -30,6 +30,8 @@ public class ActionTemplate: Codable {
     public var name: String?
     /** Description of the action template's functionality. */
     public var _description: String?
+    /** The version of the action template. */
+    public var version: Int?
     /** Media type of action described by the action template. */
     public var mediaType: MediaType?
     /** Whether the action template is currently active, inactive or deleted. */
@@ -43,10 +45,11 @@ public class ActionTemplate: Codable {
     /** Date when action template was last modified in ISO-8601 format. */
     public var modifiedDate: Date?
 
-    public init(_id: String?, name: String?, _description: String?, mediaType: MediaType?, state: State?, contentOffer: ContentOffer?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, mediaType: MediaType?, state: State?, contentOffer: ContentOffer?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
         self._id = _id
         self.name = name
         self._description = _description
+        self.version = version
         self.mediaType = mediaType
         self.state = state
         self.contentOffer = contentOffer
@@ -59,6 +62,7 @@ public class ActionTemplate: Codable {
         case _id = "id"
         case name
         case _description = "description"
+        case version
         case mediaType
         case state
         case contentOffer

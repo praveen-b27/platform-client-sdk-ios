@@ -55,6 +55,7 @@ public class AuditQueryEntity: Codable {
         case deployment = "Deployment"
         case did = "DID"
         case didpool = "DIDPool"
+        case digitalRuleSet = "DigitalRuleSet"
         case dnclist = "DNCList"
         case document = "Document"
         case dynamicGroup = "DynamicGroup"
@@ -66,6 +67,7 @@ public class AuditQueryEntity: Codable {
         case edgePcaps = "EdgePcaps"
         case edgePreferences = "EdgePreferences"
         case edgeTraceLevel = "EdgeTraceLevel"
+        case emailCampaignSchedule = "EmailCampaignSchedule"
         case emergencyGroup = "EmergencyGroup"
         case enterpriseAgreement = "EnterpriseAgreement"
         case evaluation = "Evaluation"
@@ -99,6 +101,7 @@ public class AuditQueryEntity: Codable {
         case maxOrgRoutingUtilizationCapacity = "MaxOrgRoutingUtilizationCapacity"
         case mediaDiagnosticsTraceFile = "MediaDiagnosticsTraceFile"
         case messagingCampaign = "MessagingCampaign"
+        case messagingCampaignSchedule = "MessagingCampaignSchedule"
         case metric = "Metric"
         case module = "Module"
         case numberOrder = "NumberOrder"
@@ -264,6 +267,8 @@ public class AuditQueryEntity: Codable {
         case rotate = "Rotate"
         case restore = "Restore"
         case unarchive = "Unarchive"
+        case enableCapture = "EnableCapture"
+        case downloadCapture = "DownloadCapture"
     }
     /** Name of the Entity */
     public var name: Name?

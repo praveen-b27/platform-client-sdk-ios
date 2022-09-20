@@ -18,6 +18,9 @@ docs/ActionInput.md
 docs/ActionMap.md
 docs/ActionMapAction.md
 docs/ActionMapActionTemplate.md
+docs/ActionMapEstimateOutcomeCriteria.md
+docs/ActionMapEstimateRequest.md
+docs/ActionMapEstimateResult.md
 docs/ActionMapListing.md
 docs/ActionMapScheduleGroup.md
 docs/ActionMapScheduleGroups.md
@@ -323,7 +326,8 @@ docs/BuScheduleReference.md
 docs/BuScheduleReferenceForMuRoute.md
 docs/BuScheduleRun.md
 docs/BuScheduleRunListing.md
-docs/BuSchedulingSettings.md
+docs/BuSchedulingSettingsRequest.md
+docs/BuSchedulingSettingsResponse.md
 docs/BuSearchAgentSchedulesRequest.md
 docs/BuServiceLevel.md
 docs/BuShortTermForecast.md
@@ -372,13 +376,13 @@ docs/BulkUpdateShiftTradeStateResponse.md
 docs/BulkUpdateShiftTradeStateResult.md
 docs/BulkUpdateShiftTradeStateResultItem.md
 docs/Bullseye.md
-docs/BusinessUnit.md
 docs/BusinessUnitActivityCode.md
 docs/BusinessUnitActivityCodeListing.md
 docs/BusinessUnitListItem.md
 docs/BusinessUnitListing.md
 docs/BusinessUnitReference.md
-docs/BusinessUnitSettings.md
+docs/BusinessUnitResponse.md
+docs/BusinessUnitSettingsResponse.md
 docs/ButtonComponent.md
 docs/ButtonResponse.md
 docs/CalendarUrlResponse.md
@@ -836,7 +840,7 @@ docs/CreateAgentTimeOffRequest.md
 docs/CreateBenefitAssessmentJobRequest.md
 docs/CreateBenefitAssessmentRequest.md
 docs/CreateBusinessUnitRequest.md
-docs/CreateBusinessUnitSettings.md
+docs/CreateBusinessUnitSettingsRequest.md
 docs/CreateCallRequest.md
 docs/CreateCallResponse.md
 docs/CreateCallbackCommand.md
@@ -864,6 +868,7 @@ docs/CreateShareRequestMember.md
 docs/CreateShareResponse.md
 docs/CreateTimeOffLimitRequest.md
 docs/CreateTimeOffPlanRequest.md
+docs/CreateTriggerRequest.md
 docs/CreateUser.md
 docs/CreateWebChatConversationRequest.md
 docs/CreateWebChatConversationResponse.md
@@ -1179,6 +1184,7 @@ docs/Entry.md
 docs/ErrorBody.md
 docs/ErrorDetails.md
 docs/ErrorInfo.md
+docs/EstimateJobAsyncResponse.md
 docs/EstimatedWaitTimePredictions.md
 docs/Evaluation.md
 docs/EvaluationAggregateDataContainer.md
@@ -1212,7 +1218,6 @@ docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
 docs/EventCoBrowse.md
 docs/EventCondition.md
-docs/EventEntity.md
 docs/EventLog.md
 docs/EventMessage.md
 docs/EventPresence.md
@@ -1459,8 +1464,6 @@ docs/IntegrationActionFields.md
 docs/IntegrationConfiguration.md
 docs/IntegrationConfigurationInfo.md
 docs/IntegrationEntityListing.md
-docs/IntegrationEvent.md
-docs/IntegrationEventEntityListing.md
 docs/IntegrationExport.md
 docs/IntegrationStatusInfo.md
 docs/IntegrationType.md
@@ -1687,6 +1690,7 @@ docs/LearningAssignmentBulkRemoveResponse.md
 docs/LearningAssignmentCreate.md
 docs/LearningAssignmentEntity.md
 docs/LearningAssignmentItem.md
+docs/LearningAssignmentReassign.md
 docs/LearningAssignmentReference.md
 docs/LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification.md
 docs/LearningAssignmentRuleRunTopicLearningAssignmentsCreated.md
@@ -1787,8 +1791,11 @@ docs/Manager.md
 docs/MarkContactAddressUncontactableActionSettings.md
 docs/MarkContactUncontactableActionSettings.md
 docs/Markdown.md
+docs/MatchCriteria.md
+docs/MatchCriteriaTestResult.md
 docs/MatchShiftTradeRequest.md
 docs/MatchShiftTradeResponse.md
+docs/MatchTestResult.md
 docs/MaxLength.md
 docs/MaxParticipants.md
 docs/MediaParticipantRequest.md
@@ -2089,6 +2096,8 @@ docs/PresenceDetailQueryPredicate.md
 docs/PresenceEventOrganizationPresence.md
 docs/PresenceEventUserPresence.md
 docs/PresenceSetting.md
+docs/ProcessAutomationAPI.json
+docs/ProcessAutomationAPI.md
 docs/ProcessScheduleUpdateUploadRequest.md
 docs/Program.md
 docs/ProgramJob.md
@@ -2584,6 +2593,7 @@ docs/Segment.md
 docs/SegmentDetailQueryClause.md
 docs/SegmentDetailQueryFilter.md
 docs/SegmentDetailQueryPredicate.md
+docs/SegmentEstimateCount.md
 docs/SegmentListing.md
 docs/SelectedAnswer.md
 docs/SelectedColumns.md
@@ -2610,6 +2620,7 @@ docs/SetUuiDataRequest.md
 docs/SetWrapperDayOfWeek.md
 docs/SetWrapperRoutePathRequest.md
 docs/SetWrapperString.md
+docs/SetWrapperSyncTimeOffProperty.md
 docs/SettingDirection.md
 docs/Share.md
 docs/ShareEntityListing.md
@@ -2756,7 +2767,14 @@ docs/TemplateParameter.md
 docs/TermAttribute.md
 docs/TestExecutionOperationResult.md
 docs/TestExecutionResult.md
+docs/TestMatchesEventOperation.md
+docs/TestMatchesOperation.md
 docs/TestMessage.md
+docs/TestModeEventResults.md
+docs/TestModeResults.md
+docs/TestModeTrigger.md
+docs/TestSchemaOperation.md
+docs/TestTargetOperation.md
 docs/TextBotChannel.md
 docs/TextBotDisconnectAction.md
 docs/TextBotErrorInputEvent.md
@@ -2811,6 +2829,7 @@ docs/TokenInfoClonedUser.md
 docs/TokensAPI.json
 docs/TokensAPI.md
 docs/Topic.md
+docs/TopicCursorEntityListing.md
 docs/TopicDuration.md
 docs/TopicJob.md
 docs/TopicJobRequest.md
@@ -2840,6 +2859,9 @@ docs/TranscriptionTopicTranscriptionMessage.md
 docs/TranscriptionTopicTranscriptionRequestStatus.md
 docs/Transcripts.md
 docs/TransferRequest.md
+docs/Trigger.md
+docs/TriggerEntityListing.md
+docs/TriggerTarget.md
 docs/Trunk.md
 docs/TrunkBase.md
 docs/TrunkBaseAssignment.md
@@ -2912,7 +2934,7 @@ docs/UpdateActionInput.md
 docs/UpdateActivityCodeRequest.md
 docs/UpdateAnalyticsDataRetentionRequest.md
 docs/UpdateBusinessUnitRequest.md
-docs/UpdateBusinessUnitSettings.md
+docs/UpdateBusinessUnitSettingsRequest.md
 docs/UpdateCoachingAppointmentRequest.md
 docs/UpdateContactColumnActionSettings.md
 docs/UpdateDraftInput.md
@@ -2926,6 +2948,7 @@ docs/UpdateScheduleUploadSchema.md
 docs/UpdateServiceGoalTemplate.md
 docs/UpdateTimeOffLimitRequest.md
 docs/UpdateTimeOffPlanRequest.md
+docs/UpdateTriggerRequest.md
 docs/UpdateUser.md
 docs/UpdateWorkPlanRotationAgentRequest.md
 docs/UpdateWorkPlanRotationRequest.md
@@ -2942,8 +2965,6 @@ docs/UsageAPI.md
 docs/UsageExecutionResult.md
 docs/UsageItem.md
 docs/User.md
-docs/UserActionCategory.md
-docs/UserActionCategoryEntityListing.md
 docs/UserAgentInfo.md
 docs/UserAggregateDataContainer.md
 docs/UserAggregateQueryClause.md
@@ -3094,7 +3115,6 @@ docs/ValidationServiceRequest.md
 docs/ValueWrapperDate.md
 docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
-docs/VendorConnectionRequest.md
 docs/Video.md
 docs/ViewFilter.md
 docs/VisibilityCondition.md
@@ -3498,6 +3518,7 @@ docs/deleteOutboundSchedulesMessagingcampaign-example.txt
 docs/deleteOutboundSchedulesSequence-example.txt
 docs/deleteOutboundSequence-example.txt
 docs/deletePresencedefinition-example.txt
+docs/deleteProcessautomationTrigger-example.txt
 docs/deleteQualityCalibration-example.txt
 docs/deleteQualityConversationEvaluation-example.txt
 docs/deleteQualityForm-example.txt
@@ -3848,7 +3869,6 @@ docs/getGamificationLeaderboardBestpoints-example.txt
 docs/getGamificationMetric-example.txt
 docs/getGamificationMetricdefinition-example.txt
 docs/getGamificationMetricdefinitions-example.txt
-docs/getGamificationMetrics-example.txt
 docs/getGamificationProfile-example.txt
 docs/getGamificationProfileMembers-example.txt
 docs/getGamificationProfileMetric-example.txt
@@ -3931,8 +3951,6 @@ docs/getIntegrationsClientappsUnifiedcommunications-example.txt
 docs/getIntegrationsCredential-example.txt
 docs/getIntegrationsCredentials-example.txt
 docs/getIntegrationsCredentialsTypes-example.txt
-docs/getIntegrationsEventlog-example.txt
-docs/getIntegrationsEventlogEventId-example.txt
 docs/getIntegrationsSpeechDialogflowAgent-example.txt
 docs/getIntegrationsSpeechDialogflowAgents-example.txt
 docs/getIntegrationsSpeechLexBotAlias-example.txt
@@ -3950,6 +3968,8 @@ docs/getIntegrationsUserapps-example.txt
 docs/getIpranges-example.txt
 docs/getJourneyActionmap-example.txt
 docs/getJourneyActionmaps-example.txt
+docs/getJourneyActionmapsEstimatesJob-example.txt
+docs/getJourneyActionmapsEstimatesJobResults-example.txt
 docs/getJourneyActiontarget-example.txt
 docs/getJourneyActiontargets-example.txt
 docs/getJourneyActiontemplate-example.txt
@@ -4130,6 +4150,9 @@ docs/getOutboundSettings-example.txt
 docs/getOutboundWrapupcodemappings-example.txt
 docs/getPresencedefinition-example.txt
 docs/getPresencedefinitions-example.txt
+docs/getProcessautomationTrigger-example.txt
+docs/getProcessautomationTriggers-example.txt
+docs/getProcessautomationTriggersTopics-example.txt
 docs/getProfilesGroups-example.txt
 docs/getProfilesUsers-example.txt
 docs/getQualityAgentsActivity-example.txt
@@ -4793,7 +4816,6 @@ docs/postFlowsExecutions-example.txt
 docs/postFlowsJobs-example.txt
 docs/postFlowsMilestones-example.txt
 docs/postFlowsOutcomes-example.txt
-docs/postGamificationMetrics-example.txt
 docs/postGamificationProfileActivate-example.txt
 docs/postGamificationProfileDeactivate-example.txt
 docs/postGamificationProfileMembers-example.txt
@@ -4817,8 +4839,8 @@ docs/postIntegrationsActionTest-example.txt
 docs/postIntegrationsActions-example.txt
 docs/postIntegrationsActionsDrafts-example.txt
 docs/postIntegrationsCredentials-example.txt
-docs/postIntegrationsWorkforcemanagementVendorconnection-example.txt
 docs/postJourneyActionmaps-example.txt
+docs/postJourneyActionmapsEstimatesJobs-example.txt
 docs/postJourneyActiontemplates-example.txt
 docs/postJourneyOutcomes-example.txt
 docs/postJourneySegments-example.txt
@@ -4912,6 +4934,9 @@ docs/postOutboundMessagingcampaignsProgress-example.txt
 docs/postOutboundRulesets-example.txt
 docs/postOutboundSequences-example.txt
 docs/postPresencedefinitions-example.txt
+docs/postProcessautomationTriggerTest-example.txt
+docs/postProcessautomationTriggers-example.txt
+docs/postProcessautomationTriggersTopicTest-example.txt
 docs/postQualityCalibrations-example.txt
 docs/postQualityConversationEvaluations-example.txt
 docs/postQualityConversationsAuditsQuery-example.txt
@@ -5196,6 +5221,7 @@ docs/putOutboundSchedulesSequence-example.txt
 docs/putOutboundSequence-example.txt
 docs/putOutboundWrapupcodemappings-example.txt
 docs/putPresencedefinition-example.txt
+docs/putProcessautomationTrigger-example.txt
 docs/putQualityCalibration-example.txt
 docs/putQualityConversationEvaluation-example.txt
 docs/putQualityForm-example.txt
@@ -5312,6 +5338,7 @@ src/APIs/OrganizationAPI.swift
 src/APIs/OrganizationAuthorizationAPI.swift
 src/APIs/OutboundAPI.swift
 src/APIs/PresenceAPI.swift
+src/APIs/ProcessAutomationAPI.swift
 src/APIs/QualityAPI.swift
 src/APIs/RecordingAPI.swift
 src/APIs/ResponseManagementAPI.swift
@@ -5356,6 +5383,9 @@ src/Models/ActionInput.swift
 src/Models/ActionMap.swift
 src/Models/ActionMapAction.swift
 src/Models/ActionMapActionTemplate.swift
+src/Models/ActionMapEstimateOutcomeCriteria.swift
+src/Models/ActionMapEstimateRequest.swift
+src/Models/ActionMapEstimateResult.swift
 src/Models/ActionMapListing.swift
 src/Models/ActionMapScheduleGroup.swift
 src/Models/ActionMapScheduleGroups.swift
@@ -5649,7 +5679,8 @@ src/Models/BuScheduleReference.swift
 src/Models/BuScheduleReferenceForMuRoute.swift
 src/Models/BuScheduleRun.swift
 src/Models/BuScheduleRunListing.swift
-src/Models/BuSchedulingSettings.swift
+src/Models/BuSchedulingSettingsRequest.swift
+src/Models/BuSchedulingSettingsResponse.swift
 src/Models/BuSearchAgentSchedulesRequest.swift
 src/Models/BuServiceLevel.swift
 src/Models/BuShortTermForecast.swift
@@ -5698,13 +5729,13 @@ src/Models/BulkUpdateShiftTradeStateResponse.swift
 src/Models/BulkUpdateShiftTradeStateResult.swift
 src/Models/BulkUpdateShiftTradeStateResultItem.swift
 src/Models/Bullseye.swift
-src/Models/BusinessUnit.swift
 src/Models/BusinessUnitActivityCode.swift
 src/Models/BusinessUnitActivityCodeListing.swift
 src/Models/BusinessUnitListItem.swift
 src/Models/BusinessUnitListing.swift
 src/Models/BusinessUnitReference.swift
-src/Models/BusinessUnitSettings.swift
+src/Models/BusinessUnitResponse.swift
+src/Models/BusinessUnitSettingsResponse.swift
 src/Models/ButtonComponent.swift
 src/Models/ButtonResponse.swift
 src/Models/CalendarUrlResponse.swift
@@ -6154,7 +6185,7 @@ src/Models/CreateAgentTimeOffRequest.swift
 src/Models/CreateBenefitAssessmentJobRequest.swift
 src/Models/CreateBenefitAssessmentRequest.swift
 src/Models/CreateBusinessUnitRequest.swift
-src/Models/CreateBusinessUnitSettings.swift
+src/Models/CreateBusinessUnitSettingsRequest.swift
 src/Models/CreateCallRequest.swift
 src/Models/CreateCallResponse.swift
 src/Models/CreateCallbackCommand.swift
@@ -6182,6 +6213,7 @@ src/Models/CreateShareRequestMember.swift
 src/Models/CreateShareResponse.swift
 src/Models/CreateTimeOffLimitRequest.swift
 src/Models/CreateTimeOffPlanRequest.swift
+src/Models/CreateTriggerRequest.swift
 src/Models/CreateUser.swift
 src/Models/CreateWebChatConversationRequest.swift
 src/Models/CreateWebChatConversationResponse.swift
@@ -6495,6 +6527,7 @@ src/Models/Entry.swift
 src/Models/ErrorBody.swift
 src/Models/ErrorDetails.swift
 src/Models/ErrorInfo.swift
+src/Models/EstimateJobAsyncResponse.swift
 src/Models/EstimatedWaitTimePredictions.swift
 src/Models/Evaluation.swift
 src/Models/EvaluationAggregateDataContainer.swift
@@ -6528,7 +6561,6 @@ src/Models/EvaluatorActivity.swift
 src/Models/EvaluatorActivityEntityListing.swift
 src/Models/EventCoBrowse.swift
 src/Models/EventCondition.swift
-src/Models/EventEntity.swift
 src/Models/EventLog.swift
 src/Models/EventMessage.swift
 src/Models/EventPresence.swift
@@ -6757,8 +6789,6 @@ src/Models/IntegrationActionFields.swift
 src/Models/IntegrationConfiguration.swift
 src/Models/IntegrationConfigurationInfo.swift
 src/Models/IntegrationEntityListing.swift
-src/Models/IntegrationEvent.swift
-src/Models/IntegrationEventEntityListing.swift
 src/Models/IntegrationExport.swift
 src/Models/IntegrationStatusInfo.swift
 src/Models/IntegrationType.swift
@@ -6973,6 +7003,7 @@ src/Models/LearningAssignmentBulkRemoveResponse.swift
 src/Models/LearningAssignmentCreate.swift
 src/Models/LearningAssignmentEntity.swift
 src/Models/LearningAssignmentItem.swift
+src/Models/LearningAssignmentReassign.swift
 src/Models/LearningAssignmentReference.swift
 src/Models/LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification.swift
 src/Models/LearningAssignmentRuleRunTopicLearningAssignmentsCreated.swift
@@ -7069,8 +7100,11 @@ src/Models/Manager.swift
 src/Models/MarkContactAddressUncontactableActionSettings.swift
 src/Models/MarkContactUncontactableActionSettings.swift
 src/Models/Markdown.swift
+src/Models/MatchCriteria.swift
+src/Models/MatchCriteriaTestResult.swift
 src/Models/MatchShiftTradeRequest.swift
 src/Models/MatchShiftTradeResponse.swift
+src/Models/MatchTestResult.swift
 src/Models/MaxLength.swift
 src/Models/MaxParticipants.swift
 src/Models/MediaParticipantRequest.swift
@@ -7835,6 +7869,7 @@ src/Models/Segment.swift
 src/Models/SegmentDetailQueryClause.swift
 src/Models/SegmentDetailQueryFilter.swift
 src/Models/SegmentDetailQueryPredicate.swift
+src/Models/SegmentEstimateCount.swift
 src/Models/SegmentListing.swift
 src/Models/SelectedAnswer.swift
 src/Models/SelectedColumns.swift
@@ -7861,6 +7896,7 @@ src/Models/SetUuiDataRequest.swift
 src/Models/SetWrapperDayOfWeek.swift
 src/Models/SetWrapperRoutePathRequest.swift
 src/Models/SetWrapperString.swift
+src/Models/SetWrapperSyncTimeOffProperty.swift
 src/Models/SettingDirection.swift
 src/Models/Share.swift
 src/Models/ShareEntityListing.swift
@@ -7995,7 +8031,14 @@ src/Models/TemplateParameter.swift
 src/Models/TermAttribute.swift
 src/Models/TestExecutionOperationResult.swift
 src/Models/TestExecutionResult.swift
+src/Models/TestMatchesEventOperation.swift
+src/Models/TestMatchesOperation.swift
 src/Models/TestMessage.swift
+src/Models/TestModeEventResults.swift
+src/Models/TestModeResults.swift
+src/Models/TestModeTrigger.swift
+src/Models/TestSchemaOperation.swift
+src/Models/TestTargetOperation.swift
 src/Models/TextBotChannel.swift
 src/Models/TextBotDisconnectAction.swift
 src/Models/TextBotErrorInputEvent.swift
@@ -8046,6 +8089,7 @@ src/Models/TimeZoneMappingPreview.swift
 src/Models/TokenInfo.swift
 src/Models/TokenInfoClonedUser.swift
 src/Models/Topic.swift
+src/Models/TopicCursorEntityListing.swift
 src/Models/TopicDuration.swift
 src/Models/TopicJob.swift
 src/Models/TopicJobRequest.swift
@@ -8075,6 +8119,9 @@ src/Models/TranscriptionTopicTranscriptionMessage.swift
 src/Models/TranscriptionTopicTranscriptionRequestStatus.swift
 src/Models/Transcripts.swift
 src/Models/TransferRequest.swift
+src/Models/Trigger.swift
+src/Models/TriggerEntityListing.swift
+src/Models/TriggerTarget.swift
 src/Models/Trunk.swift
 src/Models/TrunkBase.swift
 src/Models/TrunkBaseAssignment.swift
@@ -8147,7 +8194,7 @@ src/Models/UpdateActionInput.swift
 src/Models/UpdateActivityCodeRequest.swift
 src/Models/UpdateAnalyticsDataRetentionRequest.swift
 src/Models/UpdateBusinessUnitRequest.swift
-src/Models/UpdateBusinessUnitSettings.swift
+src/Models/UpdateBusinessUnitSettingsRequest.swift
 src/Models/UpdateCoachingAppointmentRequest.swift
 src/Models/UpdateContactColumnActionSettings.swift
 src/Models/UpdateDraftInput.swift
@@ -8161,6 +8208,7 @@ src/Models/UpdateScheduleUploadSchema.swift
 src/Models/UpdateServiceGoalTemplate.swift
 src/Models/UpdateTimeOffLimitRequest.swift
 src/Models/UpdateTimeOffPlanRequest.swift
+src/Models/UpdateTriggerRequest.swift
 src/Models/UpdateUser.swift
 src/Models/UpdateWorkPlanRotationAgentRequest.swift
 src/Models/UpdateWorkPlanRotationRequest.swift
@@ -8173,8 +8221,6 @@ src/Models/Usage.swift
 src/Models/UsageExecutionResult.swift
 src/Models/UsageItem.swift
 src/Models/User.swift
-src/Models/UserActionCategory.swift
-src/Models/UserActionCategoryEntityListing.swift
 src/Models/UserAgentInfo.swift
 src/Models/UserAggregateDataContainer.swift
 src/Models/UserAggregateQueryClause.swift
@@ -8319,7 +8365,6 @@ src/Models/ValidationServiceRequest.swift
 src/Models/ValueWrapperDate.swift
 src/Models/ValueWrapperPlanningPeriodSettings.swift
 src/Models/ValueWrapperString.swift
-src/Models/VendorConnectionRequest.swift
 src/Models/Video.swift
 src/Models/ViewFilter.swift
 src/Models/VisibilityCondition.swift

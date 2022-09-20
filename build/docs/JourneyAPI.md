@@ -13,6 +13,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteJourneySegment**](JourneyAPI.html#deleteJourneySegment) | Delete a segment. |
 | [**getJourneyActionmap**](JourneyAPI.html#getJourneyActionmap) | Retrieve a single action map. |
 | [**getJourneyActionmaps**](JourneyAPI.html#getJourneyActionmaps) | Retrieve all action maps. |
+| [**getJourneyActionmapsEstimatesJob**](JourneyAPI.html#getJourneyActionmapsEstimatesJob) | Get status of job. |
+| [**getJourneyActionmapsEstimatesJobResults**](JourneyAPI.html#getJourneyActionmapsEstimatesJobResults) | Get estimates from completed job. |
 | [**getJourneyActiontarget**](JourneyAPI.html#getJourneyActiontarget) | Retrieve a single action target. |
 | [**getJourneyActiontargets**](JourneyAPI.html#getJourneyActiontargets) | Retrieve all action targets. |
 | [**getJourneyActiontemplate**](JourneyAPI.html#getJourneyActiontemplate) | Retrieve a single action template. |
@@ -30,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchJourneySegment**](JourneyAPI.html#patchJourneySegment) | Update a segment. |
 | [**postAnalyticsJourneysAggregatesQuery**](JourneyAPI.html#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
 | [**postJourneyActionmaps**](JourneyAPI.html#postJourneyActionmaps) | Create an action map. |
+| [**postJourneyActionmapsEstimatesJobs**](JourneyAPI.html#postJourneyActionmapsEstimatesJobs) | Query for estimates |
 | [**postJourneyActiontemplates**](JourneyAPI.html#postJourneyActiontemplates) | Create a single action template. |
 | [**postJourneyOutcomes**](JourneyAPI.html#postJourneyOutcomes) | Create an outcome. |
 | [**postJourneySegments**](JourneyAPI.html#postJourneySegments) | Create a segment. |
@@ -358,6 +361,110 @@ JourneyAPI.getJourneyActionmaps(pageNumber: pageNumber, pageSize: pageSize, sort
 ### Return type
 
 [**ActionMapListing**](ActionMapListing.html)
+
+<a name="getJourneyActionmapsEstimatesJob"></a>
+
+# **getJourneyActionmapsEstimatesJob**
+
+
+
+> String getJourneyActionmapsEstimatesJob(jobId)
+
+Get status of job.
+
+
+
+Wraps GET /api/v2/journey/actionmaps/estimates/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* journey:actionmapEstimateJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // ID of the job.
+
+// Code example
+JourneyAPI.getJourneyActionmapsEstimatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyActionmapsEstimatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| ID of the job. | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
+<a name="getJourneyActionmapsEstimatesJobResults"></a>
+
+# **getJourneyActionmapsEstimatesJobResults**
+
+
+
+> [ActionMapEstimateResult](ActionMapEstimateResult.html) getJourneyActionmapsEstimatesJobResults(jobId)
+
+Get estimates from completed job.
+
+
+
+Wraps GET /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results  
+
+Requires ALL permissions: 
+
+* journey:actionmapEstimate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // ID of the job.
+
+// Code example
+JourneyAPI.getJourneyActionmapsEstimatesJobResults(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyActionmapsEstimatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| ID of the job. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActionMapEstimateResult**](ActionMapEstimateResult.html)
 
 <a name="getJourneyActiontarget"></a>
 
@@ -1289,6 +1396,58 @@ JourneyAPI.postJourneyActionmaps(body: body) { (response, error) in
 ### Return type
 
 [**ActionMap**](ActionMap.html)
+
+<a name="postJourneyActionmapsEstimatesJobs"></a>
+
+# **postJourneyActionmapsEstimatesJobs**
+
+
+
+> [EstimateJobAsyncResponse](EstimateJobAsyncResponse.html) postJourneyActionmapsEstimatesJobs(body)
+
+Query for estimates
+
+
+
+Wraps POST /api/v2/journey/actionmaps/estimates/jobs  
+
+Requires ANY permissions: 
+
+* journey:actionmapEstimateJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ActionMapEstimateRequest = new ActionMapEstimateRequest(...) // audience estimator request
+
+// Code example
+JourneyAPI.postJourneyActionmapsEstimatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyActionmapsEstimatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ActionMapEstimateRequest**](ActionMapEstimateRequest.html)| audience estimator request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EstimateJobAsyncResponse**](EstimateJobAsyncResponse.html)
 
 <a name="postJourneyActiontemplates"></a>
 

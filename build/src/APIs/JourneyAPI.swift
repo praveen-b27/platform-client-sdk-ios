@@ -436,8 +436,8 @@ open class JourneyAPI {
     "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -472,6 +472,120 @@ open class JourneyAPI {
         ])
 
         let requestBuilder: RequestBuilder<ActionMapListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get status of job.
+     
+     - parameter jobId: (path) ID of the job. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyActionmapsEstimatesJob(jobId: String, completion: @escaping ((_ data: String?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyActionmapsEstimatesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<String>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get status of job.
+     - GET /api/v2/journey/actionmaps/estimates/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter jobId: (path) ID of the job. 
+
+     - returns: RequestBuilder<String> 
+     */
+    open class func getJourneyActionmapsEstimatesJobWithRequestBuilder(jobId: String) -> RequestBuilder<String> {        
+        var path = "/api/v2/journey/actionmaps/estimates/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get estimates from completed job.
+     
+     - parameter jobId: (path) ID of the job. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyActionmapsEstimatesJobResults(jobId: String, completion: @escaping ((_ data: ActionMapEstimateResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyActionmapsEstimatesJobResultsWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<ActionMapEstimateResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get estimates from completed job.
+     - GET /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "qualifiedSessionCount" : 0,
+  "perSegmentCounts" : [ {
+    "segmentId" : "segmentId",
+    "count" : 1
+  }, {
+    "segmentId" : "segmentId",
+    "count" : 1
+  } ],
+  "totalSessionCount" : 6,
+  "outcomesScoresCount" : 5
+}, statusCode=200}]
+     
+     - parameter jobId: (path) ID of the job. 
+
+     - returns: RequestBuilder<ActionMapEstimateResult> 
+     */
+    open class func getJourneyActionmapsEstimatesJobResultsWithRequestBuilder(jobId: String) -> RequestBuilder<ActionMapEstimateResult> {        
+        var path = "/api/v2/journey/actionmaps/estimates/jobs/{jobId}/results"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActionMapEstimateResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -621,8 +735,8 @@ open class JourneyAPI {
     "serviceLevel" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -689,6 +803,7 @@ open class JourneyAPI {
   "mediaType" : "webchat",
   "id" : "id",
   "state" : "Active",
+  "version" : 0,
   "contentOffer" : "{}"
 }, statusCode=200}]
      
@@ -784,6 +899,7 @@ open class JourneyAPI {
     "mediaType" : "webchat",
     "id" : "id",
     "state" : "Active",
+    "version" : 0,
     "contentOffer" : "{}"
   }, {
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
@@ -794,11 +910,12 @@ open class JourneyAPI {
     "mediaType" : "webchat",
     "id" : "id",
     "state" : "Active",
+    "version" : 0,
     "contentOffer" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -973,8 +1090,8 @@ open class JourneyAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1158,8 +1275,8 @@ open class JourneyAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1601,6 +1718,7 @@ open class JourneyAPI {
   "mediaType" : "webchat",
   "id" : "id",
   "state" : "Active",
+  "version" : 0,
   "contentOffer" : "{}"
 }, statusCode=200}]
      
@@ -2186,6 +2304,58 @@ open class JourneyAPI {
 
     
     /**
+     Query for estimates
+     
+     - parameter body: (body) audience estimator request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyActionmapsEstimatesJobs(body: ActionMapEstimateRequest, completion: @escaping ((_ data: EstimateJobAsyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyActionmapsEstimatesJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EstimateJobAsyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for estimates
+     - POST /api/v2/journey/actionmaps/estimates/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
+     
+     - parameter body: (body) audience estimator request 
+
+     - returns: RequestBuilder<EstimateJobAsyncResponse> 
+     */
+    open class func postJourneyActionmapsEstimatesJobsWithRequestBuilder(body: ActionMapEstimateRequest) -> RequestBuilder<EstimateJobAsyncResponse> {        
+        let path = "/api/v2/journey/actionmaps/estimates/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EstimateJobAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Create a single action template.
      
      - parameter body: (body)  (optional)
@@ -2224,6 +2394,7 @@ open class JourneyAPI {
   "mediaType" : "webchat",
   "id" : "id",
   "state" : "Active",
+  "version" : 0,
   "contentOffer" : "{}"
 }, statusCode=200}]
      

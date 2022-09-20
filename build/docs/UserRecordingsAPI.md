@@ -124,7 +124,7 @@ UserRecordingsAPI.getUserrecording(recordingId: recordingId, expand: expand) { (
 
 
 
-> [DownloadResponse](DownloadResponse.html) getUserrecordingMedia(recordingId, formatId)
+> [DownloadResponse](DownloadResponse.html) getUserrecordingMedia(recordingId, formatId, async)
 
 Download a user recording.
 
@@ -145,9 +145,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let recordingId: String = "" // User Recording ID
 let formatId: UserRecordingsAPI.FormatId_getUserrecordingMedia = UserRecordingsAPI.FormatId_getUserrecordingMedia.enummember // The desired media format.
+let async: Bool = true // When set to true, api will return 202 response until the recording is ready for download
 
 // Code example
-UserRecordingsAPI.getUserrecordingMedia(recordingId: recordingId, formatId: formatId) { (response, error) in
+UserRecordingsAPI.getUserrecordingMedia(recordingId: recordingId, formatId: formatId, async: async) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -164,6 +165,7 @@ UserRecordingsAPI.getUserrecordingMedia(recordingId: recordingId, formatId: form
 | ------------- | ------------- | ------------- | ------------- |
 | **recordingId** | **String**| User Recording ID | |
 | **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **async** | **Bool**| When set to true, api will return 202 response until the recording is ready for download | [optional] |
 {: class="table-striped"}
 
 

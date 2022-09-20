@@ -181,8 +181,8 @@ open class GamificationAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -751,105 +751,6 @@ open class GamificationAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GetMetricDefinitionsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
-    
-    /**
-     All gamified metrics for a given profile
-     
-     - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
-     - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getGamificationMetrics(performanceProfileId: String? = nil, workday: Date? = nil, completion: @escaping ((_ data: GetMetricsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationMetricsWithRequestBuilder(performanceProfileId: performanceProfileId, workday: workday)
-        requestBuilder.execute { (response: Response<GetMetricsResponse>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     All gamified metrics for a given profile
-     - GET /api/v2/gamification/metrics
-     - This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "total" : 0,
-  "entities" : [ {
-    "precision" : 5,
-    "selfUri" : "https://openapi-generator.tech",
-    "dateUnlinked" : "2000-01-23",
-    "performanceProfileId" : "performanceProfileId",
-    "enabled" : true,
-    "unitType" : "None",
-    "metricDefinitionId" : "metricDefinitionId",
-    "linkedMetric" : "{}",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "templateName" : "templateName",
-    "maxPoints" : 1,
-    "unitDefinition" : "unitDefinition",
-    "name" : "name",
-    "sourcePerformanceProfile" : "{}",
-    "id" : "id",
-    "metricDefinitionName" : "metricDefinitionName",
-    "externalMetricDefinitionId" : "externalMetricDefinitionId",
-    "order" : 6
-  }, {
-    "precision" : 5,
-    "selfUri" : "https://openapi-generator.tech",
-    "dateUnlinked" : "2000-01-23",
-    "performanceProfileId" : "performanceProfileId",
-    "enabled" : true,
-    "unitType" : "None",
-    "metricDefinitionId" : "metricDefinitionId",
-    "linkedMetric" : "{}",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "templateName" : "templateName",
-    "maxPoints" : 1,
-    "unitDefinition" : "unitDefinition",
-    "name" : "name",
-    "sourcePerformanceProfile" : "{}",
-    "id" : "id",
-    "metricDefinitionName" : "metricDefinitionName",
-    "externalMetricDefinitionId" : "externalMetricDefinitionId",
-    "order" : 6
-  } ],
-  "selfUri" : "https://openapi-generator.tech"
-}, statusCode=200}]
-     
-     - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
-     - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
-
-     - returns: RequestBuilder<GetMetricsResponse> 
-     */
-    open class func getGamificationMetricsWithRequestBuilder(performanceProfileId: String? = nil, workday: Date? = nil) -> RequestBuilder<GetMetricsResponse> {        
-        let path = "/api/v2/gamification/metrics"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "performanceProfileId": performanceProfileId, 
-            "workday": workday?.encodeToJSON()
-        ])
-
-        let requestBuilder: RequestBuilder<GetMetricsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -3622,68 +3523,6 @@ open class GamificationAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalMetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: url!, body: body)
-    }
-
-    
-    /**
-     Creates a gamified metric with a given metric definition and metric objective
-     
-     - parameter body: (body) Metric 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postGamificationMetrics(body: CreateMetric, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
-        let requestBuilder = postGamificationMetricsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Creates a gamified metric with a given metric definition and metric objective
-     - POST /api/v2/gamification/metrics
-     - This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "metricDefinitionId" : "metricDefinitionId",
-  "linkedMetric" : "{}",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "sourcePerformanceProfile" : "{}",
-  "id" : "id",
-  "dateUnlinked" : "2000-01-23",
-  "externalMetricDefinitionId" : "externalMetricDefinitionId",
-  "performanceProfileId" : "performanceProfileId",
-  "objective" : "{}"
-}, statusCode=201}]
-     
-     - parameter body: (body) Metric 
-
-     - returns: RequestBuilder<Metric> 
-     */
-    open class func postGamificationMetricsWithRequestBuilder(body: CreateMetric) -> RequestBuilder<Metric> {        
-        let path = "/api/v2/gamification/metrics"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

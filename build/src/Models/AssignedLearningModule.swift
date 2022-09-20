@@ -21,6 +21,10 @@ public class AssignedLearningModule: Codable {
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
     }
+    public enum ArchivalMode: String, Codable { 
+        case graceful = "Graceful"
+        case immediate = "Immediate"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of learning module */
@@ -63,8 +67,10 @@ public class AssignedLearningModule: Codable {
     public var summaryData: LearningModuleSummary?
     /** The cover art for the learning module */
     public var coverArt: LearningModuleCoverArtResponse?
+    /** The mode of archival for learning module */
+    public var archivalMode: ArchivalMode?
 
-    public init(_id: String?, name: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, currentAssignments: [LearningAssignment]?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, coverArt: LearningModuleCoverArtResponse?) {
+    public init(_id: String?, name: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, currentAssignments: [LearningAssignment]?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, coverArt: LearningModuleCoverArtResponse?, archivalMode: ArchivalMode?) {
         self._id = _id
         self.name = name
         self.createdBy = createdBy
@@ -86,6 +92,7 @@ public class AssignedLearningModule: Codable {
         self.assessmentForm = assessmentForm
         self.summaryData = summaryData
         self.coverArt = coverArt
+        self.archivalMode = archivalMode
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -110,6 +117,7 @@ public class AssignedLearningModule: Codable {
         case assessmentForm
         case summaryData
         case coverArt
+        case archivalMode
     }
 
 

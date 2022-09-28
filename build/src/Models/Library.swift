@@ -15,6 +15,7 @@ public class Library: Codable {
         case messagingTemplate = "MessagingTemplate"
         case campaignSmsTemplate = "CampaignSmsTemplate"
         case campaignEmailTemplate = "CampaignEmailTemplate"
+        case footer = "Footer"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

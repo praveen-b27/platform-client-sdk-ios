@@ -688,13 +688,15 @@ open class WebDeploymentsAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    
     /**
      Get deployments
      
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebdeploymentsDeployments(completion: @escaping ((_ data: WebDeploymentEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWebdeploymentsDeploymentsWithRequestBuilder()
+    open class func getWebdeploymentsDeployments(expand: [String]? = nil, completion: @escaping ((_ data: WebDeploymentEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsDeploymentsWithRequestBuilder(expand: expand)
         requestBuilder.execute { (response: Response<WebDeploymentEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -750,15 +752,20 @@ open class WebDeploymentsAPI {
   } ],
   "selfUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
+     
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)
 
      - returns: RequestBuilder<WebDeploymentEntityListing> 
      */
-    open class func getWebdeploymentsDeploymentsWithRequestBuilder() -> RequestBuilder<WebDeploymentEntityListing> {        
+    open class func getWebdeploymentsDeploymentsWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<WebDeploymentEntityListing> {        
         let path = "/api/v2/webdeployments/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<WebDeploymentEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingMessageRecipient**](RoutingAPI.html#getRoutingMessageRecipient) | Get a recipient |
 | [**getRoutingMessageRecipients**](RoutingAPI.html#getRoutingMessageRecipients) | Get recipients |
 | [**getRoutingPredictor**](RoutingAPI.html#getRoutingPredictor) | Retrieve a single predictor. |
+| [**getRoutingPredictorModelFeatures**](RoutingAPI.html#getRoutingPredictorModelFeatures) | Retrieve Predictor Model Features. |
+| [**getRoutingPredictorModels**](RoutingAPI.html#getRoutingPredictorModels) | Retrieve Predictor Models and Top Features. |
 | [**getRoutingPredictors**](RoutingAPI.html#getRoutingPredictors) | Retrieve all predictors. |
 | [**getRoutingPredictorsKeyperformanceindicators**](RoutingAPI.html#getRoutingPredictorsKeyperformanceindicators) | Get a list of Key Performance Indicators |
 | [**getRoutingQueue**](RoutingAPI.html#getRoutingQueue) | Get details about this queue. |
@@ -1737,6 +1739,112 @@ RoutingAPI.getRoutingPredictor(predictorId: predictorId) { (response, error) in
 ### Return type
 
 [**Predictor**](Predictor.html)
+
+<a name="getRoutingPredictorModelFeatures"></a>
+
+# **getRoutingPredictorModelFeatures**
+
+
+
+> [PredictorModelFeatureListing](PredictorModelFeatureListing.html) getRoutingPredictorModelFeatures(predictorId, modelId)
+
+Retrieve Predictor Model Features.
+
+
+
+Wraps GET /api/v2/routing/predictors/{predictorId}/models/{modelId}/features  
+
+Requires ALL permissions: 
+
+* routing:predictorModelFeature:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let predictorId: String = "" // Predictor ID
+let modelId: String = "" // Model ID
+
+// Code example
+RoutingAPI.getRoutingPredictorModelFeatures(predictorId: predictorId, modelId: modelId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingPredictorModelFeatures was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **predictorId** | **String**| Predictor ID | |
+| **modelId** | **String**| Model ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PredictorModelFeatureListing**](PredictorModelFeatureListing.html)
+
+<a name="getRoutingPredictorModels"></a>
+
+# **getRoutingPredictorModels**
+
+
+
+> [PredictorModels](PredictorModels.html) getRoutingPredictorModels(predictorId)
+
+Retrieve Predictor Models and Top Features.
+
+
+
+Wraps GET /api/v2/routing/predictors/{predictorId}/models  
+
+Requires ALL permissions: 
+
+* routing:predictorModel:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let predictorId: String = "" // Predictor ID
+
+// Code example
+RoutingAPI.getRoutingPredictorModels(predictorId: predictorId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingPredictorModels was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **predictorId** | **String**| Predictor ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PredictorModels**](PredictorModels.html)
 
 <a name="getRoutingPredictors"></a>
 

@@ -21,6 +21,7 @@ public class ModelResponse: Codable {
         case messagingTemplate = "MessagingTemplate"
         case campaignSmsTemplate = "CampaignSmsTemplate"
         case campaignEmailTemplate = "CampaignEmailTemplate"
+        case footer = "Footer"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
@@ -47,10 +48,12 @@ public class ModelResponse: Codable {
     public var messagingTemplate: MessagingTemplate?
     /** Assets used in the response */
     public var assets: [AddressableEntityRef]?
+    /** Footer template definition for responseType.Footer. */
+    public var footer: FooterTemplate?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, assets: [AddressableEntityRef]?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, assets: [AddressableEntityRef]?, footer: FooterTemplate?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.version = version
@@ -64,6 +67,7 @@ public class ModelResponse: Codable {
         self.responseType = responseType
         self.messagingTemplate = messagingTemplate
         self.assets = assets
+        self.footer = footer
         self.selfUri = selfUri
     }
 
@@ -81,6 +85,7 @@ public class ModelResponse: Codable {
         case responseType
         case messagingTemplate
         case assets
+        case footer
         case selfUri
     }
 

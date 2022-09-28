@@ -267,6 +267,7 @@ docs/BotConnectorBotVersion.md
 docs/BotConnectorBotVersionSummaryEntityListing.md
 docs/BotIntent.md
 docs/BotList.md
+docs/BotMessengerProfile.md
 docs/BotSearchResponse.md
 docs/BotSearchResponseEntityListing.md
 docs/BotSlot.md
@@ -1343,6 +1344,7 @@ docs/FlowVersion.md
 docs/FlowVersionEntityListing.md
 docs/FlowsAPI.json
 docs/FlowsAPI.md
+docs/FooterTemplate.md
 docs/ForecastAbandonRateResponse.md
 docs/ForecastAverageSpeedOfAnswerResponse.md
 docs/ForecastPlanningGroupData.md
@@ -1434,6 +1436,7 @@ docs/HistoricalImportStatusListing.md
 docs/HistoryEntry.md
 docs/HistoryListing.md
 docs/HomerRecord.md
+docs/Humanize.md
 docs/IVR.md
 docs/IVREntityListing.md
 docs/IdentityNow.md
@@ -1462,6 +1465,7 @@ docs/Integration.md
 docs/IntegrationAction.md
 docs/IntegrationActionFields.md
 docs/IntegrationConfiguration.md
+docs/IntegrationConfigurationCredential.md
 docs/IntegrationConfigurationInfo.md
 docs/IntegrationEntityListing.md
 docs/IntegrationExport.md
@@ -1943,6 +1947,7 @@ docs/OpenIntegrationEntityListing.md
 docs/OpenIntegrationRequest.md
 docs/OpenIntegrationUpdateRequest.md
 docs/OpenMessageContent.md
+docs/OpenMessageEvent.md
 docs/OpenMessagingChannel.md
 docs/OpenMessagingFromRecipient.md
 docs/OpenMessagingToRecipient.md
@@ -2085,6 +2090,10 @@ docs/PredictionResults.md
 docs/PredictiveRouting.md
 docs/Predictor.md
 docs/PredictorListing.md
+docs/PredictorModel.md
+docs/PredictorModelFeature.md
+docs/PredictorModelFeatureListing.md
+docs/PredictorModels.md
 docs/PredictorSchedule.md
 docs/PredictorWorkloadBalancing.md
 docs/PresenceAPI.json
@@ -3117,6 +3126,10 @@ docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/Video.md
 docs/ViewFilter.md
+docs/VipBackup.md
+docs/VipCallMediaSettings.md
+docs/VipMediaSettings.md
+docs/VipRouting.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
 docs/Voicemail.md
@@ -3161,7 +3174,6 @@ docs/WebDeployment.md
 docs/WebDeploymentActiveConfigurationOnDeployment.md
 docs/WebDeploymentConfigurationVersion.md
 docs/WebDeploymentConfigurationVersionEntityListing.md
-docs/WebDeploymentConfigurationVersionEntityRef.md
 docs/WebDeploymentEntityListing.md
 docs/WebDeploymentsAPI.json
 docs/WebDeploymentsAPI.md
@@ -4222,6 +4234,8 @@ docs/getRoutingLanguages-example.txt
 docs/getRoutingMessageRecipient-example.txt
 docs/getRoutingMessageRecipients-example.txt
 docs/getRoutingPredictor-example.txt
+docs/getRoutingPredictorModelFeatures-example.txt
+docs/getRoutingPredictorModels-example.txt
 docs/getRoutingPredictors-example.txt
 docs/getRoutingPredictorsKeyperformanceindicators-example.txt
 docs/getRoutingQueue-example.txt
@@ -5620,6 +5634,7 @@ src/Models/BotConnectorBotVersion.swift
 src/Models/BotConnectorBotVersionSummaryEntityListing.swift
 src/Models/BotIntent.swift
 src/Models/BotList.swift
+src/Models/BotMessengerProfile.swift
 src/Models/BotSearchResponse.swift
 src/Models/BotSearchResponseEntityListing.swift
 src/Models/BotSlot.swift
@@ -6680,6 +6695,7 @@ src/Models/FlowRuntimeExecution.swift
 src/Models/FlowStartDetailEventTopicFlowStartEvent.swift
 src/Models/FlowVersion.swift
 src/Models/FlowVersionEntityListing.swift
+src/Models/FooterTemplate.swift
 src/Models/ForecastAbandonRateResponse.swift
 src/Models/ForecastAverageSpeedOfAnswerResponse.swift
 src/Models/ForecastPlanningGroupData.swift
@@ -6761,6 +6777,7 @@ src/Models/HistoricalImportStatusListing.swift
 src/Models/HistoryEntry.swift
 src/Models/HistoryListing.swift
 src/Models/HomerRecord.swift
+src/Models/Humanize.swift
 src/Models/IVR.swift
 src/Models/IVREntityListing.swift
 src/Models/IdentityNow.swift
@@ -6787,6 +6804,7 @@ src/Models/Integration.swift
 src/Models/IntegrationAction.swift
 src/Models/IntegrationActionFields.swift
 src/Models/IntegrationConfiguration.swift
+src/Models/IntegrationConfigurationCredential.swift
 src/Models/IntegrationConfigurationInfo.swift
 src/Models/IntegrationEntityListing.swift
 src/Models/IntegrationExport.swift
@@ -7244,6 +7262,7 @@ src/Models/OpenIntegrationEntityListing.swift
 src/Models/OpenIntegrationRequest.swift
 src/Models/OpenIntegrationUpdateRequest.swift
 src/Models/OpenMessageContent.swift
+src/Models/OpenMessageEvent.swift
 src/Models/OpenMessagingChannel.swift
 src/Models/OpenMessagingFromRecipient.swift
 src/Models/OpenMessagingToRecipient.swift
@@ -7380,6 +7399,10 @@ src/Models/PredictionResults.swift
 src/Models/PredictiveRouting.swift
 src/Models/Predictor.swift
 src/Models/PredictorListing.swift
+src/Models/PredictorModel.swift
+src/Models/PredictorModelFeature.swift
+src/Models/PredictorModelFeatureListing.swift
+src/Models/PredictorModels.swift
 src/Models/PredictorSchedule.swift
 src/Models/PredictorWorkloadBalancing.swift
 src/Models/PresenceDefinition.swift
@@ -8367,6 +8390,10 @@ src/Models/ValueWrapperPlanningPeriodSettings.swift
 src/Models/ValueWrapperString.swift
 src/Models/Video.swift
 src/Models/ViewFilter.swift
+src/Models/VipBackup.swift
+src/Models/VipCallMediaSettings.swift
+src/Models/VipMediaSettings.swift
+src/Models/VipRouting.swift
 src/Models/VisibilityCondition.swift
 src/Models/VmPairingInfo.swift
 src/Models/Voicemail.swift
@@ -8406,7 +8433,6 @@ src/Models/WebDeployment.swift
 src/Models/WebDeploymentActiveConfigurationOnDeployment.swift
 src/Models/WebDeploymentConfigurationVersion.swift
 src/Models/WebDeploymentConfigurationVersionEntityListing.swift
-src/Models/WebDeploymentConfigurationVersionEntityRef.swift
 src/Models/WebDeploymentEntityListing.swift
 src/Models/WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody.swift
 src/Models/WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody.swift

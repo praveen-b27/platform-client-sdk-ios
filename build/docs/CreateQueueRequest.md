@@ -33,6 +33,7 @@ title: CreateQueueRequest
 | **enableTranscription** | **Bool** | Indicates whether voice transcription is enabled for this queue. | [optional] |
 | **enableManualAssignment** | **Bool** | Indicates whether manual assignment is enabled for this queue. | [optional] |
 | **agentOwnedRouting** | [**AgentOwnedRouting**](AgentOwnedRouting.html) | The Agent Owned Routing settings for the queue | [optional] |
+| **vipRouting** | [**VipRouting**](VipRouting.html) | The VIP Routing settings for the queue | [optional] |
 | **callingPartyName** | **String** | The name to use for caller identification for outbound calls from this queue. | [optional] |
 | **callingPartyNumber** | **String** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |
 | **defaultScripts** | [**[String:Script]**](Script.html) | The default script Ids for the communication types. | [optional] |

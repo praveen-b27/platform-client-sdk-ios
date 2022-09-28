@@ -20,7 +20,6 @@ public class SurveyAggregationQuery: Codable {
         case requestedlanguageid = "requestedLanguageId"
         case requestedroutingskillid = "requestedRoutingSkillId"
         case surveyanswerid = "surveyAnswerId"
-        case surveycreateddate = "surveyCreatedDate"
         case surveyerrorreason = "surveyErrorReason"
         case surveyformcontextid = "surveyFormContextId"
         case surveyformid = "surveyFormId"

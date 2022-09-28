@@ -15,7 +15,6 @@ public class EvaluationAggregationQueryMe: Codable {
         case calibrationid = "calibrationId"
         case contextid = "contextId"
         case conversationid = "conversationId"
-        case conversationstart = "conversationStart"
         case divisionid = "divisionId"
         case evaluationid = "evaluationId"
         case evaluatorid = "evaluatorId"

@@ -30,7 +30,7 @@ public class ResponseAssetFilter: Codable {
     public var fields: [String]?
     /** A value for the search to match against */
     public var value: String?
-    /** How to apply this search criteria against other criteria */
+    /** How to apply this search criteria against other criteria. Filter type supported for each field:- name:[STARTS_WITH, TERM], divisionId:[TERM, TERMS], contentLength:[RANGE, GREATER_THAN_EQUAL_TO, LESS_THAN_EQUAL_TO], contentType:[STARTS_WITH, TERM] dateCreated:[DATE_RANGE] */
     public var type: ModelType?
 
     public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, type: ModelType?) {

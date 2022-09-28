@@ -47,12 +47,14 @@ public class MessagingCampaign: Codable {
     public var contactListFilters: [DomainEntityRef]?
     /** A list of current error conditions associated with this messaging campaign. */
     public var errors: [RestErrorDetail]?
+    /** Configuration for this messaging campaign to send Email messages. */
+    public var emailConfig: EmailConfig?
     /** Configuration for this messaging campaign to send SMS messages. */
     public var smsConfig: SmsConfig?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, contactListFilters: [DomainEntityRef]?, errors: [RestErrorDetail]?, smsConfig: SmsConfig?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, contactListFilters: [DomainEntityRef]?, errors: [RestErrorDetail]?, emailConfig: EmailConfig?, smsConfig: SmsConfig?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -68,6 +70,7 @@ public class MessagingCampaign: Codable {
         self.messagesPerMinute = messagesPerMinute
         self.contactListFilters = contactListFilters
         self.errors = errors
+        self.emailConfig = emailConfig
         self.smsConfig = smsConfig
         self.selfUri = selfUri
     }
@@ -88,6 +91,7 @@ public class MessagingCampaign: Codable {
         case messagesPerMinute
         case contactListFilters
         case errors
+        case emailConfig
         case smsConfig
         case selfUri
     }

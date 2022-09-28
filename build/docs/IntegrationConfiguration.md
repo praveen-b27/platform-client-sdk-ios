@@ -14,7 +14,7 @@ Configuration for an Integration
 | **properties** | [**JSON**](.html) | Key-value configuration settings described by the schema in the propertiesSchemaUri field. | |
 | **advanced** | [**JSON**](.html) | Advanced configuration described by the schema in the advancedSchemaUri field. | |
 | **notes** | **String** | Notes about the integration. | |
-| **credentials** | [**[String:CredentialInfo]**](CredentialInfo.html) | Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type | |
+| **credentials** | [**[String:IntegrationConfigurationCredential]**](IntegrationConfigurationCredential.html) | Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

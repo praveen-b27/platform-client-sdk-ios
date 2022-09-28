@@ -11759,6 +11759,7 @@ open class RecordingAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -14242,6 +14243,7 @@ open class RecordingAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -17650,6 +17652,7 @@ open class RecordingAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -20133,6 +20136,7 @@ open class RecordingAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -23870,6 +23874,7 @@ open class RecordingAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -26353,6 +26358,7 @@ open class RecordingAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -29761,6 +29767,7 @@ open class RecordingAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -32244,6 +32251,7 @@ open class RecordingAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -33952,16 +33960,18 @@ open class RecordingAPI {
     
     
     
+    
     /**
      Updates the retention records on a recording.
      
      - parameter conversationId: (path) Conversation ID 
      - parameter recordingId: (path) Recording ID 
      - parameter body: (body) recording 
+     - parameter clearExport: (query) Whether to clear the pending export for the recording (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putConversationRecording(conversationId: String, recordingId: String, body: Recording, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
-        let requestBuilder = putConversationRecordingWithRequestBuilder(conversationId: conversationId, recordingId: recordingId, body: body)
+    open class func putConversationRecording(conversationId: String, recordingId: String, body: Recording, clearExport: Bool? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
+        let requestBuilder = putConversationRecordingWithRequestBuilder(conversationId: conversationId, recordingId: recordingId, body: body, clearExport: clearExport)
         requestBuilder.execute { (response: Response<Recording>?, error) -> Void in
             do {
                 if let e = error {
@@ -34824,10 +34834,11 @@ open class RecordingAPI {
      - parameter conversationId: (path) Conversation ID 
      - parameter recordingId: (path) Recording ID 
      - parameter body: (body) recording 
+     - parameter clearExport: (query) Whether to clear the pending export for the recording (optional)
 
      - returns: RequestBuilder<Recording> 
      */
-    open class func putConversationRecordingWithRequestBuilder(conversationId: String, recordingId: String, body: Recording) -> RequestBuilder<Recording> {        
+    open class func putConversationRecordingWithRequestBuilder(conversationId: String, recordingId: String, body: Recording, clearExport: Bool? = nil) -> RequestBuilder<Recording> {        
         var path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -34838,7 +34849,10 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "clearExport": clearExport
+        ])
 
         let requestBuilder: RequestBuilder<Recording>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

@@ -1935,6 +1935,217 @@ open class RoutingAPI {
 
     
     
+    /**
+     Retrieve Predictor Model Features.
+     
+     - parameter predictorId: (path) Predictor ID 
+     - parameter modelId: (path) Model ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingPredictorModelFeatures(predictorId: String, modelId: String, completion: @escaping ((_ data: PredictorModelFeatureListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorModelFeaturesWithRequestBuilder(predictorId: predictorId, modelId: modelId)
+        requestBuilder.execute { (response: Response<PredictorModelFeatureListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve Predictor Model Features.
+     - GET /api/v2/routing/predictors/{predictorId}/models/{modelId}/features
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "percentageImportance" : 0.8008281904610115,
+    "id" : "id",
+    "type" : "User"
+  }, {
+    "percentageImportance" : 0.8008281904610115,
+    "id" : "id",
+    "type" : "User"
+  } ]
+}, statusCode=200}]
+     
+     - parameter predictorId: (path) Predictor ID 
+     - parameter modelId: (path) Model ID 
+
+     - returns: RequestBuilder<PredictorModelFeatureListing> 
+     */
+    open class func getRoutingPredictorModelFeaturesWithRequestBuilder(predictorId: String, modelId: String) -> RequestBuilder<PredictorModelFeatureListing> {        
+        var path = "/api/v2/routing/predictors/{predictorId}/models/{modelId}/features"
+        let predictorIdPreEscape = "\(predictorId)"
+        let predictorIdPostEscape = predictorIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{predictorId}", with: predictorIdPostEscape, options: .literal, range: nil)
+        let modelIdPreEscape = "\(modelId)"
+        let modelIdPostEscape = modelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{modelId}", with: modelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PredictorModelFeatureListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Retrieve Predictor Models and Top Features.
+     
+     - parameter predictorId: (path) Predictor ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingPredictorModels(predictorId: String, completion: @escaping ((_ data: PredictorModels?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorModelsWithRequestBuilder(predictorId: predictorId)
+        requestBuilder.execute { (response: Response<PredictorModels>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve Predictor Models and Top Features.
+     - GET /api/v2/routing/predictors/{predictorId}/models
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "predictorModels" : [ {
+    "features" : [ {
+      "percentageImportance" : 0.8008281904610115,
+      "id" : "id",
+      "type" : "User"
+    }, {
+      "percentageImportance" : 0.8008281904610115,
+      "id" : "id",
+      "type" : "User"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "kpi" : "kpi",
+    "queues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+    "mediaType" : "voice",
+    "id" : "id"
+  }, {
+    "features" : [ {
+      "percentageImportance" : 0.8008281904610115,
+      "id" : "id",
+      "type" : "User"
+    }, {
+      "percentageImportance" : 0.8008281904610115,
+      "id" : "id",
+      "type" : "User"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "kpi" : "kpi",
+    "queues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+    "mediaType" : "voice",
+    "id" : "id"
+  } ],
+  "entities" : [ {
+    "features" : [ {
+      "percentageImportance" : 0.8008281904610115,
+      "id" : "id",
+      "type" : "User"
+    }, {
+      "percentageImportance" : 0.8008281904610115,
+      "id" : "id",
+      "type" : "User"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "kpi" : "kpi",
+    "queues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+    "mediaType" : "voice",
+    "id" : "id"
+  }, {
+    "features" : [ {
+      "percentageImportance" : 0.8008281904610115,
+      "id" : "id",
+      "type" : "User"
+    }, {
+      "percentageImportance" : 0.8008281904610115,
+      "id" : "id",
+      "type" : "User"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "kpi" : "kpi",
+    "queues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+00:00",
+    "mediaType" : "voice",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter predictorId: (path) Predictor ID 
+
+     - returns: RequestBuilder<PredictorModels> 
+     */
+    open class func getRoutingPredictorModelsWithRequestBuilder(predictorId: String) -> RequestBuilder<PredictorModels> {        
+        var path = "/api/v2/routing/predictors/{predictorId}/models"
+        let predictorIdPreEscape = "\(predictorId)"
+        let predictorIdPostEscape = predictorIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{predictorId}", with: predictorIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PredictorModels>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
     
     
     
@@ -2224,6 +2435,7 @@ open class RoutingAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
+  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
@@ -4287,6 +4499,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -4437,6 +4650,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -4689,6 +4903,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -4839,6 +5054,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5074,6 +5290,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5224,6 +5441,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5452,6 +5670,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5602,6 +5821,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -6913,6 +7133,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -7063,6 +7284,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -9228,6 +9450,7 @@ open class RoutingAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
+  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
@@ -9443,6 +9666,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -9593,6 +9817,7 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -9993,10 +10218,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10019,10 +10244,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10063,10 +10288,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10089,10 +10314,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10138,10 +10363,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10164,10 +10389,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10208,10 +10433,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10234,10 +10459,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11021,6 +11246,7 @@ open class RoutingAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
+  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
@@ -11748,6 +11974,7 @@ open class RoutingAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
+  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",

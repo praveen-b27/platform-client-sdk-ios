@@ -448,7 +448,7 @@ WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations(deploymentId: deploy
 
 
 
-> [WebDeploymentEntityListing](WebDeploymentEntityListing.html) getWebdeploymentsDeployments()
+> [WebDeploymentEntityListing](WebDeploymentEntityListing.html) getWebdeploymentsDeployments(expand)
 
 Get deployments
 
@@ -468,9 +468,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected. Valid values:
 
 // Code example
-WebDeploymentsAPI.getWebdeploymentsDeployments() { (response, error) in
+WebDeploymentsAPI.getWebdeploymentsDeployments(expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -482,8 +483,11 @@ WebDeploymentsAPI.getWebdeploymentsDeployments() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **expand** | [**[String]**](String.html)| The specified entity attributes will be filled. Comma separated values expected. Valid values: | [optional]<br />**Values**: configuration ("Configuration") |
+{: class="table-striped"}
 
 
 ### Return type

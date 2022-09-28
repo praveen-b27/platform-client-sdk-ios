@@ -25,10 +25,12 @@ public class ResponseSet: Codable {
     public var responses: [String:Reaction]?
     /** Whether to enable answering machine beep detection */
     public var beepDetectionEnabled: Bool?
+    /** Whether to enable answering machine detection */
+    public var amdSpeechDistinguishEnabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, responses: [String:Reaction]?, beepDetectionEnabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, responses: [String:Reaction]?, beepDetectionEnabled: Bool?, amdSpeechDistinguishEnabled: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -36,6 +38,7 @@ public class ResponseSet: Codable {
         self.version = version
         self.responses = responses
         self.beepDetectionEnabled = beepDetectionEnabled
+        self.amdSpeechDistinguishEnabled = amdSpeechDistinguishEnabled
         self.selfUri = selfUri
     }
 
@@ -47,6 +50,7 @@ public class ResponseSet: Codable {
         case version
         case responses
         case beepDetectionEnabled
+        case amdSpeechDistinguishEnabled
         case selfUri
     }
 

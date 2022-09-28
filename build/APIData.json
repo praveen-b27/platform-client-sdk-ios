@@ -24079,7 +24079,7 @@
   "putconversationrecording": {
     "operationId": "putconversationrecording",
     "functionName": "putConversationRecording",
-    "signature": "putConversationRecording(conversationId, recordingId, body)",
+    "signature": "putConversationRecording(conversationId, recordingId, body, clearExport)",
     "parameters": [
       {
         "name": "conversationId",
@@ -24095,10 +24095,15 @@
         "name": "body",
         "type": "Recording",
         "required": "true"
+      },
+      {
+        "name": "clearExport",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "Recording",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\nlet recordingId: String = \"\" // Recording ID\nlet body: Recording = new Recording(...) // recording\n\n// Updates the retention records on a recording.\nPutConversationRecordingRequest.putConversationRecording(conversationId: conversationId, recordingId: recordingId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationRecordingRequest.putConversationRecording was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\nlet recordingId: String = \"\" // Recording ID\nlet body: Recording = new Recording(...) // recording\nlet clearExport: Bool = true // Whether to clear the pending export for the recording\n\n// Updates the retention records on a recording.\nPutConversationRecordingRequest.putConversationRecording(conversationId: conversationId, recordingId: recordingId, body: body, clearExport: clearExport) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationRecordingRequest.putConversationRecording was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationrecordingannotation": {
     "operationId": "putconversationrecordingannotation",
@@ -25077,6 +25082,39 @@
     ],
     "return": "Predictor",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet predictorId: String = \"\" // Predictor ID\n\n// Retrieve a single predictor.\nGetRoutingPredictorRequest.getRoutingPredictor(predictorId: predictorId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingPredictorRequest.getRoutingPredictor was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getroutingpredictormodelfeatures": {
+    "operationId": "getroutingpredictormodelfeatures",
+    "functionName": "getRoutingPredictorModelFeatures",
+    "signature": "getRoutingPredictorModelFeatures(predictorId, modelId)",
+    "parameters": [
+      {
+        "name": "predictorId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "modelId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "PredictorModelFeatureListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet predictorId: String = \"\" // Predictor ID\nlet modelId: String = \"\" // Model ID\n\n// Retrieve Predictor Model Features.\nGetRoutingPredictorModelFeaturesRequest.getRoutingPredictorModelFeatures(predictorId: predictorId, modelId: modelId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingPredictorModelFeaturesRequest.getRoutingPredictorModelFeatures was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getroutingpredictormodels": {
+    "operationId": "getroutingpredictormodels",
+    "functionName": "getRoutingPredictorModels",
+    "signature": "getRoutingPredictorModels(predictorId)",
+    "parameters": [
+      {
+        "name": "predictorId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "PredictorModels",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet predictorId: String = \"\" // Predictor ID\n\n// Retrieve Predictor Models and Top Features.\nGetRoutingPredictorModelsRequest.getRoutingPredictorModels(predictorId: predictorId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingPredictorModelsRequest.getRoutingPredictorModels was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingpredictors": {
     "operationId": "getroutingpredictors",
@@ -33289,9 +33327,16 @@
   "getwebdeploymentsdeployments": {
     "operationId": "getwebdeploymentsdeployments",
     "functionName": "getWebdeploymentsDeployments",
-    "signature": "getWebdeploymentsDeployments()",
+    "signature": "getWebdeploymentsDeployments(expand)",
+    "parameters": [
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
     "return": "WebDeploymentEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get deployments\nGetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected. Valid values:\n\n// Get deployments\nGetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments(expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
   },
   "postwebdeploymentsconfigurationversionsdraftpublish": {
     "operationId": "postwebdeploymentsconfigurationversionsdraftpublish",

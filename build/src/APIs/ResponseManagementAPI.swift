@@ -336,6 +336,7 @@ open class ResponseManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "substitutionsSchema" : "{}",
+  "footer" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "libraries" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -580,6 +581,7 @@ open class ResponseManagementAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "substitutionsSchema" : "{}",
+    "footer" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "libraries" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -623,6 +625,7 @@ open class ResponseManagementAPI {
     "id" : "id"
   }, {
     "substitutionsSchema" : "{}",
+    "footer" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "libraries" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -953,6 +956,7 @@ open class ResponseManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "substitutionsSchema" : "{}",
+  "footer" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "libraries" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -1174,6 +1178,7 @@ open class ResponseManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "substitutionsSchema" : "{}",
+  "footer" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "libraries" : [ {
     "selfUri" : "https://openapi-generator.tech",

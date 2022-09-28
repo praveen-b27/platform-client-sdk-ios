@@ -28,14 +28,17 @@ public class ConversationAppSettings: Codable {
     public var markdown: Markdown?
     /** The conversation disconnect settings for the messenger app */
     public var conversationDisconnect: ConversationDisconnectSettings?
+    /** The humanize conversations settings for the messenger app */
+    public var humanize: Humanize?
 
-    public init(showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?, autoStart: AutoStart?, markdown: Markdown?, conversationDisconnect: ConversationDisconnectSettings?) {
+    public init(showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?, autoStart: AutoStart?, markdown: Markdown?, conversationDisconnect: ConversationDisconnectSettings?, humanize: Humanize?) {
         self.showAgentTypingIndicator = showAgentTypingIndicator
         self.showUserTypingIndicator = showUserTypingIndicator
         self.autoStartType = autoStartType
         self.autoStart = autoStart
         self.markdown = markdown
         self.conversationDisconnect = conversationDisconnect
+        self.humanize = humanize
     }
 
 

@@ -26,7 +26,7 @@ public class WebDeployment: Codable {
     /** The description of the config */
     public var _description: String?
     /** The config version this deployment uses */
-    public var configuration: WebDeploymentConfigurationVersionEntityRef?
+    public var configuration: WebDeploymentConfigurationVersion?
     /** Property indicates whether all domains are allowed or not. allowedDomains must be empty when this is set as true. */
     public var allowAllDomains: Bool?
     /** The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use. */
@@ -46,7 +46,7 @@ public class WebDeployment: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, configuration: WebDeploymentConfigurationVersionEntityRef?, allowAllDomains: Bool?, allowedDomains: [String]?, snippet: String?, dateCreated: Date?, dateModified: Date?, lastModifiedUser: AddressableEntityRef?, flow: DomainEntityRef?, status: Status?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, configuration: WebDeploymentConfigurationVersion?, allowAllDomains: Bool?, allowedDomains: [String]?, snippet: String?, dateCreated: Date?, dateModified: Date?, lastModifiedUser: AddressableEntityRef?, flow: DomainEntityRef?, status: Status?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description

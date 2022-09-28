@@ -2762,7 +2762,7 @@ RecordingAPI.postRecordingsScreensessionsMetadata(body: body) { (error) in
 
 
 
-> [Recording](Recording.html) putConversationRecording(conversationId, recordingId, body)
+> [Recording](Recording.html) putConversationRecording(conversationId, recordingId, body, clearExport)
 
 Updates the retention records on a recording.
 
@@ -2789,9 +2789,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // Conversation ID
 let recordingId: String = "" // Recording ID
 let body: Recording = new Recording(...) // recording
+let clearExport: Bool = true // Whether to clear the pending export for the recording
 
 // Code example
-RecordingAPI.putConversationRecording(conversationId: conversationId, recordingId: recordingId, body: body) { (response, error) in
+RecordingAPI.putConversationRecording(conversationId: conversationId, recordingId: recordingId, body: body, clearExport: clearExport) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2809,6 +2810,7 @@ RecordingAPI.putConversationRecording(conversationId: conversationId, recordingI
 | **conversationId** | **String**| Conversation ID | |
 | **recordingId** | **String**| Recording ID | |
 | **body** | [**Recording**](Recording.html)| recording | |
+| **clearExport** | **Bool**| Whether to clear the pending export for the recording | [optional] |
 {: class="table-striped"}
 
 

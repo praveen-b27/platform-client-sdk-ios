@@ -5638,6 +5638,7 @@ open class UsersAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5788,6 +5789,7 @@ open class UsersAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -10766,6 +10768,7 @@ open class UsersAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -11206,6 +11209,7 @@ open class UsersAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -11661,6 +11665,7 @@ open class UsersAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -12101,6 +12106,7 @@ open class UsersAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -12569,6 +12575,7 @@ open class UsersAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -13009,6 +13016,7 @@ open class UsersAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -13464,6 +13472,7 @@ open class UsersAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -13904,6 +13913,7 @@ open class UsersAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
+            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -16751,6 +16761,7 @@ open class UsersAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
+  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
@@ -16966,6 +16977,7 @@ open class UsersAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -17116,6 +17128,7 @@ open class UsersAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
+    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -18651,10 +18664,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18677,10 +18690,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18721,10 +18734,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18747,10 +18760,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18796,10 +18809,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18822,10 +18835,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18866,10 +18879,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18892,10 +18905,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

@@ -21,6 +21,7 @@ Contains information about a response.
 | **responseType** | **String** | The response type represented by the response. | [optional] |
 | **messagingTemplate** | [**MessagingTemplate**](MessagingTemplate.html) | An optional messaging template definition for responseType.MessagingTemplate. | [optional] |
 | **assets** | [**[AddressableEntityRef]**](AddressableEntityRef.html) | Assets used in the response | [optional] |
+| **footer** | [**FooterTemplate**](FooterTemplate.html) | Footer template definition for responseType.Footer. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

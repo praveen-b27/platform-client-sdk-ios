@@ -26,7 +26,7 @@ public class DialerContact: Codable {
     public var callable: Bool?
     /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
     public var phoneNumberStatus: [String:PhoneNumberStatus]?
-    /** A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type. */
+    /** A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. */
     public var contactableStatus: [String:ContactableStatus]?
     /** Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip */
     public var contactColumnTimeZones: [String:ContactColumnTimeZone]?

@@ -14,6 +14,7 @@ public class AsyncConversationQuery: Codable {
     public enum Order: String, Codable { 
         case asc = "asc"
         case desc = "desc"
+        case unordered = "unordered"
     }
     public enum OrderBy: String, Codable { 
         case conversationstart = "conversationStart"

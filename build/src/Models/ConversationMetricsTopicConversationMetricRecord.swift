@@ -42,6 +42,8 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case tconnected = "tConnected"
         case tcontacting = "tContacting"
         case tdialing = "tDialing"
+        case tfirstconnect = "tFirstConnect"
+        case tfirstdial = "tFirstDial"
         case tflowout = "tFlowOut"
         case thandle = "tHandle"
         case theld = "tHeld"

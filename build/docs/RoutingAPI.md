@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingAssessment**](RoutingAPI.html#deleteRoutingAssessment) | Delete single benefit assessment. |
 | [**deleteRoutingEmailDomain**](RoutingAPI.html#deleteRoutingEmailDomain) | Delete a domain |
 | [**deleteRoutingEmailDomainRoute**](RoutingAPI.html#deleteRoutingEmailDomainRoute) | Delete a route |
+| [**deleteRoutingEmailOutboundDomain**](RoutingAPI.html#deleteRoutingEmailOutboundDomain) | Delete an outbound domain |
 | [**deleteRoutingPredictor**](RoutingAPI.html#deleteRoutingPredictor) | Delete single predictor. |
 | [**deleteRoutingQueue**](RoutingAPI.html#deleteRoutingQueue) | Delete a queue |
 | [**deleteRoutingQueueMember**](RoutingAPI.html#deleteRoutingQueueMember) | Delete a queue member. |
@@ -33,6 +34,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingEmailDomainRoute**](RoutingAPI.html#getRoutingEmailDomainRoute) | Get a route |
 | [**getRoutingEmailDomainRoutes**](RoutingAPI.html#getRoutingEmailDomainRoutes) | Get routes |
 | [**getRoutingEmailDomains**](RoutingAPI.html#getRoutingEmailDomains) | Get domains |
+| [**getRoutingEmailOutboundDomain**](RoutingAPI.html#getRoutingEmailOutboundDomain) | Get domain |
+| [**getRoutingEmailOutboundDomainActivation**](RoutingAPI.html#getRoutingEmailOutboundDomainActivation) | Get activation status (cname + dkim) of an outbound domain |
+| [**getRoutingEmailOutboundDomainSearch**](RoutingAPI.html#getRoutingEmailOutboundDomainSearch) | Search a domain across organizations |
+| [**getRoutingEmailOutboundDomains**](RoutingAPI.html#getRoutingEmailOutboundDomains) | Get outbound domains |
 | [**getRoutingEmailSetup**](RoutingAPI.html#getRoutingEmailSetup) | Get email setup |
 | [**getRoutingLanguages**](RoutingAPI.html#getRoutingLanguages) | Get the list of supported languages. |
 | [**getRoutingMessageRecipient**](RoutingAPI.html#getRoutingMessageRecipient) | Get a recipient |
@@ -91,6 +96,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingEmailDomainRoutes**](RoutingAPI.html#postRoutingEmailDomainRoutes) | Create a route |
 | [**postRoutingEmailDomainTestconnection**](RoutingAPI.html#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this domain |
 | [**postRoutingEmailDomains**](RoutingAPI.html#postRoutingEmailDomains) | Create a domain |
+| [**postRoutingEmailOutboundDomains**](RoutingAPI.html#postRoutingEmailOutboundDomains) | Create a domain |
+| [**postRoutingEmailOutboundDomainsSimulated**](RoutingAPI.html#postRoutingEmailOutboundDomainsSimulated) | Create a simulated domain |
 | [**postRoutingLanguages**](RoutingAPI.html#postRoutingLanguages) | Create Language |
 | [**postRoutingPredictors**](RoutingAPI.html#postRoutingPredictors) | Create a predictor. |
 | [**postRoutingQueueMembers**](RoutingAPI.html#postRoutingQueueMembers) | Bulk add or delete up to 100 queue members |
@@ -104,6 +111,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUserRoutinglanguages**](RoutingAPI.html#postUserRoutinglanguages) | Add routing language to user |
 | [**postUserRoutingskills**](RoutingAPI.html#postUserRoutingskills) | Add routing skill to user |
 | [**putRoutingEmailDomainRoute**](RoutingAPI.html#putRoutingEmailDomainRoute) | Update a route |
+| [**putRoutingEmailOutboundDomainActivation**](RoutingAPI.html#putRoutingEmailOutboundDomainActivation) | Request an activation status (cname + dkim) update of an outbound domain |
 | [**putRoutingMessageRecipient**](RoutingAPI.html#putRoutingMessageRecipient) | Update a recipient |
 | [**putRoutingQueue**](RoutingAPI.html#putRoutingQueue) | Update a queue |
 | [**putRoutingSettings**](RoutingAPI.html#putRoutingSettings) | Update an organization&#39;s routing settings |
@@ -264,6 +272,57 @@ RoutingAPI.deleteRoutingEmailDomainRoute(domainName: domainName, routeId: routeI
 | ------------- | ------------- | ------------- | ------------- |
 | **domainName** | **String**| email domain | |
 | **routeId** | **String**| route ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingEmailOutboundDomain"></a>
+
+# **deleteRoutingEmailOutboundDomain**
+
+
+
+> Void deleteRoutingEmailOutboundDomain(domainId)
+
+Delete an outbound domain
+
+
+
+Wraps DELETE /api/v2/routing/email/outbound/domains/{domainId}  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.deleteRoutingEmailOutboundDomain(domainId: domainId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingEmailOutboundDomain was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
 {: class="table-striped"}
 
 
@@ -1472,6 +1531,210 @@ RoutingAPI.getRoutingEmailDomains(excludeStatus: excludeStatus) { (response, err
 ### Return type
 
 [**InboundDomainEntityListing**](InboundDomainEntityListing.html)
+
+<a name="getRoutingEmailOutboundDomain"></a>
+
+# **getRoutingEmailOutboundDomain**
+
+
+
+> [OutboundDomain](OutboundDomain.html) getRoutingEmailOutboundDomain(domainId)
+
+Get domain
+
+
+
+Wraps GET /api/v2/routing/email/outbound/domains/{domainId}  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.getRoutingEmailOutboundDomain(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailOutboundDomain was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OutboundDomain**](OutboundDomain.html)
+
+<a name="getRoutingEmailOutboundDomainActivation"></a>
+
+# **getRoutingEmailOutboundDomainActivation**
+
+
+
+> [EmailOutboundDomainResult](EmailOutboundDomainResult.html) getRoutingEmailOutboundDomainActivation(domainId)
+
+Get activation status (cname + dkim) of an outbound domain
+
+
+
+Wraps GET /api/v2/routing/email/outbound/domains/{domainId}/activation  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.getRoutingEmailOutboundDomainActivation(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailOutboundDomainActivation was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailOutboundDomainResult**](EmailOutboundDomainResult.html)
+
+<a name="getRoutingEmailOutboundDomainSearch"></a>
+
+# **getRoutingEmailOutboundDomainSearch**
+
+
+
+> [OutboundDomain](OutboundDomain.html) getRoutingEmailOutboundDomainSearch(domainId)
+
+Search a domain across organizations
+
+
+
+Wraps GET /api/v2/routing/email/outbound/domains/{domainId}/search  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.getRoutingEmailOutboundDomainSearch(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailOutboundDomainSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OutboundDomain**](OutboundDomain.html)
+
+<a name="getRoutingEmailOutboundDomains"></a>
+
+# **getRoutingEmailOutboundDomains**
+
+
+
+> [OutboundDomainEntityListing](OutboundDomainEntityListing.html) getRoutingEmailOutboundDomains()
+
+Get outbound domains
+
+
+
+Wraps GET /api/v2/routing/email/outbound/domains  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RoutingAPI.getRoutingEmailOutboundDomains() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailOutboundDomains was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**OutboundDomainEntityListing**](OutboundDomainEntityListing.html)
 
 <a name="getRoutingEmailSetup"></a>
 
@@ -4703,6 +4966,110 @@ RoutingAPI.postRoutingEmailDomains(body: body) { (response, error) in
 
 [**InboundDomain**](InboundDomain.html)
 
+<a name="postRoutingEmailOutboundDomains"></a>
+
+# **postRoutingEmailOutboundDomains**
+
+
+
+> [EmailOutboundDomainResult](EmailOutboundDomainResult.html) postRoutingEmailOutboundDomains(body)
+
+Create a domain
+
+
+
+Wraps POST /api/v2/routing/email/outbound/domains  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: OutboundDomain = new OutboundDomain(...) // Domain
+
+// Code example
+RoutingAPI.postRoutingEmailOutboundDomains(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingEmailOutboundDomains was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**OutboundDomain**](OutboundDomain.html)| Domain | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailOutboundDomainResult**](EmailOutboundDomainResult.html)
+
+<a name="postRoutingEmailOutboundDomainsSimulated"></a>
+
+# **postRoutingEmailOutboundDomainsSimulated**
+
+
+
+> [EmailOutboundDomainResult](EmailOutboundDomainResult.html) postRoutingEmailOutboundDomainsSimulated(body)
+
+Create a simulated domain
+
+
+
+Wraps POST /api/v2/routing/email/outbound/domains/simulated  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: OutboundDomain = new OutboundDomain(...) // Domain
+
+// Code example
+RoutingAPI.postRoutingEmailOutboundDomainsSimulated(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingEmailOutboundDomainsSimulated was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**OutboundDomain**](OutboundDomain.html)| Domain | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailOutboundDomainResult**](EmailOutboundDomainResult.html)
+
 <a name="postRoutingLanguages"></a>
 
 # **postRoutingLanguages**
@@ -5398,6 +5765,58 @@ RoutingAPI.putRoutingEmailDomainRoute(domainName: domainName, routeId: routeId, 
 ### Return type
 
 [**InboundRoute**](InboundRoute.html)
+
+<a name="putRoutingEmailOutboundDomainActivation"></a>
+
+# **putRoutingEmailOutboundDomainActivation**
+
+
+
+> [EmailOutboundDomainResult](EmailOutboundDomainResult.html) putRoutingEmailOutboundDomainActivation(domainId)
+
+Request an activation status (cname + dkim) update of an outbound domain
+
+
+
+Wraps PUT /api/v2/routing/email/outbound/domains/{domainId}/activation  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.putRoutingEmailOutboundDomainActivation(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingEmailOutboundDomainActivation was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailOutboundDomainResult**](EmailOutboundDomainResult.html)
 
 <a name="putRoutingMessageRecipient"></a>
 

@@ -17,6 +17,7 @@ public class ConversationMessageMetadata: Codable {
         case structured = "Structured"
         case receipt = "Receipt"
         case event = "Event"
+        case message = "Message"
         case unknown = "Unknown"
     }
     /** Message type. */

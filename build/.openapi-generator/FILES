@@ -73,6 +73,8 @@ docs/AgentOwnedMappingPreview.md
 docs/AgentOwnedMappingPreviewListing.md
 docs/AgentOwnedRouting.md
 docs/AgentTimeOffRequestPatch.md
+docs/AgentlessEmailSendRequestDto.md
+docs/AgentlessEmailSendResponseDto.md
 docs/AggregateMetricData.md
 docs/AggregateViewData.md
 docs/AggregationRange.md
@@ -189,6 +191,8 @@ docs/AttributeDetailEventTopicAttributeUpdateEvent.md
 docs/AttributeFilterItem.md
 docs/AtzmTimeSlot.md
 docs/AtzmTimeSlotWithTimeZone.md
+docs/AudioState.md
+docs/AudioUpdatedEvent.md
 docs/AuditAPI.json
 docs/AuditAPI.md
 docs/AuditChange.md
@@ -241,11 +245,15 @@ docs/AvailableTranslations.md
 docs/BaseMediaSettings.md
 docs/BaseProgramEntity.md
 docs/BaseTopicEntitiy.md
+docs/BatchConversationEventRequest.md
 docs/BatchDownloadJobResult.md
 docs/BatchDownloadJobStatusResult.md
 docs/BatchDownloadJobSubmission.md
 docs/BatchDownloadJobSubmissionResult.md
 docs/BatchDownloadRequest.md
+docs/BatchEventResponse.md
+docs/BatchUserPresenceEventRequest.md
+docs/BatchUserRoutingStatusEventRequest.md
 docs/BenefitAssessment.md
 docs/BenefitAssessmentJob.md
 docs/BillingAPI.json
@@ -514,6 +522,9 @@ docs/CommonCampaign.md
 docs/CommonCampaignDivisionView.md
 docs/CommonCampaignDivisionViewEntityListing.md
 docs/CommonCampaignEntityListing.md
+docs/CommunicationAnsweredEvent.md
+docs/CommunicationDispositionAppliedEvent.md
+docs/CommunicationEndedEvent.md
 docs/ComparisonPeriod.md
 docs/ComparisonPeriodListing.md
 docs/Condition.md
@@ -526,6 +537,7 @@ docs/ConnectedQueue.md
 docs/ConnectedUser.md
 docs/ConstraintConflictMessage.md
 docs/ConsultTransfer.md
+docs/ConsultTransferEvent.md
 docs/ConsultTransferResponse.md
 docs/ConsultTransferUpdate.md
 docs/ConsumedResourcesEntityListing.md
@@ -541,6 +553,7 @@ docs/ContactColumnConditionSettings.md
 docs/ContactColumnTimeZone.md
 docs/ContactColumnToDataActionFieldMapping.md
 docs/ContactDetailEventTopicContactUpdateEvent.md
+docs/ContactIdentifier.md
 docs/ContactList.md
 docs/ContactListDivisionView.md
 docs/ContactListDivisionViewListing.md
@@ -586,10 +599,12 @@ docs/ContentPositionProperties.md
 docs/ContentPostback.md
 docs/ContentQueryRequest.md
 docs/ContentQuickReply.md
+docs/ContentQuickReplyV2.md
 docs/ContentReaction.md
 docs/ContentSetting.md
 docs/ContentSortItem.md
 docs/ContentStory.md
+docs/ContentText.md
 docs/Context.md
 docs/ContextEntity.md
 docs/ContextIntent.md
@@ -672,7 +687,9 @@ docs/ConversationContentCarousel.md
 docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentQuickReply.md
+docs/ConversationContentQuickReplyV2.md
 docs/ConversationContentStory.md
+docs/ConversationContentText.md
 docs/ConversationDeletionProtectionQuery.md
 docs/ConversationDetailQueryClause.md
 docs/ConversationDetailQueryFilter.md
@@ -1043,6 +1060,7 @@ docs/DncListDivisionViewListing.md
 docs/DncListEntityListing.md
 docs/DnclistDownloadReadyExportUri.md
 docs/DnclistImportStatusImportStatus.md
+docs/DnsRecordEntry.md
 docs/DoNotSendActionSettings.md
 docs/Document.md
 docs/DocumentArticle.md
@@ -1061,6 +1079,10 @@ docs/DocumentContentBlock.md
 docs/DocumentEntityListing.md
 docs/DocumentFaq.md
 docs/DocumentListing.md
+docs/DocumentQuery.md
+docs/DocumentQueryClause.md
+docs/DocumentQueryInterval.md
+docs/DocumentQueryPredicate.md
 docs/DocumentReference.md
 docs/DocumentText.md
 docs/DocumentThumbnail.md
@@ -1103,6 +1125,8 @@ docs/DomainResourceConditionValue.md
 docs/DomainRole.md
 docs/DomainSchemaReference.md
 docs/DownloadResponse.md
+docs/DownloadsAPI.json
+docs/DownloadsAPI.md
 docs/Draft.md
 docs/DraftIntents.md
 docs/DraftListing.md
@@ -1167,6 +1191,7 @@ docs/EmailMediaPolicy.md
 docs/EmailMediaPolicyConditions.md
 docs/EmailMessage.md
 docs/EmailMessageListing.md
+docs/EmailOutboundDomainResult.md
 docs/EmailSetup.md
 docs/EmailsSettings.md
 docs/EmbeddedIntegration.md
@@ -1177,8 +1202,11 @@ docs/EmployerInfo.md
 docs/Empty.md
 docs/EncryptionKey.md
 docs/EncryptionKeyEntityListing.md
+docs/EndConsultTransferEvent.md
+docs/EndTransferEvent.md
 docs/Endpoint.md
 docs/Entity.md
+docs/EntityChange.md
 docs/EntityListing.md
 docs/EntityTypeCriteria.md
 docs/Entry.md
@@ -1219,12 +1247,17 @@ docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
 docs/EventCoBrowse.md
 docs/EventCondition.md
+docs/EventError.md
 docs/EventLog.md
 docs/EventMessage.md
 docs/EventPresence.md
 docs/EventSetting.md
 docs/EventTyping.md
+docs/EventsAPI.json
+docs/EventsAPI.md
 docs/ExecuteRecordingJobsQuery.md
+docs/ExpandableWebDeployment.md
+docs/ExpandableWebDeploymentEntityListing.md
 docs/ExpansionCriterium.md
 docs/ExpiredEdgeListing.md
 docs/ExportScriptRequest.md
@@ -1257,6 +1290,7 @@ docs/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.md
 docs/ExternalContactsUnresolvedContactChangedTopicTwitterId.md
 docs/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.md
 docs/ExternalDataSource.md
+docs/ExternalEstablishedEvent.md
 docs/ExternalMetricDataItem.md
 docs/ExternalMetricDataProcessedItem.md
 docs/ExternalMetricDataUnprocessedItem.md
@@ -1435,10 +1469,12 @@ docs/HistoricalImportStatus.md
 docs/HistoricalImportStatusListing.md
 docs/HistoryEntry.md
 docs/HistoryListing.md
+docs/HoldUpdatedEvent.md
 docs/HomerRecord.md
 docs/Humanize.md
 docs/IVR.md
 docs/IVREntityListing.md
+docs/IdentifierClaimRequest.md
 docs/IdentityNow.md
 docs/IdentityProviderAPI.json
 docs/IdentityProviderAPI.md
@@ -1460,12 +1496,13 @@ docs/InboundMessageRequest.md
 docs/InboundOnlySetting.md
 docs/InboundRoute.md
 docs/InboundRouteEntityListing.md
+docs/InitialConfiguration.md
 docs/InitiateScreenRecording.md
+docs/InitiatingAction.md
 docs/Integration.md
 docs/IntegrationAction.md
 docs/IntegrationActionFields.md
 docs/IntegrationConfiguration.md
-docs/IntegrationConfigurationCredential.md
 docs/IntegrationConfigurationInfo.md
 docs/IntegrationEntityListing.md
 docs/IntegrationExport.md
@@ -1489,6 +1526,7 @@ docs/IpAddressRange.md
 docs/IpAddressRangeListing.md
 docs/ItemValidationLimits.md
 docs/Items.md
+docs/IvrEstablishedEvent.md
 docs/Journey.md
 docs/JourneyAPI.json
 docs/JourneyAPI.md
@@ -1638,6 +1676,7 @@ docs/KnowledgeGroupStatistics.md
 docs/KnowledgeGuestDocument.md
 docs/KnowledgeGuestDocumentResponseListing.md
 docs/KnowledgeGuestDocumentSuggestion.md
+docs/KnowledgeGuestDocumentSuggestionRequest.md
 docs/KnowledgeGuestDocumentSuggestionResult.md
 docs/KnowledgeGuestDocumentVariation.md
 docs/KnowledgeGuestDocumentVariationContext.md
@@ -1818,6 +1857,7 @@ docs/MemberEntity.md
 docs/MemberGroup.md
 docs/MemberListing.md
 docs/MergeOperation.md
+docs/MergeRequest.md
 docs/Message.md
 docs/MessageContent.md
 docs/MessageConversation.md
@@ -1976,6 +2016,8 @@ docs/OutOfOfficeEventUser.md
 docs/OutboundAPI.json
 docs/OutboundAPI.md
 docs/OutboundDetailEventTopicOutboundInitEvent.md
+docs/OutboundDomain.md
+docs/OutboundDomainEntityListing.md
 docs/OutboundMessagingMessagingCampaignConfigChangeContactSort.md
 docs/OutboundMessagingMessagingCampaignConfigChangeEmailConfig.md
 docs/OutboundMessagingMessagingCampaignConfigChangeErrorDetail.md
@@ -2057,11 +2099,13 @@ docs/PhoneChangeTopicProvisionInfo.md
 docs/PhoneChangeTopicUserAgentInfo.md
 docs/PhoneColumn.md
 docs/PhoneEntityListing.md
+docs/PhoneEstablishedEvent.md
 docs/PhoneMetaBaseEntityListing.md
 docs/PhoneNumber.md
 docs/PhoneNumberColumn.md
 docs/PhoneNumberStatus.md
 docs/PhoneStatus.md
+docs/PhoneTransferEvent.md
 docs/PhonesReboot.md
 docs/Phrase.md
 docs/PhraseAssociations.md
@@ -2116,6 +2160,8 @@ docs/ProgramMappingsRequest.md
 docs/ProgramRequest.md
 docs/ProgramsEntityListing.md
 docs/ProgramsMappingsEntityListing.md
+docs/ProgressConsultTransferEvent.md
+docs/ProgressTransferEvent.md
 docs/Prompt.md
 docs/PromptAsset.md
 docs/PromptAssetCreate.md
@@ -2496,6 +2542,7 @@ docs/RoutingAPI.md
 docs/RoutingConversationAttributesRequest.md
 docs/RoutingConversationAttributesResponse.md
 docs/RoutingData.md
+docs/RoutingEstablishedEvent.md
 docs/RoutingRule.md
 docs/RoutingSettings.md
 docs/RoutingSkill.md
@@ -2504,6 +2551,7 @@ docs/RoutingStatus.md
 docs/RoutingStatusDetailQueryClause.md
 docs/RoutingStatusDetailQueryFilter.md
 docs/RoutingStatusDetailQueryPredicate.md
+docs/RoutingTransferEvent.md
 docs/RuleSet.md
 docs/RuleSetDiagnostic.md
 docs/RuleSetEntityListing.md
@@ -2651,6 +2699,7 @@ docs/ShortTermForecastReference.md
 docs/ShortTermForecastingSettings.md
 docs/ShrinkageOverride.md
 docs/ShrinkageOverrides.md
+docs/Signature.md
 docs/SignedUrlResponse.md
 docs/SingleWorkdayAveragePoints.md
 docs/SingleWorkdayAverageValues.md
@@ -2674,6 +2723,9 @@ docs/SmsProvisioningStatus.md
 docs/SocialExpression.md
 docs/SocialHandle.md
 docs/SortItem.md
+docs/Source.md
+docs/SourceConfiguration.md
+docs/SourceEntityListing.md
 docs/SourcePlanningGroupRequest.md
 docs/SpeechTextAnalyticsAPI.json
 docs/SpeechTextAnalyticsAPI.md
@@ -3001,6 +3053,7 @@ docs/UserDetailsQuery.md
 docs/UserDevice.md
 docs/UserEndDetailEventTopicUserEndEvent.md
 docs/UserEntityListing.md
+docs/UserEstablishedEvent.md
 docs/UserExpands.md
 docs/UserExternalIdentifier.md
 docs/UserGreetingEventGreeting.md
@@ -3020,6 +3073,8 @@ docs/UserObservationQueryPredicate.md
 docs/UserObservationQueryResponse.md
 docs/UserParam.md
 docs/UserPresence.md
+docs/UserPresenceEvent.md
+docs/UserPrimarySource.md
 docs/UserProfile.md
 docs/UserProfileEntityListing.md
 docs/UserQueue.md
@@ -3034,6 +3089,7 @@ docs/UserRoutingLanguagePost.md
 docs/UserRoutingSkill.md
 docs/UserRoutingSkillPost.md
 docs/UserRoutingStatusErrorInfo.md
+docs/UserRoutingStatusEvent.md
 docs/UserRoutingStatusRoutingStatus.md
 docs/UserRoutingStatusUserParam.md
 docs/UserRoutingStatusUserRoutingStatus.md
@@ -3057,6 +3113,7 @@ docs/UserStations.md
 docs/UserTimeOffRequestReference.md
 docs/UserTokensTopicTokenNotification.md
 docs/UserTokensTopicUriReference.md
+docs/UserTransferEvent.md
 docs/UsersAPI.json
 docs/UsersAPI.md
 docs/UsersSearchResponse.md
@@ -3124,6 +3181,7 @@ docs/ValidationServiceRequest.md
 docs/ValueWrapperDate.md
 docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
+docs/VerificationResult.md
 docs/Video.md
 docs/ViewFilter.md
 docs/VipBackup.md
@@ -3174,7 +3232,9 @@ docs/WebDeployment.md
 docs/WebDeploymentActiveConfigurationOnDeployment.md
 docs/WebDeploymentConfigurationVersion.md
 docs/WebDeploymentConfigurationVersionEntityListing.md
-docs/WebDeploymentEntityListing.md
+docs/WebDeploymentConfigurationVersionEntityRef.md
+docs/WebDeploymentConfigurationVersionResponse.md
+docs/WebDeploymentHeadlessMode.md
 docs/WebDeploymentsAPI.json
 docs/WebDeploymentsAPI.md
 docs/WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody.md
@@ -3529,6 +3589,7 @@ docs/deleteOutboundSchedulesEmailcampaign-example.txt
 docs/deleteOutboundSchedulesMessagingcampaign-example.txt
 docs/deleteOutboundSchedulesSequence-example.txt
 docs/deleteOutboundSequence-example.txt
+docs/deletePresenceSource-example.txt
 docs/deletePresencedefinition-example.txt
 docs/deleteProcessautomationTrigger-example.txt
 docs/deleteQualityCalibration-example.txt
@@ -3547,6 +3608,7 @@ docs/deleteResponsemanagementResponseasset-example.txt
 docs/deleteRoutingAssessment-example.txt
 docs/deleteRoutingEmailDomain-example.txt
 docs/deleteRoutingEmailDomainRoute-example.txt
+docs/deleteRoutingEmailOutboundDomain-example.txt
 docs/deleteRoutingLanguage-example.txt
 docs/deleteRoutingPredictor-example.txt
 docs/deleteRoutingQueue-example.txt
@@ -3816,11 +3878,14 @@ docs/getDataextensionsLimits-example.txt
 docs/getDate-example.txt
 docs/getDocumentationGknSearch-example.txt
 docs/getDocumentationSearch-example.txt
+docs/getDownload-example.txt
 docs/getEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/getEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/getExternalcontactsContact-example.txt
+docs/getExternalcontactsContactIdentifiers-example.txt
 docs/getExternalcontactsContactNote-example.txt
 docs/getExternalcontactsContactNotes-example.txt
+docs/getExternalcontactsContactUnresolved-example.txt
 docs/getExternalcontactsContacts-example.txt
 docs/getExternalcontactsContactsSchema-example.txt
 docs/getExternalcontactsContactsSchemaVersion-example.txt
@@ -4160,6 +4225,9 @@ docs/getOutboundSequence-example.txt
 docs/getOutboundSequences-example.txt
 docs/getOutboundSettings-example.txt
 docs/getOutboundWrapupcodemappings-example.txt
+docs/getPresenceSource-example.txt
+docs/getPresenceSources-example.txt
+docs/getPresenceUserPrimarysource-example.txt
 docs/getPresencedefinition-example.txt
 docs/getPresencedefinitions-example.txt
 docs/getProcessautomationTrigger-example.txt
@@ -4228,6 +4296,10 @@ docs/getRoutingEmailDomain-example.txt
 docs/getRoutingEmailDomainRoute-example.txt
 docs/getRoutingEmailDomainRoutes-example.txt
 docs/getRoutingEmailDomains-example.txt
+docs/getRoutingEmailOutboundDomain-example.txt
+docs/getRoutingEmailOutboundDomainActivation-example.txt
+docs/getRoutingEmailOutboundDomainSearch-example.txt
+docs/getRoutingEmailOutboundDomains-example.txt
 docs/getRoutingEmailSetup-example.txt
 docs/getRoutingLanguage-example.txt
 docs/getRoutingLanguages-example.txt
@@ -4577,6 +4649,7 @@ docs/patchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/patchConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/patchEmployeeperformanceExternalmetricsDefinition-example.txt
+docs/patchExternalcontactsContactIdentifiers-example.txt
 docs/patchGeolocationsSettings-example.txt
 docs/patchIntegration-example.txt
 docs/patchIntegrationsAction-example.txt
@@ -4770,6 +4843,7 @@ docs/postConversationsEmailMessages-example.txt
 docs/postConversationsEmailMessagesDraftAttachmentsCopy-example.txt
 docs/postConversationsEmailParticipantReplace-example.txt
 docs/postConversationsEmails-example.txt
+docs/postConversationsEmailsAgentless-example.txt
 docs/postConversationsFaxes-example.txt
 docs/postConversationsKeyconfigurations-example.txt
 docs/postConversationsKeyconfigurationsValidate-example.txt
@@ -4790,9 +4864,13 @@ docs/postDocumentationGknSearch-example.txt
 docs/postDocumentationSearch-example.txt
 docs/postEmployeeperformanceExternalmetricsData-example.txt
 docs/postEmployeeperformanceExternalmetricsDefinitions-example.txt
+docs/postEventsConversations-example.txt
+docs/postEventsUsersPresence-example.txt
+docs/postEventsUsersRoutingstatus-example.txt
 docs/postExternalcontactsBulkContacts-example.txt
 docs/postExternalcontactsBulkContactsAdd-example.txt
 docs/postExternalcontactsBulkContactsRemove-example.txt
+docs/postExternalcontactsBulkContactsUnresolved-example.txt
 docs/postExternalcontactsBulkContactsUpdate-example.txt
 docs/postExternalcontactsBulkNotes-example.txt
 docs/postExternalcontactsBulkNotesAdd-example.txt
@@ -4807,8 +4885,11 @@ docs/postExternalcontactsBulkRelationshipsAdd-example.txt
 docs/postExternalcontactsBulkRelationshipsRemove-example.txt
 docs/postExternalcontactsBulkRelationshipsUpdate-example.txt
 docs/postExternalcontactsContactNotes-example.txt
+docs/postExternalcontactsContactPromotion-example.txt
 docs/postExternalcontactsContacts-example.txt
 docs/postExternalcontactsContactsSchemas-example.txt
+docs/postExternalcontactsIdentifierlookup-example.txt
+docs/postExternalcontactsMergeContacts-example.txt
 docs/postExternalcontactsOrganizationNotes-example.txt
 docs/postExternalcontactsOrganizations-example.txt
 docs/postExternalcontactsOrganizationsSchemas-example.txt
@@ -4947,6 +5028,7 @@ docs/postOutboundMessagingcampaigns-example.txt
 docs/postOutboundMessagingcampaignsProgress-example.txt
 docs/postOutboundRulesets-example.txt
 docs/postOutboundSequences-example.txt
+docs/postPresenceSources-example.txt
 docs/postPresencedefinitions-example.txt
 docs/postProcessautomationTriggerTest-example.txt
 docs/postProcessautomationTriggers-example.txt
@@ -4985,6 +5067,8 @@ docs/postRoutingAssessmentsJobs-example.txt
 docs/postRoutingEmailDomainRoutes-example.txt
 docs/postRoutingEmailDomainTestconnection-example.txt
 docs/postRoutingEmailDomains-example.txt
+docs/postRoutingEmailOutboundDomains-example.txt
+docs/postRoutingEmailOutboundDomainsSimulated-example.txt
 docs/postRoutingLanguages-example.txt
 docs/postRoutingPredictors-example.txt
 docs/postRoutingQueueMembers-example.txt
@@ -5234,6 +5318,8 @@ docs/putOutboundSchedulesMessagingcampaign-example.txt
 docs/putOutboundSchedulesSequence-example.txt
 docs/putOutboundSequence-example.txt
 docs/putOutboundWrapupcodemappings-example.txt
+docs/putPresenceSource-example.txt
+docs/putPresenceUserPrimarysource-example.txt
 docs/putPresencedefinition-example.txt
 docs/putProcessautomationTrigger-example.txt
 docs/putQualityCalibration-example.txt
@@ -5254,6 +5340,7 @@ docs/putResponsemanagementLibrary-example.txt
 docs/putResponsemanagementResponse-example.txt
 docs/putResponsemanagementResponseasset-example.txt
 docs/putRoutingEmailDomainRoute-example.txt
+docs/putRoutingEmailOutboundDomainActivation-example.txt
 docs/putRoutingMessageRecipient-example.txt
 docs/putRoutingQueue-example.txt
 docs/putRoutingSettings-example.txt
@@ -5326,6 +5413,8 @@ src/APIs/CoachingAPI.swift
 src/APIs/ContentManagementAPI.swift
 src/APIs/ConversationsAPI.swift
 src/APIs/DataExtensionsAPI.swift
+src/APIs/DownloadsAPI.swift
+src/APIs/EventsAPI.swift
 src/APIs/ExternalContactsAPI.swift
 src/APIs/FaxAPI.swift
 src/APIs/FlowsAPI.swift
@@ -5452,6 +5541,8 @@ src/Models/AgentOwnedMappingPreview.swift
 src/Models/AgentOwnedMappingPreviewListing.swift
 src/Models/AgentOwnedRouting.swift
 src/Models/AgentTimeOffRequestPatch.swift
+src/Models/AgentlessEmailSendRequestDto.swift
+src/Models/AgentlessEmailSendResponseDto.swift
 src/Models/AggregateMetricData.swift
 src/Models/AggregateViewData.swift
 src/Models/AggregationRange.swift
@@ -5562,6 +5653,8 @@ src/Models/AttributeDetailEventTopicAttributeUpdateEvent.swift
 src/Models/AttributeFilterItem.swift
 src/Models/AtzmTimeSlot.swift
 src/Models/AtzmTimeSlotWithTimeZone.swift
+src/Models/AudioState.swift
+src/Models/AudioUpdatedEvent.swift
 src/Models/AuditChange.swift
 src/Models/AuditEntity.swift
 src/Models/AuditEntityReference.swift
@@ -5610,11 +5703,15 @@ src/Models/AvailableTranslations.swift
 src/Models/BaseMediaSettings.swift
 src/Models/BaseProgramEntity.swift
 src/Models/BaseTopicEntitiy.swift
+src/Models/BatchConversationEventRequest.swift
 src/Models/BatchDownloadJobResult.swift
 src/Models/BatchDownloadJobStatusResult.swift
 src/Models/BatchDownloadJobSubmission.swift
 src/Models/BatchDownloadJobSubmissionResult.swift
 src/Models/BatchDownloadRequest.swift
+src/Models/BatchEventResponse.swift
+src/Models/BatchUserPresenceEventRequest.swift
+src/Models/BatchUserRoutingStatusEventRequest.swift
 src/Models/BenefitAssessment.swift
 src/Models/BenefitAssessmentJob.swift
 src/Models/BillingUsage.swift
@@ -5877,6 +5974,9 @@ src/Models/CommonCampaign.swift
 src/Models/CommonCampaignDivisionView.swift
 src/Models/CommonCampaignDivisionViewEntityListing.swift
 src/Models/CommonCampaignEntityListing.swift
+src/Models/CommunicationAnsweredEvent.swift
+src/Models/CommunicationDispositionAppliedEvent.swift
+src/Models/CommunicationEndedEvent.swift
 src/Models/ComparisonPeriod.swift
 src/Models/ComparisonPeriodListing.swift
 src/Models/Condition.swift
@@ -5889,6 +5989,7 @@ src/Models/ConnectedQueue.swift
 src/Models/ConnectedUser.swift
 src/Models/ConstraintConflictMessage.swift
 src/Models/ConsultTransfer.swift
+src/Models/ConsultTransferEvent.swift
 src/Models/ConsultTransferResponse.swift
 src/Models/ConsultTransferUpdate.swift
 src/Models/ConsumedResourcesEntityListing.swift
@@ -5904,6 +6005,7 @@ src/Models/ContactColumnConditionSettings.swift
 src/Models/ContactColumnTimeZone.swift
 src/Models/ContactColumnToDataActionFieldMapping.swift
 src/Models/ContactDetailEventTopicContactUpdateEvent.swift
+src/Models/ContactIdentifier.swift
 src/Models/ContactList.swift
 src/Models/ContactListDivisionView.swift
 src/Models/ContactListDivisionViewListing.swift
@@ -5947,10 +6049,12 @@ src/Models/ContentPositionProperties.swift
 src/Models/ContentPostback.swift
 src/Models/ContentQueryRequest.swift
 src/Models/ContentQuickReply.swift
+src/Models/ContentQuickReplyV2.swift
 src/Models/ContentReaction.swift
 src/Models/ContentSetting.swift
 src/Models/ContentSortItem.swift
 src/Models/ContentStory.swift
+src/Models/ContentText.swift
 src/Models/Context.swift
 src/Models/ContextEntity.swift
 src/Models/ContextIntent.swift
@@ -6033,7 +6137,9 @@ src/Models/ConversationContentCarousel.swift
 src/Models/ConversationContentLocation.swift
 src/Models/ConversationContentNotificationTemplate.swift
 src/Models/ConversationContentQuickReply.swift
+src/Models/ConversationContentQuickReplyV2.swift
 src/Models/ConversationContentStory.swift
+src/Models/ConversationContentText.swift
 src/Models/ConversationDeletionProtectionQuery.swift
 src/Models/ConversationDetailQueryClause.swift
 src/Models/ConversationDetailQueryFilter.swift
@@ -6400,6 +6506,7 @@ src/Models/DncListDivisionViewListing.swift
 src/Models/DncListEntityListing.swift
 src/Models/DnclistDownloadReadyExportUri.swift
 src/Models/DnclistImportStatusImportStatus.swift
+src/Models/DnsRecordEntry.swift
 src/Models/DoNotSendActionSettings.swift
 src/Models/Document.swift
 src/Models/DocumentArticle.swift
@@ -6418,6 +6525,10 @@ src/Models/DocumentContentBlock.swift
 src/Models/DocumentEntityListing.swift
 src/Models/DocumentFaq.swift
 src/Models/DocumentListing.swift
+src/Models/DocumentQuery.swift
+src/Models/DocumentQueryClause.swift
+src/Models/DocumentQueryInterval.swift
+src/Models/DocumentQueryPredicate.swift
 src/Models/DocumentReference.swift
 src/Models/DocumentText.swift
 src/Models/DocumentThumbnail.swift
@@ -6524,6 +6635,7 @@ src/Models/EmailMediaPolicy.swift
 src/Models/EmailMediaPolicyConditions.swift
 src/Models/EmailMessage.swift
 src/Models/EmailMessageListing.swift
+src/Models/EmailOutboundDomainResult.swift
 src/Models/EmailSetup.swift
 src/Models/EmailsSettings.swift
 src/Models/EmbeddedIntegration.swift
@@ -6534,8 +6646,11 @@ src/Models/EmployerInfo.swift
 src/Models/Empty.swift
 src/Models/EncryptionKey.swift
 src/Models/EncryptionKeyEntityListing.swift
+src/Models/EndConsultTransferEvent.swift
+src/Models/EndTransferEvent.swift
 src/Models/Endpoint.swift
 src/Models/Entity.swift
+src/Models/EntityChange.swift
 src/Models/EntityListing.swift
 src/Models/EntityTypeCriteria.swift
 src/Models/Entry.swift
@@ -6576,12 +6691,15 @@ src/Models/EvaluatorActivity.swift
 src/Models/EvaluatorActivityEntityListing.swift
 src/Models/EventCoBrowse.swift
 src/Models/EventCondition.swift
+src/Models/EventError.swift
 src/Models/EventLog.swift
 src/Models/EventMessage.swift
 src/Models/EventPresence.swift
 src/Models/EventSetting.swift
 src/Models/EventTyping.swift
 src/Models/ExecuteRecordingJobsQuery.swift
+src/Models/ExpandableWebDeployment.swift
+src/Models/ExpandableWebDeploymentEntityListing.swift
 src/Models/ExpansionCriterium.swift
 src/Models/ExpiredEdgeListing.swift
 src/Models/ExportScriptRequest.swift
@@ -6612,6 +6730,7 @@ src/Models/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicTwitterId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.swift
 src/Models/ExternalDataSource.swift
+src/Models/ExternalEstablishedEvent.swift
 src/Models/ExternalMetricDataItem.swift
 src/Models/ExternalMetricDataProcessedItem.swift
 src/Models/ExternalMetricDataUnprocessedItem.swift
@@ -6776,10 +6895,12 @@ src/Models/HistoricalImportStatus.swift
 src/Models/HistoricalImportStatusListing.swift
 src/Models/HistoryEntry.swift
 src/Models/HistoryListing.swift
+src/Models/HoldUpdatedEvent.swift
 src/Models/HomerRecord.swift
 src/Models/Humanize.swift
 src/Models/IVR.swift
 src/Models/IVREntityListing.swift
+src/Models/IdentifierClaimRequest.swift
 src/Models/IdentityNow.swift
 src/Models/IdleEventTrigger.swift
 src/Models/IgnoredActivityCategories.swift
@@ -6799,12 +6920,13 @@ src/Models/InboundMessageRequest.swift
 src/Models/InboundOnlySetting.swift
 src/Models/InboundRoute.swift
 src/Models/InboundRouteEntityListing.swift
+src/Models/InitialConfiguration.swift
 src/Models/InitiateScreenRecording.swift
+src/Models/InitiatingAction.swift
 src/Models/Integration.swift
 src/Models/IntegrationAction.swift
 src/Models/IntegrationActionFields.swift
 src/Models/IntegrationConfiguration.swift
-src/Models/IntegrationConfigurationCredential.swift
 src/Models/IntegrationConfigurationInfo.swift
 src/Models/IntegrationEntityListing.swift
 src/Models/IntegrationExport.swift
@@ -6826,6 +6948,7 @@ src/Models/IpAddressRange.swift
 src/Models/IpAddressRangeListing.swift
 src/Models/ItemValidationLimits.swift
 src/Models/Items.swift
+src/Models/IvrEstablishedEvent.swift
 src/Models/Journey.swift
 src/Models/JourneyAction.swift
 src/Models/JourneyActionMap.swift
@@ -6971,6 +7094,7 @@ src/Models/KnowledgeGroupStatistics.swift
 src/Models/KnowledgeGuestDocument.swift
 src/Models/KnowledgeGuestDocumentResponseListing.swift
 src/Models/KnowledgeGuestDocumentSuggestion.swift
+src/Models/KnowledgeGuestDocumentSuggestionRequest.swift
 src/Models/KnowledgeGuestDocumentSuggestionResult.swift
 src/Models/KnowledgeGuestDocumentVariation.swift
 src/Models/KnowledgeGuestDocumentVariationContext.swift
@@ -7141,6 +7265,7 @@ src/Models/MemberEntity.swift
 src/Models/MemberGroup.swift
 src/Models/MemberListing.swift
 src/Models/MergeOperation.swift
+src/Models/MergeRequest.swift
 src/Models/Message.swift
 src/Models/MessageContent.swift
 src/Models/MessageConversation.swift
@@ -7285,6 +7410,8 @@ src/Models/OutOfOffice.swift
 src/Models/OutOfOfficeEventOutOfOffice.swift
 src/Models/OutOfOfficeEventUser.swift
 src/Models/OutboundDetailEventTopicOutboundInitEvent.swift
+src/Models/OutboundDomain.swift
+src/Models/OutboundDomainEntityListing.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeContactSort.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeEmailConfig.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeErrorDetail.swift
@@ -7366,11 +7493,13 @@ src/Models/PhoneChangeTopicProvisionInfo.swift
 src/Models/PhoneChangeTopicUserAgentInfo.swift
 src/Models/PhoneColumn.swift
 src/Models/PhoneEntityListing.swift
+src/Models/PhoneEstablishedEvent.swift
 src/Models/PhoneMetaBaseEntityListing.swift
 src/Models/PhoneNumber.swift
 src/Models/PhoneNumberColumn.swift
 src/Models/PhoneNumberStatus.swift
 src/Models/PhoneStatus.swift
+src/Models/PhoneTransferEvent.swift
 src/Models/PhonesReboot.swift
 src/Models/Phrase.swift
 src/Models/PhraseAssociations.swift
@@ -7421,6 +7550,8 @@ src/Models/ProgramMappingsRequest.swift
 src/Models/ProgramRequest.swift
 src/Models/ProgramsEntityListing.swift
 src/Models/ProgramsMappingsEntityListing.swift
+src/Models/ProgressConsultTransferEvent.swift
+src/Models/ProgressTransferEvent.swift
 src/Models/Prompt.swift
 src/Models/PromptAsset.swift
 src/Models/PromptAssetCreate.swift
@@ -7792,6 +7923,7 @@ src/Models/RoutePathResponse.swift
 src/Models/RoutingConversationAttributesRequest.swift
 src/Models/RoutingConversationAttributesResponse.swift
 src/Models/RoutingData.swift
+src/Models/RoutingEstablishedEvent.swift
 src/Models/RoutingRule.swift
 src/Models/RoutingSettings.swift
 src/Models/RoutingSkill.swift
@@ -7800,6 +7932,7 @@ src/Models/RoutingStatus.swift
 src/Models/RoutingStatusDetailQueryClause.swift
 src/Models/RoutingStatusDetailQueryFilter.swift
 src/Models/RoutingStatusDetailQueryPredicate.swift
+src/Models/RoutingTransferEvent.swift
 src/Models/RuleSet.swift
 src/Models/RuleSetDiagnostic.swift
 src/Models/RuleSetEntityListing.swift
@@ -7941,6 +8074,7 @@ src/Models/ShortTermForecastReference.swift
 src/Models/ShortTermForecastingSettings.swift
 src/Models/ShrinkageOverride.swift
 src/Models/ShrinkageOverrides.swift
+src/Models/Signature.swift
 src/Models/SignedUrlResponse.swift
 src/Models/SingleWorkdayAveragePoints.swift
 src/Models/SingleWorkdayAverageValues.swift
@@ -7964,6 +8098,9 @@ src/Models/SmsProvisioningStatus.swift
 src/Models/SocialExpression.swift
 src/Models/SocialHandle.swift
 src/Models/SortItem.swift
+src/Models/Source.swift
+src/Models/SourceConfiguration.swift
+src/Models/SourceEntityListing.swift
 src/Models/SourcePlanningGroupRequest.swift
 src/Models/SpeechTextAnalyticsSettingsRequest.swift
 src/Models/SpeechTextAnalyticsSettingsResponse.swift
@@ -8271,6 +8408,7 @@ src/Models/UserDetailsQuery.swift
 src/Models/UserDevice.swift
 src/Models/UserEndDetailEventTopicUserEndEvent.swift
 src/Models/UserEntityListing.swift
+src/Models/UserEstablishedEvent.swift
 src/Models/UserExpands.swift
 src/Models/UserExternalIdentifier.swift
 src/Models/UserGreetingEventGreeting.swift
@@ -8290,6 +8428,8 @@ src/Models/UserObservationQueryPredicate.swift
 src/Models/UserObservationQueryResponse.swift
 src/Models/UserParam.swift
 src/Models/UserPresence.swift
+src/Models/UserPresenceEvent.swift
+src/Models/UserPrimarySource.swift
 src/Models/UserProfile.swift
 src/Models/UserProfileEntityListing.swift
 src/Models/UserQueue.swift
@@ -8302,6 +8442,7 @@ src/Models/UserRoutingLanguagePost.swift
 src/Models/UserRoutingSkill.swift
 src/Models/UserRoutingSkillPost.swift
 src/Models/UserRoutingStatusErrorInfo.swift
+src/Models/UserRoutingStatusEvent.swift
 src/Models/UserRoutingStatusRoutingStatus.swift
 src/Models/UserRoutingStatusUserParam.swift
 src/Models/UserRoutingStatusUserRoutingStatus.swift
@@ -8325,6 +8466,7 @@ src/Models/UserStations.swift
 src/Models/UserTimeOffRequestReference.swift
 src/Models/UserTokensTopicTokenNotification.swift
 src/Models/UserTokensTopicUriReference.swift
+src/Models/UserTransferEvent.swift
 src/Models/UsersSearchResponse.swift
 src/Models/Utilization.swift
 src/Models/Utterance.swift
@@ -8388,6 +8530,7 @@ src/Models/ValidationServiceRequest.swift
 src/Models/ValueWrapperDate.swift
 src/Models/ValueWrapperPlanningPeriodSettings.swift
 src/Models/ValueWrapperString.swift
+src/Models/VerificationResult.swift
 src/Models/Video.swift
 src/Models/ViewFilter.swift
 src/Models/VipBackup.swift
@@ -8433,7 +8576,9 @@ src/Models/WebDeployment.swift
 src/Models/WebDeploymentActiveConfigurationOnDeployment.swift
 src/Models/WebDeploymentConfigurationVersion.swift
 src/Models/WebDeploymentConfigurationVersionEntityListing.swift
-src/Models/WebDeploymentEntityListing.swift
+src/Models/WebDeploymentConfigurationVersionEntityRef.swift
+src/Models/WebDeploymentConfigurationVersionResponse.swift
+src/Models/WebDeploymentHeadlessMode.swift
 src/Models/WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody.swift
 src/Models/WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody.swift
 src/Models/WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody.swift

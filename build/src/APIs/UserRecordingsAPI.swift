@@ -293,8 +293,8 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "cobrowseRole" : "cobrowseRole",
-        "cobrowseSessionId" : "cobrowseSessionId",
         "initialState" : "alerting",
+        "cobrowseSessionId" : "cobrowseSessionId",
         "afterCallWorkRequired" : true,
         "viewerUrl" : "viewerUrl",
         "segments" : [ {
@@ -325,8 +325,8 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "cobrowseRole" : "cobrowseRole",
-        "cobrowseSessionId" : "cobrowseSessionId",
         "initialState" : "alerting",
+        "cobrowseSessionId" : "cobrowseSessionId",
         "afterCallWorkRequired" : true,
         "viewerUrl" : "viewerUrl",
         "segments" : [ {
@@ -2957,6 +2957,7 @@ open class UserRecordingsAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -5441,6 +5442,7 @@ open class UserRecordingsAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -5497,8 +5499,8 @@ open class UserRecordingsAPI {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "other" : "{}",
-        "confined" : true,
         "initialState" : "alerting",
+        "confined" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "recording" : true,
@@ -5551,8 +5553,8 @@ open class UserRecordingsAPI {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "other" : "{}",
-        "confined" : true,
         "initialState" : "alerting",
+        "confined" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "recording" : true,
@@ -6186,8 +6188,8 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "cobrowseRole" : "cobrowseRole",
-        "cobrowseSessionId" : "cobrowseSessionId",
         "initialState" : "alerting",
+        "cobrowseSessionId" : "cobrowseSessionId",
         "afterCallWorkRequired" : true,
         "viewerUrl" : "viewerUrl",
         "segments" : [ {
@@ -6218,8 +6220,8 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "cobrowseRole" : "cobrowseRole",
-        "cobrowseSessionId" : "cobrowseSessionId",
         "initialState" : "alerting",
+        "cobrowseSessionId" : "cobrowseSessionId",
         "afterCallWorkRequired" : true,
         "viewerUrl" : "viewerUrl",
         "segments" : [ {
@@ -8850,6 +8852,7 @@ open class UserRecordingsAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -11334,6 +11337,7 @@ open class UserRecordingsAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -11390,8 +11394,8 @@ open class UserRecordingsAPI {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "other" : "{}",
-        "confined" : true,
         "initialState" : "alerting",
+        "confined" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "recording" : true,
@@ -11444,8 +11448,8 @@ open class UserRecordingsAPI {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "other" : "{}",
-        "confined" : true,
         "initialState" : "alerting",
+        "confined" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "recording" : true,
@@ -12298,8 +12302,8 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
-          "cobrowseSessionId" : "cobrowseSessionId",
           "initialState" : "alerting",
+          "cobrowseSessionId" : "cobrowseSessionId",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -12330,8 +12334,8 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
-          "cobrowseSessionId" : "cobrowseSessionId",
           "initialState" : "alerting",
+          "cobrowseSessionId" : "cobrowseSessionId",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -14962,6 +14966,7 @@ open class UserRecordingsAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -17446,6 +17451,7 @@ open class UserRecordingsAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -17502,8 +17508,8 @@ open class UserRecordingsAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "other" : "{}",
-          "confined" : true,
           "initialState" : "alerting",
+          "confined" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -17556,8 +17562,8 @@ open class UserRecordingsAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "other" : "{}",
-          "confined" : true,
           "initialState" : "alerting",
+          "confined" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -18191,8 +18197,8 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
-          "cobrowseSessionId" : "cobrowseSessionId",
           "initialState" : "alerting",
+          "cobrowseSessionId" : "cobrowseSessionId",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -18223,8 +18229,8 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
-          "cobrowseSessionId" : "cobrowseSessionId",
           "initialState" : "alerting",
+          "cobrowseSessionId" : "cobrowseSessionId",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -20855,6 +20861,7 @@ open class UserRecordingsAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -23339,6 +23346,7 @@ open class UserRecordingsAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -23395,8 +23403,8 @@ open class UserRecordingsAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "other" : "{}",
-          "confined" : true,
           "initialState" : "alerting",
+          "confined" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -23449,8 +23457,8 @@ open class UserRecordingsAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "other" : "{}",
-          "confined" : true,
           "initialState" : "alerting",
+          "confined" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -24152,8 +24160,8 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
-          "cobrowseSessionId" : "cobrowseSessionId",
           "initialState" : "alerting",
+          "cobrowseSessionId" : "cobrowseSessionId",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -24184,8 +24192,8 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
-          "cobrowseSessionId" : "cobrowseSessionId",
           "initialState" : "alerting",
+          "cobrowseSessionId" : "cobrowseSessionId",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -26816,6 +26824,7 @@ open class UserRecordingsAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -29300,6 +29309,7 @@ open class UserRecordingsAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -29356,8 +29366,8 @@ open class UserRecordingsAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "other" : "{}",
-          "confined" : true,
           "initialState" : "alerting",
+          "confined" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -29410,8 +29420,8 @@ open class UserRecordingsAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "other" : "{}",
-          "confined" : true,
           "initialState" : "alerting",
+          "confined" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -30045,8 +30055,8 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
-          "cobrowseSessionId" : "cobrowseSessionId",
           "initialState" : "alerting",
+          "cobrowseSessionId" : "cobrowseSessionId",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -30077,8 +30087,8 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "cobrowseRole" : "cobrowseRole",
-          "cobrowseSessionId" : "cobrowseSessionId",
           "initialState" : "alerting",
+          "cobrowseSessionId" : "cobrowseSessionId",
           "afterCallWorkRequired" : true,
           "viewerUrl" : "viewerUrl",
           "segments" : [ {
@@ -32709,6 +32719,7 @@ open class UserRecordingsAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -35193,6 +35204,7 @@ open class UserRecordingsAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -35249,8 +35261,8 @@ open class UserRecordingsAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "other" : "{}",
-          "confined" : true,
           "initialState" : "alerting",
+          "confined" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -35303,8 +35315,8 @@ open class UserRecordingsAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "other" : "{}",
-          "confined" : true,
           "initialState" : "alerting",
+          "confined" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "recording" : true,
@@ -36122,8 +36134,8 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "cobrowseRole" : "cobrowseRole",
-        "cobrowseSessionId" : "cobrowseSessionId",
         "initialState" : "alerting",
+        "cobrowseSessionId" : "cobrowseSessionId",
         "afterCallWorkRequired" : true,
         "viewerUrl" : "viewerUrl",
         "segments" : [ {
@@ -36154,8 +36166,8 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "cobrowseRole" : "cobrowseRole",
-        "cobrowseSessionId" : "cobrowseSessionId",
         "initialState" : "alerting",
+        "cobrowseSessionId" : "cobrowseSessionId",
         "afterCallWorkRequired" : true,
         "viewerUrl" : "viewerUrl",
         "segments" : [ {
@@ -38786,6 +38798,7 @@ open class UserRecordingsAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -41270,6 +41283,7 @@ open class UserRecordingsAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -41326,8 +41340,8 @@ open class UserRecordingsAPI {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "other" : "{}",
-        "confined" : true,
         "initialState" : "alerting",
+        "confined" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "recording" : true,
@@ -41380,8 +41394,8 @@ open class UserRecordingsAPI {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "other" : "{}",
-        "confined" : true,
         "initialState" : "alerting",
+        "confined" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "recording" : true,
@@ -42015,8 +42029,8 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "cobrowseRole" : "cobrowseRole",
-        "cobrowseSessionId" : "cobrowseSessionId",
         "initialState" : "alerting",
+        "cobrowseSessionId" : "cobrowseSessionId",
         "afterCallWorkRequired" : true,
         "viewerUrl" : "viewerUrl",
         "segments" : [ {
@@ -42047,8 +42061,8 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "cobrowseRole" : "cobrowseRole",
-        "cobrowseSessionId" : "cobrowseSessionId",
         "initialState" : "alerting",
+        "cobrowseSessionId" : "cobrowseSessionId",
         "afterCallWorkRequired" : true,
         "viewerUrl" : "viewerUrl",
         "segments" : [ {
@@ -44679,6 +44693,7 @@ open class UserRecordingsAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -47163,6 +47178,7 @@ open class UserRecordingsAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -47219,8 +47235,8 @@ open class UserRecordingsAPI {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "other" : "{}",
-        "confined" : true,
         "initialState" : "alerting",
+        "confined" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "recording" : true,
@@ -47273,8 +47289,8 @@ open class UserRecordingsAPI {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "other" : "{}",
-        "confined" : true,
         "initialState" : "alerting",
+        "confined" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "recording" : true,

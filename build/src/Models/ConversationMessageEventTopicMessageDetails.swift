@@ -19,6 +19,7 @@ public class ConversationMessageEventTopicMessageDetails: Codable {
         case deliverySuccess = "delivery-success"
         case deliveryFailed = "delivery-failed"
         case read = "read"
+        case removed = "removed"
     }
     public var message: ConversationMessageEventTopicUriReference?
     public var messageTime: Date?

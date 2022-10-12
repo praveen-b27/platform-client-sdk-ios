@@ -1448,6 +1448,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -1889,6 +1890,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -2345,6 +2347,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -2786,6 +2789,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -3310,6 +3314,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -3751,6 +3756,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -4207,6 +4213,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -4648,6 +4655,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -5105,6 +5113,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -5546,6 +5555,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -6002,6 +6012,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -6443,6 +6454,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -6905,6 +6917,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -7346,6 +7359,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -7802,6 +7816,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -8243,6 +8258,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -8708,6 +8724,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -9149,6 +9166,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -9605,6 +9623,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -10046,6 +10065,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -10508,6 +10528,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -10949,6 +10970,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -11405,6 +11427,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -11846,6 +11869,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -13158,6 +13182,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -13599,6 +13624,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -14055,6 +14081,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -14496,6 +14523,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -14965,6 +14993,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -15406,6 +15435,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -15862,6 +15892,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -16303,6 +16334,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -17255,6 +17287,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -17696,6 +17729,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -18152,6 +18186,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -18593,6 +18628,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -19372,6 +19408,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -19813,6 +19850,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -20269,6 +20307,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -20710,6 +20749,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -21167,6 +21207,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -21608,6 +21649,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -22064,6 +22106,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -22505,6 +22548,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -22967,6 +23011,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -23408,6 +23453,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -23864,6 +23910,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -24305,6 +24352,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -24770,6 +24818,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -25211,6 +25260,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -25667,6 +25717,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -26108,6 +26159,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -26570,6 +26622,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -27011,6 +27064,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -27467,6 +27521,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -27908,6 +27963,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -28435,6 +28491,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -28876,6 +28933,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -29332,6 +29390,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -29773,6 +29832,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -30296,6 +30356,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -30737,6 +30798,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -31193,6 +31255,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -31634,6 +31697,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -32103,6 +32167,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -32544,6 +32609,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -33000,6 +33066,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -33441,6 +33508,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -34252,6 +34320,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -34693,6 +34762,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -35149,6 +35219,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -35590,6 +35661,7 @@ open class AuthorizationAPI {
           "enableTranscription" : true,
           "outboundEmailAddress" : {
             "route" : {
+              "signature" : "{}",
               "replyEmailAddress" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "pattern" : "pattern",
@@ -36226,6 +36298,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -36667,6 +36740,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -37123,6 +37197,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -37564,6 +37639,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -38033,6 +38109,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -38474,6 +38551,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -38930,6 +39008,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",
@@ -39371,6 +39450,7 @@ open class AuthorizationAPI {
             "enableTranscription" : true,
             "outboundEmailAddress" : {
               "route" : {
+                "signature" : "{}",
                 "replyEmailAddress" : "{}",
                 "selfUri" : "https://openapi-generator.tech",
                 "pattern" : "pattern",

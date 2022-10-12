@@ -7,7 +7,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deletePresenceSource**](PresenceAPI.html#deletePresenceSource) | Delete a Presence Source |
 | [**deletePresencedefinition**](PresenceAPI.html#deletePresencedefinition) | Delete a Presence Definition |
+| [**getPresenceSource**](PresenceAPI.html#getPresenceSource) | Get a Presence Source |
+| [**getPresenceSources**](PresenceAPI.html#getPresenceSources) | Get a list of Presence Sources |
+| [**getPresenceUserPrimarysource**](PresenceAPI.html#getPresenceUserPrimarysource) | Get a user&#39;s Primary Presence Source |
 | [**getPresencedefinition**](PresenceAPI.html#getPresencedefinition) | Get a Presence Definition |
 | [**getPresencedefinitions**](PresenceAPI.html#getPresencedefinitions) | Get an Organization&#39;s list of Presence Definitions |
 | [**getSystempresences**](PresenceAPI.html#getSystempresences) | Get the list of SystemPresences |
@@ -15,10 +19,65 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserPresencesPurecloud**](PresenceAPI.html#getUserPresencesPurecloud) | Get a user&#39;s Genesys Cloud presence. |
 | [**patchUserPresence**](PresenceAPI.html#patchUserPresence) | Patch a user&#39;s Presence |
 | [**patchUserPresencesPurecloud**](PresenceAPI.html#patchUserPresencesPurecloud) | Patch a Genesys Cloud user&#39;s presence |
+| [**postPresenceSources**](PresenceAPI.html#postPresenceSources) | Create a Presence Source |
 | [**postPresencedefinitions**](PresenceAPI.html#postPresencedefinitions) | Create a Presence Definition |
+| [**putPresenceSource**](PresenceAPI.html#putPresenceSource) | Update a Presence Source |
+| [**putPresenceUserPrimarysource**](PresenceAPI.html#putPresenceUserPrimarysource) | Update a user&#39;s Primary Presence Source |
 | [**putPresencedefinition**](PresenceAPI.html#putPresencedefinition) | Update a Presence Definition |
 | [**putUsersPresencesBulk**](PresenceAPI.html#putUsersPresencesBulk) | Update bulk user Presences |
 {: class="table-striped"}
+
+<a name="deletePresenceSource"></a>
+
+# **deletePresenceSource**
+
+
+
+> Void deletePresenceSource(sourceId)
+
+Delete a Presence Source
+
+
+
+Wraps DELETE /api/v2/presence/sources/{sourceId}  
+
+Requires ANY permissions: 
+
+* presence:source:delete
+* presence:source:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Presence Source ID
+
+// Code example
+PresenceAPI.deletePresenceSource(sourceId: sourceId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PresenceAPI.deletePresenceSource was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Presence Source ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deletePresencedefinition"></a>
 
@@ -70,6 +129,162 @@ PresenceAPI.deletePresencedefinition(presenceId: presenceId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="getPresenceSource"></a>
+
+# **getPresenceSource**
+
+
+
+> [Source](Source.html) getPresenceSource(sourceId)
+
+Get a Presence Source
+
+
+
+Wraps GET /api/v2/presence/sources/{sourceId}  
+
+Requires ALL permissions: 
+
+* presence:source:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Presence Source ID
+
+// Code example
+PresenceAPI.getPresenceSource(sourceId: sourceId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.getPresenceSource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Presence Source ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Source**](Source.html)
+
+<a name="getPresenceSources"></a>
+
+# **getPresenceSources**
+
+
+
+> [SourceEntityListing](SourceEntityListing.html) getPresenceSources(deleted)
+
+Get a list of Presence Sources
+
+
+
+Wraps GET /api/v2/presence/sources  
+
+Requires ALL permissions: 
+
+* presence:source:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let deleted: String = "" // Deleted query can be TRUE or FALSE
+
+// Code example
+PresenceAPI.getPresenceSources(deleted: deleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.getPresenceSources was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deleted** | **String**| Deleted query can be TRUE or FALSE | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SourceEntityListing**](SourceEntityListing.html)
+
+<a name="getPresenceUserPrimarysource"></a>
+
+# **getPresenceUserPrimarysource**
+
+
+
+> [UserPrimarySource](UserPrimarySource.html) getPresenceUserPrimarysource(userId)
+
+Get a user&#39;s Primary Presence Source
+
+
+
+Wraps GET /api/v2/presence/users/{userId}/primarysource  
+
+Requires ALL permissions: 
+
+* presence:userPrimarySource:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user ID
+
+// Code example
+PresenceAPI.getPresenceUserPrimarysource(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.getPresenceUserPrimarysource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserPrimarySource**](UserPrimarySource.html)
 
 <a name="getPresencedefinition"></a>
 
@@ -448,6 +663,58 @@ PresenceAPI.patchUserPresencesPurecloud(userId: userId, body: body) { (response,
 
 [**UserPresence**](UserPresence.html)
 
+<a name="postPresenceSources"></a>
+
+# **postPresenceSources**
+
+
+
+> [Source](Source.html) postPresenceSources(body)
+
+Create a Presence Source
+
+
+
+Wraps POST /api/v2/presence/sources  
+
+Requires ALL permissions: 
+
+* presence:source:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: Source = new Source(...) // The Presence Source to create
+
+// Code example
+PresenceAPI.postPresenceSources(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.postPresenceSources was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**Source**](Source.html)| The Presence Source to create | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Source**](Source.html)
+
 <a name="postPresencedefinitions"></a>
 
 # **postPresencedefinitions**
@@ -499,6 +766,114 @@ PresenceAPI.postPresencedefinitions(body: body) { (response, error) in
 ### Return type
 
 [**OrganizationPresence**](OrganizationPresence.html)
+
+<a name="putPresenceSource"></a>
+
+# **putPresenceSource**
+
+
+
+> [Source](Source.html) putPresenceSource(sourceId, body)
+
+Update a Presence Source
+
+
+
+Wraps PUT /api/v2/presence/sources/{sourceId}  
+
+Requires ALL permissions: 
+
+* presence:source:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Presence Source ID
+let body: Source = new Source(...) // The updated Presence Source
+
+// Code example
+PresenceAPI.putPresenceSource(sourceId: sourceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.putPresenceSource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Presence Source ID | |
+| **body** | [**Source**](Source.html)| The updated Presence Source | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Source**](Source.html)
+
+<a name="putPresenceUserPrimarysource"></a>
+
+# **putPresenceUserPrimarysource**
+
+
+
+> [UserPrimarySource](UserPrimarySource.html) putPresenceUserPrimarysource(userId, body)
+
+Update a user&#39;s Primary Presence Source
+
+
+
+Wraps PUT /api/v2/presence/users/{userId}/primarysource  
+
+Requires ALL permissions: 
+
+* presence:userPrimarySource:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user ID
+let body: UserPrimarySource = new UserPrimarySource(...) // Primary Source
+
+// Code example
+PresenceAPI.putPresenceUserPrimarysource(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.putPresenceUserPrimarysource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user ID | |
+| **body** | [**UserPrimarySource**](UserPrimarySource.html)| Primary Source | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserPrimarySource**](UserPrimarySource.html)
 
 <a name="putPresencedefinition"></a>
 

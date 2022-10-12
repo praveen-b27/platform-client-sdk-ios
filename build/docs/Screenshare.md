@@ -8,6 +8,7 @@ title: Screenshare
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The connection state of this communication. | [optional] |
+| **initialState** | **String** | The initial connection state of this communication. | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **context** | **String** | The room id context (xmpp jid) for the conference session. | [optional] |
 | **sharing** | **Bool** | Indicates whether this participant is sharing their screen. | [optional] |
@@ -22,7 +23,6 @@ title: Screenshare
 | **wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 | **afterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 | **afterCallWorkRequired** | **Bool** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **initialState** | **String** | The initial connection state of this communication. | [optional] |
 {: class="table table-striped"}
 
 

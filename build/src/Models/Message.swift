@@ -16,6 +16,11 @@ public class Message: Codable {
         case connected = "connected"
         case disconnected = "disconnected"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case connected = "connected"
+        case disconnected = "disconnected"
+    }
     public enum Direction: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
@@ -51,13 +56,10 @@ public class Message: Codable {
         case _open = "open"
         case instagram = "instagram"
     }
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case connected = "connected"
-        case disconnected = "disconnected"
-    }
     /** The connection state of this communication. */
     public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
     /** A globally unique identifier for this communication. */
     public var _id: String?
     /** True if this call is held and the person on this side hears silence. */
@@ -109,11 +111,10 @@ public class Message: Codable {
     public var afterCallWorkRequired: Bool?
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
-    /** The initial connection state of this communication. */
-    public var initialState: InitialState?
 
-    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, initialState: InitialState?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         self.state = state
+        self.initialState = initialState
         self._id = _id
         self.held = held
         self.segments = segments
@@ -140,11 +141,11 @@ public class Message: Codable {
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
-        self.initialState = initialState
     }
 
     public enum CodingKeys: String, CodingKey { 
         case state
+        case initialState
         case _id = "id"
         case held
         case segments
@@ -171,7 +172,6 @@ public class Message: Codable {
         case afterCallWork
         case afterCallWorkRequired
         case agentAssistantId
-        case initialState
     }
 
 

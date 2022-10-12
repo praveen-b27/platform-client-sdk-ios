@@ -22,6 +22,8 @@ public class ConversationMessageContent: Codable {
         case mention = "Mention"
         case card = "Card"
         case carousel = "Carousel"
+        case text = "Text"
+        case quickReplyV2 = "QuickReplyV2"
         case unknown = "Unknown"
     }
     /** Type of this content element. */
@@ -42,8 +44,12 @@ public class ConversationMessageContent: Codable {
     public var card: ConversationContentCard?
     /** Carousel content */
     public var carousel: ConversationContentCarousel?
+    /** Text content. */
+    public var text: ConversationContentText?
+    /** Quick reply V2 content. */
+    public var quickReplyV2: ConversationContentQuickReplyV2?
 
-    public init(contentType: ContentType?, location: ConversationContentLocation?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, buttonResponse: ConversationContentButtonResponse?, template: ConversationContentNotificationTemplate?, story: ConversationContentStory?, card: ConversationContentCard?, carousel: ConversationContentCarousel?) {
+    public init(contentType: ContentType?, location: ConversationContentLocation?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, buttonResponse: ConversationContentButtonResponse?, template: ConversationContentNotificationTemplate?, story: ConversationContentStory?, card: ConversationContentCard?, carousel: ConversationContentCarousel?, text: ConversationContentText?, quickReplyV2: ConversationContentQuickReplyV2?) {
         self.contentType = contentType
         self.location = location
         self.attachment = attachment
@@ -53,6 +59,8 @@ public class ConversationMessageContent: Codable {
         self.story = story
         self.card = card
         self.carousel = carousel
+        self.text = text
+        self.quickReplyV2 = quickReplyV2
     }
 
 

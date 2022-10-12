@@ -24,6 +24,19 @@ public class CallBasic: Codable {
         case transmitting = "transmitting"
         case _none = "none"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case converting = "converting"
+        case uploading = "uploading"
+        case transmitting = "transmitting"
+        case _none = "none"
+    }
     public enum Direction: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
@@ -51,21 +64,10 @@ public class CallBasic: Codable {
         case spam = "spam"
         case uncallable = "uncallable"
     }
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case converting = "converting"
-        case uploading = "uploading"
-        case transmitting = "transmitting"
-        case _none = "none"
-    }
     /** The connection state of this communication. */
     public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
     /** A globally unique identifier for this communication. */
     public var _id: String?
     /** The direction of the call */
@@ -121,11 +123,10 @@ public class CallBasic: Codable {
     public var afterCallWorkRequired: Bool?
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
-    /** The initial connection state of this communication. */
-    public var initialState: InitialState?
 
-    public init(state: State?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, initialState: InitialState?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         self.state = state
+        self.initialState = initialState
         self._id = _id
         self.direction = direction
         self.recording = recording
@@ -154,11 +155,11 @@ public class CallBasic: Codable {
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
-        self.initialState = initialState
     }
 
     public enum CodingKeys: String, CodingKey { 
         case state
+        case initialState
         case _id = "id"
         case direction
         case recording
@@ -187,7 +188,6 @@ public class CallBasic: Codable {
         case afterCallWork
         case afterCallWorkRequired
         case agentAssistantId
-        case initialState
     }
 
 

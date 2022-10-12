@@ -22,6 +22,8 @@ public class ConversationMessageMetadataContent: Codable {
         case mention = "Mention"
         case card = "Card"
         case carousel = "Carousel"
+        case text = "Text"
+        case quickReplyV2 = "QuickReplyV2"
         case unknown = "Unknown"
     }
     public enum SubType: String, Codable { 

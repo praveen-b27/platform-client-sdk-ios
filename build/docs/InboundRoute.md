@@ -18,8 +18,9 @@ title: InboundRoute
 | **fromEmail** | **String** | The sender email to use for outgoing replies. | [optional] |
 | **flow** | [**DomainEntityRef**](DomainEntityRef.html) | The flow to use for processing the email. | [optional] |
 | **replyEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) | The route to use for email replies. | [optional] |
-| **autoBcc** | [**[EmailAddress]**](EmailAddress.html) | The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute. | [optional] |
+| **autoBcc** | [**[EmailAddress]**](EmailAddress.html) | The recipients that should be automatically blind copied on outbound emails associated with this InboundRoute. | [optional] |
 | **spamFlow** | [**DomainEntityRef**](DomainEntityRef.html) | The flow to use for processing inbound emails that have been marked as spam. | [optional] |
+| **signature** | [**Signature**](Signature.html) | The configuration for the canned response signature that will be appended to outbound emails sent via this route | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -19,6 +19,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case cancelled = "Cancelled"
     }
     public enum ServiceName: String, Codable { 
+        case agentConfig = "AgentConfig"
         case analyticsReporting = "AnalyticsReporting"
         case architect = "Architect"
         case coaching = "Coaching"

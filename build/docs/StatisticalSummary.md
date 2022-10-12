@@ -18,6 +18,8 @@ title: StatisticalSummary
 | **numerator** | **Double** |  | [optional] |
 | **denominator** | **Double** |  | [optional] |
 | **target** | **Double** |  | [optional] |
+| **p95** | **Int64** |  | [optional] |
+| **p99** | **Int64** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -8,6 +8,7 @@ title: Message
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The connection state of this communication. | [optional] |
+| **initialState** | **String** | The initial connection state of this communication. | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |
 | **segments** | [**[Segment]**](Segment.html) | The time line of the participant&#39;s message, divided into activity segments. | [optional] |
@@ -34,7 +35,6 @@ title: Message
 | **afterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 | **afterCallWorkRequired** | **Bool** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **agentAssistantId** | **String** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
-| **initialState** | **String** | The initial connection state of this communication. | [optional] |
 {: class="table table-striped"}
 
 

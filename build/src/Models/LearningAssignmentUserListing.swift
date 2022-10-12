@@ -20,22 +20,22 @@ public class LearningAssignmentUserListing: Codable {
     /** The total number of users */
     public var unfilteredTotal: Int?
     public var firstUri: String?
+    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
-    public var nextUri: String?
     public var previousUri: String?
     public var pageCount: Int?
 
-    public init(entities: [LearningAssignmentUser]?, pageSize: Int?, pageNumber: Int?, total: Int64?, unfilteredTotal: Int?, firstUri: String?, lastUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
+    public init(entities: [LearningAssignmentUser]?, pageSize: Int?, pageNumber: Int?, total: Int64?, unfilteredTotal: Int?, firstUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.unfilteredTotal = unfilteredTotal
         self.firstUri = firstUri
+        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
-        self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
     }

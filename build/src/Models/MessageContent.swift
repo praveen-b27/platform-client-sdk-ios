@@ -26,6 +26,8 @@ public class MessageContent: Codable {
         case story = "Story"
         case card = "Card"
         case carousel = "Carousel"
+        case text = "Text"
+        case quickReplyV2 = "QuickReplyV2"
     }
     /** Type of this content element. */
     public var contentType: ContentType?
@@ -55,8 +57,12 @@ public class MessageContent: Codable {
     public var card: ContentCard?
     /** Carousel content */
     public var carousel: ContentCarousel?
+    /** Text content. */
+    public var text: ContentText?
+    /** Quick reply V2 content. */
+    public var quickReplyV2: ContentQuickReplyV2?
 
-    public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, buttonResponse: ContentButtonResponse?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?, story: ContentStory?, card: ContentCard?, carousel: ContentCarousel?) {
+    public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, buttonResponse: ContentButtonResponse?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?, story: ContentStory?, card: ContentCard?, carousel: ContentCarousel?, text: ContentText?, quickReplyV2: ContentQuickReplyV2?) {
         self.contentType = contentType
         self.location = location
         self.attachment = attachment
@@ -71,6 +77,8 @@ public class MessageContent: Codable {
         self.story = story
         self.card = card
         self.carousel = carousel
+        self.text = text
+        self.quickReplyV2 = quickReplyV2
     }
 
 

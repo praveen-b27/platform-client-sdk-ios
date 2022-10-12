@@ -25,6 +25,8 @@ public class VoicemailGroupPolicy: Codable {
     public var sendEmailNotifications: Bool?
     /** Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization. */
     public var disableEmailPii: Bool?
+    /** The language preference for the group.  Used for group voicemail transcription */
+    public var languagePreference: String?
     /** How many seconds to ring before rotating to the next member in the group */
     public var rotateCallsSecs: Int?
     /** How many rotations to go through */
@@ -36,12 +38,13 @@ public class VoicemailGroupPolicy: Codable {
     /** The prompt to use when connecting a user to a Group Ring call */
     public var interactiveResponsePromptId: String?
 
-    public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?, interactiveResponsePromptId: String?) {
+    public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, languagePreference: String?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?, interactiveResponsePromptId: String?) {
         self.name = name
         self.group = group
         self.enabled = enabled
         self.sendEmailNotifications = sendEmailNotifications
         self.disableEmailPii = disableEmailPii
+        self.languagePreference = languagePreference
         self.rotateCallsSecs = rotateCallsSecs
         self.stopRingingAfterRotations = stopRingingAfterRotations
         self.overflowGroupId = overflowGroupId

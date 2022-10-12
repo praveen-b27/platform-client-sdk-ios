@@ -315,6 +315,7 @@ open class VoicemailAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "rotateCallsSecs" : 0,
+  "languagePreference" : "languagePreference",
   "disableEmailPii" : true,
   "sendEmailNotifications" : true,
   "name" : "name",
@@ -947,6 +948,7 @@ open class VoicemailAPI {
   "interactiveResponseRequired" : true,
   "disableEmailPii" : true,
   "sendEmailNotifications" : true,
+  "includeEmailTranscriptions" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "enabled" : true,
   "pinConfiguration" : "{}"
@@ -1314,6 +1316,7 @@ open class VoicemailAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "rotateCallsSecs" : 0,
+  "languagePreference" : "languagePreference",
   "disableEmailPii" : true,
   "sendEmailNotifications" : true,
   "name" : "name",
@@ -1864,6 +1867,7 @@ open class VoicemailAPI {
   "interactiveResponseRequired" : true,
   "disableEmailPii" : true,
   "sendEmailNotifications" : true,
+  "includeEmailTranscriptions" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "enabled" : true,
   "pinConfiguration" : "{}"

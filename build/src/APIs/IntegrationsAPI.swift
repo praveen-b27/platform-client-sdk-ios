@@ -332,9 +332,12 @@ open class IntegrationsAPI {
   "advanced" : "{}",
   "credentials" : {
     "key" : {
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
-      "id" : "id"
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "type" : "{}"
     }
   },
   "selfUri" : "https://openapi-generator.tech",
@@ -4410,9 +4413,12 @@ open class IntegrationsAPI {
   "advanced" : "{}",
   "credentials" : {
     "key" : {
+      "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
-      "id" : "id"
+      "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "type" : "{}"
     }
   },
   "selfUri" : "https://openapi-generator.tech",

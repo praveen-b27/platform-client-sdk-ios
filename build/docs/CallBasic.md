@@ -8,6 +8,7 @@ title: CallBasic
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The connection state of this communication. | [optional] |
+| **initialState** | **String** | The initial connection state of this communication. | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **direction** | **String** | The direction of the call | [optional] |
 | **recording** | **Bool** | True if this call is being recorded. | [optional] |
@@ -36,7 +37,6 @@ title: CallBasic
 | **afterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 | **afterCallWorkRequired** | **Bool** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **agentAssistantId** | **String** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
-| **initialState** | **String** | The initial connection state of this communication. | [optional] |
 {: class="table table-striped"}
 
 

@@ -13,6 +13,7 @@ public class ScheduleActivity: Codable {
 
     public enum ExternalActivityType: String, Codable { 
         case coaching = "Coaching"
+        case learning = "Learning"
     }
     /** The start date/time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateStart: Date?

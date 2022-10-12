@@ -258,6 +258,7 @@ open class TextbotsAPI {
     "type" : "Text",
     "content" : [ {
       "template" : "{}",
+      "quickReplyV2" : "{}",
       "quickReply" : "{}",
       "postback" : "{}",
       "buttonResponse" : "{}",
@@ -274,11 +275,13 @@ open class TextbotsAPI {
         "reactionType" : "Like",
         "count" : 0
       } ],
+      "text" : "{}",
       "contentType" : "Attachment",
       "card" : "{}",
       "story" : "{}"
     }, {
       "template" : "{}",
+      "quickReplyV2" : "{}",
       "quickReply" : "{}",
       "postback" : "{}",
       "buttonResponse" : "{}",
@@ -295,6 +298,7 @@ open class TextbotsAPI {
         "reactionType" : "Like",
         "count" : 0
       } ],
+      "text" : "{}",
       "contentType" : "Attachment",
       "card" : "{}",
       "story" : "{}"
@@ -304,6 +308,7 @@ open class TextbotsAPI {
     "type" : "Text",
     "content" : [ {
       "template" : "{}",
+      "quickReplyV2" : "{}",
       "quickReply" : "{}",
       "postback" : "{}",
       "buttonResponse" : "{}",
@@ -320,11 +325,13 @@ open class TextbotsAPI {
         "reactionType" : "Like",
         "count" : 0
       } ],
+      "text" : "{}",
       "contentType" : "Attachment",
       "card" : "{}",
       "story" : "{}"
     }, {
       "template" : "{}",
+      "quickReplyV2" : "{}",
       "quickReply" : "{}",
       "postback" : "{}",
       "buttonResponse" : "{}",
@@ -341,6 +348,7 @@ open class TextbotsAPI {
         "reactionType" : "Like",
         "count" : 0
       } ],
+      "text" : "{}",
       "contentType" : "Attachment",
       "card" : "{}",
       "story" : "{}"

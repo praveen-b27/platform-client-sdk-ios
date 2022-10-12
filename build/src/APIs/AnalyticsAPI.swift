@@ -412,6 +412,7 @@ open class AnalyticsAPI {
       "peerId" : "peerId",
       "remoteNameDisplayable" : "remoteNameDisplayable",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+      "bcc" : [ "bcc", "bcc" ],
       "agentBullseyeRing" : 7,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
@@ -516,6 +517,7 @@ open class AnalyticsAPI {
       "flowInType" : "flowInType",
       "ani" : "ani",
       "direction" : "inbound",
+      "cc" : [ "cc", "cc" ],
       "routingRing" : 6,
       "journeyCustomerSessionId" : "journeyCustomerSessionId",
       "sessionId" : "sessionId",
@@ -613,6 +615,7 @@ open class AnalyticsAPI {
       "peerId" : "peerId",
       "remoteNameDisplayable" : "remoteNameDisplayable",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+      "bcc" : [ "bcc", "bcc" ],
       "agentBullseyeRing" : 7,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
@@ -717,6 +720,7 @@ open class AnalyticsAPI {
       "flowInType" : "flowInType",
       "ani" : "ani",
       "direction" : "inbound",
+      "cc" : [ "cc", "cc" ],
       "routingRing" : 6,
       "journeyCustomerSessionId" : "journeyCustomerSessionId",
       "sessionId" : "sessionId",
@@ -824,6 +828,7 @@ open class AnalyticsAPI {
       "peerId" : "peerId",
       "remoteNameDisplayable" : "remoteNameDisplayable",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+      "bcc" : [ "bcc", "bcc" ],
       "agentBullseyeRing" : 7,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
@@ -928,6 +933,7 @@ open class AnalyticsAPI {
       "flowInType" : "flowInType",
       "ani" : "ani",
       "direction" : "inbound",
+      "cc" : [ "cc", "cc" ],
       "routingRing" : 6,
       "journeyCustomerSessionId" : "journeyCustomerSessionId",
       "sessionId" : "sessionId",
@@ -1025,6 +1031,7 @@ open class AnalyticsAPI {
       "peerId" : "peerId",
       "remoteNameDisplayable" : "remoteNameDisplayable",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+      "bcc" : [ "bcc", "bcc" ],
       "agentBullseyeRing" : 7,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
@@ -1129,6 +1136,7 @@ open class AnalyticsAPI {
       "flowInType" : "flowInType",
       "ani" : "ani",
       "direction" : "inbound",
+      "cc" : [ "cc", "cc" ],
       "routingRing" : 6,
       "journeyCustomerSessionId" : "journeyCustomerSessionId",
       "sessionId" : "sessionId",
@@ -1370,6 +1378,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -1474,6 +1483,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -1571,6 +1581,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -1675,6 +1686,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -1782,6 +1794,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -1886,6 +1899,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -1983,6 +1997,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -2087,6 +2102,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -2275,6 +2291,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -2379,6 +2396,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -2476,6 +2494,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -2580,6 +2599,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -2687,6 +2707,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -2791,6 +2812,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -2888,6 +2910,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -2992,6 +3015,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -3298,6 +3322,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -3402,6 +3427,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -3499,6 +3525,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -3603,6 +3630,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -3713,6 +3741,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -3817,6 +3846,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -3914,6 +3944,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -4018,6 +4049,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -4209,6 +4241,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -4313,6 +4346,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -4410,6 +4444,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -4514,6 +4549,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -4624,6 +4660,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -4728,6 +4765,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -4825,6 +4863,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -4929,6 +4968,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -6410,64 +6450,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -6476,64 +6524,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -6547,64 +6603,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -6613,64 +6677,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -6802,64 +6874,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -6868,64 +6948,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -6939,64 +7027,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -7005,64 +7101,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -7348,6 +7452,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -7452,6 +7557,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -7549,6 +7655,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -7653,6 +7760,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -7760,6 +7868,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -7864,6 +7973,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -7961,6 +8071,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -8065,6 +8176,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -8253,6 +8365,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -8357,6 +8470,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -8454,6 +8568,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -8558,6 +8673,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -8665,6 +8781,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -8769,6 +8886,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -8866,6 +8984,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -8970,6 +9089,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -9209,6 +9329,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -9313,6 +9434,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -9410,6 +9532,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -9514,6 +9637,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -9621,6 +9745,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -9725,6 +9850,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -9822,6 +9948,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -9926,6 +10053,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -10114,6 +10242,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -10218,6 +10347,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -10315,6 +10445,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -10419,6 +10550,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -10526,6 +10658,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -10630,6 +10763,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -10727,6 +10861,7 @@ open class AnalyticsAPI {
         "peerId" : "peerId",
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
+        "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 7,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
@@ -10831,6 +10966,7 @@ open class AnalyticsAPI {
         "flowInType" : "flowInType",
         "ani" : "ani",
         "direction" : "inbound",
+        "cc" : [ "cc", "cc" ],
         "routingRing" : 6,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
@@ -10934,64 +11070,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11000,64 +11144,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11071,64 +11223,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11137,64 +11297,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11259,64 +11427,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11325,64 +11501,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11396,64 +11580,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11462,64 +11654,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11582,17 +11782,19 @@ open class AnalyticsAPI {
     "data" : [ {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -11652,17 +11854,19 @@ open class AnalyticsAPI {
     }, {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -11727,17 +11931,19 @@ open class AnalyticsAPI {
     "data" : [ {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -11797,17 +12003,19 @@ open class AnalyticsAPI {
     }, {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -11925,64 +12133,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -11991,64 +12207,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -12062,64 +12286,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -12128,64 +12360,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -12251,17 +12491,19 @@ open class AnalyticsAPI {
     "data" : [ {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -12321,17 +12563,19 @@ open class AnalyticsAPI {
     }, {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -12396,17 +12640,19 @@ open class AnalyticsAPI {
     "data" : [ {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -12466,17 +12712,19 @@ open class AnalyticsAPI {
     }, {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -12821,64 +13069,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -12887,64 +13143,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -12958,64 +13222,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13024,64 +13296,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13146,64 +13426,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13212,64 +13500,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13283,64 +13579,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13349,64 +13653,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13474,64 +13786,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13540,64 +13860,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13611,64 +13939,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13677,64 +14013,72 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
       } ],
       "views" : [ {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       }, {
         "stats" : {
-          "current" : 7.061401241503109,
-          "min" : 6.027456183070403,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 2.3021358869347655,
-          "countPositive" : 5,
+          "p95" : 7,
           "countNegative" : 5,
-          "ratio" : 9.301444243932576,
           "numerator" : 3.616076749251911,
           "denominator" : 2.027123023002322,
-          "target" : 4.145608029883936
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
         },
         "name" : "name"
       } ]
@@ -13977,17 +14321,19 @@ open class AnalyticsAPI {
     "data" : [ {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -14047,17 +14393,19 @@ open class AnalyticsAPI {
     }, {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -14122,17 +14470,19 @@ open class AnalyticsAPI {
     "data" : [ {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -14192,17 +14542,19 @@ open class AnalyticsAPI {
     }, {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {

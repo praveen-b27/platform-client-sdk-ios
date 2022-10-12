@@ -8,6 +8,7 @@ title: Cobrowsesession
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The connection state of this communication. | [optional] |
+| **initialState** | **String** | The initial connection state of this communication. | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **disconnectType** | **String** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **_self** | [**Address**](Address.html) | Address and name data for a call endpoint. | [optional] |
@@ -25,7 +26,6 @@ title: Cobrowsesession
 | **wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 | **afterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 | **afterCallWorkRequired** | **Bool** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **initialState** | **String** | The initial connection state of this communication. | [optional] |
 {: class="table table-striped"}
 
 

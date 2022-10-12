@@ -48,7 +48,7 @@ open class AuditAPI {
       "name" : "AccessToken",
       "actions" : [ "Create", "Create" ]
     } ],
-    "name" : "AnalyticsReporting"
+    "name" : "AgentConfig"
   }, {
     "entities" : [ {
       "name" : "AccessToken",
@@ -57,7 +57,7 @@ open class AuditAPI {
       "name" : "AccessToken",
       "actions" : [ "Create", "Create" ]
     } ],
-    "name" : "AnalyticsReporting"
+    "name" : "AgentConfig"
   } ]
 }, statusCode=200}]
 
@@ -113,7 +113,7 @@ open class AuditAPI {
       "name" : "AccessToken",
       "actions" : [ "Create", "Create" ]
     } ],
-    "name" : "AnalyticsReporting"
+    "name" : "AgentConfig"
   }, {
     "entities" : [ {
       "name" : "AccessToken",
@@ -122,7 +122,7 @@ open class AuditAPI {
       "name" : "AccessToken",
       "actions" : [ "Create", "Create" ]
     } ],
-    "name" : "AnalyticsReporting"
+    "name" : "AgentConfig"
   } ]
 }, statusCode=200}]
 
@@ -189,7 +189,7 @@ open class AuditAPI {
     "sortOrder" : "ascending",
     "name" : "Timestamp"
   } ],
-  "serviceName" : "AnalyticsReporting",
+  "serviceName" : "AgentConfig",
   "startDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
@@ -264,8 +264,11 @@ open class AuditAPI {
     } ],
     "level" : "USER",
     "entityType" : "AccessToken",
-    "serviceName" : "AnalyticsReporting",
+    "transactionInitiator" : true,
+    "initiatingAction" : "{}",
+    "serviceName" : "AgentConfig",
     "message" : "{}",
+    "application" : "application",
     "context" : {
       "key" : "context"
     },
@@ -273,6 +276,19 @@ open class AuditAPI {
     "action" : "Create",
     "userHomeOrgId" : "userHomeOrgId",
     "id" : "id",
+    "entityChanges" : [ {
+      "entityName" : "entityName",
+      "entityType" : "AccessToken",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "entityName" : "entityName",
+      "entityType" : "AccessToken",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
     "user" : "{}",
     "entity" : "{}",
     "eventDate" : "2000-01-23T04:56:07.000+00:00",
@@ -290,8 +306,11 @@ open class AuditAPI {
     } ],
     "level" : "USER",
     "entityType" : "AccessToken",
-    "serviceName" : "AnalyticsReporting",
+    "transactionInitiator" : true,
+    "initiatingAction" : "{}",
+    "serviceName" : "AgentConfig",
     "message" : "{}",
+    "application" : "application",
     "context" : {
       "key" : "context"
     },
@@ -299,6 +318,19 @@ open class AuditAPI {
     "action" : "Create",
     "userHomeOrgId" : "userHomeOrgId",
     "id" : "id",
+    "entityChanges" : [ {
+      "entityName" : "entityName",
+      "entityType" : "AccessToken",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "entityName" : "entityName",
+      "entityType" : "AccessToken",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
     "user" : "{}",
     "entity" : "{}",
     "eventDate" : "2000-01-23T04:56:07.000+00:00",
@@ -384,7 +416,7 @@ open class AuditAPI {
     "sortOrder" : "ascending",
     "name" : "Timestamp"
   } ],
-  "serviceName" : "AnalyticsReporting",
+  "serviceName" : "AgentConfig",
   "startDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
@@ -454,8 +486,11 @@ open class AuditAPI {
     } ],
     "level" : "USER",
     "entityType" : "AccessToken",
-    "serviceName" : "AnalyticsReporting",
+    "transactionInitiator" : true,
+    "initiatingAction" : "{}",
+    "serviceName" : "AgentConfig",
     "message" : "{}",
+    "application" : "application",
     "context" : {
       "key" : "context"
     },
@@ -463,6 +498,19 @@ open class AuditAPI {
     "action" : "Create",
     "userHomeOrgId" : "userHomeOrgId",
     "id" : "id",
+    "entityChanges" : [ {
+      "entityName" : "entityName",
+      "entityType" : "AccessToken",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "entityName" : "entityName",
+      "entityType" : "AccessToken",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
     "user" : "{}",
     "entity" : "{}",
     "eventDate" : "2000-01-23T04:56:07.000+00:00",
@@ -480,8 +528,11 @@ open class AuditAPI {
     } ],
     "level" : "USER",
     "entityType" : "AccessToken",
-    "serviceName" : "AnalyticsReporting",
+    "transactionInitiator" : true,
+    "initiatingAction" : "{}",
+    "serviceName" : "AgentConfig",
     "message" : "{}",
+    "application" : "application",
     "context" : {
       "key" : "context"
     },
@@ -489,6 +540,19 @@ open class AuditAPI {
     "action" : "Create",
     "userHomeOrgId" : "userHomeOrgId",
     "id" : "id",
+    "entityChanges" : [ {
+      "entityName" : "entityName",
+      "entityType" : "AccessToken",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "entityName" : "entityName",
+      "entityType" : "AccessToken",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
     "user" : "{}",
     "entity" : "{}",
     "eventDate" : "2000-01-23T04:56:07.000+00:00",

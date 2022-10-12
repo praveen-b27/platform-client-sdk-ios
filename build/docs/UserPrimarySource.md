@@ -1,8 +1,7 @@
 ---
-title: IntegrationConfigurationCredential
+title: UserPrimarySource
 ---
-## IntegrationConfigurationCredential
-Configuration credential for the integration
+## UserPrimarySource
 
 ## Properties
 
@@ -10,6 +9,8 @@ Configuration credential for the integration
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
+| **sourceId** | **String** | The id of the source | [optional] |
+| **registered** | **Bool** | Whether or not the source is registered | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

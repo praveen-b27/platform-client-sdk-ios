@@ -22,6 +22,17 @@ public class Cobrowsesession: Codable {
         case scheduled = "scheduled"
         case _none = "none"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case scheduled = "scheduled"
+        case _none = "none"
+    }
     public enum DisconnectType: String, Codable { 
         case endpoint = "endpoint"
         case client = "client"
@@ -38,19 +49,10 @@ public class Cobrowsesession: Codable {
         case spam = "spam"
         case uncallable = "uncallable"
     }
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case scheduled = "scheduled"
-        case _none = "none"
-    }
     /** The connection state of this communication. */
     public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
     /** A globally unique identifier for this communication. */
     public var _id: String?
     /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
@@ -85,11 +87,10 @@ public class Cobrowsesession: Codable {
     public var afterCallWork: AfterCallWork?
     /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
-    /** The initial connection state of this communication. */
-    public var initialState: InitialState?
 
-    public init(state: State?, _id: String?, disconnectType: DisconnectType?, _self: Address?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, providerEventTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, segments: [Segment]?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, initialState: InitialState?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, disconnectType: DisconnectType?, _self: Address?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, providerEventTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, segments: [Segment]?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
         self.state = state
+        self.initialState = initialState
         self._id = _id
         self.disconnectType = disconnectType
         self._self = _self
@@ -107,11 +108,11 @@ public class Cobrowsesession: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
-        self.initialState = initialState
     }
 
     public enum CodingKeys: String, CodingKey { 
         case state
+        case initialState
         case _id = "id"
         case disconnectType
         case _self = "self"
@@ -129,7 +130,6 @@ public class Cobrowsesession: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
-        case initialState
     }
 
 

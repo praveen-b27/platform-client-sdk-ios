@@ -132,6 +132,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "headlessMode" : "{}",
   "languages" : "en-us, de-de",
   "journeyEvents" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -231,6 +232,7 @@ open class WebDeploymentsAPI {
      - examples: [{contentType=application/json, example={
   "total" : 0,
   "entities" : [ {
+    "headlessMode" : "{}",
     "languages" : "en-us, de-de",
     "journeyEvents" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -271,6 +273,7 @@ open class WebDeploymentsAPI {
     "createdUser" : "{}",
     "status" : "Pending"
   }, {
+    "headlessMode" : "{}",
     "languages" : "en-us, de-de",
     "journeyEvents" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -365,6 +368,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "headlessMode" : "{}",
   "languages" : "en-us, de-de",
   "journeyEvents" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -459,6 +463,7 @@ open class WebDeploymentsAPI {
      - examples: [{contentType=application/json, example={
   "total" : 0,
   "entities" : [ {
+    "headlessMode" : "{}",
     "languages" : "en-us, de-de",
     "journeyEvents" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -499,6 +504,7 @@ open class WebDeploymentsAPI {
     "createdUser" : "{}",
     "status" : "Pending"
   }, {
+    "headlessMode" : "{}",
     "languages" : "en-us, de-de",
     "journeyEvents" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -695,9 +701,9 @@ open class WebDeploymentsAPI {
      - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebdeploymentsDeployments(expand: [String]? = nil, completion: @escaping ((_ data: WebDeploymentEntityListing?,_ error: Error?) -> Void)) {
+    open class func getWebdeploymentsDeployments(expand: [String]? = nil, completion: @escaping ((_ data: ExpandableWebDeploymentEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getWebdeploymentsDeploymentsWithRequestBuilder(expand: expand)
-        requestBuilder.execute { (response: Response<WebDeploymentEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<ExpandableWebDeploymentEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -755,9 +761,9 @@ open class WebDeploymentsAPI {
      
      - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional)
 
-     - returns: RequestBuilder<WebDeploymentEntityListing> 
+     - returns: RequestBuilder<ExpandableWebDeploymentEntityListing> 
      */
-    open class func getWebdeploymentsDeploymentsWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<WebDeploymentEntityListing> {        
+    open class func getWebdeploymentsDeploymentsWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<ExpandableWebDeploymentEntityListing> {        
         let path = "/api/v2/webdeployments/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -767,7 +773,7 @@ open class WebDeploymentsAPI {
             "expand": expand
         ])
 
-        let requestBuilder: RequestBuilder<WebDeploymentEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ExpandableWebDeploymentEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -804,6 +810,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "headlessMode" : "{}",
   "languages" : "en-us, de-de",
   "journeyEvents" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -896,6 +903,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "headlessMode" : "{}",
   "languages" : "en-us, de-de",
   "journeyEvents" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -1050,6 +1058,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "headlessMode" : "{}",
   "languages" : "en-us, de-de",
   "journeyEvents" : "{}",
   "selfUri" : "https://openapi-generator.tech",

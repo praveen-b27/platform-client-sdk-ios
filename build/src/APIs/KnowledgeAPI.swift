@@ -5717,7 +5717,7 @@ open class KnowledgeAPI {
      - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postKnowledgeGuestSessionDocumentsSearchSuggestions(sessionId: String, body: KnowledgeDocumentSuggestionRequest? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentSuggestion?,_ error: Error?) -> Void)) {
+    open class func postKnowledgeGuestSessionDocumentsSearchSuggestions(sessionId: String, body: KnowledgeGuestDocumentSuggestionRequest? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentSuggestion?,_ error: Error?) -> Void)) {
         let requestBuilder = postKnowledgeGuestSessionDocumentsSearchSuggestionsWithRequestBuilder(sessionId: sessionId, body: body)
         requestBuilder.execute { (response: Response<KnowledgeGuestDocumentSuggestion>?, error) -> Void in
             do {
@@ -5754,7 +5754,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeGuestDocumentSuggestion> 
      */
-    open class func postKnowledgeGuestSessionDocumentsSearchSuggestionsWithRequestBuilder(sessionId: String, body: KnowledgeDocumentSuggestionRequest? = nil) -> RequestBuilder<KnowledgeGuestDocumentSuggestion> {        
+    open class func postKnowledgeGuestSessionDocumentsSearchSuggestionsWithRequestBuilder(sessionId: String, body: KnowledgeGuestDocumentSuggestionRequest? = nil) -> RequestBuilder<KnowledgeGuestDocumentSuggestion> {        
         var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions"
         let sessionIdPreEscape = "\(sessionId)"
         let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

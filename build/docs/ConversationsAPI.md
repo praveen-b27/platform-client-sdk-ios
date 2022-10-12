@@ -149,6 +149,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsAPI.html#postConversationsEmailMessagesDraftAttachmentsCopy) | Copy attachments from an email message to the current draft. |
 | [**postConversationsEmailParticipantReplace**](ConversationsAPI.html#postConversationsEmailParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsEmails**](ConversationsAPI.html#postConversationsEmails) | Create an email conversation |
+| [**postConversationsEmailsAgentless**](ConversationsAPI.html#postConversationsEmailsAgentless) | Create an email conversation, per API |
 | [**postConversationsFaxes**](ConversationsAPI.html#postConversationsFaxes) | Create Fax Conversation |
 | [**postConversationsKeyconfigurations**](ConversationsAPI.html#postConversationsKeyconfigurations) | Setup configurations for encryption key creation |
 | [**postConversationsKeyconfigurationsValidate**](ConversationsAPI.html#postConversationsKeyconfigurationsValidate) | Validate encryption key configurations without saving it |
@@ -3063,7 +3064,7 @@ ConversationsAPI.getConversationsMessageCommunicationMessagesMediaMediaId(conver
 
 
 
-> [MessageData](MessageData.html) getConversationsMessageDetails(messageId)
+> [MessageData](MessageData.html) getConversationsMessageDetails(messageId, useNormalizedMessage)
 
 Get message
 
@@ -3085,9 +3086,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let messageId: String = "" // messageId
+let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media, stickers)
 
 // Code example
-ConversationsAPI.getConversationsMessageDetails(messageId: messageId) { (response, error) in
+ConversationsAPI.getConversationsMessageDetails(messageId: messageId, useNormalizedMessage: useNormalizedMessage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3103,6 +3105,7 @@ ConversationsAPI.getConversationsMessageDetails(messageId: messageId) { (respons
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageId** | **String**| messageId | |
+| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] |
 {: class="table-striped"}
 
 
@@ -3116,7 +3119,7 @@ ConversationsAPI.getConversationsMessageDetails(messageId: messageId) { (respons
 
 
 
-> [MessageData](MessageData.html) getConversationsMessageMessage(conversationId, messageId)
+> [MessageData](MessageData.html) getConversationsMessageMessage(conversationId, messageId, useNormalizedMessage)
 
 Get conversation message
 
@@ -3139,9 +3142,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let messageId: String = "" // messageId
+let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media, stickers)
 
 // Code example
-ConversationsAPI.getConversationsMessageMessage(conversationId: conversationId, messageId: messageId) { (response, error) in
+ConversationsAPI.getConversationsMessageMessage(conversationId: conversationId, messageId: messageId, useNormalizedMessage: useNormalizedMessage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3158,6 +3162,7 @@ ConversationsAPI.getConversationsMessageMessage(conversationId: conversationId, 
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **messageId** | **String**| messageId | |
+| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] |
 {: class="table-striped"}
 
 
@@ -7773,6 +7778,59 @@ ConversationsAPI.postConversationsEmails(body: body) { (response, error) in
 
 [**EmailConversation**](EmailConversation.html)
 
+<a name="postConversationsEmailsAgentless"></a>
+
+# **postConversationsEmailsAgentless**
+
+
+
+> [AgentlessEmailSendResponseDto](AgentlessEmailSendResponseDto.html) postConversationsEmailsAgentless(body)
+
+Create an email conversation, per API
+
+
+
+Wraps POST /api/v2/conversations/emails/agentless  
+
+Requires ANY permissions: 
+
+* conversation:email:create
+* conversation:agentlessEmail:send
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentlessEmailSendRequestDto = new AgentlessEmailSendRequestDto(...) // Create agentless email request
+
+// Code example
+ConversationsAPI.postConversationsEmailsAgentless(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsEmailsAgentless was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentlessEmailSendRequestDto**](AgentlessEmailSendRequestDto.html)| Create agentless email request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentlessEmailSendResponseDto**](AgentlessEmailSendResponseDto.html)
+
 <a name="postConversationsFaxes"></a>
 
 # **postConversationsFaxes**
@@ -7934,7 +7992,7 @@ ConversationsAPI.postConversationsKeyconfigurationsValidate(body: body) { (respo
 
 
 
-> [MessageData](MessageData.html) postConversationsMessageCommunicationMessages(conversationId, communicationId, body)
+> [MessageData](MessageData.html) postConversationsMessageCommunicationMessages(conversationId, communicationId, body, useNormalizedMessage)
 
 Send message
 
@@ -7960,9 +8018,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let communicationId: String = "" // communicationId
 let body: AdditionalMessage = new AdditionalMessage(...) // Message
+let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media, stickers)
 
 // Code example
-ConversationsAPI.postConversationsMessageCommunicationMessages(conversationId: conversationId, communicationId: communicationId, body: body) { (response, error) in
+ConversationsAPI.postConversationsMessageCommunicationMessages(conversationId: conversationId, communicationId: communicationId, body: body, useNormalizedMessage: useNormalizedMessage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7980,6 +8039,7 @@ ConversationsAPI.postConversationsMessageCommunicationMessages(conversationId: c
 | **conversationId** | **String**| conversationId | |
 | **communicationId** | **String**| communicationId | |
 | **body** | [**AdditionalMessage**](AdditionalMessage.html)| Message | |
+| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] |
 {: class="table-striped"}
 
 
@@ -8050,7 +8110,7 @@ ConversationsAPI.postConversationsMessageCommunicationMessagesMedia(conversation
 
 
 
-> [TextMessageListing](TextMessageListing.html) postConversationsMessageMessagesBulk(conversationId, body)
+> [TextMessageListing](TextMessageListing.html) postConversationsMessageMessagesBulk(conversationId, useNormalizedMessage, body)
 
 Get messages in batch
 
@@ -8074,10 +8134,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // 
+let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media, stickers)
 let body: [String] = [""] // messageIds
 
 // Code example
-ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversationId, body: body) { (response, error) in
+ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversationId, useNormalizedMessage: useNormalizedMessage, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -8093,6 +8154,7 @@ ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversati
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**|  | |
+| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] |
 | **body** | [**[String]**](String.html)| messageIds | [optional] |
 {: class="table-striped"}
 

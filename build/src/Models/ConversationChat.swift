@@ -21,6 +21,16 @@ public class ConversationChat: Codable {
         case terminated = "terminated"
         case _none = "none"
     }
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
     public enum Direction: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
@@ -39,18 +49,10 @@ public class ConversationChat: Codable {
         case uncallable = "uncallable"
         case timeout = "timeout"
     }
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
     /** The connection state of this communication. */
     public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
     /** A globally unique identifier for this communication. */
     public var _id: String?
     /** The room id for the chat. */
@@ -89,11 +91,10 @@ public class ConversationChat: Codable {
     public var afterCallWork: AfterCallWork?
     /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
-    /** The initial connection state of this communication. */
-    public var initialState: InitialState?
 
-    public init(state: State?, _id: String?, roomId: String?, recordingId: String?, segments: [Segment]?, held: Bool?, direction: Direction?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, avatarImageUrl: String?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, initialState: InitialState?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, roomId: String?, recordingId: String?, segments: [Segment]?, held: Bool?, direction: Direction?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, avatarImageUrl: String?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
         self.state = state
+        self.initialState = initialState
         self._id = _id
         self.roomId = roomId
         self.recordingId = recordingId
@@ -113,11 +114,11 @@ public class ConversationChat: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
-        self.initialState = initialState
     }
 
     public enum CodingKeys: String, CodingKey { 
         case state
+        case initialState
         case _id = "id"
         case roomId
         case recordingId
@@ -137,7 +138,6 @@ public class ConversationChat: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
-        case initialState
     }
 
 

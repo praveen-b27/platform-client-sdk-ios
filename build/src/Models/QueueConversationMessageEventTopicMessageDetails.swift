@@ -19,6 +19,7 @@ public class QueueConversationMessageEventTopicMessageDetails: Codable {
         case deliverySuccess = "delivery-success"
         case deliveryFailed = "delivery-failed"
         case read = "read"
+        case removed = "removed"
     }
     public var message: QueueConversationMessageEventTopicUriReference?
     public var messageTime: Date?

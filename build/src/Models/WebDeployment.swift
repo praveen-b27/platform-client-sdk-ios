@@ -25,8 +25,6 @@ public class WebDeployment: Codable {
     public var name: String?
     /** The description of the config */
     public var _description: String?
-    /** The config version this deployment uses */
-    public var configuration: WebDeploymentConfigurationVersion?
     /** Property indicates whether all domains are allowed or not. allowedDomains must be empty when this is set as true. */
     public var allowAllDomains: Bool?
     /** The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use. */
@@ -43,14 +41,15 @@ public class WebDeployment: Codable {
     public var flow: DomainEntityRef?
     /** The current status of the deployment */
     public var status: Status?
+    /** The config version this deployment uses */
+    public var configuration: WebDeploymentConfigurationVersionEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, configuration: WebDeploymentConfigurationVersion?, allowAllDomains: Bool?, allowedDomains: [String]?, snippet: String?, dateCreated: Date?, dateModified: Date?, lastModifiedUser: AddressableEntityRef?, flow: DomainEntityRef?, status: Status?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, allowAllDomains: Bool?, allowedDomains: [String]?, snippet: String?, dateCreated: Date?, dateModified: Date?, lastModifiedUser: AddressableEntityRef?, flow: DomainEntityRef?, status: Status?, configuration: WebDeploymentConfigurationVersionEntityRef?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
-        self.configuration = configuration
         self.allowAllDomains = allowAllDomains
         self.allowedDomains = allowedDomains
         self.snippet = snippet
@@ -59,6 +58,7 @@ public class WebDeployment: Codable {
         self.lastModifiedUser = lastModifiedUser
         self.flow = flow
         self.status = status
+        self.configuration = configuration
         self.selfUri = selfUri
     }
 
@@ -66,7 +66,6 @@ public class WebDeployment: Codable {
         case _id = "id"
         case name
         case _description = "description"
-        case configuration
         case allowAllDomains
         case allowedDomains
         case snippet
@@ -75,6 +74,7 @@ public class WebDeployment: Codable {
         case lastModifiedUser
         case flow
         case status
+        case configuration
         case selfUri
     }
 

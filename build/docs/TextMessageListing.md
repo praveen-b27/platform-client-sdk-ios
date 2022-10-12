@@ -12,9 +12,9 @@ title: TextMessageListing
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
+| **pageCount** | **Int** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-| **pageCount** | **Int** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 {: class="table table-striped"}

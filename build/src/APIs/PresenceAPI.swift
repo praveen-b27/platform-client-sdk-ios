@@ -12,6 +12,50 @@ import Foundation
 open class PresenceAPI {
     
     /**
+     Delete a Presence Source
+     
+     - parameter sourceId: (path) Presence Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deletePresenceSource(sourceId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deletePresenceSourceWithRequestBuilder(sourceId: sourceId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Presence Source
+     - DELETE /api/v2/presence/sources/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter sourceId: (path) Presence Source ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deletePresenceSourceWithRequestBuilder(sourceId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/presence/sources/{sourceId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
      Delete a Presence Definition
      
      - parameter presenceId: (path) Organization Presence ID 
@@ -52,6 +96,193 @@ open class PresenceAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
+     Get a Presence Source
+     
+     - parameter sourceId: (path) Presence Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPresenceSource(sourceId: String, completion: @escaping ((_ data: Source?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceSourceWithRequestBuilder(sourceId: sourceId)
+        requestBuilder.execute { (response: Response<Source>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Presence Source
+     - GET /api/v2/presence/sources/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "type" : "System",
+  "deactivated" : true
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Presence Source ID 
+
+     - returns: RequestBuilder<Source> 
+     */
+    open class func getPresenceSourceWithRequestBuilder(sourceId: String) -> RequestBuilder<Source> {        
+        var path = "/api/v2/presence/sources/{sourceId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Source>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get a list of Presence Sources
+     
+     - parameter deleted: (query) Deleted query can be TRUE or FALSE (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPresenceSources(deleted: String? = nil, completion: @escaping ((_ data: SourceEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceSourcesWithRequestBuilder(deleted: deleted)
+        requestBuilder.execute { (response: Response<SourceEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Presence Sources
+     - GET /api/v2/presence/sources
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "type" : "System",
+    "deactivated" : true
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "type" : "System",
+    "deactivated" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter deleted: (query) Deleted query can be TRUE or FALSE (optional)
+
+     - returns: RequestBuilder<SourceEntityListing> 
+     */
+    open class func getPresenceSourcesWithRequestBuilder(deleted: String? = nil) -> RequestBuilder<SourceEntityListing> {        
+        let path = "/api/v2/presence/sources"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "deleted": deleted
+        ])
+
+        let requestBuilder: RequestBuilder<SourceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get a user's Primary Presence Source
+     
+     - parameter userId: (path) user ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPresenceUserPrimarysource(userId: String, completion: @escaping ((_ data: UserPrimarySource?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceUserPrimarysourceWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<UserPrimarySource>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a user's Primary Presence Source
+     - GET /api/v2/presence/users/{userId}/primarysource
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "registered" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter userId: (path) user ID 
+
+     - returns: RequestBuilder<UserPrimarySource> 
+     */
+    open class func getPresenceUserPrimarysourceWithRequestBuilder(userId: String) -> RequestBuilder<UserPrimarySource> {        
+        var path = "/api/v2/presence/users/{userId}/primarysource"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserPrimarySource>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
     
@@ -2272,6 +2503,62 @@ open class PresenceAPI {
 
     
     /**
+     Create a Presence Source
+     
+     - parameter body: (body) The Presence Source to create 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postPresenceSources(body: Source, completion: @escaping ((_ data: Source?,_ error: Error?) -> Void)) {
+        let requestBuilder = postPresenceSourcesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Source>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a Presence Source
+     - POST /api/v2/presence/sources
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "type" : "System",
+  "deactivated" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) The Presence Source to create 
+
+     - returns: RequestBuilder<Source> 
+     */
+    open class func postPresenceSourcesWithRequestBuilder(body: Source) -> RequestBuilder<Source> {        
+        let path = "/api/v2/presence/sources"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Source>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Create a Presence Definition
      
      - parameter body: (body) The Presence Definition to create 
@@ -2901,6 +3188,129 @@ open class PresenceAPI {
         let requestBuilder: RequestBuilder<OrganizationPresence>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update a Presence Source
+     
+     - parameter sourceId: (path) Presence Source ID 
+     - parameter body: (body) The updated Presence Source 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putPresenceSource(sourceId: String, body: Source, completion: @escaping ((_ data: Source?,_ error: Error?) -> Void)) {
+        let requestBuilder = putPresenceSourceWithRequestBuilder(sourceId: sourceId, body: body)
+        requestBuilder.execute { (response: Response<Source>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a Presence Source
+     - PUT /api/v2/presence/sources/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "type" : "System",
+  "deactivated" : true
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Presence Source ID 
+     - parameter body: (body) The updated Presence Source 
+
+     - returns: RequestBuilder<Source> 
+     */
+    open class func putPresenceSourceWithRequestBuilder(sourceId: String, body: Source) -> RequestBuilder<Source> {        
+        var path = "/api/v2/presence/sources/{sourceId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Source>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update a user's Primary Presence Source
+     
+     - parameter userId: (path) user ID 
+     - parameter body: (body) Primary Source 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putPresenceUserPrimarysource(userId: String, body: UserPrimarySource, completion: @escaping ((_ data: UserPrimarySource?,_ error: Error?) -> Void)) {
+        let requestBuilder = putPresenceUserPrimarysourceWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<UserPrimarySource>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a user's Primary Presence Source
+     - PUT /api/v2/presence/users/{userId}/primarysource
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "sourceId" : "sourceId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "registered" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter userId: (path) user ID 
+     - parameter body: (body) Primary Source 
+
+     - returns: RequestBuilder<UserPrimarySource> 
+     */
+    open class func putPresenceUserPrimarysourceWithRequestBuilder(userId: String, body: UserPrimarySource) -> RequestBuilder<UserPrimarySource> {        
+        var path = "/api/v2/presence/users/{userId}/primarysource"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserPrimarySource>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
     

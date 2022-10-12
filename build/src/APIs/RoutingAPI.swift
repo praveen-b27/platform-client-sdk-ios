@@ -150,6 +150,50 @@ open class RoutingAPI {
 
     
     /**
+     Delete an outbound domain
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingEmailOutboundDomain(domainId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingEmailOutboundDomainWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an outbound domain
+     - DELETE /api/v2/routing/email/outbound/domains/{domainId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingEmailOutboundDomainWithRequestBuilder(domainId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/routing/email/outbound/domains/{domainId}"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
      Delete single predictor.
      
      - parameter predictorId: (path) Predictor ID 
@@ -1286,6 +1330,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "signature" : "{}",
   "replyEmailAddress" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "pattern" : "pattern",
@@ -1381,6 +1426,7 @@ open class RoutingAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "signature" : "{}",
     "replyEmailAddress" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "pattern" : "pattern",
@@ -1410,6 +1456,7 @@ open class RoutingAPI {
     "flow" : "{}",
     "spamFlow" : "{}"
   }, {
+    "signature" : "{}",
     "replyEmailAddress" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "pattern" : "pattern",
@@ -1549,6 +1596,260 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<InboundDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get domain
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailOutboundDomain(domainId: String, completion: @escaping ((_ data: OutboundDomain?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailOutboundDomainWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<OutboundDomain>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get domain
+     - GET /api/v2/routing/email/outbound/domains/{domainId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cnameVerificationResult" : "{}",
+  "dkimVerificationResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "senderType" : "Unknown",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<OutboundDomain> 
+     */
+    open class func getRoutingEmailOutboundDomainWithRequestBuilder(domainId: String) -> RequestBuilder<OutboundDomain> {        
+        var path = "/api/v2/routing/email/outbound/domains/{domainId}"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get activation status (cname + dkim) of an outbound domain
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailOutboundDomainActivation(domainId: String, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailOutboundDomainActivationWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<EmailOutboundDomainResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get activation status (cname + dkim) of an outbound domain
+     - GET /api/v2/routing/email/outbound/domains/{domainId}/activation
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "senderStatus" : "RequestReceived",
+  "domainName" : "domainName",
+  "senderType" : "Unknown",
+  "dnsTxtSendingRecord" : {
+    "recordContents" : "recordContents",
+    "verificationStatus" : "Pending",
+    "host" : "host"
+  },
+  "dnsCnameBounceRecord" : {
+    "recordContents" : "recordContents",
+    "verificationStatus" : "Pending",
+    "host" : "host"
+  }
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<EmailOutboundDomainResult> 
+     */
+    open class func getRoutingEmailOutboundDomainActivationWithRequestBuilder(domainId: String) -> RequestBuilder<EmailOutboundDomainResult> {        
+        var path = "/api/v2/routing/email/outbound/domains/{domainId}/activation"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailOutboundDomainResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Search a domain across organizations
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailOutboundDomainSearch(domainId: String, completion: @escaping ((_ data: OutboundDomain?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailOutboundDomainSearchWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<OutboundDomain>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search a domain across organizations
+     - GET /api/v2/routing/email/outbound/domains/{domainId}/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cnameVerificationResult" : "{}",
+  "dkimVerificationResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "senderType" : "Unknown",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<OutboundDomain> 
+     */
+    open class func getRoutingEmailOutboundDomainSearchWithRequestBuilder(domainId: String) -> RequestBuilder<OutboundDomain> {        
+        var path = "/api/v2/routing/email/outbound/domains/{domainId}/search"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    /**
+     Get outbound domains
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailOutboundDomains(completion: @escaping ((_ data: OutboundDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailOutboundDomainsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<OutboundDomainEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get outbound domains
+     - GET /api/v2/routing/email/outbound/domains
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "cnameVerificationResult" : "{}",
+    "dkimVerificationResult" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "senderType" : "Unknown",
+    "id" : "id"
+  }, {
+    "cnameVerificationResult" : "{}",
+    "dkimVerificationResult" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "senderType" : "Unknown",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<OutboundDomainEntityListing> 
+     */
+    open class func getRoutingEmailOutboundDomainsWithRequestBuilder() -> RequestBuilder<OutboundDomainEntityListing> {        
+        let path = "/api/v2/routing/email/outbound/domains"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutboundDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2466,6 +2767,7 @@ open class RoutingAPI {
   "enableTranscription" : true,
   "outboundEmailAddress" : {
     "route" : {
+      "signature" : "{}",
       "replyEmailAddress" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "pattern" : "pattern",
@@ -4530,6 +4832,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -4681,6 +4984,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -4934,6 +5238,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -5085,6 +5390,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -5321,6 +5627,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -5472,6 +5779,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -5702,6 +6010,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -5853,6 +6162,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -7165,6 +7475,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -7316,6 +7627,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -9482,6 +9794,7 @@ open class RoutingAPI {
   "enableTranscription" : true,
   "outboundEmailAddress" : {
     "route" : {
+      "signature" : "{}",
       "replyEmailAddress" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "pattern" : "pattern",
@@ -9698,6 +10011,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -9849,6 +10163,7 @@ open class RoutingAPI {
     "enableTranscription" : true,
     "outboundEmailAddress" : {
       "route" : {
+        "signature" : "{}",
         "replyEmailAddress" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "pattern" : "pattern",
@@ -10189,17 +10504,19 @@ open class RoutingAPI {
     "data" : [ {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -10259,17 +10576,19 @@ open class RoutingAPI {
     }, {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -10334,17 +10653,19 @@ open class RoutingAPI {
     "data" : [ {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -10404,17 +10725,19 @@ open class RoutingAPI {
     }, {
       "metric" : "metric",
       "stats" : {
-        "current" : 7.061401241503109,
-        "min" : 6.027456183070403,
         "max" : 0.8008281904610115,
         "count" : 1,
         "sum" : 2.3021358869347655,
-        "countPositive" : 5,
+        "p95" : 7,
         "countNegative" : 5,
-        "ratio" : 9.301444243932576,
         "numerator" : 3.616076749251911,
         "denominator" : 2.027123023002322,
-        "target" : 4.145608029883936
+        "target" : 4.145608029883936,
+        "p99" : 1,
+        "current" : 7.061401241503109,
+        "min" : 6.027456183070403,
+        "countPositive" : 5,
+        "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
       "observations" : [ {
@@ -10666,6 +10989,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "signature" : "{}",
   "replyEmailAddress" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "pattern" : "pattern",
@@ -10839,6 +11163,132 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<InboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Create a domain
+     
+     - parameter body: (body) Domain 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingEmailOutboundDomains(body: OutboundDomain, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingEmailOutboundDomainsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EmailOutboundDomainResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a domain
+     - POST /api/v2/routing/email/outbound/domains
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "senderStatus" : "RequestReceived",
+  "domainName" : "domainName",
+  "senderType" : "Unknown",
+  "dnsTxtSendingRecord" : {
+    "recordContents" : "recordContents",
+    "verificationStatus" : "Pending",
+    "host" : "host"
+  },
+  "dnsCnameBounceRecord" : {
+    "recordContents" : "recordContents",
+    "verificationStatus" : "Pending",
+    "host" : "host"
+  }
+}, statusCode=202}]
+     
+     - parameter body: (body) Domain 
+
+     - returns: RequestBuilder<EmailOutboundDomainResult> 
+     */
+    open class func postRoutingEmailOutboundDomainsWithRequestBuilder(body: OutboundDomain) -> RequestBuilder<EmailOutboundDomainResult> {        
+        let path = "/api/v2/routing/email/outbound/domains"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailOutboundDomainResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Create a simulated domain
+     
+     - parameter body: (body) Domain 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingEmailOutboundDomainsSimulated(body: OutboundDomain, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingEmailOutboundDomainsSimulatedWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EmailOutboundDomainResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a simulated domain
+     - POST /api/v2/routing/email/outbound/domains/simulated
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "senderStatus" : "RequestReceived",
+  "domainName" : "domainName",
+  "senderType" : "Unknown",
+  "dnsTxtSendingRecord" : {
+    "recordContents" : "recordContents",
+    "verificationStatus" : "Pending",
+    "host" : "host"
+  },
+  "dnsCnameBounceRecord" : {
+    "recordContents" : "recordContents",
+    "verificationStatus" : "Pending",
+    "host" : "host"
+  }
+}, statusCode=202}]
+     
+     - parameter body: (body) Domain 
+
+     - returns: RequestBuilder<EmailOutboundDomainResult> 
+     */
+    open class func postRoutingEmailOutboundDomainsSimulatedWithRequestBuilder(body: OutboundDomain) -> RequestBuilder<EmailOutboundDomainResult> {        
+        let path = "/api/v2/routing/email/outbound/domains/simulated"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailOutboundDomainResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -11277,6 +11727,7 @@ open class RoutingAPI {
   "enableTranscription" : true,
   "outboundEmailAddress" : {
     "route" : {
+      "signature" : "{}",
       "replyEmailAddress" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "pattern" : "pattern",
@@ -11742,6 +12193,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "signature" : "{}",
   "replyEmailAddress" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "pattern" : "pattern",
@@ -11792,6 +12244,72 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<InboundRoute>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    /**
+     Request an activation status (cname + dkim) update of an outbound domain
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingEmailOutboundDomainActivation(domainId: String, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingEmailOutboundDomainActivationWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<EmailOutboundDomainResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request an activation status (cname + dkim) update of an outbound domain
+     - PUT /api/v2/routing/email/outbound/domains/{domainId}/activation
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "senderStatus" : "RequestReceived",
+  "domainName" : "domainName",
+  "senderType" : "Unknown",
+  "dnsTxtSendingRecord" : {
+    "recordContents" : "recordContents",
+    "verificationStatus" : "Pending",
+    "host" : "host"
+  },
+  "dnsCnameBounceRecord" : {
+    "recordContents" : "recordContents",
+    "verificationStatus" : "Pending",
+    "host" : "host"
+  }
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<EmailOutboundDomainResult> 
+     */
+    open class func putRoutingEmailOutboundDomainActivationWithRequestBuilder(domainId: String) -> RequestBuilder<EmailOutboundDomainResult> {        
+        var path = "/api/v2/routing/email/outbound/domains/{domainId}/activation"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailOutboundDomainResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -12005,6 +12523,7 @@ open class RoutingAPI {
   "enableTranscription" : true,
   "outboundEmailAddress" : {
     "route" : {
+      "signature" : "{}",
       "replyEmailAddress" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "pattern" : "pattern",

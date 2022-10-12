@@ -3220,7 +3220,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let sessionId: String = "" // Knowledge guest session ID.
-let body: KnowledgeDocumentSuggestionRequest = new KnowledgeDocumentSuggestionRequest(...) // 
+let body: KnowledgeGuestDocumentSuggestionRequest = new KnowledgeGuestDocumentSuggestionRequest(...) // 
 
 // Code example
 KnowledgeAPI.postKnowledgeGuestSessionDocumentsSearchSuggestions(sessionId: sessionId, body: body) { (response, error) in
@@ -3239,7 +3239,7 @@ KnowledgeAPI.postKnowledgeGuestSessionDocumentsSearchSuggestions(sessionId: sess
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sessionId** | **String**| Knowledge guest session ID. | |
-| **body** | [**KnowledgeDocumentSuggestionRequest**](KnowledgeDocumentSuggestionRequest.html)|  | [optional] |
+| **body** | [**KnowledgeGuestDocumentSuggestionRequest**](KnowledgeGuestDocumentSuggestionRequest.html)|  | [optional] |
 {: class="table-striped"}
 
 

@@ -448,7 +448,7 @@ WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations(deploymentId: deploy
 
 
 
-> [WebDeploymentEntityListing](WebDeploymentEntityListing.html) getWebdeploymentsDeployments(expand)
+> [ExpandableWebDeploymentEntityListing](ExpandableWebDeploymentEntityListing.html) getWebdeploymentsDeployments(expand)
 
 Get deployments
 
@@ -492,7 +492,7 @@ WebDeploymentsAPI.getWebdeploymentsDeployments(expand: expand) { (response, erro
 
 ### Return type
 
-[**WebDeploymentEntityListing**](WebDeploymentEntityListing.html)
+[**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing.html)
 
 <a name="postWebdeploymentsConfigurationVersionsDraftPublish"></a>
 

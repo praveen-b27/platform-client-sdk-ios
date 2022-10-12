@@ -15,6 +15,7 @@ public class PostTextMessage: Codable {
         case text = "Text"
         case structured = "Structured"
         case receipt = "Receipt"
+        case message = "Message"
     }
     /** Message type */
     public var type: ModelType?

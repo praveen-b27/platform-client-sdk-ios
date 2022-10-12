@@ -17,6 +17,7 @@ public class WebMessagingAttachment: Codable {
         case video = "Video"
         case audio = "Audio"
         case file = "File"
+        case link = "Link"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

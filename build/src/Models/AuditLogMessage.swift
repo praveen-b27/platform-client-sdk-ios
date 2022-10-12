@@ -12,6 +12,7 @@ import Foundation
 public class AuditLogMessage: Codable {
 
     public enum ServiceName: String, Codable { 
+        case agentConfig = "AgentConfig"
         case analyticsReporting = "AnalyticsReporting"
         case architect = "Architect"
         case coaching = "Coaching"
@@ -182,11 +183,13 @@ public class AuditLogMessage: Codable {
         case conversationThreadingWindow = "ConversationThreadingWindow"
         case credential = "Credential"
         case dashboardSettings = "DashboardSettings"
+        case defaultPanelSettings = "DefaultPanelSettings"
         case dependencyTrackingBuild = "DependencyTrackingBuild"
         case deployment = "Deployment"
         case did = "DID"
         case didpool = "DIDPool"
         case digitalRuleSet = "DigitalRuleSet"
+        case directoryGroup = "DirectoryGroup"
         case dnclist = "DNCList"
         case document = "Document"
         case dynamicGroup = "DynamicGroup"
@@ -215,6 +218,7 @@ public class AuditLogMessage: Codable {
         case flowMilestone = "FlowMilestone"
         case flowOutcome = "FlowOutcome"
         case forecast = "Forecast"
+        case gdprRequest = "GdprRequest"
         case historicalData = "HistoricalData"
         case insightSettings = "InsightSettings"
         case integration = "Integration"
@@ -223,6 +227,7 @@ public class AuditLogMessage: Codable {
         case knowledgeCategory = "KnowledgeCategory"
         case knowledgeDocument = "KnowledgeDocument"
         case knowledgeDocumentVariation = "KnowledgeDocumentVariation"
+        case knowledgeLabel = "KnowledgeLabel"
         case knowledgeSearchFeedback = "KnowledgeSearchFeedback"
         case knowledgeTraining = "KnowledgeTraining"
         case line = "Line"
@@ -286,6 +291,7 @@ public class AuditLogMessage: Codable {
         case sessionType = "SessionType"
         case shiftTrade = "ShiftTrade"
         case site = "Site"
+        case skillsGroup = "SkillsGroup"
         case speechTextAnalyticsSettings = "SpeechTextAnalyticsSettings"
         case status = "Status"
         case supportedContent = "SupportedContent"
@@ -347,12 +353,20 @@ public class AuditLogMessage: Codable {
     public var entityType: EntityType?
     /** Status of the event being audited */
     public var status: Status?
+    /** Name of the application used to perform the audit's action */
+    public var application: String?
+    /** Id and action of the audit initiating the transaction */
+    public var initiatingAction: InitiatingAction?
+    /** Whether the current audit is the initiator of the transaction */
+    public var transactionInitiator: Bool?
     /** List of properties that were changed and changes made to those properties. */
     public var propertyChanges: [PropertyChange]?
     /** Additional context for this message. */
     public var context: [String:String]?
+    /** List of entities that were changed and changes made to those entities. */
+    public var entityChanges: [EntityChange]?
 
-    public init(_id: String?, userHomeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, level: Level?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, status: Status?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
+    public init(_id: String?, userHomeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, level: Level?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, status: Status?, application: String?, initiatingAction: InitiatingAction?, transactionInitiator: Bool?, propertyChanges: [PropertyChange]?, context: [String:String]?, entityChanges: [EntityChange]?) {
         self._id = _id
         self.userHomeOrgId = userHomeOrgId
         self.user = user
@@ -366,8 +380,12 @@ public class AuditLogMessage: Codable {
         self.entity = entity
         self.entityType = entityType
         self.status = status
+        self.application = application
+        self.initiatingAction = initiatingAction
+        self.transactionInitiator = transactionInitiator
         self.propertyChanges = propertyChanges
         self.context = context
+        self.entityChanges = entityChanges
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -384,8 +402,12 @@ public class AuditLogMessage: Codable {
         case entity
         case entityType
         case status
+        case application
+        case initiatingAction
+        case transactionInitiator
         case propertyChanges
         case context
+        case entityChanges
     }
 
 

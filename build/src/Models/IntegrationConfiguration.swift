@@ -25,11 +25,11 @@ public class IntegrationConfiguration: Codable {
     /** Notes about the integration. */
     public var notes: String?
     /** Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type */
-    public var credentials: [String:IntegrationConfigurationCredential]?
+    public var credentials: [String:CredentialInfo]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, properties: JSON?, advanced: JSON?, notes: String?, credentials: [String:IntegrationConfigurationCredential]?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, properties: JSON?, advanced: JSON?, notes: String?, credentials: [String:CredentialInfo]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.version = version

@@ -12,6 +12,7 @@ import Foundation
 public class AuditQueryService: Codable {
 
     public enum Name: String, Codable { 
+        case agentConfig = "AgentConfig"
         case analyticsReporting = "AnalyticsReporting"
         case architect = "Architect"
         case coaching = "Coaching"

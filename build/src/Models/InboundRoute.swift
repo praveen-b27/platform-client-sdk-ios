@@ -32,14 +32,16 @@ public class InboundRoute: Codable {
     public var flow: DomainEntityRef?
     /** The route to use for email replies. */
     public var replyEmailAddress: QueueEmailAddress?
-    /** The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute. */
+    /** The recipients that should be automatically blind copied on outbound emails associated with this InboundRoute. */
     public var autoBcc: [EmailAddress]?
     /** The flow to use for processing inbound emails that have been marked as spam. */
     public var spamFlow: DomainEntityRef?
+    /** The configuration for the canned response signature that will be appended to outbound emails sent via this route */
+    public var signature: Signature?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, selfUri: String?) {
+    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, signature: Signature?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.pattern = pattern
@@ -53,6 +55,7 @@ public class InboundRoute: Codable {
         self.replyEmailAddress = replyEmailAddress
         self.autoBcc = autoBcc
         self.spamFlow = spamFlow
+        self.signature = signature
         self.selfUri = selfUri
     }
 
@@ -70,6 +73,7 @@ public class InboundRoute: Codable {
         case replyEmailAddress
         case autoBcc
         case spamFlow
+        case signature
         case selfUri
     }
 

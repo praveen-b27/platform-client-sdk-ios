@@ -25,6 +25,8 @@ public class WebDeploymentConfigurationVersion: Codable {
     public var name: String?
     /** The version of the configuration */
     public var version: String?
+    /** Headless Mode Support which Controls UI components. When enabled, native UI components will be disabled and allows for custom-built UI. */
+    public var headlessMode: WebDeploymentHeadlessMode?
     /** The description of the configuration */
     public var _description: String?
     /** A list of languages supported on the configuration required if the messenger is enabled */
@@ -62,10 +64,11 @@ public class WebDeploymentConfigurationVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: String?, _description: String?, languages: [String]?, defaultLanguage: String?, customI18nLabels: [CustomI18nLabels]?, messenger: MessengerSettings?, position: PositionSettings?, supportCenter: SupportCenterSettings?, cobrowse: CobrowseSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: String?, headlessMode: WebDeploymentHeadlessMode?, _description: String?, languages: [String]?, defaultLanguage: String?, customI18nLabels: [CustomI18nLabels]?, messenger: MessengerSettings?, position: PositionSettings?, supportCenter: SupportCenterSettings?, cobrowse: CobrowseSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.version = version
+        self.headlessMode = headlessMode
         self._description = _description
         self.languages = languages
         self.defaultLanguage = defaultLanguage
@@ -90,6 +93,7 @@ public class WebDeploymentConfigurationVersion: Codable {
         case _id = "id"
         case name
         case version
+        case headlessMode
         case _description = "description"
         case languages
         case defaultLanguage

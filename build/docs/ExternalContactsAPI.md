@@ -15,8 +15,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteExternalcontactsOrganizationTrustor**](ExternalContactsAPI.html#deleteExternalcontactsOrganizationTrustor) | Unlink the Trustor for this External Organization |
 | [**deleteExternalcontactsRelationship**](ExternalContactsAPI.html#deleteExternalcontactsRelationship) | Delete a relationship |
 | [**getExternalcontactsContact**](ExternalContactsAPI.html#getExternalcontactsContact) | Fetch an external contact |
+| [**getExternalcontactsContactIdentifiers**](ExternalContactsAPI.html#getExternalcontactsContactIdentifiers) | List the identifiers for a contact |
 | [**getExternalcontactsContactNote**](ExternalContactsAPI.html#getExternalcontactsContactNote) | Fetch a note for an external contact |
 | [**getExternalcontactsContactNotes**](ExternalContactsAPI.html#getExternalcontactsContactNotes) | List notes for an external contact |
+| [**getExternalcontactsContactUnresolved**](ExternalContactsAPI.html#getExternalcontactsContactUnresolved) | Fetch an unresolved external contact |
 | [**getExternalcontactsContacts**](ExternalContactsAPI.html#getExternalcontactsContacts) | Search for external contacts |
 | [**getExternalcontactsContactsSchema**](ExternalContactsAPI.html#getExternalcontactsContactsSchema) | Get a schema |
 | [**getExternalcontactsContactsSchemaVersion**](ExternalContactsAPI.html#getExternalcontactsContactsSchemaVersion) | Get a specific version of a schema |
@@ -38,9 +40,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsScanNotes**](ExternalContactsAPI.html#getExternalcontactsScanNotes) | Scan for notes using paging |
 | [**getExternalcontactsScanOrganizations**](ExternalContactsAPI.html#getExternalcontactsScanOrganizations) | Scan for external organizations using paging |
 | [**getExternalcontactsScanRelationships**](ExternalContactsAPI.html#getExternalcontactsScanRelationships) | Scan for relationships |
+| [**patchExternalcontactsContactIdentifiers**](ExternalContactsAPI.html#patchExternalcontactsContactIdentifiers) | Claim or release identifiers for a contact |
 | [**postExternalcontactsBulkContacts**](ExternalContactsAPI.html#postExternalcontactsBulkContacts) | Bulk fetch contacts |
 | [**postExternalcontactsBulkContactsAdd**](ExternalContactsAPI.html#postExternalcontactsBulkContactsAdd) | Bulk add contacts |
 | [**postExternalcontactsBulkContactsRemove**](ExternalContactsAPI.html#postExternalcontactsBulkContactsRemove) | Bulk remove contacts |
+| [**postExternalcontactsBulkContactsUnresolved**](ExternalContactsAPI.html#postExternalcontactsBulkContactsUnresolved) | Bulk fetch unresolved ancestor contacts |
 | [**postExternalcontactsBulkContactsUpdate**](ExternalContactsAPI.html#postExternalcontactsBulkContactsUpdate) | Bulk update contacts |
 | [**postExternalcontactsBulkNotes**](ExternalContactsAPI.html#postExternalcontactsBulkNotes) | Bulk fetch notes |
 | [**postExternalcontactsBulkNotesAdd**](ExternalContactsAPI.html#postExternalcontactsBulkNotesAdd) | Bulk add notes |
@@ -55,8 +59,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsBulkRelationshipsRemove**](ExternalContactsAPI.html#postExternalcontactsBulkRelationshipsRemove) | Bulk remove relationships |
 | [**postExternalcontactsBulkRelationshipsUpdate**](ExternalContactsAPI.html#postExternalcontactsBulkRelationshipsUpdate) | Bulk update relationships |
 | [**postExternalcontactsContactNotes**](ExternalContactsAPI.html#postExternalcontactsContactNotes) | Create a note for an external contact |
+| [**postExternalcontactsContactPromotion**](ExternalContactsAPI.html#postExternalcontactsContactPromotion) | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**postExternalcontactsContacts**](ExternalContactsAPI.html#postExternalcontactsContacts) | Create an external contact |
 | [**postExternalcontactsContactsSchemas**](ExternalContactsAPI.html#postExternalcontactsContactsSchemas) | Create a schema |
+| [**postExternalcontactsIdentifierlookup**](ExternalContactsAPI.html#postExternalcontactsIdentifierlookup) | Fetch a contact using an identifier type and value. |
+| [**postExternalcontactsMergeContacts**](ExternalContactsAPI.html#postExternalcontactsMergeContacts) | Merge two contacts into a new contact record |
 | [**postExternalcontactsOrganizationNotes**](ExternalContactsAPI.html#postExternalcontactsOrganizationNotes) | Create a note for an external organization |
 | [**postExternalcontactsOrganizations**](ExternalContactsAPI.html#postExternalcontactsOrganizations) | Create an external organization |
 | [**postExternalcontactsOrganizationsSchemas**](ExternalContactsAPI.html#postExternalcontactsOrganizationsSchemas) | Create a schema |
@@ -493,6 +500,58 @@ ExternalContactsAPI.getExternalcontactsContact(contactId: contactId, expand: exp
 
 [**ExternalContact**](ExternalContact.html)
 
+<a name="getExternalcontactsContactIdentifiers"></a>
+
+# **getExternalcontactsContactIdentifiers**
+
+
+
+> [EntityListing](EntityListing.html) getExternalcontactsContactIdentifiers(contactId)
+
+List the identifiers for a contact
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/{contactId}/identifiers  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactIdentifiers(contactId: contactId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactIdentifiers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
+
 <a name="getExternalcontactsContactNote"></a>
 
 # **getExternalcontactsContactNote**
@@ -608,6 +667,60 @@ ExternalContactsAPI.getExternalcontactsContactNotes(contactId: contactId, pageSi
 ### Return type
 
 [**NoteListing**](NoteListing.html)
+
+<a name="getExternalcontactsContactUnresolved"></a>
+
+# **getExternalcontactsContactUnresolved**
+
+
+
+> [ExternalContact](ExternalContact.html) getExternalcontactsContactUnresolved(contactId, expand)
+
+Fetch an unresolved external contact
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/{contactId}/unresolved  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let expand: [String] = [""] // which fields, if any, to expand (externalOrganization,externalDataSources)
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactUnresolved(contactId: contactId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactUnresolved was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **expand** | [**[String]**](String.html)| which fields, if any, to expand (externalOrganization,externalDataSources) | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalContact**](ExternalContact.html)
 
 <a name="getExternalcontactsContacts"></a>
 
@@ -1767,6 +1880,60 @@ ExternalContactsAPI.getExternalcontactsScanRelationships(limit: limit, cursor: c
 
 [**CursorRelationshipListing**](CursorRelationshipListing.html)
 
+<a name="patchExternalcontactsContactIdentifiers"></a>
+
+# **patchExternalcontactsContactIdentifiers**
+
+
+
+> [ContactIdentifier](ContactIdentifier.html) patchExternalcontactsContactIdentifiers(contactId, body)
+
+Claim or release identifiers for a contact
+
+
+
+Wraps PATCH /api/v2/externalcontacts/contacts/{contactId}/identifiers  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let body: IdentifierClaimRequest = new IdentifierClaimRequest(...) // ClaimRequest
+
+// Code example
+ExternalContactsAPI.patchExternalcontactsContactIdentifiers(contactId: contactId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.patchExternalcontactsContactIdentifiers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **body** | [**IdentifierClaimRequest**](IdentifierClaimRequest.html)| ClaimRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactIdentifier**](ContactIdentifier.html)
+
 <a name="postExternalcontactsBulkContacts"></a>
 
 # **postExternalcontactsBulkContacts**
@@ -1922,6 +2089,58 @@ ExternalContactsAPI.postExternalcontactsBulkContactsRemove(body: body) { (respon
 ### Return type
 
 [**BulkDeleteResponse**](BulkDeleteResponse.html)
+
+<a name="postExternalcontactsBulkContactsUnresolved"></a>
+
+# **postExternalcontactsBulkContactsUnresolved**
+
+
+
+> [BulkFetchContactsResponse](BulkFetchContactsResponse.html) postExternalcontactsBulkContactsUnresolved(body)
+
+Bulk fetch unresolved ancestor contacts
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/contacts/unresolved  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkIdsRequest = new BulkIdsRequest(...) // Contact ids
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkContactsUnresolved(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkContactsUnresolved was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Contact ids | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkFetchContactsResponse**](BulkFetchContactsResponse.html)
 
 <a name="postExternalcontactsBulkContactsUpdate"></a>
 
@@ -2661,6 +2880,58 @@ ExternalContactsAPI.postExternalcontactsContactNotes(contactId: contactId, body:
 
 [**Note**](Note.html)
 
+<a name="postExternalcontactsContactPromotion"></a>
+
+# **postExternalcontactsContactPromotion**
+
+
+
+> [ExternalContact](ExternalContact.html) postExternalcontactsContactPromotion(contactId)
+
+Promote an observed contact (ephemeral or identified) to a curated contact
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/{contactId}/promotion  
+
+Requires ANY permissions: 
+
+* externalContacts:identity:promote
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+
+// Code example
+ExternalContactsAPI.postExternalcontactsContactPromotion(contactId: contactId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsContactPromotion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalContact**](ExternalContact.html)
+
 <a name="postExternalcontactsContacts"></a>
 
 # **postExternalcontactsContacts**
@@ -2764,6 +3035,114 @@ ExternalContactsAPI.postExternalcontactsContactsSchemas(body: body) { (response,
 ### Return type
 
 [**DataSchema**](DataSchema.html)
+
+<a name="postExternalcontactsIdentifierlookup"></a>
+
+# **postExternalcontactsIdentifierlookup**
+
+
+
+> [ExternalContact](ExternalContact.html) postExternalcontactsIdentifierlookup(identifier)
+
+Fetch a contact using an identifier type and value.
+
+Phone number identifier values must be provided with the country code and a leading &#39;+&#39; symbol. Example: \&quot;+1 704 298 4733\&quot;
+
+
+
+Wraps POST /api/v2/externalcontacts/identifierlookup  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+* relate:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let identifier: ContactIdentifier = new ContactIdentifier(...) // 
+
+// Code example
+ExternalContactsAPI.postExternalcontactsIdentifierlookup(identifier: identifier) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsIdentifierlookup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **identifier** | [**ContactIdentifier**](ContactIdentifier.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalContact**](ExternalContact.html)
+
+<a name="postExternalcontactsMergeContacts"></a>
+
+# **postExternalcontactsMergeContacts**
+
+
+
+> [ExternalContact](ExternalContact.html) postExternalcontactsMergeContacts(body)
+
+Merge two contacts into a new contact record
+
+
+
+Wraps POST /api/v2/externalcontacts/merge/contacts  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+* externalContacts:identity:merge
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: MergeRequest = new MergeRequest(...) // MergeRequest
+
+// Code example
+ExternalContactsAPI.postExternalcontactsMergeContacts(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsMergeContacts was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**MergeRequest**](MergeRequest.html)| MergeRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExternalContact**](ExternalContact.html)
 
 <a name="postExternalcontactsOrganizationNotes"></a>
 

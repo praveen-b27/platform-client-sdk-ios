@@ -19,6 +19,7 @@ public class QueueConversationEventTopicMessageDetails: Codable {
         case deliverySuccess = "delivery-success"
         case deliveryFailed = "delivery-failed"
         case read = "read"
+        case removed = "removed"
     }
     /** UUID identifying the message media. */
     public var messageId: String?

@@ -43,6 +43,8 @@ public class MessagingCampaign: Codable {
     public var contactSorts: [ContactSort]?
     /** How many messages this messaging campaign will send per minute. */
     public var messagesPerMinute: Int?
+    /** Rule Sets to be applied while this campaign is sending messages */
+    public var ruleSets: [DomainEntityRef]?
     /** The contact list filter to check before sending a message for this messaging campaign. */
     public var contactListFilters: [DomainEntityRef]?
     /** A list of current error conditions associated with this messaging campaign. */
@@ -54,7 +56,7 @@ public class MessagingCampaign: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, contactListFilters: [DomainEntityRef]?, errors: [RestErrorDetail]?, emailConfig: EmailConfig?, smsConfig: SmsConfig?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, ruleSets: [DomainEntityRef]?, contactListFilters: [DomainEntityRef]?, errors: [RestErrorDetail]?, emailConfig: EmailConfig?, smsConfig: SmsConfig?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -68,6 +70,7 @@ public class MessagingCampaign: Codable {
         self.alwaysRunning = alwaysRunning
         self.contactSorts = contactSorts
         self.messagesPerMinute = messagesPerMinute
+        self.ruleSets = ruleSets
         self.contactListFilters = contactListFilters
         self.errors = errors
         self.emailConfig = emailConfig
@@ -89,6 +92,7 @@ public class MessagingCampaign: Codable {
         case alwaysRunning
         case contactSorts
         case messagesPerMinute
+        case ruleSets
         case contactListFilters
         case errors
         case emailConfig

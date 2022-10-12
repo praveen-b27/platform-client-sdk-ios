@@ -11,6 +11,7 @@ Details about the configuration version of a Web Deployment
 | **_id** | **String** | The configuration version ID | [optional] |
 | **name** | **String** | The configuration version name | |
 | **version** | **String** | The version of the configuration | [optional] |
+| **headlessMode** | [**WebDeploymentHeadlessMode**](WebDeploymentHeadlessMode.html) | Headless Mode Support which Controls UI components. When enabled, native UI components will be disabled and allows for custom-built UI. | [optional] |
 | **_description** | **String** | The description of the configuration | [optional] |
 | **languages** | **[String]** | A list of languages supported on the configuration required if the messenger is enabled | [optional] |
 | **defaultLanguage** | **String** | The default language to use for the configuration required if the messenger is enabled | [optional] |

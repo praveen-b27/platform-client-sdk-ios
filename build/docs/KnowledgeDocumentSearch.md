@@ -14,6 +14,7 @@ title: KnowledgeDocumentSearch
 | **total** | **Int** | The total number of documents matching the query. | [optional] |
 | **pageCount** | **Int** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
 | **results** | [**[KnowledgeDocumentSearchResult]**](KnowledgeDocumentSearchResult.html) | Documents matching the search query. | [optional] |
+| **application** | [**KnowledgeSearchClientApplication**](KnowledgeSearchClientApplication.html) | The client application details from which search happened. | [optional] |
 {: class="table table-striped"}
 
 

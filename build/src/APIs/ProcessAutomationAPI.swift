@@ -56,7 +56,7 @@ open class ProcessAutomationAPI {
 
     
     /**
-     Retrieve a single Trigger matching id.
+     Retrieve a single Trigger matching id
      
      - parameter triggerId: (path) triggerId 
      - parameter completion: completion handler to receive the data and the error objects
@@ -80,7 +80,7 @@ open class ProcessAutomationAPI {
     }
 
     /**
-     Retrieve a single Trigger matching id.
+     Retrieve a single Trigger matching id
      - GET /api/v2/processautomation/triggers/{triggerId}
      - OAuth:
        - type: oauth2
@@ -133,12 +133,12 @@ open class ProcessAutomationAPI {
     
     
     /**
-     Retrieves all triggers
+     Retrieves all triggers, optionally filtered by query parameters.
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
-     - parameter topicName: (query) Topic name (optional)
+     - parameter topicName: (query) Topic name(s). Separated by commas (optional)
      - parameter enabled: (query) Boolean indicating desired enabled state of triggers (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -161,7 +161,7 @@ open class ProcessAutomationAPI {
     }
 
     /**
-     Retrieves all triggers
+     Retrieves all triggers, optionally filtered by query parameters.
      - GET /api/v2/processautomation/triggers
      - OAuth:
        - type: oauth2
@@ -218,7 +218,7 @@ open class ProcessAutomationAPI {
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
-     - parameter topicName: (query) Topic name (optional)
+     - parameter topicName: (query) Topic name(s). Separated by commas (optional)
      - parameter enabled: (query) Boolean indicating desired enabled state of triggers (optional)
 
      - returns: RequestBuilder<TriggerEntityListing> 

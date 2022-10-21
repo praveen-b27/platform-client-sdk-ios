@@ -55,6 +55,56 @@ open class TeamsAPI {
     }
 
     
+    
+    /**
+     Delete team members
+     
+     - parameter teamId: (path) Team ID 
+     - parameter _id: (query) Comma separated list of member ids to remove 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteTeamMembers(teamId: String, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteTeamMembersWithRequestBuilder(teamId: teamId, _id: _id)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete team members
+     - DELETE /api/v2/teams/{teamId}/members
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter teamId: (path) Team ID 
+     - parameter _id: (query) Comma separated list of member ids to remove 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteTeamMembersWithRequestBuilder(teamId: String, _id: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/teams/{teamId}/members"
+        let teamIdPreEscape = "\(teamId)"
+        let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{teamId}", with: teamIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "id": _id
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
     /**
      Get team
      
@@ -111,6 +161,94 @@ open class TeamsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Team>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum Expand_getTeamMembers: String { 
+        case entities = "entities"
+    }
+
+    
+    /**
+     Get team membership
+     
+     - parameter teamId: (path) Team ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter before: (query) The cursor that points to the previous item in the complete list of teams (optional)
+     - parameter after: (query) The cursor that points to the next item in the complete list of teams (optional)
+     - parameter expand: (query) Expand the name on each user (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTeamMembers(teamId: String, pageSize: Int? = nil, before: String? = nil, after: String? = nil, expand: Expand_getTeamMembers? = nil, completion: @escaping ((_ data: TeamMemberEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTeamMembersWithRequestBuilder(teamId: teamId, pageSize: pageSize, before: before, after: after, expand: expand)
+        requestBuilder.execute { (response: Response<TeamMemberEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get team membership
+     - GET /api/v2/teams/{teamId}/members
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter teamId: (path) Team ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter before: (query) The cursor that points to the previous item in the complete list of teams (optional)
+     - parameter after: (query) The cursor that points to the next item in the complete list of teams (optional)
+     - parameter expand: (query) Expand the name on each user (optional)
+
+     - returns: RequestBuilder<TeamMemberEntityListing> 
+     */
+    open class func getTeamMembersWithRequestBuilder(teamId: String, pageSize: Int? = nil, before: String? = nil, after: String? = nil, expand: Expand_getTeamMembers? = nil) -> RequestBuilder<TeamMemberEntityListing> {        
+        var path = "/api/v2/teams/{teamId}/members"
+        let teamIdPreEscape = "\(teamId)"
+        let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{teamId}", with: teamIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "before": before, 
+            "after": after, 
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<TeamMemberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -273,6 +411,76 @@ open class TeamsAPI {
         let requestBuilder: RequestBuilder<Team>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Add team members
+     
+     - parameter teamId: (path) Team ID 
+     - parameter body: (body) TeamMembers 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTeamMembers(teamId: String, body: TeamMembers, completion: @escaping ((_ data: TeamMemberAddListingResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTeamMembersWithRequestBuilder(teamId: teamId, body: body)
+        requestBuilder.execute { (response: Response<TeamMemberAddListingResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add team members
+     - POST /api/v2/teams/{teamId}/members
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failures" : [ {
+    "reason" : "UserNotFound",
+    "id" : "id"
+  }, {
+    "reason" : "UserNotFound",
+    "id" : "id"
+  } ],
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter teamId: (path) Team ID 
+     - parameter body: (body) TeamMembers 
+
+     - returns: RequestBuilder<TeamMemberAddListingResponse> 
+     */
+    open class func postTeamMembersWithRequestBuilder(teamId: String, body: TeamMembers) -> RequestBuilder<TeamMemberAddListingResponse> {        
+        var path = "/api/v2/teams/{teamId}/members"
+        let teamIdPreEscape = "\(teamId)"
+        let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{teamId}", with: teamIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TeamMemberAddListingResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
     

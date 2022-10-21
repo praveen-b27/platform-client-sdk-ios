@@ -76,6 +76,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUsersDevelopmentActivitiesAggregatesQuery**](UsersAPI.html#postUsersDevelopmentActivitiesAggregatesQuery) | Retrieve aggregated development activity data |
 | [**postUsersMePassword**](UsersAPI.html#postUsersMePassword) | Change your password |
 | [**postUsersSearch**](UsersAPI.html#postUsersSearch) | Search users |
+| [**postUsersSearchTeamsAssign**](UsersAPI.html#postUsersSearchTeamsAssign) | Search users assigned to teams |
 | [**putRoutingUserUtilization**](UsersAPI.html#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putUserCallforwarding**](UsersAPI.html#putUserCallforwarding) | Update a user&#39;s CallForwarding |
 | [**putUserOutofoffice**](UsersAPI.html#putUserOutofoffice) | Update an OutOfOffice |
@@ -3849,6 +3850,58 @@ UsersAPI.postUsersSearch(body: body) { (response, error) in
         dump(error)
     } else if let response = response {
         print("UsersAPI.postUsersSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="postUsersSearchTeamsAssign"></a>
+
+# **postUsersSearchTeamsAssign**
+
+
+
+> [UsersSearchResponse](UsersSearchResponse.html) postUsersSearchTeamsAssign(body)
+
+Search users assigned to teams
+
+
+
+Wraps POST /api/v2/users/search/teams/assign  
+
+Requires ANY permissions: 
+
+* groups:team:assign
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UserSearchRequest = new UserSearchRequest(...) // Search request options
+
+// Code example
+UsersAPI.postUsersSearchTeamsAssign(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postUsersSearchTeamsAssign was successful")
         dump(response)
     }
 }

@@ -2864,27 +2864,23 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "kpiResults" : [ {
-    "kpiTotalOff" : 2,
-    "interactionCountOff" : 9,
-    "interactionCountOn" : 7,
+    "kpiTotalOff" : 6,
+    "interactionCountOff" : 5,
+    "interactionCountOn" : 1,
     "mediaType" : "voice",
-    "kpiTotalOn" : 5
+    "kpiTotalOn" : 0
   }, {
-    "kpiTotalOff" : 2,
-    "interactionCountOff" : 9,
-    "interactionCountOn" : 7,
+    "kpiTotalOff" : 6,
+    "interactionCountOff" : 5,
+    "interactionCountOn" : 1,
     "mediaType" : "voice",
-    "kpiTotalOn" : 5
+    "kpiTotalOn" : 0
   } ],
-  "kpiTotalOff" : 6,
   "kpi" : "kpi",
   "dateStarted" : "2000-01-23T04:56:07.000+00:00",
   "dateEnded" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
-  "interactionCountOff" : 5,
-  "interactionCountOn" : 1,
-  "id" : "id",
-  "kpiTotalOn" : 0
+  "id" : "id"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue id 
@@ -2945,50 +2941,42 @@ open class RoutingAPI {
   "total" : 0,
   "entities" : [ {
     "kpiResults" : [ {
-      "kpiTotalOff" : 2,
-      "interactionCountOff" : 9,
-      "interactionCountOn" : 7,
+      "kpiTotalOff" : 6,
+      "interactionCountOff" : 5,
+      "interactionCountOn" : 1,
       "mediaType" : "voice",
-      "kpiTotalOn" : 5
+      "kpiTotalOn" : 0
     }, {
-      "kpiTotalOff" : 2,
-      "interactionCountOff" : 9,
-      "interactionCountOn" : 7,
+      "kpiTotalOff" : 6,
+      "interactionCountOff" : 5,
+      "interactionCountOn" : 1,
       "mediaType" : "voice",
-      "kpiTotalOn" : 5
+      "kpiTotalOn" : 0
     } ],
-    "kpiTotalOff" : 6,
     "kpi" : "kpi",
     "dateStarted" : "2000-01-23T04:56:07.000+00:00",
     "dateEnded" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
-    "interactionCountOff" : 5,
-    "interactionCountOn" : 1,
-    "id" : "id",
-    "kpiTotalOn" : 0
+    "id" : "id"
   }, {
     "kpiResults" : [ {
-      "kpiTotalOff" : 2,
-      "interactionCountOff" : 9,
-      "interactionCountOn" : 7,
+      "kpiTotalOff" : 6,
+      "interactionCountOff" : 5,
+      "interactionCountOn" : 1,
       "mediaType" : "voice",
-      "kpiTotalOn" : 5
+      "kpiTotalOn" : 0
     }, {
-      "kpiTotalOff" : 2,
-      "interactionCountOff" : 9,
-      "interactionCountOn" : 7,
+      "kpiTotalOff" : 6,
+      "interactionCountOff" : 5,
+      "interactionCountOn" : 1,
       "mediaType" : "voice",
-      "kpiTotalOn" : 5
+      "kpiTotalOn" : 0
     } ],
-    "kpiTotalOff" : 6,
     "kpi" : "kpi",
     "dateStarted" : "2000-01-23T04:56:07.000+00:00",
     "dateEnded" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
-    "interactionCountOff" : 5,
-    "interactionCountOn" : 1,
-    "id" : "id",
-    "kpiTotalOn" : 0
+    "id" : "id"
   } ],
   "selfUri" : "https://openapi-generator.tech"
 }, statusCode=200}]

@@ -6246,6 +6246,7 @@ open class KnowledgeAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "searchId" : "searchId",
+  "application" : "{}",
   "query" : "query",
   "pageSize" : 0,
   "results" : [ {

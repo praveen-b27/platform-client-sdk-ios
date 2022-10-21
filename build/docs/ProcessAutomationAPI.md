@@ -8,8 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteProcessautomationTrigger**](ProcessAutomationAPI.html#deleteProcessautomationTrigger) | Delete a Trigger |
-| [**getProcessautomationTrigger**](ProcessAutomationAPI.html#getProcessautomationTrigger) | Retrieve a single Trigger matching id. |
-| [**getProcessautomationTriggers**](ProcessAutomationAPI.html#getProcessautomationTriggers) | Retrieves all triggers |
+| [**getProcessautomationTrigger**](ProcessAutomationAPI.html#getProcessautomationTrigger) | Retrieve a single Trigger matching id |
+| [**getProcessautomationTriggers**](ProcessAutomationAPI.html#getProcessautomationTriggers) | Retrieves all triggers, optionally filtered by query parameters. |
 | [**getProcessautomationTriggersTopics**](ProcessAutomationAPI.html#getProcessautomationTriggersTopics) | Get topics available for organization |
 | [**postProcessautomationTriggerTest**](ProcessAutomationAPI.html#postProcessautomationTriggerTest) | Test the matching of a Trigger based on provided event body |
 | [**postProcessautomationTriggers**](ProcessAutomationAPI.html#postProcessautomationTriggers) | Create a Trigger |
@@ -76,7 +76,7 @@ ProcessAutomationAPI.deleteProcessautomationTrigger(triggerId: triggerId) { (err
 
 > [Trigger](Trigger.html) getProcessautomationTrigger(triggerId)
 
-Retrieve a single Trigger matching id.
+Retrieve a single Trigger matching id
 
 
 
@@ -129,7 +129,7 @@ ProcessAutomationAPI.getProcessautomationTrigger(triggerId: triggerId) { (respon
 
 > [TriggerEntityListing](TriggerEntityListing.html) getProcessautomationTriggers(before, after, pageSize, topicName, enabled)
 
-Retrieves all triggers
+Retrieves all triggers, optionally filtered by query parameters.
 
 
 
@@ -151,7 +151,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
-let topicName: String = "" // Topic name
+let topicName: String = "" // Topic name(s). Separated by commas
 let enabled: Bool = true // Boolean indicating desired enabled state of triggers
 
 // Code example
@@ -173,7 +173,7 @@ ProcessAutomationAPI.getProcessautomationTriggers(before: before, after: after, 
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
-| **topicName** | **String**| Topic name | [optional] |
+| **topicName** | **String**| Topic name(s). Separated by commas | [optional] |
 | **enabled** | **Bool**| Boolean indicating desired enabled state of triggers | [optional] |
 {: class="table-striped"}
 

@@ -131,6 +131,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequests) | Create a new time off request |
 | [**postWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsQuery) | Fetches time off requests matching the conditions specified in the request body |
 | [**postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery) | Retrieves daily waitlist position for a list of time off requests |
+| [**postWorkforcemanagementManagementunitUserTimeoffbalanceJobs**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitUserTimeoffbalanceJobs) | Query time off balances for a given user for specified activity code and dates |
+| [**postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs) | Query time off balances for dates spanned by a given time off request |
 | [**postWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradeMatch) | Matches a shift trade. This route can only be called by the receiving agent |
 | [**postWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttrades) | Adds a shift trade |
 | [**postWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradesSearch) | Searches for potential shift trade matches for the current agent |
@@ -7259,6 +7261,118 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsWaitl
 ### Return type
 
 [**WaitlistPositionListing**](WaitlistPositionListing.html)
+
+<a name="postWorkforcemanagementManagementunitUserTimeoffbalanceJobs"></a>
+
+# **postWorkforcemanagementManagementunitUserTimeoffbalanceJobs**
+
+
+
+> [TimeOffBalancesResponse](TimeOffBalancesResponse.html) postWorkforcemanagementManagementunitUserTimeoffbalanceJobs(managementUnitId, userId, body)
+
+Query time off balances for a given user for specified activity code and dates
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs  
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit
+let userId: String = "" // The ID of the user
+let body: TimeOffBalanceRequest = new TimeOffBalanceRequest(...) // The request body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffbalanceJobs(managementUnitId: managementUnitId, userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffbalanceJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit | |
+| **userId** | **String**| The ID of the user | |
+| **body** | [**TimeOffBalanceRequest**](TimeOffBalanceRequest.html)| The request body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
+
+<a name="postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs"></a>
+
+# **postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs**
+
+
+
+> [TimeOffBalancesResponse](TimeOffBalancesResponse.html) postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs(managementUnitId, userId, timeOffRequestId)
+
+Query time off balances for dates spanned by a given time off request
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs  
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit.
+let userId: String = "" // The userId to whom the time off request applies.
+let timeOffRequestId: String = "" // The time off request id.
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs(managementUnitId: managementUnitId, userId: userId, timeOffRequestId: timeOffRequestId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit. | |
+| **userId** | **String**| The userId to whom the time off request applies. | |
+| **timeOffRequestId** | **String**| The time off request id. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
 
 <a name="postWorkforcemanagementManagementunitWeekShifttradeMatch"></a>
 

@@ -11377,6 +11377,157 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     Query time off balances for a given user for specified activity code and dates
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter userId: (path) The ID of the user 
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitUserTimeoffbalanceJobs(managementUnitId: String, userId: String, body: TimeOffBalanceRequest, completion: @escaping ((_ data: TimeOffBalancesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitUserTimeoffbalanceJobsWithRequestBuilder(managementUnitId: managementUnitId, userId: userId, body: body)
+        requestBuilder.execute { (response: Response<TimeOffBalancesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query time off balances for a given user for specified activity code and dates
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "activityCodeId" : "activityCodeId",
+    "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "startDate" : "2000-01-23",
+    "balanceMinutesPerDay" : [ 0, 0 ]
+  }, {
+    "activityCodeId" : "activityCodeId",
+    "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "startDate" : "2000-01-23",
+    "balanceMinutesPerDay" : [ 0, 0 ]
+  } ],
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter userId: (path) The ID of the user 
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<TimeOffBalancesResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitUserTimeoffbalanceJobsWithRequestBuilder(managementUnitId: String, userId: String, body: TimeOffBalanceRequest) -> RequestBuilder<TimeOffBalancesResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TimeOffBalancesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Query time off balances for dates spanned by a given time off request
+     
+     - parameter managementUnitId: (path) The ID of the management unit. 
+     - parameter userId: (path) The userId to whom the time off request applies. 
+     - parameter timeOffRequestId: (path) The time off request id. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs(managementUnitId: String, userId: String, timeOffRequestId: String, completion: @escaping ((_ data: TimeOffBalancesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsWithRequestBuilder(managementUnitId: managementUnitId, userId: userId, timeOffRequestId: timeOffRequestId)
+        requestBuilder.execute { (response: Response<TimeOffBalancesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query time off balances for dates spanned by a given time off request
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "activityCodeId" : "activityCodeId",
+    "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "startDate" : "2000-01-23",
+    "balanceMinutesPerDay" : [ 0, 0 ]
+  }, {
+    "activityCodeId" : "activityCodeId",
+    "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "startDate" : "2000-01-23",
+    "balanceMinutesPerDay" : [ 0, 0 ]
+  } ],
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit. 
+     - parameter userId: (path) The userId to whom the time off request applies. 
+     - parameter timeOffRequestId: (path) The time off request id. 
+
+     - returns: RequestBuilder<TimeOffBalancesResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String) -> RequestBuilder<TimeOffBalancesResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let timeOffRequestIdPreEscape = "\(timeOffRequestId)"
+        let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffRequestId}", with: timeOffRequestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TimeOffBalancesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     
     /**
      Matches a shift trade. This route can only be called by the receiving agent

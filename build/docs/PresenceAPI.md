@@ -188,7 +188,7 @@ PresenceAPI.getPresenceSource(sourceId: sourceId) { (response, error) in
 
 
 
-> [SourceEntityListing](SourceEntityListing.html) getPresenceSources(deleted)
+> [SourceEntityListing](SourceEntityListing.html) getPresenceSources(deactivated)
 
 Get a list of Presence Sources
 
@@ -208,10 +208,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let deleted: String = "" // Deleted query can be TRUE or FALSE
+let deactivated: String = "" // Deactivated query can be TRUE or FALSE
 
 // Code example
-PresenceAPI.getPresenceSources(deleted: deleted) { (response, error) in
+PresenceAPI.getPresenceSources(deactivated: deactivated) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -226,7 +226,7 @@ PresenceAPI.getPresenceSources(deleted: deleted) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **deleted** | **String**| Deleted query can be TRUE or FALSE | [optional] |
+| **deactivated** | **String**| Deactivated query can be TRUE or FALSE | [optional] |
 {: class="table-striped"}
 
 

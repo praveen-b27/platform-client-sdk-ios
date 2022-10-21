@@ -19,28 +19,16 @@ public class ComparisonPeriod: Codable {
     public var dateStarted: Date?
     /** End date of the comparison period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateEnded: Date?
-    /** Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on) */
-    public var kpiTotalOn: Int64?
-    /** Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off) */
-    public var kpiTotalOff: Int64?
-    /** Total interactions handled by predictive routing (GPR was on) */
-    public var interactionCountOn: Int64?
-    /** Total interactions not routed by predictive routing (GPR was off) */
-    public var interactionCountOff: Int64?
     /** KPI results for each metric */
     public var kpiResults: [KpiResult]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, kpi: String?, dateStarted: Date?, dateEnded: Date?, kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, kpiResults: [KpiResult]?, selfUri: String?) {
+    public init(_id: String?, kpi: String?, dateStarted: Date?, dateEnded: Date?, kpiResults: [KpiResult]?, selfUri: String?) {
         self._id = _id
         self.kpi = kpi
         self.dateStarted = dateStarted
         self.dateEnded = dateEnded
-        self.kpiTotalOn = kpiTotalOn
-        self.kpiTotalOff = kpiTotalOff
-        self.interactionCountOn = interactionCountOn
-        self.interactionCountOff = interactionCountOff
         self.kpiResults = kpiResults
         self.selfUri = selfUri
     }
@@ -50,10 +38,6 @@ public class ComparisonPeriod: Codable {
         case kpi
         case dateStarted
         case dateEnded
-        case kpiTotalOn
-        case kpiTotalOff
-        case interactionCountOn
-        case interactionCountOff
         case kpiResults
         case selfUri
     }

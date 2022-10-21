@@ -161,11 +161,11 @@ open class PresenceAPI {
     /**
      Get a list of Presence Sources
      
-     - parameter deleted: (query) Deleted query can be TRUE or FALSE (optional)
+     - parameter deactivated: (query) Deactivated query can be TRUE or FALSE (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPresenceSources(deleted: String? = nil, completion: @escaping ((_ data: SourceEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getPresenceSourcesWithRequestBuilder(deleted: deleted)
+    open class func getPresenceSources(deactivated: String? = nil, completion: @escaping ((_ data: SourceEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceSourcesWithRequestBuilder(deactivated: deactivated)
         requestBuilder.execute { (response: Response<SourceEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -208,18 +208,18 @@ open class PresenceAPI {
   "selfUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
-     - parameter deleted: (query) Deleted query can be TRUE or FALSE (optional)
+     - parameter deactivated: (query) Deactivated query can be TRUE or FALSE (optional)
 
      - returns: RequestBuilder<SourceEntityListing> 
      */
-    open class func getPresenceSourcesWithRequestBuilder(deleted: String? = nil) -> RequestBuilder<SourceEntityListing> {        
+    open class func getPresenceSourcesWithRequestBuilder(deactivated: String? = nil) -> RequestBuilder<SourceEntityListing> {        
         let path = "/api/v2/presence/sources"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "deleted": deleted
+            "deactivated": deactivated
         ])
 
         let requestBuilder: RequestBuilder<SourceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

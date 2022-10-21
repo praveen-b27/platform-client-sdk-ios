@@ -155,6 +155,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsKeyconfigurationsValidate**](ConversationsAPI.html#postConversationsKeyconfigurationsValidate) | Validate encryption key configurations without saving it |
 | [**postConversationsMessageCommunicationMessages**](ConversationsAPI.html#postConversationsMessageCommunicationMessages) | Send message |
 | [**postConversationsMessageCommunicationMessagesMedia**](ConversationsAPI.html#postConversationsMessageCommunicationMessagesMedia) | Create media |
+| [**postConversationsMessageCommunicationTyping**](ConversationsAPI.html#postConversationsMessageCommunicationTyping) | Send message typing event |
 | [**postConversationsMessageMessagesBulk**](ConversationsAPI.html#postConversationsMessageMessagesBulk) | Get messages in batch |
 | [**postConversationsMessageParticipantReplace**](ConversationsAPI.html#postConversationsMessageParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsMessages**](ConversationsAPI.html#postConversationsMessages) | Create an outbound messaging conversation. |
@@ -4273,8 +4274,9 @@ Update conversation participant.
 
 Wraps PATCH /api/v2/conversations/{conversationId}/participants/{participantId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 
@@ -4489,8 +4491,9 @@ Update conversation participant
 
 Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 
@@ -4763,8 +4766,9 @@ Update conversation participant
 
 Wraps PATCH /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 
@@ -5034,8 +5038,9 @@ Update conversation participant
 
 Wraps PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 
@@ -5253,8 +5258,9 @@ Update conversation participant
 
 Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 
@@ -5472,8 +5478,9 @@ Update conversation participant
 
 Wraps PATCH /api/v2/conversations/emails/{conversationId}/participants/{participantId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 
@@ -5691,8 +5698,9 @@ Update conversation participant
 
 Wraps PATCH /api/v2/conversations/messages/{conversationId}/participants/{participantId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 
@@ -8103,6 +8111,64 @@ ConversationsAPI.postConversationsMessageCommunicationMessagesMedia(conversation
 ### Return type
 
 [**MessageMediaData**](MessageMediaData.html)
+
+<a name="postConversationsMessageCommunicationTyping"></a>
+
+# **postConversationsMessageCommunicationTyping**
+
+
+
+> Void postConversationsMessageCommunicationTyping(conversationId, communicationId, body)
+
+Send message typing event
+
+Send message typing event for existing conversation/communication.
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing  
+
+Requires ANY permissions: 
+
+* conversation:message:create
+* conversation:webmessaging:create
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let body: MessageTypingEventRequest = new MessageTypingEventRequest(...) // MessageTypingEvent
+
+// Code example
+ConversationsAPI.postConversationsMessageCommunicationTyping(conversationId: conversationId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsMessageCommunicationTyping was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**MessageTypingEventRequest**](MessageTypingEventRequest.html)| MessageTypingEvent | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postConversationsMessageMessagesBulk"></a>
 

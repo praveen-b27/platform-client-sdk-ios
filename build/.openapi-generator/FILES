@@ -1471,6 +1471,7 @@ docs/HistoryEntry.md
 docs/HistoryListing.md
 docs/HoldUpdatedEvent.md
 docs/HomerRecord.md
+docs/HrisTimeOffType.md
 docs/Humanize.md
 docs/IVR.md
 docs/IVREntityListing.md
@@ -1690,6 +1691,7 @@ docs/KnowledgeImportJobRequest.md
 docs/KnowledgeImportJobResponse.md
 docs/KnowledgeImportJobSettings.md
 docs/KnowledgeImportJobStatistics.md
+docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocument.md
 docs/KnowledgeSearchRequest.md
 docs/KnowledgeSearchResponse.md
@@ -1875,6 +1877,7 @@ docs/MessageMediaPolicy.md
 docs/MessageMediaPolicyConditions.md
 docs/MessageSticker.md
 docs/MessageStickerAttachment.md
+docs/MessageTypingEventRequest.md
 docs/MessagingAPI.json
 docs/MessagingAPI.md
 docs/MessagingCampaign.md
@@ -2669,6 +2672,7 @@ docs/ServiceLevel.md
 docs/Session.md
 docs/SessionEndDetails.md
 docs/SessionLastEvent.md
+docs/SessionListing.md
 docs/SessionSegmentAssignment.md
 docs/SetContentTemplateActionSettings.md
 docs/SetRecordingState.md
@@ -2813,7 +2817,11 @@ docs/TagValue.md
 docs/TagValueEntityListing.md
 docs/TargetPerformanceProfile.md
 docs/Team.md
+docs/TeamAddMemberFailure.md
 docs/TeamEntityListing.md
+docs/TeamMemberAddListingResponse.md
+docs/TeamMemberEntityListing.md
+docs/TeamMembers.md
 docs/TeamReference.md
 docs/TeamSearchCriteria.md
 docs/TeamSearchRequest.md
@@ -2867,6 +2875,10 @@ docs/TextbotsAPI.md
 docs/Ticker.md
 docs/TimeAllowed.md
 docs/TimeInterval.md
+docs/TimeOffBalanceJobReference.md
+docs/TimeOffBalanceRequest.md
+docs/TimeOffBalanceResponse.md
+docs/TimeOffBalancesResponse.md
 docs/TimeOffLimit.md
 docs/TimeOffLimitListing.md
 docs/TimeOffLimitRange.md
@@ -3084,6 +3096,7 @@ docs/UserRecordingEntityListing.md
 docs/UserRecordingsAPI.json
 docs/UserRecordingsAPI.md
 docs/UserReference.md
+docs/UserReferenceWithName.md
 docs/UserRoutingLanguage.md
 docs/UserRoutingLanguagePost.md
 docs/UserRoutingSkill.md
@@ -3631,6 +3644,7 @@ docs/deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId-example.tx
 docs/deleteSpeechandtextanalyticsTopic-example.txt
 docs/deleteStationAssociateduser-example.txt
 docs/deleteTeam-example.txt
+docs/deleteTeamMembers-example.txt
 docs/deleteTelephonyProvidersEdge-example.txt
 docs/deleteTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/deleteTelephonyProvidersEdgeSoftwareupdate-example.txt
@@ -3883,6 +3897,7 @@ docs/getEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/getEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/getExternalcontactsContact-example.txt
 docs/getExternalcontactsContactIdentifiers-example.txt
+docs/getExternalcontactsContactJourneySessions-example.txt
 docs/getExternalcontactsContactNote-example.txt
 docs/getExternalcontactsContactNotes-example.txt
 docs/getExternalcontactsContactUnresolved-example.txt
@@ -4393,6 +4408,7 @@ docs/getStations-example.txt
 docs/getStationsSettings-example.txt
 docs/getSystempresences-example.txt
 docs/getTeam-example.txt
+docs/getTeamMembers-example.txt
 docs/getTeams-example.txt
 docs/getTelephonyProvidersEdge-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticNslookup-example.txt
@@ -4849,6 +4865,7 @@ docs/postConversationsKeyconfigurations-example.txt
 docs/postConversationsKeyconfigurationsValidate-example.txt
 docs/postConversationsMessageCommunicationMessages-example.txt
 docs/postConversationsMessageCommunicationMessagesMedia-example.txt
+docs/postConversationsMessageCommunicationTyping-example.txt
 docs/postConversationsMessageMessagesBulk-example.txt
 docs/postConversationsMessageParticipantReplace-example.txt
 docs/postConversationsMessages-example.txt
@@ -5094,6 +5111,7 @@ docs/postSpeechandtextanalyticsTopics-example.txt
 docs/postSpeechandtextanalyticsTopicsPublishjobs-example.txt
 docs/postSpeechandtextanalyticsTranscriptsSearch-example.txt
 docs/postSpeechandtextanalyticsTranscriptsSearch-example.txt
+docs/postTeamMembers-example.txt
 docs/postTeams-example.txt
 docs/postTeamsSearch-example.txt
 docs/postTeamsSearch-example.txt
@@ -5145,6 +5163,8 @@ docs/postUsersDevelopmentActivitiesAggregatesQuery-example.txt
 docs/postUsersMePassword-example.txt
 docs/postUsersSearch-example.txt
 docs/postUsersSearch-example.txt
+docs/postUsersSearchTeamsAssign-example.txt
+docs/postUsersSearchTeamsAssign-example.txt
 docs/postVoicemailMessages-example.txt
 docs/postVoicemailSearch-example.txt
 docs/postVoicemailSearch-example.txt
@@ -5190,6 +5210,8 @@ docs/postWorkforcemanagementManagementunitTimeoffplans-example.txt
 docs/postWorkforcemanagementManagementunitTimeoffrequests-example.txt
 docs/postWorkforcemanagementManagementunitTimeoffrequestsQuery-example.txt
 docs/postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery-example.txt
+docs/postWorkforcemanagementManagementunitUserTimeoffbalanceJobs-example.txt
+docs/postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs-example.txt
 docs/postWorkforcemanagementManagementunitWeekShifttradeMatch-example.txt
 docs/postWorkforcemanagementManagementunitWeekShifttrades-example.txt
 docs/postWorkforcemanagementManagementunitWeekShifttradesSearch-example.txt
@@ -6897,6 +6919,7 @@ src/Models/HistoryEntry.swift
 src/Models/HistoryListing.swift
 src/Models/HoldUpdatedEvent.swift
 src/Models/HomerRecord.swift
+src/Models/HrisTimeOffType.swift
 src/Models/Humanize.swift
 src/Models/IVR.swift
 src/Models/IVREntityListing.swift
@@ -7108,6 +7131,7 @@ src/Models/KnowledgeImportJobRequest.swift
 src/Models/KnowledgeImportJobResponse.swift
 src/Models/KnowledgeImportJobSettings.swift
 src/Models/KnowledgeImportJobStatistics.swift
+src/Models/KnowledgeSearchClientApplication.swift
 src/Models/KnowledgeSearchDocument.swift
 src/Models/KnowledgeSearchRequest.swift
 src/Models/KnowledgeSearchResponse.swift
@@ -7283,6 +7307,7 @@ src/Models/MessageMediaPolicy.swift
 src/Models/MessageMediaPolicyConditions.swift
 src/Models/MessageSticker.swift
 src/Models/MessageStickerAttachment.swift
+src/Models/MessageTypingEventRequest.swift
 src/Models/MessagingCampaign.swift
 src/Models/MessagingCampaignDivisionView.swift
 src/Models/MessagingCampaignDivisionViewEntityListing.swift
@@ -8044,6 +8069,7 @@ src/Models/ServiceLevel.swift
 src/Models/Session.swift
 src/Models/SessionEndDetails.swift
 src/Models/SessionLastEvent.swift
+src/Models/SessionListing.swift
 src/Models/SessionSegmentAssignment.swift
 src/Models/SetContentTemplateActionSettings.swift
 src/Models/SetRecordingState.swift
@@ -8182,7 +8208,11 @@ src/Models/TagValue.swift
 src/Models/TagValueEntityListing.swift
 src/Models/TargetPerformanceProfile.swift
 src/Models/Team.swift
+src/Models/TeamAddMemberFailure.swift
 src/Models/TeamEntityListing.swift
+src/Models/TeamMemberAddListingResponse.swift
+src/Models/TeamMemberEntityListing.swift
+src/Models/TeamMembers.swift
 src/Models/TeamReference.swift
 src/Models/TeamSearchCriteria.swift
 src/Models/TeamSearchRequest.swift
@@ -8228,6 +8258,10 @@ src/Models/TextStyleProperties.swift
 src/Models/Ticker.swift
 src/Models/TimeAllowed.swift
 src/Models/TimeInterval.swift
+src/Models/TimeOffBalanceJobReference.swift
+src/Models/TimeOffBalanceRequest.swift
+src/Models/TimeOffBalanceResponse.swift
+src/Models/TimeOffBalancesResponse.swift
 src/Models/TimeOffLimit.swift
 src/Models/TimeOffLimitListing.swift
 src/Models/TimeOffLimitRange.swift
@@ -8437,6 +8471,7 @@ src/Models/UserQueueEntityListing.swift
 src/Models/UserRecording.swift
 src/Models/UserRecordingEntityListing.swift
 src/Models/UserReference.swift
+src/Models/UserReferenceWithName.swift
 src/Models/UserRoutingLanguage.swift
 src/Models/UserRoutingLanguagePost.swift
 src/Models/UserRoutingSkill.swift

@@ -5724,9 +5724,9 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "reportId" : "reportId",
     "selfUri" : "https://openapi-generator.tech",
@@ -5755,7 +5755,7 @@ open class AnalyticsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]

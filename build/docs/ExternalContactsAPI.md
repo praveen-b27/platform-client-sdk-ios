@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteExternalcontactsRelationship**](ExternalContactsAPI.html#deleteExternalcontactsRelationship) | Delete a relationship |
 | [**getExternalcontactsContact**](ExternalContactsAPI.html#getExternalcontactsContact) | Fetch an external contact |
 | [**getExternalcontactsContactIdentifiers**](ExternalContactsAPI.html#getExternalcontactsContactIdentifiers) | List the identifiers for a contact |
+| [**getExternalcontactsContactJourneySessions**](ExternalContactsAPI.html#getExternalcontactsContactJourneySessions) | Retrieve all sessions for a given external contact. |
 | [**getExternalcontactsContactNote**](ExternalContactsAPI.html#getExternalcontactsContactNote) | Fetch a note for an external contact |
 | [**getExternalcontactsContactNotes**](ExternalContactsAPI.html#getExternalcontactsContactNotes) | List notes for an external contact |
 | [**getExternalcontactsContactUnresolved**](ExternalContactsAPI.html#getExternalcontactsContactUnresolved) | Fetch an unresolved external contact |
@@ -551,6 +552,64 @@ ExternalContactsAPI.getExternalcontactsContactIdentifiers(contactId: contactId) 
 ### Return type
 
 [**EntityListing**](EntityListing.html)
+
+<a name="getExternalcontactsContactJourneySessions"></a>
+
+# **getExternalcontactsContactJourneySessions**
+
+
+
+> [SessionListing](SessionListing.html) getExternalcontactsContactJourneySessions(contactId, pageSize, after, includeMerged)
+
+Retrieve all sessions for a given external contact.
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/{contactId}/journey/sessions  
+
+Requires ANY permissions: 
+
+* externalContacts:session:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let includeMerged: Bool = true // Indicates whether to return sessions from all external contacts in the merge-set of the given one.
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactJourneySessions(contactId: contactId, pageSize: pageSize, after: after, includeMerged: includeMerged) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactJourneySessions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **includeMerged** | **Bool**| Indicates whether to return sessions from all external contacts in the merge-set of the given one. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SessionListing**](SessionListing.html)
 
 <a name="getExternalcontactsContactNote"></a>
 

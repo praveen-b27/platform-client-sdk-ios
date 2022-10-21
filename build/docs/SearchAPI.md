@@ -26,6 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SearchAPI.html#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
 | [**postTeamsSearch**](SearchAPI.html#postTeamsSearch) | Search resources. |
 | [**postUsersSearch**](SearchAPI.html#postUsersSearch) | Search users |
+| [**postUsersSearchTeamsAssign**](SearchAPI.html#postUsersSearchTeamsAssign) | Search users assigned to teams |
 | [**postVoicemailSearch**](SearchAPI.html#postVoicemailSearch) | Search voicemails |
 {: class="table-striped"}
 
@@ -1015,6 +1016,58 @@ SearchAPI.postUsersSearch(body: body) { (response, error) in
         dump(error)
     } else if let response = response {
         print("SearchAPI.postUsersSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="postUsersSearchTeamsAssign"></a>
+
+# **postUsersSearchTeamsAssign**
+
+
+
+> [UsersSearchResponse](UsersSearchResponse.html) postUsersSearchTeamsAssign(body)
+
+Search users assigned to teams
+
+
+
+Wraps POST /api/v2/users/search/teams/assign  
+
+Requires ANY permissions: 
+
+* groups:team:assign
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UserSearchRequest = new UserSearchRequest(...) // Search request options
+
+// Code example
+SearchAPI.postUsersSearchTeamsAssign(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SearchAPI.postUsersSearchTeamsAssign was successful")
         dump(response)
     }
 }

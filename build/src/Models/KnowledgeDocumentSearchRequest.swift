@@ -51,8 +51,10 @@ public class KnowledgeDocumentSearchRequest: Codable {
     public var sortOrder: SortOrder?
     /** The field in the documents that you want to sort the search results by. */
     public var sortBy: SortBy?
+    /** The client application details from which search request was sent. */
+    public var application: KnowledgeSearchClientApplication?
 
-    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, includeDraftDocuments: Bool?, interval: DocumentQueryInterval?, filter: DocumentQuery?, sortOrder: SortOrder?, sortBy: SortBy?) {
+    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, includeDraftDocuments: Bool?, interval: DocumentQueryInterval?, filter: DocumentQuery?, sortOrder: SortOrder?, sortBy: SortBy?, application: KnowledgeSearchClientApplication?) {
         self.query = query
         self.pageSize = pageSize
         self.pageNumber = pageNumber
@@ -64,6 +66,7 @@ public class KnowledgeDocumentSearchRequest: Codable {
         self.filter = filter
         self.sortOrder = sortOrder
         self.sortBy = sortBy
+        self.application = application
     }
 
 

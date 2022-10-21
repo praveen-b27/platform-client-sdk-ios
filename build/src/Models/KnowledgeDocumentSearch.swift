@@ -25,8 +25,10 @@ public class KnowledgeDocumentSearch: Codable {
     public var pageCount: Int?
     /** Documents matching the search query. */
     public var results: [KnowledgeDocumentSearchResult]?
+    /** The client application details from which search happened. */
+    public var application: KnowledgeSearchClientApplication?
 
-    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, results: [KnowledgeDocumentSearchResult]?) {
+    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, results: [KnowledgeDocumentSearchResult]?, application: KnowledgeSearchClientApplication?) {
         self.query = query
         self.pageSize = pageSize
         self.pageNumber = pageNumber
@@ -34,6 +36,7 @@ public class KnowledgeDocumentSearch: Codable {
         self.total = total
         self.pageCount = pageCount
         self.results = results
+        self.application = application
     }
 
 

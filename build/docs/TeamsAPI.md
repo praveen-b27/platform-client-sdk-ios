@@ -8,9 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteTeam**](TeamsAPI.html#deleteTeam) | Delete team |
+| [**deleteTeamMembers**](TeamsAPI.html#deleteTeamMembers) | Delete team members |
 | [**getTeam**](TeamsAPI.html#getTeam) | Get team |
+| [**getTeamMembers**](TeamsAPI.html#getTeamMembers) | Get team membership |
 | [**getTeams**](TeamsAPI.html#getTeams) | Get Team listing |
 | [**patchTeam**](TeamsAPI.html#patchTeam) | Update team |
+| [**postTeamMembers**](TeamsAPI.html#postTeamMembers) | Add team members |
 | [**postTeams**](TeamsAPI.html#postTeams) | Create a team |
 | [**postTeamsSearch**](TeamsAPI.html#postTeamsSearch) | Search resources. |
 {: class="table-striped"}
@@ -59,6 +62,59 @@ TeamsAPI.deleteTeam(teamId: teamId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **teamId** | **String**| Team ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteTeamMembers"></a>
+
+# **deleteTeamMembers**
+
+
+
+> Void deleteTeamMembers(teamId, _id)
+
+Delete team members
+
+
+
+Wraps DELETE /api/v2/teams/{teamId}/members  
+
+Requires ANY permissions: 
+
+* groups:team:assign
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let teamId: String = "" // Team ID
+let _id: String = "" // Comma separated list of member ids to remove
+
+// Code example
+TeamsAPI.deleteTeamMembers(teamId: teamId, _id: _id) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TeamsAPI.deleteTeamMembers was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **teamId** | **String**| Team ID | |
+| **_id** | **String**| Comma separated list of member ids to remove | |
 {: class="table-striped"}
 
 
@@ -117,6 +173,66 @@ TeamsAPI.getTeam(teamId: teamId) { (response, error) in
 ### Return type
 
 [**Team**](Team.html)
+
+<a name="getTeamMembers"></a>
+
+# **getTeamMembers**
+
+
+
+> [TeamMemberEntityListing](TeamMemberEntityListing.html) getTeamMembers(teamId, pageSize, before, after, expand)
+
+Get team membership
+
+
+
+Wraps GET /api/v2/teams/{teamId}/members  
+
+Requires ANY permissions: 
+
+* groups:team:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let teamId: String = "" // Team ID
+let pageSize: Int = 0 // Page size
+let before: String = "" // The cursor that points to the previous item in the complete list of teams
+let after: String = "" // The cursor that points to the next item in the complete list of teams
+let expand: TeamsAPI.Expand_getTeamMembers = TeamsAPI.Expand_getTeamMembers.enummember // Expand the name on each user
+
+// Code example
+TeamsAPI.getTeamMembers(teamId: teamId, pageSize: pageSize, before: before, after: after, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TeamsAPI.getTeamMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **teamId** | **String**| Team ID | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **before** | **String**| The cursor that points to the previous item in the complete list of teams | [optional] |
+| **after** | **String**| The cursor that points to the next item in the complete list of teams | [optional] |
+| **expand** | **String**| Expand the name on each user | [optional]<br />**Values**: entities ("entities") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TeamMemberEntityListing**](TeamMemberEntityListing.html)
 
 <a name="getTeams"></a>
 
@@ -231,6 +347,60 @@ TeamsAPI.patchTeam(teamId: teamId, body: body) { (response, error) in
 ### Return type
 
 [**Team**](Team.html)
+
+<a name="postTeamMembers"></a>
+
+# **postTeamMembers**
+
+
+
+> [TeamMemberAddListingResponse](TeamMemberAddListingResponse.html) postTeamMembers(teamId, body)
+
+Add team members
+
+
+
+Wraps POST /api/v2/teams/{teamId}/members  
+
+Requires ANY permissions: 
+
+* groups:team:assign
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let teamId: String = "" // Team ID
+let body: TeamMembers = new TeamMembers(...) // TeamMembers
+
+// Code example
+TeamsAPI.postTeamMembers(teamId: teamId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TeamsAPI.postTeamMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **teamId** | **String**| Team ID | |
+| **body** | [**TeamMembers**](TeamMembers.html)| TeamMembers | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TeamMemberAddListingResponse**](TeamMemberAddListingResponse.html)
 
 <a name="postTeams"></a>
 

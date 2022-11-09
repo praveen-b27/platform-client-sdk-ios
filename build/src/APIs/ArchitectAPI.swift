@@ -13458,6 +13458,13 @@ open class ArchitectAPI {
     
     
     
+    
+    public enum SortOrder_getFlowsDatatableRows: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    
     /**
      Returns the rows for the datatable with the given id
      
@@ -13465,10 +13472,11 @@ open class ArchitectAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter showbrief: (query) If true returns just the key value of the row (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFlowsDatatableRows(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil, showbrief: Bool? = nil, completion: @escaping ((_ data: DataTableRowEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getFlowsDatatableRowsWithRequestBuilder(datatableId: datatableId, pageNumber: pageNumber, pageSize: pageSize, showbrief: showbrief)
+    open class func getFlowsDatatableRows(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil, showbrief: Bool? = nil, sortOrder: SortOrder_getFlowsDatatableRows? = nil, completion: @escaping ((_ data: DataTableRowEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDatatableRowsWithRequestBuilder(datatableId: datatableId, pageNumber: pageNumber, pageSize: pageSize, showbrief: showbrief, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<DataTableRowEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -13513,10 +13521,11 @@ open class ArchitectAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter showbrief: (query) If true returns just the key value of the row (optional)
+     - parameter sortOrder: (query) Sort order (optional)
 
      - returns: RequestBuilder<DataTableRowEntityListing> 
      */
-    open class func getFlowsDatatableRowsWithRequestBuilder(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil, showbrief: Bool? = nil) -> RequestBuilder<DataTableRowEntityListing> {        
+    open class func getFlowsDatatableRowsWithRequestBuilder(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil, showbrief: Bool? = nil, sortOrder: SortOrder_getFlowsDatatableRows? = nil) -> RequestBuilder<DataTableRowEntityListing> {        
         var path = "/api/v2/flows/datatables/{datatableId}/rows"
         let datatableIdPreEscape = "\(datatableId)"
         let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13528,7 +13537,8 @@ open class ArchitectAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
-            "showbrief": showbrief
+            "showbrief": showbrief, 
+            "sortOrder": sortOrder?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<DataTableRowEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13563,7 +13573,7 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter divisionId: (query) division ID(s) (optional)
-     - parameter name: (query) Name to filter by (optional)
+     - parameter name: (query) Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getFlowsDatatables(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, name: String? = nil, completion: @escaping ((_ data: DataTablesDomainEntityListing?,_ error: Error?) -> Void)) {
@@ -13624,7 +13634,7 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter divisionId: (query) division ID(s) (optional)
-     - parameter name: (query) Name to filter by (optional)
+     - parameter name: (query) Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)
 
      - returns: RequestBuilder<DataTablesDomainEntityListing> 
      */
@@ -13747,7 +13757,7 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter divisionId: (query) division ID(s) (optional)
-     - parameter name: (query) Name to filter by (optional)
+     - parameter name: (query) Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getFlowsDatatablesDivisionviews(expand: Expand_getFlowsDatatablesDivisionviews? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatablesDivisionviews? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, name: String? = nil, completion: @escaping ((_ data: DataTablesDomainEntityListing?,_ error: Error?) -> Void)) {
@@ -13808,7 +13818,7 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter divisionId: (query) division ID(s) (optional)
-     - parameter name: (query) Name to filter by (optional)
+     - parameter name: (query) Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)
 
      - returns: RequestBuilder<DataTablesDomainEntityListing> 
      */

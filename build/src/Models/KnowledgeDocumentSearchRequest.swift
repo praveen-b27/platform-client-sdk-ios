@@ -12,9 +12,8 @@ import Foundation
 public class KnowledgeDocumentSearchRequest: Codable {
 
     public enum SortOrder: String, Codable { 
-        case asc = "ASC"
-        case desc = "DESC"
-        case score = "SCORE"
+        case asc = "Asc"
+        case desc = "Desc"
     }
     public enum SortBy: String, Codable { 
         case confidenceScore = "ConfidenceScore"

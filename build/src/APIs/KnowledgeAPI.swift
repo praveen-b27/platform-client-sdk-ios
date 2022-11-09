@@ -990,11 +990,11 @@ open class KnowledgeAPI {
      
      - parameter sessionId: (path) Knowledge guest session ID. 
      - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
-     - parameter includeSubcategories: (query) Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
+     - parameter includeSubcategories: (query) Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeGuestSessionDocuments(sessionId: String, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, pageSize: String? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentResponseListing?,_ error: Error?) -> Void)) {
+    open class func getKnowledgeGuestSessionDocuments(sessionId: String, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentResponseListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: sessionId, categoryId: categoryId, includeSubcategories: includeSubcategories, pageSize: pageSize)
         requestBuilder.execute { (response: Response<KnowledgeGuestDocumentResponseListing>?, error) -> Void in
             do {
@@ -1178,12 +1178,12 @@ open class KnowledgeAPI {
      
      - parameter sessionId: (path) Knowledge guest session ID. 
      - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
-     - parameter includeSubcategories: (query) Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
+     - parameter includeSubcategories: (query) Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
 
      - returns: RequestBuilder<KnowledgeGuestDocumentResponseListing> 
      */
-    open class func getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: String, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, pageSize: String? = nil) -> RequestBuilder<KnowledgeGuestDocumentResponseListing> {        
+    open class func getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: String, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, pageSize: Int? = nil) -> RequestBuilder<KnowledgeGuestDocumentResponseListing> {        
         var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents"
         let sessionIdPreEscape = "\(sessionId)"
         let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1195,7 +1195,7 @@ open class KnowledgeAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             "categoryId": categoryId, 
             "includeSubcategories": includeSubcategories, 
-            "pageSize": pageSize
+            "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeGuestDocumentResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2604,6 +2604,7 @@ open class KnowledgeAPI {
   "downloadURL" : "downloadURL",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "fileType" : "Json",
   "status" : "Created"
 }, statusCode=200}]
      
@@ -6400,6 +6401,7 @@ open class KnowledgeAPI {
   "downloadURL" : "downloadURL",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "fileType" : "Json",
   "status" : "Created"
 }, statusCode=200}]
      

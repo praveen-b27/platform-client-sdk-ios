@@ -636,6 +636,7 @@ open class LanguageUnderstandingAPI {
      - examples: [{contentType=application/json, example={
   "intents" : [ {
     "utterances" : [ {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -644,6 +645,7 @@ open class LanguageUnderstandingAPI {
         "entity" : "{}"
       } ]
     }, {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -653,6 +655,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
       "entityName" : "entityName"
@@ -663,6 +666,7 @@ open class LanguageUnderstandingAPI {
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   }, {
     "utterances" : [ {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -671,6 +675,7 @@ open class LanguageUnderstandingAPI {
         "entity" : "{}"
       } ]
     }, {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -680,6 +685,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
       "entityName" : "entityName"
@@ -870,6 +876,7 @@ open class LanguageUnderstandingAPI {
   "entities" : [ {
     "intents" : [ {
       "utterances" : [ {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -878,6 +885,7 @@ open class LanguageUnderstandingAPI {
           "entity" : "{}"
         } ]
       }, {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -887,6 +895,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
         "entityName" : "entityName"
@@ -897,6 +906,7 @@ open class LanguageUnderstandingAPI {
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     }, {
       "utterances" : [ {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -905,6 +915,7 @@ open class LanguageUnderstandingAPI {
           "entity" : "{}"
         } ]
       }, {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -914,6 +925,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
         "entityName" : "entityName"
@@ -954,6 +966,7 @@ open class LanguageUnderstandingAPI {
   }, {
     "intents" : [ {
       "utterances" : [ {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -962,6 +975,7 @@ open class LanguageUnderstandingAPI {
           "entity" : "{}"
         } ]
       }, {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -971,6 +985,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
         "entityName" : "entityName"
@@ -981,6 +996,7 @@ open class LanguageUnderstandingAPI {
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     }, {
       "utterances" : [ {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -989,6 +1005,7 @@ open class LanguageUnderstandingAPI {
           "entity" : "{}"
         } ]
       }, {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -998,6 +1015,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
         "entityName" : "entityName"
@@ -2028,6 +2046,7 @@ open class LanguageUnderstandingAPI {
      - examples: [{contentType=application/json, example={
   "intents" : [ {
     "utterances" : [ {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2036,6 +2055,7 @@ open class LanguageUnderstandingAPI {
         "entity" : "{}"
       } ]
     }, {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2045,6 +2065,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
       "entityName" : "entityName"
@@ -2055,6 +2076,7 @@ open class LanguageUnderstandingAPI {
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   }, {
     "utterances" : [ {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2063,6 +2085,7 @@ open class LanguageUnderstandingAPI {
         "entity" : "{}"
       } ]
     }, {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2072,6 +2095,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
       "entityName" : "entityName"
@@ -2172,6 +2196,7 @@ open class LanguageUnderstandingAPI {
   "version" : {
     "intents" : [ {
       "utterances" : [ {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -2180,6 +2205,7 @@ open class LanguageUnderstandingAPI {
           "entity" : "{}"
         } ]
       }, {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -2189,6 +2215,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
         "entityName" : "entityName"
@@ -2199,6 +2226,7 @@ open class LanguageUnderstandingAPI {
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     }, {
       "utterances" : [ {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -2207,6 +2235,7 @@ open class LanguageUnderstandingAPI {
           "entity" : "{}"
         } ]
       }, {
+        "id" : "id",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -2216,6 +2245,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
         "entityName" : "entityName"
@@ -2315,6 +2345,7 @@ open class LanguageUnderstandingAPI {
      - examples: [{contentType=application/json, example={
   "intents" : [ {
     "utterances" : [ {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2323,6 +2354,7 @@ open class LanguageUnderstandingAPI {
         "entity" : "{}"
       } ]
     }, {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2332,6 +2364,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
       "entityName" : "entityName"
@@ -2342,6 +2375,7 @@ open class LanguageUnderstandingAPI {
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   }, {
     "utterances" : [ {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2350,6 +2384,7 @@ open class LanguageUnderstandingAPI {
         "entity" : "{}"
       } ]
     }, {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2359,6 +2394,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
       "entityName" : "entityName"
@@ -2726,6 +2762,7 @@ open class LanguageUnderstandingAPI {
      - examples: [{contentType=application/json, example={
   "intents" : [ {
     "utterances" : [ {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2734,6 +2771,7 @@ open class LanguageUnderstandingAPI {
         "entity" : "{}"
       } ]
     }, {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2743,6 +2781,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
       "entityName" : "entityName"
@@ -2753,6 +2792,7 @@ open class LanguageUnderstandingAPI {
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   }, {
     "utterances" : [ {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2761,6 +2801,7 @@ open class LanguageUnderstandingAPI {
         "entity" : "{}"
       } ]
     }, {
+      "id" : "id",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2770,6 +2811,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
       "entityName" : "entityName"

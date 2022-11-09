@@ -22,13 +22,16 @@ public class TextBotFlowLaunchRequest: Codable {
     public var inputData: TextBotInputOutputData?
     /** Channel information relevant to the bot flow. */
     public var channel: TextBotChannel?
+    /** The language that the bot will use in the session. Validated against list of supported languages and if the value is omitted or is invalid, the default language will be used. */
+    public var language: String?
 
-    public init(flow: TextBotFlow?, externalSessionId: String?, conversationId: String?, inputData: TextBotInputOutputData?, channel: TextBotChannel?) {
+    public init(flow: TextBotFlow?, externalSessionId: String?, conversationId: String?, inputData: TextBotInputOutputData?, channel: TextBotChannel?, language: String?) {
         self.flow = flow
         self.externalSessionId = externalSessionId
         self.conversationId = conversationId
         self.inputData = inputData
         self.channel = channel
+        self.language = language
     }
 
 

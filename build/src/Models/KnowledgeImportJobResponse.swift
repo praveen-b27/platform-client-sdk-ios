@@ -14,6 +14,7 @@ public class KnowledgeImportJobResponse: Codable {
     public enum FileType: String, Codable { 
         case json = "Json"
         case csv = "Csv"
+        case xlsx = "Xlsx"
     }
     public enum Status: String, Codable { 
         case created = "Created"
@@ -32,7 +33,7 @@ public class KnowledgeImportJobResponse: Codable {
     public var _id: String?
     /** Upload key */
     public var uploadKey: String?
-    /** file type of the document */
+    /** File type of the document */
     public var fileType: FileType?
     /** Additional optional settings */
     public var settings: KnowledgeImportJobSettings?

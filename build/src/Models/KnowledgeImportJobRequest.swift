@@ -14,6 +14,7 @@ public class KnowledgeImportJobRequest: Codable {
     public enum FileType: String, Codable { 
         case json = "Json"
         case csv = "Csv"
+        case xlsx = "Xlsx"
     }
     /** Upload key */
     public var uploadKey: String?

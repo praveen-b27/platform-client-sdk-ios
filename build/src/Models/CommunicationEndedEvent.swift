@@ -17,8 +17,10 @@ public class CommunicationEndedEvent: Codable {
         case system = "System"
         case error = "Error"
         case transfer = "Transfer"
+        case transferACD = "TransferACD"
         case transferConsult = "TransferConsult"
         case transferConference = "TransferConference"
+        case transferUser = "TransferUser"
     }
     /** A unique (V4 UUID) eventId for this event */
     public var eventId: String?

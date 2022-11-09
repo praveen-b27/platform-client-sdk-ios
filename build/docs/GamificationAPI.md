@@ -14,7 +14,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getGamificationLeaderboardAll**](GamificationAPI.html#getGamificationLeaderboardAll) | Leaderboard by filter type |
 | [**getGamificationLeaderboardAllBestpoints**](GamificationAPI.html#getGamificationLeaderboardAllBestpoints) | Best Points by division or performance profile |
 | [**getGamificationLeaderboardBestpoints**](GamificationAPI.html#getGamificationLeaderboardBestpoints) | Best Points of the requesting user&#39;s current performance profile or division |
-| [**getGamificationMetric**](GamificationAPI.html#getGamificationMetric) | Gamified metric by id |
 | [**getGamificationMetricdefinition**](GamificationAPI.html#getGamificationMetricdefinition) | Metric definition by id |
 | [**getGamificationMetricdefinitions**](GamificationAPI.html#getGamificationMetricdefinitions) | All metric definitions |
 | [**getGamificationProfile**](GamificationAPI.html#getGamificationProfile) | Performance profile by id |
@@ -58,7 +57,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postGamificationProfileMetricLink**](GamificationAPI.html#postGamificationProfileMetricLink) | Creates a linked metric |
 | [**postGamificationProfileMetrics**](GamificationAPI.html#postGamificationProfileMetrics) | Creates a gamified metric with a given metric definition and metric objective under in a performance profile |
 | [**postGamificationProfiles**](GamificationAPI.html#postGamificationProfiles) | Create a new custom performance profile |
-| [**putGamificationMetric**](GamificationAPI.html#putGamificationMetric) | Updates a metric |
 | [**putGamificationProfile**](GamificationAPI.html#putGamificationProfile) | Updates a performance profile |
 | [**putGamificationProfileMetric**](GamificationAPI.html#putGamificationProfileMetric) | Updates a metric in performance profile |
 | [**putGamificationStatus**](GamificationAPI.html#putGamificationStatus) | Update gamification activation status |
@@ -438,66 +436,6 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**OverallBestPoints**](OverallBestPoints.html)
-
-<a name="getGamificationMetric"></a>
-
-# **getGamificationMetric**
-
-
-
-> [Metric](Metric.html) getGamificationMetric(metricId, workday, performanceProfileId)
-
-Gamified metric by id
-
-This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
-
-
-
-Wraps GET /api/v2/gamification/metrics/{metricId}  
-
-Requires ANY permissions: 
-
-* gamification:profile:view
-* gamification:leaderboard:view
-* gamification:scorecard:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let metricId: String = "" // metric Id
-let workday: Date = new Date(...) // The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let performanceProfileId: String = "" // The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given.
-
-// Code example
-GamificationAPI.getGamificationMetric(metricId: metricId, workday: workday, performanceProfileId: performanceProfileId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("GamificationAPI.getGamificationMetric was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **metricId** | **String**| metric Id | |
-| **workday** | **Date**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-| **performanceProfileId** | **String**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**Metric**](Metric.html)
 
 <a name="getGamificationMetricdefinition"></a>
 
@@ -2853,64 +2791,6 @@ GamificationAPI.postGamificationProfiles(body: body, copyMetrics: copyMetrics) {
 ### Return type
 
 [**PerformanceProfile**](PerformanceProfile.html)
-
-<a name="putGamificationMetric"></a>
-
-# **putGamificationMetric**
-
-
-
-> [Metric](Metric.html) putGamificationMetric(metricId, body, performanceProfileId)
-
-Updates a metric
-
-This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics/{metricId} instead.
-
-
-
-Wraps PUT /api/v2/gamification/metrics/{metricId}  
-
-Requires ALL permissions: 
-
-* gamification:profile:update
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let metricId: String = "" // metric Id
-let body: CreateMetric = new CreateMetric(...) // Metric
-let performanceProfileId: String = "" // The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given.
-
-// Code example
-GamificationAPI.putGamificationMetric(metricId: metricId, body: body, performanceProfileId: performanceProfileId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("GamificationAPI.putGamificationMetric was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **metricId** | **String**| metric Id | |
-| **body** | [**CreateMetric**](CreateMetric.html)| Metric | |
-| **performanceProfileId** | **String**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**Metric**](Metric.html)
 
 <a name="putGamificationProfile"></a>
 

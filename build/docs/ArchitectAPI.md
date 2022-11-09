@@ -3160,7 +3160,7 @@ ArchitectAPI.getFlowsDatatableRow(datatableId: datatableId, rowId: rowId, showbr
 
 
 
-> [DataTableRowEntityListing](DataTableRowEntityListing.html) getFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief)
+> [DataTableRowEntityListing](DataTableRowEntityListing.html) getFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief, sortOrder)
 
 Returns the rows for the datatable with the given id
 
@@ -3187,9 +3187,10 @@ let datatableId: String = "" // id of datatable
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
 let showbrief: Bool = true // If true returns just the key value of the row
+let sortOrder: ArchitectAPI.SortOrder_getFlowsDatatableRows = ArchitectAPI.SortOrder_getFlowsDatatableRows.enummember // Sort order
 
 // Code example
-ArchitectAPI.getFlowsDatatableRows(datatableId: datatableId, pageNumber: pageNumber, pageSize: pageSize, showbrief: showbrief) { (response, error) in
+ArchitectAPI.getFlowsDatatableRows(datatableId: datatableId, pageNumber: pageNumber, pageSize: pageSize, showbrief: showbrief, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3208,6 +3209,7 @@ ArchitectAPI.getFlowsDatatableRows(datatableId: datatableId, pageNumber: pageNum
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **showbrief** | **Bool**| If true returns just the key value of the row | [optional] |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
 
@@ -3249,7 +3251,7 @@ let pageSize: Int = 0 // Page size
 let sortBy: ArchitectAPI.SortBy_getFlowsDatatables = ArchitectAPI.SortBy_getFlowsDatatables.enummember // Sort by
 let sortOrder: String = "" // Sort order
 let divisionId: [String] = [""] // division ID(s)
-let name: String = "" // Name to filter by
+let name: String = exactMatch, beginsWith*, *endsWith, *contains* // Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive.
 
 // Code example
 ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, divisionId: divisionId, name: name) { (response, error) in
@@ -3273,7 +3275,7 @@ ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: _id ("id"), name ("name") |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
-| **name** | **String**| Name to filter by | [optional] |
+| **name** | **String**| Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. | [optional] |
 {: class="table-striped"}
 
 
@@ -3371,7 +3373,7 @@ let pageSize: Int = 0 // Page size
 let sortBy: ArchitectAPI.SortBy_getFlowsDatatablesDivisionviews = ArchitectAPI.SortBy_getFlowsDatatablesDivisionviews.enummember // Sort by
 let sortOrder: String = "" // Sort order
 let divisionId: [String] = [""] // division ID(s)
-let name: String = "" // Name to filter by
+let name: String = exactMatch, beginsWith*, *endsWith, *contains* // Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive.
 
 // Code example
 ArchitectAPI.getFlowsDatatablesDivisionviews(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, divisionId: divisionId, name: name) { (response, error) in
@@ -3395,7 +3397,7 @@ ArchitectAPI.getFlowsDatatablesDivisionviews(expand: expand, pageNumber: pageNum
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: _id ("id"), name ("name") |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
-| **name** | **String**| Name to filter by | [optional] |
+| **name** | **String**| Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. | [optional] |
 {: class="table-striped"}
 
 

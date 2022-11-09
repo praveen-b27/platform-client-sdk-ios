@@ -3166,7 +3166,6 @@ Wraps POST /api/v2/externalcontacts/merge/contacts
 
 Requires ANY permissions: 
 
-* externalContacts:contact:edit
 * externalContacts:identity:merge
 
 ### Example

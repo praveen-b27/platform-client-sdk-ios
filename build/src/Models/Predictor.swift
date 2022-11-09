@@ -36,10 +36,12 @@ public class Predictor: Codable {
     public var workloadBalancingConfig: PredictorWorkloadBalancing?
     /** Predictor error code - optional details on why the predictor went into error state. */
     public var errorCode: String?
+    /** Predictor's models */
+    public var models: [PredictorModelBrief]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, queues: [AddressableEntityRef]?, kpi: String?, routingTimeoutSeconds: Int?, schedule: PredictorSchedule?, state: State?, dateCreated: Date?, dateModified: Date?, workloadBalancingConfig: PredictorWorkloadBalancing?, errorCode: String?, selfUri: String?) {
+    public init(_id: String?, queues: [AddressableEntityRef]?, kpi: String?, routingTimeoutSeconds: Int?, schedule: PredictorSchedule?, state: State?, dateCreated: Date?, dateModified: Date?, workloadBalancingConfig: PredictorWorkloadBalancing?, errorCode: String?, models: [PredictorModelBrief]?, selfUri: String?) {
         self._id = _id
         self.queues = queues
         self.kpi = kpi
@@ -50,6 +52,7 @@ public class Predictor: Codable {
         self.dateModified = dateModified
         self.workloadBalancingConfig = workloadBalancingConfig
         self.errorCode = errorCode
+        self.models = models
         self.selfUri = selfUri
     }
 
@@ -64,6 +67,7 @@ public class Predictor: Codable {
         case dateModified
         case workloadBalancingConfig
         case errorCode
+        case models
         case selfUri
     }
 

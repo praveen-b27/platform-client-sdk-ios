@@ -772,8 +772,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let sessionId: String = "" // Knowledge guest session ID.
 let categoryId: [String] = [""] // If specified, retrieves documents associated with category ids, comma separated values expected.
-let includeSubcategories: Bool = true // Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories.
-let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let includeSubcategories: Bool = true // Deprecated - Do Not Use. Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories.
+let pageSize: Int = 0 // Number of entities to return. Maximum of 200.
 
 // Code example
 KnowledgeAPI.getKnowledgeGuestSessionDocuments(sessionId: sessionId, categoryId: categoryId, includeSubcategories: includeSubcategories, pageSize: pageSize) { (response, error) in
@@ -793,8 +793,8 @@ KnowledgeAPI.getKnowledgeGuestSessionDocuments(sessionId: sessionId, categoryId:
 | ------------- | ------------- | ------------- | ------------- |
 | **sessionId** | **String**| Knowledge guest session ID. | |
 | **categoryId** | [**[String]**](String.html)| If specified, retrieves documents associated with category ids, comma separated values expected. | [optional] |
-| **includeSubcategories** | **Bool**| Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional] |
-| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **includeSubcategories** | **Bool**| Deprecated - Do Not Use. Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum of 200. | [optional] |
 {: class="table-striped"}
 
 

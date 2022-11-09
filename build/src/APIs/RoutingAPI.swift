@@ -519,6 +519,50 @@ open class RoutingAPI {
 
     
     /**
+     Remove skill group definition
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingSkillgroup(skillGroupId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingSkillgroupWithRequestBuilder(skillGroupId: skillGroupId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Remove skill group definition
+     - DELETE /api/v2/routing/skillgroups/{skillGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingSkillgroupWithRequestBuilder(skillGroupId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/routing/skillgroups/{skillGroupId}"
+        let skillGroupIdPreEscape = "\(skillGroupId)"
+        let skillGroupIdPostEscape = skillGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{skillGroupId}", with: skillGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
      Delete an Address by Id for SMS
      
      - parameter addressId: (path) Address ID 
@@ -2197,6 +2241,31 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "schedule" : "{}",
+  "models" : [ {
+    "retrainingErrors" : [ {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    }, {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    } ],
+    "mediaType" : "voice",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "retrainingErrors" : [ {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    }, {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    } ],
+    "mediaType" : "voice",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+  } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "kpi" : "kpi",
   "queues" : [ {
@@ -2487,6 +2556,31 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "schedule" : "{}",
+    "models" : [ {
+      "retrainingErrors" : [ {
+        "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+        "errorCode" : "NotEnoughData",
+        "id" : "id"
+      }, {
+        "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+        "errorCode" : "NotEnoughData",
+        "id" : "id"
+      } ],
+      "mediaType" : "voice",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "retrainingErrors" : [ {
+        "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+        "errorCode" : "NotEnoughData",
+        "id" : "id"
+      }, {
+        "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+        "errorCode" : "NotEnoughData",
+        "id" : "id"
+      } ],
+      "mediaType" : "voice",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "kpi" : "kpi",
     "queues" : [ {
@@ -2505,6 +2599,31 @@ open class RoutingAPI {
     "workloadBalancingConfig" : "{}"
   }, {
     "schedule" : "{}",
+    "models" : [ {
+      "retrainingErrors" : [ {
+        "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+        "errorCode" : "NotEnoughData",
+        "id" : "id"
+      }, {
+        "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+        "errorCode" : "NotEnoughData",
+        "id" : "id"
+      } ],
+      "mediaType" : "voice",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "retrainingErrors" : [ {
+        "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+        "errorCode" : "NotEnoughData",
+        "id" : "id"
+      }, {
+        "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+        "errorCode" : "NotEnoughData",
+        "id" : "id"
+      } ],
+      "mediaType" : "voice",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "kpi" : "kpi",
     "queues" : [ {
@@ -6429,6 +6548,462 @@ open class RoutingAPI {
     }
 
     
+    /**
+     Get skill group
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSkillgroup(skillGroupId: String, completion: @escaping ((_ data: SkillGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSkillgroupWithRequestBuilder(skillGroupId: skillGroupId)
+        requestBuilder.execute { (response: Response<SkillGroup>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get skill group
+     - GET /api/v2/routing/skillgroups/{skillGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "memberCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "skillConditions" : [ {
+    "languageSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "routingSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "operation" : "And"
+  }, {
+    "languageSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "routingSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "operation" : "And"
+  } ]
+}, statusCode=200}]
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+
+     - returns: RequestBuilder<SkillGroup> 
+     */
+    open class func getRoutingSkillgroupWithRequestBuilder(skillGroupId: String) -> RequestBuilder<SkillGroup> {        
+        var path = "/api/v2/routing/skillgroups/{skillGroupId}"
+        let skillGroupIdPreEscape = "\(skillGroupId)"
+        let skillGroupIdPostEscape = skillGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{skillGroupId}", with: skillGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SkillGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum Expand_getRoutingSkillgroupMembers: String { 
+        case entities = "entities"
+    }
+
+    
+    /**
+     Get skill group members
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter after: (query) The cursor that points to the next item (optional)
+     - parameter before: (query) The cursor that points to the previous item (optional)
+     - parameter expand: (query) Expand the name on each user (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSkillgroupMembers(skillGroupId: String, pageSize: Int? = nil, after: String? = nil, before: String? = nil, expand: Expand_getRoutingSkillgroupMembers? = nil, completion: @escaping ((_ data: SkillGroupMemberEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSkillgroupMembersWithRequestBuilder(skillGroupId: skillGroupId, pageSize: pageSize, after: after, before: before, expand: expand)
+        requestBuilder.execute { (response: Response<SkillGroupMemberEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get skill group members
+     - GET /api/v2/routing/skillgroups/{skillGroupId}/members
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter after: (query) The cursor that points to the next item (optional)
+     - parameter before: (query) The cursor that points to the previous item (optional)
+     - parameter expand: (query) Expand the name on each user (optional)
+
+     - returns: RequestBuilder<SkillGroupMemberEntityListing> 
+     */
+    open class func getRoutingSkillgroupMembersWithRequestBuilder(skillGroupId: String, pageSize: Int? = nil, after: String? = nil, before: String? = nil, expand: Expand_getRoutingSkillgroupMembers? = nil) -> RequestBuilder<SkillGroupMemberEntityListing> {        
+        var path = "/api/v2/routing/skillgroups/{skillGroupId}/members"
+        let skillGroupIdPreEscape = "\(skillGroupId)"
+        let skillGroupIdPostEscape = skillGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{skillGroupId}", with: skillGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "after": after, 
+            "before": before, 
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<SkillGroupMemberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    public enum Expand_getRoutingSkillgroupMembersDivisions: String { 
+        case entities = "entities"
+    }
+
+    
+    /**
+     Get list of member divisions for this skill group.
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter expand: (query) Expand the name on each user (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSkillgroupMembersDivisions(skillGroupId: String, expand: Expand_getRoutingSkillgroupMembersDivisions? = nil, completion: @escaping ((_ data: SkillGroupMemberDivisionList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSkillgroupMembersDivisionsWithRequestBuilder(skillGroupId: skillGroupId, expand: expand)
+        requestBuilder.execute { (response: Response<SkillGroupMemberDivisionList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of member divisions for this skill group.
+     - GET /api/v2/routing/skillgroups/{skillGroupId}/members/divisions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter expand: (query) Expand the name on each user (optional)
+
+     - returns: RequestBuilder<SkillGroupMemberDivisionList> 
+     */
+    open class func getRoutingSkillgroupMembersDivisionsWithRequestBuilder(skillGroupId: String, expand: Expand_getRoutingSkillgroupMembersDivisions? = nil) -> RequestBuilder<SkillGroupMemberDivisionList> {        
+        var path = "/api/v2/routing/skillgroups/{skillGroupId}/members/divisions"
+        let skillGroupIdPreEscape = "\(skillGroupId)"
+        let skillGroupIdPostEscape = skillGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{skillGroupId}", with: skillGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<SkillGroupMemberDivisionList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get skill group listing
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter name: (query) Return only skill group names whose names start with this value (case-insensitive matching) (optional)
+     - parameter after: (query) The cursor that points to the next item (optional)
+     - parameter before: (query) The cursor that points to the previous item (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSkillgroups(pageSize: Int? = nil, name: String? = nil, after: String? = nil, before: String? = nil, completion: @escaping ((_ data: SkillGroupEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSkillgroupsWithRequestBuilder(pageSize: pageSize, name: name, after: after, before: before)
+        requestBuilder.execute { (response: Response<SkillGroupEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get skill group listing
+     - GET /api/v2/routing/skillgroups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "memberCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "skillConditions" : [ {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    }, {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    } ]
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "memberCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "skillConditions" : [ {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    }, {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    } ]
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter name: (query) Return only skill group names whose names start with this value (case-insensitive matching) (optional)
+     - parameter after: (query) The cursor that points to the next item (optional)
+     - parameter before: (query) The cursor that points to the previous item (optional)
+
+     - returns: RequestBuilder<SkillGroupEntityListing> 
+     */
+    open class func getRoutingSkillgroupsWithRequestBuilder(pageSize: Int? = nil, name: String? = nil, after: String? = nil, before: String? = nil) -> RequestBuilder<SkillGroupEntityListing> {        
+        let path = "/api/v2/routing/skillgroups"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "name": name, 
+            "after": after, 
+            "before": before
+        ])
+
+        let requestBuilder: RequestBuilder<SkillGroupEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     
@@ -8130,6 +8705,31 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "schedule" : "{}",
+  "models" : [ {
+    "retrainingErrors" : [ {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    }, {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    } ],
+    "mediaType" : "voice",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "retrainingErrors" : [ {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    }, {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    } ],
+    "mediaType" : "voice",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+  } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "kpi" : "kpi",
   "queues" : [ {
@@ -9638,6 +10238,119 @@ open class RoutingAPI {
 
     
     
+    /**
+     Update skill group definition
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter body: (body) Update skill groups 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingSkillgroup(skillGroupId: String, body: SkillGroup, completion: @escaping ((_ data: SkillGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingSkillgroupWithRequestBuilder(skillGroupId: skillGroupId, body: body)
+        requestBuilder.execute { (response: Response<SkillGroup>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update skill group definition
+     - PATCH /api/v2/routing/skillgroups/{skillGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "memberCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "skillConditions" : [ {
+    "languageSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "routingSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "operation" : "And"
+  }, {
+    "languageSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "routingSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "operation" : "And"
+  } ]
+}, statusCode=200}]
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter body: (body) Update skill groups 
+
+     - returns: RequestBuilder<SkillGroup> 
+     */
+    open class func patchRoutingSkillgroupWithRequestBuilder(skillGroupId: String, body: SkillGroup) -> RequestBuilder<SkillGroup> {        
+        var path = "/api/v2/routing/skillgroups/{skillGroupId}"
+        let skillGroupIdPreEscape = "\(skillGroupId)"
+        let skillGroupIdPostEscape = skillGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{skillGroupId}", with: skillGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SkillGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
     
     /**
      Join or unjoin a queue for a user
@@ -10523,10 +11236,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10549,10 +11262,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10595,10 +11308,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10621,10 +11334,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10672,10 +11385,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10698,10 +11411,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10744,10 +11457,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -10770,10 +11483,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11370,6 +12083,31 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "schedule" : "{}",
+  "models" : [ {
+    "retrainingErrors" : [ {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    }, {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    } ],
+    "mediaType" : "voice",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "retrainingErrors" : [ {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    }, {
+      "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
+      "errorCode" : "NotEnoughData",
+      "id" : "id"
+    } ],
+    "mediaType" : "voice",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+  } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "kpi" : "kpi",
   "queues" : [ {
@@ -11770,6 +12508,160 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Queue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Add or remove member divisions for this skill group.
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingSkillgroupMembersDivisions(skillGroupId: String, body: SkillGroupMemberDivisions? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingSkillgroupMembersDivisionsWithRequestBuilder(skillGroupId: skillGroupId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add or remove member divisions for this skill group.
+     - POST /api/v2/routing/skillgroups/{skillGroupId}/members/divisions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter skillGroupId: (path) Skill Group ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postRoutingSkillgroupMembersDivisionsWithRequestBuilder(skillGroupId: String, body: SkillGroupMemberDivisions? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/routing/skillgroups/{skillGroupId}/members/divisions"
+        let skillGroupIdPreEscape = "\(skillGroupId)"
+        let skillGroupIdPostEscape = skillGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{skillGroupId}", with: skillGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Create a skill group
+     
+     - parameter body: (body) Create skill group 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingSkillgroups(body: SkillGroup, completion: @escaping ((_ data: SkillGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingSkillgroupsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SkillGroup>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a skill group
+     - POST /api/v2/routing/skillgroups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "memberCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "skillConditions" : [ {
+    "languageSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "routingSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "operation" : "And"
+  }, {
+    "languageSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "languageSkill" : "English-Written",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "routingSkillConditions" : [ {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    }, {
+      "comparator" : "EqualTo",
+      "routingSkill" : "routingSkill",
+      "childConditions" : [ null, null ],
+      "proficiency" : 5
+    } ],
+    "operation" : "And"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) Create skill group 
+
+     - returns: RequestBuilder<SkillGroup> 
+     */
+    open class func postRoutingSkillgroupsWithRequestBuilder(body: SkillGroup) -> RequestBuilder<SkillGroup> {        
+        let path = "/api/v2/routing/skillgroups"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SkillGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

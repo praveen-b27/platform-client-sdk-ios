@@ -33,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsUsersDetailsJobResults**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsUsersDetailsJobsAvailability**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
 | [**patchAnalyticsReportingSettings**](AnalyticsAPI.html#patchAnalyticsReportingSettings) | Patch AnalyticsReportingSettings values for an organization |
+| [**postAnalyticsActionsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsActionsAggregatesQuery) | Query for action aggregates |
 | [**postAnalyticsBotsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsBotsAggregatesQuery) | Query for bot aggregates |
 | [**postAnalyticsConversationDetailsProperties**](AnalyticsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
@@ -216,7 +217,7 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 
 
-> [ReportingTurnsResponse](ReportingTurnsResponse.html) getAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId)
+> [ReportingTurnsResponse](ReportingTurnsResponse.html) getAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId, language)
 
 Get Reporting Turns.
 
@@ -241,9 +242,10 @@ let after: String = "" // The cursor that points to the ID of the last item in t
 let pageSize: String = "" // Max number of entities to return. Maximum of 250
 let actionId: String = "" // Optional action ID to get the reporting turns associated to a particular flow action
 let sessionId: String = "" // Optional session ID to get the reporting turns for a particular session
+let language: String = en-us // Optional language code to get the reporting turns for a particular language
 
 // Code example
-AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId) { (response, error) in
+AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId, language: language) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -263,6 +265,7 @@ AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: afte
 | **pageSize** | **String**| Max number of entities to return. Maximum of 250 | [optional] |
 | **actionId** | **String**| Optional action ID to get the reporting turns associated to a particular flow action | [optional] |
 | **sessionId** | **String**| Optional session ID to get the reporting turns for a particular session | [optional] |
+| **language** | **String**| Optional language code to get the reporting turns for a particular language | [optional] |
 {: class="table-striped"}
 
 
@@ -1415,6 +1418,59 @@ AnalyticsAPI.patchAnalyticsReportingSettings(body: body) { (response, error) in
 ### Return type
 
 [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
+
+<a name="postAnalyticsActionsAggregatesQuery"></a>
+
+# **postAnalyticsActionsAggregatesQuery**
+
+
+
+> [ActionAggregateQueryResponse](ActionAggregateQueryResponse.html) postAnalyticsActionsAggregatesQuery(body)
+
+Query for action aggregates
+
+
+
+Wraps POST /api/v2/analytics/actions/aggregates/query  
+
+Requires ANY permissions: 
+
+* integrations:action:view
+* bridge:actions:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ActionAggregationQuery = new ActionAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsActionsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsActionsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ActionAggregationQuery**](ActionAggregationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActionAggregateQueryResponse**](ActionAggregateQueryResponse.html)
 
 <a name="postAnalyticsBotsAggregatesQuery"></a>
 

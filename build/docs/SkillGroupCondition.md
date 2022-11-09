@@ -1,0 +1,15 @@
+---
+title: SkillGroupCondition
+---
+## SkillGroupCondition
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **routingSkillConditions** | [**[SkillGroupRoutingCondition]**](SkillGroupRoutingCondition.html) | Routing skill conditions that will be used for building the query | |
+| **languageSkillConditions** | [**[SkillGroupLanguageCondition]**](SkillGroupLanguageCondition.html) | Routing skill conditions that will be used for building the query | |
+| **operation** | **String** | Operator that will be applied to the conditions | |
+{: class="table table-striped"}
+
+

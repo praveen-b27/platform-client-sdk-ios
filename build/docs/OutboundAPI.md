@@ -6090,7 +6090,7 @@ Update a campaign.
 
 Wraps PUT /api/v2/outbound/campaigns/{campaignId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:campaign:edit
 

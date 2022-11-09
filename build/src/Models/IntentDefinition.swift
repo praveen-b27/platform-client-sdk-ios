@@ -11,6 +11,8 @@ import Foundation
 
 public class IntentDefinition: Codable {
 
+    /** ID of the intent. */
+    public var _id: String?
     /** The name of the intent. */
     public var name: String?
     /** The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities */
@@ -20,11 +22,20 @@ public class IntentDefinition: Codable {
     /** The utterances that act as training phrases for the intent. */
     public var utterances: [NluUtterance]?
 
-    public init(name: String?, entityTypeBindings: [NamedEntityTypeBinding]?, entityNameReferences: [String]?, utterances: [NluUtterance]?) {
+    public init(_id: String?, name: String?, entityTypeBindings: [NamedEntityTypeBinding]?, entityNameReferences: [String]?, utterances: [NluUtterance]?) {
+        self._id = _id
         self.name = name
         self.entityTypeBindings = entityTypeBindings
         self.entityNameReferences = entityNameReferences
         self.utterances = utterances
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case entityTypeBindings
+        case entityNameReferences
+        case utterances
     }
 
 

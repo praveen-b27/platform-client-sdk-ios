@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingQueueWrapupcode**](RoutingAPI.html#deleteRoutingQueueWrapupcode) | Delete a wrap-up code from a queue |
 | [**deleteRoutingSettings**](RoutingAPI.html#deleteRoutingSettings) | Delete an organization&#39;s routing settings |
 | [**deleteRoutingSkill**](RoutingAPI.html#deleteRoutingSkill) | Delete Routing Skill |
+| [**deleteRoutingSkillgroup**](RoutingAPI.html#deleteRoutingSkillgroup) | Remove skill group definition |
 | [**deleteRoutingSmsAddress**](RoutingAPI.html#deleteRoutingSmsAddress) | Delete an Address by Id for SMS |
 | [**deleteRoutingSmsPhonenumber**](RoutingAPI.html#deleteRoutingSmsPhonenumber) | Delete a phone number provisioned for SMS. |
 | [**deleteRoutingUserUtilization**](RoutingAPI.html#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
@@ -63,6 +64,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingSettingsContactcenter**](RoutingAPI.html#getRoutingSettingsContactcenter) | Get Contact Center Settings |
 | [**getRoutingSettingsTranscription**](RoutingAPI.html#getRoutingSettingsTranscription) | Get Transcription Settings |
 | [**getRoutingSkill**](RoutingAPI.html#getRoutingSkill) | Get Routing Skill |
+| [**getRoutingSkillgroup**](RoutingAPI.html#getRoutingSkillgroup) | Get skill group |
+| [**getRoutingSkillgroupMembers**](RoutingAPI.html#getRoutingSkillgroupMembers) | Get skill group members |
+| [**getRoutingSkillgroupMembersDivisions**](RoutingAPI.html#getRoutingSkillgroupMembersDivisions) | Get list of member divisions for this skill group. |
+| [**getRoutingSkillgroups**](RoutingAPI.html#getRoutingSkillgroups) | Get skill group listing |
 | [**getRoutingSkills**](RoutingAPI.html#getRoutingSkills) | Get the list of routing skills. |
 | [**getRoutingSmsAddress**](RoutingAPI.html#getRoutingSmsAddress) | Get an Address by Id for SMS |
 | [**getRoutingSmsAddresses**](RoutingAPI.html#getRoutingSmsAddresses) | Get a list of Addresses for SMS |
@@ -85,6 +90,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
 | [**patchRoutingQueueUsers**](RoutingAPI.html#patchRoutingQueueUsers) | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**patchRoutingSettingsContactcenter**](RoutingAPI.html#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
+| [**patchRoutingSkillgroup**](RoutingAPI.html#patchRoutingSkillgroup) | Update skill group definition |
 | [**patchUserQueue**](RoutingAPI.html#patchUserQueue) | Join or unjoin a queue for a user |
 | [**patchUserQueues**](RoutingAPI.html#patchUserQueues) | Join or unjoin a set of queues for a user |
 | [**patchUserRoutinglanguage**](RoutingAPI.html#patchUserRoutinglanguage) | Update routing language proficiency or state. |
@@ -104,6 +110,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingQueueUsers**](RoutingAPI.html#postRoutingQueueUsers) | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**postRoutingQueueWrapupcodes**](RoutingAPI.html#postRoutingQueueWrapupcodes) | Add up to 100 wrap-up codes to a queue |
 | [**postRoutingQueues**](RoutingAPI.html#postRoutingQueues) | Create a queue |
+| [**postRoutingSkillgroupMembersDivisions**](RoutingAPI.html#postRoutingSkillgroupMembersDivisions) | Add or remove member divisions for this skill group. |
+| [**postRoutingSkillgroups**](RoutingAPI.html#postRoutingSkillgroups) | Create a skill group |
 | [**postRoutingSkills**](RoutingAPI.html#postRoutingSkills) | Create Skill |
 | [**postRoutingSmsAddresses**](RoutingAPI.html#postRoutingSmsAddresses) | Provision an Address for SMS |
 | [**postRoutingSmsPhonenumbers**](RoutingAPI.html#postRoutingSmsPhonenumbers) | Provision a phone number for SMS |
@@ -687,6 +695,57 @@ RoutingAPI.deleteRoutingSkill(skillId: skillId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **skillId** | **String**| Skill ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingSkillgroup"></a>
+
+# **deleteRoutingSkillgroup**
+
+
+
+> Void deleteRoutingSkillgroup(skillGroupId)
+
+Remove skill group definition
+
+
+
+Wraps DELETE /api/v2/routing/skillgroups/{skillGroupId}  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let skillGroupId: String = "" // Skill Group ID
+
+// Code example
+RoutingAPI.deleteRoutingSkillgroup(skillGroupId: skillGroupId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingSkillgroup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **skillGroupId** | **String**| Skill Group ID | |
 {: class="table-striped"}
 
 
@@ -3136,6 +3195,230 @@ RoutingAPI.getRoutingSkill(skillId: skillId) { (response, error) in
 
 [**RoutingSkill**](RoutingSkill.html)
 
+<a name="getRoutingSkillgroup"></a>
+
+# **getRoutingSkillgroup**
+
+
+
+> [SkillGroup](SkillGroup.html) getRoutingSkillgroup(skillGroupId)
+
+Get skill group
+
+
+
+Wraps GET /api/v2/routing/skillgroups/{skillGroupId}  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let skillGroupId: String = "" // Skill Group ID
+
+// Code example
+RoutingAPI.getRoutingSkillgroup(skillGroupId: skillGroupId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSkillgroup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **skillGroupId** | **String**| Skill Group ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SkillGroup**](SkillGroup.html)
+
+<a name="getRoutingSkillgroupMembers"></a>
+
+# **getRoutingSkillgroupMembers**
+
+
+
+> [SkillGroupMemberEntityListing](SkillGroupMemberEntityListing.html) getRoutingSkillgroupMembers(skillGroupId, pageSize, after, before, expand)
+
+Get skill group members
+
+
+
+Wraps GET /api/v2/routing/skillgroups/{skillGroupId}/members  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let skillGroupId: String = "" // Skill Group ID
+let pageSize: Int = 0 // Page size
+let after: String = "" // The cursor that points to the next item
+let before: String = "" // The cursor that points to the previous item
+let expand: RoutingAPI.Expand_getRoutingSkillgroupMembers = RoutingAPI.Expand_getRoutingSkillgroupMembers.enummember // Expand the name on each user
+
+// Code example
+RoutingAPI.getRoutingSkillgroupMembers(skillGroupId: skillGroupId, pageSize: pageSize, after: after, before: before, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSkillgroupMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **skillGroupId** | **String**| Skill Group ID | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **after** | **String**| The cursor that points to the next item | [optional] |
+| **before** | **String**| The cursor that points to the previous item | [optional] |
+| **expand** | **String**| Expand the name on each user | [optional]<br />**Values**: entities ("entities") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SkillGroupMemberEntityListing**](SkillGroupMemberEntityListing.html)
+
+<a name="getRoutingSkillgroupMembersDivisions"></a>
+
+# **getRoutingSkillgroupMembersDivisions**
+
+
+
+> [SkillGroupMemberDivisionList](SkillGroupMemberDivisionList.html) getRoutingSkillgroupMembersDivisions(skillGroupId, expand)
+
+Get list of member divisions for this skill group.
+
+
+
+Wraps GET /api/v2/routing/skillgroups/{skillGroupId}/members/divisions  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let skillGroupId: String = "" // Skill Group ID
+let expand: RoutingAPI.Expand_getRoutingSkillgroupMembersDivisions = RoutingAPI.Expand_getRoutingSkillgroupMembersDivisions.enummember // Expand the name on each user
+
+// Code example
+RoutingAPI.getRoutingSkillgroupMembersDivisions(skillGroupId: skillGroupId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSkillgroupMembersDivisions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **skillGroupId** | **String**| Skill Group ID | |
+| **expand** | **String**| Expand the name on each user | [optional]<br />**Values**: entities ("entities") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SkillGroupMemberDivisionList**](SkillGroupMemberDivisionList.html)
+
+<a name="getRoutingSkillgroups"></a>
+
+# **getRoutingSkillgroups**
+
+
+
+> [SkillGroupEntityListing](SkillGroupEntityListing.html) getRoutingSkillgroups(pageSize, name, after, before)
+
+Get skill group listing
+
+
+
+Wraps GET /api/v2/routing/skillgroups  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let name: String = "" // Return only skill group names whose names start with this value (case-insensitive matching)
+let after: String = "" // The cursor that points to the next item
+let before: String = "" // The cursor that points to the previous item
+
+// Code example
+RoutingAPI.getRoutingSkillgroups(pageSize: pageSize, name: name, after: after, before: before) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSkillgroups was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **name** | **String**| Return only skill group names whose names start with this value (case-insensitive matching) | [optional] |
+| **after** | **String**| The cursor that points to the next item | [optional] |
+| **before** | **String**| The cursor that points to the previous item | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SkillGroupEntityListing**](SkillGroupEntityListing.html)
+
 <a name="getRoutingSkills"></a>
 
 # **getRoutingSkills**
@@ -4367,6 +4650,60 @@ RoutingAPI.patchRoutingSettingsContactcenter(body: body) { (error) in
 
 `nil` (empty response body)
 
+<a name="patchRoutingSkillgroup"></a>
+
+# **patchRoutingSkillgroup**
+
+
+
+> [SkillGroup](SkillGroup.html) patchRoutingSkillgroup(skillGroupId, body)
+
+Update skill group definition
+
+
+
+Wraps PATCH /api/v2/routing/skillgroups/{skillGroupId}  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let skillGroupId: String = "" // Skill Group ID
+let body: SkillGroup = new SkillGroup(...) // Update skill groups
+
+// Code example
+RoutingAPI.patchRoutingSkillgroup(skillGroupId: skillGroupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingSkillgroup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **skillGroupId** | **String**| Skill Group ID | |
+| **body** | [**SkillGroup**](SkillGroup.html)| Update skill groups | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SkillGroup**](SkillGroup.html)
+
 <a name="patchUserQueue"></a>
 
 # **patchUserQueue**
@@ -5392,6 +5729,111 @@ RoutingAPI.postRoutingQueues(body: body) { (response, error) in
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="postRoutingSkillgroupMembersDivisions"></a>
+
+# **postRoutingSkillgroupMembersDivisions**
+
+
+
+> Void postRoutingSkillgroupMembersDivisions(skillGroupId, body)
+
+Add or remove member divisions for this skill group.
+
+
+
+Wraps POST /api/v2/routing/skillgroups/{skillGroupId}/members/divisions  
+
+Requires ALL permissions: 
+
+* routing:skillGroup:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let skillGroupId: String = "" // Skill Group ID
+let body: SkillGroupMemberDivisions = new SkillGroupMemberDivisions(...) // 
+
+// Code example
+RoutingAPI.postRoutingSkillgroupMembersDivisions(skillGroupId: skillGroupId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.postRoutingSkillgroupMembersDivisions was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **skillGroupId** | **String**| Skill Group ID | |
+| **body** | [**SkillGroupMemberDivisions**](SkillGroupMemberDivisions.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postRoutingSkillgroups"></a>
+
+# **postRoutingSkillgroups**
+
+
+
+> [SkillGroup](SkillGroup.html) postRoutingSkillgroups(body)
+
+Create a skill group
+
+
+
+Wraps POST /api/v2/routing/skillgroups  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SkillGroup = new SkillGroup(...) // Create skill group
+
+// Code example
+RoutingAPI.postRoutingSkillgroups(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingSkillgroups was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SkillGroup**](SkillGroup.html)| Create skill group | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SkillGroup**](SkillGroup.html)
 
 <a name="postRoutingSkills"></a>
 

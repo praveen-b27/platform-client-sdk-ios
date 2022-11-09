@@ -50,6 +50,8 @@ public class ReportingTurnAction: Codable {
         case findSystemPromptAction = "FindSystemPromptAction"
         case findUserPromptAction = "FindUserPromptAction"
         case transferPureMatchAction = "TransferPureMatchAction"
+        case findQueueAction = "FindQueueAction"
+        case findQueueByIdAction = "FindQueueByIdAction"
         case unknown = "Unknown"
     }
     /** The ID of the action in the bot flow. */

@@ -12,6 +12,7 @@ title: VoicemailGroupPolicy
 | **enabled** | **Bool** | Whether voicemail is enabled for the group | [optional] |
 | **sendEmailNotifications** | **Bool** | Whether email notifications are sent to group members when a new voicemail is received | [optional] |
 | **disableEmailPii** | **Bool** | Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization. | [optional] |
+| **includeEmailTranscriptions** | **Bool** | Whether to include the voicemail transcription in a group notification email | [optional] |
 | **languagePreference** | **String** | The language preference for the group.  Used for group voicemail transcription | [optional] |
 | **rotateCallsSecs** | **Int** | How many seconds to ring before rotating to the next member in the group | [optional] |
 | **stopRingingAfterRotations** | **Int** | How many rotations to go through | [optional] |

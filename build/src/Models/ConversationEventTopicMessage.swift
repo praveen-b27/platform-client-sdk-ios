@@ -21,6 +21,10 @@ public class ConversationEventTopicMessage: Codable {
         case connected = "connected"
         case disconnected = "disconnected"
     }
+    public enum Direction: String, Codable { 
+        case outbound = "outbound"
+        case inbound = "inbound"
+    }
     public enum DisconnectType: String, Codable { 
         case endpoint = "endpoint"
         case client = "client"
@@ -58,6 +62,8 @@ public class ConversationEventTopicMessage: Codable {
     public var _id: String?
     public var state: State?
     public var initialState: InitialState?
+    /** Whether a message is inbound or outbound. */
+    public var direction: Direction?
     /** True if this call is held and the person on this side hears silence. */
     public var held: Bool?
     /** Detailed information about an error response. */
@@ -101,10 +107,11 @@ public class ConversationEventTopicMessage: Codable {
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: ConversationEventTopicJourneyContext?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: ConversationEventTopicJourneyContext?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
+        self.direction = direction
         self.held = held
         self.errorInfo = errorInfo
         self.provider = provider
@@ -132,6 +139,7 @@ public class ConversationEventTopicMessage: Codable {
         case _id = "id"
         case state
         case initialState
+        case direction
         case held
         case errorInfo
         case provider

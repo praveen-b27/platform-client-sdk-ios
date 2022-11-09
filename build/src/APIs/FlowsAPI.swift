@@ -434,10 +434,10 @@ open class FlowsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -460,10 +460,10 @@ open class FlowsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -506,10 +506,10 @@ open class FlowsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -532,10 +532,10 @@ open class FlowsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -583,10 +583,10 @@ open class FlowsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -609,10 +609,10 @@ open class FlowsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -655,10 +655,10 @@ open class FlowsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -681,10 +681,10 @@ open class FlowsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

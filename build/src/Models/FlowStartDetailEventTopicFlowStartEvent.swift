@@ -51,6 +51,12 @@ public class FlowStartDetailEventTopicFlowStartEvent: Codable {
         case workflow = "WORKFLOW"
         case bot = "BOT"
         case digitalbot = "DIGITALBOT"
+        case commonmodule = "COMMONMODULE"
+        case inqueueemail = "INQUEUEEMAIL"
+        case inqueueshortmessage = "INQUEUESHORTMESSAGE"
+        case voice = "VOICE"
+        case voicemail = "VOICEMAIL"
+        case workitem = "WORKITEM"
     }
     public var eventTime: Int?
     public var conversationId: String?

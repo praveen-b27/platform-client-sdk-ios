@@ -77,7 +77,7 @@ public class QueueConversationEventTopicEmail: Codable {
     public var disconnectedTime: Date?
     /** A globally unique identifier for the stored content of this communication. */
     public var messageId: String?
-    /** Whether a call is inbound or outbound. */
+    /** Whether an email is inbound or outbound. */
     public var direction: Direction?
     /** A list of uploaded attachments on the email draft. */
     public var draftAttachments: [QueueConversationEventTopicAttachment]?

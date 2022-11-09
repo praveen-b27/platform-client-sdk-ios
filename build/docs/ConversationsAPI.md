@@ -3380,7 +3380,7 @@ This endpoint does not require any parameters.
 
 
 
-> [MessagingIntegrationEntityListing](MessagingIntegrationEntityListing.html) getConversationsMessagingIntegrations(pageSize, pageNumber, expand, supportedContentId)
+> [MessagingIntegrationEntityListing](MessagingIntegrationEntityListing.html) getConversationsMessagingIntegrations(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
 
 Get a list of Integrations
 
@@ -3402,11 +3402,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
-let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrations = ConversationsAPI.Expand_getConversationsMessagingIntegrations.enummember // Expand instructions for the return value.
+let expand: [String] = [""] // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3423,8 +3424,9 @@ ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageN
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | [**[String]**](String.html)| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3438,7 +3440,7 @@ ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageN
 
 
 
-> [FacebookIntegrationEntityListing](FacebookIntegrationEntityListing.html) getConversationsMessagingIntegrationsFacebook(pageSize, pageNumber, expand, supportedContentId)
+> [FacebookIntegrationEntityListing](FacebookIntegrationEntityListing.html) getConversationsMessagingIntegrationsFacebook(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
 
 Get a list of Facebook Integrations
 
@@ -3462,9 +3464,10 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsFacebook = ConversationsAPI.Expand_getConversationsMessagingIntegrationsFacebook.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3481,8 +3484,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSiz
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3536,7 +3540,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebookIntegrationId(inte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 {: class="table-striped"}
 
 
@@ -3550,7 +3554,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebookIntegrationId(inte
 
 
 
-> [LineIntegrationEntityListing](LineIntegrationEntityListing.html) getConversationsMessagingIntegrationsLine(pageSize, pageNumber, expand, supportedContentId)
+> [LineIntegrationEntityListing](LineIntegrationEntityListing.html) getConversationsMessagingIntegrationsLine(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
 
 Get a list of LINE messenger Integrations
 
@@ -3574,9 +3578,10 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsLine = ConversationsAPI.Expand_getConversationsMessagingIntegrationsLine.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3593,8 +3598,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, p
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3648,7 +3654,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId(integrat
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 {: class="table-striped"}
 
 
@@ -3662,7 +3668,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId(integrat
 
 
 
-> [OpenIntegrationEntityListing](OpenIntegrationEntityListing.html) getConversationsMessagingIntegrationsOpen(pageSize, pageNumber, expand, supportedContentId)
+> [OpenIntegrationEntityListing](OpenIntegrationEntityListing.html) getConversationsMessagingIntegrationsOpen(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
 
 Get a list of Open messaging integrations
 
@@ -3688,9 +3694,10 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsOpen = ConversationsAPI.Expand_getConversationsMessagingIntegrationsOpen.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsOpen(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsOpen(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3707,8 +3714,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpen(pageSize: pageSize, p
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3764,7 +3772,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpenIntegrationId(integrat
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 {: class="table-striped"}
 
 
@@ -3778,7 +3786,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpenIntegrationId(integrat
 
 
 
-> [TwitterIntegrationEntityListing](TwitterIntegrationEntityListing.html) getConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId)
+> [TwitterIntegrationEntityListing](TwitterIntegrationEntityListing.html) getConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
 
 Get a list of Twitter Integrations
 
@@ -3802,9 +3810,10 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter = ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3821,8 +3830,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3876,7 +3886,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integ
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 {: class="table-striped"}
 
 
@@ -3890,7 +3900,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integ
 
 
 
-> [WhatsAppIntegrationEntityListing](WhatsAppIntegrationEntityListing.html) getConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber, expand, supportedContentId)
+> [WhatsAppIntegrationEntityListing](WhatsAppIntegrationEntityListing.html) getConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
 
 Get a list of WhatsApp Integrations
 
@@ -3914,9 +3924,10 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsWhatsapp = ConversationsAPI.Expand_getConversationsMessagingIntegrationsWhatsapp.enummember // Expand instructions for the return value.
 let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3933,8 +3944,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSiz
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3988,7 +4000,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsappIntegrationId(inte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
 {: class="table-striped"}
 
 

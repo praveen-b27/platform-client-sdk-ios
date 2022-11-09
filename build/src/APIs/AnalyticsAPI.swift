@@ -147,6 +147,7 @@ open class AnalyticsAPI {
     
     
     
+    
     /**
      Get Reporting Turns.
      
@@ -155,10 +156,11 @@ open class AnalyticsAPI {
      - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional)
      - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
      - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session (optional)
+     - parameter language: (query) Optional language code to get the reporting turns for a particular language (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsBotflowReportingturns(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil, completion: @escaping ((_ data: ReportingTurnsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId)
+    open class func getAnalyticsBotflowReportingturns(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil, language: String? = nil, completion: @escaping ((_ data: ReportingTurnsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId, language: language)
         requestBuilder.execute { (response: Response<ReportingTurnsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -215,10 +217,11 @@ open class AnalyticsAPI {
      - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional)
      - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
      - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session (optional)
+     - parameter language: (query) Optional language code to get the reporting turns for a particular language (optional)
 
      - returns: RequestBuilder<ReportingTurnsResponse> 
      */
-    open class func getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil) -> RequestBuilder<ReportingTurnsResponse> {        
+    open class func getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil, language: String? = nil) -> RequestBuilder<ReportingTurnsResponse> {        
         var path = "/api/v2/analytics/botflows/{botFlowId}/reportingturns"
         let botFlowIdPreEscape = "\(botFlowId)"
         let botFlowIdPostEscape = botFlowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -231,7 +234,8 @@ open class AnalyticsAPI {
             "after": after, 
             "pageSize": pageSize, 
             "actionId": actionId, 
-            "sessionId": sessionId
+            "sessionId": sessionId, 
+            "language": language
         ])
 
         let requestBuilder: RequestBuilder<ReportingTurnsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -272,12 +276,12 @@ open class AnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "conversationStart" : "2000-01-23T04:56:07.000+00:00",
-  "mediaStatsMinConversationMos" : 5.637376656633329,
+  "mediaStatsMinConversationMos" : 0.8008281904610115,
   "evaluations" : [ {
     "formId" : "formId",
     "queueId" : "queueId",
-    "oTotalScore" : 9,
-    "oTotalCriticalScore" : 7,
+    "oTotalScore" : 5,
+    "oTotalCriticalScore" : 1,
     "contextId" : "contextId",
     "userId" : "userId",
     "evaluationId" : "evaluationId",
@@ -291,8 +295,8 @@ open class AnalyticsAPI {
   }, {
     "formId" : "formId",
     "queueId" : "queueId",
-    "oTotalScore" : 9,
-    "oTotalCriticalScore" : 7,
+    "oTotalScore" : 5,
+    "oTotalCriticalScore" : 1,
     "contextId" : "contextId",
     "userId" : "userId",
     "evaluationId" : "evaluationId",
@@ -316,7 +320,7 @@ open class AnalyticsAPI {
     "surveyFormId" : "surveyFormId",
     "surveyFormContextId" : "surveyFormContextId",
     "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-    "surveyPromoterScore" : 3,
+    "surveyPromoterScore" : 5,
     "userId" : "userId"
   }, {
     "queueId" : "queueId",
@@ -328,24 +332,24 @@ open class AnalyticsAPI {
     "surveyFormId" : "surveyFormId",
     "surveyFormContextId" : "surveyFormContextId",
     "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-    "surveyPromoterScore" : 3,
+    "surveyPromoterScore" : 5,
     "userId" : "userId"
   } ],
   "externalTag" : "externalTag",
   "resolutions" : [ {
     "queueId" : "queueId",
     "eventTime" : "2000-01-23T04:56:07.000+00:00",
-    "nNextContactAvoided" : 4,
+    "nNextContactAvoided" : 7,
     "userId" : "userId"
   }, {
     "queueId" : "queueId",
     "eventTime" : "2000-01-23T04:56:07.000+00:00",
-    "nNextContactAvoided" : 4,
+    "nNextContactAvoided" : 7,
     "userId" : "userId"
   } ],
   "originatingDirection" : "inbound",
   "divisionIds" : [ "divisionIds", "divisionIds" ],
-  "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+  "mediaStatsMinConversationRFactor" : 6.027456183070403,
   "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
   "customerParticipation" : true,
   "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
@@ -359,13 +363,13 @@ open class AnalyticsAPI {
       "monitoredParticipantId" : "monitoredParticipantId",
       "videoAddressSelf" : "videoAddressSelf",
       "agentOwned" : true,
-      "waitingInteractionCounts" : [ 4, 4 ],
+      "waitingInteractionCounts" : [ 1, 1 ],
       "proposedAgents" : [ {
         "proposedAgentId" : "proposedAgentId",
-        "agentRank" : 5
+        "agentRank" : 6
       }, {
         "proposedAgentId" : "proposedAgentId",
-        "agentRank" : 5
+        "agentRank" : 6
       } ],
       "addressSelf" : "addressSelf",
       "skipEnabled" : true,
@@ -376,7 +380,7 @@ open class AnalyticsAPI {
       "messageType" : "messageType",
       "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
       "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-      "mediaCount" : 1,
+      "mediaCount" : 4,
       "dnis" : "dnis",
       "videoRoomId" : "videoRoomId",
       "flow" : "{}",
@@ -395,14 +399,14 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "name" : "name",
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
-        "value" : 2
+        "value" : 6
       }, {
         "name" : "name",
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
-        "value" : 2
+        "value" : 6
       } ],
       "bargedParticipantId" : "bargedParticipantId",
-      "journeyActionMapVersion" : 1,
+      "journeyActionMapVersion" : 2,
       "mediaBridgeId" : "mediaBridgeId",
       "agentAssistantId" : "agentAssistantId",
       "deliveryStatus" : "DeliveryFailed",
@@ -413,7 +417,7 @@ open class AnalyticsAPI {
       "remoteNameDisplayable" : "remoteNameDisplayable",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
       "bcc" : [ "bcc", "bcc" ],
-      "agentBullseyeRing" : 7,
+      "agentBullseyeRing" : 9,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
       "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -435,14 +439,14 @@ open class AnalyticsAPI {
         "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 6, 6 ],
+        "q850ResponseCodes" : [ 3, 3 ],
         "wrapUpCode" : "wrapUpCode",
         "destinationConversationId" : "destinationConversationId",
         "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -475,14 +479,14 @@ open class AnalyticsAPI {
         "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 6, 6 ],
+        "q850ResponseCodes" : [ 3, 3 ],
         "wrapUpCode" : "wrapUpCode",
         "destinationConversationId" : "destinationConversationId",
         "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -518,42 +522,42 @@ open class AnalyticsAPI {
       "ani" : "ani",
       "direction" : "inbound",
       "cc" : [ "cc", "cc" ],
-      "routingRing" : 6,
+      "routingRing" : 7,
       "journeyCustomerSessionId" : "journeyCustomerSessionId",
       "sessionId" : "sessionId",
       "journeyActionId" : "journeyActionId",
-      "eligibleAgentCounts" : [ 1, 1 ],
+      "eligibleAgentCounts" : [ 3, 3 ],
       "dispositionName" : "dispositionName",
       "scriptId" : "scriptId",
       "selectedAgentId" : "selectedAgentId",
       "coachedParticipantId" : "coachedParticipantId",
       "acwSkipped" : true,
       "mediaEndpointStats" : [ {
-        "minRFactor" : 6.438423552598547,
-        "underrunPackets" : 1,
-        "overrunPackets" : 3,
-        "maxLatencyMs" : 8,
-        "minMos" : 9.018348186070783,
+        "minRFactor" : 9.369310271410669,
+        "underrunPackets" : 9,
+        "overrunPackets" : 6,
+        "maxLatencyMs" : 5,
+        "minMos" : 9.965781217890562,
         "codecs" : [ "codecs", "codecs" ],
         "eventTime" : "2000-01-23T04:56:07.000+00:00",
-        "receivedPackets" : 6,
-        "duplicatePackets" : 9,
-        "invalidPackets" : 6,
-        "discardedPackets" : 9
+        "receivedPackets" : 8,
+        "duplicatePackets" : 1,
+        "invalidPackets" : 4,
+        "discardedPackets" : 7
       }, {
-        "minRFactor" : 6.438423552598547,
-        "underrunPackets" : 1,
-        "overrunPackets" : 3,
-        "maxLatencyMs" : 8,
-        "minMos" : 9.018348186070783,
+        "minRFactor" : 9.369310271410669,
+        "underrunPackets" : 9,
+        "overrunPackets" : 6,
+        "maxLatencyMs" : 5,
+        "minMos" : 9.965781217890562,
         "codecs" : [ "codecs", "codecs" ],
         "eventTime" : "2000-01-23T04:56:07.000+00:00",
-        "receivedPackets" : 6,
-        "duplicatePackets" : 9,
-        "invalidPackets" : 6,
-        "discardedPackets" : 9
+        "receivedPackets" : 8,
+        "duplicatePackets" : 1,
+        "invalidPackets" : 4,
+        "discardedPackets" : 7
       } ],
-      "selectedAgentRank" : 7,
+      "selectedAgentRank" : 1,
       "outboundContactListId" : "outboundContactListId"
     }, {
       "authenticated" : true,
@@ -562,13 +566,13 @@ open class AnalyticsAPI {
       "monitoredParticipantId" : "monitoredParticipantId",
       "videoAddressSelf" : "videoAddressSelf",
       "agentOwned" : true,
-      "waitingInteractionCounts" : [ 4, 4 ],
+      "waitingInteractionCounts" : [ 1, 1 ],
       "proposedAgents" : [ {
         "proposedAgentId" : "proposedAgentId",
-        "agentRank" : 5
+        "agentRank" : 6
       }, {
         "proposedAgentId" : "proposedAgentId",
-        "agentRank" : 5
+        "agentRank" : 6
       } ],
       "addressSelf" : "addressSelf",
       "skipEnabled" : true,
@@ -579,7 +583,7 @@ open class AnalyticsAPI {
       "messageType" : "messageType",
       "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
       "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-      "mediaCount" : 1,
+      "mediaCount" : 4,
       "dnis" : "dnis",
       "videoRoomId" : "videoRoomId",
       "flow" : "{}",
@@ -598,14 +602,14 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "name" : "name",
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
-        "value" : 2
+        "value" : 6
       }, {
         "name" : "name",
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
-        "value" : 2
+        "value" : 6
       } ],
       "bargedParticipantId" : "bargedParticipantId",
-      "journeyActionMapVersion" : 1,
+      "journeyActionMapVersion" : 2,
       "mediaBridgeId" : "mediaBridgeId",
       "agentAssistantId" : "agentAssistantId",
       "deliveryStatus" : "DeliveryFailed",
@@ -616,7 +620,7 @@ open class AnalyticsAPI {
       "remoteNameDisplayable" : "remoteNameDisplayable",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
       "bcc" : [ "bcc", "bcc" ],
-      "agentBullseyeRing" : 7,
+      "agentBullseyeRing" : 9,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
       "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -638,14 +642,14 @@ open class AnalyticsAPI {
         "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 6, 6 ],
+        "q850ResponseCodes" : [ 3, 3 ],
         "wrapUpCode" : "wrapUpCode",
         "destinationConversationId" : "destinationConversationId",
         "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -678,14 +682,14 @@ open class AnalyticsAPI {
         "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 6, 6 ],
+        "q850ResponseCodes" : [ 3, 3 ],
         "wrapUpCode" : "wrapUpCode",
         "destinationConversationId" : "destinationConversationId",
         "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -721,42 +725,42 @@ open class AnalyticsAPI {
       "ani" : "ani",
       "direction" : "inbound",
       "cc" : [ "cc", "cc" ],
-      "routingRing" : 6,
+      "routingRing" : 7,
       "journeyCustomerSessionId" : "journeyCustomerSessionId",
       "sessionId" : "sessionId",
       "journeyActionId" : "journeyActionId",
-      "eligibleAgentCounts" : [ 1, 1 ],
+      "eligibleAgentCounts" : [ 3, 3 ],
       "dispositionName" : "dispositionName",
       "scriptId" : "scriptId",
       "selectedAgentId" : "selectedAgentId",
       "coachedParticipantId" : "coachedParticipantId",
       "acwSkipped" : true,
       "mediaEndpointStats" : [ {
-        "minRFactor" : 6.438423552598547,
-        "underrunPackets" : 1,
-        "overrunPackets" : 3,
-        "maxLatencyMs" : 8,
-        "minMos" : 9.018348186070783,
+        "minRFactor" : 9.369310271410669,
+        "underrunPackets" : 9,
+        "overrunPackets" : 6,
+        "maxLatencyMs" : 5,
+        "minMos" : 9.965781217890562,
         "codecs" : [ "codecs", "codecs" ],
         "eventTime" : "2000-01-23T04:56:07.000+00:00",
-        "receivedPackets" : 6,
-        "duplicatePackets" : 9,
-        "invalidPackets" : 6,
-        "discardedPackets" : 9
+        "receivedPackets" : 8,
+        "duplicatePackets" : 1,
+        "invalidPackets" : 4,
+        "discardedPackets" : 7
       }, {
-        "minRFactor" : 6.438423552598547,
-        "underrunPackets" : 1,
-        "overrunPackets" : 3,
-        "maxLatencyMs" : 8,
-        "minMos" : 9.018348186070783,
+        "minRFactor" : 9.369310271410669,
+        "underrunPackets" : 9,
+        "overrunPackets" : 6,
+        "maxLatencyMs" : 5,
+        "minMos" : 9.965781217890562,
         "codecs" : [ "codecs", "codecs" ],
         "eventTime" : "2000-01-23T04:56:07.000+00:00",
-        "receivedPackets" : 6,
-        "duplicatePackets" : 9,
-        "invalidPackets" : 6,
-        "discardedPackets" : 9
+        "receivedPackets" : 8,
+        "duplicatePackets" : 1,
+        "invalidPackets" : 4,
+        "discardedPackets" : 7
       } ],
-      "selectedAgentRank" : 7,
+      "selectedAgentRank" : 1,
       "outboundContactListId" : "outboundContactListId"
     } ],
     "externalContactId" : "externalContactId",
@@ -775,13 +779,13 @@ open class AnalyticsAPI {
       "monitoredParticipantId" : "monitoredParticipantId",
       "videoAddressSelf" : "videoAddressSelf",
       "agentOwned" : true,
-      "waitingInteractionCounts" : [ 4, 4 ],
+      "waitingInteractionCounts" : [ 1, 1 ],
       "proposedAgents" : [ {
         "proposedAgentId" : "proposedAgentId",
-        "agentRank" : 5
+        "agentRank" : 6
       }, {
         "proposedAgentId" : "proposedAgentId",
-        "agentRank" : 5
+        "agentRank" : 6
       } ],
       "addressSelf" : "addressSelf",
       "skipEnabled" : true,
@@ -792,7 +796,7 @@ open class AnalyticsAPI {
       "messageType" : "messageType",
       "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
       "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-      "mediaCount" : 1,
+      "mediaCount" : 4,
       "dnis" : "dnis",
       "videoRoomId" : "videoRoomId",
       "flow" : "{}",
@@ -811,14 +815,14 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "name" : "name",
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
-        "value" : 2
+        "value" : 6
       }, {
         "name" : "name",
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
-        "value" : 2
+        "value" : 6
       } ],
       "bargedParticipantId" : "bargedParticipantId",
-      "journeyActionMapVersion" : 1,
+      "journeyActionMapVersion" : 2,
       "mediaBridgeId" : "mediaBridgeId",
       "agentAssistantId" : "agentAssistantId",
       "deliveryStatus" : "DeliveryFailed",
@@ -829,7 +833,7 @@ open class AnalyticsAPI {
       "remoteNameDisplayable" : "remoteNameDisplayable",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
       "bcc" : [ "bcc", "bcc" ],
-      "agentBullseyeRing" : 7,
+      "agentBullseyeRing" : 9,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
       "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -851,14 +855,14 @@ open class AnalyticsAPI {
         "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 6, 6 ],
+        "q850ResponseCodes" : [ 3, 3 ],
         "wrapUpCode" : "wrapUpCode",
         "destinationConversationId" : "destinationConversationId",
         "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -891,14 +895,14 @@ open class AnalyticsAPI {
         "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 6, 6 ],
+        "q850ResponseCodes" : [ 3, 3 ],
         "wrapUpCode" : "wrapUpCode",
         "destinationConversationId" : "destinationConversationId",
         "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -934,42 +938,42 @@ open class AnalyticsAPI {
       "ani" : "ani",
       "direction" : "inbound",
       "cc" : [ "cc", "cc" ],
-      "routingRing" : 6,
+      "routingRing" : 7,
       "journeyCustomerSessionId" : "journeyCustomerSessionId",
       "sessionId" : "sessionId",
       "journeyActionId" : "journeyActionId",
-      "eligibleAgentCounts" : [ 1, 1 ],
+      "eligibleAgentCounts" : [ 3, 3 ],
       "dispositionName" : "dispositionName",
       "scriptId" : "scriptId",
       "selectedAgentId" : "selectedAgentId",
       "coachedParticipantId" : "coachedParticipantId",
       "acwSkipped" : true,
       "mediaEndpointStats" : [ {
-        "minRFactor" : 6.438423552598547,
-        "underrunPackets" : 1,
-        "overrunPackets" : 3,
-        "maxLatencyMs" : 8,
-        "minMos" : 9.018348186070783,
+        "minRFactor" : 9.369310271410669,
+        "underrunPackets" : 9,
+        "overrunPackets" : 6,
+        "maxLatencyMs" : 5,
+        "minMos" : 9.965781217890562,
         "codecs" : [ "codecs", "codecs" ],
         "eventTime" : "2000-01-23T04:56:07.000+00:00",
-        "receivedPackets" : 6,
-        "duplicatePackets" : 9,
-        "invalidPackets" : 6,
-        "discardedPackets" : 9
+        "receivedPackets" : 8,
+        "duplicatePackets" : 1,
+        "invalidPackets" : 4,
+        "discardedPackets" : 7
       }, {
-        "minRFactor" : 6.438423552598547,
-        "underrunPackets" : 1,
-        "overrunPackets" : 3,
-        "maxLatencyMs" : 8,
-        "minMos" : 9.018348186070783,
+        "minRFactor" : 9.369310271410669,
+        "underrunPackets" : 9,
+        "overrunPackets" : 6,
+        "maxLatencyMs" : 5,
+        "minMos" : 9.965781217890562,
         "codecs" : [ "codecs", "codecs" ],
         "eventTime" : "2000-01-23T04:56:07.000+00:00",
-        "receivedPackets" : 6,
-        "duplicatePackets" : 9,
-        "invalidPackets" : 6,
-        "discardedPackets" : 9
+        "receivedPackets" : 8,
+        "duplicatePackets" : 1,
+        "invalidPackets" : 4,
+        "discardedPackets" : 7
       } ],
-      "selectedAgentRank" : 7,
+      "selectedAgentRank" : 1,
       "outboundContactListId" : "outboundContactListId"
     }, {
       "authenticated" : true,
@@ -978,13 +982,13 @@ open class AnalyticsAPI {
       "monitoredParticipantId" : "monitoredParticipantId",
       "videoAddressSelf" : "videoAddressSelf",
       "agentOwned" : true,
-      "waitingInteractionCounts" : [ 4, 4 ],
+      "waitingInteractionCounts" : [ 1, 1 ],
       "proposedAgents" : [ {
         "proposedAgentId" : "proposedAgentId",
-        "agentRank" : 5
+        "agentRank" : 6
       }, {
         "proposedAgentId" : "proposedAgentId",
-        "agentRank" : 5
+        "agentRank" : 6
       } ],
       "addressSelf" : "addressSelf",
       "skipEnabled" : true,
@@ -995,7 +999,7 @@ open class AnalyticsAPI {
       "messageType" : "messageType",
       "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
       "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-      "mediaCount" : 1,
+      "mediaCount" : 4,
       "dnis" : "dnis",
       "videoRoomId" : "videoRoomId",
       "flow" : "{}",
@@ -1014,14 +1018,14 @@ open class AnalyticsAPI {
       "metrics" : [ {
         "name" : "name",
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
-        "value" : 2
+        "value" : 6
       }, {
         "name" : "name",
         "emitDate" : "2000-01-23T04:56:07.000+00:00",
-        "value" : 2
+        "value" : 6
       } ],
       "bargedParticipantId" : "bargedParticipantId",
-      "journeyActionMapVersion" : 1,
+      "journeyActionMapVersion" : 2,
       "mediaBridgeId" : "mediaBridgeId",
       "agentAssistantId" : "agentAssistantId",
       "deliveryStatus" : "DeliveryFailed",
@@ -1032,7 +1036,7 @@ open class AnalyticsAPI {
       "remoteNameDisplayable" : "remoteNameDisplayable",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
       "bcc" : [ "bcc", "bcc" ],
-      "agentBullseyeRing" : 7,
+      "agentBullseyeRing" : 9,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
       "recording" : true,
       "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -1054,14 +1058,14 @@ open class AnalyticsAPI {
         "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 6, 6 ],
+        "q850ResponseCodes" : [ 3, 3 ],
         "wrapUpCode" : "wrapUpCode",
         "destinationConversationId" : "destinationConversationId",
         "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -1094,14 +1098,14 @@ open class AnalyticsAPI {
         "segmentStart" : "2000-01-23T04:56:07.000+00:00",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "videoMuted" : true,
         "audioMuted" : true,
-        "q850ResponseCodes" : [ 6, 6 ],
+        "q850ResponseCodes" : [ 3, 3 ],
         "wrapUpCode" : "wrapUpCode",
         "destinationConversationId" : "destinationConversationId",
         "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -1137,42 +1141,42 @@ open class AnalyticsAPI {
       "ani" : "ani",
       "direction" : "inbound",
       "cc" : [ "cc", "cc" ],
-      "routingRing" : 6,
+      "routingRing" : 7,
       "journeyCustomerSessionId" : "journeyCustomerSessionId",
       "sessionId" : "sessionId",
       "journeyActionId" : "journeyActionId",
-      "eligibleAgentCounts" : [ 1, 1 ],
+      "eligibleAgentCounts" : [ 3, 3 ],
       "dispositionName" : "dispositionName",
       "scriptId" : "scriptId",
       "selectedAgentId" : "selectedAgentId",
       "coachedParticipantId" : "coachedParticipantId",
       "acwSkipped" : true,
       "mediaEndpointStats" : [ {
-        "minRFactor" : 6.438423552598547,
-        "underrunPackets" : 1,
-        "overrunPackets" : 3,
-        "maxLatencyMs" : 8,
-        "minMos" : 9.018348186070783,
+        "minRFactor" : 9.369310271410669,
+        "underrunPackets" : 9,
+        "overrunPackets" : 6,
+        "maxLatencyMs" : 5,
+        "minMos" : 9.965781217890562,
         "codecs" : [ "codecs", "codecs" ],
         "eventTime" : "2000-01-23T04:56:07.000+00:00",
-        "receivedPackets" : 6,
-        "duplicatePackets" : 9,
-        "invalidPackets" : 6,
-        "discardedPackets" : 9
+        "receivedPackets" : 8,
+        "duplicatePackets" : 1,
+        "invalidPackets" : 4,
+        "discardedPackets" : 7
       }, {
-        "minRFactor" : 6.438423552598547,
-        "underrunPackets" : 1,
-        "overrunPackets" : 3,
-        "maxLatencyMs" : 8,
-        "minMos" : 9.018348186070783,
+        "minRFactor" : 9.369310271410669,
+        "underrunPackets" : 9,
+        "overrunPackets" : 6,
+        "maxLatencyMs" : 5,
+        "minMos" : 9.965781217890562,
         "codecs" : [ "codecs", "codecs" ],
         "eventTime" : "2000-01-23T04:56:07.000+00:00",
-        "receivedPackets" : 6,
-        "duplicatePackets" : 9,
-        "invalidPackets" : 6,
-        "discardedPackets" : 9
+        "receivedPackets" : 8,
+        "duplicatePackets" : 1,
+        "invalidPackets" : 4,
+        "discardedPackets" : 7
       } ],
-      "selectedAgentRank" : 7,
+      "selectedAgentRank" : 1,
       "outboundContactListId" : "outboundContactListId"
     } ],
     "externalContactId" : "externalContactId",
@@ -1238,12 +1242,12 @@ open class AnalyticsAPI {
      - examples: [{contentType=application/json, example={
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
-    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "mediaStatsMinConversationMos" : 0.8008281904610115,
     "evaluations" : [ {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -1257,8 +1261,8 @@ open class AnalyticsAPI {
     }, {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -1282,7 +1286,7 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
@@ -1294,24 +1298,24 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
@@ -1325,13 +1329,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -1342,7 +1346,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -1361,14 +1365,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -1379,7 +1383,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -1401,14 +1405,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -1441,14 +1445,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -1484,42 +1488,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -1528,13 +1532,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -1545,7 +1549,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -1564,14 +1568,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -1582,7 +1586,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -1604,14 +1608,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -1644,14 +1648,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -1687,42 +1691,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -1741,13 +1745,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -1758,7 +1762,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -1777,14 +1781,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -1795,7 +1799,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -1817,14 +1821,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -1857,14 +1861,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -1900,42 +1904,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -1944,13 +1948,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -1961,7 +1965,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -1980,14 +1984,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -1998,7 +2002,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -2020,14 +2024,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2060,14 +2064,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2103,42 +2107,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -2151,12 +2155,12 @@ open class AnalyticsAPI {
     } ]
   }, {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
-    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "mediaStatsMinConversationMos" : 0.8008281904610115,
     "evaluations" : [ {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -2170,8 +2174,8 @@ open class AnalyticsAPI {
     }, {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -2195,7 +2199,7 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
@@ -2207,24 +2211,24 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
@@ -2238,13 +2242,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -2255,7 +2259,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -2274,14 +2278,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -2292,7 +2296,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -2314,14 +2318,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2354,14 +2358,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2397,42 +2401,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -2441,13 +2445,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -2458,7 +2462,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -2477,14 +2481,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -2495,7 +2499,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -2517,14 +2521,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2557,14 +2561,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2600,42 +2604,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -2654,13 +2658,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -2671,7 +2675,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -2690,14 +2694,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -2708,7 +2712,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -2730,14 +2734,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2770,14 +2774,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2813,42 +2817,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -2857,13 +2861,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -2874,7 +2878,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -2893,14 +2897,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -2911,7 +2915,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -2933,14 +2937,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -2973,14 +2977,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -3016,42 +3020,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -3186,8 +3190,8 @@ open class AnalyticsAPI {
     "evaluations" : [ {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -3201,8 +3205,8 @@ open class AnalyticsAPI {
     }, {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -3226,7 +3230,7 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
@@ -3238,19 +3242,19 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
@@ -3269,13 +3273,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -3286,7 +3290,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -3305,14 +3309,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -3323,7 +3327,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -3345,14 +3349,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -3385,14 +3389,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -3428,42 +3432,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -3472,13 +3476,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -3489,7 +3493,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -3508,14 +3512,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -3526,7 +3530,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -3548,14 +3552,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -3588,14 +3592,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -3631,42 +3635,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -3688,13 +3692,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -3705,7 +3709,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -3724,14 +3728,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -3742,7 +3746,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -3764,14 +3768,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -3804,14 +3808,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -3847,42 +3851,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -3891,13 +3895,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -3908,7 +3912,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -3927,14 +3931,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -3945,7 +3949,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -3967,14 +3971,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4007,14 +4011,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4050,42 +4054,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -4105,8 +4109,8 @@ open class AnalyticsAPI {
     "evaluations" : [ {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -4120,8 +4124,8 @@ open class AnalyticsAPI {
     }, {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -4145,7 +4149,7 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
@@ -4157,19 +4161,19 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
@@ -4188,13 +4192,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -4205,7 +4209,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -4224,14 +4228,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -4242,7 +4246,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -4264,14 +4268,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4304,14 +4308,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4347,42 +4351,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -4391,13 +4395,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -4408,7 +4412,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -4427,14 +4431,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -4445,7 +4449,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -4467,14 +4471,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4507,14 +4511,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4550,42 +4554,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -4607,13 +4611,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -4624,7 +4628,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -4643,14 +4647,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -4661,7 +4665,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -4683,14 +4687,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4723,14 +4727,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4766,42 +4770,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -4810,13 +4814,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -4827,7 +4831,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -4846,14 +4850,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -4864,7 +4868,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -4886,14 +4890,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4926,14 +4930,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -4969,42 +4973,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -6414,6 +6418,363 @@ open class AnalyticsAPI {
 
     
     /**
+     Query for action aggregates
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsActionsAggregatesQuery(body: ActionAggregationQuery, completion: @escaping ((_ data: ActionAggregateQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsActionsAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ActionAggregateQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for action aggregates
+     - POST /api/v2/analytics/actions/aggregates/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<ActionAggregateQueryResponse> 
+     */
+    open class func postAnalyticsActionsAggregatesQueryWithRequestBuilder(body: ActionAggregationQuery) -> RequestBuilder<ActionAggregateQueryResponse> {        
+        let path = "/api/v2/analytics/actions/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActionAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Query for bot aggregates
      
      - parameter body: (body) query 
@@ -7276,7 +7637,7 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalHits" : 6,
+  "totalHits" : 5,
   "aggregations" : [ {
     "metric" : "metric",
     "count" : 0,
@@ -7312,12 +7673,12 @@ open class AnalyticsAPI {
   } ],
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
-    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "mediaStatsMinConversationMos" : 0.8008281904610115,
     "evaluations" : [ {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -7331,8 +7692,8 @@ open class AnalyticsAPI {
     }, {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -7356,7 +7717,7 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
@@ -7368,24 +7729,24 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
@@ -7399,13 +7760,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -7416,7 +7777,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -7435,14 +7796,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -7453,7 +7814,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -7475,14 +7836,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -7515,14 +7876,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -7558,42 +7919,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -7602,13 +7963,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -7619,7 +7980,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -7638,14 +7999,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -7656,7 +8017,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -7678,14 +8039,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -7718,14 +8079,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -7761,42 +8122,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -7815,13 +8176,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -7832,7 +8193,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -7851,14 +8212,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -7869,7 +8230,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -7891,14 +8252,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -7931,14 +8292,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -7974,42 +8335,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -8018,13 +8379,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -8035,7 +8396,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -8054,14 +8415,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -8072,7 +8433,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -8094,14 +8455,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -8134,14 +8495,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -8177,42 +8538,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -8225,12 +8586,12 @@ open class AnalyticsAPI {
     } ]
   }, {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
-    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "mediaStatsMinConversationMos" : 0.8008281904610115,
     "evaluations" : [ {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -8244,8 +8605,8 @@ open class AnalyticsAPI {
     }, {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -8269,7 +8630,7 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
@@ -8281,24 +8642,24 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
@@ -8312,13 +8673,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -8329,7 +8690,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -8348,14 +8709,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -8366,7 +8727,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -8388,14 +8749,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -8428,14 +8789,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -8471,42 +8832,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -8515,13 +8876,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -8532,7 +8893,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -8551,14 +8912,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -8569,7 +8930,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -8591,14 +8952,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -8631,14 +8992,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -8674,42 +9035,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -8728,13 +9089,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -8745,7 +9106,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -8764,14 +9125,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -8782,7 +9143,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -8804,14 +9165,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -8844,14 +9205,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -8887,42 +9248,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -8931,13 +9292,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -8948,7 +9309,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -8967,14 +9328,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -8985,7 +9346,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -9007,14 +9368,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -9047,14 +9408,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -9090,42 +9451,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -9189,12 +9550,12 @@ open class AnalyticsAPI {
      - examples: [{contentType=application/json, example={
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
-    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "mediaStatsMinConversationMos" : 0.8008281904610115,
     "evaluations" : [ {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -9208,8 +9569,8 @@ open class AnalyticsAPI {
     }, {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -9233,7 +9594,7 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
@@ -9245,24 +9606,24 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
@@ -9276,13 +9637,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -9293,7 +9654,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -9312,14 +9673,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -9330,7 +9691,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -9352,14 +9713,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -9392,14 +9753,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -9435,42 +9796,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -9479,13 +9840,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -9496,7 +9857,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -9515,14 +9876,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -9533,7 +9894,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -9555,14 +9916,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -9595,14 +9956,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -9638,42 +9999,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -9692,13 +10053,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -9709,7 +10070,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -9728,14 +10089,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -9746,7 +10107,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -9768,14 +10129,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -9808,14 +10169,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -9851,42 +10212,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -9895,13 +10256,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -9912,7 +10273,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -9931,14 +10292,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -9949,7 +10310,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -9971,14 +10332,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10011,14 +10372,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10054,42 +10415,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -10102,12 +10463,12 @@ open class AnalyticsAPI {
     } ]
   }, {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
-    "mediaStatsMinConversationMos" : 5.637376656633329,
+    "mediaStatsMinConversationMos" : 0.8008281904610115,
     "evaluations" : [ {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -10121,8 +10482,8 @@ open class AnalyticsAPI {
     }, {
       "formId" : "formId",
       "queueId" : "queueId",
-      "oTotalScore" : 9,
-      "oTotalCriticalScore" : 7,
+      "oTotalScore" : 5,
+      "oTotalCriticalScore" : 1,
       "contextId" : "contextId",
       "userId" : "userId",
       "evaluationId" : "evaluationId",
@@ -10146,7 +10507,7 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
@@ -10158,24 +10519,24 @@ open class AnalyticsAPI {
       "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
-      "surveyPromoterScore" : 3,
+      "surveyPromoterScore" : 5,
       "userId" : "userId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     }, {
       "queueId" : "queueId",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "nNextContactAvoided" : 4,
+      "nNextContactAvoided" : 7,
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "mediaStatsMinConversationRFactor" : 2.3021358869347655,
+    "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
@@ -10189,13 +10550,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -10206,7 +10567,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -10225,14 +10586,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -10243,7 +10604,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -10265,14 +10626,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10305,14 +10666,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10348,42 +10709,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -10392,13 +10753,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -10409,7 +10770,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -10428,14 +10789,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -10446,7 +10807,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -10468,14 +10829,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10508,14 +10869,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10551,42 +10912,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -10605,13 +10966,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -10622,7 +10983,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -10641,14 +11002,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -10659,7 +11020,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -10681,14 +11042,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10721,14 +11082,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10764,42 +11125,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       }, {
         "authenticated" : true,
@@ -10808,13 +11169,13 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "monitoredParticipantId",
         "videoAddressSelf" : "videoAddressSelf",
         "agentOwned" : true,
-        "waitingInteractionCounts" : [ 4, 4 ],
+        "waitingInteractionCounts" : [ 1, 1 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         }, {
           "proposedAgentId" : "proposedAgentId",
-          "agentRank" : 5
+          "agentRank" : 6
         } ],
         "addressSelf" : "addressSelf",
         "skipEnabled" : true,
@@ -10825,7 +11186,7 @@ open class AnalyticsAPI {
         "messageType" : "messageType",
         "removedSkillIds" : [ "removedSkillIds", "removedSkillIds" ],
         "requestedRoutings" : [ "Bullseye", "Bullseye" ],
-        "mediaCount" : 1,
+        "mediaCount" : 4,
         "dnis" : "dnis",
         "videoRoomId" : "videoRoomId",
         "flow" : "{}",
@@ -10844,14 +11205,14 @@ open class AnalyticsAPI {
         "metrics" : [ {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         }, {
           "name" : "name",
           "emitDate" : "2000-01-23T04:56:07.000+00:00",
-          "value" : 2
+          "value" : 6
         } ],
         "bargedParticipantId" : "bargedParticipantId",
-        "journeyActionMapVersion" : 1,
+        "journeyActionMapVersion" : 2,
         "mediaBridgeId" : "mediaBridgeId",
         "agentAssistantId" : "agentAssistantId",
         "deliveryStatus" : "DeliveryFailed",
@@ -10862,7 +11223,7 @@ open class AnalyticsAPI {
         "remoteNameDisplayable" : "remoteNameDisplayable",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+00:00",
         "bcc" : [ "bcc", "bcc" ],
-        "agentBullseyeRing" : 7,
+        "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
@@ -10884,14 +11245,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10924,14 +11285,14 @@ open class AnalyticsAPI {
           "segmentStart" : "2000-01-23T04:56:07.000+00:00",
           "scoredAgents" : [ {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           }, {
             "scoredAgentId" : "scoredAgentId",
-            "agentScore" : 5
+            "agentScore" : 1
           } ],
           "videoMuted" : true,
           "audioMuted" : true,
-          "q850ResponseCodes" : [ 6, 6 ],
+          "q850ResponseCodes" : [ 3, 3 ],
           "wrapUpCode" : "wrapUpCode",
           "destinationConversationId" : "destinationConversationId",
           "wrapUpTags" : [ "wrapUpTags", "wrapUpTags" ],
@@ -10967,42 +11328,42 @@ open class AnalyticsAPI {
         "ani" : "ani",
         "direction" : "inbound",
         "cc" : [ "cc", "cc" ],
-        "routingRing" : 6,
+        "routingRing" : 7,
         "journeyCustomerSessionId" : "journeyCustomerSessionId",
         "sessionId" : "sessionId",
         "journeyActionId" : "journeyActionId",
-        "eligibleAgentCounts" : [ 1, 1 ],
+        "eligibleAgentCounts" : [ 3, 3 ],
         "dispositionName" : "dispositionName",
         "scriptId" : "scriptId",
         "selectedAgentId" : "selectedAgentId",
         "coachedParticipantId" : "coachedParticipantId",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         }, {
-          "minRFactor" : 6.438423552598547,
-          "underrunPackets" : 1,
-          "overrunPackets" : 3,
-          "maxLatencyMs" : 8,
-          "minMos" : 9.018348186070783,
+          "minRFactor" : 9.369310271410669,
+          "underrunPackets" : 9,
+          "overrunPackets" : 6,
+          "maxLatencyMs" : 5,
+          "minMos" : 9.965781217890562,
           "codecs" : [ "codecs", "codecs" ],
           "eventTime" : "2000-01-23T04:56:07.000+00:00",
-          "receivedPackets" : 6,
-          "duplicatePackets" : 9,
-          "invalidPackets" : 6,
-          "discardedPackets" : 9
+          "receivedPackets" : 8,
+          "duplicatePackets" : 1,
+          "invalidPackets" : 4,
+          "discardedPackets" : 7
         } ],
-        "selectedAgentRank" : 7,
+        "selectedAgentRank" : 1,
         "outboundContactListId" : "outboundContactListId"
       } ],
       "externalContactId" : "externalContactId",
@@ -11813,10 +12174,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11839,10 +12200,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11885,10 +12246,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11911,10 +12272,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11962,10 +12323,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11988,10 +12349,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12034,10 +12395,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12060,10 +12421,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12522,10 +12883,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12548,10 +12909,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12594,10 +12955,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12620,10 +12981,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12671,10 +13032,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12697,10 +13058,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12743,10 +13104,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -12769,10 +13130,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14352,10 +14713,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14378,10 +14739,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14424,10 +14785,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14450,10 +14811,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14501,10 +14862,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14527,10 +14888,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14573,10 +14934,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -14599,10 +14960,10 @@ open class AnalyticsAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

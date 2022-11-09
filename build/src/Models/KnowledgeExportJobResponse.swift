@@ -11,6 +11,11 @@ import Foundation
 
 public class KnowledgeExportJobResponse: Codable {
 
+    public enum FileType: String, Codable { 
+        case json = "Json"
+        case csv = "Csv"
+        case xlsx = "Xlsx"
+    }
     public enum Status: String, Codable { 
         case created = "Created"
         case validationInProgress = "ValidationInProgress"
@@ -28,6 +33,8 @@ public class KnowledgeExportJobResponse: Codable {
     public var _id: String?
     /** The URL of the location at which the caller can download the export file, when available. */
     public var downloadURL: String?
+    /** File type of the document */
+    public var fileType: FileType?
     /** The current count of the number of records processed. */
     public var countDocumentProcessed: Int?
     /** Filters to narrow down what to export. */
@@ -45,9 +52,10 @@ public class KnowledgeExportJobResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, downloadURL: String?, countDocumentProcessed: Int?, exportFilter: KnowledgeExportJobFilter?, status: Status?, knowledgeBase: KnowledgeBase?, dateCreated: Date?, dateModified: Date?, errorInformation: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, downloadURL: String?, fileType: FileType?, countDocumentProcessed: Int?, exportFilter: KnowledgeExportJobFilter?, status: Status?, knowledgeBase: KnowledgeBase?, dateCreated: Date?, dateModified: Date?, errorInformation: ErrorBody?, selfUri: String?) {
         self._id = _id
         self.downloadURL = downloadURL
+        self.fileType = fileType
         self.countDocumentProcessed = countDocumentProcessed
         self.exportFilter = exportFilter
         self.status = status
@@ -61,6 +69,7 @@ public class KnowledgeExportJobResponse: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case downloadURL
+        case fileType
         case countDocumentProcessed
         case exportFilter
         case status

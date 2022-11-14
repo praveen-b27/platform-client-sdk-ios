@@ -1566,14 +1566,18 @@ open class RoutingAPI {
     }
 
     
+    
+    
     /**
      Get domains
      
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter excludeStatus: (query) Exclude MX record data (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailDomains(excludeStatus: Bool? = nil, completion: @escaping ((_ data: InboundDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailDomainsWithRequestBuilder(excludeStatus: excludeStatus)
+    open class func getRoutingEmailDomains(pageSize: Int? = nil, pageNumber: Int? = nil, excludeStatus: Bool? = nil, completion: @escaping ((_ data: InboundDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus)
         requestBuilder.execute { (response: Response<InboundDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1625,17 +1629,21 @@ open class RoutingAPI {
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
      - parameter excludeStatus: (query) Exclude MX record data (optional)
 
      - returns: RequestBuilder<InboundDomainEntityListing> 
      */
-    open class func getRoutingEmailDomainsWithRequestBuilder(excludeStatus: Bool? = nil) -> RequestBuilder<InboundDomainEntityListing> {        
+    open class func getRoutingEmailDomainsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, excludeStatus: Bool? = nil) -> RequestBuilder<InboundDomainEntityListing> {        
         let path = "/api/v2/routing/email/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
             "excludeStatus": excludeStatus
         ])
 
@@ -11236,10 +11244,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11262,10 +11270,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11308,10 +11316,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11334,10 +11342,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11385,10 +11393,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11411,10 +11419,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11457,10 +11465,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11483,10 +11491,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 1
+          "agentScore" : 5
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

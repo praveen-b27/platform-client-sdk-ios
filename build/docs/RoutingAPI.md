@@ -1545,7 +1545,7 @@ RoutingAPI.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSiz
 
 
 
-> [InboundDomainEntityListing](InboundDomainEntityListing.html) getRoutingEmailDomains(excludeStatus)
+> [InboundDomainEntityListing](InboundDomainEntityListing.html) getRoutingEmailDomains(pageSize, pageNumber, excludeStatus)
 
 Get domains
 
@@ -1565,10 +1565,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
 let excludeStatus: Bool = true // Exclude MX record data
 
 // Code example
-RoutingAPI.getRoutingEmailDomains(excludeStatus: excludeStatus) { (response, error) in
+RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1583,6 +1585,8 @@ RoutingAPI.getRoutingEmailDomains(excludeStatus: excludeStatus) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
 | **excludeStatus** | **Bool**| Exclude MX record data | [optional] |
 {: class="table-striped"}
 

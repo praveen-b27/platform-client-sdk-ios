@@ -21,8 +21,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplan) | Delete a work plan |
 | [**deleteWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplanrotation) | Delete a work plan rotation |
 | [**getWorkforcemanagementAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementAdherence) | Get a list of UserScheduleAdherence records for the requested users |
+| [**getWorkforcemanagementAdherenceExplanation**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceExplanation) | Get an adherence explanation for the current user |
+| [**getWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceExplanationsJob) | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalJob) | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdhocmodelingjob**](WorkforceManagementAPI.html#getWorkforcemanagementAdhocmodelingjob) | Get status of the modeling job |
+| [**getWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI.html#getWorkforcemanagementAgentAdherenceExplanation) | Get an adherence explanation |
 | [**getWorkforcemanagementAgentManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentManagementunit) | Get the management unit to which the agent belongs |
 | [**getWorkforcemanagementAgentsMeManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentsMeManagementunit) | Get the management unit to which the currently logged in agent belongs |
 | [**getWorkforcemanagementBusinessunit**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunit) | Get business unit |
@@ -81,9 +84,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementNotifications**](WorkforceManagementAPI.html#getWorkforcemanagementNotifications) | Get a list of notifications for the current user |
 | [**getWorkforcemanagementSchedulingjob**](WorkforceManagementAPI.html#getWorkforcemanagementSchedulingjob) | Get status of the scheduling job |
 | [**getWorkforcemanagementShifttrades**](WorkforceManagementAPI.html#getWorkforcemanagementShifttrades) | Gets all of my shift trades |
+| [**getWorkforcemanagementShrinkageJob**](WorkforceManagementAPI.html#getWorkforcemanagementShrinkageJob) | Request to fetch the status of the historical shrinkage query |
 | [**getWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequest) | Get a time off request for the current user |
 | [**getWorkforcemanagementTimeoffrequestWaitlistpositions**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequestWaitlistpositions) | Get the daily waitlist positions of a time off request for the current user |
 | [**getWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequests) | Get a list of time off requests for the current user |
+| [**patchWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI.html#patchWorkforcemanagementAgentAdherenceExplanation) | Update an adherence explanation |
 | [**patchWorkforcemanagementBusinessunit**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunit) | Update business unit |
 | [**patchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitActivitycode) | Update an activity code |
 | [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
@@ -97,9 +102,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWorkplan) | Update a work plan |
 | [**patchWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWorkplanrotation) | Update a work plan rotation |
 | [**patchWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementTimeoffrequest) | Update a time off request for the current user |
+| [**postWorkforcemanagementAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceExplanations) | Submit an adherence explanation for the current user |
+| [**postWorkforcemanagementAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceExplanationsQuery) | Query adherence explanations for the current user |
 | [**postWorkforcemanagementAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistorical) | Request a historical adherence report for users across management units |
+| [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
+| [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
 | [**postWorkforcemanagementAgentschedulesMine**](WorkforceManagementAPI.html#postWorkforcemanagementAgentschedulesMine) | Get published schedule for the current user |
 | [**postWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivitycodes) | Create a new activity code |
+| [**postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | Query adherence explanations across an entire business unit for the requested period |
 | [**postWorkforcemanagementBusinessunitAgentschedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAgentschedulesSearch) | Search published schedules |
 | [**postWorkforcemanagementBusinessunitIntraday**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitIntraday) | Get intraday data for the given date for the requested planningGroupIds |
 | [**postWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitPlanninggroups) | Adds a new planning group |
@@ -125,6 +135,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitHistoricaladherencequery) | Request a historical adherence report |
 | [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
 | [**postWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitSchedulesSearch) | Query published schedules for given given time range for set of users |
+| [**postWorkforcemanagementManagementunitShrinkageJobs**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitShrinkageJobs) | Request a historical shrinkage report |
 | [**postWorkforcemanagementManagementunitTimeofflimits**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeofflimits) | Creates a new time off limit object under management unit. |
 | [**postWorkforcemanagementManagementunitTimeofflimitsValuesQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeofflimitsValuesQuery) | Retrieves time off limit related values based on a given set of filters. |
 | [**postWorkforcemanagementManagementunitTimeoffplans**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffplans) | Creates a new time off plan |
@@ -890,6 +901,111 @@ WorkforceManagementAPI.getWorkforcemanagementAdherence(userId: userId) { (respon
 
 [**[UserScheduleAdherence]**](UserScheduleAdherence.html)
 
+<a name="getWorkforcemanagementAdherenceExplanation"></a>
+
+# **getWorkforcemanagementAdherenceExplanation**
+
+
+
+> [AdherenceExplanationResponse](AdherenceExplanationResponse.html) getWorkforcemanagementAdherenceExplanation(explanationId)
+
+Get an adherence explanation for the current user
+
+
+
+Wraps GET /api/v2/workforcemanagement/adherence/explanations/{explanationId}  
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceExplanation:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let explanationId: String = "" // The ID of the explanation to update
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementAdherenceExplanation(explanationId: explanationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementAdherenceExplanation was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **explanationId** | **String**| The ID of the explanation to update | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AdherenceExplanationResponse**](AdherenceExplanationResponse.html)
+
+<a name="getWorkforcemanagementAdherenceExplanationsJob"></a>
+
+# **getWorkforcemanagementAdherenceExplanationsJob**
+
+
+
+> [AdherenceExplanationJob](AdherenceExplanationJob.html) getWorkforcemanagementAdherenceExplanationsJob(jobId)
+
+Query the status of an adherence explanation operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/adherence/explanations/jobs/{jobId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementAdherenceExplanationsJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementAdherenceExplanationsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of the job | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AdherenceExplanationJob**](AdherenceExplanationJob.html)
+
 <a name="getWorkforcemanagementAdherenceHistoricalJob"></a>
 
 # **getWorkforcemanagementAdherenceHistoricalJob**
@@ -995,6 +1111,60 @@ WorkforceManagementAPI.getWorkforcemanagementAdhocmodelingjob(jobId: jobId) { (r
 ### Return type
 
 [**ModelingStatusResponse**](ModelingStatusResponse.html)
+
+<a name="getWorkforcemanagementAgentAdherenceExplanation"></a>
+
+# **getWorkforcemanagementAgentAdherenceExplanation**
+
+
+
+> [AdherenceExplanationResponse](AdherenceExplanationResponse.html) getWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId)
+
+Get an adherence explanation
+
+
+
+Wraps GET /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}  
+
+Requires ANY permissions: 
+
+* wfm:adherenceExplanation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent to query
+let explanationId: String = "" // The ID of the explanation to update
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementAgentAdherenceExplanation(agentId: agentId, explanationId: explanationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementAgentAdherenceExplanation was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent to query | |
+| **explanationId** | **String**| The ID of the explanation to update | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AdherenceExplanationResponse**](AdherenceExplanationResponse.html)
 
 <a name="getWorkforcemanagementAgentManagementunit"></a>
 
@@ -4473,6 +4643,57 @@ This endpoint does not require any parameters.
 
 [**ShiftTradeListResponse**](ShiftTradeListResponse.html)
 
+<a name="getWorkforcemanagementShrinkageJob"></a>
+
+# **getWorkforcemanagementShrinkageJob**
+
+
+
+> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse.html) getWorkforcemanagementShrinkageJob(jobId)
+
+Request to fetch the status of the historical shrinkage query
+
+
+
+Wraps GET /api/v2/workforcemanagement/shrinkage/jobs/{jobId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementShrinkageJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementShrinkageJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
+
 <a name="getWorkforcemanagementTimeoffrequest"></a>
 
 # **getWorkforcemanagementTimeoffrequest**
@@ -4630,6 +4851,62 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequests(recentlyReviewed: r
 ### Return type
 
 [**TimeOffRequestList**](TimeOffRequestList.html)
+
+<a name="patchWorkforcemanagementAgentAdherenceExplanation"></a>
+
+# **patchWorkforcemanagementAgentAdherenceExplanation**
+
+
+
+> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse.html) patchWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId, body)
+
+Update an adherence explanation
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}  
+
+Requires ANY permissions: 
+
+* wfm:adherenceExplanation:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent to query
+let explanationId: String = "" // The ID of the explanation to update
+let body: UpdateAdherenceExplanationStatusRequest = new UpdateAdherenceExplanationStatusRequest(...) // The request body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementAgentAdherenceExplanation(agentId: agentId, explanationId: explanationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementAgentAdherenceExplanation was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent to query | |
+| **explanationId** | **String**| The ID of the explanation to update | |
+| **body** | [**UpdateAdherenceExplanationStatusRequest**](UpdateAdherenceExplanationStatusRequest.html)| The request body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html)
 
 <a name="patchWorkforcemanagementBusinessunit"></a>
 
@@ -5360,6 +5637,114 @@ WorkforceManagementAPI.patchWorkforcemanagementTimeoffrequest(timeOffRequestId: 
 
 [**TimeOffRequestResponse**](TimeOffRequestResponse.html)
 
+<a name="postWorkforcemanagementAdherenceExplanations"></a>
+
+# **postWorkforcemanagementAdherenceExplanations**
+
+
+
+> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse.html) postWorkforcemanagementAdherenceExplanations(body)
+
+Submit an adherence explanation for the current user
+
+
+
+Wraps POST /api/v2/workforcemanagement/adherence/explanations  
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceExplanation:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AddAdherenceExplanationAgentRequest = new AddAdherenceExplanationAgentRequest(...) // The request body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAdherenceExplanations(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAdherenceExplanations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AddAdherenceExplanationAgentRequest**](AddAdherenceExplanationAgentRequest.html)| The request body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html)
+
+<a name="postWorkforcemanagementAdherenceExplanationsQuery"></a>
+
+# **postWorkforcemanagementAdherenceExplanationsQuery**
+
+
+
+> [QueryAdherenceExplanationsResponse](QueryAdherenceExplanationsResponse.html) postWorkforcemanagementAdherenceExplanationsQuery(body, forceAsync, forceDownloadService)
+
+Query adherence explanations for the current user
+
+
+
+Wraps POST /api/v2/workforcemanagement/adherence/explanations/query  
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceExplanation:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentQueryAdherenceExplanationsRequest = new AgentQueryAdherenceExplanationsRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAdherenceExplanationsQuery(body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAdherenceExplanationsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentQueryAdherenceExplanationsRequest**](AgentQueryAdherenceExplanationsRequest.html)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**QueryAdherenceExplanationsResponse**](QueryAdherenceExplanationsResponse.html)
+
 <a name="postWorkforcemanagementAdherenceHistorical"></a>
 
 # **postWorkforcemanagementAdherenceHistorical**
@@ -5411,6 +5796,118 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceHistorical(body: body) { 
 ### Return type
 
 [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
+
+<a name="postWorkforcemanagementAgentAdherenceExplanations"></a>
+
+# **postWorkforcemanagementAgentAdherenceExplanations**
+
+
+
+> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse.html) postWorkforcemanagementAgentAdherenceExplanations(agentId, body)
+
+Add an adherence explanation for the requested user
+
+
+
+Wraps POST /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations  
+
+Requires ANY permissions: 
+
+* wfm:adherenceExplanation:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent to query
+let body: AddAdherenceExplanationAdminRequest = new AddAdherenceExplanationAdminRequest(...) // The request body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanations(agentId: agentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent to query | |
+| **body** | [**AddAdherenceExplanationAdminRequest**](AddAdherenceExplanationAdminRequest.html)| The request body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html)
+
+<a name="postWorkforcemanagementAgentAdherenceExplanationsQuery"></a>
+
+# **postWorkforcemanagementAgentAdherenceExplanationsQuery**
+
+
+
+> [AgentQueryAdherenceExplanationsResponse](AgentQueryAdherenceExplanationsResponse.html) postWorkforcemanagementAgentAdherenceExplanationsQuery(agentId, body, forceAsync, forceDownloadService)
+
+Query adherence explanations for the given agent across a specified range
+
+
+
+Wraps POST /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query  
+
+Requires ANY permissions: 
+
+* wfm:adherenceExplanation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent to query
+let body: AgentQueryAdherenceExplanationsRequest = new AgentQueryAdherenceExplanationsRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanationsQuery(agentId: agentId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanationsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent to query | |
+| **body** | [**AgentQueryAdherenceExplanationsRequest**](AgentQueryAdherenceExplanationsRequest.html)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse.html)
 
 <a name="postWorkforcemanagementAgentschedulesMine"></a>
 
@@ -5517,6 +6014,64 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(business
 ### Return type
 
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode.html)
+
+<a name="postWorkforcemanagementBusinessunitAdherenceExplanationsQuery"></a>
+
+# **postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**
+
+
+
+> [BuQueryAdherenceExplanationsResponse](BuQueryAdherenceExplanationsResponse.html) postWorkforcemanagementBusinessunitAdherenceExplanationsQuery(businessUnitId, body, forceAsync, forceDownloadService)
+
+Query adherence explanations across an entire business unit for the requested period
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query  
+
+Requires ANY permissions: 
+
+* wfm:adherenceExplanation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: BuQueryAdherenceExplanationsRequest = new BuQueryAdherenceExplanationsRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceExplanationsQuery(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceExplanationsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**BuQueryAdherenceExplanationsRequest**](BuQueryAdherenceExplanationsRequest.html)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuQueryAdherenceExplanationsResponse**](BuQueryAdherenceExplanationsResponse.html)
 
 <a name="postWorkforcemanagementBusinessunitAgentschedulesSearch"></a>
 
@@ -6933,6 +7488,62 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(mana
 ### Return type
 
 [**UserScheduleContainer**](UserScheduleContainer.html)
+
+<a name="postWorkforcemanagementManagementunitShrinkageJobs"></a>
+
+# **postWorkforcemanagementManagementunitShrinkageJobs**
+
+
+
+> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse.html) postWorkforcemanagementManagementunitShrinkageJobs(managementUnitId, body)
+
+Request a historical shrinkage report
+
+The maximum supported range for historical shrinkage queries is up to 32 days. Historical Shrinkage for a given date range can be queried in two modes - granular and aggregated. To see granular shrinkage information, provide granularity in the request body. 
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/shrinkage/jobs  
+
+Requires ANY permissions: 
+
+* wfm:shrinkage:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit
+let body: WfmHistoricalShrinkageRequest = new WfmHistoricalShrinkageRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitShrinkageJobs(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitShrinkageJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit | |
+| **body** | [**WfmHistoricalShrinkageRequest**](WfmHistoricalShrinkageRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
 
 <a name="postWorkforcemanagementManagementunitTimeofflimits"></a>
 

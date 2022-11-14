@@ -46,6 +46,8 @@ docs/ActivityCodeContainer.md
 docs/ActivityCodeReference.md
 docs/AcwDetailEventTopicAfterCallWorkEvent.md
 docs/AcwSettings.md
+docs/AddAdherenceExplanationAdminRequest.md
+docs/AddAdherenceExplanationAgentRequest.md
 docs/AddConversationRequest.md
 docs/AddConversationResponse.md
 docs/AddShiftTradeRequest.md
@@ -55,7 +57,14 @@ docs/AdditionalMessage.md
 docs/Address.md
 docs/AddressableEntityRef.md
 docs/AddressableLicenseDefinition.md
+docs/AdherenceExplanationAsyncResponse.md
+docs/AdherenceExplanationJob.md
+docs/AdherenceExplanationJobReference.md
+docs/AdherenceExplanationListing.md
+docs/AdherenceExplanationListingAgentQueryResponse.md
+docs/AdherenceExplanationListingBuQueryResponse.md
 docs/AdherenceExplanationNotification.md
+docs/AdherenceExplanationResponse.md
 docs/AdherenceSettings.md
 docs/AdhocRecordingTopicConversationData.md
 docs/AdhocRecordingTopicLockData.md
@@ -79,6 +88,8 @@ docs/AgentMaxUtilization.md
 docs/AgentOwnedMappingPreview.md
 docs/AgentOwnedMappingPreviewListing.md
 docs/AgentOwnedRouting.md
+docs/AgentQueryAdherenceExplanationsRequest.md
+docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentTimeOffRequestPatch.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
@@ -230,6 +241,7 @@ docs/AuditUser.md
 docs/AuthenticationSettings.md
 docs/AuthorizationAPI.json
 docs/AuthorizationAPI.md
+docs/AuthorizationSettings.md
 docs/AuthzDivision.md
 docs/AuthzDivisionEntityListing.md
 docs/AuthzDivisionGrantEntityListing.md
@@ -331,6 +343,8 @@ docs/BuIntradayResponse.md
 docs/BuIntradayScheduleData.md
 docs/BuManagementUnitScheduleSummary.md
 docs/BuPlanningGroupHeadcountForecast.md
+docs/BuQueryAdherenceExplanationsRequest.md
+docs/BuQueryAdherenceExplanationsResponse.md
 docs/BuQueryAgentSchedulesRequest.md
 docs/BuRescheduleAgentScheduleResult.md
 docs/BuRescheduleRequest.md
@@ -938,6 +952,8 @@ docs/DIDNumberEntityListing.md
 docs/DIDPool.md
 docs/DIDPoolEntityListing.md
 docs/DataActionConditionPredicate.md
+docs/DataActionConditionSettings.md
+docs/DataActionContactColumnFieldMapping.md
 docs/DataAvailabilityResponse.md
 docs/DataExtensionsAPI.json
 docs/DataExtensionsAPI.md
@@ -1049,6 +1065,7 @@ docs/DialogflowProject.md
 docs/DigitLength.md
 docs/DigitalAction.md
 docs/DigitalCondition.md
+docs/DigitalDataActionConditionPredicate.md
 docs/DigitalRule.md
 docs/DigitalRuleSet.md
 docs/DigitalRuleSetEntityListing.md
@@ -1474,6 +1491,11 @@ docs/HistoricalAdherenceQueryResult.md
 docs/HistoricalImportDeleteJobResponse.md
 docs/HistoricalImportStatus.md
 docs/HistoricalImportStatusListing.md
+docs/HistoricalShrinkageActivityCategoryResponse.md
+docs/HistoricalShrinkageActivityCodeResponse.md
+docs/HistoricalShrinkageAggregateResponse.md
+docs/HistoricalShrinkageResult.md
+docs/HistoricalShrinkageResultListing.md
 docs/HistoryEntry.md
 docs/HistoryListing.md
 docs/HoldUpdatedEvent.md
@@ -2197,6 +2219,7 @@ docs/QualityAuditLogMessage.md
 docs/QualityAuditQueryExecutionResultsResponse.md
 docs/QualityAuditQueryExecutionStatusResponse.md
 docs/QualityAuditQueryFilter.md
+docs/QueryAdherenceExplanationsResponse.md
 docs/QueryDivision.md
 docs/QueryFacetInfo.md
 docs/QueryRequest.md
@@ -3022,6 +3045,7 @@ docs/UnreadMetric.md
 docs/UnreadStatus.md
 docs/UpdateActionInput.md
 docs/UpdateActivityCodeRequest.md
+docs/UpdateAdherenceExplanationStatusRequest.md
 docs/UpdateAnalyticsDataRetentionRequest.md
 docs/UpdateBusinessUnitRequest.md
 docs/UpdateBusinessUnitSettingsRequest.md
@@ -3372,6 +3396,8 @@ docs/WfmHistoricalAdherenceResponse.md
 docs/WfmHistoricalAdherenceResultWrapper.md
 docs/WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadPurgeRequestUpdate.md
 docs/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.md
+docs/WfmHistoricalShrinkageRequest.md
+docs/WfmHistoricalShrinkageResponse.md
 docs/WfmIntradayDataUpdateTopicIntradayDataGroup.md
 docs/WfmIntradayDataUpdateTopicIntradayDataUpdate.md
 docs/WfmIntradayDataUpdateTopicIntradayForecastData.md
@@ -3796,6 +3822,7 @@ docs/getAuthorizationRoleComparedefaultRightRoleId-example.txt
 docs/getAuthorizationRoleSubjectgrants-example.txt
 docs/getAuthorizationRoleUsers-example.txt
 docs/getAuthorizationRoles-example.txt
+docs/getAuthorizationSettings-example.txt
 docs/getAuthorizationSubject-example.txt
 docs/getAuthorizationSubject-example.txt
 docs/getAuthorizationSubjectsMe-example.txt
@@ -4579,8 +4606,11 @@ docs/getWebmessagingMessages-example.txt
 docs/getWidgetsDeployment-example.txt
 docs/getWidgetsDeployments-example.txt
 docs/getWorkforcemanagementAdherence-example.txt
+docs/getWorkforcemanagementAdherenceExplanation-example.txt
+docs/getWorkforcemanagementAdherenceExplanationsJob-example.txt
 docs/getWorkforcemanagementAdherenceHistoricalJob-example.txt
 docs/getWorkforcemanagementAdhocmodelingjob-example.txt
+docs/getWorkforcemanagementAgentAdherenceExplanation-example.txt
 docs/getWorkforcemanagementAgentManagementunit-example.txt
 docs/getWorkforcemanagementAgentsMeManagementunit-example.txt
 docs/getWorkforcemanagementBusinessunit-example.txt
@@ -4639,6 +4669,7 @@ docs/getWorkforcemanagementManagementunitsDivisionviews-example.txt
 docs/getWorkforcemanagementNotifications-example.txt
 docs/getWorkforcemanagementSchedulingjob-example.txt
 docs/getWorkforcemanagementShifttrades-example.txt
+docs/getWorkforcemanagementShrinkageJob-example.txt
 docs/getWorkforcemanagementTimeoffrequest-example.txt
 docs/getWorkforcemanagementTimeoffrequestWaitlistpositions-example.txt
 docs/getWorkforcemanagementTimeoffrequests-example.txt
@@ -4646,6 +4677,7 @@ docs/headNotificationsChannel-example.txt
 docs/headTokensMe-example.txt
 docs/patchAnalyticsReportingSettings-example.txt
 docs/patchAuthorizationRole-example.txt
+docs/patchAuthorizationSettings-example.txt
 docs/patchChatSettings-example.txt
 docs/patchCoachingAppointment-example.txt
 docs/patchCoachingAppointmentAnnotation-example.txt
@@ -4759,6 +4791,7 @@ docs/patchVoicemailMePolicy-example.txt
 docs/patchVoicemailMessage-example.txt
 docs/patchVoicemailUserpolicy-example.txt
 docs/patchWebchatGuestConversationMediarequest-example.txt
+docs/patchWorkforcemanagementAgentAdherenceExplanation-example.txt
 docs/patchWorkforcemanagementBusinessunit-example.txt
 docs/patchWorkforcemanagementBusinessunitActivitycode-example.txt
 docs/patchWorkforcemanagementBusinessunitPlanninggroup-example.txt
@@ -5201,9 +5234,14 @@ docs/postWebdeploymentsConfigurationVersionsDraftPublish-example.txt
 docs/postWebdeploymentsConfigurations-example.txt
 docs/postWebdeploymentsDeployments-example.txt
 docs/postWidgetsDeployments-example.txt
+docs/postWorkforcemanagementAdherenceExplanations-example.txt
+docs/postWorkforcemanagementAdherenceExplanationsQuery-example.txt
 docs/postWorkforcemanagementAdherenceHistorical-example.txt
+docs/postWorkforcemanagementAgentAdherenceExplanations-example.txt
+docs/postWorkforcemanagementAgentAdherenceExplanationsQuery-example.txt
 docs/postWorkforcemanagementAgentschedulesMine-example.txt
 docs/postWorkforcemanagementBusinessunitActivitycodes-example.txt
+docs/postWorkforcemanagementBusinessunitAdherenceExplanationsQuery-example.txt
 docs/postWorkforcemanagementBusinessunitAgentschedulesSearch-example.txt
 docs/postWorkforcemanagementBusinessunitIntraday-example.txt
 docs/postWorkforcemanagementBusinessunitPlanninggroups-example.txt
@@ -5229,6 +5267,7 @@ docs/postWorkforcemanagementManagementunitAgentschedulesSearch-example.txt
 docs/postWorkforcemanagementManagementunitHistoricaladherencequery-example.txt
 docs/postWorkforcemanagementManagementunitMove-example.txt
 docs/postWorkforcemanagementManagementunitSchedulesSearch-example.txt
+docs/postWorkforcemanagementManagementunitShrinkageJobs-example.txt
 docs/postWorkforcemanagementManagementunitTimeofflimits-example.txt
 docs/postWorkforcemanagementManagementunitTimeofflimitsValuesQuery-example.txt
 docs/postWorkforcemanagementManagementunitTimeoffplans-example.txt
@@ -5560,6 +5599,8 @@ src/Models/ActivityCodeContainer.swift
 src/Models/ActivityCodeReference.swift
 src/Models/AcwDetailEventTopicAfterCallWorkEvent.swift
 src/Models/AcwSettings.swift
+src/Models/AddAdherenceExplanationAdminRequest.swift
+src/Models/AddAdherenceExplanationAgentRequest.swift
 src/Models/AddConversationRequest.swift
 src/Models/AddConversationResponse.swift
 src/Models/AddShiftTradeRequest.swift
@@ -5569,7 +5610,14 @@ src/Models/AdditionalMessage.swift
 src/Models/Address.swift
 src/Models/AddressableEntityRef.swift
 src/Models/AddressableLicenseDefinition.swift
+src/Models/AdherenceExplanationAsyncResponse.swift
+src/Models/AdherenceExplanationJob.swift
+src/Models/AdherenceExplanationJobReference.swift
+src/Models/AdherenceExplanationListing.swift
+src/Models/AdherenceExplanationListingAgentQueryResponse.swift
+src/Models/AdherenceExplanationListingBuQueryResponse.swift
 src/Models/AdherenceExplanationNotification.swift
+src/Models/AdherenceExplanationResponse.swift
 src/Models/AdherenceSettings.swift
 src/Models/AdhocRecordingTopicConversationData.swift
 src/Models/AdhocRecordingTopicLockData.swift
@@ -5593,6 +5641,8 @@ src/Models/AgentMaxUtilization.swift
 src/Models/AgentOwnedMappingPreview.swift
 src/Models/AgentOwnedMappingPreviewListing.swift
 src/Models/AgentOwnedRouting.swift
+src/Models/AgentQueryAdherenceExplanationsRequest.swift
+src/Models/AgentQueryAdherenceExplanationsResponse.swift
 src/Models/AgentTimeOffRequestPatch.swift
 src/Models/AgentlessEmailSendRequestDto.swift
 src/Models/AgentlessEmailSendResponseDto.swift
@@ -5734,6 +5784,7 @@ src/Models/AuditTopicMessageInfo.swift
 src/Models/AuditTopicPropertyChange.swift
 src/Models/AuditUser.swift
 src/Models/AuthenticationSettings.swift
+src/Models/AuthorizationSettings.swift
 src/Models/AuthzDivision.swift
 src/Models/AuthzDivisionEntityListing.swift
 src/Models/AuthzDivisionGrantEntityListing.swift
@@ -5833,6 +5884,8 @@ src/Models/BuIntradayResponse.swift
 src/Models/BuIntradayScheduleData.swift
 src/Models/BuManagementUnitScheduleSummary.swift
 src/Models/BuPlanningGroupHeadcountForecast.swift
+src/Models/BuQueryAdherenceExplanationsRequest.swift
+src/Models/BuQueryAdherenceExplanationsResponse.swift
 src/Models/BuQueryAgentSchedulesRequest.swift
 src/Models/BuRescheduleAgentScheduleResult.swift
 src/Models/BuRescheduleRequest.swift
@@ -6432,6 +6485,8 @@ src/Models/DIDNumberEntityListing.swift
 src/Models/DIDPool.swift
 src/Models/DIDPoolEntityListing.swift
 src/Models/DataActionConditionPredicate.swift
+src/Models/DataActionConditionSettings.swift
+src/Models/DataActionContactColumnFieldMapping.swift
 src/Models/DataAvailabilityResponse.swift
 src/Models/DataSchema.swift
 src/Models/DataSchemaListing.swift
@@ -6541,6 +6596,7 @@ src/Models/DialogflowProject.swift
 src/Models/DigitLength.swift
 src/Models/DigitalAction.swift
 src/Models/DigitalCondition.swift
+src/Models/DigitalDataActionConditionPredicate.swift
 src/Models/DigitalRule.swift
 src/Models/DigitalRuleSet.swift
 src/Models/DigitalRuleSetEntityListing.swift
@@ -6946,6 +7002,11 @@ src/Models/HistoricalAdherenceQueryResult.swift
 src/Models/HistoricalImportDeleteJobResponse.swift
 src/Models/HistoricalImportStatus.swift
 src/Models/HistoricalImportStatusListing.swift
+src/Models/HistoricalShrinkageActivityCategoryResponse.swift
+src/Models/HistoricalShrinkageActivityCodeResponse.swift
+src/Models/HistoricalShrinkageAggregateResponse.swift
+src/Models/HistoricalShrinkageResult.swift
+src/Models/HistoricalShrinkageResultListing.swift
 src/Models/HistoryEntry.swift
 src/Models/HistoryListing.swift
 src/Models/HoldUpdatedEvent.swift
@@ -7631,6 +7692,7 @@ src/Models/QualityAuditLogMessage.swift
 src/Models/QualityAuditQueryExecutionResultsResponse.swift
 src/Models/QualityAuditQueryExecutionStatusResponse.swift
 src/Models/QualityAuditQueryFilter.swift
+src/Models/QueryAdherenceExplanationsResponse.swift
 src/Models/QueryDivision.swift
 src/Models/QueryFacetInfo.swift
 src/Models/QueryRequest.swift
@@ -8427,6 +8489,7 @@ src/Models/UnreadMetric.swift
 src/Models/UnreadStatus.swift
 src/Models/UpdateActionInput.swift
 src/Models/UpdateActivityCodeRequest.swift
+src/Models/UpdateAdherenceExplanationStatusRequest.swift
 src/Models/UpdateAnalyticsDataRetentionRequest.swift
 src/Models/UpdateBusinessUnitRequest.swift
 src/Models/UpdateBusinessUnitSettingsRequest.swift
@@ -8758,6 +8821,8 @@ src/Models/WfmHistoricalAdherenceResponse.swift
 src/Models/WfmHistoricalAdherenceResultWrapper.swift
 src/Models/WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadPurgeRequestUpdate.swift
 src/Models/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.swift
+src/Models/WfmHistoricalShrinkageRequest.swift
+src/Models/WfmHistoricalShrinkageResponse.swift
 src/Models/WfmIntradayDataUpdateTopicIntradayDataGroup.swift
 src/Models/WfmIntradayDataUpdateTopicIntradayDataUpdate.swift
 src/Models/WfmIntradayDataUpdateTopicIntradayForecastData.swift

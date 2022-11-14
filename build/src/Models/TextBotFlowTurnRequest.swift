@@ -19,6 +19,7 @@ public class TextBotFlowTurnRequest: Codable {
         case noMatch = "NoMatch"
         case noInput = "NoInput"
         case userDisconnect = "UserDisconnect"
+        case clientSessionExpired = "ClientSessionExpired"
     }
     /** The reference to a previous turn if appropriate, used to avoid race conditions. */
     public var previousTurn: TextBotTurnReference?

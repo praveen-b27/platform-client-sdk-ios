@@ -19,6 +19,8 @@ public class HistoricalAdherenceQueryResult: Codable {
     }
     /** The ID of the user for whom the adherence is queried */
     public var userId: String?
+    /** The ID of the management unit of the user for whom the adherence is queried */
+    public var managementUnitId: String?
     /** Beginning of the date range that was queried, in ISO-8601 format */
     public var startDate: Date?
     /** End of the date range that was queried, in ISO-8601 format. If it was not set, end date will be set to the queried time */
@@ -38,8 +40,9 @@ public class HistoricalAdherenceQueryResult: Codable {
     /** List of actual activity with offset for this user */
     public var actuals: [HistoricalAdherenceActuals]?
 
-    public init(userId: String?, startDate: Date?, endDate: Date?, adherencePercentage: Double?, conformancePercentage: Double?, impact: Impact?, exceptionInfo: [HistoricalAdherenceExceptionInfo]?, dayMetrics: [HistoricalAdherenceDayMetrics]?, actualsEndDate: Date?, actuals: [HistoricalAdherenceActuals]?) {
+    public init(userId: String?, managementUnitId: String?, startDate: Date?, endDate: Date?, adherencePercentage: Double?, conformancePercentage: Double?, impact: Impact?, exceptionInfo: [HistoricalAdherenceExceptionInfo]?, dayMetrics: [HistoricalAdherenceDayMetrics]?, actualsEndDate: Date?, actuals: [HistoricalAdherenceActuals]?) {
         self.userId = userId
+        self.managementUnitId = managementUnitId
         self.startDate = startDate
         self.endDate = endDate
         self.adherencePercentage = adherencePercentage

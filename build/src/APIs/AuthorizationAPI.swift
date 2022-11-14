@@ -16444,6 +16444,56 @@ open class AuthorizationAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    /**
+     Get authorization settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationSettings(completion: @escaping ((_ data: AuthorizationSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AuthorizationSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get authorization settings
+     - GET /api/v2/authorization/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "analysisDays" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "analysisEnabled" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<AuthorizationSettings> 
+     */
+    open class func getAuthorizationSettingsWithRequestBuilder() -> RequestBuilder<AuthorizationSettings> {        
+        let path = "/api/v2/authorization/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthorizationSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
     
     /**
      Returns a listing of roles and permissions for a user.
@@ -18708,6 +18758,61 @@ open class AuthorizationAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DomainOrganizationRole>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    /**
+     Change authorization settings
+     
+     - parameter body: (body) Authorization Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchAuthorizationSettings(body: AuthorizationSettings, completion: @escaping ((_ data: AuthorizationSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchAuthorizationSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AuthorizationSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Change authorization settings
+     - PATCH /api/v2/authorization/settings
+     - Change authorization settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "analysisDays" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "analysisEnabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) Authorization Settings 
+
+     - returns: RequestBuilder<AuthorizationSettings> 
+     */
+    open class func patchAuthorizationSettingsWithRequestBuilder(body: AuthorizationSettings) -> RequestBuilder<AuthorizationSettings> {        
+        let path = "/api/v2/authorization/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthorizationSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }

@@ -693,6 +693,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "adherenceExplanation" : "{}",
   "removedFromManagementUnit" : true,
   "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
   "businessUnit" : "{}",
@@ -737,6 +738,134 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<[UserScheduleAdherence]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get an adherence explanation for the current user
+     
+     - parameter explanationId: (path) The ID of the explanation to update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAdherenceExplanation(explanationId: String, completion: @escaping ((_ data: AdherenceExplanationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAdherenceExplanationWithRequestBuilder(explanationId: explanationId)
+        requestBuilder.execute { (response: Response<AdherenceExplanationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an adherence explanation for the current user
+     - GET /api/v2/workforcemanagement/adherence/explanations/{explanationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agent" : "{}",
+  "businessUnit" : "{}",
+  "notes" : "notes",
+  "managementUnit" : "{}",
+  "lengthMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "type" : "Late",
+  "reviewedBy" : "{}",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Pending"
+}, statusCode=200}]
+     
+     - parameter explanationId: (path) The ID of the explanation to update 
+
+     - returns: RequestBuilder<AdherenceExplanationResponse> 
+     */
+    open class func getWorkforcemanagementAdherenceExplanationWithRequestBuilder(explanationId: String) -> RequestBuilder<AdherenceExplanationResponse> {        
+        var path = "/api/v2/workforcemanagement/adherence/explanations/{explanationId}"
+        let explanationIdPreEscape = "\(explanationId)"
+        let explanationIdPostEscape = explanationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{explanationId}", with: explanationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceExplanationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Query the status of an adherence explanation operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAdherenceExplanationsJob(jobId: String, completion: @escaping ((_ data: AdherenceExplanationJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAdherenceExplanationsJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<AdherenceExplanationJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of an adherence explanation operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/adherence/explanations/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "adherenceExplanation" : "{}",
+  "agentQueryResponseTemplate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddExplanation",
+  "error" : "{}",
+  "buQueryResponseTemplate" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<AdherenceExplanationJob> 
+     */
+    open class func getWorkforcemanagementAdherenceExplanationsJobWithRequestBuilder(jobId: String) -> RequestBuilder<AdherenceExplanationJob> {        
+        var path = "/api/v2/workforcemanagement/adherence/explanations/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceExplanationJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -859,6 +988,77 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ModelingStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Get an adherence explanation
+     
+     - parameter agentId: (path) The ID of the agent to query 
+     - parameter explanationId: (path) The ID of the explanation to update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAgentAdherenceExplanation(agentId: String, explanationId: String, completion: @escaping ((_ data: AdherenceExplanationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAgentAdherenceExplanationWithRequestBuilder(agentId: agentId, explanationId: explanationId)
+        requestBuilder.execute { (response: Response<AdherenceExplanationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an adherence explanation
+     - GET /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agent" : "{}",
+  "businessUnit" : "{}",
+  "notes" : "notes",
+  "managementUnit" : "{}",
+  "lengthMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "type" : "Late",
+  "reviewedBy" : "{}",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Pending"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent to query 
+     - parameter explanationId: (path) The ID of the explanation to update 
+
+     - returns: RequestBuilder<AdherenceExplanationResponse> 
+     */
+    open class func getWorkforcemanagementAgentAdherenceExplanationWithRequestBuilder(agentId: String, explanationId: String) -> RequestBuilder<AdherenceExplanationResponse> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let explanationIdPreEscape = "\(explanationId)"
+        let explanationIdPostEscape = explanationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{explanationId}", with: explanationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceExplanationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -3794,6 +3994,7 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "adherenceExplanation" : "{}",
     "removedFromManagementUnit" : true,
     "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
     "businessUnit" : "{}",
@@ -3822,6 +4023,7 @@ open class WorkforceManagementAPI {
     "id" : "id",
     "user" : "{}"
   }, {
+    "adherenceExplanation" : "{}",
     "removedFromManagementUnit" : true,
     "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
     "businessUnit" : "{}",
@@ -7428,6 +7630,63 @@ open class WorkforceManagementAPI {
 
     
     /**
+     Request to fetch the status of the historical shrinkage query
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementShrinkageJob(jobId: String, completion: @escaping ((_ data: WfmHistoricalShrinkageResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementShrinkageJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<WfmHistoricalShrinkageResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request to fetch the status of the historical shrinkage query
+     - GET /api/v2/workforcemanagement/shrinkage/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "operationId" : "operationId",
+  "state" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<WfmHistoricalShrinkageResponse> 
+     */
+    open class func getWorkforcemanagementShrinkageJobWithRequestBuilder(jobId: String) -> RequestBuilder<WfmHistoricalShrinkageResponse> {        
+        var path = "/api/v2/workforcemanagement/shrinkage/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmHistoricalShrinkageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
      Get a time off request for the current user
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
@@ -7660,6 +7919,69 @@ open class WorkforceManagementAPI {
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Update an adherence explanation
+     
+     - parameter agentId: (path) The ID of the agent to query 
+     - parameter explanationId: (path) The ID of the explanation to update 
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementAgentAdherenceExplanation(agentId: String, explanationId: String, body: UpdateAdherenceExplanationStatusRequest, completion: @escaping ((_ data: AdherenceExplanationAsyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementAgentAdherenceExplanationWithRequestBuilder(agentId: agentId, explanationId: explanationId, body: body)
+        requestBuilder.execute { (response: Response<AdherenceExplanationAsyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an adherence explanation
+     - PATCH /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent to query 
+     - parameter explanationId: (path) The ID of the explanation to update 
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AdherenceExplanationAsyncResponse> 
+     */
+    open class func patchWorkforcemanagementAgentAdherenceExplanationWithRequestBuilder(agentId: String, explanationId: String, body: UpdateAdherenceExplanationStatusRequest) -> RequestBuilder<AdherenceExplanationAsyncResponse> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let explanationIdPreEscape = "\(explanationId)"
+        let explanationIdPostEscape = explanationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{explanationId}", with: explanationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceExplanationAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
     
@@ -8796,6 +9118,120 @@ open class WorkforceManagementAPI {
 
     
     /**
+     Submit an adherence explanation for the current user
+     
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAdherenceExplanations(body: AddAdherenceExplanationAgentRequest, completion: @escaping ((_ data: AdherenceExplanationAsyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAdherenceExplanationsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AdherenceExplanationAsyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Submit an adherence explanation for the current user
+     - POST /api/v2/workforcemanagement/adherence/explanations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=202}]
+     
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AdherenceExplanationAsyncResponse> 
+     */
+    open class func postWorkforcemanagementAdherenceExplanationsWithRequestBuilder(body: AddAdherenceExplanationAgentRequest) -> RequestBuilder<AdherenceExplanationAsyncResponse> {        
+        let path = "/api/v2/workforcemanagement/adherence/explanations"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceExplanationAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Query adherence explanations for the current user
+     
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAdherenceExplanationsQuery(body: AgentQueryAdherenceExplanationsRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: QueryAdherenceExplanationsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAdherenceExplanationsQueryWithRequestBuilder(body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<QueryAdherenceExplanationsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query adherence explanations for the current user
+     - POST /api/v2/workforcemanagement/adherence/explanations/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "job" : "{}"
+}, statusCode=202}]
+     
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<QueryAdherenceExplanationsResponse> 
+     */
+    open class func postWorkforcemanagementAdherenceExplanationsQueryWithRequestBuilder(body: AgentQueryAdherenceExplanationsRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<QueryAdherenceExplanationsResponse> {        
+        let path = "/api/v2/workforcemanagement/adherence/explanations/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<QueryAdherenceExplanationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
      Request a historical adherence report for users across management units
      
      - parameter body: (body) body (optional)
@@ -8845,6 +9281,132 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Add an adherence explanation for the requested user
+     
+     - parameter agentId: (path) The ID of the agent to query 
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentAdherenceExplanations(agentId: String, body: AddAdherenceExplanationAdminRequest, completion: @escaping ((_ data: AdherenceExplanationAsyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentAdherenceExplanationsWithRequestBuilder(agentId: agentId, body: body)
+        requestBuilder.execute { (response: Response<AdherenceExplanationAsyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add an adherence explanation for the requested user
+     - POST /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=202}]
+     
+     - parameter agentId: (path) The ID of the agent to query 
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AdherenceExplanationAsyncResponse> 
+     */
+    open class func postWorkforcemanagementAgentAdherenceExplanationsWithRequestBuilder(agentId: String, body: AddAdherenceExplanationAdminRequest) -> RequestBuilder<AdherenceExplanationAsyncResponse> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceExplanationAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Query adherence explanations for the given agent across a specified range
+     
+     - parameter agentId: (path) The ID of the agent to query 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentAdherenceExplanationsQuery(agentId: String, body: AgentQueryAdherenceExplanationsRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: AgentQueryAdherenceExplanationsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentAdherenceExplanationsQueryWithRequestBuilder(agentId: agentId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<AgentQueryAdherenceExplanationsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query adherence explanations for the given agent across a specified range
+     - POST /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent to query 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<AgentQueryAdherenceExplanationsResponse> 
+     */
+    open class func postWorkforcemanagementAgentAdherenceExplanationsQueryWithRequestBuilder(agentId: String, body: AgentQueryAdherenceExplanationsRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<AgentQueryAdherenceExplanationsResponse> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<AgentQueryAdherenceExplanationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -9130,6 +9692,75 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Query adherence explanations across an entire business unit for the requested period
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceExplanationsQuery(businessUnitId: String, body: BuQueryAdherenceExplanationsRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuQueryAdherenceExplanationsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAdherenceExplanationsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<BuQueryAdherenceExplanationsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query adherence explanations across an entire business unit for the requested period
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<BuQueryAdherenceExplanationsResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceExplanationsQueryWithRequestBuilder(businessUnitId: String, body: BuQueryAdherenceExplanationsRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuQueryAdherenceExplanationsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<BuQueryAdherenceExplanationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -10897,6 +11528,67 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Request a historical shrinkage report
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitShrinkageJobs(managementUnitId: String, body: WfmHistoricalShrinkageRequest? = nil, completion: @escaping ((_ data: WfmHistoricalShrinkageResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitShrinkageJobsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<WfmHistoricalShrinkageResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request a historical shrinkage report
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/shrinkage/jobs
+     - The maximum supported range for historical shrinkage queries is up to 32 days. Historical Shrinkage for a given date range can be queried in two modes - granular and aggregated. To see granular shrinkage information, provide granularity in the request body. 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "operationId" : "operationId",
+  "state" : "Processing"
+}, statusCode=202}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WfmHistoricalShrinkageResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitShrinkageJobsWithRequestBuilder(managementUnitId: String, body: WfmHistoricalShrinkageRequest? = nil) -> RequestBuilder<WfmHistoricalShrinkageResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shrinkage/jobs"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmHistoricalShrinkageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

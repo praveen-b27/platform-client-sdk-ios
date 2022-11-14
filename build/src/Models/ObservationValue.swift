@@ -23,6 +23,7 @@ public class ObservationValue: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     /** The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var observationDate: Date?

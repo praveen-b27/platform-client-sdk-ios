@@ -95,6 +95,7 @@ public class ViewFilter: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     public enum RequestedRoutingTypes: String, Codable { 
         case bullseye = "Bullseye"
@@ -104,6 +105,7 @@ public class ViewFilter: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     public enum ParticipantPurposes: String, Codable { 
         case _internal = "internal"

@@ -25,11 +25,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAuthorizationRoleSubjectgrants**](AuthorizationAPI.html#getAuthorizationRoleSubjectgrants) | Get the subjects&#39; granted divisions in the specified role. |
 | [**getAuthorizationRoleUsers**](AuthorizationAPI.html#getAuthorizationRoleUsers) | Get a list of the users in a specified role. |
 | [**getAuthorizationRoles**](AuthorizationAPI.html#getAuthorizationRoles) | Retrieve a list of all roles defined for the organization |
+| [**getAuthorizationSettings**](AuthorizationAPI.html#getAuthorizationSettings) | Get authorization settings |
 | [**getAuthorizationSubject**](AuthorizationAPI.html#getAuthorizationSubject) | Returns a listing of roles and permissions for a user. |
 | [**getAuthorizationSubjectsMe**](AuthorizationAPI.html#getAuthorizationSubjectsMe) | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**getAuthorizationSubjectsRolecounts**](AuthorizationAPI.html#getAuthorizationSubjectsRolecounts) | Get the count of roles granted to a list of subjects |
 | [**getUserRoles**](AuthorizationAPI.html#getUserRoles) | Returns a listing of roles and permissions for a user. |
 | [**patchAuthorizationRole**](AuthorizationAPI.html#patchAuthorizationRole) | Patch Organization Role for needsUpdate Field |
+| [**patchAuthorizationSettings**](AuthorizationAPI.html#patchAuthorizationSettings) | Change authorization settings |
 | [**postAuthorizationDivisionObject**](AuthorizationAPI.html#postAuthorizationDivisionObject) | Assign a list of objects to a division |
 | [**postAuthorizationDivisionRestore**](AuthorizationAPI.html#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
 | [**postAuthorizationDivisions**](AuthorizationAPI.html#postAuthorizationDivisions) | Create a division. |
@@ -1068,6 +1070,55 @@ AuthorizationAPI.getAuthorizationRoles(pageSize: pageSize, pageNumber: pageNumbe
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
 
+<a name="getAuthorizationSettings"></a>
+
+# **getAuthorizationSettings**
+
+
+
+> [AuthorizationSettings](AuthorizationSettings.html) getAuthorizationSettings()
+
+Get authorization settings
+
+
+
+Wraps GET /api/v2/authorization/settings  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* authorization:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AuthorizationAPI.getAuthorizationSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**AuthorizationSettings**](AuthorizationSettings.html)
+
 <a name="getAuthorizationSubject"></a>
 
 # **getAuthorizationSubject**
@@ -1326,6 +1377,61 @@ AuthorizationAPI.patchAuthorizationRole(roleId: roleId, body: body) { (response,
 ### Return type
 
 [**DomainOrganizationRole**](DomainOrganizationRole.html)
+
+<a name="patchAuthorizationSettings"></a>
+
+# **patchAuthorizationSettings**
+
+
+
+> [AuthorizationSettings](AuthorizationSettings.html) patchAuthorizationSettings(body)
+
+Change authorization settings
+
+Change authorization settings
+
+
+
+Wraps PATCH /api/v2/authorization/settings  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* authorization:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AuthorizationSettings = new AuthorizationSettings(...) // Authorization Settings
+
+// Code example
+AuthorizationAPI.patchAuthorizationSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.patchAuthorizationSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AuthorizationSettings**](AuthorizationSettings.html)| Authorization Settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AuthorizationSettings**](AuthorizationSettings.html)
 
 <a name="postAuthorizationDivisionObject"></a>
 

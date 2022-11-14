@@ -95,6 +95,8 @@ public class UserScheduleAdherence: Codable {
     public var adherenceState: AdherenceState?
     /** The impact of the user's current adherenceState */
     public var impact: Impact?
+    /** Currently applicable explanation for the adherence state */
+    public var adherenceExplanation: RealTimeAdherenceExplanation?
     /** Time when the user entered the current adherenceState in ISO-8601 format */
     public var timeOfAdherenceChange: Date?
     /** Time when presence was last updated. Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -108,7 +110,7 @@ public class UserScheduleAdherence: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: UserReference?, businessUnit: BusinessUnitReference?, managementUnit: ManagementUnitReference?, team: TeamReference?, scheduledActivityCategory: ScheduledActivityCategory?, scheduledActivityCode: ActivityCodeReference?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: UserReference?, businessUnit: BusinessUnitReference?, managementUnit: ManagementUnitReference?, team: TeamReference?, scheduledActivityCategory: ScheduledActivityCategory?, scheduledActivityCode: ActivityCodeReference?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, adherenceExplanation: RealTimeAdherenceExplanation?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.user = user
@@ -124,6 +126,7 @@ public class UserScheduleAdherence: Codable {
         self.isOutOfOffice = isOutOfOffice
         self.adherenceState = adherenceState
         self.impact = impact
+        self.adherenceExplanation = adherenceExplanation
         self.timeOfAdherenceChange = timeOfAdherenceChange
         self.presenceUpdateTime = presenceUpdateTime
         self.activeQueues = activeQueues
@@ -148,6 +151,7 @@ public class UserScheduleAdherence: Codable {
         case isOutOfOffice
         case adherenceState
         case impact
+        case adherenceExplanation
         case timeOfAdherenceChange
         case presenceUpdateTime
         case activeQueues

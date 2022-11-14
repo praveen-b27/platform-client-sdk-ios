@@ -43,6 +43,7 @@ public class AnalyticsSession: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     public enum UsedRouting: String, Codable { 
         case bullseye = "Bullseye"
@@ -52,6 +53,7 @@ public class AnalyticsSession: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     /** ID(s) of Skill(s) that are active on the conversation */
     public var activeSkillIds: [String]?

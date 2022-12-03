@@ -118,10 +118,12 @@ public class LimitChangeRequestDetails: Codable {
     public var dateCompleted: Date?
     /** The reason for rejecting the limit override request */
     public var rejectReason: RejectReason?
+    /** The approval breakdown for this override request. */
+    public var approvalNamespaces: [ApprovalNamespace]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, key: String?, namespace: Namespace?, requestedValue: Double?, _description: String?, supportCaseUrl: String?, status: Status?, currentValue: Double?, dateCreated: Date?, statusHistory: [StatusChange]?, dateCompleted: Date?, rejectReason: RejectReason?, selfUri: String?) {
+    public init(_id: String?, key: String?, namespace: Namespace?, requestedValue: Double?, _description: String?, supportCaseUrl: String?, status: Status?, currentValue: Double?, dateCreated: Date?, statusHistory: [StatusChange]?, dateCompleted: Date?, rejectReason: RejectReason?, approvalNamespaces: [ApprovalNamespace]?, selfUri: String?) {
         self._id = _id
         self.key = key
         self.namespace = namespace
@@ -134,6 +136,7 @@ public class LimitChangeRequestDetails: Codable {
         self.statusHistory = statusHistory
         self.dateCompleted = dateCompleted
         self.rejectReason = rejectReason
+        self.approvalNamespaces = approvalNamespaces
         self.selfUri = selfUri
     }
 
@@ -150,6 +153,7 @@ public class LimitChangeRequestDetails: Codable {
         case statusHistory
         case dateCompleted
         case rejectReason
+        case approvalNamespaces
         case selfUri
     }
 

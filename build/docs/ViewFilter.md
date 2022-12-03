@@ -152,7 +152,7 @@ title: ViewFilter
 | **isAcdInteraction** | **Bool** | Filter to indicate if interaction was ACD or non-ACD | [optional] |
 | **hasFax** | **Bool** | Filters to indicate if interaction has FAX | [optional] |
 | **dataActionIds** | **[String]** | The list of Data Action IDs  | [optional] |
-| **actionCategoryName** | **String** | Action Category Name | [optional] |
+| **actionCategoryName** | **String** | Deprecated - Please use integrationIds instead | [optional] |
 | **integrationIds** | **[String]** | The list of integration IDs for Data Action | [optional] |
 | **responseStatuses** | **[String]** | The list of Response codes for Data Action | [optional] |
 | **availableDashboard** | **String** | Filter to indicate the availability of the dashboard is public or private. | [optional] |

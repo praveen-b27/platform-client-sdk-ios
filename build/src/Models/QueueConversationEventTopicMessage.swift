@@ -106,8 +106,9 @@ public class QueueConversationEventTopicMessage: Codable {
     public var afterCallWorkRequired: Bool?
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
+    public var additionalProperties: [String:JSON]?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationEventTopicJourneyContext?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationEventTopicJourneyContext?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, additionalProperties: [String:JSON]?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -133,6 +134,7 @@ public class QueueConversationEventTopicMessage: Codable {
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
+        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -161,6 +163,7 @@ public class QueueConversationEventTopicMessage: Codable {
         case afterCallWork
         case afterCallWorkRequired
         case agentAssistantId
+        case additionalProperties
     }
 
 

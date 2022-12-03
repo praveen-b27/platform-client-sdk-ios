@@ -33,6 +33,7 @@ public class DialerDnclistConfigChangeDncList: Codable {
     public var licenseId: String?
     public var contactMethod: ContactMethod?
     public var division: DialerDnclistConfigChangeUriReference?
+    public var additionalProperties: [String:JSON]?
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The UI-visible name of the object */
@@ -44,7 +45,7 @@ public class DialerDnclistConfigChangeDncList: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
 
-    public init(importStatus: DialerDnclistConfigChangeImportStatus?, size: Int?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, contactMethod: ContactMethod?, division: DialerDnclistConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(importStatus: DialerDnclistConfigChangeImportStatus?, size: Int?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, contactMethod: ContactMethod?, division: DialerDnclistConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         self.importStatus = importStatus
         self.size = size
         self.dncSourceType = dncSourceType
@@ -53,6 +54,7 @@ public class DialerDnclistConfigChangeDncList: Codable {
         self.licenseId = licenseId
         self.contactMethod = contactMethod
         self.division = division
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -69,6 +71,7 @@ public class DialerDnclistConfigChangeDncList: Codable {
         case licenseId
         case contactMethod
         case division
+        case additionalProperties
         case _id = "id"
         case name
         case dateCreated

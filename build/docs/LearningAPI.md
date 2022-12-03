@@ -576,7 +576,7 @@ LearningAPI.getLearningModuleVersion(moduleId: moduleId, versionId: versionId, e
 
 
 
-> [LearningModulesDomainEntityListing](LearningModulesDomainEntityListing.html) getLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished)
+> [LearningModulesDomainEntityListing](LearningModulesDomainEntityListing.html) getLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses)
 
 Get all learning modules of an organization
 
@@ -605,9 +605,10 @@ let sortBy: LearningAPI.SortBy_getLearningModules = LearningAPI.SortBy_getLearni
 let searchTerm: String = "" // Search Term (searchable by name)
 let expand: [String] = [""] // Fields to expand in response(case insensitive)
 let isPublished: LearningAPI.IsPublished_getLearningModules = LearningAPI.IsPublished_getLearningModules.enummember // Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned
+let statuses: [String] = [""] // Specifies the module statuses to filter by
 
 // Code example
-LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished) { (response, error) in
+LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -631,6 +632,7 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 | **searchTerm** | **String**| Search Term (searchable by name) | [optional] |
 | **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: rule ("rule"), summarydata ("summaryData") |
 | **isPublished** | **String**| Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **statuses** | [**[String]**](String.html)| Specifies the module statuses to filter by | [optional]<br />**Values**: unpublished ("Unpublished"), published ("Published"), archived ("Archived") |
 {: class="table-striped"}
 
 

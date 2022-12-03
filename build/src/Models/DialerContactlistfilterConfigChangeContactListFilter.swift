@@ -21,6 +21,7 @@ public class DialerContactlistfilterConfigChangeContactListFilter: Codable {
     public var clauses: [DialerContactlistfilterConfigChangeFilterClause]?
     /** Contact list filter type */
     public var filterType: FilterType?
+    public var additionalProperties: [String:JSON]?
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The UI-visible name of the object */
@@ -32,11 +33,12 @@ public class DialerContactlistfilterConfigChangeContactListFilter: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
 
-    public init(contactList: DialerContactlistfilterConfigChangeUriReference?, contactListColumns: [String]?, clauses: [DialerContactlistfilterConfigChangeFilterClause]?, filterType: FilterType?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(contactList: DialerContactlistfilterConfigChangeUriReference?, contactListColumns: [String]?, clauses: [DialerContactlistfilterConfigChangeFilterClause]?, filterType: FilterType?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         self.contactList = contactList
         self.contactListColumns = contactListColumns
         self.clauses = clauses
         self.filterType = filterType
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -49,6 +51,7 @@ public class DialerContactlistfilterConfigChangeContactListFilter: Codable {
         case contactListColumns
         case clauses
         case filterType
+        case additionalProperties
         case _id = "id"
         case name
         case dateCreated

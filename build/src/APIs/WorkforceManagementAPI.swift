@@ -12105,11 +12105,13 @@ open class WorkforceManagementAPI {
   "entities" : [ {
     "activityCodeId" : "activityCodeId",
     "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "hrisTimeOffTypeSecondaryId" : "hrisTimeOffTypeSecondaryId",
     "startDate" : "2000-01-23",
     "balanceMinutesPerDay" : [ 0, 0 ]
   }, {
     "activityCodeId" : "activityCodeId",
     "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "hrisTimeOffTypeSecondaryId" : "hrisTimeOffTypeSecondaryId",
     "startDate" : "2000-01-23",
     "balanceMinutesPerDay" : [ 0, 0 ]
   } ],
@@ -12179,11 +12181,13 @@ open class WorkforceManagementAPI {
   "entities" : [ {
     "activityCodeId" : "activityCodeId",
     "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "hrisTimeOffTypeSecondaryId" : "hrisTimeOffTypeSecondaryId",
     "startDate" : "2000-01-23",
     "balanceMinutesPerDay" : [ 0, 0 ]
   }, {
     "activityCodeId" : "activityCodeId",
     "hrisTimeOffTypeId" : "hrisTimeOffTypeId",
+    "hrisTimeOffTypeSecondaryId" : "hrisTimeOffTypeSecondaryId",
     "startDate" : "2000-01-23",
     "balanceMinutesPerDay" : [ 0, 0 ]
   } ],

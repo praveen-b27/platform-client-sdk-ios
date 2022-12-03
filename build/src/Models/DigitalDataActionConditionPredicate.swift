@@ -23,12 +23,6 @@ public class DigitalDataActionConditionPredicate: Codable {
         case before = "Before"
         case after = "After"
     }
-    public enum ValueType: String, Codable { 
-        case dateTime = "DateTime"
-        case numeric = "Numeric"
-        case period = "Period"
-        case string = "String"
-    }
     /** The name of an output field from the data action's output to use for this condition */
     public var outputField: String?
     /** The operation with which to evaluate this condition */
@@ -39,16 +33,13 @@ public class DigitalDataActionConditionPredicate: Codable {
     public var inverted: Bool?
     /** The result of this predicate if the requested output field is missing from the data action's result */
     public var outputFieldMissingResolution: Bool?
-    /** The data type the value should be treated as. */
-    public var valueType: ValueType?
 
-    public init(outputField: String?, outputOperator: OutputOperator?, comparisonValue: String?, inverted: Bool?, outputFieldMissingResolution: Bool?, valueType: ValueType?) {
+    public init(outputField: String?, outputOperator: OutputOperator?, comparisonValue: String?, inverted: Bool?, outputFieldMissingResolution: Bool?) {
         self.outputField = outputField
         self.outputOperator = outputOperator
         self.comparisonValue = comparisonValue
         self.inverted = inverted
         self.outputFieldMissingResolution = outputFieldMissingResolution
-        self.valueType = valueType
     }
 
 

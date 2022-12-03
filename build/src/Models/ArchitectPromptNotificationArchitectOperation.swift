@@ -46,12 +46,11 @@ public class ArchitectPromptNotificationArchitectOperation: Codable {
     public var errorMessage: String?
     /** The error code, if the action failed */
     public var errorCode: String?
-    /** The error message params, if the action failed */
-    public var errorMessageParams: JSON?
+    public var errorMessageParams: ArchitectPromptNotificationErrorMessageParams?
     /** The error details, if the action failed */
     public var errorDetails: [ArchitectPromptNotificationErrorDetail]?
 
-    public init(_id: String?, complete: Bool?, user: ArchitectPromptNotificationUser?, client: ArchitectPromptNotificationClient?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: JSON?, errorDetails: [ArchitectPromptNotificationErrorDetail]?) {
+    public init(_id: String?, complete: Bool?, user: ArchitectPromptNotificationUser?, client: ArchitectPromptNotificationClient?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: ArchitectPromptNotificationErrorMessageParams?, errorDetails: [ArchitectPromptNotificationErrorDetail]?) {
         self._id = _id
         self.complete = complete
         self.user = user

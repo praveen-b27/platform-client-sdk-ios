@@ -19,12 +19,14 @@ public class DialerRulesetConfigChangeAction: Codable {
     public var updateOption: String?
     /** Map of key-value pairs pertinent to the action (different actions require different properties) */
     public var properties: [String:String]?
+    public var additionalProperties: [String:JSON]?
 
-    public init(type: String?, actionTypeName: String?, updateOption: String?, properties: [String:String]?) {
+    public init(type: String?, actionTypeName: String?, updateOption: String?, properties: [String:String]?, additionalProperties: [String:JSON]?) {
         self.type = type
         self.actionTypeName = actionTypeName
         self.updateOption = updateOption
         self.properties = properties
+        self.additionalProperties = additionalProperties
     }
 
 

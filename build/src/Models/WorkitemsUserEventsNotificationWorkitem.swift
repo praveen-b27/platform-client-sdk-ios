@@ -38,6 +38,7 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
         case reassign = "reassign"
         case archive = "archive"
         case unarchive = "unarchive"
+        case reschedule = "reschedule"
     }
     public enum AssignmentState: String, Codable { 
         case unknown = "Unknown"
@@ -51,6 +52,7 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
         case parked = "Parked"
         case held = "Held"
         case acdCancelled = "AcdCancelled"
+        case terminated = "Terminated"
     }
     public var _id: String?
     public var name: String?

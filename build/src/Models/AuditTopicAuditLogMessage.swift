@@ -40,7 +40,6 @@ public class AuditTopicAuditLogMessage: Codable {
         case routing = "Routing"
         case speechAndTextAnalytics = "SpeechAndTextAnalytics"
         case telephony = "Telephony"
-        case topicsDefinitions = "TopicsDefinitions"
         case triggers = "Triggers"
         case processAutomation = "ProcessAutomation"
         case voicemail = "Voicemail"

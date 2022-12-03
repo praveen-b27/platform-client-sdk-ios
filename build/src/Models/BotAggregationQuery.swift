@@ -12,6 +12,8 @@ import Foundation
 public class BotAggregationQuery: Codable {
 
     public enum GroupBy: String, Codable { 
+        case askactionid = "askActionId"
+        case askactionresult = "askActionResult"
         case botfinalintent = "botFinalIntent"
         case botid = "botId"
         case botintent = "botIntent"
@@ -32,6 +34,7 @@ public class BotAggregationQuery: Codable {
         case selfserved = "selfServed"
     }
     public enum Metrics: String, Codable { 
+        case nbotsessionturns = "nBotSessionTurns"
         case nbotsessions = "nBotSessions"
         case obotintent = "oBotIntent"
         case obotsessionquery = "oBotSessionQuery"

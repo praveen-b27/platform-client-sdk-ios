@@ -12,13 +12,15 @@ import Foundation
 public class CommunicationEndedEvent: Codable {
 
     public enum DisconnectType: String, Codable { 
-        case _self = "Self"
-        case peer = "Peer"
-        case system = "System"
         case error = "Error"
+        case peer = "Peer"
+        case _self = "Self"
+        case system = "System"
         case transfer = "Transfer"
-        case transferConsult = "TransferConsult"
+        case transferACD = "TransferACD"
         case transferConference = "TransferConference"
+        case transferConsult = "TransferConsult"
+        case transferUser = "TransferUser"
     }
     /** A unique (V4 UUID) eventId for this event */
     public var eventId: String?

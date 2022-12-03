@@ -31,6 +31,7 @@ public class DialerContactlistConfigChangeContactList: Codable {
     public var zipCodeColumnName: String?
     /** A UriReference for a resource */
     public var division: DialerContactlistConfigChangeUriReference?
+    public var additionalProperties: [String:JSON]?
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The UI-visible name of the object */
@@ -42,7 +43,7 @@ public class DialerContactlistConfigChangeContactList: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
 
-    public init(columnNames: [String]?, phoneColumns: [DialerContactlistConfigChangeContactPhoneNumberColumn]?, emailColumns: [DialerContactlistConfigChangeEmailColumn]?, importStatus: DialerContactlistConfigChangeImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int?, attemptLimits: DialerContactlistConfigChangeUriReference?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, division: DialerContactlistConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(columnNames: [String]?, phoneColumns: [DialerContactlistConfigChangeContactPhoneNumberColumn]?, emailColumns: [DialerContactlistConfigChangeEmailColumn]?, importStatus: DialerContactlistConfigChangeImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int?, attemptLimits: DialerContactlistConfigChangeUriReference?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, division: DialerContactlistConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         self.columnNames = columnNames
         self.phoneColumns = phoneColumns
         self.emailColumns = emailColumns
@@ -54,6 +55,7 @@ public class DialerContactlistConfigChangeContactList: Codable {
         self.automaticTimeZoneMapping = automaticTimeZoneMapping
         self.zipCodeColumnName = zipCodeColumnName
         self.division = division
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -73,6 +75,7 @@ public class DialerContactlistConfigChangeContactList: Codable {
         case automaticTimeZoneMapping
         case zipCodeColumnName
         case division
+        case additionalProperties
         case _id = "id"
         case name
         case dateCreated

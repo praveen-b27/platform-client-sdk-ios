@@ -11,6 +11,7 @@ title: DialerCampaignRuleConfigChangeCampaignRuleAction
 | **parameters** | **[String:String]** | The parameters to match this action | [optional] |
 | **actionType** | **String** | The type of this action | [optional] |
 | **campaignRuleActionEntities** | [**DialerCampaignRuleConfigChangeCampaignRuleActionEntities**](DialerCampaignRuleConfigChangeCampaignRuleActionEntities.html) |  | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

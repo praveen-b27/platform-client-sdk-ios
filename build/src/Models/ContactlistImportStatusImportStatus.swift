@@ -25,13 +25,15 @@ public class ContactlistImportStatusImportStatus: Codable {
     public var percentageComplete: Int?
     /** if the import has failed, the reason for the failure */
     public var failureReason: String?
+    public var additionalProperties: [String:JSON]?
 
-    public init(importState: ImportState?, totalRecords: Int?, completedRecords: Int?, percentageComplete: Int?, failureReason: String?) {
+    public init(importState: ImportState?, totalRecords: Int?, completedRecords: Int?, percentageComplete: Int?, failureReason: String?, additionalProperties: [String:JSON]?) {
         self.importState = importState
         self.totalRecords = totalRecords
         self.completedRecords = completedRecords
         self.percentageComplete = percentageComplete
         self.failureReason = failureReason
+        self.additionalProperties = additionalProperties
     }
 
 

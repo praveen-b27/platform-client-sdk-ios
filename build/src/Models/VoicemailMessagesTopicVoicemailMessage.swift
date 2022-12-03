@@ -17,6 +17,7 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
     public var audioRecordingSizeBytes: Int?
     public var createdDate: Date?
     public var modifiedDate: Date?
+    public var createdDateString: String?
     public var callerAddress: String?
     public var callerName: String?
     public var action: String?
@@ -25,14 +26,16 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
     public var modifiedByUserId: String?
     public var copiedTo: [VoicemailMessagesTopicVoicemailCopyRecord]?
     public var copiedFrom: VoicemailMessagesTopicVoicemailCopyRecord?
+    public var modifiedDateString: String?
 
-    public init(_id: String?, read: Bool?, audioRecordingDurationSeconds: Int?, audioRecordingSizeBytes: Int?, createdDate: Date?, modifiedDate: Date?, callerAddress: String?, callerName: String?, action: String?, note: String?, deleted: Bool?, modifiedByUserId: String?, copiedTo: [VoicemailMessagesTopicVoicemailCopyRecord]?, copiedFrom: VoicemailMessagesTopicVoicemailCopyRecord?) {
+    public init(_id: String?, read: Bool?, audioRecordingDurationSeconds: Int?, audioRecordingSizeBytes: Int?, createdDate: Date?, modifiedDate: Date?, createdDateString: String?, callerAddress: String?, callerName: String?, action: String?, note: String?, deleted: Bool?, modifiedByUserId: String?, copiedTo: [VoicemailMessagesTopicVoicemailCopyRecord]?, copiedFrom: VoicemailMessagesTopicVoicemailCopyRecord?, modifiedDateString: String?) {
         self._id = _id
         self.read = read
         self.audioRecordingDurationSeconds = audioRecordingDurationSeconds
         self.audioRecordingSizeBytes = audioRecordingSizeBytes
         self.createdDate = createdDate
         self.modifiedDate = modifiedDate
+        self.createdDateString = createdDateString
         self.callerAddress = callerAddress
         self.callerName = callerName
         self.action = action
@@ -41,6 +44,7 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
         self.modifiedByUserId = modifiedByUserId
         self.copiedTo = copiedTo
         self.copiedFrom = copiedFrom
+        self.modifiedDateString = modifiedDateString
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -50,6 +54,7 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
         case audioRecordingSizeBytes
         case createdDate
         case modifiedDate
+        case createdDateString
         case callerAddress
         case callerName
         case action
@@ -58,6 +63,7 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
         case modifiedByUserId
         case copiedTo
         case copiedFrom
+        case modifiedDateString
     }
 
 

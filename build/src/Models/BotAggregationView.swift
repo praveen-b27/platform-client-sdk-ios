@@ -12,6 +12,7 @@ import Foundation
 public class BotAggregationView: Codable {
 
     public enum Target: String, Codable { 
+        case nbotsessionturns = "nBotSessionTurns"
         case nbotsessions = "nBotSessions"
         case obotintent = "oBotIntent"
         case obotsessionquery = "oBotSessionQuery"

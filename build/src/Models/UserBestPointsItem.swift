@@ -12,9 +12,9 @@ import Foundation
 public class UserBestPointsItem: Codable {
 
     public enum GranularityType: String, Codable { 
-        case monthly = "Monthly"
-        case weekly = "Weekly"
         case daily = "Daily"
+        case weekly = "Weekly"
+        case monthly = "Monthly"
     }
     /** Best points aggregation interval granularity */
     public var granularityType: GranularityType?

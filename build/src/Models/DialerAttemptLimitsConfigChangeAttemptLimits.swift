@@ -25,6 +25,7 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
     public var recallEntries: [String:DialerAttemptLimitsConfigChangeRecallEntry]?
     /** Whether recalls are performed before considering other numbers (true) or after (false) */
     public var breadthFirstRecalls: Bool?
+    public var additionalProperties: [String:JSON]?
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The UI-visible name of the object */
@@ -36,13 +37,14 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
 
-    public init(maxAttemptsPerContact: Int?, maxAttemptsPerNumber: Int?, timeZoneId: String?, resetPeriod: ResetPeriod?, recallEntries: [String:DialerAttemptLimitsConfigChangeRecallEntry]?, breadthFirstRecalls: Bool?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(maxAttemptsPerContact: Int?, maxAttemptsPerNumber: Int?, timeZoneId: String?, resetPeriod: ResetPeriod?, recallEntries: [String:DialerAttemptLimitsConfigChangeRecallEntry]?, breadthFirstRecalls: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         self.maxAttemptsPerContact = maxAttemptsPerContact
         self.maxAttemptsPerNumber = maxAttemptsPerNumber
         self.timeZoneId = timeZoneId
         self.resetPeriod = resetPeriod
         self.recallEntries = recallEntries
         self.breadthFirstRecalls = breadthFirstRecalls
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -57,6 +59,7 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
         case resetPeriod
         case recallEntries
         case breadthFirstRecalls
+        case additionalProperties
         case _id = "id"
         case name
         case dateCreated

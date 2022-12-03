@@ -46,12 +46,11 @@ public class ArchitectFlowNotificationArchitectOperation: Codable {
     public var errorMessage: String?
     /** The error code, if the action failed */
     public var errorCode: String?
-    /** The error message params, if the action failed */
-    public var errorMessageParams: JSON?
+    public var errorMessageParams: ArchitectFlowNotificationErrorMessageParams?
     /** The error details, if the action failed */
     public var errorDetails: [ArchitectFlowNotificationErrorDetail]?
 
-    public init(_id: String?, complete: Bool?, user: ArchitectFlowNotificationUser?, client: ArchitectFlowNotificationClient?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: JSON?, errorDetails: [ArchitectFlowNotificationErrorDetail]?) {
+    public init(_id: String?, complete: Bool?, user: ArchitectFlowNotificationUser?, client: ArchitectFlowNotificationClient?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: ArchitectFlowNotificationErrorMessageParams?, errorDetails: [ArchitectFlowNotificationErrorDetail]?) {
         self._id = _id
         self.complete = complete
         self.user = user

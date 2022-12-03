@@ -893,6 +893,7 @@ open class LearningAPI {
     }
 
     
+    
     /**
      Get all learning modules of an organization
      
@@ -905,10 +906,11 @@ open class LearningAPI {
      - parameter searchTerm: (query) Search Term (searchable by name) (optional)
      - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
      - parameter isPublished: (query) Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional)
+     - parameter statuses: (query) Specifies the module statuses to filter by (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, completion: @escaping ((_ data: LearningModulesDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLearningModulesWithRequestBuilder(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished)
+    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, completion: @escaping ((_ data: LearningModulesDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningModulesWithRequestBuilder(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses)
         requestBuilder.execute { (response: Response<LearningModulesDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -932,9 +934,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 2,
-  "pageCount" : 7,
-  "pageNumber" : 5,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "archivalMode" : "Graceful",
     "isArchived" : true,
@@ -1011,7 +1013,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 5,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -1025,10 +1027,11 @@ open class LearningAPI {
      - parameter searchTerm: (query) Search Term (searchable by name) (optional)
      - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
      - parameter isPublished: (query) Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional)
+     - parameter statuses: (query) Specifies the module statuses to filter by (optional)
 
      - returns: RequestBuilder<LearningModulesDomainEntityListing> 
      */
-    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil) -> RequestBuilder<LearningModulesDomainEntityListing> {        
+    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil) -> RequestBuilder<LearningModulesDomainEntityListing> {        
         let path = "/api/v2/learning/modules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1043,7 +1046,8 @@ open class LearningAPI {
             "sortBy": sortBy?.rawValue, 
             "searchTerm": searchTerm, 
             "expand": expand, 
-            "isPublished": isPublished?.rawValue
+            "isPublished": isPublished?.rawValue, 
+            "statuses": statuses
         ])
 
         let requestBuilder: RequestBuilder<LearningModulesDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -9,6 +9,7 @@ the campaign/sequence entities that this action acts on
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **useTriggeringEntity** | **Bool** | Whether this action should act on the entity that triggered it | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 | **campaigns** | [**[DialerCampaignRuleConfigChangeUriReference]**](DialerCampaignRuleConfigChangeUriReference.html) | A list of campaignIds to act on | [optional] |
 | **sequences** | [**[DialerCampaignRuleConfigChangeUriReference]**](DialerCampaignRuleConfigChangeUriReference.html) | A list of sequenceIds to act on | [optional] |
 {: class="table table-striped"}

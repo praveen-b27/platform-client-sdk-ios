@@ -418,7 +418,7 @@ open class GamificationAPI {
   "division" : "{}",
   "performanceProfile" : "{}",
   "bestPoints" : [ {
-    "granularityType" : "Monthly",
+    "granularityType" : "Daily",
     "dateEndWorkday" : "2000-01-23",
     "count" : 0,
     "dateStartWorkday" : "2000-01-23",
@@ -431,7 +431,7 @@ open class GamificationAPI {
     } ],
     "points" : 6
   }, {
-    "granularityType" : "Monthly",
+    "granularityType" : "Daily",
     "dateEndWorkday" : "2000-01-23",
     "count" : 0,
     "dateStartWorkday" : "2000-01-23",
@@ -500,7 +500,7 @@ open class GamificationAPI {
   "division" : "{}",
   "performanceProfile" : "{}",
   "bestPoints" : [ {
-    "granularityType" : "Monthly",
+    "granularityType" : "Daily",
     "dateEndWorkday" : "2000-01-23",
     "count" : 0,
     "dateStartWorkday" : "2000-01-23",
@@ -513,7 +513,7 @@ open class GamificationAPI {
     } ],
     "points" : 6
   }, {
-    "granularityType" : "Monthly",
+    "granularityType" : "Daily",
     "dateEndWorkday" : "2000-01-23",
     "count" : 0,
     "dateStartWorkday" : "2000-01-23",
@@ -1525,13 +1525,13 @@ open class GamificationAPI {
      - examples: [{contentType=application/json, example={
   "user" : "{}",
   "bestPoints" : [ {
-    "granularityType" : "Monthly",
+    "granularityType" : "Daily",
     "dateEndWorkday" : "2000-01-23",
     "dateStartWorkday" : "2000-01-23",
     "rank" : 6,
     "points" : 0
   }, {
-    "granularityType" : "Monthly",
+    "granularityType" : "Daily",
     "dateEndWorkday" : "2000-01-23",
     "dateStartWorkday" : "2000-01-23",
     "rank" : 6,
@@ -2266,13 +2266,13 @@ open class GamificationAPI {
      - examples: [{contentType=application/json, example={
   "user" : "{}",
   "bestPoints" : [ {
-    "granularityType" : "Monthly",
+    "granularityType" : "Daily",
     "dateEndWorkday" : "2000-01-23",
     "dateStartWorkday" : "2000-01-23",
     "rank" : 6,
     "points" : 0
   }, {
-    "granularityType" : "Monthly",
+    "granularityType" : "Daily",
     "dateEndWorkday" : "2000-01-23",
     "dateStartWorkday" : "2000-01-23",
     "rank" : 6,

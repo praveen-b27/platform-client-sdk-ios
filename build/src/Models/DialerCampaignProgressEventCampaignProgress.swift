@@ -20,13 +20,15 @@ public class DialerCampaignProgressEventCampaignProgress: Codable {
     public var totalNumberOfContacts: Double?
     /** numberOfContactsContacted/totalNumberOfContacts*100 */
     public var percentage: Int?
+    public var additionalProperties: [String:JSON]?
 
-    public init(campaign: DialerCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?) {
+    public init(campaign: DialerCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?, additionalProperties: [String:JSON]?) {
         self.campaign = campaign
         self.numberOfContactsCalled = numberOfContactsCalled
         self.numberOfContactsMessaged = numberOfContactsMessaged
         self.totalNumberOfContacts = totalNumberOfContacts
         self.percentage = percentage
+        self.additionalProperties = additionalProperties
     }
 
 

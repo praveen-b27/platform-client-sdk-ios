@@ -114,8 +114,9 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
     public var afterCallWorkRequired: Bool?
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
+    public var additionalProperties: [String:JSON]?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, other: QueueConversationSocialExpressionEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationSocialExpressionEventTopicDisconnectReason]?, faxStatus: QueueConversationSocialExpressionEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, other: QueueConversationSocialExpressionEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationSocialExpressionEventTopicDisconnectReason]?, faxStatus: QueueConversationSocialExpressionEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, additionalProperties: [String:JSON]?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -144,6 +145,7 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
+        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -175,6 +177,7 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
         case afterCallWork
         case afterCallWorkRequired
         case agentAssistantId
+        case additionalProperties
     }
 
 

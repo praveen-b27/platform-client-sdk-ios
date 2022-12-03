@@ -14,10 +14,13 @@ public class HistoryListing: Codable {
     public enum ActionName: String, Codable { 
         case create = "CREATE"
         case checkin = "CHECKIN"
+        case checkout = "CHECKOUT"
         case debug = "DEBUG"
         case delete = "DELETE"
         case history = "HISTORY"
         case publish = "PUBLISH"
+        case revert = "REVERT"
+        case save = "SAVE"
         case stateChange = "STATE_CHANGE"
         case update = "UPDATE"
         case validate = "VALIDATE"

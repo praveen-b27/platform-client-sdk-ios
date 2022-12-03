@@ -17,6 +17,8 @@ public class BotAggregateQueryPredicate: Codable {
         case metric = "metric"
     }
     public enum Dimension: String, Codable { 
+        case askactionid = "askActionId"
+        case askactionresult = "askActionResult"
         case botfinalintent = "botFinalIntent"
         case botid = "botId"
         case botintent = "botIntent"

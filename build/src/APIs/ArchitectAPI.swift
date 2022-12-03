@@ -2927,6 +2927,7 @@ open class ArchitectAPI {
     
     
     
+    
     /**
      Get IVR configs.
      
@@ -2936,10 +2937,11 @@ open class ArchitectAPI {
      - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Name of the IVR to filter by. (optional)
      - parameter dnis: (query) The phone number of the IVR to filter by. (optional)
+     - parameter scheduleGroup: (query) The Schedule Group of the IVR to filter by. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectIvrs(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil, completion: @escaping ((_ data: IVREntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectIvrsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, dnis: dnis)
+    open class func getArchitectIvrs(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil, scheduleGroup: String? = nil, completion: @escaping ((_ data: IVREntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectIvrsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, dnis: dnis, scheduleGroup: scheduleGroup)
         requestBuilder.execute { (response: Response<IVREntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -3019,10 +3021,11 @@ open class ArchitectAPI {
      - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Name of the IVR to filter by. (optional)
      - parameter dnis: (query) The phone number of the IVR to filter by. (optional)
+     - parameter scheduleGroup: (query) The Schedule Group of the IVR to filter by. (optional)
 
      - returns: RequestBuilder<IVREntityListing> 
      */
-    open class func getArchitectIvrsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil) -> RequestBuilder<IVREntityListing> {        
+    open class func getArchitectIvrsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil, scheduleGroup: String? = nil) -> RequestBuilder<IVREntityListing> {        
         let path = "/api/v2/architect/ivrs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -3034,7 +3037,8 @@ open class ArchitectAPI {
             "sortBy": sortBy, 
             "sortOrder": sortOrder, 
             "name": name, 
-            "dnis": dnis
+            "dnis": dnis, 
+            "scheduleGroup": scheduleGroup
         ])
 
         let requestBuilder: RequestBuilder<IVREntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

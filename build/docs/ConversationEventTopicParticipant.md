@@ -45,6 +45,7 @@ title: ConversationEventTopicParticipant
 | **socialExpressions** | [**[ConversationEventTopicSocialExpression]**](ConversationEventTopicSocialExpression.html) |  | [optional] |
 | **videos** | [**[ConversationEventTopicVideo]**](ConversationEventTopicVideo.html) |  | [optional] |
 | **workflow** | [**ConversationEventTopicWorkflow**](ConversationEventTopicWorkflow.html) |  | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

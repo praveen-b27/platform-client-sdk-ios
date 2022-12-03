@@ -22,13 +22,15 @@ public class ConversationEventTopicAddress: Codable {
     public var addressRaw: String?
     /** The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table. */
     public var addressDisplayable: String?
+    public var additionalProperties: [String:JSON]?
 
-    public init(name: String?, nameRaw: String?, addressNormalized: String?, addressRaw: String?, addressDisplayable: String?) {
+    public init(name: String?, nameRaw: String?, addressNormalized: String?, addressRaw: String?, addressDisplayable: String?, additionalProperties: [String:JSON]?) {
         self.name = name
         self.nameRaw = nameRaw
         self.addressNormalized = addressNormalized
         self.addressRaw = addressRaw
         self.addressDisplayable = addressDisplayable
+        self.additionalProperties = additionalProperties
     }
 
 

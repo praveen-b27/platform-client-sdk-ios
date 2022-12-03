@@ -17,11 +17,17 @@ public class OutcomeEventScore: Codable {
     public var sessionMaxProbability: Float?
     /** Represents the likelihood of a customer reaching or achieving a given outcome. */
     public var probability: Float?
+    /** Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome. */
+    public var percentile: Int?
+    /** Represents the maximum likelihood percentile score reached for a given outcome by the current session. */
+    public var sessionMaxPercentile: Int?
 
-    public init(outcome: AddressableEntityRef?, sessionMaxProbability: Float?, probability: Float?) {
+    public init(outcome: AddressableEntityRef?, sessionMaxProbability: Float?, probability: Float?, percentile: Int?, sessionMaxPercentile: Int?) {
         self.outcome = outcome
         self.sessionMaxProbability = sessionMaxProbability
         self.probability = probability
+        self.percentile = percentile
+        self.sessionMaxPercentile = sessionMaxPercentile
     }
 
 

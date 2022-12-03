@@ -20,6 +20,7 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
     public var matchAnyConditions: Bool?
     /** Whether this campaign rule is enabled */
     public var enabled: Bool?
+    public var additionalProperties: [String:JSON]?
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The UI-visible name of the object */
@@ -31,12 +32,13 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
 
-    public init(campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?, campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?, campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?, campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?, campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         self.campaignRuleEntities = campaignRuleEntities
         self.campaignRuleConditions = campaignRuleConditions
         self.campaignRuleActions = campaignRuleActions
         self.matchAnyConditions = matchAnyConditions
         self.enabled = enabled
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -50,6 +52,7 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
         case campaignRuleActions
         case matchAnyConditions
         case enabled
+        case additionalProperties
         case _id = "id"
         case name
         case dateCreated

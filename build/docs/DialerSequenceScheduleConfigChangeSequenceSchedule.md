@@ -10,6 +10,7 @@ title: DialerSequenceScheduleConfigChangeSequenceSchedule
 | **intervals** | [**[DialerSequenceScheduleConfigChangeScheduleInterval]**](DialerSequenceScheduleConfigChangeScheduleInterval.html) | a list of start and end times | [optional] |
 | **timeZone** | **String** | time zone identifier to be applied to the intervals; for example Africa/Abidjan | [optional] |
 | **sequence** | [**DialerSequenceScheduleConfigChangeUriReference**](DialerSequenceScheduleConfigChangeUriReference.html) |  | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The UI-visible name of the object | [optional] |
 | **dateCreated** | [**Date**](Date.html) | Creation time of the entity | [optional] |

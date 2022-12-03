@@ -13,12 +13,14 @@ public class DncListCreate: Codable {
 
     public enum DncSourceType: String, Codable { 
         case rds = "rds"
+        case rdsCustom = "rds_custom"
         case dncCom = "dnc.com"
         case gryphon = "gryphon"
     }
     public enum ContactMethod: String, Codable { 
         case email = "Email"
         case phone = "Phone"
+        case any = "Any"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

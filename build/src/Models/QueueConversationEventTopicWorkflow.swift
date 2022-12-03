@@ -14,9 +14,11 @@ public class QueueConversationEventTopicWorkflow: Codable {
 
     /** The id of the workflow */
     public var workflowId: String?
+    public var additionalProperties: [String:JSON]?
 
-    public init(workflowId: String?) {
+    public init(workflowId: String?, additionalProperties: [String:JSON]?) {
         self.workflowId = workflowId
+        self.additionalProperties = additionalProperties
     }
 
 

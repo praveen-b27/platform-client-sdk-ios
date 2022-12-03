@@ -26,6 +26,8 @@ public class ContactList: Codable {
     public var columnNames: [String]?
     /** Indicates which columns are phone numbers. */
     public var phoneColumns: [ContactPhoneNumberColumn]?
+    /** Indicates which columns are email addresses */
+    public var emailColumns: [EmailColumn]?
     /** The status of the import process. */
     public var importStatus: ImportStatus?
     /** A column to check if a contact should always be dialed in preview mode. */
@@ -43,7 +45,7 @@ public class ContactList: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, emailColumns: [EmailColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -52,6 +54,7 @@ public class ContactList: Codable {
         self.division = division
         self.columnNames = columnNames
         self.phoneColumns = phoneColumns
+        self.emailColumns = emailColumns
         self.importStatus = importStatus
         self.previewModeColumnName = previewModeColumnName
         self.previewModeAcceptedValues = previewModeAcceptedValues
@@ -71,6 +74,7 @@ public class ContactList: Codable {
         case division
         case columnNames
         case phoneColumns
+        case emailColumns
         case importStatus
         case previewModeColumnName
         case previewModeAcceptedValues

@@ -12,6 +12,7 @@ title: QueueConversationCallbackEventTopicDialerPreview
 | **contactListId** | **String** | The contactList associated with this preview data pop. | [optional] |
 | **campaignId** | **String** | The campaignId associated with this preview data pop. | [optional] |
 | **phoneNumberColumns** | [**[QueueConversationCallbackEventTopicPhoneNumberColumn]**](QueueConversationCallbackEventTopicPhoneNumberColumn.html) | The phone number columns associated with this campaign | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -2260,7 +2260,8 @@ open class RoutingAPI {
       "id" : "id"
     } ],
     "mediaType" : "voice",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "state" : "Trained"
   }, {
     "retrainingErrors" : [ {
       "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
@@ -2272,7 +2273,8 @@ open class RoutingAPI {
       "id" : "id"
     } ],
     "mediaType" : "voice",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "state" : "Trained"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "kpi" : "kpi",
@@ -2575,7 +2577,8 @@ open class RoutingAPI {
         "id" : "id"
       } ],
       "mediaType" : "voice",
-      "dateModified" : "2000-01-23T04:56:07.000+00:00"
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "state" : "Trained"
     }, {
       "retrainingErrors" : [ {
         "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
@@ -2587,7 +2590,8 @@ open class RoutingAPI {
         "id" : "id"
       } ],
       "mediaType" : "voice",
-      "dateModified" : "2000-01-23T04:56:07.000+00:00"
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "state" : "Trained"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "kpi" : "kpi",
@@ -2618,7 +2622,8 @@ open class RoutingAPI {
         "id" : "id"
       } ],
       "mediaType" : "voice",
-      "dateModified" : "2000-01-23T04:56:07.000+00:00"
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "state" : "Trained"
     }, {
       "retrainingErrors" : [ {
         "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
@@ -2630,7 +2635,8 @@ open class RoutingAPI {
         "id" : "id"
       } ],
       "mediaType" : "voice",
-      "dateModified" : "2000-01-23T04:56:07.000+00:00"
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "state" : "Trained"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "kpi" : "kpi",
@@ -8724,7 +8730,8 @@ open class RoutingAPI {
       "id" : "id"
     } ],
     "mediaType" : "voice",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "state" : "Trained"
   }, {
     "retrainingErrors" : [ {
       "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
@@ -8736,7 +8743,8 @@ open class RoutingAPI {
       "id" : "id"
     } ],
     "mediaType" : "voice",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "state" : "Trained"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "kpi" : "kpi",
@@ -12102,7 +12110,8 @@ open class RoutingAPI {
       "id" : "id"
     } ],
     "mediaType" : "voice",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "state" : "Trained"
   }, {
     "retrainingErrors" : [ {
       "dateOfFirstOccurrence" : "2000-01-23T04:56:07.000+00:00",
@@ -12114,7 +12123,8 @@ open class RoutingAPI {
       "id" : "id"
     } ],
     "mediaType" : "voice",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00"
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "state" : "Trained"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "kpi" : "kpi",

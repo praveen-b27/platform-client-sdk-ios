@@ -17,6 +17,7 @@ public class DialerRulesetConfigChangeRule: Codable {
     }
     /** The list of rule conditions; all must evaluate to true to trigger the rule actions */
     public var conditions: [DialerRulesetConfigChangeCondition]?
+    public var additionalProperties: [String:JSON]?
     /** The identifier of the rule */
     public var _id: String?
     /** The name of the rule */
@@ -28,8 +29,9 @@ public class DialerRulesetConfigChangeRule: Codable {
     /** The list of rule actions to be taken if the conditions are true */
     public var actions: [DialerRulesetConfigChangeAction]?
 
-    public init(conditions: [DialerRulesetConfigChangeCondition]?, _id: String?, name: String?, order: Int?, category: Category?, actions: [DialerRulesetConfigChangeAction]?) {
+    public init(conditions: [DialerRulesetConfigChangeCondition]?, additionalProperties: [String:JSON]?, _id: String?, name: String?, order: Int?, category: Category?, actions: [DialerRulesetConfigChangeAction]?) {
         self.conditions = conditions
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.order = order
@@ -39,6 +41,7 @@ public class DialerRulesetConfigChangeRule: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case conditions
+        case additionalProperties
         case _id = "id"
         case name
         case order

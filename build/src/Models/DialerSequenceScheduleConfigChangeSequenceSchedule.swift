@@ -16,6 +16,7 @@ public class DialerSequenceScheduleConfigChangeSequenceSchedule: Codable {
     /** time zone identifier to be applied to the intervals; for example Africa/Abidjan */
     public var timeZone: String?
     public var sequence: DialerSequenceScheduleConfigChangeUriReference?
+    public var additionalProperties: [String:JSON]?
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The UI-visible name of the object */
@@ -27,10 +28,11 @@ public class DialerSequenceScheduleConfigChangeSequenceSchedule: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
 
-    public init(intervals: [DialerSequenceScheduleConfigChangeScheduleInterval]?, timeZone: String?, sequence: DialerSequenceScheduleConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(intervals: [DialerSequenceScheduleConfigChangeScheduleInterval]?, timeZone: String?, sequence: DialerSequenceScheduleConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         self.intervals = intervals
         self.timeZone = timeZone
         self.sequence = sequence
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -42,6 +44,7 @@ public class DialerSequenceScheduleConfigChangeSequenceSchedule: Codable {
         case intervals
         case timeZone
         case sequence
+        case additionalProperties
         case _id = "id"
         case name
         case dateCreated

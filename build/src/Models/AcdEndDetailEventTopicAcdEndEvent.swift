@@ -73,6 +73,7 @@ public class AcdEndDetailEventTopicAcdEndEvent: Codable {
         case standard = "STANDARD"
         case other = "OTHER"
         case conditional = "CONDITIONAL"
+        case vip = "VIP"
     }
     public enum UsedRouting: String, Codable { 
         case unknown = "UNKNOWN"
@@ -84,6 +85,7 @@ public class AcdEndDetailEventTopicAcdEndEvent: Codable {
         case standard = "STANDARD"
         case other = "OTHER"
         case conditional = "CONDITIONAL"
+        case vip = "VIP"
     }
     public var eventTime: Int?
     public var conversationId: String?

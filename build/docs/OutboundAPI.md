@@ -105,6 +105,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundContactlists**](OutboundAPI.html#postOutboundContactlists) | Create a contact List. |
 | [**postOutboundConversationDnc**](OutboundAPI.html#postOutboundConversationDnc) | Add phone numbers to a Dialer DNC list. |
 | [**postOutboundDigitalrulesets**](OutboundAPI.html#postOutboundDigitalrulesets) | Create an Outbound Digital Rule Set |
+| [**postOutboundDnclistEmailaddresses**](OutboundAPI.html#postOutboundDnclistEmailaddresses) | Add email addresses to a DNC list. |
 | [**postOutboundDnclistExport**](OutboundAPI.html#postOutboundDnclistExport) | Initiate the export of a dnc list. |
 | [**postOutboundDnclistPhonenumbers**](OutboundAPI.html#postOutboundDnclistPhonenumbers) | Add phone numbers to a DNC list. |
 | [**postOutboundDnclists**](OutboundAPI.html#postOutboundDnclists) | Create dialer DNC list |
@@ -3243,7 +3244,7 @@ OutboundAPI.getOutboundDnclists(includeImportStatus: includeImportStatus, includ
 | **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
 | **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
-| **dncSourceType** | **String**| DncSourceType | [optional]<br />**Values**: rds ("rds"), dncCom ("dnc.com"), gryphon ("gryphon") |
+| **dncSourceType** | **String**| DncSourceType | [optional]<br />**Values**: rds ("rds"), rdsCustom ("rds_custom"), dncCom ("dnc.com"), gryphon ("gryphon") |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
@@ -3373,7 +3374,7 @@ OutboundAPI.getOutboundDnclistsDivisionviews(includeImportStatus: includeImportS
 | **pageNumber** | **Int**| Page number | [optional] |
 | **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
-| **dncSourceType** | **String**| DncSourceType | [optional]<br />**Values**: rds ("rds"), dncCom ("dnc.com"), gryphon ("gryphon") |
+| **dncSourceType** | **String**| DncSourceType | [optional]<br />**Values**: rds ("rds"), rdsCustom ("rds_custom"), dncCom ("dnc.com"), gryphon ("gryphon") |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
@@ -5539,6 +5540,61 @@ OutboundAPI.postOutboundDigitalrulesets(body: body) { (response, error) in
 ### Return type
 
 [**DigitalRuleSet**](DigitalRuleSet.html)
+
+<a name="postOutboundDnclistEmailaddresses"></a>
+
+# **postOutboundDnclistEmailaddresses**
+
+
+
+> Void postOutboundDnclistEmailaddresses(dncListId, body)
+
+Add email addresses to a DNC list.
+
+Only Internal DNC lists may be appended to
+
+
+
+Wraps POST /api/v2/outbound/dnclists/{dncListId}/emailaddresses  
+
+Requires ANY permissions: 
+
+* outbound:dnc:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let dncListId: String = "" // DncList ID
+let body: [String] = [""] // DNC email addresses
+
+// Code example
+OutboundAPI.postOutboundDnclistEmailaddresses(dncListId: dncListId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.postOutboundDnclistEmailaddresses was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dncListId** | **String**| DncList ID | |
+| **body** | [**[String]**](String.html)| DNC email addresses | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postOutboundDnclistExport"></a>
 

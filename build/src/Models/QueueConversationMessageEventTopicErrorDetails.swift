@@ -24,8 +24,9 @@ public class QueueConversationMessageEventTopicErrorDetails: Codable {
     /** The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead. */
     public var contextId: String?
     public var uri: String?
+    public var additionalProperties: [String:JSON]?
 
-    public init(status: Int?, code: String?, message: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, uri: String?) {
+    public init(status: Int?, code: String?, message: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, uri: String?, additionalProperties: [String:JSON]?) {
         self.status = status
         self.code = code
         self.message = message
@@ -33,6 +34,7 @@ public class QueueConversationMessageEventTopicErrorDetails: Codable {
         self.messageParams = messageParams
         self.contextId = contextId
         self.uri = uri
+        self.additionalProperties = additionalProperties
     }
 
 

@@ -7942,7 +7942,7 @@ open class RecordingAPI {
 
     
     /**
-     Get the local encryption settings
+     Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
      
      - parameter settingsId: (path) Settings Id 
      - parameter completion: completion handler to receive the data and the error objects
@@ -7966,7 +7966,7 @@ open class RecordingAPI {
     }
 
     /**
-     Get the local encryption settings
+     Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
      - GET /api/v2/recording/localkeys/settings/{settingsId}
      - OAuth:
        - type: oauth2
@@ -8000,7 +8000,7 @@ open class RecordingAPI {
     }
 
     /**
-     gets a list local key settings data
+     gets a list local key settings data. Replaced by API recording/keyconfigurations
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -8023,7 +8023,7 @@ open class RecordingAPI {
     }
 
     /**
-     gets a list local key settings data
+     gets a list local key settings data. Replaced by API recording/keyconfigurations
      - GET /api/v2/recording/localkeys/settings
      - OAuth:
        - type: oauth2
@@ -33570,7 +33570,7 @@ open class RecordingAPI {
 
     
     /**
-     create a local recording key
+     create a local key management recording key
      
      - parameter body: (body) Local Encryption body 
      - parameter completion: completion handler to receive the data and the error objects
@@ -33594,7 +33594,7 @@ open class RecordingAPI {
     }
 
     /**
-     create a local recording key
+     create a local key management recording key
      - POST /api/v2/recording/localkeys
      - OAuth:
        - type: oauth2
@@ -33629,7 +33629,7 @@ open class RecordingAPI {
 
     
     /**
-     create settings for local key creation
+     create settings for local key creation. Replaced by API recording/keyconfigurations
      
      - parameter body: (body) Local Encryption Configuration 
      - parameter completion: completion handler to receive the data and the error objects
@@ -33653,7 +33653,7 @@ open class RecordingAPI {
     }
 
     /**
-     create settings for local key creation
+     create settings for local key creation. Replaced by API recording/keyconfigurations
      - POST /api/v2/recording/localkeys/settings
      - OAuth:
        - type: oauth2
@@ -36073,7 +36073,7 @@ open class RecordingAPI {
     
     
     /**
-     Update the local encryption settings
+     Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
      
      - parameter settingsId: (path) Settings Id 
      - parameter body: (body) Local Encryption metadata 
@@ -36098,7 +36098,7 @@ open class RecordingAPI {
     }
 
     /**
-     Update the local encryption settings
+     Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
      - PUT /api/v2/recording/localkeys/settings/{settingsId}
      - OAuth:
        - type: oauth2

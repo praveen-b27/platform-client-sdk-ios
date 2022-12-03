@@ -79,6 +79,7 @@ public class DialerCampaignConfigChangeCampaign: Codable {
     public var division: DialerCampaignConfigChangeUriReference?
     /** For Preview Campaigns. Name of the contact column in the contact list containing the userIds of agents to assign specific contact records to. */
     public var agentOwnedColumn: String?
+    public var additionalProperties: [String:JSON]?
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The UI-visible name of the object */
@@ -90,7 +91,7 @@ public class DialerCampaignConfigChangeCampaign: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
 
-    public init(contactList: DialerCampaignConfigChangeUriReference?, queue: DialerCampaignConfigChangeUriReference?, dialingMode: DialingMode?, script: DialerCampaignConfigChangeUriReference?, edgeGroup: DialerCampaignConfigChangeUriReference?, site: DialerCampaignConfigChangeUriReference?, campaignStatus: CampaignStatus?, phoneColumns: [DialerCampaignConfigChangePhoneColumn]?, abandonRate: Double?, dncLists: [DialerCampaignConfigChangeUriReference]?, callableTimeSet: DialerCampaignConfigChangeUriReference?, callAnalysisResponseSet: DialerCampaignConfigChangeUriReference?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, errors: [DialerCampaignConfigChangeRestErrorDetail]?, ruleSets: [DialerCampaignConfigChangeUriReference]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int?, singleNumberPreview: Bool?, contactSort: DialerCampaignConfigChangeContactSort?, contactSorts: [DialerCampaignConfigChangeContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DialerCampaignConfigChangeUriReference]?, division: DialerCampaignConfigChangeUriReference?, agentOwnedColumn: String?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(contactList: DialerCampaignConfigChangeUriReference?, queue: DialerCampaignConfigChangeUriReference?, dialingMode: DialingMode?, script: DialerCampaignConfigChangeUriReference?, edgeGroup: DialerCampaignConfigChangeUriReference?, site: DialerCampaignConfigChangeUriReference?, campaignStatus: CampaignStatus?, phoneColumns: [DialerCampaignConfigChangePhoneColumn]?, abandonRate: Double?, dncLists: [DialerCampaignConfigChangeUriReference]?, callableTimeSet: DialerCampaignConfigChangeUriReference?, callAnalysisResponseSet: DialerCampaignConfigChangeUriReference?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, errors: [DialerCampaignConfigChangeRestErrorDetail]?, ruleSets: [DialerCampaignConfigChangeUriReference]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int?, singleNumberPreview: Bool?, contactSort: DialerCampaignConfigChangeContactSort?, contactSorts: [DialerCampaignConfigChangeContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DialerCampaignConfigChangeUriReference]?, division: DialerCampaignConfigChangeUriReference?, agentOwnedColumn: String?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         self.contactList = contactList
         self.queue = queue
         self.dialingMode = dialingMode
@@ -119,6 +120,7 @@ public class DialerCampaignConfigChangeCampaign: Codable {
         self.contactListFilters = contactListFilters
         self.division = division
         self.agentOwnedColumn = agentOwnedColumn
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -155,6 +157,7 @@ public class DialerCampaignConfigChangeCampaign: Codable {
         case contactListFilters
         case division
         case agentOwnedColumn
+        case additionalProperties
         case _id = "id"
         case name
         case dateCreated

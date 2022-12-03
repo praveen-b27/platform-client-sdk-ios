@@ -10,6 +10,7 @@ title: DialerRulesetConfigChangeRuleSet
 | **contactList** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference.html) |  | [optional] |
 | **queue** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
 | **rules** | [**[DialerRulesetConfigChangeRule]**](DialerRulesetConfigChangeRule.html) |  | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The UI-visible name of the object | [optional] |
 | **dateCreated** | [**Date**](Date.html) | Creation time of the entity | [optional] |

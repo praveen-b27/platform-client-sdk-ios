@@ -22,6 +22,8 @@ public class DialerContact: Codable {
     public var callRecords: [String:CallRecord]?
     /** A map of SMS records for the contact phone columns. */
     public var latestSmsEvaluations: [String:MessageEvaluation]?
+    /** A map of email records for the contact email columns. */
+    public var latestEmailEvaluations: [String:MessageEvaluation]?
     /** Indicates whether or not the contact can be called. */
     public var callable: Bool?
     /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
@@ -35,13 +37,14 @@ public class DialerContact: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.contactListId = contactListId
         self.data = data
         self.callRecords = callRecords
         self.latestSmsEvaluations = latestSmsEvaluations
+        self.latestEmailEvaluations = latestEmailEvaluations
         self.callable = callable
         self.phoneNumberStatus = phoneNumberStatus
         self.contactableStatus = contactableStatus
@@ -57,6 +60,7 @@ public class DialerContact: Codable {
         case data
         case callRecords
         case latestSmsEvaluations
+        case latestEmailEvaluations
         case callable
         case phoneNumberStatus
         case contactableStatus

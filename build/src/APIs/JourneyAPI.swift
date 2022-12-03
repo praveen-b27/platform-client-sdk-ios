@@ -1471,12 +1471,16 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "outcomeScores" : [ {
+    "percentile" : 1,
     "sessionMaxProbability" : 0.8008282,
     "probability" : 6.0274563,
+    "sessionMaxPercentile" : 5,
     "outcome" : "{}"
   }, {
+    "percentile" : 1,
     "sessionMaxProbability" : 0.8008282,
     "probability" : 6.0274563,
+    "sessionMaxPercentile" : 5,
     "outcome" : "{}"
   } ],
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00"

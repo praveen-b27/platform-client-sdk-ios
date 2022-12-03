@@ -45,6 +45,7 @@ title: QueueConversationEventTopicParticipant
 | **socialExpressions** | [**[QueueConversationEventTopicSocialExpression]**](QueueConversationEventTopicSocialExpression.html) |  | [optional] |
 | **videos** | [**[QueueConversationEventTopicVideo]**](QueueConversationEventTopicVideo.html) |  | [optional] |
 | **workflow** | [**QueueConversationEventTopicWorkflow**](QueueConversationEventTopicWorkflow.html) |  | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

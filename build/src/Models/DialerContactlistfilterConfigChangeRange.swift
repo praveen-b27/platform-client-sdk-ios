@@ -22,13 +22,15 @@ public class DialerContactlistfilterConfigChangeRange: Codable {
     public var maxInclusive: Bool?
     /** Elements that apply to the IN operator */
     public var inSet: [String]?
+    public var additionalProperties: [String:JSON]?
 
-    public init(min: String?, max: String?, minInclusive: Bool?, maxInclusive: Bool?, inSet: [String]?) {
+    public init(min: String?, max: String?, minInclusive: Bool?, maxInclusive: Bool?, inSet: [String]?, additionalProperties: [String:JSON]?) {
         self.min = min
         self.max = max
         self.minInclusive = minInclusive
         self.maxInclusive = maxInclusive
         self.inSet = inSet
+        self.additionalProperties = additionalProperties
     }
 
 

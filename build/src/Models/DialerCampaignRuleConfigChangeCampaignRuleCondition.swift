@@ -21,17 +21,20 @@ public class DialerCampaignRuleConfigChangeCampaignRuleCondition: Codable {
     public var parameters: [String:String]?
     /** The type of this condition */
     public var conditionType: ConditionType?
+    public var additionalProperties: [String:JSON]?
 
-    public init(_id: String?, parameters: [String:String]?, conditionType: ConditionType?) {
+    public init(_id: String?, parameters: [String:String]?, conditionType: ConditionType?, additionalProperties: [String:JSON]?) {
         self._id = _id
         self.parameters = parameters
         self.conditionType = conditionType
+        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case parameters
         case conditionType
+        case additionalProperties
     }
 
 

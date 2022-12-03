@@ -80,8 +80,9 @@ public class QueueConversationEventTopicChat: Codable {
     public var afterCallWork: QueueConversationEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    public var additionalProperties: [String:JSON]?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationEventTopicJourneyContext?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationEventTopicJourneyContext?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: [String:JSON]?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -99,6 +100,7 @@ public class QueueConversationEventTopicChat: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -119,6 +121,7 @@ public class QueueConversationEventTopicChat: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case additionalProperties
     }
 
 

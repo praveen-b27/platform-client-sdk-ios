@@ -25,6 +25,10 @@ public class UserEstablishedEvent: Codable {
     public var userId: String?
     /** A Station ID (V4 UUID) that identifies the station being used if the user is using a station and the stationId is known. */
     public var stationId: String?
+    /** The automatic number identification if it is available for this conversation. */
+    public var ani: String?
+    /** The dialed number identification if it is available for this conversation. */
+    public var dnis: String?
     /** Indicates whether or not this user will be required to complete after call work. */
     public var afterCallWorkRequired: Bool?
     /** The id (V4 UUID) of the queue that the user is calling on behalf of. Applies to outbound calls only. */
@@ -34,7 +38,7 @@ public class UserEstablishedEvent: Codable {
     /** Metadata about the source of this communication's interaction. */
     public var sourceConfiguration: SourceConfiguration?
 
-    public init(eventId: String?, eventDateTime: Date?, conversationId: String?, communicationId: String?, phoneNumber: String?, userId: String?, stationId: String?, afterCallWorkRequired: Bool?, queueId: String?, initialConfiguration: InitialConfiguration?, sourceConfiguration: SourceConfiguration?) {
+    public init(eventId: String?, eventDateTime: Date?, conversationId: String?, communicationId: String?, phoneNumber: String?, userId: String?, stationId: String?, ani: String?, dnis: String?, afterCallWorkRequired: Bool?, queueId: String?, initialConfiguration: InitialConfiguration?, sourceConfiguration: SourceConfiguration?) {
         self.eventId = eventId
         self.eventDateTime = eventDateTime
         self.conversationId = conversationId
@@ -42,6 +46,8 @@ public class UserEstablishedEvent: Codable {
         self.phoneNumber = phoneNumber
         self.userId = userId
         self.stationId = stationId
+        self.ani = ani
+        self.dnis = dnis
         self.afterCallWorkRequired = afterCallWorkRequired
         self.queueId = queueId
         self.initialConfiguration = initialConfiguration

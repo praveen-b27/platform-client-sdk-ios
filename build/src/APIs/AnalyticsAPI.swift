@@ -148,6 +148,27 @@ open class AnalyticsAPI {
     
     
     
+    
+    public enum AskActionResults_getAnalyticsBotflowReportingturns: String { 
+        case agentRequestedByUser = "AgentRequestedByUser"
+        case confirmationRequired = "ConfirmationRequired"
+        case disambiguationRequired = "DisambiguationRequired"
+        case error = "Error"
+        case expressionError = "ExpressionError"
+        case noInputCollection = "NoInputCollection"
+        case noInputConfirmation = "NoInputConfirmation"
+        case noInputDisambiguation = "NoInputDisambiguation"
+        case noMatchCollection = "NoMatchCollection"
+        case noMatchConfirmation = "NoMatchConfirmation"
+        case noMatchDisambiguation = "NoMatchDisambiguation"
+        case successCollection = "SuccessCollection"
+        case successConfirmationNo = "SuccessConfirmationNo"
+        case successConfirmationYes = "SuccessConfirmationYes"
+        case successDisambiguation = "SuccessDisambiguation"
+        case successDisambiguationNone = "SuccessDisambiguationNone"
+    }
+
+    
     /**
      Get Reporting Turns.
      
@@ -157,10 +178,11 @@ open class AnalyticsAPI {
      - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
      - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session (optional)
      - parameter language: (query) Optional language code to get the reporting turns for a particular language (optional)
+     - parameter askActionResults: (query) Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsBotflowReportingturns(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil, language: String? = nil, completion: @escaping ((_ data: ReportingTurnsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId, language: language)
+    open class func getAnalyticsBotflowReportingturns(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil, language: String? = nil, askActionResults: AskActionResults_getAnalyticsBotflowReportingturns? = nil, completion: @escaping ((_ data: ReportingTurnsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId, language: language, askActionResults: askActionResults)
         requestBuilder.execute { (response: Response<ReportingTurnsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -218,10 +240,11 @@ open class AnalyticsAPI {
      - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
      - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session (optional)
      - parameter language: (query) Optional language code to get the reporting turns for a particular language (optional)
+     - parameter askActionResults: (query) Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)
 
      - returns: RequestBuilder<ReportingTurnsResponse> 
      */
-    open class func getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil, language: String? = nil) -> RequestBuilder<ReportingTurnsResponse> {        
+    open class func getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil, language: String? = nil, askActionResults: AskActionResults_getAnalyticsBotflowReportingturns? = nil) -> RequestBuilder<ReportingTurnsResponse> {        
         var path = "/api/v2/analytics/botflows/{botFlowId}/reportingturns"
         let botFlowIdPreEscape = "\(botFlowId)"
         let botFlowIdPostEscape = botFlowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -235,7 +258,8 @@ open class AnalyticsAPI {
             "pageSize": pageSize, 
             "actionId": actionId, 
             "sessionId": sessionId, 
-            "language": language
+            "language": language, 
+            "askActionResults": askActionResults?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<ReportingTurnsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

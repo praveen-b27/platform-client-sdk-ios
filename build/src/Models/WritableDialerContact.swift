@@ -19,6 +19,8 @@ public class WritableDialerContact: Codable {
     public var data: [String:JSON]?
     /** A map of SMS records for the contact phone columns. */
     public var latestSmsEvaluations: [String:MessageEvaluation]?
+    /** A map of email records for the contact email columns. */
+    public var latestEmailEvaluations: [String:MessageEvaluation]?
     /** Indicates whether or not the contact can be called. */
     public var callable: Bool?
     /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
@@ -26,11 +28,12 @@ public class WritableDialerContact: Codable {
     /** A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. */
     public var contactableStatus: [String:ContactableStatus]?
 
-    public init(_id: String?, contactListId: String?, data: [String:JSON]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?) {
+    public init(_id: String?, contactListId: String?, data: [String:JSON]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?) {
         self._id = _id
         self.contactListId = contactListId
         self.data = data
         self.latestSmsEvaluations = latestSmsEvaluations
+        self.latestEmailEvaluations = latestEmailEvaluations
         self.callable = callable
         self.phoneNumberStatus = phoneNumberStatus
         self.contactableStatus = contactableStatus
@@ -41,6 +44,7 @@ public class WritableDialerContact: Codable {
         case contactListId
         case data
         case latestSmsEvaluations
+        case latestEmailEvaluations
         case callable
         case phoneNumberStatus
         case contactableStatus

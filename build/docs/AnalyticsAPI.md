@@ -217,7 +217,7 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 
 
-> [ReportingTurnsResponse](ReportingTurnsResponse.html) getAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId, language)
+> [ReportingTurnsResponse](ReportingTurnsResponse.html) getAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId, language, askActionResults)
 
 Get Reporting Turns.
 
@@ -243,9 +243,10 @@ let pageSize: String = "" // Max number of entities to return. Maximum of 250
 let actionId: String = "" // Optional action ID to get the reporting turns associated to a particular flow action
 let sessionId: String = "" // Optional session ID to get the reporting turns for a particular session
 let language: String = en-us // Optional language code to get the reporting turns for a particular language
+let askActionResults: AnalyticsAPI.AskActionResults_getAnalyticsBotflowReportingturns = AnalyticsAPI.AskActionResults_getAnalyticsBotflowReportingturns.enummember // Optional case-insensitive comma separated list of ask action results to filter the reporting turns.
 
 // Code example
-AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId, language: language) { (response, error) in
+AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId, language: language, askActionResults: askActionResults) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -266,6 +267,7 @@ AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: afte
 | **actionId** | **String**| Optional action ID to get the reporting turns associated to a particular flow action | [optional] |
 | **sessionId** | **String**| Optional session ID to get the reporting turns for a particular session | [optional] |
 | **language** | **String**| Optional language code to get the reporting turns for a particular language | [optional] |
+| **askActionResults** | **String**| Optional case-insensitive comma separated list of ask action results to filter the reporting turns. | [optional]<br />**Values**: agentRequestedByUser ("AgentRequestedByUser"), confirmationRequired ("ConfirmationRequired"), disambiguationRequired ("DisambiguationRequired"), error ("Error"), expressionError ("ExpressionError"), noInputCollection ("NoInputCollection"), noInputConfirmation ("NoInputConfirmation"), noInputDisambiguation ("NoInputDisambiguation"), noMatchCollection ("NoMatchCollection"), noMatchConfirmation ("NoMatchConfirmation"), noMatchDisambiguation ("NoMatchDisambiguation"), successCollection ("SuccessCollection"), successConfirmationNo ("SuccessConfirmationNo"), successConfirmationYes ("SuccessConfirmationYes"), successDisambiguation ("SuccessDisambiguation"), successDisambiguationNone ("SuccessDisambiguationNone") |
 {: class="table-striped"}
 
 

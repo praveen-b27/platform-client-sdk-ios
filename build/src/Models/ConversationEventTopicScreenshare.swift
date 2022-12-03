@@ -79,8 +79,9 @@ public class ConversationEventTopicScreenshare: Codable {
     public var afterCallWork: ConversationEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    public var additionalProperties: [String:JSON]?
 
-    public init(state: State?, initialState: InitialState?, _self: ConversationEventTopicAddress?, _id: String?, context: String?, sharing: Bool?, provider: String?, scriptId: String?, peerId: String?, peerCount: JSON?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, _self: ConversationEventTopicAddress?, _id: String?, context: String?, sharing: Bool?, provider: String?, scriptId: String?, peerId: String?, peerCount: JSON?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: [String:JSON]?) {
         self.state = state
         self.initialState = initialState
         self._self = _self
@@ -97,6 +98,7 @@ public class ConversationEventTopicScreenshare: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -116,6 +118,7 @@ public class ConversationEventTopicScreenshare: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case additionalProperties
     }
 
 

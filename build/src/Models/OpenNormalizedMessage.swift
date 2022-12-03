@@ -15,7 +15,6 @@ public class OpenNormalizedMessage: Codable {
     public enum ModelType: String, Codable { 
         case text = "Text"
         case receipt = "Receipt"
-        case event = "Event"
     }
     public enum Status: String, Codable { 
         case sent = "Sent"
@@ -39,8 +38,6 @@ public class OpenNormalizedMessage: Codable {
     public var text: String?
     /** List of content elements. */
     public var content: [OpenMessageContent]?
-    /** List of event elements. */
-    public var events: [OpenMessageEvent]?
     /** Message receipt status, only used with type Receipt. */
     public var status: Status?
     /** List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. */
@@ -52,13 +49,12 @@ public class OpenNormalizedMessage: Codable {
     /** Additional metadata about this message. */
     public var metadata: [String:String]?
 
-    public init(_id: String?, channel: OpenMessagingChannel?, type: ModelType?, text: String?, content: [OpenMessageContent]?, events: [OpenMessageEvent]?, status: Status?, reasons: [Reason]?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
+    public init(_id: String?, channel: OpenMessagingChannel?, type: ModelType?, text: String?, content: [OpenMessageContent]?, status: Status?, reasons: [Reason]?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
         self._id = _id
         self.channel = channel
         self.type = type
         self.text = text
         self.content = content
-        self.events = events
         self.status = status
         self.reasons = reasons
         self.isFinalReceipt = isFinalReceipt
@@ -72,7 +68,6 @@ public class OpenNormalizedMessage: Codable {
         case type
         case text
         case content
-        case events
         case status
         case reasons
         case isFinalReceipt

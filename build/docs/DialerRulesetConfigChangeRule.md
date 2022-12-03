@@ -8,6 +8,7 @@ title: DialerRulesetConfigChangeRule
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **conditions** | [**[DialerRulesetConfigChangeCondition]**](DialerRulesetConfigChangeCondition.html) | The list of rule conditions; all must evaluate to true to trigger the rule actions | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 | **_id** | **String** | The identifier of the rule | [optional] |
 | **name** | **String** | The name of the rule | [optional] |
 | **order** | **Int** | The ranked order of the rule; rules are processed from lowest number to highest | [optional] |

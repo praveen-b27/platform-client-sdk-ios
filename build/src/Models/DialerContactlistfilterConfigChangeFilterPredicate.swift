@@ -40,14 +40,16 @@ public class DialerContactlistfilterConfigChangeFilterPredicate: Codable {
     public var range: DialerContactlistfilterConfigChangeRange?
     /** Whether or not to invert to result of evaluating the predicate */
     public var inverted: Bool?
+    public var additionalProperties: [String:JSON]?
 
-    public init(column: String?, columnType: ColumnType?, _operator: Operator?, value: String?, range: DialerContactlistfilterConfigChangeRange?, inverted: Bool?) {
+    public init(column: String?, columnType: ColumnType?, _operator: Operator?, value: String?, range: DialerContactlistfilterConfigChangeRange?, inverted: Bool?, additionalProperties: [String:JSON]?) {
         self.column = column
         self.columnType = columnType
         self._operator = _operator
         self.value = value
         self.range = range
         self.inverted = inverted
+        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -57,6 +59,7 @@ public class DialerContactlistfilterConfigChangeFilterPredicate: Codable {
         case value
         case range
         case inverted
+        case additionalProperties
     }
 
 

@@ -13,10 +13,12 @@ public class QueueConversationCallbackEventTopicPhoneNumberColumn: Codable {
 
     public var columnName: String?
     public var type: String?
+    public var additionalProperties: [String:JSON]?
 
-    public init(columnName: String?, type: String?) {
+    public init(columnName: String?, type: String?, additionalProperties: [String:JSON]?) {
         self.columnName = columnName
         self.type = type
+        self.additionalProperties = additionalProperties
     }
 
 

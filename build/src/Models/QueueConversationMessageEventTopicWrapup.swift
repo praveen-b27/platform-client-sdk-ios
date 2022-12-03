@@ -21,13 +21,15 @@ public class QueueConversationMessageEventTopicWrapup: Codable {
     public var durationSeconds: Int?
     /** The timestamp when the wrapup was finished. */
     public var endTime: Date?
+    public var additionalProperties: [String:JSON]?
 
-    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {
+    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?, additionalProperties: [String:JSON]?) {
         self.code = code
         self.notes = notes
         self.tags = tags
         self.durationSeconds = durationSeconds
         self.endTime = endTime
+        self.additionalProperties = additionalProperties
     }
 
 

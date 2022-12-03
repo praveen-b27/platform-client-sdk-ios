@@ -83,8 +83,9 @@ public class ConversationEventTopicCobrowse: Codable {
     public var afterCallWork: ConversationEventTopicAfterCallWork?
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    public var additionalProperties: [String:JSON]?
 
-    public init(state: State?, initialState: InitialState?, disconnectType: DisconnectType?, _id: String?, _self: ConversationEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, initialState: InitialState?, disconnectType: DisconnectType?, _id: String?, _self: ConversationEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: [String:JSON]?) {
         self.state = state
         self.initialState = initialState
         self.disconnectType = disconnectType
@@ -104,6 +105,7 @@ public class ConversationEventTopicCobrowse: Codable {
         self.wrapup = wrapup
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
+        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -126,6 +128,7 @@ public class ConversationEventTopicCobrowse: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case additionalProperties
     }
 
 

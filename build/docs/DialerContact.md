@@ -13,6 +13,7 @@ title: DialerContact
 | **data** | [**[String:JSON]**](JSON.html) | An ordered map of the contact&#39;s columns and corresponding values. | |
 | **callRecords** | [**[String:CallRecord]**](CallRecord.html) | A map of call records for the contact phone columns. | [optional] |
 | **latestSmsEvaluations** | [**[String:MessageEvaluation]**](MessageEvaluation.html) | A map of SMS records for the contact phone columns. | [optional] |
+| **latestEmailEvaluations** | [**[String:MessageEvaluation]**](MessageEvaluation.html) | A map of email records for the contact email columns. | [optional] |
 | **callable** | **Bool** | Indicates whether or not the contact can be called. | [optional] |
 | **phoneNumberStatus** | [**[String:PhoneNumberStatus]**](PhoneNumberStatus.html) | A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. | [optional] |
 | **contactableStatus** | [**[String:ContactableStatus]**](ContactableStatus.html) | A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. | [optional] |

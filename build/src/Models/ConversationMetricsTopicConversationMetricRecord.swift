@@ -154,6 +154,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     public enum UsedRouting: String, Codable { 
         case bullseye = "Bullseye"
@@ -163,6 +164,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     /** Metric name */
     public var metric: Metric?

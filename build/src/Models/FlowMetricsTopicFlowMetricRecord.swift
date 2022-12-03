@@ -98,7 +98,10 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
         case securecall = "securecall"
         case speech = "speech"
         case surveyinvite = "surveyinvite"
+        case voice = "voice"
+        case voicemail = "voicemail"
         case workflow = "workflow"
+        case workitem = "workitem"
     }
     public enum MediaType: String, Codable { 
         case callback = "callback"
@@ -143,6 +146,7 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     public enum UsedRouting: String, Codable { 
         case bullseye = "Bullseye"
@@ -152,6 +156,7 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
         case predictive = "Predictive"
         case preferred = "Preferred"
         case standard = "Standard"
+        case vip = "Vip"
     }
     /** Metric name */
     public var metric: Metric?

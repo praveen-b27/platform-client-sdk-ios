@@ -115,6 +115,7 @@ public class AuditQueryEntity: Codable {
         case numberPlan = "NumberPlan"
         case oauthclient = "OAuthClient"
         case oauthclientauthorization = "OAuthClientAuthorization"
+        case organization = "Organization"
         case organizationAuthorizationTrust = "OrganizationAuthorizationTrust"
         case organizationAuthorizationUserTrust = "OrganizationAuthorizationUserTrust"
         case organizationFeature = "OrganizationFeature"

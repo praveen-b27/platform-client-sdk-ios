@@ -25,6 +25,7 @@ public class DialerSequenceConfigChangeCampaignSequence: Codable {
     public var stopMessage: String?
     /** indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false */
     public var _repeat: Bool?
+    public var additionalProperties: [String:JSON]?
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The UI-visible name of the object */
@@ -36,12 +37,13 @@ public class DialerSequenceConfigChangeCampaignSequence: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
 
-    public init(campaigns: [DialerSequenceConfigChangeUriReference]?, currentCampaign: Int?, status: Status?, stopMessage: String?, _repeat: Bool?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(campaigns: [DialerSequenceConfigChangeUriReference]?, currentCampaign: Int?, status: Status?, stopMessage: String?, _repeat: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         self.campaigns = campaigns
         self.currentCampaign = currentCampaign
         self.status = status
         self.stopMessage = stopMessage
         self._repeat = _repeat
+        self.additionalProperties = additionalProperties
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -55,6 +57,7 @@ public class DialerSequenceConfigChangeCampaignSequence: Codable {
         case status
         case stopMessage
         case _repeat = "repeat"
+        case additionalProperties
         case _id = "id"
         case name
         case dateCreated

@@ -270,6 +270,15 @@ open class OrganizationAPI {
      - examples: [{contentType=application/json, example={
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
+  "approvalNamespaces" : [ {
+    "namespace" : "contacts",
+    "type" : "Primary",
+    "status" : "Approved"
+  }, {
+    "namespace" : "contacts",
+    "type" : "Primary",
+    "status" : "Approved"
+  } ],
   "requestedValue" : 0.8008281904610115,
   "statusHistory" : [ {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
@@ -377,6 +386,15 @@ open class OrganizationAPI {
   "entities" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
+    "approvalNamespaces" : [ {
+      "namespace" : "contacts",
+      "type" : "Primary",
+      "status" : "Approved"
+    }, {
+      "namespace" : "contacts",
+      "type" : "Primary",
+      "status" : "Approved"
+    } ],
     "requestedValue" : 0.8008281904610115,
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
@@ -405,6 +423,15 @@ open class OrganizationAPI {
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
+    "approvalNamespaces" : [ {
+      "namespace" : "contacts",
+      "type" : "Primary",
+      "status" : "Approved"
+    }, {
+      "namespace" : "contacts",
+      "type" : "Primary",
+      "status" : "Approved"
+    } ],
     "requestedValue" : 0.8008281904610115,
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",

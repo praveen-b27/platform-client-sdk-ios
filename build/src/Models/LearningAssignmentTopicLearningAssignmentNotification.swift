@@ -30,8 +30,9 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
     public var modifiedBy: LearningAssignmentTopicUserReference?
     public var dateModified: Date?
     public var isOverdue: Bool?
+    public var lengthInMinutes: Int?
 
-    public init(_id: String?, user: LearningAssignmentTopicUserReference?, module: LearningAssignmentTopicLearningModuleReference?, version: Int?, state: State?, dateRecommendedForCompletion: Date?, createdBy: LearningAssignmentTopicUserReference?, dateCreated: Date?, modifiedBy: LearningAssignmentTopicUserReference?, dateModified: Date?, isOverdue: Bool?) {
+    public init(_id: String?, user: LearningAssignmentTopicUserReference?, module: LearningAssignmentTopicLearningModuleReference?, version: Int?, state: State?, dateRecommendedForCompletion: Date?, createdBy: LearningAssignmentTopicUserReference?, dateCreated: Date?, modifiedBy: LearningAssignmentTopicUserReference?, dateModified: Date?, isOverdue: Bool?, lengthInMinutes: Int?) {
         self._id = _id
         self.user = user
         self.module = module
@@ -43,6 +44,7 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
         self.modifiedBy = modifiedBy
         self.dateModified = dateModified
         self.isOverdue = isOverdue
+        self.lengthInMinutes = lengthInMinutes
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -57,6 +59,7 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
         case modifiedBy
         case dateModified
         case isOverdue
+        case lengthInMinutes
     }
 
 

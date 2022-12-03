@@ -17,11 +17,13 @@ public class DialerContactlistConfigChangeContactPhoneNumberColumn: Codable {
     public var type: String?
     /** name of the column indicating the timezone to be considered for determining callable times */
     public var callableTimeColumn: String?
+    public var additionalProperties: [String:JSON]?
 
-    public init(columnName: String?, type: String?, callableTimeColumn: String?) {
+    public init(columnName: String?, type: String?, callableTimeColumn: String?, additionalProperties: [String:JSON]?) {
         self.columnName = columnName
         self.type = type
         self.callableTimeColumn = callableTimeColumn
+        self.additionalProperties = additionalProperties
     }
 
 

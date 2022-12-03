@@ -37,6 +37,8 @@ public class DevelopmentActivity: Codable {
     public var percentageScore: Float?
     /** True if the activity was passed */
     public var isPassed: Bool?
+    /** True if this is the latest version of assignment assigned to the user */
+    public var isLatest: Bool?
     /** The URI for this object */
     public var selfUri: String?
     /** The name of the activity */
@@ -54,13 +56,14 @@ public class DevelopmentActivity: Codable {
     /** Indicates if the activity is overdue */
     public var isOverdue: Bool?
 
-    public init(_id: String?, dateCompleted: Date?, createdBy: UserReference?, dateCreated: Date?, percentageScore: Float?, isPassed: Bool?, selfUri: String?, name: String?, type: ModelType?, status: Status?, dateDue: Date?, facilitator: UserReference?, attendees: [UserReference]?, isOverdue: Bool?) {
+    public init(_id: String?, dateCompleted: Date?, createdBy: UserReference?, dateCreated: Date?, percentageScore: Float?, isPassed: Bool?, isLatest: Bool?, selfUri: String?, name: String?, type: ModelType?, status: Status?, dateDue: Date?, facilitator: UserReference?, attendees: [UserReference]?, isOverdue: Bool?) {
         self._id = _id
         self.dateCompleted = dateCompleted
         self.createdBy = createdBy
         self.dateCreated = dateCreated
         self.percentageScore = percentageScore
         self.isPassed = isPassed
+        self.isLatest = isLatest
         self.selfUri = selfUri
         self.name = name
         self.type = type
@@ -78,6 +81,7 @@ public class DevelopmentActivity: Codable {
         case dateCreated
         case percentageScore
         case isPassed
+        case isLatest
         case selfUri
         case name
         case type

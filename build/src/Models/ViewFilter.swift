@@ -174,6 +174,7 @@ public class ViewFilter: Codable {
         case genesysByob = "GenesysByob"
         case amazonLexV2 = "AmazonLexV2"
         case googleDialogFlowCxResell = "GoogleDialogFlowCxResell"
+        case googleSttBotFlow = "GoogleSttBotFlow"
         case microsoftSttBotFlow = "MicrosoftSttBotFlow"
     }
     public enum BotRecognitionFailureReasonList: String, Codable { 
@@ -509,7 +510,7 @@ public class ViewFilter: Codable {
     public var hasFax: Bool?
     /** The list of Data Action IDs  */
     public var dataActionIds: [String]?
-    /** Action Category Name */
+    /** Deprecated - Please use integrationIds instead */
     public var actionCategoryName: String?
     /** The list of integration IDs for Data Action */
     public var integrationIds: [String]?

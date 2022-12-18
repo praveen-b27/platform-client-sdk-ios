@@ -11,6 +11,11 @@ import Foundation
 
 public class InboundRoute: Codable {
 
+    public enum HistoryInclusion: String, Codable { 
+        case include = "Include"
+        case exclude = "Exclude"
+        case _optional = "Optional"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -38,10 +43,12 @@ public class InboundRoute: Codable {
     public var spamFlow: DomainEntityRef?
     /** The configuration for the canned response signature that will be appended to outbound emails sent via this route */
     public var signature: Signature?
+    /** The configuration to indicate how the history of a conversation has to be included in a draft */
+    public var historyInclusion: HistoryInclusion?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, signature: Signature?, selfUri: String?) {
+    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, signature: Signature?, historyInclusion: HistoryInclusion?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.pattern = pattern
@@ -56,6 +63,7 @@ public class InboundRoute: Codable {
         self.autoBcc = autoBcc
         self.spamFlow = spamFlow
         self.signature = signature
+        self.historyInclusion = historyInclusion
         self.selfUri = selfUri
     }
 
@@ -74,6 +82,7 @@ public class InboundRoute: Codable {
         case autoBcc
         case spamFlow
         case signature
+        case historyInclusion
         case selfUri
     }
 

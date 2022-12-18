@@ -24,6 +24,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLanguageunderstandingMinerDrafts**](LanguageUnderstandingAPI.html#getLanguageunderstandingMinerDrafts) | Retrieve the list of drafts created. |
 | [**getLanguageunderstandingMinerIntent**](LanguageUnderstandingAPI.html#getLanguageunderstandingMinerIntent) | Get information about a mined intent |
 | [**getLanguageunderstandingMinerIntents**](LanguageUnderstandingAPI.html#getLanguageunderstandingMinerIntents) | Retrieve a list of mined intents. |
+| [**getLanguageunderstandingMinerTopic**](LanguageUnderstandingAPI.html#getLanguageunderstandingMinerTopic) | Retrieves details of a particular topic. |
+| [**getLanguageunderstandingMinerTopicPhrase**](LanguageUnderstandingAPI.html#getLanguageunderstandingMinerTopicPhrase) | Retrieves utterances related to a phrase in a topic. |
+| [**getLanguageunderstandingMinerTopics**](LanguageUnderstandingAPI.html#getLanguageunderstandingMinerTopics) | Retrieve a list of mined topics. |
 | [**getLanguageunderstandingMiners**](LanguageUnderstandingAPI.html#getLanguageunderstandingMiners) | Retrieve the list of miners created. |
 | [**patchLanguageunderstandingDomain**](LanguageUnderstandingAPI.html#patchLanguageunderstandingDomain) | Update an NLU Domain. |
 | [**patchLanguageunderstandingMinerDraft**](LanguageUnderstandingAPI.html#patchLanguageunderstandingMinerDraft) | Save information for the draft. Either topic draft or intent draft should be sent. |
@@ -362,7 +365,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomain(domainId: domainId) { (r
 
 
 
-> [NluFeedbackListing](NluFeedbackListing.html) getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields)
+> [NluFeedbackListing](NluFeedbackListing.html) getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields)
 
 Get all feedback in the given NLU Domain Version.
 
@@ -389,6 +392,7 @@ let assessment: LanguageUnderstandingAPI.Assessment_getLanguageunderstandingDoma
 let dateStart: Date = new Date(...) // Begin of time window as ISO-8601 date.
 let dateEnd: Date = new Date(...) // End of time window as ISO-8601 date.
 let includeDeleted: Bool = true // Whether to include soft-deleted items in the result.
+let language: String = "" // Whether to filter response based on the language, e.g. en-us, pt-br.
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
 let enableCursorPagination: Bool = true // Enable Cursor Pagination
@@ -396,7 +400,7 @@ let after: String = "" // The cursor that points to the end of the set of entiti
 let fields: [String] = [""] // Fields and properties to get, comma-separated
 
 // Code example
-LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields) { (response, error) in
+LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -417,6 +421,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domain
 | **dateStart** | **Date**| Begin of time window as ISO-8601 date. | [optional] |
 | **dateEnd** | **Date**| End of time window as ISO-8601 date. | [optional] |
 | **includeDeleted** | **Bool**| Whether to include soft-deleted items in the result. | [optional] |
+| **language** | **String**| Whether to filter response based on the language, e.g. en-us, pt-br. | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **enableCursorPagination** | **Bool**| Enable Cursor Pagination | [optional] |
@@ -770,7 +775,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingMiner(minerId: minerId) { (resp
 
 
 
-> [Draft](Draft.html) getLanguageunderstandingMinerDraft(minerId, draftId)
+> [Draft](Draft.html) getLanguageunderstandingMinerDraft(minerId, draftId, draftIntentId, draftTopicId)
 
 Get information about a draft.
 
@@ -792,9 +797,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let minerId: String = "" // Miner ID
 let draftId: String = "" // Draft ID
+let draftIntentId: String = "" // Parameter to filter a specific intent.
+let draftTopicId: String = "" // Parameter to filter a specific topic.
 
 // Code example
-LanguageUnderstandingAPI.getLanguageunderstandingMinerDraft(minerId: minerId, draftId: draftId) { (response, error) in
+LanguageUnderstandingAPI.getLanguageunderstandingMinerDraft(minerId: minerId, draftId: draftId, draftIntentId: draftIntentId, draftTopicId: draftTopicId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -811,6 +818,8 @@ LanguageUnderstandingAPI.getLanguageunderstandingMinerDraft(minerId: minerId, dr
 | ------------- | ------------- | ------------- | ------------- |
 | **minerId** | **String**| Miner ID | |
 | **draftId** | **String**| Draft ID | |
+| **draftIntentId** | **String**| Parameter to filter a specific intent. | [optional] |
+| **draftTopicId** | **String**| Parameter to filter a specific topic. | [optional] |
 {: class="table-striped"}
 
 
@@ -980,13 +989,177 @@ LanguageUnderstandingAPI.getLanguageunderstandingMinerIntents(minerId: minerId, 
 
 [**MinedIntentsListing**](MinedIntentsListing.html)
 
+<a name="getLanguageunderstandingMinerTopic"></a>
+
+# **getLanguageunderstandingMinerTopic**
+
+
+
+> [MinerTopic](MinerTopic.html) getLanguageunderstandingMinerTopic(minerId, topicId, expand)
+
+Retrieves details of a particular topic.
+
+
+
+Wraps GET /api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let minerId: String = "" // Miner ID
+let topicId: String = "" // The ID of the topic to be retrieved.
+let expand: LanguageUnderstandingAPI.Expand_getLanguageunderstandingMinerTopic = LanguageUnderstandingAPI.Expand_getLanguageunderstandingMinerTopic.enummember // Option to fetch phrases
+
+// Code example
+LanguageUnderstandingAPI.getLanguageunderstandingMinerTopic(minerId: minerId, topicId: topicId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.getLanguageunderstandingMinerTopic was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **minerId** | **String**| Miner ID | |
+| **topicId** | **String**| The ID of the topic to be retrieved. | |
+| **expand** | **String**| Option to fetch phrases | [optional]<br />**Values**: phrases ("phrases"), utterances ("utterances") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MinerTopic**](MinerTopic.html)
+
+<a name="getLanguageunderstandingMinerTopicPhrase"></a>
+
+# **getLanguageunderstandingMinerTopicPhrase**
+
+
+
+> [MinerTopicPhrase](MinerTopicPhrase.html) getLanguageunderstandingMinerTopicPhrase(minerId, topicId, phraseId)
+
+Retrieves utterances related to a phrase in a topic.
+
+
+
+Wraps GET /api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId}  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let minerId: String = "" // Miner ID
+let topicId: String = "" // The ID of the topic to be retrieved.
+let phraseId: String = "" // The ID of the phrase to be retrieved.
+
+// Code example
+LanguageUnderstandingAPI.getLanguageunderstandingMinerTopicPhrase(minerId: minerId, topicId: topicId, phraseId: phraseId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.getLanguageunderstandingMinerTopicPhrase was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **minerId** | **String**| Miner ID | |
+| **topicId** | **String**| The ID of the topic to be retrieved. | |
+| **phraseId** | **String**| The ID of the phrase to be retrieved. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MinerTopicPhrase**](MinerTopicPhrase.html)
+
+<a name="getLanguageunderstandingMinerTopics"></a>
+
+# **getLanguageunderstandingMinerTopics**
+
+
+
+> [MinerTopicsListing](MinerTopicsListing.html) getLanguageunderstandingMinerTopics(minerId)
+
+Retrieve a list of mined topics.
+
+
+
+Wraps GET /api/v2/languageunderstanding/miners/{minerId}/topics  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let minerId: String = "" // Miner ID
+
+// Code example
+LanguageUnderstandingAPI.getLanguageunderstandingMinerTopics(minerId: minerId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.getLanguageunderstandingMinerTopics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **minerId** | **String**| Miner ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MinerTopicsListing**](MinerTopicsListing.html)
+
 <a name="getLanguageunderstandingMiners"></a>
 
 # **getLanguageunderstandingMiners**
 
 
 
-> [MinerListing](MinerListing.html) getLanguageunderstandingMiners()
+> [MinerListing](MinerListing.html) getLanguageunderstandingMiners(minerType)
 
 Retrieve the list of miners created.
 
@@ -1006,9 +1179,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let minerType: String = "" // Type of miner, either intent or topic
 
 // Code example
-LanguageUnderstandingAPI.getLanguageunderstandingMiners() { (response, error) in
+LanguageUnderstandingAPI.getLanguageunderstandingMiners(minerType: minerType) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1020,8 +1194,11 @@ LanguageUnderstandingAPI.getLanguageunderstandingMiners() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **minerType** | **String**| Type of miner, either intent or topic | [optional] |
+{: class="table-striped"}
 
 
 ### Return type
@@ -1367,7 +1544,7 @@ LanguageUnderstandingAPI.postLanguageunderstandingDomainVersionTrain(domainId: d
 
 
 
-> [NluDomainVersion](NluDomainVersion.html) postLanguageunderstandingDomainVersions(domainId, body)
+> [NluDomainVersion](NluDomainVersion.html) postLanguageunderstandingDomainVersions(domainId, body, includeUtterances)
 
 Create an NLU Domain Version.
 
@@ -1390,9 +1567,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // ID of the NLU domain.
 let body: NluDomainVersion = new NluDomainVersion(...) // The NLU Domain Version to create.
+let includeUtterances: Bool = true // Whether utterances for intent definition should be included when marshalling response.
 
 // Code example
-LanguageUnderstandingAPI.postLanguageunderstandingDomainVersions(domainId: domainId, body: body) { (response, error) in
+LanguageUnderstandingAPI.postLanguageunderstandingDomainVersions(domainId: domainId, body: body, includeUtterances: includeUtterances) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1409,6 +1587,7 @@ LanguageUnderstandingAPI.postLanguageunderstandingDomainVersions(domainId: domai
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| ID of the NLU domain. | |
 | **body** | [**NluDomainVersion**](NluDomainVersion.html)| The NLU Domain Version to create. | |
+| **includeUtterances** | **Bool**| Whether utterances for intent definition should be included when marshalling response. | [optional] |
 {: class="table-striped"}
 
 

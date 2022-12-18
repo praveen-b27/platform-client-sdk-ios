@@ -10,6 +10,55 @@ import Foundation
 
 
 open class TelephonyAPI {
+    /**
+     Retrieve the list of AWS regions media can stream through.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyMediaregions(completion: @escaping ((_ data: MediaRegions?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyMediaregionsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<MediaRegions>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve the list of AWS regions media can stream through.
+     - GET /api/v2/telephony/mediaregions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "awsCoreRegions" : [ "awsCoreRegions", "awsCoreRegions" ],
+  "awsSatelliteRegions" : [ "awsSatelliteRegions", "awsSatelliteRegions" ],
+  "awsHomeRegion" : "awsHomeRegion"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<MediaRegions> 
+     */
+    open class func getTelephonyMediaregionsWithRequestBuilder() -> RequestBuilder<MediaRegions> {        
+        let path = "/api/v2/telephony/mediaregions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MediaRegions>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
     
     
     

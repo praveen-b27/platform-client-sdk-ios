@@ -15,6 +15,7 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
         case webEvent = "WebEvent"
         case webActionEvent = "WebActionEvent"
         case outcomeAchievedEvent = "OutcomeAchievedEvent"
+        case segmentAssignmentEvent = "SegmentAssignmentEvent"
     }
     public var _id: String?
     public var correlationId: String?

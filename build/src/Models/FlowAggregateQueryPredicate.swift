@@ -44,6 +44,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case endinglanguage = "endingLanguage"
         case entryreason = "entryReason"
         case entrytype = "entryType"
+        case errorcode = "errorCode"
         case exitreason = "exitReason"
         case extendeddeliverystatus = "extendedDeliveryStatus"
         case externalcontactid = "externalContactId"

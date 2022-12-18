@@ -29,10 +29,12 @@ public class VoicemailOrganizationPolicy: Codable {
     public var includeEmailTranscriptions: Bool?
     /** Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization. */
     public var disableEmailPii: Bool?
+    /** Default value for the maximum length of time in seconds of a recorded voicemail */
+    public var maximumRecordingTimeSeconds: Int?
     /** The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
-    public init(enabled: Bool?, alertTimeoutSeconds: Int?, pinConfiguration: PINConfiguration?, voicemailExtension: String?, pinRequired: Bool?, interactiveResponseRequired: Bool?, sendEmailNotifications: Bool?, includeEmailTranscriptions: Bool?, disableEmailPii: Bool?, modifiedDate: Date?) {
+    public init(enabled: Bool?, alertTimeoutSeconds: Int?, pinConfiguration: PINConfiguration?, voicemailExtension: String?, pinRequired: Bool?, interactiveResponseRequired: Bool?, sendEmailNotifications: Bool?, includeEmailTranscriptions: Bool?, disableEmailPii: Bool?, maximumRecordingTimeSeconds: Int?, modifiedDate: Date?) {
         self.enabled = enabled
         self.alertTimeoutSeconds = alertTimeoutSeconds
         self.pinConfiguration = pinConfiguration
@@ -42,6 +44,7 @@ public class VoicemailOrganizationPolicy: Codable {
         self.sendEmailNotifications = sendEmailNotifications
         self.includeEmailTranscriptions = includeEmailTranscriptions
         self.disableEmailPii = disableEmailPii
+        self.maximumRecordingTimeSeconds = maximumRecordingTimeSeconds
         self.modifiedDate = modifiedDate
     }
 

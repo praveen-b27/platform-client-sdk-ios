@@ -68,8 +68,8 @@ public class CreateQueueRequest: Codable {
     public var enableManualAssignment: Bool?
     /** The Agent Owned Routing settings for the queue */
     public var agentOwnedRouting: AgentOwnedRouting?
-    /** The VIP Routing settings for the queue */
-    public var vipRouting: VipRouting?
+    /** The Direct Routing settings for the queue */
+    public var directRouting: DirectRouting?
     /** The name to use for caller identification for outbound calls from this queue. */
     public var callingPartyName: String?
     /** The phone number to use for caller identification for outbound calls from this queue. */
@@ -86,7 +86,7 @@ public class CreateQueueRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, vipRouting: VipRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, sourceQueueId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, sourceQueueId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -113,7 +113,7 @@ public class CreateQueueRequest: Codable {
         self.enableTranscription = enableTranscription
         self.enableManualAssignment = enableManualAssignment
         self.agentOwnedRouting = agentOwnedRouting
-        self.vipRouting = vipRouting
+        self.directRouting = directRouting
         self.callingPartyName = callingPartyName
         self.callingPartyNumber = callingPartyNumber
         self.defaultScripts = defaultScripts
@@ -151,7 +151,7 @@ public class CreateQueueRequest: Codable {
         case enableTranscription
         case enableManualAssignment
         case agentOwnedRouting
-        case vipRouting
+        case directRouting
         case callingPartyName
         case callingPartyNumber
         case defaultScripts

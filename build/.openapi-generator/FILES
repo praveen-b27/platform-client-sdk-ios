@@ -53,6 +53,8 @@ docs/AddConversationResponse.md
 docs/AddShiftTradeRequest.md
 docs/AddWorkPlanRotationAgentRequest.md
 docs/AddWorkPlanRotationRequest.md
+docs/AdditionalLanguagesIntent.md
+docs/AdditionalLanguagesSynonyms.md
 docs/AdditionalMessage.md
 docs/Address.md
 docs/AddressableEntityRef.md
@@ -1095,6 +1097,9 @@ docs/DigitalRule.md
 docs/DigitalRuleSet.md
 docs/DigitalRuleSetEntityListing.md
 docs/Digits.md
+docs/DirectRouting.md
+docs/DirectRoutingCallMediaSettings.md
+docs/DirectRoutingMediaSettings.md
 docs/DirectoryUserDevicesListing.md
 docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
@@ -1107,6 +1112,8 @@ docs/DncListCreate.md
 docs/DncListDivisionView.md
 docs/DncListDivisionViewListing.md
 docs/DncListEntityListing.md
+docs/DncPatchEmailsRequest.md
+docs/DncPatchPhoneNumbersRequest.md
 docs/DnclistDownloadReadyExportUri.md
 docs/DnclistDownloadReadyObject.md
 docs/DnclistImportStatusImportStatus.md
@@ -1596,6 +1603,7 @@ docs/JourneyAggregateQueryPredicate.md
 docs/JourneyAggregateQueryResponse.md
 docs/JourneyAggregationQuery.md
 docs/JourneyAggregationView.md
+docs/JourneyApp.md
 docs/JourneyCampaign.md
 docs/JourneyContext.md
 docs/JourneyCustomer.md
@@ -1901,6 +1909,7 @@ docs/MaxLength.md
 docs/MaxParticipants.md
 docs/MediaParticipantRequest.md
 docs/MediaPolicies.md
+docs/MediaRegions.md
 docs/MediaResult.md
 docs/MediaSetting.md
 docs/MediaSummary.md
@@ -1969,6 +1978,9 @@ docs/Miner.md
 docs/MinerExecuteRequest.md
 docs/MinerIntent.md
 docs/MinerListing.md
+docs/MinerTopic.md
+docs/MinerTopicPhrase.md
+docs/MinerTopicsListing.md
 docs/MobileDevicesAPI.json
 docs/MobileDevicesAPI.md
 docs/ModelingProcessingError.md
@@ -1984,6 +1996,7 @@ docs/NamedEntityTypeBinding.md
 docs/NamedEntityTypeDefinition.md
 docs/NamedEntityTypeItem.md
 docs/NamedEntityTypeMechanism.md
+docs/NetworkConnectivity.md
 docs/NluConfusionMatrixColumn.md
 docs/NluConfusionMatrixRow.md
 docs/NluDetectionContext.md
@@ -2515,6 +2528,8 @@ docs/Record.md
 docs/Recording.md
 docs/RecordingAPI.json
 docs/RecordingAPI.md
+docs/RecordingAnnotationFlow.md
+docs/RecordingAnnotationQueue.md
 docs/RecordingArchiveRestoreTopicMediaResult.md
 docs/RecordingArchiveRestoreTopicRecording.md
 docs/RecordingButtonComponent.md
@@ -2700,6 +2715,7 @@ docs/ScriptEntityListing.md
 docs/ScriptsAPI.json
 docs/ScriptsAPI.md
 docs/ScrollPercentageEventTrigger.md
+docs/SdkLibrary.md
 docs/SearchAPI.json
 docs/SearchAPI.md
 docs/SearchAggregation.md
@@ -2982,6 +2998,7 @@ docs/TopicDuration.md
 docs/TopicJob.md
 docs/TopicJobRequest.md
 docs/TopicOffset.md
+docs/TopicPhrase.md
 docs/TopicRequest.md
 docs/TopicsEntityListing.md
 docs/TrainingListing.md
@@ -3285,10 +3302,6 @@ docs/ValueWrapperString.md
 docs/VerificationResult.md
 docs/Video.md
 docs/ViewFilter.md
-docs/VipBackup.md
-docs/VipCallMediaSettings.md
-docs/VipMediaSettings.md
-docs/VipRouting.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
 docs/Voicemail.md
@@ -3446,6 +3459,9 @@ docs/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.
 docs/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.md
 docs/WfmHistoricalShrinkageRequest.md
 docs/WfmHistoricalShrinkageResponse.md
+docs/WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody.md
+docs/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType.md
+docs/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification.md
 docs/WfmIntradayDataUpdateTopicIntradayDataGroup.md
 docs/WfmIntradayDataUpdateTopicIntradayDataUpdate.md
 docs/WfmIntradayDataUpdateTopicIntradayForecastData.md
@@ -3466,6 +3482,9 @@ docs/WfmProcessUploadRequest.md
 docs/WfmScheduleActivity.md
 docs/WfmScheduleReference.md
 docs/WfmScheduleTopicWfmScheduleNotification.md
+docs/WfmTimeOffBalanceJobTopicErrorBody.md
+docs/WfmTimeOffBalanceJobTopicTimeOffBalance.md
+docs/WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification.md
 docs/WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate.md
 docs/WfmTimeOffRequestUpdateTopicUserReference.md
 docs/WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete.md
@@ -3685,6 +3704,8 @@ docs/deleteOutboundContactlistfilter-example.txt
 docs/deleteOutboundContactlists-example.txt
 docs/deleteOutboundDigitalruleset-example.txt
 docs/deleteOutboundDnclist-example.txt
+docs/deleteOutboundDnclistEmailaddresses-example.txt
+docs/deleteOutboundDnclistPhonenumbers-example.txt
 docs/deleteOutboundMessagingcampaign-example.txt
 docs/deleteOutboundMessagingcampaignProgress-example.txt
 docs/deleteOutboundRuleset-example.txt
@@ -4211,6 +4232,9 @@ docs/getLanguageunderstandingMinerDraft-example.txt
 docs/getLanguageunderstandingMinerDrafts-example.txt
 docs/getLanguageunderstandingMinerIntent-example.txt
 docs/getLanguageunderstandingMinerIntents-example.txt
+docs/getLanguageunderstandingMinerTopic-example.txt
+docs/getLanguageunderstandingMinerTopicPhrase-example.txt
+docs/getLanguageunderstandingMinerTopics-example.txt
 docs/getLanguageunderstandingMiners-example.txt
 docs/getLearningAssignment-example.txt
 docs/getLearningAssignments-example.txt
@@ -4506,6 +4530,7 @@ docs/getSystempresences-example.txt
 docs/getTeam-example.txt
 docs/getTeamMembers-example.txt
 docs/getTeams-example.txt
+docs/getTelephonyMediaregions-example.txt
 docs/getTelephonyProvidersEdge-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticPing-example.txt
@@ -4795,6 +4820,8 @@ docs/patchLearningAssignment-example.txt
 docs/patchLocation-example.txt
 docs/patchMessagingSupportedcontentSupportedContentId-example.txt
 docs/patchOrganizationsFeature-example.txt
+docs/patchOutboundDnclistEmailaddresses-example.txt
+docs/patchOutboundDnclistPhonenumbers-example.txt
 docs/patchOutboundSettings-example.txt
 docs/patchQualityFormsSurvey-example.txt
 docs/patchRecordingCrossplatformMediaretentionpolicy-example.txt
@@ -5655,6 +5682,8 @@ src/Models/AddConversationResponse.swift
 src/Models/AddShiftTradeRequest.swift
 src/Models/AddWorkPlanRotationAgentRequest.swift
 src/Models/AddWorkPlanRotationRequest.swift
+src/Models/AdditionalLanguagesIntent.swift
+src/Models/AdditionalLanguagesSynonyms.swift
 src/Models/AdditionalMessage.swift
 src/Models/Address.swift
 src/Models/AddressableEntityRef.swift
@@ -6675,6 +6704,9 @@ src/Models/DigitalRule.swift
 src/Models/DigitalRuleSet.swift
 src/Models/DigitalRuleSetEntityListing.swift
 src/Models/Digits.swift
+src/Models/DirectRouting.swift
+src/Models/DirectRoutingCallMediaSettings.swift
+src/Models/DirectRoutingMediaSettings.swift
 src/Models/DirectoryUserDevicesListing.swift
 src/Models/DisallowedEntityLearningAssignmentItem.swift
 src/Models/DisallowedEntityLearningAssignmentReference.swift
@@ -6687,6 +6719,8 @@ src/Models/DncListCreate.swift
 src/Models/DncListDivisionView.swift
 src/Models/DncListDivisionViewListing.swift
 src/Models/DncListEntityListing.swift
+src/Models/DncPatchEmailsRequest.swift
+src/Models/DncPatchPhoneNumbersRequest.swift
 src/Models/DnclistDownloadReadyExportUri.swift
 src/Models/DnclistDownloadReadyObject.swift
 src/Models/DnclistImportStatusImportStatus.swift
@@ -7150,6 +7184,7 @@ src/Models/JourneyAggregateQueryPredicate.swift
 src/Models/JourneyAggregateQueryResponse.swift
 src/Models/JourneyAggregationQuery.swift
 src/Models/JourneyAggregationView.swift
+src/Models/JourneyApp.swift
 src/Models/JourneyCampaign.swift
 src/Models/JourneyContext.swift
 src/Models/JourneyCustomer.swift
@@ -7443,6 +7478,7 @@ src/Models/MaxLength.swift
 src/Models/MaxParticipants.swift
 src/Models/MediaParticipantRequest.swift
 src/Models/MediaPolicies.swift
+src/Models/MediaRegions.swift
 src/Models/MediaResult.swift
 src/Models/MediaSetting.swift
 src/Models/MediaSummary.swift
@@ -7509,6 +7545,9 @@ src/Models/Miner.swift
 src/Models/MinerExecuteRequest.swift
 src/Models/MinerIntent.swift
 src/Models/MinerListing.swift
+src/Models/MinerTopic.swift
+src/Models/MinerTopicPhrase.swift
+src/Models/MinerTopicsListing.swift
 src/Models/ModelResponse.swift
 src/Models/ModelVoid.swift
 src/Models/ModelingProcessingError.swift
@@ -7524,6 +7563,7 @@ src/Models/NamedEntityTypeBinding.swift
 src/Models/NamedEntityTypeDefinition.swift
 src/Models/NamedEntityTypeItem.swift
 src/Models/NamedEntityTypeMechanism.swift
+src/Models/NetworkConnectivity.swift
 src/Models/NluConfusionMatrixColumn.swift
 src/Models/NluConfusionMatrixRow.swift
 src/Models/NluDetectionContext.swift
@@ -8035,6 +8075,8 @@ src/Models/RecipientAdditionalIdentifier.swift
 src/Models/RecipientListing.swift
 src/Models/Record.swift
 src/Models/Recording.swift
+src/Models/RecordingAnnotationFlow.swift
+src/Models/RecordingAnnotationQueue.swift
 src/Models/RecordingArchiveRestoreTopicMediaResult.swift
 src/Models/RecordingArchiveRestoreTopicRecording.swift
 src/Models/RecordingButtonComponent.swift
@@ -8211,6 +8253,7 @@ src/Models/Screenshare.swift
 src/Models/Script.swift
 src/Models/ScriptEntityListing.swift
 src/Models/ScrollPercentageEventTrigger.swift
+src/Models/SdkLibrary.swift
 src/Models/SearchAggregation.swift
 src/Models/SearchCriteria.swift
 src/Models/SearchRequest.swift
@@ -8475,6 +8518,7 @@ src/Models/TopicDuration.swift
 src/Models/TopicJob.swift
 src/Models/TopicJobRequest.swift
 src/Models/TopicOffset.swift
+src/Models/TopicPhrase.swift
 src/Models/TopicRequest.swift
 src/Models/TopicsEntityListing.swift
 src/Models/TrainingListing.swift
@@ -8768,10 +8812,6 @@ src/Models/ValueWrapperString.swift
 src/Models/VerificationResult.swift
 src/Models/Video.swift
 src/Models/ViewFilter.swift
-src/Models/VipBackup.swift
-src/Models/VipCallMediaSettings.swift
-src/Models/VipMediaSettings.swift
-src/Models/VipRouting.swift
 src/Models/VisibilityCondition.swift
 src/Models/VmPairingInfo.swift
 src/Models/Voicemail.swift
@@ -8920,6 +8960,9 @@ src/Models/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestU
 src/Models/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.swift
 src/Models/WfmHistoricalShrinkageRequest.swift
 src/Models/WfmHistoricalShrinkageResponse.swift
+src/Models/WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody.swift
+src/Models/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType.swift
+src/Models/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification.swift
 src/Models/WfmIntradayDataUpdateTopicIntradayDataGroup.swift
 src/Models/WfmIntradayDataUpdateTopicIntradayDataUpdate.swift
 src/Models/WfmIntradayDataUpdateTopicIntradayForecastData.swift
@@ -8940,6 +8983,9 @@ src/Models/WfmProcessUploadRequest.swift
 src/Models/WfmScheduleActivity.swift
 src/Models/WfmScheduleReference.swift
 src/Models/WfmScheduleTopicWfmScheduleNotification.swift
+src/Models/WfmTimeOffBalanceJobTopicErrorBody.swift
+src/Models/WfmTimeOffBalanceJobTopicTimeOffBalance.swift
+src/Models/WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification.swift
 src/Models/WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate.swift
 src/Models/WfmTimeOffRequestUpdateTopicUserReference.swift
 src/Models/WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete.swift

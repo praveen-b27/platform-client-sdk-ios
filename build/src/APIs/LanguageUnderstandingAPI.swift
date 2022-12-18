@@ -329,6 +329,7 @@ open class LanguageUnderstandingAPI {
     
     
     
+    
     /**
      Get all feedback in the given NLU Domain Version.
      
@@ -338,6 +339,7 @@ open class LanguageUnderstandingAPI {
      - parameter dateStart: (query) Begin of time window as ISO-8601 date. (optional)
      - parameter dateEnd: (query) End of time window as ISO-8601 date. (optional)
      - parameter includeDeleted: (query) Whether to include soft-deleted items in the result. (optional)
+     - parameter language: (query) Whether to filter response based on the language, e.g. en-us, pt-br. (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional)
@@ -345,8 +347,8 @@ open class LanguageUnderstandingAPI {
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLanguageunderstandingDomainFeedback(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil, completion: @escaping ((_ data: NluFeedbackListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields)
+    open class func getLanguageunderstandingDomainFeedback(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, language: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil, completion: @escaping ((_ data: NluFeedbackListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields)
         requestBuilder.execute { (response: Response<NluFeedbackListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -407,6 +409,7 @@ open class LanguageUnderstandingAPI {
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
+    "language" : "language",
     "id" : "id",
     "text" : "text",
     "version" : "{}"
@@ -444,6 +447,7 @@ open class LanguageUnderstandingAPI {
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
+    "language" : "language",
     "id" : "id",
     "text" : "text",
     "version" : "{}"
@@ -462,6 +466,7 @@ open class LanguageUnderstandingAPI {
      - parameter dateStart: (query) Begin of time window as ISO-8601 date. (optional)
      - parameter dateEnd: (query) End of time window as ISO-8601 date. (optional)
      - parameter includeDeleted: (query) Whether to include soft-deleted items in the result. (optional)
+     - parameter language: (query) Whether to filter response based on the language, e.g. en-us, pt-br. (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional)
@@ -470,7 +475,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<NluFeedbackListing> 
      */
-    open class func getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil) -> RequestBuilder<NluFeedbackListing> {        
+    open class func getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, language: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil) -> RequestBuilder<NluFeedbackListing> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/feedback"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -485,6 +490,7 @@ open class LanguageUnderstandingAPI {
             "dateStart": dateStart?.encodeToJSON(), 
             "dateEnd": dateEnd?.encodeToJSON(), 
             "includeDeleted": includeDeleted, 
+            "language": language, 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "enableCursorPagination": enableCursorPagination, 
@@ -566,6 +572,7 @@ open class LanguageUnderstandingAPI {
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
+  "language" : "language",
   "id" : "id",
   "text" : "text",
   "version" : "{}"
@@ -663,6 +670,30 @@ open class LanguageUnderstandingAPI {
       "entityType" : "entityType",
       "entityName" : "entityName"
     } ],
+    "additionalLanguages" : {
+      "key" : {
+        "utterances" : [ {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        }, {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        } ],
+        "id" : "id"
+      }
+    },
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   }, {
     "utterances" : [ {
@@ -693,6 +724,30 @@ open class LanguageUnderstandingAPI {
       "entityType" : "entityType",
       "entityName" : "entityName"
     } ],
+    "additionalLanguages" : {
+      "key" : {
+        "utterances" : [ {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        }, {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        } ],
+        "id" : "id"
+      }
+    },
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   } ],
   "dateTrained" : "2000-01-23T04:56:07.000+00:00",
@@ -903,6 +958,30 @@ open class LanguageUnderstandingAPI {
         "entityType" : "entityType",
         "entityName" : "entityName"
       } ],
+      "additionalLanguages" : {
+        "key" : {
+          "utterances" : [ {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          }, {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          } ],
+          "id" : "id"
+        }
+      },
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     }, {
       "utterances" : [ {
@@ -933,6 +1012,30 @@ open class LanguageUnderstandingAPI {
         "entityType" : "entityType",
         "entityName" : "entityName"
       } ],
+      "additionalLanguages" : {
+        "key" : {
+          "utterances" : [ {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          }, {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          } ],
+          "id" : "id"
+        }
+      },
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+00:00",
@@ -993,6 +1096,30 @@ open class LanguageUnderstandingAPI {
         "entityType" : "entityType",
         "entityName" : "entityName"
       } ],
+      "additionalLanguages" : {
+        "key" : {
+          "utterances" : [ {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          }, {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          } ],
+          "id" : "id"
+        }
+      },
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     }, {
       "utterances" : [ {
@@ -1023,6 +1150,30 @@ open class LanguageUnderstandingAPI {
         "entityType" : "entityType",
         "entityName" : "entityName"
       } ],
+      "additionalLanguages" : {
+        "key" : {
+          "utterances" : [ {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          }, {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          } ],
+          "id" : "id"
+        }
+      },
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+00:00",
@@ -1208,12 +1359,18 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "conversationsFetchedCount" : 0,
+  "getminedItemCount" : 1,
+  "warningInfo" : "{}",
   "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
   "selfUri" : "https://openapi-generator.tech",
+  "participantType" : "Customer",
+  "errorInfo" : "{}",
   "language" : "en-us",
   "mediaType" : "Chat",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "message" : "message",
+  "minerType" : "Intent",
   "conversationDataUploaded" : true,
   "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
   "queueIds" : [ "queueIds", "queueIds" ],
@@ -1221,6 +1378,7 @@ open class LanguageUnderstandingAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
   "latestDraftVersion" : "{}",
+  "conversationsValidCount" : 6,
   "name" : "name",
   "id" : "id",
   "status" : "NotStarted"
@@ -1247,15 +1405,19 @@ open class LanguageUnderstandingAPI {
 
     
     
+    
+    
     /**
      Get information about a draft.
      
      - parameter minerId: (path) Miner ID 
      - parameter draftId: (path) Draft ID 
+     - parameter draftIntentId: (query) Parameter to filter a specific intent. (optional)
+     - parameter draftTopicId: (query) Parameter to filter a specific topic. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLanguageunderstandingMinerDraft(minerId: String, draftId: String, completion: @escaping ((_ data: Draft?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLanguageunderstandingMinerDraftWithRequestBuilder(minerId: minerId, draftId: draftId)
+    open class func getLanguageunderstandingMinerDraft(minerId: String, draftId: String, draftIntentId: String? = nil, draftTopicId: String? = nil, completion: @escaping ((_ data: Draft?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerDraftWithRequestBuilder(minerId: minerId, draftId: draftId, draftIntentId: draftIntentId, draftTopicId: draftTopicId)
         requestBuilder.execute { (response: Response<Draft>?, error) -> Void in
             do {
                 if let e = error {
@@ -1291,6 +1453,27 @@ open class LanguageUnderstandingAPI {
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "topics" : [ {
+    "conversationCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "phraseCount" : 5,
+    "phrases" : [ "phrases", "phrases" ],
+    "miner" : "{}",
+    "utteranceCount" : 1,
+    "conversationPercent" : 6.0274563
+  }, {
+    "conversationCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "phraseCount" : 5,
+    "phrases" : [ "phrases", "phrases" ],
+    "miner" : "{}",
+    "utteranceCount" : 1,
+    "conversationPercent" : 6.0274563
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -1300,10 +1483,12 @@ open class LanguageUnderstandingAPI {
      
      - parameter minerId: (path) Miner ID 
      - parameter draftId: (path) Draft ID 
+     - parameter draftIntentId: (query) Parameter to filter a specific intent. (optional)
+     - parameter draftTopicId: (query) Parameter to filter a specific topic. (optional)
 
      - returns: RequestBuilder<Draft> 
      */
-    open class func getLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String) -> RequestBuilder<Draft> {        
+    open class func getLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String, draftIntentId: String? = nil, draftTopicId: String? = nil) -> RequestBuilder<Draft> {        
         var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1314,7 +1499,11 @@ open class LanguageUnderstandingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "draftIntentId": draftIntentId, 
+            "draftTopicId": draftTopicId
+        ])
 
         let requestBuilder: RequestBuilder<Draft>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1366,6 +1555,27 @@ open class LanguageUnderstandingAPI {
       "id" : "id"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "topics" : [ {
+      "conversationCount" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "phraseCount" : 5,
+      "phrases" : [ "phrases", "phrases" ],
+      "miner" : "{}",
+      "utteranceCount" : 1,
+      "conversationPercent" : 6.0274563
+    }, {
+      "conversationCount" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "phraseCount" : 5,
+      "phrases" : [ "phrases", "phrases" ],
+      "miner" : "{}",
+      "utteranceCount" : 1,
+      "conversationPercent" : 6.0274563
+    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -1384,6 +1594,27 @@ open class LanguageUnderstandingAPI {
       "id" : "id"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "topics" : [ {
+      "conversationCount" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "phraseCount" : 5,
+      "phrases" : [ "phrases", "phrases" ],
+      "miner" : "{}",
+      "utteranceCount" : 1,
+      "conversationPercent" : 6.0274563
+    }, {
+      "conversationCount" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id",
+      "phraseCount" : 5,
+      "phrases" : [ "phrases", "phrases" ],
+      "miner" : "{}",
+      "utteranceCount" : 1,
+      "conversationPercent" : 6.0274563
+    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -1586,13 +1817,271 @@ open class LanguageUnderstandingAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    
+    
+    
+    public enum Expand_getLanguageunderstandingMinerTopic: String { 
+        case phrases = "phrases"
+        case utterances = "utterances"
+    }
+
+    
+    /**
+     Retrieves details of a particular topic.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter topicId: (path) The ID of the topic to be retrieved. 
+     - parameter expand: (query) Option to fetch phrases (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMinerTopic(minerId: String, topicId: String, expand: Expand_getLanguageunderstandingMinerTopic? = nil, completion: @escaping ((_ data: MinerTopic?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerTopicWithRequestBuilder(minerId: minerId, topicId: topicId, expand: expand)
+        requestBuilder.execute { (response: Response<MinerTopic>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves details of a particular topic.
+     - GET /api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "conversationCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "phraseCount" : 5,
+  "phrases" : [ {
+    "id" : "id",
+    "text" : "text",
+    "utteranceCount" : 5
+  }, {
+    "id" : "id",
+    "text" : "text",
+    "utteranceCount" : 5
+  } ],
+  "miner" : "{}",
+  "utteranceCount" : 1,
+  "conversationPercent" : 6.0274563
+}, statusCode=200}]
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter topicId: (path) The ID of the topic to be retrieved. 
+     - parameter expand: (query) Option to fetch phrases (optional)
+
+     - returns: RequestBuilder<MinerTopic> 
+     */
+    open class func getLanguageunderstandingMinerTopicWithRequestBuilder(minerId: String, topicId: String, expand: Expand_getLanguageunderstandingMinerTopic? = nil) -> RequestBuilder<MinerTopic> {        
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<MinerTopic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Retrieves utterances related to a phrase in a topic.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter topicId: (path) The ID of the topic to be retrieved. 
+     - parameter phraseId: (path) The ID of the phrase to be retrieved. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMinerTopicPhrase(minerId: String, topicId: String, phraseId: String, completion: @escaping ((_ data: MinerTopicPhrase?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerTopicPhraseWithRequestBuilder(minerId: minerId, topicId: topicId, phraseId: phraseId)
+        requestBuilder.execute { (response: Response<MinerTopicPhrase>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves utterances related to a phrase in a topic.
+     - GET /api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "utterances" : [ {
+    "utteranceText" : "I want to pay bill."
+  }, {
+    "utteranceText" : "I want to pay bill."
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "topic" : "{}",
+  "id" : "id",
+  "utteranceCount" : 0
+}, statusCode=200}]
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter topicId: (path) The ID of the topic to be retrieved. 
+     - parameter phraseId: (path) The ID of the phrase to be retrieved. 
+
+     - returns: RequestBuilder<MinerTopicPhrase> 
+     */
+    open class func getLanguageunderstandingMinerTopicPhraseWithRequestBuilder(minerId: String, topicId: String, phraseId: String) -> RequestBuilder<MinerTopicPhrase> {        
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId}"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let phraseIdPreEscape = "\(phraseId)"
+        let phraseIdPostEscape = phraseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{phraseId}", with: phraseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MinerTopicPhrase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Retrieve a list of mined topics.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMinerTopics(minerId: String, completion: @escaping ((_ data: MinerTopicsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerTopicsWithRequestBuilder(minerId: minerId)
+        requestBuilder.execute { (response: Response<MinerTopicsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve a list of mined topics.
+     - GET /api/v2/languageunderstanding/miners/{minerId}/topics
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "conversationCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "phraseCount" : 5,
+    "phrases" : [ {
+      "id" : "id",
+      "text" : "text",
+      "utteranceCount" : 5
+    }, {
+      "id" : "id",
+      "text" : "text",
+      "utteranceCount" : 5
+    } ],
+    "miner" : "{}",
+    "utteranceCount" : 1,
+    "conversationPercent" : 6.0274563
+  }, {
+    "conversationCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "phraseCount" : 5,
+    "phrases" : [ {
+      "id" : "id",
+      "text" : "text",
+      "utteranceCount" : 5
+    }, {
+      "id" : "id",
+      "text" : "text",
+      "utteranceCount" : 5
+    } ],
+    "miner" : "{}",
+    "utteranceCount" : 1,
+    "conversationPercent" : 6.0274563
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter minerId: (path) Miner ID 
+
+     - returns: RequestBuilder<MinerTopicsListing> 
+     */
+    open class func getLanguageunderstandingMinerTopicsWithRequestBuilder(minerId: String) -> RequestBuilder<MinerTopicsListing> {        
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/topics"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MinerTopicsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      Retrieve the list of miners created.
      
+     - parameter minerType: (query) Type of miner, either intent or topic (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLanguageunderstandingMiners(completion: @escaping ((_ data: MinerListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLanguageunderstandingMinersWithRequestBuilder()
+    open class func getLanguageunderstandingMiners(minerType: String? = nil, completion: @escaping ((_ data: MinerListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinersWithRequestBuilder(minerType: minerType)
         requestBuilder.execute { (response: Response<MinerListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1617,12 +2106,18 @@ open class LanguageUnderstandingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "conversationsFetchedCount" : 0,
+    "getminedItemCount" : 1,
+    "warningInfo" : "{}",
     "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
     "selfUri" : "https://openapi-generator.tech",
+    "participantType" : "Customer",
+    "errorInfo" : "{}",
     "language" : "en-us",
     "mediaType" : "Chat",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "message" : "message",
+    "minerType" : "Intent",
     "conversationDataUploaded" : true,
     "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
     "queueIds" : [ "queueIds", "queueIds" ],
@@ -1630,16 +2125,23 @@ open class LanguageUnderstandingAPI {
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
     "latestDraftVersion" : "{}",
+    "conversationsValidCount" : 6,
     "name" : "name",
     "id" : "id",
     "status" : "NotStarted"
   }, {
+    "conversationsFetchedCount" : 0,
+    "getminedItemCount" : 1,
+    "warningInfo" : "{}",
     "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
     "selfUri" : "https://openapi-generator.tech",
+    "participantType" : "Customer",
+    "errorInfo" : "{}",
     "language" : "en-us",
     "mediaType" : "Chat",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "message" : "message",
+    "minerType" : "Intent",
     "conversationDataUploaded" : true,
     "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
     "queueIds" : [ "queueIds", "queueIds" ],
@@ -1647,6 +2149,7 @@ open class LanguageUnderstandingAPI {
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
     "latestDraftVersion" : "{}",
+    "conversationsValidCount" : 6,
     "name" : "name",
     "id" : "id",
     "status" : "NotStarted"
@@ -1655,15 +2158,20 @@ open class LanguageUnderstandingAPI {
   "nextUri" : "nextUri",
   "previousUri" : "previousUri"
 }, statusCode=200}]
+     
+     - parameter minerType: (query) Type of miner, either intent or topic (optional)
 
      - returns: RequestBuilder<MinerListing> 
      */
-    open class func getLanguageunderstandingMinersWithRequestBuilder() -> RequestBuilder<MinerListing> {        
+    open class func getLanguageunderstandingMinersWithRequestBuilder(minerType: String? = nil) -> RequestBuilder<MinerListing> {        
         let path = "/api/v2/languageunderstanding/miners"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "minerType": minerType
+        ])
 
         let requestBuilder: RequestBuilder<MinerListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1783,6 +2291,27 @@ open class LanguageUnderstandingAPI {
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "topics" : [ {
+    "conversationCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "phraseCount" : 5,
+    "phrases" : [ "phrases", "phrases" ],
+    "miner" : "{}",
+    "utteranceCount" : 1,
+    "conversationPercent" : 6.0274563
+  }, {
+    "conversationCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "phraseCount" : 5,
+    "phrases" : [ "phrases", "phrases" ],
+    "miner" : "{}",
+    "utteranceCount" : 1,
+    "conversationPercent" : 6.0274563
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -1881,6 +2410,7 @@ open class LanguageUnderstandingAPI {
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
+  "language" : "language",
   "id" : "id",
   "text" : "text",
   "version" : "{}"
@@ -1981,6 +2511,7 @@ open class LanguageUnderstandingAPI {
     } ]
   },
   "input" : {
+    "language" : "language",
     "text" : "text"
   },
   "version" : "{}"
@@ -2073,6 +2604,30 @@ open class LanguageUnderstandingAPI {
       "entityType" : "entityType",
       "entityName" : "entityName"
     } ],
+    "additionalLanguages" : {
+      "key" : {
+        "utterances" : [ {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        }, {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        } ],
+        "id" : "id"
+      }
+    },
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   }, {
     "utterances" : [ {
@@ -2103,6 +2658,30 @@ open class LanguageUnderstandingAPI {
       "entityType" : "entityType",
       "entityName" : "entityName"
     } ],
+    "additionalLanguages" : {
+      "key" : {
+        "utterances" : [ {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        }, {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        } ],
+        "id" : "id"
+      }
+    },
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   } ],
   "dateTrained" : "2000-01-23T04:56:07.000+00:00",
@@ -2223,6 +2802,30 @@ open class LanguageUnderstandingAPI {
         "entityType" : "entityType",
         "entityName" : "entityName"
       } ],
+      "additionalLanguages" : {
+        "key" : {
+          "utterances" : [ {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          }, {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          } ],
+          "id" : "id"
+        }
+      },
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     }, {
       "utterances" : [ {
@@ -2253,6 +2856,30 @@ open class LanguageUnderstandingAPI {
         "entityType" : "entityType",
         "entityName" : "entityName"
       } ],
+      "additionalLanguages" : {
+        "key" : {
+          "utterances" : [ {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          }, {
+            "id" : "id",
+            "segments" : [ {
+              "text" : "text",
+              "entity" : "{}"
+            }, {
+              "text" : "text",
+              "entity" : "{}"
+            } ]
+          } ],
+          "id" : "id"
+        }
+      },
       "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+00:00",
@@ -2311,15 +2938,17 @@ open class LanguageUnderstandingAPI {
 
     
     
+    
     /**
      Create an NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter body: (body) The NLU Domain Version to create. 
+     - parameter includeUtterances: (query) Whether utterances for intent definition should be included when marshalling response. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLanguageunderstandingDomainVersions(domainId: String, body: NluDomainVersion, completion: @escaping ((_ data: NluDomainVersion?,_ error: Error?) -> Void)) {
-        let requestBuilder = postLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: domainId, body: body)
+    open class func postLanguageunderstandingDomainVersions(domainId: String, body: NluDomainVersion, includeUtterances: Bool? = nil, completion: @escaping ((_ data: NluDomainVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: domainId, body: body, includeUtterances: includeUtterances)
         requestBuilder.execute { (response: Response<NluDomainVersion>?, error) -> Void in
             do {
                 if let e = error {
@@ -2372,6 +3001,30 @@ open class LanguageUnderstandingAPI {
       "entityType" : "entityType",
       "entityName" : "entityName"
     } ],
+    "additionalLanguages" : {
+      "key" : {
+        "utterances" : [ {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        }, {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        } ],
+        "id" : "id"
+      }
+    },
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   }, {
     "utterances" : [ {
@@ -2402,6 +3055,30 @@ open class LanguageUnderstandingAPI {
       "entityType" : "entityType",
       "entityName" : "entityName"
     } ],
+    "additionalLanguages" : {
+      "key" : {
+        "utterances" : [ {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        }, {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        } ],
+        "id" : "id"
+      }
+    },
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   } ],
   "dateTrained" : "2000-01-23T04:56:07.000+00:00",
@@ -2436,10 +3113,11 @@ open class LanguageUnderstandingAPI {
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter body: (body) The NLU Domain Version to create. 
+     - parameter includeUtterances: (query) Whether utterances for intent definition should be included when marshalling response. (optional)
 
      - returns: RequestBuilder<NluDomainVersion> 
      */
-    open class func postLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: String, body: NluDomainVersion) -> RequestBuilder<NluDomainVersion> {        
+    open class func postLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: String, body: NluDomainVersion, includeUtterances: Bool? = nil) -> RequestBuilder<NluDomainVersion> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2447,7 +3125,10 @@ open class LanguageUnderstandingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeUtterances": includeUtterances
+        ])
 
         let requestBuilder: RequestBuilder<NluDomainVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -2559,6 +3240,27 @@ open class LanguageUnderstandingAPI {
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "topics" : [ {
+    "conversationCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "phraseCount" : 5,
+    "phrases" : [ "phrases", "phrases" ],
+    "miner" : "{}",
+    "utteranceCount" : 1,
+    "conversationPercent" : 6.0274563
+  }, {
+    "conversationCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "phraseCount" : 5,
+    "phrases" : [ "phrases", "phrases" ],
+    "miner" : "{}",
+    "utteranceCount" : 1,
+    "conversationPercent" : 6.0274563
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -2620,12 +3322,18 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "conversationsFetchedCount" : 0,
+  "getminedItemCount" : 1,
+  "warningInfo" : "{}",
   "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
   "selfUri" : "https://openapi-generator.tech",
+  "participantType" : "Customer",
+  "errorInfo" : "{}",
   "language" : "en-us",
   "mediaType" : "Chat",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "message" : "message",
+  "minerType" : "Intent",
   "conversationDataUploaded" : true,
   "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
   "queueIds" : [ "queueIds", "queueIds" ],
@@ -2633,6 +3341,7 @@ open class LanguageUnderstandingAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
   "latestDraftVersion" : "{}",
+  "conversationsValidCount" : 6,
   "name" : "name",
   "id" : "id",
   "status" : "NotStarted"
@@ -2690,12 +3399,18 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "conversationsFetchedCount" : 0,
+  "getminedItemCount" : 1,
+  "warningInfo" : "{}",
   "conversationsDateRangeStart" : "2019-06-20T00:00:00.000+0000",
   "selfUri" : "https://openapi-generator.tech",
+  "participantType" : "Customer",
+  "errorInfo" : "{}",
   "language" : "en-us",
   "mediaType" : "Chat",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "message" : "message",
+  "minerType" : "Intent",
   "conversationDataUploaded" : true,
   "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
   "queueIds" : [ "queueIds", "queueIds" ],
@@ -2703,6 +3418,7 @@ open class LanguageUnderstandingAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
   "latestDraftVersion" : "{}",
+  "conversationsValidCount" : 6,
   "name" : "name",
   "id" : "id",
   "status" : "NotStarted"
@@ -2789,6 +3505,30 @@ open class LanguageUnderstandingAPI {
       "entityType" : "entityType",
       "entityName" : "entityName"
     } ],
+    "additionalLanguages" : {
+      "key" : {
+        "utterances" : [ {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        }, {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        } ],
+        "id" : "id"
+      }
+    },
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   }, {
     "utterances" : [ {
@@ -2819,6 +3559,30 @@ open class LanguageUnderstandingAPI {
       "entityType" : "entityType",
       "entityName" : "entityName"
     } ],
+    "additionalLanguages" : {
+      "key" : {
+        "utterances" : [ {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        }, {
+          "id" : "id",
+          "segments" : [ {
+            "text" : "text",
+            "entity" : "{}"
+          }, {
+            "text" : "text",
+            "entity" : "{}"
+          } ]
+        } ],
+        "id" : "id"
+      }
+    },
     "entityNameReferences" : [ "entityNameReferences", "entityNameReferences" ]
   } ],
   "dateTrained" : "2000-01-23T04:56:07.000+00:00",

@@ -7,10 +7,59 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**getTelephonyMediaregions**](TelephonyAPI.html#getTelephonyMediaregions) | Retrieve the list of AWS regions media can stream through. |
 | [**getTelephonySiptraces**](TelephonyAPI.html#getTelephonySiptraces) | Fetch SIP metadata |
 | [**getTelephonySiptracesDownloadDownloadId**](TelephonyAPI.html#getTelephonySiptracesDownloadDownloadId) | Get signed S3 URL for a pcap download |
 | [**postTelephonySiptracesDownload**](TelephonyAPI.html#postTelephonySiptracesDownload) | Request a download of a pcap file to S3 |
 {: class="table-striped"}
+
+<a name="getTelephonyMediaregions"></a>
+
+# **getTelephonyMediaregions**
+
+
+
+> [MediaRegions](MediaRegions.html) getTelephonyMediaregions()
+
+Retrieve the list of AWS regions media can stream through.
+
+
+
+Wraps GET /api/v2/telephony/mediaregions  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TelephonyAPI.getTelephonyMediaregions() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyMediaregions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**MediaRegions**](MediaRegions.html)
 
 <a name="getTelephonySiptraces"></a>
 

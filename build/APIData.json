@@ -16339,7 +16339,7 @@
   "getlanguageunderstandingdomainfeedback": {
     "operationId": "getlanguageunderstandingdomainfeedback",
     "functionName": "getLanguageunderstandingDomainFeedback",
-    "signature": "getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields)",
+    "signature": "getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields)",
     "parameters": [
       {
         "name": "domainId",
@@ -16372,6 +16372,11 @@
         "required": "false"
       },
       {
+        "name": "language",
+        "type": "String",
+        "required": "false"
+      },
+      {
         "name": "pageNumber",
         "type": "Int",
         "required": "false"
@@ -16398,7 +16403,7 @@
       }
     ],
     "return": "NluFeedbackListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // ID of the NLU domain.\nlet intentName: String = \"\" // The top intent name to retrieve feedback for.\nlet assessment: GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback = GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback.enummember // The top assessment to retrieve feedback for.\nlet dateStart: Date = new Date(...) // Begin of time window as ISO-8601 date.\nlet dateEnd: Date = new Date(...) // End of time window as ISO-8601 date.\nlet includeDeleted: Bool = true // Whether to include soft-deleted items in the result.\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet enableCursorPagination: Bool = true // Enable Cursor Pagination\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true\nlet fields: [String] = [\"\"] // Fields and properties to get, comma-separated\n\n// Get all feedback in the given NLU Domain Version.\nGetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // ID of the NLU domain.\nlet intentName: String = \"\" // The top intent name to retrieve feedback for.\nlet assessment: GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback = GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback.enummember // The top assessment to retrieve feedback for.\nlet dateStart: Date = new Date(...) // Begin of time window as ISO-8601 date.\nlet dateEnd: Date = new Date(...) // End of time window as ISO-8601 date.\nlet includeDeleted: Bool = true // Whether to include soft-deleted items in the result.\nlet language: String = \"\" // Whether to filter response based on the language, e.g. en-us, pt-br.\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet enableCursorPagination: Bool = true // Enable Cursor Pagination\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true\nlet fields: [String] = [\"\"] // Fields and properties to get, comma-separated\n\n// Get all feedback in the given NLU Domain Version.\nGetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback was successful\")\n        dump(response)\n    }\n}"
   },
   "getlanguageunderstandingdomainfeedbackfeedbackid": {
     "operationId": "getlanguageunderstandingdomainfeedbackfeedbackid",
@@ -16532,7 +16537,7 @@
   "getlanguageunderstandingminerdraft": {
     "operationId": "getlanguageunderstandingminerdraft",
     "functionName": "getLanguageunderstandingMinerDraft",
-    "signature": "getLanguageunderstandingMinerDraft(minerId, draftId)",
+    "signature": "getLanguageunderstandingMinerDraft(minerId, draftId, draftIntentId, draftTopicId)",
     "parameters": [
       {
         "name": "minerId",
@@ -16543,10 +16548,20 @@
         "name": "draftId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "draftIntentId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "draftTopicId",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "Draft",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet minerId: String = \"\" // Miner ID\nlet draftId: String = \"\" // Draft ID\n\n// Get information about a draft.\nGetLanguageunderstandingMinerDraftRequest.getLanguageunderstandingMinerDraft(minerId: minerId, draftId: draftId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinerDraftRequest.getLanguageunderstandingMinerDraft was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet minerId: String = \"\" // Miner ID\nlet draftId: String = \"\" // Draft ID\nlet draftIntentId: String = \"\" // Parameter to filter a specific intent.\nlet draftTopicId: String = \"\" // Parameter to filter a specific topic.\n\n// Get information about a draft.\nGetLanguageunderstandingMinerDraftRequest.getLanguageunderstandingMinerDraft(minerId: minerId, draftId: draftId, draftIntentId: draftIntentId, draftTopicId: draftTopicId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinerDraftRequest.getLanguageunderstandingMinerDraft was successful\")\n        dump(response)\n    }\n}"
   },
   "getlanguageunderstandingminerdrafts": {
     "operationId": "getlanguageunderstandingminerdrafts",
@@ -16605,12 +16620,81 @@
     "return": "MinedIntentsListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet minerId: String = \"\" // Miner ID\nlet expand: GetLanguageunderstandingMinerIntentsRequest.Expand_getLanguageunderstandingMinerIntents = GetLanguageunderstandingMinerIntentsRequest.Expand_getLanguageunderstandingMinerIntents.enummember // Option to fetch utterances.\n\n// Retrieve a list of mined intents.\nGetLanguageunderstandingMinerIntentsRequest.getLanguageunderstandingMinerIntents(minerId: minerId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinerIntentsRequest.getLanguageunderstandingMinerIntents was successful\")\n        dump(response)\n    }\n}"
   },
+  "getlanguageunderstandingminertopic": {
+    "operationId": "getlanguageunderstandingminertopic",
+    "functionName": "getLanguageunderstandingMinerTopic",
+    "signature": "getLanguageunderstandingMinerTopic(minerId, topicId, expand)",
+    "parameters": [
+      {
+        "name": "minerId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "MinerTopic",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet minerId: String = \"\" // Miner ID\nlet topicId: String = \"\" // The ID of the topic to be retrieved.\nlet expand: GetLanguageunderstandingMinerTopicRequest.Expand_getLanguageunderstandingMinerTopic = GetLanguageunderstandingMinerTopicRequest.Expand_getLanguageunderstandingMinerTopic.enummember // Option to fetch phrases\n\n// Retrieves details of a particular topic.\nGetLanguageunderstandingMinerTopicRequest.getLanguageunderstandingMinerTopic(minerId: minerId, topicId: topicId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinerTopicRequest.getLanguageunderstandingMinerTopic was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getlanguageunderstandingminertopicphrase": {
+    "operationId": "getlanguageunderstandingminertopicphrase",
+    "functionName": "getLanguageunderstandingMinerTopicPhrase",
+    "signature": "getLanguageunderstandingMinerTopicPhrase(minerId, topicId, phraseId)",
+    "parameters": [
+      {
+        "name": "minerId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "phraseId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "MinerTopicPhrase",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet minerId: String = \"\" // Miner ID\nlet topicId: String = \"\" // The ID of the topic to be retrieved.\nlet phraseId: String = \"\" // The ID of the phrase to be retrieved.\n\n// Retrieves utterances related to a phrase in a topic.\nGetLanguageunderstandingMinerTopicPhraseRequest.getLanguageunderstandingMinerTopicPhrase(minerId: minerId, topicId: topicId, phraseId: phraseId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinerTopicPhraseRequest.getLanguageunderstandingMinerTopicPhrase was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getlanguageunderstandingminertopics": {
+    "operationId": "getlanguageunderstandingminertopics",
+    "functionName": "getLanguageunderstandingMinerTopics",
+    "signature": "getLanguageunderstandingMinerTopics(minerId)",
+    "parameters": [
+      {
+        "name": "minerId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "MinerTopicsListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet minerId: String = \"\" // Miner ID\n\n// Retrieve a list of mined topics.\nGetLanguageunderstandingMinerTopicsRequest.getLanguageunderstandingMinerTopics(minerId: minerId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinerTopicsRequest.getLanguageunderstandingMinerTopics was successful\")\n        dump(response)\n    }\n}"
+  },
   "getlanguageunderstandingminers": {
     "operationId": "getlanguageunderstandingminers",
     "functionName": "getLanguageunderstandingMiners",
-    "signature": "getLanguageunderstandingMiners()",
+    "signature": "getLanguageunderstandingMiners(minerType)",
+    "parameters": [
+      {
+        "name": "minerType",
+        "type": "String",
+        "required": "false"
+      }
+    ],
     "return": "MinerListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieve the list of miners created.\nGetLanguageunderstandingMinersRequest.getLanguageunderstandingMiners() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinersRequest.getLanguageunderstandingMiners was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet minerType: String = \"\" // Type of miner, either intent or topic\n\n// Retrieve the list of miners created.\nGetLanguageunderstandingMinersRequest.getLanguageunderstandingMiners(minerType: minerType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinersRequest.getLanguageunderstandingMiners was successful\")\n        dump(response)\n    }\n}"
   },
   "patchlanguageunderstandingdomain": {
     "operationId": "patchlanguageunderstandingdomain",
@@ -16739,7 +16823,7 @@
   "postlanguageunderstandingdomainversions": {
     "operationId": "postlanguageunderstandingdomainversions",
     "functionName": "postLanguageunderstandingDomainVersions",
-    "signature": "postLanguageunderstandingDomainVersions(domainId, body)",
+    "signature": "postLanguageunderstandingDomainVersions(domainId, body, includeUtterances)",
     "parameters": [
       {
         "name": "domainId",
@@ -16750,10 +16834,15 @@
         "name": "body",
         "type": "NluDomainVersion",
         "required": "true"
+      },
+      {
+        "name": "includeUtterances",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "NluDomainVersion",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // ID of the NLU domain.\nlet body: NluDomainVersion = new NluDomainVersion(...) // The NLU Domain Version to create.\n\n// Create an NLU Domain Version.\nPostLanguageunderstandingDomainVersionsRequest.postLanguageunderstandingDomainVersions(domainId: domainId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLanguageunderstandingDomainVersionsRequest.postLanguageunderstandingDomainVersions was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // ID of the NLU domain.\nlet body: NluDomainVersion = new NluDomainVersion(...) // The NLU Domain Version to create.\nlet includeUtterances: Bool = true // Whether utterances for intent definition should be included when marshalling response.\n\n// Create an NLU Domain Version.\nPostLanguageunderstandingDomainVersionsRequest.postLanguageunderstandingDomainVersions(domainId: domainId, body: body, includeUtterances: includeUtterances) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLanguageunderstandingDomainVersionsRequest.postLanguageunderstandingDomainVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "postlanguageunderstandingdomains": {
     "operationId": "postlanguageunderstandingdomains",
@@ -19347,6 +19436,42 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\n\n// Delete dialer DNC list\nDeleteOutboundDnclistRequest.deleteOutboundDnclist(dncListId: dncListId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundDnclistRequest.deleteOutboundDnclist was successful\")\n    }\n}"
   },
+  "deleteoutbounddnclistemailaddresses": {
+    "operationId": "deleteoutbounddnclistemailaddresses",
+    "functionName": "deleteOutboundDnclistEmailaddresses",
+    "signature": "deleteOutboundDnclistEmailaddresses(dncListId, expiredOnly)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expiredOnly",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet expiredOnly: Bool = true // Set to true to only remove DNC entries that are expired\n\n// Deletes all or expired email addresses from a DNC list.\nDeleteOutboundDnclistEmailaddressesRequest.deleteOutboundDnclistEmailaddresses(dncListId: dncListId, expiredOnly: expiredOnly) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundDnclistEmailaddressesRequest.deleteOutboundDnclistEmailaddresses was successful\")\n    }\n}"
+  },
+  "deleteoutbounddnclistphonenumbers": {
+    "operationId": "deleteoutbounddnclistphonenumbers",
+    "functionName": "deleteOutboundDnclistPhonenumbers",
+    "signature": "deleteOutboundDnclistPhonenumbers(dncListId, expiredOnly)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expiredOnly",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet expiredOnly: Bool = true // Set to true to only remove DNC entries that are expired\n\n// Deletes all or expired phone numbers from a DNC list.\nDeleteOutboundDnclistPhonenumbersRequest.deleteOutboundDnclistPhonenumbers(dncListId: dncListId, expiredOnly: expiredOnly) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundDnclistPhonenumbersRequest.deleteOutboundDnclistPhonenumbers was successful\")\n    }\n}"
+  },
   "deleteoutboundmessagingcampaign": {
     "operationId": "deleteoutboundmessagingcampaign",
     "functionName": "deleteOutboundMessagingcampaign",
@@ -20956,6 +21081,42 @@
     "signature": "getOutboundWrapupcodemappings()",
     "return": "WrapUpCodeMapping",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the Dialer wrap up code mapping.\nGetOutboundWrapupcodemappingsRequest.getOutboundWrapupcodemappings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundWrapupcodemappingsRequest.getOutboundWrapupcodemappings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchoutbounddnclistemailaddresses": {
+    "operationId": "patchoutbounddnclistemailaddresses",
+    "functionName": "patchOutboundDnclistEmailaddresses",
+    "signature": "patchOutboundDnclistEmailaddresses(dncListId, body)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DncPatchEmailsRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet body: DncPatchEmailsRequest = new DncPatchEmailsRequest(...) // DNC Emails\n\n// Add emails to or Delete emails from a DNC list.\nPatchOutboundDnclistEmailaddressesRequest.patchOutboundDnclistEmailaddresses(dncListId: dncListId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchOutboundDnclistEmailaddressesRequest.patchOutboundDnclistEmailaddresses was successful\")\n    }\n}"
+  },
+  "patchoutbounddnclistphonenumbers": {
+    "operationId": "patchoutbounddnclistphonenumbers",
+    "functionName": "patchOutboundDnclistPhonenumbers",
+    "signature": "patchOutboundDnclistPhonenumbers(dncListId, body)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DncPatchPhoneNumbersRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet body: DncPatchPhoneNumbersRequest = new DncPatchPhoneNumbersRequest(...) // DNC Phone Numbers\n\n// Add numbers to or delete numbers from a DNC list.\nPatchOutboundDnclistPhonenumbersRequest.patchOutboundDnclistPhonenumbers(dncListId: dncListId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchOutboundDnclistPhonenumbersRequest.patchOutboundDnclistPhonenumbers was successful\")\n    }\n}"
   },
   "patchoutboundsettings": {
     "operationId": "patchoutboundsettings",
@@ -29456,6 +29617,13 @@
     ],
     "return": "Team",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Team = new Team(...) // Team\n\n// Create a team\nPostTeamsRequest.postTeams(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTeamsRequest.postTeams was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettelephonymediaregions": {
+    "operationId": "gettelephonymediaregions",
+    "functionName": "getTelephonyMediaregions",
+    "signature": "getTelephonyMediaregions()",
+    "return": "MediaRegions",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieve the list of AWS regions media can stream through.\nGetTelephonyMediaregionsRequest.getTelephonyMediaregions() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyMediaregionsRequest.getTelephonyMediaregions was successful\")\n        dump(response)\n    }\n}"
   },
   "gettelephonysiptraces": {
     "operationId": "gettelephonysiptraces",

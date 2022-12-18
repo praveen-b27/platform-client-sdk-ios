@@ -42,10 +42,12 @@ public class ContactList: Codable {
     public var automaticTimeZoneMapping: Bool?
     /** The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true. */
     public var zipCodeColumnName: String?
+    /** The settings of the columns selected for dynamic queueing */
+    public var columnDataTypeSpecifications: [ColumnDataTypeSpecification]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, emailColumns: [EmailColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, emailColumns: [EmailColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, columnDataTypeSpecifications: [ColumnDataTypeSpecification]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -62,6 +64,7 @@ public class ContactList: Codable {
         self.attemptLimits = attemptLimits
         self.automaticTimeZoneMapping = automaticTimeZoneMapping
         self.zipCodeColumnName = zipCodeColumnName
+        self.columnDataTypeSpecifications = columnDataTypeSpecifications
         self.selfUri = selfUri
     }
 
@@ -82,6 +85,7 @@ public class ContactList: Codable {
         case attemptLimits
         case automaticTimeZoneMapping
         case zipCodeColumnName
+        case columnDataTypeSpecifications
         case selfUri
     }
 

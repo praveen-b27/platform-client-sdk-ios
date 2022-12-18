@@ -49,6 +49,8 @@ public class MessagingCampaign: Codable {
     public var contactListFilters: [DomainEntityRef]?
     /** A list of current error conditions associated with this messaging campaign. */
     public var errors: [RestErrorDetail]?
+    /** Indicates (when true) that the campaign supports dynamic queueing of the contact list at the time of a request for contacts. */
+    public var dynamicContactQueueingSettings: DynamicContactQueueingSettings?
     /** Configuration for this messaging campaign to send Email messages. */
     public var emailConfig: EmailConfig?
     /** Configuration for this messaging campaign to send SMS messages. */
@@ -56,7 +58,7 @@ public class MessagingCampaign: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, ruleSets: [DomainEntityRef]?, contactListFilters: [DomainEntityRef]?, errors: [RestErrorDetail]?, emailConfig: EmailConfig?, smsConfig: SmsConfig?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, ruleSets: [DomainEntityRef]?, contactListFilters: [DomainEntityRef]?, errors: [RestErrorDetail]?, dynamicContactQueueingSettings: DynamicContactQueueingSettings?, emailConfig: EmailConfig?, smsConfig: SmsConfig?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -73,6 +75,7 @@ public class MessagingCampaign: Codable {
         self.ruleSets = ruleSets
         self.contactListFilters = contactListFilters
         self.errors = errors
+        self.dynamicContactQueueingSettings = dynamicContactQueueingSettings
         self.emailConfig = emailConfig
         self.smsConfig = smsConfig
         self.selfUri = selfUri
@@ -95,6 +98,7 @@ public class MessagingCampaign: Codable {
         case ruleSets
         case contactListFilters
         case errors
+        case dynamicContactQueueingSettings
         case emailConfig
         case smsConfig
         case selfUri

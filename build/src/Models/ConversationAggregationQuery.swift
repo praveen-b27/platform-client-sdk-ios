@@ -36,6 +36,7 @@ public class ConversationAggregationQuery: Codable {
         case dnis = "dnis"
         case edgeid = "edgeId"
         case eligibleagentcount = "eligibleAgentCount"
+        case errorcode = "errorCode"
         case extendeddeliverystatus = "extendedDeliveryStatus"
         case externalcontactid = "externalContactId"
         case externalmediacount = "externalMediaCount"

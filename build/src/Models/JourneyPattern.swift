@@ -15,6 +15,7 @@ public class JourneyPattern: Codable {
         case web = "Web"
         case custom = "Custom"
         case conversation = "Conversation"
+        case app = "App"
     }
     /** A list of one or more criteria to satisfy. */
     public var criteria: [Criteria]?

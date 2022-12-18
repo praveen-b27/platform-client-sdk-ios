@@ -92,10 +92,12 @@ public class Campaign: Codable {
     public var contactListFilters: [DomainEntityRef]?
     /** The division this campaign belongs to. */
     public var division: DomainEntityRef?
+    /** Settings for dynamic queueing of contacts. */
+    public var dynamicContactQueueingSettings: DynamicContactQueueingSettings?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, queue: DomainEntityRef?, dialingMode: DialingMode?, script: DomainEntityRef?, edgeGroup: DomainEntityRef?, site: DomainEntityRef?, campaignStatus: CampaignStatus?, phoneColumns: [PhoneColumn]?, abandonRate: Double?, dncLists: [DomainEntityRef]?, callableTimeSet: DomainEntityRef?, callAnalysisResponseSet: DomainEntityRef?, errors: [RestErrorDetail]?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, ruleSets: [DomainEntityRef]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int64?, alwaysRunning: Bool?, contactSort: ContactSort?, contactSorts: [ContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DomainEntityRef]?, division: DomainEntityRef?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, queue: DomainEntityRef?, dialingMode: DialingMode?, script: DomainEntityRef?, edgeGroup: DomainEntityRef?, site: DomainEntityRef?, campaignStatus: CampaignStatus?, phoneColumns: [PhoneColumn]?, abandonRate: Double?, dncLists: [DomainEntityRef]?, callableTimeSet: DomainEntityRef?, callAnalysisResponseSet: DomainEntityRef?, errors: [RestErrorDetail]?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, ruleSets: [DomainEntityRef]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int64?, alwaysRunning: Bool?, contactSort: ContactSort?, contactSorts: [ContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DomainEntityRef]?, division: DomainEntityRef?, dynamicContactQueueingSettings: DynamicContactQueueingSettings?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -128,6 +130,7 @@ public class Campaign: Codable {
         self.priority = priority
         self.contactListFilters = contactListFilters
         self.division = division
+        self.dynamicContactQueueingSettings = dynamicContactQueueingSettings
         self.selfUri = selfUri
     }
 
@@ -164,6 +167,7 @@ public class Campaign: Codable {
         case priority
         case contactListFilters
         case division
+        case dynamicContactQueueingSettings
         case selfUri
     }
 

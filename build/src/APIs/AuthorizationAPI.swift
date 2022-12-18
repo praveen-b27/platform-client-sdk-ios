@@ -1417,7 +1417,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -1474,6 +1473,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -1487,6 +1487,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -1859,7 +1860,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -1916,6 +1916,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -1929,6 +1930,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -2316,7 +2318,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -2373,6 +2374,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -2386,6 +2388,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -2758,7 +2761,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -2815,6 +2817,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -2828,6 +2831,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -3283,7 +3287,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -3340,6 +3343,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -3353,6 +3357,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -3725,7 +3730,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -3782,6 +3786,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -3795,6 +3800,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -4182,7 +4188,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -4239,6 +4244,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -4252,6 +4258,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -4624,7 +4631,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -4681,6 +4687,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -4694,6 +4701,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -5082,7 +5090,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -5139,6 +5146,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -5152,6 +5160,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -5524,7 +5533,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -5581,6 +5589,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -5594,6 +5603,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -5981,7 +5991,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -6038,6 +6047,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -6051,6 +6061,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -6423,7 +6434,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -6480,6 +6490,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -6493,6 +6504,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -6886,7 +6898,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -6943,6 +6954,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -6956,6 +6968,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -7328,7 +7341,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -7385,6 +7397,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -7398,6 +7411,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -7785,7 +7799,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -7842,6 +7855,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -7855,6 +7869,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -8227,7 +8242,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -8284,6 +8298,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -8297,6 +8312,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -8693,7 +8709,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -8750,6 +8765,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -8763,6 +8779,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -9135,7 +9152,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -9192,6 +9208,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -9205,6 +9222,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -9592,7 +9610,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -9649,6 +9666,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -9662,6 +9680,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -10034,7 +10053,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -10091,6 +10109,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -10104,6 +10123,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -10497,7 +10517,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -10554,6 +10573,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -10567,6 +10587,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -10939,7 +10960,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -10996,6 +11016,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -11009,6 +11030,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -11396,7 +11418,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -11453,6 +11474,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -11466,6 +11488,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -11838,7 +11861,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -11895,6 +11917,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -11908,6 +11931,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -13151,7 +13175,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -13208,6 +13231,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -13221,6 +13245,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -13593,7 +13618,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -13650,6 +13674,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -13663,6 +13688,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -14050,7 +14076,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -14107,6 +14132,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -14120,6 +14146,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -14492,7 +14519,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -14549,6 +14575,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -14562,6 +14589,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -14962,7 +14990,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -15019,6 +15046,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -15032,6 +15060,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -15404,7 +15433,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -15461,6 +15489,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -15474,6 +15503,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -15861,7 +15891,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -15918,6 +15947,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -15931,6 +15961,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -16303,7 +16334,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -16360,6 +16390,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -16373,6 +16404,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -17306,7 +17338,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -17363,6 +17394,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -17376,6 +17408,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -17748,7 +17781,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -17805,6 +17837,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -17818,6 +17851,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -18205,7 +18239,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -18262,6 +18295,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -18275,6 +18309,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -18647,7 +18682,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -18704,6 +18738,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -18717,6 +18752,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -19482,7 +19518,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -19539,6 +19574,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -19552,6 +19588,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -19924,7 +19961,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -19981,6 +20017,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -19994,6 +20031,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -20381,7 +20419,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -20438,6 +20475,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -20451,6 +20489,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -20823,7 +20862,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -20880,6 +20918,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -20893,6 +20932,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -21281,7 +21321,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -21338,6 +21377,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -21351,6 +21391,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -21723,7 +21764,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -21780,6 +21820,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -21793,6 +21834,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -22180,7 +22222,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -22237,6 +22278,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -22250,6 +22292,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -22622,7 +22665,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -22679,6 +22721,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -22692,6 +22735,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -23085,7 +23129,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -23142,6 +23185,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -23155,6 +23199,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -23527,7 +23572,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -23584,6 +23628,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -23597,6 +23642,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -23984,7 +24030,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -24041,6 +24086,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -24054,6 +24100,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -24426,7 +24473,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -24483,6 +24529,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -24496,6 +24543,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -24892,7 +24940,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -24949,6 +24996,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -24962,6 +25010,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -25334,7 +25383,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -25391,6 +25439,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -25404,6 +25453,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -25791,7 +25841,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -25848,6 +25897,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -25861,6 +25911,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -26233,7 +26284,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -26290,6 +26340,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -26303,6 +26354,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -26696,7 +26748,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -26753,6 +26804,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -26766,6 +26818,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -27138,7 +27191,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -27195,6 +27247,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -27208,6 +27261,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -27595,7 +27649,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -27652,6 +27705,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -27665,6 +27719,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -28037,7 +28092,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -28094,6 +28148,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -28107,6 +28162,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -28565,7 +28621,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -28622,6 +28677,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -28635,6 +28691,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -29007,7 +29064,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -29064,6 +29120,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -29077,6 +29134,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -29464,7 +29522,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -29521,6 +29578,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -29534,6 +29592,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -29906,7 +29965,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -29963,6 +30021,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -29976,6 +30035,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -30430,7 +30490,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -30487,6 +30546,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -30500,6 +30560,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -30872,7 +30933,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -30929,6 +30989,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -30942,6 +31003,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -31329,7 +31391,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -31386,6 +31447,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -31399,6 +31461,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -31771,7 +31834,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -31828,6 +31890,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -31841,6 +31904,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -32241,7 +32305,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -32298,6 +32361,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -32311,6 +32375,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -32683,7 +32748,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -32740,6 +32804,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -32753,6 +32818,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -33140,7 +33206,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -33197,6 +33262,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -33210,6 +33276,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -33582,7 +33649,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -33639,6 +33705,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -33652,6 +33719,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -34394,7 +34462,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -34451,6 +34518,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -34464,6 +34532,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -34836,7 +34905,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -34893,6 +34961,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -34906,6 +34975,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -35293,7 +35363,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -35350,6 +35419,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -35363,6 +35433,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -35735,7 +35806,6 @@ open class AuthorizationAPI {
           "division" : "{}",
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
-          "vipRouting" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
           "userMemberCount" : 6,
           "modifiedBy" : "modifiedBy",
@@ -35792,6 +35862,7 @@ open class AuthorizationAPI {
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
+              "historyInclusion" : "Include",
               "queue" : "{}",
               "flow" : "{}",
               "spamFlow" : "{}"
@@ -35805,6 +35876,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
         }
@@ -36372,7 +36444,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -36429,6 +36500,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -36442,6 +36514,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -36814,7 +36887,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -36871,6 +36943,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -36884,6 +36957,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -37271,7 +37345,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -37328,6 +37401,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -37341,6 +37415,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -37713,7 +37788,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -37770,6 +37844,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -37783,6 +37858,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -38183,7 +38259,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -38240,6 +38315,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -38253,6 +38329,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -38625,7 +38702,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -38682,6 +38758,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -38695,6 +38772,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -39082,7 +39160,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -39139,6 +39216,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -39152,6 +39230,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }
@@ -39524,7 +39603,6 @@ open class AuthorizationAPI {
             "division" : "{}",
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
-            "vipRouting" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
             "userMemberCount" : 6,
             "modifiedBy" : "modifiedBy",
@@ -39581,6 +39659,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
+                "historyInclusion" : "Include",
                 "queue" : "{}",
                 "flow" : "{}",
                 "spamFlow" : "{}"
@@ -39594,6 +39673,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
           }

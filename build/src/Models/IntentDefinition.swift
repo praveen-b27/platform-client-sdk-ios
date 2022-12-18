@@ -21,13 +21,16 @@ public class IntentDefinition: Codable {
     public var entityNameReferences: [String]?
     /** The utterances that act as training phrases for the intent. */
     public var utterances: [NluUtterance]?
+    /** Additional languages for intents */
+    public var additionalLanguages: [String:AdditionalLanguagesIntent]?
 
-    public init(_id: String?, name: String?, entityTypeBindings: [NamedEntityTypeBinding]?, entityNameReferences: [String]?, utterances: [NluUtterance]?) {
+    public init(_id: String?, name: String?, entityTypeBindings: [NamedEntityTypeBinding]?, entityNameReferences: [String]?, utterances: [NluUtterance]?, additionalLanguages: [String:AdditionalLanguagesIntent]?) {
         self._id = _id
         self.name = name
         self.entityTypeBindings = entityTypeBindings
         self.entityNameReferences = entityNameReferences
         self.utterances = utterances
+        self.additionalLanguages = additionalLanguages
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -36,6 +39,7 @@ public class IntentDefinition: Codable {
         case entityTypeBindings
         case entityNameReferences
         case utterances
+        case additionalLanguages
     }
 
 

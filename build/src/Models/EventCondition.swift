@@ -29,6 +29,7 @@ public class EventCondition: Codable {
         case web = "Web"
         case custom = "Custom"
         case conversation = "Conversation"
+        case app = "App"
     }
     /** The event key. */
     public var key: String?

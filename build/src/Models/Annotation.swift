@@ -19,7 +19,7 @@ public class Annotation: Codable {
     public var location: Int64?
     /** Duration of annotation in milliseconds. */
     public var durationMs: Int64?
-    /** Offset of annotation (milliseconds) from start of recording. */
+    /** Offset of annotation (milliseconds) from start of recording (after removing the cumulative duration of all pauses). */
     public var absoluteLocation: Int64?
     /** Duration of annotation (milliseconds). */
     public var absoluteDurationMs: Int64?

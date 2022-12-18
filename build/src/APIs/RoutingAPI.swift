@@ -1400,6 +1400,7 @@ open class RoutingAPI {
   "name" : "name",
   "fromName" : "fromName",
   "id" : "id",
+  "historyInclusion" : "Include",
   "queue" : "{}",
   "flow" : "{}",
   "spamFlow" : "{}"
@@ -1496,6 +1497,7 @@ open class RoutingAPI {
     "name" : "name",
     "fromName" : "fromName",
     "id" : "id",
+    "historyInclusion" : "Include",
     "queue" : "{}",
     "flow" : "{}",
     "spamFlow" : "{}"
@@ -1526,6 +1528,7 @@ open class RoutingAPI {
     "name" : "name",
     "fromName" : "fromName",
     "id" : "id",
+    "historyInclusion" : "Include",
     "queue" : "{}",
     "flow" : "{}",
     "spamFlow" : "{}"
@@ -2869,7 +2872,6 @@ open class RoutingAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
-  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
@@ -2926,6 +2928,7 @@ open class RoutingAPI {
       "name" : "name",
       "fromName" : "fromName",
       "id" : "id",
+      "historyInclusion" : "Include",
       "queue" : "{}",
       "flow" : "{}",
       "spamFlow" : "{}"
@@ -2939,6 +2942,7 @@ open class RoutingAPI {
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
+  "directRouting" : "{}",
   "name" : "name",
   "agentOwnedRouting" : "{}"
 }, statusCode=200}]
@@ -4922,7 +4926,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -4979,6 +4982,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -4992,6 +4996,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   }, {
@@ -5074,7 +5079,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5131,6 +5135,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -5144,6 +5149,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   } ],
@@ -5328,7 +5334,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5385,6 +5390,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -5398,6 +5404,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   }, {
@@ -5480,7 +5487,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5537,6 +5543,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -5550,6 +5557,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   } ],
@@ -5717,7 +5725,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5774,6 +5781,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -5787,6 +5795,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   }, {
@@ -5869,7 +5878,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -5926,6 +5934,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -5939,6 +5948,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   } ],
@@ -6099,7 +6109,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -6157,6 +6166,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -6170,6 +6180,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   }, {
@@ -6251,7 +6262,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -6309,6 +6319,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -6322,6 +6333,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   } ],
@@ -8020,7 +8032,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -8078,6 +8089,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -8091,6 +8103,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   }, {
@@ -8172,7 +8185,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -8230,6 +8242,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -8243,6 +8256,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   } ],
@@ -10479,7 +10493,6 @@ open class RoutingAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
-  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
@@ -10537,6 +10550,7 @@ open class RoutingAPI {
       "name" : "name",
       "fromName" : "fromName",
       "id" : "id",
+      "historyInclusion" : "Include",
       "queue" : "{}",
       "flow" : "{}",
       "spamFlow" : "{}"
@@ -10550,6 +10564,7 @@ open class RoutingAPI {
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
+  "directRouting" : "{}",
   "name" : "name",
   "agentOwnedRouting" : "{}"
 }, statusCode=200}]
@@ -10696,7 +10711,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -10754,6 +10768,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -10767,6 +10782,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   }, {
@@ -10848,7 +10864,6 @@ open class RoutingAPI {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
-    "vipRouting" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
     "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
@@ -10906,6 +10921,7 @@ open class RoutingAPI {
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
+        "historyInclusion" : "Include",
         "queue" : "{}",
         "flow" : "{}",
         "spamFlow" : "{}"
@@ -10919,6 +10935,7 @@ open class RoutingAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
   } ],
@@ -11252,10 +11269,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11278,10 +11295,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11324,10 +11341,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11350,10 +11367,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11401,10 +11418,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11427,10 +11444,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11473,10 +11490,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11499,10 +11516,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11732,6 +11749,7 @@ open class RoutingAPI {
   "name" : "name",
   "fromName" : "fromName",
   "id" : "id",
+  "historyInclusion" : "Include",
   "queue" : "{}",
   "flow" : "{}",
   "spamFlow" : "{}"
@@ -12440,7 +12458,6 @@ open class RoutingAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
-  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
@@ -12497,6 +12514,7 @@ open class RoutingAPI {
       "name" : "name",
       "fromName" : "fromName",
       "id" : "id",
+      "historyInclusion" : "Include",
       "queue" : "{}",
       "flow" : "{}",
       "spamFlow" : "{}"
@@ -12510,6 +12528,7 @@ open class RoutingAPI {
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
+  "directRouting" : "{}",
   "name" : "name",
   "agentOwnedRouting" : "{}"
 }, statusCode=200}]
@@ -13117,6 +13136,7 @@ open class RoutingAPI {
   "name" : "name",
   "fromName" : "fromName",
   "id" : "id",
+  "historyInclusion" : "Include",
   "queue" : "{}",
   "flow" : "{}",
   "spamFlow" : "{}"
@@ -13390,7 +13410,6 @@ open class RoutingAPI {
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
-  "vipRouting" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
   "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
@@ -13447,6 +13466,7 @@ open class RoutingAPI {
       "name" : "name",
       "fromName" : "fromName",
       "id" : "id",
+      "historyInclusion" : "Include",
       "queue" : "{}",
       "flow" : "{}",
       "spamFlow" : "{}"
@@ -13460,6 +13480,7 @@ open class RoutingAPI {
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
+  "directRouting" : "{}",
   "name" : "name",
   "agentOwnedRouting" : "{}"
 }, statusCode=200}]

@@ -73,6 +73,7 @@ public class InitiatingAction: Codable {
         case write = "Write"
         case purge = "Purge"
         case processed = "Processed"
+        case remove = "Remove"
         case replace = "Replace"
         case updateInService = "UpdateInService"
         case updateOutOfService = "UpdateOutOfService"

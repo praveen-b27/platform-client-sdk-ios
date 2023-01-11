@@ -8540,6 +8540,64 @@ open class RecordingAPI {
     }
 
     
+    /**
+     Get the status of a recording upload status report
+     
+     - parameter reportId: (path) reportId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRecordingUploadsReport(reportId: String, completion: @escaping ((_ data: RecordingUploadReport?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingUploadsReportWithRequestBuilder(reportId: reportId)
+        requestBuilder.execute { (response: Response<RecordingUploadReport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status of a recording upload status report
+     - GET /api/v2/recording/uploads/reports/{reportId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "state" : "InProgress",
+  "signedUrl" : "signedUrl"
+}, statusCode=200}]
+     
+     - parameter reportId: (path) reportId 
+
+     - returns: RequestBuilder<RecordingUploadReport> 
+     */
+    open class func getRecordingUploadsReportWithRequestBuilder(reportId: String) -> RequestBuilder<RecordingUploadReport> {        
+        var path = "/api/v2/recording/uploads/reports/{reportId}"
+        let reportIdPreEscape = "\(reportId)"
+        let reportIdPostEscape = reportIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{reportId}", with: reportIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RecordingUploadReport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -33835,6 +33893,61 @@ open class RecordingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EncryptionKey>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Creates a recording upload status report
+     
+     - parameter body: (body) Report parameters 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRecordingUploadsReports(body: RecordingUploadReportRequest, completion: @escaping ((_ data: RecordingUploadReport?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRecordingUploadsReportsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<RecordingUploadReport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a recording upload status report
+     - POST /api/v2/recording/uploads/reports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "state" : "InProgress",
+  "signedUrl" : "signedUrl"
+}, statusCode=202}]
+     
+     - parameter body: (body) Report parameters 
+
+     - returns: RequestBuilder<RecordingUploadReport> 
+     */
+    open class func postRecordingUploadsReportsWithRequestBuilder(body: RecordingUploadReportRequest) -> RequestBuilder<RecordingUploadReport> {        
+        let path = "/api/v2/recording/uploads/reports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RecordingUploadReport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

@@ -33,6 +33,7 @@ title: ConversationMetricsTopicConversationMetricRecord
 | **dnis** | **String** | Dialed number identification service (number dialed by the calling party) | [optional] |
 | **edgeId** | **String** | Unique identifier of the edge device | [optional] |
 | **eligibleAgentCounts** | **[Int]** | Number of eligible agents for each predictive routing attempt | [optional] |
+| **errorCode** | **String** | A code corresponding to the error that occurred | [optional] |
 | **extendedDeliveryStatus** | **String** | Extended delivery status | [optional] |
 | **externalContactId** | **String** | External contact identifier | [optional] |
 | **externalMediaCount** | **Int** | Count of any media (images, files, etc) included on the external session | [optional] |

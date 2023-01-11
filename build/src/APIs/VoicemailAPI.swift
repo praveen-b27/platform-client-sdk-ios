@@ -314,17 +314,18 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "rotateCallsSecs" : 0,
-  "languagePreference" : "languagePreference",
   "disableEmailPii" : true,
   "sendEmailNotifications" : true,
-  "name" : "name",
   "includeEmailTranscriptions" : true,
   "stopRingingAfterRotations" : 6,
   "overflowGroupId" : "overflowGroupId",
-  "groupAlertType" : "RANDOM",
   "interactiveResponsePromptId" : "interactiveResponsePromptId",
   "enabled" : true,
+  "rotateCallsSecs" : 0,
+  "languagePreference" : "languagePreference",
+  "interactiveResponseRequired" : true,
+  "name" : "name",
+  "groupAlertType" : "RANDOM",
   "group" : "{}"
 }, statusCode=200}]
      
@@ -1317,17 +1318,18 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "rotateCallsSecs" : 0,
-  "languagePreference" : "languagePreference",
   "disableEmailPii" : true,
   "sendEmailNotifications" : true,
-  "name" : "name",
   "includeEmailTranscriptions" : true,
   "stopRingingAfterRotations" : 6,
   "overflowGroupId" : "overflowGroupId",
-  "groupAlertType" : "RANDOM",
   "interactiveResponsePromptId" : "interactiveResponsePromptId",
   "enabled" : true,
+  "rotateCallsSecs" : 0,
+  "languagePreference" : "languagePreference",
+  "interactiveResponseRequired" : true,
+  "name" : "name",
+  "groupAlertType" : "RANDOM",
   "group" : "{}"
 }, statusCode=200}]
      

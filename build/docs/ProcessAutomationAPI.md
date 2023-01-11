@@ -127,7 +127,7 @@ ProcessAutomationAPI.getProcessautomationTrigger(triggerId: triggerId) { (respon
 
 
 
-> [TriggerEntityListing](TriggerEntityListing.html) getProcessautomationTriggers(before, after, pageSize, topicName, enabled)
+> [TriggerEntityListing](TriggerEntityListing.html) getProcessautomationTriggers(before, after, pageSize, topicName, enabled, hasDelayBy)
 
 Retrieves all triggers, optionally filtered by query parameters.
 
@@ -153,9 +153,10 @@ let after: String = "" // The cursor that points to the end of the set of entiti
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let topicName: String = "" // Topic name(s). Separated by commas
 let enabled: Bool = true // Boolean indicating desired enabled state of triggers
+let hasDelayBy: Bool = true // Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set.
 
 // Code example
-ProcessAutomationAPI.getProcessautomationTriggers(before: before, after: after, pageSize: pageSize, topicName: topicName, enabled: enabled) { (response, error) in
+ProcessAutomationAPI.getProcessautomationTriggers(before: before, after: after, pageSize: pageSize, topicName: topicName, enabled: enabled, hasDelayBy: hasDelayBy) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -175,6 +176,7 @@ ProcessAutomationAPI.getProcessautomationTriggers(before: before, after: after, 
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **topicName** | **String**| Topic name(s). Separated by commas | [optional] |
 | **enabled** | **Bool**| Boolean indicating desired enabled state of triggers | [optional] |
+| **hasDelayBy** | **Bool**| Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. | [optional] |
 {: class="table-striped"}
 
 

@@ -5682,7 +5682,8 @@ open class KnowledgeAPI {
   }, {
     "confidence" : 5.637376656633329,
     "document" : "{}"
-  } ]
+  } ],
+  "queryType" : "AutoSearch"
 }, statusCode=200}]
      
      - parameter sessionId: (path) Knowledge guest session ID. 
@@ -6243,6 +6244,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "conversationContext" : "{}",
   "total" : 1,
   "pageCount" : 5,
   "pageNumber" : 6,
@@ -6256,7 +6258,8 @@ open class KnowledgeAPI {
   }, {
     "confidence" : 5.637376656633329,
     "document" : "{}"
-  } ]
+  } ],
+  "queryType" : "AutoSearch"
 }, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) The ID of knowledge base containing the documents to query. 

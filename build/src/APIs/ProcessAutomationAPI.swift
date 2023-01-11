@@ -100,6 +100,7 @@ open class ProcessAutomationAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "topicName" : "topicName",
+  "delayBySeconds" : 1,
   "description" : "description",
   "id" : "id",
   "version" : 0,
@@ -132,6 +133,7 @@ open class ProcessAutomationAPI {
     
     
     
+    
     /**
      Retrieves all triggers, optionally filtered by query parameters.
      
@@ -140,10 +142,11 @@ open class ProcessAutomationAPI {
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter topicName: (query) Topic name(s). Separated by commas (optional)
      - parameter enabled: (query) Boolean indicating desired enabled state of triggers (optional)
+     - parameter hasDelayBy: (query) Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getProcessautomationTriggers(before: String? = nil, after: String? = nil, pageSize: String? = nil, topicName: String? = nil, enabled: Bool? = nil, completion: @escaping ((_ data: TriggerEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getProcessautomationTriggersWithRequestBuilder(before: before, after: after, pageSize: pageSize, topicName: topicName, enabled: enabled)
+    open class func getProcessautomationTriggers(before: String? = nil, after: String? = nil, pageSize: String? = nil, topicName: String? = nil, enabled: Bool? = nil, hasDelayBy: Bool? = nil, completion: @escaping ((_ data: TriggerEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getProcessautomationTriggersWithRequestBuilder(before: before, after: after, pageSize: pageSize, topicName: topicName, enabled: enabled, hasDelayBy: hasDelayBy)
         requestBuilder.execute { (response: Response<TriggerEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -182,6 +185,7 @@ open class ProcessAutomationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "topicName" : "topicName",
+    "delayBySeconds" : 1,
     "description" : "description",
     "id" : "id",
     "version" : 0,
@@ -203,6 +207,7 @@ open class ProcessAutomationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "topicName" : "topicName",
+    "delayBySeconds" : 1,
     "description" : "description",
     "id" : "id",
     "version" : 0,
@@ -220,10 +225,11 @@ open class ProcessAutomationAPI {
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter topicName: (query) Topic name(s). Separated by commas (optional)
      - parameter enabled: (query) Boolean indicating desired enabled state of triggers (optional)
+     - parameter hasDelayBy: (query) Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)
 
      - returns: RequestBuilder<TriggerEntityListing> 
      */
-    open class func getProcessautomationTriggersWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, topicName: String? = nil, enabled: Bool? = nil) -> RequestBuilder<TriggerEntityListing> {        
+    open class func getProcessautomationTriggersWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, topicName: String? = nil, enabled: Bool? = nil, hasDelayBy: Bool? = nil) -> RequestBuilder<TriggerEntityListing> {        
         let path = "/api/v2/processautomation/triggers"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -234,7 +240,8 @@ open class ProcessAutomationAPI {
             "after": after, 
             "pageSize": pageSize, 
             "topicName": topicName, 
-            "enabled": enabled
+            "enabled": enabled, 
+            "hasDelayBy": hasDelayBy
         ])
 
         let requestBuilder: RequestBuilder<TriggerEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -413,6 +420,7 @@ open class ProcessAutomationAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "topicName" : "topicName",
+  "delayBySeconds" : 1,
   "description" : "description",
   "id" : "id",
   "version" : 0,
@@ -543,6 +551,7 @@ open class ProcessAutomationAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "topicName" : "topicName",
+  "delayBySeconds" : 1,
   "description" : "description",
   "id" : "id",
   "version" : 0,

@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingEmailDomain**](RoutingAPI.html#deleteRoutingEmailDomain) | Delete a domain |
 | [**deleteRoutingEmailDomainRoute**](RoutingAPI.html#deleteRoutingEmailDomainRoute) | Delete a route |
 | [**deleteRoutingEmailOutboundDomain**](RoutingAPI.html#deleteRoutingEmailOutboundDomain) | Delete an outbound domain |
+| [**deleteRoutingLanguage**](RoutingAPI.html#deleteRoutingLanguage) | Delete a routing language |
 | [**deleteRoutingPredictor**](RoutingAPI.html#deleteRoutingPredictor) | Delete single predictor. |
 | [**deleteRoutingQueue**](RoutingAPI.html#deleteRoutingQueue) | Delete a queue |
 | [**deleteRoutingQueueMember**](RoutingAPI.html#deleteRoutingQueueMember) | Delete a queue member. |
@@ -40,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingEmailOutboundDomainSearch**](RoutingAPI.html#getRoutingEmailOutboundDomainSearch) | Search a domain across organizations |
 | [**getRoutingEmailOutboundDomains**](RoutingAPI.html#getRoutingEmailOutboundDomains) | Get outbound domains |
 | [**getRoutingEmailSetup**](RoutingAPI.html#getRoutingEmailSetup) | Get email setup |
+| [**getRoutingLanguage**](RoutingAPI.html#getRoutingLanguage) | Get a routing language |
 | [**getRoutingLanguages**](RoutingAPI.html#getRoutingLanguages) | Get the list of supported languages. |
 | [**getRoutingMessageRecipient**](RoutingAPI.html#getRoutingMessageRecipient) | Get a recipient |
 | [**getRoutingMessageRecipients**](RoutingAPI.html#getRoutingMessageRecipients) | Get recipients |
@@ -331,6 +333,57 @@ RoutingAPI.deleteRoutingEmailOutboundDomain(domainId: domainId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| domain ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingLanguage"></a>
+
+# **deleteRoutingLanguage**
+
+
+
+> Void deleteRoutingLanguage(languageId)
+
+Delete a routing language
+
+
+
+Wraps DELETE /api/v2/routing/languages/{languageId}  
+
+Requires ANY permissions: 
+
+* routing:skill:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageId: String = "" // Language ID
+
+// Code example
+RoutingAPI.deleteRoutingLanguage(languageId: languageId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingLanguage was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageId** | **String**| Language ID | |
 {: class="table-striped"}
 
 
@@ -1846,6 +1899,57 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**EmailSetup**](EmailSetup.html)
+
+<a name="getRoutingLanguage"></a>
+
+# **getRoutingLanguage**
+
+
+
+> [Language](Language.html) getRoutingLanguage(languageId)
+
+Get a routing language
+
+
+
+Wraps GET /api/v2/routing/languages/{languageId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageId: String = "" // Language ID
+
+// Code example
+RoutingAPI.getRoutingLanguage(languageId: languageId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingLanguage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageId** | **String**| Language ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Language**](Language.html)
 
 <a name="getRoutingLanguages"></a>
 

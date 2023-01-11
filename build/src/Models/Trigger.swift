@@ -26,14 +26,16 @@ public class Trigger: Codable {
     public var enabled: Bool?
     /** The configuration for when a trigger is considered to be a match for an event */
     public var matchCriteria: [MatchCriteria]?
-    /** How long each event is meaningful after origination, in seconds. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely. */
+    /** Optional length of time that events are meaningful after origination. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely, otherwise must be set to at least 10 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. */
     public var eventTTLSeconds: Int?
+    /** Optional delay invoking target after trigger fires. Must be in the range of 60 to 900 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. Until delayed triggers are released supplying this attribute will cause a failure. */
+    public var delayBySeconds: Int?
     /** Description of the trigger. Can be up to 512 characters in length. */
     public var _description: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, topicName: String?, target: TriggerTarget?, version: Int64?, enabled: Bool?, matchCriteria: [MatchCriteria]?, eventTTLSeconds: Int?, _description: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, topicName: String?, target: TriggerTarget?, version: Int64?, enabled: Bool?, matchCriteria: [MatchCriteria]?, eventTTLSeconds: Int?, delayBySeconds: Int?, _description: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.topicName = topicName
@@ -42,6 +44,7 @@ public class Trigger: Codable {
         self.enabled = enabled
         self.matchCriteria = matchCriteria
         self.eventTTLSeconds = eventTTLSeconds
+        self.delayBySeconds = delayBySeconds
         self._description = _description
         self.selfUri = selfUri
     }
@@ -55,6 +58,7 @@ public class Trigger: Codable {
         case enabled
         case matchCriteria
         case eventTTLSeconds
+        case delayBySeconds
         case _description = "description"
         case selfUri
     }

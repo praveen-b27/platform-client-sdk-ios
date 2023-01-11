@@ -260,22 +260,11 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
-      "postback" : "{}",
-      "buttonResponse" : "{}",
-      "list" : "{}",
-      "carousel" : "{}",
-      "generic" : "{}",
-      "mention" : "{}",
       "attachment" : "{}",
+      "buttonResponse" : "{}",
       "location" : "{}",
-      "reactions" : [ {
-        "reactionType" : "Like",
-        "count" : 0
-      }, {
-        "reactionType" : "Like",
-        "count" : 0
-      } ],
       "text" : "{}",
+      "carousel" : "{}",
       "contentType" : "Attachment",
       "card" : "{}",
       "story" : "{}"
@@ -283,22 +272,11 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
-      "postback" : "{}",
-      "buttonResponse" : "{}",
-      "list" : "{}",
-      "carousel" : "{}",
-      "generic" : "{}",
-      "mention" : "{}",
       "attachment" : "{}",
+      "buttonResponse" : "{}",
       "location" : "{}",
-      "reactions" : [ {
-        "reactionType" : "Like",
-        "count" : 0
-      }, {
-        "reactionType" : "Like",
-        "count" : 0
-      } ],
       "text" : "{}",
+      "carousel" : "{}",
       "contentType" : "Attachment",
       "card" : "{}",
       "story" : "{}"
@@ -310,22 +288,11 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
-      "postback" : "{}",
-      "buttonResponse" : "{}",
-      "list" : "{}",
-      "carousel" : "{}",
-      "generic" : "{}",
-      "mention" : "{}",
       "attachment" : "{}",
+      "buttonResponse" : "{}",
       "location" : "{}",
-      "reactions" : [ {
-        "reactionType" : "Like",
-        "count" : 0
-      }, {
-        "reactionType" : "Like",
-        "count" : 0
-      } ],
       "text" : "{}",
+      "carousel" : "{}",
       "contentType" : "Attachment",
       "card" : "{}",
       "story" : "{}"
@@ -333,22 +300,11 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
-      "postback" : "{}",
-      "buttonResponse" : "{}",
-      "list" : "{}",
-      "carousel" : "{}",
-      "generic" : "{}",
-      "mention" : "{}",
       "attachment" : "{}",
+      "buttonResponse" : "{}",
       "location" : "{}",
-      "reactions" : [ {
-        "reactionType" : "Like",
-        "count" : 0
-      }, {
-        "reactionType" : "Like",
-        "count" : 0
-      } ],
       "text" : "{}",
+      "carousel" : "{}",
       "contentType" : "Attachment",
       "card" : "{}",
       "story" : "{}"

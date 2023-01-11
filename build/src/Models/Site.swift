@@ -64,10 +64,18 @@ public class Site: Codable {
     public var coreSite: Bool?
     /** The site connections */
     public var siteConnections: [SiteConnection]?
+    /** The ordered list of AWS regions through which media can stream. */
+    public var mediaRegions: [String]?
+    /** The caller ID value for the site. */
+    public var callerId: String?
+    /** The caller name for the site. */
+    public var callerName: String?
+    /** Enables premises Edge Force Turn  */
+    public var cloudProxyForceTurn: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, mediaModel: MediaModel?, coreSite: Bool?, siteConnections: [SiteConnection]?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, mediaModel: MediaModel?, coreSite: Bool?, siteConnections: [SiteConnection]?, mediaRegions: [String]?, callerId: String?, callerName: String?, cloudProxyForceTurn: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -94,6 +102,10 @@ public class Site: Codable {
         self.mediaModel = mediaModel
         self.coreSite = coreSite
         self.siteConnections = siteConnections
+        self.mediaRegions = mediaRegions
+        self.callerId = callerId
+        self.callerName = callerName
+        self.cloudProxyForceTurn = cloudProxyForceTurn
         self.selfUri = selfUri
     }
 
@@ -124,6 +136,10 @@ public class Site: Codable {
         case mediaModel
         case coreSite
         case siteConnections
+        case mediaRegions
+        case callerId
+        case callerName
+        case cloudProxyForceTurn
         case selfUri
     }
 

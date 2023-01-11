@@ -13,6 +13,7 @@ title: KnowledgeDocumentGuestSearch
 | **searchId** | **String** | The globally unique identifier for the search. | [optional] |
 | **total** | **Int** | The total number of documents matching the query. | [optional] |
 | **pageCount** | **Int** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
+| **queryType** | **String** | The type of the query that initiates the search. | [optional] |
 | **sessionId** | **String** | Session ID of the search. | [optional] |
 | **results** | [**[KnowledgeDocumentGuestSearchResult]**](KnowledgeDocumentGuestSearchResult.html) | Documents that matched the search query. | [optional] |
 {: class="table table-striped"}

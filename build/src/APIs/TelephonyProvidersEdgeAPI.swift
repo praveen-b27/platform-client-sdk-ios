@@ -9783,6 +9783,7 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "description" : "description",
   "createdByApp" : "createdByApp",
+  "callerName" : "callerName",
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "primaryEdges" : [ {
@@ -10058,8 +10059,10 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "managed" : true,
   "modifiedBy" : "modifiedBy",
+  "cloudProxyForceTurn" : true,
   "id" : "id",
   "state" : "active",
+  "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
   "coreSite" : true,
   "selfUri" : "https://openapi-generator.tech",
   "edges" : [ {
@@ -10351,6 +10354,7 @@ open class TelephonyProvidersEdgeAPI {
   "modifiedByApp" : "modifiedByApp",
   "location" : "{}",
   "mediaModel" : "Premises",
+  "callerId" : "callerId",
   "siteConnections" : [ {
     "coreSite" : true,
     "managed" : true,
@@ -11342,6 +11346,7 @@ open class TelephonyProvidersEdgeAPI {
     } ],
     "description" : "description",
     "createdByApp" : "createdByApp",
+    "callerName" : "callerName",
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "primaryEdges" : [ {
@@ -11617,8 +11622,10 @@ open class TelephonyProvidersEdgeAPI {
     } ],
     "managed" : true,
     "modifiedBy" : "modifiedBy",
+    "cloudProxyForceTurn" : true,
     "id" : "id",
     "state" : "active",
+    "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
     "coreSite" : true,
     "selfUri" : "https://openapi-generator.tech",
     "edges" : [ {
@@ -11910,6 +11917,7 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "modifiedByApp",
     "location" : "{}",
     "mediaModel" : "Premises",
+    "callerId" : "callerId",
     "siteConnections" : [ {
       "coreSite" : true,
       "managed" : true,
@@ -12384,6 +12392,7 @@ open class TelephonyProvidersEdgeAPI {
     } ],
     "description" : "description",
     "createdByApp" : "createdByApp",
+    "callerName" : "callerName",
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "primaryEdges" : [ {
@@ -12659,8 +12668,10 @@ open class TelephonyProvidersEdgeAPI {
     } ],
     "managed" : true,
     "modifiedBy" : "modifiedBy",
+    "cloudProxyForceTurn" : true,
     "id" : "id",
     "state" : "active",
+    "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
     "coreSite" : true,
     "selfUri" : "https://openapi-generator.tech",
     "edges" : [ {
@@ -12952,6 +12963,7 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "modifiedByApp",
     "location" : "{}",
     "mediaModel" : "Premises",
+    "callerId" : "callerId",
     "siteConnections" : [ {
       "coreSite" : true,
       "managed" : true,
@@ -16741,6 +16753,7 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "description" : "description",
   "createdByApp" : "createdByApp",
+  "callerName" : "callerName",
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "primaryEdges" : [ {
@@ -17016,8 +17029,10 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "managed" : true,
   "modifiedBy" : "modifiedBy",
+  "cloudProxyForceTurn" : true,
   "id" : "id",
   "state" : "active",
+  "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
   "coreSite" : true,
   "selfUri" : "https://openapi-generator.tech",
   "edges" : [ {
@@ -17309,6 +17324,7 @@ open class TelephonyProvidersEdgeAPI {
   "modifiedByApp" : "modifiedByApp",
   "location" : "{}",
   "mediaModel" : "Premises",
+  "callerId" : "callerId",
   "siteConnections" : [ {
     "coreSite" : true,
     "managed" : true,
@@ -19832,6 +19848,7 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "description" : "description",
   "createdByApp" : "createdByApp",
+  "callerName" : "callerName",
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "primaryEdges" : [ {
@@ -20107,8 +20124,10 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "managed" : true,
   "modifiedBy" : "modifiedBy",
+  "cloudProxyForceTurn" : true,
   "id" : "id",
   "state" : "active",
+  "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
   "coreSite" : true,
   "selfUri" : "https://openapi-generator.tech",
   "edges" : [ {
@@ -20400,6 +20419,7 @@ open class TelephonyProvidersEdgeAPI {
   "modifiedByApp" : "modifiedByApp",
   "location" : "{}",
   "mediaModel" : "Premises",
+  "callerId" : "callerId",
   "siteConnections" : [ {
     "coreSite" : true,
     "managed" : true,

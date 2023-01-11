@@ -8,14 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteLanguage**](LanguagesAPI.html#deleteLanguage) | Delete Language (Deprecated) |
-| [**deleteRoutingLanguage**](LanguagesAPI.html#deleteRoutingLanguage) | Delete Language |
-| [**getLanguage**](LanguagesAPI.html#getLanguage) | Get language (Deprecated) |
+| [**getLanguage**](LanguagesAPI.html#getLanguage) | Get Language (Deprecated) |
 | [**getLanguages**](LanguagesAPI.html#getLanguages) | Get the list of supported languages. (Deprecated) |
 | [**getLanguagesTranslations**](LanguagesAPI.html#getLanguagesTranslations) | Get all available languages for translation |
 | [**getLanguagesTranslationsBuiltin**](LanguagesAPI.html#getLanguagesTranslationsBuiltin) | Get the builtin translation for a language |
 | [**getLanguagesTranslationsOrganization**](LanguagesAPI.html#getLanguagesTranslationsOrganization) | Get effective translation for an organization by language |
 | [**getLanguagesTranslationsUser**](LanguagesAPI.html#getLanguagesTranslationsUser) | Get effective language translation for a user |
-| [**getRoutingLanguage**](LanguagesAPI.html#getRoutingLanguage) | Get language |
 | [**postLanguages**](LanguagesAPI.html#postLanguages) | Create Language (Deprecated) |
 {: class="table-striped"}
 
@@ -29,7 +27,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete Language (Deprecated)
 
-This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
 
 
 
@@ -72,57 +70,6 @@ LanguagesAPI.deleteLanguage(languageId: languageId) { (error) in
 
 `nil` (empty response body)
 
-<a name="deleteRoutingLanguage"></a>
-
-# **deleteRoutingLanguage**
-
-
-
-> Void deleteRoutingLanguage(languageId)
-
-Delete Language
-
-
-
-Wraps DELETE /api/v2/routing/languages/{languageId}  
-
-Requires ANY permissions: 
-
-* routing:skill:manage
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let languageId: String = "" // Language ID
-
-// Code example
-LanguagesAPI.deleteRoutingLanguage(languageId: languageId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("LanguagesAPI.deleteRoutingLanguage was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **languageId** | **String**| Language ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
 <a name="getLanguage"></a>
 
 # **getLanguage**
@@ -131,9 +78,9 @@ LanguagesAPI.deleteRoutingLanguage(languageId: languageId) { (error) in
 
 > [Language](Language.html) getLanguage(languageId)
 
-Get language (Deprecated)
+Get Language (Deprecated)
 
-This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
 
 
 
@@ -187,7 +134,7 @@ LanguagesAPI.getLanguage(languageId: languageId) { (response, error) in
 
 Get the list of supported languages. (Deprecated)
 
-This endpoint is deprecated. It has been moved to /routing/languages
+This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
 
 
 
@@ -437,57 +384,6 @@ LanguagesAPI.getLanguagesTranslationsUser(userId: userId) { (response, error) in
 
 [**[String:JSON]**](JSON.html)
 
-<a name="getRoutingLanguage"></a>
-
-# **getRoutingLanguage**
-
-
-
-> [Language](Language.html) getRoutingLanguage(languageId)
-
-Get language
-
-
-
-Wraps GET /api/v2/routing/languages/{languageId}  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let languageId: String = "" // Language ID
-
-// Code example
-LanguagesAPI.getRoutingLanguage(languageId: languageId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("LanguagesAPI.getRoutingLanguage was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **languageId** | **String**| Language ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**Language**](Language.html)
-
 <a name="postLanguages"></a>
 
 # **postLanguages**
@@ -498,7 +394,7 @@ LanguagesAPI.getRoutingLanguage(languageId: languageId) { (response, error) in
 
 Create Language (Deprecated)
 
-This endpoint is deprecated. It has been moved to /routing/languages
+This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
 
 
 

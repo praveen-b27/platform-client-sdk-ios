@@ -15,6 +15,7 @@ public class IpAddressRange: Codable {
         case dataActions = "data-actions"
         case smtp = "smtp"
         case audiohook = "audiohook"
+        case api = "api"
     }
     public var cidr: String?
     public var service: Service?

@@ -23,14 +23,17 @@ public class HistoricalShrinkageResult: Codable {
     public var aggregatedShrinkage: HistoricalShrinkageAggregateResponse?
     /** Shrinkage for activity categories */
     public var shrinkageForActivityCategories: [HistoricalShrinkageActivityCategoryResponse]?
+    /** List of all business units of all the agents in response */
+    public var businessUnitIds: [String]?
 
-    public init(startDate: Date?, endDate: Date?, totalScheduledDurationSeconds: Int?, totalLoggedInDurationSeconds: Int?, aggregatedShrinkage: HistoricalShrinkageAggregateResponse?, shrinkageForActivityCategories: [HistoricalShrinkageActivityCategoryResponse]?) {
+    public init(startDate: Date?, endDate: Date?, totalScheduledDurationSeconds: Int?, totalLoggedInDurationSeconds: Int?, aggregatedShrinkage: HistoricalShrinkageAggregateResponse?, shrinkageForActivityCategories: [HistoricalShrinkageActivityCategoryResponse]?, businessUnitIds: [String]?) {
         self.startDate = startDate
         self.endDate = endDate
         self.totalScheduledDurationSeconds = totalScheduledDurationSeconds
         self.totalLoggedInDurationSeconds = totalLoggedInDurationSeconds
         self.aggregatedShrinkage = aggregatedShrinkage
         self.shrinkageForActivityCategories = shrinkageForActivityCategories
+        self.businessUnitIds = businessUnitIds
     }
 
 

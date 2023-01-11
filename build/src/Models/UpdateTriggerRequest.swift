@@ -23,12 +23,14 @@ public class UpdateTriggerRequest: Codable {
     public var name: String?
     /** The topic that will cause the trigger to be invoked. Must match existing trigger topicName. */
     public var topicName: String?
-    /** How long each event is meaningful after origination, in seconds. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely. */
+    /** Optional length of time that events are meaningful after origination. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely, otherwise must be set to at least 10 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. */
     public var eventTTLSeconds: Int?
+    /** Optional delay invoking target after trigger fires. Must be in the range of 60 to 900 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. Until delayed triggers are released supplying this attribute will cause a failure. */
+    public var delayBySeconds: Int?
     /** Description of the trigger. Can be up to 512 characters in length. */
     public var _description: String?
 
-    public init(version: Int64?, enabled: Bool?, target: TriggerTarget?, matchCriteria: [MatchCriteria]?, name: String?, topicName: String?, eventTTLSeconds: Int?, _description: String?) {
+    public init(version: Int64?, enabled: Bool?, target: TriggerTarget?, matchCriteria: [MatchCriteria]?, name: String?, topicName: String?, eventTTLSeconds: Int?, delayBySeconds: Int?, _description: String?) {
         self.version = version
         self.enabled = enabled
         self.target = target
@@ -36,6 +38,7 @@ public class UpdateTriggerRequest: Codable {
         self.name = name
         self.topicName = topicName
         self.eventTTLSeconds = eventTTLSeconds
+        self.delayBySeconds = delayBySeconds
         self._description = _description
     }
 
@@ -47,6 +50,7 @@ public class UpdateTriggerRequest: Codable {
         case name
         case topicName
         case eventTTLSeconds
+        case delayBySeconds
         case _description = "description"
     }
 

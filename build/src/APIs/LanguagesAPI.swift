@@ -31,7 +31,7 @@ open class LanguagesAPI {
     /**
      Delete Language (Deprecated)
      - DELETE /api/v2/languages/{languageId}
-     - This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+     - This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -57,51 +57,7 @@ open class LanguagesAPI {
 
     
     /**
-     Delete Language
-     
-     - parameter languageId: (path) Language ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func deleteRoutingLanguage(languageId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteRoutingLanguageWithRequestBuilder(languageId: languageId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Delete Language
-     - DELETE /api/v2/routing/languages/{languageId}
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     
-     - parameter languageId: (path) Language ID 
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func deleteRoutingLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Void> {        
-        var path = "/api/v2/routing/languages/{languageId}"
-        let languageIdPreEscape = "\(languageId)"
-        let languageIdPostEscape = languageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{languageId}", with: languageIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
-    }
-
-    
-    /**
-     Get language (Deprecated)
+     Get Language (Deprecated)
      
      - parameter languageId: (path) Language ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -125,9 +81,9 @@ open class LanguagesAPI {
     }
 
     /**
-     Get language (Deprecated)
+     Get Language (Deprecated)
      - GET /api/v2/languages/{languageId}
-     - This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+     - This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -199,7 +155,7 @@ open class LanguagesAPI {
     /**
      Get the list of supported languages. (Deprecated)
      - GET /api/v2/languages
-     - This endpoint is deprecated. It has been moved to /routing/languages
+     - This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -458,65 +414,6 @@ open class LanguagesAPI {
 
     
     /**
-     Get language
-     
-     - parameter languageId: (path) Language ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getRoutingLanguage(languageId: String, completion: @escaping ((_ data: Language?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingLanguageWithRequestBuilder(languageId: languageId)
-        requestBuilder.execute { (response: Response<Language>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get language
-     - GET /api/v2/routing/languages/{languageId}
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "id" : "id",
-  "state" : "active",
-  "version" : "version"
-}, statusCode=200}]
-     
-     - parameter languageId: (path) Language ID 
-
-     - returns: RequestBuilder<Language> 
-     */
-    open class func getRoutingLanguageWithRequestBuilder(languageId: String) -> RequestBuilder<Language> {        
-        var path = "/api/v2/routing/languages/{languageId}"
-        let languageIdPreEscape = "\(languageId)"
-        let languageIdPostEscape = languageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{languageId}", with: languageIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Language>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
-    /**
      Create Language (Deprecated)
      
      - parameter body: (body) Language 
@@ -543,7 +440,7 @@ open class LanguagesAPI {
     /**
      Create Language (Deprecated)
      - POST /api/v2/languages
-     - This endpoint is deprecated. It has been moved to /routing/languages
+     - This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

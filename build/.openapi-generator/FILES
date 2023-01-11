@@ -1710,6 +1710,8 @@ docs/KnowledgeCategory.md
 docs/KnowledgeCategoryRequest.md
 docs/KnowledgeContextReference.md
 docs/KnowledgeContextValueReference.md
+docs/KnowledgeConversationContext.md
+docs/KnowledgeConversationContextResponse.md
 docs/KnowledgeDocument.md
 docs/KnowledgeDocumentAlternative.md
 docs/KnowledgeDocumentBulkRequest.md
@@ -2551,6 +2553,8 @@ docs/RecordingRetentionCursorEntityListing.md
 docs/RecordingSettings.md
 docs/RecordingTranscodeCompleteTopicMediaResult.md
 docs/RecordingTranscodeCompleteTopicRecording.md
+docs/RecordingUploadReport.md
+docs/RecordingUploadReportRequest.md
 docs/Referrer.md
 docs/RegionTimeZone.md
 docs/RegisterArchitectJobResponse.md
@@ -3297,6 +3301,7 @@ docs/ValidateWorkPlanResponse.md
 docs/ValidationLimits.md
 docs/ValidationServiceRequest.md
 docs/ValueWrapperDate.md
+docs/ValueWrapperHrisTimeOffType.md
 docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/VerificationResult.md
@@ -4410,6 +4415,7 @@ docs/getRecordingMediaretentionpolicy-example.txt
 docs/getRecordingRecordingkeys-example.txt
 docs/getRecordingRecordingkeysRotationschedule-example.txt
 docs/getRecordingSettings-example.txt
+docs/getRecordingUploadsReport-example.txt
 docs/getRecordingsRetentionQuery-example.txt
 docs/getRecordingsScreensessions-example.txt
 docs/getResponsemanagementLibraries-example.txt
@@ -5203,6 +5209,7 @@ docs/postRecordingLocalkeys-example.txt
 docs/postRecordingLocalkeysSettings-example.txt
 docs/postRecordingMediaretentionpolicies-example.txt
 docs/postRecordingRecordingkeys-example.txt
+docs/postRecordingUploadsReports-example.txt
 docs/postRecordingsDeletionprotection-example.txt
 docs/postRecordingsScreensessionsAcknowledge-example.txt
 docs/postRecordingsScreensessionsMetadata-example.txt
@@ -7289,6 +7296,8 @@ src/Models/KnowledgeCategory.swift
 src/Models/KnowledgeCategoryRequest.swift
 src/Models/KnowledgeContextReference.swift
 src/Models/KnowledgeContextValueReference.swift
+src/Models/KnowledgeConversationContext.swift
+src/Models/KnowledgeConversationContextResponse.swift
 src/Models/KnowledgeDocument.swift
 src/Models/KnowledgeDocumentAlternative.swift
 src/Models/KnowledgeDocumentBulkRequest.swift
@@ -8098,6 +8107,8 @@ src/Models/RecordingRetentionCursorEntityListing.swift
 src/Models/RecordingSettings.swift
 src/Models/RecordingTranscodeCompleteTopicMediaResult.swift
 src/Models/RecordingTranscodeCompleteTopicRecording.swift
+src/Models/RecordingUploadReport.swift
+src/Models/RecordingUploadReportRequest.swift
 src/Models/Referrer.swift
 src/Models/RegionTimeZone.swift
 src/Models/RegisterArchitectJobResponse.swift
@@ -8807,6 +8818,7 @@ src/Models/ValidateWorkPlanResponse.swift
 src/Models/ValidationLimits.swift
 src/Models/ValidationServiceRequest.swift
 src/Models/ValueWrapperDate.swift
+src/Models/ValueWrapperHrisTimeOffType.swift
 src/Models/ValueWrapperPlanningPeriodSettings.swift
 src/Models/ValueWrapperString.swift
 src/Models/VerificationResult.swift

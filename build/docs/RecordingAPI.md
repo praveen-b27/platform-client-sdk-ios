@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRecordingRecordingkeys**](RecordingAPI.html#getRecordingRecordingkeys) | Get encryption key list |
 | [**getRecordingRecordingkeysRotationschedule**](RecordingAPI.html#getRecordingRecordingkeysRotationschedule) | Get key rotation schedule |
 | [**getRecordingSettings**](RecordingAPI.html#getRecordingSettings) | Get the Recording Settings for the Organization |
+| [**getRecordingUploadsReport**](RecordingAPI.html#getRecordingUploadsReport) | Get the status of a recording upload status report |
 | [**getRecordingsRetentionQuery**](RecordingAPI.html#getRecordingsRetentionQuery) | Query for recording retention data |
 | [**getRecordingsScreensessions**](RecordingAPI.html#getRecordingsScreensessions) | Retrieves a paged listing of screen recording sessions |
 | [**patchRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#patchRecordingCrossplatformMediaretentionpolicy) | Patch a media retention policy |
@@ -53,6 +54,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRecordingLocalkeysSettings**](RecordingAPI.html#postRecordingLocalkeysSettings) | create settings for local key creation. Replaced by API recording/keyconfigurations |
 | [**postRecordingMediaretentionpolicies**](RecordingAPI.html#postRecordingMediaretentionpolicies) | Create media retention policy |
 | [**postRecordingRecordingkeys**](RecordingAPI.html#postRecordingRecordingkeys) | Create encryption key |
+| [**postRecordingUploadsReports**](RecordingAPI.html#postRecordingUploadsReports) | Creates a recording upload status report |
 | [**postRecordingsDeletionprotection**](RecordingAPI.html#postRecordingsDeletionprotection) | Get a list of conversations with protected recordings |
 | [**postRecordingsScreensessionsAcknowledge**](RecordingAPI.html#postRecordingsScreensessionsAcknowledge) | Acknowledge a screen recording. |
 | [**postRecordingsScreensessionsMetadata**](RecordingAPI.html#postRecordingsScreensessionsMetadata) | Provide meta-data a screen recording. |
@@ -1807,6 +1809,58 @@ RecordingAPI.getRecordingSettings(createDefault: createDefault) { (response, err
 
 [**RecordingSettings**](RecordingSettings.html)
 
+<a name="getRecordingUploadsReport"></a>
+
+# **getRecordingUploadsReport**
+
+
+
+> [RecordingUploadReport](RecordingUploadReport.html) getRecordingUploadsReport(reportId)
+
+Get the status of a recording upload status report
+
+
+
+Wraps GET /api/v2/recording/uploads/reports/{reportId}  
+
+Requires ALL permissions: 
+
+* recording:uploadReport:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let reportId: String = "" // reportId
+
+// Code example
+RecordingAPI.getRecordingUploadsReport(reportId: reportId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.getRecordingUploadsReport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **reportId** | **String**| reportId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**RecordingUploadReport**](RecordingUploadReport.html)
+
 <a name="getRecordingsRetentionQuery"></a>
 
 # **getRecordingsRetentionQuery**
@@ -2604,6 +2658,58 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**EncryptionKey**](EncryptionKey.html)
+
+<a name="postRecordingUploadsReports"></a>
+
+# **postRecordingUploadsReports**
+
+
+
+> [RecordingUploadReport](RecordingUploadReport.html) postRecordingUploadsReports(body)
+
+Creates a recording upload status report
+
+
+
+Wraps POST /api/v2/recording/uploads/reports  
+
+Requires ALL permissions: 
+
+* recording:uploadReport:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: RecordingUploadReportRequest = new RecordingUploadReportRequest(...) // Report parameters
+
+// Code example
+RecordingAPI.postRecordingUploadsReports(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.postRecordingUploadsReports was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**RecordingUploadReportRequest**](RecordingUploadReportRequest.html)| Report parameters | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**RecordingUploadReport**](RecordingUploadReport.html)
 
 <a name="postRecordingsDeletionprotection"></a>
 

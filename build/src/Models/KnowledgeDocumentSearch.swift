@@ -11,6 +11,11 @@ import Foundation
 
 public class KnowledgeDocumentSearch: Codable {
 
+    public enum QueryType: String, Codable { 
+        case autoSearch = "AutoSearch"
+        case manualSearch = "ManualSearch"
+        case suggestion = "Suggestion"
+    }
     /** Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. */
     public var query: String?
     /** Page size of the returned results. */
@@ -23,20 +28,26 @@ public class KnowledgeDocumentSearch: Codable {
     public var total: Int?
     /** Number of pages returned in the result calculated according to the pageSize and the total */
     public var pageCount: Int?
+    /** The type of the query that initiates the search. */
+    public var queryType: QueryType?
     /** Documents matching the search query. */
     public var results: [KnowledgeDocumentSearchResult]?
     /** The client application details from which search happened. */
     public var application: KnowledgeSearchClientApplication?
+    /** Conversation context information if the search is initiated in the context of a conversation. */
+    public var conversationContext: KnowledgeConversationContextResponse?
 
-    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, results: [KnowledgeDocumentSearchResult]?, application: KnowledgeSearchClientApplication?) {
+    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, results: [KnowledgeDocumentSearchResult]?, application: KnowledgeSearchClientApplication?, conversationContext: KnowledgeConversationContextResponse?) {
         self.query = query
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.searchId = searchId
         self.total = total
         self.pageCount = pageCount
+        self.queryType = queryType
         self.results = results
         self.application = application
+        self.conversationContext = conversationContext
     }
 
 

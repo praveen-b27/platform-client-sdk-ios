@@ -116,6 +116,7 @@ public class ReportingExportJobResponse: Codable {
         case knowledgePerformanceView = "KNOWLEDGE_PERFORMANCE_VIEW"
         case agentScorecardInsightsSummaryView = "AGENT_SCORECARD_INSIGHTS_SUMMARY_VIEW"
         case agentScorecardInsightsDetailView = "AGENT_SCORECARD_INSIGHTS_DETAIL_VIEW"
+        case queueWrapupDetailView = "QUEUE_WRAPUP_DETAIL_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

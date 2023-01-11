@@ -13,6 +13,7 @@ title: HistoricalShrinkageResult
 | **totalLoggedInDurationSeconds** | **Int** | Total duration in seconds for which agents in the management unit are actually logged-in | [optional] |
 | **aggregatedShrinkage** | [**HistoricalShrinkageAggregateResponse**](HistoricalShrinkageAggregateResponse.html) | Aggregated shrinkage data for all the activity categories | [optional] |
 | **shrinkageForActivityCategories** | [**[HistoricalShrinkageActivityCategoryResponse]**](HistoricalShrinkageActivityCategoryResponse.html) | Shrinkage for activity categories | [optional] |
+| **businessUnitIds** | **[String]** | List of all business units of all the agents in response | [optional] |
 {: class="table table-striped"}
 
 

@@ -4892,7 +4892,7 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 1, 1 ],
+  "errorIndexes" : [ 6, 6 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
@@ -5290,7 +5290,7 @@ open class ExternalContactsAPI {
       "surveyOptOut" : true
     }
   } ],
-  "errorCount" : 6
+  "errorCount" : 0
 }, statusCode=200}]
      
      - parameter body: (body) Contact ids 
@@ -6138,7 +6138,7 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
@@ -6184,7 +6184,7 @@ open class ExternalContactsAPI {
     },
     "entity" : "{}"
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Contact ids 
@@ -6235,7 +6235,7 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 1, 1 ],
+  "errorIndexes" : [ 6, 6 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
@@ -6633,7 +6633,7 @@ open class ExternalContactsAPI {
       "surveyOptOut" : true
     }
   } ],
-  "errorCount" : 6
+  "errorCount" : 0
 }, statusCode=200}]
      
      - parameter body: (body) Contact ids 
@@ -7767,7 +7767,7 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
@@ -7813,7 +7813,7 @@ open class ExternalContactsAPI {
     },
     "entity" : "{}"
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Note ids 
@@ -8643,7 +8643,7 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
@@ -8689,7 +8689,7 @@ open class ExternalContactsAPI {
     },
     "entity" : "{}"
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Organization ids 
@@ -9389,7 +9389,7 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
@@ -9435,7 +9435,7 @@ open class ExternalContactsAPI {
     },
     "entity" : "{}"
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Relationships ids 

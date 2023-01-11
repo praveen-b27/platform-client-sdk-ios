@@ -16947,19 +16947,6 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet languageId: String = \"\" // Language ID\n\n// Delete Language (Deprecated)\nDeleteLanguageRequest.deleteLanguage(languageId: languageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteLanguageRequest.deleteLanguage was successful\")\n    }\n}"
   },
-  "deleteroutinglanguage": {
-    "operationId": "deleteroutinglanguage",
-    "functionName": "deleteRoutingLanguage",
-    "signature": "deleteRoutingLanguage(languageId)",
-    "parameters": [
-      {
-        "name": "languageId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet languageId: String = \"\" // Language ID\n\n// Delete Language\nDeleteRoutingLanguageRequest.deleteRoutingLanguage(languageId: languageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteRoutingLanguageRequest.deleteRoutingLanguage was successful\")\n    }\n}"
-  },
   "getlanguage": {
     "operationId": "getlanguage",
     "functionName": "getLanguage",
@@ -16972,7 +16959,7 @@
       }
     ],
     "return": "Language",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet languageId: String = \"\" // Language ID\n\n// Get language (Deprecated)\nGetLanguageRequest.getLanguage(languageId: languageId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageRequest.getLanguage was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet languageId: String = \"\" // Language ID\n\n// Get Language (Deprecated)\nGetLanguageRequest.getLanguage(languageId: languageId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageRequest.getLanguage was successful\")\n        dump(response)\n    }\n}"
   },
   "getlanguages": {
     "operationId": "getlanguages",
@@ -17051,20 +17038,6 @@
     ],
     "return": "[String:JSON]",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The user id\n\n// Get effective language translation for a user\nGetLanguagesTranslationsUserRequest.getLanguagesTranslationsUser(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguagesTranslationsUserRequest.getLanguagesTranslationsUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getroutinglanguage": {
-    "operationId": "getroutinglanguage",
-    "functionName": "getRoutingLanguage",
-    "signature": "getRoutingLanguage(languageId)",
-    "parameters": [
-      {
-        "name": "languageId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "Language",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet languageId: String = \"\" // Language ID\n\n// Get language\nGetRoutingLanguageRequest.getRoutingLanguage(languageId: languageId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingLanguageRequest.getRoutingLanguage was successful\")\n        dump(response)\n    }\n}"
   },
   "postlanguages": {
     "operationId": "postlanguages",
@@ -22255,7 +22228,7 @@
   "getprocessautomationtriggers": {
     "operationId": "getprocessautomationtriggers",
     "functionName": "getProcessautomationTriggers",
-    "signature": "getProcessautomationTriggers(before, after, pageSize, topicName, enabled)",
+    "signature": "getProcessautomationTriggers(before, after, pageSize, topicName, enabled, hasDelayBy)",
     "parameters": [
       {
         "name": "before",
@@ -22281,10 +22254,15 @@
         "name": "enabled",
         "type": "Bool",
         "required": "false"
+      },
+      {
+        "name": "hasDelayBy",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "TriggerEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet topicName: String = \"\" // Topic name(s). Separated by commas\nlet enabled: Bool = true // Boolean indicating desired enabled state of triggers\n\n// Retrieves all triggers, optionally filtered by query parameters.\nGetProcessautomationTriggersRequest.getProcessautomationTriggers(before: before, after: after, pageSize: pageSize, topicName: topicName, enabled: enabled) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetProcessautomationTriggersRequest.getProcessautomationTriggers was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet topicName: String = \"\" // Topic name(s). Separated by commas\nlet enabled: Bool = true // Boolean indicating desired enabled state of triggers\nlet hasDelayBy: Bool = true // Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set.\n\n// Retrieves all triggers, optionally filtered by query parameters.\nGetProcessautomationTriggersRequest.getProcessautomationTriggers(before: before, after: after, pageSize: pageSize, topicName: topicName, enabled: enabled, hasDelayBy: hasDelayBy) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetProcessautomationTriggersRequest.getProcessautomationTriggers was successful\")\n        dump(response)\n    }\n}"
   },
   "getprocessautomationtriggerstopics": {
     "operationId": "getprocessautomationtriggerstopics",
@@ -24387,6 +24365,20 @@
     "return": "RecordingSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet createDefault: Bool = true // If no settings are found, a new one is created with default values\n\n// Get the Recording Settings for the Organization\nGetRecordingSettingsRequest.getRecordingSettings(createDefault: createDefault) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingSettingsRequest.getRecordingSettings was successful\")\n        dump(response)\n    }\n}"
   },
+  "getrecordinguploadsreport": {
+    "operationId": "getrecordinguploadsreport",
+    "functionName": "getRecordingUploadsReport",
+    "signature": "getRecordingUploadsReport(reportId)",
+    "parameters": [
+      {
+        "name": "reportId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "RecordingUploadReport",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet reportId: String = \"\" // reportId\n\n// Get the status of a recording upload status report\nGetRecordingUploadsReportRequest.getRecordingUploadsReport(reportId: reportId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingUploadsReportRequest.getRecordingUploadsReport was successful\")\n        dump(response)\n    }\n}"
+  },
   "getrecordingsretentionquery": {
     "operationId": "getrecordingsretentionquery",
     "functionName": "getRecordingsRetentionQuery",
@@ -24628,6 +24620,20 @@
     "signature": "postRecordingRecordingkeys()",
     "return": "EncryptionKey",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Create encryption key\nPostRecordingRecordingkeysRequest.postRecordingRecordingkeys() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRecordingRecordingkeysRequest.postRecordingRecordingkeys was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postrecordinguploadsreports": {
+    "operationId": "postrecordinguploadsreports",
+    "functionName": "postRecordingUploadsReports",
+    "signature": "postRecordingUploadsReports(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "RecordingUploadReportRequest",
+        "required": "true"
+      }
+    ],
+    "return": "RecordingUploadReport",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RecordingUploadReportRequest = new RecordingUploadReportRequest(...) // Report parameters\n\n// Creates a recording upload status report\nPostRecordingUploadsReportsRequest.postRecordingUploadsReports(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRecordingUploadsReportsRequest.postRecordingUploadsReports was successful\")\n        dump(response)\n    }\n}"
   },
   "postrecordingsdeletionprotection": {
     "operationId": "postrecordingsdeletionprotection",
@@ -25239,6 +25245,19 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\n\n// Delete an outbound domain\nDeleteRoutingEmailOutboundDomainRequest.deleteRoutingEmailOutboundDomain(domainId: domainId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteRoutingEmailOutboundDomainRequest.deleteRoutingEmailOutboundDomain was successful\")\n    }\n}"
   },
+  "deleteroutinglanguage": {
+    "operationId": "deleteroutinglanguage",
+    "functionName": "deleteRoutingLanguage",
+    "signature": "deleteRoutingLanguage(languageId)",
+    "parameters": [
+      {
+        "name": "languageId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet languageId: String = \"\" // Language ID\n\n// Delete a routing language\nDeleteRoutingLanguageRequest.deleteRoutingLanguage(languageId: languageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteRoutingLanguageRequest.deleteRoutingLanguage was successful\")\n    }\n}"
+  },
   "deleteroutingpredictor": {
     "operationId": "deleteroutingpredictor",
     "functionName": "deleteRoutingPredictor",
@@ -25674,6 +25693,20 @@
     "signature": "getRoutingEmailSetup()",
     "return": "EmailSetup",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get email setup\nGetRoutingEmailSetupRequest.getRoutingEmailSetup() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailSetupRequest.getRoutingEmailSetup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getroutinglanguage": {
+    "operationId": "getroutinglanguage",
+    "functionName": "getRoutingLanguage",
+    "signature": "getRoutingLanguage(languageId)",
+    "parameters": [
+      {
+        "name": "languageId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Language",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet languageId: String = \"\" // Language ID\n\n// Get a routing language\nGetRoutingLanguageRequest.getRoutingLanguage(languageId: languageId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingLanguageRequest.getRoutingLanguage was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutinglanguages": {
     "operationId": "getroutinglanguages",

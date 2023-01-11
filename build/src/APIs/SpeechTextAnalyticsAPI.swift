@@ -1367,6 +1367,7 @@ open class SpeechTextAnalyticsAPI {
         case ptPt = "pt-PT"
         case nlNl = "nl-NL"
         case koKr = "ko-KR"
+        case jaJp = "ja-JP"
     }
 
     

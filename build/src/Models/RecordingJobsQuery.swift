@@ -17,8 +17,14 @@ public class RecordingJobsQuery: Codable {
     }
     /** Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. */
     public var action: Action?
-    /** The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var actionDate: Date?
+    /** The number of days after each recording's creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. */
+    public var actionAge: Int?
+    /** The date when the action will be performed for screen recordings. If this is provided then includeScreenRecordings must be true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var screenRecordingActionDate: Date?
+    /** The number of days after each screen recording's creation date when the action will be performed. If this is provided then includeScreenRecordings must be true. */
+    public var screenRecordingActionAge: Int?
     /** IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is required and used only for EXPORT action. */
     public var integrationId: String?
     /** Whether to include recordings with PCI DSS and/or PII data, default value = false  */
@@ -30,9 +36,12 @@ public class RecordingJobsQuery: Codable {
     /** Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability */
     public var conversationQuery: AsyncConversationQuery?
 
-    public init(action: Action?, actionDate: Date?, integrationId: String?, includeRecordingsWithSensitiveData: Bool?, includeScreenRecordings: Bool?, clearExport: Bool?, conversationQuery: AsyncConversationQuery?) {
+    public init(action: Action?, actionDate: Date?, actionAge: Int?, screenRecordingActionDate: Date?, screenRecordingActionAge: Int?, integrationId: String?, includeRecordingsWithSensitiveData: Bool?, includeScreenRecordings: Bool?, clearExport: Bool?, conversationQuery: AsyncConversationQuery?) {
         self.action = action
         self.actionDate = actionDate
+        self.actionAge = actionAge
+        self.screenRecordingActionDate = screenRecordingActionDate
+        self.screenRecordingActionAge = screenRecordingActionAge
         self.integrationId = integrationId
         self.includeRecordingsWithSensitiveData = includeRecordingsWithSensitiveData
         self.includeScreenRecordings = includeScreenRecordings

@@ -134,6 +134,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case verify = "Verify"
         case cancel = "Cancel"
         case hardDelete = "HardDelete"
+        case softDelete = "SoftDelete"
         case enableCapture = "EnableCapture"
         case downloadCapture = "DownloadCapture"
     }

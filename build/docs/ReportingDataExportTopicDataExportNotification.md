@@ -22,6 +22,7 @@ title: ReportingDataExportTopicDataExportNotification
 | **emailStatuses** | **[String:String]** |  | [optional] |
 | **emailErrorDescription** | **String** |  | [optional] |
 | **scheduleExpression** | **String** |  | [optional] |
+| **scheduleStaticLinkUrl** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

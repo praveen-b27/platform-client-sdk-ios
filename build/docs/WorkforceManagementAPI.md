@@ -23,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementAdherence) | Get a list of UserScheduleAdherence records for the requested users |
 | [**getWorkforcemanagementAdherenceExplanation**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceExplanation) | Get an adherence explanation for the current user |
 | [**getWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceExplanationsJob) | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementAdherenceHistoricalBulkJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalBulkJob) | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalJob) | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdhocmodelingjob**](WorkforceManagementAPI.html#getWorkforcemanagementAdhocmodelingjob) | Get status of the modeling job |
 | [**getWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI.html#getWorkforcemanagementAgentAdherenceExplanation) | Get an adherence explanation |
@@ -105,6 +106,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceExplanations) | Submit an adherence explanation for the current user |
 | [**postWorkforcemanagementAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceExplanationsQuery) | Query adherence explanations for the current user |
 | [**postWorkforcemanagementAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistorical) | Request a historical adherence report for users across management units |
+| [**postWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistoricalBulk) | Request a historical adherence report in bulk |
 | [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
 | [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
 | [**postWorkforcemanagementAgentschedulesMine**](WorkforceManagementAPI.html#postWorkforcemanagementAgentschedulesMine) | Get published schedule for the current user |
@@ -1005,6 +1007,59 @@ WorkforceManagementAPI.getWorkforcemanagementAdherenceExplanationsJob(jobId: job
 ### Return type
 
 [**AdherenceExplanationJob**](AdherenceExplanationJob.html)
+
+<a name="getWorkforcemanagementAdherenceHistoricalBulkJob"></a>
+
+# **getWorkforcemanagementAdherenceHistoricalBulkJob**
+
+
+
+> [WfmHistoricalAdherenceBulkResponse](WfmHistoricalAdherenceBulkResponse.html) getWorkforcemanagementAdherenceHistoricalBulkJob(jobId)
+
+Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // ID of the job to get
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalBulkJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalBulkJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| ID of the job to get | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse.html)
 
 <a name="getWorkforcemanagementAdherenceHistoricalJob"></a>
 
@@ -5796,6 +5851,58 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceHistorical(body: body) { 
 ### Return type
 
 [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
+
+<a name="postWorkforcemanagementAdherenceHistoricalBulk"></a>
+
+# **postWorkforcemanagementAdherenceHistoricalBulk**
+
+
+
+> [WfmHistoricalAdherenceBulkResponse](WfmHistoricalAdherenceBulkResponse.html) postWorkforcemanagementAdherenceHistoricalBulk(body)
+
+Request a historical adherence report in bulk
+
+
+
+Wraps POST /api/v2/workforcemanagement/adherence/historical/bulk  
+
+Requires ANY permissions: 
+
+* wfm:historicalAdherence:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: WfmHistoricalAdherenceBulkQuery = new WfmHistoricalAdherenceBulkQuery(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAdherenceHistoricalBulk(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAdherenceHistoricalBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**WfmHistoricalAdherenceBulkQuery**](WfmHistoricalAdherenceBulkQuery.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse.html)
 
 <a name="postWorkforcemanagementAgentAdherenceExplanations"></a>
 

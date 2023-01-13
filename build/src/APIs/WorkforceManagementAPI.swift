@@ -872,6 +872,63 @@ open class WorkforceManagementAPI {
 
     
     /**
+     Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) ID of the job to get 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAdherenceHistoricalBulkJob(jobId: String, completion: @escaping ((_ data: WfmHistoricalAdherenceBulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAdherenceHistoricalBulkJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<WfmHistoricalAdherenceBulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) ID of the job to get 
+
+     - returns: RequestBuilder<WfmHistoricalAdherenceBulkResponse> 
+     */
+    open class func getWorkforcemanagementAdherenceHistoricalBulkJobWithRequestBuilder(jobId: String) -> RequestBuilder<WfmHistoricalAdherenceBulkResponse> {        
+        var path = "/api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmHistoricalAdherenceBulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
      Query the status of a historical adherence request operation. Only the user who started the operation can query the status
      
      - parameter jobId: (path) jobId 
@@ -9281,6 +9338,59 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Request a historical adherence report in bulk
+     
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAdherenceHistoricalBulk(body: WfmHistoricalAdherenceBulkQuery? = nil, completion: @escaping ((_ data: WfmHistoricalAdherenceBulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAdherenceHistoricalBulkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<WfmHistoricalAdherenceBulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request a historical adherence report in bulk
+     - POST /api/v2/workforcemanagement/adherence/historical/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "job" : "{}"
+}, statusCode=202}]
+     
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WfmHistoricalAdherenceBulkResponse> 
+     */
+    open class func postWorkforcemanagementAdherenceHistoricalBulkWithRequestBuilder(body: WfmHistoricalAdherenceBulkQuery? = nil) -> RequestBuilder<WfmHistoricalAdherenceBulkResponse> {        
+        let path = "/api/v2/workforcemanagement/adherence/historical/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmHistoricalAdherenceBulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

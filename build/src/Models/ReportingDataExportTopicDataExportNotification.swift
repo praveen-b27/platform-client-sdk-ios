@@ -99,6 +99,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case agentLoginLogoutDetailView = "AGENT_LOGIN_LOGOUT_DETAIL_VIEW"
         case campaignPerformanceSummaryView = "CAMPAIGN_PERFORMANCE_SUMMARY_VIEW"
         case campaignPerformanceDetailView = "CAMPAIGN_PERFORMANCE_DETAIL_VIEW"
+        case queueWrapupDetailView = "QUEUE_WRAPUP_DETAIL_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"
@@ -129,8 +130,9 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
     public var emailStatuses: [String:String]?
     public var emailErrorDescription: String?
     public var scheduleExpression: String?
+    public var scheduleStaticLinkUrl: String?
 
-    public init(_id: String?, runId: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?, emailStatuses: [String:String]?, emailErrorDescription: String?, scheduleExpression: String?) {
+    public init(_id: String?, runId: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?, emailStatuses: [String:String]?, emailErrorDescription: String?, scheduleExpression: String?, scheduleStaticLinkUrl: String?) {
         self._id = _id
         self.runId = runId
         self.name = name
@@ -146,6 +148,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         self.emailStatuses = emailStatuses
         self.emailErrorDescription = emailErrorDescription
         self.scheduleExpression = scheduleExpression
+        self.scheduleStaticLinkUrl = scheduleStaticLinkUrl
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -164,6 +167,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case emailStatuses
         case emailErrorDescription
         case scheduleExpression
+        case scheduleStaticLinkUrl
     }
 
 

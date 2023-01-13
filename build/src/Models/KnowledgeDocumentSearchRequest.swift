@@ -24,13 +24,7 @@ public class KnowledgeDocumentSearchRequest: Codable {
         case confidenceScore = "ConfidenceScore"
         case dateCreated = "DateCreated"
         case dateModified = "DateModified"
-        case categoryId = "CategoryId"
         case categoryName = "CategoryName"
-        case contextId = "ContextId"
-        case contextName = "ContextName"
-        case contextValueId = "ContextValueId"
-        case contextValueName = "ContextValueName"
-        case labelId = "LabelId"
         case labelName = "LabelName"
     }
     /** Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. */

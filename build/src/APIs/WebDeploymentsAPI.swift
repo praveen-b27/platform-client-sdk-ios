@@ -101,6 +101,52 @@ open class WebDeploymentsAPI {
     
     
     /**
+     Invalidate JWT
+     
+     - parameter xJourneySessionId: (header) The Customer&#39;s journey sessionId. (optional)
+     - parameter xJourneySessionType: (header) The Customer&#39;s journey session type. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWebdeploymentsTokenRevoke(xJourneySessionId: String? = nil, xJourneySessionType: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWebdeploymentsTokenRevokeWithRequestBuilder(xJourneySessionId: xJourneySessionId, xJourneySessionType: xJourneySessionType)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Invalidate JWT
+     - DELETE /api/v2/webdeployments/token/revoke
+     
+     - parameter xJourneySessionId: (header) The Customer&#39;s journey sessionId. (optional)
+     - parameter xJourneySessionType: (header) The Customer&#39;s journey session type. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWebdeploymentsTokenRevokeWithRequestBuilder(xJourneySessionId: String? = nil, xJourneySessionType: String? = nil) -> RequestBuilder<Void> {        
+        let path = "/api/v2/webdeployments/token/revoke"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+        let nillableHeaders: [String: Any?] = [
+            "X-Journey-Session-Id": xJourneySessionId,
+            "X-Journey-Session-Type": xJourneySessionType
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body, headers: headerParameters)
+    }
+
+    
+    
+    /**
      Get a configuration version
      
      - parameter configurationId: (path) The configuration version ID 
@@ -1020,6 +1066,103 @@ open class WebDeploymentsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+     
+     - parameter body: (body) webDeploymentsOAuthExchangeRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWebdeploymentsTokenOauthcodegrantjwtexchange(body: WebDeploymentsOAuthExchangeRequest, completion: @escaping ((_ data: WebDeploymentsAuthorizationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWebdeploymentsTokenOauthcodegrantjwtexchangeWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<WebDeploymentsAuthorizationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+     - POST /api/v2/webdeployments/token/oauthcodegrantjwtexchange
+     - examples: [{contentType=application/json, example={
+  "jwt" : "jwt",
+  "refreshToken" : "refreshToken"
+}, statusCode=200}]
+     
+     - parameter body: (body) webDeploymentsOAuthExchangeRequest 
+
+     - returns: RequestBuilder<WebDeploymentsAuthorizationResponse> 
+     */
+    open class func postWebdeploymentsTokenOauthcodegrantjwtexchangeWithRequestBuilder(body: WebDeploymentsOAuthExchangeRequest) -> RequestBuilder<WebDeploymentsAuthorizationResponse> {        
+        let path = "/api/v2/webdeployments/token/oauthcodegrantjwtexchange"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WebDeploymentsAuthorizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Refresh a JWT.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWebdeploymentsTokenRefresh(body: WebDeploymentsRefreshJWTRequest? = nil, completion: @escaping ((_ data: SignedData?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWebdeploymentsTokenRefreshWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SignedData>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Refresh a JWT.
+     - POST /api/v2/webdeployments/token/refresh
+     - examples: [{contentType=application/json, example={
+  "jwt" : "jwt"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<SignedData> 
+     */
+    open class func postWebdeploymentsTokenRefreshWithRequestBuilder(body: WebDeploymentsRefreshJWTRequest? = nil) -> RequestBuilder<SignedData> {        
+        let path = "/api/v2/webdeployments/token/refresh"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SignedData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

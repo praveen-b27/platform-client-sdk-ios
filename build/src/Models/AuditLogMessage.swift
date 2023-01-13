@@ -281,6 +281,7 @@ public class AuditLogMessage: Codable {
         case response = "Response"
         case responseAsset = "ResponseAsset"
         case role = "Role"
+        case roleSettings = "RoleSettings"
         case row = "Row"
         case routingTranscriptionSettings = "RoutingTranscriptionSettings"
         case routingUtilizationTag = "RoutingUtilizationTag"

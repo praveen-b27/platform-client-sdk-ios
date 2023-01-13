@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteWebdeploymentsConfiguration**](WebDeploymentsAPI.html#deleteWebdeploymentsConfiguration) | Delete all versions of a configuration |
 | [**deleteWebdeploymentsDeployment**](WebDeploymentsAPI.html#deleteWebdeploymentsDeployment) | Delete a deployment |
+| [**deleteWebdeploymentsTokenRevoke**](WebDeploymentsAPI.html#deleteWebdeploymentsTokenRevoke) | Invalidate JWT |
 | [**getWebdeploymentsConfigurationVersion**](WebDeploymentsAPI.html#getWebdeploymentsConfigurationVersion) | Get a configuration version |
 | [**getWebdeploymentsConfigurationVersions**](WebDeploymentsAPI.html#getWebdeploymentsConfigurationVersions) | Get the versions of a configuration |
 | [**getWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsAPI.html#getWebdeploymentsConfigurationVersionsDraft) | Get the configuration draft |
@@ -19,6 +20,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsAPI.html#postWebdeploymentsConfigurationVersionsDraftPublish) | Publish the configuration draft and create a new version |
 | [**postWebdeploymentsConfigurations**](WebDeploymentsAPI.html#postWebdeploymentsConfigurations) | Create a configuration draft |
 | [**postWebdeploymentsDeployments**](WebDeploymentsAPI.html#postWebdeploymentsDeployments) | Create a deployment |
+| [**postWebdeploymentsTokenOauthcodegrantjwtexchange**](WebDeploymentsAPI.html#postWebdeploymentsTokenOauthcodegrantjwtexchange) | Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. |
+| [**postWebdeploymentsTokenRefresh**](WebDeploymentsAPI.html#postWebdeploymentsTokenRefresh) | Refresh a JWT. |
 | [**putWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsAPI.html#putWebdeploymentsConfigurationVersionsDraft) | Update the configuration draft |
 | [**putWebdeploymentsDeployment**](WebDeploymentsAPI.html#putWebdeploymentsDeployment) | Update a deployment |
 {: class="table-striped"}
@@ -118,6 +121,58 @@ WebDeploymentsAPI.deleteWebdeploymentsDeployment(deploymentId: deploymentId) { (
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The deployment ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteWebdeploymentsTokenRevoke"></a>
+
+# **deleteWebdeploymentsTokenRevoke**
+
+
+
+> Void deleteWebdeploymentsTokenRevoke(xJourneySessionId, xJourneySessionType)
+
+Invalidate JWT
+
+
+
+Wraps DELETE /api/v2/webdeployments/token/revoke  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let xJourneySessionId: String = "" // The Customer's journey sessionId.
+let xJourneySessionType: String = "" // The Customer's journey session type.
+
+// Code example
+WebDeploymentsAPI.deleteWebdeploymentsTokenRevoke(xJourneySessionId: xJourneySessionId, xJourneySessionType: xJourneySessionType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WebDeploymentsAPI.deleteWebdeploymentsTokenRevoke was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **xJourneySessionId** | **String**| The Customer's journey sessionId. | [optional] |
+| **xJourneySessionType** | **String**| The Customer's journey session type. | [optional] |
 {: class="table-striped"}
 
 
@@ -650,6 +705,108 @@ WebDeploymentsAPI.postWebdeploymentsDeployments(deployment: deployment) { (respo
 ### Return type
 
 [**WebDeployment**](WebDeployment.html)
+
+<a name="postWebdeploymentsTokenOauthcodegrantjwtexchange"></a>
+
+# **postWebdeploymentsTokenOauthcodegrantjwtexchange**
+
+
+
+> [WebDeploymentsAuthorizationResponse](WebDeploymentsAuthorizationResponse.html) postWebdeploymentsTokenOauthcodegrantjwtexchange(body)
+
+Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+
+
+
+Wraps POST /api/v2/webdeployments/token/oauthcodegrantjwtexchange  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: WebDeploymentsOAuthExchangeRequest = new WebDeploymentsOAuthExchangeRequest(...) // webDeploymentsOAuthExchangeRequest
+
+// Code example
+WebDeploymentsAPI.postWebdeploymentsTokenOauthcodegrantjwtexchange(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WebDeploymentsAPI.postWebdeploymentsTokenOauthcodegrantjwtexchange was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**WebDeploymentsOAuthExchangeRequest**](WebDeploymentsOAuthExchangeRequest.html)| webDeploymentsOAuthExchangeRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WebDeploymentsAuthorizationResponse**](WebDeploymentsAuthorizationResponse.html)
+
+<a name="postWebdeploymentsTokenRefresh"></a>
+
+# **postWebdeploymentsTokenRefresh**
+
+
+
+> [SignedData](SignedData.html) postWebdeploymentsTokenRefresh(body)
+
+Refresh a JWT.
+
+
+
+Wraps POST /api/v2/webdeployments/token/refresh  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: WebDeploymentsRefreshJWTRequest = new WebDeploymentsRefreshJWTRequest(...) // 
+
+// Code example
+WebDeploymentsAPI.postWebdeploymentsTokenRefresh(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WebDeploymentsAPI.postWebdeploymentsTokenRefresh was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**WebDeploymentsRefreshJWTRequest**](WebDeploymentsRefreshJWTRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SignedData**](SignedData.html)
 
 <a name="putWebdeploymentsConfigurationVersionsDraft"></a>
 

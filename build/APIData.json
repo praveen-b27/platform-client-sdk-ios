@@ -34222,6 +34222,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\n\n// Delete a deployment\nDeleteWebdeploymentsDeploymentRequest.deleteWebdeploymentsDeployment(deploymentId: deploymentId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteWebdeploymentsDeploymentRequest.deleteWebdeploymentsDeployment was successful\")\n    }\n}"
   },
+  "deletewebdeploymentstokenrevoke": {
+    "operationId": "deletewebdeploymentstokenrevoke",
+    "functionName": "deleteWebdeploymentsTokenRevoke",
+    "signature": "deleteWebdeploymentsTokenRevoke(xJourneySessionId, xJourneySessionType)",
+    "parameters": [
+      {
+        "name": "xJourneySessionId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "xJourneySessionType",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet xJourneySessionId: String = \"\" // The Customer's journey sessionId.\nlet xJourneySessionType: String = \"\" // The Customer's journey session type.\n\n// Invalidate JWT\nDeleteWebdeploymentsTokenRevokeRequest.deleteWebdeploymentsTokenRevoke(xJourneySessionId: xJourneySessionId, xJourneySessionType: xJourneySessionType) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteWebdeploymentsTokenRevokeRequest.deleteWebdeploymentsTokenRevoke was successful\")\n    }\n}"
+  },
   "getwebdeploymentsconfigurationversion": {
     "operationId": "getwebdeploymentsconfigurationversion",
     "functionName": "getWebdeploymentsConfigurationVersion",
@@ -34371,6 +34389,34 @@
     ],
     "return": "WebDeployment",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deployment: WebDeployment = new WebDeployment(...) // \n\n// Create a deployment\nPostWebdeploymentsDeploymentsRequest.postWebdeploymentsDeployments(deployment: deployment) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWebdeploymentsDeploymentsRequest.postWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postwebdeploymentstokenoauthcodegrantjwtexchange": {
+    "operationId": "postwebdeploymentstokenoauthcodegrantjwtexchange",
+    "functionName": "postWebdeploymentsTokenOauthcodegrantjwtexchange",
+    "signature": "postWebdeploymentsTokenOauthcodegrantjwtexchange(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "WebDeploymentsOAuthExchangeRequest",
+        "required": "true"
+      }
+    ],
+    "return": "WebDeploymentsAuthorizationResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WebDeploymentsOAuthExchangeRequest = new WebDeploymentsOAuthExchangeRequest(...) // webDeploymentsOAuthExchangeRequest\n\n// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.\nPostWebdeploymentsTokenOauthcodegrantjwtexchangeRequest.postWebdeploymentsTokenOauthcodegrantjwtexchange(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWebdeploymentsTokenOauthcodegrantjwtexchangeRequest.postWebdeploymentsTokenOauthcodegrantjwtexchange was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postwebdeploymentstokenrefresh": {
+    "operationId": "postwebdeploymentstokenrefresh",
+    "functionName": "postWebdeploymentsTokenRefresh",
+    "signature": "postWebdeploymentsTokenRefresh(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "WebDeploymentsRefreshJWTRequest",
+        "required": "false"
+      }
+    ],
+    "return": "SignedData",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WebDeploymentsRefreshJWTRequest = new WebDeploymentsRefreshJWTRequest(...) // \n\n// Refresh a JWT.\nPostWebdeploymentsTokenRefreshRequest.postWebdeploymentsTokenRefresh(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWebdeploymentsTokenRefreshRequest.postWebdeploymentsTokenRefresh was successful\")\n        dump(response)\n    }\n}"
   },
   "putwebdeploymentsconfigurationversionsdraft": {
     "operationId": "putwebdeploymentsconfigurationversionsdraft",
@@ -34760,6 +34806,20 @@
     ],
     "return": "AdherenceExplanationJob",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The ID of the job\n\n// Query the status of an adherence explanation operation. Only the user who started the operation can query the status\nGetWorkforcemanagementAdherenceExplanationsJobRequest.getWorkforcemanagementAdherenceExplanationsJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAdherenceExplanationsJobRequest.getWorkforcemanagementAdherenceExplanationsJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementadherencehistoricalbulkjob": {
+    "operationId": "getworkforcemanagementadherencehistoricalbulkjob",
+    "functionName": "getWorkforcemanagementAdherenceHistoricalBulkJob",
+    "signature": "getWorkforcemanagementAdherenceHistoricalBulkJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WfmHistoricalAdherenceBulkResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // ID of the job to get\n\n// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status\nGetWorkforcemanagementAdherenceHistoricalBulkJobRequest.getWorkforcemanagementAdherenceHistoricalBulkJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAdherenceHistoricalBulkJobRequest.getWorkforcemanagementAdherenceHistoricalBulkJob was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementadherencehistoricaljob": {
     "operationId": "getworkforcemanagementadherencehistoricaljob",
@@ -36385,6 +36445,20 @@
     ],
     "return": "WfmHistoricalAdherenceResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WfmHistoricalAdherenceQueryForUsers = new WfmHistoricalAdherenceQueryForUsers(...) // body\n\n// Request a historical adherence report for users across management units\nPostWorkforcemanagementAdherenceHistoricalRequest.postWorkforcemanagementAdherenceHistorical(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAdherenceHistoricalRequest.postWorkforcemanagementAdherenceHistorical was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementadherencehistoricalbulk": {
+    "operationId": "postworkforcemanagementadherencehistoricalbulk",
+    "functionName": "postWorkforcemanagementAdherenceHistoricalBulk",
+    "signature": "postWorkforcemanagementAdherenceHistoricalBulk(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "WfmHistoricalAdherenceBulkQuery",
+        "required": "false"
+      }
+    ],
+    "return": "WfmHistoricalAdherenceBulkResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WfmHistoricalAdherenceBulkQuery = new WfmHistoricalAdherenceBulkQuery(...) // body\n\n// Request a historical adherence report in bulk\nPostWorkforcemanagementAdherenceHistoricalBulkRequest.postWorkforcemanagementAdherenceHistoricalBulk(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAdherenceHistoricalBulkRequest.postWorkforcemanagementAdherenceHistoricalBulk was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementagentadherenceexplanations": {
     "operationId": "postworkforcemanagementagentadherenceexplanations",

@@ -295,6 +295,7 @@ open class StationsAPI {
     /**
      Get an organization's StationSettings
      - GET /api/v2/stations/settings
+     - This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -344,6 +345,7 @@ open class StationsAPI {
     /**
      Patch an organization's StationSettings
      - PATCH /api/v2/stations/settings
+     - This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

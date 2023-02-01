@@ -9406,6 +9406,7 @@ open class RecordingAPI {
         "dnis" : "dnis",
         "ani" : "ani",
         "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+        "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
         "wrapup" : "{}",
         "address" : "address",
         "evaluations" : [ {
@@ -15303,6 +15304,7 @@ open class RecordingAPI {
         "dnis" : "dnis",
         "ani" : "ani",
         "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+        "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
         "wrapup" : "{}",
         "address" : "address",
         "evaluations" : [ {
@@ -21529,6 +21531,7 @@ open class RecordingAPI {
         "dnis" : "dnis",
         "ani" : "ani",
         "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+        "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
         "wrapup" : "{}",
         "address" : "address",
         "evaluations" : [ {
@@ -27426,6 +27429,7 @@ open class RecordingAPI {
         "dnis" : "dnis",
         "ani" : "ani",
         "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+        "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
         "wrapup" : "{}",
         "address" : "address",
         "evaluations" : [ {

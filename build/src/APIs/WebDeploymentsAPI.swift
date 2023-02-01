@@ -101,6 +101,60 @@ open class WebDeploymentsAPI {
     
     
     /**
+     Deletes a cobrowse session
+     
+     - parameter deploymentId: (path) WebMessaging deployment ID 
+     - parameter sessionId: (path) Cobrowse session id or join code 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWebdeploymentsDeploymentCobrowseSessionId(deploymentId: String, sessionId: String, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWebdeploymentsDeploymentCobrowseSessionIdWithRequestBuilder(deploymentId: deploymentId, sessionId: sessionId)
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Deletes a cobrowse session
+     - DELETE /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}
+     
+     - parameter deploymentId: (path) WebMessaging deployment ID 
+     - parameter sessionId: (path) Cobrowse session id or join code 
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func deleteWebdeploymentsDeploymentCobrowseSessionIdWithRequestBuilder(deploymentId: String, sessionId: String) -> RequestBuilder<JSON> {        
+        var path = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    /**
      Invalidate JWT
      
      - parameter xJourneySessionId: (header) The Customer&#39;s journey sessionId. (optional)
@@ -675,6 +729,69 @@ open class WebDeploymentsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Retrieves a cobrowse session
+     
+     - parameter deploymentId: (path) WebMessaging deployment ID 
+     - parameter sessionId: (path) Cobrowse session id or join code 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWebdeploymentsDeploymentCobrowseSessionId(deploymentId: String, sessionId: String, completion: @escaping ((_ data: CobrowseWebMessagingSession?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsDeploymentCobrowseSessionIdWithRequestBuilder(deploymentId: deploymentId, sessionId: sessionId)
+        requestBuilder.execute { (response: Response<CobrowseWebMessagingSession>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves a cobrowse session
+     - GET /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "websocketUrl" : "websocketUrl",
+  "communicationType" : "Call",
+  "id" : "id",
+  "joinCode" : "joinCode",
+  "dateOfferEnds" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter deploymentId: (path) WebMessaging deployment ID 
+     - parameter sessionId: (path) Cobrowse session id or join code 
+
+     - returns: RequestBuilder<CobrowseWebMessagingSession> 
+     */
+    open class func getWebdeploymentsDeploymentCobrowseSessionIdWithRequestBuilder(deploymentId: String, sessionId: String) -> RequestBuilder<CobrowseWebMessagingSession> {        
+        var path = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CobrowseWebMessagingSession>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }

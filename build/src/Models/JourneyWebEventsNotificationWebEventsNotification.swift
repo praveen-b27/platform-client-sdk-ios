@@ -28,8 +28,9 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
     public var webEvent: JourneyWebEventsNotificationWebMessage?
     public var webActionEvent: JourneyWebEventsNotificationWebActionMessage?
     public var outcomeAchievedEvent: JourneyWebEventsNotificationOutcomeAchievedMessage?
+    public var segmentAssignmentEvent: JourneyWebEventsNotificationSegmentAssignmentMessage?
 
-    public init(_id: String?, correlationId: String?, externalContact: JourneyWebEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, session: JourneyWebEventsNotificationSession?, eventType: EventType?, webEvent: JourneyWebEventsNotificationWebMessage?, webActionEvent: JourneyWebEventsNotificationWebActionMessage?, outcomeAchievedEvent: JourneyWebEventsNotificationOutcomeAchievedMessage?) {
+    public init(_id: String?, correlationId: String?, externalContact: JourneyWebEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, session: JourneyWebEventsNotificationSession?, eventType: EventType?, webEvent: JourneyWebEventsNotificationWebMessage?, webActionEvent: JourneyWebEventsNotificationWebActionMessage?, outcomeAchievedEvent: JourneyWebEventsNotificationOutcomeAchievedMessage?, segmentAssignmentEvent: JourneyWebEventsNotificationSegmentAssignmentMessage?) {
         self._id = _id
         self.correlationId = correlationId
         self.externalContact = externalContact
@@ -41,6 +42,7 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
         self.webEvent = webEvent
         self.webActionEvent = webActionEvent
         self.outcomeAchievedEvent = outcomeAchievedEvent
+        self.segmentAssignmentEvent = segmentAssignmentEvent
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -55,6 +57,7 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
         case webEvent
         case webActionEvent
         case outcomeAchievedEvent
+        case segmentAssignmentEvent
     }
 
 

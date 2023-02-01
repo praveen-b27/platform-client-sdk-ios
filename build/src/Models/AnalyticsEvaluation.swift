@@ -11,6 +11,13 @@ import Foundation
 
 public class AnalyticsEvaluation: Codable {
 
+    public enum EvaluationStatus: String, Codable { 
+        case finished = "Finished"
+        case inProgress = "InProgress"
+        case inReview = "InReview"
+        case pending = "Pending"
+        case retracted = "Retracted"
+    }
     /** The calibration ID used for the purpose of training evaluators */
     public var calibrationId: String?
     /** A unique identifier for an evaluation form, regardless of version */
@@ -19,6 +26,8 @@ public class AnalyticsEvaluation: Codable {
     public var deleted: Bool?
     /** Unique identifier for the evaluation */
     public var evaluationId: String?
+    /** Status of evaluation */
+    public var evaluationStatus: EvaluationStatus?
     /** A unique identifier of the user who evaluated the interaction */
     public var evaluatorId: String?
     /** Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -38,11 +47,12 @@ public class AnalyticsEvaluation: Codable {
     public var oTotalCriticalScore: Int64?
     public var oTotalScore: Int64?
 
-    public init(calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, released: Bool?, rescored: Bool?, userId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
+    public init(calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluationStatus: EvaluationStatus?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, released: Bool?, rescored: Bool?, userId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
         self.calibrationId = calibrationId
         self.contextId = contextId
         self.deleted = deleted
         self.evaluationId = evaluationId
+        self.evaluationStatus = evaluationStatus
         self.evaluatorId = evaluatorId
         self.eventTime = eventTime
         self.formId = formId

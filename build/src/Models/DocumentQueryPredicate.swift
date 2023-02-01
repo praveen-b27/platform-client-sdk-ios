@@ -19,6 +19,7 @@ public class DocumentQueryPredicate: Codable {
         case contextname = "contextName"
         case contextvalueid = "contextValueId"
         case contextvaluename = "contextValueName"
+        case documentid = "documentId"
         case labelid = "labelId"
         case labelname = "labelName"
         case title = "title"

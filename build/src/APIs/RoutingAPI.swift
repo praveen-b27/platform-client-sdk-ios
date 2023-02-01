@@ -2831,17 +2831,18 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "wrapUpCodeConfig" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "WrapUpCode",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "optimizationType" : "Maximization",
   "kpiType" : "SalesConversion",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
-  "description" : "description",
-  "wrapUpCodeConfig" : "{}",
   "kpiGroup" : "Standard",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "outcomeConfig" : "{}",
   "id" : "id",
-  "source" : "WrapUpCode",
   "status" : "Enabled"
 }, statusCode=200}]
      
@@ -7542,7 +7543,9 @@ open class RoutingAPI {
   "version" : 0,
   "phoneNumber" : "phoneNumber",
   "createdBy" : "{}",
-  "name" : "name"
+  "compliance" : "{}",
+  "name" : "name",
+  "integration" : "{}"
 }, statusCode=200}]
      
      - parameter addressId: (path) Address ID 
@@ -7661,7 +7664,9 @@ open class RoutingAPI {
     "version" : 0,
     "phoneNumber" : "phoneNumber",
     "createdBy" : "{}",
-    "name" : "name"
+    "compliance" : "{}",
+    "name" : "name",
+    "integration" : "{}"
   }, {
     "supportsSms" : true,
     "country" : "country",
@@ -7687,7 +7692,9 @@ open class RoutingAPI {
     "version" : 0,
     "phoneNumber" : "phoneNumber",
     "createdBy" : "{}",
-    "name" : "name"
+    "compliance" : "{}",
+    "name" : "name",
+    "integration" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -12977,7 +12984,9 @@ open class RoutingAPI {
   "version" : 0,
   "phoneNumber" : "phoneNumber",
   "createdBy" : "{}",
-  "name" : "name"
+  "compliance" : "{}",
+  "name" : "name",
+  "integration" : "{}"
 }, statusCode=200}]
      
      - parameter body: (body) SmsPhoneNumber 
@@ -13771,7 +13780,9 @@ open class RoutingAPI {
   "version" : 0,
   "phoneNumber" : "phoneNumber",
   "createdBy" : "{}",
-  "name" : "name"
+  "compliance" : "{}",
+  "name" : "name",
+  "integration" : "{}"
 }, statusCode=200}]
      
      - parameter addressId: (path) Address ID 

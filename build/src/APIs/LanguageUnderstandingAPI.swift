@@ -330,6 +330,7 @@ open class LanguageUnderstandingAPI {
     
     
     
+    
     /**
      Get all feedback in the given NLU Domain Version.
      
@@ -343,12 +344,13 @@ open class LanguageUnderstandingAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional)
+     - parameter includeTrainingUtterances: (query) Include Training Utterances. By default they&#39;re included. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination&#x3D;true (optional)
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLanguageunderstandingDomainFeedback(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, language: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil, completion: @escaping ((_ data: NluFeedbackListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields)
+    open class func getLanguageunderstandingDomainFeedback(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, language: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, includeTrainingUtterances: Bool? = nil, after: String? = nil, fields: [String]? = nil, completion: @escaping ((_ data: NluFeedbackListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, includeTrainingUtterances: includeTrainingUtterances, after: after, fields: fields)
         requestBuilder.execute { (response: Response<NluFeedbackListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -470,12 +472,13 @@ open class LanguageUnderstandingAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional)
+     - parameter includeTrainingUtterances: (query) Include Training Utterances. By default they&#39;re included. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination&#x3D;true (optional)
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
 
      - returns: RequestBuilder<NluFeedbackListing> 
      */
-    open class func getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, language: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil) -> RequestBuilder<NluFeedbackListing> {        
+    open class func getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, language: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, includeTrainingUtterances: Bool? = nil, after: String? = nil, fields: [String]? = nil) -> RequestBuilder<NluFeedbackListing> {        
         var path = "/api/v2/languageunderstanding/domains/{domainId}/feedback"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -494,6 +497,7 @@ open class LanguageUnderstandingAPI {
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "enableCursorPagination": enableCursorPagination, 
+            "includeTrainingUtterances": includeTrainingUtterances, 
             "after": after, 
             "fields": fields
         ])

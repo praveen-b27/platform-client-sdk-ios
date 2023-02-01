@@ -7816,6 +7816,20 @@
     "return": "String",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: ConversationUser = new ConversationUser(...) // Targeted user\n\n// Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.\nPostConversationAssignRequest.postConversationAssign(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationAssignRequest.postConversationAssign was successful\")\n        dump(response)\n    }\n}"
   },
+  "postconversationcobrowse": {
+    "operationId": "postconversationcobrowse",
+    "functionName": "postConversationCobrowse",
+    "signature": "postConversationCobrowse(conversationId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "CobrowseWebMessagingSession",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\n\n// Creates a cobrowse session\nPostConversationCobrowseRequest.postConversationCobrowse(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationCobrowseRequest.postConversationCobrowse was successful\")\n        dump(response)\n    }\n}"
+  },
   "postconversationdisconnect": {
     "operationId": "postconversationdisconnect",
     "functionName": "postConversationDisconnect",
@@ -8260,7 +8274,7 @@
         "required": "true"
       }
     ],
-    "return": "EmailMessage",
+    "return": "EmailMessageReply",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: EmailMessage = new EmailMessage(...) // Reply\n\n// Send an email reply\nPostConversationsEmailMessagesRequest.postConversationsEmailMessages(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsEmailMessagesRequest.postConversationsEmailMessages was successful\")\n        dump(response)\n    }\n}"
   },
   "postconversationsemailmessagesdraftattachmentscopy": {
@@ -16339,7 +16353,7 @@
   "getlanguageunderstandingdomainfeedback": {
     "operationId": "getlanguageunderstandingdomainfeedback",
     "functionName": "getLanguageunderstandingDomainFeedback",
-    "signature": "getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields)",
+    "signature": "getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, includeTrainingUtterances, after, fields)",
     "parameters": [
       {
         "name": "domainId",
@@ -16392,6 +16406,11 @@
         "required": "false"
       },
       {
+        "name": "includeTrainingUtterances",
+        "type": "Bool",
+        "required": "false"
+      },
+      {
         "name": "after",
         "type": "String",
         "required": "false"
@@ -16403,7 +16422,7 @@
       }
     ],
     "return": "NluFeedbackListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // ID of the NLU domain.\nlet intentName: String = \"\" // The top intent name to retrieve feedback for.\nlet assessment: GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback = GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback.enummember // The top assessment to retrieve feedback for.\nlet dateStart: Date = new Date(...) // Begin of time window as ISO-8601 date.\nlet dateEnd: Date = new Date(...) // End of time window as ISO-8601 date.\nlet includeDeleted: Bool = true // Whether to include soft-deleted items in the result.\nlet language: String = \"\" // Whether to filter response based on the language, e.g. en-us, pt-br.\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet enableCursorPagination: Bool = true // Enable Cursor Pagination\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true\nlet fields: [String] = [\"\"] // Fields and properties to get, comma-separated\n\n// Get all feedback in the given NLU Domain Version.\nGetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // ID of the NLU domain.\nlet intentName: String = \"\" // The top intent name to retrieve feedback for.\nlet assessment: GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback = GetLanguageunderstandingDomainFeedbackRequest.Assessment_getLanguageunderstandingDomainFeedback.enummember // The top assessment to retrieve feedback for.\nlet dateStart: Date = new Date(...) // Begin of time window as ISO-8601 date.\nlet dateEnd: Date = new Date(...) // End of time window as ISO-8601 date.\nlet includeDeleted: Bool = true // Whether to include soft-deleted items in the result.\nlet language: String = \"\" // Whether to filter response based on the language, e.g. en-us, pt-br.\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet enableCursorPagination: Bool = true // Enable Cursor Pagination\nlet includeTrainingUtterances: Bool = true // Include Training Utterances. By default they're included.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true\nlet fields: [String] = [\"\"] // Fields and properties to get, comma-separated\n\n// Get all feedback in the given NLU Domain Version.\nGetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, includeTrainingUtterances: includeTrainingUtterances, after: after, fields: fields) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingDomainFeedbackRequest.getLanguageunderstandingDomainFeedback was successful\")\n        dump(response)\n    }\n}"
   },
   "getlanguageunderstandingdomainfeedbackfeedbackid": {
     "operationId": "getlanguageunderstandingdomainfeedbackfeedbackid",
@@ -17180,7 +17199,7 @@
       }
     ],
     "return": "LearningAssignmentsDomainEntity",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module. Fetch assignments for learning module ID\nlet interval: String = \"\" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetLearningAssignmentsRequest.Overdue_getLearningAssignments = GetLearningAssignmentsRequest.Overdue_getLearningAssignments.enummember // Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pass: GetLearningAssignmentsRequest.Pass_getLearningAssignments = GetLearningAssignmentsRequest.Pass_getLearningAssignments.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned\nlet minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet sortOrder: GetLearningAssignmentsRequest.SortOrder_getLearningAssignments = GetLearningAssignmentsRequest.SortOrder_getLearningAssignments.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)\nlet sortBy: GetLearningAssignmentsRequest.SortBy_getLearningAssignments = GetLearningAssignmentsRequest.SortBy_getLearningAssignments.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate\nlet userId: [String] = [\"\"] // Specifies the list of user IDs to be queried, up to 100 user IDs.\nlet types: [String] = [\"\"] // Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned\nlet states: [String] = [\"\"] // Specifies the assignment states to filter by\nlet expand: [String] = [\"\"] // Specifies the expand option for returning additional information\n\n// List of Learning module Assignments\nGetLearningAssignmentsRequest.getLearningAssignments(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningAssignmentsRequest.getLearningAssignments was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module. Fetch assignments for learning module ID\nlet interval: String = \"\" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetLearningAssignmentsRequest.Overdue_getLearningAssignments = GetLearningAssignmentsRequest.Overdue_getLearningAssignments.enummember // Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pass: GetLearningAssignmentsRequest.Pass_getLearningAssignments = GetLearningAssignmentsRequest.Pass_getLearningAssignments.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned\nlet minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet sortOrder: GetLearningAssignmentsRequest.SortOrder_getLearningAssignments = GetLearningAssignmentsRequest.SortOrder_getLearningAssignments.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)\nlet sortBy: GetLearningAssignmentsRequest.SortBy_getLearningAssignments = GetLearningAssignmentsRequest.SortBy_getLearningAssignments.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate\nlet userId: [String] = [\"\"] // Specifies the list of user IDs to be queried, up to 100 user IDs.\nlet types: [String] = [\"\"] // Specifies the module types to filter by\nlet states: [String] = [\"\"] // Specifies the assignment states to filter by\nlet expand: [String] = [\"\"] // Specifies the expand option for returning additional information\n\n// List of Learning module Assignments\nGetLearningAssignmentsRequest.getLearningAssignments(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningAssignmentsRequest.getLearningAssignments was successful\")\n        dump(response)\n    }\n}"
   },
   "getlearningassignmentsme": {
     "operationId": "getlearningassignmentsme",
@@ -17259,7 +17278,7 @@
       }
     ],
     "return": "LearningAssignmentsDomainEntity",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module. Fetch assignments for learning module ID\nlet interval: String = \"\" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetLearningAssignmentsMeRequest.Overdue_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.Overdue_getLearningAssignmentsMe.enummember // Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pass: GetLearningAssignmentsMeRequest.Pass_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.Pass_getLearningAssignmentsMe.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned\nlet minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet sortOrder: GetLearningAssignmentsMeRequest.SortOrder_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.SortOrder_getLearningAssignmentsMe.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)\nlet sortBy: GetLearningAssignmentsMeRequest.SortBy_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.SortBy_getLearningAssignmentsMe.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate\nlet types: [String] = [\"\"] // Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned\nlet states: [String] = [\"\"] // Specifies the assignment states to filter by\nlet expand: [String] = [\"\"] // Specifies the expand option for returning additional information\n\n// List of Learning Assignments assigned to current user\nGetLearningAssignmentsMeRequest.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, types: types, states: states, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningAssignmentsMeRequest.getLearningAssignmentsMe was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module. Fetch assignments for learning module ID\nlet interval: String = \"\" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetLearningAssignmentsMeRequest.Overdue_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.Overdue_getLearningAssignmentsMe.enummember // Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pass: GetLearningAssignmentsMeRequest.Pass_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.Pass_getLearningAssignmentsMe.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned\nlet minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet sortOrder: GetLearningAssignmentsMeRequest.SortOrder_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.SortOrder_getLearningAssignmentsMe.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)\nlet sortBy: GetLearningAssignmentsMeRequest.SortBy_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.SortBy_getLearningAssignmentsMe.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate\nlet types: [String] = [\"\"] // Specifies the module types to filter by\nlet states: [String] = [\"\"] // Specifies the assignment states to filter by\nlet expand: [String] = [\"\"] // Specifies the expand option for returning additional information\n\n// List of Learning Assignments assigned to current user\nGetLearningAssignmentsMeRequest.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, types: types, states: states, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningAssignmentsMeRequest.getLearningAssignmentsMe was successful\")\n        dump(response)\n    }\n}"
   },
   "getlearningmodule": {
     "operationId": "getlearningmodule",
@@ -18666,6 +18685,42 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet trusteeUserId: String = \"\" // Id of the cloned user to delete\n\n// Deletes cloned user\nDeleteOrgauthorizationTrusteeCloneduserRequest.deleteOrgauthorizationTrusteeCloneduser(trusteeOrgId: trusteeOrgId, trusteeUserId: trusteeUserId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOrgauthorizationTrusteeCloneduserRequest.deleteOrgauthorizationTrusteeCloneduser was successful\")\n    }\n}"
   },
+  "deleteorgauthorizationtrusteegroup": {
+    "operationId": "deleteorgauthorizationtrusteegroup",
+    "functionName": "deleteOrgauthorizationTrusteeGroup",
+    "signature": "deleteOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet trusteeGroupId: String = \"\" // Trustee Group Id\n\n// Delete Trustee Group\nDeleteOrgauthorizationTrusteeGroupRequest.deleteOrgauthorizationTrusteeGroup(trusteeOrgId: trusteeOrgId, trusteeGroupId: trusteeGroupId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOrgauthorizationTrusteeGroupRequest.deleteOrgauthorizationTrusteeGroup was successful\")\n    }\n}"
+  },
+  "deleteorgauthorizationtrusteegrouproles": {
+    "operationId": "deleteorgauthorizationtrusteegrouproles",
+    "functionName": "deleteOrgauthorizationTrusteeGroupRoles",
+    "signature": "deleteOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet trusteeGroupId: String = \"\" // Trustee Group Id\n\n// Delete Trustee Group Roles\nDeleteOrgauthorizationTrusteeGroupRolesRequest.deleteOrgauthorizationTrusteeGroupRoles(trusteeOrgId: trusteeOrgId, trusteeGroupId: trusteeGroupId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOrgauthorizationTrusteeGroupRolesRequest.deleteOrgauthorizationTrusteeGroupRoles was successful\")\n    }\n}"
+  },
   "deleteorgauthorizationtrusteeuser": {
     "operationId": "deleteorgauthorizationtrusteeuser",
     "functionName": "deleteOrgauthorizationTrusteeUser",
@@ -18733,6 +18788,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trustorOrgId: String = \"\" // Trustor Organization Id\nlet trusteeUserId: String = \"\" // Trustee User Id\n\n// Delete Cloned User\nDeleteOrgauthorizationTrustorCloneduserRequest.deleteOrgauthorizationTrustorCloneduser(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOrgauthorizationTrustorCloneduserRequest.deleteOrgauthorizationTrustorCloneduser was successful\")\n    }\n}"
   },
+  "deleteorgauthorizationtrustorgroup": {
+    "operationId": "deleteorgauthorizationtrustorgroup",
+    "functionName": "deleteOrgauthorizationTrustorGroup",
+    "signature": "deleteOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)",
+    "parameters": [
+      {
+        "name": "trustorOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trustorGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trustorOrgId: String = \"\" // Trustor Organization Id\nlet trustorGroupId: String = \"\" // Trustor Group Id\n\n// Delete Trustee Group\nDeleteOrgauthorizationTrustorGroupRequest.deleteOrgauthorizationTrustorGroup(trustorOrgId: trustorOrgId, trustorGroupId: trustorGroupId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOrgauthorizationTrustorGroupRequest.deleteOrgauthorizationTrustorGroup was successful\")\n    }\n}"
+  },
   "deleteorgauthorizationtrustoruser": {
     "operationId": "deleteorgauthorizationtrustoruser",
     "functionName": "deleteOrgauthorizationTrustorUser",
@@ -18792,6 +18865,68 @@
     ],
     "return": "ClonedUserEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\n\n// The list of cloned users from the trustee organization (i.e. users with a native user record).\nGetOrgauthorizationTrusteeClonedusersRequest.getOrgauthorizationTrusteeClonedusers(trusteeOrgId: trusteeOrgId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrgauthorizationTrusteeClonedusersRequest.getOrgauthorizationTrusteeClonedusers was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getorgauthorizationtrusteegroup": {
+    "operationId": "getorgauthorizationtrusteegroup",
+    "functionName": "getOrgauthorizationTrusteeGroup",
+    "signature": "getOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "TrustGroup",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet trusteeGroupId: String = \"\" // Trustee Group Id\n\n// Get Trustee Group\nGetOrgauthorizationTrusteeGroupRequest.getOrgauthorizationTrusteeGroup(trusteeOrgId: trusteeOrgId, trusteeGroupId: trusteeGroupId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrgauthorizationTrusteeGroupRequest.getOrgauthorizationTrusteeGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getorgauthorizationtrusteegrouproles": {
+    "operationId": "getorgauthorizationtrusteegrouproles",
+    "functionName": "getOrgauthorizationTrusteeGroupRoles",
+    "signature": "getOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "UserAuthorization",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet trusteeGroupId: String = \"\" // Trustee Group Id\n\n// Get Trustee Group Roles\nGetOrgauthorizationTrusteeGroupRolesRequest.getOrgauthorizationTrusteeGroupRoles(trusteeOrgId: trusteeOrgId, trusteeGroupId: trusteeGroupId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrgauthorizationTrusteeGroupRolesRequest.getOrgauthorizationTrusteeGroupRoles was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getorgauthorizationtrusteegroups": {
+    "operationId": "getorgauthorizationtrusteegroups",
+    "functionName": "getOrgauthorizationTrusteeGroups",
+    "signature": "getOrgauthorizationTrusteeGroups(trusteeOrgId, pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "TrustGroupEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// The list of trustee groups for this organization (i.e. groups granted access to this organization).\nGetOrgauthorizationTrusteeGroupsRequest.getOrgauthorizationTrusteeGroups(trusteeOrgId: trusteeOrgId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrgauthorizationTrusteeGroupsRequest.getOrgauthorizationTrusteeGroups was successful\")\n        dump(response)\n    }\n}"
   },
   "getorgauthorizationtrusteeuser": {
     "operationId": "getorgauthorizationtrusteeuser",
@@ -18928,6 +19063,49 @@
     "return": "ClonedUserEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trustorOrgId: String = \"\" // Trustor Organization Id\n\n// The list of cloned users in the trustor organization (i.e. users with a native user record).\nGetOrgauthorizationTrustorClonedusersRequest.getOrgauthorizationTrustorClonedusers(trustorOrgId: trustorOrgId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrgauthorizationTrustorClonedusersRequest.getOrgauthorizationTrustorClonedusers was successful\")\n        dump(response)\n    }\n}"
   },
+  "getorgauthorizationtrustorgroup": {
+    "operationId": "getorgauthorizationtrustorgroup",
+    "functionName": "getOrgauthorizationTrustorGroup",
+    "signature": "getOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)",
+    "parameters": [
+      {
+        "name": "trustorOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trustorGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "TrustGroup",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trustorOrgId: String = \"\" // Trustor Organization Id\nlet trustorGroupId: String = \"\" // Trustor Group Id\n\n// Get Trustee Group\nGetOrgauthorizationTrustorGroupRequest.getOrgauthorizationTrustorGroup(trustorOrgId: trustorOrgId, trustorGroupId: trustorGroupId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrgauthorizationTrustorGroupRequest.getOrgauthorizationTrustorGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getorgauthorizationtrustorgroups": {
+    "operationId": "getorgauthorizationtrustorgroups",
+    "functionName": "getOrgauthorizationTrustorGroups",
+    "signature": "getOrgauthorizationTrustorGroups(trustorOrgId, pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "trustorOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "TrustGroupEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trustorOrgId: String = \"\" // Trustee Organization Id\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// The list of groups in the trustor organization (i.e. groups granted access).\nGetOrgauthorizationTrustorGroupsRequest.getOrgauthorizationTrustorGroups(trustorOrgId: trustorOrgId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrgauthorizationTrustorGroupsRequest.getOrgauthorizationTrustorGroups was successful\")\n        dump(response)\n    }\n}"
+  },
   "getorgauthorizationtrustoruser": {
     "operationId": "getorgauthorizationtrustoruser",
     "functionName": "getOrgauthorizationTrustorUser",
@@ -19003,6 +19181,25 @@
     ],
     "return": "TrustRequest",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: TrustRequestCreate = new TrustRequestCreate(...) // Pairing Info\n\n// A pairing id is created by the trustee and given to the trustor to create a trust.\nPostOrgauthorizationPairingsRequest.postOrgauthorizationPairings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOrgauthorizationPairingsRequest.postOrgauthorizationPairings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postorgauthorizationtrusteegroups": {
+    "operationId": "postorgauthorizationtrusteegroups",
+    "functionName": "postOrgauthorizationTrusteeGroups",
+    "signature": "postOrgauthorizationTrusteeGroups(trusteeOrgId, body)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "TrustMemberCreate",
+        "required": "true"
+      }
+    ],
+    "return": "TrustGroup",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet body: TrustMemberCreate = new TrustMemberCreate(...) // Trust\n\n// Add a group to the trust.\nPostOrgauthorizationTrusteeGroupsRequest.postOrgauthorizationTrusteeGroups(trusteeOrgId: trusteeOrgId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOrgauthorizationTrusteeGroupsRequest.postOrgauthorizationTrusteeGroups was successful\")\n        dump(response)\n    }\n}"
   },
   "postorgauthorizationtrusteeusers": {
     "operationId": "postorgauthorizationtrusteeusers",
@@ -19143,6 +19340,54 @@
     "return": "Trustee",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet body: TrustUpdate = new TrustUpdate(...) // Client\n\n// Update Org Trust\nPutOrgauthorizationTrusteeRequest.putOrgauthorizationTrustee(trusteeOrgId: trusteeOrgId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOrgauthorizationTrusteeRequest.putOrgauthorizationTrustee was successful\")\n        dump(response)\n    }\n}"
   },
+  "putorgauthorizationtrusteegrouproledivisions": {
+    "operationId": "putorgauthorizationtrusteegrouproledivisions",
+    "functionName": "putOrgauthorizationTrusteeGroupRoledivisions",
+    "signature": "putOrgauthorizationTrusteeGroupRoledivisions(trusteeOrgId, trusteeGroupId, body)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "RoleDivisionGrants",
+        "required": "true"
+      }
+    ],
+    "return": "UserAuthorization",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet trusteeGroupId: String = \"\" // Trustee Group Id\nlet body: RoleDivisionGrants = new RoleDivisionGrants(...) // Set of roles with corresponding divisions to apply\n\n// Update Trustee Group Roles\nPutOrgauthorizationTrusteeGroupRoledivisionsRequest.putOrgauthorizationTrusteeGroupRoledivisions(trusteeOrgId: trusteeOrgId, trusteeGroupId: trusteeGroupId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOrgauthorizationTrusteeGroupRoledivisionsRequest.putOrgauthorizationTrusteeGroupRoledivisions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putorgauthorizationtrusteegrouproles": {
+    "operationId": "putorgauthorizationtrusteegrouproles",
+    "functionName": "putOrgauthorizationTrusteeGroupRoles",
+    "signature": "putOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId, body)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "[String]",
+        "required": "true"
+      }
+    ],
+    "return": "UserAuthorization",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trusteeOrgId: String = \"\" // Trustee Organization Id\nlet trusteeGroupId: String = \"\" // Trustee Group Id\nlet body: [String] = [\"\"] // List of roles\n\n// Update Trustee Group Roles\nPutOrgauthorizationTrusteeGroupRolesRequest.putOrgauthorizationTrusteeGroupRoles(trusteeOrgId: trusteeOrgId, trusteeGroupId: trusteeGroupId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOrgauthorizationTrusteeGroupRolesRequest.putOrgauthorizationTrusteeGroupRoles was successful\")\n        dump(response)\n    }\n}"
+  },
   "putorgauthorizationtrusteeuserroledivisions": {
     "operationId": "putorgauthorizationtrusteeuserroledivisions",
     "functionName": "putOrgauthorizationTrusteeUserRoledivisions",
@@ -19209,6 +19454,25 @@
     ],
     "return": "ClonedUser",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trustorOrgId: String = \"\" // Trustor Organization Id\nlet trusteeUserId: String = \"\" // Trustee User Id\n\n// Creates a clone of the trustee user in the trustor org.\nPutOrgauthorizationTrustorCloneduserRequest.putOrgauthorizationTrustorCloneduser(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOrgauthorizationTrustorCloneduserRequest.putOrgauthorizationTrustorCloneduser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putorgauthorizationtrustorgroup": {
+    "operationId": "putorgauthorizationtrustorgroup",
+    "functionName": "putOrgauthorizationTrustorGroup",
+    "signature": "putOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)",
+    "parameters": [
+      {
+        "name": "trustorOrgId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "trustorGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "TrustGroup",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trustorOrgId: String = \"\" // Trustor Organization Id\nlet trustorGroupId: String = \"\" // Trustor Group Id\n\n// Add a Trustee Group to the trust.\nPutOrgauthorizationTrustorGroupRequest.putOrgauthorizationTrustorGroup(trustorOrgId: trustorOrgId, trustorGroupId: trustorGroupId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOrgauthorizationTrustorGroupRequest.putOrgauthorizationTrustorGroup was successful\")\n        dump(response)\n    }\n}"
   },
   "putorgauthorizationtrustoruser": {
     "operationId": "putorgauthorizationtrustoruser",
@@ -34222,6 +34486,25 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\n\n// Delete a deployment\nDeleteWebdeploymentsDeploymentRequest.deleteWebdeploymentsDeployment(deploymentId: deploymentId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteWebdeploymentsDeploymentRequest.deleteWebdeploymentsDeployment was successful\")\n    }\n}"
   },
+  "deletewebdeploymentsdeploymentcobrowsesessionid": {
+    "operationId": "deletewebdeploymentsdeploymentcobrowsesessionid",
+    "functionName": "deleteWebdeploymentsDeploymentCobrowseSessionId",
+    "signature": "deleteWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "sessionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "JSON",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // WebMessaging deployment ID\nlet sessionId: String = \"\" // Cobrowse session id or join code\n\n// Deletes a cobrowse session\nDeleteWebdeploymentsDeploymentCobrowseSessionIdRequest.deleteWebdeploymentsDeploymentCobrowseSessionId(deploymentId: deploymentId, sessionId: sessionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteWebdeploymentsDeploymentCobrowseSessionIdRequest.deleteWebdeploymentsDeploymentCobrowseSessionId was successful\")\n        dump(response)\n    }\n}"
+  },
   "deletewebdeploymentstokenrevoke": {
     "operationId": "deletewebdeploymentstokenrevoke",
     "functionName": "deleteWebdeploymentsTokenRevoke",
@@ -34314,6 +34597,25 @@
     ],
     "return": "WebDeployment",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\n\n// Get a deployment\nGetWebdeploymentsDeploymentRequest.getWebdeploymentsDeployment(deploymentId: deploymentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentRequest.getWebdeploymentsDeployment was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getwebdeploymentsdeploymentcobrowsesessionid": {
+    "operationId": "getwebdeploymentsdeploymentcobrowsesessionid",
+    "functionName": "getWebdeploymentsDeploymentCobrowseSessionId",
+    "signature": "getWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "sessionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "CobrowseWebMessagingSession",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // WebMessaging deployment ID\nlet sessionId: String = \"\" // Cobrowse session id or join code\n\n// Retrieves a cobrowse session\nGetWebdeploymentsDeploymentCobrowseSessionIdRequest.getWebdeploymentsDeploymentCobrowseSessionId(deploymentId: deploymentId, sessionId: sessionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentCobrowseSessionIdRequest.getWebdeploymentsDeploymentCobrowseSessionId was successful\")\n        dump(response)\n    }\n}"
   },
   "getwebdeploymentsdeploymentconfigurations": {
     "operationId": "getwebdeploymentsdeploymentconfigurations",

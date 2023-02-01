@@ -108,6 +108,7 @@ public class ReportingExportJobRequest: Codable {
         case agentScorecardInsightsSummaryView = "AGENT_SCORECARD_INSIGHTS_SUMMARY_VIEW"
         case agentScorecardInsightsDetailView = "AGENT_SCORECARD_INSIGHTS_DETAIL_VIEW"
         case queueWrapupDetailView = "QUEUE_WRAPUP_DETAIL_VIEW"
+        case interactionDetailView = "INTERACTION_DETAIL_VIEW"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"
@@ -129,7 +130,7 @@ public class ReportingExportJobRequest: Codable {
     public var filter: ViewFilter?
     /** Indicates if the request has been marked as read */
     public var read: Bool?
-    /** The locale use for localization of the exported data, i.e. en-us, es-mx   */
+    /** The locale used for localization of the exported data, i.e. en-US, es */
     public var locale: String?
     /** Indicates if durations are formatted in hh:mm:ss format instead of ms */
     public var hasFormatDurations: Bool?

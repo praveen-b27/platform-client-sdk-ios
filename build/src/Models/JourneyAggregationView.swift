@@ -32,6 +32,7 @@ public class JourneyAggregationView: Codable {
         case nwebactionsrejected = "nWebActionsRejected"
         case nwebactionsstarted = "nWebActionsStarted"
         case nwebactionstimedout = "nWebActionsTimedout"
+        case ojourneyoutcometouchpointvalue = "oJourneyOutcomeTouchpointValue"
         case ojourneyoutcomevalue = "oJourneyOutcomeValue"
     }
     public enum Function: String, Codable { 

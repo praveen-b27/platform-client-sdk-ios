@@ -19,11 +19,14 @@ public class KeyPerformanceIndicator: Codable {
         case salesConversion = "SalesConversion"
         case churn = "Churn"
         case retention = "Retention"
+        case salesValue = "SalesValue"
         case handleTime = "HandleTime"
         case numberOfTransfers = "NumberOfTransfers"
     }
     public enum Source: String, Codable { 
         case wrapUpCode = "WrapUpCode"
+        case outcome = "Outcome"
+        case _none = "None"
     }
     public enum Status: String, Codable { 
         case enabled = "Enabled"
@@ -51,6 +54,8 @@ public class KeyPerformanceIndicator: Codable {
     public var source: Source?
     /** Defines what wrap up codes are mapped to Key Performance Indicator. */
     public var wrapUpCodeConfig: WrapUpCodeConfig?
+    /** Defines what outcome ids are mapped to Key Performance Indicator. */
+    public var outcomeConfig: OutcomeConfig?
     /** The status of the Key Performance Indicator. */
     public var status: Status?
     /** The group the Key Performance Indicator belongs to. */
@@ -58,7 +63,7 @@ public class KeyPerformanceIndicator: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, optimizationType: OptimizationType?, dateCreated: Date?, dateModified: Date?, _description: String?, kpiType: KpiType?, source: Source?, wrapUpCodeConfig: WrapUpCodeConfig?, status: Status?, kpiGroup: KpiGroup?, selfUri: String?) {
+    public init(_id: String?, name: String?, optimizationType: OptimizationType?, dateCreated: Date?, dateModified: Date?, _description: String?, kpiType: KpiType?, source: Source?, wrapUpCodeConfig: WrapUpCodeConfig?, outcomeConfig: OutcomeConfig?, status: Status?, kpiGroup: KpiGroup?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.optimizationType = optimizationType
@@ -68,6 +73,7 @@ public class KeyPerformanceIndicator: Codable {
         self.kpiType = kpiType
         self.source = source
         self.wrapUpCodeConfig = wrapUpCodeConfig
+        self.outcomeConfig = outcomeConfig
         self.status = status
         self.kpiGroup = kpiGroup
         self.selfUri = selfUri
@@ -83,6 +89,7 @@ public class KeyPerformanceIndicator: Codable {
         case kpiType
         case source
         case wrapUpCodeConfig
+        case outcomeConfig
         case status
         case kpiGroup
         case selfUri

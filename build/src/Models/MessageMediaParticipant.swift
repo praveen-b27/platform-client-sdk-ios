@@ -88,6 +88,8 @@ public class MessageMediaParticipant: Codable {
     public var wrapupRequired: Bool?
     /** The wrap-up prompt indicating the type of wrap-up to be performed. */
     public var wrapupPrompt: String?
+    /** List of roles this participant's media has had on the conversation, ie monitor, coach, etc */
+    public var mediaRoles: [String]?
     /** The PureCloud user for this participant. */
     public var user: DomainEntityRef?
     /** The PureCloud queue for this participant. */
@@ -141,7 +143,7 @@ public class MessageMediaParticipant: Codable {
     /** If true, the participant member is authenticated. */
     public var authenticated: Bool?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?, authenticated: Bool?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?, authenticated: Bool?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -156,6 +158,7 @@ public class MessageMediaParticipant: Codable {
         self.held = held
         self.wrapupRequired = wrapupRequired
         self.wrapupPrompt = wrapupPrompt
+        self.mediaRoles = mediaRoles
         self.user = user
         self.queue = queue
         self.team = team
@@ -199,6 +202,7 @@ public class MessageMediaParticipant: Codable {
         case held
         case wrapupRequired
         case wrapupPrompt
+        case mediaRoles
         case user
         case queue
         case team

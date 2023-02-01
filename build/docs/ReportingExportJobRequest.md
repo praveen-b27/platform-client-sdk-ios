@@ -15,7 +15,7 @@ title: ReportingExportJobRequest
 | **viewType** | **String** | The type of view export job to be created | |
 | **filter** | [**ViewFilter**](ViewFilter.html) | Filters to apply to create the view | |
 | **read** | **Bool** | Indicates if the request has been marked as read | [optional] |
-| **locale** | **String** | The locale use for localization of the exported data, i.e. en-us, es-mx   | |
+| **locale** | **String** | The locale used for localization of the exported data, i.e. en-US, es | |
 | **hasFormatDurations** | **Bool** | Indicates if durations are formatted in hh:mm:ss format instead of ms | [optional] |
 | **hasSplitFilters** | **Bool** | Indicates if filters will be split in aggregate detail exports | [optional] |
 | **excludeEmptyRows** | **Bool** | Excludes empty rows from the exports | [optional] |

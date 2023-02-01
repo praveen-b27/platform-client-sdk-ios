@@ -75,6 +75,8 @@ public class CobrowseMediaParticipant: Codable {
     public var wrapupRequired: Bool?
     /** The wrap-up prompt indicating the type of wrap-up to be performed. */
     public var wrapupPrompt: String?
+    /** List of roles this participant's media has had on the conversation, ie monitor, coach, etc */
+    public var mediaRoles: [String]?
     /** The PureCloud user for this participant. */
     public var user: DomainEntityRef?
     /** The PureCloud queue for this participant. */
@@ -124,7 +126,7 @@ public class CobrowseMediaParticipant: Codable {
     /** The time when the provider event which triggered this conversation update happened in the corrected provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var providerEventTime: Date?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, providerEventTime: Date?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, providerEventTime: Date?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -139,6 +141,7 @@ public class CobrowseMediaParticipant: Codable {
         self.held = held
         self.wrapupRequired = wrapupRequired
         self.wrapupPrompt = wrapupPrompt
+        self.mediaRoles = mediaRoles
         self.user = user
         self.queue = queue
         self.team = team
@@ -180,6 +183,7 @@ public class CobrowseMediaParticipant: Codable {
         case held
         case wrapupRequired
         case wrapupPrompt
+        case mediaRoles
         case user
         case queue
         case team

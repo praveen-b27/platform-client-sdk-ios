@@ -190,6 +190,8 @@ StationsAPI.getStations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sort
 
 Get an organization&#39;s StationSettings
 
+This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
+
 
 
 Wraps GET /api/v2/stations/settings  
@@ -236,6 +238,8 @@ This endpoint does not require any parameters.
 > [StationSettings](StationSettings.html) patchStationsSettings(body)
 
 Patch an organization&#39;s StationSettings
+
+This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
 
 
 

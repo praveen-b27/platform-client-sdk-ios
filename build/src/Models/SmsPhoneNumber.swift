@@ -84,10 +84,14 @@ public class SmsPhoneNumber: Codable {
     public var supportsMms: Bool?
     /** Set to true if this phone number has the capability to support voice */
     public var supportsVoice: Bool?
+    /** The Genesys Cloud integration this phone number belongs to. */
+    public var integration: DomainEntityRef?
+    /** Compliance configuration for short codes, including help, stop and opt in. */
+    public var compliance: Compliance?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, capabilities: [Capabilities]?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, provisioningStatus: SmsProvisioningStatus?, country: String?, supportsSms: Bool?, supportsMms: Bool?, supportsVoice: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, capabilities: [Capabilities]?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, provisioningStatus: SmsProvisioningStatus?, country: String?, supportsSms: Bool?, supportsMms: Bool?, supportsVoice: Bool?, integration: DomainEntityRef?, compliance: Compliance?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.phoneNumber = phoneNumber
@@ -112,6 +116,8 @@ public class SmsPhoneNumber: Codable {
         self.supportsSms = supportsSms
         self.supportsMms = supportsMms
         self.supportsVoice = supportsVoice
+        self.integration = integration
+        self.compliance = compliance
         self.selfUri = selfUri
     }
 
@@ -140,6 +146,8 @@ public class SmsPhoneNumber: Codable {
         case supportsSms
         case supportsMms
         case supportsVoice
+        case integration
+        case compliance
         case selfUri
     }
 

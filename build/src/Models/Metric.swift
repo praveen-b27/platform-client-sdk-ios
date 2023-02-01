@@ -11,6 +11,12 @@ import Foundation
 
 public class Metric: Codable {
 
+    public enum TimeDisplayUnit: String, Codable { 
+        case _none = "None"
+        case seconds = "Seconds"
+        case minutes = "Minutes"
+        case hours = "Hours"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of this metric */
@@ -29,12 +35,16 @@ public class Metric: Codable {
     public var dateCreated: Date?
     /** The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateUnlinked: Date?
+    /** The precision of the metric, must be between 0 and 5 */
+    public var precision: Int?
+    /** The time unit in which the metric should be displayed -- this parameter is ignored when displaying non-time values */
+    public var timeDisplayUnit: TimeDisplayUnit?
     /** The source performance profile when this metric is linked */
     public var sourcePerformanceProfile: PerformanceProfile?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, selfUri: String?) {
+    public init(_id: String?, name: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, precision: Int?, timeDisplayUnit: TimeDisplayUnit?, sourcePerformanceProfile: PerformanceProfile?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.metricDefinitionId = metricDefinitionId
@@ -44,6 +54,8 @@ public class Metric: Codable {
         self.linkedMetric = linkedMetric
         self.dateCreated = dateCreated
         self.dateUnlinked = dateUnlinked
+        self.precision = precision
+        self.timeDisplayUnit = timeDisplayUnit
         self.sourcePerformanceProfile = sourcePerformanceProfile
         self.selfUri = selfUri
     }
@@ -58,6 +70,8 @@ public class Metric: Codable {
         case linkedMetric
         case dateCreated
         case dateUnlinked
+        case precision
+        case timeDisplayUnit
         case sourcePerformanceProfile
         case selfUri
     }

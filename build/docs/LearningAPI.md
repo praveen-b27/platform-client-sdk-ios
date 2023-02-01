@@ -235,7 +235,7 @@ let maxPercentageScore: Float = 0 // The maximum assessment score for an assignm
 let sortOrder: LearningAPI.SortOrder_getLearningAssignments = LearningAPI.SortOrder_getLearningAssignments.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)
 let sortBy: LearningAPI.SortBy_getLearningAssignments = LearningAPI.SortBy_getLearningAssignments.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate
 let userId: [String] = [""] // Specifies the list of user IDs to be queried, up to 100 user IDs.
-let types: [String] = [""] // Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned
+let types: [String] = [""] // Specifies the module types to filter by
 let states: [String] = [""] // Specifies the assignment states to filter by
 let expand: [String] = [""] // Specifies the expand option for returning additional information
 
@@ -267,7 +267,7 @@ LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, compl
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
 | **userId** | [**[String]**](String.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional] |
-| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the module types to filter by | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), notCompleted ("NotCompleted") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
@@ -313,7 +313,7 @@ let minPercentageScore: Float = 0 // The minimum assessment score for an assignm
 let maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)
 let sortOrder: LearningAPI.SortOrder_getLearningAssignmentsMe = LearningAPI.SortOrder_getLearningAssignmentsMe.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)
 let sortBy: LearningAPI.SortBy_getLearningAssignmentsMe = LearningAPI.SortBy_getLearningAssignmentsMe.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate
-let types: [String] = [""] // Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned
+let types: [String] = [""] // Specifies the module types to filter by
 let states: [String] = [""] // Specifies the assignment states to filter by
 let expand: [String] = [""] // Specifies the expand option for returning additional information
 
@@ -344,7 +344,7 @@ LearningAPI.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, com
 | **maxPercentageScore** | **Float**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
-| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the module types to filter by | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), notCompleted ("NotCompleted") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}

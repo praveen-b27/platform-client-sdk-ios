@@ -16,6 +16,7 @@ title: KeyPerformanceIndicator
 | **kpiType** | **String** | The type of Key Performance Indicator. | [optional] |
 | **source** | **String** | Source of values for Key Performance Indicator. | [optional] |
 | **wrapUpCodeConfig** | [**WrapUpCodeConfig**](WrapUpCodeConfig.html) | Defines what wrap up codes are mapped to Key Performance Indicator. | [optional] |
+| **outcomeConfig** | [**OutcomeConfig**](OutcomeConfig.html) | Defines what outcome ids are mapped to Key Performance Indicator. | [optional] |
 | **status** | **String** | The status of the Key Performance Indicator. | [optional] |
 | **kpiGroup** | **String** | The group the Key Performance Indicator belongs to. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |

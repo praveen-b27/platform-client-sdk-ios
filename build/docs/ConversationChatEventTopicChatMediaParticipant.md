@@ -42,6 +42,7 @@ title: ConversationChatEventTopicChatMediaParticipant
 | **journeyContext** | [**ConversationChatEventTopicJourneyContext**](ConversationChatEventTopicJourneyContext.html) |  | [optional] |
 | **startAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **endAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **mediaRoles** | **[String]** |  | [optional] |
 | **roomId** | **String** |  | [optional] |
 | **avatarImageUrl** | **String** |  | [optional] |
 {: class="table table-striped"}

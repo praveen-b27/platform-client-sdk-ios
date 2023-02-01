@@ -31,6 +31,8 @@ title: SmsPhoneNumber
 | **supportsSms** | **Bool** | Set to true if this phone number has the capability to support SMS | [optional] |
 | **supportsMms** | **Bool** | Set to true if this phone number has the capability to support MMS | [optional] |
 | **supportsVoice** | **Bool** | Set to true if this phone number has the capability to support voice | [optional] |
+| **integration** | [**DomainEntityRef**](DomainEntityRef.html) | The Genesys Cloud integration this phone number belongs to. | [optional] |
+| **compliance** | [**Compliance**](Compliance.html) | Compliance configuration for short codes, including help, stop and opt in. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

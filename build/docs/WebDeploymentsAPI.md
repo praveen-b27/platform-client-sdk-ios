@@ -9,12 +9,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteWebdeploymentsConfiguration**](WebDeploymentsAPI.html#deleteWebdeploymentsConfiguration) | Delete all versions of a configuration |
 | [**deleteWebdeploymentsDeployment**](WebDeploymentsAPI.html#deleteWebdeploymentsDeployment) | Delete a deployment |
+| [**deleteWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsAPI.html#deleteWebdeploymentsDeploymentCobrowseSessionId) | Deletes a cobrowse session |
 | [**deleteWebdeploymentsTokenRevoke**](WebDeploymentsAPI.html#deleteWebdeploymentsTokenRevoke) | Invalidate JWT |
 | [**getWebdeploymentsConfigurationVersion**](WebDeploymentsAPI.html#getWebdeploymentsConfigurationVersion) | Get a configuration version |
 | [**getWebdeploymentsConfigurationVersions**](WebDeploymentsAPI.html#getWebdeploymentsConfigurationVersions) | Get the versions of a configuration |
 | [**getWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsAPI.html#getWebdeploymentsConfigurationVersionsDraft) | Get the configuration draft |
 | [**getWebdeploymentsConfigurations**](WebDeploymentsAPI.html#getWebdeploymentsConfigurations) | View configuration drafts |
 | [**getWebdeploymentsDeployment**](WebDeploymentsAPI.html#getWebdeploymentsDeployment) | Get a deployment |
+| [**getWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsAPI.html#getWebdeploymentsDeploymentCobrowseSessionId) | Retrieves a cobrowse session |
 | [**getWebdeploymentsDeploymentConfigurations**](WebDeploymentsAPI.html#getWebdeploymentsDeploymentConfigurations) | Get active configuration for a given deployment |
 | [**getWebdeploymentsDeployments**](WebDeploymentsAPI.html#getWebdeploymentsDeployments) | Get deployments |
 | [**postWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsAPI.html#postWebdeploymentsConfigurationVersionsDraftPublish) | Publish the configuration draft and create a new version |
@@ -127,6 +129,59 @@ WebDeploymentsAPI.deleteWebdeploymentsDeployment(deploymentId: deploymentId) { (
 ### Return type
 
 `nil` (empty response body)
+
+<a name="deleteWebdeploymentsDeploymentCobrowseSessionId"></a>
+
+# **deleteWebdeploymentsDeploymentCobrowseSessionId**
+
+
+
+> [JSON](JSON.html) deleteWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId)
+
+Deletes a cobrowse session
+
+
+
+Wraps DELETE /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let deploymentId: String = "" // WebMessaging deployment ID
+let sessionId: String = "" // Cobrowse session id or join code
+
+// Code example
+WebDeploymentsAPI.deleteWebdeploymentsDeploymentCobrowseSessionId(deploymentId: deploymentId, sessionId: sessionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WebDeploymentsAPI.deleteWebdeploymentsDeploymentCobrowseSessionId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **String**| WebMessaging deployment ID | |
+| **sessionId** | **String**| Cobrowse session id or join code | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JSON**](JSON.html)
 
 <a name="deleteWebdeploymentsTokenRevoke"></a>
 
@@ -443,6 +498,59 @@ WebDeploymentsAPI.getWebdeploymentsDeployment(deploymentId: deploymentId) { (res
 ### Return type
 
 [**WebDeployment**](WebDeployment.html)
+
+<a name="getWebdeploymentsDeploymentCobrowseSessionId"></a>
+
+# **getWebdeploymentsDeploymentCobrowseSessionId**
+
+
+
+> [CobrowseWebMessagingSession](CobrowseWebMessagingSession.html) getWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId)
+
+Retrieves a cobrowse session
+
+
+
+Wraps GET /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let deploymentId: String = "" // WebMessaging deployment ID
+let sessionId: String = "" // Cobrowse session id or join code
+
+// Code example
+WebDeploymentsAPI.getWebdeploymentsDeploymentCobrowseSessionId(deploymentId: deploymentId, sessionId: sessionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WebDeploymentsAPI.getWebdeploymentsDeploymentCobrowseSessionId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **String**| WebMessaging deployment ID | |
+| **sessionId** | **String**| Cobrowse session id or join code | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html)
 
 <a name="getWebdeploymentsDeploymentConfigurations"></a>
 

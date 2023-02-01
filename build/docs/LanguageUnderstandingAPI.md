@@ -365,7 +365,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomain(domainId: domainId) { (r
 
 
 
-> [NluFeedbackListing](NluFeedbackListing.html) getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields)
+> [NluFeedbackListing](NluFeedbackListing.html) getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, includeTrainingUtterances, after, fields)
 
 Get all feedback in the given NLU Domain Version.
 
@@ -396,11 +396,12 @@ let language: String = "" // Whether to filter response based on the language, e
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
 let enableCursorPagination: Bool = true // Enable Cursor Pagination
+let includeTrainingUtterances: Bool = true // Include Training Utterances. By default they're included.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true
 let fields: [String] = [""] // Fields and properties to get, comma-separated
 
 // Code example
-LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields) { (response, error) in
+LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, language: language, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, includeTrainingUtterances: includeTrainingUtterances, after: after, fields: fields) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -425,6 +426,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domain
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **enableCursorPagination** | **Bool**| Enable Cursor Pagination | [optional] |
+| **includeTrainingUtterances** | **Bool**| Include Training Utterances. By default they're included. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true | [optional] |
 | **fields** | [**[String]**](String.html)| Fields and properties to get, comma-separated | [optional]<br />**Values**: version ("version"), datecreated ("dateCreated"), text ("text"), intents ("intents") |
 {: class="table-striped"}

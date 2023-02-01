@@ -81,6 +81,8 @@ public class ParticipantBasic: Codable {
     public var wrapupSkipped: Bool?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
+    /** List of roles this participant's media has had on the conversation, ie monitor, coach, etc. */
+    public var mediaRoles: [String]?
     /** Information on how a communication should be routed to an agent. */
     public var conversationRoutingData: ConversationRoutingData?
     /** Specifies how long the agent has to answer an interaction before being marked as not responding. */
@@ -112,7 +114,7 @@ public class ParticipantBasic: Codable {
     /** If this participant barged in a participant's call, then this will be the id of the targeted participant. */
     public var bargedParticipantId: String?
 
-    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [CallBasic]?, callbacks: [CallbackBasic]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?, bargedParticipantId: String?) {
+    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, mediaRoles: [String]?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [CallBasic]?, callbacks: [CallbackBasic]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?, bargedParticipantId: String?) {
         self._id = _id
         self.startTime = startTime
         self.endTime = endTime
@@ -139,6 +141,7 @@ public class ParticipantBasic: Codable {
         self.wrapupTimeoutMs = wrapupTimeoutMs
         self.wrapupSkipped = wrapupSkipped
         self.wrapup = wrapup
+        self.mediaRoles = mediaRoles
         self.conversationRoutingData = conversationRoutingData
         self.alertingTimeoutMs = alertingTimeoutMs
         self.monitoredParticipantId = monitoredParticipantId
@@ -188,6 +191,7 @@ public class ParticipantBasic: Codable {
         case wrapupTimeoutMs
         case wrapupSkipped
         case wrapup
+        case mediaRoles
         case conversationRoutingData
         case alertingTimeoutMs
         case monitoredParticipantId

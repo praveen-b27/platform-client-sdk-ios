@@ -31,6 +31,7 @@ public class JourneyAggregationQuery: Codable {
         case journeydevicecategory = "journeyDeviceCategory"
         case journeydevicetype = "journeyDeviceType"
         case journeyfrequencycapreason = "journeyFrequencyCapReason"
+        case journeyipgeolocationcountry = "journeyIpGeolocationCountry"
         case journeyoutcomeid = "journeyOutcomeId"
         case journeysegmentid = "journeySegmentId"
         case journeysegmentscope = "journeySegmentScope"
@@ -42,6 +43,15 @@ public class JourneyAggregationQuery: Codable {
         case notequalcondition = "notEqualCondition"
         case startswithcondition = "startsWithCondition"
         case touchpointactionmapid = "touchpointActionMapId"
+        case touchpointagentid = "touchpointAgentId"
+        case touchpointattributionscope = "touchpointAttributionScope"
+        case touchpointchannelmessagetype = "touchpointChannelMessageType"
+        case touchpointchannelplatform = "touchpointChannelPlatform"
+        case touchpointchanneltype = "touchpointChannelType"
+        case touchpointconversationid = "touchpointConversationId"
+        case touchpointinteractiontype = "touchpointInteractionType"
+        case touchpointqueueid = "touchpointQueueId"
+        case touchpointwrapupcode = "touchpointWrapupCode"
     }
     public enum Metrics: String, Codable { 
         case ndistinctjourneyactions = "nDistinctJourneyActions"
@@ -64,6 +74,7 @@ public class JourneyAggregationQuery: Codable {
         case nwebactionsrejected = "nWebActionsRejected"
         case nwebactionsstarted = "nWebActionsStarted"
         case nwebactionstimedout = "nWebActionsTimedout"
+        case ojourneyoutcometouchpointvalue = "oJourneyOutcomeTouchpointValue"
         case ojourneyoutcomevalue = "oJourneyOutcomeValue"
     }
     public enum AlternateTimeDimension: String, Codable { 

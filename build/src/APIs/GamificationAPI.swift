@@ -846,17 +846,19 @@ open class GamificationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "timeDisplayUnit" : "None",
+  "precision" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateUnlinked" : "2000-01-23",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}",
   "metricDefinitionId" : "metricDefinitionId",
   "linkedMetric" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "sourcePerformanceProfile" : "{}",
   "id" : "id",
-  "dateUnlinked" : "2000-01-23",
-  "externalMetricDefinitionId" : "externalMetricDefinitionId",
-  "performanceProfileId" : "performanceProfileId",
-  "objective" : "{}"
+  "externalMetricDefinitionId" : "externalMetricDefinitionId"
 }, statusCode=200}]
      
      - parameter profileId: (path) Performance Profile Id 
@@ -926,29 +928,33 @@ open class GamificationAPI {
      - examples: [{contentType=application/json, example={
   "total" : 0,
   "entities" : [ {
+    "timeDisplayUnit" : "None",
+    "precision" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateUnlinked" : "2000-01-23",
+    "performanceProfileId" : "performanceProfileId",
+    "objective" : "{}",
     "metricDefinitionId" : "metricDefinitionId",
     "linkedMetric" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "sourcePerformanceProfile" : "{}",
     "id" : "id",
-    "dateUnlinked" : "2000-01-23",
-    "externalMetricDefinitionId" : "externalMetricDefinitionId",
-    "performanceProfileId" : "performanceProfileId",
-    "objective" : "{}"
+    "externalMetricDefinitionId" : "externalMetricDefinitionId"
   }, {
+    "timeDisplayUnit" : "None",
+    "precision" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateUnlinked" : "2000-01-23",
+    "performanceProfileId" : "performanceProfileId",
+    "objective" : "{}",
     "metricDefinitionId" : "metricDefinitionId",
     "linkedMetric" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "sourcePerformanceProfile" : "{}",
     "id" : "id",
-    "dateUnlinked" : "2000-01-23",
-    "externalMetricDefinitionId" : "externalMetricDefinitionId",
-    "performanceProfileId" : "performanceProfileId",
-    "objective" : "{}"
+    "externalMetricDefinitionId" : "externalMetricDefinitionId"
   } ],
   "selfUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -3799,17 +3805,19 @@ open class GamificationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "timeDisplayUnit" : "None",
+  "precision" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateUnlinked" : "2000-01-23",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}",
   "metricDefinitionId" : "metricDefinitionId",
   "linkedMetric" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "sourcePerformanceProfile" : "{}",
   "id" : "id",
-  "dateUnlinked" : "2000-01-23",
-  "externalMetricDefinitionId" : "externalMetricDefinitionId",
-  "performanceProfileId" : "performanceProfileId",
-  "objective" : "{}"
+  "externalMetricDefinitionId" : "externalMetricDefinitionId"
 }, statusCode=201}]
      
      - parameter sourceProfileId: (path) Source Performance Profile Id 
@@ -3870,17 +3878,19 @@ open class GamificationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "timeDisplayUnit" : "None",
+  "precision" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateUnlinked" : "2000-01-23",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}",
   "metricDefinitionId" : "metricDefinitionId",
   "linkedMetric" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "sourcePerformanceProfile" : "{}",
   "id" : "id",
-  "dateUnlinked" : "2000-01-23",
-  "externalMetricDefinitionId" : "externalMetricDefinitionId",
-  "performanceProfileId" : "performanceProfileId",
-  "objective" : "{}"
+  "externalMetricDefinitionId" : "externalMetricDefinitionId"
 }, statusCode=201}]
      
      - parameter profileId: (path) Performance Profile Id 
@@ -4085,17 +4095,19 @@ open class GamificationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "timeDisplayUnit" : "None",
+  "precision" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "dateUnlinked" : "2000-01-23",
+  "performanceProfileId" : "performanceProfileId",
+  "objective" : "{}",
   "metricDefinitionId" : "metricDefinitionId",
   "linkedMetric" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "sourcePerformanceProfile" : "{}",
   "id" : "id",
-  "dateUnlinked" : "2000-01-23",
-  "externalMetricDefinitionId" : "externalMetricDefinitionId",
-  "performanceProfileId" : "performanceProfileId",
-  "objective" : "{}"
+  "externalMetricDefinitionId" : "externalMetricDefinitionId"
 }, statusCode=200}]
      
      - parameter profileId: (path) Performance Profile Id 

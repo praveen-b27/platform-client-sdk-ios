@@ -314,6 +314,7 @@ open class AnalyticsAPI {
     "eventTime" : "2000-01-23T04:56:07.000+00:00",
     "rescored" : true,
     "calibrationId" : "calibrationId",
+    "evaluationStatus" : "Finished",
     "evaluatorId" : "evaluatorId",
     "released" : true
   }, {
@@ -329,6 +330,7 @@ open class AnalyticsAPI {
     "eventTime" : "2000-01-23T04:56:07.000+00:00",
     "rescored" : true,
     "calibrationId" : "calibrationId",
+    "evaluationStatus" : "Finished",
     "evaluatorId" : "evaluatorId",
     "released" : true
   } ],
@@ -1280,6 +1282,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     }, {
@@ -1295,6 +1298,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
@@ -2193,6 +2197,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     }, {
@@ -2208,6 +2213,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
@@ -3224,6 +3230,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     }, {
@@ -3239,6 +3246,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
@@ -4143,6 +4151,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     }, {
@@ -4158,6 +4167,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
@@ -7711,6 +7721,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     }, {
@@ -7726,6 +7737,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
@@ -8624,6 +8636,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     }, {
@@ -8639,6 +8652,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
@@ -9588,6 +9602,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     }, {
@@ -9603,6 +9618,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
@@ -10501,6 +10517,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     }, {
@@ -10516,6 +10533,7 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
       "calibrationId" : "calibrationId",
+      "evaluationStatus" : "Finished",
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],

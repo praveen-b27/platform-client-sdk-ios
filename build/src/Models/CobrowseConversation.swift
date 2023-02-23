@@ -18,14 +18,17 @@ public class CobrowseConversation: Codable {
     public var participants: [CobrowseMediaParticipant]?
     /** The list of other media channels involved in the conversation. */
     public var otherMediaUris: [String]?
+    /** The list of the most recent 20 transfer commands applied to this conversation. */
+    public var recentTransfers: [TransferResponse]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, participants: [CobrowseMediaParticipant]?, otherMediaUris: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, participants: [CobrowseMediaParticipant]?, otherMediaUris: [String]?, recentTransfers: [TransferResponse]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
+        self.recentTransfers = recentTransfers
         self.selfUri = selfUri
     }
 
@@ -34,6 +37,7 @@ public class CobrowseConversation: Codable {
         case name
         case participants
         case otherMediaUris
+        case recentTransfers
         case selfUri
     }
 

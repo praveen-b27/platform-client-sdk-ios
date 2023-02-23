@@ -5692,6 +5692,7 @@ open class UsersAPI {
           "name" : "name",
           "id" : "id"
         } ],
+        "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
@@ -5845,6 +5846,7 @@ open class UsersAPI {
           "name" : "name",
           "id" : "id"
         } ],
+        "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
@@ -10830,6 +10832,7 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -11273,6 +11276,7 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -11731,6 +11735,7 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -12174,6 +12179,7 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -12645,6 +12651,7 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -13088,6 +13095,7 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -13546,6 +13554,7 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -13989,6 +13998,7 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -16840,6 +16850,7 @@ open class UsersAPI {
         "name" : "name",
         "id" : "id"
       } ],
+      "allowMultipleActions" : true,
       "name" : "name",
       "fromName" : "fromName",
       "id" : "id",
@@ -17058,6 +17069,7 @@ open class UsersAPI {
           "name" : "name",
           "id" : "id"
         } ],
+        "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",
@@ -17211,6 +17223,7 @@ open class UsersAPI {
           "name" : "name",
           "id" : "id"
         } ],
+        "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
         "id" : "id",

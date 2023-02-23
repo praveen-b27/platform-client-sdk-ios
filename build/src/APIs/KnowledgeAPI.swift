@@ -984,18 +984,16 @@ open class KnowledgeAPI {
     
     
     
-    
     /**
      Get documents.
      
      - parameter sessionId: (path) Knowledge guest session ID. 
      - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
-     - parameter includeSubcategories: (query) Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeGuestSessionDocuments(sessionId: String, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentResponseListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: sessionId, categoryId: categoryId, includeSubcategories: includeSubcategories, pageSize: pageSize)
+    open class func getKnowledgeGuestSessionDocuments(sessionId: String, categoryId: [String]? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: KnowledgeGuestDocumentResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: sessionId, categoryId: categoryId, pageSize: pageSize)
         requestBuilder.execute { (response: Response<KnowledgeGuestDocumentResponseListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1178,12 +1176,11 @@ open class KnowledgeAPI {
      
      - parameter sessionId: (path) Knowledge guest session ID. 
      - parameter categoryId: (query) If specified, retrieves documents associated with category ids, comma separated values expected. (optional)
-     - parameter includeSubcategories: (query) Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
 
      - returns: RequestBuilder<KnowledgeGuestDocumentResponseListing> 
      */
-    open class func getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: String, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, pageSize: Int? = nil) -> RequestBuilder<KnowledgeGuestDocumentResponseListing> {        
+    open class func getKnowledgeGuestSessionDocumentsWithRequestBuilder(sessionId: String, categoryId: [String]? = nil, pageSize: Int? = nil) -> RequestBuilder<KnowledgeGuestDocumentResponseListing> {        
         var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents"
         let sessionIdPreEscape = "\(sessionId)"
         let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1194,7 +1191,6 @@ open class KnowledgeAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             "categoryId": categoryId, 
-            "includeSubcategories": includeSubcategories, 
             "pageSize": pageSize?.encodeToJSON()
         ])
 

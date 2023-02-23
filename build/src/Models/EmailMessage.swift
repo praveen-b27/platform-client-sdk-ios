@@ -14,6 +14,12 @@ public class EmailMessage: Codable {
     public enum State: String, Codable { 
         case created = "Created"
         case ready = "Ready"
+        case edited = "Edited"
+    }
+    public enum DraftType: String, Codable { 
+        case reply = "Reply"
+        case replyAll = "ReplyAll"
+        case forward = "Forward"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
@@ -40,7 +46,10 @@ public class EmailMessage: Codable {
     public var time: Date?
     /** Indicates whether the history of previous emails of the conversation is included within the email bodies of this message. */
     public var historyIncluded: Bool?
+    /** The state of the current draft. */
     public var state: State?
+    /** The type of draft that need to be treated. */
+    public var draftType: DraftType?
     /** Indicates an estimation of the size of the current email as a whole, in its final, ready to be sent form. */
     public var emailSizeBytes: Int?
     /** Indicates the maximum allowed size for an email to be send via SMTP server, based on the email domain configuration */
@@ -48,7 +57,7 @@ public class EmailMessage: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, replyTo: EmailAddress?, subject: String?, attachments: [Attachment]?, textBody: String?, htmlBody: String?, time: Date?, historyIncluded: Bool?, state: State?, emailSizeBytes: Int?, maxEmailSizeBytes: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, replyTo: EmailAddress?, subject: String?, attachments: [Attachment]?, textBody: String?, htmlBody: String?, time: Date?, historyIncluded: Bool?, state: State?, draftType: DraftType?, emailSizeBytes: Int?, maxEmailSizeBytes: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.to = to
@@ -63,6 +72,7 @@ public class EmailMessage: Codable {
         self.time = time
         self.historyIncluded = historyIncluded
         self.state = state
+        self.draftType = draftType
         self.emailSizeBytes = emailSizeBytes
         self.maxEmailSizeBytes = maxEmailSizeBytes
         self.selfUri = selfUri
@@ -83,6 +93,7 @@ public class EmailMessage: Codable {
         case time
         case historyIncluded
         case state
+        case draftType
         case emailSizeBytes
         case maxEmailSizeBytes
         case selfUri

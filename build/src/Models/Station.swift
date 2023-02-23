@@ -36,10 +36,12 @@ public class Station: Codable {
     public var webRtcForceTurn: Bool?
     /** The number of call appearances on the station. */
     public var webRtcCallAppearances: Int?
+    /** True when the media helper required. */
+    public var webRtcRequireMediaHelper: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, userId: String?, webRtcUserId: String?, primaryEdge: DomainEntityRef?, secondaryEdge: DomainEntityRef?, type: String?, lineAppearanceId: String?, webRtcMediaDscp: Int?, webRtcPersistentEnabled: Bool?, webRtcForceTurn: Bool?, webRtcCallAppearances: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, userId: String?, webRtcUserId: String?, primaryEdge: DomainEntityRef?, secondaryEdge: DomainEntityRef?, type: String?, lineAppearanceId: String?, webRtcMediaDscp: Int?, webRtcPersistentEnabled: Bool?, webRtcForceTurn: Bool?, webRtcCallAppearances: Int?, webRtcRequireMediaHelper: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -54,6 +56,7 @@ public class Station: Codable {
         self.webRtcPersistentEnabled = webRtcPersistentEnabled
         self.webRtcForceTurn = webRtcForceTurn
         self.webRtcCallAppearances = webRtcCallAppearances
+        self.webRtcRequireMediaHelper = webRtcRequireMediaHelper
         self.selfUri = selfUri
     }
 
@@ -72,6 +75,7 @@ public class Station: Codable {
         case webRtcPersistentEnabled
         case webRtcForceTurn
         case webRtcCallAppearances
+        case webRtcRequireMediaHelper
         case selfUri
     }
 

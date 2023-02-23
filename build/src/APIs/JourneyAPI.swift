@@ -150,6 +150,50 @@ open class JourneyAPI {
 
     
     /**
+     Delete an outcome predictor.
+     
+     - parameter predictorId: (path) ID of predictor 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteJourneyOutcomesPredictor(predictorId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteJourneyOutcomesPredictorWithRequestBuilder(predictorId: predictorId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an outcome predictor.
+     - DELETE /api/v2/journey/outcomes/predictors/{predictorId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter predictorId: (path) ID of predictor 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteJourneyOutcomesPredictorWithRequestBuilder(predictorId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/journey/outcomes/predictors/{predictorId}"
+        let predictorIdPreEscape = "\(predictorId)"
+        let predictorIdPostEscape = predictorIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{predictorId}", with: predictorIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
      Delete a segment.
      
      - parameter segmentId: (path) ID of the segment. 
@@ -1122,6 +1166,117 @@ open class JourneyAPI {
         ])
 
         let requestBuilder: RequestBuilder<OutcomeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Retrieve a single outcome predictor.
+     
+     - parameter predictorId: (path) ID of predictor 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyOutcomesPredictor(predictorId: String, completion: @escaping ((_ data: OutcomePredictor?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyOutcomesPredictorWithRequestBuilder(predictorId: predictorId)
+        requestBuilder.execute { (response: Response<OutcomePredictor>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve a single outcome predictor.
+     - GET /api/v2/journey/outcomes/predictors/{predictorId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "outcome" : "{}"
+}, statusCode=200}]
+     
+     - parameter predictorId: (path) ID of predictor 
+
+     - returns: RequestBuilder<OutcomePredictor> 
+     */
+    open class func getJourneyOutcomesPredictorWithRequestBuilder(predictorId: String) -> RequestBuilder<OutcomePredictor> {        
+        var path = "/api/v2/journey/outcomes/predictors/{predictorId}"
+        let predictorIdPreEscape = "\(predictorId)"
+        let predictorIdPostEscape = predictorIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{predictorId}", with: predictorIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutcomePredictor>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    /**
+     Retrieve all outcome predictors.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyOutcomesPredictors(completion: @escaping ((_ data: OutcomePredictorListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyOutcomesPredictorsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<OutcomePredictorListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve all outcome predictors.
+     - GET /api/v2/journey/outcomes/predictors
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "outcome" : "{}"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "outcome" : "{}"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<OutcomePredictorListing> 
+     */
+    open class func getJourneyOutcomesPredictorsWithRequestBuilder() -> RequestBuilder<OutcomePredictorListing> {        
+        let path = "/api/v2/journey/outcomes/predictors"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutcomePredictorListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2508,6 +2663,59 @@ open class JourneyAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Outcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Create an outcome predictor.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyOutcomesPredictors(body: OutcomePredictorRequest? = nil, completion: @escaping ((_ data: OutcomePredictor?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyOutcomesPredictorsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OutcomePredictor>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an outcome predictor.
+     - POST /api/v2/journey/outcomes/predictors
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "outcome" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<OutcomePredictor> 
+     */
+    open class func postJourneyOutcomesPredictorsWithRequestBuilder(body: OutcomePredictorRequest? = nil) -> RequestBuilder<OutcomePredictor> {        
+        let path = "/api/v2/journey/outcomes/predictors"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutcomePredictor>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

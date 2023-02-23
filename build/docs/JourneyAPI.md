@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteJourneyActionmap**](JourneyAPI.html#deleteJourneyActionmap) | Delete single action map. |
 | [**deleteJourneyActiontemplate**](JourneyAPI.html#deleteJourneyActiontemplate) | Delete a single action template. |
 | [**deleteJourneyOutcome**](JourneyAPI.html#deleteJourneyOutcome) | Delete an outcome. |
+| [**deleteJourneyOutcomesPredictor**](JourneyAPI.html#deleteJourneyOutcomesPredictor) | Delete an outcome predictor. |
 | [**deleteJourneySegment**](JourneyAPI.html#deleteJourneySegment) | Delete a segment. |
 | [**getJourneyActionmap**](JourneyAPI.html#getJourneyActionmap) | Retrieve a single action map. |
 | [**getJourneyActionmaps**](JourneyAPI.html#getJourneyActionmaps) | Retrieve all action maps. |
@@ -21,6 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyActiontemplates**](JourneyAPI.html#getJourneyActiontemplates) | Retrieve all action templates. |
 | [**getJourneyOutcome**](JourneyAPI.html#getJourneyOutcome) | Retrieve a single outcome. |
 | [**getJourneyOutcomes**](JourneyAPI.html#getJourneyOutcomes) | Retrieve all outcomes. |
+| [**getJourneyOutcomesPredictor**](JourneyAPI.html#getJourneyOutcomesPredictor) | Retrieve a single outcome predictor. |
+| [**getJourneyOutcomesPredictors**](JourneyAPI.html#getJourneyOutcomesPredictors) | Retrieve all outcome predictors. |
 | [**getJourneySegment**](JourneyAPI.html#getJourneySegment) | Retrieve a single segment. |
 | [**getJourneySegments**](JourneyAPI.html#getJourneySegments) | Retrieve all segments. |
 | [**getJourneySession**](JourneyAPI.html#getJourneySession) | Retrieve a single session. |
@@ -35,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyActionmapsEstimatesJobs**](JourneyAPI.html#postJourneyActionmapsEstimatesJobs) | Query for estimates |
 | [**postJourneyActiontemplates**](JourneyAPI.html#postJourneyActiontemplates) | Create a single action template. |
 | [**postJourneyOutcomes**](JourneyAPI.html#postJourneyOutcomes) | Create an outcome. |
+| [**postJourneyOutcomesPredictors**](JourneyAPI.html#postJourneyOutcomesPredictors) | Create an outcome predictor. |
 | [**postJourneySegments**](JourneyAPI.html#postJourneySegments) | Create a segment. |
 {: class="table-striped"}
 
@@ -186,6 +190,57 @@ JourneyAPI.deleteJourneyOutcome(outcomeId: outcomeId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **outcomeId** | **String**| ID of the outcome. | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteJourneyOutcomesPredictor"></a>
+
+# **deleteJourneyOutcomesPredictor**
+
+
+
+> Void deleteJourneyOutcomesPredictor(predictorId)
+
+Delete an outcome predictor.
+
+
+
+Wraps DELETE /api/v2/journey/outcomes/predictors/{predictorId}  
+
+Requires ANY permissions: 
+
+* journey:outcomepredictor:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let predictorId: String = "" // ID of predictor
+
+// Code example
+JourneyAPI.deleteJourneyOutcomesPredictor(predictorId: predictorId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("JourneyAPI.deleteJourneyOutcomesPredictor was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **predictorId** | **String**| ID of predictor | |
 {: class="table-striped"}
 
 
@@ -801,6 +856,106 @@ JourneyAPI.getJourneyOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy
 ### Return type
 
 [**OutcomeListing**](OutcomeListing.html)
+
+<a name="getJourneyOutcomesPredictor"></a>
+
+# **getJourneyOutcomesPredictor**
+
+
+
+> [OutcomePredictor](OutcomePredictor.html) getJourneyOutcomesPredictor(predictorId)
+
+Retrieve a single outcome predictor.
+
+
+
+Wraps GET /api/v2/journey/outcomes/predictors/{predictorId}  
+
+Requires ANY permissions: 
+
+* journey:outcomepredictor:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let predictorId: String = "" // ID of predictor
+
+// Code example
+JourneyAPI.getJourneyOutcomesPredictor(predictorId: predictorId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyOutcomesPredictor was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **predictorId** | **String**| ID of predictor | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OutcomePredictor**](OutcomePredictor.html)
+
+<a name="getJourneyOutcomesPredictors"></a>
+
+# **getJourneyOutcomesPredictors**
+
+
+
+> [OutcomePredictorListing](OutcomePredictorListing.html) getJourneyOutcomesPredictors()
+
+Retrieve all outcome predictors.
+
+
+
+Wraps GET /api/v2/journey/outcomes/predictors  
+
+Requires ANY permissions: 
+
+* journey:outcomepredictor:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+JourneyAPI.getJourneyOutcomesPredictors() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyOutcomesPredictors was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**OutcomePredictorListing**](OutcomePredictorListing.html)
 
 <a name="getJourneySegment"></a>
 
@@ -1552,6 +1707,58 @@ JourneyAPI.postJourneyOutcomes(body: body) { (response, error) in
 ### Return type
 
 [**Outcome**](Outcome.html)
+
+<a name="postJourneyOutcomesPredictors"></a>
+
+# **postJourneyOutcomesPredictors**
+
+
+
+> [OutcomePredictor](OutcomePredictor.html) postJourneyOutcomesPredictors(body)
+
+Create an outcome predictor.
+
+
+
+Wraps POST /api/v2/journey/outcomes/predictors  
+
+Requires ANY permissions: 
+
+* journey:outcomepredictor:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: OutcomePredictorRequest = new OutcomePredictorRequest(...) // 
+
+// Code example
+JourneyAPI.postJourneyOutcomesPredictors(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyOutcomesPredictors was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**OutcomePredictorRequest**](OutcomePredictorRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OutcomePredictor**](OutcomePredictor.html)
 
 <a name="postJourneySegments"></a>
 

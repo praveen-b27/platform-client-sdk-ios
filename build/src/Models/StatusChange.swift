@@ -42,7 +42,6 @@ public class StatusChange: Codable {
         case rollbackImplemented = "RollbackImplemented"
     }
     public enum Namespace: String, Codable { 
-        case contacts = "contacts"
         case agentAssistant = "agent.assistant"
         case analyticsAlerting = "analytics.alerting"
         case analytics = "analytics"

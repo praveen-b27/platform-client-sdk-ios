@@ -1305,6 +1305,7 @@ docs/EvaluationQuestionGroupScore.md
 docs/EvaluationQuestionScore.md
 docs/EvaluationResponse.md
 docs/EvaluationScoringSet.md
+docs/EvaluationSource.md
 docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
 docs/EventCoBrowse.md
@@ -2123,7 +2124,12 @@ docs/OutcomeAchievement.md
 docs/OutcomeConfig.md
 docs/OutcomeEventScore.md
 docs/OutcomeListing.md
+docs/OutcomePredictor.md
+docs/OutcomePredictorListing.md
+docs/OutcomePredictorRequest.md
 docs/OutcomeProbabilityCondition.md
+docs/OutcomeRef.md
+docs/OutcomeRefRequest.md
 docs/OutcomeScoresResult.md
 docs/OverallBestPoints.md
 docs/OverallBestPointsItem.md
@@ -3039,7 +3045,10 @@ docs/TranscriptionTopicTranscriptWord.md
 docs/TranscriptionTopicTranscriptionMessage.md
 docs/TranscriptionTopicTranscriptionRequestStatus.md
 docs/Transcripts.md
+docs/TransferDestination.md
+docs/TransferInitiator.md
 docs/TransferRequest.md
+docs/TransferResponse.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
 docs/TriggerTarget.md
@@ -3690,6 +3699,7 @@ docs/deleteIntegrationsCredential-example.txt
 docs/deleteJourneyActionmap-example.txt
 docs/deleteJourneyActiontemplate-example.txt
 docs/deleteJourneyOutcome-example.txt
+docs/deleteJourneyOutcomesPredictor-example.txt
 docs/deleteJourneySegment-example.txt
 docs/deleteKnowledgeKnowledgebase-example.txt
 docs/deleteKnowledgeKnowledgebaseCategory-example.txt
@@ -4217,6 +4227,8 @@ docs/getJourneyActiontemplate-example.txt
 docs/getJourneyActiontemplates-example.txt
 docs/getJourneyOutcome-example.txt
 docs/getJourneyOutcomes-example.txt
+docs/getJourneyOutcomesPredictor-example.txt
+docs/getJourneyOutcomesPredictors-example.txt
 docs/getJourneySegment-example.txt
 docs/getJourneySegments-example.txt
 docs/getJourneySession-example.txt
@@ -5131,6 +5143,7 @@ docs/postJourneyActionmaps-example.txt
 docs/postJourneyActionmapsEstimatesJobs-example.txt
 docs/postJourneyActiontemplates-example.txt
 docs/postJourneyOutcomes-example.txt
+docs/postJourneyOutcomesPredictors-example.txt
 docs/postJourneySegments-example.txt
 docs/postKnowledgeDocumentuploads-example.txt
 docs/postKnowledgeDocumentuploads-example.txt
@@ -6963,6 +6976,7 @@ src/Models/EvaluationQuestionGroupScore.swift
 src/Models/EvaluationQuestionScore.swift
 src/Models/EvaluationResponse.swift
 src/Models/EvaluationScoringSet.swift
+src/Models/EvaluationSource.swift
 src/Models/EvaluatorActivity.swift
 src/Models/EvaluatorActivityEntityListing.swift
 src/Models/EventCoBrowse.swift
@@ -7731,7 +7745,12 @@ src/Models/OutcomeAchievement.swift
 src/Models/OutcomeConfig.swift
 src/Models/OutcomeEventScore.swift
 src/Models/OutcomeListing.swift
+src/Models/OutcomePredictor.swift
+src/Models/OutcomePredictorListing.swift
+src/Models/OutcomePredictorRequest.swift
 src/Models/OutcomeProbabilityCondition.swift
+src/Models/OutcomeRef.swift
+src/Models/OutcomeRefRequest.swift
 src/Models/OutcomeScoresResult.swift
 src/Models/OverallBestPoints.swift
 src/Models/OverallBestPointsItem.swift
@@ -8612,7 +8631,10 @@ src/Models/TranscriptionTopicTranscriptWord.swift
 src/Models/TranscriptionTopicTranscriptionMessage.swift
 src/Models/TranscriptionTopicTranscriptionRequestStatus.swift
 src/Models/Transcripts.swift
+src/Models/TransferDestination.swift
+src/Models/TransferInitiator.swift
 src/Models/TransferRequest.swift
+src/Models/TransferResponse.swift
 src/Models/Trigger.swift
 src/Models/TriggerEntityListing.swift
 src/Models/TriggerTarget.swift

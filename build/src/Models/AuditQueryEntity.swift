@@ -289,6 +289,8 @@ public class AuditQueryEntity: Codable {
         case reset = "Reset"
         case rotate = "Rotate"
         case restore = "Restore"
+        case restoreAll = "RestoreAll"
+        case restoreDeleted = "RestoreDeleted"
         case unarchive = "Unarchive"
         case enableCapture = "EnableCapture"
         case downloadCapture = "DownloadCapture"

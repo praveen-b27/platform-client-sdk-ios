@@ -11,6 +11,10 @@ import Foundation
 
 public class TransferRequest: Codable {
 
+    public enum TransferType: String, Codable { 
+        case attended = "Attended"
+        case unattended = "Unattended"
+    }
     /** The user ID of the transfer target. */
     public var userId: String?
     /** The phone number or address of the transfer target. */
@@ -21,13 +25,16 @@ public class TransferRequest: Codable {
     public var queueId: String?
     /** If true, transfer to the voicemail inbox of the participant that is being replaced. */
     public var voicemail: Bool?
+    /** The type of transfer to perform. */
+    public var transferType: TransferType?
 
-    public init(userId: String?, address: String?, userName: String?, queueId: String?, voicemail: Bool?) {
+    public init(userId: String?, address: String?, userName: String?, queueId: String?, voicemail: Bool?, transferType: TransferType?) {
         self.userId = userId
         self.address = address
         self.userName = userName
         self.queueId = queueId
         self.voicemail = voicemail
+        self.transferType = transferType
     }
 
 

@@ -2012,7 +2012,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeTrunks(edgeId: edgeId, pageNu
 
 
 
-> [EdgeEntityListing](EdgeEntityListing.html) getTelephonyProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed)
+> [EdgeEntityListing](EdgeEntityListing.html) getTelephonyProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed, showCloudMedia)
 
 Get the list of edges.
 
@@ -2039,9 +2039,10 @@ let siteId: String = "" // Filter by site.id
 let edgeGroupId: String = "" // Filter by edgeGroup.id
 let sortBy: String = "" // Sort by
 let managed: Bool = true // Filter by managed
+let showCloudMedia: Bool = true // True to show the cloud media devices in the result.
 
 // Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdges(pageSize: pageSize, pageNumber: pageNumber, name: name, siteId: siteId, edgeGroupId: edgeGroupId, sortBy: sortBy, managed: managed) { (response, error) in
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdges(pageSize: pageSize, pageNumber: pageNumber, name: name, siteId: siteId, edgeGroupId: edgeGroupId, sortBy: sortBy, managed: managed, showCloudMedia: showCloudMedia) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2063,6 +2064,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdges(pageSize: pageSize, pageNum
 | **edgeGroupId** | **String**| Filter by edgeGroup.id | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **managed** | **Bool**| Filter by managed | [optional] |
+| **showCloudMedia** | **Bool**| True to show the cloud media devices in the result. | [optional] |
 {: class="table-striped"}
 
 

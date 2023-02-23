@@ -23,17 +23,20 @@ public class CallConversation: Codable {
     public var participants: [CallMediaParticipant]?
     /** The list of other media channels involved in the conversation. */
     public var otherMediaUris: [String]?
+    /** The list of the most recent 20 transfer commands applied to this conversation. */
+    public var recentTransfers: [TransferResponse]?
     public var recordingState: RecordingState?
     /** If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference. */
     public var maxParticipants: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, participants: [CallMediaParticipant]?, otherMediaUris: [String]?, recordingState: RecordingState?, maxParticipants: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, participants: [CallMediaParticipant]?, otherMediaUris: [String]?, recentTransfers: [TransferResponse]?, recordingState: RecordingState?, maxParticipants: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
+        self.recentTransfers = recentTransfers
         self.recordingState = recordingState
         self.maxParticipants = maxParticipants
         self.selfUri = selfUri
@@ -44,6 +47,7 @@ public class CallConversation: Codable {
         case name
         case participants
         case otherMediaUris
+        case recentTransfers
         case recordingState
         case maxParticipants
         case selfUri

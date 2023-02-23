@@ -22,6 +22,7 @@ public class Check: Codable {
         case handleTimeValue = "HandleTimeValue"
         case transferRateValue = "TransferRateValue"
         case salesConversionRateValue = "SalesConversionRateValue"
+        case salesAmountValue = "SalesAmountValue"
         case retentionRateValue = "RetentionRateValue"
         case churnRateValue = "ChurnRateValue"
         case interactionVolume = "InteractionVolume"

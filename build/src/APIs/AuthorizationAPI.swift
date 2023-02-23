@@ -1470,6 +1470,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -1913,6 +1914,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -2371,6 +2373,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -2814,6 +2817,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -3340,6 +3344,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -3783,6 +3788,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -4241,6 +4247,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -4684,6 +4691,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -5143,6 +5151,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -5586,6 +5595,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -6044,6 +6054,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -6487,6 +6498,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -6951,6 +6963,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -7394,6 +7407,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -7852,6 +7866,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -8295,6 +8310,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -8762,6 +8778,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -9205,6 +9222,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -9663,6 +9681,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -10106,6 +10125,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -10570,6 +10590,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -11013,6 +11034,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -11471,6 +11493,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -11914,6 +11937,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -13228,6 +13252,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -13671,6 +13696,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -14129,6 +14155,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -14572,6 +14599,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -15043,6 +15071,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -15486,6 +15515,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -15944,6 +15974,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -16387,6 +16418,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -17391,6 +17423,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -17834,6 +17867,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -18292,6 +18326,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -18735,6 +18770,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -19571,6 +19607,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -20014,6 +20051,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -20472,6 +20510,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -20915,6 +20954,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -21374,6 +21414,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -21817,6 +21858,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -22275,6 +22317,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -22718,6 +22761,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -23182,6 +23226,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -23625,6 +23670,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -24083,6 +24129,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -24526,6 +24573,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -24993,6 +25041,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -25436,6 +25485,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -25894,6 +25944,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -26337,6 +26388,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -26801,6 +26853,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -27244,6 +27297,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -27702,6 +27756,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -28145,6 +28200,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -28674,6 +28730,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -29117,6 +29174,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -29575,6 +29633,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -30018,6 +30077,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -30543,6 +30603,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -30986,6 +31047,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -31444,6 +31506,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -31887,6 +31950,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -32358,6 +32422,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -32801,6 +32866,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -33259,6 +33325,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -33702,6 +33769,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -34515,6 +34583,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -34958,6 +35027,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -35416,6 +35486,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -35859,6 +35930,7 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
               "id" : "id",
@@ -36497,6 +36569,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -36940,6 +37013,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -37398,6 +37472,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -37841,6 +37916,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -38312,6 +38388,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -38755,6 +38832,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -39213,6 +39291,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",
@@ -39656,6 +39735,7 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
                 "id" : "id",

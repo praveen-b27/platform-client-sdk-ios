@@ -45,10 +45,12 @@ public class InboundRoute: Codable {
     public var signature: Signature?
     /** The configuration to indicate how the history of a conversation has to be included in a draft */
     public var historyInclusion: HistoryInclusion?
+    /** Control if multiple actions are allowed on this route. When true the disconnect has to be done manually. When false a conversation will be disconnected by the system after every action */
+    public var allowMultipleActions: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, signature: Signature?, historyInclusion: HistoryInclusion?, selfUri: String?) {
+    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, signature: Signature?, historyInclusion: HistoryInclusion?, allowMultipleActions: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.pattern = pattern
@@ -64,6 +66,7 @@ public class InboundRoute: Codable {
         self.spamFlow = spamFlow
         self.signature = signature
         self.historyInclusion = historyInclusion
+        self.allowMultipleActions = allowMultipleActions
         self.selfUri = selfUri
     }
 
@@ -83,6 +86,7 @@ public class InboundRoute: Codable {
         case spamFlow
         case signature
         case historyInclusion
+        case allowMultipleActions
         case selfUri
     }
 

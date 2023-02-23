@@ -546,6 +546,8 @@ Wraps GET /api/v2/quality/conversations/{conversationId}/evaluations/{evaluation
 Requires ANY permissions: 
 
 * quality:evaluation:view
+* quality:evaluation:assign
+* quality:evaluation:release
 
 ### Example
 
@@ -557,7 +559,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let evaluationId: String = "" // evaluationId
-let expand: String = "" // agent, evaluator, evaluationForm
+let expand: String = "" // agent, assignee, evaluator, evaluationForm
 
 // Code example
 QualityAPI.getQualityConversationEvaluation(conversationId: conversationId, evaluationId: evaluationId, expand: expand) { (response, error) in
@@ -577,7 +579,7 @@ QualityAPI.getQualityConversationEvaluation(conversationId: conversationId, eval
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **evaluationId** | **String**| evaluationId | |
-| **expand** | **String**| agent, evaluator, evaluationForm | [optional] |
+| **expand** | **String**| agent, assignee, evaluator, evaluationForm | [optional] |
 {: class="table-striped"}
 
 
@@ -753,11 +755,11 @@ QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId:
 
 
 
-> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
+> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
 
 Queries Evaluations and returns a paged list
 
-Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to &#39;Never Release&#39; are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to &#39;Never Release&#39; are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
 
 
 
@@ -784,6 +786,7 @@ let previousPage: String = "" // Previous page token
 let conversationId: String = "" // conversationId specified
 let agentUserId: String = "" // user id of the agent
 let evaluatorUserId: String = "" // evaluator user id
+let assigneeUserId: String = "" // assignee user id
 let queueId: String = "" // queue id
 let startTime: String = "" // start time of the evaluation query
 let endTime: String = "" // end time of the evaluation query
@@ -795,7 +798,7 @@ let maximum: Int = 0 // maximum
 let sortOrder: String = "" // sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending'
 
 // Code example
-QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, queueId: queueId, startTime: startTime, endTime: endTime, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
+QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -819,6 +822,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **conversationId** | **String**| conversationId specified | [optional] |
 | **agentUserId** | **String**| user id of the agent | [optional] |
 | **evaluatorUserId** | **String**| evaluator user id | [optional] |
+| **assigneeUserId** | **String**| assignee user id | [optional] |
 | **queueId** | **String**| queue id | [optional] |
 | **startTime** | **String**| start time of the evaluation query | [optional] |
 | **endTime** | **String**| end time of the evaluation query | [optional] |

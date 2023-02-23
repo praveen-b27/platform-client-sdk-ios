@@ -21,6 +21,7 @@ public class DialerAction: Codable {
         case modifyContactAttribute = "MODIFY_CONTACT_ATTRIBUTE"
         case switchToPreview = "SWITCH_TO_PREVIEW"
         case appendNumberToDncList = "APPEND_NUMBER_TO_DNC_LIST"
+        case appendCustomEntryToDncList = "APPEND_CUSTOM_ENTRY_TO_DNC_LIST"
         case scheduleCallback = "SCHEDULE_CALLBACK"
         case contactUncallable = "CONTACT_UNCALLABLE"
         case numberUncallable = "NUMBER_UNCALLABLE"

@@ -17,6 +17,7 @@ title: EvaluationResponse
 | **status** | **String** |  | [optional] |
 | **answers** | [**EvaluationScoringSet**](EvaluationScoringSet.html) |  | [optional] |
 | **agentHasRead** | **Bool** |  | [optional] |
+| **assignee** | [**User**](User.html) |  | [optional] |
 | **releaseDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **assignedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **changedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -30,8 +31,9 @@ title: EvaluationResponse
 | **resourceType** | **String** | The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources. | [optional] |
 | **redacted** | **Bool** | Is only true when the user making the request does not have sufficient permissions to see evaluation | [optional] |
 | **isScoringIndex** | **Bool** |  | [optional] |
-| **authorizedActions** | **[String]** | List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit | [optional] |
+| **authorizedActions** | **[String]** | List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit | [optional] |
 | **hasAssistanceFailed** | **Bool** | Is true when evaluation assistance didn&#39;t execute successfully | [optional] |
+| **evaluationSource** | [**EvaluationSource**](EvaluationSource.html) | The source that created the evaluation. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

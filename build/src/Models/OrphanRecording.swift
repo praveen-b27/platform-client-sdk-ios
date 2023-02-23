@@ -42,14 +42,17 @@ public class OrphanRecording: Codable {
     }
     public enum Region: String, Codable { 
         case afSouth1 = "af-south-1"
+        case apEast1 = "ap-east-1"
         case apNortheast1 = "ap-northeast-1"
         case apNortheast2 = "ap-northeast-2"
         case apSouth1 = "ap-south-1"
         case apSoutheast2 = "ap-southeast-2"
+        case apSoutheast3 = "ap-southeast-3"
         case caCentral1 = "ca-central-1"
         case euCentral1 = "eu-central-1"
         case euWest1 = "eu-west-1"
         case euWest2 = "eu-west-2"
+        case euWest3 = "eu-west-3"
         case saEast1 = "sa-east-1"
         case usEast1 = "us-east-1"
         case usWest2 = "us-west-2"

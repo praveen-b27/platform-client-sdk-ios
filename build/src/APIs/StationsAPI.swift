@@ -86,6 +86,7 @@ open class StationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "webRtcRequireMediaHelper" : true,
   "webRtcCallAppearances" : 6,
   "webRtcMediaDscp" : 0,
   "webRtcForceTurn" : true,
@@ -180,6 +181,7 @@ open class StationsAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "webRtcRequireMediaHelper" : true,
     "webRtcCallAppearances" : 6,
     "webRtcMediaDscp" : 0,
     "webRtcForceTurn" : true,
@@ -204,6 +206,7 @@ open class StationsAPI {
     },
     "status" : "AVAILABLE"
   }, {
+    "webRtcRequireMediaHelper" : true,
     "webRtcCallAppearances" : 6,
     "webRtcMediaDscp" : 0,
     "webRtcForceTurn" : true,

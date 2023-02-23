@@ -3703,6 +3703,7 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
+    
     /**
      Get the list of edges.
      
@@ -3713,10 +3714,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter edgeGroupId: (query) Filter by edgeGroup.id (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter managed: (query) Filter by managed (optional)
+     - parameter showCloudMedia: (query) True to show the cloud media devices in the result. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTelephonyProvidersEdges(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, edgeGroupId: String? = nil, sortBy: String? = nil, managed: Bool? = nil, completion: @escaping ((_ data: EdgeEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTelephonyProvidersEdgesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, name: name, siteId: siteId, edgeGroupId: edgeGroupId, sortBy: sortBy, managed: managed)
+    open class func getTelephonyProvidersEdges(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, edgeGroupId: String? = nil, sortBy: String? = nil, managed: Bool? = nil, showCloudMedia: Bool? = nil, completion: @escaping ((_ data: EdgeEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, name: name, siteId: siteId, edgeGroupId: edgeGroupId, sortBy: sortBy, managed: managed, showCloudMedia: showCloudMedia)
         requestBuilder.execute { (response: Response<EdgeEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4029,10 +4031,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter edgeGroupId: (query) Filter by edgeGroup.id (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter managed: (query) Filter by managed (optional)
+     - parameter showCloudMedia: (query) True to show the cloud media devices in the result. (optional)
 
      - returns: RequestBuilder<EdgeEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, edgeGroupId: String? = nil, sortBy: String? = nil, managed: Bool? = nil) -> RequestBuilder<EdgeEntityListing> {        
+    open class func getTelephonyProvidersEdgesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, siteId: String? = nil, edgeGroupId: String? = nil, sortBy: String? = nil, managed: Bool? = nil, showCloudMedia: Bool? = nil) -> RequestBuilder<EdgeEntityListing> {        
         let path = "/api/v2/telephony/providers/edges"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -4045,7 +4048,8 @@ open class TelephonyProvidersEdgeAPI {
             "site.id": siteId, 
             "edgeGroup.id": edgeGroupId, 
             "sortBy": sortBy, 
-            "managed": managed
+            "managed": managed, 
+            "showCloudMedia": showCloudMedia
         ])
 
         let requestBuilder: RequestBuilder<EdgeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

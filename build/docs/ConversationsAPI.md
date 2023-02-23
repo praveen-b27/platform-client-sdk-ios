@@ -123,7 +123,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsConversationsDetailsJobs**](ConversationsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](ConversationsAPI.html#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
 | [**postConversationAssign**](ConversationsAPI.html#postConversationAssign) | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
-| [**postConversationCobrowse**](ConversationsAPI.html#postConversationCobrowse) | Creates a cobrowse session |
+| [**postConversationCobrowse**](ConversationsAPI.html#postConversationCobrowse) | Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission. |
 | [**postConversationDisconnect**](ConversationsAPI.html#postConversationDisconnect) | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**postConversationParticipantCallbacks**](ConversationsAPI.html#postConversationParticipantCallbacks) | Create a new callback for the specified participant on the conversation. |
 | [**postConversationParticipantDigits**](ConversationsAPI.html#postConversationParticipantDigits) | Sends DTMF to the participant |
@@ -6420,7 +6420,7 @@ ConversationsAPI.postConversationAssign(conversationId: conversationId, body: bo
 
 > [CobrowseWebMessagingSession](CobrowseWebMessagingSession.html) postConversationCobrowse(conversationId)
 
-Creates a cobrowse session
+Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission.
 
 
 
@@ -6429,6 +6429,7 @@ Wraps POST /api/v2/conversations/{conversationId}/cobrowse
 Requires ANY permissions: 
 
 * conversation:cobrowse:add
+* conversation:cobrowseVoice:add
 
 ### Example
 

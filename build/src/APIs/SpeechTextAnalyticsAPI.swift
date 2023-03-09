@@ -459,6 +459,69 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
+    /**
+     Get transcription engine settings of a program
+     
+     - parameter programId: (path) The id of the program 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsProgramTranscriptionengines(programId: String, completion: @escaping ((_ data: ProgramTranscriptionEngines?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramTranscriptionenginesWithRequestBuilder(programId: programId)
+        requestBuilder.execute { (response: Response<ProgramTranscriptionEngines>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get transcription engine settings of a program
+     - GET /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "program" : "{}",
+  "transcriptionEngines" : [ {
+    "engine" : "Genesys",
+    "dialects" : [ "dialects", "dialects" ]
+  }, {
+    "engine" : "Genesys",
+    "dialects" : [ "dialects", "dialects" ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter programId: (path) The id of the program 
+
+     - returns: RequestBuilder<ProgramTranscriptionEngines> 
+     */
+    open class func getSpeechandtextanalyticsProgramTranscriptionenginesWithRequestBuilder(programId: String) -> RequestBuilder<ProgramTranscriptionEngines> {        
+        var path = "/api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ProgramTranscriptionEngines>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     public enum State_getSpeechandtextanalyticsPrograms: String { 
@@ -797,6 +860,59 @@ open class SpeechTextAnalyticsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ProgramJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    /**
+     Get supported dialects for each transcription engine
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsProgramsTranscriptionenginesDialects(completion: @escaping ((_ data: SupportedDialectsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramsTranscriptionenginesDialectsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SupportedDialectsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get supported dialects for each transcription engine
+     - GET /api/v2/speechandtextanalytics/programs/transcriptionengines/dialects
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "engine" : "Genesys",
+    "dialects" : [ "dialects", "dialects" ]
+  }, {
+    "engine" : "Genesys",
+    "dialects" : [ "dialects", "dialects" ]
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SupportedDialectsEntityListing> 
+     */
+    open class func getSpeechandtextanalyticsProgramsTranscriptionenginesDialectsWithRequestBuilder() -> RequestBuilder<SupportedDialectsEntityListing> {        
+        let path = "/api/v2/speechandtextanalytics/programs/transcriptionengines/dialects"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SupportedDialectsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2178,6 +2294,72 @@ open class SpeechTextAnalyticsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ProgramMappings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Update transcription engine settings of a program
+     
+     - parameter programId: (path) The id of the program 
+     - parameter body: (body) Program transcription engine setting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putSpeechandtextanalyticsProgramTranscriptionengines(programId: String, body: TranscriptionEnginesRequest, completion: @escaping ((_ data: ProgramTranscriptionEngines?,_ error: Error?) -> Void)) {
+        let requestBuilder = putSpeechandtextanalyticsProgramTranscriptionenginesWithRequestBuilder(programId: programId, body: body)
+        requestBuilder.execute { (response: Response<ProgramTranscriptionEngines>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update transcription engine settings of a program
+     - PUT /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "program" : "{}",
+  "transcriptionEngines" : [ {
+    "engine" : "Genesys",
+    "dialects" : [ "dialects", "dialects" ]
+  }, {
+    "engine" : "Genesys",
+    "dialects" : [ "dialects", "dialects" ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter programId: (path) The id of the program 
+     - parameter body: (body) Program transcription engine setting 
+
+     - returns: RequestBuilder<ProgramTranscriptionEngines> 
+     */
+    open class func putSpeechandtextanalyticsProgramTranscriptionenginesWithRequestBuilder(programId: String, body: TranscriptionEnginesRequest) -> RequestBuilder<ProgramTranscriptionEngines> {        
+        var path = "/api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ProgramTranscriptionEngines>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

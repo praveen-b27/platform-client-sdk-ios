@@ -18,9 +18,9 @@ public class OpenMessageContent: Codable {
     /** Type of this content element. If contentType = \"Attachment\" only one item is allowed. */
     public var contentType: ContentType?
     /** Attachment content. */
-    public var attachment: ContentAttachment?
+    public var attachment: ConversationContentAttachment?
 
-    public init(contentType: ContentType?, attachment: ContentAttachment?) {
+    public init(contentType: ContentType?, attachment: ConversationContentAttachment?) {
         self.contentType = contentType
         self.attachment = attachment
     }

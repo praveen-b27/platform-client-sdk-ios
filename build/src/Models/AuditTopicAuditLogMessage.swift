@@ -331,6 +331,7 @@ public class AuditTopicAuditLogMessage: Codable {
     public var clientId: AuditTopicAddressableEntityRef?
     public var remoteIp: [String]?
     public var serviceName: ServiceName?
+    public var level: String?
     public var eventTime: Date?
     public var message: AuditTopicMessageInfo?
     public var action: Action?
@@ -339,7 +340,7 @@ public class AuditTopicAuditLogMessage: Codable {
     public var propertyChanges: [AuditTopicPropertyChange]?
     public var context: [String:String]?
 
-    public init(_id: String?, userId: String?, userHomeOrgId: String?, username: AuditTopicDomainEntityRef?, userDisplay: String?, clientId: AuditTopicAddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventTime: Date?, message: AuditTopicMessageInfo?, action: Action?, entityType: EntityType?, entity: AuditTopicDomainEntityRef?, propertyChanges: [AuditTopicPropertyChange]?, context: [String:String]?) {
+    public init(_id: String?, userId: String?, userHomeOrgId: String?, username: AuditTopicDomainEntityRef?, userDisplay: String?, clientId: AuditTopicAddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, level: String?, eventTime: Date?, message: AuditTopicMessageInfo?, action: Action?, entityType: EntityType?, entity: AuditTopicDomainEntityRef?, propertyChanges: [AuditTopicPropertyChange]?, context: [String:String]?) {
         self._id = _id
         self.userId = userId
         self.userHomeOrgId = userHomeOrgId
@@ -348,6 +349,7 @@ public class AuditTopicAuditLogMessage: Codable {
         self.clientId = clientId
         self.remoteIp = remoteIp
         self.serviceName = serviceName
+        self.level = level
         self.eventTime = eventTime
         self.message = message
         self.action = action
@@ -366,6 +368,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case clientId
         case remoteIp
         case serviceName
+        case level
         case eventTime
         case message
         case action

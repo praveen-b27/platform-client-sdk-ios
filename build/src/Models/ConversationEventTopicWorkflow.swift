@@ -14,11 +14,9 @@ public class ConversationEventTopicWorkflow: Codable {
 
     /** The id of the workflow */
     public var workflowId: String?
-    public var additionalProperties: [String:JSON]?
 
-    public init(workflowId: String?, additionalProperties: [String:JSON]?) {
+    public init(workflowId: String?) {
         self.workflowId = workflowId
-        self.additionalProperties = additionalProperties
     }
 
 

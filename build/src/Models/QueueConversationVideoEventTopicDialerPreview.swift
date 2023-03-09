@@ -21,15 +21,13 @@ public class QueueConversationVideoEventTopicDialerPreview: Codable {
     public var campaignId: String?
     /** The phone number columns associated with this campaign */
     public var phoneNumberColumns: [QueueConversationVideoEventTopicPhoneNumberColumn]?
-    public var additionalProperties: [String:JSON]?
 
-    public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [QueueConversationVideoEventTopicPhoneNumberColumn]?, additionalProperties: [String:JSON]?) {
+    public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [QueueConversationVideoEventTopicPhoneNumberColumn]?) {
         self._id = _id
         self.contactId = contactId
         self.contactListId = contactListId
         self.campaignId = campaignId
         self.phoneNumberColumns = phoneNumberColumns
-        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -38,7 +36,6 @@ public class QueueConversationVideoEventTopicDialerPreview: Codable {
         case contactListId
         case campaignId
         case phoneNumberColumns
-        case additionalProperties
     }
 
 

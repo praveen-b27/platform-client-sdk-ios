@@ -12,7 +12,6 @@ title: QueueConversationSocialExpressionEventTopicAttachment
 | **contentUri** | **String** | The content uri of the attachment. If set, this is commonly a public api download location. | [optional] |
 | **contentType** | **String** | The type of file the attachment is. | [optional] |
 | **contentLength** | **Int** | The length of the attachment file. | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

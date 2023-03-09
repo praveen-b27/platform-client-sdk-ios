@@ -14,7 +14,7 @@ Open Messaging rich media message structure
 | **text** | **String** | Message text. | [optional] |
 | **content** | [**[OpenMessageContent]**](OpenMessageContent.html) | List of content elements. | [optional] |
 | **status** | **String** | Message receipt status, only used with type Receipt. | [optional] |
-| **reasons** | [**[Reason]**](Reason.html) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |
+| **reasons** | [**[ConversationReason]**](ConversationReason.html) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |
 | **isFinalReceipt** | **Bool** | Indicates if this is the last message receipt for this message, or if another message receipt can be expected. | [optional] |
 | **direction** | **String** | The direction of the message. | [optional] |
 | **metadata** | **[String:String]** | Additional metadata about this message. | [optional] |

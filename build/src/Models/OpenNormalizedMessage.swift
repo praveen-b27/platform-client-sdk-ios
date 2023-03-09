@@ -41,7 +41,7 @@ public class OpenNormalizedMessage: Codable {
     /** Message receipt status, only used with type Receipt. */
     public var status: Status?
     /** List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. */
-    public var reasons: [Reason]?
+    public var reasons: [ConversationReason]?
     /** Indicates if this is the last message receipt for this message, or if another message receipt can be expected. */
     public var isFinalReceipt: Bool?
     /** The direction of the message. */
@@ -49,7 +49,7 @@ public class OpenNormalizedMessage: Codable {
     /** Additional metadata about this message. */
     public var metadata: [String:String]?
 
-    public init(_id: String?, channel: OpenMessagingChannel?, type: ModelType?, text: String?, content: [OpenMessageContent]?, status: Status?, reasons: [Reason]?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
+    public init(_id: String?, channel: OpenMessagingChannel?, type: ModelType?, text: String?, content: [OpenMessageContent]?, status: Status?, reasons: [ConversationReason]?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
         self._id = _id
         self.channel = channel
         self.type = type

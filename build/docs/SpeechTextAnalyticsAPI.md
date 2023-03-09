@@ -15,10 +15,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**getSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgram) | Get a Speech &amp; Text Analytics program by id |
 | [**getSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramMappings) | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
+| [**getSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramTranscriptionengines) | Get transcription engine settings of a program |
 | [**getSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsPrograms) | Get the list of Speech &amp; Text Analytics programs |
 | [**getSpeechandtextanalyticsProgramsGeneralJob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsGeneralJob) | Get a Speech &amp; Text Analytics general program job by id |
 | [**getSpeechandtextanalyticsProgramsMappings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsMappings) | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**getSpeechandtextanalyticsProgramsPublishjob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsPublishjob) | Get a Speech &amp; Text Analytics publish programs job by id |
+| [**getSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsTranscriptionenginesDialects) | Get supported dialects for each transcription engine |
 | [**getSpeechandtextanalyticsProgramsUnpublished**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsUnpublished) | Get the list of Speech &amp; Text Analytics unpublished programs |
 | [**getSpeechandtextanalyticsSentimentDialects**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsSentimentDialects) | Get the list of Speech &amp; Text Analytics sentiment supported dialects |
 | [**getSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsSentimentfeedback) | Get the list of Speech &amp; Text Analytics SentimentFeedback |
@@ -38,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
 | [**putSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgram) | Update existing Speech &amp; Text Analytics program |
 | [**putSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgramMappings) | Set Speech &amp; Text Analytics program mappings to queues and flows |
+| [**putSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgramTranscriptionengines) | Update transcription engine settings of a program |
 | [**putSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsSettings) | Update Speech And Text Analytics Settings |
 | [**putSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsTopic) | Update existing Speech &amp; Text Analytics topic |
 {: class="table-striped"}
@@ -454,6 +457,58 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramMappings(programId: progr
 
 [**ProgramMappings**](ProgramMappings.html)
 
+<a name="getSpeechandtextanalyticsProgramTranscriptionengines"></a>
+
+# **getSpeechandtextanalyticsProgramTranscriptionengines**
+
+
+
+> [ProgramTranscriptionEngines](ProgramTranscriptionEngines.html) getSpeechandtextanalyticsProgramTranscriptionengines(programId)
+
+Get transcription engine settings of a program
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramTranscriptionengines(programId: programId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramTranscriptionengines was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **programId** | **String**| The id of the program | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ProgramTranscriptionEngines**](ProgramTranscriptionEngines.html)
+
 <a name="getSpeechandtextanalyticsPrograms"></a>
 
 # **getSpeechandtextanalyticsPrograms**
@@ -670,6 +725,53 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsPublishjob(jobId: jobId)
 ### Return type
 
 [**ProgramJob**](ProgramJob.html)
+
+<a name="getSpeechandtextanalyticsProgramsTranscriptionenginesDialects"></a>
+
+# **getSpeechandtextanalyticsProgramsTranscriptionenginesDialects**
+
+
+
+> [SupportedDialectsEntityListing](SupportedDialectsEntityListing.html) getSpeechandtextanalyticsProgramsTranscriptionenginesDialects()
+
+Get supported dialects for each transcription engine
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/transcriptionengines/dialects  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsTranscriptionenginesDialects() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsTranscriptionenginesDialects was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**SupportedDialectsEntityListing**](SupportedDialectsEntityListing.html)
 
 <a name="getSpeechandtextanalyticsProgramsUnpublished"></a>
 
@@ -1666,6 +1768,60 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramMappings(programId: progr
 ### Return type
 
 [**ProgramMappings**](ProgramMappings.html)
+
+<a name="putSpeechandtextanalyticsProgramTranscriptionengines"></a>
+
+# **putSpeechandtextanalyticsProgramTranscriptionengines**
+
+
+
+> [ProgramTranscriptionEngines](ProgramTranscriptionEngines.html) putSpeechandtextanalyticsProgramTranscriptionengines(programId, body)
+
+Update transcription engine settings of a program
+
+
+
+Wraps PUT /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+let body: TranscriptionEnginesRequest = new TranscriptionEnginesRequest(...) // Program transcription engine setting
+
+// Code example
+SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramTranscriptionengines(programId: programId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramTranscriptionengines was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **programId** | **String**| The id of the program | |
+| **body** | [**TranscriptionEnginesRequest**](TranscriptionEnginesRequest.html)| Program transcription engine setting | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ProgramTranscriptionEngines**](ProgramTranscriptionEngines.html)
 
 <a name="putSpeechandtextanalyticsSettings"></a>
 

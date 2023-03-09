@@ -83,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserQueues**](RoutingAPI.html#getUserQueues) | Get queues for user |
 | [**getUserRoutinglanguages**](RoutingAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](RoutingAPI.html#getUserRoutingskills) | List routing skills for user |
+| [**getUserSkillgroups**](RoutingAPI.html#getUserSkillgroups) | Get skill groups for a user |
 | [**patchRoutingConversation**](RoutingAPI.html#patchRoutingConversation) | Update attributes of an in-queue conversation |
 | [**patchRoutingEmailDomain**](RoutingAPI.html#patchRoutingEmailDomain) | Update domain settings |
 | [**patchRoutingEmailDomainValidate**](RoutingAPI.html#patchRoutingEmailDomainValidate) | Validate domain settings |
@@ -3762,7 +3763,7 @@ RoutingAPI.getRoutingSmsAvailablephonenumbers(countryCode: countryCode, phoneNum
 
 
 
-> [SmsPhoneNumber](SmsPhoneNumber.html) getRoutingSmsPhonenumber(addressId)
+> [SmsPhoneNumber](SmsPhoneNumber.html) getRoutingSmsPhonenumber(addressId, expand)
 
 Get a phone number provisioned for SMS.
 
@@ -3783,9 +3784,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let addressId: String = "" // Address ID
+let expand: RoutingAPI.Expand_getRoutingSmsPhonenumber = RoutingAPI.Expand_getRoutingSmsPhonenumber.enummember // Expand response with additional information
 
 // Code example
-RoutingAPI.getRoutingSmsPhonenumber(addressId: addressId) { (response, error) in
+RoutingAPI.getRoutingSmsPhonenumber(addressId: addressId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3801,6 +3803,7 @@ RoutingAPI.getRoutingSmsPhonenumber(addressId: addressId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
+| **expand** | **String**| Expand response with additional information | [optional]<br />**Values**: compliance ("compliance") |
 {: class="table-striped"}
 
 
@@ -4265,6 +4268,64 @@ RoutingAPI.getUserRoutingskills(userId: userId, pageSize: pageSize, pageNumber: 
 ### Return type
 
 [**UserSkillEntityListing**](UserSkillEntityListing.html)
+
+<a name="getUserSkillgroups"></a>
+
+# **getUserSkillgroups**
+
+
+
+> [UserSkillGroupEntityListing](UserSkillGroupEntityListing.html) getUserSkillgroups(userId, pageSize, after, before)
+
+Get skill groups for a user
+
+
+
+Wraps GET /api/v2/users/{userId}/skillgroups  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let pageSize: Int = 0 // Page size
+let after: String = "" // The cursor that points to the next page
+let before: String = "" // The cursor that points to the previous page
+
+// Code example
+RoutingAPI.getUserSkillgroups(userId: userId, pageSize: pageSize, after: after, before: before) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getUserSkillgroups was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **after** | **String**| The cursor that points to the next page | [optional] |
+| **before** | **String**| The cursor that points to the previous page | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserSkillGroupEntityListing**](UserSkillGroupEntityListing.html)
 
 <a name="patchRoutingConversation"></a>
 

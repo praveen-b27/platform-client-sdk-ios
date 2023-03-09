@@ -21,15 +21,13 @@ public class QueueConversationEmailEventTopicAttachment: Codable {
     public var contentType: String?
     /** The length of the attachment file. */
     public var contentLength: Int?
-    public var additionalProperties: [String:JSON]?
 
-    public init(attachmentId: String?, name: String?, contentUri: String?, contentType: String?, contentLength: Int?, additionalProperties: [String:JSON]?) {
+    public init(attachmentId: String?, name: String?, contentUri: String?, contentType: String?, contentLength: Int?) {
         self.attachmentId = attachmentId
         self.name = name
         self.contentUri = contentUri
         self.contentType = contentType
         self.contentLength = contentLength
-        self.additionalProperties = additionalProperties
     }
 
 

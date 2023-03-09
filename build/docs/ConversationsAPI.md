@@ -168,6 +168,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | Create a WhatsApp Integration |
 | [**postConversationsMessagingSupportedcontent**](ConversationsAPI.html#postConversationsMessagingSupportedcontent) | Create a Supported Content profile |
+| [**postConversationsParticipantsAttributesSearch**](ConversationsAPI.html#postConversationsParticipantsAttributesSearch) | Search conversations |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI.html#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**putConversationSecureattributes**](ConversationsAPI.html#putConversationSecureattributes) | Set the secure attributes on a conversation. |
 | [**putConversationTags**](ConversationsAPI.html#putConversationTags) | Update the tags on a conversation. |
@@ -8826,6 +8827,58 @@ ConversationsAPI.postConversationsMessagingSupportedcontent(body: body) { (respo
 ### Return type
 
 [**SupportedContent**](SupportedContent.html)
+
+<a name="postConversationsParticipantsAttributesSearch"></a>
+
+# **postConversationsParticipantsAttributesSearch**
+
+
+
+> [JsonCursorSearchResponse](JsonCursorSearchResponse.html) postConversationsParticipantsAttributesSearch(body)
+
+Search conversations
+
+
+
+Wraps POST /api/v2/conversations/participants/attributes/search  
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesview
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationParticipantSearchRequest = new ConversationParticipantSearchRequest(...) // Search request options
+
+// Code example
+ConversationsAPI.postConversationsParticipantsAttributesSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsParticipantsAttributesSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationParticipantSearchRequest**](ConversationParticipantSearchRequest.html)| Search request options | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JsonCursorSearchResponse**](JsonCursorSearchResponse.html)
 
 <a name="putConversationParticipantFlaggedreason"></a>
 

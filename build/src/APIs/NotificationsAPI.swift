@@ -200,10 +200,14 @@ open class NotificationsAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "state" : "Permitted",
+    "rejectionReason" : "rejectionReason"
   }, {
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "state" : "Permitted",
+    "rejectionReason" : "rejectionReason"
   } ]
 }, statusCode=200}]
      
@@ -341,15 +345,17 @@ open class NotificationsAPI {
 
     
     
+    
     /**
      Add a list of subscriptions to the existing list of subscriptions
      
      - parameter channelId: (path) Channel ID 
      - parameter body: (body) Body 
+     - parameter ignoreErrors: (query) Optionally prevent throwing of errors for failed permissions checks. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postNotificationsChannelSubscriptions(channelId: String, body: [ChannelTopic], completion: @escaping ((_ data: ChannelTopicEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = postNotificationsChannelSubscriptionsWithRequestBuilder(channelId: channelId, body: body)
+    open class func postNotificationsChannelSubscriptions(channelId: String, body: [ChannelTopic], ignoreErrors: Bool? = nil, completion: @escaping ((_ data: ChannelTopicEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postNotificationsChannelSubscriptionsWithRequestBuilder(channelId: channelId, body: body, ignoreErrors: ignoreErrors)
         requestBuilder.execute { (response: Response<ChannelTopicEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -375,19 +381,24 @@ open class NotificationsAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "state" : "Permitted",
+    "rejectionReason" : "rejectionReason"
   }, {
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "state" : "Permitted",
+    "rejectionReason" : "rejectionReason"
   } ]
 }, statusCode=200}]
      
      - parameter channelId: (path) Channel ID 
      - parameter body: (body) Body 
+     - parameter ignoreErrors: (query) Optionally prevent throwing of errors for failed permissions checks. (optional)
 
      - returns: RequestBuilder<ChannelTopicEntityListing> 
      */
-    open class func postNotificationsChannelSubscriptionsWithRequestBuilder(channelId: String, body: [ChannelTopic]) -> RequestBuilder<ChannelTopicEntityListing> {        
+    open class func postNotificationsChannelSubscriptionsWithRequestBuilder(channelId: String, body: [ChannelTopic], ignoreErrors: Bool? = nil) -> RequestBuilder<ChannelTopicEntityListing> {        
         var path = "/api/v2/notifications/channels/{channelId}/subscriptions"
         let channelIdPreEscape = "\(channelId)"
         let channelIdPostEscape = channelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -395,7 +406,10 @@ open class NotificationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "ignoreErrors": ignoreErrors
+        ])
 
         let requestBuilder: RequestBuilder<ChannelTopicEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -454,15 +468,17 @@ open class NotificationsAPI {
 
     
     
+    
     /**
      Replace the current list of subscriptions with a new list.
      
      - parameter channelId: (path) Channel ID 
      - parameter body: (body) Body 
+     - parameter ignoreErrors: (query) Optionally prevent throwing of errors for failed permissions checks. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putNotificationsChannelSubscriptions(channelId: String, body: [ChannelTopic], completion: @escaping ((_ data: ChannelTopicEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = putNotificationsChannelSubscriptionsWithRequestBuilder(channelId: channelId, body: body)
+    open class func putNotificationsChannelSubscriptions(channelId: String, body: [ChannelTopic], ignoreErrors: Bool? = nil, completion: @escaping ((_ data: ChannelTopicEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = putNotificationsChannelSubscriptionsWithRequestBuilder(channelId: channelId, body: body, ignoreErrors: ignoreErrors)
         requestBuilder.execute { (response: Response<ChannelTopicEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -488,19 +504,24 @@ open class NotificationsAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "state" : "Permitted",
+    "rejectionReason" : "rejectionReason"
   }, {
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "state" : "Permitted",
+    "rejectionReason" : "rejectionReason"
   } ]
 }, statusCode=200}]
      
      - parameter channelId: (path) Channel ID 
      - parameter body: (body) Body 
+     - parameter ignoreErrors: (query) Optionally prevent throwing of errors for failed permissions checks. (optional)
 
      - returns: RequestBuilder<ChannelTopicEntityListing> 
      */
-    open class func putNotificationsChannelSubscriptionsWithRequestBuilder(channelId: String, body: [ChannelTopic]) -> RequestBuilder<ChannelTopicEntityListing> {        
+    open class func putNotificationsChannelSubscriptionsWithRequestBuilder(channelId: String, body: [ChannelTopic], ignoreErrors: Bool? = nil) -> RequestBuilder<ChannelTopicEntityListing> {        
         var path = "/api/v2/notifications/channels/{channelId}/subscriptions"
         let channelIdPreEscape = "\(channelId)"
         let channelIdPostEscape = channelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -508,7 +529,10 @@ open class NotificationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "ignoreErrors": ignoreErrors
+        ])
 
         let requestBuilder: RequestBuilder<ChannelTopicEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

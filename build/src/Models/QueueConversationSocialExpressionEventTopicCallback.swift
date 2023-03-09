@@ -105,9 +105,8 @@ public class QueueConversationSocialExpressionEventTopicCallback: Codable {
     public var callerId: String?
     /** The name displayed to recipients of the phone call. */
     public var callerIdName: String?
-    public var additionalProperties: [String:JSON]?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationSocialExpressionEventTopicDialerPreview?, voicemail: QueueConversationSocialExpressionEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?, additionalProperties: [String:JSON]?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationSocialExpressionEventTopicDialerPreview?, voicemail: QueueConversationSocialExpressionEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -134,7 +133,6 @@ public class QueueConversationSocialExpressionEventTopicCallback: Codable {
         self.afterCallWorkRequired = afterCallWorkRequired
         self.callerId = callerId
         self.callerIdName = callerIdName
-        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -164,7 +162,6 @@ public class QueueConversationSocialExpressionEventTopicCallback: Codable {
         case afterCallWorkRequired
         case callerId
         case callerIdName
-        case additionalProperties
     }
 
 

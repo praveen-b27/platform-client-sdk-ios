@@ -18,7 +18,7 @@ public class KnowledgeDocumentResponse: Codable {
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** Document title. */
+    /** Document title, having a limit of 500 words. */
     public var title: String?
     /** Indicates if the knowledge document should be included in search results. */
     public var visible: Bool?

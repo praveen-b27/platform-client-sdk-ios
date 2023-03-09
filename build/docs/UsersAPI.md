@@ -40,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserRoutinglanguages**](UsersAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](UsersAPI.html#getUserRoutingskills) | List routing skills for user |
 | [**getUserRoutingstatus**](UsersAPI.html#getUserRoutingstatus) | Fetch the routing status of a user |
+| [**getUserSkillgroups**](UsersAPI.html#getUserSkillgroups) | Get skill groups for a user |
 | [**getUserState**](UsersAPI.html#getUserState) | Get user state information. |
 | [**getUserStation**](UsersAPI.html#getUserStation) | Get station information for user |
 | [**getUserSuperiors**](UsersAPI.html#getUserSuperiors) | Get superiors |
@@ -1866,6 +1867,64 @@ UsersAPI.getUserRoutingstatus(userId: userId) { (response, error) in
 
 [**RoutingStatus**](RoutingStatus.html)
 
+<a name="getUserSkillgroups"></a>
+
+# **getUserSkillgroups**
+
+
+
+> [UserSkillGroupEntityListing](UserSkillGroupEntityListing.html) getUserSkillgroups(userId, pageSize, after, before)
+
+Get skill groups for a user
+
+
+
+Wraps GET /api/v2/users/{userId}/skillgroups  
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let pageSize: Int = 0 // Page size
+let after: String = "" // The cursor that points to the next page
+let before: String = "" // The cursor that points to the previous page
+
+// Code example
+UsersAPI.getUserSkillgroups(userId: userId, pageSize: pageSize, after: after, before: before) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUserSkillgroups was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **after** | **String**| The cursor that points to the next page | [optional] |
+| **before** | **String**| The cursor that points to the previous page | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserSkillGroupEntityListing**](UserSkillGroupEntityListing.html)
+
 <a name="getUserState"></a>
 
 # **getUserState**
@@ -2338,7 +2397,7 @@ UsersAPI.getUsersDevelopmentActivity(activityId: activityId, type: type) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **activityId** | **String**| Specifies the activity ID, maps to either assignment or appointment ID | |
-| **type** | **String**| Specifies the activity type. |<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
+| **type** | **String**| Specifies the activity type. |<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External") |
 {: class="table-striped"}
 
 

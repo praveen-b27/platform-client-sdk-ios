@@ -109,6 +109,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistoricalBulk) | Request a historical adherence report in bulk |
 | [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
 | [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
+| [**postWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementAPI.html#postWorkforcemanagementAgentsMePossibleworkshifts) | Get agent possible work shifts for requested time frame |
 | [**postWorkforcemanagementAgentschedulesMine**](WorkforceManagementAPI.html#postWorkforcemanagementAgentschedulesMine) | Get published schedule for the current user |
 | [**postWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivitycodes) | Create a new activity code |
 | [**postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | Query adherence explanations across an entire business unit for the requested period |
@@ -6015,6 +6016,58 @@ WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanationsQuery(ag
 ### Return type
 
 [**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse.html)
+
+<a name="postWorkforcemanagementAgentsMePossibleworkshifts"></a>
+
+# **postWorkforcemanagementAgentsMePossibleworkshifts**
+
+
+
+> [AgentPossibleWorkShiftsResponse](AgentPossibleWorkShiftsResponse.html) postWorkforcemanagementAgentsMePossibleworkshifts(body)
+
+Get agent possible work shifts for requested time frame
+
+
+
+Wraps POST /api/v2/workforcemanagement/agents/me/possibleworkshifts  
+
+Requires ANY permissions: 
+
+* wfm:agentPossibleWorkShifts:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentPossibleWorkShiftsRequest = new AgentPossibleWorkShiftsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAgentsMePossibleworkshifts(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAgentsMePossibleworkshifts was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentPossibleWorkShiftsRequest**](AgentPossibleWorkShiftsRequest.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentPossibleWorkShiftsResponse**](AgentPossibleWorkShiftsResponse.html)
 
 <a name="postWorkforcemanagementAgentschedulesMine"></a>
 

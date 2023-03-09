@@ -40,9 +40,9 @@ public class ExtensionPool: Codable {
     public var modifiedByApp: String?
     /** The application that created the resource. */
     public var createdByApp: String?
-    /** The starting phone number for the range of this Extension pool. Must be in E.164 format */
+    /** The starting phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the endNumber. */
     public var startNumber: String?
-    /** The ending phone number for the range of this Extension pool. Must be in E.164 format */
+    /** The ending phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the startNumber. */
     public var endNumber: String?
     /** The URI for this object */
     public var selfUri: String?

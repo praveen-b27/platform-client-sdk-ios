@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLearningModulesAssignments**](LearningAPI.html#getLearningModulesAssignments) | Get all learning modules of an organization including assignments for a specific user |
 | [**getLearningModulesCoverartCoverArtId**](LearningAPI.html#getLearningModulesCoverartCoverArtId) | Get a specific Learning Module cover art using ID |
 | [**patchLearningAssignment**](LearningAPI.html#patchLearningAssignment) | Update Learning Assignment |
+| [**patchLearningAssignmentReschedule**](LearningAPI.html#patchLearningAssignmentReschedule) | Reschedule Learning Assignment |
 | [**postLearningAssessmentsScoring**](LearningAPI.html#postLearningAssessmentsScoring) | Score learning assessment for preview |
 | [**postLearningAssignmentReassign**](LearningAPI.html#postLearningAssignmentReassign) | Reassign Learning Assignment |
 | [**postLearningAssignmentReset**](LearningAPI.html#postLearningAssignmentReset) | Reset Learning Assignment |
@@ -31,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postLearningModulePublish**](LearningAPI.html#postLearningModulePublish) | Publish a Learning module |
 | [**postLearningModules**](LearningAPI.html#postLearningModules) | Create a new learning module |
 | [**postLearningRulesQuery**](LearningAPI.html#postLearningRulesQuery) | Get users for learning module rule |
+| [**postLearningScheduleslotsQuery**](LearningAPI.html#postLearningScheduleslotsQuery) | Get list of possible slots where a learning activity can be scheduled. |
 | [**putLearningModule**](LearningAPI.html#putLearningModule) | Update a learning module |
 | [**putLearningModuleRule**](LearningAPI.html#putLearningModuleRule) | Update a learning module rule |
 {: class="table-striped"}
@@ -268,7 +270,7 @@ LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, compl
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
 | **userId** | [**[String]**](String.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional] |
 | **types** | [**[String]**](String.html)| Specifies the module types to filter by | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
-| **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), notCompleted ("NotCompleted") |
+| **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), notCompleted ("NotCompleted"), invalidSchedule ("InvalidSchedule") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
 
@@ -345,7 +347,7 @@ LearningAPI.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, com
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
 | **types** | [**[String]**](String.html)| Specifies the module types to filter by | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
-| **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), notCompleted ("NotCompleted") |
+| **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), notCompleted ("NotCompleted"), invalidSchedule ("InvalidSchedule") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
 
@@ -696,7 +698,7 @@ LearningAPI.getLearningModulesAssignments(userIds: userIds, pageSize: pageSize, 
 | **pageNumber** | **Int**| Page number | [optional] |
 | **searchTerm** | **String**| Search Term (searches by name and description) | [optional] |
 | **overdue** | **String**| Specifies if only modules with overdue/not overdue (overdue is \"True\" or \"False\") assignments are returned. If overdue is \"Any\" or omitted, both are returned and can including modules that are unassigned. | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
-| **assignmentStates** | [**[String]**](String.html)| Specifies the assignment states to return. | [optional]<br />**Values**: notAssigned ("NotAssigned"), assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed") |
+| **assignmentStates** | [**[String]**](String.html)| Specifies the assignment states to return. | [optional]<br />**Values**: notAssigned ("NotAssigned"), assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: coverart ("coverArt") |
 {: class="table-striped"}
 
@@ -803,6 +805,60 @@ LearningAPI.patchLearningAssignment(assignmentId: assignmentId, body: body) { (r
 | ------------- | ------------- | ------------- | ------------- |
 | **assignmentId** | **String**| The ID of Learning Assignment | |
 | **body** | [**LearningAssignmentUpdate**](LearningAssignmentUpdate.html)| The Learning Assignment to be updated | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningAssignment**](LearningAssignment.html)
+
+<a name="patchLearningAssignmentReschedule"></a>
+
+# **patchLearningAssignmentReschedule**
+
+
+
+> [LearningAssignment](LearningAssignment.html) patchLearningAssignmentReschedule(assignmentId, body)
+
+Reschedule Learning Assignment
+
+
+
+Wraps PATCH /api/v2/learning/assignments/{assignmentId}/reschedule  
+
+Requires ANY permissions: 
+
+* learning:assignment:reschedule
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assignmentId: String = "" // The ID of Learning Assignment
+let body: LearningAssignmentReschedule = new LearningAssignmentReschedule(...) // The Learning assignment reschedule model
+
+// Code example
+LearningAPI.patchLearningAssignmentReschedule(assignmentId: assignmentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.patchLearningAssignmentReschedule was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assignmentId** | **String**| The ID of Learning Assignment | |
+| **body** | [**LearningAssignmentReschedule**](LearningAssignmentReschedule.html)| The Learning assignment reschedule model | [optional] |
 {: class="table-striped"}
 
 
@@ -1399,6 +1455,58 @@ LearningAPI.postLearningRulesQuery(pageSize: pageSize, pageNumber: pageNumber, b
 ### Return type
 
 [**LearningAssignmentUserListing**](LearningAssignmentUserListing.html)
+
+<a name="postLearningScheduleslotsQuery"></a>
+
+# **postLearningScheduleslotsQuery**
+
+
+
+> [LearningScheduleSlotsQueryResponse](LearningScheduleSlotsQueryResponse.html) postLearningScheduleslotsQuery(body)
+
+Get list of possible slots where a learning activity can be scheduled.
+
+
+
+Wraps POST /api/v2/learning/scheduleslots/query  
+
+Requires ANY permissions: 
+
+* learning:scheduleSlot:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: LearningScheduleSlotsQueryRequest = new LearningScheduleSlotsQueryRequest(...) // The slot search request
+
+// Code example
+LearningAPI.postLearningScheduleslotsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.postLearningScheduleslotsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**LearningScheduleSlotsQueryRequest**](LearningScheduleSlotsQueryRequest.html)| The slot search request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningScheduleSlotsQueryResponse**](LearningScheduleSlotsQueryResponse.html)
 
 <a name="putLearningModule"></a>
 

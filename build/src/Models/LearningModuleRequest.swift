@@ -16,6 +16,7 @@ public class LearningModuleRequest: Codable {
         case informational = "Informational"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
+        case external = "External"
     }
     /** The name of learning module */
     public var name: String?

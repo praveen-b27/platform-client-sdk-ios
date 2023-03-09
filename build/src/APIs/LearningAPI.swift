@@ -1437,6 +1437,80 @@ open class LearningAPI {
     }
 
     
+    
+    /**
+     Reschedule Learning Assignment
+     
+     - parameter assignmentId: (path) The ID of Learning Assignment 
+     - parameter body: (body) The Learning assignment reschedule model (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchLearningAssignmentReschedule(assignmentId: String, body: LearningAssignmentReschedule? = nil, completion: @escaping ((_ data: LearningAssignment?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchLearningAssignmentRescheduleWithRequestBuilder(assignmentId: assignmentId, body: body)
+        requestBuilder.execute { (response: Response<LearningAssignment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Reschedule Learning Assignment
+     - PATCH /api/v2/learning/assignments/{assignmentId}/reschedule
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "isPassed" : true,
+  "isManual" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "module" : "{}",
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 6,
+  "isRule" : true,
+  "assessment" : "{}",
+  "assessmentForm" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isOverdue" : true,
+  "createdBy" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "percentageScore" : 0.8008282,
+  "state" : "Assigned",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter assignmentId: (path) The ID of Learning Assignment 
+     - parameter body: (body) The Learning assignment reschedule model (optional)
+
+     - returns: RequestBuilder<LearningAssignment> 
+     */
+    open class func patchLearningAssignmentRescheduleWithRequestBuilder(assignmentId: String, body: LearningAssignmentReschedule? = nil) -> RequestBuilder<LearningAssignment> {        
+        var path = "/api/v2/learning/assignments/{assignmentId}/reschedule"
+        let assignmentIdPreEscape = "\(assignmentId)"
+        let assignmentIdPostEscape = assignmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assignmentId}", with: assignmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
     /**
      Score learning assessment for preview
      
@@ -2303,6 +2377,140 @@ open class LearningAPI {
         ])
 
         let requestBuilder: RequestBuilder<LearningAssignmentUserListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Get list of possible slots where a learning activity can be scheduled.
+     
+     - parameter body: (body) The slot search request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLearningScheduleslotsQuery(body: LearningScheduleSlotsQueryRequest, completion: @escaping ((_ data: LearningScheduleSlotsQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningScheduleslotsQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<LearningScheduleSlotsQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of possible slots where a learning activity can be scheduled.
+     - POST /api/v2/learning/scheduleslots/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "suggestedSlots" : [ {
+    "lengthInMinutes" : 0,
+    "staffingDifference" : 6.027456183070403,
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "differenceRating" : "Poor"
+  }, {
+    "lengthInMinutes" : 0,
+    "staffingDifference" : 6.027456183070403,
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "differenceRating" : "Poor"
+  } ],
+  "wfmScheduleActivities" : [ {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 5,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 5,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "Coaching",
+      "timeOffRequestId" : "timeOffRequestId",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "Coaching",
+      "timeOffRequestId" : "timeOffRequestId",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "user" : "{}"
+  }, {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 5,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "timeOffRequestId" : "timeOffRequestId",
+      "lengthMinutes" : 5,
+      "businessUnitDate" : "2000-01-23",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "Coaching",
+      "timeOffRequestId" : "timeOffRequestId",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "Coaching",
+      "timeOffRequestId" : "timeOffRequestId",
+      "dateStart" : "2000-01-23T04:56:07.000+00:00",
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description"
+    } ],
+    "user" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) The slot search request 
+
+     - returns: RequestBuilder<LearningScheduleSlotsQueryResponse> 
+     */
+    open class func postLearningScheduleslotsQueryWithRequestBuilder(body: LearningScheduleSlotsQueryRequest) -> RequestBuilder<LearningScheduleSlotsQueryResponse> {        
+        let path = "/api/v2/learning/scheduleslots/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningScheduleSlotsQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

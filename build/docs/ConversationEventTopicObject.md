@@ -2,6 +2,7 @@
 title: ConversationEventTopicObject
 ---
 ## ConversationEventTopicObject
+The number of peer participants from the perspective of the participant in the conference.
 
 ## Properties
 

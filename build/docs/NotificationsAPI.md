@@ -280,7 +280,7 @@ NotificationsAPI.headNotificationsChannel(channelId: channelId) { (error) in
 
 
 
-> [ChannelTopicEntityListing](ChannelTopicEntityListing.html) postNotificationsChannelSubscriptions(channelId, body)
+> [ChannelTopicEntityListing](ChannelTopicEntityListing.html) postNotificationsChannelSubscriptions(channelId, body, ignoreErrors)
 
 Add a list of subscriptions to the existing list of subscriptions
 
@@ -301,9 +301,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let channelId: String = "" // Channel ID
 let body: [ChannelTopic] = [new ChannelTopic(...)] // Body
+let ignoreErrors: Bool = true // Optionally prevent throwing of errors for failed permissions checks.
 
 // Code example
-NotificationsAPI.postNotificationsChannelSubscriptions(channelId: channelId, body: body) { (response, error) in
+NotificationsAPI.postNotificationsChannelSubscriptions(channelId: channelId, body: body, ignoreErrors: ignoreErrors) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -320,6 +321,7 @@ NotificationsAPI.postNotificationsChannelSubscriptions(channelId: channelId, bod
 | ------------- | ------------- | ------------- | ------------- |
 | **channelId** | **String**| Channel ID | |
 | **body** | [**[ChannelTopic]**](ChannelTopic.html)| Body | |
+| **ignoreErrors** | **Bool**| Optionally prevent throwing of errors for failed permissions checks. | [optional] |
 {: class="table-striped"}
 
 
@@ -382,7 +384,7 @@ This endpoint does not require any parameters.
 
 
 
-> [ChannelTopicEntityListing](ChannelTopicEntityListing.html) putNotificationsChannelSubscriptions(channelId, body)
+> [ChannelTopicEntityListing](ChannelTopicEntityListing.html) putNotificationsChannelSubscriptions(channelId, body, ignoreErrors)
 
 Replace the current list of subscriptions with a new list.
 
@@ -403,9 +405,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let channelId: String = "" // Channel ID
 let body: [ChannelTopic] = [new ChannelTopic(...)] // Body
+let ignoreErrors: Bool = true // Optionally prevent throwing of errors for failed permissions checks.
 
 // Code example
-NotificationsAPI.putNotificationsChannelSubscriptions(channelId: channelId, body: body) { (response, error) in
+NotificationsAPI.putNotificationsChannelSubscriptions(channelId: channelId, body: body, ignoreErrors: ignoreErrors) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -422,6 +425,7 @@ NotificationsAPI.putNotificationsChannelSubscriptions(channelId: channelId, body
 | ------------- | ------------- | ------------- | ------------- |
 | **channelId** | **String**| Channel ID | |
 | **body** | [**[ChannelTopic]**](ChannelTopic.html)| Body | |
+| **ignoreErrors** | **Bool**| Optionally prevent throwing of errors for failed permissions checks. | [optional] |
 {: class="table-striped"}
 
 

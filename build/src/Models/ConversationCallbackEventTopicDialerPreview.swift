@@ -20,15 +20,13 @@ public class ConversationCallbackEventTopicDialerPreview: Codable {
     public var campaignId: String?
     /** The phone number columns associated with this campaign */
     public var phoneNumberColumns: [ConversationCallbackEventTopicPhoneNumberColumn]?
-    public var additionalProperties: [String:JSON]?
 
-    public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [ConversationCallbackEventTopicPhoneNumberColumn]?, additionalProperties: [String:JSON]?) {
+    public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [ConversationCallbackEventTopicPhoneNumberColumn]?) {
         self._id = _id
         self.contactId = contactId
         self.contactListId = contactListId
         self.campaignId = campaignId
         self.phoneNumberColumns = phoneNumberColumns
-        self.additionalProperties = additionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -37,7 +35,6 @@ public class ConversationCallbackEventTopicDialerPreview: Codable {
         case contactListId
         case campaignId
         case phoneNumberColumns
-        case additionalProperties
     }
 
 

@@ -25,6 +25,7 @@ public class AuditQueryRequest: Codable {
         case emails = "Emails"
         case employeePerformance = "EmployeePerformance"
         case gamification = "Gamification"
+        case gdpr = "GDPR"
         case groups = "Groups"
         case integrations = "Integrations"
         case knowledge = "Knowledge"

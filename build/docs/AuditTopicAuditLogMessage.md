@@ -15,6 +15,7 @@ title: AuditTopicAuditLogMessage
 | **clientId** | [**AuditTopicAddressableEntityRef**](AuditTopicAddressableEntityRef.html) |  | [optional] |
 | **remoteIp** | **[String]** |  | [optional] |
 | **serviceName** | **String** |  | [optional] |
+| **level** | **String** |  | [optional] |
 | **eventTime** | [**Date**](Date.html) |  | [optional] |
 | **message** | [**AuditTopicMessageInfo**](AuditTopicMessageInfo.html) |  | [optional] |
 | **action** | **String** |  | [optional] |

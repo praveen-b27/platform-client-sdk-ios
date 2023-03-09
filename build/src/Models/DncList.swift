@@ -50,10 +50,12 @@ public class DncList: Codable {
     public var licenseId: String?
     /** The division this DncList belongs to. */
     public var division: DomainEntityRef?
+    /** The column to evaluate exclusion against. Required if the dncSourceType is rds_custom. */
+    public var customExclusionColumn: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, contactMethod: ContactMethod?, loginId: String?, campaignId: String?, dncCodes: [String]?, licenseId: String?, division: DomainEntityRef?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, contactMethod: ContactMethod?, loginId: String?, campaignId: String?, dncCodes: [String]?, licenseId: String?, division: DomainEntityRef?, customExclusionColumn: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -68,6 +70,7 @@ public class DncList: Codable {
         self.dncCodes = dncCodes
         self.licenseId = licenseId
         self.division = division
+        self.customExclusionColumn = customExclusionColumn
         self.selfUri = selfUri
     }
 
@@ -86,6 +89,7 @@ public class DncList: Codable {
         case dncCodes
         case licenseId
         case division
+        case customExclusionColumn
         case selfUri
     }
 

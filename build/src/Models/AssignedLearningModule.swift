@@ -20,6 +20,7 @@ public class AssignedLearningModule: Codable {
         case informational = "Informational"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
+        case external = "External"
     }
     public enum ArchivalMode: String, Codable { 
         case graceful = "Graceful"

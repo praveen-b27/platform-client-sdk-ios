@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUsersSearch**](SearchAPI.html#getUsersSearch) | Search users using the q64 value returned from a previous search |
 | [**getVoicemailSearch**](SearchAPI.html#getVoicemailSearch) | Search voicemails using the q64 value returned from a previous search |
 | [**postAnalyticsConversationsTranscriptsQuery**](SearchAPI.html#postAnalyticsConversationsTranscriptsQuery) | Search resources. |
+| [**postConversationsParticipantsAttributesSearch**](SearchAPI.html#postConversationsParticipantsAttributesSearch) | Search conversations |
 | [**postDocumentationGknSearch**](SearchAPI.html#postDocumentationGknSearch) | Search gkn documentation |
 | [**postDocumentationSearch**](SearchAPI.html#postDocumentationSearch) | Search documentation |
 | [**postGroupsSearch**](SearchAPI.html#postGroupsSearch) | Search groups |
@@ -510,6 +511,58 @@ SearchAPI.postAnalyticsConversationsTranscriptsQuery(body: body) { (response, er
 ### Return type
 
 [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html)
+
+<a name="postConversationsParticipantsAttributesSearch"></a>
+
+# **postConversationsParticipantsAttributesSearch**
+
+
+
+> [JsonCursorSearchResponse](JsonCursorSearchResponse.html) postConversationsParticipantsAttributesSearch(body)
+
+Search conversations
+
+
+
+Wraps POST /api/v2/conversations/participants/attributes/search  
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesview
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationParticipantSearchRequest = new ConversationParticipantSearchRequest(...) // Search request options
+
+// Code example
+SearchAPI.postConversationsParticipantsAttributesSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SearchAPI.postConversationsParticipantsAttributesSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationParticipantSearchRequest**](ConversationParticipantSearchRequest.html)| Search request options | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JsonCursorSearchResponse**](JsonCursorSearchResponse.html)
 
 <a name="postDocumentationGknSearch"></a>
 

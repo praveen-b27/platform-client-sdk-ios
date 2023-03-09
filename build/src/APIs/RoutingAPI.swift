@@ -7500,14 +7500,21 @@ open class RoutingAPI {
     }
 
     
+    
+    public enum Expand_getRoutingSmsPhonenumber: String { 
+        case compliance = "compliance"
+    }
+
+    
     /**
      Get a phone number provisioned for SMS.
      
      - parameter addressId: (path) Address ID 
+     - parameter expand: (query) Expand response with additional information (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingSmsPhonenumber(addressId: String, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId)
+    open class func getRoutingSmsPhonenumber(addressId: String, expand: Expand_getRoutingSmsPhonenumber? = nil, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId, expand: expand)
         requestBuilder.execute { (response: Response<SmsPhoneNumber>?, error) -> Void in
             do {
                 if let e = error {
@@ -7561,10 +7568,11 @@ open class RoutingAPI {
 }, statusCode=200}]
      
      - parameter addressId: (path) Address ID 
+     - parameter expand: (query) Expand response with additional information (optional)
 
      - returns: RequestBuilder<SmsPhoneNumber> 
      */
-    open class func getRoutingSmsPhonenumberWithRequestBuilder(addressId: String) -> RequestBuilder<SmsPhoneNumber> {        
+    open class func getRoutingSmsPhonenumberWithRequestBuilder(addressId: String, expand: Expand_getRoutingSmsPhonenumber? = nil) -> RequestBuilder<SmsPhoneNumber> {        
         var path = "/api/v2/routing/sms/phonenumbers/{addressId}"
         let addressIdPreEscape = "\(addressId)"
         let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7572,7 +7580,10 @@ open class RoutingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<SmsPhoneNumber>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -8611,6 +8622,193 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<UserSkillEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get skill groups for a user
+     
+     - parameter userId: (path) User ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter after: (query) The cursor that points to the next page (optional)
+     - parameter before: (query) The cursor that points to the previous page (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserSkillgroups(userId: String, pageSize: Int? = nil, after: String? = nil, before: String? = nil, completion: @escaping ((_ data: UserSkillGroupEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserSkillgroupsWithRequestBuilder(userId: userId, pageSize: pageSize, after: after, before: before)
+        requestBuilder.execute { (response: Response<UserSkillGroupEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get skill groups for a user
+     - GET /api/v2/users/{userId}/skillgroups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "memberCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "skillConditions" : [ {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    }, {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    } ]
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "memberCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "skillConditions" : [ {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    }, {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    } ]
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter after: (query) The cursor that points to the next page (optional)
+     - parameter before: (query) The cursor that points to the previous page (optional)
+
+     - returns: RequestBuilder<UserSkillGroupEntityListing> 
+     */
+    open class func getUserSkillgroupsWithRequestBuilder(userId: String, pageSize: Int? = nil, after: String? = nil, before: String? = nil) -> RequestBuilder<UserSkillGroupEntityListing> {        
+        var path = "/api/v2/users/{userId}/skillgroups"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "after": after, 
+            "before": before
+        ])
+
+        let requestBuilder: RequestBuilder<UserSkillGroupEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -11396,10 +11594,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11422,10 +11620,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11468,10 +11666,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11494,10 +11692,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11545,10 +11743,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11571,10 +11769,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11617,10 +11815,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11643,10 +11841,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

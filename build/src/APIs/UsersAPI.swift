@@ -6273,6 +6273,193 @@ open class UsersAPI {
     }
 
     
+    
+    
+    
+    /**
+     Get skill groups for a user
+     
+     - parameter userId: (path) User ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter after: (query) The cursor that points to the next page (optional)
+     - parameter before: (query) The cursor that points to the previous page (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserSkillgroups(userId: String, pageSize: Int? = nil, after: String? = nil, before: String? = nil, completion: @escaping ((_ data: UserSkillGroupEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserSkillgroupsWithRequestBuilder(userId: userId, pageSize: pageSize, after: after, before: before)
+        requestBuilder.execute { (response: Response<UserSkillGroupEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get skill groups for a user
+     - GET /api/v2/users/{userId}/skillgroups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "memberCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "skillConditions" : [ {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    }, {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    } ]
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "memberCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "skillConditions" : [ {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    }, {
+      "languageSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "languageSkill" : "English-Written",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "routingSkillConditions" : [ {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      }, {
+        "comparator" : "EqualTo",
+        "routingSkill" : "routingSkill",
+        "childConditions" : [ null, null ],
+        "proficiency" : 5
+      } ],
+      "operation" : "And"
+    } ]
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter after: (query) The cursor that points to the next page (optional)
+     - parameter before: (query) The cursor that points to the previous page (optional)
+
+     - returns: RequestBuilder<UserSkillGroupEntityListing> 
+     */
+    open class func getUserSkillgroupsWithRequestBuilder(userId: String, pageSize: Int? = nil, after: String? = nil, before: String? = nil) -> RequestBuilder<UserSkillGroupEntityListing> {        
+        var path = "/api/v2/users/{userId}/skillgroups"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "after": after, 
+            "before": before
+        ])
+
+        let requestBuilder: RequestBuilder<UserSkillGroupEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      Get user state information.
      
@@ -7825,6 +8012,7 @@ open class UsersAPI {
         case coaching = "Coaching"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
+        case external = "External"
     }
 
     
@@ -18742,10 +18930,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18768,10 +18956,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18814,10 +19002,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18840,10 +19028,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18891,10 +19079,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18917,10 +19105,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18963,10 +19151,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -18989,10 +19177,10 @@ open class UsersAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

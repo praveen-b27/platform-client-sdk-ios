@@ -6050,6 +6050,35 @@
     "return": "CallConversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\n\n// Get call conversation\nGetConversationsCallRequest.getConversationsCall(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCallRequest.getConversationsCall was successful\")\n        dump(response)\n    }\n}"
   },
+  "getconversationscallparticipantcommunicationwrapup": {
+    "operationId": "getconversationscallparticipantcommunicationwrapup",
+    "functionName": "getConversationsCallParticipantCommunicationWrapup",
+    "signature": "getConversationsCallParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsCallParticipantCommunicationWrapupRequest.getConversationsCallParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCallParticipantCommunicationWrapupRequest.getConversationsCallParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
+  },
   "getconversationscallparticipantwrapup": {
     "operationId": "getconversationscallparticipantwrapup",
     "functionName": "getConversationsCallParticipantWrapup",
@@ -6106,6 +6135,35 @@
     ],
     "return": "CallbackConversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\n\n// Get callback conversation\nGetConversationsCallbackRequest.getConversationsCallback(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCallbackRequest.getConversationsCallback was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscallbackparticipantcommunicationwrapup": {
+    "operationId": "getconversationscallbackparticipantcommunicationwrapup",
+    "functionName": "getConversationsCallbackParticipantCommunicationWrapup",
+    "signature": "getConversationsCallbackParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsCallbackParticipantCommunicationWrapupRequest.getConversationsCallbackParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCallbackParticipantCommunicationWrapupRequest.getConversationsCallbackParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationscallbackparticipantwrapup": {
     "operationId": "getconversationscallbackparticipantwrapup",
@@ -6267,6 +6325,35 @@
     "return": "WebChatMessageEntityList",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet after: String = \"\" // If specified, get the messages chronologically after the id of this message\nlet before: String = \"\" // If specified, get the messages chronologically before the id of this message\nlet sortOrder: GetConversationsChatMessagesRequest.SortOrder_getConversationsChatMessages = GetConversationsChatMessagesRequest.SortOrder_getConversationsChatMessages.enummember // Sort order\nlet maxResults: Int = 0 // Limit the returned number of messages, up to a maximum of 100\n\n// Get the messages of a chat conversation.\nGetConversationsChatMessagesRequest.getConversationsChatMessages(conversationId: conversationId, after: after, before: before, sortOrder: sortOrder, maxResults: maxResults) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsChatMessagesRequest.getConversationsChatMessages was successful\")\n        dump(response)\n    }\n}"
   },
+  "getconversationschatparticipantcommunicationwrapup": {
+    "operationId": "getconversationschatparticipantcommunicationwrapup",
+    "functionName": "getConversationsChatParticipantCommunicationWrapup",
+    "signature": "getConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsChatParticipantCommunicationWrapupRequest.getConversationsChatParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsChatParticipantCommunicationWrapupRequest.getConversationsChatParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
+  },
   "getconversationschatparticipantwrapup": {
     "operationId": "getconversationschatparticipantwrapup",
     "functionName": "getConversationsChatParticipantWrapup",
@@ -6330,6 +6417,35 @@
     ],
     "return": "CobrowseConversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\n\n// Get cobrowse conversation\nGetConversationsCobrowsesessionRequest.getConversationsCobrowsesession(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCobrowsesessionRequest.getConversationsCobrowsesession was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscobrowsesessionparticipantcommunicationwrapup": {
+    "operationId": "getconversationscobrowsesessionparticipantcommunicationwrapup",
+    "functionName": "getConversationsCobrowsesessionParticipantCommunicationWrapup",
+    "signature": "getConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsCobrowsesessionParticipantCommunicationWrapupRequest.getConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCobrowsesessionParticipantCommunicationWrapupRequest.getConversationsCobrowsesessionParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationscobrowsesessionparticipantwrapup": {
     "operationId": "getconversationscobrowsesessionparticipantwrapup",
@@ -6441,6 +6557,35 @@
     ],
     "return": "EmailMessage",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\n\n// Get conversation draft reply\nGetConversationsEmailMessagesDraftRequest.getConversationsEmailMessagesDraft(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsEmailMessagesDraftRequest.getConversationsEmailMessagesDraft was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsemailparticipantcommunicationwrapup": {
+    "operationId": "getconversationsemailparticipantcommunicationwrapup",
+    "functionName": "getConversationsEmailParticipantCommunicationWrapup",
+    "signature": "getConversationsEmailParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsEmailParticipantCommunicationWrapupRequest.getConversationsEmailParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsEmailParticipantCommunicationWrapupRequest.getConversationsEmailParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsemailparticipantwrapup": {
     "operationId": "getconversationsemailparticipantwrapup",
@@ -6607,6 +6752,35 @@
     ],
     "return": "MessageData",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet messageId: String = \"\" // messageId\nlet useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media, stickers)\n\n// Get conversation message\nGetConversationsMessageMessageRequest.getConversationsMessageMessage(conversationId: conversationId, messageId: messageId, useNormalizedMessage: useNormalizedMessage) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessageMessageRequest.getConversationsMessageMessage was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsmessageparticipantcommunicationwrapup": {
+    "operationId": "getconversationsmessageparticipantcommunicationwrapup",
+    "functionName": "getConversationsMessageParticipantCommunicationWrapup",
+    "signature": "getConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsMessageParticipantCommunicationWrapupRequest.getConversationsMessageParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessageParticipantCommunicationWrapupRequest.getConversationsMessageParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessageparticipantwrapup": {
     "operationId": "getconversationsmessageparticipantwrapup",
@@ -7034,6 +7208,100 @@
     "signature": "getConversationsMessagingThreadingtimeline()",
     "return": "ConversationThreadingWindow",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get conversation threading window timeline for each messaging type\nGetConversationsMessagingThreadingtimelineRequest.getConversationsMessagingThreadingtimeline() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingThreadingtimelineRequest.getConversationsMessagingThreadingtimeline was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsscreenshareparticipantcommunicationwrapup": {
+    "operationId": "getconversationsscreenshareparticipantcommunicationwrapup",
+    "functionName": "getConversationsScreenshareParticipantCommunicationWrapup",
+    "signature": "getConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsScreenshareParticipantCommunicationWrapupRequest.getConversationsScreenshareParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsScreenshareParticipantCommunicationWrapupRequest.getConversationsScreenshareParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationssettings": {
+    "operationId": "getconversationssettings",
+    "functionName": "getConversationsSettings",
+    "signature": "getConversationsSettings()",
+    "return": "Settings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get Settings\nGetConversationsSettingsRequest.getConversationsSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsSettingsRequest.getConversationsSettings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationssocialparticipantcommunicationwrapup": {
+    "operationId": "getconversationssocialparticipantcommunicationwrapup",
+    "functionName": "getConversationsSocialParticipantCommunicationWrapup",
+    "signature": "getConversationsSocialParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsSocialParticipantCommunicationWrapupRequest.getConversationsSocialParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsSocialParticipantCommunicationWrapupRequest.getConversationsSocialParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsvideoparticipantcommunicationwrapup": {
+    "operationId": "getconversationsvideoparticipantcommunicationwrapup",
+    "functionName": "getConversationsVideoParticipantCommunicationWrapup",
+    "signature": "getConversationsVideoParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates if the wrap-up code is provisional.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsVideoParticipantCommunicationWrapupRequest.getConversationsVideoParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsVideoParticipantCommunicationWrapupRequest.getConversationsVideoParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
   },
   "patchconversationparticipant": {
     "operationId": "patchconversationparticipant",
@@ -7797,6 +8065,19 @@
     "return": "SupportedContent",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet supportedContentId: String = \"\" // Supported Content ID\nlet body: SupportedContent = new SupportedContent(...) // SupportedContent\n\n// Update a supported content profile\nPatchConversationsMessagingSupportedcontentSupportedContentIdRequest.patchConversationsMessagingSupportedcontentSupportedContentId(supportedContentId: supportedContentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsMessagingSupportedcontentSupportedContentIdRequest.patchConversationsMessagingSupportedcontentSupportedContentId was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchconversationssettings": {
+    "operationId": "patchconversationssettings",
+    "functionName": "patchConversationsSettings",
+    "signature": "patchConversationsSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "Settings",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Settings = new Settings(...) // Settings\n\n// Update Settings\nPatchConversationsSettingsRequest.patchConversationsSettings(body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationsSettingsRequest.patchConversationsSettings was successful\")\n    }\n}"
+  },
   "postconversationassign": {
     "operationId": "postconversationassign",
     "functionName": "postConversationAssign",
@@ -7974,6 +8255,34 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\n\n// Listen in on the conversation from the point of view of a given participant while speaking to just the given participant.\nPostConversationsCallParticipantCoachRequest.postConversationsCallParticipantCoach(conversationId: conversationId, participantId: participantId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsCallParticipantCoachRequest.postConversationsCallParticipantCoach was successful\")\n    }\n}"
   },
+  "postconversationscallparticipantcommunicationwrapup": {
+    "operationId": "postconversationscallparticipantcommunicationwrapup",
+    "functionName": "postConversationsCallParticipantCommunicationWrapup",
+    "signature": "postConversationsCallParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsCallParticipantCommunicationWrapupRequest.postConversationsCallParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsCallParticipantCommunicationWrapupRequest.postConversationsCallParticipantCommunicationWrapup was successful\")\n    }\n}"
+  },
   "postconversationscallparticipantconsult": {
     "operationId": "postconversationscallparticipantconsult",
     "functionName": "postConversationsCallParticipantConsult",
@@ -8057,6 +8366,34 @@
     ],
     "return": "Conversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: Conversation = new Conversation(...) // Conversation\n\n// Add participants to a conversation\nPostConversationsCallParticipantsRequest.postConversationsCallParticipants(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsCallParticipantsRequest.postConversationsCallParticipants was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postconversationscallbackparticipantcommunicationwrapup": {
+    "operationId": "postconversationscallbackparticipantcommunicationwrapup",
+    "functionName": "postConversationsCallbackParticipantCommunicationWrapup",
+    "signature": "postConversationsCallbackParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsCallbackParticipantCommunicationWrapupRequest.postConversationsCallbackParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsCallbackParticipantCommunicationWrapupRequest.postConversationsCallbackParticipantCommunicationWrapup was successful\")\n    }\n}"
   },
   "postconversationscallbackparticipantreplace": {
     "operationId": "postconversationscallbackparticipantreplace",
@@ -8179,6 +8516,34 @@
     "return": "WebChatTyping",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet communicationId: String = \"\" // communicationId\n\n// Send a typing-indicator on behalf of a communication in a chat conversation.\nPostConversationsChatCommunicationTypingRequest.postConversationsChatCommunicationTyping(conversationId: conversationId, communicationId: communicationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsChatCommunicationTypingRequest.postConversationsChatCommunicationTyping was successful\")\n        dump(response)\n    }\n}"
   },
+  "postconversationschatparticipantcommunicationwrapup": {
+    "operationId": "postconversationschatparticipantcommunicationwrapup",
+    "functionName": "postConversationsChatParticipantCommunicationWrapup",
+    "signature": "postConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsChatParticipantCommunicationWrapupRequest.postConversationsChatParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsChatParticipantCommunicationWrapupRequest.postConversationsChatParticipantCommunicationWrapup was successful\")\n    }\n}"
+  },
   "postconversationschatparticipantreplace": {
     "operationId": "postconversationschatparticipantreplace",
     "functionName": "postConversationsChatParticipantReplace",
@@ -8215,6 +8580,34 @@
     ],
     "return": "ChatConversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CreateWebChatRequest = new CreateWebChatRequest(...) // Create web chat request\n\n// Create a web chat conversation\nPostConversationsChatsRequest.postConversationsChats(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsChatsRequest.postConversationsChats was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postconversationscobrowsesessionparticipantcommunicationwrapup": {
+    "operationId": "postconversationscobrowsesessionparticipantcommunicationwrapup",
+    "functionName": "postConversationsCobrowsesessionParticipantCommunicationWrapup",
+    "signature": "postConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsCobrowsesessionParticipantCommunicationWrapupRequest.postConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsCobrowsesessionParticipantCommunicationWrapupRequest.postConversationsCobrowsesessionParticipantCommunicationWrapup was successful\")\n    }\n}"
   },
   "postconversationscobrowsesessionparticipantreplace": {
     "operationId": "postconversationscobrowsesessionparticipantreplace",
@@ -8295,6 +8688,34 @@
     ],
     "return": "EmailMessage",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: CopyAttachmentsRequest = new CopyAttachmentsRequest(...) // Copy Attachment Request\n\n// Copy attachments from an email message to the current draft.\nPostConversationsEmailMessagesDraftAttachmentsCopyRequest.postConversationsEmailMessagesDraftAttachmentsCopy(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsEmailMessagesDraftAttachmentsCopyRequest.postConversationsEmailMessagesDraftAttachmentsCopy was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postconversationsemailparticipantcommunicationwrapup": {
+    "operationId": "postconversationsemailparticipantcommunicationwrapup",
+    "functionName": "postConversationsEmailParticipantCommunicationWrapup",
+    "signature": "postConversationsEmailParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsEmailParticipantCommunicationWrapupRequest.postConversationsEmailParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsEmailParticipantCommunicationWrapupRequest.postConversationsEmailParticipantCommunicationWrapup was successful\")\n    }\n}"
   },
   "postconversationsemailparticipantreplace": {
     "operationId": "postconversationsemailparticipantreplace",
@@ -8484,6 +8905,34 @@
     "return": "TextMessageListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // \nlet useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media, stickers)\nlet body: [String] = [\"\"] // messageIds\n\n// Get messages in batch\nPostConversationsMessageMessagesBulkRequest.postConversationsMessageMessagesBulk(conversationId: conversationId, useNormalizedMessage: useNormalizedMessage, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessageMessagesBulkRequest.postConversationsMessageMessagesBulk was successful\")\n        dump(response)\n    }\n}"
   },
+  "postconversationsmessageparticipantcommunicationwrapup": {
+    "operationId": "postconversationsmessageparticipantcommunicationwrapup",
+    "functionName": "postConversationsMessageParticipantCommunicationWrapup",
+    "signature": "postConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsMessageParticipantCommunicationWrapupRequest.postConversationsMessageParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsMessageParticipantCommunicationWrapupRequest.postConversationsMessageParticipantCommunicationWrapup was successful\")\n    }\n}"
+  },
   "postconversationsmessageparticipantreplace": {
     "operationId": "postconversationsmessageparticipantreplace",
     "functionName": "postConversationsMessageParticipantReplace",
@@ -8646,6 +9095,90 @@
     ],
     "return": "JsonCursorSearchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ConversationParticipantSearchRequest = new ConversationParticipantSearchRequest(...) // Search request options\n\n// Search conversations\nPostConversationsParticipantsAttributesSearchRequest.postConversationsParticipantsAttributesSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsParticipantsAttributesSearchRequest.postConversationsParticipantsAttributesSearch was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postconversationsscreenshareparticipantcommunicationwrapup": {
+    "operationId": "postconversationsscreenshareparticipantcommunicationwrapup",
+    "functionName": "postConversationsScreenshareParticipantCommunicationWrapup",
+    "signature": "postConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsScreenshareParticipantCommunicationWrapupRequest.postConversationsScreenshareParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsScreenshareParticipantCommunicationWrapupRequest.postConversationsScreenshareParticipantCommunicationWrapup was successful\")\n    }\n}"
+  },
+  "postconversationssocialparticipantcommunicationwrapup": {
+    "operationId": "postconversationssocialparticipantcommunicationwrapup",
+    "functionName": "postConversationsSocialParticipantCommunicationWrapup",
+    "signature": "postConversationsSocialParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsSocialParticipantCommunicationWrapupRequest.postConversationsSocialParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsSocialParticipantCommunicationWrapupRequest.postConversationsSocialParticipantCommunicationWrapup was successful\")\n    }\n}"
+  },
+  "postconversationsvideoparticipantcommunicationwrapup": {
+    "operationId": "postconversationsvideoparticipantcommunicationwrapup",
+    "functionName": "postConversationsVideoParticipantCommunicationWrapup",
+    "signature": "postConversationsVideoParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsVideoParticipantCommunicationWrapupRequest.postConversationsVideoParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsVideoParticipantCommunicationWrapupRequest.postConversationsVideoParticipantCommunicationWrapup was successful\")\n    }\n}"
   },
   "putconversationparticipantflaggedreason": {
     "operationId": "putconversationparticipantflaggedreason",

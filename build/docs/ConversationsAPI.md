@@ -31,9 +31,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationSecureattributes**](ConversationsAPI.html#getConversationSecureattributes) | Get the secure attributes on a conversation. |
 | [**getConversations**](ConversationsAPI.html#getConversations) | Get active conversations for the logged in user |
 | [**getConversationsCall**](ConversationsAPI.html#getConversationsCall) | Get call conversation |
+| [**getConversationsCallParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsCallParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsCallParticipantWrapup**](ConversationsAPI.html#getConversationsCallParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsCallParticipantWrapupcodes**](ConversationsAPI.html#getConversationsCallParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsCallback**](ConversationsAPI.html#getConversationsCallback) | Get callback conversation |
+| [**getConversationsCallbackParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsCallbackParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsCallbackParticipantWrapup**](ConversationsAPI.html#getConversationsCallbackParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsCallbackParticipantWrapupcodes**](ConversationsAPI.html#getConversationsCallbackParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsCallbacks**](ConversationsAPI.html#getConversationsCallbacks) | Get active callback conversations for the logged in user |
@@ -43,10 +45,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsChat**](ConversationsAPI.html#getConversationsChat) | Get chat conversation |
 | [**getConversationsChatMessage**](ConversationsAPI.html#getConversationsChatMessage) | Get a web chat conversation message |
 | [**getConversationsChatMessages**](ConversationsAPI.html#getConversationsChatMessages) | Get the messages of a chat conversation. |
+| [**getConversationsChatParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsChatParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsChatParticipantWrapup**](ConversationsAPI.html#getConversationsChatParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsChatParticipantWrapupcodes**](ConversationsAPI.html#getConversationsChatParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsChats**](ConversationsAPI.html#getConversationsChats) | Get active chat conversations for the logged in user |
 | [**getConversationsCobrowsesession**](ConversationsAPI.html#getConversationsCobrowsesession) | Get cobrowse conversation |
+| [**getConversationsCobrowsesessionParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsCobrowsesessionParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsCobrowsesessionParticipantWrapup**](ConversationsAPI.html#getConversationsCobrowsesessionParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsCobrowsesessionParticipantWrapupcodes**](ConversationsAPI.html#getConversationsCobrowsesessionParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsCobrowsesessions**](ConversationsAPI.html#getConversationsCobrowsesessions) | Get active cobrowse conversations for the logged in user |
@@ -54,6 +58,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsEmailMessage**](ConversationsAPI.html#getConversationsEmailMessage) | Get conversation message |
 | [**getConversationsEmailMessages**](ConversationsAPI.html#getConversationsEmailMessages) | Get conversation messages |
 | [**getConversationsEmailMessagesDraft**](ConversationsAPI.html#getConversationsEmailMessagesDraft) | Get conversation draft reply |
+| [**getConversationsEmailParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsEmailParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsEmailParticipantWrapup**](ConversationsAPI.html#getConversationsEmailParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsEmailParticipantWrapupcodes**](ConversationsAPI.html#getConversationsEmailParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsEmailSettings**](ConversationsAPI.html#getConversationsEmailSettings) | Get emails settings for a given conversation |
@@ -64,6 +69,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsAPI.html#getConversationsMessageCommunicationMessagesMediaMediaId) | Get media |
 | [**getConversationsMessageDetails**](ConversationsAPI.html#getConversationsMessageDetails) | Get message |
 | [**getConversationsMessageMessage**](ConversationsAPI.html#getConversationsMessageMessage) | Get conversation message |
+| [**getConversationsMessageParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsMessageParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsMessageParticipantWrapup**](ConversationsAPI.html#getConversationsMessageParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsMessageParticipantWrapupcodes**](ConversationsAPI.html#getConversationsMessageParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsMessages**](ConversationsAPI.html#getConversationsMessages) | Get active message conversations for the logged in user |
@@ -84,6 +90,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#getConversationsMessagingSupportedcontentDefault) | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
 | [**getConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#getConversationsMessagingSupportedcontentSupportedContentId) | Get a supported content profile |
 | [**getConversationsMessagingThreadingtimeline**](ConversationsAPI.html#getConversationsMessagingThreadingtimeline) | Get conversation threading window timeline for each messaging type |
+| [**getConversationsScreenshareParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsScreenshareParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
+| [**getConversationsSettings**](ConversationsAPI.html#getConversationsSettings) | Get Settings |
+| [**getConversationsSocialParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsSocialParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
+| [**getConversationsVideoParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsVideoParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**patchConversationParticipant**](ConversationsAPI.html#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI.html#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationSecureattributes**](ConversationsAPI.html#patchConversationSecureattributes) | Update the secure attributes on a conversation. |
@@ -118,6 +128,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update Twitter messaging integration |
 | [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update or activate a WhatsApp messaging integration |
 | [**patchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#patchConversationsMessagingSupportedcontentSupportedContentId) | Update a supported content profile |
+| [**patchConversationsSettings**](ConversationsAPI.html#patchConversationsSettings) | Update Settings |
 | [**postAnalyticsConversationDetailsProperties**](ConversationsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsAggregatesQuery**](ConversationsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
 | [**postAnalyticsConversationsDetailsJobs**](ConversationsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
@@ -131,10 +142,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationParticipantSecureivrsessions**](ConversationsAPI.html#postConversationParticipantSecureivrsessions) | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**postConversationsCall**](ConversationsAPI.html#postConversationsCall) | Place a new call as part of a callback conversation. |
 | [**postConversationsCallParticipantCoach**](ConversationsAPI.html#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
+| [**postConversationsCallParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsCallParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCallParticipantConsult**](ConversationsAPI.html#postConversationsCallParticipantConsult) | Initiate and update consult transfer |
 | [**postConversationsCallParticipantMonitor**](ConversationsAPI.html#postConversationsCallParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsCallParticipantReplace**](ConversationsAPI.html#postConversationsCallParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallParticipants**](ConversationsAPI.html#postConversationsCallParticipants) | Add participants to a conversation |
+| [**postConversationsCallbackParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsCallbackParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCallbackParticipantReplace**](ConversationsAPI.html#postConversationsCallbackParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallbacks**](ConversationsAPI.html#postConversationsCallbacks) | Create a Callback |
 | [**postConversationsCallbacksBulkDisconnect**](ConversationsAPI.html#postConversationsCallbacksBulkDisconnect) | Disconnect multiple scheduled callbacks |
@@ -142,12 +155,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsCalls**](ConversationsAPI.html#postConversationsCalls) | Create a call conversation |
 | [**postConversationsChatCommunicationMessages**](ConversationsAPI.html#postConversationsChatCommunicationMessages) | Send a message on behalf of a communication in a chat conversation. |
 | [**postConversationsChatCommunicationTyping**](ConversationsAPI.html#postConversationsChatCommunicationTyping) | Send a typing-indicator on behalf of a communication in a chat conversation. |
+| [**postConversationsChatParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsChatParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsChatParticipantReplace**](ConversationsAPI.html#postConversationsChatParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsChats**](ConversationsAPI.html#postConversationsChats) | Create a web chat conversation |
+| [**postConversationsCobrowsesessionParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsCobrowsesessionParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCobrowsesessionParticipantReplace**](ConversationsAPI.html#postConversationsCobrowsesessionParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsEmailInboundmessages**](ConversationsAPI.html#postConversationsEmailInboundmessages) | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
 | [**postConversationsEmailMessages**](ConversationsAPI.html#postConversationsEmailMessages) | Send an email reply |
 | [**postConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsAPI.html#postConversationsEmailMessagesDraftAttachmentsCopy) | Copy attachments from an email message to the current draft. |
+| [**postConversationsEmailParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsEmailParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsEmailParticipantReplace**](ConversationsAPI.html#postConversationsEmailParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsEmails**](ConversationsAPI.html#postConversationsEmails) | Create an email conversation |
 | [**postConversationsEmailsAgentless**](ConversationsAPI.html#postConversationsEmailsAgentless) | Create an email conversation, per API |
@@ -158,6 +174,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageCommunicationMessagesMedia**](ConversationsAPI.html#postConversationsMessageCommunicationMessagesMedia) | Create media |
 | [**postConversationsMessageCommunicationTyping**](ConversationsAPI.html#postConversationsMessageCommunicationTyping) | Send message typing event |
 | [**postConversationsMessageMessagesBulk**](ConversationsAPI.html#postConversationsMessageMessagesBulk) | Get messages in batch |
+| [**postConversationsMessageParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsMessageParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsMessageParticipantReplace**](ConversationsAPI.html#postConversationsMessageParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsMessages**](ConversationsAPI.html#postConversationsMessages) | Create an outbound messaging conversation. |
 | [**postConversationsMessagesAgentless**](ConversationsAPI.html#postConversationsMessagesAgentless) | Send an agentless outbound message |
@@ -169,6 +186,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | Create a WhatsApp Integration |
 | [**postConversationsMessagingSupportedcontent**](ConversationsAPI.html#postConversationsMessagingSupportedcontent) | Create a Supported Content profile |
 | [**postConversationsParticipantsAttributesSearch**](ConversationsAPI.html#postConversationsParticipantsAttributesSearch) | Search conversations |
+| [**postConversationsScreenshareParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsScreenshareParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
+| [**postConversationsSocialParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsSocialParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
+| [**postConversationsVideoParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsVideoParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI.html#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**putConversationSecureattributes**](ConversationsAPI.html#putConversationSecureattributes) | Set the secure attributes on a conversation. |
 | [**putConversationTags**](ConversationsAPI.html#putConversationTags) | Update the tags on a conversation. |
@@ -1446,6 +1466,63 @@ ConversationsAPI.getConversationsCall(conversationId: conversationId) { (respons
 
 [**CallConversation**](CallConversation.html)
 
+<a name="getConversationsCallParticipantCommunicationWrapup"></a>
+
+# **getConversationsCallParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsCallParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsCallParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCallParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
+
 <a name="getConversationsCallParticipantWrapup"></a>
 
 # **getConversationsCallParticipantWrapup**
@@ -1604,6 +1681,63 @@ ConversationsAPI.getConversationsCallback(conversationId: conversationId) { (res
 ### Return type
 
 [**CallbackConversation**](CallbackConversation.html)
+
+<a name="getConversationsCallbackParticipantCommunicationWrapup"></a>
+
+# **getConversationsCallbackParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsCallbackParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsCallbackParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCallbackParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getConversationsCallbackParticipantWrapup"></a>
 
@@ -2078,6 +2212,63 @@ ConversationsAPI.getConversationsChatMessages(conversationId: conversationId, af
 
 [**WebChatMessageEntityList**](WebChatMessageEntityList.html)
 
+<a name="getConversationsChatParticipantCommunicationWrapup"></a>
+
+# **getConversationsChatParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsChatParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsChatParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
+
 <a name="getConversationsChatParticipantWrapup"></a>
 
 # **getConversationsChatParticipantWrapup**
@@ -2283,6 +2474,63 @@ ConversationsAPI.getConversationsCobrowsesession(conversationId: conversationId)
 ### Return type
 
 [**CobrowseConversation**](CobrowseConversation.html)
+
+<a name="getConversationsCobrowsesessionParticipantCommunicationWrapup"></a>
+
+# **getConversationsCobrowsesessionParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCobrowsesessionParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getConversationsCobrowsesessionParticipantWrapup"></a>
 
@@ -2644,6 +2892,63 @@ ConversationsAPI.getConversationsEmailMessagesDraft(conversationId: conversation
 ### Return type
 
 [**EmailMessage**](EmailMessage.html)
+
+<a name="getConversationsEmailParticipantCommunicationWrapup"></a>
+
+# **getConversationsEmailParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsEmailParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsEmailParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsEmailParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getConversationsEmailParticipantWrapup"></a>
 
@@ -3172,6 +3477,63 @@ ConversationsAPI.getConversationsMessageMessage(conversationId: conversationId, 
 ### Return type
 
 [**MessageData**](MessageData.html)
+
+<a name="getConversationsMessageParticipantCommunicationWrapup"></a>
+
+# **getConversationsMessageParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsMessageParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessageParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getConversationsMessageParticipantWrapup"></a>
 
@@ -4271,6 +4633,225 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**ConversationThreadingWindow**](ConversationThreadingWindow.html)
+
+<a name="getConversationsScreenshareParticipantCommunicationWrapup"></a>
+
+# **getConversationsScreenshareParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsScreenshareParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsScreenshareParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
+
+<a name="getConversationsSettings"></a>
+
+# **getConversationsSettings**
+
+
+
+> [Settings](Settings.html) getConversationsSettings()
+
+Get Settings
+
+
+
+Wraps GET /api/v2/conversations/settings  
+
+Requires ANY permissions: 
+
+* conversation:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**Settings**](Settings.html)
+
+<a name="getConversationsSocialParticipantCommunicationWrapup"></a>
+
+# **getConversationsSocialParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsSocialParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsSocialParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsSocialParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
+
+<a name="getConversationsVideoParticipantCommunicationWrapup"></a>
+
+# **getConversationsVideoParticipantCommunicationWrapup**
+
+
+
+> [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsVideoParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
+
+Get the wrap-up for this conversation communication. 
+
+
+
+Wraps GET /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+
+// Code example
+ConversationsAPI.getConversationsVideoParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsVideoParticipantCommunicationWrapup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="patchConversationParticipant"></a>
 
@@ -6138,6 +6719,57 @@ ConversationsAPI.patchConversationsMessagingSupportedcontentSupportedContentId(s
 
 [**SupportedContent**](SupportedContent.html)
 
+<a name="patchConversationsSettings"></a>
+
+# **patchConversationsSettings**
+
+
+
+> Void patchConversationsSettings(body)
+
+Update Settings
+
+
+
+Wraps PATCH /api/v2/conversations/settings  
+
+Requires ANY permissions: 
+
+* conversation:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: Settings = new Settings(...) // Settings
+
+// Code example
+ConversationsAPI.patchConversationsSettings(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationsSettings was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**Settings**](Settings.html)| Settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="postAnalyticsConversationDetailsProperties"></a>
 
 # **postAnalyticsConversationDetailsProperties**
@@ -6842,6 +7474,63 @@ ConversationsAPI.postConversationsCallParticipantCoach(conversationId: conversat
 
 `nil` (empty response body)
 
+<a name="postConversationsCallParticipantCommunicationWrapup"></a>
+
+# **postConversationsCallParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsCallParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsCallParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="postConversationsCallParticipantConsult"></a>
 
 # **postConversationsCallParticipantConsult**
@@ -7056,6 +7745,63 @@ ConversationsAPI.postConversationsCallParticipants(conversationId: conversationI
 ### Return type
 
 [**Conversation**](Conversation.html)
+
+<a name="postConversationsCallbackParticipantCommunicationWrapup"></a>
+
+# **postConversationsCallbackParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsCallbackParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsCallbackParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsCallbackParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postConversationsCallbackParticipantReplace"></a>
 
@@ -7426,6 +8172,63 @@ ConversationsAPI.postConversationsChatCommunicationTyping(conversationId: conver
 
 [**WebChatTyping**](WebChatTyping.html)
 
+<a name="postConversationsChatParticipantCommunicationWrapup"></a>
+
+# **postConversationsChatParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsChatParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsChatParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="postConversationsChatParticipantReplace"></a>
 
 # **postConversationsChatParticipantReplace**
@@ -7531,6 +8334,63 @@ ConversationsAPI.postConversationsChats(body: body) { (response, error) in
 ### Return type
 
 [**ChatConversation**](ChatConversation.html)
+
+<a name="postConversationsCobrowsesessionParticipantCommunicationWrapup"></a>
+
+# **postConversationsCobrowsesessionParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsCobrowsesessionParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postConversationsCobrowsesessionParticipantReplace"></a>
 
@@ -7744,6 +8604,63 @@ ConversationsAPI.postConversationsEmailMessagesDraftAttachmentsCopy(conversation
 ### Return type
 
 [**EmailMessage**](EmailMessage.html)
+
+<a name="postConversationsEmailParticipantCommunicationWrapup"></a>
+
+# **postConversationsEmailParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsEmailParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsEmailParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsEmailParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postConversationsEmailParticipantReplace"></a>
 
@@ -8295,6 +9212,63 @@ ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversati
 ### Return type
 
 [**TextMessageListing**](TextMessageListing.html)
+
+<a name="postConversationsMessageParticipantCommunicationWrapup"></a>
+
+# **postConversationsMessageParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsMessageParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsMessageParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postConversationsMessageParticipantReplace"></a>
 
@@ -8879,6 +9853,177 @@ ConversationsAPI.postConversationsParticipantsAttributesSearch(body: body) { (re
 ### Return type
 
 [**JsonCursorSearchResponse**](JsonCursorSearchResponse.html)
+
+<a name="postConversationsScreenshareParticipantCommunicationWrapup"></a>
+
+# **postConversationsScreenshareParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsScreenshareParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsScreenshareParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationsSocialParticipantCommunicationWrapup"></a>
+
+# **postConversationsSocialParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsSocialParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsSocialParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsSocialParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationsVideoParticipantCommunicationWrapup"></a>
+
+# **postConversationsVideoParticipantCommunicationWrapup**
+
+
+
+> Void postConversationsVideoParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
+
+Apply wrap-up for this conversation communication
+
+
+
+Wraps POST /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+
+// Code example
+ConversationsAPI.postConversationsVideoParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsVideoParticipantCommunicationWrapup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="putConversationParticipantFlaggedreason"></a>
 

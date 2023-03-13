@@ -19,15 +19,19 @@ public class TriggerTarget: Codable {
     public var type: ModelType?
     /** The ID of the entity to target */
     public var _id: String?
+    /** Optional config for the target. Until the feature gets enabled will always operate in TopLevelPrimitives mode. */
+    public var workflowTargetSettings: WorkflowTargetSettings?
 
-    public init(type: ModelType?, _id: String?) {
+    public init(type: ModelType?, _id: String?, workflowTargetSettings: WorkflowTargetSettings?) {
         self.type = type
         self._id = _id
+        self.workflowTargetSettings = workflowTargetSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
         case type
         case _id = "id"
+        case workflowTargetSettings
     }
 
 

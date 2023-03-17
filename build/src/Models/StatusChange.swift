@@ -97,6 +97,7 @@ public class StatusChange: Codable {
         case supportability = "supportability"
         case taskManagement = "task.management"
         case telephonyConfiguration = "telephony.configuration"
+        case users = "users"
         case webDeployments = "web.deployments"
         case webMessaging = "web.messaging"
         case webchat = "webchat"

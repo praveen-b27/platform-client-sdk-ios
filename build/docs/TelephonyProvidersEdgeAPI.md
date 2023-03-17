@@ -117,7 +117,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTelephonyProvidersEdgesPhones**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesPhones) | Create a new Phone |
 | [**postTelephonyProvidersEdgesPhonesReboot**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesPhonesReboot) | Reboot Multiple Phones |
 | [**postTelephonyProvidersEdgesSiteOutboundroutes**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesSiteOutboundroutes) | Create outbound route |
-| [**postTelephonyProvidersEdgesSiteRebalance**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesSiteRebalance) | Triggers the rebalance operation. |
 | [**postTelephonyProvidersEdgesSites**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesSites) | Create a Site. |
 | [**postTelephonyProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesTrunkbasesettings) | Create a Trunk Base Settings object |
 | [**putTelephonyProvidersEdge**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdge) | Update a edge. |
@@ -6131,57 +6130,6 @@ TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesSiteOutboundroutes(siteId: 
 ### Return type
 
 [**OutboundRouteBase**](OutboundRouteBase.html)
-
-<a name="postTelephonyProvidersEdgesSiteRebalance"></a>
-
-# **postTelephonyProvidersEdgesSiteRebalance**
-
-
-
-> Void postTelephonyProvidersEdgesSiteRebalance(siteId)
-
-Triggers the rebalance operation.
-
-
-
-Wraps POST /api/v2/telephony/providers/edges/sites/{siteId}/rebalance  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let siteId: String = "" // Site ID
-
-// Code example
-TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesSiteRebalance(siteId: siteId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesSiteRebalance was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **siteId** | **String**| Site ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
 
 <a name="postTelephonyProvidersEdgesSites"></a>
 

@@ -16384,50 +16384,6 @@ open class TelephonyProvidersEdgeAPI {
 
     
     /**
-     Triggers the rebalance operation.
-     
-     - parameter siteId: (path) Site ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postTelephonyProvidersEdgesSiteRebalance(siteId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = postTelephonyProvidersEdgesSiteRebalanceWithRequestBuilder(siteId: siteId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Triggers the rebalance operation.
-     - POST /api/v2/telephony/providers/edges/sites/{siteId}/rebalance
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     
-     - parameter siteId: (path) Site ID 
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func postTelephonyProvidersEdgesSiteRebalanceWithRequestBuilder(siteId: String) -> RequestBuilder<Void> {        
-        var path = "/api/v2/telephony/providers/edges/sites/{siteId}/rebalance"
-        let siteIdPreEscape = "\(siteId)"
-        let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: url!, body: body)
-    }
-
-    
-    /**
      Create a Site.
      
      - parameter body: (body) Site 

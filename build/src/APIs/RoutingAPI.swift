@@ -4850,6 +4850,7 @@ open class RoutingAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "selfUri" : "https://openapi-generator.tech",
@@ -4858,6 +4859,7 @@ open class RoutingAPI {
     "modifiedBy" : "modifiedBy",
     "id" : "id"
   }, {
+    "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "selfUri" : "https://openapi-generator.tech",
@@ -7908,6 +7910,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "selfUri" : "https://openapi-generator.tech",
@@ -7953,6 +7956,7 @@ open class RoutingAPI {
 
     
     
+    
     /**
      Get list of wrapup codes.
      
@@ -7961,10 +7965,11 @@ open class RoutingAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)
+     - parameter divisionId: (query) Filter by division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingWrapupcodes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingWrapupcodesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name)
+    open class func getRoutingWrapupcodes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingWrapupcodesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, divisionId: divisionId)
         requestBuilder.execute { (response: Response<WrapupCodeEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7992,6 +7997,7 @@ open class RoutingAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "selfUri" : "https://openapi-generator.tech",
@@ -8000,6 +8006,7 @@ open class RoutingAPI {
     "modifiedBy" : "modifiedBy",
     "id" : "id"
   }, {
+    "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "createdBy",
     "selfUri" : "https://openapi-generator.tech",
@@ -8021,10 +8028,11 @@ open class RoutingAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)
+     - parameter divisionId: (query) Filter by division ID(s) (optional)
 
      - returns: RequestBuilder<WrapupCodeEntityListing> 
      */
-    open class func getRoutingWrapupcodesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil) -> RequestBuilder<WrapupCodeEntityListing> {        
+    open class func getRoutingWrapupcodesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<WrapupCodeEntityListing> {        
         let path = "/api/v2/routing/wrapupcodes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -8035,7 +8043,8 @@ open class RoutingAPI {
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy?.rawValue, 
             "sortOrder": sortOrder?.rawValue, 
-            "name": name
+            "name": name, 
+            "divisionId": divisionId
         ])
 
         let requestBuilder: RequestBuilder<WrapupCodeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -12644,6 +12653,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "selfUri" : "https://openapi-generator.tech",
@@ -13229,7 +13239,7 @@ open class RoutingAPI {
      - parameter body: (body) WrapupCode 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingWrapupcodes(body: WrapupCode, completion: @escaping ((_ data: WrapupCode?,_ error: Error?) -> Void)) {
+    open class func postRoutingWrapupcodes(body: WrapupCodeRequest, completion: @escaping ((_ data: WrapupCode?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingWrapupcodesWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<WrapupCode>?, error) -> Void in
             do {
@@ -13254,6 +13264,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "selfUri" : "https://openapi-generator.tech",
@@ -13267,7 +13278,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<WrapupCode> 
      */
-    open class func postRoutingWrapupcodesWithRequestBuilder(body: WrapupCode) -> RequestBuilder<WrapupCode> {        
+    open class func postRoutingWrapupcodesWithRequestBuilder(body: WrapupCodeRequest) -> RequestBuilder<WrapupCode> {        
         let path = "/api/v2/routing/wrapupcodes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -14154,7 +14165,7 @@ open class RoutingAPI {
      - parameter body: (body) WrapupCode 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingWrapupcode(codeId: String, body: WrapupCode, completion: @escaping ((_ data: WrapupCode?,_ error: Error?) -> Void)) {
+    open class func putRoutingWrapupcode(codeId: String, body: WrapupCodeRequest, completion: @escaping ((_ data: WrapupCode?,_ error: Error?) -> Void)) {
         let requestBuilder = putRoutingWrapupcodeWithRequestBuilder(codeId: codeId, body: body)
         requestBuilder.execute { (response: Response<WrapupCode>?, error) -> Void in
             do {
@@ -14179,6 +14190,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "createdBy",
   "selfUri" : "https://openapi-generator.tech",
@@ -14193,7 +14205,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<WrapupCode> 
      */
-    open class func putRoutingWrapupcodeWithRequestBuilder(codeId: String, body: WrapupCode) -> RequestBuilder<WrapupCode> {        
+    open class func putRoutingWrapupcodeWithRequestBuilder(codeId: String, body: WrapupCodeRequest) -> RequestBuilder<WrapupCode> {        
         var path = "/api/v2/routing/wrapupcodes/{codeId}"
         let codeIdPreEscape = "\(codeId)"
         let codeIdPostEscape = codeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

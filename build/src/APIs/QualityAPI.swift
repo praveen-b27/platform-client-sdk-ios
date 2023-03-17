@@ -15969,7 +15969,7 @@ open class QualityAPI {
      - parameter agentHasRead: (query) agent has the evaluation (optional)
      - parameter expandAnswerTotalScores: (query) get the total scores for evaluations (optional)
      - parameter maximum: (query) maximum (optional)
-     - parameter sortOrder: (query) sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)
+     - parameter sortOrder: (query) sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
@@ -21578,7 +21578,7 @@ open class QualityAPI {
      - parameter agentHasRead: (query) agent has the evaluation (optional)
      - parameter expandAnswerTotalScores: (query) get the total scores for evaluations (optional)
      - parameter maximum: (query) maximum (optional)
-     - parameter sortOrder: (query) sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)
+     - parameter sortOrder: (query) sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId (optional)
 
      - returns: RequestBuilder<EvaluationEntityListing> 
      */

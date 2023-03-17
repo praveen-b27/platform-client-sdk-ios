@@ -795,7 +795,7 @@ let isReleased: Bool = true // the evaluation has been released
 let agentHasRead: Bool = true // agent has the evaluation
 let expandAnswerTotalScores: Bool = true // get the total scores for evaluations
 let maximum: Int = 0 // maximum
-let sortOrder: String = "" // sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending'
+let sortOrder: String = "" // sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending'. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId
 
 // Code example
 QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
@@ -831,7 +831,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **agentHasRead** | **Bool**| agent has the evaluation | [optional] |
 | **expandAnswerTotalScores** | **Bool**| get the total scores for evaluations | [optional] |
 | **maximum** | **Int**| maximum | [optional] |
-| **sortOrder** | **String**| sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending' | [optional] |
+| **sortOrder** | **String**| sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending'. Sorts by assigned date when evaluatorUserId or agentTeamId are supplied, and by released date for agentUserId | [optional] |
 {: class="table-striped"}
 
 

@@ -16,6 +16,7 @@ public class LearningModuleInformStep: Codable {
         case content = "Content"
         case genesysBuiltInCourse = "GenesysBuiltInCourse"
         case richText = "RichText"
+        case scorm = "Scorm"
     }
     /** The learning module inform step type */
     public var type: ModelType?

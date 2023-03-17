@@ -1306,7 +1306,10 @@ docs/EvaluationQuestionGroupScore.md
 docs/EvaluationQuestionScore.md
 docs/EvaluationResponse.md
 docs/EvaluationScoringSet.md
+docs/EvaluationSettings.md
+docs/EvaluationSettingsAssignee.md
 docs/EvaluationSource.md
+docs/EvaluationVersion.md
 docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
 docs/EventCoBrowse.md
@@ -2149,6 +2152,7 @@ docs/OverallBestPointsItem.md
 docs/PINConfiguration.md
 docs/Page.md
 docs/PagedNamespaceListing.md
+docs/PagelessDomainEntityListingEvaluationVersion.md
 docs/PagingSpec.md
 docs/Parameter.md
 docs/ParsedCertificate.md
@@ -2255,6 +2259,7 @@ docs/PresenceDetailQueryFilter.md
 docs/PresenceDetailQueryPredicate.md
 docs/PresenceEventOrganizationPresence.md
 docs/PresenceEventUserPresence.md
+docs/PresenceSettings.md
 docs/ProcessAutomationAPI.json
 docs/ProcessAutomationAPI.md
 docs/ProcessScheduleUpdateUploadRequest.md
@@ -2648,6 +2653,7 @@ docs/ResponseSetEntityListing.md
 docs/ResponseSubstitution.md
 docs/ResponseText.md
 docs/RestErrorDetail.md
+docs/RestorePresenceSettings.md
 docs/ResultCounters.md
 docs/RetentionDuration.md
 docs/ReverseWhitepagesLookupResult.md
@@ -2794,6 +2800,7 @@ docs/SessionListing.md
 docs/SessionSegmentAssignment.md
 docs/SetContentTemplateActionSettings.md
 docs/SetRecordingState.md
+docs/SetSmsPhoneNumberActionSettings.md
 docs/SetTimeOffLimitValuesRequest.md
 docs/SetUuiDataRequest.md
 docs/SetWrapperDayOfWeek.md
@@ -2863,6 +2870,7 @@ docs/SpeechTextAnalyticsAPI.json
 docs/SpeechTextAnalyticsAPI.md
 docs/SpeechTextAnalyticsSettingsRequest.md
 docs/SpeechTextAnalyticsSettingsResponse.md
+docs/StarrableDivision.md
 docs/StatEventCampaignTopicIntervalMetrics.md
 docs/StatEventCampaignTopicMetricStats.md
 docs/StatEventCampaignTopicStatsNotification.md
@@ -3646,10 +3654,12 @@ docs/WrapUpCodeReference.md
 docs/Wrapup.md
 docs/WrapupCode.md
 docs/WrapupCodeEntityListing.md
+docs/WrapupCodeRequest.md
 docs/WrapupDetailEventTopicWrapupEvent.md
 docs/WritableDialerContact.md
 docs/WritableDivision.md
 docs/WritableEntity.md
+docs/WritableStarrableDivision.md
 docs/deleteAlertingInteractionstatsAlert-example.txt
 docs/deleteAlertingInteractionstatsRule-example.txt
 docs/deleteAnalyticsConversationsDetailsJob-example.txt
@@ -4448,6 +4458,7 @@ docs/getOutboundSequence-example.txt
 docs/getOutboundSequences-example.txt
 docs/getOutboundSettings-example.txt
 docs/getOutboundWrapupcodemappings-example.txt
+docs/getPresenceSettings-example.txt
 docs/getPresenceSource-example.txt
 docs/getPresenceSources-example.txt
 docs/getPresenceUserPrimarysource-example.txt
@@ -5388,7 +5399,6 @@ docs/postTelephonyProvidersEdgesPhonebasesettings-example.txt
 docs/postTelephonyProvidersEdgesPhones-example.txt
 docs/postTelephonyProvidersEdgesPhonesReboot-example.txt
 docs/postTelephonyProvidersEdgesSiteOutboundroutes-example.txt
-docs/postTelephonyProvidersEdgesSiteRebalance-example.txt
 docs/postTelephonyProvidersEdgesSites-example.txt
 docs/postTelephonyProvidersEdgesTrunkbasesettings-example.txt
 docs/postTelephonySiptracesDownload-example.txt
@@ -5602,6 +5612,7 @@ docs/putOutboundSchedulesMessagingcampaign-example.txt
 docs/putOutboundSchedulesSequence-example.txt
 docs/putOutboundSequence-example.txt
 docs/putOutboundWrapupcodemappings-example.txt
+docs/putPresenceSettings-example.txt
 docs/putPresenceSource-example.txt
 docs/putPresenceUserPrimarysource-example.txt
 docs/putPresencedefinition-example.txt
@@ -7035,7 +7046,10 @@ src/Models/EvaluationQuestionGroupScore.swift
 src/Models/EvaluationQuestionScore.swift
 src/Models/EvaluationResponse.swift
 src/Models/EvaluationScoringSet.swift
+src/Models/EvaluationSettings.swift
+src/Models/EvaluationSettingsAssignee.swift
 src/Models/EvaluationSource.swift
+src/Models/EvaluationVersion.swift
 src/Models/EvaluatorActivity.swift
 src/Models/EvaluatorActivityEntityListing.swift
 src/Models/EventCoBrowse.swift
@@ -7826,6 +7840,7 @@ src/Models/OverallBestPointsItem.swift
 src/Models/PINConfiguration.swift
 src/Models/Page.swift
 src/Models/PagedNamespaceListing.swift
+src/Models/PagelessDomainEntityListingEvaluationVersion.swift
 src/Models/PagingSpec.swift
 src/Models/Parameter.swift
 src/Models/ParsedCertificate.swift
@@ -7930,6 +7945,7 @@ src/Models/PresenceDetailQueryFilter.swift
 src/Models/PresenceDetailQueryPredicate.swift
 src/Models/PresenceEventOrganizationPresence.swift
 src/Models/PresenceEventUserPresence.swift
+src/Models/PresenceSettings.swift
 src/Models/ProcessScheduleUpdateUploadRequest.swift
 src/Models/Program.swift
 src/Models/ProgramJob.swift
@@ -8314,6 +8330,7 @@ src/Models/ResponseSetEntityListing.swift
 src/Models/ResponseSubstitution.swift
 src/Models/ResponseText.swift
 src/Models/RestErrorDetail.swift
+src/Models/RestorePresenceSettings.swift
 src/Models/ResultCounters.swift
 src/Models/RetentionDuration.swift
 src/Models/ReverseWhitepagesLookupResult.swift
@@ -8452,6 +8469,7 @@ src/Models/SessionListing.swift
 src/Models/SessionSegmentAssignment.swift
 src/Models/SetContentTemplateActionSettings.swift
 src/Models/SetRecordingState.swift
+src/Models/SetSmsPhoneNumberActionSettings.swift
 src/Models/SetTimeOffLimitValuesRequest.swift
 src/Models/SetUuiDataRequest.swift
 src/Models/SetWrapperDayOfWeek.swift
@@ -8519,6 +8537,7 @@ src/Models/SourceEntityListing.swift
 src/Models/SourcePlanningGroupRequest.swift
 src/Models/SpeechTextAnalyticsSettingsRequest.swift
 src/Models/SpeechTextAnalyticsSettingsResponse.swift
+src/Models/StarrableDivision.swift
 src/Models/StatEventCampaignTopicIntervalMetrics.swift
 src/Models/StatEventCampaignTopicMetricStats.swift
 src/Models/StatEventCampaignTopicStatsNotification.swift
@@ -9265,9 +9284,11 @@ src/Models/WrapUpCodeReference.swift
 src/Models/Wrapup.swift
 src/Models/WrapupCode.swift
 src/Models/WrapupCodeEntityListing.swift
+src/Models/WrapupCodeRequest.swift
 src/Models/WrapupDetailEventTopicWrapupEvent.swift
 src/Models/WritableDialerContact.swift
 src/Models/WritableDivision.swift
 src/Models/WritableEntity.swift
+src/Models/WritableStarrableDivision.swift
 src/SdkConfiguration.swift
 src/UrlSessionImplementations.swift

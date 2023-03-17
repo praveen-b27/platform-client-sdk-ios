@@ -4039,7 +4039,7 @@ RoutingAPI.getRoutingWrapupcode(codeId: codeId) { (response, error) in
 
 
 
-> [WrapupCodeEntityListing](WrapupCodeEntityListing.html) getRoutingWrapupcodes(pageSize, pageNumber, sortBy, sortOrder, name)
+> [WrapupCodeEntityListing](WrapupCodeEntityListing.html) getRoutingWrapupcodes(pageSize, pageNumber, sortBy, sortOrder, name, divisionId)
 
 Get list of wrapup codes.
 
@@ -4064,9 +4064,10 @@ let pageNumber: Int = 0 // Page number
 let sortBy: RoutingAPI.SortBy_getRoutingWrapupcodes = RoutingAPI.SortBy_getRoutingWrapupcodes.enummember // Sort by
 let sortOrder: RoutingAPI.SortOrder_getRoutingWrapupcodes = RoutingAPI.SortOrder_getRoutingWrapupcodes.enummember // Sort order
 let name: String = "" // Wrapup code's name ('Sort by' param is ignored unless this field is provided)
+let divisionId: [String] = [""] // Filter by division ID(s)
 
 // Code example
-RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name) { (response, error) in
+RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4086,6 +4087,7 @@ RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sor
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: name ("name"), _id ("id") |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **name** | **String**| Wrapup code's name ('Sort by' param is ignored unless this field is provided) | [optional] |
+| **divisionId** | [**[String]**](String.html)| Filter by division ID(s) | [optional] |
 {: class="table-striped"}
 
 
@@ -6186,7 +6188,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: WrapupCode = new WrapupCode(...) // WrapupCode
+let body: WrapupCodeRequest = new WrapupCodeRequest(...) // WrapupCode
 
 // Code example
 RoutingAPI.postRoutingWrapupcodes(body: body) { (response, error) in
@@ -6204,7 +6206,7 @@ RoutingAPI.postRoutingWrapupcodes(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode | |
+| **body** | [**WrapupCodeRequest**](WrapupCodeRequest.html)| WrapupCode | |
 {: class="table-striped"}
 
 
@@ -6828,7 +6830,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let codeId: String = "" // Wrapup Code ID
-let body: WrapupCode = new WrapupCode(...) // WrapupCode
+let body: WrapupCodeRequest = new WrapupCodeRequest(...) // WrapupCode
 
 // Code example
 RoutingAPI.putRoutingWrapupcode(codeId: codeId, body: body) { (response, error) in
@@ -6847,7 +6849,7 @@ RoutingAPI.putRoutingWrapupcode(codeId: codeId, body: body) { (response, error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **codeId** | **String**| Wrapup Code ID | |
-| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode | |
+| **body** | [**WrapupCodeRequest**](WrapupCodeRequest.html)| WrapupCode | |
 {: class="table-striped"}
 
 

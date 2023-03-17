@@ -15,6 +15,8 @@ public class EvaluationResponse: Codable {
         case pending = "PENDING"
         case inprogress = "INPROGRESS"
         case finished = "FINISHED"
+        case inreview = "INREVIEW"
+        case retracted = "RETRACTED"
     }
     public enum MediaType: String, Codable { 
         case call = "CALL"

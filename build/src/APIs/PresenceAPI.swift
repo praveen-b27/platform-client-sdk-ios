@@ -98,6 +98,56 @@ open class PresenceAPI {
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
 
+    /**
+     Get the presence settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPresenceSettings(completion: @escaping ((_ data: PresenceSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<PresenceSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the presence settings
+     - GET /api/v2/presence/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "restorePresenceSettings" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<PresenceSettings> 
+     */
+    open class func getPresenceSettingsWithRequestBuilder() -> RequestBuilder<PresenceSettings> {        
+        let path = "/api/v2/presence/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PresenceSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
     
     /**
      Get a Presence Source
@@ -3188,6 +3238,60 @@ open class PresenceAPI {
         let requestBuilder: RequestBuilder<OrganizationPresence>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Update the presence settings
+     
+     - parameter body: (body) Presence Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putPresenceSettings(body: PresenceSettings, completion: @escaping ((_ data: PresenceSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putPresenceSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<PresenceSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the presence settings
+     - PUT /api/v2/presence/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "restorePresenceSettings" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) Presence Settings 
+
+     - returns: RequestBuilder<PresenceSettings> 
+     */
+    open class func putPresenceSettingsWithRequestBuilder(body: PresenceSettings) -> RequestBuilder<PresenceSettings> {        
+        let path = "/api/v2/presence/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PresenceSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
     

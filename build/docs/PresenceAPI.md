@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deletePresenceSource**](PresenceAPI.html#deletePresenceSource) | Delete a Presence Source |
 | [**deletePresencedefinition**](PresenceAPI.html#deletePresencedefinition) | Delete a Presence Definition |
+| [**getPresenceSettings**](PresenceAPI.html#getPresenceSettings) | Get the presence settings |
 | [**getPresenceSource**](PresenceAPI.html#getPresenceSource) | Get a Presence Source |
 | [**getPresenceSources**](PresenceAPI.html#getPresenceSources) | Get a list of Presence Sources |
 | [**getPresenceUserPrimarysource**](PresenceAPI.html#getPresenceUserPrimarysource) | Get a user&#39;s Primary Presence Source |
@@ -21,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserPresencesPurecloud**](PresenceAPI.html#patchUserPresencesPurecloud) | Patch a Genesys Cloud user&#39;s presence |
 | [**postPresenceSources**](PresenceAPI.html#postPresenceSources) | Create a Presence Source |
 | [**postPresencedefinitions**](PresenceAPI.html#postPresencedefinitions) | Create a Presence Definition |
+| [**putPresenceSettings**](PresenceAPI.html#putPresenceSettings) | Update the presence settings |
 | [**putPresenceSource**](PresenceAPI.html#putPresenceSource) | Update a Presence Source |
 | [**putPresenceUserPrimarysource**](PresenceAPI.html#putPresenceUserPrimarysource) | Update a user&#39;s Primary Presence Source |
 | [**putPresencedefinition**](PresenceAPI.html#putPresencedefinition) | Update a Presence Definition |
@@ -129,6 +131,54 @@ PresenceAPI.deletePresencedefinition(presenceId: presenceId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="getPresenceSettings"></a>
+
+# **getPresenceSettings**
+
+
+
+> [PresenceSettings](PresenceSettings.html) getPresenceSettings()
+
+Get the presence settings
+
+
+
+Wraps GET /api/v2/presence/settings  
+
+Requires ALL permissions: 
+
+* presence:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+PresenceAPI.getPresenceSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.getPresenceSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**PresenceSettings**](PresenceSettings.html)
 
 <a name="getPresenceSource"></a>
 
@@ -767,6 +817,58 @@ PresenceAPI.postPresencedefinitions(body: body) { (response, error) in
 ### Return type
 
 [**OrganizationPresence**](OrganizationPresence.html)
+
+<a name="putPresenceSettings"></a>
+
+# **putPresenceSettings**
+
+
+
+> [PresenceSettings](PresenceSettings.html) putPresenceSettings(body)
+
+Update the presence settings
+
+
+
+Wraps PUT /api/v2/presence/settings  
+
+Requires ALL permissions: 
+
+* presence:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: PresenceSettings = new PresenceSettings(...) // Presence Settings
+
+// Code example
+PresenceAPI.putPresenceSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.putPresenceSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**PresenceSettings**](PresenceSettings.html)| Presence Settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PresenceSettings**](PresenceSettings.html)
 
 <a name="putPresenceSource"></a>
 

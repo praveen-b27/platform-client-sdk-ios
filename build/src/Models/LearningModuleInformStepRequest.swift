@@ -16,6 +16,7 @@ public class LearningModuleInformStepRequest: Codable {
         case url = "Url"
         case content = "Content"
         case richText = "RichText"
+        case scorm = "Scorm"
     }
     /** The learning module inform step type */
     public var type: ModelType?

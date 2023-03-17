@@ -16539,6 +16539,8 @@ open class AuthorizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "analysisDays" : 0,
+  "dateLastCalculated" : "2000-01-23T04:56:07.000+00:00",
+  "dateLastActive" : "2000-01-23",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "analysisEnabled" : true
@@ -18868,6 +18870,8 @@ open class AuthorizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "analysisDays" : 0,
+  "dateLastCalculated" : "2000-01-23T04:56:07.000+00:00",
+  "dateLastActive" : "2000-01-23",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "analysisEnabled" : true

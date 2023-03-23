@@ -1298,6 +1298,7 @@ docs/EvaluationFormEntityListing.md
 docs/EvaluationFormResponse.md
 docs/EvaluationQualityV2TopicCalibration.md
 docs/EvaluationQualityV2TopicEvaluationScoringSet.md
+docs/EvaluationQualityV2TopicEvaluationSource.md
 docs/EvaluationQualityV2TopicEvaluationV2.md
 docs/EvaluationQualityV2TopicUser.md
 docs/EvaluationQuestion.md
@@ -1649,8 +1650,6 @@ docs/JourneySessionEventsNotificationConnectedQueue.md
 docs/JourneySessionEventsNotificationConversation.md
 docs/JourneySessionEventsNotificationConversationChannel.md
 docs/JourneySessionEventsNotificationConversationUserDisposition.md
-docs/JourneySessionEventsNotificationCustomEventAttribute.md
-docs/JourneySessionEventsNotificationCustomEventAttributeList.md
 docs/JourneySessionEventsNotificationDevice.md
 docs/JourneySessionEventsNotificationExternalContact.md
 docs/JourneySessionEventsNotificationGeoLocation.md
@@ -3636,12 +3635,15 @@ docs/WorkforceManagementAPI.md
 docs/WorkitemsEventsNotificationCustomAttribute.md
 docs/WorkitemsEventsNotificationDelta.md
 docs/WorkitemsEventsNotificationWorkitem.md
+docs/WorkitemsEventsNotificationWrapup.md
 docs/WorkitemsQueueEventsNotificationCustomAttribute.md
 docs/WorkitemsQueueEventsNotificationDelta.md
 docs/WorkitemsQueueEventsNotificationWorkitem.md
+docs/WorkitemsQueueEventsNotificationWrapup.md
 docs/WorkitemsUserEventsNotificationCustomAttribute.md
 docs/WorkitemsUserEventsNotificationDelta.md
 docs/WorkitemsUserEventsNotificationWorkitem.md
+docs/WorkitemsUserEventsNotificationWrapup.md
 docs/Workspace.md
 docs/WorkspaceCreate.md
 docs/WorkspaceEntityListing.md
@@ -7038,6 +7040,7 @@ src/Models/EvaluationFormEntityListing.swift
 src/Models/EvaluationFormResponse.swift
 src/Models/EvaluationQualityV2TopicCalibration.swift
 src/Models/EvaluationQualityV2TopicEvaluationScoringSet.swift
+src/Models/EvaluationQualityV2TopicEvaluationSource.swift
 src/Models/EvaluationQualityV2TopicEvaluationV2.swift
 src/Models/EvaluationQualityV2TopicUser.swift
 src/Models/EvaluationQuestion.swift
@@ -7363,8 +7366,6 @@ src/Models/JourneySessionEventsNotificationConnectedQueue.swift
 src/Models/JourneySessionEventsNotificationConversation.swift
 src/Models/JourneySessionEventsNotificationConversationChannel.swift
 src/Models/JourneySessionEventsNotificationConversationUserDisposition.swift
-src/Models/JourneySessionEventsNotificationCustomEventAttribute.swift
-src/Models/JourneySessionEventsNotificationCustomEventAttributeList.swift
 src/Models/JourneySessionEventsNotificationDevice.swift
 src/Models/JourneySessionEventsNotificationExternalContact.swift
 src/Models/JourneySessionEventsNotificationGeoLocation.swift
@@ -9266,12 +9267,15 @@ src/Models/WorkflowTargetSettings.swift
 src/Models/WorkitemsEventsNotificationCustomAttribute.swift
 src/Models/WorkitemsEventsNotificationDelta.swift
 src/Models/WorkitemsEventsNotificationWorkitem.swift
+src/Models/WorkitemsEventsNotificationWrapup.swift
 src/Models/WorkitemsQueueEventsNotificationCustomAttribute.swift
 src/Models/WorkitemsQueueEventsNotificationDelta.swift
 src/Models/WorkitemsQueueEventsNotificationWorkitem.swift
+src/Models/WorkitemsQueueEventsNotificationWrapup.swift
 src/Models/WorkitemsUserEventsNotificationCustomAttribute.swift
 src/Models/WorkitemsUserEventsNotificationDelta.swift
 src/Models/WorkitemsUserEventsNotificationWorkitem.swift
+src/Models/WorkitemsUserEventsNotificationWrapup.swift
 src/Models/Workspace.swift
 src/Models/WorkspaceCreate.swift
 src/Models/WorkspaceEntityListing.swift

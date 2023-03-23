@@ -38,8 +38,11 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
     public var conversationDate: Date?
     public var mediaType: [String]?
     public var calibration: EvaluationQualityV2TopicCalibration?
+    public var evaluationSource: EvaluationQualityV2TopicEvaluationSource?
+    public var assigneeUserId: String?
+    public var previousAssigneeUserId: String?
 
-    public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?, calibration: EvaluationQualityV2TopicCalibration?) {
+    public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?, calibration: EvaluationQualityV2TopicCalibration?, evaluationSource: EvaluationQualityV2TopicEvaluationSource?, assigneeUserId: String?, previousAssigneeUserId: String?) {
         self._id = _id
         self.conversationId = conversationId
         self.agent = agent
@@ -62,6 +65,9 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         self.conversationDate = conversationDate
         self.mediaType = mediaType
         self.calibration = calibration
+        self.evaluationSource = evaluationSource
+        self.assigneeUserId = assigneeUserId
+        self.previousAssigneeUserId = previousAssigneeUserId
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -87,6 +93,9 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         case conversationDate
         case mediaType
         case calibration
+        case evaluationSource
+        case assigneeUserId
+        case previousAssigneeUserId
     }
 
 

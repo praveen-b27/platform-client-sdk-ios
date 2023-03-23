@@ -51,8 +51,6 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
     public var type: String?
     public var outcomeAchievements: [JourneySessionEventsNotificationOutcomeAchievement]?
     public var segmentAssignments: [JourneySessionEventsNotificationSegmentAssignment]?
-    public var attributes: [String:JourneySessionEventsNotificationCustomEventAttribute]?
-    public var attributeLists: [String:JourneySessionEventsNotificationCustomEventAttributeList]?
     public var awayDate: Date?
     public var browser: JourneySessionEventsNotificationBrowser?
     public var device: JourneySessionEventsNotificationDevice?
@@ -81,7 +79,7 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
     public var lastAcdOutcome: LastAcdOutcome?
     public var authenticated: Bool?
 
-    public init(_id: String?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: JourneySessionEventsNotificationExternalContact?, customerId: String?, customerIdType: String?, type: String?, outcomeAchievements: [JourneySessionEventsNotificationOutcomeAchievement]?, segmentAssignments: [JourneySessionEventsNotificationSegmentAssignment]?, attributes: [String:JourneySessionEventsNotificationCustomEventAttribute]?, attributeLists: [String:JourneySessionEventsNotificationCustomEventAttributeList]?, awayDate: Date?, browser: JourneySessionEventsNotificationBrowser?, device: JourneySessionEventsNotificationDevice?, geolocation: JourneySessionEventsNotificationGeoLocation?, idleDate: Date?, ipAddress: String?, ipOrganization: String?, lastPage: JourneySessionEventsNotificationPage?, mktCampaign: JourneySessionEventsNotificationMktCampaign?, referrer: JourneySessionEventsNotificationReferrer?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: JourneySessionEventsNotificationSessionLastEvent?, conversation: JourneySessionEventsNotificationConversation?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisposition: JourneySessionEventsNotificationConversationUserDisposition?, lastConnectedUser: JourneySessionEventsNotificationUser?, lastConnectedQueue: JourneySessionEventsNotificationConnectedQueue?, conversationChannels: [JourneySessionEventsNotificationConversationChannel]?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?) {
+    public init(_id: String?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: JourneySessionEventsNotificationExternalContact?, customerId: String?, customerIdType: String?, type: String?, outcomeAchievements: [JourneySessionEventsNotificationOutcomeAchievement]?, segmentAssignments: [JourneySessionEventsNotificationSegmentAssignment]?, awayDate: Date?, browser: JourneySessionEventsNotificationBrowser?, device: JourneySessionEventsNotificationDevice?, geolocation: JourneySessionEventsNotificationGeoLocation?, idleDate: Date?, ipAddress: String?, ipOrganization: String?, lastPage: JourneySessionEventsNotificationPage?, mktCampaign: JourneySessionEventsNotificationMktCampaign?, referrer: JourneySessionEventsNotificationReferrer?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: JourneySessionEventsNotificationSessionLastEvent?, conversation: JourneySessionEventsNotificationConversation?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisposition: JourneySessionEventsNotificationConversationUserDisposition?, lastConnectedUser: JourneySessionEventsNotificationUser?, lastConnectedQueue: JourneySessionEventsNotificationConnectedQueue?, conversationChannels: [JourneySessionEventsNotificationConversationChannel]?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?) {
         self._id = _id
         self.selfUri = selfUri
         self.createdDate = createdDate
@@ -92,8 +90,6 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
         self.type = type
         self.outcomeAchievements = outcomeAchievements
         self.segmentAssignments = segmentAssignments
-        self.attributes = attributes
-        self.attributeLists = attributeLists
         self.awayDate = awayDate
         self.browser = browser
         self.device = device
@@ -134,8 +130,6 @@ public class JourneySessionEventsNotificationSessionEvent: Codable {
         case type
         case outcomeAchievements
         case segmentAssignments
-        case attributes
-        case attributeLists
         case awayDate
         case browser
         case device

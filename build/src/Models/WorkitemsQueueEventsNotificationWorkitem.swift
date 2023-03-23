@@ -84,8 +84,9 @@ public class WorkitemsQueueEventsNotificationWorkitem: Codable {
     public var alertTimeoutSeconds: Int?
     public var queueId: String?
     public var customFields: [String:WorkitemsQueueEventsNotificationCustomAttribute]?
+    public var wrapup: WorkitemsQueueEventsNotificationWrapup?
 
-    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, statusCategory: StatusCategory?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsQueueEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, queueId: String?, customFields: [String:WorkitemsQueueEventsNotificationCustomAttribute]?) {
+    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, statusCategory: StatusCategory?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsQueueEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, queueId: String?, customFields: [String:WorkitemsQueueEventsNotificationCustomAttribute]?, wrapup: WorkitemsQueueEventsNotificationWrapup?) {
         self._id = _id
         self.name = name
         self.typeId = typeId
@@ -115,6 +116,7 @@ public class WorkitemsQueueEventsNotificationWorkitem: Codable {
         self.alertTimeoutSeconds = alertTimeoutSeconds
         self.queueId = queueId
         self.customFields = customFields
+        self.wrapup = wrapup
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -147,6 +149,7 @@ public class WorkitemsQueueEventsNotificationWorkitem: Codable {
         case alertTimeoutSeconds
         case queueId
         case customFields
+        case wrapup
     }
 
 

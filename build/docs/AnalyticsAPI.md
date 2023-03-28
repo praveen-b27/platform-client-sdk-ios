@@ -221,6 +221,8 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 Get Reporting Turns.
 
+Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
+
 
 
 Wraps GET /api/v2/analytics/botflows/{botFlowId}/reportingturns  

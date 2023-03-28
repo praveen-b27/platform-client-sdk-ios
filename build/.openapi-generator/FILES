@@ -459,6 +459,7 @@ docs/CallbackConversationEntityListing.md
 docs/CallbackDisconnectIdentifier.md
 docs/CallbackIdentifier.md
 docs/CallbackMediaParticipant.md
+docs/CallbackMediaSettings.md
 docs/Campaign.md
 docs/CampaignDiagnostics.md
 docs/CampaignDivisionView.md
@@ -1936,7 +1937,7 @@ docs/MediaParticipantRequest.md
 docs/MediaPolicies.md
 docs/MediaRegions.md
 docs/MediaResult.md
-docs/MediaSetting.md
+docs/MediaSettings.md
 docs/MediaSummary.md
 docs/MediaSummaryDetail.md
 docs/MediaTranscription.md
@@ -2538,6 +2539,7 @@ docs/QueueConversationVideoEventTopicWorkflow.md
 docs/QueueConversationVideoEventTopicWrapup.md
 docs/QueueEmailAddress.md
 docs/QueueEntityListing.md
+docs/QueueMediaSettings.md
 docs/QueueMember.md
 docs/QueueMemberEntityListing.md
 docs/QueueMemberEntityListingV1.md
@@ -2789,6 +2791,7 @@ docs/SequenceSchedule.md
 docs/ServerDate.md
 docs/ServiceContext.md
 docs/ServiceGoalTemplate.md
+docs/ServiceGoalTemplateImpactOverride.md
 docs/ServiceGoalTemplateList.md
 docs/ServiceGoalTemplateReference.md
 docs/ServiceLevel.md
@@ -3985,6 +3988,7 @@ docs/getAuthorizationSubjectsRolecounts-example.txt
 docs/getBillingReportsBillableusage-example.txt
 docs/getBillingTrusteebillingoverviewTrustorOrgId-example.txt
 docs/getChatSettings-example.txt
+docs/getChatsSettings-example.txt
 docs/getCoachingAppointment-example.txt
 docs/getCoachingAppointmentAnnotation-example.txt
 docs/getCoachingAppointmentAnnotations-example.txt
@@ -4862,6 +4866,7 @@ docs/patchAnalyticsReportingSettings-example.txt
 docs/patchAuthorizationRole-example.txt
 docs/patchAuthorizationSettings-example.txt
 docs/patchChatSettings-example.txt
+docs/patchChatsSettings-example.txt
 docs/patchCoachingAppointment-example.txt
 docs/patchCoachingAppointmentAnnotation-example.txt
 docs/patchCoachingAppointmentStatus-example.txt
@@ -5516,6 +5521,7 @@ docs/putAuthorizationRoleUsersAdd-example.txt
 docs/putAuthorizationRoleUsersRemove-example.txt
 docs/putAuthorizationRolesDefault-example.txt
 docs/putChatSettings-example.txt
+docs/putChatsSettings-example.txt
 docs/putContentmanagementWorkspace-example.txt
 docs/putContentmanagementWorkspaceMember-example.txt
 docs/putContentmanagementWorkspaceTagvalue-example.txt
@@ -6213,6 +6219,7 @@ src/Models/CallbackConversationEntityListing.swift
 src/Models/CallbackDisconnectIdentifier.swift
 src/Models/CallbackIdentifier.swift
 src/Models/CallbackMediaParticipant.swift
+src/Models/CallbackMediaSettings.swift
 src/Models/Campaign.swift
 src/Models/CampaignDiagnostics.swift
 src/Models/CampaignDivisionView.swift
@@ -7640,7 +7647,7 @@ src/Models/MediaParticipantRequest.swift
 src/Models/MediaPolicies.swift
 src/Models/MediaRegions.swift
 src/Models/MediaResult.swift
-src/Models/MediaSetting.swift
+src/Models/MediaSettings.swift
 src/Models/MediaSummary.swift
 src/Models/MediaSummaryDetail.swift
 src/Models/MediaTranscription.swift
@@ -8222,6 +8229,7 @@ src/Models/QueueConversationVideoEventTopicWorkflow.swift
 src/Models/QueueConversationVideoEventTopicWrapup.swift
 src/Models/QueueEmailAddress.swift
 src/Models/QueueEntityListing.swift
+src/Models/QueueMediaSettings.swift
 src/Models/QueueMember.swift
 src/Models/QueueMemberEntityListing.swift
 src/Models/QueueMemberEntityListingV1.swift
@@ -8460,6 +8468,7 @@ src/Models/SequenceSchedule.swift
 src/Models/ServerDate.swift
 src/Models/ServiceContext.swift
 src/Models/ServiceGoalTemplate.swift
+src/Models/ServiceGoalTemplateImpactOverride.swift
 src/Models/ServiceGoalTemplateList.swift
 src/Models/ServiceGoalTemplateReference.swift
 src/Models/ServiceLevel.swift

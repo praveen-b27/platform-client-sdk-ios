@@ -3152,33 +3152,19 @@ open class UserRecordingsAPI {
         },
         "queue" : {
           "peerId" : "peerId",
-          "mediaSettings" : {
-            "key" : {
-              "alertingTimeoutSeconds" : 5,
-              "enableAutoAnswer" : true,
-              "subTypeSettings" : {
-                "key" : {
-                  "enableAutoAnswer" : true
-                }
-              },
-              "serviceLevel" : {
-                "percentage" : 5.637376656633329,
-                "durationMs" : 2
-              }
-            }
-          },
+          "mediaSettings" : "{}",
           "enableManualAssignment" : true,
           "description" : "description",
           "onHoldPrompt" : "{}",
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -3236,14 +3222,14 @@ open class UserRecordingsAPI {
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
@@ -3272,7 +3258,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 2,
+              "priority" : 7,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -5927,33 +5913,19 @@ open class UserRecordingsAPI {
         },
         "queue" : {
           "peerId" : "peerId",
-          "mediaSettings" : {
-            "key" : {
-              "alertingTimeoutSeconds" : 5,
-              "enableAutoAnswer" : true,
-              "subTypeSettings" : {
-                "key" : {
-                  "enableAutoAnswer" : true
-                }
-              },
-              "serviceLevel" : {
-                "percentage" : 5.637376656633329,
-                "durationMs" : 2
-              }
-            }
-          },
+          "mediaSettings" : "{}",
           "enableManualAssignment" : true,
           "description" : "description",
           "onHoldPrompt" : "{}",
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -6011,14 +5983,14 @@ open class UserRecordingsAPI {
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
@@ -6047,7 +6019,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 2,
+              "priority" : 7,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -9628,33 +9600,19 @@ open class UserRecordingsAPI {
         },
         "queue" : {
           "peerId" : "peerId",
-          "mediaSettings" : {
-            "key" : {
-              "alertingTimeoutSeconds" : 5,
-              "enableAutoAnswer" : true,
-              "subTypeSettings" : {
-                "key" : {
-                  "enableAutoAnswer" : true
-                }
-              },
-              "serviceLevel" : {
-                "percentage" : 5.637376656633329,
-                "durationMs" : 2
-              }
-            }
-          },
+          "mediaSettings" : "{}",
           "enableManualAssignment" : true,
           "description" : "description",
           "onHoldPrompt" : "{}",
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -9712,14 +9670,14 @@ open class UserRecordingsAPI {
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
@@ -9748,7 +9706,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 2,
+              "priority" : 7,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -12403,33 +12361,19 @@ open class UserRecordingsAPI {
         },
         "queue" : {
           "peerId" : "peerId",
-          "mediaSettings" : {
-            "key" : {
-              "alertingTimeoutSeconds" : 5,
-              "enableAutoAnswer" : true,
-              "subTypeSettings" : {
-                "key" : {
-                  "enableAutoAnswer" : true
-                }
-              },
-              "serviceLevel" : {
-                "percentage" : 5.637376656633329,
-                "durationMs" : 2
-              }
-            }
-          },
+          "mediaSettings" : "{}",
           "enableManualAssignment" : true,
           "description" : "description",
           "onHoldPrompt" : "{}",
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -12487,14 +12431,14 @@ open class UserRecordingsAPI {
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
@@ -12523,7 +12467,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 2,
+              "priority" : 7,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -16338,33 +16282,19 @@ open class UserRecordingsAPI {
           },
           "queue" : {
             "peerId" : "peerId",
-            "mediaSettings" : {
-              "key" : {
-                "alertingTimeoutSeconds" : 5,
-                "enableAutoAnswer" : true,
-                "subTypeSettings" : {
-                  "key" : {
-                    "enableAutoAnswer" : true
-                  }
-                },
-                "serviceLevel" : {
-                  "percentage" : 5.637376656633329,
-                  "durationMs" : 2
-                }
-              }
-            },
+            "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
             "onHoldPrompt" : "{}",
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -16422,14 +16352,14 @@ open class UserRecordingsAPI {
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
@@ -16458,7 +16388,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 2,
+                "priority" : 7,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -19113,33 +19043,19 @@ open class UserRecordingsAPI {
           },
           "queue" : {
             "peerId" : "peerId",
-            "mediaSettings" : {
-              "key" : {
-                "alertingTimeoutSeconds" : 5,
-                "enableAutoAnswer" : true,
-                "subTypeSettings" : {
-                  "key" : {
-                    "enableAutoAnswer" : true
-                  }
-                },
-                "serviceLevel" : {
-                  "percentage" : 5.637376656633329,
-                  "durationMs" : 2
-                }
-              }
-            },
+            "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
             "onHoldPrompt" : "{}",
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -19197,14 +19113,14 @@ open class UserRecordingsAPI {
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
@@ -19233,7 +19149,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 2,
+                "priority" : 7,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -22814,33 +22730,19 @@ open class UserRecordingsAPI {
           },
           "queue" : {
             "peerId" : "peerId",
-            "mediaSettings" : {
-              "key" : {
-                "alertingTimeoutSeconds" : 5,
-                "enableAutoAnswer" : true,
-                "subTypeSettings" : {
-                  "key" : {
-                    "enableAutoAnswer" : true
-                  }
-                },
-                "serviceLevel" : {
-                  "percentage" : 5.637376656633329,
-                  "durationMs" : 2
-                }
-              }
-            },
+            "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
             "onHoldPrompt" : "{}",
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -22898,14 +22800,14 @@ open class UserRecordingsAPI {
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
@@ -22934,7 +22836,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 2,
+                "priority" : 7,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -25589,33 +25491,19 @@ open class UserRecordingsAPI {
           },
           "queue" : {
             "peerId" : "peerId",
-            "mediaSettings" : {
-              "key" : {
-                "alertingTimeoutSeconds" : 5,
-                "enableAutoAnswer" : true,
-                "subTypeSettings" : {
-                  "key" : {
-                    "enableAutoAnswer" : true
-                  }
-                },
-                "serviceLevel" : {
-                  "percentage" : 5.637376656633329,
-                  "durationMs" : 2
-                }
-              }
-            },
+            "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
             "onHoldPrompt" : "{}",
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -25673,14 +25561,14 @@ open class UserRecordingsAPI {
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
@@ -25709,7 +25597,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 2,
+                "priority" : 7,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -29373,33 +29261,19 @@ open class UserRecordingsAPI {
           },
           "queue" : {
             "peerId" : "peerId",
-            "mediaSettings" : {
-              "key" : {
-                "alertingTimeoutSeconds" : 5,
-                "enableAutoAnswer" : true,
-                "subTypeSettings" : {
-                  "key" : {
-                    "enableAutoAnswer" : true
-                  }
-                },
-                "serviceLevel" : {
-                  "percentage" : 5.637376656633329,
-                  "durationMs" : 2
-                }
-              }
-            },
+            "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
             "onHoldPrompt" : "{}",
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -29457,14 +29331,14 @@ open class UserRecordingsAPI {
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
@@ -29493,7 +29367,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 2,
+                "priority" : 7,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -32148,33 +32022,19 @@ open class UserRecordingsAPI {
           },
           "queue" : {
             "peerId" : "peerId",
-            "mediaSettings" : {
-              "key" : {
-                "alertingTimeoutSeconds" : 5,
-                "enableAutoAnswer" : true,
-                "subTypeSettings" : {
-                  "key" : {
-                    "enableAutoAnswer" : true
-                  }
-                },
-                "serviceLevel" : {
-                  "percentage" : 5.637376656633329,
-                  "durationMs" : 2
-                }
-              }
-            },
+            "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
             "onHoldPrompt" : "{}",
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -32232,14 +32092,14 @@ open class UserRecordingsAPI {
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
@@ -32268,7 +32128,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 2,
+                "priority" : 7,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -35849,33 +35709,19 @@ open class UserRecordingsAPI {
           },
           "queue" : {
             "peerId" : "peerId",
-            "mediaSettings" : {
-              "key" : {
-                "alertingTimeoutSeconds" : 5,
-                "enableAutoAnswer" : true,
-                "subTypeSettings" : {
-                  "key" : {
-                    "enableAutoAnswer" : true
-                  }
-                },
-                "serviceLevel" : {
-                  "percentage" : 5.637376656633329,
-                  "durationMs" : 2
-                }
-              }
-            },
+            "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
             "onHoldPrompt" : "{}",
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -35933,14 +35779,14 @@ open class UserRecordingsAPI {
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
@@ -35969,7 +35815,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 2,
+                "priority" : 7,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -38624,33 +38470,19 @@ open class UserRecordingsAPI {
           },
           "queue" : {
             "peerId" : "peerId",
-            "mediaSettings" : {
-              "key" : {
-                "alertingTimeoutSeconds" : 5,
-                "enableAutoAnswer" : true,
-                "subTypeSettings" : {
-                  "key" : {
-                    "enableAutoAnswer" : true
-                  }
-                },
-                "serviceLevel" : {
-                  "percentage" : 5.637376656633329,
-                  "durationMs" : 2
-                }
-              }
-            },
+            "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
             "onHoldPrompt" : "{}",
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 9.301444243932576,
-              "threshold" : 7,
+              "waitSeconds" : 5.637376656633329,
+              "threshold" : 5,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -38708,14 +38540,14 @@ open class UserRecordingsAPI {
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 3,
+              "memberCount" : 2,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
@@ -38744,7 +38576,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "email" : "email"
                 } ],
-                "priority" : 2,
+                "priority" : 7,
                 "fromEmail" : "fromEmail",
                 "skills" : [ {
                   "selfUri" : "https://openapi-generator.tech",
@@ -42524,33 +42356,19 @@ open class UserRecordingsAPI {
         },
         "queue" : {
           "peerId" : "peerId",
-          "mediaSettings" : {
-            "key" : {
-              "alertingTimeoutSeconds" : 5,
-              "enableAutoAnswer" : true,
-              "subTypeSettings" : {
-                "key" : {
-                  "enableAutoAnswer" : true
-                }
-              },
-              "serviceLevel" : {
-                "percentage" : 5.637376656633329,
-                "durationMs" : 2
-              }
-            }
-          },
+          "mediaSettings" : "{}",
           "enableManualAssignment" : true,
           "description" : "description",
           "onHoldPrompt" : "{}",
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -42608,14 +42426,14 @@ open class UserRecordingsAPI {
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
@@ -42644,7 +42462,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 2,
+              "priority" : 7,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -45299,33 +45117,19 @@ open class UserRecordingsAPI {
         },
         "queue" : {
           "peerId" : "peerId",
-          "mediaSettings" : {
-            "key" : {
-              "alertingTimeoutSeconds" : 5,
-              "enableAutoAnswer" : true,
-              "subTypeSettings" : {
-                "key" : {
-                  "enableAutoAnswer" : true
-                }
-              },
-              "serviceLevel" : {
-                "percentage" : 5.637376656633329,
-                "durationMs" : 2
-              }
-            }
-          },
+          "mediaSettings" : "{}",
           "enableManualAssignment" : true,
           "description" : "description",
           "onHoldPrompt" : "{}",
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -45383,14 +45187,14 @@ open class UserRecordingsAPI {
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
@@ -45419,7 +45223,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 2,
+              "priority" : 7,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -49000,33 +48804,19 @@ open class UserRecordingsAPI {
         },
         "queue" : {
           "peerId" : "peerId",
-          "mediaSettings" : {
-            "key" : {
-              "alertingTimeoutSeconds" : 5,
-              "enableAutoAnswer" : true,
-              "subTypeSettings" : {
-                "key" : {
-                  "enableAutoAnswer" : true
-                }
-              },
-              "serviceLevel" : {
-                "percentage" : 5.637376656633329,
-                "durationMs" : 2
-              }
-            }
-          },
+          "mediaSettings" : "{}",
           "enableManualAssignment" : true,
           "description" : "description",
           "onHoldPrompt" : "{}",
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -49084,14 +48874,14 @@ open class UserRecordingsAPI {
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
@@ -49120,7 +48910,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 2,
+              "priority" : 7,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",
@@ -51775,33 +51565,19 @@ open class UserRecordingsAPI {
         },
         "queue" : {
           "peerId" : "peerId",
-          "mediaSettings" : {
-            "key" : {
-              "alertingTimeoutSeconds" : 5,
-              "enableAutoAnswer" : true,
-              "subTypeSettings" : {
-                "key" : {
-                  "enableAutoAnswer" : true
-                }
-              },
-              "serviceLevel" : {
-                "percentage" : 5.637376656633329,
-                "durationMs" : 2
-              }
-            }
-          },
+          "mediaSettings" : "{}",
           "enableManualAssignment" : true,
           "description" : "description",
           "onHoldPrompt" : "{}",
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 9.301444243932576,
-            "threshold" : 7,
+            "waitSeconds" : 5.637376656633329,
+            "threshold" : 5,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -51859,14 +51635,14 @@ open class UserRecordingsAPI {
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 3,
+            "memberCount" : 2,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
@@ -51895,7 +51671,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "email" : "email"
               } ],
-              "priority" : 2,
+              "priority" : 7,
               "fromEmail" : "fromEmail",
               "skills" : [ {
                 "selfUri" : "https://openapi-generator.tech",

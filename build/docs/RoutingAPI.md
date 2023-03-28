@@ -1599,7 +1599,7 @@ RoutingAPI.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSiz
 
 
 
-> [InboundDomainEntityListing](InboundDomainEntityListing.html) getRoutingEmailDomains(pageSize, pageNumber, excludeStatus)
+> [InboundDomainEntityListing](InboundDomainEntityListing.html) getRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter)
 
 Get domains
 
@@ -1622,9 +1622,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let excludeStatus: Bool = true // Exclude MX record data
+let filter: String = "" // Optional search filter
 
 // Code example
-RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus) { (response, error) in
+RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1642,6 +1643,7 @@ RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, ex
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **excludeStatus** | **Bool**| Exclude MX record data | [optional] |
+| **filter** | **String**| Optional search filter | [optional] |
 {: class="table-striped"}
 
 
@@ -1811,7 +1813,7 @@ RoutingAPI.getRoutingEmailOutboundDomainSearch(domainId: domainId) { (response, 
 
 
 
-> [OutboundDomainEntityListing](OutboundDomainEntityListing.html) getRoutingEmailOutboundDomains()
+> [OutboundDomainEntityListing](OutboundDomainEntityListing.html) getRoutingEmailOutboundDomains(filter)
 
 Get outbound domains
 
@@ -1831,9 +1833,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let filter: String = "" // Optional search filter
 
 // Code example
-RoutingAPI.getRoutingEmailOutboundDomains() { (response, error) in
+RoutingAPI.getRoutingEmailOutboundDomains(filter: filter) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1845,8 +1848,11 @@ RoutingAPI.getRoutingEmailOutboundDomains() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **String**| Optional search filter | [optional] |
+{: class="table-striped"}
 
 
 ### Return type

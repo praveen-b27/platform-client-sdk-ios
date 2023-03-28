@@ -169,7 +169,7 @@ Delete a grant of a role in a division
 
 Wraps DELETE /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:delete
 
@@ -769,7 +769,7 @@ This endpoint does not require any parameters.
 
 
 
-> [DomainOrganizationRole](DomainOrganizationRole.html) getAuthorizationRole(roleId, expand)
+> [DomainOrganizationRole](DomainOrganizationRole.html) getAuthorizationRole(roleId, userCount, expand)
 
 Get a single organization role.
 
@@ -792,10 +792,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
+let userCount: AuthorizationAPI.UserCount_getAuthorizationRole = AuthorizationAPI.UserCount_getAuthorizationRole.enummember // Fetch the count of users who have this role granted in at least one division
 let expand: [String] = [""] // Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role
 
 // Code example
-AuthorizationAPI.getAuthorizationRole(roleId: roleId, expand: expand) { (response, error) in
+AuthorizationAPI.getAuthorizationRole(roleId: roleId, userCount: userCount, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -811,6 +812,7 @@ AuthorizationAPI.getAuthorizationRole(roleId: roleId, expand: expand) { (respons
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
+| **userCount** | **Bool**| Fetch the count of users who have this role granted in at least one division | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role | [optional]<br />**Values**: unusedpermissions ("unusedPermissions") |
 {: class="table-striped"}
 
@@ -1829,7 +1831,7 @@ Bulk-grant roles and divisions to a subject.
 
 Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkadd  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:add
 
@@ -1884,7 +1886,7 @@ Bulk-remove grants from a subject.
 
 Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkremove  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:delete
 
@@ -1995,7 +1997,7 @@ Make a grant of a role in a division
 
 Wraps POST /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:add
 

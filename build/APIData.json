@@ -3789,12 +3789,17 @@
   "getauthorizationrole": {
     "operationId": "getauthorizationrole",
     "functionName": "getAuthorizationRole",
-    "signature": "getAuthorizationRole(roleId, expand)",
+    "signature": "getAuthorizationRole(roleId, userCount, expand)",
     "parameters": [
       {
         "name": "roleId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "userCount",
+        "type": "Bool",
+        "required": "false"
       },
       {
         "name": "expand",
@@ -3803,7 +3808,7 @@
       }
     ],
     "return": "DomainOrganizationRole",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roleId: String = \"\" // Role ID\nlet expand: [String] = [\"\"] // Which fields, if any, to expand. \\\"unusedPermissions\\\" returns the permissions not used for the role\n\n// Get a single organization role.\nGetAuthorizationRoleRequest.getAuthorizationRole(roleId: roleId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationRoleRequest.getAuthorizationRole was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roleId: String = \"\" // Role ID\nlet userCount: Bool = true // Fetch the count of users who have this role granted in at least one division\nlet expand: [String] = [\"\"] // Which fields, if any, to expand. \\\"unusedPermissions\\\" returns the permissions not used for the role\n\n// Get a single organization role.\nGetAuthorizationRoleRequest.getAuthorizationRole(roleId: roleId, userCount: userCount, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationRoleRequest.getAuthorizationRole was successful\")\n        dump(response)\n    }\n}"
   },
   "getauthorizationrolecomparedefaultrightroleid": {
     "operationId": "getauthorizationrolecomparedefaultrightroleid",
@@ -4422,6 +4427,13 @@
     "return": "ChatSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get Chat Settings.\nGetChatSettingsRequest.getChatSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatSettingsRequest.getChatSettings was successful\")\n        dump(response)\n    }\n}"
   },
+  "getchatssettings": {
+    "operationId": "getchatssettings",
+    "functionName": "getChatsSettings",
+    "signature": "getChatsSettings()",
+    "return": "ChatSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get Chat Settings.\nGetChatsSettingsRequest.getChatsSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatsSettingsRequest.getChatsSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchchatsettings": {
     "operationId": "patchchatsettings",
     "functionName": "patchChatSettings",
@@ -4436,6 +4448,20 @@
     "return": "ChatSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ChatSettings = new ChatSettings(...) // Chat\n\n// Patch Chat Settings.\nPatchChatSettingsRequest.patchChatSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchChatSettingsRequest.patchChatSettings was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchchatssettings": {
+    "operationId": "patchchatssettings",
+    "functionName": "patchChatsSettings",
+    "signature": "patchChatsSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ChatSettings",
+        "required": "true"
+      }
+    ],
+    "return": "ChatSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ChatSettings = new ChatSettings(...) // Chat\n\n// Patch Chat Settings.\nPatchChatsSettingsRequest.patchChatsSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchChatsSettingsRequest.patchChatsSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "putchatsettings": {
     "operationId": "putchatsettings",
     "functionName": "putChatSettings",
@@ -4449,6 +4475,20 @@
     ],
     "return": "ChatSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ChatSettings = new ChatSettings(...) // Chat\n\n// Update Chat Settings.\nPutChatSettingsRequest.putChatSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutChatSettingsRequest.putChatSettings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putchatssettings": {
+    "operationId": "putchatssettings",
+    "functionName": "putChatsSettings",
+    "signature": "putChatsSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ChatSettings",
+        "required": "true"
+      }
+    ],
+    "return": "ChatSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ChatSettings = new ChatSettings(...) // Chat\n\n// Update Chat Settings.\nPutChatsSettingsRequest.putChatsSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutChatsSettingsRequest.putChatsSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "deletecoachingappointment": {
     "operationId": "deletecoachingappointment",
@@ -26584,7 +26624,7 @@
   "getroutingemaildomains": {
     "operationId": "getroutingemaildomains",
     "functionName": "getRoutingEmailDomains",
-    "signature": "getRoutingEmailDomains(pageSize, pageNumber, excludeStatus)",
+    "signature": "getRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter)",
     "parameters": [
       {
         "name": "pageSize",
@@ -26600,10 +26640,15 @@
         "name": "excludeStatus",
         "type": "Bool",
         "required": "false"
+      },
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "InboundDomainEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet excludeStatus: Bool = true // Exclude MX record data\n\n// Get domains\nGetRoutingEmailDomainsRequest.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainsRequest.getRoutingEmailDomains was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet excludeStatus: Bool = true // Exclude MX record data\nlet filter: String = \"\" // Optional search filter\n\n// Get domains\nGetRoutingEmailDomainsRequest.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainsRequest.getRoutingEmailDomains was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemailoutbounddomain": {
     "operationId": "getroutingemailoutbounddomain",
@@ -26650,9 +26695,16 @@
   "getroutingemailoutbounddomains": {
     "operationId": "getroutingemailoutbounddomains",
     "functionName": "getRoutingEmailOutboundDomains",
-    "signature": "getRoutingEmailOutboundDomains()",
+    "signature": "getRoutingEmailOutboundDomains(filter)",
+    "parameters": [
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
     "return": "OutboundDomainEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get outbound domains\nGetRoutingEmailOutboundDomainsRequest.getRoutingEmailOutboundDomains() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailOutboundDomainsRequest.getRoutingEmailOutboundDomains was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filter: String = \"\" // Optional search filter\n\n// Get outbound domains\nGetRoutingEmailOutboundDomainsRequest.getRoutingEmailOutboundDomains(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailOutboundDomainsRequest.getRoutingEmailOutboundDomains was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemailsetup": {
     "operationId": "getroutingemailsetup",

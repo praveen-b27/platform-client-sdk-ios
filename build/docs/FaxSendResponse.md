@@ -11,6 +11,7 @@ title: FaxSendResponse
 | **name** | **String** |  | [optional] |
 | **uploadDestinationUri** | **String** |  | [optional] |
 | **uploadMethodType** | **String** |  | [optional] |
+| **headers** | **[String:String]** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -36,6 +36,7 @@ open class ChatAPI {
     /**
      Get Chat Settings.
      - GET /api/v2/chat/settings
+     - This route is deprecated, please use /chats/settings instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -47,6 +48,53 @@ open class ChatAPI {
      */
     open class func getChatSettingsWithRequestBuilder() -> RequestBuilder<ChatSettings> {        
         let path = "/api/v2/chat/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ChatSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    /**
+     Get Chat Settings.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getChatsSettings(completion: @escaping ((_ data: ChatSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getChatsSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ChatSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Chat Settings.
+     - GET /api/v2/chats/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "messageRetentionPeriodDays" : 0
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ChatSettings> 
+     */
+    open class func getChatsSettingsWithRequestBuilder() -> RequestBuilder<ChatSettings> {        
+        let path = "/api/v2/chats/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
@@ -85,6 +133,7 @@ open class ChatAPI {
     /**
      Patch Chat Settings.
      - PATCH /api/v2/chat/settings
+     - This route is deprecated, please use /chats/settings instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -98,6 +147,57 @@ open class ChatAPI {
      */
     open class func patchChatSettingsWithRequestBuilder(body: ChatSettings) -> RequestBuilder<ChatSettings> {        
         let path = "/api/v2/chat/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ChatSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    /**
+     Patch Chat Settings.
+     
+     - parameter body: (body) Chat 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchChatsSettings(body: ChatSettings, completion: @escaping ((_ data: ChatSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchChatsSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ChatSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Patch Chat Settings.
+     - PATCH /api/v2/chats/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "messageRetentionPeriodDays" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body) Chat 
+
+     - returns: RequestBuilder<ChatSettings> 
+     */
+    open class func patchChatsSettingsWithRequestBuilder(body: ChatSettings) -> RequestBuilder<ChatSettings> {        
+        let path = "/api/v2/chats/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
@@ -136,6 +236,7 @@ open class ChatAPI {
     /**
      Update Chat Settings.
      - PUT /api/v2/chat/settings
+     - This route is deprecated, please use /chats/settings instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -149,6 +250,57 @@ open class ChatAPI {
      */
     open class func putChatSettingsWithRequestBuilder(body: ChatSettings) -> RequestBuilder<ChatSettings> {        
         let path = "/api/v2/chat/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ChatSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    /**
+     Update Chat Settings.
+     
+     - parameter body: (body) Chat 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putChatsSettings(body: ChatSettings, completion: @escaping ((_ data: ChatSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putChatsSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ChatSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update Chat Settings.
+     - PUT /api/v2/chats/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "messageRetentionPeriodDays" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body) Chat 
+
+     - returns: RequestBuilder<ChatSettings> 
+     */
+    open class func putChatsSettingsWithRequestBuilder(body: ChatSettings) -> RequestBuilder<ChatSettings> {        
+        let path = "/api/v2/chats/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 

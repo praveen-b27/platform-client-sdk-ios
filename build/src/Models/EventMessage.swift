@@ -12,11 +12,14 @@ import Foundation
 public class EventMessage: Codable {
 
     public enum Code: String, Codable { 
+        case activeCampaignsLimitExceeded = "ACTIVE_CAMPAIGNS_LIMIT_EXCEEDED"
+        case allCampaignsBlacklisted = "ALL_CAMPAIGNS_BLACKLISTED"
         case approachingContactLimit = "APPROACHING_CONTACT_LIMIT"
         case approachingDncListPhoneNumberLimit = "APPROACHING_DNC_LIST_PHONE_NUMBER_LIMIT"
         case approachingDncOrganizationPhoneNumberLimit = "APPROACHING_DNC_ORGANIZATION_PHONE_NUMBER_LIMIT"
         case approachingEntityLimit = "APPROACHING_ENTITY_LIMIT"
         case automaticTimeZoneZipCodeInvalid = "AUTOMATIC_TIME_ZONE_ZIP_CODE_INVALID"
+        case campaignBlacklisted = "CAMPAIGN_BLACKLISTED"
         case campaignContentTemplateSubstitutionMismatch = "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH"
         case campaignEmailBodyCharacterLimitExceeded = "CAMPAIGN_EMAIL_BODY_CHARACTER_LIMIT_EXCEEDED"
         case campaignEmailSubjectCharacterLimitExceeded = "CAMPAIGN_EMAIL_SUBJECT_CHARACTER_LIMIT_EXCEEDED"
@@ -84,6 +87,8 @@ public class EventMessage: Codable {
         case importTooManyExtraColumns = "IMPORT_TOO_MANY_EXTRA_COLUMNS"
         case organizationHasNoDomainSet = "ORGANIZATION_HAS_NO_DOMAIN_SET"
         case recycleCampaign = "RECYCLE_CAMPAIGN"
+        case scheduledCampaignInvalid = "SCHEDULED_CAMPAIGN_INVALID"
+        case scheduleUnknownError = "SCHEDULE_UNKNOWN_ERROR"
     }
     public var code: Code?
     public var message: String?

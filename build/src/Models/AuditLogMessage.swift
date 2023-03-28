@@ -24,6 +24,7 @@ public class AuditLogMessage: Codable {
         case dynamicSchema = "DynamicSchema"
         case emails = "Emails"
         case employeePerformance = "EmployeePerformance"
+        case externalContacts = "ExternalContacts"
         case gamification = "Gamification"
         case gdpr = "GDPR"
         case groups = "Groups"

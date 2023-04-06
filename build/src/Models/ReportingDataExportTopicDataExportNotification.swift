@@ -131,8 +131,9 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
     public var emailErrorDescription: String?
     public var scheduleExpression: String?
     public var scheduleStaticLinkUrl: String?
+    public var exportAllowedToRerun: Bool?
 
-    public init(_id: String?, runId: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?, emailStatuses: [String:String]?, emailErrorDescription: String?, scheduleExpression: String?, scheduleStaticLinkUrl: String?) {
+    public init(_id: String?, runId: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?, emailStatuses: [String:String]?, emailErrorDescription: String?, scheduleExpression: String?, scheduleStaticLinkUrl: String?, exportAllowedToRerun: Bool?) {
         self._id = _id
         self.runId = runId
         self.name = name
@@ -149,6 +150,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         self.emailErrorDescription = emailErrorDescription
         self.scheduleExpression = scheduleExpression
         self.scheduleStaticLinkUrl = scheduleStaticLinkUrl
+        self.exportAllowedToRerun = exportAllowedToRerun
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -168,6 +170,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case emailErrorDescription
         case scheduleExpression
         case scheduleStaticLinkUrl
+        case exportAllowedToRerun
     }
 
 

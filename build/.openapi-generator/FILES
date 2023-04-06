@@ -78,6 +78,7 @@ docs/AdhocRecordingTopicWorkspaceData.md
 docs/Adjacents.md
 docs/AdminTimeOffRequestPatch.md
 docs/AfterCallWork.md
+docs/AfterCallWorkUpdate.md
 docs/Agent.md
 docs/AgentActivity.md
 docs/AgentActivityChangedTopicAgentActivity.md
@@ -1306,6 +1307,7 @@ docs/EvaluationQuestion.md
 docs/EvaluationQuestionGroup.md
 docs/EvaluationQuestionGroupScore.md
 docs/EvaluationQuestionScore.md
+docs/EvaluationReference.md
 docs/EvaluationResponse.md
 docs/EvaluationScoringSet.md
 docs/EvaluationSettings.md
@@ -1332,7 +1334,6 @@ docs/ExpiredEdgeListing.md
 docs/ExportScriptRequest.md
 docs/ExportScriptResponse.md
 docs/ExportUri.md
-docs/ExtendedWrapup.md
 docs/Extension.md
 docs/ExtensionEntityListing.md
 docs/ExtensionPool.md
@@ -2101,6 +2102,7 @@ docs/OrganizationAuthorizationAPI.json
 docs/OrganizationAuthorizationAPI.md
 docs/OrganizationFeatures.md
 docs/OrganizationPresence.md
+docs/OrganizationPresenceDefinition.md
 docs/OrganizationPresenceEntityListing.md
 docs/OrganizationProductEntityListing.md
 docs/OrganizationRoleEntityListing.md
@@ -2921,6 +2923,7 @@ docs/SupportCenterSettings.md
 docs/SupportCenterStyleSetting.md
 docs/SupportedContent.md
 docs/SupportedContentListing.md
+docs/SupportedContentProfile.md
 docs/SupportedContentReference.md
 docs/SupportedDialectsEntityListing.md
 docs/SupportedLanguage.md
@@ -3661,6 +3664,7 @@ docs/WrapupCode.md
 docs/WrapupCodeEntityListing.md
 docs/WrapupCodeRequest.md
 docs/WrapupDetailEventTopicWrapupEvent.md
+docs/WrapupInput.md
 docs/WritableDialerContact.md
 docs/WritableDivision.md
 docs/WritableEntity.md
@@ -4370,6 +4374,8 @@ docs/getOauthAuthorization-example.txt
 docs/getOauthAuthorizations-example.txt
 docs/getOauthClient-example.txt
 docs/getOauthClientUsageQueryResult-example.txt
+docs/getOauthClientUsageQueryResult-example.txt
+docs/getOauthClientUsageSummary-example.txt
 docs/getOauthClientUsageSummary-example.txt
 docs/getOauthClients-example.txt
 docs/getOauthScope-example.txt
@@ -4874,6 +4880,7 @@ docs/patchCoachingNotification-example.txt
 docs/patchConversationParticipant-example.txt
 docs/patchConversationParticipantAttributes-example.txt
 docs/patchConversationSecureattributes-example.txt
+docs/patchConversationsAftercallworkConversationIdParticipantCommunication-example.txt
 docs/patchConversationsCall-example.txt
 docs/patchConversationsCallParticipant-example.txt
 docs/patchConversationsCallParticipantAttributes-example.txt
@@ -5276,6 +5283,7 @@ docs/postMobiledevices-example.txt
 docs/postNotificationsChannelSubscriptions-example.txt
 docs/postNotificationsChannels-example.txt
 docs/postOauthClientSecret-example.txt
+docs/postOauthClientUsageQuery-example.txt
 docs/postOauthClientUsageQuery-example.txt
 docs/postOauthClients-example.txt
 docs/postOrgauthorizationPairings-example.txt
@@ -5850,6 +5858,7 @@ src/Models/AdhocRecordingTopicWorkspaceData.swift
 src/Models/Adjacents.swift
 src/Models/AdminTimeOffRequestPatch.swift
 src/Models/AfterCallWork.swift
+src/Models/AfterCallWorkUpdate.swift
 src/Models/Agent.swift
 src/Models/AgentActivity.swift
 src/Models/AgentActivityChangedTopicAgentActivity.swift
@@ -7054,6 +7063,7 @@ src/Models/EvaluationQuestion.swift
 src/Models/EvaluationQuestionGroup.swift
 src/Models/EvaluationQuestionGroupScore.swift
 src/Models/EvaluationQuestionScore.swift
+src/Models/EvaluationReference.swift
 src/Models/EvaluationResponse.swift
 src/Models/EvaluationScoringSet.swift
 src/Models/EvaluationSettings.swift
@@ -7078,7 +7088,6 @@ src/Models/ExpiredEdgeListing.swift
 src/Models/ExportScriptRequest.swift
 src/Models/ExportScriptResponse.swift
 src/Models/ExportUri.swift
-src/Models/ExtendedWrapup.swift
 src/Models/Extension.swift
 src/Models/ExtensionEntityListing.swift
 src/Models/ExtensionPool.swift
@@ -7799,6 +7808,7 @@ src/Models/OrgWhitelistSettings.swift
 src/Models/Organization.swift
 src/Models/OrganizationFeatures.swift
 src/Models/OrganizationPresence.swift
+src/Models/OrganizationPresenceDefinition.swift
 src/Models/OrganizationPresenceEntityListing.swift
 src/Models/OrganizationProductEntityListing.swift
 src/Models/OrganizationRoleEntityListing.swift
@@ -8592,6 +8602,7 @@ src/Models/SupportCenterSettings.swift
 src/Models/SupportCenterStyleSetting.swift
 src/Models/SupportedContent.swift
 src/Models/SupportedContentListing.swift
+src/Models/SupportedContentProfile.swift
 src/Models/SupportedContentReference.swift
 src/Models/SupportedDialectsEntityListing.swift
 src/Models/SupportedLanguage.swift
@@ -9299,6 +9310,7 @@ src/Models/WrapupCode.swift
 src/Models/WrapupCodeEntityListing.swift
 src/Models/WrapupCodeRequest.swift
 src/Models/WrapupDetailEventTopicWrapupEvent.swift
+src/Models/WrapupInput.swift
 src/Models/WritableDialerContact.swift
 src/Models/WritableDivision.swift
 src/Models/WritableEntity.swift

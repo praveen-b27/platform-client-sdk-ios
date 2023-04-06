@@ -17,7 +17,7 @@ public class TransferRequest: Codable {
     }
     /** The user ID of the transfer target. */
     public var userId: String?
-    /** The phone number or address of the transfer target. */
+    /** The address of the transfer target which can be user ID, queue ID or queue name */
     public var address: String?
     /** The user name of the transfer target. */
     public var userName: String?

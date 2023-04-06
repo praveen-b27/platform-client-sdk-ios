@@ -20,6 +20,7 @@ General rich media message structure with normalized feature support across many
 | **isFinalReceipt** | **Bool** | Indicates if this is the last message receipt for this message, or if another message receipt can be expected. | [optional] |
 | **direction** | **String** | The direction of the message. | [optional] |
 | **metadata** | **[String:String]** | Additional metadata about this message. | [optional] |
+| **byoSmsIntegrationId** | **String** | The internal id representing the customer supplied sms integration message. | [optional] |
 {: class="table table-striped"}
 
 

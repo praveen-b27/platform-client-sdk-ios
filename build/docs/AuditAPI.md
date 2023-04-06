@@ -191,7 +191,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let transactionId: String = "" // Transaction ID
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
-let pageSize: Int = 0 // Page size
+let pageSize: Int = 0 // Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500.
 let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
@@ -212,7 +212,7 @@ AuditAPI.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor
 | ------------- | ------------- | ------------- | ------------- |
 | **transactionId** | **String**| Transaction ID | |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
-| **pageSize** | **Int**| Page size | [optional] |
+| **pageSize** | **Int**| Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
 {: class="table-striped"}
 

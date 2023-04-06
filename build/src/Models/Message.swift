@@ -111,8 +111,10 @@ public class Message: Codable {
     public var afterCallWorkRequired: Bool?
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
+    /** The internal id representing the customer supplied sms integration message. */
+    public var byoSmsIntegrationId: String?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -141,6 +143,7 @@ public class Message: Codable {
         self.afterCallWork = afterCallWork
         self.afterCallWorkRequired = afterCallWorkRequired
         self.agentAssistantId = agentAssistantId
+        self.byoSmsIntegrationId = byoSmsIntegrationId
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -172,6 +175,7 @@ public class Message: Codable {
         case afterCallWork
         case afterCallWorkRequired
         case agentAssistantId
+        case byoSmsIntegrationId
     }
 
 

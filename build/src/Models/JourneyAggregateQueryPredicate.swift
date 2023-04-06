@@ -31,8 +31,6 @@ public class JourneyAggregateQueryPredicate: Codable {
         case journeyblockingemergencyschedulegroupid = "journeyBlockingEmergencyScheduleGroupId"
         case journeyblockingreason = "journeyBlockingReason"
         case journeyblockingschedulegroupid = "journeyBlockingScheduleGroupId"
-        case journeycustomerid = "journeyCustomerId"
-        case journeycustomeridtype = "journeyCustomerIdType"
         case journeydevicecategory = "journeyDeviceCategory"
         case journeydevicetype = "journeyDeviceType"
         case journeyfrequencycapreason = "journeyFrequencyCapReason"

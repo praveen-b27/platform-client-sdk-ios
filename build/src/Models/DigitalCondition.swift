@@ -27,8 +27,10 @@ public class DigitalCondition: Codable {
     public var lastResultByColumnConditionSettings: LastResultByColumnConditionSettings?
     /** The settings for a 'last result overall' condition. */
     public var lastResultOverallConditionSettings: LastResultOverallConditionSettings?
+    /** The settings for a 'data action' condition. */
+    public var dataActionConditionSettings: DataActionConditionSettings?
 
-    public init(inverted: Bool?, contactColumnConditionSettings: ContactColumnConditionSettings?, contactAddressConditionSettings: ContactAddressConditionSettings?, contactAddressTypeConditionSettings: ContactAddressTypeConditionSettings?, lastAttemptByColumnConditionSettings: LastAttemptByColumnConditionSettings?, lastAttemptOverallConditionSettings: LastAttemptOverallConditionSettings?, lastResultByColumnConditionSettings: LastResultByColumnConditionSettings?, lastResultOverallConditionSettings: LastResultOverallConditionSettings?) {
+    public init(inverted: Bool?, contactColumnConditionSettings: ContactColumnConditionSettings?, contactAddressConditionSettings: ContactAddressConditionSettings?, contactAddressTypeConditionSettings: ContactAddressTypeConditionSettings?, lastAttemptByColumnConditionSettings: LastAttemptByColumnConditionSettings?, lastAttemptOverallConditionSettings: LastAttemptOverallConditionSettings?, lastResultByColumnConditionSettings: LastResultByColumnConditionSettings?, lastResultOverallConditionSettings: LastResultOverallConditionSettings?, dataActionConditionSettings: DataActionConditionSettings?) {
         self.inverted = inverted
         self.contactColumnConditionSettings = contactColumnConditionSettings
         self.contactAddressConditionSettings = contactAddressConditionSettings
@@ -37,6 +39,7 @@ public class DigitalCondition: Codable {
         self.lastAttemptOverallConditionSettings = lastAttemptOverallConditionSettings
         self.lastResultByColumnConditionSettings = lastResultByColumnConditionSettings
         self.lastResultOverallConditionSettings = lastResultOverallConditionSettings
+        self.dataActionConditionSettings = dataActionConditionSettings
     }
 
 

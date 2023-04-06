@@ -221,7 +221,7 @@ open class AuditAPI {
      
      - parameter transactionId: (path) Transaction ID 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
-     - parameter pageSize: (query) Page size (optional)
+     - parameter pageSize: (query) Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional)
      - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -342,7 +342,7 @@ open class AuditAPI {
      
      - parameter transactionId: (path) Transaction ID 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
-     - parameter pageSize: (query) Page size (optional)
+     - parameter pageSize: (query) Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional)
      - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<AuditQueryExecutionResultsResponse> 

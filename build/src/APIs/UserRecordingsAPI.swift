@@ -2864,6 +2864,7 @@ open class UserRecordingsAPI {
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
         "name" : "name",
+        "assigned" : true,
         "assignee" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -5625,6 +5626,7 @@ open class UserRecordingsAPI {
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
         "name" : "name",
+        "assigned" : true,
         "assignee" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -6363,6 +6365,7 @@ open class UserRecordingsAPI {
         "recipientCountry" : "recipientCountry",
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
+        "byoSmsIntegrationId" : "byoSmsIntegrationId",
         "agentAssistantId" : "agentAssistantId"
       }, {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
@@ -6483,6 +6486,7 @@ open class UserRecordingsAPI {
         "recipientCountry" : "recipientCountry",
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
+        "byoSmsIntegrationId" : "byoSmsIntegrationId",
         "agentAssistantId" : "agentAssistantId"
       } ],
       "socialExpressions" : [ {
@@ -9312,6 +9316,7 @@ open class UserRecordingsAPI {
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
         "name" : "name",
+        "assigned" : true,
         "assignee" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -12073,6 +12078,7 @@ open class UserRecordingsAPI {
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
         "name" : "name",
+        "assigned" : true,
         "assignee" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -12811,6 +12817,7 @@ open class UserRecordingsAPI {
         "recipientCountry" : "recipientCountry",
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
+        "byoSmsIntegrationId" : "byoSmsIntegrationId",
         "agentAssistantId" : "agentAssistantId"
       }, {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
@@ -12931,6 +12938,7 @@ open class UserRecordingsAPI {
         "recipientCountry" : "recipientCountry",
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
+        "byoSmsIntegrationId" : "byoSmsIntegrationId",
         "agentAssistantId" : "agentAssistantId"
       } ],
       "socialExpressions" : [ {
@@ -15994,6 +16002,7 @@ open class UserRecordingsAPI {
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
+          "assigned" : true,
           "assignee" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -18755,6 +18764,7 @@ open class UserRecordingsAPI {
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
+          "assigned" : true,
           "assignee" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -19493,6 +19503,7 @@ open class UserRecordingsAPI {
           "recipientCountry" : "recipientCountry",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
+          "byoSmsIntegrationId" : "byoSmsIntegrationId",
           "agentAssistantId" : "agentAssistantId"
         }, {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
@@ -19613,6 +19624,7 @@ open class UserRecordingsAPI {
           "recipientCountry" : "recipientCountry",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
+          "byoSmsIntegrationId" : "byoSmsIntegrationId",
           "agentAssistantId" : "agentAssistantId"
         } ],
         "socialExpressions" : [ {
@@ -22442,6 +22454,7 @@ open class UserRecordingsAPI {
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
+          "assigned" : true,
           "assignee" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -25203,6 +25216,7 @@ open class UserRecordingsAPI {
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
+          "assigned" : true,
           "assignee" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -25941,6 +25955,7 @@ open class UserRecordingsAPI {
           "recipientCountry" : "recipientCountry",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
+          "byoSmsIntegrationId" : "byoSmsIntegrationId",
           "agentAssistantId" : "agentAssistantId"
         }, {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
@@ -26061,6 +26076,7 @@ open class UserRecordingsAPI {
           "recipientCountry" : "recipientCountry",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
+          "byoSmsIntegrationId" : "byoSmsIntegrationId",
           "agentAssistantId" : "agentAssistantId"
         } ],
         "socialExpressions" : [ {
@@ -28973,6 +28989,7 @@ open class UserRecordingsAPI {
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
+          "assigned" : true,
           "assignee" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -31734,6 +31751,7 @@ open class UserRecordingsAPI {
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
+          "assigned" : true,
           "assignee" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -32472,6 +32490,7 @@ open class UserRecordingsAPI {
           "recipientCountry" : "recipientCountry",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
+          "byoSmsIntegrationId" : "byoSmsIntegrationId",
           "agentAssistantId" : "agentAssistantId"
         }, {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
@@ -32592,6 +32611,7 @@ open class UserRecordingsAPI {
           "recipientCountry" : "recipientCountry",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
+          "byoSmsIntegrationId" : "byoSmsIntegrationId",
           "agentAssistantId" : "agentAssistantId"
         } ],
         "socialExpressions" : [ {
@@ -35421,6 +35441,7 @@ open class UserRecordingsAPI {
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
+          "assigned" : true,
           "assignee" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -38182,6 +38203,7 @@ open class UserRecordingsAPI {
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
           "name" : "name",
+          "assigned" : true,
           "assignee" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -38920,6 +38942,7 @@ open class UserRecordingsAPI {
           "recipientCountry" : "recipientCountry",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
+          "byoSmsIntegrationId" : "byoSmsIntegrationId",
           "agentAssistantId" : "agentAssistantId"
         }, {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
@@ -39040,6 +39063,7 @@ open class UserRecordingsAPI {
           "recipientCountry" : "recipientCountry",
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
+          "byoSmsIntegrationId" : "byoSmsIntegrationId",
           "agentAssistantId" : "agentAssistantId"
         } ],
         "socialExpressions" : [ {
@@ -42068,6 +42092,7 @@ open class UserRecordingsAPI {
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
         "name" : "name",
+        "assigned" : true,
         "assignee" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -44829,6 +44854,7 @@ open class UserRecordingsAPI {
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
         "name" : "name",
+        "assigned" : true,
         "assignee" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -45567,6 +45593,7 @@ open class UserRecordingsAPI {
         "recipientCountry" : "recipientCountry",
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
+        "byoSmsIntegrationId" : "byoSmsIntegrationId",
         "agentAssistantId" : "agentAssistantId"
       }, {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
@@ -45687,6 +45714,7 @@ open class UserRecordingsAPI {
         "recipientCountry" : "recipientCountry",
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
+        "byoSmsIntegrationId" : "byoSmsIntegrationId",
         "agentAssistantId" : "agentAssistantId"
       } ],
       "socialExpressions" : [ {
@@ -48516,6 +48544,7 @@ open class UserRecordingsAPI {
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
         "name" : "name",
+        "assigned" : true,
         "assignee" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -51277,6 +51306,7 @@ open class UserRecordingsAPI {
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
         "name" : "name",
+        "assigned" : true,
         "assignee" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -52015,6 +52045,7 @@ open class UserRecordingsAPI {
         "recipientCountry" : "recipientCountry",
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
+        "byoSmsIntegrationId" : "byoSmsIntegrationId",
         "agentAssistantId" : "agentAssistantId"
       }, {
         "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
@@ -52135,6 +52166,7 @@ open class UserRecordingsAPI {
         "recipientCountry" : "recipientCountry",
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
+        "byoSmsIntegrationId" : "byoSmsIntegrationId",
         "agentAssistantId" : "agentAssistantId"
       } ],
       "socialExpressions" : [ {

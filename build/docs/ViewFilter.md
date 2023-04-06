@@ -163,6 +163,10 @@ title: ViewFilter
 | **alertRuleIds** | **[String]** | The list of Alert Rule IDs | [optional] |
 | **evaluationFormContextIds** | **[String]** | The list of Evaluation Form Context IDs | [optional] |
 | **evaluationStatuses** | **[String]** | The evaluation statuses that are used to filter the view | [optional] |
+| **isAnalyzedForSensitiveData** | **Bool** | Filter to indicate the transcript has been analyzed for sensitive data. | [optional] |
+| **hasSensitiveData** | **Bool** | Filter to indicate the transcript contains sensitive data. | [optional] |
+| **subPath** | **String** | Filter for Sub Path | [optional] |
+| **userState** | **String** | The user supplied state value in the view | [optional] |
 {: class="table table-striped"}
 
 

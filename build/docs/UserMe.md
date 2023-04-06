@@ -45,7 +45,8 @@ title: UserMe
 | **date** | [**ServerDate**](ServerDate.html) | The PureCloud system date time. | [optional] |
 | **geolocationSettings** | [**GeolocationSettings**](GeolocationSettings.html) | Geolocation settings for user&#39;s organization. | [optional] |
 | **organization** | [**Organization**](Organization.html) | Organization details for this user. | [optional] |
-| **presenceDefinitions** | [**[OrganizationPresence]**](OrganizationPresence.html) | The first 100 presence definitions for user&#39;s organization. | [optional] |
+| **presenceDefinitions** | [**[OrganizationPresence]**](OrganizationPresence.html) | The first 100 non-divisioned presence definitions for user&#39;s organization. | [optional] |
+| **divisionedPresenceDefinitions** | [**[OrganizationPresenceDefinition]**](OrganizationPresenceDefinition.html) | The presence definitions that the user has access to | [optional] |
 | **locationDefinitions** | [**[LocationDefinition]**](LocationDefinition.html) | The first 100 site locations for user&#39;s organization | [optional] |
 | **orgAuthorization** | [**[DomainOrganizationRole]**](DomainOrganizationRole.html) | The first 100 organization roles, with applicable permission policies, for user&#39;s organization. | [optional] |
 | **favorites** | [**[User]**](User.html) | The first 50 favorited users. | [optional] |

@@ -60,8 +60,10 @@ public class ConversationNormalizedMessage: Codable {
     public var direction: Direction?
     /** Additional metadata about this message. */
     public var metadata: [String:String]?
+    /** The internal id representing the customer supplied sms integration message. */
+    public var byoSmsIntegrationId: String?
 
-    public init(_id: String?, channel: ConversationMessagingChannel?, type: ModelType?, text: String?, content: [ConversationMessageContent]?, events: [ConversationMessageEvent]?, status: Status?, reasons: [ConversationReason]?, originatingEntity: OriginatingEntity?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
+    public init(_id: String?, channel: ConversationMessagingChannel?, type: ModelType?, text: String?, content: [ConversationMessageContent]?, events: [ConversationMessageEvent]?, status: Status?, reasons: [ConversationReason]?, originatingEntity: OriginatingEntity?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?, byoSmsIntegrationId: String?) {
         self._id = _id
         self.channel = channel
         self.type = type
@@ -74,6 +76,7 @@ public class ConversationNormalizedMessage: Codable {
         self.isFinalReceipt = isFinalReceipt
         self.direction = direction
         self.metadata = metadata
+        self.byoSmsIntegrationId = byoSmsIntegrationId
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -89,6 +92,7 @@ public class ConversationNormalizedMessage: Codable {
         case isFinalReceipt
         case direction
         case metadata
+        case byoSmsIntegrationId
     }
 
 

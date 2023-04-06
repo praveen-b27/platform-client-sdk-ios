@@ -80,8 +80,10 @@ public class UserMe: Codable {
     public var geolocationSettings: GeolocationSettings?
     /** Organization details for this user. */
     public var organization: Organization?
-    /** The first 100 presence definitions for user's organization. */
+    /** The first 100 non-divisioned presence definitions for user's organization. */
     public var presenceDefinitions: [OrganizationPresence]?
+    /** The presence definitions that the user has access to */
+    public var divisionedPresenceDefinitions: [OrganizationPresenceDefinition]?
     /** The first 100 site locations for user's organization */
     public var locationDefinitions: [LocationDefinition]?
     /** The first 100 organization roles, with applicable permission policies, for user's organization. */
@@ -107,7 +109,7 @@ public class UserMe: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, date: ServerDate?, geolocationSettings: GeolocationSettings?, organization: Organization?, presenceDefinitions: [OrganizationPresence]?, locationDefinitions: [LocationDefinition]?, orgAuthorization: [DomainOrganizationRole]?, favorites: [User]?, superiors: [User]?, directReports: [User]?, adjacents: Adjacents?, routingSkills: [RoutingSkill]?, fieldConfigs: FieldConfigs?, token: TokenInfo?, trustors: [Trustor]?, orgProducts: [DomainOrganizationProduct]?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, date: ServerDate?, geolocationSettings: GeolocationSettings?, organization: Organization?, presenceDefinitions: [OrganizationPresence]?, divisionedPresenceDefinitions: [OrganizationPresenceDefinition]?, locationDefinitions: [LocationDefinition]?, orgAuthorization: [DomainOrganizationRole]?, favorites: [User]?, superiors: [User]?, directReports: [User]?, adjacents: Adjacents?, routingSkills: [RoutingSkill]?, fieldConfigs: FieldConfigs?, token: TokenInfo?, trustors: [Trustor]?, orgProducts: [DomainOrganizationProduct]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -147,6 +149,7 @@ public class UserMe: Codable {
         self.geolocationSettings = geolocationSettings
         self.organization = organization
         self.presenceDefinitions = presenceDefinitions
+        self.divisionedPresenceDefinitions = divisionedPresenceDefinitions
         self.locationDefinitions = locationDefinitions
         self.orgAuthorization = orgAuthorization
         self.favorites = favorites
@@ -201,6 +204,7 @@ public class UserMe: Codable {
         case geolocationSettings
         case organization
         case presenceDefinitions
+        case divisionedPresenceDefinitions
         case locationDefinitions
         case orgAuthorization
         case favorites

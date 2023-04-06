@@ -7842,6 +7842,7 @@ open class RoutingAPI {
     
     
     
+    
     /**
      Get list of wrapup codes.
      
@@ -7849,12 +7850,13 @@ open class RoutingAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) Filter by wrapup code ID(s) (optional)
      - parameter name: (query) Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)
      - parameter divisionId: (query) Filter by division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingWrapupcodes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingWrapupcodesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, divisionId: divisionId)
+    open class func getRoutingWrapupcodes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingWrapupcodesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId)
         requestBuilder.execute { (response: Response<WrapupCodeEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7912,12 +7914,13 @@ open class RoutingAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) Filter by wrapup code ID(s) (optional)
      - parameter name: (query) Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)
      - parameter divisionId: (query) Filter by division ID(s) (optional)
 
      - returns: RequestBuilder<WrapupCodeEntityListing> 
      */
-    open class func getRoutingWrapupcodesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<WrapupCodeEntityListing> {        
+    open class func getRoutingWrapupcodesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<WrapupCodeEntityListing> {        
         let path = "/api/v2/routing/wrapupcodes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -7928,6 +7931,7 @@ open class RoutingAPI {
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy?.rawValue, 
             "sortOrder": sortOrder?.rawValue, 
+            "id": _id, 
             "name": name, 
             "divisionId": divisionId
         ])

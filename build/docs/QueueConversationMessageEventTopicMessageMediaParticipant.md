@@ -47,6 +47,7 @@ title: QueueConversationMessageEventTopicMessageMediaParticipant
 | **type** | **String** |  | [optional] |
 | **recipientCountry** | **String** |  | [optional] |
 | **recipientType** | **String** |  | [optional] |
+| **byoSmsIntegrationId** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

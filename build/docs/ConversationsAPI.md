@@ -97,6 +97,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationParticipant**](ConversationsAPI.html#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI.html#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationSecureattributes**](ConversationsAPI.html#patchConversationSecureattributes) | Update the secure attributes on a conversation. |
+| [**patchConversationsAftercallworkConversationIdParticipantCommunication**](ConversationsAPI.html#patchConversationsAftercallworkConversationIdParticipantCommunication) | Update after-call work for this conversation communication. |
 | [**patchConversationsCall**](ConversationsAPI.html#patchConversationsCall) | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**patchConversationsCallParticipant**](ConversationsAPI.html#patchConversationsCallParticipant) | Update conversation participant |
 | [**patchConversationsCallParticipantAttributes**](ConversationsAPI.html#patchConversationsCallParticipantAttributes) | Update the attributes on a conversation participant. |
@@ -5018,6 +5019,64 @@ ConversationsAPI.patchConversationSecureattributes(conversationId: conversationI
 
 **String**
 
+<a name="patchConversationsAftercallworkConversationIdParticipantCommunication"></a>
+
+# **patchConversationsAftercallworkConversationIdParticipantCommunication**
+
+
+
+> [AfterCallWorkUpdate](AfterCallWorkUpdate.html) patchConversationsAftercallworkConversationIdParticipantCommunication(conversationId, participantId, communicationId, body)
+
+Update after-call work for this conversation communication.
+
+
+
+Wraps PATCH /api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId}  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: AfterCallWorkUpdate = new AfterCallWorkUpdate(...) // AfterCallWorkUpdate
+
+// Code example
+ConversationsAPI.patchConversationsAftercallworkConversationIdParticipantCommunication(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsAftercallworkConversationIdParticipantCommunication was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**AfterCallWorkUpdate**](AfterCallWorkUpdate.html)| AfterCallWorkUpdate | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AfterCallWorkUpdate**](AfterCallWorkUpdate.html)
+
 <a name="patchConversationsCall"></a>
 
 # **patchConversationsCall**
@@ -7503,7 +7562,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsCallParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -7523,7 +7582,7 @@ ConversationsAPI.postConversationsCallParticipantCommunicationWrapup(conversatio
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 
@@ -7775,7 +7834,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsCallbackParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -7795,7 +7854,7 @@ ConversationsAPI.postConversationsCallbackParticipantCommunicationWrapup(convers
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 
@@ -8201,7 +8260,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsChatParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -8221,7 +8280,7 @@ ConversationsAPI.postConversationsChatParticipantCommunicationWrapup(conversatio
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 
@@ -8364,7 +8423,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -8384,7 +8443,7 @@ ConversationsAPI.postConversationsCobrowsesessionParticipantCommunicationWrapup(
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 
@@ -8634,7 +8693,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsEmailParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -8654,7 +8713,7 @@ ConversationsAPI.postConversationsEmailParticipantCommunicationWrapup(conversati
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 
@@ -9242,7 +9301,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsMessageParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -9262,7 +9321,7 @@ ConversationsAPI.postConversationsMessageParticipantCommunicationWrapup(conversa
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 
@@ -9883,7 +9942,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsScreenshareParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -9903,7 +9962,7 @@ ConversationsAPI.postConversationsScreenshareParticipantCommunicationWrapup(conv
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 
@@ -9940,7 +9999,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsSocialParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -9960,7 +10019,7 @@ ConversationsAPI.postConversationsSocialParticipantCommunicationWrapup(conversat
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 
@@ -9997,7 +10056,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let body: ExtendedWrapup = new ExtendedWrapup(...) // Wrap-up
+let body: WrapupInput = new WrapupInput(...) // Wrap-up
 
 // Code example
 ConversationsAPI.postConversationsVideoParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
@@ -10017,7 +10076,7 @@ ConversationsAPI.postConversationsVideoParticipantCommunicationWrapup(conversati
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional] |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional] |
 {: class="table-striped"}
 
 

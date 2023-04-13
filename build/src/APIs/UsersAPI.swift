@@ -7672,6 +7672,14 @@ open class UsersAPI {
 
     
     
+    public enum Pass_getUsersDevelopmentActivities: String { 
+        case _true = "True"
+        case _false = "False"
+        case any = "Any"
+    }
+
+    
+    
     
     
     public enum SortOrder_getUsersDevelopmentActivities: String { 
@@ -7691,6 +7699,7 @@ open class UsersAPI {
      - parameter interval: (query) Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter completionInterval: (query) Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter overdue: (query) Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional)
+     - parameter pass: (query) Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)
@@ -7699,8 +7708,8 @@ open class UsersAPI {
      - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersDevelopmentActivities(userId: [String]? = nil, moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivities? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivities? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil, completion: @escaping ((_ data: DevelopmentActivityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsersDevelopmentActivitiesWithRequestBuilder(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship)
+    open class func getUsersDevelopmentActivities(userId: [String]? = nil, moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivities? = nil, pass: Pass_getUsersDevelopmentActivities? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivities? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil, completion: @escaping ((_ data: DevelopmentActivityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersDevelopmentActivitiesWithRequestBuilder(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pass: pass, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship)
         requestBuilder.execute { (response: Response<DevelopmentActivityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7731,6 +7740,8 @@ open class UsersAPI {
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
+    "archivalMode" : "Graceful",
+    "isModuleArchived" : true,
     "attendees" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -7753,6 +7764,8 @@ open class UsersAPI {
   }, {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
+    "archivalMode" : "Graceful",
+    "isModuleArchived" : true,
     "attendees" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -7786,6 +7799,7 @@ open class UsersAPI {
      - parameter interval: (query) Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter completionInterval: (query) Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter overdue: (query) Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional)
+     - parameter pass: (query) Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)
@@ -7795,7 +7809,7 @@ open class UsersAPI {
 
      - returns: RequestBuilder<DevelopmentActivityListing> 
      */
-    open class func getUsersDevelopmentActivitiesWithRequestBuilder(userId: [String]? = nil, moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivities? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivities? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil) -> RequestBuilder<DevelopmentActivityListing> {        
+    open class func getUsersDevelopmentActivitiesWithRequestBuilder(userId: [String]? = nil, moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivities? = nil, pass: Pass_getUsersDevelopmentActivities? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivities? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil) -> RequestBuilder<DevelopmentActivityListing> {        
         let path = "/api/v2/users/development/activities"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -7807,6 +7821,7 @@ open class UsersAPI {
             "interval": interval, 
             "completionInterval": completionInterval, 
             "overdue": overdue?.rawValue, 
+            "pass": pass?.rawValue, 
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortOrder": sortOrder?.rawValue, 
@@ -7832,6 +7847,14 @@ open class UsersAPI {
 
     
     
+    public enum Pass_getUsersDevelopmentActivitiesMe: String { 
+        case _true = "True"
+        case _false = "False"
+        case any = "Any"
+    }
+
+    
+    
     
     
     public enum SortOrder_getUsersDevelopmentActivitiesMe: String { 
@@ -7850,6 +7873,7 @@ open class UsersAPI {
      - parameter interval: (query) Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter completionInterval: (query) Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter overdue: (query) Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional)
+     - parameter pass: (query) Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)
@@ -7858,8 +7882,8 @@ open class UsersAPI {
      - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersDevelopmentActivitiesMe(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivitiesMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivitiesMe? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil, completion: @escaping ((_ data: DevelopmentActivityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsersDevelopmentActivitiesMeWithRequestBuilder(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship)
+    open class func getUsersDevelopmentActivitiesMe(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivitiesMe? = nil, pass: Pass_getUsersDevelopmentActivitiesMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivitiesMe? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil, completion: @escaping ((_ data: DevelopmentActivityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersDevelopmentActivitiesMeWithRequestBuilder(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pass: pass, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship)
         requestBuilder.execute { (response: Response<DevelopmentActivityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7890,6 +7914,8 @@ open class UsersAPI {
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
+    "archivalMode" : "Graceful",
+    "isModuleArchived" : true,
     "attendees" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -7912,6 +7938,8 @@ open class UsersAPI {
   }, {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
+    "archivalMode" : "Graceful",
+    "isModuleArchived" : true,
     "attendees" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -7944,6 +7972,7 @@ open class UsersAPI {
      - parameter interval: (query) Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter completionInterval: (query) Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter overdue: (query) Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional)
+     - parameter pass: (query) Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)
@@ -7953,7 +7982,7 @@ open class UsersAPI {
 
      - returns: RequestBuilder<DevelopmentActivityListing> 
      */
-    open class func getUsersDevelopmentActivitiesMeWithRequestBuilder(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivitiesMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivitiesMe? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil) -> RequestBuilder<DevelopmentActivityListing> {        
+    open class func getUsersDevelopmentActivitiesMeWithRequestBuilder(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivitiesMe? = nil, pass: Pass_getUsersDevelopmentActivitiesMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivitiesMe? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil) -> RequestBuilder<DevelopmentActivityListing> {        
         let path = "/api/v2/users/development/activities/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -7964,6 +7993,7 @@ open class UsersAPI {
             "interval": interval, 
             "completionInterval": completionInterval, 
             "overdue": overdue?.rawValue, 
+            "pass": pass?.rawValue, 
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortOrder": sortOrder?.rawValue, 
@@ -8023,6 +8053,8 @@ open class UsersAPI {
      - examples: [{contentType=application/json, example={
   "dateDue" : "2000-01-23T04:56:07.000+00:00",
   "isPassed" : true,
+  "archivalMode" : "Graceful",
+  "isModuleArchived" : true,
   "attendees" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"

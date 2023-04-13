@@ -1208,8 +1208,6 @@ docs/EdgeEntityListing.md
 docs/EdgeGroup.md
 docs/EdgeGroupEntityListing.md
 docs/EdgeInterface.md
-docs/EdgeLine.md
-docs/EdgeLineEntityListing.md
 docs/EdgeLogicalInterfacesChangeTopicDomainLogicalInterfaceChange.md
 docs/EdgeLogicalInterfacesChangeTopicErrorInfo.md
 docs/EdgeLogsJob.md
@@ -4652,8 +4650,6 @@ docs/getTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticPing-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticRoute-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticTracepath-example.txt
-docs/getTelephonyProvidersEdgeLine-example.txt
-docs/getTelephonyProvidersEdgeLines-example.txt
 docs/getTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/getTelephonyProvidersEdgeLogicalinterfaces-example.txt
 docs/getTelephonyProvidersEdgeLogsJob-example.txt
@@ -5670,7 +5666,6 @@ docs/putSpeechandtextanalyticsProgramTranscriptionengines-example.txt
 docs/putSpeechandtextanalyticsSettings-example.txt
 docs/putSpeechandtextanalyticsTopic-example.txt
 docs/putTelephonyProvidersEdge-example.txt
-docs/putTelephonyProvidersEdgeLine-example.txt
 docs/putTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/putTelephonyProvidersEdgesCertificateauthority-example.txt
 docs/putTelephonyProvidersEdgesDid-example.txt
@@ -6964,8 +6959,6 @@ src/Models/EdgeEntityListing.swift
 src/Models/EdgeGroup.swift
 src/Models/EdgeGroupEntityListing.swift
 src/Models/EdgeInterface.swift
-src/Models/EdgeLine.swift
-src/Models/EdgeLineEntityListing.swift
 src/Models/EdgeLogicalInterfacesChangeTopicDomainLogicalInterfaceChange.swift
 src/Models/EdgeLogicalInterfacesChangeTopicErrorInfo.swift
 src/Models/EdgeLogsJob.swift

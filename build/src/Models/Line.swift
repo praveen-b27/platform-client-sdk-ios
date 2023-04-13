@@ -41,6 +41,7 @@ public class Line: Codable {
     /** The application that created the resource. */
     public var createdByApp: String?
     public var properties: [String:JSON]?
+    /** The edge group associated with the line. (Deprecated) */
     public var edgeGroup: DomainEntityRef?
     public var template: DomainEntityRef?
     public var site: DomainEntityRef?

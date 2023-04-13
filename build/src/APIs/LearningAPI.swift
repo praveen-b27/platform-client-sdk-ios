@@ -146,6 +146,7 @@ open class LearningAPI {
   "assessmentForm" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
+  "isLatest" : true,
   "createdBy" : "{}",
   "modifiedBy" : "{}",
   "id" : "id",
@@ -280,6 +281,7 @@ open class LearningAPI {
     "assessmentForm" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
+    "isLatest" : true,
     "createdBy" : "{}",
     "modifiedBy" : "{}",
     "id" : "id",
@@ -299,6 +301,7 @@ open class LearningAPI {
     "assessmentForm" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
+    "isLatest" : true,
     "createdBy" : "{}",
     "modifiedBy" : "{}",
     "id" : "id",
@@ -461,6 +464,7 @@ open class LearningAPI {
     "assessmentForm" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
+    "isLatest" : true,
     "createdBy" : "{}",
     "modifiedBy" : "{}",
     "id" : "id",
@@ -480,6 +484,7 @@ open class LearningAPI {
     "assessmentForm" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
+    "isLatest" : true,
     "createdBy" : "{}",
     "modifiedBy" : "{}",
     "id" : "id",
@@ -574,6 +579,7 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "reassignSummaryData" : "{}",
   "archivalMode" : "Graceful",
   "isArchived" : true,
   "isPublished" : true,
@@ -799,6 +805,7 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "reassignSummaryData" : "{}",
   "archivalMode" : "Graceful",
   "isArchived" : true,
   "isPublished" : true,
@@ -938,6 +945,7 @@ open class LearningAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
     "isArchived" : true,
     "isPublished" : true,
@@ -974,6 +982,7 @@ open class LearningAPI {
     "modifiedBy" : "{}",
     "id" : "id"
   }, {
+    "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
     "isArchived" : true,
     "isPublished" : true,
@@ -1110,6 +1119,7 @@ open class LearningAPI {
   "pageCount" : 2,
   "pageNumber" : 5,
   "entities" : [ {
+    "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
     "isArchived" : true,
     "isPublished" : true,
@@ -1158,6 +1168,7 @@ open class LearningAPI {
       "assessmentForm" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "isOverdue" : true,
+      "isLatest" : true,
       "createdBy" : "{}",
       "modifiedBy" : "{}",
       "id" : "id",
@@ -1177,6 +1188,7 @@ open class LearningAPI {
       "assessmentForm" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "isOverdue" : true,
+      "isLatest" : true,
       "createdBy" : "{}",
       "modifiedBy" : "{}",
       "id" : "id",
@@ -1185,6 +1197,7 @@ open class LearningAPI {
       "user" : "{}"
     } ]
   }, {
+    "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
     "isArchived" : true,
     "isPublished" : true,
@@ -1233,6 +1246,7 @@ open class LearningAPI {
       "assessmentForm" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "isOverdue" : true,
+      "isLatest" : true,
       "createdBy" : "{}",
       "modifiedBy" : "{}",
       "id" : "id",
@@ -1252,6 +1266,7 @@ open class LearningAPI {
       "assessmentForm" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "isOverdue" : true,
+      "isLatest" : true,
       "createdBy" : "{}",
       "modifiedBy" : "{}",
       "id" : "id",
@@ -1408,6 +1423,7 @@ open class LearningAPI {
   "assessmentForm" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
+  "isLatest" : true,
   "createdBy" : "{}",
   "modifiedBy" : "{}",
   "id" : "id",
@@ -1482,6 +1498,7 @@ open class LearningAPI {
   "assessmentForm" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
+  "isLatest" : true,
   "createdBy" : "{}",
   "modifiedBy" : "{}",
   "id" : "id",
@@ -1677,6 +1694,7 @@ open class LearningAPI {
   "assessmentForm" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
+  "isLatest" : true,
   "createdBy" : "{}",
   "modifiedBy" : "{}",
   "id" : "id",
@@ -1749,6 +1767,7 @@ open class LearningAPI {
   "assessmentForm" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
+  "isLatest" : true,
   "createdBy" : "{}",
   "modifiedBy" : "{}",
   "id" : "id",
@@ -1820,6 +1839,7 @@ open class LearningAPI {
   "assessmentForm" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "isOverdue" : true,
+  "isLatest" : true,
   "createdBy" : "{}",
   "modifiedBy" : "{}",
   "id" : "id",
@@ -1986,6 +2006,7 @@ open class LearningAPI {
     "assessmentForm" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
+    "isLatest" : true,
     "createdBy" : "{}",
     "modifiedBy" : "{}",
     "id" : "id",
@@ -2005,6 +2026,7 @@ open class LearningAPI {
     "assessmentForm" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "isOverdue" : true,
+    "isLatest" : true,
     "createdBy" : "{}",
     "modifiedBy" : "{}",
     "id" : "id",
@@ -2248,6 +2270,7 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "reassignSummaryData" : "{}",
   "archivalMode" : "Graceful",
   "isArchived" : true,
   "isPublished" : true,
@@ -2550,6 +2573,7 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "reassignSummaryData" : "{}",
   "archivalMode" : "Graceful",
   "isArchived" : true,
   "isPublished" : true,

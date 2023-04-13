@@ -12,6 +12,10 @@ import Foundation
 
 public class DevelopmentActivity: Codable {
 
+    public enum ArchivalMode: String, Codable { 
+        case graceful = "Graceful"
+        case immediate = "Immediate"
+    }
     public enum ModelType: String, Codable { 
         case informational = "Informational"
         case coaching = "Coaching"
@@ -40,6 +44,10 @@ public class DevelopmentActivity: Codable {
     public var isPassed: Bool?
     /** True if this is the latest version of assignment assigned to the user */
     public var isLatest: Bool?
+    /** True if the associated module is archived */
+    public var isModuleArchived: Bool?
+    /** Module archive type */
+    public var archivalMode: ArchivalMode?
     /** The URI for this object */
     public var selfUri: String?
     /** The name of the activity */
@@ -57,7 +65,7 @@ public class DevelopmentActivity: Codable {
     /** Indicates if the activity is overdue */
     public var isOverdue: Bool?
 
-    public init(_id: String?, dateCompleted: Date?, createdBy: UserReference?, dateCreated: Date?, percentageScore: Float?, isPassed: Bool?, isLatest: Bool?, selfUri: String?, name: String?, type: ModelType?, status: Status?, dateDue: Date?, facilitator: UserReference?, attendees: [UserReference]?, isOverdue: Bool?) {
+    public init(_id: String?, dateCompleted: Date?, createdBy: UserReference?, dateCreated: Date?, percentageScore: Float?, isPassed: Bool?, isLatest: Bool?, isModuleArchived: Bool?, archivalMode: ArchivalMode?, selfUri: String?, name: String?, type: ModelType?, status: Status?, dateDue: Date?, facilitator: UserReference?, attendees: [UserReference]?, isOverdue: Bool?) {
         self._id = _id
         self.dateCompleted = dateCompleted
         self.createdBy = createdBy
@@ -65,6 +73,8 @@ public class DevelopmentActivity: Codable {
         self.percentageScore = percentageScore
         self.isPassed = isPassed
         self.isLatest = isLatest
+        self.isModuleArchived = isModuleArchived
+        self.archivalMode = archivalMode
         self.selfUri = selfUri
         self.name = name
         self.type = type
@@ -83,6 +93,8 @@ public class DevelopmentActivity: Codable {
         case percentageScore
         case isPassed
         case isLatest
+        case isModuleArchived
+        case archivalMode
         case selfUri
         case name
         case type

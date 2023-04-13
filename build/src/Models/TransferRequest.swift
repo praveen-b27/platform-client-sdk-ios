@@ -17,7 +17,7 @@ public class TransferRequest: Codable {
     }
     /** The user ID of the transfer target. */
     public var userId: String?
-    /** The address of the transfer target which can be user ID, queue ID or queue name */
+    /** The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication. */
     public var address: String?
     /** The user name of the transfer target. */
     public var userName: String?

@@ -42,6 +42,8 @@ public class LearningAssignment: Codable {
     public var isManual: Bool?
     /** True if the assessment was passed */
     public var isPassed: Bool?
+    /** True if the assignment is based on latest module */
+    public var isLatest: Bool?
     /** The URI for this object */
     public var selfUri: String?
     /** The Learning Assignment state */
@@ -57,7 +59,7 @@ public class LearningAssignment: Codable {
     /** The assessment form associated with this assignment */
     public var assessmentForm: AssessmentForm?
 
-    public init(_id: String?, assessment: LearningAssessment?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, isOverdue: Bool?, percentageScore: Float?, isRule: Bool?, isManual: Bool?, isPassed: Bool?, selfUri: String?, state: State?, dateRecommendedForCompletion: Date?, version: Int?, module: LearningModule?, user: UserReference?, assessmentForm: AssessmentForm?) {
+    public init(_id: String?, assessment: LearningAssessment?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, isOverdue: Bool?, percentageScore: Float?, isRule: Bool?, isManual: Bool?, isPassed: Bool?, isLatest: Bool?, selfUri: String?, state: State?, dateRecommendedForCompletion: Date?, version: Int?, module: LearningModule?, user: UserReference?, assessmentForm: AssessmentForm?) {
         self._id = _id
         self.assessment = assessment
         self.createdBy = createdBy
@@ -69,6 +71,7 @@ public class LearningAssignment: Codable {
         self.isRule = isRule
         self.isManual = isManual
         self.isPassed = isPassed
+        self.isLatest = isLatest
         self.selfUri = selfUri
         self.state = state
         self.dateRecommendedForCompletion = dateRecommendedForCompletion
@@ -90,6 +93,7 @@ public class LearningAssignment: Codable {
         case isRule
         case isManual
         case isPassed
+        case isLatest
         case selfUri
         case state
         case dateRecommendedForCompletion

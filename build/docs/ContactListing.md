@@ -12,8 +12,8 @@ title: ContactListing
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **partialResults** | **Bool** |  | [optional] |
-| **nextUri** | **String** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
+| **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |

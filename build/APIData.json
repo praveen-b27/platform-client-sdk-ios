@@ -31246,49 +31246,6 @@
     "return": "EdgeNetworkDiagnosticResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet edgeId: String = \"\" // Edge Id\n\n// Get networking-related information from an Edge for a target IP or host.\nGetTelephonyProvidersEdgeDiagnosticTracepathRequest.getTelephonyProvidersEdgeDiagnosticTracepath(edgeId: edgeId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgeDiagnosticTracepathRequest.getTelephonyProvidersEdgeDiagnosticTracepath was successful\")\n        dump(response)\n    }\n}"
   },
-  "gettelephonyprovidersedgeline": {
-    "operationId": "gettelephonyprovidersedgeline",
-    "functionName": "getTelephonyProvidersEdgeLine",
-    "signature": "getTelephonyProvidersEdgeLine(edgeId, lineId)",
-    "parameters": [
-      {
-        "name": "edgeId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "lineId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "EdgeLine",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet edgeId: String = \"\" // Edge ID\nlet lineId: String = \"\" // Line ID\n\n// Get line\nGetTelephonyProvidersEdgeLineRequest.getTelephonyProvidersEdgeLine(edgeId: edgeId, lineId: lineId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgeLineRequest.getTelephonyProvidersEdgeLine was successful\")\n        dump(response)\n    }\n}"
-  },
-  "gettelephonyprovidersedgelines": {
-    "operationId": "gettelephonyprovidersedgelines",
-    "functionName": "getTelephonyProvidersEdgeLines",
-    "signature": "getTelephonyProvidersEdgeLines(edgeId, pageSize, pageNumber)",
-    "parameters": [
-      {
-        "name": "edgeId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "pageSize",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "pageNumber",
-        "type": "Int",
-        "required": "false"
-      }
-    ],
-    "return": "EdgeLineEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet edgeId: String = \"\" // Edge ID\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Get the list of lines.\nGetTelephonyProvidersEdgeLinesRequest.getTelephonyProvidersEdgeLines(edgeId: edgeId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgeLinesRequest.getTelephonyProvidersEdgeLines was successful\")\n        dump(response)\n    }\n}"
-  },
   "gettelephonyprovidersedgelogicalinterface": {
     "operationId": "gettelephonyprovidersedgelogicalinterface",
     "functionName": "getTelephonyProvidersEdgeLogicalinterface",
@@ -31977,7 +31934,7 @@
       }
     ],
     "return": "LineEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet name: String = \"\" // Name\nlet sortBy: String = \"\" // Value by which to sort\nlet expand: [String] = [\"\"] // Fields to expand in the response, comma-separated\n\n// Get a list of Lines\nGetTelephonyProvidersEdgesLinesRequest.getTelephonyProvidersEdgesLines(pageSize: pageSize, pageNumber: pageNumber, name: name, sortBy: sortBy, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesLinesRequest.getTelephonyProvidersEdgesLines was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet name: String = \"\" // Name\nlet sortBy: String = \"\" // Value by which to sort\nlet expand: [String] = [\"\"] // Fields to expand in the response, comma-separated. The edgeGroup value is deprecated.\n\n// Get a list of Lines\nGetTelephonyProvidersEdgesLinesRequest.getTelephonyProvidersEdgesLines(pageSize: pageSize, pageNumber: pageNumber, name: name, sortBy: sortBy, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesLinesRequest.getTelephonyProvidersEdgesLines was successful\")\n        dump(response)\n    }\n}"
   },
   "gettelephonyprovidersedgeslinestemplate": {
     "operationId": "gettelephonyprovidersedgeslinestemplate",
@@ -33125,30 +33082,6 @@
     "return": "Edge",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet edgeId: String = \"\" // Edge ID\nlet body: Edge = new Edge(...) // Edge\n\n// Update a edge.\nPutTelephonyProvidersEdgeRequest.putTelephonyProvidersEdge(edgeId: edgeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgeRequest.putTelephonyProvidersEdge was successful\")\n        dump(response)\n    }\n}"
   },
-  "puttelephonyprovidersedgeline": {
-    "operationId": "puttelephonyprovidersedgeline",
-    "functionName": "putTelephonyProvidersEdgeLine",
-    "signature": "putTelephonyProvidersEdgeLine(edgeId, lineId, body)",
-    "parameters": [
-      {
-        "name": "edgeId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "lineId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "EdgeLine",
-        "required": "true"
-      }
-    ],
-    "return": "EdgeLine",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet edgeId: String = \"\" // Edge ID\nlet lineId: String = \"\" // Line ID\nlet body: EdgeLine = new EdgeLine(...) // Line\n\n// Update a line.\nPutTelephonyProvidersEdgeLineRequest.putTelephonyProvidersEdgeLine(edgeId: edgeId, lineId: lineId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgeLineRequest.putTelephonyProvidersEdgeLine was successful\")\n        dump(response)\n    }\n}"
-  },
   "puttelephonyprovidersedgelogicalinterface": {
     "operationId": "puttelephonyprovidersedgelogicalinterface",
     "functionName": "putTelephonyProvidersEdgeLogicalinterface",
@@ -34159,7 +34092,7 @@
   "getusersdevelopmentactivities": {
     "operationId": "getusersdevelopmentactivities",
     "functionName": "getUsersDevelopmentActivities",
-    "signature": "getUsersDevelopmentActivities(userId, moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship)",
+    "signature": "getUsersDevelopmentActivities(userId, moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship)",
     "parameters": [
       {
         "name": "userId",
@@ -34187,6 +34120,11 @@
         "required": "false"
       },
       {
+        "name": "pass",
+        "type": "String",
+        "required": "false"
+      },
+      {
         "name": "pageSize",
         "type": "Int",
         "required": "false"
@@ -34218,12 +34156,12 @@
       }
     ],
     "return": "DevelopmentActivityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: [String] = [\"\"] // Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId.\nlet moduleId: String = \"\" // Specifies the ID of the learning module.\nlet interval: String = \"\" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetUsersDevelopmentActivitiesRequest.Overdue_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.Overdue_getUsersDevelopmentActivities.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersDevelopmentActivitiesRequest.SortOrder_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.SortOrder_getUsersDevelopmentActivities.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)\nlet types: [String] = [\"\"] // Specifies the activity types.\nlet statuses: [String] = [\"\"] // Specifies the activity statuses to filter by\nlet relationship: [String] = [\"\"] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.\n\n// Get list of Development Activities\nGetUsersDevelopmentActivitiesRequest.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivitiesRequest.getUsersDevelopmentActivities was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: [String] = [\"\"] // Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId.\nlet moduleId: String = \"\" // Specifies the ID of the learning module.\nlet interval: String = \"\" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetUsersDevelopmentActivitiesRequest.Overdue_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.Overdue_getUsersDevelopmentActivities.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned\nlet pass: GetUsersDevelopmentActivitiesRequest.Pass_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.Pass_getUsersDevelopmentActivities.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") activities are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all activities are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersDevelopmentActivitiesRequest.SortOrder_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.SortOrder_getUsersDevelopmentActivities.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)\nlet types: [String] = [\"\"] // Specifies the activity types.\nlet statuses: [String] = [\"\"] // Specifies the activity statuses to filter by\nlet relationship: [String] = [\"\"] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.\n\n// Get list of Development Activities\nGetUsersDevelopmentActivitiesRequest.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pass: pass, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivitiesRequest.getUsersDevelopmentActivities was successful\")\n        dump(response)\n    }\n}"
   },
   "getusersdevelopmentactivitiesme": {
     "operationId": "getusersdevelopmentactivitiesme",
     "functionName": "getUsersDevelopmentActivitiesMe",
-    "signature": "getUsersDevelopmentActivitiesMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship)",
+    "signature": "getUsersDevelopmentActivitiesMe(moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship)",
     "parameters": [
       {
         "name": "moduleId",
@@ -34246,6 +34184,11 @@
         "required": "false"
       },
       {
+        "name": "pass",
+        "type": "String",
+        "required": "false"
+      },
+      {
         "name": "pageSize",
         "type": "Int",
         "required": "false"
@@ -34277,7 +34220,7 @@
       }
     ],
     "return": "DevelopmentActivityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module.\nlet interval: String = \"\" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)\nlet types: [String] = [\"\"] // Specifies the activity types.\nlet statuses: [String] = [\"\"] // Specifies the activity statuses to filter by\nlet relationship: [String] = [\"\"] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.\n\n// Get list of Development Activities for current user\nGetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module.\nlet interval: String = \"\" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned\nlet pass: GetUsersDevelopmentActivitiesMeRequest.Pass_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.Pass_getUsersDevelopmentActivitiesMe.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") activities are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all activities are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)\nlet types: [String] = [\"\"] // Specifies the activity types.\nlet statuses: [String] = [\"\"] // Specifies the activity statuses to filter by\nlet relationship: [String] = [\"\"] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.\n\n// Get list of Development Activities for current user\nGetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pass: pass, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe was successful\")\n        dump(response)\n    }\n}"
   },
   "getusersdevelopmentactivity": {
     "operationId": "getusersdevelopmentactivity",

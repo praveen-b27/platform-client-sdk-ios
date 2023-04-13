@@ -30,8 +30,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeDiagnosticPing) | Get networking-related information from an Edge for a target IP or host. |
 | [**getTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeDiagnosticRoute) | Get networking-related information from an Edge for a target IP or host. |
 | [**getTelephonyProvidersEdgeDiagnosticTracepath**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeDiagnosticTracepath) | Get networking-related information from an Edge for a target IP or host. |
-| [**getTelephonyProvidersEdgeLine**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeLine) | Get line |
-| [**getTelephonyProvidersEdgeLines**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeLines) | Get the list of lines. |
 | [**getTelephonyProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeLogicalinterface) | Get an edge logical interface |
 | [**getTelephonyProvidersEdgeLogicalinterfaces**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeLogicalinterfaces) | Get edge logical interfaces. |
 | [**getTelephonyProvidersEdgeLogsJob**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeLogsJob) | Get an Edge logs job. |
@@ -120,7 +118,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTelephonyProvidersEdgesSites**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesSites) | Create a Site. |
 | [**postTelephonyProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesTrunkbasesettings) | Create a Trunk Base Settings object |
 | [**putTelephonyProvidersEdge**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdge) | Update a edge. |
-| [**putTelephonyProvidersEdgeLine**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgeLine) | Update a line. |
 | [**putTelephonyProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgeLogicalinterface) | Update an edge logical interface. |
 | [**putTelephonyProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesCertificateauthority) | Update a certificate authority. |
 | [**putTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesDid) | Update a DID by ID. |
@@ -1348,116 +1345,6 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticTracepath(edgeId: e
 ### Return type
 
 [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
-
-<a name="getTelephonyProvidersEdgeLine"></a>
-
-# **getTelephonyProvidersEdgeLine**
-
-
-
-> [EdgeLine](EdgeLine.html) getTelephonyProvidersEdgeLine(edgeId, lineId)
-
-Get line
-
-
-
-Wraps GET /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let edgeId: String = "" // Edge ID
-let lineId: String = "" // Line ID
-
-// Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLine(edgeId: edgeId, lineId: lineId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLine was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **edgeId** | **String**| Edge ID | |
-| **lineId** | **String**| Line ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**EdgeLine**](EdgeLine.html)
-
-<a name="getTelephonyProvidersEdgeLines"></a>
-
-# **getTelephonyProvidersEdgeLines**
-
-
-
-> [EdgeLineEntityListing](EdgeLineEntityListing.html) getTelephonyProvidersEdgeLines(edgeId, pageSize, pageNumber)
-
-Get the list of lines.
-
-
-
-Wraps GET /api/v2/telephony/providers/edges/{edgeId}/lines  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let edgeId: String = "" // Edge ID
-let pageSize: Int = 0 // Page size
-let pageNumber: Int = 0 // Page number
-
-// Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLines(edgeId: edgeId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLines was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **edgeId** | **String**| Edge ID | |
-| **pageSize** | **Int**| Page size | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**EdgeLineEntityListing**](EdgeLineEntityListing.html)
 
 <a name="getTelephonyProvidersEdgeLogicalinterface"></a>
 
@@ -3190,7 +3077,7 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let name: String = "" // Name
 let sortBy: String = "" // Value by which to sort
-let expand: [String] = [""] // Fields to expand in the response, comma-separated
+let expand: [String] = [""] // Fields to expand in the response, comma-separated. The edgeGroup value is deprecated.
 
 // Code example
 TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLines(pageSize: pageSize, pageNumber: pageNumber, name: name, sortBy: sortBy, expand: expand) { (response, error) in
@@ -3212,7 +3099,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLines(pageSize: pageSize, pa
 | **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Value by which to sort | [optional] |
-| **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated | [optional]<br />**Values**: properties ("properties"), site ("site"), edgegroup ("edgeGroup"), primaryedge ("primaryEdge"), secondaryedge ("secondaryEdge"), edges ("edges"), assigneduser ("assignedUser") |
+| **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. | [optional]<br />**Values**: properties ("properties"), site ("site"), edgegroup ("edgeGroup"), primaryedge ("primaryEdge"), secondaryedge ("secondaryEdge"), edges ("edges"), assigneduser ("assignedUser") |
 {: class="table-striped"}
 
 
@@ -6288,62 +6175,6 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdge(edgeId: edgeId, body: body) 
 ### Return type
 
 [**Edge**](Edge.html)
-
-<a name="putTelephonyProvidersEdgeLine"></a>
-
-# **putTelephonyProvidersEdgeLine**
-
-
-
-> [EdgeLine](EdgeLine.html) putTelephonyProvidersEdgeLine(edgeId, lineId, body)
-
-Update a line.
-
-
-
-Wraps PUT /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let edgeId: String = "" // Edge ID
-let lineId: String = "" // Line ID
-let body: EdgeLine = new EdgeLine(...) // Line
-
-// Code example
-TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgeLine(edgeId: edgeId, lineId: lineId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgeLine was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **edgeId** | **String**| Edge ID | |
-| **lineId** | **String**| Line ID | |
-| **body** | [**EdgeLine**](EdgeLine.html)| Line | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**EdgeLine**](EdgeLine.html)
 
 <a name="putTelephonyProvidersEdgeLogicalinterface"></a>
 

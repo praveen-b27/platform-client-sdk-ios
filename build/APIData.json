@@ -27580,7 +27580,7 @@
   "getroutingsmsphonenumbers": {
     "operationId": "getroutingsmsphonenumbers",
     "functionName": "getRoutingSmsPhonenumbers",
-    "signature": "getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language)",
+    "signature": "getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId)",
     "parameters": [
       {
         "name": "phoneNumber",
@@ -27626,10 +27626,15 @@
         "name": "language",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "SmsPhoneNumberEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet phoneNumber: String = \"\" // Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used.\nlet phoneNumberType: [String] = [\"\"] // Filter on phone number type\nlet phoneNumberStatus: [String] = [\"\"] // Filter on phone number status\nlet countryCode: [String] = [\"\"] // Filter on country code\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers.enummember // Optional field to sort results\nlet sortOrder: GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers.enummember // Sort order\nlet language: String = en-US // A language tag (which is sometimes referred to as a \\\"locale identifier\\\") to use to localize country field and sort operations\n\n// Get a list of provisioned phone numbers.\nGetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet phoneNumber: String = \"\" // Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used.\nlet phoneNumberType: [String] = [\"\"] // Filter on phone number type\nlet phoneNumberStatus: [String] = [\"\"] // Filter on phone number status\nlet countryCode: [String] = [\"\"] // Filter on country code\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers.enummember // Optional field to sort results\nlet sortOrder: GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers.enummember // Sort order\nlet language: String = en-US // A language tag (which is sometimes referred to as a \\\"locale identifier\\\") to use to localize country field and sort operations\nlet integrationId: String = \"\" // Filter on the Genesys Cloud integration id to which the phone number belongs to\n\n// Get a list of provisioned phone numbers.\nGetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutinguserutilization": {
     "operationId": "getroutinguserutilization",
@@ -31036,141 +31041,6 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trunkBaseSettingsId: String = \"\" // Trunk Base ID\n\n// Delete a Trunk Base Settings object by ID\nDeleteTelephonyProvidersEdgesTrunkbasesettingRequest.deleteTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSettingsId: trunkBaseSettingsId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTelephonyProvidersEdgesTrunkbasesettingRequest.deleteTelephonyProvidersEdgesTrunkbasesetting was successful\")\n    }\n}"
   },
-  "getconfigurationschemasedgesvnext": {
-    "operationId": "getconfigurationschemasedgesvnext",
-    "functionName": "getConfigurationSchemasEdgesVnext",
-    "signature": "getConfigurationSchemasEdgesVnext(pageSize, pageNumber)",
-    "parameters": [
-      {
-        "name": "pageSize",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "pageNumber",
-        "type": "Int",
-        "required": "false"
-      }
-    ],
-    "return": "SchemaCategoryEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Lists available schema categories (Deprecated)\nGetConfigurationSchemasEdgesVnextRequest.getConfigurationSchemasEdgesVnext(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConfigurationSchemasEdgesVnextRequest.getConfigurationSchemasEdgesVnext was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getconfigurationschemasedgesvnextschemacategory": {
-    "operationId": "getconfigurationschemasedgesvnextschemacategory",
-    "functionName": "getConfigurationSchemasEdgesVnextSchemaCategory",
-    "signature": "getConfigurationSchemasEdgesVnextSchemaCategory(schemaCategory, pageSize, pageNumber)",
-    "parameters": [
-      {
-        "name": "schemaCategory",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "pageSize",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "pageNumber",
-        "type": "Int",
-        "required": "false"
-      }
-    ],
-    "return": "SchemaReferenceEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaCategory: String = \"\" // Schema category\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// List schemas of a specific category (Deprecated)\nGetConfigurationSchemasEdgesVnextSchemaCategoryRequest.getConfigurationSchemasEdgesVnextSchemaCategory(schemaCategory: schemaCategory, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConfigurationSchemasEdgesVnextSchemaCategoryRequest.getConfigurationSchemasEdgesVnextSchemaCategory was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getconfigurationschemasedgesvnextschemacategoryschematype": {
-    "operationId": "getconfigurationschemasedgesvnextschemacategoryschematype",
-    "functionName": "getConfigurationSchemasEdgesVnextSchemaCategorySchemaType",
-    "signature": "getConfigurationSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory, schemaType, pageSize, pageNumber)",
-    "parameters": [
-      {
-        "name": "schemaCategory",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "schemaType",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "pageSize",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "pageNumber",
-        "type": "Int",
-        "required": "false"
-      }
-    ],
-    "return": "SchemaReferenceEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaCategory: String = \"\" // Schema category\nlet schemaType: String = \"\" // Schema type\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// List schemas of a specific category (Deprecated)\nGetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeRequest.getConfigurationSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory: schemaCategory, schemaType: schemaType, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeRequest.getConfigurationSchemasEdgesVnextSchemaCategorySchemaType was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getconfigurationschemasedgesvnextschemacategoryschematypeschemaid": {
-    "operationId": "getconfigurationschemasedgesvnextschemacategoryschematypeschemaid",
-    "functionName": "getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId",
-    "signature": "getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory, schemaType, schemaId)",
-    "parameters": [
-      {
-        "name": "schemaCategory",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "schemaType",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "schemaId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "Organization",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaCategory: String = \"\" // Schema category\nlet schemaType: String = \"\" // Schema type\nlet schemaId: String = \"\" // Schema ID\n\n// Get a json schema (Deprecated)\nGetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdRequest.getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory: schemaCategory, schemaType: schemaType, schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdRequest.getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getconfigurationschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid": {
-    "operationId": "getconfigurationschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid",
-    "functionName": "getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId",
-    "signature": "getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type)",
-    "parameters": [
-      {
-        "name": "schemaCategory",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "schemaType",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "schemaId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "extensionType",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "metadataId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "type",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "Organization",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaCategory: String = \"\" // Schema category\nlet schemaType: String = \"\" // Schema type\nlet schemaId: String = \"\" // Schema ID\nlet extensionType: String = \"\" // extension\nlet metadataId: String = \"\" // Metadata ID\nlet type: String = \"\" // Type\n\n// Get metadata for a schema (Deprecated)\nGetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataIdRequest.getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId(schemaCategory: schemaCategory, schemaType: schemaType, schemaId: schemaId, extensionType: extensionType, metadataId: metadataId, type: type) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataIdRequest.getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId was successful\")\n        dump(response)\n    }\n}"
-  },
   "gettelephonyprovidersedge": {
     "operationId": "gettelephonyprovidersedge",
     "functionName": "getTelephonyProvidersEdge",
@@ -33125,25 +32995,6 @@
     "return": "DomainCertificateAuthority",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet certificateId: String = \"\" // Certificate ID\nlet body: DomainCertificateAuthority = new DomainCertificateAuthority(...) // Certificate authority\n\n// Update a certificate authority.\nPutTelephonyProvidersEdgesCertificateauthorityRequest.putTelephonyProvidersEdgesCertificateauthority(certificateId: certificateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgesCertificateauthorityRequest.putTelephonyProvidersEdgesCertificateauthority was successful\")\n        dump(response)\n    }\n}"
   },
-  "puttelephonyprovidersedgesdid": {
-    "operationId": "puttelephonyprovidersedgesdid",
-    "functionName": "putTelephonyProvidersEdgesDid",
-    "signature": "putTelephonyProvidersEdgesDid(didId, body)",
-    "parameters": [
-      {
-        "name": "didId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "DID",
-        "required": "true"
-      }
-    ],
-    "return": "DID",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet didId: String = \"\" // DID ID\nlet body: DID = new DID(...) // DID\n\n// Update a DID by ID.\nPutTelephonyProvidersEdgesDidRequest.putTelephonyProvidersEdgesDid(didId: didId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgesDidRequest.putTelephonyProvidersEdgesDid was successful\")\n        dump(response)\n    }\n}"
-  },
   "puttelephonyprovidersedgesdidpool": {
     "operationId": "puttelephonyprovidersedgesdidpool",
     "functionName": "putTelephonyProvidersEdgesDidpool",
@@ -33205,25 +33056,6 @@
     ],
     "return": "EdgeTrunkBase",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet edgegroupId: String = \"\" // Edge Group ID\nlet edgetrunkbaseId: String = \"\" // Edge Trunk Base ID\nlet body: EdgeTrunkBase = new EdgeTrunkBase(...) // EdgeTrunkBase\n\n// Update the edge trunk base associated with the edge group\nPutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseRequest.putTelephonyProvidersEdgesEdgegroupEdgetrunkbase(edgegroupId: edgegroupId, edgetrunkbaseId: edgetrunkbaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseRequest.putTelephonyProvidersEdgesEdgegroupEdgetrunkbase was successful\")\n        dump(response)\n    }\n}"
-  },
-  "puttelephonyprovidersedgesextension": {
-    "operationId": "puttelephonyprovidersedgesextension",
-    "functionName": "putTelephonyProvidersEdgesExtension",
-    "signature": "putTelephonyProvidersEdgesExtension(extensionId, body)",
-    "parameters": [
-      {
-        "name": "extensionId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "Extension",
-        "required": "true"
-      }
-    ],
-    "return": "Extension",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet extensionId: String = \"\" // Extension ID\nlet body: Extension = new Extension(...) // Extension\n\n// Update an extension by ID.\nPutTelephonyProvidersEdgesExtensionRequest.putTelephonyProvidersEdgesExtension(extensionId: extensionId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgesExtensionRequest.putTelephonyProvidersEdgesExtension was successful\")\n        dump(response)\n    }\n}"
   },
   "puttelephonyprovidersedgesextensionpool": {
     "operationId": "puttelephonyprovidersedgesextensionpool",

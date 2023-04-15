@@ -1187,7 +1187,6 @@ docs/DomainPhysicalInterface.md
 docs/DomainResourceConditionNode.md
 docs/DomainResourceConditionValue.md
 docs/DomainRole.md
-docs/DomainSchemaReference.md
 docs/DownloadResponse.md
 docs/DownloadsAPI.json
 docs/DownloadsAPI.md
@@ -2658,6 +2657,7 @@ docs/RestorePresenceSettings.md
 docs/ResultCounters.md
 docs/RetentionDuration.md
 docs/ReverseWhitepagesLookupResult.md
+docs/ReviewAssessmentResults.md
 docs/Ring.md
 docs/RoleDivision.md
 docs/RoleDivisionGrants.md
@@ -2710,10 +2710,7 @@ docs/SchedulingSettingsResponse.md
 docs/SchedulingStatusResponse.md
 docs/SchedulingTestingOptionsRequest.md
 docs/Schema.md
-docs/SchemaCategory.md
-docs/SchemaCategoryEntityListing.md
 docs/SchemaQuantityLimits.md
-docs/SchemaReferenceEntityListing.md
 docs/ScimConfigResourceType.md
 docs/ScimConfigResourceTypeSchemaExtension.md
 docs/ScimConfigResourceTypesListResponse.md
@@ -3999,11 +3996,6 @@ docs/getCoachingAppointments-example.txt
 docs/getCoachingAppointmentsMe-example.txt
 docs/getCoachingNotification-example.txt
 docs/getCoachingNotifications-example.txt
-docs/getConfigurationSchemasEdgesVnext-example.txt
-docs/getConfigurationSchemasEdgesVnextSchemaCategory-example.txt
-docs/getConfigurationSchemasEdgesVnextSchemaCategorySchemaType-example.txt
-docs/getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId-example.txt
-docs/getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId-example.txt
 docs/getContentmanagementDocument-example.txt
 docs/getContentmanagementDocumentAudits-example.txt
 docs/getContentmanagementDocumentContent-example.txt
@@ -5668,11 +5660,9 @@ docs/putSpeechandtextanalyticsTopic-example.txt
 docs/putTelephonyProvidersEdge-example.txt
 docs/putTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/putTelephonyProvidersEdgesCertificateauthority-example.txt
-docs/putTelephonyProvidersEdgesDid-example.txt
 docs/putTelephonyProvidersEdgesDidpool-example.txt
 docs/putTelephonyProvidersEdgesEdgegroup-example.txt
 docs/putTelephonyProvidersEdgesEdgegroupEdgetrunkbase-example.txt
-docs/putTelephonyProvidersEdgesExtension-example.txt
 docs/putTelephonyProvidersEdgesExtensionpool-example.txt
 docs/putTelephonyProvidersEdgesOutboundroute-example.txt
 docs/putTelephonyProvidersEdgesPhone-example.txt
@@ -6940,7 +6930,6 @@ src/Models/DomainPhysicalInterface.swift
 src/Models/DomainResourceConditionNode.swift
 src/Models/DomainResourceConditionValue.swift
 src/Models/DomainRole.swift
-src/Models/DomainSchemaReference.swift
 src/Models/DownloadResponse.swift
 src/Models/Draft.swift
 src/Models/DraftIntents.swift
@@ -8346,6 +8335,7 @@ src/Models/RestorePresenceSettings.swift
 src/Models/ResultCounters.swift
 src/Models/RetentionDuration.swift
 src/Models/ReverseWhitepagesLookupResult.swift
+src/Models/ReviewAssessmentResults.swift
 src/Models/Ring.swift
 src/Models/RoleDivision.swift
 src/Models/RoleDivisionGrants.swift
@@ -8394,10 +8384,7 @@ src/Models/SchedulingSettingsResponse.swift
 src/Models/SchedulingStatusResponse.swift
 src/Models/SchedulingTestingOptionsRequest.swift
 src/Models/Schema.swift
-src/Models/SchemaCategory.swift
-src/Models/SchemaCategoryEntityListing.swift
 src/Models/SchemaQuantityLimits.swift
-src/Models/SchemaReferenceEntityListing.swift
 src/Models/ScimConfigResourceType.swift
 src/Models/ScimConfigResourceTypeSchemaExtension.swift
 src/Models/ScimConfigResourceTypesListResponse.swift

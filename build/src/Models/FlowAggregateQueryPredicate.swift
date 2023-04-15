@@ -28,6 +28,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case ani = "ani"
         case assignerid = "assignerId"
         case authenticated = "authenticated"
+        case canonicalexternalcontactid = "canonicalExternalContactId"
         case conversationid = "conversationId"
         case conversationinitiator = "conversationInitiator"
         case convertedfrom = "convertedFrom"

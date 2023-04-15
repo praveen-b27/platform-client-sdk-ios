@@ -25,6 +25,7 @@ title: AnalyticsSession
 | **callbackScheduledTime** | [**Date**](Date.html) | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **callbackUserName** | **String** | The name of the user requesting a call back | [optional] |
 | **cc** | **[String]** | Carbon copy email address(es) | [optional] |
+| **cleared** | **Bool** | Flag that indicates that the conversation has been cleared by the customer | [optional] |
 | **coachedParticipantId** | **String** | The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **cobrowseRole** | **String** | Describes side of the cobrowse (sharer or viewer) | [optional] |
 | **cobrowseRoomId** | **String** | A unique identifier for a PureCloud cobrowse room | [optional] |
@@ -79,8 +80,8 @@ title: AnalyticsSession
 | **videoAddressSelf** | **String** | Direct Video address | [optional] |
 | **videoRoomId** | **String** | A unique identifier for a PureCloud video room | [optional] |
 | **waitingInteractionCounts** | **[Int]** | Number of waiting interactions for each predictive routing attempt | [optional] |
-| **agentGroups** | [**[AnalyticsAgentGroup]**](AnalyticsAgentGroup.html) | Conditional group routing agent groups | [optional] |
 | **proposedAgents** | [**[AnalyticsProposedAgent]**](AnalyticsProposedAgent.html) | Proposed agents | [optional] |
+| **agentGroups** | [**[AnalyticsAgentGroup]**](AnalyticsAgentGroup.html) | Conditional group routing agent groups | [optional] |
 | **mediaEndpointStats** | [**[AnalyticsMediaEndpointStat]**](AnalyticsMediaEndpointStat.html) | MediaEndpointStats associated with this session | [optional] |
 | **flow** | [**AnalyticsFlow**](AnalyticsFlow.html) | IVR flow execution associated with this session | [optional] |
 | **metrics** | [**[AnalyticsSessionMetric]**](AnalyticsSessionMetric.html) | List of metrics for this session | [optional] |

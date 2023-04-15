@@ -90,6 +90,7 @@ public class ViewFilter: Codable {
     public enum UsedRoutingTypes: String, Codable { 
         case bullseye = "Bullseye"
         case conditional = "Conditional"
+        case direct = "Direct"
         case last = "Last"
         case manual = "Manual"
         case predictive = "Predictive"
@@ -100,6 +101,7 @@ public class ViewFilter: Codable {
     public enum RequestedRoutingTypes: String, Codable { 
         case bullseye = "Bullseye"
         case conditional = "Conditional"
+        case direct = "Direct"
         case last = "Last"
         case manual = "Manual"
         case predictive = "Predictive"

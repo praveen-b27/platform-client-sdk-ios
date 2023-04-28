@@ -9289,7 +9289,7 @@ open class WorkforceManagementAPI {
 
     
     /**
-     Request a historical adherence report for users across management units
+     Deprecated. Use bulk routes instead (/adherence/historical/bulk)
      
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -9313,7 +9313,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Request a historical adherence report for users across management units
+     Deprecated. Use bulk routes instead (/adherence/historical/bulk)
      - POST /api/v2/workforcemanagement/adherence/historical
      - OAuth:
        - type: oauth2

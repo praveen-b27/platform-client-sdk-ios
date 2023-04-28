@@ -37,8 +37,9 @@ public class ExternalContactsUnresolvedContactChangedTopicContact: Codable {
     public var lineId: ExternalContactsUnresolvedContactChangedTopicLineId?
     public var whatsAppId: ExternalContactsUnresolvedContactChangedTopicWhatsAppId?
     public var facebookId: ExternalContactsUnresolvedContactChangedTopicFacebookId?
+    public var instagramId: ExternalContactsUnresolvedContactChangedTopicInstagramId?
 
-    public init(_id: String?, type: ModelType?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, cellPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, homePhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, otherPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ExternalContactsUnresolvedContactChangedTopicContactAddress?, surveyOptOut: Bool?, externalSystemUrl: String?, twitterId: ExternalContactsUnresolvedContactChangedTopicTwitterId?, lineId: ExternalContactsUnresolvedContactChangedTopicLineId?, whatsAppId: ExternalContactsUnresolvedContactChangedTopicWhatsAppId?, facebookId: ExternalContactsUnresolvedContactChangedTopicFacebookId?) {
+    public init(_id: String?, type: ModelType?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, cellPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, homePhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, otherPhone: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ExternalContactsUnresolvedContactChangedTopicContactAddress?, surveyOptOut: Bool?, externalSystemUrl: String?, twitterId: ExternalContactsUnresolvedContactChangedTopicTwitterId?, lineId: ExternalContactsUnresolvedContactChangedTopicLineId?, whatsAppId: ExternalContactsUnresolvedContactChangedTopicWhatsAppId?, facebookId: ExternalContactsUnresolvedContactChangedTopicFacebookId?, instagramId: ExternalContactsUnresolvedContactChangedTopicInstagramId?) {
         self._id = _id
         self.type = type
         self.firstName = firstName
@@ -60,6 +61,7 @@ public class ExternalContactsUnresolvedContactChangedTopicContact: Codable {
         self.lineId = lineId
         self.whatsAppId = whatsAppId
         self.facebookId = facebookId
+        self.instagramId = instagramId
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -84,6 +86,7 @@ public class ExternalContactsUnresolvedContactChangedTopicContact: Codable {
         case lineId
         case whatsAppId
         case facebookId
+        case instagramId
     }
 
 

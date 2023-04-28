@@ -26,6 +26,8 @@ title: UserStartDetailEventTopicUserStartEvent
 | **userId** | **String** |  | [optional] |
 | **divisionId** | **String** |  | [optional] |
 | **queueId** | **String** |  | [optional] |
+| **conversationExternalContactIds** | **[String]** |  | [optional] |
+| **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 {: class="table table-striped"}
 
 

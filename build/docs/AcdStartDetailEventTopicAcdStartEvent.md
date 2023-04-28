@@ -25,6 +25,8 @@ title: AcdStartDetailEventTopicAcdStartEvent
 | **messageType** | **String** |  | [optional] |
 | **queueId** | **String** |  | [optional] |
 | **divisionId** | **String** |  | [optional] |
+| **conversationExternalContactIds** | **[String]** |  | [optional] |
+| **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -1296,6 +1296,7 @@ docs/EvaluationFormAndScoringSet.md
 docs/EvaluationFormEntityListing.md
 docs/EvaluationFormResponse.md
 docs/EvaluationQualityV2TopicCalibration.md
+docs/EvaluationQualityV2TopicEvaluationReference.md
 docs/EvaluationQualityV2TopicEvaluationScoringSet.md
 docs/EvaluationQualityV2TopicEvaluationSource.md
 docs/EvaluationQualityV2TopicEvaluationV2.md
@@ -1342,6 +1343,8 @@ docs/ExternalContactsContactChangedTopicContact.md
 docs/ExternalContactsContactChangedTopicContactAddress.md
 docs/ExternalContactsContactChangedTopicFacebookId.md
 docs/ExternalContactsContactChangedTopicFacebookScopedId.md
+docs/ExternalContactsContactChangedTopicInstagramId.md
+docs/ExternalContactsContactChangedTopicInstagramScopedId.md
 docs/ExternalContactsContactChangedTopicLineId.md
 docs/ExternalContactsContactChangedTopicLineUserId.md
 docs/ExternalContactsContactChangedTopicPhoneNumber.md
@@ -1351,6 +1354,8 @@ docs/ExternalContactsUnresolvedContactChangedTopicContact.md
 docs/ExternalContactsUnresolvedContactChangedTopicContactAddress.md
 docs/ExternalContactsUnresolvedContactChangedTopicFacebookId.md
 docs/ExternalContactsUnresolvedContactChangedTopicFacebookScopedId.md
+docs/ExternalContactsUnresolvedContactChangedTopicInstagramId.md
+docs/ExternalContactsUnresolvedContactChangedTopicInstagramScopedId.md
 docs/ExternalContactsUnresolvedContactChangedTopicLineId.md
 docs/ExternalContactsUnresolvedContactChangedTopicLineUserId.md
 docs/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.md
@@ -1576,6 +1581,23 @@ docs/InfrastructureascodeJob.md
 docs/InitialConfiguration.md
 docs/InitiateScreenRecording.md
 docs/InitiatingAction.md
+docs/InsightsAgentItem.md
+docs/InsightsAgents.md
+docs/InsightsDetails.md
+docs/InsightsDetailsMetricItem.md
+docs/InsightsDetailsMetricPeriodPoints.md
+docs/InsightsDetailsOverallItem.md
+docs/InsightsDetailsOverallPeriodPoints.md
+docs/InsightsSummary.md
+docs/InsightsSummaryMetricItem.md
+docs/InsightsSummaryMetricPeriodPoints.md
+docs/InsightsSummaryOverallItem.md
+docs/InsightsSummaryOverallPeriodPoints.md
+docs/InsightsSummaryUserItem.md
+docs/InsightsTrend.md
+docs/InsightsTrendMetricItem.md
+docs/InsightsTrendTotalItem.md
+docs/InsightsTrends.md
 docs/InstagramId.md
 docs/InstagramScopedId.md
 docs/Integration.md
@@ -2262,6 +2284,7 @@ docs/PresenceSettings.md
 docs/ProcessAutomationAPI.json
 docs/ProcessAutomationAPI.md
 docs/ProcessScheduleUpdateUploadRequest.md
+docs/ProfileWithDateRange.md
 docs/Program.md
 docs/ProgramJob.md
 docs/ProgramJobRequest.md
@@ -2296,6 +2319,7 @@ docs/QualityAuditLogMessage.md
 docs/QualityAuditQueryExecutionResultsResponse.md
 docs/QualityAuditQueryExecutionStatusResponse.md
 docs/QualityAuditQueryFilter.md
+docs/QualityEvaluationScoreItem.md
 docs/QueryAdherenceExplanationsResponse.md
 docs/QueryDivision.md
 docs/QueryFacetInfo.md
@@ -2841,6 +2865,7 @@ docs/SiteEntityListing.md
 docs/SkillEntityListing.md
 docs/SkillGroup.md
 docs/SkillGroupCondition.md
+docs/SkillGroupDefinition.md
 docs/SkillGroupEntityListing.md
 docs/SkillGroupLanguageCondition.md
 docs/SkillGroupMemberDivisionList.md
@@ -3076,6 +3101,7 @@ docs/TransferDestination.md
 docs/TransferInitiator.md
 docs/TransferRequest.md
 docs/TransferResponse.md
+docs/TrendData.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
 docs/TriggerTarget.md
@@ -3218,6 +3244,7 @@ docs/UserGreetingEventGreeting.md
 docs/UserGreetingEventGreetingAudioFile.md
 docs/UserGreetingEventGreetingOwner.md
 docs/UserImage.md
+docs/UserInsightsTrend.md
 docs/UserLanguageEntityListing.md
 docs/UserLicenses.md
 docs/UserLicensesEntityListing.md
@@ -3235,6 +3262,8 @@ docs/UserPresenceEvent.md
 docs/UserPrimarySource.md
 docs/UserProfile.md
 docs/UserProfileEntityListing.md
+docs/UserProfilesInDateRange.md
+docs/UserProfilesInDateRangeRequest.md
 docs/UserQueue.md
 docs/UserQueueEntityListing.md
 docs/UserRecording.md
@@ -3356,6 +3385,8 @@ docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/VerificationResult.md
 docs/Video.md
+docs/VideoConferenceUpdateTopicParticipantInfo.md
+docs/VideoConferenceUpdateTopicVideoConference.md
 docs/ViewFilter.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
@@ -3625,6 +3656,7 @@ docs/WorkPlanValidationMessageArgument.md
 docs/WorkPlanValidationRequest.md
 docs/WorkdayMetric.md
 docs/WorkdayMetricListing.md
+docs/WorkdayPeriod.md
 docs/WorkdayPointsTrend.md
 docs/WorkdayPointsTrendItem.md
 docs/WorkdayValuesMetricItem.md
@@ -3850,7 +3882,6 @@ docs/deleteTelephonyProvidersEdgesCertificateauthority-example.txt
 docs/deleteTelephonyProvidersEdgesDidpool-example.txt
 docs/deleteTelephonyProvidersEdgesEdgegroup-example.txt
 docs/deleteTelephonyProvidersEdgesExtensionpool-example.txt
-docs/deleteTelephonyProvidersEdgesOutboundroute-example.txt
 docs/deleteTelephonyProvidersEdgesPhone-example.txt
 docs/deleteTelephonyProvidersEdgesPhonebasesetting-example.txt
 docs/deleteTelephonyProvidersEdgesSite-example.txt
@@ -4161,6 +4192,14 @@ docs/getFlowsMilestonesDivisionviews-example.txt
 docs/getFlowsOutcome-example.txt
 docs/getFlowsOutcomes-example.txt
 docs/getFlowsOutcomesDivisionviews-example.txt
+docs/getGamificationInsights-example.txt
+docs/getGamificationInsightsDetails-example.txt
+docs/getGamificationInsightsGroupsTrends-example.txt
+docs/getGamificationInsightsGroupsTrendsAll-example.txt
+docs/getGamificationInsightsMembers-example.txt
+docs/getGamificationInsightsTrends-example.txt
+docs/getGamificationInsightsUserDetails-example.txt
+docs/getGamificationInsightsUserTrends-example.txt
 docs/getGamificationLeaderboard-example.txt
 docs/getGamificationLeaderboardAll-example.txt
 docs/getGamificationLeaderboardAllBestpoints-example.txt
@@ -5191,6 +5230,8 @@ docs/postGamificationProfileMembersValidate-example.txt
 docs/postGamificationProfileMetricLink-example.txt
 docs/postGamificationProfileMetrics-example.txt
 docs/postGamificationProfiles-example.txt
+docs/postGamificationProfilesUserQuery-example.txt
+docs/postGamificationProfilesUsersMeQuery-example.txt
 docs/postGdprRequests-example.txt
 docs/postGreetings-example.txt
 docs/postGroupGreetings-example.txt
@@ -5396,7 +5437,6 @@ docs/postTelephonyProvidersEdgesCertificateauthorities-example.txt
 docs/postTelephonyProvidersEdgesDidpools-example.txt
 docs/postTelephonyProvidersEdgesEdgegroups-example.txt
 docs/postTelephonyProvidersEdgesExtensionpools-example.txt
-docs/postTelephonyProvidersEdgesOutboundroutes-example.txt
 docs/postTelephonyProvidersEdgesPhoneReboot-example.txt
 docs/postTelephonyProvidersEdgesPhonebasesettings-example.txt
 docs/postTelephonyProvidersEdgesPhones-example.txt
@@ -5664,7 +5704,6 @@ docs/putTelephonyProvidersEdgesDidpool-example.txt
 docs/putTelephonyProvidersEdgesEdgegroup-example.txt
 docs/putTelephonyProvidersEdgesEdgegroupEdgetrunkbase-example.txt
 docs/putTelephonyProvidersEdgesExtensionpool-example.txt
-docs/putTelephonyProvidersEdgesOutboundroute-example.txt
 docs/putTelephonyProvidersEdgesPhone-example.txt
 docs/putTelephonyProvidersEdgesPhonebasesetting-example.txt
 docs/putTelephonyProvidersEdgesSite-example.txt
@@ -7037,6 +7076,7 @@ src/Models/EvaluationFormAndScoringSet.swift
 src/Models/EvaluationFormEntityListing.swift
 src/Models/EvaluationFormResponse.swift
 src/Models/EvaluationQualityV2TopicCalibration.swift
+src/Models/EvaluationQualityV2TopicEvaluationReference.swift
 src/Models/EvaluationQualityV2TopicEvaluationScoringSet.swift
 src/Models/EvaluationQualityV2TopicEvaluationSource.swift
 src/Models/EvaluationQualityV2TopicEvaluationV2.swift
@@ -7079,6 +7119,8 @@ src/Models/ExternalContactsContactChangedTopicContact.swift
 src/Models/ExternalContactsContactChangedTopicContactAddress.swift
 src/Models/ExternalContactsContactChangedTopicFacebookId.swift
 src/Models/ExternalContactsContactChangedTopicFacebookScopedId.swift
+src/Models/ExternalContactsContactChangedTopicInstagramId.swift
+src/Models/ExternalContactsContactChangedTopicInstagramScopedId.swift
 src/Models/ExternalContactsContactChangedTopicLineId.swift
 src/Models/ExternalContactsContactChangedTopicLineUserId.swift
 src/Models/ExternalContactsContactChangedTopicPhoneNumber.swift
@@ -7088,6 +7130,8 @@ src/Models/ExternalContactsUnresolvedContactChangedTopicContact.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicContactAddress.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicFacebookId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicFacebookScopedId.swift
+src/Models/ExternalContactsUnresolvedContactChangedTopicInstagramId.swift
+src/Models/ExternalContactsUnresolvedContactChangedTopicInstagramScopedId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicLineId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicLineUserId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.swift
@@ -7295,6 +7339,23 @@ src/Models/InfrastructureascodeJob.swift
 src/Models/InitialConfiguration.swift
 src/Models/InitiateScreenRecording.swift
 src/Models/InitiatingAction.swift
+src/Models/InsightsAgentItem.swift
+src/Models/InsightsAgents.swift
+src/Models/InsightsDetails.swift
+src/Models/InsightsDetailsMetricItem.swift
+src/Models/InsightsDetailsMetricPeriodPoints.swift
+src/Models/InsightsDetailsOverallItem.swift
+src/Models/InsightsDetailsOverallPeriodPoints.swift
+src/Models/InsightsSummary.swift
+src/Models/InsightsSummaryMetricItem.swift
+src/Models/InsightsSummaryMetricPeriodPoints.swift
+src/Models/InsightsSummaryOverallItem.swift
+src/Models/InsightsSummaryOverallPeriodPoints.swift
+src/Models/InsightsSummaryUserItem.swift
+src/Models/InsightsTrend.swift
+src/Models/InsightsTrendMetricItem.swift
+src/Models/InsightsTrendTotalItem.swift
+src/Models/InsightsTrends.swift
 src/Models/InstagramId.swift
 src/Models/InstagramScopedId.swift
 src/Models/Integration.swift
@@ -7947,6 +8008,7 @@ src/Models/PresenceEventOrganizationPresence.swift
 src/Models/PresenceEventUserPresence.swift
 src/Models/PresenceSettings.swift
 src/Models/ProcessScheduleUpdateUploadRequest.swift
+src/Models/ProfileWithDateRange.swift
 src/Models/Program.swift
 src/Models/ProgramJob.swift
 src/Models/ProgramJobRequest.swift
@@ -7979,6 +8041,7 @@ src/Models/QualityAuditLogMessage.swift
 src/Models/QualityAuditQueryExecutionResultsResponse.swift
 src/Models/QualityAuditQueryExecutionStatusResponse.swift
 src/Models/QualityAuditQueryFilter.swift
+src/Models/QualityEvaluationScoreItem.swift
 src/Models/QueryAdherenceExplanationsResponse.swift
 src/Models/QueryDivision.swift
 src/Models/QueryFacetInfo.swift
@@ -8511,6 +8574,7 @@ src/Models/SiteEntityListing.swift
 src/Models/SkillEntityListing.swift
 src/Models/SkillGroup.swift
 src/Models/SkillGroupCondition.swift
+src/Models/SkillGroupDefinition.swift
 src/Models/SkillGroupEntityListing.swift
 src/Models/SkillGroupLanguageCondition.swift
 src/Models/SkillGroupMemberDivisionList.swift
@@ -8730,6 +8794,7 @@ src/Models/TransferDestination.swift
 src/Models/TransferInitiator.swift
 src/Models/TransferRequest.swift
 src/Models/TransferResponse.swift
+src/Models/TrendData.swift
 src/Models/Trigger.swift
 src/Models/TriggerEntityListing.swift
 src/Models/TriggerTarget.swift
@@ -8868,6 +8933,7 @@ src/Models/UserGreetingEventGreeting.swift
 src/Models/UserGreetingEventGreetingAudioFile.swift
 src/Models/UserGreetingEventGreetingOwner.swift
 src/Models/UserImage.swift
+src/Models/UserInsightsTrend.swift
 src/Models/UserLanguageEntityListing.swift
 src/Models/UserLicenses.swift
 src/Models/UserLicensesEntityListing.swift
@@ -8885,6 +8951,8 @@ src/Models/UserPresenceEvent.swift
 src/Models/UserPrimarySource.swift
 src/Models/UserProfile.swift
 src/Models/UserProfileEntityListing.swift
+src/Models/UserProfilesInDateRange.swift
+src/Models/UserProfilesInDateRangeRequest.swift
 src/Models/UserQueue.swift
 src/Models/UserQueueEntityListing.swift
 src/Models/UserRecording.swift
@@ -9000,6 +9068,8 @@ src/Models/ValueWrapperPlanningPeriodSettings.swift
 src/Models/ValueWrapperString.swift
 src/Models/VerificationResult.swift
 src/Models/Video.swift
+src/Models/VideoConferenceUpdateTopicParticipantInfo.swift
+src/Models/VideoConferenceUpdateTopicVideoConference.swift
 src/Models/ViewFilter.swift
 src/Models/VisibilityCondition.swift
 src/Models/VmPairingInfo.swift
@@ -9258,6 +9328,7 @@ src/Models/WorkPlanValidationMessageArgument.swift
 src/Models/WorkPlanValidationRequest.swift
 src/Models/WorkdayMetric.swift
 src/Models/WorkdayMetricListing.swift
+src/Models/WorkdayPeriod.swift
 src/Models/WorkdayPointsTrend.swift
 src/Models/WorkdayPointsTrendItem.swift
 src/Models/WorkdayValuesMetricItem.swift

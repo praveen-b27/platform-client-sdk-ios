@@ -16,7 +16,7 @@ public class WritableDialerContact: Codable {
     /** The identifier of the contact list containing this contact. */
     public var contactListId: String?
     /** An ordered map of the contact's columns and corresponding values. */
-    public var data: [String:JSON]?
+    public var data: [String:String]?
     /** A map of SMS records for the contact phone columns. */
     public var latestSmsEvaluations: [String:MessageEvaluation]?
     /** A map of email records for the contact email columns. */
@@ -28,7 +28,7 @@ public class WritableDialerContact: Codable {
     /** A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. */
     public var contactableStatus: [String:ContactableStatus]?
 
-    public init(_id: String?, contactListId: String?, data: [String:JSON]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?) {
+    public init(_id: String?, contactListId: String?, data: [String:String]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?) {
         self._id = _id
         self.contactListId = contactListId
         self.data = data

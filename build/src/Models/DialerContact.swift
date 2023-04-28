@@ -17,7 +17,7 @@ public class DialerContact: Codable {
     /** The identifier of the contact list containing this contact. */
     public var contactListId: String?
     /** An ordered map of the contact's columns and corresponding values. */
-    public var data: [String:JSON]?
+    public var data: [String:String]?
     /** A map of call records for the contact phone columns. */
     public var callRecords: [String:CallRecord]?
     /** A map of SMS records for the contact phone columns. */
@@ -37,7 +37,7 @@ public class DialerContact: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.contactListId = contactListId

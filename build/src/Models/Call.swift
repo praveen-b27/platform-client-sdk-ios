@@ -82,6 +82,8 @@ public class Call: Codable {
     public var confined: Bool?
     /** True if this call is held and the person on this side hears silence. */
     public var held: Bool?
+    /** True when the recording of this call is in secure pause status. */
+    public var securePause: Bool?
     /** A globally unique identifier for the recording associated with this call. */
     public var recordingId: String?
     /** The time line of the participant's call, divided into activity segments. */
@@ -124,7 +126,7 @@ public class Call: Codable {
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, securePause: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -134,6 +136,7 @@ public class Call: Codable {
         self.muted = muted
         self.confined = confined
         self.held = held
+        self.securePause = securePause
         self.recordingId = recordingId
         self.segments = segments
         self.errorInfo = errorInfo
@@ -167,6 +170,7 @@ public class Call: Codable {
         case muted
         case confined
         case held
+        case securePause
         case recordingId
         case segments
         case errorInfo

@@ -14,6 +14,7 @@ title: CallConversation
 | **recentTransfers** | [**[TransferResponse]**](TransferResponse.html) | The list of the most recent 20 transfer commands applied to this conversation. | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **maxParticipants** | **Int** | If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference. | [optional] |
+| **securePause** | **Bool** | True when the recording of this conversation is in secure pause status. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

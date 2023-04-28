@@ -147,6 +147,7 @@ open class UserRecordingsAPI {
     } ],
     "maxParticipants" : 0,
     "conversationIds" : [ "conversationIds", "conversationIds" ],
+    "securePause" : true,
     "recordingState" : "ACTIVE",
     "name" : "name",
     "recentTransfers" : [ {
@@ -535,6 +536,7 @@ open class UserRecordingsAPI {
       "address" : "address",
       "evaluations" : [ {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+        "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -3297,6 +3299,7 @@ open class UserRecordingsAPI {
         "resourceType" : "EMAIL"
       }, {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+        "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -6104,6 +6107,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "scriptId" : "scriptId",
+        "securePause" : true,
         "recordingState" : "none",
         "self" : "{}",
         "documentId" : "documentId",
@@ -6158,6 +6162,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "scriptId" : "scriptId",
+        "securePause" : true,
         "recordingState" : "none",
         "self" : "{}",
         "documentId" : "documentId",
@@ -6987,6 +6992,7 @@ open class UserRecordingsAPI {
       "address" : "address",
       "evaluations" : [ {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+        "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -9749,6 +9755,7 @@ open class UserRecordingsAPI {
         "resourceType" : "EMAIL"
       }, {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+        "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -12556,6 +12563,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "scriptId" : "scriptId",
+        "securePause" : true,
         "recordingState" : "none",
         "self" : "{}",
         "documentId" : "documentId",
@@ -12610,6 +12618,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "scriptId" : "scriptId",
+        "securePause" : true,
         "recordingState" : "none",
         "self" : "{}",
         "documentId" : "documentId",
@@ -13285,6 +13294,7 @@ open class UserRecordingsAPI {
       } ],
       "maxParticipants" : 0,
       "conversationIds" : [ "conversationIds", "conversationIds" ],
+      "securePause" : true,
       "recordingState" : "ACTIVE",
       "name" : "name",
       "recentTransfers" : [ {
@@ -13673,6 +13683,7 @@ open class UserRecordingsAPI {
         "address" : "address",
         "evaluations" : [ {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -16435,6 +16446,7 @@ open class UserRecordingsAPI {
           "resourceType" : "EMAIL"
         }, {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -19242,6 +19254,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -19296,6 +19309,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -20125,6 +20139,7 @@ open class UserRecordingsAPI {
         "address" : "address",
         "evaluations" : [ {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -22887,6 +22902,7 @@ open class UserRecordingsAPI {
           "resourceType" : "EMAIL"
         }, {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -25694,6 +25710,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -25748,6 +25765,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -26272,6 +26290,7 @@ open class UserRecordingsAPI {
       } ],
       "maxParticipants" : 0,
       "conversationIds" : [ "conversationIds", "conversationIds" ],
+      "securePause" : true,
       "recordingState" : "ACTIVE",
       "name" : "name",
       "recentTransfers" : [ {
@@ -26660,6 +26679,7 @@ open class UserRecordingsAPI {
         "address" : "address",
         "evaluations" : [ {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -29422,6 +29442,7 @@ open class UserRecordingsAPI {
           "resourceType" : "EMAIL"
         }, {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -32229,6 +32250,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -32283,6 +32305,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -33112,6 +33135,7 @@ open class UserRecordingsAPI {
         "address" : "address",
         "evaluations" : [ {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -35874,6 +35898,7 @@ open class UserRecordingsAPI {
           "resourceType" : "EMAIL"
         }, {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -38681,6 +38706,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -38735,6 +38761,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -39375,6 +39402,7 @@ open class UserRecordingsAPI {
     } ],
     "maxParticipants" : 0,
     "conversationIds" : [ "conversationIds", "conversationIds" ],
+    "securePause" : true,
     "recordingState" : "ACTIVE",
     "name" : "name",
     "recentTransfers" : [ {
@@ -39763,6 +39791,7 @@ open class UserRecordingsAPI {
       "address" : "address",
       "evaluations" : [ {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+        "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -42525,6 +42554,7 @@ open class UserRecordingsAPI {
         "resourceType" : "EMAIL"
       }, {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+        "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -45332,6 +45362,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "scriptId" : "scriptId",
+        "securePause" : true,
         "recordingState" : "none",
         "self" : "{}",
         "documentId" : "documentId",
@@ -45386,6 +45417,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "scriptId" : "scriptId",
+        "securePause" : true,
         "recordingState" : "none",
         "self" : "{}",
         "documentId" : "documentId",
@@ -46215,6 +46247,7 @@ open class UserRecordingsAPI {
       "address" : "address",
       "evaluations" : [ {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+        "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -48977,6 +49010,7 @@ open class UserRecordingsAPI {
         "resourceType" : "EMAIL"
       }, {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+        "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
           "addresses" : [ {
             "extension" : "extension",
@@ -51784,6 +51818,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "scriptId" : "scriptId",
+        "securePause" : true,
         "recordingState" : "none",
         "self" : "{}",
         "documentId" : "documentId",
@@ -51838,6 +51873,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "scriptId" : "scriptId",
+        "securePause" : true,
         "recordingState" : "none",
         "self" : "{}",
         "documentId" : "documentId",

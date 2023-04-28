@@ -54,10 +54,12 @@ public class Conversation: Codable {
     public var divisions: [ConversationDivisionMembership]?
     /** The list of the most recent 20 transfer commands applied to this conversation. */
     public var recentTransfers: [TransferResponse]?
+    /** True when the recording of this conversation is in secure pause status. */
+    public var securePause: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, externalTag: String?, startTime: Date?, endTime: Date?, address: String?, participants: [Participant]?, conversationIds: [String]?, maxParticipants: Int?, recordingState: RecordingState?, state: State?, divisions: [ConversationDivisionMembership]?, recentTransfers: [TransferResponse]?, selfUri: String?) {
+    public init(_id: String?, name: String?, externalTag: String?, startTime: Date?, endTime: Date?, address: String?, participants: [Participant]?, conversationIds: [String]?, maxParticipants: Int?, recordingState: RecordingState?, state: State?, divisions: [ConversationDivisionMembership]?, recentTransfers: [TransferResponse]?, securePause: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.externalTag = externalTag
@@ -71,6 +73,7 @@ public class Conversation: Codable {
         self.state = state
         self.divisions = divisions
         self.recentTransfers = recentTransfers
+        self.securePause = securePause
         self.selfUri = selfUri
     }
 
@@ -88,6 +91,7 @@ public class Conversation: Codable {
         case state
         case divisions
         case recentTransfers
+        case securePause
         case selfUri
     }
 

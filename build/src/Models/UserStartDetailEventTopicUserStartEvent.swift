@@ -57,8 +57,10 @@ public class UserStartDetailEventTopicUserStartEvent: Codable {
     public var userId: String?
     public var divisionId: String?
     public var queueId: String?
+    public var conversationExternalContactIds: [String]?
+    public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, divisionId: String?, queueId: String?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, divisionId: String?, queueId: String?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -78,6 +80,8 @@ public class UserStartDetailEventTopicUserStartEvent: Codable {
         self.userId = userId
         self.divisionId = divisionId
         self.queueId = queueId
+        self.conversationExternalContactIds = conversationExternalContactIds
+        self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
     }
 
 

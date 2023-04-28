@@ -887,6 +887,7 @@ open class KnowledgeAPI {
   "title" : "title",
   "documentVersion" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateImported" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "lastPublishedVersionNumber" : 0,
   "createdBy" : "{}",
@@ -1022,6 +1023,7 @@ open class KnowledgeAPI {
     "title" : "title",
     "documentVersion" : "{}",
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateImported" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "lastPublishedVersionNumber" : 0,
     "createdBy" : "{}",
@@ -1099,6 +1101,7 @@ open class KnowledgeAPI {
     "title" : "title",
     "documentVersion" : "{}",
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateImported" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "lastPublishedVersionNumber" : 0,
     "createdBy" : "{}",
@@ -1519,6 +1522,7 @@ open class KnowledgeAPI {
     "id" : "id"
   } ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateImported" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "lastPublishedVersionNumber" : 0,
   "knowledgeBase" : "{}",
@@ -2346,6 +2350,7 @@ open class KnowledgeAPI {
       "id" : "id"
     } ],
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateImported" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "lastPublishedVersionNumber" : 0,
     "knowledgeBase" : "{}",
@@ -2440,6 +2445,7 @@ open class KnowledgeAPI {
       "id" : "id"
     } ],
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateImported" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "lastPublishedVersionNumber" : 0,
     "knowledgeBase" : "{}",
@@ -4587,6 +4593,7 @@ open class KnowledgeAPI {
     "id" : "id"
   } ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateImported" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "lastPublishedVersionNumber" : 0,
   "knowledgeBase" : "{}",
@@ -6112,6 +6119,7 @@ open class KnowledgeAPI {
     "id" : "id"
   } ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateImported" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "lastPublishedVersionNumber" : 0,
   "knowledgeBase" : "{}",

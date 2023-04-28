@@ -11,62 +11,16 @@ import Foundation
 
 public class AuditQueryRequest: Codable {
 
-    public enum ServiceName: String, Codable { 
-        case agentConfig = "AgentConfig"
-        case analyticsReporting = "AnalyticsReporting"
-        case architect = "Architect"
-        case callback = "Callback"
-        case coaching = "Coaching"
-        case contactCenter = "ContactCenter"
-        case contentManagement = "ContentManagement"
-        case datatables = "Datatables"
-        case directory = "Directory"
-        case dynamicSchema = "DynamicSchema"
-        case emails = "Emails"
-        case employeePerformance = "EmployeePerformance"
-        case externalContacts = "ExternalContacts"
-        case gamification = "Gamification"
-        case gdpr = "GDPR"
-        case groups = "Groups"
-        case integrations = "Integrations"
-        case knowledge = "Knowledge"
-        case languageUnderstanding = "LanguageUnderstanding"
-        case learning = "Learning"
-        case limits = "Limits"
-        case logCapture = "LogCapture"
-        case marketplace = "Marketplace"
-        case messaging = "Messaging"
-        case numberPurchasing = "NumberPurchasing"
-        case outbound = "Outbound"
-        case peoplePermissions = "PeoplePermissions"
-        case predictiveEngagement = "PredictiveEngagement"
-        case presence = "Presence"
-        case processAutomation = "ProcessAutomation"
-        case quality = "Quality"
-        case responseManagement = "ResponseManagement"
-        case routing = "Routing"
-        case scim = "SCIM"
-        case scripter = "Scripter"
-        case speechAndTextAnalytics = "SpeechAndTextAnalytics"
-        case supportability = "Supportability"
-        case telephony = "Telephony"
-        case triggers = "Triggers"
-        case voicemail = "Voicemail"
-        case webDeployments = "WebDeployments"
-        case webhooks = "Webhooks"
-        case workforceManagement = "WorkforceManagement"
-        case workitems = "Workitems"
-    }
     /** Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ */
     public var interval: String?
     /** Name of the service to query audits for. */
-    public var serviceName: ServiceName?
+    public var serviceName: String?
     /** Additional filters for the query. */
     public var filters: [AuditQueryFilter]?
     /** Sort parameter for the query. */
     public var sort: [AuditQuerySort]?
 
-    public init(interval: String?, serviceName: ServiceName?, filters: [AuditQueryFilter]?, sort: [AuditQuerySort]?) {
+    public init(interval: String?, serviceName: String?, filters: [AuditQueryFilter]?, sort: [AuditQuerySort]?) {
         self.interval = interval
         self.serviceName = serviceName
         self.filters = filters

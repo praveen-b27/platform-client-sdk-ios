@@ -120,8 +120,9 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
     public var recipientCountry: String?
     public var recipientType: String?
     public var byoSmsIntegrationId: String?
+    public var monitoredParticipantId: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationMessageEventTopicUriReference?, queue: QueueConversationMessageEventTopicUriReference?, team: QueueConversationMessageEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationMessageEventTopicErrorBody?, script: QueueConversationMessageEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationMessageEventTopicUriReference?, externalOrganization: QueueConversationMessageEventTopicUriReference?, wrapup: QueueConversationMessageEventTopicWrapup?, conversationRoutingData: QueueConversationMessageEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationMessageEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, mediaRoles: [String]?, messages: [QueueConversationMessageEventTopicMessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?, byoSmsIntegrationId: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationMessageEventTopicUriReference?, queue: QueueConversationMessageEventTopicUriReference?, team: QueueConversationMessageEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationMessageEventTopicErrorBody?, script: QueueConversationMessageEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationMessageEventTopicUriReference?, externalOrganization: QueueConversationMessageEventTopicUriReference?, wrapup: QueueConversationMessageEventTopicWrapup?, conversationRoutingData: QueueConversationMessageEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationMessageEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, mediaRoles: [String]?, messages: [QueueConversationMessageEventTopicMessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?, byoSmsIntegrationId: String?, monitoredParticipantId: String?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -163,6 +164,7 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
         self.recipientCountry = recipientCountry
         self.recipientType = recipientType
         self.byoSmsIntegrationId = byoSmsIntegrationId
+        self.monitoredParticipantId = monitoredParticipantId
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -207,6 +209,7 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
         case recipientCountry
         case recipientType
         case byoSmsIntegrationId
+        case monitoredParticipantId
     }
 
 

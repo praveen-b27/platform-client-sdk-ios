@@ -10,7 +10,7 @@ title: DialerContact
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **contactListId** | **String** | The identifier of the contact list containing this contact. | |
-| **data** | [**[String:JSON]**](JSON.html) | An ordered map of the contact&#39;s columns and corresponding values. | |
+| **data** | **[String:String]** | An ordered map of the contact&#39;s columns and corresponding values. | |
 | **callRecords** | [**[String:CallRecord]**](CallRecord.html) | A map of call records for the contact phone columns. | [optional] |
 | **latestSmsEvaluations** | [**[String:MessageEvaluation]**](MessageEvaluation.html) | A map of SMS records for the contact phone columns. | [optional] |
 | **latestEmailEvaluations** | [**[String:MessageEvaluation]**](MessageEvaluation.html) | A map of email records for the contact email columns. | [optional] |

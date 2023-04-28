@@ -1741,6 +1741,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+  "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
   "agent" : {
     "addresses" : [ {
       "extension" : "extension",
@@ -12792,6 +12793,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+  "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
   "agent" : {
     "addresses" : [ {
       "extension" : "extension",
@@ -15977,6 +15979,7 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+    "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
     "agent" : {
       "addresses" : [ {
         "extension" : "extension",
@@ -18739,6 +18742,7 @@ open class QualityAPI {
     "resourceType" : "EMAIL"
   }, {
     "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+    "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
     "agent" : {
       "addresses" : [ {
         "extension" : "extension",
@@ -31550,6 +31554,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+  "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
   "agent" : {
     "addresses" : [ {
       "extension" : "extension",
@@ -38148,6 +38153,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+  "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
   "agent" : {
     "addresses" : [ {
       "extension" : "extension",

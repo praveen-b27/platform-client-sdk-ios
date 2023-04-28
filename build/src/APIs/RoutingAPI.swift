@@ -2814,14 +2814,16 @@ open class RoutingAPI {
     }
 
     
+    
     /**
      Get a list of Key Performance Indicators
      
      - parameter kpiGroup: (query) The Group of Key Performance Indicators to return (optional)
+     - parameter expand: (query) Parameter to request additional data to return in KPI payload (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingPredictorsKeyperformanceindicators(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil, completion: @escaping ((_ data: [KeyPerformanceIndicator]?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: kpiGroup)
+    open class func getRoutingPredictorsKeyperformanceindicators(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil, expand: [String]? = nil, completion: @escaping ((_ data: [KeyPerformanceIndicator]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: kpiGroup, expand: expand)
         requestBuilder.execute { (response: Response<[KeyPerformanceIndicator]>?, error) -> Void in
             do {
                 if let e = error {
@@ -2851,6 +2853,7 @@ open class RoutingAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "source" : "WrapUpCode",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "queues" : [ "queues", "queues" ],
   "optimizationType" : "Maximization",
   "kpiType" : "SalesConversion",
   "name" : "name",
@@ -2861,17 +2864,19 @@ open class RoutingAPI {
 }, statusCode=200}]
      
      - parameter kpiGroup: (query) The Group of Key Performance Indicators to return (optional)
+     - parameter expand: (query) Parameter to request additional data to return in KPI payload (optional)
 
      - returns: RequestBuilder<[KeyPerformanceIndicator]> 
      */
-    open class func getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil) -> RequestBuilder<[KeyPerformanceIndicator]> {        
+    open class func getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil, expand: [String]? = nil) -> RequestBuilder<[KeyPerformanceIndicator]> {        
         let path = "/api/v2/routing/predictors/keyperformanceindicators"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "kpiGroup": kpiGroup?.rawValue
+            "kpiGroup": kpiGroup?.rawValue, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<[KeyPerformanceIndicator]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6893,56 +6898,7 @@ open class RoutingAPI {
     "name" : "name",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
-    "skillConditions" : [ {
-      "languageSkillConditions" : [ {
-        "comparator" : "EqualTo",
-        "languageSkill" : "English-Written",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      }, {
-        "comparator" : "EqualTo",
-        "languageSkill" : "English-Written",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      } ],
-      "routingSkillConditions" : [ {
-        "comparator" : "EqualTo",
-        "routingSkill" : "routingSkill",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      }, {
-        "comparator" : "EqualTo",
-        "routingSkill" : "routingSkill",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      } ],
-      "operation" : "And"
-    }, {
-      "languageSkillConditions" : [ {
-        "comparator" : "EqualTo",
-        "languageSkill" : "English-Written",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      }, {
-        "comparator" : "EqualTo",
-        "languageSkill" : "English-Written",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      } ],
-      "routingSkillConditions" : [ {
-        "comparator" : "EqualTo",
-        "routingSkill" : "routingSkill",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      }, {
-        "comparator" : "EqualTo",
-        "routingSkill" : "routingSkill",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      } ],
-      "operation" : "And"
-    } ]
+    "id" : "id"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -6951,56 +6907,7 @@ open class RoutingAPI {
     "name" : "name",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
-    "skillConditions" : [ {
-      "languageSkillConditions" : [ {
-        "comparator" : "EqualTo",
-        "languageSkill" : "English-Written",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      }, {
-        "comparator" : "EqualTo",
-        "languageSkill" : "English-Written",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      } ],
-      "routingSkillConditions" : [ {
-        "comparator" : "EqualTo",
-        "routingSkill" : "routingSkill",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      }, {
-        "comparator" : "EqualTo",
-        "routingSkill" : "routingSkill",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      } ],
-      "operation" : "And"
-    }, {
-      "languageSkillConditions" : [ {
-        "comparator" : "EqualTo",
-        "languageSkill" : "English-Written",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      }, {
-        "comparator" : "EqualTo",
-        "languageSkill" : "English-Written",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      } ],
-      "routingSkillConditions" : [ {
-        "comparator" : "EqualTo",
-        "routingSkill" : "routingSkill",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      }, {
-        "comparator" : "EqualTo",
-        "routingSkill" : "routingSkill",
-        "childConditions" : [ null, null ],
-        "proficiency" : 5
-      } ],
-      "operation" : "And"
-    } ]
+    "id" : "id"
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",

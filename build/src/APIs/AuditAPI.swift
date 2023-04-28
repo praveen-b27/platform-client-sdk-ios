@@ -42,22 +42,22 @@ open class AuditAPI {
      - examples: [{contentType=application/json, example={
   "services" : [ {
     "entities" : [ {
-      "name" : "AccessToken",
-      "actions" : [ "Create", "Create" ]
+      "name" : "name",
+      "actions" : [ "actions", "actions" ]
     }, {
-      "name" : "AccessToken",
-      "actions" : [ "Create", "Create" ]
+      "name" : "name",
+      "actions" : [ "actions", "actions" ]
     } ],
-    "name" : "AgentConfig"
+    "name" : "name"
   }, {
     "entities" : [ {
-      "name" : "AccessToken",
-      "actions" : [ "Create", "Create" ]
+      "name" : "name",
+      "actions" : [ "actions", "actions" ]
     }, {
-      "name" : "AccessToken",
-      "actions" : [ "Create", "Create" ]
+      "name" : "name",
+      "actions" : [ "actions", "actions" ]
     } ],
-    "name" : "AgentConfig"
+    "name" : "name"
   } ]
 }, statusCode=200}]
 
@@ -107,22 +107,22 @@ open class AuditAPI {
      - examples: [{contentType=application/json, example={
   "services" : [ {
     "entities" : [ {
-      "name" : "AccessToken",
-      "actions" : [ "Create", "Create" ]
+      "name" : "name",
+      "actions" : [ "actions", "actions" ]
     }, {
-      "name" : "AccessToken",
-      "actions" : [ "Create", "Create" ]
+      "name" : "name",
+      "actions" : [ "actions", "actions" ]
     } ],
-    "name" : "AgentConfig"
+    "name" : "name"
   }, {
     "entities" : [ {
-      "name" : "AccessToken",
-      "actions" : [ "Create", "Create" ]
+      "name" : "name",
+      "actions" : [ "actions", "actions" ]
     }, {
-      "name" : "AccessToken",
-      "actions" : [ "Create", "Create" ]
+      "name" : "name",
+      "actions" : [ "actions", "actions" ]
     } ],
-    "name" : "AgentConfig"
+    "name" : "name"
   } ]
 }, statusCode=200}]
 
@@ -189,7 +189,7 @@ open class AuditAPI {
     "sortOrder" : "ascending",
     "name" : "Timestamp"
   } ],
-  "serviceName" : "AgentConfig",
+  "serviceName" : "serviceName",
   "startDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
@@ -263,28 +263,28 @@ open class AuditAPI {
       "oldValues" : [ "oldValues", "oldValues" ]
     } ],
     "level" : "USER",
-    "entityType" : "AccessToken",
+    "entityType" : "entityType",
     "transactionInitiator" : true,
     "initiatingAction" : "{}",
-    "serviceName" : "AgentConfig",
+    "serviceName" : "serviceName",
     "message" : "{}",
     "application" : "application",
     "context" : {
       "key" : "context"
     },
     "client" : "{}",
-    "action" : "Create",
+    "action" : "action",
     "userHomeOrgId" : "userHomeOrgId",
     "id" : "id",
     "entityChanges" : [ {
       "entityName" : "entityName",
-      "entityType" : "AccessToken",
+      "entityType" : "entityType",
       "entityId" : "entityId",
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
     }, {
       "entityName" : "entityName",
-      "entityType" : "AccessToken",
+      "entityType" : "entityType",
       "entityId" : "entityId",
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
@@ -305,28 +305,28 @@ open class AuditAPI {
       "oldValues" : [ "oldValues", "oldValues" ]
     } ],
     "level" : "USER",
-    "entityType" : "AccessToken",
+    "entityType" : "entityType",
     "transactionInitiator" : true,
     "initiatingAction" : "{}",
-    "serviceName" : "AgentConfig",
+    "serviceName" : "serviceName",
     "message" : "{}",
     "application" : "application",
     "context" : {
       "key" : "context"
     },
     "client" : "{}",
-    "action" : "Create",
+    "action" : "action",
     "userHomeOrgId" : "userHomeOrgId",
     "id" : "id",
     "entityChanges" : [ {
       "entityName" : "entityName",
-      "entityType" : "AccessToken",
+      "entityType" : "entityType",
       "entityId" : "entityId",
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
     }, {
       "entityName" : "entityName",
-      "entityType" : "AccessToken",
+      "entityType" : "entityType",
       "entityId" : "entityId",
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
@@ -395,6 +395,7 @@ open class AuditAPI {
     /**
      Create audit query execution
      - POST /api/v2/audits/query
+     - Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -416,7 +417,7 @@ open class AuditAPI {
     "sortOrder" : "ascending",
     "name" : "Timestamp"
   } ],
-  "serviceName" : "AgentConfig",
+  "serviceName" : "serviceName",
   "startDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
@@ -466,6 +467,7 @@ open class AuditAPI {
     /**
      This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
      - POST /api/v2/audits/query/realtime
+     - Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -485,28 +487,28 @@ open class AuditAPI {
       "oldValues" : [ "oldValues", "oldValues" ]
     } ],
     "level" : "USER",
-    "entityType" : "AccessToken",
+    "entityType" : "entityType",
     "transactionInitiator" : true,
     "initiatingAction" : "{}",
-    "serviceName" : "AgentConfig",
+    "serviceName" : "serviceName",
     "message" : "{}",
     "application" : "application",
     "context" : {
       "key" : "context"
     },
     "client" : "{}",
-    "action" : "Create",
+    "action" : "action",
     "userHomeOrgId" : "userHomeOrgId",
     "id" : "id",
     "entityChanges" : [ {
       "entityName" : "entityName",
-      "entityType" : "AccessToken",
+      "entityType" : "entityType",
       "entityId" : "entityId",
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
     }, {
       "entityName" : "entityName",
-      "entityType" : "AccessToken",
+      "entityType" : "entityType",
       "entityId" : "entityId",
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
@@ -527,28 +529,28 @@ open class AuditAPI {
       "oldValues" : [ "oldValues", "oldValues" ]
     } ],
     "level" : "USER",
-    "entityType" : "AccessToken",
+    "entityType" : "entityType",
     "transactionInitiator" : true,
     "initiatingAction" : "{}",
-    "serviceName" : "AgentConfig",
+    "serviceName" : "serviceName",
     "message" : "{}",
     "application" : "application",
     "context" : {
       "key" : "context"
     },
     "client" : "{}",
-    "action" : "Create",
+    "action" : "action",
     "userHomeOrgId" : "userHomeOrgId",
     "id" : "id",
     "entityChanges" : [ {
       "entityName" : "entityName",
-      "entityType" : "AccessToken",
+      "entityType" : "entityType",
       "entityId" : "entityId",
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]
     }, {
       "entityName" : "entityName",
-      "entityType" : "AccessToken",
+      "entityType" : "entityType",
       "entityId" : "entityId",
       "newValues" : [ "newValues", "newValues" ],
       "oldValues" : [ "oldValues", "oldValues" ]

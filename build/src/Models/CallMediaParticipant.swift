@@ -150,8 +150,10 @@ public class CallMediaParticipant: Codable {
     public var uuiData: String?
     /** The timestamp when this participant was connected to the barge conference in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var bargedTime: Date?
+    /** True when the recording of this call is in secure pause status. */
+    public var securePause: Bool?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, consultParticipantId: String?, uuiData: String?, bargedTime: Date?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, consultParticipantId: String?, uuiData: String?, bargedTime: Date?, securePause: Bool?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -201,6 +203,7 @@ public class CallMediaParticipant: Codable {
         self.consultParticipantId = consultParticipantId
         self.uuiData = uuiData
         self.bargedTime = bargedTime
+        self.securePause = securePause
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -253,6 +256,7 @@ public class CallMediaParticipant: Codable {
         case consultParticipantId
         case uuiData
         case bargedTime
+        case securePause
     }
 
 

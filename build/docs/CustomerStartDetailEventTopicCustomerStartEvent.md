@@ -25,6 +25,8 @@ title: CustomerStartDetailEventTopicCustomerStartEvent
 | **callbackScheduledTime** | **Int** |  | [optional] |
 | **subject** | **String** |  | [optional] |
 | **messageType** | **String** |  | [optional] |
+| **conversationExternalContactIds** | **[String]** |  | [optional] |
+| **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 {: class="table table-striped"}
 
 

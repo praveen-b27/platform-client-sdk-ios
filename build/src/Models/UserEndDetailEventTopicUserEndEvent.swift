@@ -82,8 +82,10 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
     public var alertingDurationMs: Int?
     public var contactingDurationMs: Int?
     public var dialingDurationMs: Int?
+    public var conversationExternalContactIds: [String]?
+    public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, divisionId: String?, queueId: String?, interactingDurationMs: Int?, heldDurationMs: Int?, alertingDurationMs: Int?, contactingDurationMs: Int?, dialingDurationMs: Int?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, divisionId: String?, queueId: String?, interactingDurationMs: Int?, heldDurationMs: Int?, alertingDurationMs: Int?, contactingDurationMs: Int?, dialingDurationMs: Int?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -109,6 +111,8 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
         self.alertingDurationMs = alertingDurationMs
         self.contactingDurationMs = contactingDurationMs
         self.dialingDurationMs = dialingDurationMs
+        self.conversationExternalContactIds = conversationExternalContactIds
+        self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
     }
 
 

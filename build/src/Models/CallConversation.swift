@@ -28,10 +28,12 @@ public class CallConversation: Codable {
     public var recordingState: RecordingState?
     /** If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference. */
     public var maxParticipants: Int?
+    /** True when the recording of this conversation is in secure pause status. */
+    public var securePause: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, participants: [CallMediaParticipant]?, otherMediaUris: [String]?, recentTransfers: [TransferResponse]?, recordingState: RecordingState?, maxParticipants: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, participants: [CallMediaParticipant]?, otherMediaUris: [String]?, recentTransfers: [TransferResponse]?, recordingState: RecordingState?, maxParticipants: Int?, securePause: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.participants = participants
@@ -39,6 +41,7 @@ public class CallConversation: Codable {
         self.recentTransfers = recentTransfers
         self.recordingState = recordingState
         self.maxParticipants = maxParticipants
+        self.securePause = securePause
         self.selfUri = selfUri
     }
 
@@ -50,6 +53,7 @@ public class CallConversation: Codable {
         case recentTransfers
         case recordingState
         case maxParticipants
+        case securePause
         case selfUri
     }
 

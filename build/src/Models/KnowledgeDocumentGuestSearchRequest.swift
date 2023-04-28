@@ -34,10 +34,8 @@ public class KnowledgeDocumentGuestSearchRequest: Codable {
     public var sessionId: String?
     /** Indicates whether the search results would also include draft documents. */
     public var includeDraftDocuments: Bool?
-    /** The app where the session is started. */
-    public var app: KnowledgeGuestSessionApp?
 
-    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, sessionId: String?, includeDraftDocuments: Bool?, app: KnowledgeGuestSessionApp?) {
+    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, sessionId: String?, includeDraftDocuments: Bool?) {
         self.query = query
         self.pageSize = pageSize
         self.pageNumber = pageNumber
@@ -47,7 +45,6 @@ public class KnowledgeDocumentGuestSearchRequest: Codable {
         self.queryType = queryType
         self.sessionId = sessionId
         self.includeDraftDocuments = includeDraftDocuments
-        self.app = app
     }
 
 

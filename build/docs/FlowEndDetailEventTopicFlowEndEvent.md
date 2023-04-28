@@ -26,6 +26,8 @@ title: FlowEndDetailEventTopicFlowEndEvent
 | **divisionId** | **String** |  | [optional] |
 | **flowVersion** | **String** |  | [optional] |
 | **connectedDurationMs** | **Int** |  | [optional] |
+| **conversationExternalContactIds** | **[String]** |  | [optional] |
+| **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 {: class="table table-striped"}
 
 

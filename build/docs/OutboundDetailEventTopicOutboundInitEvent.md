@@ -24,6 +24,8 @@ title: OutboundDetailEventTopicOutboundInitEvent
 | **divisionId** | **String** |  | [optional] |
 | **outboundContactListId** | **String** |  | [optional] |
 | **outboundContactId** | **String** |  | [optional] |
+| **conversationExternalContactIds** | **[String]** |  | [optional] |
+| **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 {: class="table table-striped"}
 
 

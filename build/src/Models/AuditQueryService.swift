@@ -11,58 +11,12 @@ import Foundation
 
 public class AuditQueryService: Codable {
 
-    public enum Name: String, Codable { 
-        case agentConfig = "AgentConfig"
-        case analyticsReporting = "AnalyticsReporting"
-        case architect = "Architect"
-        case callback = "Callback"
-        case coaching = "Coaching"
-        case contactCenter = "ContactCenter"
-        case contentManagement = "ContentManagement"
-        case datatables = "Datatables"
-        case directory = "Directory"
-        case dynamicSchema = "DynamicSchema"
-        case emails = "Emails"
-        case employeePerformance = "EmployeePerformance"
-        case externalContacts = "ExternalContacts"
-        case gamification = "Gamification"
-        case gdpr = "GDPR"
-        case groups = "Groups"
-        case integrations = "Integrations"
-        case knowledge = "Knowledge"
-        case languageUnderstanding = "LanguageUnderstanding"
-        case learning = "Learning"
-        case limits = "Limits"
-        case logCapture = "LogCapture"
-        case marketplace = "Marketplace"
-        case messaging = "Messaging"
-        case numberPurchasing = "NumberPurchasing"
-        case outbound = "Outbound"
-        case peoplePermissions = "PeoplePermissions"
-        case predictiveEngagement = "PredictiveEngagement"
-        case presence = "Presence"
-        case processAutomation = "ProcessAutomation"
-        case quality = "Quality"
-        case responseManagement = "ResponseManagement"
-        case routing = "Routing"
-        case scim = "SCIM"
-        case scripter = "Scripter"
-        case speechAndTextAnalytics = "SpeechAndTextAnalytics"
-        case supportability = "Supportability"
-        case telephony = "Telephony"
-        case triggers = "Triggers"
-        case voicemail = "Voicemail"
-        case webDeployments = "WebDeployments"
-        case webhooks = "Webhooks"
-        case workforceManagement = "WorkforceManagement"
-        case workitems = "Workitems"
-    }
     /** Name of the Service */
-    public var name: Name?
+    public var name: String?
     /** List of Entities */
     public var entities: [AuditQueryEntity]?
 
-    public init(name: Name?, entities: [AuditQueryEntity]?) {
+    public init(name: String?, entities: [AuditQueryEntity]?) {
         self.name = name
         self.entities = entities
     }

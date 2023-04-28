@@ -16,6 +16,7 @@ title: CallBasic
 | **muted** | **Bool** | True if this call is muted so that remote participants can&#39;t hear any audio from this end. | [optional] |
 | **confined** | **Bool** | True if this call is held and the person on this side hears hold music. | [optional] |
 | **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |
+| **securePause** | **Bool** | True when the recording of this call is in secure pause status. | [optional] |
 | **recordingId** | **String** | A globally unique identifier for the recording associated with this call. | [optional] |
 | **segments** | [**[Segment]**](Segment.html) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
 | **errorInfo** | [**ErrorInfo**](ErrorInfo.html) |  | [optional] |

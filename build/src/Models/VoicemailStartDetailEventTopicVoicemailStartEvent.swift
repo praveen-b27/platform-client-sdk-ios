@@ -39,8 +39,10 @@ public class VoicemailStartDetailEventTopicVoicemailStartEvent: Codable {
     public var userId: String?
     public var queueId: String?
     public var divisionId: String?
+    public var conversationExternalContactIds: [String]?
+    public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, userId: String?, queueId: String?, divisionId: String?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, userId: String?, queueId: String?, divisionId: String?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -53,6 +55,8 @@ public class VoicemailStartDetailEventTopicVoicemailStartEvent: Codable {
         self.userId = userId
         self.queueId = queueId
         self.divisionId = divisionId
+        self.conversationExternalContactIds = conversationExternalContactIds
+        self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
     }
 
 

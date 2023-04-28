@@ -22,17 +22,20 @@ public class ConversationBasic: Codable {
     public var endTime: Date?
     /** Identifiers of divisions associated with this conversation */
     public var divisions: [ConversationDivisionMembership]?
+    /** True when the recording of this conversation is in secure pause status. */
+    public var securePause: Bool?
     /** The URI for this object */
     public var selfUri: String?
     public var participants: [ParticipantBasic]?
 
-    public init(_id: String?, name: String?, externalTag: String?, startTime: Date?, endTime: Date?, divisions: [ConversationDivisionMembership]?, selfUri: String?, participants: [ParticipantBasic]?) {
+    public init(_id: String?, name: String?, externalTag: String?, startTime: Date?, endTime: Date?, divisions: [ConversationDivisionMembership]?, securePause: Bool?, selfUri: String?, participants: [ParticipantBasic]?) {
         self._id = _id
         self.name = name
         self.externalTag = externalTag
         self.startTime = startTime
         self.endTime = endTime
         self.divisions = divisions
+        self.securePause = securePause
         self.selfUri = selfUri
         self.participants = participants
     }
@@ -44,6 +47,7 @@ public class ConversationBasic: Codable {
         case startTime
         case endTime
         case divisions
+        case securePause
         case selfUri
         case participants
     }

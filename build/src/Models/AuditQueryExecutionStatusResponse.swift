@@ -18,52 +18,6 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case failed = "Failed"
         case cancelled = "Cancelled"
     }
-    public enum ServiceName: String, Codable { 
-        case agentConfig = "AgentConfig"
-        case analyticsReporting = "AnalyticsReporting"
-        case architect = "Architect"
-        case callback = "Callback"
-        case coaching = "Coaching"
-        case contactCenter = "ContactCenter"
-        case contentManagement = "ContentManagement"
-        case datatables = "Datatables"
-        case directory = "Directory"
-        case dynamicSchema = "DynamicSchema"
-        case emails = "Emails"
-        case employeePerformance = "EmployeePerformance"
-        case externalContacts = "ExternalContacts"
-        case gamification = "Gamification"
-        case gdpr = "GDPR"
-        case groups = "Groups"
-        case integrations = "Integrations"
-        case knowledge = "Knowledge"
-        case languageUnderstanding = "LanguageUnderstanding"
-        case learning = "Learning"
-        case limits = "Limits"
-        case logCapture = "LogCapture"
-        case marketplace = "Marketplace"
-        case messaging = "Messaging"
-        case numberPurchasing = "NumberPurchasing"
-        case outbound = "Outbound"
-        case peoplePermissions = "PeoplePermissions"
-        case predictiveEngagement = "PredictiveEngagement"
-        case presence = "Presence"
-        case processAutomation = "ProcessAutomation"
-        case quality = "Quality"
-        case responseManagement = "ResponseManagement"
-        case routing = "Routing"
-        case scim = "SCIM"
-        case scripter = "Scripter"
-        case speechAndTextAnalytics = "SpeechAndTextAnalytics"
-        case supportability = "Supportability"
-        case telephony = "Telephony"
-        case triggers = "Triggers"
-        case voicemail = "Voicemail"
-        case webDeployments = "WebDeployments"
-        case webhooks = "Webhooks"
-        case workforceManagement = "WorkforceManagement"
-        case workitems = "Workitems"
-    }
     /** Id of the audit query execution request. */
     public var _id: String?
     /** Status of the audit query execution request. */
@@ -73,13 +27,13 @@ public class AuditQueryExecutionStatusResponse: Codable {
     /** Interval for the audit query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?
     /** Service name for the audit query. */
-    public var serviceName: ServiceName?
+    public var serviceName: String?
     /** Filters for the audit query. */
     public var filters: [AuditQueryFilter]?
     /** Sort parameter for the audit query. */
     public var sort: [AuditQuerySort]?
 
-    public init(_id: String?, state: State?, startDate: Date?, interval: String?, serviceName: ServiceName?, filters: [AuditQueryFilter]?, sort: [AuditQuerySort]?) {
+    public init(_id: String?, state: State?, startDate: Date?, interval: String?, serviceName: String?, filters: [AuditQueryFilter]?, sort: [AuditQuerySort]?) {
         self._id = _id
         self.state = state
         self.startDate = startDate

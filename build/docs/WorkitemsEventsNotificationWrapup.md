@@ -10,6 +10,7 @@ title: WorkitemsEventsNotificationWrapup
 | **code** | **String** |  | [optional] |
 | **userId** | **String** |  | [optional] |
 | **op** | **String** |  | [optional] |
+| **action** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

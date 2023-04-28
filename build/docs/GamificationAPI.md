@@ -10,6 +10,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteEmployeeperformanceExternalmetricsDefinition**](GamificationAPI.html#deleteEmployeeperformanceExternalmetricsDefinition) | Delete an External Metric Definition |
 | [**getEmployeeperformanceExternalmetricsDefinition**](GamificationAPI.html#getEmployeeperformanceExternalmetricsDefinition) | Get an External Metric Definition |
 | [**getEmployeeperformanceExternalmetricsDefinitions**](GamificationAPI.html#getEmployeeperformanceExternalmetricsDefinitions) | Get a list of External Metric Definitions of an organization, sorted by name in ascending order |
+| [**getGamificationInsights**](GamificationAPI.html#getGamificationInsights) | Get insights summary |
+| [**getGamificationInsightsDetails**](GamificationAPI.html#getGamificationInsightsDetails) | Get insights details for the current user |
+| [**getGamificationInsightsGroupsTrends**](GamificationAPI.html#getGamificationInsightsGroupsTrends) | Get insights overall trend for the current user |
+| [**getGamificationInsightsGroupsTrendsAll**](GamificationAPI.html#getGamificationInsightsGroupsTrendsAll) | Get insights overall trend |
+| [**getGamificationInsightsMembers**](GamificationAPI.html#getGamificationInsightsMembers) | Query users in a profile during a period of time |
+| [**getGamificationInsightsTrends**](GamificationAPI.html#getGamificationInsightsTrends) | Get insights user trend for the current user |
+| [**getGamificationInsightsUserDetails**](GamificationAPI.html#getGamificationInsightsUserDetails) | Get insights details for the user |
+| [**getGamificationInsightsUserTrends**](GamificationAPI.html#getGamificationInsightsUserTrends) | Get insights user trend for the user |
 | [**getGamificationLeaderboard**](GamificationAPI.html#getGamificationLeaderboard) | Leaderboard of the requesting user&#39;s division or performance profile |
 | [**getGamificationLeaderboardAll**](GamificationAPI.html#getGamificationLeaderboardAll) | Leaderboard by filter type |
 | [**getGamificationLeaderboardAllBestpoints**](GamificationAPI.html#getGamificationLeaderboardAllBestpoints) | Best Points by division or performance profile |
@@ -57,6 +65,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postGamificationProfileMetricLink**](GamificationAPI.html#postGamificationProfileMetricLink) | Creates a linked metric |
 | [**postGamificationProfileMetrics**](GamificationAPI.html#postGamificationProfileMetrics) | Creates a gamified metric with a given metric definition and metric objective under in a performance profile |
 | [**postGamificationProfiles**](GamificationAPI.html#postGamificationProfiles) | Create a new custom performance profile |
+| [**postGamificationProfilesUserQuery**](GamificationAPI.html#postGamificationProfilesUserQuery) | Query performance profiles in date range for a user |
+| [**postGamificationProfilesUsersMeQuery**](GamificationAPI.html#postGamificationProfilesUsersMeQuery) | Query performance profiles in date range for the current user |
 | [**putGamificationProfile**](GamificationAPI.html#putGamificationProfile) | Updates a performance profile |
 | [**putGamificationProfileMetric**](GamificationAPI.html#putGamificationProfileMetric) | Updates a metric in performance profile |
 | [**putGamificationStatus**](GamificationAPI.html#putGamificationStatus) | Update gamification activation status |
@@ -218,6 +228,516 @@ GamificationAPI.getEmployeeperformanceExternalmetricsDefinitions(pageSize: pageS
 ### Return type
 
 [**ExternalMetricDefinitionListing**](ExternalMetricDefinitionListing.html)
+
+<a name="getGamificationInsights"></a>
+
+# **getGamificationInsights**
+
+
+
+> [InsightsSummary](InsightsSummary.html) getGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds)
+
+Get insights summary
+
+
+
+Wraps GET /api/v2/gamification/insights  
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filterType: GamificationAPI.FilterType_getGamificationInsights = GamificationAPI.FilterType_getGamificationInsights.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsights = GamificationAPI.Granularity_getGamificationInsights.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortKey: GamificationAPI.SortKey_getGamificationInsights = GamificationAPI.SortKey_getGamificationInsights.enummember // Sort key
+let sortMetricId: String = "" // Sort Metric Id
+let sortOrder: GamificationAPI.SortOrder_getGamificationInsights = GamificationAPI.SortOrder_getGamificationInsights.enummember // Sort order
+let userIds: String = "" // A list of up to 100 comma-separated user Ids
+
+// Code example
+GamificationAPI.getGamificationInsights(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsights was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: weekly ("Weekly"), monthly ("Monthly") |
+| **comparativePeriodStartWorkday** | **Date**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodStartWorkday** | **Date**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortKey** | **String**| Sort key | [optional]<br />**Values**: percentofgoal ("percentOfGoal"), percentofgoalchange ("percentOfGoalChange"), overallpercentofgoal ("overallPercentOfGoal"), overallpercentofgoalchange ("overallPercentOfGoalChange"), value ("value"), valuechange ("valueChange") |
+| **sortMetricId** | **String**| Sort Metric Id | [optional] |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **userIds** | **String**| A list of up to 100 comma-separated user Ids | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InsightsSummary**](InsightsSummary.html)
+
+<a name="getGamificationInsightsDetails"></a>
+
+# **getGamificationInsightsDetails**
+
+
+
+> [InsightsDetails](InsightsDetails.html) getGamificationInsightsDetails(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday)
+
+Get insights details for the current user
+
+
+
+Wraps GET /api/v2/gamification/insights/details  
+
+Requires ANY permissions: 
+
+* gamification:insights:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filterType: GamificationAPI.FilterType_getGamificationInsightsDetails = GamificationAPI.FilterType_getGamificationInsightsDetails.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsDetails = GamificationAPI.Granularity_getGamificationInsightsDetails.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GamificationAPI.getGamificationInsightsDetails(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsDetails was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: weekly ("Weekly"), monthly ("Monthly") |
+| **comparativePeriodStartWorkday** | **Date**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodStartWorkday** | **Date**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InsightsDetails**](InsightsDetails.html)
+
+<a name="getGamificationInsightsGroupsTrends"></a>
+
+# **getGamificationInsightsGroupsTrends**
+
+
+
+> [InsightsTrend](InsightsTrend.html) getGamificationInsightsGroupsTrends(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday)
+
+Get insights overall trend for the current user
+
+
+
+Wraps GET /api/v2/gamification/insights/groups/trends  
+
+Requires ANY permissions: 
+
+* gamification:insights:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filterType: GamificationAPI.FilterType_getGamificationInsightsGroupsTrends = GamificationAPI.FilterType_getGamificationInsightsGroupsTrends.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsGroupsTrends = GamificationAPI.Granularity_getGamificationInsightsGroupsTrends.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let comparativePeriodEndWorkday: Date = new Date(...) // The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodEndWorkday: Date = new Date(...) // The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GamificationAPI.getGamificationInsightsGroupsTrends(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsGroupsTrends was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: daily ("Daily"), weekly ("Weekly"), monthly ("Monthly") |
+| **comparativePeriodStartWorkday** | **Date**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **comparativePeriodEndWorkday** | **Date**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodStartWorkday** | **Date**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodEndWorkday** | **Date**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InsightsTrend**](InsightsTrend.html)
+
+<a name="getGamificationInsightsGroupsTrendsAll"></a>
+
+# **getGamificationInsightsGroupsTrendsAll**
+
+
+
+> [InsightsTrend](InsightsTrend.html) getGamificationInsightsGroupsTrendsAll(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday)
+
+Get insights overall trend
+
+
+
+Wraps GET /api/v2/gamification/insights/groups/trends/all  
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filterType: GamificationAPI.FilterType_getGamificationInsightsGroupsTrendsAll = GamificationAPI.FilterType_getGamificationInsightsGroupsTrendsAll.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsGroupsTrendsAll = GamificationAPI.Granularity_getGamificationInsightsGroupsTrendsAll.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let comparativePeriodEndWorkday: Date = new Date(...) // The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodEndWorkday: Date = new Date(...) // The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GamificationAPI.getGamificationInsightsGroupsTrendsAll(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsGroupsTrendsAll was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: daily ("Daily"), weekly ("Weekly"), monthly ("Monthly") |
+| **comparativePeriodStartWorkday** | **Date**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **comparativePeriodEndWorkday** | **Date**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodStartWorkday** | **Date**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodEndWorkday** | **Date**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InsightsTrend**](InsightsTrend.html)
+
+<a name="getGamificationInsightsMembers"></a>
+
+# **getGamificationInsightsMembers**
+
+
+
+> [InsightsAgents](InsightsAgents.html) getGamificationInsightsMembers(filterType, filterId, granularity, startWorkday)
+
+Query users in a profile during a period of time
+
+
+
+Wraps GET /api/v2/gamification/insights/members  
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filterType: GamificationAPI.FilterType_getGamificationInsightsMembers = GamificationAPI.FilterType_getGamificationInsightsMembers.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsMembers = GamificationAPI.Granularity_getGamificationInsightsMembers.enummember // Granularity
+let startWorkday: Date = new Date(...) // The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GamificationAPI.getGamificationInsightsMembers(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: weekly ("Weekly"), monthly ("Monthly") |
+| **startWorkday** | **Date**| The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InsightsAgents**](InsightsAgents.html)
+
+<a name="getGamificationInsightsTrends"></a>
+
+# **getGamificationInsightsTrends**
+
+
+
+> [UserInsightsTrend](UserInsightsTrend.html) getGamificationInsightsTrends(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday)
+
+Get insights user trend for the current user
+
+
+
+Wraps GET /api/v2/gamification/insights/trends  
+
+Requires ANY permissions: 
+
+* gamification:insights:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filterType: GamificationAPI.FilterType_getGamificationInsightsTrends = GamificationAPI.FilterType_getGamificationInsightsTrends.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsTrends = GamificationAPI.Granularity_getGamificationInsightsTrends.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let comparativePeriodEndWorkday: Date = new Date(...) // The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodEndWorkday: Date = new Date(...) // The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GamificationAPI.getGamificationInsightsTrends(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsTrends was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: daily ("Daily"), weekly ("Weekly") |
+| **comparativePeriodStartWorkday** | **Date**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **comparativePeriodEndWorkday** | **Date**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodStartWorkday** | **Date**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodEndWorkday** | **Date**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserInsightsTrend**](UserInsightsTrend.html)
+
+<a name="getGamificationInsightsUserDetails"></a>
+
+# **getGamificationInsightsUserDetails**
+
+
+
+> [InsightsDetails](InsightsDetails.html) getGamificationInsightsUserDetails(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday)
+
+Get insights details for the user
+
+
+
+Wraps GET /api/v2/gamification/insights/users/{userId}/details  
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // The ID of a user.
+let filterType: GamificationAPI.FilterType_getGamificationInsightsUserDetails = GamificationAPI.FilterType_getGamificationInsightsUserDetails.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsUserDetails = GamificationAPI.Granularity_getGamificationInsightsUserDetails.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GamificationAPI.getGamificationInsightsUserDetails(userId: userId, filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsUserDetails was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| The ID of a user. | |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: weekly ("Weekly"), monthly ("Monthly") |
+| **comparativePeriodStartWorkday** | **Date**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodStartWorkday** | **Date**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InsightsDetails**](InsightsDetails.html)
+
+<a name="getGamificationInsightsUserTrends"></a>
+
+# **getGamificationInsightsUserTrends**
+
+
+
+> [UserInsightsTrend](UserInsightsTrend.html) getGamificationInsightsUserTrends(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday)
+
+Get insights user trend for the user
+
+
+
+Wraps GET /api/v2/gamification/insights/users/{userId}/trends  
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // The ID of a user.
+let filterType: GamificationAPI.FilterType_getGamificationInsightsUserTrends = GamificationAPI.FilterType_getGamificationInsightsUserTrends.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsUserTrends = GamificationAPI.Granularity_getGamificationInsightsUserTrends.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let comparativePeriodEndWorkday: Date = new Date(...) // The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodEndWorkday: Date = new Date(...) // The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GamificationAPI.getGamificationInsightsUserTrends(userId: userId, filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsUserTrends was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| The ID of a user. | |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: daily ("Daily"), weekly ("Weekly") |
+| **comparativePeriodStartWorkday** | **Date**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **comparativePeriodEndWorkday** | **Date**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodStartWorkday** | **Date**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodEndWorkday** | **Date**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserInsightsTrend**](UserInsightsTrend.html)
 
 <a name="getGamificationLeaderboard"></a>
 
@@ -2791,6 +3311,111 @@ GamificationAPI.postGamificationProfiles(body: body, copyMetrics: copyMetrics) {
 ### Return type
 
 [**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="postGamificationProfilesUserQuery"></a>
+
+# **postGamificationProfilesUserQuery**
+
+
+
+> [UserProfilesInDateRange](UserProfilesInDateRange.html) postGamificationProfilesUserQuery(userId, body)
+
+Query performance profiles in date range for a user
+
+
+
+Wraps POST /api/v2/gamification/profiles/users/{userId}/query  
+
+Requires ANY permissions: 
+
+* gamification:agentProfileMembership:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // The ID of a user.
+let body: UserProfilesInDateRangeRequest = new UserProfilesInDateRangeRequest(...) // The date range of work day.
+
+// Code example
+GamificationAPI.postGamificationProfilesUserQuery(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationProfilesUserQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| The ID of a user. | |
+| **body** | [**UserProfilesInDateRangeRequest**](UserProfilesInDateRangeRequest.html)| The date range of work day. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserProfilesInDateRange**](UserProfilesInDateRange.html)
+
+<a name="postGamificationProfilesUsersMeQuery"></a>
+
+# **postGamificationProfilesUsersMeQuery**
+
+
+
+> [UserProfilesInDateRange](UserProfilesInDateRange.html) postGamificationProfilesUsersMeQuery(body)
+
+Query performance profiles in date range for the current user
+
+
+
+Wraps POST /api/v2/gamification/profiles/users/me/query  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UserProfilesInDateRangeRequest = new UserProfilesInDateRangeRequest(...) // The date range of work day.
+
+// Code example
+GamificationAPI.postGamificationProfilesUsersMeQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationProfilesUsersMeQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UserProfilesInDateRangeRequest**](UserProfilesInDateRangeRequest.html)| The date range of work day. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserProfilesInDateRange**](UserProfilesInDateRange.html)
 
 <a name="putGamificationProfile"></a>
 

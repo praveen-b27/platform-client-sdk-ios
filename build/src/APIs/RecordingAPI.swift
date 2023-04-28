@@ -8394,6 +8394,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "regionalRecordingStorageEnabled" : true,
   "maxConfigurableScreenRecordingStreams" : 6,
   "maxSimultaneousStreams" : 0
 }, statusCode=200}]
@@ -8916,6 +8917,7 @@ open class RecordingAPI {
       } ],
       "maxParticipants" : 0,
       "conversationIds" : [ "conversationIds", "conversationIds" ],
+      "securePause" : true,
       "recordingState" : "ACTIVE",
       "name" : "name",
       "recentTransfers" : [ {
@@ -9304,6 +9306,7 @@ open class RecordingAPI {
         "address" : "address",
         "evaluations" : [ {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -12066,6 +12069,7 @@ open class RecordingAPI {
           "resourceType" : "EMAIL"
         }, {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -14873,6 +14877,7 @@ open class RecordingAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -14927,6 +14932,7 @@ open class RecordingAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -15756,6 +15762,7 @@ open class RecordingAPI {
         "address" : "address",
         "evaluations" : [ {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -18518,6 +18525,7 @@ open class RecordingAPI {
           "resourceType" : "EMAIL"
         }, {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -21325,6 +21333,7 @@ open class RecordingAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -21379,6 +21388,7 @@ open class RecordingAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -22164,6 +22174,7 @@ open class RecordingAPI {
       } ],
       "maxParticipants" : 0,
       "conversationIds" : [ "conversationIds", "conversationIds" ],
+      "securePause" : true,
       "recordingState" : "ACTIVE",
       "name" : "name",
       "recentTransfers" : [ {
@@ -22552,6 +22563,7 @@ open class RecordingAPI {
         "address" : "address",
         "evaluations" : [ {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -25314,6 +25326,7 @@ open class RecordingAPI {
           "resourceType" : "EMAIL"
         }, {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -28121,6 +28134,7 @@ open class RecordingAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -28175,6 +28189,7 @@ open class RecordingAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -29004,6 +29019,7 @@ open class RecordingAPI {
         "address" : "address",
         "evaluations" : [ {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -31766,6 +31782,7 @@ open class RecordingAPI {
           "resourceType" : "EMAIL"
         }, {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
+          "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
             "addresses" : [ {
               "extension" : "extension",
@@ -34573,6 +34590,7 @@ open class RecordingAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -34627,6 +34645,7 @@ open class RecordingAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "scriptId" : "scriptId",
+          "securePause" : true,
           "recordingState" : "none",
           "self" : "{}",
           "documentId" : "documentId",
@@ -38448,6 +38467,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "regionalRecordingStorageEnabled" : true,
   "maxConfigurableScreenRecordingStreams" : 6,
   "maxSimultaneousStreams" : 0
 }, statusCode=200}]

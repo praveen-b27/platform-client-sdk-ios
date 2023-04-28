@@ -15,12 +15,13 @@ public class WrapupCodeRequest: Codable {
     public var _id: String?
     /** The wrap-up code name. */
     public var name: String?
-    /** Date when the assistant wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** Date when the wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** Date when the wrapup-code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** Date when the wrap-up code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
-    /** The wrap-up code name. */
+    /** The ID of the user that created the wrap-up code. */
     public var createdBy: String?
+    /** The ID of the user that modified the wrap-up code. */
     public var modifiedBy: String?
     /** The URI for this object */
     public var selfUri: String?

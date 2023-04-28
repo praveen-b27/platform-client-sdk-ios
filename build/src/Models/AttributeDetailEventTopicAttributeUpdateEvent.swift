@@ -15,12 +15,16 @@ public class AttributeDetailEventTopicAttributeUpdateEvent: Codable {
     public var conversationId: String?
     public var participantId: String?
     public var attributes: [String:String]?
+    public var conversationExternalContactIds: [String]?
+    public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, attributes: [String:String]?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, attributes: [String:String]?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
         self.attributes = attributes
+        self.conversationExternalContactIds = conversationExternalContactIds
+        self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
     }
 
 

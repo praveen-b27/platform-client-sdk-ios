@@ -60,10 +60,12 @@ public class KeyPerformanceIndicator: Codable {
     public var status: Status?
     /** The group the Key Performance Indicator belongs to. */
     public var kpiGroup: KpiGroup?
+    /** Queue IDs on which KPI specification is used. */
+    public var queues: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, optimizationType: OptimizationType?, dateCreated: Date?, dateModified: Date?, _description: String?, kpiType: KpiType?, source: Source?, wrapUpCodeConfig: WrapUpCodeConfig?, outcomeConfig: OutcomeConfig?, status: Status?, kpiGroup: KpiGroup?, selfUri: String?) {
+    public init(_id: String?, name: String?, optimizationType: OptimizationType?, dateCreated: Date?, dateModified: Date?, _description: String?, kpiType: KpiType?, source: Source?, wrapUpCodeConfig: WrapUpCodeConfig?, outcomeConfig: OutcomeConfig?, status: Status?, kpiGroup: KpiGroup?, queues: [String]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.optimizationType = optimizationType
@@ -76,6 +78,7 @@ public class KeyPerformanceIndicator: Codable {
         self.outcomeConfig = outcomeConfig
         self.status = status
         self.kpiGroup = kpiGroup
+        self.queues = queues
         self.selfUri = selfUri
     }
 
@@ -92,6 +95,7 @@ public class KeyPerformanceIndicator: Codable {
         case outcomeConfig
         case status
         case kpiGroup
+        case queues
         case selfUri
     }
 

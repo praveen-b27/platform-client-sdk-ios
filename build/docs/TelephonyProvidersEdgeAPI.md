@@ -14,7 +14,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteTelephonyProvidersEdgesDidpool**](TelephonyProvidersEdgeAPI.html#deleteTelephonyProvidersEdgesDidpool) | Delete a DID Pool by ID. |
 | [**deleteTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeAPI.html#deleteTelephonyProvidersEdgesEdgegroup) | Delete an edge group. |
 | [**deleteTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeAPI.html#deleteTelephonyProvidersEdgesExtensionpool) | Delete an extension pool by ID |
-| [**deleteTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeAPI.html#deleteTelephonyProvidersEdgesOutboundroute) | Delete Outbound Route |
 | [**deleteTelephonyProvidersEdgesPhone**](TelephonyProvidersEdgeAPI.html#deleteTelephonyProvidersEdgesPhone) | Delete a Phone by ID |
 | [**deleteTelephonyProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeAPI.html#deleteTelephonyProvidersEdgesPhonebasesetting) | Delete a Phone Base Settings by ID |
 | [**deleteTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeAPI.html#deleteTelephonyProvidersEdgesSite) | Delete a Site by ID |
@@ -104,7 +103,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTelephonyProvidersEdgesDidpools**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesDidpools) | Create a new DID pool |
 | [**postTelephonyProvidersEdgesEdgegroups**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesEdgegroups) | Create an edge group. |
 | [**postTelephonyProvidersEdgesExtensionpools**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesExtensionpools) | Create a new extension pool |
-| [**postTelephonyProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesOutboundroutes) | Create outbound rule |
 | [**postTelephonyProvidersEdgesPhoneReboot**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesPhoneReboot) | Reboot a Phone |
 | [**postTelephonyProvidersEdgesPhonebasesettings**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesPhonebasesettings) | Create a new Phone Base Settings object |
 | [**postTelephonyProvidersEdgesPhones**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgesPhones) | Create a new Phone |
@@ -119,7 +117,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesEdgegroup) | Update an edge group. |
 | [**putTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesEdgegroupEdgetrunkbase) | Update the edge trunk base associated with the edge group |
 | [**putTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesExtensionpool) | Update an extension pool by ID |
-| [**putTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesOutboundroute) | Update outbound route |
 | [**putTelephonyProvidersEdgesPhone**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesPhone) | Update a Phone by ID |
 | [**putTelephonyProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesPhonebasesetting) | Update a Phone Base Settings by ID |
 | [**putTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesSite) | Update a Site by ID. |
@@ -479,59 +476,6 @@ TelephonyProvidersEdgeAPI.deleteTelephonyProvidersEdgesExtensionpool(extensionPo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **extensionPoolId** | **String**| Extension pool ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="deleteTelephonyProvidersEdgesOutboundroute"></a>
-
-# **deleteTelephonyProvidersEdgesOutboundroute**
-
-
-
-> Void deleteTelephonyProvidersEdgesOutboundroute(outboundRouteId)
-
-Delete Outbound Route
-
-This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-
-
-
-Wraps DELETE /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let outboundRouteId: String = "" // Outbound route ID
-
-// Code example
-TelephonyProvidersEdgeAPI.deleteTelephonyProvidersEdgesOutboundroute(outboundRouteId: outboundRouteId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("TelephonyProvidersEdgeAPI.deleteTelephonyProvidersEdgesOutboundroute was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **outboundRouteId** | **String**| Outbound route ID | |
 {: class="table-striped"}
 
 
@@ -5416,60 +5360,6 @@ TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesExtensionpools(body: body) 
 
 [**ExtensionPool**](ExtensionPool.html)
 
-<a name="postTelephonyProvidersEdgesOutboundroutes"></a>
-
-# **postTelephonyProvidersEdgesOutboundroutes**
-
-
-
-> [OutboundRoute](OutboundRoute.html) postTelephonyProvidersEdgesOutboundroutes(body)
-
-Create outbound rule
-
-This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
-
-
-
-Wraps POST /api/v2/telephony/providers/edges/outboundroutes  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: OutboundRoute = new OutboundRoute(...) // OutboundRoute
-
-// Code example
-TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesOutboundroutes(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesOutboundroutes was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**OutboundRoute**](OutboundRoute.html)
-
 <a name="postTelephonyProvidersEdgesPhoneReboot"></a>
 
 # **postTelephonyProvidersEdgesPhoneReboot**
@@ -6215,62 +6105,6 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesExtensionpool(extensionPoolI
 ### Return type
 
 [**ExtensionPool**](ExtensionPool.html)
-
-<a name="putTelephonyProvidersEdgesOutboundroute"></a>
-
-# **putTelephonyProvidersEdgesOutboundroute**
-
-
-
-> [OutboundRoute](OutboundRoute.html) putTelephonyProvidersEdgesOutboundroute(outboundRouteId, body)
-
-Update outbound route
-
-This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-
-
-
-Wraps PUT /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let outboundRouteId: String = "" // Outbound route ID
-let body: OutboundRoute = new OutboundRoute(...) // OutboundRoute
-
-// Code example
-TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesOutboundroute(outboundRouteId: outboundRouteId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesOutboundroute was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **outboundRouteId** | **String**| Outbound route ID | |
-| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**OutboundRoute**](OutboundRoute.html)
 
 <a name="putTelephonyProvidersEdgesPhone"></a>
 

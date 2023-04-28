@@ -24,6 +24,8 @@ title: FlowStartDetailEventTopicFlowStartEvent
 | **flowId** | **String** |  | [optional] |
 | **divisionId** | **String** |  | [optional] |
 | **flowVersion** | **String** |  | [optional] |
+| **conversationExternalContactIds** | **[String]** |  | [optional] |
+| **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 {: class="table table-striped"}
 
 

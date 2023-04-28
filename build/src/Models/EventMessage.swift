@@ -55,6 +55,7 @@ public class EventMessage: Codable {
         case digitalRuleInternalError = "DIGITAL_RULE_INTERNAL_ERROR"
         case digitalRuleNoDncListsConfigured = "DIGITAL_RULE_NO_DNC_LISTS_CONFIGURED"
         case digitalRuleUpdatedContactAddress = "DIGITAL_RULE_UPDATED_CONTACT_ADDRESS"
+        case digitalRuleSmsPhoneNumberTypeMismatch = "DIGITAL_RULE_SMS_PHONE_NUMBER_TYPE_MISMATCH"
         case dncAuthenticationFailure = "DNC_AUTHENTICATION_FAILURE"
         case exceededContactLimit = "EXCEEDED_CONTACT_LIMIT"
         case exceededDncRecordLimit = "EXCEEDED_DNC_RECORD_LIMIT"

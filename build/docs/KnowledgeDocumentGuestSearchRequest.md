@@ -16,7 +16,6 @@ title: KnowledgeDocumentGuestSearchRequest
 | **queryType** | **String** | The type of the query that initiates the search. | [optional] |
 | **sessionId** | **String** | Session ID of the search. | [optional] |
 | **includeDraftDocuments** | **Bool** | Indicates whether the search results would also include draft documents. | [optional] |
-| **app** | [**KnowledgeGuestSessionApp**](KnowledgeGuestSessionApp.html) | The app where the session is started. | [optional] |
 {: class="table table-striped"}
 
 

@@ -18,6 +18,7 @@ public class SupportCenterModuleSetting: Codable {
         case contact = "Contact"
         case results = "Results"
         case article = "Article"
+        case topViewedArticles = "TopViewedArticles"
     }
     /** Screen module type */
     public var type: ModelType?

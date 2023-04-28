@@ -55,8 +55,10 @@ public class OutboundDetailEventTopicOutboundInitEvent: Codable {
     public var divisionId: String?
     public var outboundContactListId: String?
     public var outboundContactId: String?
+    public var conversationExternalContactIds: [String]?
+    public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, outboundCampaignId: String?, divisionId: String?, outboundContactListId: String?, outboundContactId: String?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, outboundCampaignId: String?, divisionId: String?, outboundContactListId: String?, outboundContactId: String?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -74,6 +76,8 @@ public class OutboundDetailEventTopicOutboundInitEvent: Codable {
         self.divisionId = divisionId
         self.outboundContactListId = outboundContactListId
         self.outboundContactId = outboundContactId
+        self.conversationExternalContactIds = conversationExternalContactIds
+        self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
     }
 
 

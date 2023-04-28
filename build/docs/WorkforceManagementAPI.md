@@ -105,7 +105,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementTimeoffrequest) | Update a time off request for the current user |
 | [**postWorkforcemanagementAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceExplanations) | Submit an adherence explanation for the current user |
 | [**postWorkforcemanagementAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceExplanationsQuery) | Query adherence explanations for the current user |
-| [**postWorkforcemanagementAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistorical) | Request a historical adherence report for users across management units |
+| [**postWorkforcemanagementAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistorical) | Deprecated. Use bulk routes instead (/adherence/historical/bulk) |
 | [**postWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistoricalBulk) | Request a historical adherence report in bulk |
 | [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
 | [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
@@ -5809,7 +5809,7 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceExplanationsQuery(body: b
 
 > [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) postWorkforcemanagementAdherenceHistorical(body)
 
-Request a historical adherence report for users across management units
+Deprecated. Use bulk routes instead (/adherence/historical/bulk)
 
 
 

@@ -15,21 +15,21 @@ public class TextMessageListing: Codable {
     public var pageSize: Int?
     public var pageNumber: Int?
     public var total: Int64?
+    public var firstUri: String?
     public var pageCount: Int?
     public var lastUri: String?
-    public var firstUri: String?
     public var selfUri: String?
     public var nextUri: String?
     public var previousUri: String?
 
-    public init(entities: [MessageData]?, pageSize: Int?, pageNumber: Int?, total: Int64?, pageCount: Int?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?) {
+    public init(entities: [MessageData]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, pageCount: Int?, lastUri: String?, selfUri: String?, nextUri: String?, previousUri: String?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
+        self.firstUri = firstUri
         self.pageCount = pageCount
         self.lastUri = lastUri
-        self.firstUri = firstUri
         self.selfUri = selfUri
         self.nextUri = nextUri
         self.previousUri = previousUri

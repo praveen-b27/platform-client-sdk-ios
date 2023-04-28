@@ -210,6 +210,886 @@ open class GamificationAPI {
     }
 
     
+    public enum FilterType_getGamificationInsights: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    public enum Granularity_getGamificationInsights: String { 
+        case weekly = "Weekly"
+        case monthly = "Monthly"
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum SortKey_getGamificationInsights: String { 
+        case percentofgoal = "percentOfGoal"
+        case percentofgoalchange = "percentOfGoalChange"
+        case overallpercentofgoal = "overallPercentOfGoal"
+        case overallpercentofgoalchange = "overallPercentOfGoalChange"
+        case value = "value"
+        case valuechange = "valueChange"
+    }
+
+    
+    
+    
+    public enum SortOrder_getGamificationInsights: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+
+    
+    
+    /**
+     Get insights summary
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortKey: (query) Sort key (optional)
+     - parameter sortMetricId: (query) Sort Metric Id (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter userIds: (query) A list of up to 100 comma-separated user Ids (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsights(filterType: FilterType_getGamificationInsights, filterId: String, granularity: Granularity_getGamificationInsights, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, pageSize: Int? = nil, pageNumber: Int? = nil, sortKey: SortKey_getGamificationInsights? = nil, sortMetricId: String? = nil, sortOrder: SortOrder_getGamificationInsights? = nil, userIds: String? = nil, completion: @escaping ((_ data: InsightsSummary?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds)
+        requestBuilder.execute { (response: Response<InsightsSummary>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get insights summary
+     - GET /api/v2/gamification/insights
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
+  "performanceProfile" : "{}",
+  "entities" : [ {
+    "overallData" : "{}",
+    "user" : "{}",
+    "metricData" : [ {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    }, {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    } ]
+  }, {
+    "overallData" : "{}",
+    "user" : "{}",
+    "metricData" : [ {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    }, {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    } ]
+  } ],
+  "granularity" : "Daily",
+  "comparativePeriod" : "{}",
+  "pageSize" : 1,
+  "primaryPeriod" : "{}"
+}, statusCode=200}]
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortKey: (query) Sort key (optional)
+     - parameter sortMetricId: (query) Sort Metric Id (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter userIds: (query) A list of up to 100 comma-separated user Ids (optional)
+
+     - returns: RequestBuilder<InsightsSummary> 
+     */
+    open class func getGamificationInsightsWithRequestBuilder(filterType: FilterType_getGamificationInsights, filterId: String, granularity: Granularity_getGamificationInsights, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, pageSize: Int? = nil, pageNumber: Int? = nil, sortKey: SortKey_getGamificationInsights? = nil, sortMetricId: String? = nil, sortOrder: SortOrder_getGamificationInsights? = nil, userIds: String? = nil) -> RequestBuilder<InsightsSummary> {        
+        let path = "/api/v2/gamification/insights"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "comparativePeriodStartWorkday": comparativePeriodStartWorkday.encodeToJSON(), 
+            "primaryPeriodStartWorkday": primaryPeriodStartWorkday.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "sortKey": sortKey?.rawValue, 
+            "sortMetricId": sortMetricId, 
+            "sortOrder": sortOrder?.rawValue, 
+            "userIds": userIds
+        ])
+
+        let requestBuilder: RequestBuilder<InsightsSummary>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    public enum FilterType_getGamificationInsightsDetails: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    public enum Granularity_getGamificationInsightsDetails: String { 
+        case weekly = "Weekly"
+        case monthly = "Monthly"
+    }
+
+    
+    
+    
+    /**
+     Get insights details for the current user
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsDetails(filterType: FilterType_getGamificationInsightsDetails, filterId: String, granularity: Granularity_getGamificationInsightsDetails, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, completion: @escaping ((_ data: InsightsDetails?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsDetailsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday)
+        requestBuilder.execute { (response: Response<InsightsDetails>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get insights details for the current user
+     - GET /api/v2/gamification/insights/details
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "overallData" : "{}",
+  "granularity" : "Daily",
+  "comparativePeriod" : "{}",
+  "primaryPeriod" : "{}",
+  "user" : "{}",
+  "metricData" : [ {
+    "percentOfGoalChange" : 0.8008281904610115,
+    "metric" : "{}",
+    "valueChange" : 6.027456183070403,
+    "comparativePeriod" : "{}",
+    "primaryPeriod" : "{}"
+  }, {
+    "percentOfGoalChange" : 0.8008281904610115,
+    "metric" : "{}",
+    "valueChange" : 6.027456183070403,
+    "comparativePeriod" : "{}",
+    "primaryPeriod" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+
+     - returns: RequestBuilder<InsightsDetails> 
+     */
+    open class func getGamificationInsightsDetailsWithRequestBuilder(filterType: FilterType_getGamificationInsightsDetails, filterId: String, granularity: Granularity_getGamificationInsightsDetails, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date) -> RequestBuilder<InsightsDetails> {        
+        let path = "/api/v2/gamification/insights/details"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "comparativePeriodStartWorkday": comparativePeriodStartWorkday.encodeToJSON(), 
+            "primaryPeriodStartWorkday": primaryPeriodStartWorkday.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<InsightsDetails>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    public enum FilterType_getGamificationInsightsGroupsTrends: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    public enum Granularity_getGamificationInsightsGroupsTrends: String { 
+        case daily = "Daily"
+        case weekly = "Weekly"
+        case monthly = "Monthly"
+    }
+
+    
+    
+    
+    
+    
+    /**
+     Get insights overall trend for the current user
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter comparativePeriodEndWorkday: (query) The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodEndWorkday: (query) The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsGroupsTrends(filterType: FilterType_getGamificationInsightsGroupsTrends, filterId: String, granularity: Granularity_getGamificationInsightsGroupsTrends, comparativePeriodStartWorkday: Date, comparativePeriodEndWorkday: Date, primaryPeriodStartWorkday: Date, primaryPeriodEndWorkday: Date, completion: @escaping ((_ data: InsightsTrend?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsGroupsTrendsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday)
+        requestBuilder.execute { (response: Response<InsightsTrend>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get insights overall trend for the current user
+     - GET /api/v2/gamification/insights/groups/trends
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "total" : "{}",
+  "performanceProfile" : "{}",
+  "entities" : [ {
+    "metric" : "{}",
+    "trends" : "{}"
+  }, {
+    "metric" : "{}",
+    "trends" : "{}"
+  } ],
+  "granularity" : "Daily",
+  "comparativePeriod" : "{}",
+  "primaryPeriod" : "{}"
+}, statusCode=200}]
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter comparativePeriodEndWorkday: (query) The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodEndWorkday: (query) The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+
+     - returns: RequestBuilder<InsightsTrend> 
+     */
+    open class func getGamificationInsightsGroupsTrendsWithRequestBuilder(filterType: FilterType_getGamificationInsightsGroupsTrends, filterId: String, granularity: Granularity_getGamificationInsightsGroupsTrends, comparativePeriodStartWorkday: Date, comparativePeriodEndWorkday: Date, primaryPeriodStartWorkday: Date, primaryPeriodEndWorkday: Date) -> RequestBuilder<InsightsTrend> {        
+        let path = "/api/v2/gamification/insights/groups/trends"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "comparativePeriodStartWorkday": comparativePeriodStartWorkday.encodeToJSON(), 
+            "comparativePeriodEndWorkday": comparativePeriodEndWorkday.encodeToJSON(), 
+            "primaryPeriodStartWorkday": primaryPeriodStartWorkday.encodeToJSON(), 
+            "primaryPeriodEndWorkday": primaryPeriodEndWorkday.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<InsightsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    public enum FilterType_getGamificationInsightsGroupsTrendsAll: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    public enum Granularity_getGamificationInsightsGroupsTrendsAll: String { 
+        case daily = "Daily"
+        case weekly = "Weekly"
+        case monthly = "Monthly"
+    }
+
+    
+    
+    
+    
+    
+    /**
+     Get insights overall trend
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter comparativePeriodEndWorkday: (query) The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodEndWorkday: (query) The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsGroupsTrendsAll(filterType: FilterType_getGamificationInsightsGroupsTrendsAll, filterId: String, granularity: Granularity_getGamificationInsightsGroupsTrendsAll, comparativePeriodStartWorkday: Date, comparativePeriodEndWorkday: Date, primaryPeriodStartWorkday: Date, primaryPeriodEndWorkday: Date, completion: @escaping ((_ data: InsightsTrend?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsGroupsTrendsAllWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday)
+        requestBuilder.execute { (response: Response<InsightsTrend>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get insights overall trend
+     - GET /api/v2/gamification/insights/groups/trends/all
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "total" : "{}",
+  "performanceProfile" : "{}",
+  "entities" : [ {
+    "metric" : "{}",
+    "trends" : "{}"
+  }, {
+    "metric" : "{}",
+    "trends" : "{}"
+  } ],
+  "granularity" : "Daily",
+  "comparativePeriod" : "{}",
+  "primaryPeriod" : "{}"
+}, statusCode=200}]
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter comparativePeriodEndWorkday: (query) The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodEndWorkday: (query) The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+
+     - returns: RequestBuilder<InsightsTrend> 
+     */
+    open class func getGamificationInsightsGroupsTrendsAllWithRequestBuilder(filterType: FilterType_getGamificationInsightsGroupsTrendsAll, filterId: String, granularity: Granularity_getGamificationInsightsGroupsTrendsAll, comparativePeriodStartWorkday: Date, comparativePeriodEndWorkday: Date, primaryPeriodStartWorkday: Date, primaryPeriodEndWorkday: Date) -> RequestBuilder<InsightsTrend> {        
+        let path = "/api/v2/gamification/insights/groups/trends/all"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "comparativePeriodStartWorkday": comparativePeriodStartWorkday.encodeToJSON(), 
+            "comparativePeriodEndWorkday": comparativePeriodEndWorkday.encodeToJSON(), 
+            "primaryPeriodStartWorkday": primaryPeriodStartWorkday.encodeToJSON(), 
+            "primaryPeriodEndWorkday": primaryPeriodEndWorkday.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<InsightsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    public enum FilterType_getGamificationInsightsMembers: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    public enum Granularity_getGamificationInsightsMembers: String { 
+        case weekly = "Weekly"
+        case monthly = "Monthly"
+    }
+
+    
+    
+    /**
+     Query users in a profile during a period of time
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter startWorkday: (query) The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsMembers(filterType: FilterType_getGamificationInsightsMembers, filterId: String, granularity: Granularity_getGamificationInsightsMembers, startWorkday: Date, completion: @escaping ((_ data: InsightsAgents?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsMembersWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday)
+        requestBuilder.execute { (response: Response<InsightsAgents>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query users in a profile during a period of time
+     - GET /api/v2/gamification/insights/members
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "granularity" : "Daily",
+  "dateStartWorkday" : "2000-01-23"
+}, statusCode=200}]
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter startWorkday: (query) The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+
+     - returns: RequestBuilder<InsightsAgents> 
+     */
+    open class func getGamificationInsightsMembersWithRequestBuilder(filterType: FilterType_getGamificationInsightsMembers, filterId: String, granularity: Granularity_getGamificationInsightsMembers, startWorkday: Date) -> RequestBuilder<InsightsAgents> {        
+        let path = "/api/v2/gamification/insights/members"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "startWorkday": startWorkday.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<InsightsAgents>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    public enum FilterType_getGamificationInsightsTrends: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    public enum Granularity_getGamificationInsightsTrends: String { 
+        case daily = "Daily"
+        case weekly = "Weekly"
+    }
+
+    
+    
+    
+    
+    
+    /**
+     Get insights user trend for the current user
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter comparativePeriodEndWorkday: (query) The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodEndWorkday: (query) The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsTrends(filterType: FilterType_getGamificationInsightsTrends, filterId: String, granularity: Granularity_getGamificationInsightsTrends, comparativePeriodStartWorkday: Date, comparativePeriodEndWorkday: Date, primaryPeriodStartWorkday: Date, primaryPeriodEndWorkday: Date, completion: @escaping ((_ data: UserInsightsTrend?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsTrendsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday)
+        requestBuilder.execute { (response: Response<UserInsightsTrend>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get insights user trend for the current user
+     - GET /api/v2/gamification/insights/trends
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "total" : "{}",
+  "performanceProfile" : "{}",
+  "entities" : [ {
+    "metric" : "{}",
+    "trends" : "{}"
+  }, {
+    "metric" : "{}",
+    "trends" : "{}"
+  } ],
+  "granularity" : "Daily",
+  "comparativePeriod" : "{}",
+  "primaryPeriod" : "{}",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter comparativePeriodEndWorkday: (query) The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodEndWorkday: (query) The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+
+     - returns: RequestBuilder<UserInsightsTrend> 
+     */
+    open class func getGamificationInsightsTrendsWithRequestBuilder(filterType: FilterType_getGamificationInsightsTrends, filterId: String, granularity: Granularity_getGamificationInsightsTrends, comparativePeriodStartWorkday: Date, comparativePeriodEndWorkday: Date, primaryPeriodStartWorkday: Date, primaryPeriodEndWorkday: Date) -> RequestBuilder<UserInsightsTrend> {        
+        let path = "/api/v2/gamification/insights/trends"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "comparativePeriodStartWorkday": comparativePeriodStartWorkday.encodeToJSON(), 
+            "comparativePeriodEndWorkday": comparativePeriodEndWorkday.encodeToJSON(), 
+            "primaryPeriodStartWorkday": primaryPeriodStartWorkday.encodeToJSON(), 
+            "primaryPeriodEndWorkday": primaryPeriodEndWorkday.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<UserInsightsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    public enum FilterType_getGamificationInsightsUserDetails: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    public enum Granularity_getGamificationInsightsUserDetails: String { 
+        case weekly = "Weekly"
+        case monthly = "Monthly"
+    }
+
+    
+    
+    
+    /**
+     Get insights details for the user
+     
+     - parameter userId: (path) The ID of a user. 
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsUserDetails(userId: String, filterType: FilterType_getGamificationInsightsUserDetails, filterId: String, granularity: Granularity_getGamificationInsightsUserDetails, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, completion: @escaping ((_ data: InsightsDetails?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsUserDetailsWithRequestBuilder(userId: userId, filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday)
+        requestBuilder.execute { (response: Response<InsightsDetails>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get insights details for the user
+     - GET /api/v2/gamification/insights/users/{userId}/details
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "overallData" : "{}",
+  "granularity" : "Daily",
+  "comparativePeriod" : "{}",
+  "primaryPeriod" : "{}",
+  "user" : "{}",
+  "metricData" : [ {
+    "percentOfGoalChange" : 0.8008281904610115,
+    "metric" : "{}",
+    "valueChange" : 6.027456183070403,
+    "comparativePeriod" : "{}",
+    "primaryPeriod" : "{}"
+  }, {
+    "percentOfGoalChange" : 0.8008281904610115,
+    "metric" : "{}",
+    "valueChange" : 6.027456183070403,
+    "comparativePeriod" : "{}",
+    "primaryPeriod" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter userId: (path) The ID of a user. 
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+
+     - returns: RequestBuilder<InsightsDetails> 
+     */
+    open class func getGamificationInsightsUserDetailsWithRequestBuilder(userId: String, filterType: FilterType_getGamificationInsightsUserDetails, filterId: String, granularity: Granularity_getGamificationInsightsUserDetails, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date) -> RequestBuilder<InsightsDetails> {        
+        var path = "/api/v2/gamification/insights/users/{userId}/details"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "comparativePeriodStartWorkday": comparativePeriodStartWorkday.encodeToJSON(), 
+            "primaryPeriodStartWorkday": primaryPeriodStartWorkday.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<InsightsDetails>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    public enum FilterType_getGamificationInsightsUserTrends: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+
+    
+    
+    
+    public enum Granularity_getGamificationInsightsUserTrends: String { 
+        case daily = "Daily"
+        case weekly = "Weekly"
+    }
+
+    
+    
+    
+    
+    
+    /**
+     Get insights user trend for the user
+     
+     - parameter userId: (path) The ID of a user. 
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter comparativePeriodEndWorkday: (query) The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodEndWorkday: (query) The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsUserTrends(userId: String, filterType: FilterType_getGamificationInsightsUserTrends, filterId: String, granularity: Granularity_getGamificationInsightsUserTrends, comparativePeriodStartWorkday: Date, comparativePeriodEndWorkday: Date, primaryPeriodStartWorkday: Date, primaryPeriodEndWorkday: Date, completion: @escaping ((_ data: UserInsightsTrend?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsUserTrendsWithRequestBuilder(userId: userId, filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday)
+        requestBuilder.execute { (response: Response<UserInsightsTrend>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get insights user trend for the user
+     - GET /api/v2/gamification/insights/users/{userId}/trends
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "total" : "{}",
+  "performanceProfile" : "{}",
+  "entities" : [ {
+    "metric" : "{}",
+    "trends" : "{}"
+  }, {
+    "metric" : "{}",
+    "trends" : "{}"
+  } ],
+  "granularity" : "Daily",
+  "comparativePeriod" : "{}",
+  "primaryPeriod" : "{}",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter userId: (path) The ID of a user. 
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter comparativePeriodEndWorkday: (query) The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodEndWorkday: (query) The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+
+     - returns: RequestBuilder<UserInsightsTrend> 
+     */
+    open class func getGamificationInsightsUserTrendsWithRequestBuilder(userId: String, filterType: FilterType_getGamificationInsightsUserTrends, filterId: String, granularity: Granularity_getGamificationInsightsUserTrends, comparativePeriodStartWorkday: Date, comparativePeriodEndWorkday: Date, primaryPeriodStartWorkday: Date, primaryPeriodEndWorkday: Date) -> RequestBuilder<UserInsightsTrend> {        
+        var path = "/api/v2/gamification/insights/users/{userId}/trends"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "comparativePeriodStartWorkday": comparativePeriodStartWorkday.encodeToJSON(), 
+            "comparativePeriodEndWorkday": comparativePeriodEndWorkday.encodeToJSON(), 
+            "primaryPeriodStartWorkday": primaryPeriodStartWorkday.encodeToJSON(), 
+            "primaryPeriodEndWorkday": primaryPeriodEndWorkday.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<UserInsightsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -3982,6 +4862,148 @@ open class GamificationAPI {
         ])
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Query performance profiles in date range for a user
+     
+     - parameter userId: (path) The ID of a user. 
+     - parameter body: (body) The date range of work day. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationProfilesUserQuery(userId: String, body: UserProfilesInDateRangeRequest, completion: @escaping ((_ data: UserProfilesInDateRange?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfilesUserQueryWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<UserProfilesInDateRange>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query performance profiles in date range for a user
+     - POST /api/v2/gamification/profiles/users/{userId}/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateEndWorkday" : "2000-01-23",
+  "profiles" : [ {
+    "division" : "{}",
+    "dateEndWorkday" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateStartWorkday" : "2000-01-23",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "dateEndWorkday" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateStartWorkday" : "2000-01-23",
+    "id" : "id"
+  } ],
+  "dateStartWorkday" : "2000-01-23",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter userId: (path) The ID of a user. 
+     - parameter body: (body) The date range of work day. 
+
+     - returns: RequestBuilder<UserProfilesInDateRange> 
+     */
+    open class func postGamificationProfilesUserQueryWithRequestBuilder(userId: String, body: UserProfilesInDateRangeRequest) -> RequestBuilder<UserProfilesInDateRange> {        
+        var path = "/api/v2/gamification/profiles/users/{userId}/query"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserProfilesInDateRange>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Query performance profiles in date range for the current user
+     
+     - parameter body: (body) The date range of work day. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationProfilesUsersMeQuery(body: UserProfilesInDateRangeRequest, completion: @escaping ((_ data: UserProfilesInDateRange?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfilesUsersMeQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UserProfilesInDateRange>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query performance profiles in date range for the current user
+     - POST /api/v2/gamification/profiles/users/me/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateEndWorkday" : "2000-01-23",
+  "profiles" : [ {
+    "division" : "{}",
+    "dateEndWorkday" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateStartWorkday" : "2000-01-23",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "dateEndWorkday" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "dateStartWorkday" : "2000-01-23",
+    "id" : "id"
+  } ],
+  "dateStartWorkday" : "2000-01-23",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) The date range of work day. 
+
+     - returns: RequestBuilder<UserProfilesInDateRange> 
+     */
+    open class func postGamificationProfilesUsersMeQueryWithRequestBuilder(body: UserProfilesInDateRangeRequest) -> RequestBuilder<UserProfilesInDateRange> {        
+        let path = "/api/v2/gamification/profiles/users/me/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserProfilesInDateRange>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

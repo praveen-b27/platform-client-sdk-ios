@@ -163,6 +163,11 @@ title: ViewFilter
 | **alertRuleIds** | **[String]** | The list of Alert Rule IDs | [optional] |
 | **evaluationFormContextIds** | **[String]** | The list of Evaluation Form Context IDs | [optional] |
 | **evaluationStatuses** | **[String]** | The evaluation statuses that are used to filter the view | [optional] |
+| **workbinIds** | **[String]** | The list of Workbin IDs | [optional] |
+| **worktypeIds** | **[String]** | The list of Worktype IDs | [optional] |
+| **workitemIds** | **[String]** | The list of Workitem IDs | [optional] |
+| **workitemAssigneeIds** | **[String]** | The list of Workitem Assignee IDs | [optional] |
+| **workitemStatuses** | **[String]** | The list of Workitem Statuses IDs | [optional] |
 | **isAnalyzedForSensitiveData** | **Bool** | Filter to indicate the transcript has been analyzed for sensitive data. | [optional] |
 | **hasSensitiveData** | **Bool** | Filter to indicate the transcript contains sensitive data. | [optional] |
 | **subPath** | **String** | Filter for Sub Path | [optional] |

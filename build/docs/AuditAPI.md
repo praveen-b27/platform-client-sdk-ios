@@ -231,6 +231,8 @@ AuditAPI.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor
 
 Create audit query execution
 
+Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+
 
 
 Wraps POST /api/v2/audits/query  
@@ -282,6 +284,8 @@ AuditAPI.postAuditsQuery(body: body) { (response, error) in
 > [AuditRealtimeQueryResultsResponse](AuditRealtimeQueryResultsResponse.html) postAuditsQueryRealtime(body, expand)
 
 This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
+
+Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
 
 
 

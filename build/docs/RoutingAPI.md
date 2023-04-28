@@ -2350,7 +2350,7 @@ RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, page
 
 
 
-> [[KeyPerformanceIndicator]](KeyPerformanceIndicator.html) getRoutingPredictorsKeyperformanceindicators(kpiGroup)
+> [[KeyPerformanceIndicator]](KeyPerformanceIndicator.html) getRoutingPredictorsKeyperformanceindicators(kpiGroup, expand)
 
 Get a list of Key Performance Indicators
 
@@ -2371,9 +2371,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let kpiGroup: RoutingAPI.KpiGroup_getRoutingPredictorsKeyperformanceindicators = RoutingAPI.KpiGroup_getRoutingPredictorsKeyperformanceindicators.enummember // The Group of Key Performance Indicators to return
+let expand: [String] = [""] // Parameter to request additional data to return in KPI payload
 
 // Code example
-RoutingAPI.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup) { (response, error) in
+RoutingAPI.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2389,6 +2390,7 @@ RoutingAPI.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup) { (r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **kpiGroup** | **String**| The Group of Key Performance Indicators to return | [optional]<br />**Values**: standard ("Standard"), custom ("Custom") |
+| **expand** | [**[String]**](String.html)| Parameter to request additional data to return in KPI payload | [optional]<br />**Values**: queues ("queues") |
 {: class="table-striped"}
 
 

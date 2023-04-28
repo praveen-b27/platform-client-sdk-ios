@@ -30,6 +30,8 @@ public class KnowledgeGuestDocument: Codable {
     public var dateCreated: Date?
     /** Document last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
+    /** Document import date-time, or null if was not imported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateImported: Date?
     /** The last published version number of the document. */
     public var lastPublishedVersionNumber: Int?
     /** The date on which the document was last published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -49,7 +51,7 @@ public class KnowledgeGuestDocument: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, variations: [KnowledgeGuestDocumentVariation]?, sessionId: String?, category: GuestCategoryReference?, selfUri: String?) {
+    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, variations: [KnowledgeGuestDocumentVariation]?, sessionId: String?, category: GuestCategoryReference?, selfUri: String?) {
         self._id = _id
         self.title = title
         self.visible = visible
@@ -57,6 +59,7 @@ public class KnowledgeGuestDocument: Codable {
         self.state = state
         self.dateCreated = dateCreated
         self.dateModified = dateModified
+        self.dateImported = dateImported
         self.lastPublishedVersionNumber = lastPublishedVersionNumber
         self.datePublished = datePublished
         self.createdBy = createdBy
@@ -76,6 +79,7 @@ public class KnowledgeGuestDocument: Codable {
         case state
         case dateCreated
         case dateModified
+        case dateImported
         case lastPublishedVersionNumber
         case datePublished
         case createdBy

@@ -16,21 +16,21 @@ public class ContactListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var partialResults: Bool?
-    public var nextUri: String?
     public var firstUri: String?
+    public var nextUri: String?
     public var selfUri: String?
     public var previousUri: String?
     public var lastUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ExternalContact]?, pageSize: Int?, pageNumber: Int?, total: Int64?, partialResults: Bool?, nextUri: String?, firstUri: String?, selfUri: String?, previousUri: String?, lastUri: String?, pageCount: Int?) {
+    public init(entities: [ExternalContact]?, pageSize: Int?, pageNumber: Int?, total: Int64?, partialResults: Bool?, firstUri: String?, nextUri: String?, selfUri: String?, previousUri: String?, lastUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.partialResults = partialResults
-        self.nextUri = nextUri
         self.firstUri = firstUri
+        self.nextUri = nextUri
         self.selfUri = selfUri
         self.previousUri = previousUri
         self.lastUri = lastUri

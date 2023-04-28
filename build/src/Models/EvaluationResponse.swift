@@ -64,6 +64,8 @@ public class EvaluationResponse: Codable {
     public var neverRelease: Bool?
     /** Set to false to unassign the evaluation. This cannot be set to false when assignee is also set. */
     public var assigned: Bool?
+    /** Date when the assignee was last changed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateAssigneeChanged: Date?
     /** Only used for email evaluations. Will be null for all other evaluations. */
     public var resourceId: String?
     /** The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources. */
@@ -80,7 +82,7 @@ public class EvaluationResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
@@ -102,6 +104,7 @@ public class EvaluationResponse: Codable {
         self.conversationEndDate = conversationEndDate
         self.neverRelease = neverRelease
         self.assigned = assigned
+        self.dateAssigneeChanged = dateAssigneeChanged
         self.resourceId = resourceId
         self.resourceType = resourceType
         self.redacted = redacted
@@ -134,6 +137,7 @@ public class EvaluationResponse: Codable {
         case conversationEndDate
         case neverRelease
         case assigned
+        case dateAssigneeChanged
         case resourceId
         case resourceType
         case redacted

@@ -9,7 +9,7 @@ title: WritableDialerContact
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **contactListId** | **String** | The identifier of the contact list containing this contact. | |
-| **data** | [**[String:JSON]**](JSON.html) | An ordered map of the contact&#39;s columns and corresponding values. | |
+| **data** | **[String:String]** | An ordered map of the contact&#39;s columns and corresponding values. | |
 | **latestSmsEvaluations** | [**[String:MessageEvaluation]**](MessageEvaluation.html) | A map of SMS records for the contact phone columns. | [optional] |
 | **latestEmailEvaluations** | [**[String:MessageEvaluation]**](MessageEvaluation.html) | A map of email records for the contact email columns. | [optional] |
 | **callable** | **Bool** | Indicates whether or not the contact can be called. | [optional] |

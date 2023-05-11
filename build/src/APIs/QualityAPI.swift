@@ -38123,7 +38123,7 @@ open class QualityAPI {
      - parameter conversationId: (path) conversationId 
      - parameter evaluationId: (path) evaluationId 
      - parameter body: (body) evaluation 
-     - parameter expand: (query) evaluatorId, evaluationForm (optional)
+     - parameter expand: (query) evaluatorId, evaluationForm, assignee (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func putQualityConversationEvaluation(conversationId: String, evaluationId: String, body: Evaluation, expand: String? = nil, completion: @escaping ((_ data: EvaluationResponse?,_ error: Error?) -> Void)) {
@@ -40919,7 +40919,7 @@ open class QualityAPI {
      - parameter conversationId: (path) conversationId 
      - parameter evaluationId: (path) evaluationId 
      - parameter body: (body) evaluation 
-     - parameter expand: (query) evaluatorId, evaluationForm (optional)
+     - parameter expand: (query) evaluatorId, evaluationForm, assignee (optional)
 
      - returns: RequestBuilder<EvaluationResponse> 
      */

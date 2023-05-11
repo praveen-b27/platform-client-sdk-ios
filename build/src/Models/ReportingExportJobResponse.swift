@@ -70,6 +70,7 @@ public class ReportingExportJobResponse: Codable {
         case landingPage = "LANDING_PAGE"
         case dashboardSummary = "DASHBOARD_SUMMARY"
         case dashboardDetail = "DASHBOARD_DETAIL"
+        case dashboardUsers = "DASHBOARD_USERS"
         case journeyActionMapSummaryView = "JOURNEY_ACTION_MAP_SUMMARY_VIEW"
         case journeyOutcomeSummaryView = "JOURNEY_OUTCOME_SUMMARY_VIEW"
         case journeySegmentSummaryView = "JOURNEY_SEGMENT_SUMMARY_VIEW"
@@ -197,11 +198,13 @@ public class ReportingExportJobResponse: Codable {
     public var emailStatuses: [String:String]?
     /** The optional error message in case the export fail to email */
     public var emailErrorDescription: String?
+    /** Indicates whether to include selected duration format to the column headers */
+    public var includeDurationFormatInHeader: Bool?
     public var enabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, emailErrorDescription: String?, enabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, emailErrorDescription: String?, includeDurationFormatInHeader: Bool?, enabled: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.runId = runId
@@ -230,6 +233,7 @@ public class ReportingExportJobResponse: Codable {
         self.recipientEmails = recipientEmails
         self.emailStatuses = emailStatuses
         self.emailErrorDescription = emailErrorDescription
+        self.includeDurationFormatInHeader = includeDurationFormatInHeader
         self.enabled = enabled
         self.selfUri = selfUri
     }
@@ -263,6 +267,7 @@ public class ReportingExportJobResponse: Codable {
         case recipientEmails
         case emailStatuses
         case emailErrorDescription
+        case includeDurationFormatInHeader
         case enabled
         case selfUri
     }

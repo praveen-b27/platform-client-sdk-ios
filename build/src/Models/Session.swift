@@ -47,7 +47,7 @@ public class Session: Codable {
     public var customerId: String?
     /** Type of source customer identifier (e.g. cookie, email, phone). */
     public var customerIdType: String?
-    /** Session types indicate the type or category of sessions (e.g. web, ticket, delivery, atm). */
+    /** Session types indicate the type or category of sessions (e.g. web, app). */
     public var type: String?
     /** Unique identifier in the external system where the events for the session originate from. */
     public var externalId: String?

@@ -15,10 +15,13 @@ public class Settings: Codable {
     public var communicationBasedACW: Bool?
     /** Display communication summary */
     public var includeNonAgentConversationSummary: Bool?
+    /** Allow Callback Queue Selection */
+    public var allowCallbackQueueSelection: Bool?
 
-    public init(communicationBasedACW: Bool?, includeNonAgentConversationSummary: Bool?) {
+    public init(communicationBasedACW: Bool?, includeNonAgentConversationSummary: Bool?, allowCallbackQueueSelection: Bool?) {
         self.communicationBasedACW = communicationBasedACW
         self.includeNonAgentConversationSummary = includeNonAgentConversationSummary
+        self.allowCallbackQueueSelection = allowCallbackQueueSelection
     }
 
 

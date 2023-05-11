@@ -10,6 +10,7 @@ Information about a CX infrastructure as code job
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **dryRun** | **Bool** | dryRun | |
+| **acceleratorId** | **String** | acceleratorId | [optional] |
 | **dateSubmitted** | [**Date**](Date.html) | dateSubmitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **submittedBy** | [**UserReference**](UserReference.html) | submittedBy | [optional] |
 | **status** | **String** | status | [optional] |

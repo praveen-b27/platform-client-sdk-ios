@@ -14,6 +14,7 @@ title: PatchActionMap
 | **triggerWithSegments** | **[String]** | Trigger action map if any segment in the list is assigned to a given customer. | |
 | **triggerWithEventConditions** | [**[EventCondition]**](EventCondition.html) | List of event conditions that must be satisfied to trigger the action map. | [optional] |
 | **triggerWithOutcomeProbabilityConditions** | [**[OutcomeProbabilityCondition]**](OutcomeProbabilityCondition.html) | Probability conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **triggerWithOutcomePercentileConditions** | [**[OutcomePercentileCondition]**](OutcomePercentileCondition.html) | Percentile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
 | **pageUrlConditions** | [**[UrlCondition]**](UrlCondition.html) | URL conditions that a page must match for web actions to be displayable. | |
 | **activation** | [**Activation**](Activation.html) | Type of activation. | [optional] |
 | **weight** | **Int** | Weight of the action map with higher number denoting higher weight. | [optional] |

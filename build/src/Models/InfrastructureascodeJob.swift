@@ -24,6 +24,8 @@ public class InfrastructureascodeJob: Codable {
     public var _id: String?
     /** dryRun */
     public var dryRun: Bool?
+    /** acceleratorId */
+    public var acceleratorId: String?
     /** dateSubmitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateSubmitted: Date?
     /** submittedBy */
@@ -37,9 +39,10 @@ public class InfrastructureascodeJob: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, dryRun: Bool?, dateSubmitted: Date?, submittedBy: UserReference?, status: Status?, errorInfo: ErrorInfo?, results: String?, selfUri: String?) {
+    public init(_id: String?, dryRun: Bool?, acceleratorId: String?, dateSubmitted: Date?, submittedBy: UserReference?, status: Status?, errorInfo: ErrorInfo?, results: String?, selfUri: String?) {
         self._id = _id
         self.dryRun = dryRun
+        self.acceleratorId = acceleratorId
         self.dateSubmitted = dateSubmitted
         self.submittedBy = submittedBy
         self.status = status
@@ -51,6 +54,7 @@ public class InfrastructureascodeJob: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case dryRun
+        case acceleratorId
         case dateSubmitted
         case submittedBy
         case status

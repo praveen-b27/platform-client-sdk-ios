@@ -35,6 +35,8 @@ public class AnalyticsConversation: Codable {
         case inbound = "inbound"
         case outbound = "outbound"
     }
+    /** The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var conferenceStart: Date?
     /** The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var conversationEnd: Date?
     /** Unique identifier for the conversation */
@@ -68,7 +70,8 @@ public class AnalyticsConversation: Codable {
     /** Participants in the conversation */
     public var participants: [AnalyticsParticipant]?
 
-    public init(conversationEnd: Date?, conversationId: String?, conversationInitiator: ConversationInitiator?, conversationStart: Date?, customerParticipation: Bool?, divisionIds: [String]?, externalTag: String?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
+    public init(conferenceStart: Date?, conversationEnd: Date?, conversationId: String?, conversationInitiator: ConversationInitiator?, conversationStart: Date?, customerParticipation: Bool?, divisionIds: [String]?, externalTag: String?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
+        self.conferenceStart = conferenceStart
         self.conversationEnd = conversationEnd
         self.conversationId = conversationId
         self.conversationInitiator = conversationInitiator

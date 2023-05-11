@@ -25,6 +25,7 @@ title: ReportingExportJobRequest
 | **selectedColumns** | [**[SelectedColumns]**](SelectedColumns.html) | The list of ordered selected columns from the export view by the user | [optional] |
 | **hasCustomParticipantAttributes** | **Bool** | Indicates if custom participant attributes will be exported | [optional] |
 | **recipientEmails** | **[String]** | The list of email recipients for the exports | [optional] |
+| **includeDurationFormatInHeader** | **Bool** | Indicates whether to include selected duration format to the column headers | [optional] |
 {: class="table table-striped"}
 
 

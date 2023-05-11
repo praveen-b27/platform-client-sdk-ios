@@ -189,7 +189,7 @@ ResponseManagementAPI.deleteResponsemanagementResponseasset(responseAssetId: res
 
 
 
-> [LibraryEntityListing](LibraryEntityListing.html) getResponsemanagementLibraries(pageNumber, pageSize, messagingTemplateFilter)
+> [LibraryEntityListing](LibraryEntityListing.html) getResponsemanagementLibraries(pageNumber, pageSize, messagingTemplateFilter, libraryPrefix)
 
 Gets a list of existing response libraries.
 
@@ -212,9 +212,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
 let messagingTemplateFilter: ResponseManagementAPI.MessagingTemplateFilter_getResponsemanagementLibraries = ResponseManagementAPI.MessagingTemplateFilter_getResponsemanagementLibraries.enummember // Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel
+let libraryPrefix: String = "" // Returns a list of libraries that contain the prefix provided
 
 // Code example
-ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pageSize: pageSize, messagingTemplateFilter: messagingTemplateFilter) { (response, error) in
+ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pageSize: pageSize, messagingTemplateFilter: messagingTemplateFilter, libraryPrefix: libraryPrefix) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -232,6 +233,7 @@ ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pag
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **messagingTemplateFilter** | **String**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional]<br />**Values**: whatsapp ("whatsapp") |
+| **libraryPrefix** | **String**| Returns a list of libraries that contain the prefix provided | [optional] |
 {: class="table-striped"}
 
 

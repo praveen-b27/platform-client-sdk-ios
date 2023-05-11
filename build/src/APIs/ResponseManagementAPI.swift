@@ -152,16 +152,18 @@ open class ResponseManagementAPI {
     }
 
     
+    
     /**
      Gets a list of existing response libraries.
      
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter messagingTemplateFilter: (query) Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)
+     - parameter libraryPrefix: (query) Returns a list of libraries that contain the prefix provided (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getResponsemanagementLibraries(pageNumber: Int? = nil, pageSize: Int? = nil, messagingTemplateFilter: MessagingTemplateFilter_getResponsemanagementLibraries? = nil, completion: @escaping ((_ data: LibraryEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getResponsemanagementLibrariesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, messagingTemplateFilter: messagingTemplateFilter)
+    open class func getResponsemanagementLibraries(pageNumber: Int? = nil, pageSize: Int? = nil, messagingTemplateFilter: MessagingTemplateFilter_getResponsemanagementLibraries? = nil, libraryPrefix: String? = nil, completion: @escaping ((_ data: LibraryEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getResponsemanagementLibrariesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, messagingTemplateFilter: messagingTemplateFilter, libraryPrefix: libraryPrefix)
         requestBuilder.execute { (response: Response<LibraryEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -216,10 +218,11 @@ open class ResponseManagementAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter messagingTemplateFilter: (query) Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)
+     - parameter libraryPrefix: (query) Returns a list of libraries that contain the prefix provided (optional)
 
      - returns: RequestBuilder<LibraryEntityListing> 
      */
-    open class func getResponsemanagementLibrariesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, messagingTemplateFilter: MessagingTemplateFilter_getResponsemanagementLibraries? = nil) -> RequestBuilder<LibraryEntityListing> {        
+    open class func getResponsemanagementLibrariesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, messagingTemplateFilter: MessagingTemplateFilter_getResponsemanagementLibraries? = nil, libraryPrefix: String? = nil) -> RequestBuilder<LibraryEntityListing> {        
         let path = "/api/v2/responsemanagement/libraries"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -228,7 +231,8 @@ open class ResponseManagementAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
-            "messagingTemplateFilter": messagingTemplateFilter?.rawValue
+            "messagingTemplateFilter": messagingTemplateFilter?.rawValue, 
+            "libraryPrefix": libraryPrefix
         ])
 
         let requestBuilder: RequestBuilder<LibraryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

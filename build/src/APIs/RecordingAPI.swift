@@ -2320,7 +2320,7 @@ open class RecordingAPI {
 
     
     /**
-     Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if recording:recording:view permission is missing.
+     Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
      
      - parameter conversationId: (path) Conversation ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -2344,7 +2344,7 @@ open class RecordingAPI {
     }
 
     /**
-     Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if recording:recording:view permission is missing.
+     Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
      - GET /api/v2/conversations/{conversationId}/recordingmetadata
      - OAuth:
        - type: oauth2
@@ -8925,6 +8925,7 @@ open class RecordingAPI {
         "initiator" : "{}",
         "destination" : "{}",
         "transferType" : "Attended",
+        "modifiedBy" : "{}",
         "id" : "id",
         "state" : "Pending"
       }, {
@@ -8932,6 +8933,7 @@ open class RecordingAPI {
         "initiator" : "{}",
         "destination" : "{}",
         "transferType" : "Attended",
+        "modifiedBy" : "{}",
         "id" : "id",
         "state" : "Pending"
       } ],
@@ -22182,6 +22184,7 @@ open class RecordingAPI {
         "initiator" : "{}",
         "destination" : "{}",
         "transferType" : "Attended",
+        "modifiedBy" : "{}",
         "id" : "id",
         "state" : "Pending"
       }, {
@@ -22189,6 +22192,7 @@ open class RecordingAPI {
         "initiator" : "{}",
         "destination" : "{}",
         "transferType" : "Attended",
+        "modifiedBy" : "{}",
         "id" : "id",
         "state" : "Pending"
       } ],

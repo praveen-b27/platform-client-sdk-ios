@@ -272,7 +272,16 @@ open class JourneyAPI {
   "endDate" : "2000-01-23T04:56:07.000+00:00",
   "displayName" : "displayName",
   "selfUri" : "https://openapi-generator.tech",
-  "weight" : 5,
+  "weight" : 2,
+  "triggerWithOutcomePercentileConditions" : [ {
+    "fallbackPercentile" : 5.637377,
+    "maximumPercentile" : 5.962134,
+    "outcomeId" : "outcomeId"
+  }, {
+    "fallbackPercentile" : 5.637377,
+    "maximumPercentile" : 5.962134,
+    "outcomeId" : "outcomeId"
+  } ],
   "isActive" : true,
   "version" : 0,
   "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
@@ -389,7 +398,16 @@ open class JourneyAPI {
     "endDate" : "2000-01-23T04:56:07.000+00:00",
     "displayName" : "displayName",
     "selfUri" : "https://openapi-generator.tech",
-    "weight" : 5,
+    "weight" : 2,
+    "triggerWithOutcomePercentileConditions" : [ {
+      "fallbackPercentile" : 5.637377,
+      "maximumPercentile" : 5.962134,
+      "outcomeId" : "outcomeId"
+    }, {
+      "fallbackPercentile" : 5.637377,
+      "maximumPercentile" : 5.962134,
+      "outcomeId" : "outcomeId"
+    } ],
     "isActive" : true,
     "version" : 0,
     "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
@@ -436,7 +454,16 @@ open class JourneyAPI {
     "endDate" : "2000-01-23T04:56:07.000+00:00",
     "displayName" : "displayName",
     "selfUri" : "https://openapi-generator.tech",
-    "weight" : 5,
+    "weight" : 2,
+    "triggerWithOutcomePercentileConditions" : [ {
+      "fallbackPercentile" : 5.637377,
+      "maximumPercentile" : 5.962134,
+      "outcomeId" : "outcomeId"
+    }, {
+      "fallbackPercentile" : 5.637377,
+      "maximumPercentile" : 5.962134,
+      "outcomeId" : "outcomeId"
+    } ],
     "isActive" : true,
     "version" : 0,
     "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
@@ -1698,7 +1725,16 @@ open class JourneyAPI {
   "endDate" : "2000-01-23T04:56:07.000+00:00",
   "displayName" : "displayName",
   "selfUri" : "https://openapi-generator.tech",
-  "weight" : 5,
+  "weight" : 2,
+  "triggerWithOutcomePercentileConditions" : [ {
+    "fallbackPercentile" : 5.637377,
+    "maximumPercentile" : 5.962134,
+    "outcomeId" : "outcomeId"
+  }, {
+    "fallbackPercentile" : 5.637377,
+    "maximumPercentile" : 5.962134,
+    "outcomeId" : "outcomeId"
+  } ],
   "isActive" : true,
   "version" : 0,
   "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],
@@ -2433,7 +2469,16 @@ open class JourneyAPI {
   "endDate" : "2000-01-23T04:56:07.000+00:00",
   "displayName" : "displayName",
   "selfUri" : "https://openapi-generator.tech",
-  "weight" : 5,
+  "weight" : 2,
+  "triggerWithOutcomePercentileConditions" : [ {
+    "fallbackPercentile" : 5.637377,
+    "maximumPercentile" : 5.962134,
+    "outcomeId" : "outcomeId"
+  }, {
+    "fallbackPercentile" : 5.637377,
+    "maximumPercentile" : 5.962134,
+    "outcomeId" : "outcomeId"
+  } ],
   "isActive" : true,
   "version" : 0,
   "triggerWithSegments" : [ "triggerWithSegments", "triggerWithSegments" ],

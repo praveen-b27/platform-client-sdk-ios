@@ -595,14 +595,18 @@ open class LearningAPI {
   "completionTimeInDays" : 6,
   "summaryData" : "{}",
   "informSteps" : [ {
+    "displayName" : "displayName",
     "name" : "name",
+    "description" : "description",
     "type" : "Url",
     "value" : "value",
     "contentType" : "contentType",
     "sharingUri" : "sharingUri",
     "order" : 1
   }, {
+    "displayName" : "displayName",
     "name" : "name",
+    "description" : "description",
     "type" : "Url",
     "value" : "value",
     "contentType" : "contentType",
@@ -821,14 +825,18 @@ open class LearningAPI {
   "completionTimeInDays" : 6,
   "summaryData" : "{}",
   "informSteps" : [ {
+    "displayName" : "displayName",
     "name" : "name",
+    "description" : "description",
     "type" : "Url",
     "value" : "value",
     "contentType" : "contentType",
     "sharingUri" : "sharingUri",
     "order" : 1
   }, {
+    "displayName" : "displayName",
     "name" : "name",
+    "description" : "description",
     "type" : "Url",
     "value" : "value",
     "contentType" : "contentType",
@@ -961,14 +969,18 @@ open class LearningAPI {
     "completionTimeInDays" : 6,
     "summaryData" : "{}",
     "informSteps" : [ {
+      "displayName" : "displayName",
       "name" : "name",
+      "description" : "description",
       "type" : "Url",
       "value" : "value",
       "contentType" : "contentType",
       "sharingUri" : "sharingUri",
       "order" : 1
     }, {
+      "displayName" : "displayName",
       "name" : "name",
+      "description" : "description",
       "type" : "Url",
       "value" : "value",
       "contentType" : "contentType",
@@ -998,14 +1010,18 @@ open class LearningAPI {
     "completionTimeInDays" : 6,
     "summaryData" : "{}",
     "informSteps" : [ {
+      "displayName" : "displayName",
       "name" : "name",
+      "description" : "description",
       "type" : "Url",
       "value" : "value",
       "contentType" : "contentType",
       "sharingUri" : "sharingUri",
       "order" : 1
     }, {
+      "displayName" : "displayName",
       "name" : "name",
+      "description" : "description",
       "type" : "Url",
       "value" : "value",
       "contentType" : "contentType",
@@ -1135,14 +1151,18 @@ open class LearningAPI {
     "completionTimeInDays" : 6,
     "summaryData" : "{}",
     "informSteps" : [ {
+      "displayName" : "displayName",
       "name" : "name",
+      "description" : "description",
       "type" : "Url",
       "value" : "value",
       "contentType" : "contentType",
       "sharingUri" : "sharingUri",
       "order" : 1
     }, {
+      "displayName" : "displayName",
       "name" : "name",
+      "description" : "description",
       "type" : "Url",
       "value" : "value",
       "contentType" : "contentType",
@@ -1213,14 +1233,18 @@ open class LearningAPI {
     "completionTimeInDays" : 6,
     "summaryData" : "{}",
     "informSteps" : [ {
+      "displayName" : "displayName",
       "name" : "name",
+      "description" : "description",
       "type" : "Url",
       "value" : "value",
       "contentType" : "contentType",
       "sharingUri" : "sharingUri",
       "order" : 1
     }, {
+      "displayName" : "displayName",
       "name" : "name",
+      "description" : "description",
       "type" : "Url",
       "value" : "value",
       "contentType" : "contentType",
@@ -2286,14 +2310,18 @@ open class LearningAPI {
   "completionTimeInDays" : 6,
   "summaryData" : "{}",
   "informSteps" : [ {
+    "displayName" : "displayName",
     "name" : "name",
+    "description" : "description",
     "type" : "Url",
     "value" : "value",
     "contentType" : "contentType",
     "sharingUri" : "sharingUri",
     "order" : 1
   }, {
+    "displayName" : "displayName",
     "name" : "name",
+    "description" : "description",
     "type" : "Url",
     "value" : "value",
     "contentType" : "contentType",
@@ -2589,14 +2617,18 @@ open class LearningAPI {
   "completionTimeInDays" : 6,
   "summaryData" : "{}",
   "informSteps" : [ {
+    "displayName" : "displayName",
     "name" : "name",
+    "description" : "description",
     "type" : "Url",
     "value" : "value",
     "contentType" : "contentType",
     "sharingUri" : "sharingUri",
     "order" : 1
   }, {
+    "displayName" : "displayName",
     "name" : "name",
+    "description" : "description",
     "type" : "Url",
     "value" : "value",
     "contentType" : "contentType",

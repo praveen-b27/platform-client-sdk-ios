@@ -22,6 +22,7 @@ public class EvaluationDetailQueryPredicate: Codable {
         case contextid = "contextId"
         case deleted = "deleted"
         case evaluationid = "evaluationId"
+        case evaluationstatus = "evaluationStatus"
         case evaluatorid = "evaluatorId"
         case eventtime = "eventTime"
         case formid = "formId"

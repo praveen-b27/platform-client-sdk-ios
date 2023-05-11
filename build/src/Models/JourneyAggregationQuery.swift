@@ -49,6 +49,8 @@ public class JourneyAggregationQuery: Codable {
         case touchpointconversationid = "touchpointConversationId"
         case touchpointinteractiontype = "touchpointInteractionType"
         case touchpointqueueid = "touchpointQueueId"
+        case touchpointrequestedrouting = "touchpointRequestedRouting"
+        case touchpointusedrouting = "touchpointUsedRouting"
         case touchpointwrapupcode = "touchpointWrapupCode"
     }
     public enum Metrics: String, Codable { 

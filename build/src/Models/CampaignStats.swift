@@ -23,14 +23,17 @@ public class CampaignStats: Codable {
     public var outstandingCalls: Int?
     /** Number of campaign calls currently scheduled */
     public var scheduledCalls: Int?
+    /** Number of campaign calls currently timezone rescheduled */
+    public var timeZoneRescheduledCalls: Int?
 
-    public init(contactRate: ConnectRate?, idleAgents: Int?, effectiveIdleAgents: Double?, adjustedCallsPerAgent: Double?, outstandingCalls: Int?, scheduledCalls: Int?) {
+    public init(contactRate: ConnectRate?, idleAgents: Int?, effectiveIdleAgents: Double?, adjustedCallsPerAgent: Double?, outstandingCalls: Int?, scheduledCalls: Int?, timeZoneRescheduledCalls: Int?) {
         self.contactRate = contactRate
         self.idleAgents = idleAgents
         self.effectiveIdleAgents = effectiveIdleAgents
         self.adjustedCallsPerAgent = adjustedCallsPerAgent
         self.outstandingCalls = outstandingCalls
         self.scheduledCalls = scheduledCalls
+        self.timeZoneRescheduledCalls = timeZoneRescheduledCalls
     }
 
 

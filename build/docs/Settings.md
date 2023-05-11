@@ -9,6 +9,7 @@ title: Settings
 |------------ | ------------- | ------------- | -------------|
 | **communicationBasedACW** | **Bool** | Communication Based ACW | [optional] |
 | **includeNonAgentConversationSummary** | **Bool** | Display communication summary | [optional] |
+| **allowCallbackQueueSelection** | **Bool** | Allow Callback Queue Selection | [optional] |
 {: class="table table-striped"}
 
 

@@ -117,6 +117,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsCobrowsesessionParticipantAttributes**](ConversationsAPI.html#patchConversationsCobrowsesessionParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsCobrowsesessionParticipantCommunication**](ConversationsAPI.html#patchConversationsCobrowsesessionParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
 | [**patchConversationsEmail**](ConversationsAPI.html#patchConversationsEmail) | Update a conversation by disconnecting all of the participants |
+| [**patchConversationsEmailMessagesDraft**](ConversationsAPI.html#patchConversationsEmailMessagesDraft) | Reset conversation draft to its initial state and/or auto-fill draft content |
 | [**patchConversationsEmailParticipant**](ConversationsAPI.html#patchConversationsEmailParticipant) | Update conversation participant |
 | [**patchConversationsEmailParticipantAttributes**](ConversationsAPI.html#patchConversationsEmailParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsEmailParticipantCommunication**](ConversationsAPI.html#patchConversationsEmailParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
@@ -6117,6 +6118,63 @@ ConversationsAPI.patchConversationsEmail(conversationId: conversationId, body: b
 ### Return type
 
 [**Conversation**](Conversation.html)
+
+<a name="patchConversationsEmailMessagesDraft"></a>
+
+# **patchConversationsEmailMessagesDraft**
+
+
+
+> [EmailMessage](EmailMessage.html) patchConversationsEmailMessagesDraft(conversationId, autoFill, discard, body)
+
+Reset conversation draft to its initial state and/or auto-fill draft content
+
+
+
+Wraps PATCH /api/v2/conversations/emails/{conversationId}/messages/draft  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let autoFill: Bool = true // autoFill
+let discard: Bool = true // discard
+let body: DraftManipulationRequest = new DraftManipulationRequest(...) // Draft Manipulation Request
+
+// Code example
+ConversationsAPI.patchConversationsEmailMessagesDraft(conversationId: conversationId, autoFill: autoFill, discard: discard, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsEmailMessagesDraft was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **autoFill** | **Bool**| autoFill | [optional] |
+| **discard** | **Bool**| discard | [optional] |
+| **body** | [**DraftManipulationRequest**](DraftManipulationRequest.html)| Draft Manipulation Request | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailMessage**](EmailMessage.html)
 
 <a name="patchConversationsEmailParticipant"></a>
 

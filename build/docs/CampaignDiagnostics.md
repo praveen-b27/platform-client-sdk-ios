@@ -12,6 +12,7 @@ title: CampaignDiagnostics
 | **ruleSetDiagnostics** | [**[RuleSetDiagnostic]**](RuleSetDiagnostic.html) | Information regarding the campaign&#39;s rule sets | [optional] |
 | **outstandingInteractionsCount** | **Int** | Current number of outstanding interactions on the campaign | [optional] |
 | **scheduledInteractionsCount** | **Int** | Current number of scheduled interactions on the campaign | [optional] |
+| **timeZoneRescheduledCallsCount** | **Int** | Current number of time zone rescheduled calls on the campaign | [optional] |
 {: class="table table-striped"}
 
 

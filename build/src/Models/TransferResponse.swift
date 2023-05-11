@@ -32,16 +32,19 @@ public class TransferResponse: Codable {
     public var dateIssued: Date?
     /** The initiator of the command. */
     public var initiator: TransferInitiator?
+    /** The user or entity that modified the command. */
+    public var modifiedBy: TransferResponseModifiedBy?
     /** The destination of the command. */
     public var destination: TransferDestination?
     /** The type of transfer to perform. */
     public var transferType: TransferType?
 
-    public init(_id: String?, state: State?, dateIssued: Date?, initiator: TransferInitiator?, destination: TransferDestination?, transferType: TransferType?) {
+    public init(_id: String?, state: State?, dateIssued: Date?, initiator: TransferInitiator?, modifiedBy: TransferResponseModifiedBy?, destination: TransferDestination?, transferType: TransferType?) {
         self._id = _id
         self.state = state
         self.dateIssued = dateIssued
         self.initiator = initiator
+        self.modifiedBy = modifiedBy
         self.destination = destination
         self.transferType = transferType
     }
@@ -51,6 +54,7 @@ public class TransferResponse: Codable {
         case state
         case dateIssued
         case initiator
+        case modifiedBy
         case destination
         case transferType
     }

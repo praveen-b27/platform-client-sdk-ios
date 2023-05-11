@@ -17,11 +17,13 @@ public class EvaluationAggregateQueryPredicate: Codable {
         case metric = "metric"
     }
     public enum Dimension: String, Codable { 
+        case assigneeid = "assigneeId"
         case calibrationid = "calibrationId"
         case contextid = "contextId"
         case conversationid = "conversationId"
         case conversationstart = "conversationStart"
         case divisionid = "divisionId"
+        case evaluationcontextid = "evaluationContextId"
         case evaluationcreateddate = "evaluationCreatedDate"
         case evaluationid = "evaluationId"
         case evaluationreleasedate = "evaluationReleaseDate"

@@ -71,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundEvent**](OutboundAPI.html#getOutboundEvent) | Get Dialer Event |
 | [**getOutboundEvents**](OutboundAPI.html#getOutboundEvents) | Query Event Logs |
 | [**getOutboundMessagingcampaign**](OutboundAPI.html#getOutboundMessagingcampaign) | Get an Outbound Messaging Campaign |
+| [**getOutboundMessagingcampaignDiagnostics**](OutboundAPI.html#getOutboundMessagingcampaignDiagnostics) | Get messaging campaign diagnostics |
 | [**getOutboundMessagingcampaignProgress**](OutboundAPI.html#getOutboundMessagingcampaignProgress) | Get messaging campaign&#39;s progress |
 | [**getOutboundMessagingcampaigns**](OutboundAPI.html#getOutboundMessagingcampaigns) | Query a list of Messaging Campaigns |
 | [**getOutboundMessagingcampaignsDivisionview**](OutboundAPI.html#getOutboundMessagingcampaignsDivisionview) | Get a basic Messaging Campaign information object |
@@ -3724,6 +3725,59 @@ OutboundAPI.getOutboundMessagingcampaign(messagingCampaignId: messagingCampaignI
 ### Return type
 
 [**MessagingCampaign**](MessagingCampaign.html)
+
+<a name="getOutboundMessagingcampaignDiagnostics"></a>
+
+# **getOutboundMessagingcampaignDiagnostics**
+
+
+
+> [MessagingCampaignDiagnostics](MessagingCampaignDiagnostics.html) getOutboundMessagingcampaignDiagnostics(messagingCampaignId)
+
+Get messaging campaign diagnostics
+
+
+
+Wraps GET /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+* outbound:emailCampaign:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+OutboundAPI.getOutboundMessagingcampaignDiagnostics(messagingCampaignId: messagingCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundMessagingcampaignDiagnostics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignDiagnostics**](MessagingCampaignDiagnostics.html)
 
 <a name="getOutboundMessagingcampaignProgress"></a>
 

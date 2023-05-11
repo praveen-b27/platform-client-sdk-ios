@@ -61,6 +61,7 @@ public class ReportingExportJobRequest: Codable {
         case landingPage = "LANDING_PAGE"
         case dashboardSummary = "DASHBOARD_SUMMARY"
         case dashboardDetail = "DASHBOARD_DETAIL"
+        case dashboardUsers = "DASHBOARD_USERS"
         case journeyActionMapSummaryView = "JOURNEY_ACTION_MAP_SUMMARY_VIEW"
         case journeyOutcomeSummaryView = "JOURNEY_OUTCOME_SUMMARY_VIEW"
         case journeySegmentSummaryView = "JOURNEY_SEGMENT_SUMMARY_VIEW"
@@ -153,8 +154,10 @@ public class ReportingExportJobRequest: Codable {
     public var hasCustomParticipantAttributes: Bool?
     /** The list of email recipients for the exports */
     public var recipientEmails: [String]?
+    /** Indicates whether to include selected duration format to the column headers */
+    public var includeDurationFormatInHeader: Bool?
 
-    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?) {
+    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, includeDurationFormatInHeader: Bool?) {
         self.name = name
         self.timeZone = timeZone
         self.exportFormat = exportFormat
@@ -173,6 +176,7 @@ public class ReportingExportJobRequest: Codable {
         self.selectedColumns = selectedColumns
         self.hasCustomParticipantAttributes = hasCustomParticipantAttributes
         self.recipientEmails = recipientEmails
+        self.includeDurationFormatInHeader = includeDurationFormatInHeader
     }
 
 

@@ -2898,7 +2898,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let evaluationId: String = "" // evaluationId
 let body: Evaluation = new Evaluation(...) // evaluation
-let expand: String = "" // evaluatorId, evaluationForm
+let expand: String = "" // evaluatorId, evaluationForm, assignee
 
 // Code example
 QualityAPI.putQualityConversationEvaluation(conversationId: conversationId, evaluationId: evaluationId, body: body, expand: expand) { (response, error) in
@@ -2919,7 +2919,7 @@ QualityAPI.putQualityConversationEvaluation(conversationId: conversationId, eval
 | **conversationId** | **String**| conversationId | |
 | **evaluationId** | **String**| evaluationId | |
 | **body** | [**Evaluation**](Evaluation.html)| evaluation | |
-| **expand** | **String**| evaluatorId, evaluationForm | [optional] |
+| **expand** | **String**| evaluatorId, evaluationForm, assignee | [optional] |
 {: class="table-striped"}
 
 

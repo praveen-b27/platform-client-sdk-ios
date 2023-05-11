@@ -155,6 +155,7 @@ open class UserRecordingsAPI {
       "initiator" : "{}",
       "destination" : "{}",
       "transferType" : "Attended",
+      "modifiedBy" : "{}",
       "id" : "id",
       "state" : "Pending"
     }, {
@@ -162,6 +163,7 @@ open class UserRecordingsAPI {
       "initiator" : "{}",
       "destination" : "{}",
       "transferType" : "Attended",
+      "modifiedBy" : "{}",
       "id" : "id",
       "state" : "Pending"
     } ],
@@ -13302,6 +13304,7 @@ open class UserRecordingsAPI {
         "initiator" : "{}",
         "destination" : "{}",
         "transferType" : "Attended",
+        "modifiedBy" : "{}",
         "id" : "id",
         "state" : "Pending"
       }, {
@@ -13309,6 +13312,7 @@ open class UserRecordingsAPI {
         "initiator" : "{}",
         "destination" : "{}",
         "transferType" : "Attended",
+        "modifiedBy" : "{}",
         "id" : "id",
         "state" : "Pending"
       } ],
@@ -26298,6 +26302,7 @@ open class UserRecordingsAPI {
         "initiator" : "{}",
         "destination" : "{}",
         "transferType" : "Attended",
+        "modifiedBy" : "{}",
         "id" : "id",
         "state" : "Pending"
       }, {
@@ -26305,6 +26310,7 @@ open class UserRecordingsAPI {
         "initiator" : "{}",
         "destination" : "{}",
         "transferType" : "Attended",
+        "modifiedBy" : "{}",
         "id" : "id",
         "state" : "Pending"
       } ],
@@ -39410,6 +39416,7 @@ open class UserRecordingsAPI {
       "initiator" : "{}",
       "destination" : "{}",
       "transferType" : "Attended",
+      "modifiedBy" : "{}",
       "id" : "id",
       "state" : "Pending"
     }, {
@@ -39417,6 +39424,7 @@ open class UserRecordingsAPI {
       "initiator" : "{}",
       "destination" : "{}",
       "transferType" : "Attended",
+      "modifiedBy" : "{}",
       "id" : "id",
       "state" : "Pending"
     } ],

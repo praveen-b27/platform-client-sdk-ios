@@ -6,7 +6,10 @@ README.md
 README.md
 docs/ADFS.md
 docs/AcceleratorInput.md
+docs/AcceleratorList.md
+docs/AcceleratorMetadata.md
 docs/AcceleratorParameter.md
+docs/AcceleratorSpecification.md
 docs/AcdEndDetailEventTopicAcdEndEvent.md
 docs/AcdStartDetailEventTopicAcdStartEvent.md
 docs/AchievedOutcome.md
@@ -483,6 +486,8 @@ docs/CampaignStats.md
 docs/CampaignTimeSlot.md
 docs/Card.md
 docs/CardAction.md
+docs/CarrierServicesAPI.json
+docs/CarrierServicesAPI.md
 docs/Category.md
 docs/CategoryEntityListing.md
 docs/CategoryListing.md
@@ -700,6 +705,7 @@ docs/ConversationChatEventTopicJourneyCustomerSession.md
 docs/ConversationChatEventTopicScoredAgent.md
 docs/ConversationChatEventTopicUriReference.md
 docs/ConversationChatEventTopicWrapup.md
+docs/ConversationClearSettings.md
 docs/ConversationCobrowseEventTopicCobrowseConversation.md
 docs/ConversationCobrowseEventTopicCobrowseMediaParticipant.md
 docs/ConversationCobrowseEventTopicConversationRoutingData.md
@@ -1193,6 +1199,7 @@ docs/DownloadsAPI.md
 docs/Draft.md
 docs/DraftIntents.md
 docs/DraftListing.md
+docs/DraftManipulationRequest.md
 docs/DraftRequest.md
 docs/DraftTopicRequest.md
 docs/DraftTopics.md
@@ -1260,6 +1267,7 @@ docs/EmbeddedIntegration.md
 docs/EmergencyCallFlow.md
 docs/EmergencyGroup.md
 docs/EmergencyGroupListing.md
+docs/EmergencyLocation.md
 docs/EmployerInfo.md
 docs/Empty.md
 docs/EncryptionKey.md
@@ -1461,7 +1469,6 @@ docs/ForecastServiceLevelResponse.md
 docs/ForecastSourceDayPointer.md
 docs/Format.md
 docs/FormsTrackTrigger.md
-docs/FreeSeatingConfiguration.md
 docs/FromEmailAddress.md
 docs/FullDayTimeOffMarker.md
 docs/GDPRJourneyCustomer.md
@@ -1546,6 +1553,7 @@ docs/HistoricalShrinkageAggregateResponse.md
 docs/HistoricalShrinkageResult.md
 docs/HistoricalShrinkageResultListing.md
 docs/HistoryEntry.md
+docs/HistoryHeadersTranslation.md
 docs/HistoryListing.md
 docs/HoldUpdatedEvent.md
 docs/HomerRecord.md
@@ -1992,6 +2000,7 @@ docs/MessageTypingEventRequest.md
 docs/MessagingAPI.json
 docs/MessagingAPI.md
 docs/MessagingCampaign.md
+docs/MessagingCampaignDiagnostics.md
 docs/MessagingCampaignDivisionView.md
 docs/MessagingCampaignDivisionViewEntityListing.md
 docs/MessagingCampaignEntityListing.md
@@ -2012,6 +2021,12 @@ docs/MessengerSettings.md
 docs/MessengerStyles.md
 docs/MetaData.md
 docs/Metabase.md
+docs/MetadataDocumentation.md
+docs/MetadataPresentation.md
+docs/MetadataProperty.md
+docs/MetadataResultEntity.md
+docs/MetadataResults.md
+docs/MetadataSchema.md
 docs/MeteredAssignmentByAgent.md
 docs/MeteredEvaluationAssignment.md
 docs/Metric.md
@@ -2161,6 +2176,7 @@ docs/OutcomeAchievement.md
 docs/OutcomeConfig.md
 docs/OutcomeEventScore.md
 docs/OutcomeListing.md
+docs/OutcomePercentileCondition.md
 docs/OutcomePredictor.md
 docs/OutcomePredictorListing.md
 docs/OutcomePredictorRequest.md
@@ -2915,7 +2931,6 @@ docs/StatEventWrapUpCodeTopicMetricStats.md
 docs/StatEventWrapUpCodeTopicStatsNotification.md
 docs/Station.md
 docs/StationEntityListing.md
-docs/StationSettings.md
 docs/StationsAPI.json
 docs/StationsAPI.md
 docs/StatisticalResponse.md
@@ -3101,6 +3116,7 @@ docs/TransferDestination.md
 docs/TransferInitiator.md
 docs/TransferRequest.md
 docs/TransferResponse.md
+docs/TransferResponseModifiedBy.md
 docs/TrendData.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
@@ -4017,6 +4033,7 @@ docs/getAuthorizationSubjectsMe-example.txt
 docs/getAuthorizationSubjectsRolecounts-example.txt
 docs/getBillingReportsBillableusage-example.txt
 docs/getBillingTrusteebillingoverviewTrustorOrgId-example.txt
+docs/getCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/getChatSettings-example.txt
 docs/getChatsSettings-example.txt
 docs/getCoachingAppointment-example.txt
@@ -4266,6 +4283,8 @@ docs/getIdentityprovidersPing-example.txt
 docs/getIdentityprovidersPurecloud-example.txt
 docs/getIdentityprovidersPureengage-example.txt
 docs/getIdentityprovidersSalesforce-example.txt
+docs/getInfrastructureascodeAccelerator-example.txt
+docs/getInfrastructureascodeAccelerators-example.txt
 docs/getInfrastructureascodeJob-example.txt
 docs/getInfrastructureascodeJobs-example.txt
 docs/getIntegration-example.txt
@@ -4481,6 +4500,7 @@ docs/getOutboundDnclistsDivisionviews-example.txt
 docs/getOutboundEvent-example.txt
 docs/getOutboundEvents-example.txt
 docs/getOutboundMessagingcampaign-example.txt
+docs/getOutboundMessagingcampaignDiagnostics-example.txt
 docs/getOutboundMessagingcampaignProgress-example.txt
 docs/getOutboundMessagingcampaigns-example.txt
 docs/getOutboundMessagingcampaignsDivisionview-example.txt
@@ -4670,7 +4690,6 @@ docs/getSpeechandtextanalyticsTopicsGeneral-example.txt
 docs/getSpeechandtextanalyticsTopicsPublishjob-example.txt
 docs/getStation-example.txt
 docs/getStations-example.txt
-docs/getStationsSettings-example.txt
 docs/getSystempresences-example.txt
 docs/getTeam-example.txt
 docs/getTeamMembers-example.txt
@@ -4927,6 +4946,7 @@ docs/patchConversationsCobrowsesessionParticipant-example.txt
 docs/patchConversationsCobrowsesessionParticipantAttributes-example.txt
 docs/patchConversationsCobrowsesessionParticipantCommunication-example.txt
 docs/patchConversationsEmail-example.txt
+docs/patchConversationsEmailMessagesDraft-example.txt
 docs/patchConversationsEmailParticipant-example.txt
 docs/patchConversationsEmailParticipantAttributes-example.txt
 docs/patchConversationsEmailParticipantCommunication-example.txt
@@ -4994,7 +5014,6 @@ docs/patchScimUser-example.txt
 docs/patchScimV2Group-example.txt
 docs/patchScimV2User-example.txt
 docs/patchSpeechandtextanalyticsSettings-example.txt
-docs/patchStationsSettings-example.txt
 docs/patchTeam-example.txt
 docs/patchUser-example.txt
 docs/patchUserCallforwarding-example.txt
@@ -5099,6 +5118,7 @@ docs/postAuthorizationSubjectBulkreplace-example.txt
 docs/postAuthorizationSubjectBulkreplace-example.txt
 docs/postAuthorizationSubjectDivisionRole-example.txt
 docs/postAuthorizationSubjectDivisionRole-example.txt
+docs/postCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/postCertificateDetails-example.txt
 docs/postCoachingAppointmentAnnotations-example.txt
 docs/postCoachingAppointmentConversations-example.txt
@@ -5743,6 +5763,7 @@ src/APIs/ArchitectAPI.swift
 src/APIs/AuditAPI.swift
 src/APIs/AuthorizationAPI.swift
 src/APIs/BillingAPI.swift
+src/APIs/CarrierServicesAPI.swift
 src/APIs/ChatAPI.swift
 src/APIs/CoachingAPI.swift
 src/APIs/ContentManagementAPI.swift
@@ -5810,7 +5831,10 @@ src/JSONEncodingHelper.swift
 src/Models.swift
 src/Models/ADFS.swift
 src/Models/AcceleratorInput.swift
+src/Models/AcceleratorList.swift
+src/Models/AcceleratorMetadata.swift
 src/Models/AcceleratorParameter.swift
+src/Models/AcceleratorSpecification.swift
 src/Models/AcdEndDetailEventTopicAcdEndEvent.swift
 src/Models/AcdStartDetailEventTopicAcdStartEvent.swift
 src/Models/AchievedOutcome.swift
@@ -6486,6 +6510,7 @@ src/Models/ConversationChatEventTopicJourneyCustomerSession.swift
 src/Models/ConversationChatEventTopicScoredAgent.swift
 src/Models/ConversationChatEventTopicUriReference.swift
 src/Models/ConversationChatEventTopicWrapup.swift
+src/Models/ConversationClearSettings.swift
 src/Models/ConversationCobrowseEventTopicCobrowseConversation.swift
 src/Models/ConversationCobrowseEventTopicCobrowseMediaParticipant.swift
 src/Models/ConversationCobrowseEventTopicConversationRoutingData.swift
@@ -6973,6 +6998,7 @@ src/Models/DownloadResponse.swift
 src/Models/Draft.swift
 src/Models/DraftIntents.swift
 src/Models/DraftListing.swift
+src/Models/DraftManipulationRequest.swift
 src/Models/DraftRequest.swift
 src/Models/DraftTopicRequest.swift
 src/Models/DraftTopics.swift
@@ -7040,6 +7066,7 @@ src/Models/EmbeddedIntegration.swift
 src/Models/EmergencyCallFlow.swift
 src/Models/EmergencyGroup.swift
 src/Models/EmergencyGroupListing.swift
+src/Models/EmergencyLocation.swift
 src/Models/EmployerInfo.swift
 src/Models/Empty.swift
 src/Models/EncryptionKey.swift
@@ -7233,7 +7260,6 @@ src/Models/ForecastServiceLevelResponse.swift
 src/Models/ForecastSourceDayPointer.swift
 src/Models/Format.swift
 src/Models/FormsTrackTrigger.swift
-src/Models/FreeSeatingConfiguration.swift
 src/Models/FromEmailAddress.swift
 src/Models/FullDayTimeOffMarker.swift
 src/Models/GDPRJourneyCustomer.swift
@@ -7308,6 +7334,7 @@ src/Models/HistoricalShrinkageAggregateResponse.swift
 src/Models/HistoricalShrinkageResult.swift
 src/Models/HistoricalShrinkageResultListing.swift
 src/Models/HistoryEntry.swift
+src/Models/HistoryHeadersTranslation.swift
 src/Models/HistoryListing.swift
 src/Models/HoldUpdatedEvent.swift
 src/Models/HomerRecord.swift
@@ -7732,6 +7759,7 @@ src/Models/MessageSticker.swift
 src/Models/MessageStickerAttachment.swift
 src/Models/MessageTypingEventRequest.swift
 src/Models/MessagingCampaign.swift
+src/Models/MessagingCampaignDiagnostics.swift
 src/Models/MessagingCampaignDivisionView.swift
 src/Models/MessagingCampaignDivisionViewEntityListing.swift
 src/Models/MessagingCampaignEntityListing.swift
@@ -7752,6 +7780,12 @@ src/Models/MessengerSettings.swift
 src/Models/MessengerStyles.swift
 src/Models/MetaData.swift
 src/Models/Metabase.swift
+src/Models/MetadataDocumentation.swift
+src/Models/MetadataPresentation.swift
+src/Models/MetadataProperty.swift
+src/Models/MetadataResultEntity.swift
+src/Models/MetadataResults.swift
+src/Models/MetadataSchema.swift
 src/Models/MeteredAssignmentByAgent.swift
 src/Models/MeteredEvaluationAssignment.swift
 src/Models/Metric.swift
@@ -7889,6 +7923,7 @@ src/Models/OutcomeAchievement.swift
 src/Models/OutcomeConfig.swift
 src/Models/OutcomeEventScore.swift
 src/Models/OutcomeListing.swift
+src/Models/OutcomePercentileCondition.swift
 src/Models/OutcomePredictor.swift
 src/Models/OutcomePredictorListing.swift
 src/Models/OutcomePredictorRequest.swift
@@ -8622,7 +8657,6 @@ src/Models/StatEventWrapUpCodeTopicMetricStats.swift
 src/Models/StatEventWrapUpCodeTopicStatsNotification.swift
 src/Models/Station.swift
 src/Models/StationEntityListing.swift
-src/Models/StationSettings.swift
 src/Models/StatisticalResponse.swift
 src/Models/StatisticalSummary.swift
 src/Models/StatusChange.swift
@@ -8794,6 +8828,7 @@ src/Models/TransferDestination.swift
 src/Models/TransferInitiator.swift
 src/Models/TransferRequest.swift
 src/Models/TransferResponse.swift
+src/Models/TransferResponseModifiedBy.swift
 src/Models/TrendData.swift
 src/Models/Trigger.swift
 src/Models/TriggerEntityListing.swift

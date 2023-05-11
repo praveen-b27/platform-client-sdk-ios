@@ -30,14 +30,31 @@ public class LearningModuleInformStep: Codable {
     public var contentType: String?
     /** The order of inform step in a learning module */
     public var order: Int?
+    /** The display name for the inform step */
+    public var displayName: String?
+    /** The description for the inform step */
+    public var _description: String?
 
-    public init(type: ModelType?, name: String?, value: String?, sharingUri: String?, contentType: String?, order: Int?) {
+    public init(type: ModelType?, name: String?, value: String?, sharingUri: String?, contentType: String?, order: Int?, displayName: String?, _description: String?) {
         self.type = type
         self.name = name
         self.value = value
         self.sharingUri = sharingUri
         self.contentType = contentType
         self.order = order
+        self.displayName = displayName
+        self._description = _description
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case type
+        case name
+        case value
+        case sharingUri
+        case contentType
+        case order
+        case displayName
+        case _description = "description"
     }
 
 

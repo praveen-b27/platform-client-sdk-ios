@@ -10436,6 +10436,7 @@ open class ExternalContactsAPI {
     /**
      Merge two contacts into a new contact record
      - POST /api/v2/externalcontacts/merge/contacts
+     - Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

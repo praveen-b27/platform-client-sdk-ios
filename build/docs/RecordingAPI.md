@@ -17,7 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationRecording**](RecordingAPI.html#getConversationRecording) | Gets a specific recording. |
 | [**getConversationRecordingAnnotation**](RecordingAPI.html#getConversationRecordingAnnotation) | Get annotation |
 | [**getConversationRecordingAnnotations**](RecordingAPI.html#getConversationRecordingAnnotations) | Get annotations for recording |
-| [**getConversationRecordingmetadata**](RecordingAPI.html#getConversationRecordingmetadata) | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing. |
+| [**getConversationRecordingmetadata**](RecordingAPI.html#getConversationRecordingmetadata) | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. |
 | [**getConversationRecordingmetadataRecordingId**](RecordingAPI.html#getConversationRecordingmetadataRecordingId) | Get metadata for a specific recording. Does not return playable media. |
 | [**getConversationRecordings**](RecordingAPI.html#getConversationRecordings) | Get all of a Conversation&#39;s Recordings. |
 | [**getOrphanrecording**](RecordingAPI.html#getOrphanrecording) | Gets a single orphan recording |
@@ -622,7 +622,7 @@ RecordingAPI.getConversationRecordingAnnotations(conversationId: conversationId,
 
 > [[RecordingMetadata]](RecordingMetadata.html) getConversationRecordingmetadata(conversationId)
 
-Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if recording:recording:view permission is missing.
+Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
 
 
 

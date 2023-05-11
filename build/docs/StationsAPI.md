@@ -10,8 +10,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteStationAssociateduser**](StationsAPI.html#deleteStationAssociateduser) | Unassigns the user assigned to this station |
 | [**getStation**](StationsAPI.html#getStation) | Get station. |
 | [**getStations**](StationsAPI.html#getStations) | Get the list of available stations. |
-| [**getStationsSettings**](StationsAPI.html#getStationsSettings) | Get an organization&#39;s StationSettings |
-| [**patchStationsSettings**](StationsAPI.html#patchStationsSettings) | Patch an organization&#39;s StationSettings |
 {: class="table-striped"}
 
 <a name="deleteStationAssociateduser"></a>
@@ -179,107 +177,4 @@ StationsAPI.getStations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sort
 ### Return type
 
 [**StationEntityListing**](StationEntityListing.html)
-
-<a name="getStationsSettings"></a>
-
-# **getStationsSettings**
-
-
-
-> [StationSettings](StationSettings.html) getStationsSettings()
-
-Get an organization&#39;s StationSettings
-
-This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
-
-
-
-Wraps GET /api/v2/stations/settings  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-
-// Code example
-StationsAPI.getStationsSettings() { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("StationsAPI.getStationsSettings was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not require any parameters.
-
-
-
-### Return type
-
-[**StationSettings**](StationSettings.html)
-
-<a name="patchStationsSettings"></a>
-
-# **patchStationsSettings**
-
-
-
-> [StationSettings](StationSettings.html) patchStationsSettings(body)
-
-Patch an organization&#39;s StationSettings
-
-This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
-
-
-
-Wraps PATCH /api/v2/stations/settings  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: StationSettings = new StationSettings(...) // Station settings
-
-// Code example
-StationsAPI.patchStationsSettings(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("StationsAPI.patchStationsSettings was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**StationSettings**](StationSettings.html)| Station settings | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**StationSettings**](StationSettings.html)
 

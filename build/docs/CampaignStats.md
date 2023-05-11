@@ -13,6 +13,7 @@ title: CampaignStats
 | **adjustedCallsPerAgent** | **Double** | Calls per agent adjusted by pace | [optional] |
 | **outstandingCalls** | **Int** | Number of campaign calls currently ongoing | [optional] |
 | **scheduledCalls** | **Int** | Number of campaign calls currently scheduled | [optional] |
+| **timeZoneRescheduledCalls** | **Int** | Number of campaign calls currently timezone rescheduled | [optional] |
 {: class="table table-striped"}
 
 

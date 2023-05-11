@@ -36,10 +36,12 @@ public class OutboundSettings: Codable {
     public var complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?
     /** The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns. */
     public var automaticTimeZoneMapping: AutomaticTimeZoneMappingSettings?
+    /** Whether or not to reschedule time-zone blocked contacts */
+    public var rescheduleTimeZoneSkippedContacts: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, maxCallsPerAgent: Int?, maxConfigurableCallsPerAgent: Int?, maxLineUtilization: Double?, abandonSeconds: Double?, complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?, automaticTimeZoneMapping: AutomaticTimeZoneMappingSettings?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, maxCallsPerAgent: Int?, maxConfigurableCallsPerAgent: Int?, maxLineUtilization: Double?, abandonSeconds: Double?, complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?, automaticTimeZoneMapping: AutomaticTimeZoneMappingSettings?, rescheduleTimeZoneSkippedContacts: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -51,6 +53,7 @@ public class OutboundSettings: Codable {
         self.abandonSeconds = abandonSeconds
         self.complianceAbandonRateDenominator = complianceAbandonRateDenominator
         self.automaticTimeZoneMapping = automaticTimeZoneMapping
+        self.rescheduleTimeZoneSkippedContacts = rescheduleTimeZoneSkippedContacts
         self.selfUri = selfUri
     }
 
@@ -66,6 +69,7 @@ public class OutboundSettings: Codable {
         case abandonSeconds
         case complianceAbandonRateDenominator
         case automaticTimeZoneMapping
+        case rescheduleTimeZoneSkippedContacts
         case selfUri
     }
 

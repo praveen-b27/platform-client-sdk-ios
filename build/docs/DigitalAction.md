@@ -13,6 +13,7 @@ title: DigitalAction
 | **markContactUncontactableActionSettings** | [**MarkContactUncontactableActionSettings**](MarkContactUncontactableActionSettings.html) | The settings for a &#39;mark contact uncontactable&#39; action. | [optional] |
 | **markContactAddressUncontactableActionSettings** | [**JSON**](JSON.html) | The settings for an &#39;mark contact address uncontactable&#39; action. | [optional] |
 | **setContentTemplateActionSettings** | [**SetContentTemplateActionSettings**](SetContentTemplateActionSettings.html) | The settings for a &#39;Set content template&#39; action. | [optional] |
+| **setSmsPhoneNumberActionSettings** | [**SetSmsPhoneNumberActionSettings**](SetSmsPhoneNumberActionSettings.html) | The settings for a &#39;set sms phone number&#39; action. | [optional] |
 {: class="table table-striped"}
 
 

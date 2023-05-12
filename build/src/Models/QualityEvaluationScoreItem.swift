@@ -36,7 +36,7 @@ public class QualityEvaluationScoreItem: Codable {
     public var points: Int?
     /** The quality score of evaluation as a percentage */
     public var evaluationScore: Double?
-    /** Gamification max points for this metric */
+    /** The maximum Gamification points a user may earn for this metric */
     public var maxPoints: Int?
     /** A list of media types for the metric */
     public var mediaTypes: [MediaTypes]?

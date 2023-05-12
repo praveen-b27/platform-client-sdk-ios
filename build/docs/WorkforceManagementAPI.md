@@ -159,6 +159,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunits**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunits) | Add a management unit |
 | [**postWorkforcemanagementNotificationsUpdate**](WorkforceManagementAPI.html#postWorkforcemanagementNotificationsUpdate) | Mark a list of notifications as read or unread |
 | [**postWorkforcemanagementSchedules**](WorkforceManagementAPI.html#postWorkforcemanagementSchedules) | Get published schedule for the current user |
+| [**postWorkforcemanagementTeamAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementTeamAdherenceHistorical) | Request a teams historical adherence report |
+| [**postWorkforcemanagementTeamShrinkageJobs**](WorkforceManagementAPI.html#postWorkforcemanagementTeamShrinkageJobs) | Request a historical shrinkage report |
 | [**postWorkforcemanagementTimeofflimitsAvailableQuery**](WorkforceManagementAPI.html#postWorkforcemanagementTimeofflimitsAvailableQuery) | Queries available time off for the current user |
 | [**postWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequests) | Create a time off request for the current user |
 | [**putWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementAPI.html#putWorkforcemanagementManagementunitTimeofflimitValues) | Sets daily values for a date range of time off limit object |
@@ -1476,7 +1478,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-let expand: [String] = [""] // 
+let expand: [String] = [""] // Include to access additional data on the business unit
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, expand: expand) { (response, error) in
@@ -1495,7 +1497,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: busine
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling") |
+| **expand** | [**[String]**](String.html)| Include to access additional data on the business unit | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling") |
 {: class="table-striped"}
 
 
@@ -2486,7 +2488,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
-let expand: [String] = [""] // 
+let expand: [String] = [""] // Include to access additional data on the forecast
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, expand: expand) { (response, error) in
@@ -2507,7 +2509,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecast(b
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: planninggroups ("planningGroups"), generationresults ("generationResults") |
+| **expand** | [**[String]**](String.html)| Include to access additional data on the forecast | [optional]<br />**Values**: planninggroups ("planningGroups"), generationresults ("generationResults") |
 {: class="table-striped"}
 
 
@@ -4410,7 +4412,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let expand: [String] = [""] // 
+let expand: [String] = [""] // Include to access additional data on the work plans
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, expand: expand) { (response, error) in
@@ -4429,7 +4431,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances"), details ("details") |
+| **expand** | [**[String]**](String.html)| Include to access additional data on the work plans | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances"), details ("details") |
 {: class="table-striped"}
 
 
@@ -7071,7 +7073,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let body: GenerateBuForecastRequest = new GenerateBuForecastRequest(...) // 
+let body: GenerateBuForecastRequest = new GenerateBuForecastRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 
 // Code example
@@ -7092,7 +7094,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest.html)|  | |
+| **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest.html)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
 {: class="table-striped"}
 
@@ -7131,7 +7133,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-let body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // 
+let body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // body
 
 // Code example
 WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body) { (response, error) in
@@ -7151,7 +7153,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)|  | |
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)| body | |
 {: class="table-striped"}
 
 
@@ -8813,6 +8815,118 @@ WorkforceManagementAPI.postWorkforcemanagementSchedules(body: body) { (response,
 ### Return type
 
 [**UserScheduleContainer**](UserScheduleContainer.html)
+
+<a name="postWorkforcemanagementTeamAdherenceHistorical"></a>
+
+# **postWorkforcemanagementTeamAdherenceHistorical**
+
+
+
+> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) postWorkforcemanagementTeamAdherenceHistorical(teamId, body)
+
+Request a teams historical adherence report
+
+The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions &#x3D; true
+
+
+
+Wraps POST /api/v2/workforcemanagement/teams/{teamId}/adherence/historical  
+
+Requires ANY permissions: 
+
+* wfm:historicalAdherence:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let teamId: String = "" // The ID of the team
+let body: WfmHistoricalAdherenceQueryForTeams = new WfmHistoricalAdherenceQueryForTeams(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementTeamAdherenceHistorical(teamId: teamId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementTeamAdherenceHistorical was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **teamId** | **String**| The ID of the team | |
+| **body** | [**WfmHistoricalAdherenceQueryForTeams**](WfmHistoricalAdherenceQueryForTeams.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
+
+<a name="postWorkforcemanagementTeamShrinkageJobs"></a>
+
+# **postWorkforcemanagementTeamShrinkageJobs**
+
+
+
+> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse.html) postWorkforcemanagementTeamShrinkageJobs(teamId, body)
+
+Request a historical shrinkage report
+
+The maximum supported range for historical shrinkage queries is up to 32 days
+
+
+
+Wraps POST /api/v2/workforcemanagement/teams/{teamId}/shrinkage/jobs  
+
+Requires ANY permissions: 
+
+* wfm:shrinkage:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let teamId: String = "" // The ID of the team
+let body: WfmHistoricalShrinkageTeamsRequest = new WfmHistoricalShrinkageTeamsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementTeamShrinkageJobs(teamId: teamId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementTeamShrinkageJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **teamId** | **String**| The ID of the team | |
+| **body** | [**WfmHistoricalShrinkageTeamsRequest**](WfmHistoricalShrinkageTeamsRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
 
 <a name="postWorkforcemanagementTimeofflimitsAvailableQuery"></a>
 

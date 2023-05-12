@@ -15,6 +15,10 @@ public class KeyPerformanceIndicator: Codable {
         case maximization = "Maximization"
         case minimization = "Minimization"
     }
+    public enum ProblemType: String, Codable { 
+        case classification = "Classification"
+        case regression = "Regression"
+    }
     public enum KpiType: String, Codable { 
         case salesConversion = "SalesConversion"
         case churn = "Churn"
@@ -42,6 +46,8 @@ public class KeyPerformanceIndicator: Codable {
     public var name: String?
     /** The optimization type of the Key Performance Indicator. */
     public var optimizationType: OptimizationType?
+    /** The problem type of the Key Performance Indicator. */
+    public var problemType: ProblemType?
     /** DateTime indicating when the Key Performance Indicator was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** DateTime indicating when the Key Performance Indicator was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -65,10 +71,11 @@ public class KeyPerformanceIndicator: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, optimizationType: OptimizationType?, dateCreated: Date?, dateModified: Date?, _description: String?, kpiType: KpiType?, source: Source?, wrapUpCodeConfig: WrapUpCodeConfig?, outcomeConfig: OutcomeConfig?, status: Status?, kpiGroup: KpiGroup?, queues: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, optimizationType: OptimizationType?, problemType: ProblemType?, dateCreated: Date?, dateModified: Date?, _description: String?, kpiType: KpiType?, source: Source?, wrapUpCodeConfig: WrapUpCodeConfig?, outcomeConfig: OutcomeConfig?, status: Status?, kpiGroup: KpiGroup?, queues: [String]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.optimizationType = optimizationType
+        self.problemType = problemType
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self._description = _description
@@ -86,6 +93,7 @@ public class KeyPerformanceIndicator: Codable {
         case _id = "id"
         case name
         case optimizationType
+        case problemType
         case dateCreated
         case dateModified
         case _description = "description"

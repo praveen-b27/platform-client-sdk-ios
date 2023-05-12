@@ -36330,7 +36330,7 @@
       }
     ],
     "return": "BusinessUnitResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\nlet expand: [String] = [\"\"] // \n\n// Get business unit\nGetWorkforcemanagementBusinessunitRequest.getWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitRequest.getWorkforcemanagementBusinessunit was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\nlet expand: [String] = [\"\"] // Include to access additional data on the business unit\n\n// Get business unit\nGetWorkforcemanagementBusinessunitRequest.getWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitRequest.getWorkforcemanagementBusinessunit was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementbusinessunitactivitycode": {
     "operationId": "getworkforcemanagementbusinessunitactivitycode",
@@ -36703,7 +36703,7 @@
       }
     ],
     "return": "BuShortTermForecast",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet forecastId: String = \"\" // The ID of the forecast\nlet expand: [String] = [\"\"] // \n\n// Get a short term forecast\nGetWorkforcemanagementBusinessunitWeekShorttermforecastRequest.getWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekShorttermforecastRequest.getWorkforcemanagementBusinessunitWeekShorttermforecast was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet forecastId: String = \"\" // The ID of the forecast\nlet expand: [String] = [\"\"] // Include to access additional data on the forecast\n\n// Get a short term forecast\nGetWorkforcemanagementBusinessunitWeekShorttermforecastRequest.getWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekShorttermforecastRequest.getWorkforcemanagementBusinessunitWeekShorttermforecast was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementbusinessunitweekshorttermforecastdata": {
     "operationId": "getworkforcemanagementbusinessunitweekshorttermforecastdata",
@@ -37349,7 +37349,7 @@
       }
     ],
     "return": "WorkPlanListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet expand: [String] = [\"\"] // \n\n// Get work plans\nGetWorkforcemanagementManagementunitWorkplansRequest.getWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementManagementunitWorkplansRequest.getWorkforcemanagementManagementunitWorkplans was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet expand: [String] = [\"\"] // Include to access additional data on the work plans\n\n// Get work plans\nGetWorkforcemanagementManagementunitWorkplansRequest.getWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementManagementunitWorkplansRequest.getWorkforcemanagementManagementunitWorkplans was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementmanagementunits": {
     "operationId": "getworkforcemanagementmanagementunits",
@@ -38411,7 +38411,7 @@
       }
     ],
     "return": "AsyncForecastOperationResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: GenerateBuForecastRequest = new GenerateBuForecastRequest(...) // \nlet forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes\n\n// Generate a short term forecast\nPostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body, forceAsync: forceAsync) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: GenerateBuForecastRequest = new GenerateBuForecastRequest(...) // body\nlet forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes\n\n// Generate a short term forecast\nPostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body, forceAsync: forceAsync) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementbusinessunitweekshorttermforecastsimport": {
     "operationId": "postworkforcemanagementbusinessunitweekshorttermforecastsimport",
@@ -38435,7 +38435,7 @@
       }
     ],
     "return": "ImportForecastResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // \n\n// Starts importing the uploaded short term forecast\nPostWorkforcemanagementBusinessunitWeekShorttermforecastsImportRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // body\n\n// Starts importing the uploaded short term forecast\nPostWorkforcemanagementBusinessunitWeekShorttermforecastsImportRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementbusinessunitweekshorttermforecastsimportuploadurl": {
     "operationId": "postworkforcemanagementbusinessunitweekshorttermforecastsimportuploadurl",
@@ -39043,6 +39043,44 @@
     ],
     "return": "UserScheduleContainer",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CurrentUserScheduleRequestBody = new CurrentUserScheduleRequestBody(...) // body\n\n// Get published schedule for the current user\nPostWorkforcemanagementSchedulesRequest.postWorkforcemanagementSchedules(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementSchedulesRequest.postWorkforcemanagementSchedules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementteamadherencehistorical": {
+    "operationId": "postworkforcemanagementteamadherencehistorical",
+    "functionName": "postWorkforcemanagementTeamAdherenceHistorical",
+    "signature": "postWorkforcemanagementTeamAdherenceHistorical(teamId, body)",
+    "parameters": [
+      {
+        "name": "teamId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WfmHistoricalAdherenceQueryForTeams",
+        "required": "false"
+      }
+    ],
+    "return": "WfmHistoricalAdherenceResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet teamId: String = \"\" // The ID of the team\nlet body: WfmHistoricalAdherenceQueryForTeams = new WfmHistoricalAdherenceQueryForTeams(...) // body\n\n// Request a teams historical adherence report\nPostWorkforcemanagementTeamAdherenceHistoricalRequest.postWorkforcemanagementTeamAdherenceHistorical(teamId: teamId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementTeamAdherenceHistoricalRequest.postWorkforcemanagementTeamAdherenceHistorical was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementteamshrinkagejobs": {
+    "operationId": "postworkforcemanagementteamshrinkagejobs",
+    "functionName": "postWorkforcemanagementTeamShrinkageJobs",
+    "signature": "postWorkforcemanagementTeamShrinkageJobs(teamId, body)",
+    "parameters": [
+      {
+        "name": "teamId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WfmHistoricalShrinkageTeamsRequest",
+        "required": "false"
+      }
+    ],
+    "return": "WfmHistoricalShrinkageResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet teamId: String = \"\" // The ID of the team\nlet body: WfmHistoricalShrinkageTeamsRequest = new WfmHistoricalShrinkageTeamsRequest(...) // body\n\n// Request a historical shrinkage report\nPostWorkforcemanagementTeamShrinkageJobsRequest.postWorkforcemanagementTeamShrinkageJobs(teamId: teamId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementTeamShrinkageJobsRequest.postWorkforcemanagementTeamShrinkageJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementtimeofflimitsavailablequery": {
     "operationId": "postworkforcemanagementtimeofflimitsavailablequery",

@@ -173,6 +173,8 @@ title: ViewFilter
 | **subPath** | **String** | Filter for Sub Path | [optional] |
 | **userState** | **String** | The user supplied state value in the view | [optional] |
 | **isClearedByCustomer** | **Bool** | Filter to indicate if the customer cleared the conversation. | [optional] |
+| **evaluationAssigneeIds** | **[String]** | The evaluation assignee ids that are used to filter the view. | [optional] |
+| **evaluationAssigned** | **Bool** | Filter to indicate that the user has no assigned evaluation. | [optional] |
 {: class="table table-striped"}
 
 

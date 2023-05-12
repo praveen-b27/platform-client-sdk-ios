@@ -1231,7 +1231,7 @@ open class WorkforceManagementAPI {
      Get business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
-     - parameter expand: (query)  (optional)
+     - parameter expand: (query) Include to access additional data on the business unit (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementBusinessunit(businessUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
@@ -1268,7 +1268,7 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
-     - parameter expand: (query)  (optional)
+     - parameter expand: (query) Include to access additional data on the business unit (optional)
 
      - returns: RequestBuilder<BusinessUnitResponse> 
      */
@@ -2931,7 +2931,7 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
-     - parameter expand: (query)  (optional)
+     - parameter expand: (query) Include to access additional data on the forecast (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId: String, weekDateId: Date, forecastId: String, expand: [String]? = nil, completion: @escaping ((_ data: BuShortTermForecast?,_ error: Error?) -> Void)) {
@@ -3028,7 +3028,7 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
-     - parameter expand: (query)  (optional)
+     - parameter expand: (query) Include to access additional data on the forecast (optional)
 
      - returns: RequestBuilder<BuShortTermForecast> 
      */
@@ -6860,7 +6860,7 @@ open class WorkforceManagementAPI {
      Get work plans
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter expand: (query)  (optional)
+     - parameter expand: (query) Include to access additional data on the work plans (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunitWorkplans(managementUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: WorkPlanListResponse?,_ error: Error?) -> Void)) {
@@ -7217,7 +7217,7 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter expand: (query)  (optional)
+     - parameter expand: (query) Include to access additional data on the work plans (optional)
 
      - returns: RequestBuilder<WorkPlanListResponse> 
      */
@@ -11005,7 +11005,7 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter body: (body)  
+     - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -11042,7 +11042,7 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter body: (body)  
+     - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
 
      - returns: RequestBuilder<AsyncForecastOperationResult> 
@@ -11076,7 +11076,7 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter body: (body)  
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId: String, weekDateId: Date, body: WfmProcessUploadRequest, completion: @escaping ((_ data: ImportForecastResponse?,_ error: Error?) -> Void)) {
@@ -11112,7 +11112,7 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter body: (body)  
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<ImportForecastResponse> 
      */
@@ -13658,6 +13658,129 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Request a teams historical adherence report
+     
+     - parameter teamId: (path) The ID of the team 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementTeamAdherenceHistorical(teamId: String, body: WfmHistoricalAdherenceQueryForTeams? = nil, completion: @escaping ((_ data: WfmHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementTeamAdherenceHistoricalWithRequestBuilder(teamId: teamId, body: body)
+        requestBuilder.execute { (response: Response<WfmHistoricalAdherenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request a teams historical adherence report
+     - POST /api/v2/workforcemanagement/teams/{teamId}/adherence/historical
+     - The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "downloadUrl" : "downloadUrl",
+  "queryState" : "Processing",
+  "id" : "id"
+}, statusCode=202}]
+     
+     - parameter teamId: (path) The ID of the team 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WfmHistoricalAdherenceResponse> 
+     */
+    open class func postWorkforcemanagementTeamAdherenceHistoricalWithRequestBuilder(teamId: String, body: WfmHistoricalAdherenceQueryForTeams? = nil) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
+        var path = "/api/v2/workforcemanagement/teams/{teamId}/adherence/historical"
+        let teamIdPreEscape = "\(teamId)"
+        let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{teamId}", with: teamIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Request a historical shrinkage report
+     
+     - parameter teamId: (path) The ID of the team 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementTeamShrinkageJobs(teamId: String, body: WfmHistoricalShrinkageTeamsRequest? = nil, completion: @escaping ((_ data: WfmHistoricalShrinkageResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementTeamShrinkageJobsWithRequestBuilder(teamId: teamId, body: body)
+        requestBuilder.execute { (response: Response<WfmHistoricalShrinkageResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request a historical shrinkage report
+     - POST /api/v2/workforcemanagement/teams/{teamId}/shrinkage/jobs
+     - The maximum supported range for historical shrinkage queries is up to 32 days
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResult" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "operationId" : "operationId",
+  "state" : "Processing"
+}, statusCode=202}]
+     
+     - parameter teamId: (path) The ID of the team 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WfmHistoricalShrinkageResponse> 
+     */
+    open class func postWorkforcemanagementTeamShrinkageJobsWithRequestBuilder(teamId: String, body: WfmHistoricalShrinkageTeamsRequest? = nil) -> RequestBuilder<WfmHistoricalShrinkageResponse> {        
+        var path = "/api/v2/workforcemanagement/teams/{teamId}/shrinkage/jobs"
+        let teamIdPreEscape = "\(teamId)"
+        let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{teamId}", with: teamIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmHistoricalShrinkageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

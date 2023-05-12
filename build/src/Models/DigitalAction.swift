@@ -23,14 +23,17 @@ public class DigitalAction: Codable {
     public var markContactAddressUncontactableActionSettings: JSON?
     /** The settings for a 'Set content template' action. */
     public var setContentTemplateActionSettings: SetContentTemplateActionSettings?
+    /** The settings for a 'set sms phone number' action. */
+    public var setSmsPhoneNumberActionSettings: SetSmsPhoneNumberActionSettings?
 
-    public init(updateContactColumnActionSettings: UpdateContactColumnActionSettings?, doNotSendActionSettings: JSON?, appendToDncActionSettings: AppendToDncActionSettings?, markContactUncontactableActionSettings: MarkContactUncontactableActionSettings?, markContactAddressUncontactableActionSettings: JSON?, setContentTemplateActionSettings: SetContentTemplateActionSettings?) {
+    public init(updateContactColumnActionSettings: UpdateContactColumnActionSettings?, doNotSendActionSettings: JSON?, appendToDncActionSettings: AppendToDncActionSettings?, markContactUncontactableActionSettings: MarkContactUncontactableActionSettings?, markContactAddressUncontactableActionSettings: JSON?, setContentTemplateActionSettings: SetContentTemplateActionSettings?, setSmsPhoneNumberActionSettings: SetSmsPhoneNumberActionSettings?) {
         self.updateContactColumnActionSettings = updateContactColumnActionSettings
         self.doNotSendActionSettings = doNotSendActionSettings
         self.appendToDncActionSettings = appendToDncActionSettings
         self.markContactUncontactableActionSettings = markContactUncontactableActionSettings
         self.markContactAddressUncontactableActionSettings = markContactAddressUncontactableActionSettings
         self.setContentTemplateActionSettings = setContentTemplateActionSettings
+        self.setSmsPhoneNumberActionSettings = setSmsPhoneNumberActionSettings
     }
 
 

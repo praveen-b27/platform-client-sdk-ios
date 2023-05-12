@@ -17,15 +17,18 @@ public class WorkdayMetric: Codable {
     public var objective: Objective?
     /** Gamification points earned for this metric */
     public var points: Int?
+    /** The maximum Gamification points a user may earn for this metric */
+    public var maxPoints: Int?
     /** Value of this metric */
     public var value: Double?
     /** List of schedule activity events for punctuality metrics */
     public var punctualityEvents: [PunctualityEvent]?
 
-    public init(metric: Metric?, objective: Objective?, points: Int?, value: Double?, punctualityEvents: [PunctualityEvent]?) {
+    public init(metric: Metric?, objective: Objective?, points: Int?, maxPoints: Int?, value: Double?, punctualityEvents: [PunctualityEvent]?) {
         self.metric = metric
         self.objective = objective
         self.points = points
+        self.maxPoints = maxPoints
         self.value = value
         self.punctualityEvents = punctualityEvents
     }

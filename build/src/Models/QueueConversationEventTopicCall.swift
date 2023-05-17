@@ -78,6 +78,8 @@ public class QueueConversationEventTopicCall: Codable {
     public var confined: Bool?
     /** True if this call is held and the person on this side hears silence. */
     public var held: Bool?
+    /** True when the recording of this call is in secure pause status. */
+    public var securePause: Bool?
     public var errorInfo: QueueConversationEventTopicErrorDetails?
     /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
     public var disconnectType: DisconnectType?
@@ -115,7 +117,7 @@ public class QueueConversationEventTopicCall: Codable {
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationEventTopicAddress?, other: QueueConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationEventTopicDisconnectReason]?, faxStatus: QueueConversationEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, securePause: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationEventTopicAddress?, other: QueueConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationEventTopicDisconnectReason]?, faxStatus: QueueConversationEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -124,6 +126,7 @@ public class QueueConversationEventTopicCall: Codable {
         self.muted = muted
         self.confined = confined
         self.held = held
+        self.securePause = securePause
         self.errorInfo = errorInfo
         self.disconnectType = disconnectType
         self.startHoldTime = startHoldTime
@@ -155,6 +158,7 @@ public class QueueConversationEventTopicCall: Codable {
         case muted
         case confined
         case held
+        case securePause
         case errorInfo
         case disconnectType
         case startHoldTime

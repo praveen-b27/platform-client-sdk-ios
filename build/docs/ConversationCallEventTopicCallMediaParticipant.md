@@ -47,6 +47,7 @@ title: ConversationCallEventTopicCallMediaParticipant
 | **confined** | **Bool** |  | [optional] |
 | **recording** | **Bool** |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
+| **securePause** | **Bool** |  | [optional] |
 | **group** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference.html) |  | [optional] |
 | **ani** | **String** |  | [optional] |
 | **dnis** | **String** |  | [optional] |

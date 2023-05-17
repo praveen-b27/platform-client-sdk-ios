@@ -1,13 +1,13 @@
 ---
-title: WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate
+title: WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
 ---
-## WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate
+## WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **updateType** | **String** |  | [optional] |
+| **type** | **String** |  | [optional] |
 | **shiftStartDates** | [**[Date]**](Date.html) |  | [optional] |
 {: class="table table-striped"}
 

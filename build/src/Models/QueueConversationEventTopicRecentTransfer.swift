@@ -30,15 +30,17 @@ public class QueueConversationEventTopicRecentTransfer: Codable {
     /** The date/time that this command was issued. */
     public var dateIssued: Date?
     public var initiator: QueueConversationEventTopicInitiator?
+    public var modifiedBy: QueueConversationEventTopicModifiedBy?
     public var destination: QueueConversationEventTopicDestination?
     /** The type of transfer to perform. */
     public var transferType: TransferType?
 
-    public init(_id: String?, state: State?, dateIssued: Date?, initiator: QueueConversationEventTopicInitiator?, destination: QueueConversationEventTopicDestination?, transferType: TransferType?) {
+    public init(_id: String?, state: State?, dateIssued: Date?, initiator: QueueConversationEventTopicInitiator?, modifiedBy: QueueConversationEventTopicModifiedBy?, destination: QueueConversationEventTopicDestination?, transferType: TransferType?) {
         self._id = _id
         self.state = state
         self.dateIssued = dateIssued
         self.initiator = initiator
+        self.modifiedBy = modifiedBy
         self.destination = destination
         self.transferType = transferType
     }
@@ -48,6 +50,7 @@ public class QueueConversationEventTopicRecentTransfer: Codable {
         case state
         case dateIssued
         case initiator
+        case modifiedBy
         case destination
         case transferType
     }

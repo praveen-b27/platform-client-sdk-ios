@@ -17,6 +17,8 @@ public class MessagingCampaign: Codable {
         case off = "off"
         case complete = "complete"
         case invalid = "invalid"
+        case forcedOff = "forced_off"
+        case forcedStopping = "forced_stopping"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

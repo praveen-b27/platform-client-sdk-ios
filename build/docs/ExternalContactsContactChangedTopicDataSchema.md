@@ -1,14 +1,14 @@
 ---
-title: WemCoachingAppointmentTopicCoachingAppointmentConversation
+title: ExternalContactsContactChangedTopicDataSchema
 ---
-## WemCoachingAppointmentTopicCoachingAppointmentConversation
+## ExternalContactsContactChangedTopicDataSchema
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **action** | **String** |  | [optional] |
+| **version** | **Int** |  | [optional] |
 {: class="table table-striped"}
 
 

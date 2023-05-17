@@ -65,6 +65,7 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
     public var dateModified: String?
     public var dateDue: String?
     public var dateExpires: String?
+    public var dateAssignmentStateChanged: String?
     public var durationSeconds: Int?
     public var ttl: Int?
     public var statusId: String?
@@ -86,7 +87,7 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
     public var customFields: [String:WorkitemsUserEventsNotificationCustomAttribute]?
     public var wrapup: WorkitemsUserEventsNotificationWrapup?
 
-    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, statusCategory: StatusCategory?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsUserEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, queueId: String?, customFields: [String:WorkitemsUserEventsNotificationCustomAttribute]?, wrapup: WorkitemsUserEventsNotificationWrapup?) {
+    public init(_id: String?, name: String?, typeId: String?, _description: String?, languageId: String?, priority: Int?, dateCreated: String?, dateModified: String?, dateDue: String?, dateExpires: String?, dateAssignmentStateChanged: String?, durationSeconds: Int?, ttl: Int?, statusId: String?, statusCategory: StatusCategory?, dateClosed: String?, workbinId: String?, reporterId: String?, assigneeId: String?, externalContactId: String?, externalTag: String?, wrapupId: String?, modifiedBy: String?, operation: Operation?, changes: [WorkitemsUserEventsNotificationDelta]?, assignmentState: AssignmentState?, assignmentId: String?, alertTimeoutSeconds: Int?, queueId: String?, customFields: [String:WorkitemsUserEventsNotificationCustomAttribute]?, wrapup: WorkitemsUserEventsNotificationWrapup?) {
         self._id = _id
         self.name = name
         self.typeId = typeId
@@ -97,6 +98,7 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
         self.dateModified = dateModified
         self.dateDue = dateDue
         self.dateExpires = dateExpires
+        self.dateAssignmentStateChanged = dateAssignmentStateChanged
         self.durationSeconds = durationSeconds
         self.ttl = ttl
         self.statusId = statusId
@@ -130,6 +132,7 @@ public class WorkitemsUserEventsNotificationWorkitem: Codable {
         case dateModified
         case dateDue
         case dateExpires
+        case dateAssignmentStateChanged
         case durationSeconds
         case ttl
         case statusId

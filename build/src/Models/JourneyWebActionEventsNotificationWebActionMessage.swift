@@ -24,8 +24,9 @@ public class JourneyWebActionEventsNotificationWebActionMessage: Codable {
     public var geolocation: JourneyWebActionEventsNotificationGeoLocation?
     public var mktCampaign: JourneyWebActionEventsNotificationMktCampaign?
     public var visitReferrer: JourneyWebActionEventsNotificationReferrer?
+    public var timeToDisposition: Int?
 
-    public init(action: JourneyWebActionEventsNotificationEventAction?, actionTarget: JourneyWebActionEventsNotificationActionTarget?, actionMap: JourneyWebActionEventsNotificationActionMap?, errorCode: String?, errorMessage: String?, userAgentString: String?, ipAddress: String?, ipOrganization: String?, browser: JourneyWebActionEventsNotificationBrowser?, device: JourneyWebActionEventsNotificationDevice?, geolocation: JourneyWebActionEventsNotificationGeoLocation?, mktCampaign: JourneyWebActionEventsNotificationMktCampaign?, visitReferrer: JourneyWebActionEventsNotificationReferrer?) {
+    public init(action: JourneyWebActionEventsNotificationEventAction?, actionTarget: JourneyWebActionEventsNotificationActionTarget?, actionMap: JourneyWebActionEventsNotificationActionMap?, errorCode: String?, errorMessage: String?, userAgentString: String?, ipAddress: String?, ipOrganization: String?, browser: JourneyWebActionEventsNotificationBrowser?, device: JourneyWebActionEventsNotificationDevice?, geolocation: JourneyWebActionEventsNotificationGeoLocation?, mktCampaign: JourneyWebActionEventsNotificationMktCampaign?, visitReferrer: JourneyWebActionEventsNotificationReferrer?, timeToDisposition: Int?) {
         self.action = action
         self.actionTarget = actionTarget
         self.actionMap = actionMap
@@ -39,6 +40,7 @@ public class JourneyWebActionEventsNotificationWebActionMessage: Codable {
         self.geolocation = geolocation
         self.mktCampaign = mktCampaign
         self.visitReferrer = visitReferrer
+        self.timeToDisposition = timeToDisposition
     }
 
 

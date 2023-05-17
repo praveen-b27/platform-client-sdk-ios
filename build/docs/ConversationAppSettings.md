@@ -8,6 +8,7 @@ Conversation settings that handles chats within the messenger
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **enabled** | **Bool** | The toggle to enable or disable conversations | [optional] |
 | **showAgentTypingIndicator** | **Bool** | The toggle to enable or disable typing indicator for messenger | [optional] |
 | **showUserTypingIndicator** | **Bool** | The toggle to enable or disable typing indicator for messenger | [optional] |
 | **autoStartType** | **String** | Deprecated. The auto start type for the messenger conversation | [optional] |

@@ -47,6 +47,7 @@ title: QueueConversationCallEventTopicCallMediaParticipant
 | **confined** | **Bool** |  | [optional] |
 | **recording** | **Bool** |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
+| **securePause** | **Bool** |  | [optional] |
 | **group** | [**QueueConversationCallEventTopicUriReference**](QueueConversationCallEventTopicUriReference.html) |  | [optional] |
 | **ani** | **String** |  | [optional] |
 | **dnis** | **String** |  | [optional] |

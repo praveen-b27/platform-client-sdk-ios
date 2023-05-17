@@ -1902,6 +1902,7 @@ open class GamificationAPI {
      - examples: [{contentType=application/json, example={
   "total" : 0,
   "entities" : [ {
+    "timeDisplayUnit" : "None",
     "precision" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "dateUnlinked" : "2000-01-23",
@@ -1921,6 +1922,7 @@ open class GamificationAPI {
     "externalMetricDefinitionId" : "externalMetricDefinitionId",
     "order" : 6
   }, {
+    "timeDisplayUnit" : "None",
     "precision" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "dateUnlinked" : "2000-01-23",

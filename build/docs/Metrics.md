@@ -24,6 +24,7 @@ title: Metrics
 | **sourcePerformanceProfile** | [**PerformanceProfile**](PerformanceProfile.html) | The source performance profile when this metric is linked | [optional] |
 | **unitDefinition** | **String** | Unit definition of linked external metric | [optional] |
 | **precision** | **Int** | Precision of linked external metric | [optional] |
+| **timeDisplayUnit** | **String** | The time unit in which the metric should be displayed -- this parameter is ignored when displaying non-time values | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

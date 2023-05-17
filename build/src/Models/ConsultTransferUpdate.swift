@@ -15,6 +15,7 @@ public class ConsultTransferUpdate: Codable {
         case destination = "DESTINATION"
         case object = "OBJECT"
         case both = "BOTH"
+        case conference = "CONFERENCE"
     }
     /** Determines to whom the initiating participant is speaking. */
     public var speakTo: SpeakTo?

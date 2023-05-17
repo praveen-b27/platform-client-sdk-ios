@@ -18,8 +18,9 @@ public class QueueConversationVideoEventTopicConversation: Codable {
     public var recordingState: String?
     public var address: String?
     public var externalTag: String?
+    public var securePause: Bool?
 
-    public init(_id: String?, maxParticipants: Int?, participants: [QueueConversationVideoEventTopicParticipant]?, recentTransfers: [QueueConversationVideoEventTopicRecentTransfer]?, recordingState: String?, address: String?, externalTag: String?) {
+    public init(_id: String?, maxParticipants: Int?, participants: [QueueConversationVideoEventTopicParticipant]?, recentTransfers: [QueueConversationVideoEventTopicRecentTransfer]?, recordingState: String?, address: String?, externalTag: String?, securePause: Bool?) {
         self._id = _id
         self.maxParticipants = maxParticipants
         self.participants = participants
@@ -27,6 +28,7 @@ public class QueueConversationVideoEventTopicConversation: Codable {
         self.recordingState = recordingState
         self.address = address
         self.externalTag = externalTag
+        self.securePause = securePause
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -37,6 +39,7 @@ public class QueueConversationVideoEventTopicConversation: Codable {
         case recordingState
         case address
         case externalTag
+        case securePause
     }
 
 

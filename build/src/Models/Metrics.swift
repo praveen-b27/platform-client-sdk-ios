@@ -20,6 +20,12 @@ public class Metrics: Codable {
         case attendanceStatus = "AttendanceStatus"
         case unit = "Unit"
     }
+    public enum TimeDisplayUnit: String, Codable { 
+        case _none = "None"
+        case seconds = "Seconds"
+        case minutes = "Minutes"
+        case hours = "Hours"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -53,10 +59,12 @@ public class Metrics: Codable {
     public var unitDefinition: String?
     /** Precision of linked external metric */
     public var precision: Int?
+    /** The time unit in which the metric should be displayed -- this parameter is ignored when displaying non-time values */
+    public var timeDisplayUnit: TimeDisplayUnit?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, order: Int?, metricDefinitionName: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, unitType: UnitType?, enabled: Bool?, templateName: String?, maxPoints: Int?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, unitDefinition: String?, precision: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, order: Int?, metricDefinitionName: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, unitType: UnitType?, enabled: Bool?, templateName: String?, maxPoints: Int?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, unitDefinition: String?, precision: Int?, timeDisplayUnit: TimeDisplayUnit?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.order = order
@@ -74,6 +82,7 @@ public class Metrics: Codable {
         self.sourcePerformanceProfile = sourcePerformanceProfile
         self.unitDefinition = unitDefinition
         self.precision = precision
+        self.timeDisplayUnit = timeDisplayUnit
         self.selfUri = selfUri
     }
 
@@ -95,6 +104,7 @@ public class Metrics: Codable {
         case sourcePerformanceProfile
         case unitDefinition
         case precision
+        case timeDisplayUnit
         case selfUri
     }
 

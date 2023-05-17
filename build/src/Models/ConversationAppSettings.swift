@@ -16,6 +16,8 @@ public class ConversationAppSettings: Codable {
         case standard = "Standard"
         case automatic = "Automatic"
     }
+    /** The toggle to enable or disable conversations */
+    public var enabled: Bool?
     /** The toggle to enable or disable typing indicator for messenger */
     public var showAgentTypingIndicator: Bool?
     /** The toggle to enable or disable typing indicator for messenger */
@@ -33,7 +35,8 @@ public class ConversationAppSettings: Codable {
     /** The humanize conversations settings for the messenger app */
     public var humanize: Humanize?
 
-    public init(showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?, autoStart: AutoStart?, markdown: Markdown?, conversationDisconnect: ConversationDisconnectSettings?, conversationClear: ConversationClearSettings?, humanize: Humanize?) {
+    public init(enabled: Bool?, showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?, autoStart: AutoStart?, markdown: Markdown?, conversationDisconnect: ConversationDisconnectSettings?, conversationClear: ConversationClearSettings?, humanize: Humanize?) {
+        self.enabled = enabled
         self.showAgentTypingIndicator = showAgentTypingIndicator
         self.showUserTypingIndicator = showUserTypingIndicator
         self.autoStartType = autoStartType

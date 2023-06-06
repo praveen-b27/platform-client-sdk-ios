@@ -29,6 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsTopics**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopics) | Get the list of Speech &amp; Text Analytics topics |
 | [**getSpeechandtextanalyticsTopicsDialects**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsDialects) | Get list of supported Speech &amp; Text Analytics topics dialects |
 | [**getSpeechandtextanalyticsTopicsGeneral**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsGeneral) | Get the Speech &amp; Text Analytics general topics for a given dialect |
+| [**getSpeechandtextanalyticsTopicsGeneralStatus**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsGeneralStatus) | Get the list of general topics from the org and the system with their current status |
 | [**getSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsPublishjob) | Get a Speech &amp; Text Analytics publish topics job by id |
 | [**patchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#patchSpeechandtextanalyticsSettings) | Patch Speech And Text Analytics Settings |
 | [**postSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsPrograms) | Create new Speech &amp; Text Analytics program |
@@ -1181,13 +1182,65 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneral(dialect: dialect) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: enUs ("en-US"), esUs ("es-US"), enAu ("en-AU"), enGb ("en-GB"), enZa ("en-ZA"), esEs ("es-ES"), enIn ("en-IN"), frFr ("fr-FR"), frCa ("fr-CA"), itIt ("it-IT"), deDe ("de-DE"), ptBr ("pt-BR"), plPl ("pl-PL"), ptPt ("pt-PT"), nlNl ("nl-NL"), koKr ("ko-KR"), jaJp ("ja-JP") |
+| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enIn ("en-IN"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), frCa ("fr-CA"), frFr ("fr-FR"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT") |
 {: class="table-striped"}
 
 
 ### Return type
 
 [**GeneralTopicsEntityListing**](GeneralTopicsEntityListing.html)
+
+<a name="getSpeechandtextanalyticsTopicsGeneralStatus"></a>
+
+# **getSpeechandtextanalyticsTopicsGeneralStatus**
+
+
+
+> [UnifiedGeneralTopicEntityListing](UnifiedGeneralTopicEntityListing.html) getSpeechandtextanalyticsTopicsGeneralStatus(dialect)
+
+Get the list of general topics from the org and the system with their current status
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/topics/general/status  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:topic:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let dialect: SpeechTextAnalyticsAPI.Dialect_getSpeechandtextanalyticsTopicsGeneralStatus = SpeechTextAnalyticsAPI.Dialect_getSpeechandtextanalyticsTopicsGeneralStatus.enummember // The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneralStatus(dialect: dialect) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneralStatus was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enIn ("en-IN"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), frCa ("fr-CA"), frFr ("fr-FR"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UnifiedGeneralTopicEntityListing**](UnifiedGeneralTopicEntityListing.html)
 
 <a name="getSpeechandtextanalyticsTopicsPublishjob"></a>
 

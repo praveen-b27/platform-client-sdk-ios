@@ -2310,8 +2310,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize
-let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let limit: String = "" // Number of entities to return. Maximum of 100. Deprecated in favour of pageSize
+let pageSize: String = "" // Number of entities to return. Maximum of 100.
 let name: String = "" // Filter by Name.
 let coreLanguage: KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases = KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases.enummember // Filter by core language.
 let published: Bool = true // Filter by published status.
@@ -2336,8 +2336,8 @@ KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: lim
 | ------------- | ------------- | ------------- | ------------- |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
-| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 100. Deprecated in favour of pageSize | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
 | **name** | **String**| Filter by Name. | [optional] |
 | **coreLanguage** | **String**| Filter by core language. | [optional]<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT") |
 | **published** | **Bool**| Filter by published status. | [optional] |

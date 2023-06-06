@@ -26,6 +26,7 @@ title: ReportingExportJobRequest
 | **hasCustomParticipantAttributes** | **Bool** | Indicates if custom participant attributes will be exported | [optional] |
 | **recipientEmails** | **[String]** | The list of email recipients for the exports | [optional] |
 | **includeDurationFormatInHeader** | **Bool** | Indicates whether to include selected duration format to the column headers | [optional] |
+| **durationFormat** | **String** | Indicates the duration format for the exports | [optional] |
 {: class="table table-striped"}
 
 

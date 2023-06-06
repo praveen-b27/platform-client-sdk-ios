@@ -22,6 +22,8 @@ public class Miner: Codable {
         case frFr = "fr-fr"
         case frCa = "fr-ca"
         case deDe = "de-de"
+        case ptPt = "pt-pt"
+        case ptBr = "pt-br"
     }
     public enum MinerType: String, Codable { 
         case intent = "Intent"

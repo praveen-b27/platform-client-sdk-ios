@@ -12,6 +12,7 @@ title: KpiResult
 | **interactionCountOn** | **Int64** | Total interactions handled by predictive routing (GPR was on) | [optional] |
 | **interactionCountOff** | **Int64** | Total interactions not routed by predictive routing (GPR was off) | [optional] |
 | **mediaType** | **String** | Media type used for the KPI | [optional] |
+| **percentageBenefit** | **Double** | The percentage benefit for this media type for the duration of the comparison period | [optional] |
 {: class="table table-striped"}
 
 

@@ -26,13 +26,16 @@ public class KpiResult: Codable {
     public var interactionCountOff: Int64?
     /** Media type used for the KPI */
     public var mediaType: MediaType?
+    /** The percentage benefit for this media type for the duration of the comparison period */
+    public var percentageBenefit: Double?
 
-    public init(kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, mediaType: MediaType?) {
+    public init(kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, mediaType: MediaType?, percentageBenefit: Double?) {
         self.kpiTotalOn = kpiTotalOn
         self.kpiTotalOff = kpiTotalOff
         self.interactionCountOn = interactionCountOn
         self.interactionCountOff = interactionCountOff
         self.mediaType = mediaType
+        self.percentageBenefit = percentageBenefit
     }
 
 

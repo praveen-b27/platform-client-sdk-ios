@@ -10,8 +10,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOauthClientUsageQueryResult**](UsageAPI.html#getOauthClientUsageQueryResult) | Get the results of a usage query |
 | [**getOauthClientUsageSummary**](UsageAPI.html#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
 | [**getUsageQueryExecutionIdResults**](UsageAPI.html#getUsageQueryExecutionIdResults) | Get the results of a usage query |
+| [**getUsageSimplesearchExecutionIdResults**](UsageAPI.html#getUsageSimplesearchExecutionIdResults) | Get the results of a usage search |
 | [**postOauthClientUsageQuery**](UsageAPI.html#postOauthClientUsageQuery) | Query for OAuth client API usage |
 | [**postUsageQuery**](UsageAPI.html#postUsageQuery) | Query organization API Usage -  |
+| [**postUsageSimplesearch**](UsageAPI.html#postUsageSimplesearch) | Search organization API Usage -  |
 {: class="table-striped"}
 
 <a name="getOauthClientUsageQueryResult"></a>
@@ -179,6 +181,59 @@ UsageAPI.getUsageQueryExecutionIdResults(executionId: executionId) { (response, 
 
 [**ApiUsageQueryResult**](ApiUsageQueryResult.html)
 
+<a name="getUsageSimplesearchExecutionIdResults"></a>
+
+# **getUsageSimplesearchExecutionIdResults**
+
+
+
+> [ApiUsageQueryResult](ApiUsageQueryResult.html) getUsageSimplesearchExecutionIdResults(executionId)
+
+Get the results of a usage search
+
+
+
+Wraps GET /api/v2/usage/simplesearch/{executionId}/results  
+
+Requires ANY permissions: 
+
+* oauth:client:view
+* usage:simpleSearch:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let executionId: String = "" // ID of the search execution
+
+// Code example
+UsageAPI.getUsageSimplesearchExecutionIdResults(executionId: executionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsageAPI.getUsageSimplesearchExecutionIdResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **executionId** | **String**| ID of the search execution | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
+
 <a name="postOauthClientUsageQuery"></a>
 
 # **postOauthClientUsageQuery**
@@ -209,7 +264,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let clientId: String = "" // Client ID
-let body: ApiUsageQuery = new ApiUsageQuery(...) // Query
+let body: ApiUsageClientQuery = new ApiUsageClientQuery(...) // Query
 
 // Code example
 UsageAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, error) in
@@ -228,7 +283,7 @@ UsageAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-| **body** | [**ApiUsageQuery**](ApiUsageQuery.html)| Query | |
+| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery.html)| Query | |
 {: class="table-striped"}
 
 
@@ -265,7 +320,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ApiUsageQuery = new ApiUsageQuery(...) // Query
+let body: ApiUsageOrganizationQuery = new ApiUsageOrganizationQuery(...) // Query
 
 // Code example
 UsageAPI.postUsageQuery(body: body) { (response, error) in
@@ -283,7 +338,62 @@ UsageAPI.postUsageQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ApiUsageQuery**](ApiUsageQuery.html)| Query | |
+| **body** | [**ApiUsageOrganizationQuery**](ApiUsageOrganizationQuery.html)| Query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UsageExecutionResult**](UsageExecutionResult.html)
+
+<a name="postUsageSimplesearch"></a>
+
+# **postUsageSimplesearch**
+
+
+
+> [UsageExecutionResult](UsageExecutionResult.html) postUsageSimplesearch(body)
+
+Search organization API Usage - 
+
+After calling this method, you will then need to poll for the query results based on the returned execution Id
+
+
+
+Wraps POST /api/v2/usage/simplesearch  
+
+Requires ANY permissions: 
+
+* oauth:client:view
+* usage:simpleSearch:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ApiUsageSimpleSearch = new ApiUsageSimpleSearch(...) // SimpleSearch
+
+// Code example
+UsageAPI.postUsageSimplesearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsageAPI.postUsageSimplesearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ApiUsageSimpleSearch**](ApiUsageSimpleSearch.html)| SimpleSearch | |
 {: class="table-striped"}
 
 

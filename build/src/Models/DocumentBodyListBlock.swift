@@ -17,11 +17,14 @@ public class DocumentBodyListBlock: Codable {
     /** The type of the list block. */
     public var type: ModelType?
     /** The list of items for an OrderedList or an UnorderedList. */
-    public var blocks: [DocumentContentBlock]?
+    public var blocks: [DocumentListContentBlock]?
+    /** The properties for the list block. */
+    public var properties: DocumentBodyListItemProperties?
 
-    public init(type: ModelType?, blocks: [DocumentContentBlock]?) {
+    public init(type: ModelType?, blocks: [DocumentListContentBlock]?, properties: DocumentBodyListItemProperties?) {
         self.type = type
         self.blocks = blocks
+        self.properties = properties
     }
 
 

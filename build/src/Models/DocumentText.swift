@@ -17,11 +17,14 @@ public class DocumentText: Codable {
     public var marks: [String]?
     /** The URL of the page that the hyperlink goes to. */
     public var hyperlink: String?
+    /** The properties for the text. */
+    public var properties: DocumentTextProperties?
 
-    public init(text: String?, marks: [Marks]?, hyperlink: String?) {
+    public init(text: String?, marks: [Marks]?, hyperlink: String?, properties: DocumentTextProperties?) {
         self.text = text
         self.marks = marks
         self.hyperlink = hyperlink
+        self.properties = properties
     }
 
 

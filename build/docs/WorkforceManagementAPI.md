@@ -1245,6 +1245,8 @@ Requires ANY permissions:
 * wfm:schedule:view
 * coaching:appointment:add
 * coaching:appointment:edit
+* learning:assignment:add
+* learning:assignment:reschedule
 
 ### Example
 

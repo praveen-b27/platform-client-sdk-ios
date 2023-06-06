@@ -109,6 +109,8 @@ public class ReportingExportMetadataJobResponse: Codable {
         case campaignInteractionDetailView = "CAMPAIGN_INTERACTION_DETAIL_VIEW"
         case campaignAttemptDetailView = "CAMPAIGN_ATTEMPT_DETAIL_VIEW"
         case workitemPerformanceSummaryView = "WORKITEM_PERFORMANCE_SUMMARY_VIEW"
+        case agentAssistPerformanceView = "AGENT_ASSIST_PERFORMANCE_VIEW"
+        case contactCenterPerformanceView = "CONTACT_CENTER_PERFORMANCE_VIEW"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

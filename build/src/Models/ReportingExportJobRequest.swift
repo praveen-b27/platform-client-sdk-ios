@@ -113,10 +113,18 @@ public class ReportingExportJobRequest: Codable {
         case campaignInteractionDetailView = "CAMPAIGN_INTERACTION_DETAIL_VIEW"
         case campaignAttemptDetailView = "CAMPAIGN_ATTEMPT_DETAIL_VIEW"
         case workitemPerformanceSummaryView = "WORKITEM_PERFORMANCE_SUMMARY_VIEW"
+        case agentAssistPerformanceView = "AGENT_ASSIST_PERFORMANCE_VIEW"
+        case contactCenterPerformanceView = "CONTACT_CENTER_PERFORMANCE_VIEW"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"
         case comma = "COMMA"
+    }
+    public enum DurationFormat: String, Codable { 
+        case seconds = "Seconds"
+        case milliseconds = "Milliseconds"
+        case hhmmss = "Hhmmss"
+        case hms = "Hms"
     }
     /** The user supplied name of the export request */
     public var name: String?
@@ -156,8 +164,10 @@ public class ReportingExportJobRequest: Codable {
     public var recipientEmails: [String]?
     /** Indicates whether to include selected duration format to the column headers */
     public var includeDurationFormatInHeader: Bool?
+    /** Indicates the duration format for the exports */
+    public var durationFormat: DurationFormat?
 
-    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, includeDurationFormatInHeader: Bool?) {
+    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, includeDurationFormatInHeader: Bool?, durationFormat: DurationFormat?) {
         self.name = name
         self.timeZone = timeZone
         self.exportFormat = exportFormat
@@ -177,6 +187,7 @@ public class ReportingExportJobRequest: Codable {
         self.hasCustomParticipantAttributes = hasCustomParticipantAttributes
         self.recipientEmails = recipientEmails
         self.includeDurationFormatInHeader = includeDurationFormatInHeader
+        self.durationFormat = durationFormat
     }
 
 

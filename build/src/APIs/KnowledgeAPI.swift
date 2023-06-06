@@ -4247,8 +4247,8 @@ open class KnowledgeAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
      - parameter name: (query) Filter by Name. (optional)
      - parameter coreLanguage: (query) Filter by core language. (optional)
      - parameter published: (query) Filter by published status. (optional)
@@ -4313,8 +4313,8 @@ open class KnowledgeAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
      - parameter name: (query) Filter by Name. (optional)
      - parameter coreLanguage: (query) Filter by core language. (optional)
      - parameter published: (query) Filter by published status. (optional)

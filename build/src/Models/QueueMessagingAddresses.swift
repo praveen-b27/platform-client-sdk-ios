@@ -12,9 +12,11 @@ import Foundation
 public class QueueMessagingAddresses: Codable {
 
     public var smsAddress: DomainEntityRef?
+    public var openMessagingRecipient: DomainEntityRef?
 
-    public init(smsAddress: DomainEntityRef?) {
+    public init(smsAddress: DomainEntityRef?, openMessagingRecipient: DomainEntityRef?) {
         self.smsAddress = smsAddress
+        self.openMessagingRecipient = openMessagingRecipient
     }
 
 

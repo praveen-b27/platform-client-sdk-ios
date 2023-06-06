@@ -24,6 +24,8 @@ title: FlowVersion
 | **publishResultUri** | **String** |  | [optional] |
 | **inputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) |  | [optional] |
 | **outputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) |  | [optional] |
+| **datePublished** | [**Date**](Date.html) | The date this version became the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **datePublishedEnd** | [**Date**](Date.html) | The date this version was no longer the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **nluInfo** | [**NluInfo**](NluInfo.html) | Information about the natural language understanding configuration for the flow version | [optional] |
 | **supportedLanguages** | [**[SupportedLanguage]**](SupportedLanguage.html) | List of supported languages for this version of the flow | [optional] |
 | **compatibleFlowTypes** | **[String]** | Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action. | [optional] |

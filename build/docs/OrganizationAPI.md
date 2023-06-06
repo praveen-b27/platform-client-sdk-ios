@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**getFieldconfig**](OrganizationAPI.html#getFieldconfig) | Fetch field config for an entity type |
+| [**getOrganizationsAuthenticationSettings**](OrganizationAPI.html#getOrganizationsAuthenticationSettings) | Gets the organization&#39;s settings |
 | [**getOrganizationsEmbeddedintegration**](OrganizationAPI.html#getOrganizationsEmbeddedintegration) | Get the list of domains that will be allowed to embed PureCloud applications |
 | [**getOrganizationsIpaddressauthentication**](OrganizationAPI.html#getOrganizationsIpaddressauthentication) | Get organization IP address whitelist settings |
 | [**getOrganizationsLimitsChangerequest**](OrganizationAPI.html#getOrganizationsLimitsChangerequest) | Get a limit change request |
@@ -17,12 +18,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOrganizationsLimitsNamespaceDefaults**](OrganizationAPI.html#getOrganizationsLimitsNamespaceDefaults) | Get the default limits in a namespace for an organization |
 | [**getOrganizationsLimitsNamespaces**](OrganizationAPI.html#getOrganizationsLimitsNamespaces) | Get the available limit namespaces |
 | [**getOrganizationsMe**](OrganizationAPI.html#getOrganizationsMe) | Get organization. |
-| [**getOrganizationsWhitelist**](OrganizationAPI.html#getOrganizationsWhitelist) | Use PUT /api/v2/organizations/embeddedintegration instead |
+| [**getOrganizationsWhitelist**](OrganizationAPI.html#getOrganizationsWhitelist) | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
+| [**patchOrganizationsAuthenticationSettings**](OrganizationAPI.html#patchOrganizationsAuthenticationSettings) | Update the organization&#39;s settings |
 | [**patchOrganizationsFeature**](OrganizationAPI.html#patchOrganizationsFeature) | Update organization |
 | [**putOrganizationsEmbeddedintegration**](OrganizationAPI.html#putOrganizationsEmbeddedintegration) | Update the list of domains that will be allowed to embed PureCloud applications |
 | [**putOrganizationsIpaddressauthentication**](OrganizationAPI.html#putOrganizationsIpaddressauthentication) | Update organization IP address whitelist settings |
 | [**putOrganizationsMe**](OrganizationAPI.html#putOrganizationsMe) | Update organization. |
-| [**putOrganizationsWhitelist**](OrganizationAPI.html#putOrganizationsWhitelist) | Use PUT /api/v2/organizations/embeddedintegration instead |
+| [**putOrganizationsWhitelist**](OrganizationAPI.html#putOrganizationsWhitelist) | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
 {: class="table-striped"}
 
 <a name="getFieldconfig"></a>
@@ -76,6 +78,54 @@ OrganizationAPI.getFieldconfig(type: type) { (response, error) in
 
 [**FieldConfig**](FieldConfig.html)
 
+<a name="getOrganizationsAuthenticationSettings"></a>
+
+# **getOrganizationsAuthenticationSettings**
+
+
+
+> [OrgAuthSettings](OrgAuthSettings.html) getOrganizationsAuthenticationSettings()
+
+Gets the organization&#39;s settings
+
+
+
+Wraps GET /api/v2/organizations/authentication/settings  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OrganizationAPI.getOrganizationsAuthenticationSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsAuthenticationSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**OrgAuthSettings**](OrgAuthSettings.html)
+
 <a name="getOrganizationsEmbeddedintegration"></a>
 
 # **getOrganizationsEmbeddedintegration**
@@ -85,6 +135,8 @@ OrganizationAPI.getFieldconfig(type: type) { (response, error) in
 > [EmbeddedIntegration](EmbeddedIntegration.html) getOrganizationsEmbeddedintegration()
 
 Get the list of domains that will be allowed to embed PureCloud applications
+
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -132,6 +184,8 @@ This endpoint does not require any parameters.
 > [IpAddressAuthentication](IpAddressAuthentication.html) getOrganizationsIpaddressauthentication()
 
 Get organization IP address whitelist settings
+
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -544,7 +598,7 @@ This endpoint does not require any parameters.
 
 > [OrgWhitelistSettings](OrgWhitelistSettings.html) getOrganizationsWhitelist()
 
-Use PUT /api/v2/organizations/embeddedintegration instead
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -582,6 +636,58 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**OrgWhitelistSettings**](OrgWhitelistSettings.html)
+
+<a name="patchOrganizationsAuthenticationSettings"></a>
+
+# **patchOrganizationsAuthenticationSettings**
+
+
+
+> [OrgAuthSettings](OrgAuthSettings.html) patchOrganizationsAuthenticationSettings(body)
+
+Update the organization&#39;s settings
+
+
+
+Wraps PATCH /api/v2/organizations/authentication/settings  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: OrgAuthSettings = new OrgAuthSettings(...) // Org settings
+
+// Code example
+OrganizationAPI.patchOrganizationsAuthenticationSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.patchOrganizationsAuthenticationSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**OrgAuthSettings**](OrgAuthSettings.html)| Org settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OrgAuthSettings**](OrgAuthSettings.html)
 
 <a name="patchOrganizationsFeature"></a>
 
@@ -647,6 +753,8 @@ OrganizationAPI.patchOrganizationsFeature(featureName: featureName, enabled: ena
 
 Update the list of domains that will be allowed to embed PureCloud applications
 
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+
 
 
 Wraps PUT /api/v2/organizations/embeddedintegration  
@@ -698,6 +806,8 @@ OrganizationAPI.putOrganizationsEmbeddedintegration(body: body) { (response, err
 > [IpAddressAuthentication](IpAddressAuthentication.html) putOrganizationsIpaddressauthentication(body)
 
 Update organization IP address whitelist settings
+
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -801,7 +911,7 @@ OrganizationAPI.putOrganizationsMe(body: body) { (response, error) in
 
 > [OrgWhitelistSettings](OrgWhitelistSettings.html) putOrganizationsWhitelist(body)
 
-Use PUT /api/v2/organizations/embeddedintegration instead
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 

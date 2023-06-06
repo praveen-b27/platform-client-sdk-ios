@@ -15,6 +15,7 @@ public class LearningModuleInformStepRequest: Codable {
     public enum ModelType: String, Codable { 
         case url = "Url"
         case content = "Content"
+        case genesysBuiltInCourse = "GenesysBuiltInCourse"
         case richText = "RichText"
         case scorm = "Scorm"
     }

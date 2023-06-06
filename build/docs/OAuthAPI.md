@@ -579,7 +579,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let clientId: String = "" // Client ID
-let body: ApiUsageQuery = new ApiUsageQuery(...) // Query
+let body: ApiUsageClientQuery = new ApiUsageClientQuery(...) // Query
 
 // Code example
 OAuthAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, error) in
@@ -598,7 +598,7 @@ OAuthAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-| **body** | [**ApiUsageQuery**](ApiUsageQuery.html)| Query | |
+| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery.html)| Query | |
 {: class="table-striped"}
 
 

@@ -52,6 +52,8 @@ public class ConversationDetailQueryPredicate: Codable {
         case omessageturn = "oMessageTurn"
         case tabandon = "tAbandon"
         case tacd = "tAcd"
+        case tactivecallback = "tActiveCallback"
+        case tactivecallbackcomplete = "tActiveCallbackComplete"
         case tacw = "tAcw"
         case tagentresponsetime = "tAgentResponseTime"
         case talert = "tAlert"

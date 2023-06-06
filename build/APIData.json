@@ -16770,7 +16770,7 @@
       }
     ],
     "return": "KnowledgeBaseListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet limit: String = \"\" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet name: String = \"\" // Filter by Name.\nlet coreLanguage: GetKnowledgeKnowledgebasesRequest.CoreLanguage_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.CoreLanguage_getKnowledgeKnowledgebases.enummember // Filter by core language.\nlet published: Bool = true // Filter by published status.\nlet sortBy: GetKnowledgeKnowledgebasesRequest.SortBy_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.SortBy_getKnowledgeKnowledgebases.enummember // Sort by.\nlet sortOrder: GetKnowledgeKnowledgebasesRequest.SortOrder_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.SortOrder_getKnowledgeKnowledgebases.enummember // Sort Order.\n\n// Get knowledge bases\nGetKnowledgeKnowledgebasesRequest.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage, published: published, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebasesRequest.getKnowledgeKnowledgebases was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet limit: String = \"\" // Number of entities to return. Maximum of 100. Deprecated in favour of pageSize\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\nlet name: String = \"\" // Filter by Name.\nlet coreLanguage: GetKnowledgeKnowledgebasesRequest.CoreLanguage_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.CoreLanguage_getKnowledgeKnowledgebases.enummember // Filter by core language.\nlet published: Bool = true // Filter by published status.\nlet sortBy: GetKnowledgeKnowledgebasesRequest.SortBy_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.SortBy_getKnowledgeKnowledgebases.enummember // Sort by.\nlet sortOrder: GetKnowledgeKnowledgebasesRequest.SortOrder_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.SortOrder_getKnowledgeKnowledgebases.enummember // Sort Order.\n\n// Get knowledge bases\nGetKnowledgeKnowledgebasesRequest.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage, published: published, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebasesRequest.getKnowledgeKnowledgebases was successful\")\n        dump(response)\n    }\n}"
   },
   "patchknowledgeguestsessiondocumentssearchsearchid": {
     "operationId": "patchknowledgeguestsessiondocumentssearchsearchid",
@@ -19703,12 +19703,12 @@
       },
       {
         "name": "body",
-        "type": "ApiUsageQuery",
+        "type": "ApiUsageClientQuery",
         "required": "true"
       }
     ],
     "return": "UsageExecutionResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet clientId: String = \"\" // Client ID\nlet body: ApiUsageQuery = new ApiUsageQuery(...) // Query\n\n// Query for OAuth client API usage\nPostOauthClientUsageQueryRequest.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOauthClientUsageQueryRequest.postOauthClientUsageQuery was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet clientId: String = \"\" // Client ID\nlet body: ApiUsageClientQuery = new ApiUsageClientQuery(...) // Query\n\n// Query for OAuth client API usage\nPostOauthClientUsageQueryRequest.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOauthClientUsageQueryRequest.postOauthClientUsageQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "postoauthclients": {
     "operationId": "postoauthclients",
@@ -19742,6 +19742,13 @@
     ],
     "return": "OAuthClient",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet clientId: String = \"\" // Client ID\nlet body: OAuthClientRequest = new OAuthClientRequest(...) // Client\n\n// Update OAuth Client\nPutOauthClientRequest.putOauthClient(clientId: clientId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOauthClientRequest.putOauthClient was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getorganizationsauthenticationsettings": {
+    "operationId": "getorganizationsauthenticationsettings",
+    "functionName": "getOrganizationsAuthenticationSettings",
+    "signature": "getOrganizationsAuthenticationSettings()",
+    "return": "OrgAuthSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Gets the organization's settings\nGetOrganizationsAuthenticationSettingsRequest.getOrganizationsAuthenticationSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsAuthenticationSettingsRequest.getOrganizationsAuthenticationSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "getorganizationsembeddedintegration": {
     "operationId": "getorganizationsembeddedintegration",
@@ -19871,7 +19878,21 @@
     "functionName": "getOrganizationsWhitelist",
     "signature": "getOrganizationsWhitelist()",
     "return": "OrgWhitelistSettings",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Use PUT /api/v2/organizations/embeddedintegration instead\nGetOrganizationsWhitelistRequest.getOrganizationsWhitelist() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsWhitelistRequest.getOrganizationsWhitelist was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// This route is deprecated, please use /api/v2/organizations/authentication/settings instead\nGetOrganizationsWhitelistRequest.getOrganizationsWhitelist() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsWhitelistRequest.getOrganizationsWhitelist was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchorganizationsauthenticationsettings": {
+    "operationId": "patchorganizationsauthenticationsettings",
+    "functionName": "patchOrganizationsAuthenticationSettings",
+    "signature": "patchOrganizationsAuthenticationSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "OrgAuthSettings",
+        "required": "true"
+      }
+    ],
+    "return": "OrgAuthSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OrgAuthSettings = new OrgAuthSettings(...) // Org settings\n\n// Update the organization's settings\nPatchOrganizationsAuthenticationSettingsRequest.patchOrganizationsAuthenticationSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchOrganizationsAuthenticationSettingsRequest.patchOrganizationsAuthenticationSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "patchorganizationsfeature": {
     "operationId": "patchorganizationsfeature",
@@ -19946,7 +19967,7 @@
       }
     ],
     "return": "OrgWhitelistSettings",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OrgWhitelistSettings = new OrgWhitelistSettings(...) // Whitelist settings\n\n// Use PUT /api/v2/organizations/embeddedintegration instead\nPutOrganizationsWhitelistRequest.putOrganizationsWhitelist(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOrganizationsWhitelistRequest.putOrganizationsWhitelist was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OrgWhitelistSettings = new OrgWhitelistSettings(...) // Whitelist settings\n\n// This route is deprecated, please use /api/v2/organizations/authentication/settings instead\nPutOrganizationsWhitelistRequest.putOrganizationsWhitelist(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOrganizationsWhitelistRequest.putOrganizationsWhitelist was successful\")\n        dump(response)\n    }\n}"
   },
   "deleteorgauthorizationtrustee": {
     "operationId": "deleteorgauthorizationtrustee",
@@ -30878,6 +30899,20 @@
     "return": "GeneralTopicsEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dialect: GetSpeechandtextanalyticsTopicsGeneralRequest.Dialect_getSpeechandtextanalyticsTopicsGeneral = GetSpeechandtextanalyticsTopicsGeneralRequest.Dialect_getSpeechandtextanalyticsTopicsGeneral.enummember // The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard\n\n// Get the Speech & Text Analytics general topics for a given dialect\nGetSpeechandtextanalyticsTopicsGeneralRequest.getSpeechandtextanalyticsTopicsGeneral(dialect: dialect) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTopicsGeneralRequest.getSpeechandtextanalyticsTopicsGeneral was successful\")\n        dump(response)\n    }\n}"
   },
+  "getspeechandtextanalyticstopicsgeneralstatus": {
+    "operationId": "getspeechandtextanalyticstopicsgeneralstatus",
+    "functionName": "getSpeechandtextanalyticsTopicsGeneralStatus",
+    "signature": "getSpeechandtextanalyticsTopicsGeneralStatus(dialect)",
+    "parameters": [
+      {
+        "name": "dialect",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "UnifiedGeneralTopicEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dialect: GetSpeechandtextanalyticsTopicsGeneralStatusRequest.Dialect_getSpeechandtextanalyticsTopicsGeneralStatus = GetSpeechandtextanalyticsTopicsGeneralStatusRequest.Dialect_getSpeechandtextanalyticsTopicsGeneralStatus.enummember // The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard\n\n// Get the list of general topics from the org and the system with their current status\nGetSpeechandtextanalyticsTopicsGeneralStatusRequest.getSpeechandtextanalyticsTopicsGeneralStatus(dialect: dialect) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTopicsGeneralStatusRequest.getSpeechandtextanalyticsTopicsGeneralStatus was successful\")\n        dump(response)\n    }\n}"
+  },
   "getspeechandtextanalyticstopicspublishjob": {
     "operationId": "getspeechandtextanalyticstopicspublishjob",
     "functionName": "getSpeechandtextanalyticsTopicsPublishjob",
@@ -33898,6 +33933,20 @@
     "return": "ApiUsageQueryResult",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet executionId: String = \"\" // ID of the query execution\n\n// Get the results of a usage query\nGetUsageQueryExecutionIdResultsRequest.getUsageQueryExecutionIdResults(executionId: executionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsageQueryExecutionIdResultsRequest.getUsageQueryExecutionIdResults was successful\")\n        dump(response)\n    }\n}"
   },
+  "getusagesimplesearchexecutionidresults": {
+    "operationId": "getusagesimplesearchexecutionidresults",
+    "functionName": "getUsageSimplesearchExecutionIdResults",
+    "signature": "getUsageSimplesearchExecutionIdResults(executionId)",
+    "parameters": [
+      {
+        "name": "executionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ApiUsageQueryResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet executionId: String = \"\" // ID of the search execution\n\n// Get the results of a usage search\nGetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults(executionId: executionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults was successful\")\n        dump(response)\n    }\n}"
+  },
   "postusagequery": {
     "operationId": "postusagequery",
     "functionName": "postUsageQuery",
@@ -33905,12 +33954,26 @@
     "parameters": [
       {
         "name": "body",
-        "type": "ApiUsageQuery",
+        "type": "ApiUsageOrganizationQuery",
         "required": "true"
       }
     ],
     "return": "UsageExecutionResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ApiUsageQuery = new ApiUsageQuery(...) // Query\n\n// Query organization API Usage - \nPostUsageQueryRequest.postUsageQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUsageQueryRequest.postUsageQuery was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ApiUsageOrganizationQuery = new ApiUsageOrganizationQuery(...) // Query\n\n// Query organization API Usage - \nPostUsageQueryRequest.postUsageQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUsageQueryRequest.postUsageQuery was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postusagesimplesearch": {
+    "operationId": "postusagesimplesearch",
+    "functionName": "postUsageSimplesearch",
+    "signature": "postUsageSimplesearch(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ApiUsageSimpleSearch",
+        "required": "true"
+      }
+    ],
+    "return": "UsageExecutionResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ApiUsageSimpleSearch = new ApiUsageSimpleSearch(...) // SimpleSearch\n\n// Search organization API Usage - \nPostUsageSimplesearchRequest.postUsageSimplesearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUsageSimplesearchRequest.postUsageSimplesearch was successful\")\n        dump(response)\n    }\n}"
   },
   "deleteuserrecording": {
     "operationId": "deleteuserrecording",

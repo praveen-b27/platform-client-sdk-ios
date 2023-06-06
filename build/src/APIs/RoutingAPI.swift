@@ -3112,22 +3112,25 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "kpiResults" : [ {
-    "kpiTotalOff" : 6,
+    "kpiTotalOff" : 1,
     "interactionCountOff" : 5,
-    "interactionCountOn" : 1,
+    "percentageBenefit" : 2.3021358869347655,
+    "interactionCountOn" : 5,
     "mediaType" : "voice",
-    "kpiTotalOn" : 0
+    "kpiTotalOn" : 6
   }, {
-    "kpiTotalOff" : 6,
+    "kpiTotalOff" : 1,
     "interactionCountOff" : 5,
-    "interactionCountOn" : 1,
+    "percentageBenefit" : 2.3021358869347655,
+    "interactionCountOn" : 5,
     "mediaType" : "voice",
-    "kpiTotalOn" : 0
+    "kpiTotalOn" : 6
   } ],
   "kpi" : "kpi",
   "dateStarted" : "2000-01-23T04:56:07.000+00:00",
   "dateEnded" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
+  "percentageBenefit" : 0.8008281904610115,
   "id" : "id"
 }, statusCode=200}]
      
@@ -3189,41 +3192,47 @@ open class RoutingAPI {
   "total" : 0,
   "entities" : [ {
     "kpiResults" : [ {
-      "kpiTotalOff" : 6,
+      "kpiTotalOff" : 1,
       "interactionCountOff" : 5,
-      "interactionCountOn" : 1,
+      "percentageBenefit" : 2.3021358869347655,
+      "interactionCountOn" : 5,
       "mediaType" : "voice",
-      "kpiTotalOn" : 0
+      "kpiTotalOn" : 6
     }, {
-      "kpiTotalOff" : 6,
+      "kpiTotalOff" : 1,
       "interactionCountOff" : 5,
-      "interactionCountOn" : 1,
+      "percentageBenefit" : 2.3021358869347655,
+      "interactionCountOn" : 5,
       "mediaType" : "voice",
-      "kpiTotalOn" : 0
+      "kpiTotalOn" : 6
     } ],
     "kpi" : "kpi",
     "dateStarted" : "2000-01-23T04:56:07.000+00:00",
     "dateEnded" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
+    "percentageBenefit" : 0.8008281904610115,
     "id" : "id"
   }, {
     "kpiResults" : [ {
-      "kpiTotalOff" : 6,
+      "kpiTotalOff" : 1,
       "interactionCountOff" : 5,
-      "interactionCountOn" : 1,
+      "percentageBenefit" : 2.3021358869347655,
+      "interactionCountOn" : 5,
       "mediaType" : "voice",
-      "kpiTotalOn" : 0
+      "kpiTotalOn" : 6
     }, {
-      "kpiTotalOff" : 6,
+      "kpiTotalOff" : 1,
       "interactionCountOff" : 5,
-      "interactionCountOn" : 1,
+      "percentageBenefit" : 2.3021358869347655,
+      "interactionCountOn" : 5,
       "mediaType" : "voice",
-      "kpiTotalOn" : 0
+      "kpiTotalOn" : 6
     } ],
     "kpi" : "kpi",
     "dateStarted" : "2000-01-23T04:56:07.000+00:00",
     "dateEnded" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
+    "percentageBenefit" : 0.8008281904610115,
     "id" : "id"
   } ],
   "selfUri" : "https://openapi-generator.tech"
@@ -11334,10 +11343,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11360,10 +11369,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11406,10 +11415,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11432,10 +11441,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11483,10 +11492,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11509,10 +11518,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11555,10 +11564,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",
@@ -11581,10 +11590,10 @@ open class RoutingAPI {
         "dnis" : "dnis",
         "scoredAgents" : [ {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         }, {
           "scoredAgentId" : "scoredAgentId",
-          "agentScore" : 5
+          "agentScore" : 1
         } ],
         "requestedLanguageId" : "requestedLanguageId",
         "participantName" : "participantName",

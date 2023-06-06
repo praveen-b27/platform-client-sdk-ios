@@ -79,6 +79,7 @@ docs/AdhocRecordingTopicRecordingDataV2.md
 docs/AdhocRecordingTopicUserData.md
 docs/AdhocRecordingTopicWorkspaceData.md
 docs/Adjacents.md
+docs/AdjustableLiveSpeakerDetection.md
 docs/AdminTimeOffRequestPatch.md
 docs/AfterCallWork.md
 docs/AfterCallWorkUpdate.md
@@ -144,9 +145,11 @@ docs/AnalyticsUserDetailsQueryResponse.md
 docs/AnalyticsUserPresenceRecord.md
 docs/Annotation.md
 docs/AnswerOption.md
-docs/ApiUsageQuery.md
+docs/ApiUsageClientQuery.md
+docs/ApiUsageOrganizationQuery.md
 docs/ApiUsageQueryResult.md
 docs/ApiUsageRow.md
+docs/ApiUsageSimpleSearch.md
 docs/AppendToDncActionSettings.md
 docs/ApprovalNamespace.md
 docs/ArchitectAPI.json
@@ -1116,6 +1119,8 @@ docs/DirectoryUserDevicesListing.md
 docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
 docs/DisconnectReason.md
+docs/Disposition.md
+docs/DispositionParameters.md
 docs/Division.md
 docs/DivisionReference.md
 docs/DivsPermittedEntityListing.md
@@ -1141,14 +1146,20 @@ docs/DocumentAuditEntityListing.md
 docs/DocumentBody.md
 docs/DocumentBodyBlock.md
 docs/DocumentBodyImage.md
+docs/DocumentBodyImageProperties.md
 docs/DocumentBodyList.md
 docs/DocumentBodyListBlock.md
+docs/DocumentBodyListBlockProperties.md
+docs/DocumentBodyListItemProperties.md
 docs/DocumentBodyParagraph.md
+docs/DocumentBodyParagraphProperties.md
 docs/DocumentBodyVideo.md
+docs/DocumentBodyVideoProperties.md
 docs/DocumentCategoryInput.md
 docs/DocumentContentBlock.md
 docs/DocumentEntityListing.md
 docs/DocumentFaq.md
+docs/DocumentListContentBlock.md
 docs/DocumentListing.md
 docs/DocumentQuery.md
 docs/DocumentQueryClause.md
@@ -1156,6 +1167,7 @@ docs/DocumentQueryInterval.md
 docs/DocumentQueryPredicate.md
 docs/DocumentReference.md
 docs/DocumentText.md
+docs/DocumentTextProperties.md
 docs/DocumentThumbnail.md
 docs/DocumentUpdate.md
 docs/DocumentUpload.md
@@ -2134,6 +2146,7 @@ docs/OpenMessagingToRecipient.md
 docs/OpenNormalizedMessage.md
 docs/Operation.md
 docs/OptInSettings.md
+docs/OrgAuthSettings.md
 docs/OrgOAuthClient.md
 docs/OrgUser.md
 docs/OrgWhitelistSettings.md
@@ -2205,6 +2218,7 @@ docs/Participant.md
 docs/ParticipantAttributes.md
 docs/ParticipantBasic.md
 docs/ParticipantMetrics.md
+docs/PasswordRequirements.md
 docs/PatchAction.md
 docs/PatchActionMap.md
 docs/PatchActionMapScheduleGroups.md
@@ -3198,6 +3212,8 @@ docs/UnansweredPhrase.md
 docs/UnansweredPhraseGroup.md
 docs/UnansweredPhraseGroupPatchRequestBody.md
 docs/UnansweredPhraseGroupUpdateResponse.md
+docs/UnifiedGeneralTopic.md
+docs/UnifiedGeneralTopicEntityListing.md
 docs/UnpublishedProgramsEntityListing.md
 docs/UnreadMetric.md
 docs/UnreadStatus.md
@@ -4435,6 +4451,7 @@ docs/getOauthClientUsageSummary-example.txt
 docs/getOauthClients-example.txt
 docs/getOauthScope-example.txt
 docs/getOauthScopes-example.txt
+docs/getOrganizationsAuthenticationSettings-example.txt
 docs/getOrganizationsEmbeddedintegration-example.txt
 docs/getOrganizationsIpaddressauthentication-example.txt
 docs/getOrganizationsLimitsChangerequest-example.txt
@@ -4694,6 +4711,7 @@ docs/getSpeechandtextanalyticsTopic-example.txt
 docs/getSpeechandtextanalyticsTopics-example.txt
 docs/getSpeechandtextanalyticsTopicsDialects-example.txt
 docs/getSpeechandtextanalyticsTopicsGeneral-example.txt
+docs/getSpeechandtextanalyticsTopicsGeneralStatus-example.txt
 docs/getSpeechandtextanalyticsTopicsPublishjob-example.txt
 docs/getStation-example.txt
 docs/getStations-example.txt
@@ -4775,6 +4793,7 @@ docs/getTextbotsBotsSearch-example.txt
 docs/getTimezones-example.txt
 docs/getTokensMe-example.txt
 docs/getUsageQueryExecutionIdResults-example.txt
+docs/getUsageSimplesearchExecutionIdResults-example.txt
 docs/getUser-example.txt
 docs/getUserAdjacents-example.txt
 docs/getUserCallforwarding-example.txt
@@ -4997,6 +5016,7 @@ docs/patchLearningAssignment-example.txt
 docs/patchLearningAssignmentReschedule-example.txt
 docs/patchLocation-example.txt
 docs/patchMessagingSupportedcontentSupportedContentId-example.txt
+docs/patchOrganizationsAuthenticationSettings-example.txt
 docs/patchOrganizationsFeature-example.txt
 docs/patchOutboundDnclistCustomexclusioncolumns-example.txt
 docs/patchOutboundDnclistEmailaddresses-example.txt
@@ -5480,6 +5500,7 @@ docs/postUploadsPublicassetsImages-example.txt
 docs/postUploadsRecordings-example.txt
 docs/postUploadsWorkforcemanagementHistoricaldataCsv-example.txt
 docs/postUsageQuery-example.txt
+docs/postUsageSimplesearch-example.txt
 docs/postUserExternalid-example.txt
 docs/postUserGreetings-example.txt
 docs/postUserInvite-example.txt
@@ -5913,6 +5934,7 @@ src/Models/AdhocRecordingTopicRecordingDataV2.swift
 src/Models/AdhocRecordingTopicUserData.swift
 src/Models/AdhocRecordingTopicWorkspaceData.swift
 src/Models/Adjacents.swift
+src/Models/AdjustableLiveSpeakerDetection.swift
 src/Models/AdminTimeOffRequestPatch.swift
 src/Models/AfterCallWork.swift
 src/Models/AfterCallWorkUpdate.swift
@@ -5974,9 +5996,11 @@ src/Models/AnalyticsUserDetailsQueryResponse.swift
 src/Models/AnalyticsUserPresenceRecord.swift
 src/Models/Annotation.swift
 src/Models/AnswerOption.swift
-src/Models/ApiUsageQuery.swift
+src/Models/ApiUsageClientQuery.swift
+src/Models/ApiUsageOrganizationQuery.swift
 src/Models/ApiUsageQueryResult.swift
 src/Models/ApiUsageRow.swift
+src/Models/ApiUsageSimpleSearch.swift
 src/Models/AppendToDncActionSettings.swift
 src/Models/ApprovalNamespace.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationClient.swift
@@ -6926,6 +6950,8 @@ src/Models/DirectoryUserDevicesListing.swift
 src/Models/DisallowedEntityLearningAssignmentItem.swift
 src/Models/DisallowedEntityLearningAssignmentReference.swift
 src/Models/DisconnectReason.swift
+src/Models/Disposition.swift
+src/Models/DispositionParameters.swift
 src/Models/Division.swift
 src/Models/DivisionReference.swift
 src/Models/DivsPermittedEntityListing.swift
@@ -6951,14 +6977,20 @@ src/Models/DocumentAuditEntityListing.swift
 src/Models/DocumentBody.swift
 src/Models/DocumentBodyBlock.swift
 src/Models/DocumentBodyImage.swift
+src/Models/DocumentBodyImageProperties.swift
 src/Models/DocumentBodyList.swift
 src/Models/DocumentBodyListBlock.swift
+src/Models/DocumentBodyListBlockProperties.swift
+src/Models/DocumentBodyListItemProperties.swift
 src/Models/DocumentBodyParagraph.swift
+src/Models/DocumentBodyParagraphProperties.swift
 src/Models/DocumentBodyVideo.swift
+src/Models/DocumentBodyVideoProperties.swift
 src/Models/DocumentCategoryInput.swift
 src/Models/DocumentContentBlock.swift
 src/Models/DocumentEntityListing.swift
 src/Models/DocumentFaq.swift
+src/Models/DocumentListContentBlock.swift
 src/Models/DocumentListing.swift
 src/Models/DocumentQuery.swift
 src/Models/DocumentQueryClause.swift
@@ -6966,6 +6998,7 @@ src/Models/DocumentQueryInterval.swift
 src/Models/DocumentQueryPredicate.swift
 src/Models/DocumentReference.swift
 src/Models/DocumentText.swift
+src/Models/DocumentTextProperties.swift
 src/Models/DocumentThumbnail.swift
 src/Models/DocumentUpdate.swift
 src/Models/DocumentUpload.swift
@@ -7896,6 +7929,7 @@ src/Models/OpenMessagingToRecipient.swift
 src/Models/OpenNormalizedMessage.swift
 src/Models/Operation.swift
 src/Models/OptInSettings.swift
+src/Models/OrgAuthSettings.swift
 src/Models/OrgOAuthClient.swift
 src/Models/OrgUser.swift
 src/Models/OrgWhitelistSettings.swift
@@ -7961,6 +7995,7 @@ src/Models/Participant.swift
 src/Models/ParticipantAttributes.swift
 src/Models/ParticipantBasic.swift
 src/Models/ParticipantMetrics.swift
+src/Models/PasswordRequirements.swift
 src/Models/PatchAction.swift
 src/Models/PatchActionMap.swift
 src/Models/PatchActionMapScheduleGroups.swift
@@ -8919,6 +8954,8 @@ src/Models/UnansweredPhrase.swift
 src/Models/UnansweredPhraseGroup.swift
 src/Models/UnansweredPhraseGroupPatchRequestBody.swift
 src/Models/UnansweredPhraseGroupUpdateResponse.swift
+src/Models/UnifiedGeneralTopic.swift
+src/Models/UnifiedGeneralTopicEntityListing.swift
 src/Models/UnpublishedProgramsEntityListing.swift
 src/Models/UnreadMetric.swift
 src/Models/UnreadStatus.swift

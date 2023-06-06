@@ -54,6 +54,10 @@ public class FlowVersion: Codable {
     public var publishResultUri: String?
     public var inputSchema: JsonSchemaDocument?
     public var outputSchema: JsonSchemaDocument?
+    /** The date this version became the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var datePublished: Date?
+    /** The date this version was no longer the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var datePublishedEnd: Date?
     /** Information about the natural language understanding configuration for the flow version */
     public var nluInfo: NluInfo?
     /** List of supported languages for this version of the flow */
@@ -63,7 +67,7 @@ public class FlowVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, debug: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, dateCheckedIn: Int64?, dateSaved: Int64?, generationId: String?, publishResultUri: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, compatibleFlowTypes: [CompatibleFlowTypes]?, selfUri: String?) {
+    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, debug: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, dateCheckedIn: Int64?, dateSaved: Int64?, generationId: String?, publishResultUri: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, datePublished: Date?, datePublishedEnd: Date?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, compatibleFlowTypes: [CompatibleFlowTypes]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.commitVersion = commitVersion
@@ -81,6 +85,8 @@ public class FlowVersion: Codable {
         self.publishResultUri = publishResultUri
         self.inputSchema = inputSchema
         self.outputSchema = outputSchema
+        self.datePublished = datePublished
+        self.datePublishedEnd = datePublishedEnd
         self.nluInfo = nluInfo
         self.supportedLanguages = supportedLanguages
         self.compatibleFlowTypes = compatibleFlowTypes
@@ -105,6 +111,8 @@ public class FlowVersion: Codable {
         case publishResultUri
         case inputSchema
         case outputSchema
+        case datePublished
+        case datePublishedEnd
         case nluInfo
         case supportedLanguages
         case compatibleFlowTypes

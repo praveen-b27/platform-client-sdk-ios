@@ -13,10 +13,11 @@ public class CreateOutboundMessagingConversationRequest: Codable {
 
     public enum ToAddressMessengerType: String, Codable { 
         case sms = "sms"
+        case _open = "open"
     }
     /** The ID of the queue to be associated with the message. This will determine the fromAddress of the message. */
     public var queueId: String?
-    /** The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234 */
+    /** The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234.  For open messenger type, any string within the outbound.open.messaging.to.address.characters.max limit can be used. */
     public var toAddress: String?
     /** The messaging address messenger type. */
     public var toAddressMessengerType: ToAddressMessengerType?

@@ -56,8 +56,11 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
     public var previousStatus: PreviousStatus?
     public var declinedReview: Bool?
     public var retractedEvaluation: EvaluationQualityV2TopicEvaluationReference?
+    public var rescoreCount: Int?
+    public var evaluatorCommentHasUpdated: Bool?
+    public var agentCommentHasUpdated: Bool?
 
-    public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?, calibration: EvaluationQualityV2TopicCalibration?, evaluationSource: EvaluationQualityV2TopicEvaluationSource?, assigneeUserId: String?, previousAssigneeUserId: String?, evaluationContextId: String?, disputeCount: Int?, version: Int?, previousStatus: PreviousStatus?, declinedReview: Bool?, retractedEvaluation: EvaluationQualityV2TopicEvaluationReference?) {
+    public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?, calibration: EvaluationQualityV2TopicCalibration?, evaluationSource: EvaluationQualityV2TopicEvaluationSource?, assigneeUserId: String?, previousAssigneeUserId: String?, evaluationContextId: String?, disputeCount: Int?, version: Int?, previousStatus: PreviousStatus?, declinedReview: Bool?, retractedEvaluation: EvaluationQualityV2TopicEvaluationReference?, rescoreCount: Int?, evaluatorCommentHasUpdated: Bool?, agentCommentHasUpdated: Bool?) {
         self._id = _id
         self.conversationId = conversationId
         self.agent = agent
@@ -89,6 +92,9 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         self.previousStatus = previousStatus
         self.declinedReview = declinedReview
         self.retractedEvaluation = retractedEvaluation
+        self.rescoreCount = rescoreCount
+        self.evaluatorCommentHasUpdated = evaluatorCommentHasUpdated
+        self.agentCommentHasUpdated = agentCommentHasUpdated
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -123,6 +129,9 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         case previousStatus
         case declinedReview
         case retractedEvaluation
+        case rescoreCount
+        case evaluatorCommentHasUpdated
+        case agentCommentHasUpdated
     }
 
 

@@ -245,6 +245,89 @@ open class UsageAPI {
     }
 
     
+    /**
+     Get the results of a usage search
+     
+     - parameter executionId: (path) ID of the search execution 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsageSimplesearchExecutionIdResults(executionId: String, completion: @escaping ((_ data: ApiUsageQueryResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsageSimplesearchExecutionIdResultsWithRequestBuilder(executionId: executionId)
+        requestBuilder.execute { (response: Response<ApiUsageQueryResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the results of a usage search
+     - GET /api/v2/usage/simplesearch/{executionId}/results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryStatus" : "Complete",
+  "results" : [ {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "clientId" : "clientId",
+    "clientName" : "clientName",
+    "templateUri" : "templateUri",
+    "requests" : 2,
+    "httpMethod" : "httpMethod",
+    "userId" : "userId",
+    "organizationId" : "organizationId",
+    "status429" : 5,
+    "status400" : 1,
+    "status500" : 5,
+    "status200" : 0,
+    "status300" : 6
+  }, {
+    "date" : "2000-01-23T04:56:07.000+00:00",
+    "clientId" : "clientId",
+    "clientName" : "clientName",
+    "templateUri" : "templateUri",
+    "requests" : 2,
+    "httpMethod" : "httpMethod",
+    "userId" : "userId",
+    "organizationId" : "organizationId",
+    "status429" : 5,
+    "status400" : 1,
+    "status500" : 5,
+    "status200" : 0,
+    "status300" : 6
+  } ]
+}, statusCode=200}]
+     
+     - parameter executionId: (path) ID of the search execution 
+
+     - returns: RequestBuilder<ApiUsageQueryResult> 
+     */
+    open class func getUsageSimplesearchExecutionIdResultsWithRequestBuilder(executionId: String) -> RequestBuilder<ApiUsageQueryResult> {        
+        var path = "/api/v2/usage/simplesearch/{executionId}/results"
+        let executionIdPreEscape = "\(executionId)"
+        let executionIdPostEscape = executionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{executionId}", with: executionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ApiUsageQueryResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     /**
      Query for OAuth client API usage
@@ -253,7 +336,7 @@ open class UsageAPI {
      - parameter body: (body) Query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postOauthClientUsageQuery(clientId: String, body: ApiUsageQuery, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
+    open class func postOauthClientUsageQuery(clientId: String, body: ApiUsageClientQuery, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postOauthClientUsageQueryWithRequestBuilder(clientId: clientId, body: body)
         requestBuilder.execute { (response: Response<UsageExecutionResult>?, error) -> Void in
             do {
@@ -288,7 +371,7 @@ open class UsageAPI {
 
      - returns: RequestBuilder<UsageExecutionResult> 
      */
-    open class func postOauthClientUsageQueryWithRequestBuilder(clientId: String, body: ApiUsageQuery) -> RequestBuilder<UsageExecutionResult> {        
+    open class func postOauthClientUsageQueryWithRequestBuilder(clientId: String, body: ApiUsageClientQuery) -> RequestBuilder<UsageExecutionResult> {        
         var path = "/api/v2/oauth/clients/{clientId}/usage/query"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -310,7 +393,7 @@ open class UsageAPI {
      - parameter body: (body) Query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsageQuery(body: ApiUsageQuery, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
+    open class func postUsageQuery(body: ApiUsageOrganizationQuery, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postUsageQueryWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<UsageExecutionResult>?, error) -> Void in
             do {
@@ -344,8 +427,61 @@ open class UsageAPI {
 
      - returns: RequestBuilder<UsageExecutionResult> 
      */
-    open class func postUsageQueryWithRequestBuilder(body: ApiUsageQuery) -> RequestBuilder<UsageExecutionResult> {        
+    open class func postUsageQueryWithRequestBuilder(body: ApiUsageOrganizationQuery) -> RequestBuilder<UsageExecutionResult> {        
         let path = "/api/v2/usage/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UsageExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     Search organization API Usage - 
+     
+     - parameter body: (body) SimpleSearch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsageSimplesearch(body: ApiUsageSimpleSearch, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsageSimplesearchWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UsageExecutionResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search organization API Usage - 
+     - POST /api/v2/usage/simplesearch
+     - After calling this method, you will then need to poll for the query results based on the returned execution Id
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "executionId" : "executionId",
+  "resultsUri" : "resultsUri"
+}, statusCode=200}]
+     
+     - parameter body: (body) SimpleSearch 
+
+     - returns: RequestBuilder<UsageExecutionResult> 
+     */
+    open class func postUsageSimplesearchWithRequestBuilder(body: ApiUsageSimpleSearch) -> RequestBuilder<UsageExecutionResult> {        
+        let path = "/api/v2/usage/simplesearch"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 

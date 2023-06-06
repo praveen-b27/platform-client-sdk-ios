@@ -183,8 +183,10 @@ public class ViewFilter: Codable {
         case unknown = "Unknown"
         case noInputCollection = "NoInputCollection"
         case noInputConfirmation = "NoInputConfirmation"
+        case noInputDisambiguation = "NoInputDisambiguation"
         case noMatchCollection = "NoMatchCollection"
         case noMatchConfirmation = "NoMatchConfirmation"
+        case noMatchDisambiguation = "NoMatchDisambiguation"
         case maxWrongMatch = "MaxWrongMatch"
     }
     public enum BotResultList: String, Codable { 

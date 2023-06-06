@@ -15,10 +15,13 @@ public class DocumentBodyImage: Codable {
     public var url: String?
     /** The URL of the page that the hyperlink goes to. */
     public var hyperlink: String?
+    /** The properties for the image. */
+    public var properties: DocumentBodyImageProperties?
 
-    public init(url: String?, hyperlink: String?) {
+    public init(url: String?, hyperlink: String?, properties: DocumentBodyImageProperties?) {
         self.url = url
         self.hyperlink = hyperlink
+        self.properties = properties
     }
 
 

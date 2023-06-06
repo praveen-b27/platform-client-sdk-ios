@@ -1467,23 +1467,30 @@ open class SpeechTextAnalyticsAPI {
 
     
     public enum Dialect_getSpeechandtextanalyticsTopicsGeneral: String { 
-        case enUs = "en-US"
-        case esUs = "es-US"
+        case ar001 = "ar-001"
+        case arAe = "ar-AE"
+        case arBh = "ar-BH"
+        case arEg = "ar-EG"
+        case arIl = "ar-IL"
+        case arSa = "ar-SA"
+        case arTn = "ar-TN"
+        case deDe = "de-DE"
         case enAu = "en-AU"
         case enGb = "en-GB"
+        case enIn = "en-IN"
+        case enUs = "en-US"
         case enZa = "en-ZA"
         case esEs = "es-ES"
-        case enIn = "en-IN"
-        case frFr = "fr-FR"
+        case esUs = "es-US"
         case frCa = "fr-CA"
+        case frFr = "fr-FR"
         case itIt = "it-IT"
-        case deDe = "de-DE"
-        case ptBr = "pt-BR"
-        case plPl = "pl-PL"
-        case ptPt = "pt-PT"
-        case nlNl = "nl-NL"
-        case koKr = "ko-KR"
         case jaJp = "ja-JP"
+        case koKr = "ko-KR"
+        case nlNl = "nl-NL"
+        case plPl = "pl-PL"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
     }
 
     
@@ -1540,6 +1547,94 @@ open class SpeechTextAnalyticsAPI {
         ])
 
         let requestBuilder: RequestBuilder<GeneralTopicsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    public enum Dialect_getSpeechandtextanalyticsTopicsGeneralStatus: String { 
+        case ar001 = "ar-001"
+        case arAe = "ar-AE"
+        case arBh = "ar-BH"
+        case arEg = "ar-EG"
+        case arIl = "ar-IL"
+        case arSa = "ar-SA"
+        case arTn = "ar-TN"
+        case deDe = "de-DE"
+        case enAu = "en-AU"
+        case enGb = "en-GB"
+        case enIn = "en-IN"
+        case enUs = "en-US"
+        case enZa = "en-ZA"
+        case esEs = "es-ES"
+        case esUs = "es-US"
+        case frCa = "fr-CA"
+        case frFr = "fr-FR"
+        case itIt = "it-IT"
+        case jaJp = "ja-JP"
+        case koKr = "ko-KR"
+        case nlNl = "nl-NL"
+        case plPl = "pl-PL"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+    }
+
+    
+    /**
+     Get the list of general topics from the org and the system with their current status
+     
+     - parameter dialect: (query) The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsTopicsGeneralStatus(dialect: Dialect_getSpeechandtextanalyticsTopicsGeneralStatus? = nil, completion: @escaping ((_ data: UnifiedGeneralTopicEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTopicsGeneralStatusWithRequestBuilder(dialect: dialect)
+        requestBuilder.execute { (response: Response<UnifiedGeneralTopicEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of general topics from the org and the system with their current status
+     - GET /api/v2/speechandtextanalytics/topics/general/status
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "name" : "name",
+    "status" : "Deprecated"
+  }, {
+    "name" : "name",
+    "status" : "Deprecated"
+  } ]
+}, statusCode=200}]
+     
+     - parameter dialect: (query) The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
+
+     - returns: RequestBuilder<UnifiedGeneralTopicEntityListing> 
+     */
+    open class func getSpeechandtextanalyticsTopicsGeneralStatusWithRequestBuilder(dialect: Dialect_getSpeechandtextanalyticsTopicsGeneralStatus? = nil) -> RequestBuilder<UnifiedGeneralTopicEntityListing> {        
+        let path = "/api/v2/speechandtextanalytics/topics/general/status"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "dialect": dialect?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<UnifiedGeneralTopicEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }

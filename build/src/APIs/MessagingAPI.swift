@@ -31,6 +31,7 @@ open class MessagingAPI {
     /**
      Delete a supported content profile
      - DELETE /api/v2/messaging/supportedcontent/{supportedContentId}
+     - Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -84,6 +85,7 @@ open class MessagingAPI {
     /**
      Get a list of Supported Content profiles
      - GET /api/v2/messaging/supportedcontent
+     - Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -169,6 +171,7 @@ open class MessagingAPI {
     /**
      Get a supported content profile
      - GET /api/v2/messaging/supportedcontent/{supportedContentId}
+     - Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -233,6 +236,7 @@ open class MessagingAPI {
     /**
      Update a supported content profile
      - PATCH /api/v2/messaging/supportedcontent/{supportedContentId}
+     - Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -296,6 +300,7 @@ open class MessagingAPI {
     /**
      Create a Supported Content profile
      - POST /api/v2/messaging/supportedcontent
+     - Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

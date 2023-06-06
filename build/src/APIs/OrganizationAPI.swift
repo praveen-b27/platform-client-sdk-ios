@@ -142,6 +142,57 @@ open class OrganizationAPI {
     }
 
     /**
+     Gets the organization's settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsAuthenticationSettings(completion: @escaping ((_ data: OrgAuthSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsAuthenticationSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<OrgAuthSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the organization's settings
+     - GET /api/v2/organizations/authentication/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "multifactorAuthenticationRequired" : true,
+  "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
+  "domainAllowlist" : [ "domainAllowlist", "domainAllowlist" ],
+  "passwordRequirements" : "{}",
+  "domainAllowlistEnabled" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<OrgAuthSettings> 
+     */
+    open class func getOrganizationsAuthenticationSettingsWithRequestBuilder() -> RequestBuilder<OrgAuthSettings> {        
+        let path = "/api/v2/organizations/authentication/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OrgAuthSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    /**
      Get the list of domains that will be allowed to embed PureCloud applications
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -167,6 +218,7 @@ open class OrganizationAPI {
     /**
      Get the list of domains that will be allowed to embed PureCloud applications
      - GET /api/v2/organizations/embeddedintegration
+     - This route is deprecated, please use /api/v2/organizations/authentication/settings instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -215,6 +267,7 @@ open class OrganizationAPI {
     /**
      Get organization IP address whitelist settings
      - GET /api/v2/organizations/ipaddressauthentication
+     - This route is deprecated, please use /api/v2/organizations/authentication/settings instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -271,11 +324,11 @@ open class OrganizationAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "approvalNamespaces" : [ {
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "type" : "Primary",
     "status" : "Approved"
   }, {
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "type" : "Primary",
     "status" : "Approved"
   } ],
@@ -283,14 +336,14 @@ open class OrganizationAPI {
   "statusHistory" : [ {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
   }, {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
@@ -298,7 +351,7 @@ open class OrganizationAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "rejectReason" : "AlternativeExists",
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-  "namespace" : "agent.assistant",
+  "namespace" : "audit",
   "id" : "id",
   "key" : "key",
   "currentValue" : 6.027456183070403,
@@ -387,11 +440,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -399,14 +452,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -414,7 +467,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -424,11 +477,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -436,14 +489,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "agent.assistant",
+      "namespace" : "audit",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -451,7 +504,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "agent.assistant",
+    "namespace" : "audit",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -776,7 +829,7 @@ open class OrganizationAPI {
     }
 
     /**
-     Use PUT /api/v2/organizations/embeddedintegration instead
+     This route is deprecated, please use /api/v2/organizations/authentication/settings instead
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -799,7 +852,7 @@ open class OrganizationAPI {
     }
 
     /**
-     Use PUT /api/v2/organizations/embeddedintegration instead
+     This route is deprecated, please use /api/v2/organizations/authentication/settings instead
      - GET /api/v2/organizations/whitelist
      - OAuth:
        - type: oauth2
@@ -821,6 +874,61 @@ open class OrganizationAPI {
         let requestBuilder: RequestBuilder<OrgWhitelistSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Update the organization's settings
+     
+     - parameter body: (body) Org settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchOrganizationsAuthenticationSettings(body: OrgAuthSettings, completion: @escaping ((_ data: OrgAuthSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchOrganizationsAuthenticationSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OrgAuthSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the organization's settings
+     - PATCH /api/v2/organizations/authentication/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "multifactorAuthenticationRequired" : true,
+  "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
+  "domainAllowlist" : [ "domainAllowlist", "domainAllowlist" ],
+  "passwordRequirements" : "{}",
+  "domainAllowlistEnabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) Org settings 
+
+     - returns: RequestBuilder<OrgAuthSettings> 
+     */
+    open class func patchOrganizationsAuthenticationSettingsWithRequestBuilder(body: OrgAuthSettings) -> RequestBuilder<OrgAuthSettings> {        
+        let path = "/api/v2/organizations/authentication/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OrgAuthSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
     
@@ -937,6 +1045,7 @@ open class OrganizationAPI {
     /**
      Update the list of domains that will be allowed to embed PureCloud applications
      - PUT /api/v2/organizations/embeddedintegration
+     - This route is deprecated, please use /api/v2/organizations/authentication/settings instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -989,6 +1098,7 @@ open class OrganizationAPI {
     /**
      Update organization IP address whitelist settings
      - PUT /api/v2/organizations/ipaddressauthentication
+     - This route is deprecated, please use /api/v2/organizations/authentication/settings instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1081,7 +1191,7 @@ open class OrganizationAPI {
 
     
     /**
-     Use PUT /api/v2/organizations/embeddedintegration instead
+     This route is deprecated, please use /api/v2/organizations/authentication/settings instead
      
      - parameter body: (body) Whitelist settings 
      - parameter completion: completion handler to receive the data and the error objects
@@ -1105,7 +1215,7 @@ open class OrganizationAPI {
     }
 
     /**
-     Use PUT /api/v2/organizations/embeddedintegration instead
+     This route is deprecated, please use /api/v2/organizations/authentication/settings instead
      - PUT /api/v2/organizations/whitelist
      - OAuth:
        - type: oauth2

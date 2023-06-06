@@ -24,6 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a supported content profile
 
+Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+
 
 
 Wraps DELETE /api/v2/messaging/supportedcontent/{supportedContentId}  
@@ -74,6 +76,8 @@ MessagingAPI.deleteMessagingSupportedcontentSupportedContentId(supportedContentI
 > [SupportedContentListing](SupportedContentListing.html) getMessagingSupportedcontent(pageSize, pageNumber)
 
 Get a list of Supported Content profiles
+
+Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
 
 
 
@@ -129,6 +133,8 @@ MessagingAPI.getMessagingSupportedcontent(pageSize: pageSize, pageNumber: pageNu
 
 Get a supported content profile
 
+Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+
 
 
 Wraps GET /api/v2/messaging/supportedcontent/{supportedContentId}  
@@ -180,6 +186,8 @@ MessagingAPI.getMessagingSupportedcontentSupportedContentId(supportedContentId: 
 > [SupportedContent](SupportedContent.html) patchMessagingSupportedcontentSupportedContentId(supportedContentId, body)
 
 Update a supported content profile
+
+Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
 
 
 
@@ -234,6 +242,8 @@ MessagingAPI.patchMessagingSupportedcontentSupportedContentId(supportedContentId
 > [SupportedContent](SupportedContent.html) postMessagingSupportedcontent(body)
 
 Create a Supported Content profile
+
+Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
 
 
 

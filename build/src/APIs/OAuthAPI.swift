@@ -857,7 +857,7 @@ open class OAuthAPI {
      - parameter body: (body) Query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postOauthClientUsageQuery(clientId: String, body: ApiUsageQuery, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
+    open class func postOauthClientUsageQuery(clientId: String, body: ApiUsageClientQuery, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postOauthClientUsageQueryWithRequestBuilder(clientId: clientId, body: body)
         requestBuilder.execute { (response: Response<UsageExecutionResult>?, error) -> Void in
             do {
@@ -892,7 +892,7 @@ open class OAuthAPI {
 
      - returns: RequestBuilder<UsageExecutionResult> 
      */
-    open class func postOauthClientUsageQueryWithRequestBuilder(clientId: String, body: ApiUsageQuery) -> RequestBuilder<UsageExecutionResult> {        
+    open class func postOauthClientUsageQueryWithRequestBuilder(clientId: String, body: ApiUsageClientQuery) -> RequestBuilder<UsageExecutionResult> {        
         var path = "/api/v2/oauth/clients/{clientId}/usage/query"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

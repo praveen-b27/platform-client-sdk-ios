@@ -24,6 +24,7 @@ title: KnowledgeDocumentResponse
 | **labels** | [**[LabelResponse]**](LabelResponse.html) | The references to labels associated with the document. | [optional] |
 | **knowledgeBase** | [**KnowledgeBaseReference**](KnowledgeBaseReference.html) | Knowledge base to which the document belongs to. | [optional] |
 | **variations** | [**[DocumentVariation]**](DocumentVariation.html) | Variations of the document. | [optional] |
+| **externalId** | **String** | The reference to external id associated with the document. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

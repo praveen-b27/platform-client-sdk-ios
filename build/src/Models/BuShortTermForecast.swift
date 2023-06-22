@@ -38,7 +38,7 @@ public class BuShortTermForecast: Codable {
     /** The source day pointers for this forecast */
     public var sourceDays: [ForecastSourceDayPointer]?
     /** Any manual modifications applied to this forecast */
-    public var modifications: [BuForecastModification]?
+    public var modifications: [BuForecastModificationResponse]?
     /** Generation result metadata */
     public var generationResults: BuForecastGenerationResult?
     /** The time zone for this forecast */
@@ -50,7 +50,7 @@ public class BuShortTermForecast: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, weekDate: Date?, weekCount: Int?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, metadata: WfmVersionedEntityMetadata?, canUseForScheduling: Bool?, referenceStartDate: Date?, sourceDays: [ForecastSourceDayPointer]?, modifications: [BuForecastModification]?, generationResults: BuForecastGenerationResult?, timeZone: String?, planningGroupsVersion: Int?, planningGroups: ForecastPlanningGroupsResponse?, selfUri: String?) {
+    public init(_id: String?, weekDate: Date?, weekCount: Int?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, metadata: WfmVersionedEntityMetadata?, canUseForScheduling: Bool?, referenceStartDate: Date?, sourceDays: [ForecastSourceDayPointer]?, modifications: [BuForecastModificationResponse]?, generationResults: BuForecastGenerationResult?, timeZone: String?, planningGroupsVersion: Int?, planningGroups: ForecastPlanningGroupsResponse?, selfUri: String?) {
         self._id = _id
         self.weekDate = weekDate
         self.weekCount = weekCount

@@ -17,6 +17,7 @@ title: ErrorBody
 | **contextId** | **String** |  | [optional] |
 | **details** | [**[Detail]**](Detail.html) |  | [optional] |
 | **errors** | [**[ErrorBody]**](ErrorBody.html) |  | [optional] |
+| **limit** | [**Limit**](Limit.html) |  | [optional] |
 {: class="table table-striped"}
 
 

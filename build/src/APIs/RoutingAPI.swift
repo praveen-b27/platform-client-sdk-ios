@@ -2918,6 +2918,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
+  "conditionalGroupRouting" : "{}",
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
   "description" : "description",
@@ -4970,6 +4971,7 @@ open class RoutingAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -5110,6 +5112,7 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -5352,6 +5355,7 @@ open class RoutingAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -5492,6 +5496,7 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -5717,6 +5722,7 @@ open class RoutingAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -5857,6 +5863,7 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -6076,6 +6083,7 @@ open class RoutingAPI {
   "pageNumber" : 5,
   "entities" : [ {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -6216,6 +6224,7 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -7907,6 +7916,7 @@ open class RoutingAPI {
   "pageNumber" : 5,
   "entities" : [ {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -8047,6 +8057,7 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -10529,6 +10540,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
+  "conditionalGroupRouting" : "{}",
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
   "description" : "description",
@@ -10734,6 +10746,7 @@ open class RoutingAPI {
   "pageNumber" : 5,
   "entities" : [ {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -10874,6 +10887,7 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -12456,6 +12470,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
+  "conditionalGroupRouting" : "{}",
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
   "description" : "description",
@@ -13399,6 +13414,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
+  "conditionalGroupRouting" : "{}",
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
   "description" : "description",

@@ -519,6 +519,7 @@ open class ContentManagementAPI {
     /**
      Get a list of audits for a document.
      - GET /api/v2/contentmanagement/documents/{documentId}/audits
+     - This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5561,6 +5562,7 @@ open class ContentManagementAPI {
     /**
      Query audits
      - POST /api/v2/contentmanagement/auditquery
+     - This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

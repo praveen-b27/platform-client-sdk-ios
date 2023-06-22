@@ -63,6 +63,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI.html#putIntegrationsBotconnectorIntegrationIdBots) | Set a list of botConnector bots plus versions for this integration |
 | [**putIntegrationsCredential**](IntegrationsAPI.html#putIntegrationsCredential) | Update a set of credentials |
 | [**putIntegrationsSpeechTtsSettings**](IntegrationsAPI.html#putIntegrationsSpeechTtsSettings) | Update TTS settings for an org |
+| [**putIntegrationsUnifiedcommunicationThirdpartypresences**](IntegrationsAPI.html#putIntegrationsUnifiedcommunicationThirdpartypresences) | Bulk integration presence ingestion |
 {: class="table-striped"}
 
 <a name="deleteIntegration"></a>
@@ -3183,4 +3184,60 @@ IntegrationsAPI.putIntegrationsSpeechTtsSettings(body: body) { (response, error)
 ### Return type
 
 [**TtsSettings**](TtsSettings.html)
+
+<a name="putIntegrationsUnifiedcommunicationThirdpartypresences"></a>
+
+# **putIntegrationsUnifiedcommunicationThirdpartypresences**
+
+
+
+> String putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegrationId, body)
+
+Bulk integration presence ingestion
+
+This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+
+
+
+Wraps PUT /api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences  
+
+Requires ANY permissions: 
+
+* integration:presence:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let ucIntegrationId: String = "" // UC Integration ID
+let body: [UCThirdPartyPresence] = [new UCThirdPartyPresence(...)] // List of User presences
+
+// Code example
+IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegrationId: ucIntegrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ucIntegrationId** | **String**| UC Integration ID | |
+| **body** | [**[UCThirdPartyPresence]**](UCThirdPartyPresence.html)| List of User presences | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
 

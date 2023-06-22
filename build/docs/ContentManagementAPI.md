@@ -422,6 +422,8 @@ ContentManagementAPI.getContentmanagementDocument(documentId: documentId, expand
 
 Get a list of audits for a document.
 
+This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
+
 
 
 Wraps GET /api/v2/contentmanagement/documents/{documentId}/audits  
@@ -1484,6 +1486,8 @@ ContentManagementAPI.getContentmanagementWorkspaces(pageSize: pageSize, pageNumb
 > [QueryResults](QueryResults.html) postContentmanagementAuditquery(body)
 
 Query audits
+
+This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
 
 
 

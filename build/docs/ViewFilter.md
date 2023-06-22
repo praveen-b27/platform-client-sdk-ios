@@ -175,6 +175,8 @@ title: ViewFilter
 | **isClearedByCustomer** | **Bool** | Filter to indicate if the customer cleared the conversation. | [optional] |
 | **evaluationAssigneeIds** | **[String]** | The evaluation assignee ids that are used to filter the view. | [optional] |
 | **evaluationAssigned** | **Bool** | Filter to indicate that the user has no assigned evaluation. | [optional] |
+| **assistantIds** | **[String]** | The assistant ids that are used to filter the view. | [optional] |
+| **knowledgeBaseIds** | **[String]** | The knowledge base ids that are used to filter the view. | [optional] |
 {: class="table table-striped"}
 
 

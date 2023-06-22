@@ -15,6 +15,7 @@ public class DocumentBodyListBlockProperties: Codable {
         case normal = "Normal"
         case square = "Square"
         case circle = "Circle"
+        case _none = "None"
     }
     public enum OrderedType: String, Codable { 
         case number = "Number"
@@ -23,6 +24,7 @@ public class DocumentBodyListBlockProperties: Codable {
         case lowerRoman = "LowerRoman"
         case upperAlpha = "UpperAlpha"
         case upperRoman = "UpperRoman"
+        case _none = "None"
     }
     /** The type of icon for the unordered list. */
     public var unorderedType: UnorderedType?

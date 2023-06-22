@@ -114,6 +114,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
+  "externalId" : "externalId",
   "parentCategory" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id"
@@ -387,6 +388,7 @@ open class KnowledgeAPI {
   "color" : "color",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id"
 }, statusCode=200}]
@@ -792,6 +794,7 @@ open class KnowledgeAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "externalId" : "externalId",
     "parentCategory" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
@@ -800,6 +803,7 @@ open class KnowledgeAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "externalId" : "externalId",
     "parentCategory" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
@@ -1329,6 +1333,7 @@ open class KnowledgeAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "externalId" : "externalId",
     "parentCategory" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
@@ -1339,6 +1344,7 @@ open class KnowledgeAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "externalId" : "externalId",
     "parentCategory" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
@@ -1427,6 +1433,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
+  "externalId" : "externalId",
   "parentCategory" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id"
@@ -1501,6 +1508,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "visible" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "title" : "title",
   "documentVersion" : "{}",
@@ -1510,6 +1518,7 @@ open class KnowledgeAPI {
     "color" : "color",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
   }, {
@@ -1518,6 +1527,7 @@ open class KnowledgeAPI {
     "color" : "color",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
   } ],
@@ -2285,6 +2295,7 @@ open class KnowledgeAPI {
     
     
     
+    
     /**
      Get documents.
      
@@ -2299,10 +2310,11 @@ open class KnowledgeAPI {
      - parameter includeDrafts: (query) If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)
      - parameter labelIds: (query) If specified, retrieves documents associated with label ids, comma separated values expected. (optional)
      - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter externalIds: (query) If specified, retrieves documents associated with external ids, comma separated values expected. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, documentId: [String]? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: KnowledgeDocumentResponseListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, documentId: documentId, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand)
+    open class func getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, documentId: [String]? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil, externalIds: [String]? = nil, completion: @escaping ((_ data: KnowledgeDocumentResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, documentId: documentId, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand, externalIds: externalIds)
         requestBuilder.execute { (response: Response<KnowledgeDocumentResponseListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2329,6 +2341,7 @@ open class KnowledgeAPI {
   "entities" : [ {
     "visible" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "title" : "title",
     "documentVersion" : "{}",
@@ -2338,6 +2351,7 @@ open class KnowledgeAPI {
       "color" : "color",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
+      "externalId" : "externalId",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id"
     }, {
@@ -2346,6 +2360,7 @@ open class KnowledgeAPI {
       "color" : "color",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
+      "externalId" : "externalId",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id"
     } ],
@@ -2424,6 +2439,7 @@ open class KnowledgeAPI {
   }, {
     "visible" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "title" : "title",
     "documentVersion" : "{}",
@@ -2433,6 +2449,7 @@ open class KnowledgeAPI {
       "color" : "color",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
+      "externalId" : "externalId",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id"
     }, {
@@ -2441,6 +2458,7 @@ open class KnowledgeAPI {
       "color" : "color",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
+      "externalId" : "externalId",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id"
     } ],
@@ -2533,10 +2551,11 @@ open class KnowledgeAPI {
      - parameter includeDrafts: (query) If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)
      - parameter labelIds: (query) If specified, retrieves documents associated with label ids, comma separated values expected. (optional)
      - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter externalIds: (query) If specified, retrieves documents associated with external ids, comma separated values expected. (optional)
 
      - returns: RequestBuilder<KnowledgeDocumentResponseListing> 
      */
-    open class func getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, documentId: [String]? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<KnowledgeDocumentResponseListing> {        
+    open class func getKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, interval: String? = nil, documentId: [String]? = nil, categoryId: [String]? = nil, includeSubcategories: Bool? = nil, includeDrafts: Bool? = nil, labelIds: [String]? = nil, expand: [String]? = nil, externalIds: [String]? = nil) -> RequestBuilder<KnowledgeDocumentResponseListing> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2555,7 +2574,8 @@ open class KnowledgeAPI {
             "includeSubcategories": includeSubcategories, 
             "includeDrafts": includeDrafts, 
             "labelIds": labelIds, 
-            "expand": expand
+            "expand": expand, 
+            "externalIds": externalIds
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2741,6 +2761,7 @@ open class KnowledgeAPI {
   "color" : "color",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id"
 }, statusCode=200}]
@@ -2816,6 +2837,7 @@ open class KnowledgeAPI {
     "color" : "color",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
   }, {
@@ -2824,6 +2846,7 @@ open class KnowledgeAPI {
     "color" : "color",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
   } ],
@@ -4474,7 +4497,7 @@ open class KnowledgeAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchKnowledgeKnowledgebaseCategory(knowledgeBaseId: String, categoryId: String, body: CategoryRequest, completion: @escaping ((_ data: CategoryResponse?,_ error: Error?) -> Void)) {
+    open class func patchKnowledgeKnowledgebaseCategory(knowledgeBaseId: String, categoryId: String, body: CategoryUpdateRequest, completion: @escaping ((_ data: CategoryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, categoryId: categoryId, body: body)
         requestBuilder.execute { (response: Response<CategoryResponse>?, error) -> Void in
             do {
@@ -4505,6 +4528,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
+  "externalId" : "externalId",
   "parentCategory" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id"
@@ -4516,7 +4540,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<CategoryResponse> 
      */
-    open class func patchKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: String, categoryId: String, body: CategoryRequest) -> RequestBuilder<CategoryResponse> {        
+    open class func patchKnowledgeKnowledgebaseCategoryWithRequestBuilder(knowledgeBaseId: String, categoryId: String, body: CategoryUpdateRequest) -> RequestBuilder<CategoryResponse> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4572,6 +4596,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "visible" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "title" : "title",
   "documentVersion" : "{}",
@@ -4581,6 +4606,7 @@ open class KnowledgeAPI {
     "color" : "color",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
   }, {
@@ -4589,6 +4615,7 @@ open class KnowledgeAPI {
     "color" : "color",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
   } ],
@@ -4950,6 +4977,7 @@ open class KnowledgeAPI {
   "color" : "color",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id"
 }, statusCode=200}]
@@ -5849,7 +5877,7 @@ open class KnowledgeAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postKnowledgeKnowledgebaseCategories(knowledgeBaseId: String, body: CategoryRequest, completion: @escaping ((_ data: CategoryResponse?,_ error: Error?) -> Void)) {
+    open class func postKnowledgeKnowledgebaseCategories(knowledgeBaseId: String, body: CategoryCreateRequest, completion: @escaping ((_ data: CategoryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postKnowledgeKnowledgebaseCategoriesWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
         requestBuilder.execute { (response: Response<CategoryResponse>?, error) -> Void in
             do {
@@ -5880,6 +5908,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
+  "externalId" : "externalId",
   "parentCategory" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id"
@@ -5890,7 +5919,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<CategoryResponse> 
      */
-    open class func postKnowledgeKnowledgebaseCategoriesWithRequestBuilder(knowledgeBaseId: String, body: CategoryRequest) -> RequestBuilder<CategoryResponse> {        
+    open class func postKnowledgeKnowledgebaseCategoriesWithRequestBuilder(knowledgeBaseId: String, body: CategoryCreateRequest) -> RequestBuilder<CategoryResponse> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6098,6 +6127,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "visible" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "title" : "title",
   "documentVersion" : "{}",
@@ -6107,6 +6137,7 @@ open class KnowledgeAPI {
     "color" : "color",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
   }, {
@@ -6115,6 +6146,7 @@ open class KnowledgeAPI {
     "color" : "color",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id"
   } ],
@@ -6537,6 +6569,7 @@ open class KnowledgeAPI {
   "color" : "color",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id"
 }, statusCode=200}]

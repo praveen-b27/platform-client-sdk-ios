@@ -23,6 +23,8 @@ public class DocumentQueryPredicate: Codable {
         case labelid = "labelId"
         case labelname = "labelName"
         case title = "title"
+        case visible = "visible"
+        case state = "state"
     }
     public enum ModelType: String, Codable { 
         case equals = "Equals"

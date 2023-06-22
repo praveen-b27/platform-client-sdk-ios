@@ -2409,6 +2409,142 @@ open class PresenceAPI {
 
     
     
+    /**
+     Get bulk user presences for a single presence source
+     
+     - parameter sourceId: (path) The requested presence source ID. 
+     - parameter _id: (query) A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersPresenceBulk(sourceId: String, _id: [String]? = nil, completion: @escaping ((_ data: [UcUserPresence]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersPresenceBulkWithRequestBuilder(sourceId: sourceId, _id: _id)
+        requestBuilder.execute { (response: Response<[UcUserPresence]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get bulk user presences for a single presence source
+     - GET /api/v2/users/presences/{sourceId}/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "presenceDefinition" : {
+    "systemPresence" : "systemPresence",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "source",
+  "message" : "message",
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) The requested presence source ID. 
+     - parameter _id: (query) A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)
+
+     - returns: RequestBuilder<[UcUserPresence]> 
+     */
+    open class func getUsersPresenceBulkWithRequestBuilder(sourceId: String, _id: [String]? = nil) -> RequestBuilder<[UcUserPresence]> {        
+        var path = "/api/v2/users/presences/{sourceId}/bulk"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "id": _id
+        ])
+
+        let requestBuilder: RequestBuilder<[UcUserPresence]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+     
+     - parameter _id: (query) A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersPresencesPurecloudBulk(_id: [String]? = nil, completion: @escaping ((_ data: [UcUserPresence]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersPresencesPurecloudBulkWithRequestBuilder(_id: _id)
+        requestBuilder.execute { (response: Response<[UcUserPresence]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+     - GET /api/v2/users/presences/purecloud/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "presenceDefinition" : {
+    "systemPresence" : "systemPresence",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "source",
+  "message" : "message",
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter _id: (query) A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. (optional)
+
+     - returns: RequestBuilder<[UcUserPresence]> 
+     */
+    open class func getUsersPresencesPurecloudBulkWithRequestBuilder(_id: [String]? = nil) -> RequestBuilder<[UcUserPresence]> {        
+        let path = "/api/v2/users/presences/purecloud/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "id": _id
+        ])
+
+        let requestBuilder: RequestBuilder<[UcUserPresence]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
     
     /**
      Patch a user's Presence

@@ -12,6 +12,13 @@ import Foundation
 public class ApprovalNamespace: Codable {
 
     public enum Namespace: String, Codable { 
+        case agentAssistant = "agent.assistant"
+        case analyticsAlerting = "analytics.alerting"
+        case analytics = "analytics"
+        case analyticsRealtime = "analytics.realtime"
+        case analyticsReportingSettings = "analytics.reporting.settings"
+        case architect = "architect"
+        case audiohook = "audiohook"
         case audit = "audit"
         case authApi = "auth.api"
         case authorization = "authorization"
@@ -62,18 +69,11 @@ public class ApprovalNamespace: Codable {
         case telephonyConfiguration = "telephony.configuration"
         case usage = "usage"
         case users = "users"
+        case webDeployments = "web.deployments"
         case webMessaging = "web.messaging"
         case webchat = "webchat"
-        case workforceManagement = "workforce.management"
-        case agentAssistant = "agent.assistant"
-        case analyticsAlerting = "analytics.alerting"
-        case analytics = "analytics"
-        case analyticsRealtime = "analytics.realtime"
-        case analyticsReportingSettings = "analytics.reporting.settings"
-        case architect = "architect"
-        case audiohook = "audiohook"
-        case webDeployments = "web.deployments"
         case webhooks = "webhooks"
+        case workforceManagement = "workforce.management"
     }
     public enum Status: String, Codable { 
         case approved = "Approved"

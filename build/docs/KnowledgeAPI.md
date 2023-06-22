@@ -1400,7 +1400,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVersions(knowledgeBaseId: knowledg
 
 
 
-> [KnowledgeDocumentResponseListing](KnowledgeDocumentResponseListing.html) getKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand)
+> [KnowledgeDocumentResponseListing](KnowledgeDocumentResponseListing.html) getKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand, externalIds)
 
 Get documents.
 
@@ -1431,9 +1431,10 @@ let includeSubcategories: Bool = true // Works along with 'categoryId' query par
 let includeDrafts: Bool = true // If includeDrafts is true, Documents in the draft state are also returned in the response.
 let labelIds: [String] = [""] // If specified, retrieves documents associated with label ids, comma separated values expected.
 let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
+let externalIds: [String] = [""] // If specified, retrieves documents associated with external ids, comma separated values expected.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, documentId: documentId, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, interval: interval, documentId: documentId, categoryId: categoryId, includeSubcategories: includeSubcategories, includeDrafts: includeDrafts, labelIds: labelIds, expand: expand, externalIds: externalIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1459,6 +1460,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId
 | **includeDrafts** | **Bool**| If includeDrafts is true, Documents in the draft state are also returned in the response. | [optional] |
 | **labelIds** | [**[String]**](String.html)| If specified, retrieves documents associated with label ids, comma separated values expected. | [optional] |
 | **expand** | [**[String]**](String.html)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: category ("category"), labels ("labels"), variations ("variations") |
+| **externalIds** | [**[String]**](String.html)| If specified, retrieves documents associated with external ids, comma separated values expected. | [optional] |
 {: class="table-striped"}
 
 
@@ -2486,7 +2488,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let categoryId: String = "" // Category ID
-let body: CategoryRequest = new CategoryRequest(...) // 
+let body: CategoryUpdateRequest = new CategoryUpdateRequest(...) // 
 
 // Code example
 KnowledgeAPI.patchKnowledgeKnowledgebaseCategory(knowledgeBaseId: knowledgeBaseId, categoryId: categoryId, body: body) { (response, error) in
@@ -2506,7 +2508,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseCategory(knowledgeBaseId: knowledgeBaseI
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
 | **categoryId** | **String**| Category ID | |
-| **body** | [**CategoryRequest**](CategoryRequest.html)|  | |
+| **body** | [**CategoryUpdateRequest**](CategoryUpdateRequest.html)|  | |
 {: class="table-striped"}
 
 
@@ -3323,7 +3325,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
-let body: CategoryRequest = new CategoryRequest(...) // 
+let body: CategoryCreateRequest = new CategoryCreateRequest(...) // 
 
 // Code example
 KnowledgeAPI.postKnowledgeKnowledgebaseCategories(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
@@ -3342,7 +3344,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseCategories(knowledgeBaseId: knowledgeBase
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **body** | [**CategoryRequest**](CategoryRequest.html)|  | |
+| **body** | [**CategoryCreateRequest**](CategoryCreateRequest.html)|  | |
 {: class="table-striped"}
 
 

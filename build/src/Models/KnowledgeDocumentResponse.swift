@@ -50,10 +50,12 @@ public class KnowledgeDocumentResponse: Codable {
     public var knowledgeBase: KnowledgeBaseReference?
     /** Variations of the document. */
     public var variations: [DocumentVariation]?
+    /** The reference to external id associated with the document. */
+    public var externalId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, category: CategoryResponse?, labels: [LabelResponse]?, knowledgeBase: KnowledgeBaseReference?, variations: [DocumentVariation]?, selfUri: String?) {
+    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, category: CategoryResponse?, labels: [LabelResponse]?, knowledgeBase: KnowledgeBaseReference?, variations: [DocumentVariation]?, externalId: String?, selfUri: String?) {
         self._id = _id
         self.title = title
         self.visible = visible
@@ -71,6 +73,7 @@ public class KnowledgeDocumentResponse: Codable {
         self.labels = labels
         self.knowledgeBase = knowledgeBase
         self.variations = variations
+        self.externalId = externalId
         self.selfUri = selfUri
     }
 
@@ -92,6 +95,7 @@ public class KnowledgeDocumentResponse: Codable {
         case labels
         case knowledgeBase
         case variations
+        case externalId
         case selfUri
     }
 

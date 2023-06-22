@@ -23,16 +23,19 @@ public class KnowledgeDocumentReq: Codable {
     public var categoryId: String?
     /** The ids of labels associated with the document. */
     public var labelIds: [String]?
+    /** The external id associated with the document. */
+    public var externalId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, categoryId: String?, labelIds: [String]?, selfUri: String?) {
+    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, categoryId: String?, labelIds: [String]?, externalId: String?, selfUri: String?) {
         self._id = _id
         self.title = title
         self.visible = visible
         self.alternatives = alternatives
         self.categoryId = categoryId
         self.labelIds = labelIds
+        self.externalId = externalId
         self.selfUri = selfUri
     }
 
@@ -43,6 +46,7 @@ public class KnowledgeDocumentReq: Codable {
         case alternatives
         case categoryId
         case labelIds
+        case externalId
         case selfUri
     }
 

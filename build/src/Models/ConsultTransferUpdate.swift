@@ -19,9 +19,12 @@ public class ConsultTransferUpdate: Codable {
     }
     /** Determines to whom the initiating participant is speaking. */
     public var speakTo: SpeakTo?
+    /** The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID */
+    public var consultingUserId: String?
 
-    public init(speakTo: SpeakTo?) {
+    public init(speakTo: SpeakTo?, consultingUserId: String?) {
         self.speakTo = speakTo
+        self.consultingUserId = consultingUserId
     }
 
 

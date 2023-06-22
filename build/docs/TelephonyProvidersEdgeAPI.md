@@ -3349,7 +3349,7 @@ let linesDefaultForUserId: String = "" // Filter by lines.defaultForUser.id
 let phoneHardwareId: String = "" // Filter by phone_hardwareId
 let linesId: String = "" // Filter by lines.id
 let linesName: String = "" // Filter by lines.name
-let name: String = "" // Name of the Phone to filter by
+let name: String = "" // Name of the Phone to filter by, comma-separated
 let statusOperationalStatus: String = "" // The primary status to filter by
 let secondaryStatusOperationalStatus: String = "" // The secondary status to filter by
 let expand: [String] = [""] // Fields to expand in the response, comma-separated
@@ -3383,7 +3383,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhones(pageNumber: pageNumbe
 | **phoneHardwareId** | **String**| Filter by phone_hardwareId | [optional] |
 | **linesId** | **String**| Filter by lines.id | [optional] |
 | **linesName** | **String**| Filter by lines.name | [optional] |
-| **name** | **String**| Name of the Phone to filter by | [optional] |
+| **name** | **String**| Name of the Phone to filter by, comma-separated | [optional] |
 | **statusOperationalStatus** | **String**| The primary status to filter by | [optional] |
 | **secondaryStatusOperationalStatus** | **String**| The secondary status to filter by | [optional] |
 | **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated | [optional]<br />**Values**: properties ("properties"), site ("site"), status ("status"), statusPrimaryedgesstatus ("status.primaryEdgesStatus"), statusSecondaryedgesstatus ("status.secondaryEdgesStatus"), phonebasesettings ("phoneBaseSettings"), lines ("lines") |

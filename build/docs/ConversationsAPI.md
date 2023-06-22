@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsCallParticipantConsult**](ConversationsAPI.html#deleteConversationsCallParticipantConsult) | Cancel the transfer |
 | [**deleteConversationsEmailMessagesDraftAttachment**](ConversationsAPI.html#deleteConversationsEmailMessagesDraftAttachment) | Delete attachment from draft |
 | [**deleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsFacebookIntegrationId) | Delete a Facebook messaging integration |
+| [**deleteConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsInstagramIntegrationId) | Delete Instagram messaging integration |
 | [**deleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsLineIntegrationId) | Delete a LINE messenger integration |
 | [**deleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsOpenIntegrationId) | Delete an Open messaging integration |
 | [**deleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsTwitterIntegrationId) | Delete a Twitter messaging integration |
@@ -77,6 +78,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIntegrations**](ConversationsAPI.html#getConversationsMessagingIntegrations) | Get a list of Integrations |
 | [**getConversationsMessagingIntegrationsFacebook**](ConversationsAPI.html#getConversationsMessagingIntegrationsFacebook) | Get a list of Facebook Integrations |
 | [**getConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsFacebookIntegrationId) | Get a Facebook messaging integration |
+| [**getConversationsMessagingIntegrationsInstagram**](ConversationsAPI.html#getConversationsMessagingIntegrationsInstagram) | Get a list of Instagram Integrations |
+| [**getConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsInstagramIntegrationId) | Get Instagram messaging integration |
 | [**getConversationsMessagingIntegrationsLine**](ConversationsAPI.html#getConversationsMessagingIntegrationsLine) | Get a list of LINE messenger Integrations |
 | [**getConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsLineIntegrationId) | Get a LINE messenger integration |
 | [**getConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpen) | Get a list of Open messaging integrations |
@@ -126,6 +129,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessageParticipantAttributes**](ConversationsAPI.html#patchConversationsMessageParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsMessageParticipantCommunication**](ConversationsAPI.html#patchConversationsMessageParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
 | [**patchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsFacebookIntegrationId) | Update Facebook messaging integration |
+| [**patchConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsInstagramIntegrationId) | Update Instagram messaging integration |
 | [**patchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsOpenIntegrationId) | Update an Open messaging integration |
 | [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update Twitter messaging integration |
 | [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update or activate a WhatsApp messaging integration |
@@ -141,11 +145,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationParticipantCallbacks**](ConversationsAPI.html#postConversationParticipantCallbacks) | Create a new callback for the specified participant on the conversation. |
 | [**postConversationParticipantDigits**](ConversationsAPI.html#postConversationParticipantDigits) | Sends DTMF to the participant |
 | [**postConversationParticipantReplace**](ConversationsAPI.html#postConversationParticipantReplace) | Replace this participant with the specified user and/or address |
+| [**postConversationParticipantReplaceAgent**](ConversationsAPI.html#postConversationParticipantReplaceAgent) | Replace this participant with the specified agent |
+| [**postConversationParticipantReplaceExternal**](ConversationsAPI.html#postConversationParticipantReplaceExternal) | Replace this participant with the an external contact |
+| [**postConversationParticipantReplaceQueue**](ConversationsAPI.html#postConversationParticipantReplaceQueue) | Replace this participant with the specified queue |
 | [**postConversationParticipantSecureivrsessions**](ConversationsAPI.html#postConversationParticipantSecureivrsessions) | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**postConversationsCall**](ConversationsAPI.html#postConversationsCall) | Place a new call as part of a callback conversation. |
 | [**postConversationsCallParticipantCoach**](ConversationsAPI.html#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**postConversationsCallParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsCallParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCallParticipantConsult**](ConversationsAPI.html#postConversationsCallParticipantConsult) | Initiate and update consult transfer |
+| [**postConversationsCallParticipantConsultAgent**](ConversationsAPI.html#postConversationsCallParticipantConsultAgent) | Initiate a consult transfer to an agent |
+| [**postConversationsCallParticipantConsultExternal**](ConversationsAPI.html#postConversationsCallParticipantConsultExternal) | Initiate a consult transfer to an external contact |
+| [**postConversationsCallParticipantConsultQueue**](ConversationsAPI.html#postConversationsCallParticipantConsultQueue) | Initiate a consult transfer to a queue |
 | [**postConversationsCallParticipantMonitor**](ConversationsAPI.html#postConversationsCallParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsCallParticipantReplace**](ConversationsAPI.html#postConversationsCallParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallParticipants**](ConversationsAPI.html#postConversationsCallParticipants) | Add participants to a conversation |
@@ -182,6 +192,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagesAgentless**](ConversationsAPI.html#postConversationsMessagesAgentless) | Send an agentless outbound message |
 | [**postConversationsMessagesInboundOpen**](ConversationsAPI.html#postConversationsMessagesInboundOpen) | Send an inbound Open Message |
 | [**postConversationsMessagingIntegrationsFacebook**](ConversationsAPI.html#postConversationsMessagingIntegrationsFacebook) | Create a Facebook Integration |
+| [**postConversationsMessagingIntegrationsInstagram**](ConversationsAPI.html#postConversationsMessagingIntegrationsInstagram) | Create Instagram Integration |
 | [**postConversationsMessagingIntegrationsLine**](ConversationsAPI.html#postConversationsMessagingIntegrationsLine) | Create a LINE messenger Integration |
 | [**postConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#postConversationsMessagingIntegrationsOpen) | Create an Open messaging integration |
 | [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
@@ -507,6 +518,57 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsFacebookIntegrationId(i
         dump(error)
     } else {
         print("ConversationsAPI.deleteConversationsMessagingIntegrationsFacebookIntegrationId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteConversationsMessagingIntegrationsInstagramIntegrationId"></a>
+
+# **deleteConversationsMessagingIntegrationsInstagramIntegrationId**
+
+
+
+> Void deleteConversationsMessagingIntegrationsInstagramIntegrationId(integrationId)
+
+Delete Instagram messaging integration
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/integrations/instagram/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+ConversationsAPI.deleteConversationsMessagingIntegrationsInstagramIntegrationId(integrationId: integrationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationsMessagingIntegrationsInstagramIntegrationId was successful")
     }
 }
 ```
@@ -3914,6 +3976,120 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebookIntegrationId(inte
 
 [**FacebookIntegration**](FacebookIntegration.html)
 
+<a name="getConversationsMessagingIntegrationsInstagram"></a>
+
+# **getConversationsMessagingIntegrationsInstagram**
+
+
+
+> [InstagramIntegrationEntityListing](InstagramIntegrationEntityListing.html) getConversationsMessagingIntegrationsInstagram(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
+
+Get a list of Instagram Integrations
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/instagram  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsInstagram = ConversationsAPI.Expand_getConversationsMessagingIntegrationsInstagram.enummember // Expand instructions for the return value.
+let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsInstagram(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsInstagram was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InstagramIntegrationEntityListing**](InstagramIntegrationEntityListing.html)
+
+<a name="getConversationsMessagingIntegrationsInstagramIntegrationId"></a>
+
+# **getConversationsMessagingIntegrationsInstagramIntegrationId**
+
+
+
+> [InstagramIntegration](InstagramIntegration.html) getConversationsMessagingIntegrationsInstagramIntegrationId(integrationId, expand)
+
+Get Instagram messaging integration
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/instagram/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsInstagramIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsInstagramIntegrationId.enummember // Expand instructions for the return value.
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsInstagramIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsInstagramIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InstagramIntegration**](InstagramIntegration.html)
+
 <a name="getConversationsMessagingIntegrationsLine"></a>
 
 # **getConversationsMessagingIntegrationsLine**
@@ -6616,6 +6792,60 @@ ConversationsAPI.patchConversationsMessagingIntegrationsFacebookIntegrationId(in
 
 [**FacebookIntegration**](FacebookIntegration.html)
 
+<a name="patchConversationsMessagingIntegrationsInstagramIntegrationId"></a>
+
+# **patchConversationsMessagingIntegrationsInstagramIntegrationId**
+
+
+
+> [InstagramIntegration](InstagramIntegration.html) patchConversationsMessagingIntegrationsInstagramIntegrationId(integrationId, body)
+
+Update Instagram messaging integration
+
+
+
+Wraps PATCH /api/v2/conversations/messaging/integrations/instagram/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: InstagramIntegrationUpdateRequest = new InstagramIntegrationUpdateRequest(...) // InstagramIntegrationUpdateRequest
+
+// Code example
+ConversationsAPI.patchConversationsMessagingIntegrationsInstagramIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsMessagingIntegrationsInstagramIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**InstagramIntegrationUpdateRequest**](InstagramIntegrationUpdateRequest.html)| InstagramIntegrationUpdateRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InstagramIntegration**](InstagramIntegration.html)
+
 <a name="patchConversationsMessagingIntegrationsOpenIntegrationId"></a>
 
 # **patchConversationsMessagingIntegrationsOpenIntegrationId**
@@ -7390,8 +7620,9 @@ Replace this participant with the specified user and/or address
 
 Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:communication:blindTransfer
 
 ### Example
 
@@ -7423,6 +7654,174 @@ ConversationsAPI.postConversationParticipantReplace(conversationId: conversation
 | **conversationId** | **String**| conversation ID | |
 | **participantId** | **String**| participant ID | |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationParticipantReplaceAgent"></a>
+
+# **postConversationParticipantReplaceAgent**
+
+
+
+> Void postConversationParticipantReplaceAgent(conversationId, participantId, body)
+
+Replace this participant with the specified agent
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent  
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferAgent
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+let body: TransferToAgentRequest = new TransferToAgentRequest(...) // Transfer request
+
+// Code example
+ConversationsAPI.postConversationParticipantReplaceAgent(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationParticipantReplaceAgent was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **participantId** | **String**| participant ID | |
+| **body** | [**TransferToAgentRequest**](TransferToAgentRequest.html)| Transfer request | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationParticipantReplaceExternal"></a>
+
+# **postConversationParticipantReplaceExternal**
+
+
+
+> Void postConversationParticipantReplaceExternal(conversationId, participantId, body)
+
+Replace this participant with the an external contact
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external  
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferExternal
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+let body: TransferToExternalRequest = new TransferToExternalRequest(...) // Transfer request
+
+// Code example
+ConversationsAPI.postConversationParticipantReplaceExternal(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationParticipantReplaceExternal was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **participantId** | **String**| participant ID | |
+| **body** | [**TransferToExternalRequest**](TransferToExternalRequest.html)| Transfer request | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationParticipantReplaceQueue"></a>
+
+# **postConversationParticipantReplaceQueue**
+
+
+
+> Void postConversationParticipantReplaceQueue(conversationId, participantId, body)
+
+Replace this participant with the specified queue
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue  
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferQueue
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+let body: TransferToQueueRequest = new TransferToQueueRequest(...) // Transfer request
+
+// Code example
+ConversationsAPI.postConversationParticipantReplaceQueue(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationParticipantReplaceQueue was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **participantId** | **String**| participant ID | |
+| **body** | [**TransferToQueueRequest**](TransferToQueueRequest.html)| Transfer request | |
 {: class="table-striped"}
 
 
@@ -7662,8 +8061,9 @@ Initiate and update consult transfer
 
 Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:communication:consultTransfer
 
 ### Example
 
@@ -7696,6 +8096,177 @@ ConversationsAPI.postConversationsCallParticipantConsult(conversationId: convers
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address & initial speak to | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postConversationsCallParticipantConsultAgent"></a>
+
+# **postConversationsCallParticipantConsultAgent**
+
+
+
+> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultAgent(conversationId, participantId, body)
+
+Initiate a consult transfer to an agent
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent  
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferAgent
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ConsultTransferToAgent = new ConsultTransferToAgent(...) // Destination agent & initial speak to
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantConsultAgent(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantConsultAgent was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**ConsultTransferToAgent**](ConsultTransferToAgent.html)| Destination agent & initial speak to | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postConversationsCallParticipantConsultExternal"></a>
+
+# **postConversationsCallParticipantConsultExternal**
+
+
+
+> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultExternal(conversationId, participantId, body)
+
+Initiate a consult transfer to an external contact
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external  
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferExternal
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ConsultTransferToExternal = new ConsultTransferToExternal(...) // Destination address & initial speak to
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantConsultExternal(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantConsultExternal was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**ConsultTransferToExternal**](ConsultTransferToExternal.html)| Destination address & initial speak to | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postConversationsCallParticipantConsultQueue"></a>
+
+# **postConversationsCallParticipantConsultQueue**
+
+
+
+> [ConsultTransferResponse](ConsultTransferResponse.html) postConversationsCallParticipantConsultQueue(conversationId, participantId, body)
+
+Initiate a consult transfer to a queue
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue  
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferQueue
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ConsultTransferToQueue = new ConsultTransferToQueue(...) // Destination queue & initial speak to
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantConsultQueue(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantConsultQueue was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**ConsultTransferToQueue**](ConsultTransferToQueue.html)| Destination queue & initial speak to | |
 {: class="table-striped"}
 
 
@@ -7770,8 +8341,9 @@ Replace this participant with the specified user and/or address
 
 Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:communication:blindTransfer
 
 ### Example
 
@@ -7934,8 +8506,9 @@ Replace this participant with the specified user and/or address
 
 Wraps POST /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:communication:blindTransfer
 
 ### Example
 
@@ -8360,8 +8933,9 @@ Replace this participant with the specified user and/or address
 
 Wraps POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:communication:blindTransfer
 
 ### Example
 
@@ -8523,8 +9097,9 @@ Replace this participant with the specified user and/or address
 
 Wraps POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:communication:blindTransfer
 
 ### Example
 
@@ -8793,8 +9368,9 @@ Replace this participant with the specified user and/or address
 
 Wraps POST /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:communication:blindTransfer
 
 ### Example
 
@@ -9401,8 +9977,9 @@ Replace this participant with the specified user and/or address
 
 Wraps POST /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:communication:blindTransfer
 
 ### Example
 
@@ -9654,6 +10231,58 @@ ConversationsAPI.postConversationsMessagingIntegrationsFacebook(body: body) { (r
 ### Return type
 
 [**FacebookIntegration**](FacebookIntegration.html)
+
+<a name="postConversationsMessagingIntegrationsInstagram"></a>
+
+# **postConversationsMessagingIntegrationsInstagram**
+
+
+
+> [InstagramIntegration](InstagramIntegration.html) postConversationsMessagingIntegrationsInstagram(body)
+
+Create Instagram Integration
+
+
+
+Wraps POST /api/v2/conversations/messaging/integrations/instagram  
+
+Requires ALL permissions: 
+
+* messaging:conversationInstagramIntegration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: InstagramIntegrationRequest = new InstagramIntegrationRequest(...) // InstagramIntegrationRequest
+
+// Code example
+ConversationsAPI.postConversationsMessagingIntegrationsInstagram(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessagingIntegrationsInstagram was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**InstagramIntegrationRequest**](InstagramIntegrationRequest.html)| InstagramIntegrationRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InstagramIntegration**](InstagramIntegration.html)
 
 <a name="postConversationsMessagingIntegrationsLine"></a>
 

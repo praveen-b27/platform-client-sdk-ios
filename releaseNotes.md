@@ -1,426 +1,310 @@
-Platform API version: 7019
+Platform API version: 7067
 
 
-# Major Changes (40 changes)
+# Major Changes (17 changes)
 
-**POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories** (1 change)
+**POST /api/v2/contentmanagement/auditquery** (1 change)
 
 * Has been deprecated
 
-**POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories** (1 change)
+**GET /api/v2/contentmanagement/documents/{documentId}/audits** (1 change)
 
 * Has been deprecated
 
-**GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}** (1 change)
+**POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Has been deprecated
 
-**DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}** (1 change)
+**POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult** (1 change)
 
 * Has been deprecated
 
-**PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId}** (1 change)
+**POST /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Has been deprecated
 
-**GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}** (1 change)
+**POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Has been deprecated
 
-**DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}** (1 change)
+**POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Has been deprecated
 
-**PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}** (1 change)
+**POST /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Has been deprecated
 
-**POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports** (1 change)
+**POST /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Has been deprecated
 
-**GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}** (1 change)
+**POST /api/v2/conversations/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Has been deprecated
 
-**DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}** (1 change)
+**GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents** (1 change)
 
-* Has been deprecated
+* Parameter externalIds was added
 
-**PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}** (1 change)
+**CategoryRequest** (1 change)
 
-* Has been deprecated
+* Model CategoryRequest was removed
 
-**GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents** (1 change)
+**GuestCategoryResponse** (1 change)
 
-* Has been deprecated
+* Model GuestCategoryResponse was removed
 
-**POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents** (1 change)
+**BuForecastModification** (1 change)
 
-* Has been deprecated
+* Model BuForecastModification was removed
 
-**PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents** (1 change)
+**Limit** (1 change)
 
-* Has been deprecated
+* Property value was changed from number to integer
 
-**GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}** (1 change)
+**GuestCategoryResponseListing** (1 change)
 
-* Has been deprecated
+* Property entities was changed from GuestCategoryResponse[] to GuestResponseCategory[]
 
-**POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}/promote** (1 change)
+**BuShortTermForecast** (1 change)
 
-* Has been deprecated
-
-**GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings** (1 change)
-
-* Has been deprecated
-
-**POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/messaging/supportedcontent/{supportedContentId}** (1 change)
-
-* Has been deprecated
-
-**DELETE /api/v2/messaging/supportedcontent/{supportedContentId}** (1 change)
-
-* Has been deprecated
-
-**PATCH /api/v2/messaging/supportedcontent/{supportedContentId}** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/messaging/supportedcontent** (1 change)
-
-* Has been deprecated
-
-**POST /api/v2/messaging/supportedcontent** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/organizations/embeddedintegration** (1 change)
-
-* Has been deprecated
-
-**PUT /api/v2/organizations/embeddedintegration** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/organizations/ipaddressauthentication** (1 change)
-
-* Has been deprecated
-
-**PUT /api/v2/organizations/ipaddressauthentication** (1 change)
-
-* Has been deprecated
-
-**ApiUsageQuery** (1 change)
-
-* Model ApiUsageQuery was removed
-
-**TextMessageListing** (9 changes)
-
-* Property pageSize was removed
-* Property pageNumber was removed
-* Property total was removed
-* Property firstUri was removed
-* Property pageCount was removed
-* Property lastUri was removed
-* Property selfUri was removed
-* Property nextUri was removed
-* Property previousUri was removed
-
-**DocumentBodyListBlock** (1 change)
-
-* Property blocks was changed from DocumentContentBlock[] to DocumentListContentBlock[]
+* Property modifications was changed from BuForecastModification[] to BuForecastModificationResponse[]
 
 
-# Minor Changes (77 changes)
+# Minor Changes (73 changes)
 
-**/api/v2/organizations/authentication/settings** (3 changes)
-
-* Path was added
-* Operation GET was added
-* Operation PATCH was added
-
-**/api/v2/speechandtextanalytics/topics/general/status** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**/api/v2/usage/simplesearch** (2 changes)
+**/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**/api/v2/usage/simplesearch/{executionId}/results** (2 changes)
+**/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/conversations/messaging/integrations/instagram/{integrationId}** (4 changes)
+
+* Path was added
+* Operation GET was added
+* Operation DELETE was added
+* Operation PATCH was added
+
+**/api/v2/conversations/messaging/integrations/instagram** (3 changes)
+
+* Path was added
+* Operation GET was added
+* Operation POST was added
+
+**/api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/conversations/{conversationId}/participants/{participantId}/replace/external** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/users/presences/purecloud/bulk** (2 changes)
 
 * Path was added
 * Operation GET was added
 
-**ConversationAggregationQuery** (2 changes)
+**/api/v2/users/presences/{sourceId}/bulk** (2 changes)
 
-* Enum value tActiveCallback was added to property metrics
-* Enum value tActiveCallbackComplete was added to property metrics
+* Path was added
+* Operation GET was added
 
-**ConversationAggregationView** (2 changes)
+**/api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences** (2 changes)
 
-* Enum value tActiveCallback was added to property target
-* Enum value tActiveCallbackComplete was added to property target
-
-**ConversationDetailQueryPredicate** (2 changes)
-
-* Enum value tActiveCallback was added to property metric
-* Enum value tActiveCallbackComplete was added to property metric
+* Path was added
+* Operation PUT was added
 
 **ViewFilter** (2 changes)
 
-* Enum value NoInputDisambiguation was added to property botRecognitionFailureReasonList
-* Enum value NoMatchDisambiguation was added to property botRecognitionFailureReasonList
+* Optional property assistantIds was added
+* Optional property knowledgeBaseIds was added
 
-**ReportingExportJobResponse** (3 changes)
+**Queue** (1 change)
 
-* Enum value AGENT_ASSIST_PERFORMANCE_VIEW was added to property viewType
-* Enum value CONTACT_CENTER_PERFORMANCE_VIEW was added to property viewType
-* Optional property durationFormat was added
-
-**ReportingExportMetadataJobResponse** (2 changes)
-
-* Enum value AGENT_ASSIST_PERFORMANCE_VIEW was added to property viewType
-* Enum value CONTACT_CENTER_PERFORMANCE_VIEW was added to property viewType
-
-**ReportingExportJobRequest** (3 changes)
-
-* Enum value AGENT_ASSIST_PERFORMANCE_VIEW was added to property viewType
-* Enum value CONTACT_CENTER_PERFORMANCE_VIEW was added to property viewType
-* Optional property durationFormat was added
-
-**AuthorizationSettings** (2 changes)
-
-* analysisEnabled is no longer readonly
-* analysisDays is no longer readonly
+* Optional property conditionalGroupRouting was added
 
 **QueueMessagingAddresses** (1 change)
 
-* Optional property openMessagingRecipient was added
+* Optional property whatsAppRecipient was added
 
-**AdjustableLiveSpeakerDetection** (1 change)
+**ErrorBody** (1 change)
 
-* Model was added
+* Optional property limit was added
 
-**Call** (1 change)
+**Limit** (3 changes)
 
-* Optional property disposition was added
+* key is no longer readonly
+* Optional property namespace was added
+* value is no longer readonly
 
-**Disposition** (1 change)
-
-* Model was added
-
-**DispositionParameters** (1 change)
-
-* Model was added
-
-**Settings** (2 changes)
-
-* Optional property completeAcwWhenAgentTransitionsOffline was added
-* Optional property totalActiveCallback was added
-
-**CreateOutboundMessagingConversationRequest** (1 change)
-
-* Enum value open was added to property toAddressMessengerType
-
-**CallBasic** (1 change)
+**CallMediaParticipant** (1 change)
 
 * Optional property disposition was added
 
-**DocumentBodyImage** (1 change)
+**ConsultTransfer** (1 change)
 
-* Optional property properties was added
+* Optional property consultingUserId was added
 
-**DocumentBodyImageProperties** (1 change)
-
-* Model was added
-
-**DocumentBodyList** (1 change)
-
-* Optional property properties was added
-
-**DocumentBodyListBlock** (1 change)
-
-* Optional property properties was added
-
-**DocumentBodyListBlockProperties** (1 change)
+**ConsultTransferToAgent** (1 change)
 
 * Model was added
 
-**DocumentBodyListItemProperties** (1 change)
+**ConsultTransferToQueue** (1 change)
 
 * Model was added
 
-**DocumentBodyParagraph** (1 change)
-
-* Optional property properties was added
-
-**DocumentBodyParagraphProperties** (1 change)
+**ConsultTransferToExternal** (1 change)
 
 * Model was added
 
-**DocumentBodyVideo** (1 change)
+**ConsultTransferUpdate** (1 change)
 
-* Optional property properties was added
+* Optional property consultingUserId was added
 
-**DocumentBodyVideoProperties** (1 change)
+**SendAgentlessOutboundMessageResponse** (1 change)
 
-* Model was added
+* Optional property message was added
 
-**DocumentListContentBlock** (1 change)
-
-* Model was added
-
-**DocumentText** (4 changes)
-
-* Enum value Strikethrough was added to property marks
-* Enum value Subscript was added to property marks
-* Enum value Superscript was added to property marks
-* Optional property properties was added
-
-**DocumentTextProperties** (1 change)
+**InstagramIntegration** (1 change)
 
 * Model was added
 
-**Miner** (2 changes)
-
-* Enum value pt-pt was added to property language
-* Enum value pt-br was added to property language
-
-**ApprovalNamespace** (1 change)
-
-* Enum value usage was added to property namespace
-
-**LimitChangeRequestDetails** (1 change)
-
-* Enum value usage was added to property namespace
-
-**StatusChange** (1 change)
-
-* Enum value usage was added to property namespace
-
-**ApiUsageClientQuery** (1 change)
+**InstagramIntegrationUpdateRequest** (1 change)
 
 * Model was added
 
-**OrgAuthSettings** (1 change)
+**InstagramIntegrationEntityListing** (1 change)
 
 * Model was added
 
-**PasswordRequirements** (1 change)
+**InstagramIntegrationRequest** (1 change)
 
 * Model was added
 
-**EventPresence** (1 change)
-
-* Enum value Clear was added to property type
-
-**ComparisonPeriod** (1 change)
-
-* Optional property percentageBenefit was added
-
-**KpiResult** (1 change)
-
-* Optional property percentageBenefit was added
-
-**FlowVersion** (2 changes)
-
-* Optional property datePublished was added
-* Optional property datePublishedEnd was added
-
-**GeneralProgramJobRequest** (7 changes)
-
-* Enum value ar-001 was added to property dialect
-* Enum value ar-AE was added to property dialect
-* Enum value ar-BH was added to property dialect
-* Enum value ar-EG was added to property dialect
-* Enum value ar-IL was added to property dialect
-* Enum value ar-SA was added to property dialect
-* Enum value ar-TN was added to property dialect
-
-**UnifiedGeneralTopic** (1 change)
+**TransferToAgentRequest** (1 change)
 
 * Model was added
 
-**UnifiedGeneralTopicEntityListing** (1 change)
+**TransferToQueueRequest** (1 change)
 
 * Model was added
 
-**ApiUsageOrganizationQuery** (1 change)
+**TransferToExternalRequest** (1 change)
 
 * Model was added
 
-**ApiUsageSimpleSearch** (1 change)
+**CategoryResponse** (6 changes)
+
+* Optional property externalId was added
+* dateCreated is no longer readonly
+* dateModified is no longer readonly
+* parentCategory is no longer readonly
+* documentCount is no longer readonly
+* knowledgeBase is no longer readonly
+
+**CategoryCreateRequest** (1 change)
 
 * Model was added
 
-**LearningModuleInformStepRequest** (1 change)
+**CategoryUpdateRequest** (1 change)
 
-* Enum value GenesysBuiltInCourse was added to property type
+* Model was added
+
+**LabelResponse** (1 change)
+
+* Optional property externalId was added
+
+**LabelUpdateRequest** (1 change)
+
+* Optional property externalId was added
+
+**LabelCreateRequest** (1 change)
+
+* Optional property externalId was added
+
+**DocumentBodyListBlockProperties** (2 changes)
+
+* Enum value None was added to property unorderedType
+* Enum value None was added to property orderedType
+
+**KnowledgeDocumentResponse** (1 change)
+
+* Optional property externalId was added
+
+**KnowledgeDocumentReq** (1 change)
+
+* Optional property externalId was added
+
+**DocumentQueryPredicate** (2 changes)
+
+* Enum value visible was added to property fields
+* Enum value state was added to property fields
+
+**KnowledgeImportJobError** (1 change)
+
+* Optional property limit was added
+
+**GuestResponseCategory** (1 change)
+
+* Model was added
+
+**UcUserPresence** (1 change)
+
+* Model was added
+
+**QueueRequest** (1 change)
+
+* Optional property conditionalGroupRouting was added
+
+**UserQueue** (1 change)
+
+* Optional property conditionalGroupRouting was added
+
+**CreateQueueRequest** (1 change)
+
+* Optional property conditionalGroupRouting was added
+
+**GeneralProgramJobRequest** (1 change)
+
+* Enum value ReplaceMerge was added to property mode
+
+**UCThirdPartyPresence** (1 change)
+
+* Model was added
+
+**BuForecastModificationResponse** (1 change)
+
+* Model was added
 
 
-# Point Changes (14 changes)
+# Point Changes (3 changes)
 
-**POST /api/v2/conversations/messages/agentless** (1 change)
+**POST /api/v2/contentmanagement/auditquery** (1 change)
 
 * Description was changed
 
-**GET /api/v2/knowledge/knowledgebases** (2 changes)
-
-* Description was changed for parameter limit
-* Description was changed for parameter pageSize
-
-**GET /api/v2/messaging/supportedcontent/{supportedContentId}** (1 change)
+**GET /api/v2/contentmanagement/documents/{documentId}/audits** (1 change)
 
 * Description was changed
 
-**DELETE /api/v2/messaging/supportedcontent/{supportedContentId}** (1 change)
+**GET /api/v2/telephony/providers/edges/phones** (1 change)
 
-* Description was changed
-
-**PATCH /api/v2/messaging/supportedcontent/{supportedContentId}** (1 change)
-
-* Description was changed
-
-**GET /api/v2/messaging/supportedcontent** (1 change)
-
-* Description was changed
-
-**POST /api/v2/messaging/supportedcontent** (1 change)
-
-* Description was changed
-
-**GET /api/v2/organizations/embeddedintegration** (1 change)
-
-* Description was changed
-
-**PUT /api/v2/organizations/embeddedintegration** (1 change)
-
-* Description was changed
-
-**GET /api/v2/organizations/ipaddressauthentication** (1 change)
-
-* Description was changed
-
-**PUT /api/v2/organizations/ipaddressauthentication** (1 change)
-
-* Description was changed
-
-**GET /api/v2/organizations/whitelist** (1 change)
-
-* Summary was changed
-
-**PUT /api/v2/organizations/whitelist** (1 change)
-
-* Summary was changed
+* Description was changed for parameter name

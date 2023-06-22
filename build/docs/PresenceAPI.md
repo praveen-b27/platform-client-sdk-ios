@@ -18,6 +18,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSystempresences**](PresenceAPI.html#getSystempresences) | Get the list of SystemPresences |
 | [**getUserPresence**](PresenceAPI.html#getUserPresence) | Get a user&#39;s Presence |
 | [**getUserPresencesPurecloud**](PresenceAPI.html#getUserPresencesPurecloud) | Get a user&#39;s Genesys Cloud presence. |
+| [**getUsersPresenceBulk**](PresenceAPI.html#getUsersPresenceBulk) | Get bulk user presences for a single presence source |
+| [**getUsersPresencesPurecloudBulk**](PresenceAPI.html#getUsersPresencesPurecloudBulk) | Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source |
 | [**patchUserPresence**](PresenceAPI.html#patchUserPresence) | Patch a user&#39;s Presence |
 | [**patchUserPresencesPurecloud**](PresenceAPI.html#patchUserPresencesPurecloud) | Patch a Genesys Cloud user&#39;s presence |
 | [**postPresenceSources**](PresenceAPI.html#postPresenceSources) | Create a Presence Source |
@@ -601,6 +603,110 @@ PresenceAPI.getUserPresencesPurecloud(userId: userId) { (response, error) in
 ### Return type
 
 [**UserPresence**](UserPresence.html)
+
+<a name="getUsersPresenceBulk"></a>
+
+# **getUsersPresenceBulk**
+
+
+
+> [[UcUserPresence]](UcUserPresence.html) getUsersPresenceBulk(sourceId, _id)
+
+Get bulk user presences for a single presence source
+
+
+
+Wraps GET /api/v2/users/presences/{sourceId}/bulk  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // The requested presence source ID.
+let _id: [String] = [""] // A comma separated list of user IDs to fetch their presence status in bulk. Limit 50.
+
+// Code example
+PresenceAPI.getUsersPresenceBulk(sourceId: sourceId, _id: _id) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.getUsersPresenceBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| The requested presence source ID. | |
+| **_id** | [**[String]**](String.html)| A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**[UcUserPresence]**](UcUserPresence.html)
+
+<a name="getUsersPresencesPurecloudBulk"></a>
+
+# **getUsersPresencesPurecloudBulk**
+
+
+
+> [[UcUserPresence]](UcUserPresence.html) getUsersPresencesPurecloudBulk(_id)
+
+Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
+
+
+
+Wraps GET /api/v2/users/presences/purecloud/bulk  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // A comma separated list of user IDs to fetch their presence status in bulk. Limit 50.
+
+// Code example
+PresenceAPI.getUsersPresencesPurecloudBulk(_id: _id) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.getUsersPresencesPurecloudBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String.html)| A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**[UcUserPresence]**](UcUserPresence.html)
 
 <a name="patchUserPresence"></a>
 

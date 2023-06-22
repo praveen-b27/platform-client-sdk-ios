@@ -790,6 +790,11 @@ open class IntegrationsAPI {
     "messageWithParams" : "messageWithParams",
     "code" : "code",
     "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "agent.assistant",
+      "value" : 7,
+      "key" : "key"
+    },
     "entityId" : "entityId",
     "contextId" : "contextId",
     "details" : [ {
@@ -813,6 +818,11 @@ open class IntegrationsAPI {
     "messageWithParams" : "messageWithParams",
     "code" : "code",
     "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "agent.assistant",
+      "value" : 7,
+      "key" : "key"
+    },
     "entityId" : "entityId",
     "contextId" : "contextId",
     "details" : [ {
@@ -4613,6 +4623,61 @@ open class IntegrationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TtsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Bulk integration presence ingestion
+     
+     - parameter ucIntegrationId: (path) UC Integration ID 
+     - parameter body: (body) List of User presences 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegrationId: String, body: [UCThirdPartyPresence], completion: @escaping ((_ data: String?,_ error: Error?) -> Void)) {
+        let requestBuilder = putIntegrationsUnifiedcommunicationThirdpartypresencesWithRequestBuilder(ucIntegrationId: ucIntegrationId, body: body)
+        requestBuilder.execute { (response: Response<String>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk integration presence ingestion
+     - PUT /api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences
+     - This endpoint accepts bulk presence updates from a 3rd-party presence integration and maps the 3rd-party user to a Genesys Cloud user via the matching email address. The 3rd-party presence value will be mapped to a Genesys Cloud organization presence definition value.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter ucIntegrationId: (path) UC Integration ID 
+     - parameter body: (body) List of User presences 
+
+     - returns: RequestBuilder<String> 
+     */
+    open class func putIntegrationsUnifiedcommunicationThirdpartypresencesWithRequestBuilder(ucIntegrationId: String, body: [UCThirdPartyPresence]) -> RequestBuilder<String> {        
+        var path = "/api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences"
+        let ucIntegrationIdPreEscape = "\(ucIntegrationId)"
+        let ucIntegrationIdPostEscape = ucIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ucIntegrationId}", with: ucIntegrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

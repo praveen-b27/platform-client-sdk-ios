@@ -5561,6 +5561,7 @@ open class UsersAPI {
   "pageNumber" : 5,
   "entities" : [ {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -5701,6 +5702,7 @@ open class UsersAPI {
     "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -10893,6 +10895,7 @@ open class UsersAPI {
           "value" : "value",
           "queue" : {
             "peerId" : "peerId",
+            "conditionalGroupRouting" : "{}",
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -11323,6 +11326,7 @@ open class UsersAPI {
           "value" : "value",
           "queue" : {
             "peerId" : "peerId",
+            "conditionalGroupRouting" : "{}",
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -11768,6 +11772,7 @@ open class UsersAPI {
           "value" : "value",
           "queue" : {
             "peerId" : "peerId",
+            "conditionalGroupRouting" : "{}",
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -12198,6 +12203,7 @@ open class UsersAPI {
           "value" : "value",
           "queue" : {
             "peerId" : "peerId",
+            "conditionalGroupRouting" : "{}",
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -12656,6 +12662,7 @@ open class UsersAPI {
           "value" : "value",
           "queue" : {
             "peerId" : "peerId",
+            "conditionalGroupRouting" : "{}",
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -13086,6 +13093,7 @@ open class UsersAPI {
           "value" : "value",
           "queue" : {
             "peerId" : "peerId",
+            "conditionalGroupRouting" : "{}",
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -13531,6 +13539,7 @@ open class UsersAPI {
           "value" : "value",
           "queue" : {
             "peerId" : "peerId",
+            "conditionalGroupRouting" : "{}",
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -13961,6 +13970,7 @@ open class UsersAPI {
           "value" : "value",
           "queue" : {
             "peerId" : "peerId",
+            "conditionalGroupRouting" : "{}",
             "mediaSettings" : "{}",
             "enableManualAssignment" : true,
             "description" : "description",
@@ -16822,6 +16832,7 @@ open class UsersAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
+  "conditionalGroupRouting" : "{}",
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
   "description" : "description",
@@ -17027,6 +17038,7 @@ open class UsersAPI {
   "pageNumber" : 5,
   "entities" : [ {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",
@@ -17167,6 +17179,7 @@ open class UsersAPI {
     "agentOwnedRouting" : "{}"
   }, {
     "peerId" : "peerId",
+    "conditionalGroupRouting" : "{}",
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
     "description" : "description",

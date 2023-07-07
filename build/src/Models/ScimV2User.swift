@@ -32,7 +32,7 @@ public class ScimV2User: Codable {
     public var emails: [ScimEmail]?
     /** The external ID of the user. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\". */
     public var externalId: String?
-    /** The list of groups that the user is a member of. */
+    /** The list of groups that the user is a member of. This list is immutable per SCIM RFC and may only be updated using the GROUPS resource endpoint. */
     public var groups: [ScimV2GroupReference]?
     /** The list of roles assigned to the user. */
     public var roles: [ScimUserRole]?
@@ -40,7 +40,7 @@ public class ScimV2User: Codable {
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
     /** The URI of the schema for the Genesys Cloud user. */
     public var urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?
-    /** The metadata of the SCIM resource. */
+    /** The metadata of the SCIM resource. Metadata is defined as immutable per SCIM RFC. */
     public var meta: ScimMetadata?
 
     public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?, meta: ScimMetadata?) {

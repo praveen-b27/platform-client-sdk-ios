@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getScriptsPublishedScriptIdVariables**](ScriptsAPI.html#getScriptsPublishedScriptIdVariables) | Get the published variables |
 | [**getScriptsUploadStatus**](ScriptsAPI.html#getScriptsUploadStatus) | Get the upload status of an imported script |
 | [**postScriptExport**](ScriptsAPI.html#postScriptExport) | Export a script via download service. |
+| [**postScriptsPublished**](ScriptsAPI.html#postScriptsPublished) | Publish a script. |
 {: class="table-striped"}
 
 <a name="getScript"></a>
@@ -787,4 +788,58 @@ ScriptsAPI.postScriptExport(scriptId: scriptId, body: body) { (response, error) 
 ### Return type
 
 [**ExportScriptResponse**](ExportScriptResponse.html)
+
+<a name="postScriptsPublished"></a>
+
+# **postScriptsPublished**
+
+
+
+> [Script](Script.html) postScriptsPublished(scriptDataVersion, body)
+
+Publish a script.
+
+
+
+Wraps POST /api/v2/scripts/published  
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
+let body: PublishScriptRequestData = new PublishScriptRequestData(...) // body
+
+// Code example
+ScriptsAPI.postScriptsPublished(scriptDataVersion: scriptDataVersion, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ScriptsAPI.postScriptsPublished was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
+| **body** | [**PublishScriptRequestData**](PublishScriptRequestData.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Script**](Script.html)
 

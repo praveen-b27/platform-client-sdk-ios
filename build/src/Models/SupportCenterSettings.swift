@@ -27,13 +27,13 @@ public class SupportCenterSettings: Codable {
     /** Available screens for the support center with its modules */
     public var screens: [SupportCenterScreen]?
     /** Enabled article categories for support center */
-    public var enabledCategories: [AddressableEntityRef]?
+    public var enabledCategories: [SupportCenterCategory]?
     /** Style attributes for support center */
     public var styleSetting: SupportCenterStyleSetting?
     /** Customer feedback settings */
     public var feedback: SupportCenterFeedbackSettings?
 
-    public init(enabled: Bool?, knowledgeBase: AddressableEntityRef?, customMessages: [SupportCenterCustomMessage]?, routerType: RouterType?, screens: [SupportCenterScreen]?, enabledCategories: [AddressableEntityRef]?, styleSetting: SupportCenterStyleSetting?, feedback: SupportCenterFeedbackSettings?) {
+    public init(enabled: Bool?, knowledgeBase: AddressableEntityRef?, customMessages: [SupportCenterCustomMessage]?, routerType: RouterType?, screens: [SupportCenterScreen]?, enabledCategories: [SupportCenterCategory]?, styleSetting: SupportCenterStyleSetting?, feedback: SupportCenterFeedbackSettings?) {
         self.enabled = enabled
         self.knowledgeBase = knowledgeBase
         self.customMessages = customMessages

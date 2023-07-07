@@ -37,6 +37,7 @@ title: ReportingExportJobResponse
 | **emailErrorDescription** | **String** | The optional error message in case the export fail to email | [optional] |
 | **includeDurationFormatInHeader** | **Bool** | Indicates whether to include selected duration format to the column headers | [optional] |
 | **durationFormat** | **String** | Indicates the duration format for the exports | [optional] |
+| **exportAllowedToRerun** | **Bool** | Indicates whether the export run is allowed to rerun | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

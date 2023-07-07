@@ -2861,7 +2861,7 @@ ConversationsAPI.getConversationsEmailMessage(conversationId: conversationId, me
 
 
 
-> [EmailMessageListing](EmailMessageListing.html) getConversationsEmailMessages(conversationId)
+> [EmailMessagePreviewListing](EmailMessagePreviewListing.html) getConversationsEmailMessages(conversationId)
 
 Get conversation messages
 
@@ -2904,7 +2904,7 @@ ConversationsAPI.getConversationsEmailMessages(conversationId: conversationId) {
 
 ### Return type
 
-[**EmailMessageListing**](EmailMessageListing.html)
+[**EmailMessagePreviewListing**](EmailMessagePreviewListing.html)
 
 <a name="getConversationsEmailMessagesDraft"></a>
 

@@ -131,6 +131,7 @@ public class ViewFilter: Codable {
         case coaching = "Coaching"
         case assessment = "Assessment"
         case assessedContent = "AssessedContent"
+        case external = "External"
     }
     public enum DevelopmentStatusList: String, Codable { 
         case planned = "Planned"

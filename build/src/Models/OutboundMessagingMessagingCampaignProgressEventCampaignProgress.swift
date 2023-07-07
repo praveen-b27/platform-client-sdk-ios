@@ -20,14 +20,17 @@ public class OutboundMessagingMessagingCampaignProgressEventCampaignProgress: Co
     public var totalNumberOfContacts: Double?
     /** numberOfContactsContacted/totalNumberOfContacts*100 */
     public var percentage: Int?
+    /** A map of skipped reasons and the number of contacts associated with each. */
+    public var numberOfContactsSkipped: [String:Int]?
     public var additionalProperties: [String:JSON]?
 
-    public init(campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?, additionalProperties: [String:JSON]?) {
+    public init(campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?, numberOfContactsSkipped: [String:Int]?, additionalProperties: [String:JSON]?) {
         self.campaign = campaign
         self.numberOfContactsCalled = numberOfContactsCalled
         self.numberOfContactsMessaged = numberOfContactsMessaged
         self.totalNumberOfContacts = totalNumberOfContacts
         self.percentage = percentage
+        self.numberOfContactsSkipped = numberOfContactsSkipped
         self.additionalProperties = additionalProperties
     }
 

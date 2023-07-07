@@ -18,6 +18,9 @@ title: Annotation
 | **recordingDurationMs** | **Int64** | Duration of annotation (milliseconds), adjusted for any recording cuts. | [optional] |
 | **user** | [**User**](User.html) | User that created this annotation (if any). | [optional] |
 | **_description** | **String** | Text of annotation. Maximum character limit is 500. | [optional] |
+| **reason** | **String** | Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue | [optional] |
+| **annotations** | [**[Annotation]**](Annotation.html) | List of annotations | [optional] |
+| **realtimeLocation** | **Int64** | Offset of annotation (milliseconds) from start of the recording before removing the cumulative duration of all pauses before this annotation | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

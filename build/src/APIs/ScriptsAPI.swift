@@ -1447,4 +1447,101 @@ open class ScriptsAPI {
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
+    
+    
+    /**
+     Publish a script.
+     
+     - parameter scriptDataVersion: (query) Advanced usage - controls the data version of the script (optional)
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postScriptsPublished(scriptDataVersion: String? = nil, body: PublishScriptRequestData? = nil, completion: @escaping ((_ data: Script?,_ error: Error?) -> Void)) {
+        let requestBuilder = postScriptsPublishedWithRequestBuilder(scriptDataVersion: scriptDataVersion, body: body)
+        requestBuilder.execute { (response: Response<Script>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Publish a script.
+     - POST /api/v2/scripts/published
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "variables" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "customActions" : "{}",
+  "versionDate" : "2000-01-23T04:56:07.000+00:00",
+  "division" : "{}",
+  "features" : "{}",
+  "versionId" : "versionId",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "pages" : [ {
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "rootContainer" : {
+      "key" : "{}"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "versionId" : "versionId",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "rootContainer" : {
+      "key" : "{}"
+    },
+    "properties" : {
+      "key" : "{}"
+    }
+  } ],
+  "startPageName" : "startPageName",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "startPageId" : "startPageId",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter scriptDataVersion: (query) Advanced usage - controls the data version of the script (optional)
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<Script> 
+     */
+    open class func postScriptsPublishedWithRequestBuilder(scriptDataVersion: String? = nil, body: PublishScriptRequestData? = nil) -> RequestBuilder<Script> {        
+        let path = "/api/v2/scripts/published"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            "scriptDataVersion": scriptDataVersion
+        ])
+
+        let requestBuilder: RequestBuilder<Script>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
 }

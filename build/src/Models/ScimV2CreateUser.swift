@@ -30,7 +30,7 @@ public class ScimV2CreateUser: Codable {
     public var emails: [ScimEmail]?
     /** The external ID of the user. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\". */
     public var externalId: String?
-    /** The list of groups that the user is a member of. */
+    /** The list of groups that the user is a member of. This list is immutable per SCIM RFC and may only be updated using the GROUPS resource endpoint. */
     public var groups: [ScimV2GroupReference]?
     /** The list of roles assigned to the user. */
     public var roles: [ScimUserRole]?

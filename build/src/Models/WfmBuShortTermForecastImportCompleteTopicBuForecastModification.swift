@@ -20,6 +20,7 @@ public class WfmBuShortTermForecastImportCompleteTopicBuForecastModification: Co
         case setValueOverRange = "SetValueOverRange"
         case changeValueOverRange = "ChangeValueOverRange"
         case setValuesForIntervalSet = "SetValuesForIntervalSet"
+        case setMultiGranularityValuesForIntervalSet = "SetMultiGranularityValuesForIntervalSet"
     }
     public enum Metric: String, Codable { 
         case offered = "Offered"
@@ -38,12 +39,14 @@ public class WfmBuShortTermForecastImportCompleteTopicBuForecastModification: Co
     public var legacyMetric: LegacyMetric?
     public var value: Double?
     public var values: [WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]?
+    public var secondaryValues: [WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]?
     public var enabled: Bool?
     public var granularity: String?
+    public var secondaryGranularity: String?
     public var displayGranularity: String?
     public var planningGroupIds: [String]?
 
-    public init(type: ModelType?, startIntervalIndex: Int?, endIntervalIndex: Int?, metric: Metric?, legacyMetric: LegacyMetric?, value: Double?, values: [WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]?, enabled: Bool?, granularity: String?, displayGranularity: String?, planningGroupIds: [String]?) {
+    public init(type: ModelType?, startIntervalIndex: Int?, endIntervalIndex: Int?, metric: Metric?, legacyMetric: LegacyMetric?, value: Double?, values: [WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]?, secondaryValues: [WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]?, enabled: Bool?, granularity: String?, secondaryGranularity: String?, displayGranularity: String?, planningGroupIds: [String]?) {
         self.type = type
         self.startIntervalIndex = startIntervalIndex
         self.endIntervalIndex = endIntervalIndex
@@ -51,8 +54,10 @@ public class WfmBuShortTermForecastImportCompleteTopicBuForecastModification: Co
         self.legacyMetric = legacyMetric
         self.value = value
         self.values = values
+        self.secondaryValues = secondaryValues
         self.enabled = enabled
         self.granularity = granularity
+        self.secondaryGranularity = secondaryGranularity
         self.displayGranularity = displayGranularity
         self.planningGroupIds = planningGroupIds
     }

@@ -6622,7 +6622,7 @@
         "required": "true"
       }
     ],
-    "return": "EmailMessageListing",
+    "return": "EmailMessagePreviewListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\n\n// Get conversation messages\nGetConversationsEmailMessagesRequest.getConversationsEmailMessages(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsEmailMessagesRequest.getConversationsEmailMessages was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsemailmessagesdraft": {
@@ -30611,6 +30611,25 @@
     ],
     "return": "ExportScriptResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet scriptId: String = \"\" // Script ID\nlet body: ExportScriptRequest = new ExportScriptRequest(...) // \n\n// Export a script via download service.\nPostScriptExportRequest.postScriptExport(scriptId: scriptId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScriptExportRequest.postScriptExport was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postscriptspublished": {
+    "operationId": "postscriptspublished",
+    "functionName": "postScriptsPublished",
+    "signature": "postScriptsPublished(scriptDataVersion, body)",
+    "parameters": [
+      {
+        "name": "scriptDataVersion",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "body",
+        "type": "PublishScriptRequestData",
+        "required": "false"
+      }
+    ],
+    "return": "Script",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet scriptDataVersion: String = \"\" // Advanced usage - controls the data version of the script\nlet body: PublishScriptRequestData = new PublishScriptRequestData(...) // body\n\n// Publish a script.\nPostScriptsPublishedRequest.postScriptsPublished(scriptDataVersion: scriptDataVersion, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScriptsPublishedRequest.postScriptsPublished was successful\")\n        dump(response)\n    }\n}"
   },
   "getdocumentationgknsearch": {
     "operationId": "getdocumentationgknsearch",

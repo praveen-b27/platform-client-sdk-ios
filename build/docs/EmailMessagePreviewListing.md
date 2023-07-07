@@ -1,13 +1,13 @@
 ---
-title: EmailMessageListing
+title: EmailMessagePreviewListing
 ---
-## EmailMessageListing
+## EmailMessagePreviewListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[EmailMessage]**](EmailMessage.html) |  | [optional] |
+| **entities** | [**[EmailMessagePreview]**](EmailMessagePreview.html) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |

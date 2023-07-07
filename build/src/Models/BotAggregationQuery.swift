@@ -14,6 +14,7 @@ public class BotAggregationQuery: Codable {
     public enum GroupBy: String, Codable { 
         case askactionid = "askActionId"
         case askactionresult = "askActionResult"
+        case askactiontype = "askActionType"
         case botfinalintent = "botFinalIntent"
         case botid = "botId"
         case botintent = "botIntent"

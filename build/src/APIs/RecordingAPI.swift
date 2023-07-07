@@ -124,13 +124,13 @@ open class RecordingAPI {
       "attachments" : [ {
         "contentPath" : "contentPath",
         "name" : "name",
-        "contentLength" : 7,
+        "contentLength" : 9,
         "attachmentId" : "attachmentId",
         "contentType" : "contentType"
       }, {
         "contentPath" : "contentPath",
         "name" : "name",
-        "contentLength" : 7,
+        "contentLength" : 9,
         "attachmentId" : "attachmentId",
         "contentType" : "contentType"
       } ],
@@ -168,13 +168,13 @@ open class RecordingAPI {
       "attachments" : [ {
         "contentPath" : "contentPath",
         "name" : "name",
-        "contentLength" : 7,
+        "contentLength" : 9,
         "attachmentId" : "attachmentId",
         "contentType" : "contentType"
       }, {
         "contentPath" : "contentPath",
         "name" : "name",
-        "contentLength" : 7,
+        "contentLength" : 9,
         "attachmentId" : "attachmentId",
         "contentType" : "contentType"
       } ],
@@ -218,13 +218,13 @@ open class RecordingAPI {
       "messageMediaAttachments" : [ {
         "name" : "name",
         "mediaType" : "image/png",
-        "contentLength" : 9,
+        "contentLength" : 3,
         "id" : "id",
         "url" : "url"
       }, {
         "name" : "name",
         "mediaType" : "image/png",
-        "contentLength" : 9,
+        "contentLength" : 3,
         "id" : "id",
         "url" : "url"
       } ],
@@ -261,13 +261,13 @@ open class RecordingAPI {
       "messageMediaAttachments" : [ {
         "name" : "name",
         "mediaType" : "image/png",
-        "contentLength" : 9,
+        "contentLength" : 3,
         "id" : "id",
         "url" : "url"
       }, {
         "name" : "name",
         "mediaType" : "image/png",
-        "contentLength" : 9,
+        "contentLength" : 3,
         "id" : "id",
         "url" : "url"
       } ],
@@ -282,31 +282,37 @@ open class RecordingAPI {
       "story" : "{}"
     } ],
     "annotations" : [ {
-      "absoluteLocation" : 1,
+      "reason" : "Hold",
       "recordingLocation" : 5,
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "description" : "description",
-      "location" : 0,
-      "id" : "id",
+      "annotations" : [ null, null ],
       "type" : "type",
       "absoluteDurationMs" : 5,
+      "recordingDurationMs" : 2,
+      "absoluteLocation" : 1,
+      "realtimeLocation" : 7,
+      "name" : "name",
+      "location" : 0,
+      "id" : "id",
       "durationMs" : 6,
-      "user" : "{}",
-      "recordingDurationMs" : 2
+      "user" : "{}"
     }, {
-      "absoluteLocation" : 1,
+      "reason" : "Hold",
       "recordingLocation" : 5,
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "description" : "description",
-      "location" : 0,
-      "id" : "id",
+      "annotations" : [ null, null ],
       "type" : "type",
       "absoluteDurationMs" : 5,
+      "recordingDurationMs" : 2,
+      "absoluteLocation" : 1,
+      "realtimeLocation" : 7,
+      "name" : "name",
+      "location" : 0,
+      "id" : "id",
       "durationMs" : 6,
-      "user" : "{}",
-      "recordingDurationMs" : 2
+      "user" : "{}"
     } ],
     "archiveMedium" : "CLOUDARCHIVE",
     "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -342,20 +348,20 @@ open class RecordingAPI {
     } ],
     "fileState" : "ARCHIVED",
     "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-    "estimatedTranscodeTimeMs" : 2,
-    "outputDurationMs" : 7,
+    "estimatedTranscodeTimeMs" : 4,
+    "outputDurationMs" : 1,
     "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
     "startTime" : "startTime",
     "id" : "id",
-    "remainingRestorationsAllowedForOrg" : 1,
+    "remainingRestorationsAllowedForOrg" : 6,
     "mediaUris" : {
       "key" : {
         "mediaUri" : "mediaUri",
-        "waveformData" : [ 3.6160767, 3.6160767 ]
+        "waveformData" : [ 2.027123, 2.027123 ]
       }
     },
     "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-    "actualTranscodeTimeMs" : 4,
+    "actualTranscodeTimeMs" : 7,
     "conversationId" : "conversationId",
     "selfUri" : "https://openapi-generator.tech",
     "sessionId" : "sessionId",
@@ -1316,13 +1322,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -1360,13 +1366,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -1410,13 +1416,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -1453,13 +1459,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -1474,31 +1480,37 @@ open class RecordingAPI {
     "story" : "{}"
   } ],
   "annotations" : [ {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   }, {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   } ],
   "archiveMedium" : "CLOUDARCHIVE",
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -1534,20 +1546,20 @@ open class RecordingAPI {
   } ],
   "fileState" : "ARCHIVED",
   "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-  "estimatedTranscodeTimeMs" : 2,
-  "outputDurationMs" : 7,
+  "estimatedTranscodeTimeMs" : 4,
+  "outputDurationMs" : 1,
   "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
   "startTime" : "startTime",
   "id" : "id",
-  "remainingRestorationsAllowedForOrg" : 1,
+  "remainingRestorationsAllowedForOrg" : 6,
   "mediaUris" : {
     "key" : {
       "mediaUri" : "mediaUri",
-      "waveformData" : [ 3.6160767, 3.6160767 ]
+      "waveformData" : [ 2.027123, 2.027123 ]
     }
   },
   "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-  "actualTranscodeTimeMs" : 4,
+  "actualTranscodeTimeMs" : 7,
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "sessionId" : "sessionId",
@@ -2206,18 +2218,21 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "absoluteLocation" : 1,
+  "reason" : "Hold",
   "recordingLocation" : 5,
   "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
   "description" : "description",
-  "location" : 0,
-  "id" : "id",
+  "annotations" : [ null, null ],
   "type" : "type",
   "absoluteDurationMs" : 5,
+  "recordingDurationMs" : 2,
+  "absoluteLocation" : 1,
+  "realtimeLocation" : 7,
+  "name" : "name",
+  "location" : 0,
+  "id" : "id",
   "durationMs" : 6,
-  "user" : "{}",
-  "recordingDurationMs" : 2
+  "user" : "{}"
 }, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -2281,18 +2296,21 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "absoluteLocation" : 1,
+  "reason" : "Hold",
   "recordingLocation" : 5,
   "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
   "description" : "description",
-  "location" : 0,
-  "id" : "id",
+  "annotations" : [ null, null ],
   "type" : "type",
   "absoluteDurationMs" : 5,
+  "recordingDurationMs" : 2,
+  "absoluteLocation" : 1,
+  "realtimeLocation" : 7,
+  "name" : "name",
+  "location" : 0,
+  "id" : "id",
   "durationMs" : 6,
-  "user" : "{}",
-  "recordingDurationMs" : 2
+  "user" : "{}"
 }, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -2354,31 +2372,37 @@ open class RecordingAPI {
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "annotations" : [ {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   }, {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   } ],
   "archiveMedium" : "CLOUDARCHIVE",
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2454,31 +2478,37 @@ open class RecordingAPI {
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "annotations" : [ {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   }, {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   } ],
   "archiveMedium" : "CLOUDARCHIVE",
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2591,13 +2621,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -2635,13 +2665,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -2685,13 +2715,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -2728,13 +2758,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -2749,31 +2779,37 @@ open class RecordingAPI {
     "story" : "{}"
   } ],
   "annotations" : [ {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   }, {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   } ],
   "archiveMedium" : "CLOUDARCHIVE",
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2809,20 +2845,20 @@ open class RecordingAPI {
   } ],
   "fileState" : "ARCHIVED",
   "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-  "estimatedTranscodeTimeMs" : 2,
-  "outputDurationMs" : 7,
+  "estimatedTranscodeTimeMs" : 4,
+  "outputDurationMs" : 1,
   "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
   "startTime" : "startTime",
   "id" : "id",
-  "remainingRestorationsAllowedForOrg" : 1,
+  "remainingRestorationsAllowedForOrg" : 6,
   "mediaUris" : {
     "key" : {
       "mediaUri" : "mediaUri",
-      "waveformData" : [ 3.6160767, 3.6160767 ]
+      "waveformData" : [ 2.027123, 2.027123 ]
     }
   },
   "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-  "actualTranscodeTimeMs" : 4,
+  "actualTranscodeTimeMs" : 7,
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "sessionId" : "sessionId",
@@ -3489,13 +3525,13 @@ open class RecordingAPI {
       "attachments" : [ {
         "contentPath" : "contentPath",
         "name" : "name",
-        "contentLength" : 7,
+        "contentLength" : 9,
         "attachmentId" : "attachmentId",
         "contentType" : "contentType"
       }, {
         "contentPath" : "contentPath",
         "name" : "name",
-        "contentLength" : 7,
+        "contentLength" : 9,
         "attachmentId" : "attachmentId",
         "contentType" : "contentType"
       } ],
@@ -3533,13 +3569,13 @@ open class RecordingAPI {
       "attachments" : [ {
         "contentPath" : "contentPath",
         "name" : "name",
-        "contentLength" : 7,
+        "contentLength" : 9,
         "attachmentId" : "attachmentId",
         "contentType" : "contentType"
       }, {
         "contentPath" : "contentPath",
         "name" : "name",
-        "contentLength" : 7,
+        "contentLength" : 9,
         "attachmentId" : "attachmentId",
         "contentType" : "contentType"
       } ],
@@ -3583,13 +3619,13 @@ open class RecordingAPI {
       "messageMediaAttachments" : [ {
         "name" : "name",
         "mediaType" : "image/png",
-        "contentLength" : 9,
+        "contentLength" : 3,
         "id" : "id",
         "url" : "url"
       }, {
         "name" : "name",
         "mediaType" : "image/png",
-        "contentLength" : 9,
+        "contentLength" : 3,
         "id" : "id",
         "url" : "url"
       } ],
@@ -3626,13 +3662,13 @@ open class RecordingAPI {
       "messageMediaAttachments" : [ {
         "name" : "name",
         "mediaType" : "image/png",
-        "contentLength" : 9,
+        "contentLength" : 3,
         "id" : "id",
         "url" : "url"
       }, {
         "name" : "name",
         "mediaType" : "image/png",
-        "contentLength" : 9,
+        "contentLength" : 3,
         "id" : "id",
         "url" : "url"
       } ],
@@ -3647,31 +3683,37 @@ open class RecordingAPI {
       "story" : "{}"
     } ],
     "annotations" : [ {
-      "absoluteLocation" : 1,
+      "reason" : "Hold",
       "recordingLocation" : 5,
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "description" : "description",
-      "location" : 0,
-      "id" : "id",
+      "annotations" : [ null, null ],
       "type" : "type",
       "absoluteDurationMs" : 5,
+      "recordingDurationMs" : 2,
+      "absoluteLocation" : 1,
+      "realtimeLocation" : 7,
+      "name" : "name",
+      "location" : 0,
+      "id" : "id",
       "durationMs" : 6,
-      "user" : "{}",
-      "recordingDurationMs" : 2
+      "user" : "{}"
     }, {
-      "absoluteLocation" : 1,
+      "reason" : "Hold",
       "recordingLocation" : 5,
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "description" : "description",
-      "location" : 0,
-      "id" : "id",
+      "annotations" : [ null, null ],
       "type" : "type",
       "absoluteDurationMs" : 5,
+      "recordingDurationMs" : 2,
+      "absoluteLocation" : 1,
+      "realtimeLocation" : 7,
+      "name" : "name",
+      "location" : 0,
+      "id" : "id",
       "durationMs" : 6,
-      "user" : "{}",
-      "recordingDurationMs" : 2
+      "user" : "{}"
     } ],
     "archiveMedium" : "CLOUDARCHIVE",
     "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -3707,20 +3749,20 @@ open class RecordingAPI {
     } ],
     "fileState" : "ARCHIVED",
     "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-    "estimatedTranscodeTimeMs" : 2,
-    "outputDurationMs" : 7,
+    "estimatedTranscodeTimeMs" : 4,
+    "outputDurationMs" : 1,
     "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
     "startTime" : "startTime",
     "id" : "id",
-    "remainingRestorationsAllowedForOrg" : 1,
+    "remainingRestorationsAllowedForOrg" : 6,
     "mediaUris" : {
       "key" : {
         "mediaUri" : "mediaUri",
-        "waveformData" : [ 3.6160767, 3.6160767 ]
+        "waveformData" : [ 2.027123, 2.027123 ]
       }
     },
     "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-    "actualTranscodeTimeMs" : 4,
+    "actualTranscodeTimeMs" : 7,
     "conversationId" : "conversationId",
     "selfUri" : "https://openapi-generator.tech",
     "sessionId" : "sessionId",
@@ -4458,13 +4500,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -4502,13 +4544,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -4552,13 +4594,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -4595,13 +4637,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -4616,31 +4658,37 @@ open class RecordingAPI {
     "story" : "{}"
   } ],
   "annotations" : [ {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   }, {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   } ],
   "archiveMedium" : "CLOUDARCHIVE",
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -4676,20 +4724,20 @@ open class RecordingAPI {
   } ],
   "fileState" : "ARCHIVED",
   "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-  "estimatedTranscodeTimeMs" : 2,
-  "outputDurationMs" : 7,
+  "estimatedTranscodeTimeMs" : 4,
+  "outputDurationMs" : 1,
   "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
   "startTime" : "startTime",
   "id" : "id",
-  "remainingRestorationsAllowedForOrg" : 1,
+  "remainingRestorationsAllowedForOrg" : 6,
   "mediaUris" : {
     "key" : {
       "mediaUri" : "mediaUri",
-      "waveformData" : [ 3.6160767, 3.6160767 ]
+      "waveformData" : [ 2.027123, 2.027123 ]
     }
   },
   "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-  "actualTranscodeTimeMs" : 4,
+  "actualTranscodeTimeMs" : 7,
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "sessionId" : "sessionId",
@@ -5390,13 +5438,13 @@ open class RecordingAPI {
         "attachments" : [ {
           "contentPath" : "contentPath",
           "name" : "name",
-          "contentLength" : 7,
+          "contentLength" : 9,
           "attachmentId" : "attachmentId",
           "contentType" : "contentType"
         }, {
           "contentPath" : "contentPath",
           "name" : "name",
-          "contentLength" : 7,
+          "contentLength" : 9,
           "attachmentId" : "attachmentId",
           "contentType" : "contentType"
         } ],
@@ -5434,13 +5482,13 @@ open class RecordingAPI {
         "attachments" : [ {
           "contentPath" : "contentPath",
           "name" : "name",
-          "contentLength" : 7,
+          "contentLength" : 9,
           "attachmentId" : "attachmentId",
           "contentType" : "contentType"
         }, {
           "contentPath" : "contentPath",
           "name" : "name",
-          "contentLength" : 7,
+          "contentLength" : 9,
           "attachmentId" : "attachmentId",
           "contentType" : "contentType"
         } ],
@@ -5484,13 +5532,13 @@ open class RecordingAPI {
         "messageMediaAttachments" : [ {
           "name" : "name",
           "mediaType" : "image/png",
-          "contentLength" : 9,
+          "contentLength" : 3,
           "id" : "id",
           "url" : "url"
         }, {
           "name" : "name",
           "mediaType" : "image/png",
-          "contentLength" : 9,
+          "contentLength" : 3,
           "id" : "id",
           "url" : "url"
         } ],
@@ -5527,13 +5575,13 @@ open class RecordingAPI {
         "messageMediaAttachments" : [ {
           "name" : "name",
           "mediaType" : "image/png",
-          "contentLength" : 9,
+          "contentLength" : 3,
           "id" : "id",
           "url" : "url"
         }, {
           "name" : "name",
           "mediaType" : "image/png",
-          "contentLength" : 9,
+          "contentLength" : 3,
           "id" : "id",
           "url" : "url"
         } ],
@@ -5548,31 +5596,37 @@ open class RecordingAPI {
         "story" : "{}"
       } ],
       "annotations" : [ {
-        "absoluteLocation" : 1,
+        "reason" : "Hold",
         "recordingLocation" : 5,
         "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
         "description" : "description",
-        "location" : 0,
-        "id" : "id",
+        "annotations" : [ null, null ],
         "type" : "type",
         "absoluteDurationMs" : 5,
+        "recordingDurationMs" : 2,
+        "absoluteLocation" : 1,
+        "realtimeLocation" : 7,
+        "name" : "name",
+        "location" : 0,
+        "id" : "id",
         "durationMs" : 6,
-        "user" : "{}",
-        "recordingDurationMs" : 2
+        "user" : "{}"
       }, {
-        "absoluteLocation" : 1,
+        "reason" : "Hold",
         "recordingLocation" : 5,
         "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
         "description" : "description",
-        "location" : 0,
-        "id" : "id",
+        "annotations" : [ null, null ],
         "type" : "type",
         "absoluteDurationMs" : 5,
+        "recordingDurationMs" : 2,
+        "absoluteLocation" : 1,
+        "realtimeLocation" : 7,
+        "name" : "name",
+        "location" : 0,
+        "id" : "id",
         "durationMs" : 6,
-        "user" : "{}",
-        "recordingDurationMs" : 2
+        "user" : "{}"
       } ],
       "archiveMedium" : "CLOUDARCHIVE",
       "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -5608,20 +5662,20 @@ open class RecordingAPI {
       } ],
       "fileState" : "ARCHIVED",
       "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-      "estimatedTranscodeTimeMs" : 2,
-      "outputDurationMs" : 7,
+      "estimatedTranscodeTimeMs" : 4,
+      "outputDurationMs" : 1,
       "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
       "startTime" : "startTime",
       "id" : "id",
-      "remainingRestorationsAllowedForOrg" : 1,
+      "remainingRestorationsAllowedForOrg" : 6,
       "mediaUris" : {
         "key" : {
           "mediaUri" : "mediaUri",
-          "waveformData" : [ 3.6160767, 3.6160767 ]
+          "waveformData" : [ 2.027123, 2.027123 ]
         }
       },
       "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-      "actualTranscodeTimeMs" : 4,
+      "actualTranscodeTimeMs" : 7,
       "conversationId" : "conversationId",
       "selfUri" : "https://openapi-generator.tech",
       "sessionId" : "sessionId",
@@ -6265,13 +6319,13 @@ open class RecordingAPI {
         "attachments" : [ {
           "contentPath" : "contentPath",
           "name" : "name",
-          "contentLength" : 7,
+          "contentLength" : 9,
           "attachmentId" : "attachmentId",
           "contentType" : "contentType"
         }, {
           "contentPath" : "contentPath",
           "name" : "name",
-          "contentLength" : 7,
+          "contentLength" : 9,
           "attachmentId" : "attachmentId",
           "contentType" : "contentType"
         } ],
@@ -6309,13 +6363,13 @@ open class RecordingAPI {
         "attachments" : [ {
           "contentPath" : "contentPath",
           "name" : "name",
-          "contentLength" : 7,
+          "contentLength" : 9,
           "attachmentId" : "attachmentId",
           "contentType" : "contentType"
         }, {
           "contentPath" : "contentPath",
           "name" : "name",
-          "contentLength" : 7,
+          "contentLength" : 9,
           "attachmentId" : "attachmentId",
           "contentType" : "contentType"
         } ],
@@ -6359,13 +6413,13 @@ open class RecordingAPI {
         "messageMediaAttachments" : [ {
           "name" : "name",
           "mediaType" : "image/png",
-          "contentLength" : 9,
+          "contentLength" : 3,
           "id" : "id",
           "url" : "url"
         }, {
           "name" : "name",
           "mediaType" : "image/png",
-          "contentLength" : 9,
+          "contentLength" : 3,
           "id" : "id",
           "url" : "url"
         } ],
@@ -6402,13 +6456,13 @@ open class RecordingAPI {
         "messageMediaAttachments" : [ {
           "name" : "name",
           "mediaType" : "image/png",
-          "contentLength" : 9,
+          "contentLength" : 3,
           "id" : "id",
           "url" : "url"
         }, {
           "name" : "name",
           "mediaType" : "image/png",
-          "contentLength" : 9,
+          "contentLength" : 3,
           "id" : "id",
           "url" : "url"
         } ],
@@ -6423,31 +6477,37 @@ open class RecordingAPI {
         "story" : "{}"
       } ],
       "annotations" : [ {
-        "absoluteLocation" : 1,
+        "reason" : "Hold",
         "recordingLocation" : 5,
         "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
         "description" : "description",
-        "location" : 0,
-        "id" : "id",
+        "annotations" : [ null, null ],
         "type" : "type",
         "absoluteDurationMs" : 5,
+        "recordingDurationMs" : 2,
+        "absoluteLocation" : 1,
+        "realtimeLocation" : 7,
+        "name" : "name",
+        "location" : 0,
+        "id" : "id",
         "durationMs" : 6,
-        "user" : "{}",
-        "recordingDurationMs" : 2
+        "user" : "{}"
       }, {
-        "absoluteLocation" : 1,
+        "reason" : "Hold",
         "recordingLocation" : 5,
         "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
         "description" : "description",
-        "location" : 0,
-        "id" : "id",
+        "annotations" : [ null, null ],
         "type" : "type",
         "absoluteDurationMs" : 5,
+        "recordingDurationMs" : 2,
+        "absoluteLocation" : 1,
+        "realtimeLocation" : 7,
+        "name" : "name",
+        "location" : 0,
+        "id" : "id",
         "durationMs" : 6,
-        "user" : "{}",
-        "recordingDurationMs" : 2
+        "user" : "{}"
       } ],
       "archiveMedium" : "CLOUDARCHIVE",
       "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -6483,20 +6543,20 @@ open class RecordingAPI {
       } ],
       "fileState" : "ARCHIVED",
       "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-      "estimatedTranscodeTimeMs" : 2,
-      "outputDurationMs" : 7,
+      "estimatedTranscodeTimeMs" : 4,
+      "outputDurationMs" : 1,
       "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
       "startTime" : "startTime",
       "id" : "id",
-      "remainingRestorationsAllowedForOrg" : 1,
+      "remainingRestorationsAllowedForOrg" : 6,
       "mediaUris" : {
         "key" : {
           "mediaUri" : "mediaUri",
-          "waveformData" : [ 3.6160767, 3.6160767 ]
+          "waveformData" : [ 2.027123, 2.027123 ]
         }
       },
       "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-      "actualTranscodeTimeMs" : 4,
+      "actualTranscodeTimeMs" : 7,
       "conversationId" : "conversationId",
       "selfUri" : "https://openapi-generator.tech",
       "sessionId" : "sessionId",
@@ -35519,18 +35579,21 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "absoluteLocation" : 1,
+  "reason" : "Hold",
   "recordingLocation" : 5,
   "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
   "description" : "description",
-  "location" : 0,
-  "id" : "id",
+  "annotations" : [ null, null ],
   "type" : "type",
   "absoluteDurationMs" : 5,
+  "recordingDurationMs" : 2,
+  "absoluteLocation" : 1,
+  "realtimeLocation" : 7,
+  "name" : "name",
+  "location" : 0,
+  "id" : "id",
   "durationMs" : 6,
-  "user" : "{}",
-  "recordingDurationMs" : 2
+  "user" : "{}"
 }, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -36338,13 +36401,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -36382,13 +36445,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -36432,13 +36495,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -36475,13 +36538,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -36496,31 +36559,37 @@ open class RecordingAPI {
     "story" : "{}"
   } ],
   "annotations" : [ {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   }, {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   } ],
   "archiveMedium" : "CLOUDARCHIVE",
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36556,20 +36625,20 @@ open class RecordingAPI {
   } ],
   "fileState" : "ARCHIVED",
   "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-  "estimatedTranscodeTimeMs" : 2,
-  "outputDurationMs" : 7,
+  "estimatedTranscodeTimeMs" : 4,
+  "outputDurationMs" : 1,
   "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
   "startTime" : "startTime",
   "id" : "id",
-  "remainingRestorationsAllowedForOrg" : 1,
+  "remainingRestorationsAllowedForOrg" : 6,
   "mediaUris" : {
     "key" : {
       "mediaUri" : "mediaUri",
-      "waveformData" : [ 3.6160767, 3.6160767 ]
+      "waveformData" : [ 2.027123, 2.027123 ]
     }
   },
   "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-  "actualTranscodeTimeMs" : 4,
+  "actualTranscodeTimeMs" : 7,
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "sessionId" : "sessionId",
@@ -37217,18 +37286,21 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "absoluteLocation" : 1,
+  "reason" : "Hold",
   "recordingLocation" : 5,
   "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
   "description" : "description",
-  "location" : 0,
-  "id" : "id",
+  "annotations" : [ null, null ],
   "type" : "type",
   "absoluteDurationMs" : 5,
+  "recordingDurationMs" : 2,
+  "absoluteLocation" : 1,
+  "realtimeLocation" : 7,
+  "name" : "name",
+  "location" : 0,
+  "id" : "id",
   "durationMs" : 6,
-  "user" : "{}",
-  "recordingDurationMs" : 2
+  "user" : "{}"
 }, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -37316,13 +37388,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -37360,13 +37432,13 @@ open class RecordingAPI {
     "attachments" : [ {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     }, {
       "contentPath" : "contentPath",
       "name" : "name",
-      "contentLength" : 7,
+      "contentLength" : 9,
       "attachmentId" : "attachmentId",
       "contentType" : "contentType"
     } ],
@@ -37410,13 +37482,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -37453,13 +37525,13 @@ open class RecordingAPI {
     "messageMediaAttachments" : [ {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     }, {
       "name" : "name",
       "mediaType" : "image/png",
-      "contentLength" : 9,
+      "contentLength" : 3,
       "id" : "id",
       "url" : "url"
     } ],
@@ -37474,31 +37546,37 @@ open class RecordingAPI {
     "story" : "{}"
   } ],
   "annotations" : [ {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   }, {
-    "absoluteLocation" : 1,
+    "reason" : "Hold",
     "recordingLocation" : 5,
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
-    "location" : 0,
-    "id" : "id",
+    "annotations" : [ null, null ],
     "type" : "type",
     "absoluteDurationMs" : 5,
+    "recordingDurationMs" : 2,
+    "absoluteLocation" : 1,
+    "realtimeLocation" : 7,
+    "name" : "name",
+    "location" : 0,
+    "id" : "id",
     "durationMs" : 6,
-    "user" : "{}",
-    "recordingDurationMs" : 2
+    "user" : "{}"
   } ],
   "archiveMedium" : "CLOUDARCHIVE",
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -37534,20 +37612,20 @@ open class RecordingAPI {
   } ],
   "fileState" : "ARCHIVED",
   "archiveDate" : "2000-01-23T04:56:07.000+00:00",
-  "estimatedTranscodeTimeMs" : 2,
-  "outputDurationMs" : 7,
+  "estimatedTranscodeTimeMs" : 4,
+  "outputDurationMs" : 1,
   "recordingErrorStatus" : "EMAIL_TRANSCRIPT_TOO_LARGE",
   "startTime" : "startTime",
   "id" : "id",
-  "remainingRestorationsAllowedForOrg" : 1,
+  "remainingRestorationsAllowedForOrg" : 6,
   "mediaUris" : {
     "key" : {
       "mediaUri" : "mediaUri",
-      "waveformData" : [ 3.6160767, 3.6160767 ]
+      "waveformData" : [ 2.027123, 2.027123 ]
     }
   },
   "deleteDate" : "2000-01-23T04:56:07.000+00:00",
-  "actualTranscodeTimeMs" : 4,
+  "actualTranscodeTimeMs" : 7,
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "sessionId" : "sessionId",

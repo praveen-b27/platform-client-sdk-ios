@@ -22,7 +22,7 @@ public class ScimV2Group: Codable {
     public var externalId: String?
     /** The list of members in the group. */
     public var members: [ScimV2MemberReference]?
-    /** The metadata of the SCIM resource. */
+    /** The metadata of the SCIM resource. Metadata is defined as immutable per SCIM RFC. */
     public var meta: ScimMetadata?
 
     public init(_id: String?, schemas: [String]?, displayName: String?, externalId: String?, members: [ScimV2MemberReference]?, meta: ScimMetadata?) {

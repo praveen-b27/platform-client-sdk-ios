@@ -140,6 +140,9 @@ public class ReportingExportJobResponse: Codable {
         case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
         case failedAsExportFileSizeIsGreaterThan10mb = "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB"
         case notAuthorizedToViewExport = "NOT_AUTHORIZED_TO_VIEW_EXPORT"
+        case staticLinkExportFailed = "STATIC_LINK_EXPORT_FAILED"
+        case tooManySearchCriteria = "TOO_MANY_SEARCH_CRITERIA"
+        case searchCriteriaValuesExceedLimit = "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"
@@ -210,11 +213,13 @@ public class ReportingExportJobResponse: Codable {
     public var includeDurationFormatInHeader: Bool?
     /** Indicates the duration format for the exports */
     public var durationFormat: DurationFormat?
+    /** Indicates whether the export run is allowed to rerun */
+    public var exportAllowedToRerun: Bool?
     public var enabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, emailErrorDescription: String?, includeDurationFormatInHeader: Bool?, durationFormat: DurationFormat?, enabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, emailErrorDescription: String?, includeDurationFormatInHeader: Bool?, durationFormat: DurationFormat?, exportAllowedToRerun: Bool?, enabled: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.runId = runId
@@ -245,6 +250,7 @@ public class ReportingExportJobResponse: Codable {
         self.emailErrorDescription = emailErrorDescription
         self.includeDurationFormatInHeader = includeDurationFormatInHeader
         self.durationFormat = durationFormat
+        self.exportAllowedToRerun = exportAllowedToRerun
         self.enabled = enabled
         self.selfUri = selfUri
     }
@@ -280,6 +286,7 @@ public class ReportingExportJobResponse: Codable {
         case emailErrorDescription
         case includeDurationFormatInHeader
         case durationFormat
+        case exportAllowedToRerun
         case enabled
         case selfUri
     }

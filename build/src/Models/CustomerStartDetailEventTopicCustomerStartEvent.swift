@@ -58,8 +58,9 @@ public class CustomerStartDetailEventTopicCustomerStartEvent: Codable {
     public var messageType: MessageType?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
+    public var journeyContext: CustomerStartDetailEventTopicJourneyContext?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, externalOrganizationId: String?, externalContactId: String?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, externalOrganizationId: String?, externalContactId: String?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, journeyContext: CustomerStartDetailEventTopicJourneyContext?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -80,6 +81,7 @@ public class CustomerStartDetailEventTopicCustomerStartEvent: Codable {
         self.messageType = messageType
         self.conversationExternalContactIds = conversationExternalContactIds
         self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
+        self.journeyContext = journeyContext
     }
 
 

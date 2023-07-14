@@ -977,6 +977,7 @@ docs/CustomI18nLabels.md
 docs/CustomerEndDetailEventTopicCustomerEndEvent.md
 docs/CustomerInteractionCenter.md
 docs/CustomerStartDetailEventTopicCustomerStartEvent.md
+docs/CustomerStartDetailEventTopicJourneyContext.md
 docs/DID.md
 docs/DIDEntityListing.md
 docs/DIDNumber.md
@@ -6850,6 +6851,7 @@ src/Models/CustomI18nLabels.swift
 src/Models/CustomerEndDetailEventTopicCustomerEndEvent.swift
 src/Models/CustomerInteractionCenter.swift
 src/Models/CustomerStartDetailEventTopicCustomerStartEvent.swift
+src/Models/CustomerStartDetailEventTopicJourneyContext.swift
 src/Models/DID.swift
 src/Models/DIDEntityListing.swift
 src/Models/DIDNumber.swift

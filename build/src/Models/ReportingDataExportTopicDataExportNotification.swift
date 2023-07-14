@@ -116,7 +116,11 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case reachedMaximumAttemptOfRetry = "REACHED_MAXIMUM_ATTEMPT_OF_RETRY"
         case failedLongRunningExport = "FAILED_LONG_RUNNING_EXPORT"
         case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
+        case failedAsExportFileSizeIsGreaterThan10mb = "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB"
         case notAuthorizedToViewExport = "NOT_AUTHORIZED_TO_VIEW_EXPORT"
+        case staticLinkExportFailed = "STATIC_LINK_EXPORT_FAILED"
+        case tooManySearchCriteria = "TOO_MANY_SEARCH_CRITERIA"
+        case searchCriteriaValuesExceedLimit = "SEARCH_CRITERIA_VALUES_EXCEED_LIMIT"
     }
     public var _id: String?
     public var runId: String?
